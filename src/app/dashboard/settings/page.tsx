@@ -1,0 +1,127 @@
+"use client";
+
+import { useState } from "react";
+import { organizations } from "@/lib/mock-data";
+import { cn } from "@/lib/utils";
+
+const org = organizations[0]; // CAF Navigli (mock)
+
+function Toggle({
+  checked,
+  onChange,
+  label,
+  description,
+}: {
+  checked: boolean;
+  onChange: (v: boolean) => void;
+  label: string;
+  description: string;
+}) {
+  return (
+    <div className="flex items-center justify-between gap-4 rounded-xl border border-line bg-card p-4">
+      <div>
+        <p className="text-sm font-semibold">{label}</p>
+        <p className="mt-0.5 text-sm text-muted">{description}</p>
+      </div>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={checked}
+        aria-label={label}
+        onClick={() => onChange(!checked)}
+        className={cn(
+          "relative h-6 w-11 shrink-0 rounded-full transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
+          checked ? "bg-brand" : "bg-line"
+        )}
+      >
+        <span
+          className={cn(
+            "absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform",
+            checked ? "translate-x-5.5" : "translate-x-0.5"
+          )}
+        />
+      </button>
+    </div>
+  );
+}
+
+export default function SettingsPage() {
+  const [name, setName] = useState(org.name);
+  const [address, setAddress] = useState(`${org.address}, ${org.city}`);
+  const [hours, setHours] = useState(org.openingHours);
+  const [queueOpen, setQueueOpen] = useState(org.queueOpen);
+  const [smsReminders, setSmsReminders] = useState(true);
+  const [saved, setSaved] = useState(false);
+
+  return (
+    <>
+      <h1 className="text-2xl font-bold tracking-tight">Impostazioni</h1>
+      <p className="mt-1 text-sm text-muted">
+        Le informazioni della tua struttura, visibili sulla pagina pubblica.
+      </p>
+
+      <div className="mt-5 flex max-w-xl flex-col gap-5">
+        <div className="flex flex-col gap-4 rounded-xl border border-line bg-card p-5">
+          <label className="flex flex-col gap-1.5">
+            <span className="text-sm font-medium">Nome della struttura</span>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="rounded-lg border border-line px-3 py-2.5 text-sm outline-none transition-colors focus:border-brand"
+            />
+          </label>
+          <label className="flex flex-col gap-1.5">
+            <span className="text-sm font-medium">Indirizzo</span>
+            <input
+              type="text"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              className="rounded-lg border border-line px-3 py-2.5 text-sm outline-none transition-colors focus:border-brand"
+            />
+          </label>
+          <label className="flex flex-col gap-1.5">
+            <span className="text-sm font-medium">Orari di apertura</span>
+            <input
+              type="text"
+              value={hours}
+              onChange={(e) => setHours(e.target.value)}
+              className="rounded-lg border border-line px-3 py-2.5 text-sm outline-none transition-colors focus:border-brand"
+            />
+          </label>
+          <div className="rounded-lg bg-canvas p-3 font-mono text-xs text-muted">
+            Pagina pubblica: avvisy.app/s/{org.slug}
+          </div>
+        </div>
+
+        <Toggle
+          checked={queueOpen}
+          onChange={setQueueOpen}
+          label="Coda live aperta"
+          description="I clienti con check-in entrano in coda e seguono il turno dal telefono."
+        />
+        <Toggle
+          checked={smsReminders}
+          onChange={setSmsReminders}
+          label="Promemoria SMS"
+          description="Invia un promemoria automatico il giorno prima dell'appuntamento."
+        />
+
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setSaved(true)}
+            className="rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          >
+            Salva modifiche
+          </button>
+          {saved && (
+            <p className="text-sm font-medium text-brand-dark">
+              Modifiche salvate (demo, solo in locale).
+            </p>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}

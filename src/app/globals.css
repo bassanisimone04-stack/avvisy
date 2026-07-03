@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Palette Avvisy */
+  --color-ink: #1b2a32; /* testo principale, blu-ardesia profondo */
+  --color-canvas: #f4f6f5; /* sfondo pagina */
+  --color-card: #ffffff;
+  --color-line: #e3e8e7;
+  --color-brand: #0e7a68; /* teal: azioni primarie */
+  --color-brand-dark: #0b5c4f;
+  --color-brand-soft: #e3f1ee;
+  --color-signal: #e8930c; /* ambra: "ora in servizio", ticket */
+  --color-signal-soft: #fdf3e3;
+  --color-muted: #5c6b70;
+
+  /* Tipografia */
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-sans: var(--font-instrument), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+/* Il "biglietto" Avvisy: bordo perforato come i ticket eliminacode */
+.ticket {
+  position: relative;
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: 0.75rem;
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-line);
+  transform: translateY(-50%);
+}
+
+.ticket::before {
+  left: -0.7rem;
+}
+
+.ticket::after {
+  right: -0.7rem;
+}
+
+.ticket-divider {
+  border-top: 2px dashed var(--color-line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
