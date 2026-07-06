@@ -52,6 +52,19 @@ export default function SettingsPage() {
   const [queueOpen, setQueueOpen] = useState(org.queueOpen);
   const [smsReminders, setSmsReminders] = useState(true);
   const [saved, setSaved] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const embed = `<iframe src="https://avvisy.app/widget/${org.slug}" width="360" height="280" style="border:0;border-radius:16px" title="Prenota con Avvisy"></iframe>`;
+
+  async function copyEmbed() {
+    try {
+      await navigator.clipboard.writeText(embed);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* ignora */
+    }
+  }
 
   return (
     <>
@@ -156,6 +169,25 @@ export default function SettingsPage() {
           </div>
         </aside>
       </div>
+
+      {/* Widget da incorporare nel proprio sito */}
+      <section className="mt-8 max-w-2xl">
+        <h2 className="text-lg font-bold">Widget per il tuo sito</h2>
+        <p className="mt-1 text-sm text-muted">
+          Incolla questo codice nel sito della tua struttura: i clienti
+          potranno prenotare direttamente da lì.
+        </p>
+        <pre className="mt-3 overflow-x-auto rounded-lg bg-canvas p-3 font-mono text-xs text-ink">
+          {embed}
+        </pre>
+        <button
+          type="button"
+          onClick={copyEmbed}
+          className="mt-3 rounded-full border border-line bg-card px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        >
+          {copied ? "Codice copiato ✓" : "Copia codice"}
+        </button>
+      </section>
     </>
   );
 }

@@ -6,6 +6,7 @@ import type { Appointment } from "@/lib/types";
 import {
   getAppointmentById,
   getOrganizationBySlug,
+  getQueueByOrg,
   getServiceById,
   organizations,
 } from "@/lib/mock-data";
@@ -56,12 +57,21 @@ export default async function CheckinPage({
   if (!appointment || !org) notFound();
 
   const service = getServiceById(appointment.serviceId);
+  const waitingCount = getQueueByOrg(org.id).filter(
+    (e) => e.status !== "in-servizio"
+  ).length;
+  const estimatedWait = org.queueOpen ? waitingCount * 15 : 0;
 
   return (
     <>
       <AppHeader />
       <main className="mx-auto max-w-2xl px-4 pb-20 pt-10">
-        <CheckinTicket appointment={appointment} org={org} service={service} />
+        <CheckinTicket
+          appointment={appointment}
+          org={org}
+          service={service}
+          estimatedWait={estimatedWait}
+        />
         <p className="mt-6 text-center text-sm text-muted">
           Vuoi vedere la coda completa?{" "}
           <Link

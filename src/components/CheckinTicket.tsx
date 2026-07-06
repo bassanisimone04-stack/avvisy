@@ -9,9 +9,15 @@ type Props = {
   appointment: Appointment;
   org: Organization;
   service: Service | null;
+  estimatedWait?: number;
 };
 
-export default function CheckinTicket({ appointment, org, service }: Props) {
+export default function CheckinTicket({
+  appointment,
+  org,
+  service,
+  estimatedWait = 0,
+}: Props) {
   const [ticket, setTicket] = useState(appointment.ticket);
   const [shared, setShared] = useState(false);
   const checkedIn = ticket !== null;
@@ -65,6 +71,26 @@ export default function CheckinTicket({ appointment, org, service }: Props) {
             Sei in coda. Ti mandiamo un SMS quando sta per arrivare il tuo
             turno: nel frattempo puoi anche allontanarti.
           </p>
+
+          {estimatedWait > 0 && (
+            <div className="mt-4 rounded-lg border border-brand-soft bg-brand-soft p-3 text-left text-sm text-brand-dark">
+              <p className="font-semibold">
+                Il tuo turno tra circa {estimatedWait} min
+              </p>
+              <p className="mt-0.5">
+                Puoi startene a casa: conviene muoverti verso le{" "}
+                <span className="font-mono font-bold">
+                  {new Date(
+                    Date.now() + Math.max(0, estimatedWait - 15) * 60_000
+                  ).toLocaleTimeString("it-IT", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </span>
+                . Ti avvisiamo comunque 15 minuti prima.
+              </p>
+            </div>
+          )}
           <div className="mt-4 flex flex-col items-center gap-2">
             <div className="rounded-lg bg-white p-3">
               <QRCodeSVG
