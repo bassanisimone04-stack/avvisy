@@ -2,8 +2,48 @@
 
 import { useMemo, useState } from "react";
 import AppointmentTable from "@/components/AppointmentTable";
+import { getServiceById } from "@/lib/mock-data";
 import type { Appointment, AppointmentStatus } from "@/lib/types";
 import { appointmentStatusLabel, cn } from "@/lib/utils";
+
+/** Costruisce e scarica un CSV (UTF-8 con BOM per Excel) degli appuntamenti. */
+function exportCSV(rows: Appointment[]) {
+  const header = [
+    "Data",
+    "Ora",
+    "Cliente",
+    "Telefono",
+    "Servizio",
+    "Ticket",
+    "Stato",
+  ];
+  const body = rows.map((a) => [
+    a.date,
+    a.time,
+    a.customerName,
+    a.customerPhone,
+    getServiceById(a.serviceId)?.name ?? "",
+    a.ticket ?? "",
+    appointmentStatusLabel[a.status],
+  ]);
+  const csv = [header, ...body]
+    .map((r) =>
+      r.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(",")
+    )
+    .join("\r\n");
+
+  const blob = new Blob(["﻿" + csv], {
+    type: "text/csv;charset=utf-8",
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `appuntamenti-${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
 
 type Filter = AppointmentStatus | "tutti";
 
@@ -69,7 +109,7 @@ export default function AppointmentsBoard({
           />
         </label>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {filters.map((f) => {
             const n = counts.get(f.value) ?? 0;
             return (
@@ -96,6 +136,14 @@ export default function AppointmentsBoard({
               </button>
             );
           })}
+          <button
+            type="button"
+            onClick={() => exportCSV(visible)}
+            disabled={visible.length === 0}
+            className="ml-auto rounded-full border border-line bg-card px-4 py-1.5 text-sm font-semibold text-ink transition-colors hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-40"
+          >
+            Esporta CSV
+          </button>
         </div>
       </div>
 

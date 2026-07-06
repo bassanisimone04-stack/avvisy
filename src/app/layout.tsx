@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Bricolage_Grotesque,
   Instrument_Sans,
   JetBrains_Mono,
 } from "next/font/google";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -25,6 +26,19 @@ export const metadata: Metadata = {
   title: "Avvisy — Appuntamenti e code senza attese",
   description:
     "Avvisy aiuta piccoli uffici e studi a gestire appuntamenti, check-in e code live. Prenotare è gratis.",
+  icons: {
+    icon: "/icon-192.png",
+    apple: "/apple-icon.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Avvisy",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0e7a68",
 };
 
 export default function RootLayout({
@@ -35,7 +49,10 @@ export default function RootLayout({
       lang="it"
       className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable}`}
     >
-      <body className="min-h-dvh">{children}</body>
+      <body className="min-h-dvh">
+        {children}
+        <ServiceWorkerRegister />
+      </body>
     </html>
   );
 }

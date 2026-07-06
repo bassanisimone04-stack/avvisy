@@ -9,6 +9,7 @@ const navItems = [
   { href: "/dashboard", label: "Panoramica", icon: "◫" },
   { href: "/dashboard/appointments", label: "Appuntamenti", icon: "▤" },
   { href: "/dashboard/queue", label: "Coda live", icon: "№" },
+  { href: "/dashboard/report", label: "Report", icon: "▦" },
   { href: "/dashboard/services", label: "Servizi", icon: "✚" },
   { href: "/dashboard/settings", label: "Impostazioni", icon: "⚙" },
 ];

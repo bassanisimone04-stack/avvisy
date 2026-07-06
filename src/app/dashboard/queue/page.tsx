@@ -1,11 +1,17 @@
+import Link from "next/link";
 import QueueList from "@/components/QueueList";
-import { getQueueByOrg, getServicesByOrg } from "@/lib/mock-data";
+import {
+  getQueueByOrg,
+  getServicesByOrg,
+  organizations,
+} from "@/lib/mock-data";
 
 const ORG_ID = "org-1";
 
 export default function QueuePage() {
   const queue = getQueueByOrg(ORG_ID);
   const services = getServicesByOrg(ORG_ID);
+  const org = organizations.find((o) => o.id === ORG_ID)!;
 
   return (
     <>
@@ -20,6 +26,15 @@ export default function QueuePage() {
         Chiama il prossimo numero quando lo sportello è libero. I clienti
         vedono l&apos;aggiornamento sul telefono.
       </p>
+      <div className="mt-3">
+        <Link
+          href={`/s/${org.slug}/schermo`}
+          target="_blank"
+          className="inline-flex items-center gap-1.5 rounded-full border border-line bg-card px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        >
+          Apri schermo sala d&apos;attesa ↗
+        </Link>
+      </div>
       <div className="mt-5">
         <QueueList initialEntries={queue} services={services} interactive />
       </div>
