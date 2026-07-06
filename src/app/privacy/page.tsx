@@ -68,7 +68,7 @@ export default function PrivacyPage() {
         <Section title="3. Perché li usiamo">
           <p>
             I dati servono esclusivamente a gestire l&apos;appuntamento e la
-            coda: confermare la prenotazione, inviarti eventuali avvisi via SMS
+            coda: confermare la prenotazione, inviarti eventuali avvisi (notifiche)
             e assegnarti il numero al check-in. Non vendiamo né cediamo i tuoi
             dati a terzi per finalità di marketing.
           </p>

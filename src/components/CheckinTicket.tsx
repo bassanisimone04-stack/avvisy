@@ -68,8 +68,8 @@ export default function CheckinTicket({
             {ticket}
           </p>
           <p className="mt-3 text-sm text-muted">
-            Sei in coda. Ti mandiamo un SMS quando sta per arrivare il tuo
-            turno: nel frattempo puoi anche allontanarti.
+            Sei in coda. Ti mandiamo una notifica quando sta per arrivare il
+            tuo turno: nel frattempo puoi anche allontanarti.
           </p>
 
           {estimatedWait > 0 && (

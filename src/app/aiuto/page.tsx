@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Come seguo il mio turno?",
-    a: "Dopo il check-in vedi il tuo numero e quello in servizio in tempo reale. Ti avvisiamo via SMS quando sta per arrivare il tuo turno: nel frattempo puoi anche allontanarti.",
+    a: "Dopo il check-in vedi il tuo numero e quello in servizio in tempo reale. Ti avvisiamo con una notifica push quando sta per arrivare il tuo turno: nel frattempo puoi anche allontanarti.",
   },
   {
     q: "Posso annullare o spostare la prenotazione?",

@@ -50,7 +50,7 @@ export default function SettingsPage() {
   const [address, setAddress] = useState(`${org.address}, ${org.city}`);
   const [hours, setHours] = useState(org.openingHours);
   const [queueOpen, setQueueOpen] = useState(org.queueOpen);
-  const [smsReminders, setSmsReminders] = useState(true);
+  const [pushNotifications, setPushNotifications] = useState(true);
   const [saved, setSaved] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -115,10 +115,10 @@ export default function SettingsPage() {
           description="I clienti con check-in entrano in coda e seguono il turno dal telefono."
         />
         <Toggle
-          checked={smsReminders}
-          onChange={setSmsReminders}
-          label="Promemoria SMS"
-          description="Invia un promemoria automatico il giorno prima dell'appuntamento."
+          checked={pushNotifications}
+          onChange={setPushNotifications}
+          label="Notifiche push"
+          description="Avvisa i clienti sul telefono quando sta per arrivare il loro turno. Gratuite e immediate."
         />
 
         <div className="flex items-center gap-3">
@@ -160,9 +160,9 @@ export default function SettingsPage() {
                   Coda aperta
                 </span>
               )}
-              {smsReminders && (
+              {pushNotifications && (
                 <span className="rounded-full bg-canvas px-3 py-1.5 text-xs font-semibold text-muted">
-                  Promemoria SMS
+                  Notifiche push
                 </span>
               )}
             </div>

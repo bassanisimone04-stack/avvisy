@@ -33,7 +33,8 @@ export default async function BookPage({
           Prenota un appuntamento
         </h1>
         <p className="mt-2 text-sm text-muted">
-          Tre passaggi, nessuna registrazione. Ricevi la conferma via SMS.
+          Tre passaggi, nessuna registrazione. Ti avvisiamo con una notifica
+          quando è il tuo turno.
         </p>
         <div className="mt-6">
           <BookingForm

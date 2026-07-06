@@ -100,8 +100,9 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
         </p>
         <div className="ticket-divider my-5" />
         <p className="text-sm text-muted">
-          Ti abbiamo inviato un SMS a {phone}. Il giorno dell&apos;appuntamento
-          fai il check-in per ricevere il tuo numero.
+          Prenotazione registrata. Il giorno dell&apos;appuntamento fai il
+          check-in per ricevere il tuo numero: ti avviseremo con una notifica
+          quando sta per arrivare il tuo turno.
         </p>
         <Link
           href={checkinHref || "/checkin/demo-appointment"}
@@ -272,7 +273,8 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
               </span>
             ) : (
               <span className="text-xs text-muted">
-                Ti avvisiamo via SMS quando sta per arrivare il tuo turno.
+                Ti avvisiamo con una notifica quando sta per arrivare il tuo
+                turno.
               </span>
             )}
           </label>

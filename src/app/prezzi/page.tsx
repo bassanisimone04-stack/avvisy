@@ -39,7 +39,7 @@ const plans: Plan[] = [
     tagline: "Per la maggior parte delle strutture.",
     features: [
       "Tutto di Base, più:",
-      "Promemoria SMS automatici",
+      "Notifiche push automatiche",
       "Report e statistiche",
       "Schermo per la sala d'attesa",
       "Esporta appuntamenti (CSV)",
