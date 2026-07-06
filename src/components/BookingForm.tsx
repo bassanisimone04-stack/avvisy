@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Organization, Service } from "@/lib/types";
+import { downloadICS } from "@/lib/calendar";
 import { cn, formatDate } from "@/lib/utils";
 
 type Props = {
@@ -92,10 +93,26 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
         </p>
         <Link
           href={checkinHref || "/checkin/demo-appointment"}
-          className="mt-5 block rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+          className="mt-5 block rounded-full bg-brand px-5 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         >
           Vai al check-in
         </Link>
+        <button
+          type="button"
+          onClick={() =>
+            downloadICS(`avvisy-${service.id}.ics`, {
+              title: `${service.name} · ${org.name}`,
+              location: `${org.address}, ${org.city}`,
+              description: `Appuntamento prenotato con Avvisy. Ricordati di fare il check-in all'arrivo.`,
+              date,
+              time,
+              durationMin: service.durationMin,
+            })
+          }
+          className="mt-2.5 block w-full rounded-full border border-line px-5 py-3 text-base font-semibold text-ink transition-colors hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        >
+          Aggiungi al calendario
+        </button>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import AppointmentTable from "@/components/AppointmentTable";
+import AppointmentsBoard from "@/components/AppointmentsBoard";
 import { getAppointmentsByOrg } from "@/lib/mock-data";
 
 const ORG_ID = "org-1";
@@ -25,7 +25,7 @@ export default function AppointmentsPage() {
         </button>
       </div>
       <div className="mt-5">
-        <AppointmentTable appointments={appointments} />
+        <AppointmentsBoard appointments={appointments} />
       </div>
     </>
   );

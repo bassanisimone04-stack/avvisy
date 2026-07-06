@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import AppHeader from "@/components/AppHeader";
 import ServiceCard from "@/components/ServiceCard";
 import QueueList from "@/components/QueueList";
+import NowServing from "@/components/NowServing";
 import {
   getOrganizationBySlug,
   getQueueByOrg,
@@ -41,11 +42,17 @@ export default async function OrganizationPage({
         <div className="mt-6">
           <Link
             href={`/s/${org.slug}/book`}
-            className="inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="inline-block rounded-full bg-brand px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Prenota un appuntamento
           </Link>
         </div>
+
+        {org.queueOpen && (
+          <div className="mt-6 max-w-xl">
+            <NowServing queue={queue} />
+          </div>
+        )}
 
         <section className="mt-10">
           <h2 className="text-xl font-bold tracking-tight">Servizi</h2>
