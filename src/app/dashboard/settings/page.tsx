@@ -60,7 +60,8 @@ export default function SettingsPage() {
         Le informazioni della tua struttura, visibili sulla pagina pubblica.
       </p>
 
-      <div className="mt-5 flex max-w-xl flex-col gap-5">
+      <div className="mt-5 grid gap-6 lg:grid-cols-[1fr_320px]">
+        <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-4 rounded-xl border border-line bg-card p-5">
           <label className="flex flex-col gap-1.5">
             <span className="text-sm font-medium">Nome della struttura</span>
@@ -121,6 +122,39 @@ export default function SettingsPage() {
             </p>
           )}
         </div>
+        </div>
+
+        {/* Anteprima live della pagina pubblica */}
+        <aside className="lg:sticky lg:top-6 lg:self-start">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
+            Anteprima pagina pubblica
+          </p>
+          <div className="rounded-xl border border-line bg-card p-5">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
+              {org.category}
+            </p>
+            <h2 className="mt-1 font-display text-xl font-bold tracking-tight">
+              {name || "Nome della struttura"}
+            </h2>
+            <p className="mt-2 text-sm text-muted">{address}</p>
+            <p className="mt-1 text-sm text-muted">{hours}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="rounded-full bg-brand px-4 py-1.5 text-xs font-semibold text-white">
+                Prenota
+              </span>
+              {queueOpen && (
+                <span className="rounded-full bg-brand-soft px-3 py-1.5 text-xs font-semibold text-brand-dark">
+                  Coda aperta
+                </span>
+              )}
+              {smsReminders && (
+                <span className="rounded-full bg-canvas px-3 py-1.5 text-xs font-semibold text-muted">
+                  Promemoria SMS
+                </span>
+              )}
+            </div>
+          </div>
+        </aside>
       </div>
     </>
   );

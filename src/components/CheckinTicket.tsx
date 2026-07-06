@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 import type { Appointment, Organization, Service } from "@/lib/types";
 import { formatDate, generateTicket } from "@/lib/utils";
 
@@ -64,6 +65,21 @@ export default function CheckinTicket({ appointment, org, service }: Props) {
             Sei in coda. Ti mandiamo un SMS quando sta per arrivare il tuo
             turno: nel frattempo puoi anche allontanarti.
           </p>
+          <div className="mt-4 flex flex-col items-center gap-2">
+            <div className="rounded-lg bg-white p-3">
+              <QRCodeSVG
+                value={
+                  typeof window !== "undefined" ? window.location.href : ""
+                }
+                size={128}
+                marginSize={0}
+                aria-label="QR code del biglietto"
+              />
+            </div>
+            <p className="text-xs text-muted">
+              Mostra questo codice allo sportello
+            </p>
+          </div>
           <p className="mt-4 rounded-lg bg-canvas p-3 text-sm">
             Ora in servizio:{" "}
             <span className="font-mono font-bold">A-041</span> · attesa stimata{" "}

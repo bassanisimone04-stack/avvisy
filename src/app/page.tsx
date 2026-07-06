@@ -1,6 +1,6 @@
 import AppHeader from "@/components/AppHeader";
 import LandingHero from "@/components/LandingHero";
-import OrganizationCard from "@/components/OrganizationCard";
+import StructuresDirectory from "@/components/StructuresDirectory";
 import { organizations } from "@/lib/mock-data";
 
 const howItWorks = [
@@ -44,17 +44,13 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 pb-20">
-        <div className="flex items-baseline justify-between">
+        <div className="mb-5 flex items-baseline justify-between">
           <h2 className="text-2xl font-bold tracking-tight">
             Strutture su Avvisy
           </h2>
           <span className="text-sm text-muted">Milano</span>
         </div>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {organizations.map((org) => (
-            <OrganizationCard key={org.id} org={org} />
-          ))}
-        </div>
+        <StructuresDirectory organizations={organizations} />
       </section>
 
       <footer className="border-t border-line bg-card">

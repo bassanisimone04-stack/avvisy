@@ -4,6 +4,7 @@ import AppHeader from "@/components/AppHeader";
 import ServiceCard from "@/components/ServiceCard";
 import QueueList from "@/components/QueueList";
 import NowServing from "@/components/NowServing";
+import OpenStatusBadge from "@/components/OpenStatusBadge";
 import {
   getOrganizationBySlug,
   getQueueByOrg,
@@ -38,6 +39,9 @@ export default async function OrganizationPage({
         <p className="mt-3 text-sm text-muted">
           {org.address}, {org.city} · {org.openingHours}
         </p>
+        <div className="mt-3">
+          <OpenStatusBadge openingHours={org.openingHours} />
+        </div>
 
         <div className="mt-6">
           <Link
