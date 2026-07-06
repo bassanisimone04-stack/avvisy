@@ -33,7 +33,7 @@ export default function AppHeader() {
           ))}
           <Link
             href="/s/demo-caf/book"
-            className="rounded-full bg-brand px-4 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Prenota ora
           </Link>
@@ -44,7 +44,7 @@ export default function AppHeader() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label={open ? "Chiudi menu" : "Apri menu"}
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-line sm:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-line sm:hidden"
         >
           <span aria-hidden className="text-lg leading-none">
             {open ? "✕" : "☰"}
@@ -60,7 +60,7 @@ export default function AppHeader() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-2 py-2 text-sm font-medium text-ink hover:bg-canvas"
+                  className="block rounded-md px-2 py-2.5 text-base font-medium text-ink hover:bg-canvas"
                 >
                   {link.label}
                 </Link>
@@ -70,7 +70,7 @@ export default function AppHeader() {
               <Link
                 href="/s/demo-caf/book"
                 onClick={() => setOpen(false)}
-                className="mt-1 block rounded-md bg-brand px-2 py-2 text-center text-sm font-semibold text-white"
+                className="mt-1 block rounded-md bg-brand px-2 py-3 text-center text-base font-semibold text-white"
               >
                 Prenota ora
               </Link>

@@ -10,21 +10,21 @@ export default function LandingHero() {
         <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
           La fila, senza stare in fila.
         </h1>
-        <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
+        <p className="mt-4 max-w-md text-lg leading-relaxed text-muted">
           Avvisy aiuta CAF, studi e piccoli uffici a gestire appuntamenti e
           code. Chi prenota sceglie l&apos;orario, fa il check-in dal telefono
           e vede in tempo reale quando tocca a lui. Prenotare è gratis.
         </p>
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <Link
             href="/s/demo-caf"
-            className="rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="rounded-full bg-brand px-7 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Trova una struttura
           </Link>
           <Link
             href="/dashboard"
-            className="rounded-full border border-line bg-card px-6 py-3 text-center text-sm font-semibold text-ink transition-colors hover:border-ink"
+            className="rounded-full border border-line bg-card px-7 py-3.5 text-center text-base font-semibold text-ink transition-colors hover:border-ink"
           >
             Gestisci la tua struttura
           </Link>

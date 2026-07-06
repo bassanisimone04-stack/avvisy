@@ -248,7 +248,7 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
           type="button"
           onClick={() => setStep((s) => Math.max(0, s - 1))}
           disabled={step === 0}
-          className="rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink disabled:invisible"
+          className="rounded-full border border-line px-6 py-3 text-base font-semibold text-ink transition-colors hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:invisible"
         >
           Indietro
         </button>
@@ -258,7 +258,7 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
           onClick={() =>
             step < 2 ? setStep((s) => s + 1) : setConfirmed(true)
           }
-          className="rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-40"
+          className="rounded-full bg-brand px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-40"
         >
           {step < 2 ? "Continua" : "Conferma prenotazione"}
         </button>

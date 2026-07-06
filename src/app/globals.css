@@ -2,16 +2,16 @@
 
 @theme inline {
   /* Palette Avvisy */
-  --color-ink: #1b2a32; /* testo principale, blu-ardesia profondo */
+  --color-ink: #172329; /* testo principale, blu-ardesia profondo */
   --color-canvas: #f4f6f5; /* sfondo pagina */
   --color-card: #ffffff;
-  --color-line: #e3e8e7;
+  --color-line: #d3dbda; /* bordi card: contrasto sufficiente a distinguerle */
   --color-brand: #0e7a68; /* teal: azioni primarie */
   --color-brand-dark: #0b5c4f;
   --color-brand-soft: #e3f1ee;
-  --color-signal: #e8930c; /* ambra: "ora in servizio", ticket */
+  --color-signal: #c9760a; /* ambra: "ora in servizio", ticket */
   --color-signal-soft: #fdf3e3;
-  --color-muted: #5c6b70;
+  --color-muted: #495459; /* testo secondario: contrasto AA anche a 70 anni */
 
   /* Tipografia */
   --font-display: var(--font-bricolage), system-ui, sans-serif;
@@ -19,17 +19,32 @@
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
+/* Base tipografica comoda da leggere a qualsiasi età (≈17px). */
+html {
+  font-size: 106.25%;
+}
+
 body {
   background-color: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+/* Focus sempre ben visibile: utile con tastiera e per chi ci vede poco. */
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 /* Il "biglietto" Avvisy: bordo perforato come i ticket eliminacode */
