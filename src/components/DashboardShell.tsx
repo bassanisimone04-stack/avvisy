@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { signOut } from "@/app/login/actions";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -50,8 +51,16 @@ export default function DashboardShell({
             </Link>
           ))}
         </nav>
-        <div className="border-t border-line p-4 text-xs text-muted">
-          CAF Navigli · Milano
+        <div className="border-t border-line p-4">
+          <p className="text-xs text-muted">CAF Navigli · Milano</p>
+          <form action={signOut} className="mt-2">
+            <button
+              type="submit"
+              className="text-sm font-semibold text-muted transition-colors hover:text-ink"
+            >
+              Esci
+            </button>
+          </form>
         </div>
       </aside>
 
@@ -62,7 +71,14 @@ export default function DashboardShell({
             <Link href="/" className="font-display text-base font-bold">
               Avvisy<span className="text-brand">.</span>
             </Link>
-            <span className="text-xs text-muted">CAF Navigli</span>
+            <form action={signOut}>
+              <button
+                type="submit"
+                className="text-sm font-semibold text-muted transition-colors hover:text-ink"
+              >
+                Esci
+              </button>
+            </form>
           </div>
           <nav className="flex gap-1 overflow-x-auto px-2 pb-2">
             {navItems.map((item) => (

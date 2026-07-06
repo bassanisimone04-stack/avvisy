@@ -14,6 +14,17 @@ type Props = {
 
 const steps = ["Servizio", "Data e ora", "I tuoi dati"] as const;
 
+/** Nome valido: almeno 2 caratteri non vuoti. */
+function isValidName(name: string) {
+  return name.trim().length >= 2;
+}
+
+/** Telefono valido: solo cifre, spazi o + iniziale, almeno 8 cifre. */
+function isValidPhone(phone: string) {
+  const digits = phone.replace(/\D/g, "");
+  return /^\+?[\d\s]+$/.test(phone.trim()) && digits.length >= 8;
+}
+
 const timeSlots = [
   "09:00",
   "09:30",
@@ -55,6 +66,7 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
   const [time, setTime] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
 
   const service = services.find((s) => s.id === serviceId) ?? null;
@@ -62,7 +74,7 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
   const canContinue =
     (step === 0 && serviceId !== "") ||
     (step === 1 && date !== "" && time !== "") ||
-    (step === 2 && name.trim() !== "" && phone.trim() !== "");
+    (step === 2 && isValidName(name) && isValidPhone(phone) && consent);
 
   const checkinHref =
     service &&
@@ -235,8 +247,14 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Es. Giulia Ferrari"
-              className="rounded-lg border border-line bg-card px-3 py-2.5 text-sm outline-none transition-colors focus:border-brand"
+              aria-invalid={name !== "" && !isValidName(name)}
+              className="rounded-lg border border-line bg-card px-3 py-2.5 text-base outline-none transition-colors focus:border-brand aria-[invalid=true]:border-red-500"
             />
+            {name !== "" && !isValidName(name) && (
+              <span className="text-xs font-medium text-red-600">
+                Inserisci nome e cognome (almeno 2 caratteri).
+              </span>
+            )}
           </label>
           <label className="flex flex-col gap-1.5">
             <span className="text-sm font-medium">Telefono</span>
@@ -245,12 +263,41 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Es. +39 340 123 4567"
-              className="rounded-lg border border-line bg-card px-3 py-2.5 text-sm outline-none transition-colors focus:border-brand"
+              aria-invalid={phone !== "" && !isValidPhone(phone)}
+              className="rounded-lg border border-line bg-card px-3 py-2.5 text-base outline-none transition-colors focus:border-brand aria-[invalid=true]:border-red-500"
             />
-            <span className="text-xs text-muted">
-              Ti avvisiamo via SMS quando sta per arrivare il tuo turno.
+            {phone !== "" && !isValidPhone(phone) ? (
+              <span className="text-xs font-medium text-red-600">
+                Inserisci un numero valido (almeno 8 cifre).
+              </span>
+            ) : (
+              <span className="text-xs text-muted">
+                Ti avvisiamo via SMS quando sta per arrivare il tuo turno.
+              </span>
+            )}
+          </label>
+
+          <label className="flex items-start gap-2.5 rounded-lg bg-canvas p-3">
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-0.5 h-5 w-5 shrink-0 accent-(--color-brand)"
+            />
+            <span className="text-sm text-muted">
+              Acconsento al trattamento dei miei dati (nome e telefono) per
+              gestire la prenotazione, come descritto nell&apos;{" "}
+              <Link
+                href="/privacy"
+                target="_blank"
+                className="font-semibold text-brand-dark hover:underline"
+              >
+                informativa privacy
+              </Link>
+              .
             </span>
           </label>
+
           {service && date && time && (
             <p className="rounded-lg bg-canvas p-3 text-sm text-muted">
               Riepilogo: <strong className="text-ink">{service.name}</strong>{" "}

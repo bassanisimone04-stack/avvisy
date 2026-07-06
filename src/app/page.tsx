@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AppHeader from "@/components/AppHeader";
 import LandingHero from "@/components/LandingHero";
 import StructuresDirectory from "@/components/StructuresDirectory";
@@ -59,6 +60,12 @@ export default function HomePage() {
             Avvisy<span className="text-brand">.</span>
           </p>
           <p>Appuntamenti, check-in e code live per piccoli uffici.</p>
+          <Link
+            href="/privacy"
+            className="font-medium text-brand-dark hover:underline"
+          >
+            Privacy
+          </Link>
         </div>
       </footer>
     </>
