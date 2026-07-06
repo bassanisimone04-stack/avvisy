@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Logo from "@/components/Logo";
 
 const navLinks = [
   { href: "/", label: "Strutture" },
@@ -14,11 +15,8 @@ export default function AppHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-card/90 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-        <Link
-          href="/"
-          className="font-display text-lg font-bold tracking-tight"
-        >
-          Avvisy<span className="text-brand">.</span>
+        <Link href="/" className="text-lg">
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-6 sm:flex">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AppHeader from "@/components/AppHeader";
+import Logo from "@/components/Logo";
 import LandingHero from "@/components/LandingHero";
 import StructuresDirectory from "@/components/StructuresDirectory";
 import { organizations } from "@/lib/mock-data";
@@ -56,9 +57,7 @@ export default function HomePage() {
 
       <footer className="border-t border-line bg-card">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-2 px-4 py-8 text-center text-sm text-muted sm:flex-row sm:justify-between">
-          <p className="font-display font-bold text-ink">
-            Avvisy<span className="text-brand">.</span>
-          </p>
+          <Logo />
           <p>Appuntamenti, check-in e code live per piccoli uffici.</p>
           <Link
             href="/privacy"

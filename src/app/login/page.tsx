@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useActionState } from "react";
+import Logo from "@/components/Logo";
 import { signIn } from "./actions";
 
 export default function LoginPage() {
@@ -12,8 +13,8 @@ export default function LoginPage() {
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-sm flex-col justify-center px-4 py-10">
-      <Link href="/" className="font-display text-2xl font-bold tracking-tight">
-        Avvisy<span className="text-brand">.</span>
+      <Link href="/" className="text-2xl">
+        <Logo />
       </Link>
       <h1 className="mt-6 text-2xl font-bold tracking-tight">
         Accedi alla dashboard
