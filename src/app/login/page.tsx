@@ -59,6 +59,13 @@ export default function LoginPage() {
         >
           {pending ? "Accesso…" : "Accedi"}
         </button>
+
+        <Link
+          href="/login/recupero"
+          className="text-center text-sm font-semibold text-brand-dark hover:underline"
+        >
+          Password dimenticata?
+        </Link>
       </form>
 
       <div className="mt-6 rounded-lg bg-signal-soft p-3 text-sm text-ink">
