@@ -12,10 +12,30 @@ type Props = {
 
 export default function CheckinTicket({ appointment, org, service }: Props) {
   const [ticket, setTicket] = useState(appointment.ticket);
+  const [shared, setShared] = useState(false);
   const checkedIn = ticket !== null;
 
   function doCheckin() {
     setTicket((current) => current ?? generateTicket());
+  }
+
+  async function share() {
+    const data = {
+      title: `Il tuo numero: ${ticket}`,
+      text: `${service?.name ?? "Appuntamento"} · ${org.name} — numero ${ticket}`,
+      url: typeof window !== "undefined" ? window.location.href : undefined,
+    };
+    try {
+      if (navigator.share) {
+        await navigator.share(data);
+        return;
+      }
+      await navigator.clipboard.writeText(data.url ?? "");
+      setShared(true);
+      setTimeout(() => setShared(false), 2000);
+    } catch {
+      /* condivisione annullata dall'utente */
+    }
   }
 
   return (
@@ -49,6 +69,22 @@ export default function CheckinTicket({ appointment, org, service }: Props) {
             <span className="font-mono font-bold">A-041</span> · attesa stimata{" "}
             <span className="font-mono font-bold">~20&apos;</span>
           </p>
+          <div className="no-print mt-5 flex gap-2">
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="flex-1 rounded-full border border-line px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            >
+              Stampa
+            </button>
+            <button
+              type="button"
+              onClick={share}
+              className="flex-1 rounded-full border border-line px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            >
+              {shared ? "Link copiato ✓" : "Condividi"}
+            </button>
+          </div>
         </>
       ) : (
         <>

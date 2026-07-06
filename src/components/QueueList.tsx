@@ -1,15 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import type { QueueEntry } from "@/lib/types";
+import type { QueueEntry, Service } from "@/lib/types";
 import { getServiceById } from "@/lib/mock-data";
-import { cn, queueStatusLabel } from "@/lib/utils";
+import { cn, generateTicket, queueStatusLabel } from "@/lib/utils";
 
 type Props = {
   initialEntries: QueueEntry[];
   /** Mostra i controlli operatore (Chiama, Completa, Salta). */
   interactive?: boolean;
+  /** Servizi disponibili: abilita l'aggiunta di clienti "al volo" (walk-in). */
+  services?: Service[];
 };
+
+/** Ora corrente in formato HH:mm. */
+function nowHM() {
+  return new Date().toLocaleTimeString("it-IT", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
 
 /** Minuti di attesa stimati per chi è in coda, in base alla durata dei servizi. */
 function estimatedWait(waiting: QueueEntry[]) {
@@ -19,10 +29,36 @@ function estimatedWait(waiting: QueueEntry[]) {
   );
 }
 
-export default function QueueList({ initialEntries, interactive }: Props) {
+export default function QueueList({
+  initialEntries,
+  interactive,
+  services,
+}: Props) {
   const [entries, setEntries] = useState(initialEntries);
   const [servedCount, setServedCount] = useState(0);
   const [lastServed, setLastServed] = useState<string | null>(null);
+
+  const canWalkIn = Boolean(interactive && services && services.length > 0);
+  const [walkInOpen, setWalkInOpen] = useState(false);
+  const [walkInName, setWalkInName] = useState("");
+  const [walkInService, setWalkInService] = useState(services?.[0]?.id ?? "");
+
+  function addWalkIn() {
+    if (!walkInName.trim() || !walkInService) return;
+    const entry: QueueEntry = {
+      id: `q-${Date.now().toString(36)}`,
+      orgId: services?.[0]?.orgId ?? initialEntries[0]?.orgId ?? "",
+      ticket: generateTicket(),
+      customerName: walkInName.trim(),
+      serviceId: walkInService,
+      joinedAt: nowHM(),
+      status: "in-attesa",
+    };
+    setEntries((prev) => [...prev, entry]);
+    setWalkInName("");
+    setWalkInService(services?.[0]?.id ?? "");
+    setWalkInOpen(false);
+  }
 
   const serving = entries.find((e) => e.status === "in-servizio") ?? null;
   const waiting = entries.filter((e) => e.status !== "in-servizio");
@@ -197,6 +233,57 @@ export default function QueueList({ initialEntries, interactive }: Props) {
           </ol>
         </>
       )}
+
+      {/* Aggiungi cliente al volo (walk-in) */}
+      {canWalkIn &&
+        (walkInOpen ? (
+          <div className="flex flex-col gap-3 rounded-xl border border-line bg-card p-4">
+            <p className="text-sm font-semibold">Aggiungi in coda</p>
+            <input
+              type="text"
+              value={walkInName}
+              onChange={(e) => setWalkInName(e.target.value)}
+              placeholder="Nome del cliente"
+              className="rounded-lg border border-line bg-card px-3 py-2.5 text-base outline-none transition-colors focus:border-brand"
+            />
+            <select
+              value={walkInService}
+              onChange={(e) => setWalkInService(e.target.value)}
+              className="rounded-lg border border-line bg-card px-3 py-2.5 text-base outline-none transition-colors focus:border-brand"
+            >
+              {services!.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {s.name}
+                </option>
+              ))}
+            </select>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => setWalkInOpen(false)}
+                className="flex-1 rounded-full border border-line px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink"
+              >
+                Annulla
+              </button>
+              <button
+                type="button"
+                onClick={addWalkIn}
+                disabled={!walkInName.trim()}
+                className="flex-1 rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Aggiungi
+              </button>
+            </div>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setWalkInOpen(true)}
+            className="rounded-xl border border-dashed border-line bg-card p-4 text-sm font-semibold text-brand-dark transition-colors hover:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          >
+            + Aggiungi cliente al volo
+          </button>
+        ))}
     </div>
   );
 }

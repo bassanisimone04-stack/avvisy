@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AppointmentTable from "@/components/AppointmentTable";
+import StatusBreakdown from "@/components/StatusBreakdown";
 import { getAppointmentsByOrg, getQueueByOrg } from "@/lib/mock-data";
 
 const ORG_ID = "org-1"; // CAF Navigli (mock: in futuro dall'autenticazione)
@@ -48,6 +49,10 @@ export default function DashboardPage() {
           </div>
         ))}
       </div>
+
+      <section className="mt-8">
+        <StatusBreakdown appointments={today} />
+      </section>
 
       <section className="mt-8">
         <div className="mb-3 flex items-baseline justify-between">

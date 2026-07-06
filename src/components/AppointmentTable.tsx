@@ -7,6 +7,27 @@ import {
   formatDate,
 } from "@/lib/utils";
 
+const RESCHEDULE_SLOTS = [
+  "09:00",
+  "09:30",
+  "10:00",
+  "10:30",
+  "11:00",
+  "11:30",
+  "12:00",
+  "14:30",
+  "15:00",
+  "15:30",
+  "16:00",
+  "16:30",
+  "17:00",
+];
+
+type Actions = {
+  onCancel?: (id: string) => void;
+  onReschedule?: (id: string, time: string) => void;
+};
+
 function StatusBadge({ status }: { status: Appointment["status"] }) {
   return (
     <span
@@ -20,11 +41,65 @@ function StatusBadge({ status }: { status: Appointment["status"] }) {
   );
 }
 
+function RowActions({
+  apt,
+  onCancel,
+  onReschedule,
+}: { apt: Appointment } & Actions) {
+  const disabled = apt.status === "annullato" || apt.status === "completato";
+  const slots = RESCHEDULE_SLOTS.includes(apt.time)
+    ? RESCHEDULE_SLOTS
+    : [apt.time, ...RESCHEDULE_SLOTS];
+
+  return (
+    <div className="flex items-center gap-2">
+      {onReschedule && (
+        <label className="sr-only" htmlFor={`resched-${apt.id}`}>
+          Sposta orario di {apt.customerName}
+        </label>
+      )}
+      {onReschedule && (
+        <select
+          id={`resched-${apt.id}`}
+          value={apt.time}
+          disabled={disabled}
+          onChange={(e) => onReschedule(apt.id, e.target.value)}
+          className="rounded-lg border border-line bg-card px-2 py-1.5 font-mono text-sm outline-none transition-colors focus:border-brand disabled:opacity-40"
+        >
+          {slots.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
+        </select>
+      )}
+      {onCancel && (
+        <button
+          type="button"
+          disabled={disabled}
+          onClick={() => {
+            if (confirm(`Annullare l'appuntamento di ${apt.customerName}?`)) {
+              onCancel(apt.id);
+            }
+          }}
+          className="rounded-full border border-line px-3 py-1.5 text-sm font-semibold text-ink transition-colors hover:border-red-500 hover:text-red-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          Annulla
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function AppointmentTable({
   appointments,
+  onCancel,
+  onReschedule,
 }: {
   appointments: Appointment[];
-}) {
+} & Actions) {
+  const hasActions = Boolean(onCancel || onReschedule);
+
   if (appointments.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-line bg-card p-8 text-center text-sm text-muted">
@@ -46,6 +121,9 @@ export default function AppointmentTable({
               <th className="px-4 py-3 font-semibold">Servizio</th>
               <th className="px-4 py-3 font-semibold">Ticket</th>
               <th className="px-4 py-3 font-semibold">Stato</th>
+              {hasActions && (
+                <th className="px-4 py-3 text-right font-semibold">Azioni</th>
+              )}
             </tr>
           </thead>
           <tbody>
@@ -70,6 +148,17 @@ export default function AppointmentTable({
                   <td className="px-4 py-3">
                     <StatusBadge status={apt.status} />
                   </td>
+                  {hasActions && (
+                    <td className="px-4 py-3">
+                      <div className="flex justify-end">
+                        <RowActions
+                          apt={apt}
+                          onCancel={onCancel}
+                          onReschedule={onReschedule}
+                        />
+                      </div>
+                    </td>
+                  )}
                 </tr>
               );
             })}
@@ -101,6 +190,15 @@ export default function AppointmentTable({
                 <p className="mt-2 font-mono text-xs text-muted">
                   Ticket {apt.ticket}
                 </p>
+              )}
+              {hasActions && (
+                <div className="mt-3 border-t border-line pt-3">
+                  <RowActions
+                    apt={apt}
+                    onCancel={onCancel}
+                    onReschedule={onReschedule}
+                  />
+                </div>
               )}
             </li>
           );

@@ -1,10 +1,11 @@
 import QueueList from "@/components/QueueList";
-import { getQueueByOrg } from "@/lib/mock-data";
+import { getQueueByOrg, getServicesByOrg } from "@/lib/mock-data";
 
 const ORG_ID = "org-1";
 
 export default function QueuePage() {
   const queue = getQueueByOrg(ORG_ID);
+  const services = getServicesByOrg(ORG_ID);
 
   return (
     <>
@@ -20,7 +21,7 @@ export default function QueuePage() {
         vedono l&apos;aggiornamento sul telefono.
       </p>
       <div className="mt-5">
-        <QueueList initialEntries={queue} interactive />
+        <QueueList initialEntries={queue} services={services} interactive />
       </div>
     </>
   );

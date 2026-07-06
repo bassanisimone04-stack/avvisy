@@ -88,3 +88,15 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Stampa: solo il biglietto, senza intestazioni né pulsanti. */
+@media print {
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+}

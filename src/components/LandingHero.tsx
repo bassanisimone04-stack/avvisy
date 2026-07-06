@@ -8,7 +8,7 @@ export default function LandingHero() {
           Appuntamenti · Check-in · Code live
         </p>
         <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-          La fila, senza stare in fila.
+          Prenota e salta la fila.
         </h1>
         <p className="mt-4 max-w-md text-lg leading-relaxed text-muted">
           Avvisy aiuta CAF, studi e piccoli uffici a gestire appuntamenti e

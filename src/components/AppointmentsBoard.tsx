@@ -21,20 +21,31 @@ export default function AppointmentsBoard({
 }: {
   appointments: Appointment[];
 }) {
+  const [items, setItems] = useState(appointments);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("tutti");
 
+  function cancel(id: string) {
+    setItems((prev) =>
+      prev.map((a) => (a.id === id ? { ...a, status: "annullato" } : a))
+    );
+  }
+
+  function reschedule(id: string, time: string) {
+    setItems((prev) => prev.map((a) => (a.id === id ? { ...a, time } : a)));
+  }
+
   const counts = useMemo(() => {
-    const map = new Map<Filter, number>([["tutti", appointments.length]]);
-    for (const a of appointments) {
+    const map = new Map<Filter, number>([["tutti", items.length]]);
+    for (const a of items) {
       map.set(a.status, (map.get(a.status) ?? 0) + 1);
     }
     return map;
-  }, [appointments]);
+  }, [items]);
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return appointments.filter((a) => {
+    return items.filter((a) => {
       if (filter !== "tutti" && a.status !== filter) return false;
       if (!q) return true;
       return (
@@ -42,7 +53,7 @@ export default function AppointmentsBoard({
         a.customerPhone.toLowerCase().includes(q)
       );
     });
-  }, [appointments, query, filter]);
+  }, [items, query, filter]);
 
   return (
     <div className="flex flex-col gap-4">
@@ -88,12 +99,16 @@ export default function AppointmentsBoard({
         </div>
       </div>
 
-      {visible.length === 0 && appointments.length > 0 ? (
+      {visible.length === 0 && items.length > 0 ? (
         <div className="rounded-xl border border-dashed border-line bg-card p-8 text-center text-sm text-muted">
           Nessun appuntamento corrisponde alla ricerca.
         </div>
       ) : (
-        <AppointmentTable appointments={visible} />
+        <AppointmentTable
+          appointments={visible}
+          onCancel={cancel}
+          onReschedule={reschedule}
+        />
       )}
     </div>
   );
