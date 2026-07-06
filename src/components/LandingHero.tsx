@@ -4,13 +4,15 @@ export default function LandingHero() {
   return (
     <section className="mx-auto grid max-w-5xl items-center gap-10 px-4 pb-14 pt-12 sm:pt-16 md:grid-cols-[1.1fr_0.9fr]">
       <div>
-        <p className="mb-3 inline-block rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-dark">
+        <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-card px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-dark shadow-soft">
+          <span className="h-1.5 w-1.5 rounded-full bg-brand" />
           Appuntamenti · Check-in · Code live
         </p>
-        <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-          Prenota e salta la fila.
+        <h1 className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
+          Prenota e{" "}
+          <span className="text-brand">salta la fila.</span>
         </h1>
-        <p className="mt-4 max-w-md text-lg leading-relaxed text-muted">
+        <p className="mt-5 max-w-md text-lg leading-relaxed text-muted">
           Avvisy aiuta CAF, studi e piccoli uffici a gestire appuntamenti e
           code. Chi prenota sceglie l&apos;orario, fa il check-in dal telefono
           e vede in tempo reale quando tocca a lui. Prenotare è gratis.
@@ -32,10 +34,19 @@ export default function LandingHero() {
       </div>
 
       {/* Il biglietto: elemento firma di Avvisy */}
-      <div className="ticket mx-auto w-full max-w-xs p-6 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-widest text-muted">
-          CAF Navigli · Milano
-        </p>
+      <div className="relative mx-auto w-full max-w-xs">
+        <div
+          aria-hidden
+          className="absolute -inset-6 -z-10 rounded-full opacity-70 blur-2xl"
+          style={{
+            background:
+              "radial-gradient(circle at 50% 40%, rgba(14,122,104,0.20), rgba(201,118,10,0.14) 55%, transparent 75%)",
+          }}
+        />
+        <div className="ticket rotate-1 p-6 transition-transform duration-300 hover:rotate-0">
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted">
+            CAF Navigli · Milano
+          </p>
         <p className="mt-4 text-xs text-muted">Ora in servizio</p>
         <p className="font-mono text-6xl font-bold tracking-tight text-signal">
           A-041
@@ -50,6 +61,7 @@ export default function LandingHero() {
             <p className="text-xs text-muted">Attesa stimata</p>
             <p className="font-mono text-2xl font-bold">~25&apos;</p>
           </div>
+        </div>
         </div>
       </div>
     </section>

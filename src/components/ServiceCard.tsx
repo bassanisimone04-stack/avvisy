@@ -10,7 +10,7 @@ type Props = {
 
 export default function ServiceCard({ service, orgSlug, hideAction }: Props) {
   return (
-    <div className="flex flex-col rounded-xl border border-line bg-card p-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+    <div className="flex flex-col rounded-2xl border border-line bg-card p-5 shadow-soft sm:flex-row sm:items-center sm:justify-between sm:gap-6">
       <div>
         <h3 className="font-display text-lg font-bold">{service.name}</h3>
         <p className="mt-1 text-base leading-relaxed text-muted">

@@ -5,7 +5,7 @@ export default function OrganizationCard({ org }: { org: Organization }) {
   return (
     <Link
       href={`/s/${org.slug}`}
-      className="group flex flex-col rounded-xl border border-line bg-card p-5 transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+      className="group flex flex-col rounded-2xl border border-line bg-card p-5 shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lift focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
     >
       <div className="flex items-start justify-between gap-3">
         <div>

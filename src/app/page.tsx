@@ -32,7 +32,7 @@ export default function HomePage() {
           {howItWorks.map((item) => (
             <div
               key={item.title}
-              className="rounded-xl border border-line bg-card p-5"
+              className="rounded-2xl border border-line bg-card p-5 shadow-soft"
             >
               <h3 className="font-display text-base font-bold">
                 {item.title}

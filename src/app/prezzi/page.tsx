@@ -96,8 +96,8 @@ export default function PrezziPage() {
               className={cn(
                 "flex flex-col rounded-2xl border bg-card p-6",
                 plan.highlight
-                  ? "border-brand shadow-md ring-1 ring-brand"
-                  : "border-line"
+                  ? "border-brand shadow-lift ring-1 ring-brand"
+                  : "border-line shadow-soft"
               )}
             >
               {plan.highlight && (

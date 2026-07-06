@@ -1,24 +1,30 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Palette Avvisy */
-  --color-ink: #172329; /* testo principale, blu-ardesia profondo */
-  --color-canvas: #f4f6f5; /* sfondo pagina */
-  --color-card: #ffffff;
-  --color-line: #d3dbda; /* bordi card: contrasto sufficiente a distinguerle */
+  /* Palette Avvisy — base perlata calda */
+  --color-ink: #1c2426; /* testo principale, quasi-nero caldo */
+  --color-canvas: #f3ede1; /* sfondo pagina: perla */
+  --color-card: #fffdf8; /* bianco caldo */
+  --color-line: #e7ddca; /* bordi card, tono sabbia */
   --color-brand: #0e7a68; /* teal: azioni primarie */
   --color-brand-dark: #0b5c4f;
-  --color-brand-soft: #e3f1ee;
+  --color-brand-soft: #e3f0ec;
   --color-signal: #c9760a; /* ambra: "ora in servizio", ticket */
-  --color-signal-soft: #fdf3e3;
+  --color-signal-soft: #fbf1de;
   --color-logo: #2b4cff; /* blu elettrico del logo Avvisy */
-  --color-muted: #495459; /* testo secondario: contrasto AA anche a 70 anni */
+  --color-muted: #5b5344; /* testo secondario: neutro caldo, contrasto AA */
 
   /* Tipografia */
   --font-display: var(--font-bricolage), system-ui, sans-serif;
   --font-sans: var(--font-instrument), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
   --font-script: var(--font-dancing), cursive;
+
+  /* Ombre morbide per dare profondità */
+  --shadow-soft: 0 1px 2px rgba(28, 36, 38, 0.04),
+    0 8px 24px -14px rgba(28, 36, 38, 0.18);
+  --shadow-lift: 0 2px 4px rgba(28, 36, 38, 0.05),
+    0 18px 40px -20px rgba(28, 36, 38, 0.28);
 }
 
 /* Base tipografica comoda da leggere a qualsiasi età (≈17px). */
@@ -28,6 +34,17 @@ html {
 
 body {
   background-color: var(--color-canvas);
+  background-image: radial-gradient(
+      1200px 600px at 50% -10%,
+      rgba(255, 253, 246, 0.9),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 100% 0%,
+      rgba(227, 240, 236, 0.5),
+      transparent 55%
+    );
+  background-attachment: fixed;
   color: var(--color-ink);
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -39,7 +56,8 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
 }
 
 /* Focus sempre ben visibile: utile con tastiera e per chi ci vede poco. */
@@ -54,7 +72,8 @@ h3 {
   position: relative;
   background: var(--color-card);
   border: 1px solid var(--color-line);
-  border-radius: 0.75rem;
+  border-radius: 0.85rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .ticket::before,
