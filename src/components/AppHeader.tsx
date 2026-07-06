@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { useState } from "react";
 import Logo from "@/components/Logo";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Strutture" },
   { href: "/assistente", label: "Assistente" },
   { href: "/prezzi", label: "Prezzi" },
-  { href: "/dashboard", label: "Per le strutture" },
+  { href: "/per-le-strutture", label: "Per le strutture" },
 ];
 
 export default function AppHeader() {
@@ -37,19 +38,23 @@ export default function AppHeader() {
           >
             Prenota ora
           </Link>
+          <ThemeToggle />
         </nav>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label={open ? "Chiudi menu" : "Apri menu"}
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-line sm:hidden"
-        >
-          <span aria-hidden className="text-lg leading-none">
-            {open ? "✕" : "☰"}
-          </span>
-        </button>
+        <div className="flex items-center gap-2 sm:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label={open ? "Chiudi menu" : "Apri menu"}
+            className="flex h-11 w-11 items-center justify-center rounded-md border border-line"
+          >
+            <span aria-hidden className="text-lg leading-none">
+              {open ? "✕" : "☰"}
+            </span>
+          </button>
+        </div>
       </div>
 
       {open && (

@@ -130,7 +130,10 @@ export default function AppointmentTable({
             {appointments.map((apt) => {
               const service = getServiceById(apt.serviceId);
               return (
-                <tr key={apt.id} className="border-b border-line last:border-0">
+                <tr
+                  key={apt.id}
+                  className="border-b border-line transition-colors last:border-0 hover:bg-canvas"
+                >
                   <td className="whitespace-nowrap px-4 py-3 font-mono">
                     <span className="capitalize">{formatDate(apt.date)}</span>{" "}
                     · {apt.time}

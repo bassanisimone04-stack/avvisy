@@ -1,18 +1,48 @@
 @import "tailwindcss";
 
+/* Palette perlata calda (tema chiaro). */
+:root {
+  --p-ink: #1c2426;
+  --p-canvas: #f3ede1;
+  --p-card: #fffdf8;
+  --p-line: #e7ddca;
+  --p-brand: #0e7a68;
+  --p-brand-dark: #0b5c4f;
+  --p-brand-soft: #e3f0ec;
+  --p-signal: #c9760a;
+  --p-signal-soft: #fbf1de;
+  --p-logo: #2b4cff;
+  --p-muted: #5b5344;
+}
+
+/* Tema scuro: stessa identità, tono notturno caldo. */
+[data-theme="dark"] {
+  --p-ink: #f0e9db;
+  --p-canvas: #15110b;
+  --p-card: #211c14;
+  --p-line: #3a3222;
+  --p-brand: #12907a;
+  --p-brand-dark: #3bb49b;
+  --p-brand-soft: #16332c;
+  --p-signal: #e0912b;
+  --p-signal-soft: #33240f;
+  --p-logo: #7d92ff;
+  --p-muted: #b7ad98;
+}
+
 @theme inline {
-  /* Palette Avvisy — base perlata calda */
-  --color-ink: #1c2426; /* testo principale, quasi-nero caldo */
-  --color-canvas: #f3ede1; /* sfondo pagina: perla */
-  --color-card: #fffdf8; /* bianco caldo */
-  --color-line: #e7ddca; /* bordi card, tono sabbia */
-  --color-brand: #0e7a68; /* teal: azioni primarie */
-  --color-brand-dark: #0b5c4f;
-  --color-brand-soft: #e3f0ec;
-  --color-signal: #c9760a; /* ambra: "ora in servizio", ticket */
-  --color-signal-soft: #fbf1de;
-  --color-logo: #2b4cff; /* blu elettrico del logo Avvisy */
-  --color-muted: #5b5344; /* testo secondario: neutro caldo, contrasto AA */
+  /* Colori mappati alle variabili di tema (commutabili a runtime) */
+  --color-ink: var(--p-ink);
+  --color-canvas: var(--p-canvas);
+  --color-card: var(--p-card);
+  --color-line: var(--p-line);
+  --color-brand: var(--p-brand);
+  --color-brand-dark: var(--p-brand-dark);
+  --color-brand-soft: var(--p-brand-soft);
+  --color-signal: var(--p-signal);
+  --color-signal-soft: var(--p-signal-soft);
+  --color-logo: var(--p-logo);
+  --color-muted: var(--p-muted);
 
   /* Tipografia */
   --font-display: var(--font-bricolage), system-ui, sans-serif;
@@ -21,10 +51,10 @@
   --font-script: var(--font-dancing), cursive;
 
   /* Ombre morbide per dare profondità */
-  --shadow-soft: 0 1px 2px rgba(28, 36, 38, 0.04),
-    0 8px 24px -14px rgba(28, 36, 38, 0.18);
-  --shadow-lift: 0 2px 4px rgba(28, 36, 38, 0.05),
-    0 18px 40px -20px rgba(28, 36, 38, 0.28);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.05),
+    0 8px 24px -14px rgba(0, 0, 0, 0.22);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.06),
+    0 18px 40px -20px rgba(0, 0, 0, 0.34);
 }
 
 /* Base tipografica comoda da leggere a qualsiasi età (≈17px). */
@@ -50,6 +80,19 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+[data-theme="dark"] body {
+  background-image: radial-gradient(
+      1200px 600px at 50% -10%,
+      rgba(59, 180, 155, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 100% 0%,
+      rgba(125, 146, 255, 0.06),
+      transparent 55%
+    );
 }
 
 h1,

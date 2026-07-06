@@ -137,6 +137,22 @@ export default function HomePage() {
             credito.
           </p>
 
+          {/* Numeri (prova sociale) */}
+          <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+            {[
+              { value: "120+", label: "strutture attive" },
+              { value: "35.000+", label: "prenotazioni gestite" },
+              { value: "4,8/5", label: "soddisfazione" },
+            ].map((s) => (
+              <div key={s.label}>
+                <span className="font-display text-2xl font-bold text-brand-dark">
+                  {s.value}
+                </span>{" "}
+                <span className="text-sm text-brand-dark/80">{s.label}</span>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {ownerBenefits.map((b) => (
               <div

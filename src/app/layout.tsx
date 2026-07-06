@@ -89,6 +89,12 @@ export default function RootLayout({
       className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable} ${dancing.variable}`}
     >
       <body className="min-h-dvh">
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('avvisy_theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();",
+          }}
+        />
         {children}
         <CookieBanner />
         <ServiceWorkerRegister />

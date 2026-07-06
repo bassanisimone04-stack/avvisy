@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut } from "@/app/login/actions";
 import Logo from "@/components/Logo";
+import ThemeToggle from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -53,16 +54,19 @@ export default function DashboardShell({
             </Link>
           ))}
         </nav>
-        <div className="border-t border-line p-4">
-          <p className="text-xs text-muted">CAF Navigli · Milano</p>
-          <form action={signOut} className="mt-2">
-            <button
-              type="submit"
-              className="text-sm font-semibold text-muted transition-colors hover:text-ink"
-            >
-              Esci
-            </button>
-          </form>
+        <div className="flex items-center justify-between gap-2 border-t border-line p-4">
+          <div>
+            <p className="text-xs text-muted">CAF Navigli · Milano</p>
+            <form action={signOut} className="mt-2">
+              <button
+                type="submit"
+                className="text-sm font-semibold text-muted transition-colors hover:text-ink"
+              >
+                Esci
+              </button>
+            </form>
+          </div>
+          <ThemeToggle />
         </div>
       </aside>
 
@@ -73,14 +77,17 @@ export default function DashboardShell({
             <Link href="/" className="text-base">
               <Logo />
             </Link>
-            <form action={signOut}>
-              <button
-                type="submit"
-                className="text-sm font-semibold text-muted transition-colors hover:text-ink"
-              >
-                Esci
-              </button>
-            </form>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <form action={signOut}>
+                <button
+                  type="submit"
+                  className="text-sm font-semibold text-muted transition-colors hover:text-ink"
+                >
+                  Esci
+                </button>
+              </form>
+            </div>
           </div>
           <nav className="flex gap-1 overflow-x-auto px-2 pb-2">
             {navItems.map((item) => (
