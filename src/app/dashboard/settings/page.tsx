@@ -18,7 +18,7 @@ function Toggle({
   description: string;
 }) {
   return (
-    <div className="flex items-center justify-between gap-4 rounded-xl border border-line bg-card p-4">
+    <div className="flex items-center justify-between gap-4 rounded-2xl border border-line bg-card p-4 shadow-soft">
       <div>
         <p className="text-sm font-semibold">{label}</p>
         <p className="mt-0.5 text-sm text-muted">{description}</p>
@@ -75,7 +75,7 @@ export default function SettingsPage() {
 
       <div className="mt-5 grid gap-6 lg:grid-cols-[1fr_320px]">
         <div className="flex flex-col gap-5">
-        <div className="flex flex-col gap-4 rounded-xl border border-line bg-card p-5">
+        <div className="flex flex-col gap-4 rounded-2xl border border-line bg-card p-5 shadow-soft">
           <label className="flex flex-col gap-1.5">
             <span className="text-sm font-medium">Nome della struttura</span>
             <input
@@ -142,7 +142,7 @@ export default function SettingsPage() {
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">
             Anteprima pagina pubblica
           </p>
-          <div className="rounded-xl border border-line bg-card p-5">
+          <div className="rounded-2xl border border-line bg-card p-5 shadow-soft">
             <p className="text-xs font-semibold uppercase tracking-wide text-muted">
               {org.category}
             </p>

@@ -30,7 +30,7 @@ export default function StatusBreakdown({
   const max = Math.max(1, ...counts.map((c) => c.n));
 
   return (
-    <div className="rounded-xl border border-line bg-card p-5">
+    <div className="rounded-2xl border border-line bg-card p-5 shadow-soft">
       <h2 className="text-lg font-bold">Appuntamenti di oggi per stato</h2>
       <dl className="mt-4 flex flex-col gap-3">
         {counts.map(({ status, n }) => (

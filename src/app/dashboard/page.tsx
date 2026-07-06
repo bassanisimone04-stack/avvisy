@@ -34,7 +34,7 @@ export default function DashboardPage() {
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="rounded-xl border border-line bg-card p-4"
+            className="rounded-2xl border border-line bg-card p-4 shadow-soft"
           >
             <p
               className={
@@ -67,7 +67,7 @@ export default function DashboardPage() {
         <AppointmentTable appointments={today} />
       </section>
 
-      <section className="mt-8 rounded-xl border border-line bg-card p-5">
+      <section className="mt-8 rounded-2xl border border-line bg-card p-5 shadow-soft">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-lg font-bold">Coda live</h2>

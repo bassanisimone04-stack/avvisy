@@ -121,7 +121,7 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
   }
 
   return (
-    <div className="rounded-xl border border-line bg-card p-5 sm:p-6">
+    <div className="rounded-2xl border border-line bg-card p-5 shadow-soft sm:p-6">
       {/* Indicatore step */}
       <ol className="mb-6 flex items-center gap-2">
         {steps.map((label, i) => (

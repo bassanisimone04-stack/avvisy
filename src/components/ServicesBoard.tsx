@@ -185,7 +185,7 @@ export default function ServicesBoard({
           {services.map((s) => (
             <div
               key={s.id}
-              className="flex flex-col gap-3 rounded-xl border border-line bg-card p-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+              className="flex flex-col gap-3 rounded-2xl border border-line bg-card p-5 shadow-soft sm:flex-row sm:items-center sm:justify-between sm:gap-6"
             >
               <div className="min-w-0">
                 <h3 className="font-display text-lg font-bold">{s.name}</h3>

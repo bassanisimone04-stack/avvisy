@@ -116,7 +116,7 @@ export default function QueueList({
         ].map((stat) => (
           <div
             key={stat.label}
-            className="rounded-xl border border-line bg-card p-3"
+            className="rounded-2xl border border-line bg-card p-3 shadow-soft"
           >
             <dt className="text-xs font-medium text-muted">{stat.label}</dt>
             <dd
@@ -204,7 +204,7 @@ export default function QueueList({
             {waiting.map((entry, i) => (
               <li
                 key={entry.id}
-                className="flex items-center gap-4 rounded-xl border border-line bg-card p-4"
+                className="flex items-center gap-4 rounded-2xl border border-line bg-card p-4 shadow-soft"
               >
                 <span className="w-16 shrink-0 font-mono text-xl font-bold">
                   {entry.ticket}
@@ -237,7 +237,7 @@ export default function QueueList({
       {/* Aggiungi cliente al volo (walk-in) */}
       {canWalkIn &&
         (walkInOpen ? (
-          <div className="flex flex-col gap-3 rounded-xl border border-line bg-card p-4">
+          <div className="flex flex-col gap-3 rounded-2xl border border-line bg-card p-4 shadow-soft">
             <p className="text-sm font-semibold">Aggiungi in coda</p>
             <input
               type="text"

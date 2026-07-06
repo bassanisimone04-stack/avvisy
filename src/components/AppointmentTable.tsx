@@ -112,7 +112,7 @@ export default function AppointmentTable({
   return (
     <>
       {/* Tabella (desktop) */}
-      <div className="hidden overflow-hidden rounded-xl border border-line bg-card md:block">
+      <div className="hidden overflow-hidden rounded-2xl border border-line bg-card shadow-soft md:block">
         <table className="w-full text-left text-sm">
           <thead className="border-b border-line bg-canvas text-xs uppercase tracking-wide text-muted">
             <tr>
@@ -173,7 +173,7 @@ export default function AppointmentTable({
           return (
             <li
               key={apt.id}
-              className="rounded-xl border border-line bg-card p-4"
+              className="rounded-2xl border border-line bg-card p-4 shadow-soft"
             >
               <div className="flex items-start justify-between gap-3">
                 <div>

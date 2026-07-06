@@ -58,7 +58,7 @@ export default function AiutoPage() {
           {faqs.map((f) => (
             <details
               key={f.q}
-              className="group rounded-xl border border-line bg-card p-4"
+              className="group rounded-2xl border border-line bg-card p-4 shadow-soft"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-base font-semibold">
                 {f.q}

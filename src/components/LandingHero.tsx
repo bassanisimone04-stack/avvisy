@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function LandingHero() {
   return (
     <section className="mx-auto grid max-w-5xl items-center gap-10 px-4 pb-14 pt-12 sm:pt-16 md:grid-cols-[1.1fr_0.9fr]">
-      <div>
+      <div className="rise">
         <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-card px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-dark shadow-soft">
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />
           Appuntamenti · Check-in · Code live
@@ -34,7 +34,7 @@ export default function LandingHero() {
       </div>
 
       {/* Il biglietto: elemento firma di Avvisy */}
-      <div className="relative mx-auto w-full max-w-xs">
+      <div className="rise-2 relative mx-auto w-full max-w-xs">
         <div
           aria-hidden
           className="absolute -inset-6 -z-10 rounded-full opacity-70 blur-2xl"

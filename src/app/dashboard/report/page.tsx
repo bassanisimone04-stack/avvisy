@@ -35,7 +35,7 @@ export default function ReportPage() {
         {stats.map((s) => (
           <div
             key={s.label}
-            className="rounded-xl border border-line bg-card p-4"
+            className="rounded-2xl border border-line bg-card p-4 shadow-soft"
           >
             <p className="font-display text-2xl font-bold">{s.value}</p>
             <p className="mt-1 text-xs text-muted">{s.label}</p>
@@ -43,7 +43,7 @@ export default function ReportPage() {
         ))}
       </div>
 
-      <section className="mt-8 rounded-xl border border-line bg-card p-5">
+      <section className="mt-8 rounded-2xl border border-line bg-card p-5 shadow-soft">
         <h2 className="text-lg font-bold">Appuntamenti per giorno</h2>
         <div className="mt-5 flex items-end gap-4" style={{ height: 180 }}>
           {days.map(([date, n]) => (

@@ -82,7 +82,7 @@ export default function ServiceAssistant({
                 <div
                   key={s.id}
                   className={cn(
-                    "flex flex-col gap-3 rounded-xl border border-line bg-card p-5",
+                    "flex flex-col gap-3 rounded-2xl border border-line bg-card p-5 shadow-soft",
                     "sm:flex-row sm:items-center sm:justify-between sm:gap-6"
                   )}
                 >
