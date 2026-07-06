@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
       "Prenota, fai il check-in e segui la coda in tempo reale.",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
+    background_color: "#f7f4ec",
     theme_color: "#0e7a68",
     lang: "it",
     icons: [

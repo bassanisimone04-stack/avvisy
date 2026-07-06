@@ -1,15 +1,16 @@
 import { cn } from "@/lib/utils";
 
-/** Logotipo Avvisy: corsivo, blu. La dimensione si eredita dal contenitore. */
+/** Logotipo Avvisy: corsivo (script), blu elettrico. La dimensione si
+ * eredita dal contenitore; lo script rende bene un filo più grande. */
 export default function Logo({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "font-display font-bold italic tracking-tight text-logo",
+        "font-script font-bold leading-none tracking-tight text-logo",
         className
       )}
     >
-      Avvisy<span className="text-logo">.</span>
+      Avvisy
     </span>
   );
 }

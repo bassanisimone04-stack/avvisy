@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import {
   Bricolage_Grotesque,
+  Dancing_Script,
   Instrument_Sans,
   JetBrains_Mono,
 } from "next/font/google";
@@ -20,6 +21,12 @@ const instrument = Instrument_Sans({
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
+});
+
+const dancing = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-dancing",
 });
 
 export const metadata: Metadata = {
@@ -47,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="it"
-      className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable}`}
+      className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable} ${dancing.variable}`}
     >
       <body className="min-h-dvh">
         {children}

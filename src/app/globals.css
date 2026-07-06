@@ -11,13 +11,14 @@
   --color-brand-soft: #e3f1ee;
   --color-signal: #c9760a; /* ambra: "ora in servizio", ticket */
   --color-signal-soft: #fdf3e3;
-  --color-logo: #1d4ed8; /* blu del logo Avvisy */
+  --color-logo: #2b4cff; /* blu elettrico del logo Avvisy */
   --color-muted: #495459; /* testo secondario: contrasto AA anche a 70 anni */
 
   /* Tipografia */
   --font-display: var(--font-bricolage), system-ui, sans-serif;
   --font-sans: var(--font-instrument), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-script: var(--font-dancing), cursive;
 }
 
 /* Base tipografica comoda da leggere a qualsiasi età (≈17px). */
