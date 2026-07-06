@@ -30,10 +30,28 @@ const dancing = Dancing_Script({
   variable: "--font-dancing",
 });
 
+const SITE_URL = "https://avvisy.app";
+const TITLE = "Avvisy — Appuntamenti e code senza attese";
+const DESCRIPTION =
+  "Avvisy aiuta piccoli uffici e studi a gestire appuntamenti, check-in e code live. Per i cittadini prenotare è sempre gratis.";
+
 export const metadata: Metadata = {
-  title: "Avvisy — Appuntamenti e code senza attese",
-  description:
-    "Avvisy aiuta piccoli uffici e studi a gestire appuntamenti, check-in e code live. Prenotare è gratis.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s · Avvisy",
+  },
+  description: DESCRIPTION,
+  applicationName: "Avvisy",
+  keywords: [
+    "appuntamenti",
+    "prenotazioni",
+    "coda",
+    "eliminacode",
+    "check-in",
+    "CAF",
+    "studio medico",
+  ],
   icons: {
     icon: "/icon-192.png",
     apple: "/apple-icon.png",
@@ -42,6 +60,19 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "default",
     title: "Avvisy",
+  },
+  openGraph: {
+    type: "website",
+    locale: "it_IT",
+    url: SITE_URL,
+    siteName: "Avvisy",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
   },
 };
 
