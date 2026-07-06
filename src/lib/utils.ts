@@ -13,6 +13,13 @@ export function formatDate(iso: string) {
   });
 }
 
+/** Numero di coda assegnato al check-in, es. "A-072". Sostituibile con
+ * la numerazione lato server (Supabase) in seguito. */
+export function generateTicket() {
+  const n = Math.floor(Math.random() * 900) + 46; // oltre i biglietti demo (…A-044)
+  return `A-${String(n).padStart(3, "0")}`;
+}
+
 export const appointmentStatusLabel: Record<AppointmentStatus, string> = {
   confermato: "Confermato",
   "check-in": "Check-in",

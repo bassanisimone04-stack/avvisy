@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { Appointment, Organization, Service } from "@/lib/types";
-import { formatDate } from "@/lib/utils";
+import { formatDate, generateTicket } from "@/lib/utils";
 
 type Props = {
   appointment: Appointment;
@@ -11,8 +11,12 @@ type Props = {
 };
 
 export default function CheckinTicket({ appointment, org, service }: Props) {
-  const [checkedIn, setCheckedIn] = useState(appointment.ticket !== null);
-  const ticket = appointment.ticket ?? "A-045"; // numero mock assegnato al check-in
+  const [ticket, setTicket] = useState(appointment.ticket);
+  const checkedIn = ticket !== null;
+
+  function doCheckin() {
+    setTicket((current) => current ?? generateTicket());
+  }
 
   return (
     <div className="ticket mx-auto max-w-sm p-6 text-center">
@@ -54,7 +58,7 @@ export default function CheckinTicket({ appointment, org, service }: Props) {
           </p>
           <button
             type="button"
-            onClick={() => setCheckedIn(true)}
+            onClick={doCheckin}
             className="mt-5 w-full rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Fai il check-in

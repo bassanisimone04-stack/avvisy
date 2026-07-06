@@ -39,6 +39,10 @@ function nextDays(count: number) {
 
 export default function BookingForm({ org, services, defaultServiceId }: Props) {
   const days = useMemo(() => nextDays(6), []);
+  const bookingId = useMemo(
+    () => `apt-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`,
+    []
+  );
 
   const [step, setStep] = useState(0);
   const [serviceId, setServiceId] = useState(
@@ -59,6 +63,17 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
     (step === 1 && date !== "" && time !== "") ||
     (step === 2 && name.trim() !== "" && phone.trim() !== "");
 
+  const checkinHref =
+    service &&
+    `/checkin/${bookingId}?${new URLSearchParams({
+      org: org.slug,
+      service: service.id,
+      name: name.trim(),
+      phone: phone.trim(),
+      date,
+      time,
+    }).toString()}`;
+
   if (confirmed && service) {
     return (
       <div className="ticket mx-auto max-w-sm p-6 text-center">
@@ -76,10 +91,10 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
           fai il check-in per ricevere il tuo numero.
         </p>
         <Link
-          href="/checkin/demo-appointment"
+          href={checkinHref || "/checkin/demo-appointment"}
           className="mt-5 block rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
         >
-          Vai al check-in (demo)
+          Vai al check-in
         </Link>
       </div>
     );
