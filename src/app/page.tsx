@@ -61,6 +61,12 @@ export default function HomePage() {
           <p>Appuntamenti, check-in e code live per piccoli uffici.</p>
           <span className="flex gap-4">
             <Link
+              href="/prezzi"
+              className="font-medium text-brand-dark hover:underline"
+            >
+              Prezzi
+            </Link>
+            <Link
               href="/aiuto"
               className="font-medium text-brand-dark hover:underline"
             >
