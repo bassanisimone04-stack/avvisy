@@ -8,6 +8,7 @@ export type Organization = {
   description: string;
   openingHours: string;
   queueOpen: boolean;
+  phone?: string;
   lat?: number;
   lng?: number;
 };

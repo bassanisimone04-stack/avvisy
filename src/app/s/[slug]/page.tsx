@@ -5,6 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import QueueList from "@/components/QueueList";
 import NowServing from "@/components/NowServing";
 import OpenStatusBadge from "@/components/OpenStatusBadge";
+import OrgQuickActions from "@/components/OrgQuickActions";
 import {
   getOrganizationBySlug,
   getQueueByOrg,
@@ -41,6 +42,9 @@ export default async function OrganizationPage({
         </p>
         <div className="mt-3">
           <OpenStatusBadge openingHours={org.openingHours} />
+        </div>
+        <div className="mt-4">
+          <OrgQuickActions org={org} />
         </div>
 
         <div className="mt-6">

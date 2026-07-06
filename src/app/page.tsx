@@ -59,12 +59,20 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-2 px-4 py-8 text-center text-sm text-muted sm:flex-row sm:justify-between">
           <Logo />
           <p>Appuntamenti, check-in e code live per piccoli uffici.</p>
-          <Link
-            href="/privacy"
-            className="font-medium text-brand-dark hover:underline"
-          >
-            Privacy
-          </Link>
+          <span className="flex gap-4">
+            <Link
+              href="/aiuto"
+              className="font-medium text-brand-dark hover:underline"
+            >
+              Aiuto
+            </Link>
+            <Link
+              href="/privacy"
+              className="font-medium text-brand-dark hover:underline"
+            >
+              Privacy
+            </Link>
+          </span>
         </div>
       </footer>
     </>
