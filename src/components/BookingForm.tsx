@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Organization, Service } from "@/lib/types";
 import { downloadICS } from "@/lib/calendar";
+import { nextOpenDays, slotsForDate } from "@/lib/hours";
 import { cn, formatDate } from "@/lib/utils";
 
 type Props = {
@@ -25,32 +26,12 @@ function isValidPhone(phone: string) {
   return /^\+?[\d\s]+$/.test(phone.trim()) && digits.length >= 8;
 }
 
-const timeSlots = [
-  "09:00",
-  "09:30",
-  "10:00",
-  "10:30",
-  "11:00",
-  "11:30",
-  "14:30",
-  "15:00",
-  "15:30",
-  "16:00",
-];
-
-function nextDays(count: number) {
-  const days: string[] = [];
-  const d = new Date();
-  while (days.length < count) {
-    d.setDate(d.getDate() + 1);
-    const weekday = d.getDay();
-    if (weekday !== 0) days.push(d.toISOString().slice(0, 10)); // salta la domenica
-  }
-  return days;
-}
-
 export default function BookingForm({ org, services, defaultServiceId }: Props) {
-  const days = useMemo(() => nextDays(6), []);
+  // Giorni prenotabili: solo quelli in cui la struttura è aperta.
+  const days = useMemo(
+    () => nextOpenDays(org.openingHours, 6),
+    [org.openingHours]
+  );
   const bookingId = useMemo(
     () => `apt-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`,
     []
@@ -70,6 +51,15 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
   const [confirmed, setConfirmed] = useState(false);
 
   const service = services.find((s) => s.id === serviceId) ?? null;
+
+  // Orari prenotabili generati dagli orari di apertura e dalla durata del servizio.
+  const slots = useMemo(
+    () =>
+      date && service
+        ? slotsForDate(org.openingHours, date, service.durationMin)
+        : [],
+    [date, service, org.openingHours]
+  );
 
   const canContinue =
     (step === 0 && serviceId !== "") ||
@@ -200,7 +190,10 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
               <button
                 key={d}
                 type="button"
-                onClick={() => setDate(d)}
+                onClick={() => {
+                  setDate(d);
+                  setTime("");
+                }}
                 className={cn(
                   "shrink-0 rounded-lg border px-3 py-2 text-sm font-medium capitalize transition-colors",
                   date === d
@@ -212,28 +205,35 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
               </button>
             ))}
           </div>
-          <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-5">
-            {timeSlots.map((t) => (
-              <button
-                key={t}
-                type="button"
-                onClick={() => setTime(t)}
-                disabled={!date}
-                className={cn(
-                  "rounded-lg border py-2 font-mono text-sm transition-colors disabled:opacity-40",
-                  time === t
-                    ? "border-brand bg-brand-soft font-bold text-brand-dark"
-                    : "border-line hover:border-muted"
-                )}
-              >
-                {t}
-              </button>
-            ))}
-          </div>
-          {!date && (
+          {date && (
+            <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-5">
+              {slots.map((t) => (
+                <button
+                  key={t}
+                  type="button"
+                  onClick={() => setTime(t)}
+                  className={cn(
+                    "rounded-lg border py-2 font-mono text-sm transition-colors",
+                    time === t
+                      ? "border-brand bg-brand-soft font-bold text-brand-dark"
+                      : "border-line hover:border-muted"
+                  )}
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          )}
+          {!date ? (
             <p className="mt-3 text-xs text-muted">
-              Seleziona prima una data per scegliere l&apos;orario.
+              Seleziona prima una data per vedere gli orari disponibili.
             </p>
+          ) : (
+            slots.length === 0 && (
+              <p className="mt-3 text-xs text-muted">
+                Nessun orario disponibile in questa giornata.
+              </p>
+            )
           )}
         </div>
       )}

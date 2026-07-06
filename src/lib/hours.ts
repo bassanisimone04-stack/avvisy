@@ -36,21 +36,68 @@ function fmt(min: number): string {
   ).padStart(2, "0")}`;
 }
 
-export type OpenStatus = { open: boolean; label: string };
-
-export function computeOpenStatus(
-  openingHours: string,
-  now: Date
-): OpenStatus | null {
+/** Interpreta la stringa orari in { giorni attivi, fasce orarie in minuti }. */
+function parse(openingHours: string): {
+  days: number[];
+  ranges: [number, number][];
+} {
   const m = openingHours.match(/^\s*(\S+)\s+(.+)$/);
-  if (!m) return null;
-
+  if (!m) return { days: [], ranges: [] };
   const days = parseDays(m[1]);
   const ranges = m[2]
     .split("/")
     .map((r) => r.split(/[–-]/))
     .filter((p) => p.length === 2)
     .map((p) => [toMin(p[0]), toMin(p[1])] as [number, number]);
+  return { days, ranges };
+}
+
+/** La struttura è aperta in un dato giorno della settimana (0=Dom … 6=Sab)? */
+export function isOpenOnWeekday(openingHours: string, weekday: number): boolean {
+  return parse(openingHours).days.includes(weekday);
+}
+
+/** Prossimi `count` giorni (date ISO) in cui la struttura è aperta. */
+export function nextOpenDays(openingHours: string, count: number): string[] {
+  const out: string[] = [];
+  const d = new Date();
+  let guard = 0;
+  while (out.length < count && guard < 60) {
+    d.setDate(d.getDate() + 1);
+    if (isOpenOnWeekday(openingHours, d.getDay())) {
+      out.push(d.toISOString().slice(0, 10));
+    }
+    guard++;
+  }
+  return out;
+}
+
+/** Slot prenotabili (HH:mm) per un giorno, generati dalle fasce di apertura
+ * a passo pari alla durata del servizio, in modo che il servizio ci stia. */
+export function slotsForDate(
+  openingHours: string,
+  isoDate: string,
+  durationMin: number
+): string[] {
+  const { days, ranges } = parse(openingHours);
+  const weekday = new Date(`${isoDate}T00:00:00`).getDay();
+  if (!days.includes(weekday)) return [];
+  const step = Math.max(5, durationMin);
+  const slots: string[] = [];
+  for (const [open, close] of ranges) {
+    for (let t = open; t + step <= close; t += step) slots.push(fmt(t));
+  }
+  return slots;
+}
+
+export type OpenStatus = { open: boolean; label: string };
+
+export function computeOpenStatus(
+  openingHours: string,
+  now: Date
+): OpenStatus | null {
+  const { days, ranges } = parse(openingHours);
+  if (days.length === 0) return null;
 
   const cur = now.getHours() * 60 + now.getMinutes();
 
