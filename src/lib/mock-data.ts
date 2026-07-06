@@ -17,6 +17,8 @@ export const organizations: Organization[] = [
       "Assistenza fiscale per famiglie e lavoratori: 730, ISEE, dichiarazioni e pratiche di patronato. Prenota online e salta la fila.",
     openingHours: "Lun–Ven 9:00–13:00 / 14:30–18:00",
     queueOpen: true,
+    lat: 45.4515,
+    lng: 9.173,
   },
   {
     id: "org-2",
@@ -29,6 +31,8 @@ export const organizations: Organization[] = [
       "Igiene, visite di controllo e prime visite. Conferma immediata e promemoria automatici.",
     openingHours: "Lun–Sab 8:30–19:00",
     queueOpen: false,
+    lat: 45.472,
+    lng: 9.187,
   },
   {
     id: "org-3",
@@ -41,6 +45,8 @@ export const organizations: Organization[] = [
       "Taglio, colore e piega su appuntamento. Coda live per i clienti senza prenotazione.",
     openingHours: "Mar–Sab 9:00–19:30",
     queueOpen: true,
+    lat: 45.488,
+    lng: 9.19,
   },
 ];
 

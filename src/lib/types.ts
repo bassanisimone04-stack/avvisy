@@ -8,6 +8,8 @@ export type Organization = {
   description: string;
   openingHours: string;
   queueOpen: boolean;
+  lat?: number;
+  lng?: number;
 };
 
 export type Service = {

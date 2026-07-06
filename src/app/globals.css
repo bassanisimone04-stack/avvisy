@@ -89,6 +89,12 @@ h3 {
   }
 }
 
+/* Sfondo neutro della mappa finché le tile non sono caricate. */
+.leaflet-container {
+  background: var(--color-canvas);
+  font: inherit;
+}
+
 /* Stampa: solo il biglietto, senza intestazioni né pulsanti. */
 @media print {
   header,
