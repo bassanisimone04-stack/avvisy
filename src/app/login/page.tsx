@@ -69,6 +69,16 @@ export default function LoginPage() {
         </Link>
       </form>
 
+      <p className="mt-6 text-center text-sm text-muted">
+        Sei una nuova struttura?{" "}
+        <Link
+          href="/registrati"
+          className="font-semibold text-brand-dark hover:underline"
+        >
+          Registrati
+        </Link>
+      </p>
+
       <div className="mt-6 rounded-lg bg-signal-soft p-3 text-sm text-ink">
         <p className="font-semibold">Accesso demo</p>
         <p className="mt-1">

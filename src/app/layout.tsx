@@ -5,6 +5,7 @@ import {
   Instrument_Sans,
   JetBrains_Mono,
 } from "next/font/google";
+import CookieBanner from "@/components/CookieBanner";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import "./globals.css";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
     >
       <body className="min-h-dvh">
         {children}
+        <CookieBanner />
         <ServiceWorkerRegister />
       </body>
     </html>

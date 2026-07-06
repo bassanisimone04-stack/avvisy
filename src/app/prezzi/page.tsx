@@ -21,20 +21,20 @@ type Plan = {
 const plans: Plan[] = [
   {
     name: "Base",
-    price: "0 €",
-    period: "per sempre",
-    tagline: "Per iniziare e provare Avvisy.",
+    price: "79 €",
+    period: "/ mese",
+    tagline: "Per la struttura singola che inizia.",
     features: [
       "Prenotazioni online illimitate",
       "Pagina pubblica della struttura",
       "Coda live e check-in",
       "1 sportello",
     ],
-    cta: "Inizia gratis",
+    cta: "Inizia la prova",
   },
   {
     name: "Pro",
-    price: "29 €",
+    price: "149 €",
     period: "/ mese",
     tagline: "Per la maggior parte delle strutture.",
     features: [
@@ -45,12 +45,12 @@ const plans: Plan[] = [
       "Esporta appuntamenti (CSV)",
       "Servizi illimitati",
     ],
-    cta: "Prova Pro",
+    cta: "Inizia la prova",
     highlight: true,
   },
   {
     name: "Multi-sede",
-    price: "79 €",
+    price: "399 €",
     period: "/ mese",
     tagline: "Per chi ha più sedi o sportelli.",
     features: [
@@ -73,8 +73,8 @@ export default function PrezziPage() {
             Prezzi semplici per la tua struttura
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
-            Paghi solo se gestisci una struttura. Nessun costo nascosto,
-            disdici quando vuoi.
+            Prova gratis per 7 giorni. Paghi solo se gestisci una struttura,
+            nessun costo nascosto, disdici quando vuoi.
           </p>
         </div>
 
@@ -113,6 +113,9 @@ export default function PrezziPage() {
                 </span>{" "}
                 <span className="text-sm text-muted">{plan.period}</span>
               </p>
+              <p className="mt-1 text-sm font-semibold text-brand-dark">
+                7 giorni di prova gratuita
+              </p>
 
               <ul className="mt-5 flex flex-1 flex-col gap-2.5">
                 {plan.features.map((f) => (
@@ -135,7 +138,7 @@ export default function PrezziPage() {
               </ul>
 
               <Link
-                href="/login"
+                href="/registrati"
                 className={cn(
                   "mt-6 rounded-full px-5 py-3 text-center text-base font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
                   plan.highlight

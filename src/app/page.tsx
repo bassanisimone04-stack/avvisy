@@ -73,6 +73,12 @@ export default function HomePage() {
               Aiuto
             </Link>
             <Link
+              href="/termini"
+              className="font-medium text-brand-dark hover:underline"
+            >
+              Termini
+            </Link>
+            <Link
               href="/privacy"
               className="font-medium text-brand-dark hover:underline"
             >
