@@ -6,11 +6,8 @@ import QueueList from "@/components/QueueList";
 import NowServing from "@/components/NowServing";
 import OpenStatusBadge from "@/components/OpenStatusBadge";
 import OrgQuickActions from "@/components/OrgQuickActions";
-import {
-  getOrganizationBySlug,
-  getQueueByOrg,
-  getServicesByOrg,
-} from "@/lib/mock-data";
+import { getOrganizationBySlug, getServicesByOrg } from "@/lib/data";
+import { getQueueByOrg } from "@/lib/mock-data";
 
 export default async function OrganizationPage({
   params,
@@ -18,10 +15,10 @@ export default async function OrganizationPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const org = getOrganizationBySlug(slug);
+  const org = await getOrganizationBySlug(slug);
   if (!org) notFound();
 
-  const services = getServicesByOrg(org.id);
+  const services = await getServicesByOrg(org.id);
   const queue = getQueueByOrg(org.id);
 
   return (

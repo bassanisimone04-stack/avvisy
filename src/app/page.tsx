@@ -3,7 +3,7 @@ import AppHeader from "@/components/AppHeader";
 import Logo from "@/components/Logo";
 import LandingHero from "@/components/LandingHero";
 import StructuresDirectory from "@/components/StructuresDirectory";
-import { organizations } from "@/lib/mock-data";
+import { getOrganizations } from "@/lib/data";
 
 const reassurance = [
   { icon: "🆓", text: "Gratis per i cittadini" },
@@ -63,7 +63,8 @@ const ownerBenefits = [
   },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const organizations = await getOrganizations();
   return (
     <>
       <AppHeader />
