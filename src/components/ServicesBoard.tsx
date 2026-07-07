@@ -1,6 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import {
+  createService,
+  deleteService,
+  updateService,
+} from "@/lib/services";
 import type { Service } from "@/lib/types";
 
 type Draft = {
@@ -28,6 +33,7 @@ export default function ServicesBoard({
   const [editingId, setEditingId] = useState<string | null>(null);
   const [showForm, setShowForm] = useState(false);
   const [draft, setDraft] = useState<Draft>(emptyDraft);
+  const [busy, setBusy] = useState(false);
 
   function openNew() {
     setEditingId(null);
@@ -46,7 +52,7 @@ export default function ServicesBoard({
     setShowForm(true);
   }
 
-  function save() {
+  async function save() {
     const name = draft.name.trim();
     if (!name) return;
     const fields = {
@@ -55,26 +61,34 @@ export default function ServicesBoard({
       durationMin: Number(draft.durationMin) || 30,
       price: draft.price.trim() || null,
     };
+    setBusy(true);
     if (editingId) {
+      await updateService(editingId, fields);
       setServices((prev) =>
         prev.map((s) => (s.id === editingId ? { ...s, ...fields } : s))
       );
     } else {
-      setServices((prev) => [
-        ...prev,
-        { id: `srv-${Date.now().toString(36)}`, orgId, ...fields },
-      ]);
+      const { service } = await createService({ orgId, ...fields });
+      const created: Service = service ?? {
+        id: `srv-${Date.now().toString(36)}`,
+        orgId,
+        ...fields,
+      };
+      setServices((prev) => [...prev, created]);
     }
+    setBusy(false);
     setShowForm(false);
     setDraft(emptyDraft);
     setEditingId(null);
   }
 
-  function remove(id: string) {
+  async function remove(id: string) {
     const s = services.find((x) => x.id === id);
-    if (s && confirm(`Eliminare il servizio "${s.name}"?`)) {
-      setServices((prev) => prev.filter((x) => x.id !== id));
-    }
+    if (!s || !confirm(`Eliminare il servizio "${s.name}"?`)) return;
+    setBusy(true);
+    await deleteService(id);
+    setServices((prev) => prev.filter((x) => x.id !== id));
+    setBusy(false);
   }
 
   const field =
@@ -166,10 +180,10 @@ export default function ServicesBoard({
             <button
               type="button"
               onClick={save}
-              disabled={!draft.name.trim()}
+              disabled={!draft.name.trim() || busy}
               className="flex-1 rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-40"
             >
-              {editingId ? "Salva" : "Aggiungi"}
+              {busy ? "Salvataggio…" : editingId ? "Salva" : "Aggiungi"}
             </button>
           </div>
         </div>

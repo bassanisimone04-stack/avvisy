@@ -3,12 +3,28 @@
 import Link from "next/link";
 import { useState } from "react";
 import Logo from "@/components/Logo";
+import { completeOnboarding } from "@/lib/org";
 import { cn } from "@/lib/utils";
 
 const steps = ["Struttura", "Primo servizio", "Pronto"] as const;
 
 export default function OnboardingPage() {
   const [step, setStep] = useState(0);
+  const [saving, setSaving] = useState(false);
+
+  async function finish() {
+    setSaving(true);
+    await completeOnboarding({
+      orgName: orgName.trim(),
+      address: address.trim(),
+      hours: hours.trim(),
+      svcName,
+      svcDurationMin: Number(svcDuration) || 30,
+      svcPrice: svcPrice.trim() || null,
+    });
+    setSaving(false);
+    setStep(2);
+  }
 
   // Struttura
   const [orgName, setOrgName] = useState("");
@@ -182,11 +198,11 @@ export default function OnboardingPage() {
           </button>
           <button
             type="button"
-            disabled={!canContinue}
-            onClick={() => setStep((s) => s + 1)}
+            disabled={!canContinue || saving}
+            onClick={() => (step === 1 ? finish() : setStep((s) => s + 1))}
             className="rounded-full bg-brand px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-40"
           >
-            {step === 1 ? "Completa" : "Continua"}
+            {saving ? "Salvataggio…" : step === 1 ? "Completa" : "Continua"}
           </button>
         </div>
       )}
