@@ -2,14 +2,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import AppHeader from "@/components/AppHeader";
 import CheckinTicket from "@/components/CheckinTicket";
-import type { Appointment } from "@/lib/types";
 import {
   getAppointmentById,
+  getOrganizationById,
   getOrganizationBySlug,
   getQueueByOrg,
   getServiceById,
-  organizations,
-} from "@/lib/mock-data";
+} from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 
 type CheckinQuery = {
   org?: string;
@@ -30,34 +31,30 @@ export default async function CheckinPage({
   const { appointmentId } = await params;
   const q = await searchParams;
 
-  // Prenotazione demo già presente nei dati mock…
-  let appointment: Appointment | null = getAppointmentById(appointmentId);
-  let org = appointment
-    ? organizations.find((o) => o.id === appointment!.orgId) ?? null
-    : null;
+  // Prenotazione già salvata nel database…
+  let appointment = await getAppointmentById(appointmentId);
+  let org = appointment ? await getOrganizationById(appointment.orgId) : null;
+  if (!org && q.org) org = await getOrganizationBySlug(q.org);
 
   // …oppure prenotazione appena creata, con i dati passati dal link.
-  if (!appointment && q.org && q.service && q.name && q.date && q.time) {
-    org = getOrganizationBySlug(q.org);
-    if (org) {
-      appointment = {
-        id: appointmentId,
-        orgId: org.id,
-        serviceId: q.service,
-        customerName: q.name,
-        customerPhone: q.phone ?? "",
-        date: q.date,
-        time: q.time,
-        status: "confermato",
-        ticket: null,
-      };
-    }
+  if (!appointment && org && q.service && q.name && q.date && q.time) {
+    appointment = {
+      id: appointmentId,
+      orgId: org.id,
+      serviceId: q.service,
+      customerName: q.name,
+      customerPhone: q.phone ?? "",
+      date: q.date,
+      time: q.time,
+      status: "confermato",
+      ticket: null,
+    };
   }
 
   if (!appointment || !org) notFound();
 
-  const service = getServiceById(appointment.serviceId);
-  const waitingCount = getQueueByOrg(org.id).filter(
+  const service = await getServiceById(appointment.serviceId);
+  const waitingCount = (await getQueueByOrg(org.id)).filter(
     (e) => e.status !== "in-servizio"
   ).length;
   const estimatedWait = org.queueOpen ? waitingCount * 15 : 0;

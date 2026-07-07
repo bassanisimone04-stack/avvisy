@@ -2,7 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import AppHeader from "@/components/AppHeader";
 import BookingForm from "@/components/BookingForm";
-import { getOrganizationBySlug, getServicesByOrg } from "@/lib/mock-data";
+import { getOrganizationBySlug, getServicesByOrg } from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 
 export default async function BookPage({
   params,
@@ -14,10 +16,10 @@ export default async function BookPage({
   const { slug } = await params;
   const { service } = await searchParams;
 
-  const org = getOrganizationBySlug(slug);
+  const org = await getOrganizationBySlug(slug);
   if (!org) notFound();
 
-  const services = getServicesByOrg(org.id);
+  const services = await getServicesByOrg(org.id);
 
   return (
     <>

@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import WaitingRoomDisplay from "@/components/WaitingRoomDisplay";
-import { getOrganizationBySlug, getQueueByOrg } from "@/lib/mock-data";
+import { getOrganizationBySlug, getQueueByOrg } from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 
 export default async function DisplayPage({
   params,
@@ -8,10 +10,10 @@ export default async function DisplayPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const org = getOrganizationBySlug(slug);
+  const org = await getOrganizationBySlug(slug);
   if (!org) notFound();
 
-  const queue = getQueueByOrg(org.id);
+  const queue = await getQueueByOrg(org.id);
   const serving = queue.find((e) => e.status === "in-servizio")?.ticket ?? null;
   const waiting = queue
     .filter((e) => e.status !== "in-servizio")

@@ -1,13 +1,19 @@
 import Link from "next/link";
 import AppHeader from "@/components/AppHeader";
 import ServiceAssistant from "@/components/ServiceAssistant";
-import { organizations, services } from "@/lib/mock-data";
+import { getAllServices, getOrganizations } from "@/lib/data";
 
 export const metadata = {
   title: "Assistente — Avvisy",
 };
 
-export default function AssistentePage() {
+export const dynamic = "force-dynamic";
+
+export default async function AssistentePage() {
+  const [organizations, services] = await Promise.all([
+    getOrganizations(),
+    getAllServices(),
+  ]);
   return (
     <>
       <AppHeader />

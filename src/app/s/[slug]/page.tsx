@@ -9,6 +9,8 @@ import OrgQuickActions from "@/components/OrgQuickActions";
 import { getOrganizationBySlug, getServicesByOrg } from "@/lib/data";
 import { getQueueByOrg } from "@/lib/mock-data";
 
+export const dynamic = "force-dynamic";
+
 export default async function OrganizationPage({
   params,
 }: {

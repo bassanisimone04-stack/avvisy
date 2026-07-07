@@ -1,11 +1,14 @@
 import "server-only";
 import { createClient } from "@/lib/supabase/server";
 import {
+  getAppointmentById as mockAppointmentById,
   getAppointmentsByOrg as mockAppointmentsByOrg,
   getOrganizationBySlug as mockOrgBySlug,
   getQueueByOrg as mockQueueByOrg,
+  getServiceById as mockServiceById,
   getServicesByOrg as mockServicesByOrg,
   organizations as mockOrgs,
+  services as mockServices,
 } from "@/lib/mock-data";
 import type {
   Appointment,
@@ -116,6 +119,24 @@ export async function getOrganizationBySlug(
   }
 }
 
+export async function getOrganizationById(
+  id: string
+): Promise<Organization | null> {
+  if (!configured()) return mockOrgs.find((o) => o.id === id) ?? null;
+  try {
+    const sb = await createClient();
+    const { data, error } = await sb
+      .from("organizations")
+      .select("*")
+      .eq("id", id)
+      .maybeSingle();
+    if (error || !data) return mockOrgs.find((o) => o.id === id) ?? null;
+    return mapOrg(data as OrgRow);
+  } catch {
+    return mockOrgs.find((o) => o.id === id) ?? null;
+  }
+}
+
 export async function getServicesByOrg(orgId: string): Promise<Service[]> {
   if (!configured()) return mockServicesByOrg(orgId);
   try {
@@ -129,6 +150,51 @@ export async function getServicesByOrg(orgId: string): Promise<Service[]> {
     return (data as ServiceRow[]).map(mapService);
   } catch {
     return mockServicesByOrg(orgId);
+  }
+}
+
+export async function getAllServices(): Promise<Service[]> {
+  if (!configured()) return mockServices;
+  try {
+    const sb = await createClient();
+    const { data, error } = await sb.from("services").select("*");
+    if (error || !data) return mockServices;
+    return (data as ServiceRow[]).map(mapService);
+  } catch {
+    return mockServices;
+  }
+}
+
+export async function getServiceById(id: string): Promise<Service | null> {
+  if (!configured()) return mockServiceById(id);
+  try {
+    const sb = await createClient();
+    const { data, error } = await sb
+      .from("services")
+      .select("*")
+      .eq("id", id)
+      .maybeSingle();
+    if (error || !data) return mockServiceById(id);
+    return mapService(data as ServiceRow);
+  } catch {
+    return mockServiceById(id);
+  }
+}
+
+/** Legge un appuntamento per id (flusso cittadino, via funzione RPC). */
+export async function getAppointmentById(
+  id: string
+): Promise<Appointment | null> {
+  if (!configured()) return mockAppointmentById(id);
+  try {
+    const sb = await createClient();
+    const { data, error } = await sb.rpc("get_appointment", { p_id: id });
+    if (error || !data) return mockAppointmentById(id);
+    const row = Array.isArray(data) ? data[0] : data;
+    if (!row) return mockAppointmentById(id);
+    return mapAppointment(row as AppointmentRow);
+  } catch {
+    return mockAppointmentById(id);
   }
 }
 

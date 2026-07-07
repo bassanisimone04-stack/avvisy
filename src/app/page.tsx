@@ -5,6 +5,9 @@ import LandingHero from "@/components/LandingHero";
 import StructuresDirectory from "@/components/StructuresDirectory";
 import { getOrganizations } from "@/lib/data";
 
+// Sempre aggiornata dal database (niente cache statica dell'elenco strutture).
+export const dynamic = "force-dynamic";
+
 const reassurance = [
   { icon: "🆓", text: "Gratis per i cittadini" },
   { icon: "⚡", text: "Nessuna registrazione" },

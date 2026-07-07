@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import Logo from "@/components/Logo";
 import OpenStatusBadge from "@/components/OpenStatusBadge";
-import { getOrganizationBySlug, getQueueByOrg } from "@/lib/mock-data";
+import { getOrganizationBySlug, getQueueByOrg } from "@/lib/data";
+
+export const dynamic = "force-dynamic";
 
 /** Card compatta pensata per essere incorporata via iframe nel sito della
  * struttura. Niente header/footer: solo prenotazione. */
@@ -11,12 +13,12 @@ export default async function WidgetPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const org = getOrganizationBySlug(slug);
+  const org = await getOrganizationBySlug(slug);
   if (!org) notFound();
 
   const serving =
-    getQueueByOrg(org.id).find((e) => e.status === "in-servizio")?.ticket ??
-    null;
+    (await getQueueByOrg(org.id)).find((e) => e.status === "in-servizio")
+      ?.ticket ?? null;
 
   return (
     <div className="p-4">
