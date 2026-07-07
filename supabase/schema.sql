@@ -165,14 +165,15 @@ values
 on conflict (slug) do nothing;
 
 insert into services (org_id, name, description, duration_min, price)
-select o.id, s.name, s.descr, s.dur, s.price from organizations o
-join (values
-  ('demo-caf', 'Dichiarazione 730', 'Compilazione e invio del modello 730.', 30, '45 €'),
-  ('demo-caf', 'ISEE', 'Calcolo e rilascio attestazione ISEE.', 20, '25 €'),
-  ('demo-caf', 'Pratica di patronato', 'Pensioni, disoccupazione, invalidità.', 40, null),
-  ('studio-brera', 'Visita di controllo', 'Controllo periodico e valutazione.', 30, '80 €'),
-  ('studio-brera', 'Igiene dentale', 'Pulizia professionale e lucidatura.', 45, '90 €'),
-  ('salone-isola', 'Taglio', 'Taglio e piega.', 45, '35 €'),
-  ('salone-isola', 'Colore', 'Colore, taglio e piega.', 90, '75 €')
-) as s(slug, name, descr, dur, price) on o.slug = s.slug
-on conflict do nothing;
+select o.id, v.name, v.descr, v.dur, v.price
+from organizations o
+join (
+  select 'demo-caf' as slug, 'Dichiarazione 730' as name, 'Compilazione e invio del modello 730.' as descr, 30 as dur, '45 €' as price
+  union all select 'demo-caf', 'ISEE', 'Calcolo e rilascio attestazione ISEE.', 20, '25 €'
+  union all select 'demo-caf', 'Pratica di patronato', 'Pensioni, disoccupazione, invalidità.', 40, null
+  union all select 'studio-brera', 'Visita di controllo', 'Controllo periodico e valutazione.', 30, '80 €'
+  union all select 'studio-brera', 'Igiene dentale', 'Pulizia professionale e lucidatura.', 45, '90 €'
+  union all select 'salone-isola', 'Taglio', 'Taglio e piega.', 45, '35 €'
+  union all select 'salone-isola', 'Colore', 'Colore, taglio e piega.', 90, '75 €'
+) v on o.slug = v.slug;
+
