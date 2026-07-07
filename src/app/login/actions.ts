@@ -1,6 +1,6 @@
 "use server";
 
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { createClient } from "@/lib/supabase/server";
@@ -71,4 +71,25 @@ export async function signOut() {
   }
 
   redirect("/login");
+}
+
+/** Invia l'email con il link per reimpostare la password.
+ * Ritorna sempre ok per non rivelare quali email sono registrate. */
+export async function requestPasswordReset(
+  email: string
+): Promise<{ ok: boolean }> {
+  if (!isSupabaseConfigured()) return { ok: true };
+  try {
+    const supabase = await createClient();
+    const h = await headers();
+    const origin =
+      h.get("origin") ??
+      (h.get("host") ? `https://${h.get("host")}` : "");
+    await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
+      redirectTo: `${origin}/reset-password`,
+    });
+    return { ok: true };
+  } catch {
+    return { ok: false };
+  }
 }

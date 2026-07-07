@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Logo from "@/components/Logo";
+import { requestPasswordReset } from "@/app/login/actions";
 
 /** Validazione email semplice per il campo di recupero. */
 function isValidEmail(email: string) {
@@ -12,6 +13,7 @@ function isValidEmail(email: string) {
 export default function RecuperoPage() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
+  const [pending, setPending] = useState(false);
 
   const field =
     "rounded-lg border border-line bg-card px-3 py-2.5 text-base outline-none transition-colors focus:border-brand";
@@ -40,9 +42,13 @@ export default function RecuperoPage() {
         </div>
       ) : (
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            if (isValidEmail(email)) setSent(true);
+            if (!isValidEmail(email)) return;
+            setPending(true);
+            await requestPasswordReset(email);
+            setPending(false);
+            setSent(true);
           }}
           className="mt-6 flex flex-col gap-4"
         >
@@ -66,10 +72,10 @@ export default function RecuperoPage() {
           </label>
           <button
             type="submit"
-            disabled={!isValidEmail(email)}
+            disabled={!isValidEmail(email) || pending}
             className="rounded-full bg-brand px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Invia il link di recupero
+            {pending ? "Invio…" : "Invia il link di recupero"}
           </button>
         </form>
       )}
@@ -81,11 +87,6 @@ export default function RecuperoPage() {
         >
           ← Torna al login
         </Link>
-      </div>
-
-      <div className="mt-6 rounded-lg bg-signal-soft p-3 text-sm text-ink">
-        Impianto provvisorio: l&apos;invio reale dell&apos;email di recupero
-        arriverà con Supabase.
       </div>
     </main>
   );
