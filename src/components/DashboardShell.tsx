@@ -13,6 +13,7 @@ const navItems = [
   { href: "/dashboard/queue", label: "Coda live", icon: "№" },
   { href: "/dashboard/report", label: "Report", icon: "▦" },
   { href: "/dashboard/services", label: "Servizi", icon: "✚" },
+  { href: "/dashboard/abbonamento", label: "Abbonamento", icon: "◆" },
   { href: "/dashboard/settings", label: "Impostazioni", icon: "⚙" },
 ];
 
