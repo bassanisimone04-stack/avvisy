@@ -6,7 +6,7 @@ export default function Logo({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "font-script font-bold leading-none tracking-tight text-logo",
+        "font-script font-bold leading-none tracking-[0.06em] text-logo",
         className
       )}
     >

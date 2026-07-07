@@ -90,7 +90,8 @@ export async function getOrganizations(): Promise<Organization[]> {
       .from("organizations")
       .select("*")
       .order("name");
-    if (error || !data || data.length === 0) return mockOrgs;
+    // In errore ricadiamo sui dati demo; una lista vuota reale resta vuota.
+    if (error || !data) return mockOrgs;
     return (data as OrgRow[]).map(mapOrg);
   } catch {
     return mockOrgs;
