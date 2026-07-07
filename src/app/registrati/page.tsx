@@ -6,7 +6,10 @@ import Logo from "@/components/Logo";
 import { signUp } from "./actions";
 
 export default function RegistratiPage() {
-  const [state, action, pending] = useActionState(signUp, { error: null });
+  const [state, action, pending] = useActionState(signUp, {
+    error: null,
+    info: null,
+  });
 
   const field =
     "rounded-lg border border-line bg-card px-3 py-2.5 text-base outline-none transition-colors focus:border-brand";
@@ -88,6 +91,12 @@ export default function RegistratiPage() {
         {state.error && (
           <p className="rounded-lg bg-red-50 px-3 py-2 text-sm font-medium text-red-700">
             {state.error}
+          </p>
+        )}
+
+        {state.info && (
+          <p className="rounded-lg bg-brand-soft px-3 py-2 text-sm font-medium text-brand-dark">
+            {state.info}
           </p>
         )}
 
