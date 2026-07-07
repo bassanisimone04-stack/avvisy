@@ -1,11 +1,10 @@
 import StatusBreakdown from "@/components/StatusBreakdown";
-import { getAppointmentsByOrg } from "@/lib/mock-data";
+import { getAppointmentsByOrg, getMyOrganization } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 
-const ORG_ID = "org-1";
-
-export default function ReportPage() {
-  const appts = getAppointmentsByOrg(ORG_ID);
+export default async function ReportPage() {
+  const org = await getMyOrganization();
+  const appts = org ? await getAppointmentsByOrg(org.id) : [];
 
   const total = appts.length;
   const completati = appts.filter((a) => a.status === "completato").length;

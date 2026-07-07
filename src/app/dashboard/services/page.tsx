@@ -1,10 +1,11 @@
+import { notFound } from "next/navigation";
 import ServicesBoard from "@/components/ServicesBoard";
-import { getServicesByOrg } from "@/lib/mock-data";
+import { getMyOrganization, getServicesByOrg } from "@/lib/data";
 
-const ORG_ID = "org-1";
+export default async function ServicesPage() {
+  const org = await getMyOrganization();
+  if (!org) notFound();
+  const services = await getServicesByOrg(org.id);
 
-export default function ServicesPage() {
-  const services = getServicesByOrg(ORG_ID);
-
-  return <ServicesBoard initialServices={services} orgId={ORG_ID} />;
+  return <ServicesBoard initialServices={services} orgId={org.id} />;
 }
