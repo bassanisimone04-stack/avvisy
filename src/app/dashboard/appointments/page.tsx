@@ -1,10 +1,10 @@
 import AppointmentsBoard from "@/components/AppointmentsBoard";
-import { getAppointmentsByOrg } from "@/lib/mock-data";
+import { getAppointmentsByOrg, getMyOrganization } from "@/lib/data";
 
-const ORG_ID = "org-1";
-
-export default function AppointmentsPage() {
-  const appointments = [...getAppointmentsByOrg(ORG_ID)].sort((a, b) =>
+export default async function AppointmentsPage() {
+  const org = await getMyOrganization();
+  const list = org ? await getAppointmentsByOrg(org.id) : [];
+  const appointments = [...list].sort((a, b) =>
     `${a.date}${a.time}`.localeCompare(`${b.date}${b.time}`)
   );
 

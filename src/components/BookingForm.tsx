@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Organization, Service } from "@/lib/types";
+import { createBooking } from "@/lib/booking";
 import { downloadICS } from "@/lib/calendar";
 import { nextOpenDays, slotsForDate } from "@/lib/hours";
 import { cn, formatDate } from "@/lib/utils";
@@ -49,6 +50,8 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
   const [phone, setPhone] = useState("");
   const [consent, setConsent] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [savedId, setSavedId] = useState<string | null>(null);
 
   const service = services.find((s) => s.id === serviceId) ?? null;
 
@@ -68,7 +71,7 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
 
   const checkinHref =
     service &&
-    `/checkin/${bookingId}?${new URLSearchParams({
+    `/checkin/${savedId ?? bookingId}?${new URLSearchParams({
       org: org.slug,
       service: service.id,
       name: name.trim(),
@@ -76,6 +79,22 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
       date,
       time,
     }).toString()}`;
+
+  async function handleConfirm() {
+    if (!service) return;
+    setSaving(true);
+    const { id } = await createBooking({
+      orgId: org.id,
+      serviceId: service.id,
+      name: name.trim(),
+      phone: phone.trim(),
+      date,
+      time,
+    });
+    if (id) setSavedId(id);
+    setSaving(false);
+    setConfirmed(true);
+  }
 
   if (confirmed && service) {
     return (
@@ -320,13 +339,15 @@ export default function BookingForm({ org, services, defaultServiceId }: Props) 
         </button>
         <button
           type="button"
-          disabled={!canContinue}
-          onClick={() =>
-            step < 2 ? setStep((s) => s + 1) : setConfirmed(true)
-          }
+          disabled={!canContinue || saving}
+          onClick={() => (step < 2 ? setStep((s) => s + 1) : handleConfirm())}
           className="rounded-full bg-brand px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-40"
         >
-          {step < 2 ? "Continua" : "Conferma prenotazione"}
+          {step < 2
+            ? "Continua"
+            : saving
+              ? "Salvataggio…"
+              : "Conferma prenotazione"}
         </button>
       </div>
     </div>

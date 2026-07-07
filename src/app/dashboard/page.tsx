@@ -1,17 +1,30 @@
 import Link from "next/link";
 import AppointmentTable from "@/components/AppointmentTable";
 import StatusBreakdown from "@/components/StatusBreakdown";
-import { getAppointmentsByOrg, getQueueByOrg } from "@/lib/mock-data";
+import {
+  getAppointmentsByOrg,
+  getMyOrganization,
+  getQueueByOrg,
+} from "@/lib/data";
 
-const ORG_ID = "org-1"; // CAF Navigli (mock: in futuro dall'autenticazione)
-const TODAY = "2026-07-03";
+export default async function DashboardPage() {
+  const org = await getMyOrganization();
+  const appointments = org ? await getAppointmentsByOrg(org.id) : [];
+  const queue = org ? await getQueueByOrg(org.id) : [];
 
-export default function DashboardPage() {
-  const appointments = getAppointmentsByOrg(ORG_ID);
-  const today = appointments.filter((a) => a.date === TODAY);
-  const queue = getQueueByOrg(ORG_ID);
+  const todayIso = new Date().toISOString().slice(0, 10);
+  const mockDate = appointments[0]?.date; // in demo gli appuntamenti hanno una data fissa
+  const refDate = appointments.some((a) => a.date === todayIso)
+    ? todayIso
+    : (mockDate ?? todayIso);
+  const today = appointments.filter((a) => a.date === refDate);
   const waiting = queue.filter((q) => q.status !== "in-servizio").length;
   const serving = queue.find((q) => q.status === "in-servizio");
+  const todayLabel = new Date().toLocaleDateString("it-IT", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
 
   const stats = [
     { label: "Appuntamenti oggi", value: String(today.length) },
@@ -26,8 +39,8 @@ export default function DashboardPage() {
   return (
     <>
       <h1 className="text-2xl font-bold tracking-tight">Panoramica</h1>
-      <p className="mt-1 text-sm text-muted">
-        Venerdì 3 luglio · CAF Navigli
+      <p className="mt-1 text-sm capitalize text-muted">
+        {todayLabel} · {org?.name ?? "La tua struttura"}
       </p>
 
       <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">

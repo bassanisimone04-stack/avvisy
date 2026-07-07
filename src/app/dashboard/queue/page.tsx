@@ -1,17 +1,13 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import QueueList from "@/components/QueueList";
-import {
-  getQueueByOrg,
-  getServicesByOrg,
-  organizations,
-} from "@/lib/mock-data";
+import { getMyOrganization, getQueueByOrg, getServicesByOrg } from "@/lib/data";
 
-const ORG_ID = "org-1";
-
-export default function QueuePage() {
-  const queue = getQueueByOrg(ORG_ID);
-  const services = getServicesByOrg(ORG_ID);
-  const org = organizations.find((o) => o.id === ORG_ID)!;
+export default async function QueuePage() {
+  const org = await getMyOrganization();
+  if (!org) notFound();
+  const queue = await getQueueByOrg(org.id);
+  const services = await getServicesByOrg(org.id);
 
   return (
     <>

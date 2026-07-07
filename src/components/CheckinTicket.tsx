@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
+import { checkInAppointment } from "@/lib/booking";
 import type { Appointment, Organization, Service } from "@/lib/types";
 import { formatDate, generateTicket } from "@/lib/utils";
 
@@ -20,10 +21,15 @@ export default function CheckinTicket({
 }: Props) {
   const [ticket, setTicket] = useState(appointment.ticket);
   const [shared, setShared] = useState(false);
+  const [pending, setPending] = useState(false);
   const checkedIn = ticket !== null;
 
-  function doCheckin() {
-    setTicket((current) => current ?? generateTicket());
+  async function doCheckin() {
+    setPending(true);
+    // Prova il check-in reale (database); in demo ricade sul numero locale.
+    const { ticket: real } = await checkInAppointment(appointment.id);
+    setTicket((current) => current ?? real ?? generateTicket());
+    setPending(false);
   }
 
   async function share() {
@@ -137,9 +143,10 @@ export default function CheckinTicket({
           <button
             type="button"
             onClick={doCheckin}
-            className="mt-5 w-full rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            disabled={pending}
+            className="mt-5 w-full rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-40"
           >
-            Fai il check-in
+            {pending ? "Attendi…" : "Fai il check-in"}
           </button>
         </>
       )}

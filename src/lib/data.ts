@@ -1,11 +1,20 @@
 import "server-only";
 import { createClient } from "@/lib/supabase/server";
 import {
+  getAppointmentsByOrg as mockAppointmentsByOrg,
   getOrganizationBySlug as mockOrgBySlug,
+  getQueueByOrg as mockQueueByOrg,
   getServicesByOrg as mockServicesByOrg,
   organizations as mockOrgs,
 } from "@/lib/mock-data";
-import type { Organization, Service } from "@/lib/types";
+import type {
+  Appointment,
+  AppointmentStatus,
+  Organization,
+  QueueEntry,
+  QueueStatus,
+  Service,
+} from "@/lib/types";
 
 /**
  * Livello dati di Avvisy.
@@ -119,5 +128,115 @@ export async function getServicesByOrg(orgId: string): Promise<Service[]> {
     return (data as ServiceRow[]).map(mapService);
   } catch {
     return mockServicesByOrg(orgId);
+  }
+}
+
+// ---------- Area gestore (dati della propria struttura) ----------
+
+type AppointmentRow = {
+  id: string;
+  org_id: string;
+  service_id: string | null;
+  customer_name: string;
+  customer_phone: string;
+  appt_date: string;
+  appt_time: string;
+  status: AppointmentStatus;
+  ticket: string | null;
+};
+
+type QueueRow = {
+  id: string;
+  org_id: string;
+  service_id: string | null;
+  ticket: string;
+  customer_name: string;
+  status: QueueStatus;
+  joined_at: string;
+};
+
+function mapAppointment(r: AppointmentRow): Appointment {
+  return {
+    id: r.id,
+    orgId: r.org_id,
+    serviceId: r.service_id ?? "",
+    customerName: r.customer_name,
+    customerPhone: r.customer_phone,
+    date: r.appt_date,
+    time: r.appt_time,
+    status: r.status,
+    ticket: r.ticket,
+  };
+}
+
+function mapQueue(r: QueueRow): QueueEntry {
+  return {
+    id: r.id,
+    orgId: r.org_id,
+    ticket: r.ticket,
+    customerName: r.customer_name,
+    serviceId: r.service_id ?? "",
+    joinedAt: new Date(r.joined_at).toLocaleTimeString("it-IT", {
+      hour: "2-digit",
+      minute: "2-digit",
+    }),
+    status: r.status,
+  };
+}
+
+/** La struttura del gestore autenticato (o quella demo se Supabase è spento). */
+export async function getMyOrganization(): Promise<Organization | null> {
+  if (!configured()) return mockOrgs[0] ?? null;
+  try {
+    const sb = await createClient();
+    const {
+      data: { user },
+    } = await sb.auth.getUser();
+    if (!user) return mockOrgs[0] ?? null;
+    const { data, error } = await sb
+      .from("organizations")
+      .select("*")
+      .eq("owner_id", user.id)
+      .order("created_at")
+      .limit(1)
+      .maybeSingle();
+    if (error || !data) return mockOrgs[0] ?? null;
+    return mapOrg(data as OrgRow);
+  } catch {
+    return mockOrgs[0] ?? null;
+  }
+}
+
+export async function getAppointmentsByOrg(
+  orgId: string
+): Promise<Appointment[]> {
+  if (!configured()) return mockAppointmentsByOrg(orgId);
+  try {
+    const sb = await createClient();
+    const { data, error } = await sb
+      .from("appointments")
+      .select("*")
+      .eq("org_id", orgId)
+      .order("appt_time");
+    if (error || !data) return mockAppointmentsByOrg(orgId);
+    return (data as AppointmentRow[]).map(mapAppointment);
+  } catch {
+    return mockAppointmentsByOrg(orgId);
+  }
+}
+
+export async function getQueueByOrg(orgId: string): Promise<QueueEntry[]> {
+  if (!configured()) return mockQueueByOrg(orgId);
+  try {
+    const sb = await createClient();
+    const { data, error } = await sb
+      .from("queue_entries")
+      .select("*")
+      .eq("org_id", orgId)
+      .order("joined_at");
+    if (error || !data) return mockQueueByOrg(orgId);
+    return (data as QueueRow[]).map(mapQueue);
+  } catch {
+    return mockQueueByOrg(orgId);
   }
 }
