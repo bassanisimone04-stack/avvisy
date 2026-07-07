@@ -113,7 +113,7 @@ export default async function HomePage() {
       </section>
 
       {/* Directory strutture */}
-      <section className="mx-auto max-w-5xl px-4 pb-16">
+      <section id="strutture" className="mx-auto max-w-5xl px-4 pb-16">
         <div className="mb-5 flex items-baseline justify-between">
           <h2 className="text-2xl font-bold tracking-tight">
             Strutture su Avvisy

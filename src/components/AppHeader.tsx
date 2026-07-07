@@ -33,7 +33,7 @@ export default function AppHeader() {
             </Link>
           ))}
           <Link
-            href="/s/demo-caf/book"
+            href="/#strutture"
             className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:bg-brand-dark active:scale-[.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Prenota ora
@@ -73,7 +73,7 @@ export default function AppHeader() {
             ))}
             <li>
               <Link
-                href="/s/demo-caf/book"
+                href="/#strutture"
                 onClick={() => setOpen(false)}
                 className="mt-1 block rounded-md bg-brand px-2 py-3 text-center text-base font-semibold text-white"
               >

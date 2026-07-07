@@ -24,7 +24,7 @@ export default function LandingHero() {
 
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <Link
-            href="/s/demo-caf"
+            href="/#strutture"
             className="rounded-full bg-brand px-7 py-3.5 text-center text-base font-semibold text-white shadow-soft transition-all hover:bg-brand-dark active:scale-[.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             Prenota ora
