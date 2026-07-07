@@ -20,19 +20,6 @@ type Plan = {
 
 const plans: Plan[] = [
   {
-    name: "Base",
-    price: "79 €",
-    period: "/ mese",
-    tagline: "Per la struttura singola che inizia.",
-    features: [
-      "Prenotazioni online illimitate",
-      "Pagina pubblica della struttura",
-      "Coda live e check-in",
-      "1 sportello",
-    ],
-    cta: "Inizia la prova",
-  },
-  {
     name: "Pro",
     price: "149 €",
     period: "/ mese",
@@ -89,7 +76,7 @@ export default function PrezziPage() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-3xl gap-5 md:grid-cols-2">
           {plans.map((plan) => (
             <div
               key={plan.name}

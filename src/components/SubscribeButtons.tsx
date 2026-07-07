@@ -4,7 +4,7 @@ import { useState } from "react";
 import { startCheckout } from "@/lib/billing";
 import { cn } from "@/lib/utils";
 
-type Plan = "base" | "pro" | "multi";
+type Plan = "pro" | "multi";
 
 const plans: {
   id: Plan;
@@ -14,17 +14,11 @@ const plans: {
   highlight?: boolean;
 }[] = [
   {
-    id: "base",
-    name: "Base",
-    price: "79 €/mese",
-    features: ["Struttura singola", "Prenotazioni e coda", "1 sportello"],
-  },
-  {
     id: "pro",
     name: "Pro",
     price: "149 €/mese",
     features: [
-      "Tutto di Base",
+      "Prenotazioni, coda e check-in",
       "Notifiche, report, schermo sala d'attesa",
       "Servizi illimitati",
     ],
@@ -58,7 +52,7 @@ export default function SubscribeButtons() {
 
   return (
     <div>
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         {plans.map((p) => (
           <div
             key={p.id}
