@@ -2,6 +2,10 @@
 
 import { useMemo, useState } from "react";
 import AppointmentTable from "@/components/AppointmentTable";
+import {
+  rescheduleAppointment,
+  setAppointmentStatus,
+} from "@/lib/appointments";
 import { getServiceById } from "@/lib/mock-data";
 import type { Appointment, AppointmentStatus } from "@/lib/types";
 import { appointmentStatusLabel, cn } from "@/lib/utils";
@@ -69,10 +73,12 @@ export default function AppointmentsBoard({
     setItems((prev) =>
       prev.map((a) => (a.id === id ? { ...a, status: "annullato" } : a))
     );
+    void setAppointmentStatus(id, "annullato");
   }
 
   function reschedule(id: string, time: string) {
     setItems((prev) => prev.map((a) => (a.id === id ? { ...a, time } : a)));
+    void rescheduleAppointment(id, time);
   }
 
   const counts = useMemo(() => {

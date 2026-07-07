@@ -1,6 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import {
+  addWalkIn as addWalkInAction,
+  queueCallNext,
+  queueComplete,
+  queueSkip,
+} from "@/lib/queue";
 import type { QueueEntry, Service } from "@/lib/types";
 import { getServiceById } from "@/lib/mock-data";
 import { cn, generateTicket, queueStatusLabel } from "@/lib/utils";
@@ -11,6 +17,8 @@ type Props = {
   interactive?: boolean;
   /** Servizi disponibili: abilita l'aggiunta di clienti "al volo" (walk-in). */
   services?: Service[];
+  /** Id della struttura (per salvare le azioni della coda). */
+  orgId?: string;
 };
 
 /** Ora corrente in formato HH:mm. */
@@ -33,28 +41,37 @@ export default function QueueList({
   initialEntries,
   interactive,
   services,
+  orgId,
 }: Props) {
   const [entries, setEntries] = useState(initialEntries);
   const [servedCount, setServedCount] = useState(0);
   const [lastServed, setLastServed] = useState<string | null>(null);
+
+  const org =
+    orgId ?? services?.[0]?.orgId ?? initialEntries[0]?.orgId ?? "";
 
   const canWalkIn = Boolean(interactive && services && services.length > 0);
   const [walkInOpen, setWalkInOpen] = useState(false);
   const [walkInName, setWalkInName] = useState("");
   const [walkInService, setWalkInService] = useState(services?.[0]?.id ?? "");
 
-  function addWalkIn() {
+  async function addWalkIn() {
     if (!walkInName.trim() || !walkInService) return;
-    const entry: QueueEntry = {
+    const { entry } = await addWalkInAction({
+      orgId: org,
+      name: walkInName.trim(),
+      serviceId: walkInService,
+    });
+    const created: QueueEntry = entry ?? {
       id: `q-${Date.now().toString(36)}`,
-      orgId: services?.[0]?.orgId ?? initialEntries[0]?.orgId ?? "",
+      orgId: org,
       ticket: generateTicket(),
       customerName: walkInName.trim(),
       serviceId: walkInService,
       joinedAt: nowHM(),
       status: "in-attesa",
     };
-    setEntries((prev) => [...prev, entry]);
+    setEntries((prev) => [...prev, created]);
     setWalkInName("");
     setWalkInService(services?.[0]?.id ?? "");
     setWalkInOpen(false);
@@ -78,6 +95,7 @@ export default function QueueList({
   /** Nessuno allo sportello: chiama il primo in attesa. */
   function callNext() {
     setEntries((prev) => promoteFirst(prev));
+    void queueCallNext(org);
   }
 
   /** Sportello libero: chiude chi è in servizio e chiama automaticamente il prossimo. */
@@ -85,9 +103,8 @@ export default function QueueList({
     if (!serving) return;
     setLastServed(serving.ticket);
     setServedCount((c) => c + 1);
-    setEntries((prev) =>
-      promoteFirst(prev.filter((e) => e.id !== serving.id))
-    );
+    setEntries((prev) => promoteFirst(prev.filter((e) => e.id !== serving.id)));
+    void queueComplete(serving.id, org);
   }
 
   /** Cliente assente: rimanda in fondo alla coda e chiama il prossimo. */
@@ -97,6 +114,7 @@ export default function QueueList({
       const rest = promoteFirst(prev.filter((e) => e.id !== serving.id));
       return [...rest, { ...serving, status: "in-attesa" as const }];
     });
+    void queueSkip(serving.id, org);
   }
 
   const wait = estimatedWait(waiting);

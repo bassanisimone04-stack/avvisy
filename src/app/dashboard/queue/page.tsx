@@ -32,7 +32,12 @@ export default async function QueuePage() {
         </Link>
       </div>
       <div className="mt-5">
-        <QueueList initialEntries={queue} services={services} interactive />
+        <QueueList
+          initialEntries={queue}
+          services={services}
+          orgId={org.id}
+          interactive
+        />
       </div>
     </>
   );
