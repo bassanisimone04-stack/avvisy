@@ -39,13 +39,14 @@ export default function SubscribeButtons() {
   async function go(plan: Plan) {
     setLoading(plan);
     setError(null);
-    const { url } = await startCheckout(plan);
+    const { url, reason } = await startCheckout(plan);
     if (url) {
       window.location.href = url;
     } else {
       setLoading(null);
       setError(
-        "I pagamenti non sono ancora attivi. Riprova più tardi o contatta il supporto."
+        reason ??
+          "I pagamenti non sono ancora attivi. Riprova più tardi o contatta il supporto."
       );
     }
   }
