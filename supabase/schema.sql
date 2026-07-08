@@ -19,8 +19,16 @@ create table if not exists organizations (
   lat           double precision,
   lng           double precision,
   owner_id      uuid references auth.users (id) on delete set null,
+  stripe_customer_id  text unique,
+  subscription_status text not null default 'inactive',
   created_at    timestamptz not null default now()
 );
+
+-- Se la tabella esiste già da una versione precedente, aggiunge le colonne
+-- necessarie alla fatturazione Stripe (idempotente).
+alter table organizations add column if not exists stripe_customer_id  text;
+alter table organizations add column if not exists subscription_status text not null default 'inactive';
+create unique index if not exists idx_org_stripe_customer on organizations (stripe_customer_id);
 
 create table if not exists services (
   id           uuid primary key default gen_random_uuid(),

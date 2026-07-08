@@ -59,8 +59,10 @@ export async function POST(req: Request) {
       default:
         break;
     }
-  } catch {
+  } catch (err) {
     // Non blocchiamo Stripe: se il DB non risponde, l'evento verrà rimandato.
+    // Registriamo comunque l'errore per la diagnostica.
+    console.error("webhook Stripe: aggiornamento DB fallito:", err);
   }
 
   return NextResponse.json({ received: true });

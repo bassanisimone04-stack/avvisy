@@ -63,7 +63,10 @@ export async function startCheckout(
     });
 
     return { url: session.url };
-  } catch {
+  } catch (err) {
+    // Non esponiamo il dettaglio al client, ma lo registriamo lato server
+    // per poter diagnosticare (chiavi errate, price ID mancante, colonne DB…).
+    console.error("startCheckout ha fallito:", err);
     return { url: null };
   }
 }
