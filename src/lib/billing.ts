@@ -55,7 +55,7 @@ export async function startCheckout(
       mode: "subscription",
       customer: customerId,
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: `${origin}/dashboard?abbonato=1`,
+      success_url: `${origin}/dashboard/abbonamento/conferma?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/dashboard/abbonamento`,
       metadata: { org_id: org.id },
       subscription_data: { metadata: { org_id: org.id } },
