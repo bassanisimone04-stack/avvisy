@@ -159,6 +159,74 @@ def test_chain_stays_valid():
     assert chain.is_valid()
 
 
+def test_vm_escrow_flow():
+    from novachain.vm import ContractEngine, Revert
+    from novachain import contracts
+
+    buyer, seller = Wallet(), Wallet()
+    chain = Blockchain(genesis_allocations={buyer.address: 500.0})
+    engine = ContractEngine(chain.balances)
+    addr = "nova1escrow"
+    engine.deploy(addr, contracts.escrow(), {"seller": seller.address, "state": 0})
+
+    engine.call(addr, "deposit", caller=buyer.address, value=200.0)
+    assert chain.balance_of(buyer.address) == 300.0
+    assert chain.balance_of(addr) == 200.0
+
+    # Only the buyer may release.
+    try:
+        engine.call(addr, "release", caller=Wallet().address)
+        assert False, "stranger should not release"
+    except Revert:
+        pass
+
+    engine.call(addr, "release", caller=buyer.address)
+    assert chain.balance_of(seller.address) == 200.0
+    assert chain.balance_of(addr) == 0.0
+
+
+def test_vm_token_and_atomic_revert():
+    from novachain.vm import ContractEngine, Revert
+    from novachain import contracts
+
+    owner, alice, bob = Wallet(), Wallet(), Wallet()
+    engine = ContractEngine({})
+    addr = "nova1token"
+    engine.deploy(addr, contracts.token(), {"owner": owner.address, "supply": 0})
+
+    # Non-owner cannot mint.
+    try:
+        engine.call(addr, "mint", caller=alice.address, args=(alice.address, 100))
+        assert False, "non-owner minted"
+    except Revert:
+        pass
+
+    engine.call(addr, "mint", caller=owner.address, args=(alice.address, 1000))
+    engine.call(addr, "transfer", caller=alice.address, args=(bob.address, 300))
+    assert engine.contracts[addr].storage["bal:" + alice.address] == 700
+    assert engine.contracts[addr].storage["bal:" + bob.address] == 300
+
+    # Overspend reverts and leaves balances untouched (atomicity).
+    try:
+        engine.call(addr, "transfer", caller=bob.address, args=(alice.address, 9999))
+        assert False, "overspend should revert"
+    except Revert:
+        pass
+    assert engine.contracts[addr].storage["bal:" + bob.address] == 300
+
+
+def test_vm_out_of_gas_reverts():
+    from novachain.vm import ContractEngine, Revert
+    engine = ContractEngine({})
+    # An infinite loop must be stopped by gas, not hang the node.
+    engine.deploy("nova1loop", {"spin": [("JMP", 0)]})
+    try:
+        engine.call("nova1loop", "spin", caller="nova1x", gas_limit=50)
+        assert False, "infinite loop should run out of gas"
+    except Revert as e:
+        assert "gas" in str(e)
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     passed = 0
