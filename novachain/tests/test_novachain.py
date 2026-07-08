@@ -1,0 +1,106 @@
+"""
+Core invariants for NovaChain. Run:  python3 -m pytest -q   (or python3 tests/test_novachain.py)
+"""
+import sys
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from novachain import Blockchain, Wallet
+
+
+def fresh_chain():
+    alice, validator = Wallet(), Wallet()
+    chain = Blockchain(genesis_allocations={alice.address: 1000.0, validator.address: 500.0})
+    chain.stake(validator.address, 500.0)
+    return chain, alice, validator
+
+
+def mine_mempool(chain):
+    who = chain.select_validator()
+    block = chain.forge_block(who)
+    ok, _ = chain.add_block(block)
+    assert ok
+    return block
+
+
+def test_signature_required():
+    chain, alice, _ = fresh_chain()
+    bob = Wallet()
+    tx = alice.create_transaction(bob.address, 10, 0.1, 0)
+    tx.signature = ""  # tamper
+    ok, reason = chain.add_transaction(tx)
+    assert not ok and "signature" in reason
+
+
+def test_cannot_forge_someone_elses_tx():
+    """Attaching your own public key to another address must fail."""
+    chain, alice, _ = fresh_chain()
+    bob, mallory = Wallet(), Wallet()
+    tx = alice.create_transaction(bob.address, 10, 0.1, 0)
+    tx.public_key = mallory.public_key  # try to substitute keys
+    assert not tx.is_signature_valid()
+
+
+def test_balances_conserve():
+    chain, alice, validator = fresh_chain()
+    bob = Wallet()
+    tx = alice.create_transaction(bob.address, 100, 1.0, 0)
+    ok, _ = chain.add_transaction(tx)
+    assert ok
+    mine_mempool(chain)
+    assert chain.balance_of(alice.address) == 1000.0 - 101.0
+    assert chain.balance_of(bob.address) == 100.0
+
+
+def test_nonce_replay_protection():
+    chain, alice, validator = fresh_chain()
+    bob = Wallet()
+    tx = alice.create_transaction(bob.address, 10, 0.1, 0)
+    assert chain.add_transaction(tx)[0]
+    mine_mempool(chain)
+    # Re-submitting the same signed tx (nonce 0) must be rejected.
+    ok, reason = chain.add_transaction(tx)
+    assert not ok and "nonce" in reason
+
+
+def test_double_spend_blocked():
+    chain, alice, _ = fresh_chain()
+    bob = Wallet()
+    ok1, _ = chain.add_transaction(alice.create_transaction(bob.address, 800, 0.1, 0))
+    # Second tx would overspend once the first is counted.
+    ok2, reason = chain.add_transaction(alice.create_transaction(bob.address, 800, 0.1, 1))
+    assert ok1 and not ok2 and "balance" in reason
+
+
+def test_ai_guardian_flags_drain():
+    chain, alice, validator = fresh_chain()
+    bob = Wallet()
+    # Teach the guardian a normal pattern.
+    for i, amt in enumerate((20, 25, 18, 22, 30)):
+        assert chain.add_transaction(alice.create_transaction(bob.address, amt, 0.1, i))[0]
+    mine_mempool(chain)
+    # Now a full-balance drain to a new address should be quarantined.
+    drain = alice.create_transaction(Wallet().address, chain.balance_of(alice.address) - 1, 0.1, 5)
+    ok, reason = chain.add_transaction(drain)
+    assert not ok and "quarantine" in reason.lower()
+    assert drain.risk_score > 0.75
+
+
+def test_chain_stays_valid():
+    chain, alice, _ = fresh_chain()
+    bob = Wallet()
+    for i in range(3):
+        chain.add_transaction(alice.create_transaction(bob.address, 10, 0.1, i))
+    mine_mempool(chain)
+    assert chain.is_valid()
+
+
+if __name__ == "__main__":
+    fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
+    passed = 0
+    for fn in fns:
+        fn()
+        print(f"  PASS  {fn.__name__}")
+        passed += 1
+    print(f"\n{passed}/{len(fns)} tests passed")
