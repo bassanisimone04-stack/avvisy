@@ -87,6 +87,33 @@ def test_ai_guardian_flags_drain():
     assert drain.risk_score > 0.75
 
 
+def test_p2p_adopt_heaviest_chain():
+    """A node replays and adopts a peer's longer valid chain from genesis."""
+    alice, validator = Wallet(), Wallet()
+    genesis = {alice.address: 1000.0, validator.address: 100.0}
+    stakes = {validator.address: 100.0}
+
+    # Node A builds two blocks.
+    node_a = Blockchain.bootstrap(genesis, stakes)
+    bob = Wallet()
+    for i in range(2):
+        node_a.add_transaction(alice.create_transaction(bob.address, 10, 0.1, i))
+        node_a.add_block(node_a.forge_block(validator.address))
+
+    # Node B starts empty and adopts A's chain.
+    node_b = Blockchain.bootstrap(genesis, stakes)
+    assert node_b.weight() == 1  # just genesis
+    assert node_b.try_adopt(node_a.export_chain(), stakes)
+    assert node_b.weight() == node_a.weight() == 3
+    assert node_b.balance_of(bob.address) == node_a.balance_of(bob.address)
+
+    # A tampered chain must be rejected wholesale.
+    tampered = node_a.export_chain()
+    tampered[1]["transactions"][0]["amount"] = 999999  # forge a reward
+    node_c = Blockchain.bootstrap(genesis, stakes)
+    assert not node_c.try_adopt(tampered, stakes)
+
+
 def test_chain_stays_valid():
     chain, alice, _ = fresh_chain()
     bob = Wallet()

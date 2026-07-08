@@ -43,16 +43,22 @@ class Blockchain:
         self.minted: float = 0.0
         self.guardian = AIGuardian()
         self.quarantine: list[Transaction] = []
-        self._create_genesis(genesis_allocations or {})
+        self.genesis_allocations: dict[str, float] = dict(genesis_allocations or {})
+        self._create_genesis(self.genesis_allocations)
 
     # --- genesis -------------------------------------------------------------
 
     def _create_genesis(self, allocations: dict[str, float]) -> None:
+        # Genesis MUST be byte-for-byte identical on every node, otherwise their
+        # genesis hashes differ and the whole network can never agree. So we pin
+        # every timestamp to 0 and iterate allocations in a fixed (sorted) order.
         txs = [
-            Transaction(sender="NETWORK", recipient=addr, amount=amt, fee=0.0, nonce=0)
-            for addr, amt in allocations.items()
+            Transaction(sender="NETWORK", recipient=addr, amount=amt, fee=0.0,
+                        nonce=0, timestamp=0.0)
+            for addr, amt in sorted(allocations.items())
         ]
-        genesis = Block(height=0, previous_hash="0" * 64, transactions=txs, validator="GENESIS")
+        genesis = Block(height=0, previous_hash="0" * 64, transactions=txs,
+                        validator="GENESIS", timestamp=0.0)
         genesis.seal()
         self.chain.append(genesis)
         for addr, amt in allocations.items():
@@ -212,4 +218,54 @@ class Blockchain:
                 return False
             if not cur.is_hash_valid():
                 return False
+        return True
+
+    # --- P2P support: chain weight and replay-based import -------------------
+
+    def weight(self) -> int:
+        """How 'heavy' this chain is for fork resolution. For this prototype the
+        longest valid chain wins (each block already required a legitimately
+        selected, staked validator to produce it)."""
+        return len(self.chain)
+
+    def export_chain(self) -> list[dict]:
+        return [b.to_dict() for b in self.chain]
+
+    @classmethod
+    def bootstrap(cls, genesis_allocations: dict[str, float],
+                  validator_stakes: dict[str, float]) -> "Blockchain":
+        """Create a fresh node from the shared network config: identical genesis
+        allocations and validator stake set on every node, so Proof-of-Stake
+        validator selection is reproducible network-wide."""
+        chain = cls(genesis_allocations=genesis_allocations)
+        for addr, amount in validator_stakes.items():
+            chain.stake(addr, amount)
+        return chain
+
+    def try_adopt(self, block_dicts: list[dict],
+                  validator_stakes: dict[str, float]) -> bool:
+        """Given another node's exported chain, rebuild it from genesis by
+        replaying every block through the full consensus checks. If it is valid
+        AND heavier than ours, adopt it and return True. A candidate that fails
+        any check is rejected wholesale — we never partially trust a peer."""
+        if not block_dicts:
+            return False
+        candidate = Blockchain.bootstrap(self.genesis_allocations, validator_stakes)
+        # block_dicts[0] is the peer's genesis; it must match ours exactly.
+        if block_dicts[0]["hash"] != candidate.last_block.hash:
+            return False
+        for d in block_dicts[1:]:
+            ok, _ = candidate.add_block(Block.from_dict(d))
+            if not ok:
+                return False
+        if candidate.weight() <= self.weight():
+            return False
+        # Adopt the heavier valid chain.
+        self.chain = candidate.chain
+        self.balances = candidate.balances
+        self.nonces = candidate.nonces
+        self.minted = candidate.minted
+        self.guardian = candidate.guardian
+        mined = {t.hash() for b in self.chain for t in b.transactions}
+        self.mempool = [t for t in self.mempool if t.hash() not in mined]
         return True
