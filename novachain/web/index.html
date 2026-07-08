@@ -1,0 +1,453 @@
+<title>NovaChain — cripto Proof-of-Stake con guardiano AI</title>
+<main>
+<style>
+  :root {
+    /* neutrals carry a slight blue bias — chosen, not defaulted */
+    --ground: #f3f6f8;
+    --panel: #ffffff;
+    --ink: #10161f;
+    --ink-soft: #46525f;
+    --ink-faint: #7d8894;
+    --line: #dde4ea;
+    /* aurora accent: clean-energy teal→cyan (the "Nova" / northern-lights motif) */
+    --accent: #0f9e78;
+    --accent-2: #1aa7c4;
+    --accent-ink: #0b5c46;
+    /* semantic, distinct from the accent — the fraud/alert hue */
+    --alert: #d8663a;
+    --btc: #b98032;
+    --hero-glow-1: rgba(15,158,120,0.20);
+    --hero-glow-2: rgba(26,167,196,0.16);
+    --shadow: 0 1px 2px rgba(16,22,31,.05), 0 8px 30px rgba(16,22,31,.06);
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    --maxw: 1080px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0b1119;
+      --panel: #121b26;
+      --ink: #eef3f7;
+      --ink-soft: #a9b6c2;
+      --ink-faint: #6f7d8b;
+      --line: #22303e;
+      --accent: #34d9a6;
+      --accent-2: #46c8e6;
+      --accent-ink: #baf3e0;
+      --alert: #f0865a;
+      --btc: #e0a955;
+      --hero-glow-1: rgba(52,217,166,0.20);
+      --hero-glow-2: rgba(70,200,230,0.16);
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 40px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:#f3f6f8; --panel:#fff; --ink:#10161f; --ink-soft:#46525f; --ink-faint:#7d8894;
+    --line:#dde4ea; --accent:#0f9e78; --accent-2:#1aa7c4; --accent-ink:#0b5c46;
+    --alert:#d8663a; --btc:#b98032;
+    --hero-glow-1:rgba(15,158,120,0.20); --hero-glow-2:rgba(26,167,196,0.16);
+    --shadow:0 1px 2px rgba(16,22,31,.05),0 8px 30px rgba(16,22,31,.06);
+  }
+  :root[data-theme="dark"] {
+    --ground:#0b1119; --panel:#121b26; --ink:#eef3f7; --ink-soft:#a9b6c2; --ink-faint:#6f7d8b;
+    --line:#22303e; --accent:#34d9a6; --accent-2:#46c8e6; --accent-ink:#baf3e0;
+    --alert:#f0865a; --btc:#e0a955;
+    --hero-glow-1:rgba(52,217,166,0.20); --hero-glow-2:rgba(70,200,230,0.16);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 40px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  main { display: block; background: var(--ground); color: var(--ink);
+    font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); }
+  h1,h2,h3 { text-wrap: balance; line-height: 1.08; margin: 0; }
+  p { margin: 0; }
+  .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--accent-ink); font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .eyebrow { color: var(--accent); } }
+  :root[data-theme="dark"] .eyebrow { color: var(--accent); }
+  :root[data-theme="light"] .eyebrow { color: var(--accent-ink); }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; overflow: hidden; border-top: none;
+    padding: 96px 0 80px; }
+  #aurora { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;
+    opacity: .9; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+  .spark { width: 26px; height: 26px; flex: none; }
+  .brand b { font-size: 18px; letter-spacing: -.01em; }
+  .brand span { font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+    letter-spacing: .12em; text-transform: uppercase; border: 1px solid var(--line);
+    padding: 3px 8px; border-radius: 999px; }
+  .hero h1 { font-size: clamp(38px, 6.4vw, 74px); font-weight: 680;
+    letter-spacing: -.028em; max-width: 16ch; }
+  .hero h1 .grad { background: linear-gradient(96deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lede { margin-top: 26px; font-size: clamp(17px, 2vw, 20px); color: var(--ink-soft);
+    max-width: 60ch; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .btn { font: inherit; font-weight: 600; font-size: 15px; text-decoration: none;
+    padding: 12px 20px; border-radius: 10px; border: 1px solid transparent;
+    display: inline-flex; align-items: center; gap: 8px; transition: transform .12s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: linear-gradient(96deg, var(--accent), var(--accent-2));
+    color: #04231a; }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--panel); }
+
+  /* ---------- energy readout ---------- */
+  .readout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px;
+    align-items: center; }
+  .bignum { font-family: var(--mono); font-size: clamp(56px, 10vw, 104px);
+    font-weight: 600; letter-spacing: -.04em; line-height: .95;
+    font-variant-numeric: tabular-nums;
+    background: linear-gradient(96deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .bignum small { display:block; font-size: 15px; font-weight: 500; letter-spacing: .02em;
+    color: var(--ink-soft); -webkit-text-fill-color: var(--ink-soft); margin-top: 10px;
+    font-family: var(--sans); }
+  .bars { display: flex; flex-direction: column; gap: 22px; }
+  .bar-row .bar-label { display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 14px; margin-bottom: 8px; }
+  .bar-row .who { font-weight: 600; }
+  .bar-row .val { font-family: var(--mono); font-variant-numeric: tabular-nums;
+    color: var(--ink-soft); font-size: 13px; }
+  .track { height: 14px; background: var(--line); border-radius: 999px; overflow: hidden; }
+  .fill { height: 100%; border-radius: 999px; width: 0;
+    transition: width 1.4s cubic-bezier(.2,.7,.2,1); }
+  .fill.btc { background: var(--btc); }
+  .fill.nova { background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+  .fine { margin-top: 18px; font-size: 12.5px; color: var(--ink-faint);
+    font-family: var(--mono); }
+
+  /* ---------- comparison table ---------- */
+  h2.sec { font-size: clamp(26px, 3.6vw, 38px); font-weight: 660; letter-spacing: -.02em; }
+  .sec-lede { margin-top: 14px; color: var(--ink-soft); max-width: 62ch; }
+  .table-scroll { overflow-x: auto; margin-top: 36px; border: 1px solid var(--line);
+    border-radius: 14px; background: var(--panel); box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; min-width: 620px; }
+  th, td { text-align: left; padding: 16px 20px; border-bottom: 1px solid var(--line);
+    font-size: 15px; vertical-align: top; }
+  thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.feat { font-weight: 600; width: 30%; }
+  .cell-btc { color: var(--ink-soft); }
+  .cell-nova { color: var(--ink); font-weight: 500; }
+  .tag { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 6px; margin-left: 8px;
+    border: 1px solid; white-space: nowrap; }
+  .tag.arch { color: var(--accent-ink); border-color: var(--accent); }
+  .tag.ai { color: var(--alert); border-color: var(--alert); }
+  :root[data-theme="dark"] .tag.arch { color: var(--accent); }
+  @media (prefers-color-scheme: dark){ .tag.arch { color: var(--accent);} }
+
+  /* ---------- pillars ---------- */
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    margin-top: 44px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
+    padding: 26px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; }
+  .card .ic { width: 40px; height: 40px; }
+  .card h3 { font-size: 19px; font-weight: 640; letter-spacing: -.01em; }
+  .card p { color: var(--ink-soft); font-size: 14.5px; }
+  .card .note { font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint);
+    margin-top: 4px; }
+
+  /* ---------- honesty callout ---------- */
+  .honest { background: var(--panel); border: 1px solid var(--line);
+    border-left: 3px solid var(--accent); border-radius: 14px; padding: 34px 36px;
+    box-shadow: var(--shadow); }
+  .honest h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 640; letter-spacing: -.02em; }
+  .honest p { margin-top: 14px; color: var(--ink-soft); max-width: 64ch; }
+  .honest .quote { margin-top: 18px; font-size: 17px; color: var(--ink); font-weight: 500;
+    border: none; padding-left: 0; }
+
+  /* ---------- europe / mica ---------- */
+  .eu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+  .eu-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 26px; box-shadow: var(--shadow); }
+  .eu-card h3 { font-size: 17px; font-weight: 640; margin-bottom: 8px; }
+  .eu-card p { color: var(--ink-soft); font-size: 14.5px; }
+
+  /* ---------- run / code ---------- */
+  .code { font-family: var(--mono); font-size: 13.5px; background: var(--panel);
+    border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; margin-top: 28px;
+    overflow-x: auto; box-shadow: var(--shadow); line-height: 1.9; }
+  .code .c { color: var(--ink-faint); }
+  .code .g { color: var(--accent); }
+
+  footer { padding: 46px 0; border-top: 1px solid var(--line); color: var(--ink-faint);
+    font-size: 13px; }
+  .disclaim { margin-top: 10px; max-width: 70ch; }
+
+  @media (max-width: 820px) {
+    .readout { grid-template-columns: 1fr; gap: 32px; }
+    .pillars { grid-template-columns: 1fr; }
+    .eu-grid { grid-template-columns: 1fr; }
+    section { padding: 64px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fill { transition: none; }
+    .btn { transition: none; }
+  }
+</style>
+
+<!-- ===================== HERO ===================== -->
+<div class="hero">
+  <canvas id="aurora" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="spark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 1.5l2.4 6.9 6.9 2.4-6.9 2.4L12 22.5l-2.4-6.9L2.7 12.8l6.9-2.4L12 1.5z"
+          fill="url(#g1)"/>
+        <defs><linearGradient id="g1" x1="2" y1="2" x2="22" y2="22">
+          <stop stop-color="#0f9e78"/><stop offset="1" stop-color="#1aa7c4"/>
+        </linearGradient></defs>
+      </svg>
+      <b>NovaChain</b>
+      <span>Prototipo · Open source</span>
+    </div>
+
+    <p class="eyebrow">Criptovaluta Proof-of-Stake · con guardiano AI</p>
+    <h1 style="margin-top:18px">Migliora Bitcoin <span class="grad">davvero</span>. Senza fumo.</h1>
+    <p class="lede">NovaChain riparte dalle fondamenta di Bitcoin — scarsità, crittografia,
+      catena immutabile — e risolve i suoi difetti reali: energia, frodi, rigidità.
+      I miglioramenti veri vengono dall'architettura; l'AI la usiamo dove serve
+      davvero, non come parola magica.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#energia">Vedi i numeri dell'energia</a>
+      <a class="btn btn-ghost" href="#onesta">La nostra promessa onesta</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== ENERGY ===================== -->
+<section id="energia">
+  <div class="wrap">
+    <p class="eyebrow">Il problema n°1 di Bitcoin — ed è vero</p>
+    <div class="readout" style="margin-top:26px">
+      <div>
+        <div class="bignum" id="factor">~2000×
+          <small>meno energia per transazione rispetto a Bitcoin</small>
+        </div>
+      </div>
+      <div class="bars" id="bars">
+        <div class="bar-row">
+          <div class="bar-label"><span class="who">Bitcoin · Proof-of-Work</span>
+            <span class="val">~1.250 kWh</span></div>
+          <div class="track"><div class="fill btc" data-w="100"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span class="who">NovaChain · Proof-of-Stake</span>
+            <span class="val">~0,6 kWh</span></div>
+          <div class="track"><div class="fill nova" data-w="4"></div></div>
+        </div>
+        <p class="fine">// Il risparmio viene dal consenso (niente mining), non dall'AI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARISON ===================== -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Otto criticità di Bitcoin, otto risposte</h2>
+    <p class="sec-lede">Ogni riga dice anche <em>chi</em> risolve il problema:
+      l'architettura o l'AI. Tenere questa distinzione chiara è ciò che rende
+      NovaChain difendibile e non marketing.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Criticità</th><th>Bitcoin</th><th>NovaChain</th></tr></thead>
+        <tbody>
+          <tr><td class="feat">Energia</td>
+            <td class="cell-btc">~150 TWh/anno, come una nazione</td>
+            <td class="cell-nova">Proof-of-Stake, ~0 spreco <span class="tag arch">Architettura</span></td></tr>
+          <tr><td class="feat">Frodi &amp; furti</td>
+            <td class="cell-btc">Nessuna difesa, tutto irreversibile</td>
+            <td class="cell-nova">Guardiano AI: rischio + quarantena <span class="tag ai">AI</span></td></tr>
+          <tr><td class="feat">Velocità</td>
+            <td class="cell-btc">~7 tx/s, blocchi da 10 min</td>
+            <td class="cell-nova">Finalità rapida, base per Layer 2 <span class="tag arch">Architettura</span></td></tr>
+          <tr><td class="feat">Programmabilità</td>
+            <td class="cell-btc">Nessuno smart contract vero</td>
+            <td class="cell-nova">VM deterministica con gas <span class="tag arch">Architettura</span></td></tr>
+          <tr><td class="feat">Centralizzazione</td>
+            <td class="cell-btc">Mining concentrato su chi ha più hardware</td>
+            <td class="cell-nova">Stake distribuito, nessun hardware speciale <span class="tag arch">Architettura</span></td></tr>
+          <tr><td class="feat">Fee imprevedibili</td>
+            <td class="cell-btc">Costo volatile e opaco</td>
+            <td class="cell-nova">Mercato fee + predizione AI <span class="tag ai">AI</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PILLARS ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Cosa c'è già, e funziona</p>
+    <h2 class="sec" style="margin-top:12px">Tre pilastri, tutti con codice reale</h2>
+    <div class="pillars">
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z" stroke="url(#g1)" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <h3>Energia quasi zero</h3>
+        <p>Proof-of-Stake: il produttore del blocco è scelto in base allo stake,
+          non a chi brucia più elettricità. Nessun mining, nessuno spreco.</p>
+        <div class="note">// architettura, non AI</div>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z" stroke="var(--alert)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--alert)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Guardiano AI anti-frode</h3>
+        <p>Un modello (Isolation Forest) impara il comportamento normale di ogni
+          conto e mette in quarantena le transazioni sospette — es. una chiave
+          rubata che svuota il conto. Bitcoin non ha nulla di simile.</p>
+        <div class="note">// advisory, mai dentro il consenso</div>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4l-4 8 4 8M16 4l4 8-4 8" stroke="url(#g1)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Programmabile</h3>
+        <p>Una macchina virtuale deterministica con gas metering fa girare smart
+          contract — escrow, token, crowdfunding — con la garanzia che ogni nodo
+          calcoli lo stesso identico risultato.</p>
+        <div class="note">// stack VM · commit atomico</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HONESTY ===================== -->
+<section id="onesta">
+  <div class="wrap">
+    <div class="honest">
+      <p class="eyebrow">La regola d'oro</p>
+      <h2 style="margin-top:12px">Cosa NON ti promettiamo</h2>
+      <p>Il cuore di una blockchain — firme, saldi, validità dei blocchi — deve
+        essere <strong>deterministico</strong>: ogni nodo, con lo stesso input, deve
+        arrivare alla stessa conclusione, altrimenti la rete si spacca. Le reti
+        neurali non sono deterministiche. Quindi l'AI <strong>non</strong> governa il
+        consenso, e chi promette il contrario vende fumo.</p>
+      <p class="quote">In NovaChain l'AI è uno scudo di sicurezza <em>accanto</em> alla
+        catena, non il motore. È questa disciplina che ci rende credibili.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EUROPE / MiCA ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Costruire in Europa, sul serio</p>
+    <h2 class="sec" style="margin-top:12px">La realtà normativa, affrontata dal giorno 1</h2>
+    <div class="eu-grid">
+      <div class="eu-card">
+        <h3>MiCA non è un dettaglio</h3>
+        <p>Offrire un token al pubblico nell'UE ha obblighi legali precisi
+          (whitepaper conforme, requisiti sugli emittenti, antiriciclaggio).
+          Saperlo dal principio separa un progetto serio da un problema legale.</p>
+      </div>
+      <div class="eu-card">
+        <h3>Qui l'AI aiuta davvero</h3>
+        <p>L'analisi antiriciclaggio (AML) on-chain è uno dei casi d'uso più solidi
+          dell'AI nel cripto — esattamente il tipo di sicurezza che un mercato
+          europeo regolato richiede.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RUN ===================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Provalo in 30 secondi</p>
+    <h2 class="sec" style="margin-top:12px">È codice, non una slide</h2>
+    <div class="code">
+      <span class="c"># installa le dipendenze</span><br>
+      pip install -r requirements.txt<br><br>
+      <span class="c"># demo: wallet, staking, blocchi, frode bloccata dall'AI</span><br>
+      python3 <span class="g">demo.py</span><br>
+      <span class="c"># rete P2P a più nodi &nbsp;·&nbsp; AI addestrata &nbsp;·&nbsp; smart contract</span><br>
+      python3 <span class="g">demo_p2p.py</span> &nbsp; python3 <span class="g">demo_ai.py</span> &nbsp; python3 <span class="g">demo_contracts.py</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong style="color:var(--ink)">NovaChain</strong> — prototipo didattico open source.
+    <p class="disclaim">Questo è un prototipo pensato per imparare e dimostrare i concetti.
+      Non è denaro reale, non è pronto per la produzione e nulla qui è consulenza
+      finanziaria o di investimento. Prima di qualsiasi lancio reale in Europa,
+      è indispensabile una consulenza legale specializzata (MiCA/AML).</p>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <linearGradient id="g1" x1="2" y1="2" x2="22" y2="22">
+    <stop stop-color="#0f9e78"/><stop offset="1" stop-color="#1aa7c4"/>
+  </linearGradient>
+</defs></svg>
+
+<script>
+  // Animate the comparison bars into view.
+  (function () {
+    var fills = document.querySelectorAll('.fill');
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function run() {
+      fills.forEach(function (f) {
+        var w = f.getAttribute('data-w') + '%';
+        if (reduce) { f.style.transition = 'none'; f.style.width = w; }
+        else { requestAnimationFrame(function(){ f.style.width = w; }); }
+      });
+    }
+    var sec = document.getElementById('energia');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { run(); io.disconnect(); } });
+      }, { threshold: 0.4 });
+      io.observe(sec);
+    } else { run(); }
+  })();
+
+  // Subtle aurora backdrop — clean-energy motif, calm and non-distracting.
+  (function () {
+    var c = document.getElementById('aurora');
+    if (!c) return;
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var ctx = c.getContext('2d'), w, h, t = 0;
+    function size() {
+      var r = window.devicePixelRatio || 1;
+      w = c.clientWidth; h = c.clientHeight;
+      c.width = w * r; h && (c.height = h * r); ctx.setTransform(r,0,0,r,0,0);
+    }
+    var blobs = [
+      { x:.22, y:.30, r:.42, c1:'rgba(15,158,120,0.20)' },
+      { x:.72, y:.20, r:.5,  c1:'rgba(26,167,196,0.16)' },
+      { x:.55, y:.62, r:.46, c1:'rgba(15,158,120,0.12)' }
+    ];
+    function isDark() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr) return attr === 'dark';
+      return matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function draw() {
+      ctx.clearRect(0,0,w,h);
+      var boost = isDark() ? 1.5 : 1;
+      for (var i=0;i<blobs.length;i++) {
+        var b = blobs[i];
+        var dx = Math.sin(t*0.0004 + i)*0.04, dy = Math.cos(t*0.0005 + i*1.7)*0.04;
+        var cx=(b.x+dx)*w, cy=(b.y+dy)*h, rad=b.r*Math.max(w,h);
+        var g = ctx.createRadialGradient(cx,cy,0,cx,cy,rad);
+        g.addColorStop(0, b.c1); g.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.globalAlpha = boost; ctx.fillStyle = g;
+        ctx.fillRect(0,0,w,h);
+      }
+      ctx.globalAlpha = 1;
+    }
+    size(); draw();
+    window.addEventListener('resize', function(){ size(); draw(); });
+    if (!reduce) (function loop(){ t += 16; draw(); requestAnimationFrame(loop); })();
+  })();
+</script>
+</main>
