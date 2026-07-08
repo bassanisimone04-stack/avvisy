@@ -87,6 +87,12 @@ def main() -> None:
     print(f"Total coins minted  : {chain.minted:.2f}")
     print(f"Chain is valid      : {chain.is_valid()}")
     line()
+
+    # 8. The headline number: energy vs Bitcoin.
+    from novachain.energy import compare
+    print(compare().pretty())
+    print("(This saving comes from Proof-of-Stake — architecture, not AI.)")
+    line()
     print("Done. Energy spent mining: 0. That's the point. ⚡")
 
 

@@ -16,9 +16,14 @@ migliorata** su tre fronti concreti:
 
 ```bash
 pip install -r requirements.txt
-python3 demo.py            # demo end-to-end (crea wallet, stake, blocchi, e frode bloccata dall'AI)
+python3 demo.py                   # demo end-to-end (wallet, stake, blocchi, frode bloccata dall'AI, confronto energia)
+python3 -m novachain.energy       # solo il confronto energetico vs Bitcoin (~2000x meno energia)
 python3 tests/test_novachain.py   # suite di test
 ```
+
+📄 **Da leggere:** [`docs/CRITICITA_BTC_E_SOLUZIONI.md`](docs/CRITICITA_BTC_E_SOLUZIONI.md)
+— ogni criticità di Bitcoin mappata alla soluzione di NovaChain, con la realtà
+regolatoria europea (MiCA). Onesto su cosa risolve l'architettura e cosa l'AI.
 
 ## Cosa vedi nella demo
 
