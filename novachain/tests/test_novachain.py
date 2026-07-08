@@ -114,6 +114,42 @@ def test_p2p_adopt_heaviest_chain():
     assert not node_c.try_adopt(tampered, stakes)
 
 
+def test_ml_guardian_separates_fraud():
+    """The trained IsolationForest scores obvious fraud far above normal spend."""
+    from novachain.ai_guardian_ml import MLGuardian, synthetic_normal_stream
+    from novachain import Transaction
+
+    sender = "nova1ml_test_account"
+    g = MLGuardian()
+    stream = synthetic_normal_stream(sender, n=300)
+    g.train(stream)
+    t = stream[-1][0].timestamp
+
+    normal = g.score(Transaction(sender, "nova1known01", 50, 0.1, 0, timestamp=t + 300), 10_000)
+    drain = g.score(Transaction(sender, "nova1thief_new", 9990, 0.1, 0, timestamp=t + 300), 10_000)
+
+    assert normal < 0.3
+    assert drain > 0.6
+    assert g.is_quarantined(drain) and not g.is_quarantined(normal)
+
+
+def test_ml_guardian_plugs_into_chain():
+    """A Blockchain can run with the ML guardian and still quarantines a drain."""
+    from novachain.ai_guardian_ml import MLGuardian, synthetic_normal_stream
+
+    alice, validator = Wallet(), Wallet()
+    g = MLGuardian()
+    g.train(synthetic_normal_stream(alice.address, n=300))
+    chain = Blockchain(genesis_allocations={alice.address: 10_000.0,
+                                            validator.address: 100.0}, guardian=g)
+    chain.stake(validator.address, 100.0)
+
+    # A full-balance drain should be quarantined by the ML guardian.
+    drain = alice.create_transaction(Wallet().address, 9900, 0.1, 0)
+    ok, reason = chain.add_transaction(drain)
+    assert not ok and "quarantine" in reason.lower()
+
+
 def test_chain_stays_valid():
     chain, alice, _ = fresh_chain()
     bob = Wallet()

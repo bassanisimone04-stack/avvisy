@@ -100,6 +100,19 @@ class AIGuardian:
         )
         return round(min(1.0, max(0.0, raw)), 4)
 
+    def features(self, tx: Transaction, sender_balance: float) -> list[float]:
+        """The feature vector describing a transaction's behaviour. Shared with
+        the ML guardian (ai_guardian_ml.py) so both score the same signals."""
+        p = self._profile(tx.sender)
+        amount_anomaly = self._amount_anomaly_signal(tx, p) if p.count >= 3 else 0.0
+        return [
+            tx.amount,
+            amount_anomaly,
+            self._velocity_signal(tx, p),
+            1.0 if tx.recipient not in p.known_recipients else 0.0,
+            self._balance_drain_signal(tx, sender_balance),
+        ]
+
     def is_quarantined(self, score: float) -> bool:
         return score >= self.QUARANTINE_THRESHOLD
 

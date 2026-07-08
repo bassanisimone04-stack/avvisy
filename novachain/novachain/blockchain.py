@@ -34,14 +34,18 @@ TOTAL_SUPPLY_CAP = 21_000_000  # a hard cap, in the spirit of Bitcoin's scarcity
 
 
 class Blockchain:
-    def __init__(self, genesis_allocations: dict[str, float] | None = None) -> None:
+    def __init__(self, genesis_allocations: dict[str, float] | None = None,
+                 guardian=None) -> None:
         self.chain: list[Block] = []
         self.mempool: list[Transaction] = []
         self.balances: dict[str, float] = {}
         self.nonces: dict[str, int] = {}
         self.stakes: dict[str, float] = {}
         self.minted: float = 0.0
-        self.guardian = AIGuardian()
+        # Pluggable AI guardian: heuristic by default, or an ML model (see
+        # ai_guardian_ml.make_guardian). Both share the same interface and both
+        # are advisory only — never part of consensus.
+        self.guardian = guardian if guardian is not None else AIGuardian()
         self.quarantine: list[Transaction] = []
         self.genesis_allocations: dict[str, float] = dict(genesis_allocations or {})
         self._create_genesis(self.genesis_allocations)
