@@ -1,192 +1,225 @@
 @import "tailwindcss";
 
-/* Palette perlata calda (tema chiaro). */
-:root {
-  --p-ink: #1c2426;
-  --p-canvas: #f3ede1;
-  --p-card: #fffdf8;
-  --p-line: #e7ddca;
-  --p-brand: #0e7a68;
-  --p-brand-dark: #0b5c4f;
-  --p-brand-soft: #e3f0ec;
-  --p-signal: #c9760a;
-  --p-signal-soft: #fbf1de;
-  --p-logo: #2b4cff;
-  --p-muted: #5b5344;
-}
+/*
+  Scortvia — sistema di design istituzionale B2B.
+  Palette sobria: acciaio/ardesia + verde industriale (circolarità delle merci).
+*/
 
-/* Tema scuro: stessa identità, tono notturno caldo. */
-[data-theme="dark"] {
-  --p-ink: #f0e9db;
-  --p-canvas: #15110b;
-  --p-card: #211c14;
-  --p-line: #3a3222;
-  --p-brand: #12907a;
-  --p-brand-dark: #3bb49b;
-  --p-brand-soft: #16332c;
-  --p-signal: #e0912b;
-  --p-signal-soft: #33240f;
-  --p-logo: #7d92ff;
-  --p-muted: #b7ad98;
+:root {
+  --s-ink: #0f1c26; /* testi principali, ardesia scura */
+  --s-ink-soft: #3a4a56;
+  --s-muted: #64757f; /* testi secondari */
+  --s-canvas: #f4f6f7; /* sfondo pagina, grigio freddo */
+  --s-surface: #ffffff; /* card e superfici */
+  --s-surface-2: #eef2f4; /* superfici alternate */
+  --s-line: #dfe6ea; /* bordi */
+  --s-line-strong: #c6d1d7;
+
+  --s-brand: #0d7d63; /* verde industriale */
+  --s-brand-dark: #0a5f4b;
+  --s-brand-soft: #e5f2ed;
+
+  --s-steel: #1f4e6b; /* blu acciaio, azioni secondarie */
+  --s-steel-soft: #e7eef3;
+
+  --s-signal: #b45309; /* ambra, verifiche/avvisi */
+  --s-signal-soft: #fbf0e0;
+
+  --s-danger: #b42318;
+  --s-danger-soft: #fbeae8;
 }
 
 @theme inline {
-  /* Colori mappati alle variabili di tema (commutabili a runtime) */
-  --color-ink: var(--p-ink);
-  --color-canvas: var(--p-canvas);
-  --color-card: var(--p-card);
-  --color-line: var(--p-line);
-  --color-brand: var(--p-brand);
-  --color-brand-dark: var(--p-brand-dark);
-  --color-brand-soft: var(--p-brand-soft);
-  --color-signal: var(--p-signal);
-  --color-signal-soft: var(--p-signal-soft);
-  --color-logo: var(--p-logo);
-  --color-muted: var(--p-muted);
+  --color-ink: var(--s-ink);
+  --color-ink-soft: var(--s-ink-soft);
+  --color-muted: var(--s-muted);
+  --color-canvas: var(--s-canvas);
+  --color-surface: var(--s-surface);
+  --color-surface-2: var(--s-surface-2);
+  --color-line: var(--s-line);
+  --color-line-strong: var(--s-line-strong);
+  --color-brand: var(--s-brand);
+  --color-brand-dark: var(--s-brand-dark);
+  --color-brand-soft: var(--s-brand-soft);
+  --color-steel: var(--s-steel);
+  --color-steel-soft: var(--s-steel-soft);
+  --color-signal: var(--s-signal);
+  --color-signal-soft: var(--s-signal-soft);
+  --color-danger: var(--s-danger);
+  --color-danger-soft: var(--s-danger-soft);
 
-  /* Tipografia */
-  --font-display: var(--font-bricolage), system-ui, sans-serif;
-  --font-sans: var(--font-instrument), system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
-  --font-script: var(--font-dancing), cursive;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 
-  /* Ombre morbide per dare profondità */
-  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.05),
-    0 8px 24px -14px rgba(0, 0, 0, 0.22);
-  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.06),
-    0 18px 40px -20px rgba(0, 0, 0, 0.34);
+  --radius-card: 0.75rem;
+
+  --shadow-soft: 0 1px 2px rgba(15, 28, 38, 0.04),
+    0 8px 24px -16px rgba(15, 28, 38, 0.18);
+  --shadow-lift: 0 2px 6px rgba(15, 28, 38, 0.06),
+    0 20px 40px -22px rgba(15, 28, 38, 0.28);
 }
 
-/* Base tipografica comoda da leggere a qualsiasi età (≈17px). */
+* {
+  border-color: var(--s-line);
+}
+
 html {
-  font-size: 106.25%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color-canvas);
-  background-image: radial-gradient(
-      1200px 600px at 50% -10%,
-      rgba(255, 253, 246, 0.9),
-      transparent 60%
-    ),
-    radial-gradient(
-      900px 500px at 100% 0%,
-      rgba(227, 240, 236, 0.5),
-      transparent 55%
-    );
-  background-attachment: fixed;
-  color: var(--color-ink);
+  background: var(--s-canvas);
+  color: var(--s-ink);
   font-family: var(--font-sans);
-  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-[data-theme="dark"] body {
-  background-image: radial-gradient(
-      1200px 600px at 50% -10%,
-      rgba(59, 180, 155, 0.08),
-      transparent 60%
-    ),
-    radial-gradient(
-      900px 500px at 100% 0%,
-      rgba(125, 146, 255, 0.06),
-      transparent 55%
-    );
-}
-
 h1,
 h2,
-h3 {
-  font-family: var(--font-display);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+h3,
+h4 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
-/* Focus sempre ben visibile: utile con tastiera e per chi ci vede poco. */
-:focus-visible {
-  outline: 3px solid var(--color-brand);
-  outline-offset: 2px;
-  border-radius: 6px;
+/* Utility di layout ricorrente. */
+.container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
 }
 
-/* Il "biglietto" Avvisy: bordo perforato come i ticket eliminacode */
-.ticket {
-  position: relative;
-  background: var(--color-card);
-  border: 1px solid var(--color-line);
-  border-radius: 0.85rem;
+/* Pulsanti */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.625rem;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: var(--s-brand);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--s-brand-dark);
+}
+.btn-steel {
+  background: var(--s-steel);
+  color: #fff;
+}
+.btn-steel:hover {
+  background: #163a50;
+}
+.btn-outline {
+  background: var(--s-surface);
+  color: var(--s-ink);
+  border-color: var(--s-line-strong);
+}
+.btn-outline:hover {
+  background: var(--s-surface-2);
+  border-color: var(--s-muted);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--s-ink);
+}
+.btn-ghost:hover {
+  background: var(--s-surface-2);
+}
+.btn-sm {
+  padding: 0.5rem 0.875rem;
+  font-size: 0.875rem;
+}
+.btn-block {
+  width: 100%;
+}
+
+/* Card */
+.card {
+  background: var(--s-surface);
+  border: 1px solid var(--s-line);
+  border-radius: var(--radius-card);
+}
+.card-soft {
   box-shadow: var(--shadow-soft);
 }
 
-.ticket::before,
-.ticket::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 9999px;
-  background: var(--color-canvas);
-  border: 1px solid var(--color-line);
-  transform: translateY(-50%);
+/* Badge */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  line-height: 1.2;
 }
 
-.ticket::before {
-  left: -0.7rem;
+/* Campi form */
+.field {
+  width: 100%;
+  background: var(--s-surface);
+  border: 1px solid var(--s-line-strong);
+  border-radius: 0.625rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9375rem;
+  color: var(--s-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--s-brand);
+  box-shadow: 0 0 0 3px var(--s-brand-soft);
+}
+.field-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--s-ink-soft);
+  margin-bottom: 0.35rem;
 }
 
-.ticket::after {
-  right: -0.7rem;
-}
-
-.ticket-divider {
-  border-top: 2px dashed var(--color-line);
+/* Motivo industriale sottile per gli header. */
+.grid-texture {
+  background-image: linear-gradient(
+      to right,
+      rgba(15, 28, 38, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(15, 28, 38, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  html {
+    scroll-behavior: auto;
   }
-}
-
-/* Micro-animazione di entrata, discreta. */
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.rise {
-  animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-.rise-2 {
-  animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) 0.12s both;
-}
-
-/* Sfondo neutro della mappa finché le tile non sono caricate. */
-.leaflet-container {
-  background: var(--color-canvas);
-  font: inherit;
-}
-
-/* Stampa: solo il biglietto, senza intestazioni né pulsanti. */
-@media print {
-  header,
-  .no-print {
-    display: none !important;
-  }
-
-  body {
-    background: #fff;
+  * {
+    transition: none !important;
   }
 }

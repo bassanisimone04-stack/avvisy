@@ -1,5 +1,5 @@
 {
-  "name": "avvisy",
+  "name": "scortvia",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,25 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.12.0",
-    "@supabase/supabase-js": "^2.110.0",
-    "leaflet": "^1.9.4",
     "next": "^15.3.0",
-    "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-leaflet": "^5.0.0",
-    "stripe": "^22.3.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@fontsource/dancing-script": "^5.2.8",
-    "@fontsource/instrument-sans": "^5.2.8",
     "@tailwindcss/postcss": "^4.1.0",
-    "@types/leaflet": "^1.9.21",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "sharp": "^0.35.3",
     "tailwindcss": "^4.1.0",
     "typescript": "^5.7.0"
   }

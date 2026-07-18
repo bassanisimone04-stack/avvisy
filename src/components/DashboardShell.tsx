@@ -2,115 +2,118 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { signOut } from "@/app/login/actions";
-import Logo from "@/components/Logo";
-import ThemeToggle from "@/components/ThemeToggle";
-import { cn } from "@/lib/utils";
+import { useState } from "react";
+import Logo from "./Logo";
+import { IconBell, IconClose, IconMenu } from "./icons";
 
-const navItems = [
-  { href: "/dashboard", label: "Panoramica", icon: "◫" },
-  { href: "/dashboard/appointments", label: "Appuntamenti", icon: "▤" },
-  { href: "/dashboard/queue", label: "Coda live", icon: "№" },
-  { href: "/dashboard/report", label: "Report", icon: "▦" },
-  { href: "/dashboard/services", label: "Servizi", icon: "✚" },
-  { href: "/dashboard/abbonamento", label: "Abbonamento", icon: "◆" },
-  { href: "/dashboard/settings", label: "Impostazioni", icon: "⚙" },
-];
+export type NavItem = { href: string; label: string; icon: React.ReactNode };
 
 export default function DashboardShell({
+  navItems,
+  areaLabel,
+  accountName,
+  accountMeta,
   children,
 }: {
+  navItems: NavItem[];
+  areaLabel: string;
+  accountName: string;
+  accountMeta: string;
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
-  const isActive = (href: string) =>
-    href === "/dashboard" ? pathname === href : pathname.startsWith(href);
-
-  return (
-    <div className="min-h-dvh md:grid md:grid-cols-[220px_1fr]">
-      {/* Sidebar (desktop) */}
-      <aside className="hidden border-r border-line bg-card md:flex md:flex-col">
-        <div className="flex h-14 items-center border-b border-line px-5">
-          <Link href="/" className="text-lg">
-            <Logo />
-          </Link>
-        </div>
-        <nav className="flex flex-1 flex-col gap-1 p-3">
-          {navItems.map((item) => (
+  const sidebar = (
+    <div className="flex h-full flex-col">
+      <div className="flex items-center justify-between p-4">
+        <Logo />
+        <button className="lg:hidden" onClick={() => setOpen(false)} aria-label="Chiudi">
+          <IconClose />
+        </button>
+      </div>
+      <div className="px-4">
+        <span className="chip bg-brand-soft text-brand-dark">{areaLabel}</span>
+      </div>
+      <nav className="mt-4 flex-1 space-y-1 px-3">
+        {navItems.map((item) => {
+          const active =
+            pathname === item.href ||
+            (item.href !== "/venditore" &&
+              item.href !== "/compratore" &&
+              item.href !== "/admin" &&
+              pathname.startsWith(item.href));
+          return (
             <Link
               key={item.href}
               href={item.href}
-              className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-                isActive(item.href)
-                  ? "bg-brand-soft text-brand-dark"
-                  : "text-muted hover:bg-canvas hover:text-ink"
-              )}
+              onClick={() => setOpen(false)}
+              className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                active
+                  ? "bg-brand text-white"
+                  : "text-ink-soft hover:bg-surface-2 hover:text-ink"
+              }`}
             >
-              <span aria-hidden className="w-4 text-center">
-                {item.icon}
-              </span>
+              <span className={active ? "text-white" : "text-muted"}>{item.icon}</span>
               {item.label}
             </Link>
-          ))}
-        </nav>
-        <div className="flex items-center justify-between gap-2 border-t border-line p-4">
-          <div>
-            <p className="text-xs text-muted">CAF Navigli · Milano</p>
-            <form action={signOut} className="mt-2">
-              <button
-                type="submit"
-                className="text-sm font-semibold text-muted transition-colors hover:text-ink"
-              >
-                Esci
-              </button>
-            </form>
+          );
+        })}
+      </nav>
+      <div className="border-t border-line p-3">
+        <div className="flex items-center gap-3 rounded-lg p-2">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-steel-soft text-sm font-bold text-steel">
+            {accountName.slice(0, 2).toUpperCase()}
+          </span>
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold text-ink">{accountName}</p>
+            <p className="truncate text-xs text-muted">{accountMeta}</p>
           </div>
-          <ThemeToggle />
         </div>
+        <Link href="/" className="btn btn-ghost btn-sm mt-1 w-full justify-start text-muted">
+          ← Torna al sito
+        </Link>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-dvh bg-canvas lg:grid lg:grid-cols-[264px_1fr]">
+      {/* Sidebar desktop */}
+      <aside className="hidden border-r border-line bg-surface lg:block">
+        <div className="sticky top-0 h-dvh overflow-y-auto">{sidebar}</div>
       </aside>
 
-      <div className="flex min-w-0 flex-col">
-        {/* Barra superiore (mobile) */}
-        <header className="sticky top-0 z-40 border-b border-line bg-card md:hidden">
-          <div className="flex h-12 items-center justify-between px-4">
-            <Link href="/" className="text-base">
-              <Logo />
-            </Link>
-            <div className="flex items-center gap-2">
-              <ThemeToggle />
-              <form action={signOut}>
-                <button
-                  type="submit"
-                  className="text-sm font-semibold text-muted transition-colors hover:text-ink"
-                >
-                  Esci
-                </button>
-              </form>
-            </div>
+      {/* Sidebar mobile */}
+      {open && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <div className="absolute inset-0 bg-ink/40" onClick={() => setOpen(false)} />
+          <div className="absolute inset-y-0 left-0 w-72 overflow-y-auto bg-surface shadow-xl">
+            {sidebar}
           </div>
-          <nav className="flex gap-1 overflow-x-auto px-2 pb-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "shrink-0 rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
-                  isActive(item.href)
-                    ? "bg-brand-soft text-brand-dark"
-                    : "text-muted hover:text-ink"
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+        </div>
+      )}
+
+      <div className="flex min-h-dvh flex-col">
+        {/* Topbar */}
+        <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-line bg-surface/90 px-4 backdrop-blur">
+          <div className="flex items-center gap-3">
+            <button
+              className="lg:hidden"
+              onClick={() => setOpen(true)}
+              aria-label="Apri menu"
+            >
+              <IconMenu />
+            </button>
+            <span className="text-sm font-semibold text-ink">{areaLabel}</span>
+          </div>
+          <button className="relative rounded-lg p-2 text-muted hover:bg-surface-2" aria-label="Notifiche">
+            <IconBell width={20} height={20} />
+            <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-signal" />
+          </button>
         </header>
 
-        <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-6 md:px-8">
-          {children}
-        </main>
+        <div className="flex-1 p-4 md:p-6">{children}</div>
       </div>
     </div>
   );

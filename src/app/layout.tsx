@@ -1,104 +1,54 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Bricolage_Grotesque,
-  Dancing_Script,
-  Instrument_Sans,
-  JetBrains_Mono,
-} from "next/font/google";
-import CookieBanner from "@/components/CookieBanner";
-import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const bricolage = Bricolage_Grotesque({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-bricolage",
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const instrument = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-instrument",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-});
-
-const dancing = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-dancing",
-});
-
-const SITE_URL = "https://avvisy.app";
-const TITLE = "Avvisy — Appuntamenti e code senza attese";
+const TITLE = "Scortvia — La nuova via delle scorte aziendali";
 const DESCRIPTION =
-  "Avvisy aiuta piccoli uffici e studi a gestire appuntamenti, check-in e code live. Per i cittadini prenotare è sempre gratis.";
+  "Marketplace B2B italiano per comprare e vendere stock, componenti industriali, ricambi e rimanenze di produzione tra aziende verificate.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
   title: {
     default: TITLE,
-    template: "%s · Avvisy",
+    template: "%s · Scortvia",
   },
   description: DESCRIPTION,
-  applicationName: "Avvisy",
+  applicationName: "Scortvia",
   keywords: [
-    "appuntamenti",
-    "prenotazioni",
-    "coda",
-    "eliminacode",
-    "check-in",
-    "CAF",
-    "studio medico",
+    "marketplace B2B",
+    "scorte aziendali",
+    "componenti industriali",
+    "ricambi",
+    "stock aziendali",
+    "rimanenze di produzione",
+    "economia circolare",
   ],
-  icons: {
-    icon: "/icon-192.png",
-    apple: "/apple-icon.png",
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Avvisy",
-  },
   openGraph: {
     type: "website",
     locale: "it_IT",
-    url: SITE_URL,
-    siteName: "Avvisy",
-    title: TITLE,
-    description: DESCRIPTION,
-  },
-  twitter: {
-    card: "summary_large_image",
+    siteName: "Scortvia",
     title: TITLE,
     description: DESCRIPTION,
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0e7a68",
+  themeColor: "#0d7d63",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="it"
-      className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable} ${dancing.variable}`}
-    >
-      <body className="min-h-dvh">
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){try{var t=localStorage.getItem('avvisy_theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();",
-          }}
-        />
-        {children}
-        <CookieBanner />
-        <ServiceWorkerRegister />
-      </body>
+    <html lang="it" className={inter.variable}>
+      <body className="min-h-dvh antialiased">{children}</body>
     </html>
   );
 }

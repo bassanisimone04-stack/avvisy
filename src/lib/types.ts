@@ -1,54 +1,141 @@
-export type Organization = {
+// Domain model for the Scortvia B2B marketplace prototype.
+// Everything here is fictional demo data — no real payments, identities or
+// external services are involved.
+
+export type VerificationStatus = "verificata" | "in_verifica" | "sospesa";
+
+export type MerchandiseCondition =
+  | "Nuovo"
+  | "Come nuovo"
+  | "Usato - buono"
+  | "Usato - funzionante"
+  | "Ricondizionato"
+  | "Fine serie";
+
+export type CategorySlug =
+  | "componenti-industriali"
+  | "ricambi"
+  | "materiali-edili"
+  | "imballaggi"
+  | "elettronica-professionale"
+  | "attrezzature"
+  | "arredi-aziendali"
+  | "materie-prime";
+
+export interface Category {
+  slug: CategorySlug;
+  name: string;
+  description: string;
+  /** Number of demo listings, used for the categories overview. */
+  count: number;
+}
+
+export interface Company {
+  id: string;
+  name: string;
+  slug: string;
+  vatNumber: string; // Partita IVA (fittizia)
+  city: string;
+  region: string;
+  sector: string;
+  status: VerificationStatus;
+  rating: number; // 0-5
+  reviewsCount: number;
+  salesCount: number;
+  memberSince: string; // ISO date
+  bio: string;
+  /** Simulated wallet balance in EUR. */
+  walletBalance: number;
+}
+
+export interface Review {
+  id: string;
+  companyId: string; // company being reviewed (seller)
+  authorCompany: string;
+  rating: number; // 1-5
+  date: string; // ISO
+  title: string;
+  body: string;
+  lotId?: string;
+}
+
+export type LotSaleMode = "immediato" | "negoziabile" | "entrambi";
+
+export interface Lot {
   id: string;
   slug: string;
-  name: string;
-  category: string;
-  address: string;
+  title: string;
+  category: CategorySlug;
+  sellerId: string;
+  description: string;
+  quantity: number;
+  minQuantity: number;
+  unit: string; // pz, kg, bancali, m...
+  unitPrice: number; // EUR
+  condition: MerchandiseCondition;
   city: string;
-  description: string;
-  openingHours: string;
-  queueOpen: boolean;
-  phone?: string;
-  lat?: number;
-  lng?: number;
-};
+  region: string;
+  saleMode: LotSaleMode;
+  shipping: boolean;
+  pickup: boolean;
+  documents: string[];
+  certifications: string[];
+  views: number;
+  publishedAt: string; // ISO
+  featured?: boolean;
+  /** Accent used by the generated illustration. */
+  imageSeed: number;
+}
 
-export type Service = {
+export type OfferStatus =
+  | "Inviata"
+  | "In valutazione"
+  | "Controproposta"
+  | "Accettata"
+  | "Rifiutata"
+  | "Scaduta";
+
+export interface Offer {
   id: string;
-  orgId: string;
-  name: string;
-  description: string;
-  durationMin: number;
-  price: string | null; // null = gratuito / non indicato
-};
+  lotId: string;
+  buyerCompany: string;
+  sellerId: string;
+  quantity: number;
+  proposedUnitPrice: number;
+  message: string;
+  status: OfferStatus;
+  date: string; // ISO
+  /** Optional seller counter proposal. */
+  counterUnitPrice?: number;
+}
 
-export type AppointmentStatus =
-  | "confermato"
-  | "check-in"
-  | "in-corso"
-  | "completato"
-  | "annullato";
+export type OrderStatus =
+  | "In lavorazione"
+  | "In spedizione"
+  | "Consegnato"
+  | "Concluso"
+  | "Annullato";
 
-export type Appointment = {
+export interface Order {
   id: string;
-  orgId: string;
-  serviceId: string;
-  customerName: string;
-  customerPhone: string;
-  date: string; // ISO yyyy-mm-dd
-  time: string; // HH:mm
-  status: AppointmentStatus;
-  ticket: string | null; // assegnato al check-in, es. "A-042"
-};
+  lotId: string;
+  lotTitle: string;
+  buyerCompany: string;
+  sellerId: string;
+  quantity: number;
+  unitPrice: number;
+  status: OrderStatus;
+  date: string; // ISO
+  fulfilment: "Spedizione" | "Ritiro in sede";
+}
 
-export type QueueStatus = "in-servizio" | "chiamato" | "in-attesa";
-
-export type QueueEntry = {
+export interface DemoNotification {
   id: string;
-  orgId: string;
-  ticket: string;
-  customerName: string;
-  serviceId: string;
-  joinedAt: string; // HH:mm
-  status: QueueStatus;
-};
+  icon: "offer" | "order" | "message" | "verify" | "system";
+  title: string;
+  detail: string;
+  time: string;
+  unread: boolean;
+}
+
+export const COMMISSION_RATE = 0.025; // 2,5% trattenuta sulle transazioni concluse
