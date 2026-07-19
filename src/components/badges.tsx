@@ -17,8 +17,8 @@ export function VerifiedBadge({
     <span
       className="chip"
       style={{
-        background: "var(--s-brand-soft)",
-        color: "var(--s-brand-dark)",
+        background: "var(--s-verified-soft)",
+        color: "var(--s-verified)",
         fontSize: size === "xs" ? "0.6875rem" : undefined,
       }}
     >
@@ -29,7 +29,7 @@ export function VerifiedBadge({
 }
 
 const verificationStyles: Record<VerificationStatus, [string, string]> = {
-  Verificata: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
+  Verificata: ["var(--s-verified-soft)", "var(--s-verified)"],
   "In verifica": ["var(--s-signal-soft)", "var(--s-signal)"],
   "Non verificata": ["var(--s-surface-2)", "var(--s-muted)"],
   Sospesa: ["var(--s-danger-soft)", "var(--s-danger)"],
@@ -76,8 +76,8 @@ const offerStyles: Record<OfferStatus, [string, string]> = {
   Inviata: ["var(--s-steel-soft)", "var(--s-steel)"],
   Visualizzata: ["var(--s-steel-soft)", "var(--s-steel)"],
   "In valutazione": ["var(--s-signal-soft)", "var(--s-signal)"],
-  Controproposta: ["#ede9fe", "#6d28d9"],
-  Accettata: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
+  Controproposta: ["#ece7f6", "#6d3bb0"],
+  Accettata: ["var(--s-verified-soft)", "var(--s-verified)"],
   Rifiutata: ["var(--s-danger-soft)", "var(--s-danger)"],
   Ritirata: ["var(--s-surface-2)", "var(--s-muted)"],
   Scaduta: ["var(--s-surface-2)", "var(--s-muted)"],
@@ -96,9 +96,9 @@ const orderStyles: Record<OrderStatus, [string, string]> = {
   "In attesa di conferma": ["var(--s-signal-soft)", "var(--s-signal)"],
   Confermato: ["var(--s-steel-soft)", "var(--s-steel)"],
   "In preparazione": ["var(--s-steel-soft)", "var(--s-steel)"],
-  Spedito: ["#ede9fe", "#6d28d9"],
-  Consegnato: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
-  Completato: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
+  Spedito: ["#ece7f6", "#6d3bb0"],
+  Consegnato: ["var(--s-verified-soft)", "var(--s-verified)"],
+  Completato: ["var(--s-verified-soft)", "var(--s-verified)"],
   Contestato: ["var(--s-danger-soft)", "var(--s-danger)"],
   Annullato: ["var(--s-surface-2)", "var(--s-muted)"],
 };
@@ -115,8 +115,8 @@ export function OrderStatusPill({ status }: { status: OrderStatus }) {
 const lotStyles: Record<LotStatus, [string, string]> = {
   Bozza: ["var(--s-surface-2)", "var(--s-muted)"],
   "In revisione": ["var(--s-signal-soft)", "var(--s-signal)"],
-  Pubblicato: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
-  Riservato: ["#ede9fe", "#6d28d9"],
+  Pubblicato: ["var(--s-verified-soft)", "var(--s-verified)"],
+  Riservato: ["#ece7f6", "#6d3bb0"],
   Venduto: ["var(--s-steel-soft)", "var(--s-steel)"],
   Scaduto: ["var(--s-surface-2)", "var(--s-muted)"],
   Sospeso: ["var(--s-danger-soft)", "var(--s-danger)"],

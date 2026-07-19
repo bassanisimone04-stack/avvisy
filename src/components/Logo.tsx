@@ -11,33 +11,42 @@ export default function Logo({
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-2 ${className}`}
+      className={`inline-flex items-center gap-2.5 ${className}`}
       aria-label="Scortvia — home"
     >
-      <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-white shadow-sm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-          {/* Freccia circolare stilizzata: circolarità delle merci */}
+      <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-[0.55rem] bg-brand text-white">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+          {/* Freccia circolare: circolarità delle merci */}
           <path
-            d="M6 8.5 4 12l2 1.2M18 15.5l2-3.5-2-1.2"
+            d="M6 8.2 4 12l2 1.4M18 15.8l2-3.8-2-1.4"
             stroke="#fff"
-            strokeWidth="1.9"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M4.6 13a7.5 7.5 0 0 0 12.2 4M19.4 11A7.5 7.5 0 0 0 7.2 7"
+            d="M4.5 13.2A7.6 7.6 0 0 0 17 17.4M19.5 10.8A7.6 7.6 0 0 0 7 6.6"
             stroke="#fff"
-            strokeWidth="1.9"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
+        <span className="absolute -bottom-1 -right-1 h-2.5 w-2.5 rounded-full border-2 border-surface bg-verified" />
       </span>
-      <span
-        className="text-lg font-bold tracking-tight"
-        style={{ color: text }}
-      >
-        Scortvia
+      <span className="flex flex-col leading-none">
+        <span
+          className="font-display text-[1.2rem] font-extrabold tracking-tight"
+          style={{ color: text }}
+        >
+          Scortvia
+        </span>
+        <span
+          className="mono text-[0.58rem] font-medium uppercase tracking-[0.18em]"
+          style={{ color: variant === "light" ? "rgba(255,255,255,.6)" : "var(--s-muted)" }}
+        >
+          Marketplace B2B
+        </span>
       </span>
     </Link>
   );

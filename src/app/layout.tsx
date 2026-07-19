@@ -1,12 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Archivo, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { StoreProvider } from "@/lib/store";
 import Toaster from "@/components/Toaster";
 import "./globals.css";
 
-const inter = Inter({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["500", "600", "700", "800", "900"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -49,7 +64,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="it" className={inter.variable}>
+    <html
+      lang="it"
+      className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable}`}
+    >
       <body className="min-h-dvh antialiased">
         <StoreProvider>
           {children}

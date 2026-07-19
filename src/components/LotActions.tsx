@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import Modal from "./Modal";
 import FavoriteButton from "./FavoriteButton";
 import { notify } from "./Toaster";
@@ -124,6 +124,7 @@ function Summary({ total }: { total: number }) {
 
 function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: () => void }) {
   const { dispatch, currentBuyerId } = useStore();
+  const uid = useId();
   const [qty, setQty] = useState(lot.minQuantity);
   const [done, setDone] = useState(false);
   const b = orderBreakdown(lot.unitPrice, qty);
@@ -172,8 +173,9 @@ function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: (
             Acquisto immediato al prezzo di listino. Quantità minima {formatNumber(lot.minQuantity)} {lot.unit}.
           </p>
           <div>
-            <label className="field-label">Quantità ({lot.unit})</label>
+            <label htmlFor={`${uid}-buyqty`} className="field-label">Quantità ({lot.unit})</label>
             <input
+              id={`${uid}-buyqty`}
               type="number"
               min={lot.minQuantity}
               max={lot.quantity}
@@ -194,6 +196,7 @@ function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: (
 
 function OfferDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: () => void }) {
   const { dispatch, currentBuyerId } = useStore();
+  const uid = useId();
   const [qty, setQty] = useState(lot.minQuantity);
   const [price, setPrice] = useState(lot.unitPrice);
   const [msg, setMsg] = useState("");
@@ -270,12 +273,12 @@ function OfferDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose:
           )}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="field-label">Quantità ({lot.unit})</label>
-              <input type="number" min={lot.minQuantity} max={lot.quantity} value={qty} onChange={(e) => setQty(Number(e.target.value) || 0)} className="field" />
+              <label htmlFor={`${uid}-qty`} className="field-label">Quantità ({lot.unit})</label>
+              <input id={`${uid}-qty`} type="number" min={lot.minQuantity} max={lot.quantity} value={qty} onChange={(e) => setQty(Number(e.target.value) || 0)} className="field" />
             </div>
             <div>
-              <label className="field-label">Prezzo proposto (€/{lot.unit})</label>
-              <input type="number" min={0} step="0.01" value={price} onChange={(e) => setPrice(Number(e.target.value) || 0)} className="field" />
+              <label htmlFor={`${uid}-price`} className="field-label">Prezzo proposto (€/{lot.unit})</label>
+              <input id={`${uid}-price`} type="number" min={0} step="0.01" value={price} onChange={(e) => setPrice(Number(e.target.value) || 0)} className="field" />
             </div>
           </div>
           <div className="flex items-center justify-between rounded-lg bg-surface-2 px-3 py-2 text-sm">
@@ -285,8 +288,8 @@ function OfferDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose:
             </span>
           </div>
           <div>
-            <label className="field-label">Scadenza offerta</label>
-            <select value={days} onChange={(e) => setDays(Number(e.target.value))} className="field">
+            <label htmlFor={`${uid}-days`} className="field-label">Scadenza offerta</label>
+            <select id={`${uid}-days`} value={days} onChange={(e) => setDays(Number(e.target.value))} className="field">
               <option value={3}>3 giorni</option>
               <option value={7}>7 giorni</option>
               <option value={14}>14 giorni</option>
@@ -294,8 +297,8 @@ function OfferDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose:
             </select>
           </div>
           <div>
-            <label className="field-label">Messaggio (facoltativo)</label>
-            <textarea value={msg} onChange={(e) => setMsg(e.target.value)} rows={2} placeholder="Es. ordine ricorrente con ritiro programmato…" className="field resize-none" />
+            <label htmlFor={`${uid}-msg`} className="field-label">Messaggio (facoltativo)</label>
+            <textarea id={`${uid}-msg`} value={msg} onChange={(e) => setMsg(e.target.value)} rows={2} placeholder="Es. ordine ricorrente con ritiro programmato…" className="field resize-none" />
           </div>
           <Summary total={total} />
         </div>

@@ -29,6 +29,9 @@ export default function LotCard({ lot }: { lot: Lot }) {
           )}
           <FavoriteButton lotId={lot.id} />
         </div>
+        <span className="mono absolute bottom-2 left-3 rounded bg-surface/90 px-1.5 py-0.5 text-[0.65rem] text-ink-soft shadow-sm">
+          {lot.code}
+        </span>
       </div>
 
       <div className="flex flex-1 flex-col p-4">
@@ -64,8 +67,8 @@ export default function LotCard({ lot }: { lot: Lot }) {
 
         <div className="mt-auto flex items-end justify-between pt-4">
           <div>
-            <p className="text-xs text-muted">Valore totale</p>
-            <p className="text-lg font-bold text-brand-dark">
+            <p className="mono text-[0.65rem] uppercase tracking-wide text-muted">Valore totale</p>
+            <p className="font-display text-lg font-extrabold text-brand">
               {formatEuro(lotTotal(lot), true)}
             </p>
           </div>

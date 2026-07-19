@@ -2,10 +2,10 @@
 // esterne, coerenti con lo stile istituzionale del marketplace.
 
 const palettes: [string, string, string][] = [
-  ["#e7eef3", "#c7d6df", "#1f4e6b"], // acciaio
-  ["#e5f2ed", "#bfe0d3", "#0d7d63"], // verde
-  ["#eef1f3", "#cfd8de", "#3a4a56"], // grafite
-  ["#f2ede2", "#e2d3b4", "#8a6d2f"], // ambra
+  ["#efe6db", "#ddccb6", "#a63a13"], // ember su cemento
+  ["#e6ebee", "#ccd6db", "#21323d"], // carbone
+  ["#e1efe8", "#c4ddd0", "#1f7a56"], // verde bosco
+  ["#f0e9da", "#ddceb0", "#9a6a0f"], // oro/ocra
 ];
 
 function CategoryMotif({ category, accent }: { category: string; accent: string }) {

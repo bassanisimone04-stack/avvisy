@@ -282,7 +282,9 @@ export default function LotPage() {
                 {seller.logo}
               </span>
               <div className="min-w-0">
-                <p className="truncate font-semibold text-ink">{seller.displayName}</p>
+                <Link href={`/azienda/${seller.id}`} className="block truncate font-semibold text-ink hover:text-brand-dark">
+                  {seller.displayName}
+                </Link>
                 <p className="truncate text-xs text-muted">{seller.sector}</p>
               </div>
             </div>
@@ -311,6 +313,9 @@ export default function LotPage() {
                 <dd className="font-semibold text-ink">{new Date(seller.registeredAt).getFullYear()}</dd>
               </div>
             </dl>
+            <Link href={`/azienda/${seller.id}`} className="btn btn-outline btn-sm mt-4 w-full">
+              Vedi profilo azienda
+            </Link>
           </div>
         </div>
       </div>
