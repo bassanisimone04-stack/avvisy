@@ -43,7 +43,7 @@ export default function CategoriePage() {
                   <Link href={`/lotto/${sample.id}`} className="sm:w-48 shrink-0">
                     <LotImage
                       category={c.slug}
-                      seed={sample.imageSeed}
+                      seed={sample.images[0] ?? 1}
                       className="rounded-lg"
                       ratio="aspect-[16/10]"
                     />

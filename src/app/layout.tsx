@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { StoreProvider } from "@/lib/store";
+import Toaster from "@/components/Toaster";
 import "./globals.css";
 
 const inter = Inter({
@@ -48,7 +50,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="it" className={inter.variable}>
-      <body className="min-h-dvh antialiased">{children}</body>
+      <body className="min-h-dvh antialiased">
+        <StoreProvider>
+          {children}
+          <Toaster />
+        </StoreProvider>
+      </body>
     </html>
   );
 }

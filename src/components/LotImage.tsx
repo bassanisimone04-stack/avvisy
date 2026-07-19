@@ -1,5 +1,3 @@
-import type { CategorySlug } from "@/lib/types";
-
 // Illustrazioni industriali generate come SVG: nessuna dipendenza da immagini
 // esterne, coerenti con lo stile istituzionale del marketplace.
 
@@ -10,7 +8,7 @@ const palettes: [string, string, string][] = [
   ["#f2ede2", "#e2d3b4", "#8a6d2f"], // ambra
 ];
 
-function CategoryMotif({ category, accent }: { category: CategorySlug; accent: string }) {
+function CategoryMotif({ category, accent }: { category: string; accent: string }) {
   const common = {
     fill: "none",
     stroke: accent,
@@ -90,7 +88,15 @@ function CategoryMotif({ category, accent }: { category: CategorySlug; accent: s
         </g>
       );
     default:
-      return null;
+      // Motivo generico (casse/merci) per le altre categorie.
+      return (
+        <g {...common}>
+          <rect x="56" y="48" width="30" height="28" rx="2" />
+          <rect x="90" y="56" width="22" height="20" rx="2" />
+          <path d="M56 62h30M71 48v28" />
+          <path d="M46 84h72" strokeWidth="3" />
+        </g>
+      );
   }
 }
 
@@ -100,7 +106,7 @@ export default function LotImage({
   className = "",
   ratio = "aspect-[4/3]",
 }: {
-  category: CategorySlug;
+  category: string;
   seed: number;
   className?: string;
   ratio?: string;

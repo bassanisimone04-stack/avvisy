@@ -1,6 +1,5 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import Toaster from "@/components/Toaster";
 
 export default function PublicLayout({
   children,
@@ -12,7 +11,6 @@ export default function PublicLayout({
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <SiteFooter />
-      <Toaster />
     </div>
   );
 }

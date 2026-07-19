@@ -11,7 +11,7 @@ import {
   IconWallet,
 } from "@/components/icons";
 import { categories, companies, lots } from "@/lib/mock-data";
-import { commissionRateLabel, formatNumber } from "@/lib/format";
+import { commissionRateLabel } from "@/lib/format";
 
 const advantages = [
   {
@@ -36,9 +36,31 @@ const advantages = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: "Abbiamo liberato un intero magazzino di fine serie in tre settimane, senza svalutare a bilancio.",
+    author: "Responsabile acquisti",
+    company: "Metalfer Componenti",
+  },
+  {
+    quote: "Troviamo ricambi e componenti a prezzi di stock da fornitori già verificati. Trattativa tutta tracciata.",
+    author: "Ufficio produzione",
+    company: "Officine Meccaniche Ferraris",
+  },
+  {
+    quote: "La commissione solo sul venduto ci ha convinto a provare. Ora pubblichiamo ogni eccedenza.",
+    author: "Direzione",
+    company: "PackItalia Imballaggi",
+  },
+];
+
 export default function HomePage() {
-  const featured = lots.filter((l) => l.featured).slice(0, 6);
-  const verifiedCount = companies.filter((c) => c.status === "verificata").length;
+  const published = lots.filter((l) => l.status === "Pubblicato");
+  const featured = published.filter((l) => l.featured).slice(0, 6);
+  const recent = [...published]
+    .sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt))
+    .slice(0, 4);
+  const verifiedCount = companies.filter((c) => c.verification === "Verificata").length;
 
   return (
     <>
@@ -160,6 +182,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* LOTTI RECENTI */}
+      <section className="container-page py-12">
+        <div className="flex items-end justify-between">
+          <div>
+            <h2 className="text-2xl font-bold text-ink">Pubblicati di recente</h2>
+            <p className="mt-1 text-muted">Gli ultimi lotti arrivati sul marketplace.</p>
+          </div>
+          <Link href="/marketplace" className="hidden items-center gap-1 text-sm font-semibold text-brand-dark hover:underline sm:inline-flex">
+            Vedi tutti
+            <IconArrowRight width={16} height={16} />
+          </Link>
+        </div>
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {recent.map((lot) => (
+            <LotCard key={lot.id} lot={lot} />
+          ))}
+        </div>
+      </section>
+
       {/* COME FUNZIONA + FIDUCIA */}
       <section className="container-page py-14">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -199,17 +240,41 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              [formatNumber(lots.length * 106), "Lotti pubblicati"],
-              [`${verifiedCount * 68}+`, "Aziende verificate"],
-              [commissionRateLabel(), "Commissione sulla vendita"],
-              ["24/7", "Marketplace sempre attivo"],
-            ].map(([v, l]) => (
-              <div key={l} className="card p-6 text-center">
-                <p className="text-3xl font-bold text-brand-dark">{v}</p>
-                <p className="mt-1 text-sm text-muted">{l}</p>
-              </div>
+          <div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                ["150+", "Lotti disponibili"],
+                ["80", "Aziende registrate"],
+                ["12", "Categorie"],
+                [commissionRateLabel(), "Commissione standard"],
+              ].map(([v, l]) => (
+                <div key={l} className="card p-6 text-center">
+                  <p className="text-3xl font-bold text-brand-dark">{v}</p>
+                  <p className="mt-1 text-sm text-muted">{l}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-center text-xs text-muted">
+              Dati dimostrativi del prototipo · {verifiedCount} aziende verificate nel dataset
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIANZE */}
+      <section className="border-t border-line bg-surface-2/50">
+        <div className="container-page py-12">
+          <h2 className="text-center text-2xl font-bold text-ink">Cosa dicono le aziende</h2>
+          <p className="mt-1 text-center text-sm text-muted">Testimonianze fittizie a scopo dimostrativo.</p>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure key={t.company} className="card flex flex-col p-5">
+                <blockquote className="flex-1 text-sm leading-relaxed text-ink-soft">“{t.quote}”</blockquote>
+                <figcaption className="mt-4 border-t border-line pt-3">
+                  <p className="text-sm font-semibold text-ink">{t.company}</p>
+                  <p className="text-xs text-muted">{t.author}</p>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>

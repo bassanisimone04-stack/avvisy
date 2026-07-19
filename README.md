@@ -13,7 +13,36 @@ inutilizzati e rimanenze di produzione.
 - **Next.js 15** (App Router) + **React 19**
 - **TypeScript**
 - **Tailwind CSS v4**
-- Dati **mock locali** in `src/lib/` — nessun backend
+- Dati **mock locali** e **stato applicativo interattivo** (React Context +
+  reducer, persistito in `localStorage`) — nessun backend
+
+## Architettura dello stato
+
+Il prototipo è pienamente interattivo: ogni azione (pubblicare un lotto,
+inviare/gestire un'offerta, creare un ordine, salvare un preferito, leggere una
+notifica) aggiorna uno **store client-side** condiviso da tutte le pagine e
+persistito nel browser.
+
+- `src/lib/types.ts` — modello dati completo (Azienda, Lotto, Offerta, Ordine,
+  Notifica) con tutti gli stati richiesti.
+- `src/lib/mock-data.ts` — dati demo (20 lotti, 8 aziende, 12 offerte, 8 ordini,
+  10 notifiche, 8 recensioni, 12 categorie).
+- `src/lib/services.ts` — servizi simulati: ricerca, filtri, ordinamento,
+  paginazione, calcolo commissioni/totali, factory di lotti/offerte/ordini.
+- `src/lib/store.tsx` — `StoreProvider`, reducer e azioni; persistenza
+  `localStorage`.
+- `src/lib/hooks.ts` — hook (`useDebounce`, `useSimulatedLoading`, …).
+
+### Percorso end-to-end simulabile
+
+1. il venditore pubblica un lotto → stato **In revisione**;
+2. l'admin/venditore lo pubblica → **Pubblicato**;
+3. il compratore lo trova con ricerca e filtri;
+4. invia un'offerta (validazione, differenza %, commissione, scadenza);
+5. il venditore rilancia con una **controproposta**;
+6. il compratore accetta;
+7. viene creato un **ordine** con commissione Scortvia del **2,5%**;
+8. l'ordine e le notifiche compaiono nelle dashboard di entrambi.
 
 ## Avvio
 

@@ -1,12 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import { PageTitle, EmptyState } from "@/components/dash";
 import LotCard from "@/components/LotCard";
 import { IconBox } from "@/components/icons";
-import { savedLotIds } from "@/lib/buyer-data";
-import { lotById } from "@/lib/mock-data";
+import { useStore } from "@/lib/store";
 
 export default function SavedLotsPage() {
-  const saved = savedLotIds.map((id) => lotById(id)).filter(Boolean);
+  const { state } = useStore();
+  const saved = state.favorites
+    .map((id) => state.lots.find((l) => l.id === id))
+    .filter((l): l is NonNullable<typeof l> => Boolean(l));
+
   return (
     <>
       <PageTitle title="Lotti salvati" subtitle="I lotti che hai messo da parte per una decisione successiva." />
@@ -21,9 +26,7 @@ export default function SavedLotsPage() {
         </div>
       ) : (
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {saved.map((l) => (
-            <LotCard key={l!.id} lot={l!} />
-          ))}
+          {saved.map((l) => <LotCard key={l.id} lot={l} />)}
         </div>
       )}
     </>

@@ -49,3 +49,24 @@ export function commission(total: number): number {
 export function commissionRateLabel(): string {
   return "2,5%";
 }
+
+/** Data di riferimento del prototipo (dati dimostrativi). */
+export const DEMO_TODAY = "2026-07-18";
+
+/** Giorni residui rispetto alla data di riferimento del prototipo. */
+export function daysUntil(iso: string): number {
+  const target = new Date(iso).getTime();
+  const today = new Date(DEMO_TODAY).getTime();
+  return Math.round((target - today) / 86_400_000);
+}
+
+/** Differenza percentuale del prezzo proposto rispetto a quello richiesto. */
+export function percentDiff(proposed: number, asking: number): number {
+  if (!asking) return 0;
+  return Math.round(((proposed - asking) / asking) * 1000) / 10;
+}
+
+export function formatPercent(value: number): string {
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${value.toString().replace(".", ",")}%`;
+}

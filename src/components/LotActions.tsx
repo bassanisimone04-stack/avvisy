@@ -2,16 +2,26 @@
 
 import { useState } from "react";
 import Modal from "./Modal";
+import FavoriteButton from "./FavoriteButton";
 import { notify } from "./Toaster";
 import { IconBolt, IconCheck, IconMessage, IconTag } from "./icons";
-import { commission, commissionRateLabel, formatEuro, formatNumber } from "@/lib/format";
+import {
+  commission,
+  commissionRateLabel,
+  formatEuro,
+  formatNumber,
+  formatPercent,
+  percentDiff,
+} from "@/lib/format";
+import { useStore } from "@/lib/store";
+import { createOffer, orderBreakdown, validateOffer } from "@/lib/services";
 import type { Lot } from "@/lib/types";
 
-type Dialog = null | "buy" | "offer" | "info";
+type Dialog = null | "buy" | "offer" | "info" | "report";
 
 export default function LotActions({ lot }: { lot: Lot }) {
   const [dialog, setDialog] = useState<Dialog>(null);
-  const [saved, setSaved] = useState(false);
+  const available = lot.status === "Pubblicato";
 
   return (
     <>
@@ -19,44 +29,76 @@ export default function LotActions({ lot }: { lot: Lot }) {
         <button
           onClick={() => setDialog("buy")}
           className="btn btn-primary btn-block"
+          disabled={!available}
         >
           <IconBolt width={18} height={18} />
-          Acquista ora
+          Acquista
         </button>
         <div className="grid grid-cols-2 gap-2">
           <button
             onClick={() => setDialog("offer")}
             className="btn btn-steel btn-sm"
-            disabled={lot.saleMode === "immediato"}
-            title={lot.saleMode === "immediato" ? "Lotto ad acquisto immediato" : undefined}
+            disabled={!available || !lot.negotiable}
+            title={!lot.negotiable ? "Prezzo non negoziabile" : undefined}
           >
             <IconTag width={16} height={16} />
-            Invia offerta
+            Fai un&apos;offerta
           </button>
-          <button
-            onClick={() => setDialog("info")}
-            className="btn btn-outline btn-sm"
-          >
+          <button onClick={() => setDialog("info")} className="btn btn-outline btn-sm">
             <IconMessage width={16} height={16} />
-            Informazioni
+            Contatta
           </button>
         </div>
-        <button
-          onClick={() => {
-            setSaved((s) => !s);
-            notify(saved ? "Lotto rimosso dai salvati." : "Lotto salvato nei preferiti.");
-          }}
-          className={`btn btn-block btn-sm ${saved ? "btn-outline text-brand-dark" : "btn-ghost"}`}
-        >
-          {saved ? <IconCheck width={16} height={16} /> : null}
-          {saved ? "Lotto salvato" : "Salva lotto"}
+        <FavoriteButton lotId={lot.id} variant="inline" />
+        <div className="flex items-center justify-center gap-4 pt-1 text-xs">
+          <ShareButton />
+          <button onClick={() => setDialog("report")} className="text-muted hover:text-danger">
+            Segnala annuncio
+          </button>
+        </div>
+        {!available && (
+          <p className="rounded-lg bg-surface-2 p-2.5 text-center text-xs text-muted">
+            Lotto <strong>{lot.status.toLowerCase()}</strong>: acquisto e offerte non disponibili.
+          </p>
+        )}
+      </div>
+
+      {/* Barra azioni fissa su mobile */}
+      <div className="fixed inset-x-0 bottom-0 z-30 flex gap-2 border-t border-line bg-surface/95 p-3 backdrop-blur lg:hidden">
+        <button onClick={() => setDialog("info")} className="btn btn-outline btn-sm shrink-0" aria-label="Contatta il venditore">
+          <IconMessage width={18} height={18} />
+        </button>
+        <button onClick={() => setDialog("offer")} className="btn btn-steel flex-1" disabled={!available || !lot.negotiable}>
+          Fai un&apos;offerta
+        </button>
+        <button onClick={() => setDialog("buy")} className="btn btn-primary flex-1" disabled={!available}>
+          Acquista
         </button>
       </div>
 
       <BuyDialog lot={lot} open={dialog === "buy"} onClose={() => setDialog(null)} />
       <OfferDialog lot={lot} open={dialog === "offer"} onClose={() => setDialog(null)} />
       <InfoDialog lot={lot} open={dialog === "info"} onClose={() => setDialog(null)} />
+      <ReportDialog open={dialog === "report"} onClose={() => setDialog(null)} />
     </>
+  );
+}
+
+function ShareButton() {
+  return (
+    <button
+      onClick={() => {
+        try {
+          navigator.clipboard?.writeText(window.location.href);
+        } catch {
+          /* no-op */
+        }
+        notify("Link del lotto copiato negli appunti.", "info");
+      }}
+      className="text-muted hover:text-brand-dark"
+    >
+      Condividi
+    </button>
   );
 }
 
@@ -69,31 +111,28 @@ function Summary({ total }: { total: number }) {
         <dd className="font-semibold text-ink">{formatEuro(total)}</dd>
       </div>
       <div className="flex justify-between">
-        <dt className="text-muted">
-          Commissione Scortvia ({commissionRateLabel()})
-        </dt>
+        <dt className="text-muted">Commissione Scortvia ({commissionRateLabel()})</dt>
         <dd className="font-semibold text-ink">{formatEuro(fee)}</dd>
       </div>
       <div className="flex justify-between border-t border-line pt-2">
         <dt className="font-semibold text-ink">Totale stimato</dt>
-        <dd className="text-base font-bold text-brand-dark">
-          {formatEuro(total + fee)}
-        </dd>
+        <dd className="text-base font-bold text-brand-dark">{formatEuro(total + fee)}</dd>
       </div>
     </dl>
   );
 }
 
 function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: () => void }) {
+  const { dispatch, currentBuyerId } = useStore();
   const [qty, setQty] = useState(lot.minQuantity);
   const [done, setDone] = useState(false);
-  const total = qty * lot.unitPrice;
+  const b = orderBreakdown(lot.unitPrice, qty);
 
   function confirm() {
+    dispatch({ type: "BUY_NOW", lotId: lot.id, quantity: qty, buyerId: currentBuyerId });
     setDone(true);
-    notify("Acquisto simulato confermato. Trovi l'ordine nella tua area compratore.");
+    notify("Acquisto simulato confermato: ordine creato.");
   }
-
   function close() {
     onClose();
     setTimeout(() => setDone(false), 200);
@@ -103,20 +142,14 @@ function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: (
     <Modal
       open={open}
       onClose={close}
-      title={done ? "Ordine confermato" : "Acquista ora"}
+      title={done ? "Ordine creato" : "Acquista lotto"}
       footer={
         done ? (
-          <button onClick={close} className="btn btn-primary btn-block">
-            Chiudi
-          </button>
+          <a href="/compratore/ordini" className="btn btn-primary btn-block">Vai ai tuoi ordini</a>
         ) : (
           <div className="flex gap-2">
-            <button onClick={close} className="btn btn-outline flex-1">
-              Annulla
-            </button>
-            <button onClick={confirm} className="btn btn-primary flex-1">
-              Conferma acquisto
-            </button>
+            <button onClick={close} className="btn btn-outline flex-1">Annulla</button>
+            <button onClick={confirm} className="btn btn-primary flex-1">Conferma acquisto</button>
           </div>
         )
       }
@@ -127,19 +160,16 @@ function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: (
             <IconCheck width={28} height={28} />
           </span>
           <p className="text-ink">
-            Hai acquistato <strong>{formatNumber(qty)} {lot.unit}</strong> di{" "}
-            <strong>{lot.title}</strong>.
+            Hai acquistato <strong>{formatNumber(qty)} {lot.unit}</strong> di <strong>{lot.title}</strong>.
           </p>
           <p className="text-sm text-muted">
-            Pagamento simulato in deposito presso il partner. Nessun addebito
-            reale è stato effettuato.
+            Ordine in attesa di conferma dal venditore. Pagamento simulato: nessun addebito reale.
           </p>
         </div>
       ) : (
         <div className="space-y-4">
           <p className="text-sm text-muted">
-            Acquisto immediato al prezzo di listino. Quantità minima{" "}
-            {formatNumber(lot.minQuantity)} {lot.unit}.
+            Acquisto immediato al prezzo di listino. Quantità minima {formatNumber(lot.minQuantity)} {lot.unit}.
           </p>
           <div>
             <label className="field-label">Quantità ({lot.unit})</label>
@@ -148,21 +178,14 @@ function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: (
               min={lot.minQuantity}
               max={lot.quantity}
               value={qty}
-              onChange={(e) =>
-                setQty(
-                  Math.max(
-                    lot.minQuantity,
-                    Math.min(lot.quantity, Number(e.target.value) || 0),
-                  ),
-                )
-              }
+              onChange={(e) => setQty(Math.max(lot.minQuantity, Math.min(lot.quantity, Number(e.target.value) || 0)))}
               className="field"
             />
             <p className="mt-1 text-xs text-muted">
               Disponibili {formatNumber(lot.quantity)} {lot.unit} · {formatEuro(lot.unitPrice)}/{lot.unit}
             </p>
           </div>
-          <Summary total={total} />
+          <Summary total={b.subtotal} />
         </div>
       )}
     </Modal>
@@ -170,39 +193,60 @@ function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: (
 }
 
 function OfferDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: () => void }) {
+  const { dispatch, currentBuyerId } = useStore();
   const [qty, setQty] = useState(lot.minQuantity);
   const [price, setPrice] = useState(lot.unitPrice);
   const [msg, setMsg] = useState("");
+  const [days, setDays] = useState(7);
   const [done, setDone] = useState(false);
+  const [errors, setErrors] = useState<string[]>([]);
+
   const total = qty * price;
+  const diff = percentDiff(price, lot.unitPrice);
 
   function submit() {
+    const errs = validateOffer(lot, { quantity: qty, unitPrice: price });
+    if (errs.length) {
+      setErrors(errs);
+      return;
+    }
+    const expires = new Date();
+    expires.setDate(expires.getDate() + days);
+    dispatch({
+      type: "SEND_OFFER",
+      offer: createOffer({
+        lotId: lot.id,
+        buyerId: currentBuyerId,
+        sellerId: lot.sellerId,
+        quantity: qty,
+        unitPrice: price,
+        message: msg,
+        expiresAt: expires.toISOString().slice(0, 10),
+      }),
+    });
     setDone(true);
-    notify("Offerta inviata al venditore. Riceverai una risposta a breve.");
+    notify("Offerta inviata al venditore.");
   }
   function close() {
     onClose();
-    setTimeout(() => setDone(false), 200);
+    setTimeout(() => {
+      setDone(false);
+      setErrors([]);
+    }, 200);
   }
 
   return (
     <Modal
       open={open}
       onClose={close}
-      title={done ? "Offerta inviata" : "Invia offerta"}
+      title={done ? "Offerta inviata" : "Fai un'offerta"}
       footer={
         done ? (
-          <button onClick={close} className="btn btn-primary btn-block">
-            Chiudi
-          </button>
+          <a href="/compratore/offerte" className="btn btn-primary btn-block">Segui la trattativa</a>
         ) : (
           <div className="flex gap-2">
-            <button onClick={close} className="btn btn-outline flex-1">
-              Annulla
-            </button>
-            <button onClick={submit} className="btn btn-steel flex-1">
-              Invia offerta
-            </button>
+            <button onClick={close} className="btn btn-outline flex-1">Annulla</button>
+            <button onClick={submit} className="btn btn-steel flex-1">Invia offerta</button>
           </div>
         )
       }
@@ -213,49 +257,45 @@ function OfferDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose:
             <IconTag width={26} height={26} />
           </span>
           <p className="text-ink">
-            Offerta di <strong>{formatEuro(price)}/{lot.unit}</strong> per{" "}
-            <strong>{formatNumber(qty)} {lot.unit}</strong> inviata.
+            Offerta di <strong>{formatEuro(price)}/{lot.unit}</strong> per <strong>{formatNumber(qty)} {lot.unit}</strong> inviata.
           </p>
-          <p className="text-sm text-muted">
-            Stato iniziale: <strong>Inviata</strong>. Puoi seguire la trattativa
-            dall&apos;area compratore.
-          </p>
+          <p className="text-sm text-muted">Stato iniziale: <strong>Inviata</strong>. La trovi nell&apos;area compratore.</p>
         </div>
       ) : (
         <div className="space-y-4">
+          {errors.length > 0 && (
+            <ul className="space-y-1 rounded-lg bg-danger-soft p-3 text-sm text-danger" role="alert">
+              {errors.map((e) => <li key={e}>• {e}</li>)}
+            </ul>
+          )}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="field-label">Quantità richiesta ({lot.unit})</label>
-              <input
-                type="number"
-                min={lot.minQuantity}
-                max={lot.quantity}
-                value={qty}
-                onChange={(e) => setQty(Number(e.target.value) || 0)}
-                className="field"
-              />
+              <label className="field-label">Quantità ({lot.unit})</label>
+              <input type="number" min={lot.minQuantity} max={lot.quantity} value={qty} onChange={(e) => setQty(Number(e.target.value) || 0)} className="field" />
             </div>
             <div>
               <label className="field-label">Prezzo proposto (€/{lot.unit})</label>
-              <input
-                type="number"
-                min={0}
-                step="0.01"
-                value={price}
-                onChange={(e) => setPrice(Number(e.target.value) || 0)}
-                className="field"
-              />
+              <input type="number" min={0} step="0.01" value={price} onChange={(e) => setPrice(Number(e.target.value) || 0)} className="field" />
             </div>
           </div>
+          <div className="flex items-center justify-between rounded-lg bg-surface-2 px-3 py-2 text-sm">
+            <span className="text-muted">Rispetto al prezzo richiesto</span>
+            <span className={`font-semibold ${diff < 0 ? "text-danger" : diff > 0 ? "text-brand-dark" : "text-ink"}`}>
+              {formatPercent(diff)}
+            </span>
+          </div>
           <div>
-            <label className="field-label">Messaggio al venditore</label>
-            <textarea
-              value={msg}
-              onChange={(e) => setMsg(e.target.value)}
-              rows={3}
-              placeholder="Es. Interessati a un ordine ricorrente con ritiro programmato…"
-              className="field resize-none"
-            />
+            <label className="field-label">Scadenza offerta</label>
+            <select value={days} onChange={(e) => setDays(Number(e.target.value))} className="field">
+              <option value={3}>3 giorni</option>
+              <option value={7}>7 giorni</option>
+              <option value={14}>14 giorni</option>
+              <option value={30}>30 giorni</option>
+            </select>
+          </div>
+          <div>
+            <label className="field-label">Messaggio (facoltativo)</label>
+            <textarea value={msg} onChange={(e) => setMsg(e.target.value)} rows={2} placeholder="Es. ordine ricorrente con ritiro programmato…" className="field resize-none" />
           </div>
           <Summary total={total} />
         </div>
@@ -269,7 +309,7 @@ function InfoDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: 
   const [done, setDone] = useState(false);
   function send() {
     setDone(true);
-    notify("Richiesta inviata. Il venditore ti risponderà nei messaggi.");
+    notify("Richiesta inviata: la trovi nei messaggi.");
   }
   function close() {
     onClose();
@@ -279,20 +319,14 @@ function InfoDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: 
     <Modal
       open={open}
       onClose={close}
-      title="Richiedi informazioni"
+      title="Contatta il venditore"
       footer={
         done ? (
-          <button onClick={close} className="btn btn-primary btn-block">
-            Chiudi
-          </button>
+          <button onClick={close} className="btn btn-primary btn-block">Chiudi</button>
         ) : (
           <div className="flex gap-2">
-            <button onClick={close} className="btn btn-outline flex-1">
-              Annulla
-            </button>
-            <button onClick={send} className="btn btn-steel flex-1" disabled={!msg.trim()}>
-              Invia richiesta
-            </button>
+            <button onClick={close} className="btn btn-outline flex-1">Annulla</button>
+            <button onClick={send} className="btn btn-steel flex-1" disabled={!msg.trim()}>Invia richiesta</button>
           </div>
         )
       }
@@ -303,23 +337,57 @@ function InfoDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: 
             <IconMessage width={26} height={26} />
           </span>
           <p className="text-ink">Richiesta inviata al venditore.</p>
-          <p className="text-sm text-muted">
-            Troverai la conversazione nella sezione Messaggi.
-          </p>
+          <p className="text-sm text-muted">Troverai la conversazione nella sezione Messaggi.</p>
         </div>
       ) : (
         <div className="space-y-3">
           <p className="text-sm text-muted">
-            Fai una domanda sul lotto <strong>{lot.title}</strong>: disponibilità,
-            documenti, logistica o condizioni di ritiro.
+            Fai una domanda sul lotto <strong>{lot.title}</strong>: disponibilità, documenti o logistica.
           </p>
-          <textarea
-            value={msg}
-            onChange={(e) => setMsg(e.target.value)}
-            rows={4}
-            placeholder="Scrivi la tua richiesta…"
-            className="field resize-none"
-          />
+          <textarea value={msg} onChange={(e) => setMsg(e.target.value)} rows={4} placeholder="Scrivi la tua richiesta…" className="field resize-none" />
+        </div>
+      )}
+    </Modal>
+  );
+}
+
+function ReportDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const [done, setDone] = useState(false);
+  function close() {
+    onClose();
+    setTimeout(() => setDone(false), 200);
+  }
+  return (
+    <Modal
+      open={open}
+      onClose={close}
+      title="Segnala annuncio"
+      footer={
+        done ? (
+          <button onClick={close} className="btn btn-primary btn-block">Chiudi</button>
+        ) : (
+          <div className="flex gap-2">
+            <button onClick={close} className="btn btn-outline flex-1">Annulla</button>
+            <button onClick={() => { setDone(true); notify("Segnalazione inviata al team di moderazione.", "info"); }} className="btn btn-steel flex-1">Invia segnalazione</button>
+          </div>
+        )
+      }
+    >
+      {done ? (
+        <p className="py-4 text-center text-sm text-muted">
+          Grazie: la segnalazione è stata inviata al team di moderazione (simulato).
+        </p>
+      ) : (
+        <div className="space-y-3">
+          <label className="field-label">Motivo</label>
+          <select className="field">
+            <option>Descrizione fuorviante</option>
+            <option>Prezzo o quantità sospetti</option>
+            <option>Possibile duplicato</option>
+            <option>Contatti fuori piattaforma</option>
+            <option>Altro</option>
+          </select>
+          <textarea rows={3} placeholder="Dettagli (facoltativo)…" className="field resize-none" />
         </div>
       )}
     </Modal>

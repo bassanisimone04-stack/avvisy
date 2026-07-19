@@ -1,9 +1,10 @@
+"use client";
+
 import { PageTitle, SectionCard, StatCard } from "@/components/dash";
 import { IconChart, IconTag, IconTruck, IconWallet } from "@/components/icons";
-import { lots, lotTotal } from "@/lib/mock-data";
 import { formatEuro, formatNumber } from "@/lib/format";
-
-const SELLER = "co-metalfer";
+import { lotTotal } from "@/lib/types";
+import { useStore } from "@/lib/store";
 
 const monthly = [
   ["Feb", 4200],
@@ -15,7 +16,8 @@ const monthly = [
 ] as const;
 
 export default function StatistichePage() {
-  const myLots = lots.filter((l) => l.sellerId === SELLER);
+  const { state, currentSellerId } = useStore();
+  const myLots = state.lots.filter((l) => l.sellerId === currentSellerId);
   const max = Math.max(...monthly.map((m) => m[1]));
   const topLots = [...myLots].sort((a, b) => b.views - a.views).slice(0, 5);
 

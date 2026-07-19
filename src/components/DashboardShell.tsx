@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
 import { IconBell, IconClose, IconMenu } from "./icons";
+import { useStore } from "@/lib/store";
 
 export type NavItem = { href: string; label: string; icon: React.ReactNode };
 
@@ -13,16 +14,26 @@ export default function DashboardShell({
   areaLabel,
   accountName,
   accountMeta,
+  audience,
+  notificationsHref,
   children,
 }: {
   navItems: NavItem[];
   areaLabel: string;
   accountName: string;
   accountMeta: string;
+  audience?: "seller" | "buyer";
+  notificationsHref?: string;
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { state } = useStore();
+  const unread = audience
+    ? state.notifications.filter(
+        (n) => !n.read && (n.audience === audience || n.audience === "both"),
+      ).length
+    : 0;
 
   const sidebar = (
     <div className="flex h-full flex-col">
@@ -107,10 +118,18 @@ export default function DashboardShell({
             </button>
             <span className="text-sm font-semibold text-ink">{areaLabel}</span>
           </div>
-          <button className="relative rounded-lg p-2 text-muted hover:bg-surface-2" aria-label="Notifiche">
+          <Link
+            href={notificationsHref ?? "#"}
+            className="relative rounded-lg p-2 text-muted hover:bg-surface-2"
+            aria-label={`Notifiche${unread ? `: ${unread} non lette` : ""}`}
+          >
             <IconBell width={20} height={20} />
-            <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-signal" />
-          </button>
+            {unread > 0 && (
+              <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-signal px-1 text-[0.65rem] font-bold text-white">
+                {unread}
+              </span>
+            )}
+          </Link>
         </header>
 
         <div className="flex-1 p-4 md:p-6">{children}</div>

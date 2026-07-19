@@ -1,16 +1,17 @@
+"use client";
+
 import { PageTitle } from "@/components/dash";
 import OrdersTable from "@/components/OrdersTable";
-import { orders } from "@/lib/mock-data";
-
-const SELLER = "co-metalfer";
+import { useStore } from "@/lib/store";
 
 export default function OrdiniVenditorePage() {
-  const myOrders = orders.filter((o) => o.sellerId === SELLER);
+  const { state, currentSellerId } = useStore();
+  const myOrders = state.orders.filter((o) => o.sellerId === currentSellerId);
   return (
     <>
       <PageTitle
         title="Ordini"
-        subtitle="Ordini generati da acquisti immediati e offerte accettate."
+        subtitle="Ordini generati da acquisti immediati e offerte accettate. Avanza lo stato per aggiornare il compratore."
       />
       <OrdersTable orders={myOrders} party="seller" />
     </>

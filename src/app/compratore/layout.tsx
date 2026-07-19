@@ -8,6 +8,9 @@ import {
   IconTag,
   IconTruck,
 } from "@/components/icons";
+import { CURRENT_BUYER_ID, companyById } from "@/lib/mock-data";
+
+const buyer = companyById(CURRENT_BUYER_ID)!;
 
 const nav: NavItem[] = [
   { href: "/compratore", label: "Dashboard", icon: <IconChart width={18} height={18} /> },
@@ -29,8 +32,10 @@ export default function CompratoreLayout({
     <DashboardShell
       navItems={nav}
       areaLabel="Area compratore"
-      accountName="Officine Meccaniche Ferraris Srl"
-      accountMeta="Torino · Verificata"
+      accountName={buyer.displayName}
+      accountMeta={`${buyer.province} · ${buyer.verification}`}
+      audience="buyer"
+      notificationsHref="/compratore/notifiche"
     >
       {children}
     </DashboardShell>

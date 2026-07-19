@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import MarketplaceClient from "@/components/MarketplaceClient";
-import { lots } from "@/lib/mock-data";
 
 export const metadata: Metadata = {
   title: "Marketplace",
@@ -27,7 +26,6 @@ export default async function MarketplacePage({
         </div>
       </section>
       <MarketplaceClient
-        allLots={lots}
         initialQuery={sp.q ?? ""}
         initialCategory={sp.categoria ?? ""}
         initialRegion={sp.regione ?? ""}

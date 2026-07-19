@@ -1,5 +1,10 @@
 import { IconStar, IconVerified } from "./icons";
-import type { OfferStatus, OrderStatus, VerificationStatus } from "@/lib/types";
+import type {
+  LotStatus,
+  OfferStatus,
+  OrderStatus,
+  VerificationStatus,
+} from "@/lib/types";
 
 export function VerifiedBadge({
   size = "sm",
@@ -23,17 +28,19 @@ export function VerifiedBadge({
   );
 }
 
+const verificationStyles: Record<VerificationStatus, [string, string]> = {
+  Verificata: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
+  "In verifica": ["var(--s-signal-soft)", "var(--s-signal)"],
+  "Non verificata": ["var(--s-surface-2)", "var(--s-muted)"],
+  Sospesa: ["var(--s-danger-soft)", "var(--s-danger)"],
+};
+
 export function VerificationChip({ status }: { status: VerificationStatus }) {
-  if (status === "verificata")
-    return <VerifiedBadge />;
-  const map: Record<Exclude<VerificationStatus, "verificata">, [string, string, string]> = {
-    in_verifica: ["In verifica", "var(--s-signal-soft)", "var(--s-signal)"],
-    sospesa: ["Sospesa", "var(--s-danger-soft)", "var(--s-danger)"],
-  };
-  const [text, bg, color] = map[status];
+  if (status === "Verificata") return <VerifiedBadge />;
+  const [bg, color] = verificationStyles[status];
   return (
     <span className="chip" style={{ background: bg, color }}>
-      {text}
+      {status}
     </span>
   );
 }
@@ -60,19 +67,19 @@ export function RatingStars({
         ))}
       </span>
       <span className="text-sm font-semibold text-ink">{value.toFixed(1)}</span>
-      {count != null && (
-        <span className="text-sm text-muted">({count})</span>
-      )}
+      {count != null && <span className="text-sm text-muted">({count})</span>}
     </span>
   );
 }
 
 const offerStyles: Record<OfferStatus, [string, string]> = {
   Inviata: ["var(--s-steel-soft)", "var(--s-steel)"],
+  Visualizzata: ["var(--s-steel-soft)", "var(--s-steel)"],
   "In valutazione": ["var(--s-signal-soft)", "var(--s-signal)"],
   Controproposta: ["#ede9fe", "#6d28d9"],
   Accettata: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
   Rifiutata: ["var(--s-danger-soft)", "var(--s-danger)"],
+  Ritirata: ["var(--s-surface-2)", "var(--s-muted)"],
   Scaduta: ["var(--s-surface-2)", "var(--s-muted)"],
 };
 
@@ -86,15 +93,37 @@ export function OfferStatusPill({ status }: { status: OfferStatus }) {
 }
 
 const orderStyles: Record<OrderStatus, [string, string]> = {
-  "In lavorazione": ["var(--s-signal-soft)", "var(--s-signal)"],
-  "In spedizione": ["var(--s-steel-soft)", "var(--s-steel)"],
+  "In attesa di conferma": ["var(--s-signal-soft)", "var(--s-signal)"],
+  Confermato: ["var(--s-steel-soft)", "var(--s-steel)"],
+  "In preparazione": ["var(--s-steel-soft)", "var(--s-steel)"],
+  Spedito: ["#ede9fe", "#6d28d9"],
   Consegnato: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
-  Concluso: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
-  Annullato: ["var(--s-danger-soft)", "var(--s-danger)"],
+  Completato: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
+  Contestato: ["var(--s-danger-soft)", "var(--s-danger)"],
+  Annullato: ["var(--s-surface-2)", "var(--s-muted)"],
 };
 
 export function OrderStatusPill({ status }: { status: OrderStatus }) {
   const [bg, color] = orderStyles[status];
+  return (
+    <span className="chip" style={{ background: bg, color }}>
+      {status}
+    </span>
+  );
+}
+
+const lotStyles: Record<LotStatus, [string, string]> = {
+  Bozza: ["var(--s-surface-2)", "var(--s-muted)"],
+  "In revisione": ["var(--s-signal-soft)", "var(--s-signal)"],
+  Pubblicato: ["var(--s-brand-soft)", "var(--s-brand-dark)"],
+  Riservato: ["#ede9fe", "#6d28d9"],
+  Venduto: ["var(--s-steel-soft)", "var(--s-steel)"],
+  Scaduto: ["var(--s-surface-2)", "var(--s-muted)"],
+  Sospeso: ["var(--s-danger-soft)", "var(--s-danger)"],
+};
+
+export function LotStatusPill({ status }: { status: LotStatus }) {
+  const [bg, color] = lotStyles[status];
   return (
     <span className="chip" style={{ background: bg, color }}>
       {status}

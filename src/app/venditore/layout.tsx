@@ -1,5 +1,6 @@
 import DashboardShell, { type NavItem } from "@/components/DashboardShell";
 import {
+  IconBell,
   IconBox,
   IconChart,
   IconDoc,
@@ -8,11 +9,10 @@ import {
   IconStore,
   IconTag,
   IconTruck,
-  IconVerified,
 } from "@/components/icons";
-import { companyById } from "@/lib/mock-data";
+import { CURRENT_SELLER_ID, companyById } from "@/lib/mock-data";
 
-const seller = companyById("co-metalfer")!;
+const seller = companyById(CURRENT_SELLER_ID)!;
 
 const nav: NavItem[] = [
   { href: "/venditore", label: "Dashboard", icon: <IconChart width={18} height={18} /> },
@@ -21,6 +21,7 @@ const nav: NavItem[] = [
   { href: "/venditore/offerte", label: "Offerte ricevute", icon: <IconTag width={18} height={18} /> },
   { href: "/venditore/ordini", label: "Ordini", icon: <IconTruck width={18} height={18} /> },
   { href: "/venditore/messaggi", label: "Messaggi", icon: <IconMessage width={18} height={18} /> },
+  { href: "/venditore/notifiche", label: "Notifiche", icon: <IconBell width={18} height={18} /> },
   { href: "/venditore/documenti", label: "Documenti", icon: <IconDoc width={18} height={18} /> },
   { href: "/venditore/statistiche", label: "Statistiche", icon: <IconChart width={18} height={18} /> },
   { href: "/venditore/profilo", label: "Profilo aziendale", icon: <IconStore width={18} height={18} /> },
@@ -35,8 +36,10 @@ export default function VenditoreLayout({
     <DashboardShell
       navItems={nav}
       areaLabel="Area venditore"
-      accountName={seller.name}
-      accountMeta={`${seller.city} · Verificata`}
+      accountName={seller.displayName}
+      accountMeta={`${seller.province} · ${seller.verification}`}
+      audience="seller"
+      notificationsHref="/venditore/notifiche"
     >
       {children}
     </DashboardShell>

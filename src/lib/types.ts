@@ -1,8 +1,51 @@
-// Domain model for the Scortvia B2B marketplace prototype.
-// Everything here is fictional demo data — no real payments, identities or
-// external services are involved.
+// Modello dati del marketplace B2B Scortvia (prototipo).
+// Dati fittizi, pagamenti/verifiche simulati: nessun servizio esterno reale.
 
-export type VerificationStatus = "verificata" | "in_verifica" | "sospesa";
+export const COMMISSION_RATE = 0.025; // 2,5% trattenuta sulle transazioni concluse
+
+// ---------------------------------------------------------------------------
+// Enumerazioni di stato
+// ---------------------------------------------------------------------------
+
+export type VerificationStatus =
+  | "Non verificata"
+  | "In verifica"
+  | "Verificata"
+  | "Sospesa";
+
+export type LotStatus =
+  | "Bozza"
+  | "In revisione"
+  | "Pubblicato"
+  | "Riservato"
+  | "Venduto"
+  | "Scaduto"
+  | "Sospeso";
+
+export type OfferStatus =
+  | "Inviata"
+  | "Visualizzata"
+  | "In valutazione"
+  | "Controproposta"
+  | "Accettata"
+  | "Rifiutata"
+  | "Ritirata"
+  | "Scaduta";
+
+export type OrderStatus =
+  | "In attesa di conferma"
+  | "Confermato"
+  | "In preparazione"
+  | "Spedito"
+  | "Consegnato"
+  | "Completato"
+  | "Contestato"
+  | "Annullato";
+
+export type DeliveryMode =
+  | "Spedizione"
+  | "Ritiro in sede"
+  | "Spedizione e ritiro";
 
 export type MerchandiseCondition =
   | "Nuovo"
@@ -12,130 +55,186 @@ export type MerchandiseCondition =
   | "Ricondizionato"
   | "Fine serie";
 
-export type CategorySlug =
-  | "componenti-industriali"
-  | "ricambi"
-  | "materiali-edili"
-  | "imballaggi"
-  | "elettronica-professionale"
-  | "attrezzature"
-  | "arredi-aziendali"
-  | "materie-prime";
+// ---------------------------------------------------------------------------
+// Categorie
+// ---------------------------------------------------------------------------
 
 export interface Category {
-  slug: CategorySlug;
+  slug: string;
   name: string;
   description: string;
-  /** Number of demo listings, used for the categories overview. */
+  subcategories: string[];
   count: number;
 }
 
+// ---------------------------------------------------------------------------
+// Azienda
+// ---------------------------------------------------------------------------
+
 export interface Company {
   id: string;
-  name: string;
-  slug: string;
-  vatNumber: string; // Partita IVA (fittizia)
-  city: string;
-  region: string;
+  ragioneSociale: string;
+  displayName: string;
+  vatNumber: string; // Partita IVA fittizia
   sector: string;
-  status: VerificationStatus;
+  description: string;
+  region: string;
+  province: string;
+  address: string;
+  foundedYear: number;
+  employees: string;
+  verification: VerificationStatus;
   rating: number; // 0-5
   reviewsCount: number;
+  /** Iniziali usate come "logo" testuale. */
+  logo: string;
+  verifiedDocuments: string[];
+  registeredAt: string; // ISO
   salesCount: number;
-  memberSince: string; // ISO date
-  bio: string;
-  /** Simulated wallet balance in EUR. */
+  /** Saldo simulato in EUR. */
   walletBalance: number;
 }
 
+// ---------------------------------------------------------------------------
+// Lotto
+// ---------------------------------------------------------------------------
+
+export interface Lot {
+  id: string;
+  title: string;
+  code: string; // es. SCV-1042
+  shortDescription: string;
+  description: string;
+  category: string; // slug categoria
+  subcategory: string;
+  images: number[]; // seed illustrazioni
+  quantity: number;
+  unit: string;
+  minQuantity: number;
+  unitPrice: number;
+  negotiable: boolean;
+  condition: MerchandiseCondition;
+  region: string;
+  province: string;
+  delivery: DeliveryMode;
+  documents: string[];
+  certifications: string[];
+  sellerId: string;
+  publishedAt: string; // ISO
+  expiresAt: string; // ISO
+  views: number;
+  offersCount: number;
+  status: LotStatus;
+  featured?: boolean;
+}
+
+export function lotTotal(lot: Pick<Lot, "unitPrice" | "quantity">): number {
+  return lot.unitPrice * lot.quantity;
+}
+
+// ---------------------------------------------------------------------------
+// Offerta
+// ---------------------------------------------------------------------------
+
+export interface CounterEntry {
+  by: "buyer" | "seller";
+  unitPrice: number;
+  quantity: number;
+  message?: string;
+  date: string; // ISO
+}
+
+export interface Offer {
+  id: string;
+  lotId: string;
+  buyerId: string;
+  sellerId: string;
+  quantity: number;
+  unitPrice: number; // prezzo unitario corrente proposto
+  totalValue: number;
+  message: string;
+  date: string; // ISO
+  expiresAt: string; // ISO
+  status: OfferStatus;
+  history: CounterEntry[];
+}
+
+// ---------------------------------------------------------------------------
+// Ordine
+// ---------------------------------------------------------------------------
+
+export interface OrderEvent {
+  status: OrderStatus;
+  date: string; // ISO
+  note?: string;
+}
+
+export interface Order {
+  id: string;
+  code: string; // ORD-2026-0148
+  lotId: string;
+  lotTitle: string;
+  buyerId: string;
+  sellerId: string;
+  quantity: number;
+  unitPrice: number; // prezzo concordato
+  subtotal: number;
+  commission: number; // commissione Scortvia
+  total: number;
+  delivery: DeliveryMode;
+  status: OrderStatus;
+  history: OrderEvent[];
+  documents: string[];
+  date: string; // ISO
+}
+
+// ---------------------------------------------------------------------------
+// Notifiche
+// ---------------------------------------------------------------------------
+
+export type NotificationType =
+  | "offerta_ricevuta"
+  | "offerta_accettata"
+  | "controproposta"
+  | "lotto_scadenza"
+  | "ordine_aggiornato"
+  | "verifica_completata"
+  | "messaggio"
+  | "sistema";
+
+export interface Notification {
+  id: string;
+  type: NotificationType;
+  title: string;
+  detail: string;
+  date: string; // ISO
+  read: boolean;
+  href?: string;
+  audience: "seller" | "buyer" | "both";
+}
+
+// ---------------------------------------------------------------------------
+// Recensioni
+// ---------------------------------------------------------------------------
+
 export interface Review {
   id: string;
-  companyId: string; // company being reviewed (seller)
+  companyId: string;
   authorCompany: string;
-  rating: number; // 1-5
-  date: string; // ISO
+  rating: number;
+  date: string;
   title: string;
   body: string;
   lotId?: string;
 }
 
-export type LotSaleMode = "immediato" | "negoziabile" | "entrambi";
+// ---------------------------------------------------------------------------
+// Ricerche salvate
+// ---------------------------------------------------------------------------
 
-export interface Lot {
+export interface SavedSearch {
   id: string;
-  slug: string;
-  title: string;
-  category: CategorySlug;
-  sellerId: string;
-  description: string;
-  quantity: number;
-  minQuantity: number;
-  unit: string; // pz, kg, bancali, m...
-  unitPrice: number; // EUR
-  condition: MerchandiseCondition;
-  city: string;
-  region: string;
-  saleMode: LotSaleMode;
-  shipping: boolean;
-  pickup: boolean;
-  documents: string[];
-  certifications: string[];
-  views: number;
-  publishedAt: string; // ISO
-  featured?: boolean;
-  /** Accent used by the generated illustration. */
-  imageSeed: number;
+  label: string;
+  query: string;
+  alerts: boolean;
 }
-
-export type OfferStatus =
-  | "Inviata"
-  | "In valutazione"
-  | "Controproposta"
-  | "Accettata"
-  | "Rifiutata"
-  | "Scaduta";
-
-export interface Offer {
-  id: string;
-  lotId: string;
-  buyerCompany: string;
-  sellerId: string;
-  quantity: number;
-  proposedUnitPrice: number;
-  message: string;
-  status: OfferStatus;
-  date: string; // ISO
-  /** Optional seller counter proposal. */
-  counterUnitPrice?: number;
-}
-
-export type OrderStatus =
-  | "In lavorazione"
-  | "In spedizione"
-  | "Consegnato"
-  | "Concluso"
-  | "Annullato";
-
-export interface Order {
-  id: string;
-  lotId: string;
-  lotTitle: string;
-  buyerCompany: string;
-  sellerId: string;
-  quantity: number;
-  unitPrice: number;
-  status: OrderStatus;
-  date: string; // ISO
-  fulfilment: "Spedizione" | "Ritiro in sede";
-}
-
-export interface DemoNotification {
-  id: string;
-  icon: "offer" | "order" | "message" | "verify" | "system";
-  title: string;
-  detail: string;
-  time: string;
-  unread: boolean;
-}
-
-export const COMMISSION_RATE = 0.025; // 2,5% trattenuta sulle transazioni concluse

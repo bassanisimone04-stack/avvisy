@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 import LotImage from "./LotImage";
-import type { CategorySlug } from "@/lib/types";
 
 // Galleria simulata: variazioni della stessa illustrazione industriale.
 export default function LotGallery({
   category,
   seed,
 }: {
-  category: CategorySlug;
+  category: string;
   seed: number;
 }) {
   const seeds = [seed, seed + 1, seed + 2, seed + 3];

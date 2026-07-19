@@ -1,19 +1,21 @@
+"use client";
+
 import { PageTitle, StatCard } from "@/components/dash";
 import { OrderStatusPill } from "@/components/badges";
 import { IconWallet } from "@/components/icons";
-import { companyById, orders } from "@/lib/mock-data";
-import { commission, commissionRateLabel, formatDate, formatEuro } from "@/lib/format";
+import { companyById } from "@/lib/mock-data";
+import { commissionRateLabel, formatDate, formatEuro } from "@/lib/format";
+import { useStore } from "@/lib/store";
 
 export default function AdminTransactionsPage() {
-  const gmv = orders.reduce((s, o) => s + o.quantity * o.unitPrice, 0);
-  const fees = orders.reduce((s, o) => s + commission(o.quantity * o.unitPrice), 0);
+  const { state } = useStore();
+  const orders = state.orders;
+  const gmv = orders.reduce((s, o) => s + o.subtotal, 0);
+  const fees = orders.reduce((s, o) => s + o.commission, 0);
 
   return (
     <>
-      <PageTitle
-        title="Transazioni e commissioni"
-        subtitle="Registro delle transazioni simulate e delle commissioni maturate."
-      />
+      <PageTitle title="Transazioni e commissioni" subtitle="Registro delle transazioni simulate e delle commissioni maturate." />
 
       <div className="mb-6 grid gap-3 sm:grid-cols-3">
         <StatCard label="Volume transato" value={formatEuro(gmv)} icon={<IconWallet width={18} height={18} />} accent="steel" />
@@ -35,24 +37,19 @@ export default function AdminTransactionsPage() {
               </tr>
             </thead>
             <tbody>
-              {orders.map((o) => {
-                const total = o.quantity * o.unitPrice;
-                return (
-                  <tr key={o.id} className="border-b border-line last:border-0 hover:bg-surface-2/40">
-                    <td className="px-4 py-3">
-                      <p className="font-mono text-xs font-semibold text-ink">{o.id}</p>
-                      <p className="text-xs text-muted">{formatDate(o.date)}</p>
-                    </td>
-                    <td className="px-4 py-3 text-ink">{companyById(o.sellerId)?.name}</td>
-                    <td className="px-4 py-3 text-muted">{o.buyerCompany}</td>
-                    <td className="px-4 py-3 text-right font-semibold text-ink">{formatEuro(total)}</td>
-                    <td className="px-4 py-3 text-right font-semibold text-brand-dark">
-                      {formatEuro(commission(total))}
-                    </td>
-                    <td className="px-4 py-3"><OrderStatusPill status={o.status} /></td>
-                  </tr>
-                );
-              })}
+              {orders.map((o) => (
+                <tr key={o.id} className="border-b border-line last:border-0 hover:bg-surface-2/40">
+                  <td className="px-4 py-3">
+                    <p className="font-mono text-xs font-semibold text-ink">{o.code}</p>
+                    <p className="text-xs text-muted">{formatDate(o.date)}</p>
+                  </td>
+                  <td className="px-4 py-3 text-ink">{companyById(o.sellerId)?.displayName}</td>
+                  <td className="px-4 py-3 text-muted">{companyById(o.buyerId)?.displayName}</td>
+                  <td className="px-4 py-3 text-right font-semibold text-ink">{formatEuro(o.subtotal)}</td>
+                  <td className="px-4 py-3 text-right font-semibold text-brand-dark">{formatEuro(o.commission)}</td>
+                  <td className="px-4 py-3"><OrderStatusPill status={o.status} /></td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
