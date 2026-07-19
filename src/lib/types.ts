@@ -186,6 +186,8 @@ export interface Order {
   history: OrderEvent[];
   documents: string[];
   date: string; // ISO
+  paid: boolean;
+  paymentMethod?: string;
 }
 
 // ---------------------------------------------------------------------------

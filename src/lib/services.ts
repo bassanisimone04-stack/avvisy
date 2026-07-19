@@ -316,6 +316,7 @@ export function createOrder(params: {
     history: [{ status: "In attesa di conferma", date }],
     documents: [],
     date,
+    paid: false,
   };
 }
 

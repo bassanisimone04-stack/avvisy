@@ -33,7 +33,7 @@ export default function Toaster() {
       {toasts.map((t) => (
         <div
           key={t.id}
-          className="pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border border-line bg-surface p-3.5 shadow-[var(--shadow-lift)]"
+          className="toast-in pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-xl border border-line bg-surface p-3.5 shadow-[var(--shadow-lift)]"
         >
           <span
             className={`mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${

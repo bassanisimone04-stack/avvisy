@@ -31,12 +31,12 @@ export default function Modal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center p-0 sm:items-center sm:p-4">
-      <div className="absolute inset-0 bg-ink/50" onClick={onClose} aria-hidden />
+      <div className="modal-overlay absolute inset-0 bg-ink/50" onClick={onClose} aria-hidden />
       <div
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="relative flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-2xl bg-surface shadow-xl sm:max-w-lg sm:rounded-2xl"
+        className="modal-panel relative flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-2xl bg-surface shadow-xl sm:max-w-lg sm:rounded-2xl"
       >
         <div className="flex items-center justify-between border-b border-line px-5 py-4">
           <h2 className="text-lg font-semibold text-ink">{title}</h2>

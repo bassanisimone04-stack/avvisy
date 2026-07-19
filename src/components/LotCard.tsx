@@ -11,7 +11,7 @@ export default function LotCard({ lot }: { lot: Lot }) {
   const seller = companyById(lot.sellerId);
   const verified = seller?.verification === "Verificata";
   return (
-    <article className="card card-soft group flex flex-col overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]">
+    <article className="card card-soft card-accent group flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
       <div className="relative">
         <Link href={`/lotto/${lot.id}`} aria-label={lot.title}>
           <LotImage category={lot.category} seed={lot.images[0] ?? 1} />

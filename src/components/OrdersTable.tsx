@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { OrderStatusPill } from "./badges";
 import { EmptyState } from "./dash";
 import { notify } from "./Toaster";
+import CheckoutModal from "./CheckoutModal";
 import { IconTruck } from "./icons";
 import { formatDate, formatEuro, formatNumber } from "@/lib/format";
 import { companyById } from "@/lib/mock-data";
@@ -19,6 +21,7 @@ export default function OrdersTable({
   party: "seller" | "buyer";
 }) {
   const { dispatch } = useStore();
+  const [payOrder, setPayOrder] = useState<Order | null>(null);
 
   if (orders.length === 0) {
     return (
@@ -31,7 +34,7 @@ export default function OrdersTable({
   return (
     <div className="card overflow-hidden">
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[860px] text-sm">
+        <table className="w-full min-w-[900px] text-sm">
           <thead>
             <tr className="border-b border-line bg-surface-2/60 text-left text-xs uppercase tracking-wide text-muted">
               <th className="px-4 py-3 font-semibold">Ordine</th>
@@ -41,6 +44,7 @@ export default function OrdersTable({
               <th className="px-4 py-3 text-right font-semibold">Totale</th>
               <th className="px-4 py-3 font-semibold">Consegna</th>
               <th className="px-4 py-3 font-semibold">Stato</th>
+              <th className="px-4 py-3 font-semibold">Pagamento</th>
               {party === "seller" && <th className="px-4 py-3" />}
             </tr>
           </thead>
@@ -67,6 +71,15 @@ export default function OrdersTable({
                   </td>
                   <td className="px-4 py-3 text-muted">{o.delivery}</td>
                   <td className="px-4 py-3"><OrderStatusPill status={o.status} /></td>
+                  <td className="px-4 py-3">
+                    {o.paid ? (
+                      <span className="chip bg-verified-soft text-verified">Pagato</span>
+                    ) : party === "buyer" ? (
+                      <button onClick={() => setPayOrder(o)} className="btn btn-primary btn-sm whitespace-nowrap">Paga ora</button>
+                    ) : (
+                      <span className="chip bg-signal-soft text-signal">Da pagare</span>
+                    )}
+                  </td>
                   {party === "seller" && (
                     <td className="px-4 py-3 text-right">
                       {next ? (
@@ -90,6 +103,11 @@ export default function OrdersTable({
           </tbody>
         </table>
       </div>
+      <CheckoutModal
+        ctx={payOrder ? { mode: "order", order: payOrder } : null}
+        open={!!payOrder}
+        onClose={() => setPayOrder(null)}
+      />
     </div>
   );
 }

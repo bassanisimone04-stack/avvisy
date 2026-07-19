@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroSearch from "@/components/HeroSearch";
+import Reveal from "@/components/Reveal";
 import LotCard from "@/components/LotCard";
 import LotImage from "@/components/LotImage";
 import CategoryCard from "@/components/CategoryCard";
@@ -146,9 +147,9 @@ export default function HomePage() {
       {/* VANTAGGI */}
       <section className="container-page py-14">
         <SectionHead index="01" title="Perché Scortvia" subtitle="Un mercato costruito per responsabili acquisti, magazzini e produzione." />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {advantages.map((a) => (
-            <div key={a.title} className="card p-5 transition-colors hover:border-line-strong">
+            <div key={a.title} className="card card-accent p-5 transition-all duration-200 hover:-translate-y-1 hover:border-line-strong hover:shadow-[var(--shadow-soft)]">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-soft text-brand-dark">
                 <a.icon width={22} height={22} />
               </span>
@@ -156,7 +157,7 @@ export default function HomePage() {
               <p className="mt-1 text-sm text-muted">{a.text}</p>
             </div>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       {/* CATEGORIE */}
@@ -171,18 +172,18 @@ export default function HomePage() {
       <section className="border-y border-line bg-surface-2/40">
         <div className="container-page py-14">
           <SectionHead index="03" title="Lotti in evidenza" subtitle="Stock e componenti selezionati da aziende verificate." link={{ href: "/marketplace", label: "Vai al marketplace" }} />
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((lot) => <LotCard key={lot.id} lot={lot} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* LOTTI RECENTI */}
       <section className="container-page py-14">
         <SectionHead index="04" title="Pubblicati di recente" subtitle="Gli ultimi lotti arrivati sul marketplace." link={{ href: "/marketplace", label: "Vedi tutti" }} />
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {recent.map((lot) => <LotCard key={lot.id} lot={lot} />)}
-        </div>
+        </Reveal>
       </section>
 
       {/* COME FUNZIONA + STAT */}
@@ -233,7 +234,7 @@ export default function HomePage() {
       <section className="border-t border-line bg-surface-2/40">
         <div className="container-page py-14">
           <SectionHead index="06" title="Cosa dicono le aziende" subtitle="Testimonianze fittizie a scopo dimostrativo." />
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <Reveal className="mt-8 grid gap-4 md:grid-cols-3">
             {testimonials.map((t) => (
               <figure key={t.company} className="card flex flex-col p-6">
                 <span className="font-display text-4xl leading-none text-brand/30">“</span>
@@ -244,26 +245,30 @@ export default function HomePage() {
                 </figcaption>
               </figure>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* CTA FINALE */}
-      <section className="relative overflow-hidden border-t border-line bg-ink">
+      <section className="relative overflow-hidden bg-brand">
         <div className="absolute inset-0 grid-texture opacity-20" aria-hidden />
+        <div className="absolute -right-16 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" aria-hidden />
         <div className="container-page relative flex flex-col items-start gap-6 py-16 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="max-w-xl text-3xl font-extrabold text-white md:text-4xl">
+            <span className="mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-white/70">
+              Inizia ora
+            </span>
+            <h2 className="mt-2 max-w-xl text-3xl font-extrabold text-white md:text-4xl">
               Hai scorte ferme in magazzino? Rimettile in circolo.
             </h2>
-            <p className="mt-3 max-w-lg text-white/60">
+            <p className="mt-3 max-w-lg text-white/80">
               Registra la tua azienda, supera la verifica e pubblica il primo
               lotto in pochi minuti. La commissione la paghi solo quando vendi.
             </p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-            <Link href="/vendi" className="btn btn-primary">Inizia a vendere</Link>
-            <Link href="/marketplace" className="btn btn-outline border-white/20 bg-transparent text-white hover:bg-white/10">Esplora</Link>
+            <Link href="/vendi" className="btn bg-white text-brand-dark hover:bg-white/90">Inizia a vendere</Link>
+            <Link href="/marketplace" className="btn btn-outline border-white/30 bg-transparent text-white hover:bg-white/10">Esplora</Link>
           </div>
         </div>
       </section>

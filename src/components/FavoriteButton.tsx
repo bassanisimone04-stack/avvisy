@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useFavorites } from "@/lib/store";
 import { notify } from "./Toaster";
 
@@ -29,22 +30,23 @@ export default function FavoriteButton({
 }) {
   const { isFavorite, toggle } = useFavorites();
   const active = isFavorite(lotId);
+  const [bump, setBump] = useState(false);
 
   function onClick(e: React.MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
     toggle(lotId);
     notify(active ? "Rimosso dai lotti salvati." : "Lotto salvato nei preferiti.");
+    setBump(true);
+    setTimeout(() => setBump(false), 450);
   }
+
+  const heart = <span className={bump ? "inline-flex animate-pop" : "inline-flex"}><HeartIcon filled={active} /></span>;
 
   if (variant === "inline") {
     return (
-      <button
-        onClick={onClick}
-        className={`btn btn-sm w-full ${active ? "btn-outline text-brand-dark" : "btn-outline"}`}
-        aria-pressed={active}
-      >
-        <HeartIcon filled={active} />
+      <button onClick={onClick} className="btn btn-outline btn-sm w-full" aria-pressed={active}>
+        <span className={active ? "text-brand" : ""}>{heart}</span>
         {active ? "Salvato" : "Salva lotto"}
       </button>
     );
@@ -55,11 +57,11 @@ export default function FavoriteButton({
       onClick={onClick}
       aria-label={active ? "Rimuovi dai preferiti" : "Salva nei preferiti"}
       aria-pressed={active}
-      className={`inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface/95 shadow-sm transition-colors ${
-        active ? "text-danger" : "text-muted hover:text-ink"
+      className={`inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface/95 shadow-sm transition-colors hover:scale-110 ${
+        active ? "text-brand" : "text-muted hover:text-ink"
       }`}
     >
-      <HeartIcon filled={active} />
+      {heart}
     </button>
   );
 }

@@ -71,6 +71,13 @@ src/
 └─ lib/                    # Tipi, dati mock, formattazione, commissione 2,5%
 ```
 
+## Pagamento simulato
+
+Il flusso di pagamento è simulato ("Scortvia Pay", demo): cassa con riepilogo,
+scelta del metodo (carta / bonifico / saldo), form carta con validazione e
+carta di test, animazione di elaborazione e conferma. Nessun dato o addebito
+reale. Gli ordini non ancora pagati mostrano "Paga ora" nell'area compratore.
+
 ## Funzionalità del prototipo
 
 - **Homepage** con hero, ricerca, vantaggi, categorie e lotti in evidenza.

@@ -81,6 +81,8 @@ type Action =
   | { type: "BUYER_ACCEPT_COUNTER"; offerId: string }
   | { type: "BUYER_REJECT_COUNTER"; offerId: string }
   | { type: "BUY_NOW"; lotId: string; quantity: number; buyerId: string }
+  | { type: "CHECKOUT_BUY"; lotId: string; quantity: number; buyerId: string; method: string }
+  | { type: "PAY_ORDER"; orderId: string; method: string }
   | { type: "UPDATE_ORDER_STATUS"; orderId: string; status: OrderStatus }
   | { type: "ADD_NOTIFICATION"; notification: Notification }
   | { type: "MARK_NOTIFICATION_READ"; id: string }
@@ -311,6 +313,46 @@ function reducer(state: StoreState, action: Action): StoreState {
         }),
       };
     }
+
+    case "CHECKOUT_BUY": {
+      const lot = state.lots.find((l) => l.id === action.lotId);
+      if (!lot) return state;
+      const order = {
+        ...createOrder({ lot, buyerId: action.buyerId, quantity: action.quantity, unitPrice: lot.unitPrice }),
+        status: "Confermato" as OrderStatus,
+        paid: true,
+        paymentMethod: action.method,
+      };
+      order.history = [
+        { status: "In attesa di conferma", date: order.date },
+        { status: "Confermato", date: order.date },
+      ];
+      return {
+        ...state,
+        orders: [order, ...state.orders],
+        notifications: notify(state, {
+          type: "ordine_aggiornato",
+          title: "Nuovo ordine pagato",
+          detail: `${companyById(action.buyerId)?.displayName ?? "Un compratore"} ha acquistato “${lot.title}”. Ordine ${order.code} pagato.`,
+          href: "/venditore/ordini",
+          audience: "seller",
+        }),
+      };
+    }
+
+    case "PAY_ORDER":
+      return {
+        ...state,
+        orders: state.orders.map((o) => {
+          if (o.id !== action.orderId) return o;
+          const status: OrderStatus = o.status === "In attesa di conferma" ? "Confermato" : o.status;
+          const history =
+            status !== o.status
+              ? [...o.history, { status, date: new Date().toISOString().slice(0, 10) }]
+              : o.history;
+          return { ...o, paid: true, paymentMethod: action.method, status, history };
+        }),
+      };
 
     case "UPDATE_ORDER_STATUS":
       return {

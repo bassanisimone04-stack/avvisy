@@ -2,9 +2,10 @@
 
 import { useId, useState } from "react";
 import Modal from "./Modal";
+import CheckoutModal from "./CheckoutModal";
 import FavoriteButton from "./FavoriteButton";
 import { notify } from "./Toaster";
-import { IconBolt, IconCheck, IconMessage, IconTag } from "./icons";
+import { IconBolt, IconMessage, IconTag } from "./icons";
 import {
   commission,
   commissionRateLabel,
@@ -14,7 +15,7 @@ import {
   percentDiff,
 } from "@/lib/format";
 import { useStore } from "@/lib/store";
-import { createOffer, orderBreakdown, validateOffer } from "@/lib/services";
+import { createOffer, validateOffer } from "@/lib/services";
 import type { Lot } from "@/lib/types";
 
 type Dialog = null | "buy" | "offer" | "info" | "report";
@@ -76,7 +77,7 @@ export default function LotActions({ lot }: { lot: Lot }) {
         </button>
       </div>
 
-      <BuyDialog lot={lot} open={dialog === "buy"} onClose={() => setDialog(null)} />
+      <CheckoutModal ctx={{ mode: "buy", lot }} open={dialog === "buy"} onClose={() => setDialog(null)} />
       <OfferDialog lot={lot} open={dialog === "offer"} onClose={() => setDialog(null)} />
       <InfoDialog lot={lot} open={dialog === "info"} onClose={() => setDialog(null)} />
       <ReportDialog open={dialog === "report"} onClose={() => setDialog(null)} />
@@ -119,78 +120,6 @@ function Summary({ total }: { total: number }) {
         <dd className="text-base font-bold text-brand-dark">{formatEuro(total + fee)}</dd>
       </div>
     </dl>
-  );
-}
-
-function BuyDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: () => void }) {
-  const { dispatch, currentBuyerId } = useStore();
-  const uid = useId();
-  const [qty, setQty] = useState(lot.minQuantity);
-  const [done, setDone] = useState(false);
-  const b = orderBreakdown(lot.unitPrice, qty);
-
-  function confirm() {
-    dispatch({ type: "BUY_NOW", lotId: lot.id, quantity: qty, buyerId: currentBuyerId });
-    setDone(true);
-    notify("Acquisto simulato confermato: ordine creato.");
-  }
-  function close() {
-    onClose();
-    setTimeout(() => setDone(false), 200);
-  }
-
-  return (
-    <Modal
-      open={open}
-      onClose={close}
-      title={done ? "Ordine creato" : "Acquista lotto"}
-      footer={
-        done ? (
-          <a href="/compratore/ordini" className="btn btn-primary btn-block">Vai ai tuoi ordini</a>
-        ) : (
-          <div className="flex gap-2">
-            <button onClick={close} className="btn btn-outline flex-1">Annulla</button>
-            <button onClick={confirm} className="btn btn-primary flex-1">Conferma acquisto</button>
-          </div>
-        )
-      }
-    >
-      {done ? (
-        <div className="flex flex-col items-center gap-3 py-4 text-center">
-          <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-soft text-brand-dark">
-            <IconCheck width={28} height={28} />
-          </span>
-          <p className="text-ink">
-            Hai acquistato <strong>{formatNumber(qty)} {lot.unit}</strong> di <strong>{lot.title}</strong>.
-          </p>
-          <p className="text-sm text-muted">
-            Ordine in attesa di conferma dal venditore. Pagamento simulato: nessun addebito reale.
-          </p>
-        </div>
-      ) : (
-        <div className="space-y-4">
-          <p className="text-sm text-muted">
-            Acquisto immediato al prezzo di listino. Quantità minima {formatNumber(lot.minQuantity)} {lot.unit}.
-          </p>
-          <div>
-            <label htmlFor={`${uid}-buyqty`} className="field-label">Quantità ({lot.unit})</label>
-            <input
-              id={`${uid}-buyqty`}
-              type="number"
-              min={lot.minQuantity}
-              max={lot.quantity}
-              value={qty}
-              onChange={(e) => setQty(Math.max(lot.minQuantity, Math.min(lot.quantity, Number(e.target.value) || 0)))}
-              className="field"
-            />
-            <p className="mt-1 text-xs text-muted">
-              Disponibili {formatNumber(lot.quantity)} {lot.unit} · {formatEuro(lot.unitPrice)}/{lot.unit}
-            </p>
-          </div>
-          <Summary total={b.subtotal} />
-        </div>
-      )}
-    </Modal>
   );
 }
 

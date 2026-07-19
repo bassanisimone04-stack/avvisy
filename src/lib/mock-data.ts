@@ -308,8 +308,9 @@ export const offers: Offer[] = [
 // ---------------------------------------------------------------------------
 
 function mkOrder(
-  o: Omit<Order, "subtotal" | "commission" | "total" | "history"> & {
+  o: Omit<Order, "subtotal" | "commission" | "total" | "history" | "paid"> & {
     history?: Order["history"];
+    paid?: boolean;
   },
 ): Order {
   const subtotal = o.unitPrice * o.quantity;
@@ -320,6 +321,8 @@ function mkOrder(
     commission,
     total: subtotal + commission,
     history: o.history ?? [{ status: o.status, date: o.date }],
+    paid: o.paid ?? o.status !== "In attesa di conferma",
+    paymentMethod: o.status !== "In attesa di conferma" ? "Carta ·· 4242" : undefined,
   };
 }
 
