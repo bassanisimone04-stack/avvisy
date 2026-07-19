@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { StoreProvider } from "@/lib/store";
 import Toaster from "@/components/Toaster";
+import ThemeInit from "@/components/ThemeInit";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -66,9 +67,17 @@ export default function RootLayout({
   return (
     <html
       lang="it"
+      suppressHydrationWarning
       className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable}`}
     >
       <body className="min-h-dvh antialiased">
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('scortvia_theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();",
+          }}
+        />
+        <ThemeInit />
         <StoreProvider>
           {children}
           <Toaster />

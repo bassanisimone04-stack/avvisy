@@ -89,7 +89,7 @@ export default function HomePage() {
               <Link href={`/lotto/${heroLot.id}`} className="card card-soft relative block overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]">
                 <div className="relative">
                   <LotImage category={heroLot.category} seed={heroLot.images[0] ?? 1} ratio="aspect-[16/10]" />
-                  <span className="absolute left-3 top-3 chip bg-ink/85 text-white">In evidenza</span>
+                  <span className="absolute left-3 top-3 chip bg-brand text-white">In evidenza</span>
                   <span className="absolute right-3 top-3 mono rounded bg-surface/95 px-2 py-1 text-[0.7rem] text-ink-soft shadow-sm">{heroLot.code}</span>
                 </div>
                 <div className="p-5">
@@ -135,7 +135,7 @@ export default function HomePage() {
       </section>
 
       {/* SETTORI / WORDMARK STRIP */}
-      <section className="border-b border-line bg-ink">
+      <section className="section-dark border-b border-line">
         <div className="container-page flex flex-wrap items-center gap-x-8 gap-y-2 py-4 text-white/60">
           <span className="mono text-[0.7rem] uppercase tracking-widest text-white/40">Settori attivi</span>
           {["Meccanica", "Edilizia", "Logistica", "Elettrotecnica", "Utensileria", "Materie prime"].map((s) => (
@@ -246,6 +246,30 @@ export default function HomePage() {
               </figure>
             ))}
           </Reveal>
+        </div>
+      </section>
+
+      {/* PROBLEMI DELLE SCORTE */}
+      <section className="container-page py-14">
+        <SectionHead index="07" title="Il costo delle scorte ferme" subtitle="Ogni magazzino ha eccedenze che pesano. Ecco cosa risolviamo." link={{ href: "/soluzioni", label: "Tutte le soluzioni" }} />
+        <Reveal className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["Magazzino immobilizzato", "Spazio e capacità occupati da merce che non ruota."],
+            ["Liquidità bloccata", "Capitale congelato nelle rimanenze invece che in cassa."],
+            ["Obsolescenza tecnica", "Fine serie e componenti che si svalutano ogni mese."],
+            ["Trasporto e ritiro", "Spedire lotti grandi è complesso: ti diamo la stima."],
+          ].map(([t, d], i) => (
+            <div key={t} className="card flex flex-col p-5">
+              <span className="mono text-sm font-semibold text-brand-dark">0{i + 1}</span>
+              <h3 className="mt-2 font-display text-base font-bold text-ink">{t}</h3>
+              <p className="mt-1 text-sm text-muted">{d}</p>
+            </div>
+          ))}
+        </Reveal>
+        <div className="mt-6">
+          <Link href="/soluzioni" className="btn btn-outline btn-sm">
+            Calcola quanto puoi recuperare <IconArrowRight width={16} height={16} />
+          </Link>
         </div>
       </section>
 

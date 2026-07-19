@@ -31,6 +31,43 @@
 
   --s-danger: #b23016;
   --s-danger-soft: #fbe7e1;
+
+  --s-steel-btn: #21323d; /* sfondo pulsante/box "steel", stabile fra i temi */
+  --s-panel: #16181c; /* barre scure (top bar, striscia settori) */
+  --s-texture: rgba(23, 25, 28, 0.05);
+  --s-shadow: rgba(23, 25, 28, 1);
+}
+
+/* Tema scuro: stessa identità, tono notturno. */
+:root[data-theme="dark"] {
+  --s-ink: #ecebe6;
+  --s-ink-soft: #b8bdc3;
+  --s-muted: #8b9299;
+  --s-canvas: #121418;
+  --s-surface: #1a1d22;
+  --s-surface-2: #23272d;
+  --s-line: #2d323a;
+  --s-line-strong: #3d444d;
+
+  --s-brand: #e6591f;
+  --s-brand-dark: #ff8a5c; /* accento chiaro su fondo scuro */
+  --s-brand-soft: #37201a;
+
+  --s-steel: #8fb6cd;
+  --s-steel-soft: #212f39;
+
+  --s-verified: #46b98a;
+  --s-verified-soft: #16302a;
+
+  --s-signal: #d8a83e;
+  --s-signal-soft: #332a12;
+
+  --s-danger: #ef7a6a;
+  --s-danger-soft: #3a1f1b;
+
+  --s-steel-btn: #38495a;
+  --s-panel: #0d0f12;
+  --s-texture: rgba(255, 255, 255, 0.05);
 }
 
 @theme inline {
@@ -53,6 +90,8 @@
   --color-signal-soft: var(--s-signal-soft);
   --color-danger: var(--s-danger);
   --color-danger-soft: var(--s-danger-soft);
+  --color-steel-btn: var(--s-steel-btn);
+  --color-panel: var(--s-panel);
 
   --font-display: var(--font-display), "Archivo", system-ui, sans-serif;
   --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
@@ -160,11 +199,11 @@ h4 {
   background: var(--s-brand-dark);
 }
 .btn-steel {
-  background: var(--s-steel);
+  background: var(--s-steel-btn);
   color: #fff;
 }
 .btn-steel:hover {
-  background: #16242c;
+  filter: brightness(1.12);
 }
 .btn-outline {
   background: var(--s-surface);
@@ -244,20 +283,19 @@ h4 {
   background: var(--s-line);
 }
 .grid-texture {
-  background-image: radial-gradient(
-    rgba(23, 25, 28, 0.09) 1px,
-    transparent 1px
-  );
+  background-image: radial-gradient(var(--s-texture) 1.4px, transparent 1.4px);
   background-size: 22px 22px;
 }
 .blueprint {
-  background-image: linear-gradient(
-      to right,
-      rgba(23, 25, 28, 0.045) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(23, 25, 28, 0.045) 1px, transparent 1px);
+  background-image: linear-gradient(to right, var(--s-texture) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--s-texture) 1px, transparent 1px);
   background-size: 34px 34px;
+}
+
+/* Barra/sezione sempre scura (indipendente dal tema) */
+.section-dark {
+  background: var(--s-panel);
+  color: #fff;
 }
 
 /* Link sottolineato editoriale */

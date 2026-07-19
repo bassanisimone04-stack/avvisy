@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 import { IconBell, IconClose, IconMenu } from "./icons";
 import { useStore } from "@/lib/store";
 
@@ -98,7 +99,7 @@ export default function DashboardShell({
       {/* Sidebar mobile */}
       {open && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-ink/40" onClick={() => setOpen(false)} />
+          <div className="absolute inset-0 bg-black/50" onClick={() => setOpen(false)} />
           <div className="absolute inset-y-0 left-0 w-72 overflow-y-auto bg-surface shadow-xl">
             {sidebar}
           </div>
@@ -118,18 +119,21 @@ export default function DashboardShell({
             </button>
             <span className="text-sm font-semibold text-ink">{areaLabel}</span>
           </div>
-          <Link
-            href={notificationsHref ?? "#"}
-            className="relative rounded-lg p-2 text-muted hover:bg-surface-2"
-            aria-label={`Notifiche${unread ? `: ${unread} non lette` : ""}`}
-          >
-            <IconBell width={20} height={20} />
-            {unread > 0 && (
-              <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-signal px-1 text-[0.65rem] font-bold text-white">
-                {unread}
-              </span>
-            )}
-          </Link>
+          <div className="flex items-center gap-1">
+            <ThemeToggle />
+            <Link
+              href={notificationsHref ?? "#"}
+              className="relative rounded-lg p-2 text-muted hover:bg-surface-2"
+              aria-label={`Notifiche${unread ? `: ${unread} non lette` : ""}`}
+            >
+              <IconBell width={20} height={20} />
+              {unread > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-signal px-1 text-[0.65rem] font-bold text-white">
+                  {unread}
+                </span>
+              )}
+            </Link>
+          </div>
         </header>
 
         <div className="flex-1 p-4 md:p-6">{children}</div>

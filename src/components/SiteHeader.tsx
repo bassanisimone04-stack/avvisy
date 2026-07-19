@@ -4,15 +4,16 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 import { IconClose, IconMenu, IconSearch } from "./icons";
 
 const nav = [
   { href: "/marketplace", label: "Marketplace" },
   { href: "/categorie", label: "Categorie" },
+  { href: "/aziende", label: "Aziende" },
   { href: "/come-funziona", label: "Come funziona" },
   { href: "/vendi", label: "Vendi" },
   { href: "/soluzioni", label: "Soluzioni" },
-  { href: "/assistenza", label: "Assistenza" },
 ];
 
 export default function SiteHeader() {
@@ -30,15 +31,18 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-surface/95 backdrop-blur">
       {/* Barra superiore */}
-      <div className="bg-ink text-white">
+      <div className="section-dark">
         <div className="container-page flex h-8 items-center justify-between text-[0.72rem]">
           <p className="mono tracking-wide text-white/70">
             Prototipo dimostrativo · dati fittizi, nessun pagamento reale
           </p>
-          <div className="hidden items-center gap-4 sm:flex">
-            <Link href="/venditore" className="text-white/70 transition-colors hover:text-white">Area venditore</Link>
-            <span className="text-white/30">·</span>
-            <Link href="/compratore" className="text-white/70 transition-colors hover:text-white">Area compratore</Link>
+          <div className="flex items-center gap-4">
+            <div className="hidden items-center gap-4 sm:flex">
+              <Link href="/venditore" className="text-white/70 transition-colors hover:text-white">Area venditore</Link>
+              <span className="text-white/30">·</span>
+              <Link href="/compratore" className="text-white/70 transition-colors hover:text-white">Area compratore</Link>
+            </div>
+            <ThemeToggle className="!h-6 !w-6 text-white/80 hover:!bg-white/10" />
           </div>
         </div>
       </div>

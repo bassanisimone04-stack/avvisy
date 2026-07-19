@@ -39,7 +39,7 @@ export default function CompanyPage() {
           </nav>
 
           <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-            <span className="inline-flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-steel text-2xl font-extrabold text-white">
+            <span className="inline-flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-steel-btn text-2xl font-extrabold text-white">
               {company.logo}
             </span>
             <div className="flex-1">

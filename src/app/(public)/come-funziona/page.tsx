@@ -53,7 +53,7 @@ export default function ComeFunzionaPage() {
             <ol className="mt-5 space-y-4">
               {buyerSteps.map(([t, d], i) => (
                 <li key={t} className="card flex gap-4 p-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-steel text-sm font-bold text-white">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-steel-btn text-sm font-bold text-white">
                     {i + 1}
                   </span>
                   <div>

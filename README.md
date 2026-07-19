@@ -71,6 +71,20 @@ src/
 └─ lib/                    # Tipi, dati mock, formattazione, commissione 2,5%
 ```
 
+## Tema chiaro/scuro
+
+Il sito supporta tema chiaro e scuro con toggle nell'header e nelle dashboard,
+persistito in `localStorage` e senza flash al caricamento.
+
+## Directory aziende e soluzioni
+
+- `/aziende` — directory pubblica dei venditori con ricerca e filtri (settore,
+  regione, verifica), collegata ai profili `/azienda/[id]`.
+- `/soluzioni` — analisi dei problemi delle scorte ferme (magazzino
+  immobilizzato, liquidità, obsolescenza, trasporto, sostenibilità) con due
+  calcolatori interattivi: costo del magazzino/liquidità recuperabile e stima
+  trasporto/ritiro.
+
 ## Pagamento simulato
 
 Il flusso di pagamento è simulato ("Scortvia Pay", demo): cassa con riepilogo,

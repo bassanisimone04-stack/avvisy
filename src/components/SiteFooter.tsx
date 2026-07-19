@@ -15,6 +15,7 @@ const cols: { title: string; links: { href: string; label: string }[] }[] = [
   {
     title: "Aziende",
     links: [
+      { href: "/aziende", label: "Directory aziende" },
       { href: "/soluzioni", label: "Soluzioni per aziende" },
       { href: "/venditore", label: "Area venditore" },
       { href: "/compratore", label: "Area compratore" },

@@ -83,7 +83,7 @@ export default function VendiPage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-ink">
+      <section className="section-dark border-t border-line">
         <div className="container-page flex flex-col items-center gap-5 py-12 text-center">
           <h2 className="text-2xl font-bold text-white">
             Pronto a rimettere in circolo le tue scorte?

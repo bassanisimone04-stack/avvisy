@@ -309,7 +309,7 @@ export default function MarketplaceClient({
 
       {showFilters && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-ink/40" onClick={() => setShowFilters(false)} />
+          <div className="absolute inset-0 bg-black/50" onClick={() => setShowFilters(false)} />
           <div className="absolute inset-y-0 left-0 w-[85%] max-w-sm overflow-y-auto bg-surface p-5 shadow-xl">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-lg font-bold">Filtri</h2>
