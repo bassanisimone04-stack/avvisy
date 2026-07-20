@@ -7,7 +7,12 @@ export const metadata: Metadata = {
     "Registrazione aziendale in più passaggi con verifica KYB simulata su Scortvia.",
 };
 
-export default function RegistratiPage() {
+export default async function RegistratiPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const sp = await searchParams;
   return (
     <div className="container-page py-10">
       <div className="mx-auto max-w-2xl">
@@ -17,7 +22,7 @@ export default function RegistratiPage() {
             Completa i passaggi per entrare nel marketplace B2B di Scortvia.
           </p>
         </div>
-        <RegistrationWizard />
+        <RegistrationWizard error={sp.error} />
       </div>
     </div>
   );
