@@ -2,11 +2,15 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
   useReducer,
+  useRef,
+  useState,
 } from "react";
+import { isSupabaseConfigured } from "./supabase/config";
 import {
   CURRENT_BUYER_ID,
   CURRENT_SELLER_ID,
@@ -23,6 +27,7 @@ import {
 import {
   createOrder,
   makeNotification,
+  newId,
   offerTotal,
 } from "./services";
 import type {
@@ -151,7 +156,7 @@ function reducer(state: StoreState, action: Action): StoreState {
       if (!src) return state;
       const copy: Lot = {
         ...src,
-        id: `lot-${Math.random().toString(36).slice(2, 8)}`,
+        id: newId(),
         code: `SCV-${Math.floor(2000 + Math.random() * 7000)}`,
         title: `${src.title} (copia)`,
         status: "Bozza",
@@ -425,52 +430,107 @@ interface StoreContextValue {
   currentBuyerId: string;
   currentSeller: Company;
   currentBuyer: Company;
+  /** true quando il backend Supabase è collegato. */
+  online: boolean;
 }
 
 const StoreContext = createContext<StoreContextValue | null>(null);
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(reducer, undefined, seedState);
+  const [ready, setReady] = useState(!isSupabaseConfigured);
+  const [companyId, setCompanyId] = useState<string | null>(null);
+  const lastAction = useRef<Action | null>(null);
+  const skipPersist = useRef(true);
 
-  // Idratazione da localStorage al primo mount.
+  // Idratazione iniziale: da Supabase se collegato, altrimenti da localStorage.
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        const parsed = JSON.parse(raw) as StoreState;
-        if (parsed && parsed.lots && parsed.offers) {
-          dispatch({ type: "HYDRATE", state: parsed });
+    let active = true;
+    if (isSupabaseConfigured) {
+      (async () => {
+        try {
+          const [{ fetchStoreState, fetchMyCompanyId }] = await Promise.all([
+            import("./supabase/data"),
+          ]);
+          const [remote, myCompany] = await Promise.all([
+            fetchStoreState(),
+            fetchMyCompanyId(),
+          ]);
+          if (!active) return;
+          if (remote) {
+            dispatch({ type: "HYDRATE", state: { ...seedState(), ...remote } });
+          }
+          setCompanyId(myCompany);
+        } catch {
+          /* fallback silenzioso ai dati demo già caricati */
+        } finally {
+          if (active) setReady(true);
         }
+      })();
+    } else {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw) as StoreState;
+          if (parsed && parsed.lots && parsed.offers) {
+            dispatch({ type: "HYDRATE", state: parsed });
+          }
+        }
+      } catch {
+        /* ignora dati corrotti */
       }
-    } catch {
-      /* ignora dati corrotti */
     }
+    return () => {
+      active = false;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Persistenza ad ogni cambiamento.
   useEffect(() => {
+    if (skipPersist.current) {
+      skipPersist.current = false;
+      return;
+    }
+    if (isSupabaseConfigured) {
+      const action = lastAction.current;
+      if (action && action.type !== "HYDRATE" && action.type !== "RESET") {
+        import("./supabase/persist")
+          .then((m) => m.persistAction(action, state, companyId))
+          .catch(() => {});
+      }
+      return;
+    }
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch {
       /* quota superata: ignora */
     }
-  }, [state]);
+  }, [state, companyId]);
+
+  const wrappedDispatch = useCallback<React.Dispatch<Action>>((action) => {
+    lastAction.current = action;
+    dispatch(action);
+  }, []);
 
   const value = useMemo<StoreContextValue>(() => {
+    // In modalità Supabase l'identità corrente è l'azienda dell'utente loggato.
+    const sellerId = isSupabaseConfigured ? companyId ?? CURRENT_SELLER_ID : CURRENT_SELLER_ID;
+    const buyerId = isSupabaseConfigured ? companyId ?? CURRENT_BUYER_ID : CURRENT_BUYER_ID;
     const currentSeller =
-      state.companies.find((c) => c.id === CURRENT_SELLER_ID) ?? state.companies[0];
+      state.companies.find((c) => c.id === sellerId) ?? state.companies[0];
     const currentBuyer =
-      state.companies.find((c) => c.id === CURRENT_BUYER_ID) ?? state.companies[0];
+      state.companies.find((c) => c.id === buyerId) ?? state.companies[0];
     return {
       state,
-      dispatch,
-      currentSellerId: CURRENT_SELLER_ID,
-      currentBuyerId: CURRENT_BUYER_ID,
+      dispatch: wrappedDispatch,
+      currentSellerId: sellerId,
+      currentBuyerId: buyerId,
       currentSeller,
       currentBuyer,
+      online: isSupabaseConfigured && ready,
     };
-  }, [state]);
+  }, [state, wrappedDispatch, companyId, ready]);
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

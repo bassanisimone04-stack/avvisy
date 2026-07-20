@@ -9,7 +9,12 @@ export const metadata: Metadata = {
   description: "Accedi alla tua area aziendale su Scortvia.",
 };
 
-export default function AccediPage() {
+export default async function AccediPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string; registrato?: string }>;
+}) {
+  const sp = await searchParams;
   return (
     <div className="container-page grid min-h-[70vh] items-center py-10">
       <div className="mx-auto w-full max-w-md">
@@ -21,8 +26,13 @@ export default function AccediPage() {
               Entra nell&apos;area aziendale del marketplace.
             </p>
           </div>
+          {sp.registrato && (
+            <p className="mt-4 rounded-lg bg-verified-soft p-3 text-center text-sm text-verified">
+              Registrazione completata. Ora puoi accedere.
+            </p>
+          )}
           <div className="mt-6">
-            <LoginForm />
+            <LoginForm error={sp.error} />
           </div>
           <p className="mt-5 text-center text-sm text-muted">
             Non hai un account?{" "}

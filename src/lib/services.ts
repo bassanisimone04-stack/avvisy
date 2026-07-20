@@ -194,6 +194,13 @@ function rand(): string {
   return Math.random().toString(36).slice(2, 8);
 }
 
+/** Id univoco: uuid reale quando disponibile (compatibile con Supabase). */
+export function newId(): string {
+  const c = globalThis.crypto as Crypto | undefined;
+  if (c && typeof c.randomUUID === "function") return c.randomUUID();
+  return `id-${rand()}${rand()}`;
+}
+
 export function makeLotCode(): string {
   return `SCV-${Math.floor(2000 + Math.random() * 7000)}`;
 }
@@ -223,7 +230,7 @@ export function createLot(input: NewLotInput): Lot {
   const expires = new Date(now);
   expires.setDate(expires.getDate() + 45);
   return {
-    id: `lot-${rand()}`,
+    id: newId(),
     code: makeLotCode(),
     title: input.title,
     shortDescription: input.shortDescription,
@@ -263,7 +270,7 @@ export interface NewOfferInput {
 
 export function createOffer(input: NewOfferInput): Offer {
   return {
-    id: `of-${rand()}`,
+    id: newId(),
     lotId: input.lotId,
     buyerId: input.buyerId,
     sellerId: input.sellerId,
@@ -300,7 +307,7 @@ export function createOrder(params: {
   const date = new Date().toISOString().slice(0, 10);
   const seq = String(++orderSeq).padStart(4, "0");
   return {
-    id: `ord-2026-${seq}`,
+    id: newId(),
     code: `ORD-2026-${seq}`,
     lotId: lot.id,
     lotTitle: lot.title,
@@ -325,7 +332,7 @@ export function makeNotification(
 ): Notification {
   return {
     ...n,
-    id: `nt-${rand()}`,
+    id: newId(),
     date: new Date().toISOString().slice(0, 10),
     read: false,
   };

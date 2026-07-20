@@ -7,6 +7,7 @@ import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 import { IconBell, IconClose, IconMenu } from "./icons";
 import { useStore } from "@/lib/store";
+import { signOutAction } from "@/lib/supabase/auth-actions";
 
 export type NavItem = { href: string; label: string; icon: React.ReactNode };
 
@@ -29,7 +30,7 @@ export default function DashboardShell({
 }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { state } = useStore();
+  const { state, online } = useStore();
   const unread = audience
     ? state.notifications.filter(
         (n) => !n.read && (n.audience === audience || n.audience === "both"),
@@ -85,6 +86,13 @@ export default function DashboardShell({
         <Link href="/" className="btn btn-ghost btn-sm mt-1 w-full justify-start text-muted">
           ← Torna al sito
         </Link>
+        {online && (
+          <form action={signOutAction}>
+            <button type="submit" className="btn btn-ghost btn-sm w-full justify-start text-danger">
+              Esci
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );
