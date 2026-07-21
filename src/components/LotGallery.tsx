@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import LotImage from "./LotImage";
+import LotPhoto from "./LotPhoto";
 
 // Galleria: foto reali se presenti, altrimenti variazioni dell'illustrazione.
 export default function LotGallery({
@@ -21,10 +22,7 @@ export default function LotGallery({
     <div>
       <div className="card overflow-hidden">
         {hasPhotos ? (
-          <div className="aspect-[16/10] overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={imageUrls![active]} alt="Foto del lotto" className="h-full w-full object-cover" />
-          </div>
+          <LotPhoto url={imageUrls![active]} category={category} seed={seed} ratio="aspect-[16/10]" />
         ) : (
           <LotImage category={category} seed={items[active] as number} ratio="aspect-[16/10]" />
         )}
@@ -41,10 +39,7 @@ export default function LotGallery({
               aria-label={`Foto ${i + 1}`}
             >
               {hasPhotos ? (
-                <div className="aspect-[4/3] overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={it as string} alt="" className="h-full w-full object-cover" />
-                </div>
+                <LotPhoto url={it as string} category={category} seed={seed + i} ratio="aspect-[4/3]" />
               ) : (
                 <LotImage category={category} seed={it as number} ratio="aspect-[4/3]" />
               )}
