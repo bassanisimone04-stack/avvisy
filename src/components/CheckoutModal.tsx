@@ -6,6 +6,7 @@ import { notify } from "./Toaster";
 import { IconCheck, IconShield, IconWallet } from "./icons";
 import { commission, commissionRateLabel, formatEuro, formatNumber } from "@/lib/format";
 import { orderBreakdown } from "@/lib/services";
+import { paymentsEnabled } from "@/lib/stripe/config";
 import { useStore } from "@/lib/store";
 import type { Lot, Order } from "@/lib/types";
 
@@ -38,7 +39,7 @@ export default function CheckoutModal({
   const [method, setMethod] = useState("card");
   const [card, setCard] = useState({ number: "", exp: "", cvc: "", holder: "" });
   const [errors, setErrors] = useState<string[]>([]);
-  const [phase, setPhase] = useState<"form" | "processing" | "done">("form");
+  const [phase, setPhase] = useState<"form" | "processing" | "done" | "created">("form");
 
   const unitPrice = lot?.unitPrice ?? order?.unitPrice ?? 0;
   const quantity = lot ? qty : order?.quantity ?? 0;
@@ -62,7 +63,7 @@ export default function CheckoutModal({
       if (qty < lot.minQuantity) e.push(`Quantità minima ${lot.minQuantity} ${lot.unit}.`);
       if (qty > lot.quantity) e.push(`Disponibili solo ${lot.quantity} ${lot.unit}.`);
     }
-    if (method === "card") {
+    if (!paymentsEnabled && method === "card") {
       const digits = card.number.replace(/\s/g, "");
       if (digits.length < 15) e.push("Inserisci un numero di carta valido.");
       if (!/^\d{2}\/\d{2}$/.test(card.exp)) e.push("Scadenza nel formato MM/AA.");
@@ -70,6 +71,45 @@ export default function CheckoutModal({
       if (!card.holder.trim()) e.push("Inserisci l'intestatario della carta.");
     }
     return e;
+  }
+
+  // Pagamento reale tramite Stripe (checkout ospitato).
+  async function payWithStripe() {
+    const e = validate();
+    if (e.length) {
+      setErrors(e);
+      return;
+    }
+    setErrors([]);
+
+    // Acquisto immediato: creiamo prima l'ordine (non pagato), poi si paga
+    // dalla sezione ordini per evitare disallineamenti.
+    if (ctx?.mode === "buy") {
+      dispatch({ type: "BUY_NOW", lotId: ctx.lot.id, quantity: qty, buyerId: currentBuyerId });
+      setPhase("created");
+      return;
+    }
+
+    if (ctx?.mode === "order") {
+      setPhase("processing");
+      try {
+        const res = await fetch("/api/checkout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ orderId: ctx.order.id }),
+        });
+        const data = await res.json();
+        if (res.ok && data.url) {
+          window.location.href = data.url;
+          return;
+        }
+        setErrors([data.error ?? "Impossibile avviare il pagamento."]);
+        setPhase("form");
+      } catch {
+        setErrors(["Errore di rete durante il pagamento."]);
+        setPhase("form");
+      }
+    }
   }
 
   function pay() {
@@ -109,16 +149,18 @@ export default function CheckoutModal({
     <Modal
       open={open}
       onClose={close}
-      title={phase === "done" ? "Pagamento completato" : "Cassa · Scortvia Pay"}
+      title={phase === "done" ? "Pagamento completato" : phase === "created" ? "Ordine creato" : "Cassa · Scortvia Pay"}
       footer={
-        phase === "done" ? (
+        phase === "done" || phase === "created" ? (
           <a href="/compratore/ordini" className="btn btn-primary btn-block">Vai ai tuoi ordini</a>
         ) : phase === "processing" ? (
           <button disabled className="btn btn-primary btn-block opacity-80">Elaborazione…</button>
         ) : (
           <div className="flex gap-2">
             <button onClick={close} className="btn btn-outline flex-1">Annulla</button>
-            <button onClick={pay} className="btn btn-primary flex-[2]">Paga {formatEuro(b.total)}</button>
+            <button onClick={paymentsEnabled ? payWithStripe : pay} className="btn btn-primary flex-[2]">
+              {paymentsEnabled && ctx?.mode === "buy" ? "Crea ordine" : `Paga ${formatEuro(b.total)}`}
+            </button>
           </div>
         )
       }
@@ -138,6 +180,16 @@ export default function CheckoutModal({
           <p className="max-w-xs text-sm text-muted">
             Hai pagato <strong>{formatEuro(b.total)}</strong> (di cui {formatEuro(b.commission)} di
             commissione Scortvia). Nessun addebito reale è stato effettuato.
+          </p>
+        </div>
+      ) : phase === "created" ? (
+        <div className="flex flex-col items-center gap-3 py-6 text-center">
+          <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-brand-soft text-brand-dark">
+            <IconCheck width={32} height={32} />
+          </span>
+          <p className="font-display text-lg font-bold text-ink">Ordine creato</p>
+          <p className="max-w-xs text-sm text-muted">
+            Trovi l&apos;ordine nella sezione <strong>Ordini</strong>: da lì completa il pagamento sicuro con Stripe.
           </p>
         </div>
       ) : (
@@ -175,6 +227,15 @@ export default function CheckoutModal({
             </dl>
           </div>
 
+          {paymentsEnabled ? (
+            <div className="rounded-lg border border-line bg-surface-2/50 p-4 text-sm text-ink-soft">
+              <p className="flex items-center gap-2 font-semibold text-ink">
+                <IconShield width={16} height={16} className="text-verified" /> Pagamento sicuro con Stripe
+              </p>
+              <p className="mt-1.5">Verrai reindirizzato alla pagina di pagamento protetta di Stripe per completare l&apos;acquisto con carta.</p>
+            </div>
+          ) : (
+          <>
           {/* Metodo */}
           <div>
             <p className="field-label">Metodo di pagamento</p>
@@ -224,10 +285,14 @@ export default function CheckoutModal({
               <IconWallet width={18} height={18} className="text-brand" /> Addebito sul saldo Scortvia simulato.
             </div>
           )}
+          </>
+          )}
 
           <p className="flex items-center gap-1.5 text-xs text-muted">
             <IconShield width={14} height={14} className="text-verified" />
-            Pagamento simulato · Scortvia Pay (demo). Nessun dato o addebito reale.
+            {paymentsEnabled
+              ? "Pagamento protetto elaborato da Stripe."
+              : "Pagamento simulato · Scortvia Pay (demo). Nessun dato o addebito reale."}
           </p>
         </div>
       )}
