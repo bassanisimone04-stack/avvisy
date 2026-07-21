@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { IconCheck, IconDoc, IconShield } from "./icons";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
-import { signUpAction } from "@/lib/supabase/auth-actions";
+import { createClient } from "@/lib/supabase/client";
 
 const steps = [
   "Dati personali",
@@ -55,9 +56,11 @@ const initial: Form = {
 };
 
 export default function RegistrationWizard({ error }: { error?: string }) {
+  const router = useRouter();
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<Form>(initial);
   const [done, setDone] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<string[]>([]);
   const last = steps.length - 1;
 
@@ -85,7 +88,8 @@ export default function RegistrationWizard({ error }: { error?: string }) {
   }
 
   async function submit() {
-    // Modalità reale: crea utente + azienda su Supabase.
+    // Modalità reale: crea utente su Supabase; l'azienda viene creata
+    // automaticamente da un trigger nel database, usando questi metadati.
     if (isSupabaseConfigured) {
       for (let s = 0; s <= 1; s++) {
         const e = validateStep(s);
@@ -95,15 +99,36 @@ export default function RegistrationWizard({ error }: { error?: string }) {
           return;
         }
       }
-      const fd = new FormData();
-      fd.set("email", form.email);
-      fd.set("password", form.password);
-      fd.set("ragioneSociale", form.ragioneSociale);
-      fd.set("vatNumber", form.vatNumber);
-      fd.set("sector", form.sector);
-      fd.set("region", form.region);
-      fd.set("province", form.city);
-      await signUpAction(fd); // reindirizza in caso di successo
+      const supabase = createClient();
+      if (!supabase) {
+        setErrors(["Connessione Supabase non disponibile."]);
+        return;
+      }
+      setSubmitting(true);
+      const displayName =
+        form.ragioneSociale.replace(/\s+(S\.r\.l\.|S\.p\.A\.|Srl|Spa)\.?$/i, "").trim() ||
+        form.ragioneSociale;
+      const { error: err } = await supabase.auth.signUp({
+        email: form.email,
+        password: form.password,
+        options: {
+          data: {
+            ragione_sociale: form.ragioneSociale,
+            display_name: displayName,
+            vat_number: form.vatNumber,
+            sector: form.sector,
+            region: form.region,
+            province: form.city,
+          },
+        },
+      });
+      setSubmitting(false);
+      if (err) {
+        setErrors([err.message]);
+        return;
+      }
+      router.push("/venditore");
+      router.refresh();
       return;
     }
     // Modalità demo.
@@ -173,7 +198,9 @@ export default function RegistrationWizard({ error }: { error?: string }) {
           {step < last ? (
             <button onClick={next} className="btn btn-primary btn-sm">Continua</button>
           ) : (
-            <button onClick={submit} className="btn btn-primary btn-sm">Invia registrazione</button>
+            <button onClick={submit} disabled={submitting} className="btn btn-primary btn-sm disabled:opacity-60">
+              {submitting ? "Invio…" : "Invia registrazione"}
+            </button>
           )}
         </div>
       </div>
