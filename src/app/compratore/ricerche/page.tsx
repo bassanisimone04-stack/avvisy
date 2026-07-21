@@ -4,11 +4,15 @@ import Link from "next/link";
 import { PageTitle, EmptyState } from "@/components/dash";
 import { notify } from "@/components/Toaster";
 import { IconBell, IconClose, IconSearch } from "@/components/icons";
+import { lotMatchesQuery } from "@/lib/services";
 import { useStore } from "@/lib/store";
 
 export default function SavedSearchesPage() {
   const { state, dispatch } = useStore();
   const searches = state.savedSearches;
+
+  const matchCount = (query: string) =>
+    state.lots.filter((l) => l.status === "Pubblicato" && lotMatchesQuery(l, query)).length;
 
   return (
     <>
@@ -33,7 +37,7 @@ export default function SavedSearchesPage() {
                 <div className="min-w-0">
                   <p className="truncate font-semibold text-ink">{s.label}</p>
                   <Link href={`/marketplace?q=${encodeURIComponent(s.query)}`} className="text-xs text-brand-dark hover:underline">
-                    Apri nel marketplace
+                    {matchCount(s.query)} {matchCount(s.query) === 1 ? "lotto" : "lotti"} in linea · apri nel marketplace
                   </Link>
                 </div>
               </div>

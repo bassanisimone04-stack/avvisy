@@ -140,6 +140,14 @@ export function similarLots(lots: Lot[], lot: Lot, limit = 3): Lot[] {
     .slice(0, limit);
 }
 
+/** true se il lotto corrisponde ai termini di una ricerca salvata (testo). */
+export function lotMatchesQuery(lot: Lot, query: string): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) return true;
+  const hay = `${lot.title} ${lot.shortDescription} ${lot.description} ${lot.category} ${lot.subcategory} ${lot.region} ${lot.province}`.toLowerCase();
+  return q.split(/\s+/).filter(Boolean).every((term) => hay.includes(term));
+}
+
 // ---------------------------------------------------------------------------
 // Calcoli economici
 // ---------------------------------------------------------------------------

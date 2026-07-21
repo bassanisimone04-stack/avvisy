@@ -26,6 +26,7 @@ import {
 } from "./mock-data";
 import {
   createOrder,
+  lotMatchesQuery,
   makeNotification,
   newId,
   offerTotal,
@@ -137,13 +138,30 @@ function reducer(state: StoreState, action: Action): StoreState {
       };
     }
 
-    case "UPDATE_LOT_STATUS":
-      return {
-        ...state,
-        lots: state.lots.map((l) =>
-          l.id === action.lotId ? { ...l, status: action.status } : l,
-        ),
-      };
+    case "UPDATE_LOT_STATUS": {
+      const lots = state.lots.map((l) =>
+        l.id === action.lotId ? { ...l, status: action.status } : l,
+      );
+      // Quando un lotto viene pubblicato, avvisa chi ha una ricerca salvata
+      // corrispondente con gli avvisi attivi.
+      let notifications = state.notifications;
+      if (action.status === "Pubblicato") {
+        const lot = lots.find((l) => l.id === action.lotId);
+        if (lot && state.savedSearches.some((s) => s.alerts && lotMatchesQuery(lot, s.query))) {
+          notifications = [
+            makeNotification({
+              type: "sistema",
+              title: "Nuovo lotto per la tua ricerca salvata",
+              detail: `“${lot.title}” corrisponde a una ricerca salvata con avvisi attivi.`,
+              href: "/marketplace",
+              audience: "buyer",
+            }),
+            ...notifications,
+          ];
+        }
+      }
+      return { ...state, lots, notifications };
+    }
 
     case "EDIT_LOT":
       return {
