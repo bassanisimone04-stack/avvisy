@@ -9,6 +9,8 @@ import { categories } from "@/lib/mock-data";
 import { commission, commissionRateLabel, formatEuro } from "@/lib/format";
 import { useStore } from "@/lib/store";
 import { createLot, type NewLotInput } from "@/lib/services";
+import { uploadLotImages } from "@/lib/supabase/storage";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
 import type { DeliveryMode, MerchandiseCondition } from "@/lib/types";
 
 const conditions: MerchandiseCondition[] = [
@@ -69,6 +71,8 @@ export default function PublishLotForm() {
   const [errors, setErrors] = useState<string[]>([]);
   const [published, setPublished] = useState(false);
   const [savedAt, setSavedAt] = useState<string | null>(null);
+  const [files, setFiles] = useState<File[]>([]);
+  const [uploading, setUploading] = useState(false);
   const dirty = useRef(false);
 
   function set<K extends keyof Form>(key: K, value: Form[K]) {
@@ -125,7 +129,7 @@ export default function PublishLotForm() {
     setStep((s) => Math.max(0, s - 1));
   }
 
-  function publish() {
+  async function publish() {
     // Rivalida tutti gli step.
     for (let s = 0; s <= 3; s++) {
       const e = validateStep(s);
@@ -135,7 +139,19 @@ export default function PublishLotForm() {
         return;
       }
     }
+    // Carica le foto reali su Storage (se presenti e se collegato).
+    let imageUrls: string[] = [];
+    if (files.length && isSupabaseConfigured) {
+      setUploading(true);
+      try {
+        imageUrls = await uploadLotImages(files);
+      } catch {
+        /* fallback: resta l'illustrazione */
+      }
+      setUploading(false);
+    }
     const input: NewLotInput = {
+      imageUrls,
       title: form.title.trim(),
       category: form.category,
       subcategory: form.subcategory,
@@ -332,10 +348,27 @@ export default function PublishLotForm() {
                 </div>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-line-strong p-6 text-center">
-                  <IconPlus className="text-muted" />
-                  <p className="mt-2 text-sm font-medium text-ink">Carica immagini</p>
-                  <p className="text-xs text-muted">JPG o PNG (simulato)</p>
+                <div>
+                  <label className="flex cursor-pointer flex-col items-center justify-center rounded-lg border border-dashed border-line-strong p-6 text-center transition-colors hover:border-brand hover:bg-brand-soft/20">
+                    <IconPlus className="text-muted" />
+                    <p className="mt-2 text-sm font-medium text-ink">Carica immagini</p>
+                    <p className="text-xs text-muted">JPG o PNG {isSupabaseConfigured ? "(caricamento reale)" : "(simulato in demo)"}</p>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      multiple
+                      className="hidden"
+                      onChange={(e) => setFiles(Array.from(e.target.files ?? []).slice(0, 4))}
+                    />
+                  </label>
+                  {files.length > 0 && (
+                    <div className="mt-2 grid grid-cols-4 gap-2">
+                      {files.map((f, i) => (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img key={i} src={URL.createObjectURL(f)} alt="" className="aspect-square w-full rounded-md object-cover" />
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-line-strong p-6 text-center">
                   <IconDoc className="text-muted" />
@@ -379,7 +412,9 @@ export default function PublishLotForm() {
             {step < steps.length - 1 ? (
               <button onClick={next} className="btn btn-primary btn-sm">Continua</button>
             ) : (
-              <button onClick={publish} className="btn btn-primary btn-sm">Pubblica lotto</button>
+              <button onClick={publish} disabled={uploading} className="btn btn-primary btn-sm disabled:opacity-60">
+                {uploading ? "Caricamento foto…" : "Pubblica lotto"}
+              </button>
             )}
           </div>
         </div>
@@ -393,7 +428,14 @@ export default function PublishLotForm() {
       <aside className="lg:sticky lg:top-20 lg:self-start">
         <p className="mb-2 text-sm font-semibold text-ink">Anteprima annuncio</p>
         <div className="card card-soft overflow-hidden">
-          <LotImage category={form.category} seed={3} />
+          {files.length > 0 ? (
+            <div className="aspect-[4/3] overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={URL.createObjectURL(files[0])} alt="" className="h-full w-full object-cover" />
+            </div>
+          ) : (
+            <LotImage category={form.category} seed={3} />
+          )}
           <div className="p-4">
             <span className="chip bg-surface-2 text-ink-soft">{categories.find((c) => c.slug === form.category)?.name}</span>
             <h3 className="mt-2 text-sm font-semibold text-ink">{form.title || "Titolo del lotto"}</h3>

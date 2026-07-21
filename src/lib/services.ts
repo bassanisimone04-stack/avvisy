@@ -223,6 +223,7 @@ export interface NewLotInput {
   documents: string[];
   certifications: string[];
   sellerId: string;
+  imageUrls?: string[];
 }
 
 export function createLot(input: NewLotInput): Lot {
@@ -238,6 +239,7 @@ export function createLot(input: NewLotInput): Lot {
     category: input.category,
     subcategory: input.subcategory,
     images: [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1],
+    imageUrls: input.imageUrls && input.imageUrls.length ? input.imageUrls : undefined,
     quantity: input.quantity,
     unit: input.unit,
     minQuantity: input.minQuantity,

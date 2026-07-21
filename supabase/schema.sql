@@ -82,6 +82,7 @@ create table if not exists lots (
   category text not null,
   subcategory text not null default '',
   images text[] not null default '{}',
+  image_urls text[] not null default '{}',
   quantity numeric not null,
   unit text not null default 'pz',
   min_quantity numeric not null default 1,

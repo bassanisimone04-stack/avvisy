@@ -59,7 +59,7 @@ export default function LotPage() {
 
       <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
         <div>
-          <LotGallery category={lot.category} seed={lot.images[0] ?? 1} />
+          <LotGallery category={lot.category} seed={lot.images[0] ?? 1} imageUrls={lot.imageUrls} />
 
           <div className="mt-6 flex flex-wrap items-center gap-2">
             <span className="chip bg-surface-2 text-ink-soft">{categoryName(lot.category)}</span>

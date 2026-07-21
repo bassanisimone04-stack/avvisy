@@ -1,5 +1,5 @@
 import Link from "next/link";
-import LotImage from "./LotImage";
+import LotMedia from "./LotMedia";
 import FavoriteButton from "./FavoriteButton";
 import { ConditionChip, VerifiedBadge } from "./badges";
 import { IconArrowRight, IconMapPin } from "./icons";
@@ -14,7 +14,7 @@ export default function LotCard({ lot }: { lot: Lot }) {
     <article className="card card-soft card-accent group flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
       <div className="relative">
         <Link href={`/lotto/${lot.id}`} aria-label={lot.title}>
-          <LotImage category={lot.category} seed={lot.images[0] ?? 1} />
+          <LotMedia category={lot.category} seed={lot.images[0] ?? 1} imageUrls={lot.imageUrls} />
         </Link>
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
           <span className="chip bg-surface/95 text-ink-soft shadow-sm">

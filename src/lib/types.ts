@@ -107,7 +107,8 @@ export interface Lot {
   description: string;
   category: string; // slug categoria
   subcategory: string;
-  images: number[]; // seed illustrazioni
+  images: number[]; // seed illustrazioni (fallback)
+  imageUrls?: string[]; // foto reali caricate su Storage
   quantity: number;
   unit: string;
   minQuantity: number;
