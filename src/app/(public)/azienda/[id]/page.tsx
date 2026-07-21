@@ -19,12 +19,20 @@ import { useStore } from "@/lib/store";
 
 export default function CompanyPage() {
   const { id } = useParams<{ id: string }>();
-  const { state } = useStore();
+  const { state, currentBuyerId, currentSellerId } = useStore();
   const company = state.companies.find((c) => c.id === id);
   if (!company) return notFound();
 
   const published = state.lots.filter((l) => l.sellerId === company.id && l.status === "Pubblicato");
   const reviews = reviewsForCompany(company.id);
+
+  // Anti-disintermediazione: i contatti completi (P.IVA, indirizzo) sono
+  // visibili solo se tra l'utente corrente e questa azienda esiste un ordine.
+  const contactsUnlocked = state.orders.some(
+    (o) =>
+      (o.sellerId === company.id && o.buyerId === currentBuyerId) ||
+      (o.buyerId === company.id && o.sellerId === currentSellerId),
+  );
 
   return (
     <>
@@ -47,7 +55,10 @@ export default function CompanyPage() {
                 <h1 className="text-2xl font-extrabold text-ink sm:text-3xl">{company.displayName}</h1>
                 <VerificationChip status={company.verification} />
               </div>
-              <p className="mt-1 mono text-sm text-muted">{company.ragioneSociale} · P.IVA {company.vatNumber}</p>
+              <p className="mt-1 mono text-sm text-muted">
+                {company.ragioneSociale}
+                {contactsUnlocked ? ` · P.IVA ${company.vatNumber}` : " · P.IVA riservata"}
+              </p>
               <p className="mt-3 max-w-2xl text-ink-soft">{company.description}</p>
               <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
                 <span className="flex items-center gap-1"><IconMapPin width={15} height={15} /> {company.province}, {company.region}</span>
@@ -127,8 +138,23 @@ export default function CompanyPage() {
             </ul>
           </div>
           <div className="card p-5">
-            <p className="mono text-[0.68rem] uppercase tracking-wide text-muted">Sede</p>
-            <p className="mt-1 text-sm text-ink">{company.address}</p>
+            <p className="mono text-[0.68rem] uppercase tracking-wide text-muted">Contatti e sede</p>
+            {contactsUnlocked ? (
+              <>
+                <p className="mt-1 text-sm text-ink">{company.address}</p>
+                <p className="mt-1 mono text-xs text-muted">P.IVA {company.vatNumber}</p>
+              </>
+            ) : (
+              <>
+                <p className="mt-1 text-sm text-ink">{company.province}, {company.region}</p>
+                <div className="mt-3 flex items-start gap-2 rounded-lg bg-surface-2/70 p-3">
+                  <IconShield width={16} height={16} className="mt-0.5 shrink-0 text-brand" />
+                  <p className="text-xs leading-relaxed text-muted">
+                    Indirizzo completo, P.IVA e referente sono visibili <b className="text-ink-soft">dopo un ordine confermato</b> su Scortvia. La trattativa e il pagamento restano protetti in piattaforma.
+                  </p>
+                </div>
+              </>
+            )}
             {company.reviewsCount > 0 && (
               <div className="mt-4 border-t border-line pt-3">
                 <RatingStars value={company.rating} count={company.reviewsCount} />
