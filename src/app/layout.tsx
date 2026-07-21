@@ -31,6 +31,7 @@ const DESCRIPTION =
   "Marketplace B2B italiano per comprare e vendere stock, componenti industriali, ricambi e rimanenze di produzione tra aziende verificate.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://avvisy-suo4.vercel.app"),
   title: {
     default: TITLE,
     template: "%s · Scortvia",
@@ -53,10 +54,18 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0d7d63",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#cf4a1e" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1614" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
