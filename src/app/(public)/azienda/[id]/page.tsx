@@ -19,7 +19,7 @@ import { useStore } from "@/lib/store";
 
 export default function CompanyPage() {
   const { id } = useParams<{ id: string }>();
-  const { state, currentBuyerId, currentSellerId } = useStore();
+  const { state, currentBuyerId, currentSellerId, currentCompanyId, online } = useStore();
   const company = state.companies.find((c) => c.id === id);
   if (!company) return notFound();
 
@@ -68,7 +68,20 @@ export default function CompanyPage() {
               </div>
             </div>
             <div className="flex gap-2">
-              <button onClick={() => notify("Conversazione avviata in piattaforma: la trovi nei Messaggi.")} className="btn btn-primary btn-sm">
+              <button
+                onClick={async () => {
+                  if (online && currentCompanyId && currentCompanyId !== company.id) {
+                    const { sendMessage } = await import("@/lib/supabase/messages");
+                    await sendMessage({
+                      from: currentCompanyId,
+                      to: company.id,
+                      body: `Buongiorno, vorremmo mettersi in contatto con ${company.displayName} tramite Scortvia.`,
+                    }).catch(() => {});
+                  }
+                  notify("Conversazione avviata in piattaforma: la trovi nei Messaggi.");
+                }}
+                className="btn btn-primary btn-sm"
+              >
                 <IconMessage width={16} height={16} /> Messaggia in piattaforma
               </button>
               <button onClick={() => notify("Azienda seguita (simulato).", "info")} className="btn btn-outline btn-sm">Segui</button>

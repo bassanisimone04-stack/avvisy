@@ -16,7 +16,7 @@ import {
 } from "@/lib/format";
 import { useStore } from "@/lib/store";
 import { createOffer, validateOffer } from "@/lib/services";
-import { hasContactInfo } from "@/lib/moderation";
+import { hasContactInfo, maskContacts } from "@/lib/moderation";
 import type { Lot } from "@/lib/types";
 
 type Dialog = null | "buy" | "offer" | "info" | "report";
@@ -238,9 +238,15 @@ function OfferDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose:
 }
 
 function InfoDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: () => void }) {
+  const { online, currentCompanyId } = useStore();
   const [msg, setMsg] = useState("");
   const [done, setDone] = useState(false);
-  function send() {
+  async function send() {
+    const body = maskContacts(msg.trim() || `Ciao, sono interessato al lotto "${lot.title}". È ancora disponibile?`);
+    if (online && currentCompanyId && currentCompanyId !== lot.sellerId) {
+      const { sendMessage } = await import("@/lib/supabase/messages");
+      await sendMessage({ from: currentCompanyId, to: lot.sellerId, body, lotId: lot.id }).catch(() => {});
+    }
     setDone(true);
     notify("Richiesta inviata: la trovi nei messaggi.");
   }

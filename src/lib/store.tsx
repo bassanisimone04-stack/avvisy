@@ -439,6 +439,8 @@ interface StoreContextValue {
   currentBuyerId: string;
   currentSeller: Company;
   currentBuyer: Company;
+  /** ID azienda dell'utente loggato (solo in modalità Supabase). */
+  currentCompanyId: string | null;
   /** true quando il backend Supabase è collegato. */
   online: boolean;
 }
@@ -537,6 +539,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       currentBuyerId: buyerId,
       currentSeller,
       currentBuyer,
+      currentCompanyId: isSupabaseConfigured ? companyId : null,
       online: isSupabaseConfigured && ready,
     };
   }, [state, wrappedDispatch, companyId, ready]);
