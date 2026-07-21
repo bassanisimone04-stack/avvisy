@@ -1,33 +1,47 @@
 import { COMMISSION_RATE } from "./types";
 
-const eur = new Intl.NumberFormat("it-IT", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 2,
-});
+// Formattazione deterministica in stile italiano (separatore migliaia ".",
+// decimali ","). NON usiamo Intl a runtime perché i dati locale di ICU possono
+// differire tra il server Node e il browser, generando disallineamenti di
+// idratazione (es. "1133 €" sul server vs "1.133 €" sul client).
 
-const eur0 = new Intl.NumberFormat("it-IT", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 0,
-});
-
-const num = new Intl.NumberFormat("it-IT");
+/** Inserisce il separatore delle migliaia in una stringa di sole cifre. */
+function groupThousands(digits: string): string {
+  return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
 
 export function formatEuro(value: number, compact = false): string {
-  return compact ? eur0.format(value) : eur.format(value);
+  const neg = value < 0;
+  const abs = Math.abs(value);
+  const fixed = compact ? Math.round(abs).toFixed(0) : abs.toFixed(2);
+  const [intPart, decPart] = fixed.split(".");
+  const grouped = groupThousands(intPart);
+  const body = decPart ? `${grouped},${decPart}` : grouped;
+  return `${neg ? "-" : ""}${body} €`;
 }
 
 export function formatNumber(value: number): string {
-  return num.format(value);
+  const neg = value < 0;
+  const abs = Math.abs(value);
+  const rounded = Math.round(abs * 100) / 100;
+  const fixed = Number.isInteger(rounded) ? rounded.toString() : rounded.toString();
+  const [intPart, decPart] = fixed.split(".");
+  const grouped = groupThousands(intPart);
+  return `${neg ? "-" : ""}${decPart ? `${grouped},${decPart}` : grouped}`;
 }
 
+const MONTHS_IT = [
+  "gen", "feb", "mar", "apr", "mag", "giu",
+  "lug", "ago", "set", "ott", "nov", "dic",
+];
+
 export function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("it-IT", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  const month = MONTHS_IT[d.getUTCMonth()];
+  const year = d.getUTCFullYear();
+  return `${day} ${month} ${year}`;
 }
 
 /** Relative-ish label used in feeds ("2 giorni fa"). */
