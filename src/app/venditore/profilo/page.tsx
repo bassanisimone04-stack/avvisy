@@ -5,13 +5,12 @@ import { PageTitle, SectionCard } from "@/components/dash";
 import { RatingStars, VerificationChip } from "@/components/badges";
 import { notify } from "@/components/Toaster";
 import { IconShield } from "@/components/icons";
-import { reviewsForCompany } from "@/lib/mock-data";
 import { formatDate, formatEuro } from "@/lib/format";
 import { useStore } from "@/lib/store";
 
 export default function ProfiloVenditorePage() {
-  const { currentSeller: c, dispatch } = useStore();
-  const revs = reviewsForCompany(c.id);
+  const { state, currentSeller: c, dispatch } = useStore();
+  const revs = state.reviews.filter((r) => r.companyId === c.id);
 
   const [edit, setEdit] = useState({
     displayName: c.displayName,

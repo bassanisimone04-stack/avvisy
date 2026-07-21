@@ -217,6 +217,26 @@ export async function persistAction(
         break;
       }
 
+      case "ADD_REVIEW": {
+        const r = action.review;
+        await supabase.from("reviews").insert({
+          id: r.id,
+          company_id: r.companyId,
+          author_company: r.authorCompany,
+          rating: r.rating,
+          title: r.title,
+          body: r.body,
+          lot_id: r.lotId ?? null,
+        });
+        const company = state.companies.find((c) => c.id === r.companyId);
+        if (company)
+          await supabase
+            .from("companies")
+            .update({ rating: company.rating, reviews_count: company.reviewsCount })
+            .eq("id", r.companyId);
+        break;
+      }
+
       default:
         break;
     }

@@ -96,7 +96,8 @@ type Action =
   | { type: "REMOVE_SAVED_SEARCH"; id: string }
   | { type: "TOGGLE_SEARCH_ALERT"; id: string }
   | { type: "SET_VERIFICATION"; companyId: string; status: VerificationStatus }
-  | { type: "UPDATE_COMPANY"; companyId: string; patch: Partial<Company> };
+  | { type: "UPDATE_COMPANY"; companyId: string; patch: Partial<Company> }
+  | { type: "ADD_REVIEW"; review: Review };
 
 function notify(
   state: StoreState,
@@ -426,6 +427,20 @@ function reducer(state: StoreState, action: Action): StoreState {
           c.id === action.companyId ? { ...c, ...action.patch } : c,
         ),
       };
+
+    case "ADD_REVIEW": {
+      const r = action.review;
+      return {
+        ...state,
+        reviews: [r, ...state.reviews],
+        companies: state.companies.map((c) => {
+          if (c.id !== r.companyId) return c;
+          const count = c.reviewsCount + 1;
+          const rating = Math.round(((c.rating * c.reviewsCount + r.rating) / count) * 10) / 10;
+          return { ...c, reviewsCount: count, rating };
+        }),
+      };
+    }
 
     default:
       return state;

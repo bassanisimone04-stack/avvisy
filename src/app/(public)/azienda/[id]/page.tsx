@@ -13,18 +13,19 @@ import {
   IconShield,
   IconVerified,
 } from "@/components/icons";
-import { reviewsForCompany } from "@/lib/mock-data";
 import { formatDate } from "@/lib/format";
+import { newId } from "@/lib/services";
 import { useStore } from "@/lib/store";
+import ReviewForm from "@/components/ReviewForm";
 
 export default function CompanyPage() {
   const { id } = useParams<{ id: string }>();
-  const { state, currentBuyerId, currentSellerId, currentCompanyId, online } = useStore();
+  const { state, dispatch, currentBuyer, currentBuyerId, currentSellerId, currentCompanyId, online } = useStore();
   const company = state.companies.find((c) => c.id === id);
   if (!company) return notFound();
 
   const published = state.lots.filter((l) => l.sellerId === company.id && l.status === "Pubblicato");
-  const reviews = reviewsForCompany(company.id);
+  const reviews = state.reviews.filter((r) => r.companyId === company.id);
 
   // Anti-disintermediazione: i contatti completi (P.IVA, indirizzo) sono
   // visibili solo se tra l'utente corrente e questa azienda esiste un ordine.
@@ -33,6 +34,28 @@ export default function CompanyPage() {
       (o.sellerId === company.id && o.buyerId === currentBuyerId) ||
       (o.buyerId === company.id && o.sellerId === currentSellerId),
   );
+
+  // Posso recensire un'azienda con cui ho concluso un ordine (e che non sia
+  // la mia). Autore = la mia azienda.
+  const myCompanyId = currentCompanyId ?? currentBuyerId;
+  const canReview = contactsUnlocked && myCompanyId !== company.id;
+  const alreadyReviewed = reviews.some((r) => r.authorCompany === currentBuyer?.displayName);
+
+  function submitReview(rating: number, title: string, body: string) {
+    dispatch({
+      type: "ADD_REVIEW",
+      review: {
+        id: newId(),
+        companyId: company!.id,
+        authorCompany: currentBuyer?.displayName ?? "Azienda",
+        rating,
+        date: new Date().toISOString().slice(0, 10),
+        title,
+        body,
+      },
+    });
+    notify("Recensione pubblicata. Grazie!");
+  }
 
   return (
     <>
@@ -118,6 +141,16 @@ export default function CompanyPage() {
           )}
 
           <h2 className="mt-12 text-xl font-extrabold text-ink">Recensioni ({reviews.length})</h2>
+
+          {canReview && !alreadyReviewed && (
+            <div className="mt-4">
+              <ReviewForm onSubmit={submitReview} />
+            </div>
+          )}
+          {canReview && alreadyReviewed && (
+            <p className="mt-3 text-sm text-verified">Hai già recensito questa azienda. Grazie!</p>
+          )}
+
           {reviews.length === 0 ? (
             <p className="mt-3 text-sm text-muted">Nessuna recensione disponibile.</p>
           ) : (

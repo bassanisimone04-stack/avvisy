@@ -16,7 +16,7 @@ import {
   IconTag,
   IconTruck,
 } from "@/components/icons";
-import { categoryName, companyById, reviewsForCompany } from "@/lib/mock-data";
+import { categoryName, companyById } from "@/lib/mock-data";
 import { commission, commissionRateLabel, daysUntil, formatDate, formatEuro, formatNumber } from "@/lib/format";
 import { lotTotal } from "@/lib/types";
 import { useStore } from "@/lib/store";
@@ -44,7 +44,7 @@ export default function LotPage() {
   const seller =
     state.companies.find((c) => c.id === lot.sellerId) ?? companyById(lot.sellerId);
   if (!seller) return notFound();
-  const reviews = reviewsForCompany(seller.id);
+  const reviews = state.reviews.filter((r) => r.companyId === seller.id);
   const selectedQty = qty ?? lot.minQuantity;
   const dynamicTotal = selectedQty * lot.unitPrice;
   const expiryDays = daysUntil(lot.expiresAt);
