@@ -39,7 +39,11 @@ export default function LotPage() {
 
   if (!lot) return notFound();
 
-  const seller = companyById(lot.sellerId)!;
+  // In modalità Supabase il venditore è un'azienda reale (UUID) presente nello
+  // store ma non nei dati demo: cerchiamo prima nello store, poi nei demo.
+  const seller =
+    state.companies.find((c) => c.id === lot.sellerId) ?? companyById(lot.sellerId);
+  if (!seller) return notFound();
   const reviews = reviewsForCompany(seller.id);
   const selectedQty = qty ?? lot.minQuantity;
   const dynamicTotal = selectedQty * lot.unitPrice;

@@ -10,8 +10,10 @@ import { lotTotal } from "@/lib/types";
 import { useStore } from "@/lib/store";
 
 export default function SellerDashboard() {
-  const { state, currentSellerId } = useStore();
-  const seller = companyById(currentSellerId)!;
+  const { state, currentSellerId, currentSeller } = useStore();
+  // In modalità Supabase l'ID è un UUID reale non presente nei dati demo:
+  // usiamo l'azienda dello store (dati reali) con fallback ai dati demo.
+  const seller = currentSeller ?? companyById(currentSellerId);
 
   const myLots = state.lots.filter((l) => l.sellerId === currentSellerId);
   const activeLots = myLots.filter((l) => l.status === "Pubblicato" || l.status === "Riservato");
@@ -47,13 +49,13 @@ export default function SellerDashboard() {
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <StatCard label="Valore lotti attivi" value={formatEuro(stockValue, true)} sub={`${activeLots.length} lotti a catalogo`} icon={<IconBox width={18} height={18} />} />
-        <StatCard label="Vendite concluse" value={String(concluded.length)} sub={`${seller.salesCount} totali storiche`} icon={<IconTruck width={18} height={18} />} accent="steel" />
+        <StatCard label="Vendite concluse" value={String(concluded.length)} sub={`${seller?.salesCount ?? 0} totali storiche`} icon={<IconTruck width={18} height={18} />} accent="steel" />
         <StatCard label="Offerte ricevute" value={String(myOffers.length)} sub={`${pendingOffers.length} da valutare`} icon={<IconTag width={18} height={18} />} accent="signal" />
         <StatCard label="Valore medio ordine" value={formatEuro(avgOrder, true)} sub={`${myOrders.length} ordini totali`} icon={<IconWallet width={18} height={18} />} />
         <StatCard label="Lotti in scadenza" value={String(expiring.length)} sub="Entro 12 giorni" icon={<IconBox width={18} height={18} />} accent="signal" />
         <div className="card p-4">
           <p className="text-sm text-muted">Saldo simulato</p>
-          <p className="mt-2 text-2xl font-bold text-ink">{formatEuro(seller.walletBalance)}</p>
+          <p className="mt-2 text-2xl font-bold text-ink">{formatEuro(seller?.walletBalance ?? 0)}</p>
           <p className="mt-0.5 text-xs text-muted">Netto commissioni Scortvia</p>
         </div>
       </div>
