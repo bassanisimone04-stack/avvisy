@@ -25,12 +25,16 @@ export default function ModerationList({
   rejectLabel = "Rifiuta",
   approvedLabel = "Approvato",
   rejectedLabel = "Rifiutato",
+  onApprove,
+  onReject,
 }: {
   items: ModItem[];
   approveLabel?: string;
   rejectLabel?: string;
   approvedLabel?: string;
   rejectedLabel?: string;
+  onApprove?: (id: string) => void;
+  onReject?: (id: string) => void;
 }) {
   const [state, setState] = useState<Record<string, "open" | "approved" | "rejected">>(
     Object.fromEntries(items.map((i) => [i.id, "open"])),
@@ -58,6 +62,7 @@ export default function ModerationList({
                 <button
                   onClick={() => {
                     setState((p) => ({ ...p, [it.id]: "rejected" }));
+                    onReject?.(it.id);
                     notify(`${it.title}: ${rejectedLabel.toLowerCase()}.`, "info");
                   }}
                   className="btn btn-outline btn-sm text-danger"
@@ -67,6 +72,7 @@ export default function ModerationList({
                 <button
                   onClick={() => {
                     setState((p) => ({ ...p, [it.id]: "approved" }));
+                    onApprove?.(it.id);
                     notify(`${it.title}: ${approvedLabel.toLowerCase()}.`);
                   }}
                   className="btn btn-primary btn-sm"
