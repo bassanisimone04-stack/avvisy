@@ -30,7 +30,15 @@ export default function DashboardShell({
 }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { state, online } = useStore();
+  const { state, online, currentSeller, currentBuyer } = useStore();
+
+  // Sul sito live (Supabase) mostriamo l'azienda realmente loggata; in demo
+  // restano i nomi passati come prop. Il passaggio avviene dopo l'idratazione
+  // (online diventa true solo a store pronto), quindi niente mismatch SSR.
+  const account = audience === "buyer" ? currentBuyer : currentSeller;
+  const name = online && account ? account.displayName : accountName;
+  const meta = online && account ? `${account.province} · ${account.verification}` : accountMeta;
+
   const unread = audience
     ? state.notifications.filter(
         (n) => !n.read && (n.audience === audience || n.audience === "both"),
@@ -76,11 +84,11 @@ export default function DashboardShell({
       <div className="border-t border-line p-3">
         <div className="flex items-center gap-3 rounded-lg p-2">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-steel-soft text-sm font-bold text-steel">
-            {accountName.slice(0, 2).toUpperCase()}
+            {name.slice(0, 2).toUpperCase()}
           </span>
           <div className="min-w-0">
-            <p className="truncate text-sm font-semibold text-ink">{accountName}</p>
-            <p className="truncate text-xs text-muted">{accountMeta}</p>
+            <p className="truncate text-sm font-semibold text-ink">{name}</p>
+            <p className="truncate text-xs text-muted">{meta}</p>
           </div>
         </div>
         <Link href="/" className="btn btn-ghost btn-sm mt-1 w-full justify-start text-muted">
