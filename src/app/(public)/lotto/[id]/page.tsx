@@ -273,10 +273,12 @@ export default function LotPage() {
               <LotActions lot={lot} />
             </div>
 
-            <p className="mt-3 flex items-center gap-1.5 text-xs text-muted">
-              <IconShield width={14} height={14} className="text-brand" />
-              Pagamento simulato protetto tramite partner fino alla consegna.
-            </p>
+            <div className="mt-3 flex items-start gap-2 rounded-lg border border-verified/30 bg-verified-soft/40 p-2.5">
+              <IconShield width={16} height={16} className="mt-0.5 shrink-0 text-verified" />
+              <p className="text-xs leading-relaxed text-ink-soft">
+                <b className="text-ink">Pagamento protetto Scortvia</b> — i fondi restano vincolati e vengono liberati al venditore solo a consegna confermata. Pagando in piattaforma sei tutelato in caso di problemi.
+              </p>
+            </div>
           </div>
 
           <div className="card mt-4 p-5">

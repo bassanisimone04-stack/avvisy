@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { notify } from "./Toaster";
 import { IconMessage } from "./icons";
+import { hasContactInfo, maskContacts } from "@/lib/moderation";
 
 type Msg = { from: "me" | "them"; text: string; time: string };
 type Thread = {
@@ -101,7 +102,7 @@ export default function MessagesInbox() {
                     : "rounded-bl-sm bg-surface text-ink shadow-sm"
                 }`}
               >
-                {m.text}
+                {maskContacts(m.text)}
                 <span
                   className={`mt-1 block text-[0.65rem] ${m.from === "me" ? "text-white/70" : "text-muted"}`}
                 >
@@ -111,25 +112,36 @@ export default function MessagesInbox() {
             </div>
           ))}
         </div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            if (!draft.trim()) return;
-            notify("Messaggio inviato (simulato).");
-            setDraft("");
-          }}
-          className="flex items-center gap-2 border-t border-line p-3"
-        >
-          <input
-            value={draft}
-            onChange={(e) => setDraft(e.target.value)}
-            placeholder="Scrivi un messaggio…"
-            className="field flex-1"
-          />
-          <button type="submit" className="btn btn-primary btn-sm">
-            <IconMessage width={16} height={16} /> Invia
-          </button>
-        </form>
+        <div className="border-t border-line">
+          {hasContactInfo(draft) && (
+            <p className="px-3 pt-2 text-xs text-signal">
+              Per la tua sicurezza, telefono, email e link vengono oscurati: concludi la trattativa in piattaforma con pagamento protetto.
+            </p>
+          )}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (!draft.trim()) return;
+              notify(
+                hasContactInfo(draft)
+                  ? "Messaggio inviato: i contatti diretti sono stati oscurati."
+                  : "Messaggio inviato (simulato).",
+              );
+              setDraft("");
+            }}
+            className="flex items-center gap-2 p-3"
+          >
+            <input
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              placeholder="Scrivi un messaggio…"
+              className="field flex-1"
+            />
+            <button type="submit" className="btn btn-primary btn-sm">
+              <IconMessage width={16} height={16} /> Invia
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

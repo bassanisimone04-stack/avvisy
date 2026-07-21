@@ -16,6 +16,7 @@ import {
 } from "@/lib/format";
 import { useStore } from "@/lib/store";
 import { createOffer, validateOffer } from "@/lib/services";
+import { hasContactInfo } from "@/lib/moderation";
 import type { Lot } from "@/lib/types";
 
 type Dialog = null | "buy" | "offer" | "info" | "report";
@@ -277,6 +278,11 @@ function InfoDialog({ lot, open, onClose }: { lot: Lot; open: boolean; onClose: 
             Fai una domanda sul lotto <strong>{lot.title}</strong>: disponibilità, documenti o logistica.
           </p>
           <textarea value={msg} onChange={(e) => setMsg(e.target.value)} rows={4} placeholder="Scrivi la tua richiesta…" className="field resize-none" />
+          {hasContactInfo(msg) && (
+            <p className="text-xs text-signal">
+              Telefono, email e link verranno oscurati: mantieni la trattativa in piattaforma con pagamento protetto.
+            </p>
+          )}
         </div>
       )}
     </Modal>

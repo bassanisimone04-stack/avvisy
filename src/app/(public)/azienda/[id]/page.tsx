@@ -68,8 +68,8 @@ export default function CompanyPage() {
               </div>
             </div>
             <div className="flex gap-2">
-              <button onClick={() => notify("Richiesta di contatto inviata (simulata).")} className="btn btn-primary btn-sm">
-                <IconMessage width={16} height={16} /> Contatta
+              <button onClick={() => notify("Conversazione avviata in piattaforma: la trovi nei Messaggi.")} className="btn btn-primary btn-sm">
+                <IconMessage width={16} height={16} /> Messaggia in piattaforma
               </button>
               <button onClick={() => notify("Azienda seguita (simulato).", "info")} className="btn btn-outline btn-sm">Segui</button>
             </div>
