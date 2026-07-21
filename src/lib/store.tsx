@@ -88,7 +88,7 @@ type Action =
   | { type: "BUY_NOW"; lotId: string; quantity: number; buyerId: string }
   | { type: "CHECKOUT_BUY"; lotId: string; quantity: number; buyerId: string; method: string }
   | { type: "PAY_ORDER"; orderId: string; method: string }
-  | { type: "UPDATE_ORDER_STATUS"; orderId: string; status: OrderStatus }
+  | { type: "UPDATE_ORDER_STATUS"; orderId: string; status: OrderStatus; note?: string }
   | { type: "ADD_NOTIFICATION"; notification: Notification }
   | { type: "MARK_NOTIFICATION_READ"; id: string }
   | { type: "MARK_ALL_READ" }
@@ -371,7 +371,11 @@ function reducer(state: StoreState, action: Action): StoreState {
                 status: action.status,
                 history: [
                   ...o.history,
-                  { status: action.status, date: new Date().toISOString().slice(0, 10) },
+                  {
+                    status: action.status,
+                    date: new Date().toISOString().slice(0, 10),
+                    ...(action.note ? { note: action.note } : {}),
+                  },
                 ],
               }
             : o,
