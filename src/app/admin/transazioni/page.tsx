@@ -4,6 +4,7 @@ import { PageTitle, StatCard } from "@/components/dash";
 import { OrderStatusPill } from "@/components/badges";
 import { IconWallet } from "@/components/icons";
 import { companyById } from "@/lib/mock-data";
+import { companyDisplayName } from "@/lib/services";
 import { commissionRateLabel, formatDate, formatEuro } from "@/lib/format";
 import { useStore } from "@/lib/store";
 
@@ -43,8 +44,8 @@ export default function AdminTransactionsPage() {
                     <p className="font-mono text-xs font-semibold text-ink">{o.code}</p>
                     <p className="text-xs text-muted">{formatDate(o.date)}</p>
                   </td>
-                  <td className="px-4 py-3 text-ink">{companyById(o.sellerId)?.displayName}</td>
-                  <td className="px-4 py-3 text-muted">{companyById(o.buyerId)?.displayName}</td>
+                  <td className="px-4 py-3 text-ink">{companyDisplayName(state.companies, o.sellerId)}</td>
+                  <td className="px-4 py-3 text-muted">{companyDisplayName(state.companies, o.buyerId)}</td>
                   <td className="px-4 py-3 text-right font-semibold text-ink">{formatEuro(o.subtotal)}</td>
                   <td className="px-4 py-3 text-right font-semibold text-brand-dark">{formatEuro(o.commission)}</td>
                   <td className="px-4 py-3"><OrderStatusPill status={o.status} /></td>

@@ -140,6 +140,19 @@ export function similarLots(lots: Lot[], lot: Lot, limit = 3): Lot[] {
     .slice(0, limit);
 }
 
+/**
+ * Nome visualizzato di un'azienda: prima dallo stato (dati reali Supabase),
+ * poi dai dati demo. Evita di mostrare UUID grezzi in modalità Supabase.
+ */
+export function companyDisplayName(companies: Company[], id: string | undefined): string {
+  if (!id) return "";
+  return (
+    companies.find((c) => c.id === id)?.displayName ??
+    companyById(id)?.displayName ??
+    "Azienda"
+  );
+}
+
 /** true se il lotto corrisponde ai termini di una ricerca salvata (testo). */
 export function lotMatchesQuery(lot: Lot, query: string): boolean {
   const q = query.trim().toLowerCase();

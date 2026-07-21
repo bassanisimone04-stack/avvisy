@@ -51,7 +51,7 @@ export default function OffersManager() {
         <div className="space-y-3">
           {filtered.map((o) => {
             const lot = state.lots.find((l) => l.id === o.lotId);
-            const buyer = companyById(o.buyerId);
+            const buyer = state.companies.find((c) => c.id === o.buyerId) ?? companyById(o.buyerId);
             const total = o.totalValue;
             const isOpen = openStatuses.includes(o.status);
             const diff = lot ? percentDiff(o.unitPrice, lot.unitPrice) : 0;

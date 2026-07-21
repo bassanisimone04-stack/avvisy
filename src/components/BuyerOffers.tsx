@@ -14,6 +14,7 @@ import {
   formatNumber,
 } from "@/lib/format";
 import { companyById } from "@/lib/mock-data";
+import { companyDisplayName } from "@/lib/services";
 import { useStore } from "@/lib/store";
 import type { OfferStatus } from "@/lib/types";
 
@@ -64,7 +65,7 @@ export default function BuyerOffers() {
                       <Link href={`/lotto/${o.lotId}`} className="font-semibold text-ink hover:text-brand-dark">{lot?.title}</Link>
                       <OfferStatusPill status={o.status} />
                     </div>
-                    <p className="mt-0.5 text-xs text-muted">{companyById(o.sellerId)?.displayName} · inviata il {formatDate(o.date)}</p>
+                    <p className="mt-0.5 text-xs text-muted">{companyDisplayName(state.companies, o.sellerId)} · inviata il {formatDate(o.date)}</p>
                     {o.message && <p className="mt-2 rounded-lg bg-surface-2 p-2.5 text-sm text-ink-soft">“{o.message}”</p>}
                   </div>
                   <div className="text-right">

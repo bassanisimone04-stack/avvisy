@@ -5,6 +5,7 @@ import { PageTitle, SectionCard, StatCard } from "@/components/dash";
 import { OfferStatusPill, OrderStatusPill } from "@/components/badges";
 import { IconBox, IconSearch, IconTag, IconTruck } from "@/components/icons";
 import { companyById } from "@/lib/mock-data";
+import { companyDisplayName } from "@/lib/services";
 import { formatEuro, formatNumber, timeAgo } from "@/lib/format";
 import { useStore } from "@/lib/store";
 
@@ -66,7 +67,7 @@ export default function BuyerDashboard() {
                 <div key={o.id} className="flex items-center justify-between gap-3">
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium text-ink">{o.lotTitle}</p>
-                    <p className="text-xs text-muted">{companyById(o.sellerId)?.displayName} · {o.code}</p>
+                    <p className="text-xs text-muted">{companyDisplayName(state.companies, o.sellerId)} · {o.code}</p>
                   </div>
                   <OrderStatusPill status={o.status} />
                 </div>

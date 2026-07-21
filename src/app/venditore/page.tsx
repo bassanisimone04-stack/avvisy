@@ -5,6 +5,7 @@ import { PageTitle, SectionCard, StatCard } from "@/components/dash";
 import { OfferStatusPill, OrderStatusPill, LotStatusPill } from "@/components/badges";
 import { IconBox, IconPlus, IconTag, IconTruck, IconWallet } from "@/components/icons";
 import { companyById } from "@/lib/mock-data";
+import { companyDisplayName } from "@/lib/services";
 import { commission, daysUntil, formatEuro, formatNumber, timeAgo } from "@/lib/format";
 import { lotTotal } from "@/lib/types";
 import { useStore } from "@/lib/store";
@@ -74,7 +75,7 @@ export default function SellerDashboard() {
                 return (
                   <div key={o.id} className="flex items-center justify-between gap-3">
                     <div className="min-w-0">
-                      <p className="truncate text-sm font-medium text-ink">{companyById(o.buyerId)?.displayName}</p>
+                      <p className="truncate text-sm font-medium text-ink">{companyDisplayName(state.companies, o.buyerId)}</p>
                       <p className="truncate text-xs text-muted">{lot?.title}</p>
                     </div>
                     <div className="text-right">
@@ -100,7 +101,7 @@ export default function SellerDashboard() {
                 <div key={o.id} className="flex items-center justify-between gap-3">
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium text-ink">{o.lotTitle}</p>
-                    <p className="truncate text-xs text-muted">{companyById(o.buyerId)?.displayName} · {o.code}</p>
+                    <p className="truncate text-xs text-muted">{companyDisplayName(state.companies, o.buyerId)} · {o.code}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm font-semibold text-ink">{formatEuro(o.subtotal, true)}</p>

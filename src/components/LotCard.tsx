@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import LotMedia from "./LotMedia";
 import FavoriteButton from "./FavoriteButton";
@@ -6,9 +8,11 @@ import { IconArrowRight, IconMapPin } from "./icons";
 import { categoryName, companyById } from "@/lib/mock-data";
 import { formatEuro, formatNumber } from "@/lib/format";
 import { lotTotal, type Lot } from "@/lib/types";
+import { useStore } from "@/lib/store";
 
 export default function LotCard({ lot }: { lot: Lot }) {
-  const seller = companyById(lot.sellerId);
+  const { state } = useStore();
+  const seller = state.companies.find((c) => c.id === lot.sellerId) ?? companyById(lot.sellerId);
   const verified = seller?.verification === "Verificata";
   return (
     <article className="card card-soft card-accent group flex flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">

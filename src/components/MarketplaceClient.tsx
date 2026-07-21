@@ -376,7 +376,8 @@ function Check({ checked, onChange, label }: { checked: boolean; onChange: () =>
 }
 
 function LotRow({ lot }: { lot: Lot }) {
-  const seller = companyById(lot.sellerId);
+  const { state } = useStore();
+  const seller = state.companies.find((c) => c.id === lot.sellerId) ?? companyById(lot.sellerId);
   return (
     <article className="card card-soft flex flex-col gap-4 p-3 sm:flex-row">
       <Link href={`/lotto/${lot.id}`} className="relative sm:w-56 shrink-0">
