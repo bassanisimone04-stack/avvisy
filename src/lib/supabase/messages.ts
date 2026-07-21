@@ -102,3 +102,21 @@ export async function markThreadRead(myCompanyId: string, otherCompanyId: string
     .eq("sender_company", otherCompanyId)
     .eq("read", false);
 }
+
+/**
+ * Sottoscrive gli aggiornamenti dei messaggi in tempo reale (Supabase Realtime).
+ * Richiede che la tabella sia nella publication supabase_realtime; se non lo è,
+ * la sottoscrizione resta silente e il polling fa da fallback.
+ * Restituisce una funzione per annullare la sottoscrizione.
+ */
+export function subscribeMessages(myCompanyId: string, onChange: () => void): () => void {
+  const supabase = createClient();
+  if (!supabase) return () => {};
+  const channel = supabase
+    .channel(`msgs-${myCompanyId}`)
+    .on("postgres_changes", { event: "*", schema: "public", table: "messages" }, () => onChange())
+    .subscribe();
+  return () => {
+    supabase.removeChannel(channel);
+  };
+}

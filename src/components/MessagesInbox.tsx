@@ -10,6 +10,7 @@ import {
   fetchMessages,
   markThreadRead,
   sendMessage,
+  subscribeMessages,
   type ChatMessage,
 } from "@/lib/supabase/messages";
 
@@ -75,7 +76,7 @@ export default function MessagesInbox() {
 
   const useReal = online && !!currentCompanyId;
 
-  // Caricamento + aggiornamento periodico dei messaggi reali.
+  // Caricamento iniziale + realtime (con polling come fallback).
   useEffect(() => {
     if (!useReal || !currentCompanyId) return;
     let alive = true;
@@ -84,10 +85,12 @@ export default function MessagesInbox() {
       if (alive) setRealMsgs(m);
     };
     load();
-    const iv = setInterval(load, 6000);
+    const unsubscribe = subscribeMessages(currentCompanyId, load);
+    const iv = setInterval(load, 10000);
     return () => {
       alive = false;
       clearInterval(iv);
+      unsubscribe();
     };
   }, [useReal, currentCompanyId]);
 

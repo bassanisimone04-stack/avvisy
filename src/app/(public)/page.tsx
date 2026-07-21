@@ -39,6 +39,9 @@ export default function HomePage() {
     .sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt))
     .slice(0, 4);
   const verifiedCount = companies.filter((c) => c.verification === "Verificata").length;
+  const lotStat = String(published.length);
+  const companyStat = String(companies.length);
+  const categoryStat = String(categories.length);
 
   return (
     <>
@@ -73,7 +76,7 @@ export default function HomePage() {
               <Link href="/vendi" className="btn btn-outline">Vendi le tue scorte</Link>
             </div>
             <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-line pt-6">
-              {[["150+", "Lotti"], ["80", "Aziende"], [commissionRateLabel(), "Commissione"]].map(([v, l]) => (
+              {[[lotStat, "Lotti"], [companyStat, "Aziende"], [commissionRateLabel(), "Commissione"]].map(([v, l]) => (
                 <div key={l}>
                   <dt className="font-display text-2xl font-extrabold text-ink">{v}</dt>
                   <dd className="mono text-[0.7rem] uppercase tracking-wider text-muted">{l}</dd>
@@ -216,7 +219,7 @@ export default function HomePage() {
 
           <div>
             <div className="grid grid-cols-2 gap-4">
-              {[["150+", "Lotti disponibili"], ["80", "Aziende registrate"], ["12", "Categorie"], [commissionRateLabel(), "Commissione standard"]].map(([v, l]) => (
+              {[[lotStat, "Lotti disponibili"], [companyStat, "Aziende registrate"], [categoryStat, "Categorie"], [commissionRateLabel(), "Commissione standard"]].map(([v, l]) => (
                 <div key={l} className="card p-6">
                   <p className="font-display text-4xl font-extrabold text-brand">{v}</p>
                   <p className="mt-1 text-sm text-muted">{l}</p>

@@ -7,7 +7,7 @@ import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 import { IconBell, IconClose, IconMenu } from "./icons";
 import { useStore } from "@/lib/store";
-import { countUnreadMessages } from "@/lib/supabase/messages";
+import { countUnreadMessages, subscribeMessages } from "@/lib/supabase/messages";
 import { signOutAction } from "@/lib/supabase/auth-actions";
 
 export type NavItem = { href: string; label: string; icon: React.ReactNode };
@@ -56,10 +56,12 @@ export default function DashboardShell({
       if (alive) setUnreadMsgs(n);
     };
     load();
-    const iv = setInterval(load, 15000);
+    const unsubscribe = subscribeMessages(currentCompanyId, load);
+    const iv = setInterval(load, 20000);
     return () => {
       alive = false;
       clearInterval(iv);
+      unsubscribe();
     };
   }, [online, currentCompanyId, pathname]);
 
