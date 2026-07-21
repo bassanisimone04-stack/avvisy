@@ -5,7 +5,7 @@ import { useState } from "react";
 import Modal from "./Modal";
 import { notify } from "./Toaster";
 import { ConditionChip, LotStatusPill } from "./badges";
-import LotImage from "./LotImage";
+import LotMedia from "./LotMedia";
 import { EmptyState } from "./dash";
 import { IconBox, IconPlus } from "./icons";
 import { formatEuro, formatNumber } from "@/lib/format";
@@ -81,7 +81,7 @@ export default function SellerLots() {
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-3">
                         <div className="hidden w-14 shrink-0 sm:block">
-                          <LotImage category={l.category} seed={l.images[0] ?? 1} className="rounded-md" />
+                          <LotMedia category={l.category} seed={l.images[0] ?? 1} imageUrls={l.imageUrls} className="rounded-md" />
                         </div>
                         <div>
                           <Link href={`/lotto/${l.id}`} className="font-medium text-ink hover:text-brand-dark">{l.title}</Link>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import CategoryCard from "@/components/CategoryCard";
 import { IconArrowRight } from "@/components/icons";
 import { categories, lots } from "@/lib/mock-data";
-import LotImage from "@/components/LotImage";
+import LotMedia from "@/components/LotMedia";
 
 export const metadata: Metadata = {
   title: "Categorie",
@@ -41,9 +41,10 @@ export default function CategoriePage() {
               >
                 {sample && (
                   <Link href={`/lotto/${sample.id}`} className="sm:w-48 shrink-0">
-                    <LotImage
+                    <LotMedia
                       category={c.slug}
                       seed={sample.images[0] ?? 1}
+                      imageUrls={sample.imageUrls}
                       className="rounded-lg"
                       ratio="aspect-[16/10]"
                     />

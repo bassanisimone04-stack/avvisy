@@ -2,7 +2,7 @@ import Link from "next/link";
 import HeroSearch from "@/components/HeroSearch";
 import Reveal from "@/components/Reveal";
 import LotCard from "@/components/LotCard";
-import LotImage from "@/components/LotImage";
+import LotMedia from "@/components/LotMedia";
 import CategoryCard from "@/components/CategoryCard";
 import { ConditionChip, VerifiedBadge } from "@/components/badges";
 import {
@@ -88,7 +88,7 @@ export default function HomePage() {
               <div className="absolute -left-4 -top-4 hidden h-full w-full rounded-xl border border-line-strong lg:block" aria-hidden />
               <Link href={`/lotto/${heroLot.id}`} className="card card-soft relative block overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]">
                 <div className="relative">
-                  <LotImage category={heroLot.category} seed={heroLot.images[0] ?? 1} ratio="aspect-[16/10]" />
+                  <LotMedia category={heroLot.category} seed={heroLot.images[0] ?? 1} imageUrls={heroLot.imageUrls} ratio="aspect-[16/10]" />
                   <span className="absolute left-3 top-3 chip bg-brand text-white">In evidenza</span>
                   <span className="absolute right-3 top-3 mono rounded bg-surface/95 px-2 py-1 text-[0.7rem] text-ink-soft shadow-sm">{heroLot.code}</span>
                 </div>

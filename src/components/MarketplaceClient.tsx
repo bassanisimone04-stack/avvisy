@@ -5,7 +5,7 @@ import Link from "next/link";
 import LotCard from "./LotCard";
 import FavoriteButton from "./FavoriteButton";
 import { ConditionChip, VerifiedBadge } from "./badges";
-import LotImage from "./LotImage";
+import LotMedia from "./LotMedia";
 import { LotCardSkeleton, RowSkeleton } from "./Skeleton";
 import { notify } from "./Toaster";
 import { IconMapPin, IconSearch, IconClose } from "./icons";
@@ -380,7 +380,7 @@ function LotRow({ lot }: { lot: Lot }) {
   return (
     <article className="card card-soft flex flex-col gap-4 p-3 sm:flex-row">
       <Link href={`/lotto/${lot.id}`} className="relative sm:w-56 shrink-0">
-        <LotImage category={lot.category} seed={lot.images[0] ?? 1} ratio="aspect-[4/3] sm:aspect-[16/10]" className="rounded-lg" />
+        <LotMedia category={lot.category} seed={lot.images[0] ?? 1} imageUrls={lot.imageUrls} ratio="aspect-[4/3] sm:aspect-[16/10]" className="rounded-lg" />
         <div className="absolute right-2 top-2"><FavoriteButton lotId={lot.id} /></div>
       </Link>
       <div className="flex flex-1 flex-col">
