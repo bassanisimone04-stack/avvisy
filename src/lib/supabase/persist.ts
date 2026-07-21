@@ -19,6 +19,19 @@ export async function persistAction(
   const supabase = createClient();
   if (!supabase) return;
 
+  // Inserisce una notifica reale destinata a una specifica azienda.
+  const notif = (
+    forCompany: string,
+    type: string,
+    title: string,
+    detail: string,
+    href: string,
+    audience: string,
+  ) =>
+    supabase
+      .from("notifications")
+      .insert({ company_id: forCompany, type, title, detail, href, audience, read: false });
+
   try {
     switch (action.type) {
       case "PUBLISH_LOT":
@@ -46,6 +59,14 @@ export async function persistAction(
         await supabase.from("offers").insert(offerToRow(action.offer));
         const lot = state.lots.find((l) => l.id === action.offer.lotId);
         if (lot) await supabase.from("lots").update({ offers_count: lot.offersCount }).eq("id", lot.id);
+        await notif(
+          action.offer.sellerId,
+          "offerta_ricevuta",
+          "Nuova offerta ricevuta",
+          `Hai ricevuto un'offerta su “${lot?.title ?? "un lotto"}”.`,
+          "/venditore/offerte",
+          "seller",
+        );
         break;
       }
 
@@ -64,7 +85,7 @@ export async function persistAction(
 
       case "SELLER_COUNTER_OFFER": {
         const of = state.offers.find((o) => o.id === action.offerId);
-        if (of)
+        if (of) {
           await supabase
             .from("offers")
             .update({
@@ -75,6 +96,8 @@ export async function persistAction(
               history: of.history,
             })
             .eq("id", action.offerId);
+          await notif(of.buyerId, "controproposta", "Controproposta ricevuta", "Il venditore ha rilanciato la tua offerta.", "/compratore/offerte", "buyer");
+        }
         break;
       }
 
@@ -85,6 +108,10 @@ export async function persistAction(
         if (newOrder) {
           await supabase.from("orders").insert({ id: newOrder.id, ...orderToRow(newOrder) });
           await supabase.from("lots").update({ status: "Riservato" }).eq("id", newOrder.lotId);
+          const forCompany = action.type === "SELLER_ACCEPT_OFFER" ? newOrder.buyerId : newOrder.sellerId;
+          const href = action.type === "SELLER_ACCEPT_OFFER" ? "/compratore/ordini" : "/venditore/ordini";
+          const audience = action.type === "SELLER_ACCEPT_OFFER" ? "buyer" : "seller";
+          await notif(forCompany, "offerta_accettata", "Offerta accettata — ordine creato", `L'accordo su “${newOrder.lotTitle}” ha generato l'ordine ${newOrder.code}.`, href, audience);
         }
         break;
       }
@@ -92,7 +119,10 @@ export async function persistAction(
       case "BUY_NOW":
       case "CHECKOUT_BUY": {
         const newOrder = state.orders[0];
-        if (newOrder) await supabase.from("orders").insert({ id: newOrder.id, ...orderToRow(newOrder) });
+        if (newOrder) {
+          await supabase.from("orders").insert({ id: newOrder.id, ...orderToRow(newOrder) });
+          await notif(newOrder.sellerId, "ordine_aggiornato", "Nuovo ordine ricevuto", `Nuovo acquisto: “${newOrder.lotTitle}” (ordine ${newOrder.code}).`, "/venditore/ordini", "seller");
+        }
         break;
       }
 
@@ -171,6 +201,21 @@ export async function persistAction(
           .update({ verification: action.status })
           .eq("id", action.companyId);
         break;
+
+      case "UPDATE_COMPANY": {
+        const p = action.patch;
+        const row: Record<string, unknown> = {};
+        if (p.displayName !== undefined) row.display_name = p.displayName;
+        if (p.ragioneSociale !== undefined) row.ragione_sociale = p.ragioneSociale;
+        if (p.description !== undefined) row.description = p.description;
+        if (p.sector !== undefined) row.sector = p.sector;
+        if (p.address !== undefined) row.address = p.address;
+        if (p.vatNumber !== undefined) row.vat_number = p.vatNumber;
+        if (p.region !== undefined) row.region = p.region;
+        if (p.province !== undefined) row.province = p.province;
+        if (Object.keys(row).length) await supabase.from("companies").update(row).eq("id", action.companyId);
+        break;
+      }
 
       default:
         break;

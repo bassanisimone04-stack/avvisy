@@ -1,15 +1,29 @@
 "use client";
 
+import { useState } from "react";
 import { PageTitle, SectionCard } from "@/components/dash";
 import { RatingStars, VerificationChip } from "@/components/badges";
+import { notify } from "@/components/Toaster";
 import { IconShield } from "@/components/icons";
 import { reviewsForCompany } from "@/lib/mock-data";
 import { formatDate, formatEuro } from "@/lib/format";
 import { useStore } from "@/lib/store";
 
 export default function ProfiloVenditorePage() {
-  const { currentSeller: c } = useStore();
+  const { currentSeller: c, dispatch } = useStore();
   const revs = reviewsForCompany(c.id);
+
+  const [edit, setEdit] = useState({
+    displayName: c.displayName,
+    sector: c.sector,
+    address: c.address,
+    description: c.description,
+  });
+
+  function save() {
+    dispatch({ type: "UPDATE_COMPANY", companyId: c.id, patch: edit });
+    notify("Profilo aziendale aggiornato.");
+  }
 
   return (
     <>
@@ -19,18 +33,23 @@ export default function ProfiloVenditorePage() {
         <div className="space-y-6">
           <SectionCard title="Dati azienda">
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Ragione sociale" value={c.ragioneSociale} />
-              <Field label="Nome visualizzato" value={c.displayName} />
-              <Field label="Partita IVA" value={c.vatNumber} />
-              <Field label="Settore" value={c.sector} />
-              <Field label="Sede" value={`${c.address}`} />
-              <Field label="Anno di fondazione" value={String(c.foundedYear)} />
+              <Field label="Ragione sociale" value={c.ragioneSociale} readOnly />
+              <Field label="Nome visualizzato" value={edit.displayName} onChange={(v) => setEdit({ ...edit, displayName: v })} />
+              <Field label="Partita IVA" value={c.vatNumber} readOnly />
+              <Field label="Settore" value={edit.sector} onChange={(v) => setEdit({ ...edit, sector: v })} />
+              <Field label="Sede" value={edit.address} onChange={(v) => setEdit({ ...edit, address: v })} />
+              <Field label="Anno di fondazione" value={String(c.foundedYear)} readOnly />
             </div>
             <div>
               <label className="field-label">Descrizione pubblica</label>
-              <textarea rows={3} defaultValue={c.description} className="field resize-none" />
+              <textarea
+                rows={3}
+                value={edit.description}
+                onChange={(e) => setEdit({ ...edit, description: e.target.value })}
+                className="field resize-none"
+              />
             </div>
-            <button className="btn btn-primary btn-sm">Salva modifiche</button>
+            <button onClick={save} className="btn btn-primary btn-sm">Salva modifiche</button>
           </SectionCard>
 
           <SectionCard title={`Recensioni ricevute (${revs.length})`}>
@@ -85,11 +104,26 @@ export default function ProfiloVenditorePage() {
   );
 }
 
-function Field({ label, value }: { label: string; value: string }) {
+function Field({
+  label,
+  value,
+  onChange,
+  readOnly,
+}: {
+  label: string;
+  value: string;
+  onChange?: (v: string) => void;
+  readOnly?: boolean;
+}) {
   return (
     <div>
       <label className="field-label">{label}</label>
-      <input defaultValue={value} className="field" />
+      <input
+        value={value}
+        readOnly={readOnly}
+        onChange={onChange ? (e) => onChange(e.target.value) : undefined}
+        className={`field ${readOnly ? "bg-surface-2 text-muted" : ""}`}
+      />
     </div>
   );
 }

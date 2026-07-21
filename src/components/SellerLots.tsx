@@ -97,37 +97,9 @@ export default function SellerLots() {
                     <td className="px-4 py-3 text-right font-semibold text-brand-dark">{formatEuro(lotTotal(l), true)}</td>
                     <td className="px-4 py-3 text-right text-ink">{l.offersCount}</td>
                     <td className="px-4 py-3 text-right">
-                      <div className="relative inline-block">
-                        <button
-                          onClick={() => setMenuFor(menuFor === l.id ? null : l.id)}
-                          className="btn btn-outline btn-sm"
-                          aria-haspopup="menu"
-                          aria-expanded={menuFor === l.id}
-                        >
-                          Azioni ▾
-                        </button>
-                        {menuFor === l.id && (
-                          <>
-                            <div className="fixed inset-0 z-10" onClick={() => setMenuFor(null)} />
-                            <div className="absolute right-0 z-20 mt-1 w-52 overflow-hidden rounded-lg border border-line bg-surface py-1 text-left shadow-[var(--shadow-lift)]" role="menu">
-                              <MenuItem onClick={() => { setEditing(l); setMenuFor(null); }}>Modifica lotto</MenuItem>
-                              {(l.status === "Bozza" || l.status === "In revisione") && (
-                                <MenuItem onClick={() => setStatus(l, "Pubblicato", "Lotto pubblicato.")}>Pubblica ora</MenuItem>
-                              )}
-                              {l.status === "Pubblicato" && (
-                                <MenuItem onClick={() => setStatus(l, "Sospeso", "Lotto sospeso.")}>Sospendi</MenuItem>
-                              )}
-                              {l.status === "Sospeso" && (
-                                <MenuItem onClick={() => setStatus(l, "Pubblicato", "Lotto riattivato.")}>Riattiva</MenuItem>
-                              )}
-                              <MenuItem onClick={() => { dispatch({ type: "DUPLICATE_LOT", lotId: l.id }); notify("Lotto duplicato come bozza."); setMenuFor(null); }}>Duplica annuncio</MenuItem>
-                              {l.status !== "Venduto" && (
-                                <MenuItem danger onClick={() => setStatus(l, "Venduto", "Lotto segnato come venduto.")}>Segna come venduto</MenuItem>
-                              )}
-                            </div>
-                          </>
-                        )}
-                      </div>
+                      <button onClick={() => setMenuFor(l.id)} className="btn btn-outline btn-sm">
+                        Azioni ▾
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -136,6 +108,34 @@ export default function SellerLots() {
           </div>
         </div>
       )}
+
+      {/* Menu azioni (finestra: non viene tagliato dalla tabella) */}
+      {(() => {
+        const l = myLots.find((x) => x.id === menuFor);
+        return (
+          <Modal open={!!l} onClose={() => setMenuFor(null)} title={l ? `Azioni · ${l.code}` : "Azioni"}>
+            {l && (
+              <div className="space-y-2">
+                <p className="mb-3 text-sm text-muted">{l.title}</p>
+                <MenuItem onClick={() => { setEditing(l); setMenuFor(null); }}>Modifica lotto (prezzo/quantità)</MenuItem>
+                {(l.status === "Bozza" || l.status === "In revisione") && (
+                  <MenuItem onClick={() => setStatus(l, "Pubblicato", "Lotto pubblicato.")}>Pubblica ora</MenuItem>
+                )}
+                {l.status === "Pubblicato" && (
+                  <MenuItem onClick={() => setStatus(l, "Sospeso", "Lotto sospeso.")}>Sospendi</MenuItem>
+                )}
+                {l.status === "Sospeso" && (
+                  <MenuItem onClick={() => setStatus(l, "Pubblicato", "Lotto riattivato.")}>Riattiva</MenuItem>
+                )}
+                <MenuItem onClick={() => { dispatch({ type: "DUPLICATE_LOT", lotId: l.id }); notify("Lotto duplicato come bozza."); setMenuFor(null); }}>Duplica annuncio</MenuItem>
+                {l.status !== "Venduto" && (
+                  <MenuItem danger onClick={() => setStatus(l, "Venduto", "Lotto segnato come venduto.")}>Segna come venduto</MenuItem>
+                )}
+              </div>
+            )}
+          </Modal>
+        );
+      })()}
 
       <EditLotModal lot={editing} onClose={() => setEditing(null)} />
     </>
@@ -146,8 +146,7 @@ function MenuItem({ children, onClick, danger }: { children: React.ReactNode; on
   return (
     <button
       onClick={onClick}
-      role="menuitem"
-      className={`block w-full px-3 py-2 text-left text-sm hover:bg-surface-2 ${danger ? "text-danger" : "text-ink"}`}
+      className={`flex w-full items-center rounded-lg border border-line px-3 py-2.5 text-left text-sm font-medium transition-colors hover:bg-surface-2 ${danger ? "text-danger hover:border-danger" : "text-ink hover:border-line-strong"}`}
     >
       {children}
     </button>

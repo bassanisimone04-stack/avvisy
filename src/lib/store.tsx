@@ -95,7 +95,8 @@ type Action =
   | { type: "ADD_SAVED_SEARCH"; search: SavedSearch }
   | { type: "REMOVE_SAVED_SEARCH"; id: string }
   | { type: "TOGGLE_SEARCH_ALERT"; id: string }
-  | { type: "SET_VERIFICATION"; companyId: string; status: VerificationStatus };
+  | { type: "SET_VERIFICATION"; companyId: string; status: VerificationStatus }
+  | { type: "UPDATE_COMPANY"; companyId: string; patch: Partial<Company> };
 
 function notify(
   state: StoreState,
@@ -415,6 +416,14 @@ function reducer(state: StoreState, action: Action): StoreState {
         ...state,
         companies: state.companies.map((c) =>
           c.id === action.companyId ? { ...c, verification: action.status } : c,
+        ),
+      };
+
+    case "UPDATE_COMPANY":
+      return {
+        ...state,
+        companies: state.companies.map((c) =>
+          c.id === action.companyId ? { ...c, ...action.patch } : c,
         ),
       };
 
