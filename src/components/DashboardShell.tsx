@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 import { IconBell, IconClose, IconMenu } from "./icons";
 import { useStore } from "@/lib/store";
+import { countUnreadMessages } from "@/lib/supabase/messages";
 import { signOutAction } from "@/lib/supabase/auth-actions";
 
 export type NavItem = { href: string; label: string; icon: React.ReactNode };
@@ -30,7 +31,7 @@ export default function DashboardShell({
 }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { state, online, currentSeller, currentBuyer } = useStore();
+  const { state, online, currentCompanyId, currentSeller, currentBuyer } = useStore();
 
   // Sul sito live (Supabase) mostriamo l'azienda realmente loggata; in demo
   // restano i nomi passati come prop. Il passaggio avviene dopo l'idratazione
@@ -44,6 +45,23 @@ export default function DashboardShell({
         (n) => !n.read && (n.audience === audience || n.audience === "both"),
       ).length
     : 0;
+
+  // Messaggi non letti (badge sulla voce "Messaggi"), aggiornati periodicamente.
+  const [unreadMsgs, setUnreadMsgs] = useState(0);
+  useEffect(() => {
+    if (!online || !currentCompanyId) return;
+    let alive = true;
+    const load = async () => {
+      const n = await countUnreadMessages(currentCompanyId);
+      if (alive) setUnreadMsgs(n);
+    };
+    load();
+    const iv = setInterval(load, 15000);
+    return () => {
+      alive = false;
+      clearInterval(iv);
+    };
+  }, [online, currentCompanyId, pathname]);
 
   const sidebar = (
     <div className="flex h-full flex-col">
@@ -76,7 +94,16 @@ export default function DashboardShell({
               }`}
             >
               <span className={active ? "text-white" : "text-muted"}>{item.icon}</span>
-              {item.label}
+              <span className="flex-1">{item.label}</span>
+              {item.href.endsWith("/messaggi") && unreadMsgs > 0 && (
+                <span
+                  className={`flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[0.65rem] font-bold ${
+                    active ? "bg-white text-brand" : "bg-signal text-white"
+                  }`}
+                >
+                  {unreadMsgs}
+                </span>
+              )}
             </Link>
           );
         })}

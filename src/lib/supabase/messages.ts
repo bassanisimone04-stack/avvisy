@@ -58,7 +58,37 @@ export async function sendMessage(input: {
     .select("*")
     .single();
   if (error || !data) return null;
+
+  // Notifica per il destinatario (best effort).
+  await supabase
+    .from("notifications")
+    .insert({
+      company_id: input.to,
+      type: "messaggio",
+      title: "Nuovo messaggio",
+      detail: "Hai ricevuto un messaggio in piattaforma.",
+      href: "/venditore/messaggi",
+      audience: "both",
+      read: false,
+    })
+    .then(
+      () => {},
+      () => {},
+    );
+
   return rowToMessage(data);
+}
+
+/** Numero di messaggi ricevuti e non ancora letti dalla mia azienda. */
+export async function countUnreadMessages(myCompanyId: string): Promise<number> {
+  const supabase = createClient();
+  if (!supabase) return 0;
+  const { count } = await supabase
+    .from("messages")
+    .select("id", { count: "exact", head: true })
+    .eq("recipient_company", myCompanyId)
+    .eq("read", false);
+  return count ?? 0;
 }
 
 /** Segna come letti i messaggi ricevuti da una specifica azienda. */
