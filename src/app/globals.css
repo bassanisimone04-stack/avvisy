@@ -166,22 +166,27 @@ h4 {
 }
 
 /* Pulsanti */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.9375rem;
-  line-height: 1;
-  padding: 0.8rem 1.3rem;
-  border-radius: 0.5rem;
-  border: 1px solid transparent;
-  transition: background-color 0.15s ease, color 0.15s ease,
-    border-color 0.15s ease, box-shadow 0.15s ease, transform 0.04s ease;
-  cursor: pointer;
-  white-space: nowrap;
+/* In @layer components così le utility Tailwind di display (hidden, lg:hidden…)
+   vincono su .btn: altrimenti i pulsanti resterebbero visibili anche quando
+   marcati come nascosti, causando overflow su mobile. */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1;
+    padding: 0.8rem 1.3rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    transition: background-color 0.15s ease, color 0.15s ease,
+      border-color 0.15s ease, box-shadow 0.15s ease, transform 0.04s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 }
 .btn:focus-visible {
   outline: 2px solid var(--s-brand);

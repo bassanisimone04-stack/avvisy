@@ -120,7 +120,7 @@ export default function StatistichePage() {
           ) : (
             <div className="grid gap-2 sm:grid-cols-2">
               {myLots.map((l) => (
-                <div key={l.id} className="flex items-center justify-between rounded-lg bg-surface-2/60 px-3 py-2 text-sm">
+                <div key={l.id} className="flex min-w-0 items-center justify-between rounded-lg bg-surface-2/60 px-3 py-2 text-sm">
                   <span className="truncate pr-2 text-ink">{l.title}</span>
                   <span className="shrink-0 font-semibold text-brand-dark">{formatEuro(lotTotal(l), true)}</span>
                 </div>

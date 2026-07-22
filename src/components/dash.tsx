@@ -67,14 +67,14 @@ export function SectionCard({
   className?: string;
 }) {
   return (
-    <section className={`card ${className}`}>
+    <section className={`card min-w-0 ${className}`}>
       {title && (
-        <div className="flex items-center justify-between border-b border-line px-5 py-3.5">
-          <h2 className="text-sm font-bold text-ink">{title}</h2>
+        <div className="flex items-center justify-between gap-3 border-b border-line px-5 py-3.5">
+          <h2 className="min-w-0 truncate text-sm font-bold text-ink">{title}</h2>
           {action}
         </div>
       )}
-      <div className="p-5">{children}</div>
+      <div className="min-w-0 p-5">{children}</div>
     </section>
   );
 }
