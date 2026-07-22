@@ -1,0 +1,56 @@
+---
+/**
+ * Piccoli "badge" riutilizzabili: tipo di locale, prezzo, stato.
+ * Passa una sola prop tra `tipo`, `prezzo`, `stato`, `evidenza`.
+ */
+import { statoLabel } from "../lib/utils";
+
+interface Props {
+  tipo?: string;
+  prezzo?: string;
+  stato?: string;
+  evidenza?: boolean;
+}
+
+const { tipo, prezzo, stato, evidenza } = Astro.props;
+
+const statoColor: Record<string, string> = {
+  aperto: "bg-green-100 text-green-800",
+  chiuso: "bg-red-100 text-red-800",
+  "temporaneamente-chiuso": "bg-amber-100 text-amber-800",
+};
+---
+
+{
+  evidenza && (
+    <span class="inline-flex items-center gap-1 rounded-full bg-brand-600 px-2.5 py-0.5 text-xs font-semibold text-white">
+      ⭐ In evidenza
+    </span>
+  )
+}
+{
+  tipo && (
+    <span class="inline-flex items-center rounded-full bg-ink-100 px-2.5 py-0.5 text-xs font-medium capitalize text-ink-800">
+      {tipo}
+    </span>
+  )
+}
+{
+  prezzo && (
+    <span class="inline-flex items-center rounded-full bg-brand-50 px-2.5 py-0.5 text-xs font-semibold text-brand-700">
+      {prezzo}
+    </span>
+  )
+}
+{
+  stato && (
+    <span
+      class:list={[
+        "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium",
+        statoColor[stato] ?? "bg-ink-100 text-ink-800",
+      ]}
+    >
+      {statoLabel(stato)}
+    </span>
+  )
+}

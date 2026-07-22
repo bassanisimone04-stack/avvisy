@@ -1,0 +1,36 @@
+---
+/** Pagina mappa con tutti i locali su OpenStreetMap (Leaflet). */
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Map from "../components/Map.astro";
+import type { MapMarker } from "../components/Map.astro";
+
+const locali = await getCollection("restaurants");
+
+// Prepara i segnaposto per la mappa.
+const markers: MapMarker[] = locali.map((l) => ({
+  lat: l.data.coordinate.lat,
+  lng: l.data.coordinate.lng,
+  nome: l.data.nome,
+  citta: l.data.citta,
+  tipo: l.data.tipo,
+  url: `/locali/${l.id}`,
+}));
+---
+
+<BaseLayout
+  title="Mappa dei locali"
+  description="Esplora sulla mappa tutti i ristoranti, bar e caffè italiani apparsi al cinema e in TV."
+>
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <h1 class="text-3xl font-extrabold text-ink-900">Mappa dei locali</h1>
+    <p class="mt-2 text-ink-700">
+      Clicca su un segnaposto per vedere i dettagli del locale. Mappa basata su
+      OpenStreetMap.
+    </p>
+
+    <div class="mt-6">
+      <Map markers={markers} height="70vh" zoom={6} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,163 @@
+---
+/** Pagina di dettaglio di un singolo locale (generata staticamente). */
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Badges from "../../components/Badges.astro";
+import Map from "../../components/Map.astro";
+import { SITE } from "../../config/site";
+import { slugify, formatData } from "../../lib/utils";
+import { restaurantJsonLd } from "../../lib/schema-org";
+
+// Genera una pagina per ogni locale della collection.
+export async function getStaticPaths() {
+  const locali = await getCollection("restaurants");
+  return locali.map((locale) => ({
+    params: { slug: locale.id },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props;
+const d = locale.data;
+const { Content } = await render(locale);
+
+// URL assoluti per SEO e dati strutturati.
+const canonical = new URL(`/locali/${locale.id}`, Astro.site ?? SITE.url).href;
+const immagineUrl = new URL(d.immagine.src, Astro.site ?? SITE.url).href;
+const jsonLd = restaurantJsonLd(locale, canonical, immagineUrl);
+---
+
+<BaseLayout
+  title={d.nome}
+  description={`${d.nome} a ${d.citta}: ${d.descrizione}`}
+  image={d.immagine.src}
+  type="article"
+  jsonLd={jsonLd}
+>
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <!-- Briciole di pane -->
+    <nav class="mb-4 text-sm text-ink-700" aria-label="Percorso">
+      <a href="/locali" class="hover:text-brand-600">Locali</a>
+      <span aria-hidden="true"> / </span>
+      <a href={`/citta/${slugify(d.citta)}`} class="hover:text-brand-600">{d.citta}</a>
+      <span aria-hidden="true"> / </span>
+      <span class="text-ink-900">{d.nome}</span>
+    </nav>
+
+    <!-- Immagine principale -->
+    <Image
+      src={d.immagine}
+      alt={d.immagineAlt || d.nome}
+      width={1200}
+      height={800}
+      loading="eager"
+      class="aspect-[3/2] w-full rounded-2xl object-cover"
+    />
+
+    <!-- Titolo e badge -->
+    <div class="mt-6 flex flex-wrap items-center gap-2">
+      <Badges evidenza={d.inEvidenza} />
+      <Badges tipo={d.tipo} />
+      <Badges prezzo={d.prezzo} />
+      <Badges stato={d.stato} />
+    </div>
+    <h1 class="mt-3 text-3xl font-extrabold text-ink-900 sm:text-4xl">{d.nome}</h1>
+    <p class="mt-1 text-ink-700">📍 {d.indirizzo}</p>
+
+    <p class="mt-4 text-lg text-ink-800">{d.descrizione}</p>
+
+    <!-- Pulsanti azione -->
+    <div class="mt-5 flex flex-wrap gap-3">
+      {
+        d.prenotazione && (
+          <a
+            href={d.prenotazione}
+            target="_blank"
+            rel="noopener"
+            class="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700"
+          >
+            Prenota un tavolo
+          </a>
+        )
+      }
+      {
+        d.sitoWeb && (
+          <a
+            href={d.sitoWeb}
+            target="_blank"
+            rel="noopener"
+            class="rounded-full border border-ink-100 px-5 py-2.5 text-sm font-semibold text-ink-800 hover:bg-ink-50"
+          >
+            Sito ufficiale
+          </a>
+        )
+      }
+      <a
+        href={`https://www.openstreetmap.org/?mlat=${d.coordinate.lat}&mlon=${d.coordinate.lng}#map=17/${d.coordinate.lat}/${d.coordinate.lng}`}
+        target="_blank"
+        rel="noopener"
+        class="rounded-full border border-ink-100 px-5 py-2.5 text-sm font-semibold text-ink-800 hover:bg-ink-50"
+      >
+        Indicazioni
+      </a>
+    </div>
+
+    <!-- Film / serie in cui appare -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-900">🎬 Al cinema e in TV</h2>
+      <ul class="mt-4 space-y-4">
+        {
+          d.film.map((f) => (
+            <li class="rounded-2xl border border-ink-100 bg-white p-4">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-lg font-semibold text-ink-900">
+                  <a href={`/film/${slugify(f.titolo)}`} class="hover:text-brand-600">
+                    {f.titolo}
+                  </a>
+                  <span class="ml-1 text-sm font-normal text-ink-700">({f.anno})</span>
+                </h3>
+                <span class="rounded-full bg-ink-100 px-2 py-0.5 text-xs text-ink-800">
+                  {f.serieTv ? "Serie TV" : "Film"}
+                </span>
+              </div>
+              <p class="mt-1 text-sm text-ink-700">Regia di {f.regista}</p>
+              <p class="mt-2 text-ink-800">{f.descrizioneScena}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <!-- Contenuto libero (dal corpo del file markdown) -->
+    <div class="prose-cinefood mt-8 max-w-none text-ink-800 [&_h2]:mt-6 [&_h2]:text-xl [&_h2]:font-bold [&_p]:mt-3">
+      <Content />
+    </div>
+
+    <!-- Mappa del locale -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink-900">Dove si trova</h2>
+      <p class="mt-1 text-sm text-ink-700">{d.indirizzo} — {d.citta}, {d.regione}</p>
+      <div class="mt-4">
+        <Map
+          markers={[
+            {
+              lat: d.coordinate.lat,
+              lng: d.coordinate.lng,
+              nome: d.nome,
+              citta: d.citta,
+              tipo: d.tipo,
+            },
+          ]}
+          height="380px"
+          zoom={15}
+        />
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs text-ink-700">
+      Ultimo aggiornamento: {formatData(d.ultimoAggiornamento)}. I dati sono
+      indicativi: verifica sempre orari e disponibilità con il locale.
+    </p>
+  </article>
+</BaseLayout>

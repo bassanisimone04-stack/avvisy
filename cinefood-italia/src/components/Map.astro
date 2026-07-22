@@ -1,0 +1,94 @@
+---
+/**
+ * Mappa interattiva con Leaflet + OpenStreetMap (gratuita, senza API key).
+ * Leaflet viene caricato solo lato client, così le altre pagine restano leggere.
+ *
+ * Passa una lista di `markers` (segnaposto). Ogni marker ha:
+ *   { lat, lng, nome, citta, tipo, url }
+ */
+export interface MapMarker {
+  lat: number;
+  lng: number;
+  nome: string;
+  citta?: string;
+  tipo?: string;
+  url?: string;
+}
+
+interface Props {
+  markers: MapMarker[];
+  /** Altezza CSS della mappa (es. "500px" o "70vh"). */
+  height?: string;
+  /** Livello di zoom iniziale (più alto = più vicino). */
+  zoom?: number;
+}
+
+const { markers, height = "500px", zoom = 6 } = Astro.props;
+---
+
+<div
+  id="mappa"
+  class="z-0 w-full overflow-hidden rounded-2xl border border-ink-100"
+  style={`height:${height}`}
+  data-zoom={zoom}
+>
+</div>
+
+<!-- I dati dei segnaposto vengono passati come JSON e letti dallo script. -->
+<script type="application/json" id="mappa-dati" set:html={JSON.stringify(markers)} />
+
+<script>
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
+
+  // Corregge il percorso delle icone dei segnaposto quando si usa un bundler.
+  import iconUrl from "leaflet/dist/images/marker-icon.png";
+  import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
+  import shadowUrl from "leaflet/dist/images/marker-shadow.png";
+
+  L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+
+  const el = document.getElementById("mappa");
+  const datiEl = document.getElementById("mappa-dati");
+
+  if (el && datiEl) {
+    type Marker = {
+      lat: number;
+      lng: number;
+      nome: string;
+      citta?: string;
+      tipo?: string;
+      url?: string;
+    };
+    const markers: Marker[] = JSON.parse(datiEl.textContent || "[]");
+    const zoom = Number(el.dataset.zoom) || 6;
+
+    // Centro predefinito: Italia.
+    const map = L.map(el).setView([41.9, 12.5], zoom);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19,
+    }).addTo(map);
+
+    const gruppo = L.featureGroup();
+    for (const m of markers) {
+      const popup = `
+        <strong>${m.nome}</strong>
+        ${m.citta ? `<br/><span>📍 ${m.citta}</span>` : ""}
+        ${m.tipo ? `<br/><span style="text-transform:capitalize">${m.tipo}</span>` : ""}
+        ${m.url ? `<br/><a href="${m.url}">Scopri di più →</a>` : ""}
+      `;
+      L.marker([m.lat, m.lng]).bindPopup(popup).addTo(gruppo);
+    }
+    gruppo.addTo(map);
+
+    // Inquadra automaticamente tutti i segnaposto (se ce n'è più di uno).
+    if (markers.length > 1) {
+      map.fitBounds(gruppo.getBounds().pad(0.2));
+    } else if (markers.length === 1) {
+      map.setView([markers[0].lat, markers[0].lng], Math.max(zoom, 14));
+    }
+  }
+</script>

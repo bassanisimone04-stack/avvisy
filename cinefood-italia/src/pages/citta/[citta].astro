@@ -1,0 +1,39 @@
+---
+/** Archivio dei locali di una singola città. */
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RestaurantCard from "../../components/RestaurantCard.astro";
+import { ordinaLocali, cittaUniche, slugify } from "../../lib/utils";
+
+export async function getStaticPaths() {
+  const locali = await getCollection("restaurants");
+  return cittaUniche(locali).map((citta) => ({
+    params: { citta: slugify(citta) },
+    props: {
+      citta,
+      locali: ordinaLocali(locali.filter((l) => l.data.citta === citta)),
+    },
+  }));
+}
+
+const { citta, locali } = Astro.props;
+---
+
+<BaseLayout
+  title={`Locali a ${citta}`}
+  description={`Ristoranti, bar e caffè a ${citta} apparsi in film e serie TV. ${locali.length} locali da scoprire.`}
+>
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <nav class="mb-3 text-sm text-ink-700">
+      <a href="/locali" class="hover:text-brand-600">Locali</a>
+      <span aria-hidden="true"> / </span>
+      <span class="text-ink-900">{citta}</span>
+    </nav>
+    <h1 class="text-3xl font-extrabold text-ink-900">Locali a {citta}</h1>
+    <p class="mt-2 text-ink-700">{locali.length} locali cinematografici in questa città.</p>
+
+    <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {locali.map((locale) => <RestaurantCard locale={locale} />)}
+    </div>
+  </section>
+</BaseLayout>

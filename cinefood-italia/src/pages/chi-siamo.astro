@@ -1,0 +1,53 @@
+---
+/** Pagina "Chi siamo". */
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config/site";
+---
+
+<BaseLayout
+  title="Chi siamo"
+  description={`Cos'è ${SITE.name}: la directory dei locali italiani apparsi al cinema e in TV.`}
+>
+  <section class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-extrabold text-ink-900">Chi siamo</h1>
+
+    <div class="mt-6 space-y-4 text-lg text-ink-800">
+      <p>
+        <strong>{SITE.name}</strong> è una guida indipendente ai ristoranti, bar,
+        caffè, trattorie e pasticcerie d'Italia che sono apparsi in film e serie
+        TV. Il nostro obiettivo è unire due grandi passioni italiane: il
+        <em>cinema</em> e la <em>buona tavola</em>.
+      </p>
+      <p>
+        Per ogni locale raccontiamo dove si trova, che tipo di cucina propone e
+        in quali film o serie è comparso, con una descrizione della scena. Così
+        puoi organizzare itinerari golosi sulle orme dei tuoi personaggi
+        preferiti.
+      </p>
+      <p>
+        Il progetto è in continua crescita: aggiungiamo nuovi locali di
+        continuo. Se conosci un posto che dovremmo includere, oppure se sei un
+        ristoratore, scrivici!
+      </p>
+    </div>
+
+    <div class="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
+      <p>
+        <strong>Nota sui dati.</strong> Le informazioni sui locali e sulle
+        apparizioni cinematografiche sono raccolte con cura ma vanno considerate
+        indicative: verifica sempre orari, indirizzi e disponibilità prima di
+        metterti in viaggio. I titoli di film e serie appartengono ai rispettivi
+        aventi diritto.
+      </p>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/aggiungi-locale" class="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700">
+        Segnala un locale
+      </a>
+      <a href="/inserzioni" class="rounded-full border border-ink-100 px-5 py-2.5 text-sm font-semibold text-ink-800 hover:bg-ink-50">
+        Inserzioni per ristoratori
+      </a>
+    </div>
+  </section>
+</BaseLayout>
