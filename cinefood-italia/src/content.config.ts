@@ -53,7 +53,9 @@ const filmSchema = z.object({
  */
 const restaurants = defineCollection({
   loader: glob({
-    pattern: "**/*.{md,mdx}",
+    // Esclude i file che iniziano con "_" (es. _template.md), così il
+    // modello non viene mai pubblicato come se fosse un locale reale.
+    pattern: ["**/*.{md,mdx}", "!**/_*"],
     base: "./src/content/restaurants",
   }),
   schema: ({ image }) =>
@@ -101,7 +103,7 @@ const restaurants = defineCollection({
  * Ogni file .md/.mdx dentro src/content/blog/ è un articolo.
  */
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
+  loader: glob({ pattern: ["**/*.{md,mdx}", "!**/_*"], base: "./src/content/blog" }),
   schema: ({ image }) =>
     z.object({
       titolo: z.string(),

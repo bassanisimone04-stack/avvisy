@@ -20,7 +20,9 @@ export default defineConfig({
     mdx(),
   ],
   vite: {
-    plugins: [tailwindcss()],
+    // Il cast a `any` evita un falso errore di tipi dovuto alla doppia
+    // versione di Vite (quella di Astro e quella di @tailwindcss/vite).
+    plugins: [/** @type {any} */ (tailwindcss())],
   },
   image: {
     // Consente immagini remote (placeholder) durante lo sviluppo.

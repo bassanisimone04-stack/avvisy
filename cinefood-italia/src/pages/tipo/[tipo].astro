@@ -3,12 +3,14 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RestaurantCard from "../../components/RestaurantCard.astro";
-import { ordinaLocali, tipiUnici } from "../../lib/utils";
+import { ordinaLocali, tipiUnici, slugify } from "../../lib/utils";
 
 export async function getStaticPaths() {
   const locali = await getCollection("restaurants");
+  // Usa uno slug senza accenti nell'URL (es. "caffè" → "/tipo/caffe/")
+  // per evitare problemi di codifica su alcuni hosting.
   return tipiUnici(locali).map((tipo) => ({
-    params: { tipo },
+    params: { tipo: slugify(tipo) },
     props: {
       tipo,
       locali: ordinaLocali(locali.filter((l) => l.data.tipo === tipo)),

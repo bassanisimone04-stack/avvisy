@@ -35,7 +35,7 @@ const { markers, height = "500px", zoom = 6 } = Astro.props;
 </div>
 
 <!-- I dati dei segnaposto vengono passati come JSON e letti dallo script. -->
-<script type="application/json" id="mappa-dati" set:html={JSON.stringify(markers)} />
+<script is:inline type="application/json" id="mappa-dati" set:html={JSON.stringify(markers)} />
 
 <script>
   import L from "leaflet";
@@ -46,7 +46,16 @@ const { markers, height = "500px", zoom = 6 } = Astro.props;
   import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
   import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 
-  L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+  // A seconda del bundler, l'import di un'immagine può restituire una
+  // stringa (URL) oppure un oggetto { src }. Gestiamo entrambi i casi.
+  const toUrl = (m: string | { src: string }) =>
+    typeof m === "string" ? m : m.src;
+
+  L.Icon.Default.mergeOptions({
+    iconUrl: toUrl(iconUrl),
+    iconRetinaUrl: toUrl(iconRetinaUrl),
+    shadowUrl: toUrl(shadowUrl),
+  });
 
   const el = document.getElementById("mappa");
   const datiEl = document.getElementById("mappa-dati");

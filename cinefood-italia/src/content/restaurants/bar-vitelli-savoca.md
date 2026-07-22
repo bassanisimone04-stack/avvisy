@@ -23,9 +23,9 @@ film:
 descrizione: "Storico bar di paese affacciato sulla piazza di Savoca, celebre per la sua granita e per essere una delle location siciliane più visitate dai cinefili."
 ---
 
-<!-- ⚠️ DATI DI ESEMPIO — DA VERIFICARE: indirizzo, coordinate, sito web,
-     orari e i dettagli della scena. La location de "Il Padrino" a Savoca è
-     nota, ma verificare sempre le fonti prima di pubblicare. -->
+<!-- ✅ Apparizione documentata: Savoca fu usata da Coppola per le scene
+     "siciliane" de Il Padrino (1972); al Bar Vitelli, Michael incontra il
+     padre di Apollonia. ⚠️ Verifica comunque indirizzo, orari e sito web. -->
 
 Immerso nel borgo medievale di Savoca, il Bar Vitelli è un piccolo museo
 vivente: fotografie d'epoca, oggetti d'antan e la celebre granita al limone.

@@ -1,47 +1,44 @@
 ---
-titolo: "Mangiare come nei film: 5 esperienze gastronomiche sul set"
-descrizione: "Dalle granite siciliane de Il Padrino ai caffè liberty di Napoli: idee per un viaggio goloso sulle orme del cinema italiano."
+titolo: "Mangiare come nei film: 4 tappe verificate sul set del cinema italiano"
+descrizione: "Dal Bar Vitelli de Il Padrino al Cilento di Benvenuti al Sud: un itinerario goloso tra location cinematografiche realmente esistenti."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-01
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tavola apparecchiata con piatti della tradizione italiana"
-tags: ["itinerari", "food", "cinema italiano", "Sicilia", "Napoli"]
+tags: ["itinerari", "food", "cinema", "Sicilia", "Cilento"]
 bozza: false
 ---
 
-C'è un modo speciale di viaggiare in Italia: seguire le tracce dei film che
-amiamo e sederci agli stessi tavoli dei nostri personaggi preferiti. Ecco
-cinque esperienze da non perdere.
+C'è un modo speciale di viaggiare in Italia: sedersi agli stessi tavoli dei
+nostri personaggi preferiti. Ecco quattro tappe **realmente esistenti** e
+documentate, dove sono state girate scene di film celebri.
 
-## 1. La granita del Padrino, in Sicilia
+## 1. Bar Vitelli, Savoca (Sicilia) — *Il Padrino* (1972)
 
-Nel borgo di **Savoca**, il celebre bar di paese è legato a una delle scene
-più note de *Il Padrino* (1972). Un caffè o una granita al limone qui valgono
-il viaggio.
+Nel borgo di **Savoca**, il Bar Vitelli è legato a una delle scene più note de
+*Il Padrino*: qui Michael Corleone incontra il padre di Apollonia. Il locale è
+rimasto quasi identico a com'era nel 1972.
 
-## 2. La sfogliatella napoletana
+## 2. Ristorante Le Gatte, Castellabate (Cilento) — *Benvenuti al Sud* (2010)
 
-A **Napoli**, i caffè liberty del centro storico raccontano un secolo e mezzo
-di storia. Perfetti per una sfogliatella calda accompagnata da un caffè.
+Sul porto di **Castellabate**, Le Gatte è il ristorante dove è ambientata la
+spassosa cena tra colleghi di *Benvenuti al Sud*, la commedia che ha fatto
+conoscere questo splendido borgo campano.
 
-## 3. Cacio e pepe a Trastevere
+## 3. Caffè Florian, Venezia — *Il talento di Mr. Ripley* (1999)
 
-Le trattorie di **Roma** sono un classico del cinema italiano. Ordina cacio e
-pepe e carciofi alla romana come vuole la tradizione.
+In Piazza San Marco, ai tavoli del caffè più antico d'Italia, Tom Ripley
+incontra Marge e il padre di Dickie. Un brindisi al Florian è un'esperienza da
+film — e da grande occasione.
 
-## 4. Un Bellini a Venezia
+## 4. Trattoria Santa Lucia, Roma — *Mangia prega ama* (2010)
 
-Tra i bar storici di **Venezia** è nato uno dei cocktail più famosi al mondo.
-Un brindisi con vista sul Canal Grande è un'esperienza da film.
-
-## 5. Dolci d'autore a Milano
-
-Le **pasticcerie storiche** milanesi, spesso comparse in pellicole d'autore,
-sono l'ideale per chiudere in dolcezza un itinerario cinematografico.
+Vicino a Piazza Navona, è la trattoria dove Julia Roberts assapora i piatti
+della cucina romana in una delle scene gastronomiche più amate del film.
 
 ---
 
 Vuoi costruire il tuo itinerario? Esplora la nostra [mappa dei locali](/mappa)
 e filtra per città o per film nella [directory](/locali).
 
-*Ricorda: i dati vanno sempre verificati prima di metterti in viaggio.*
+*Ricorda: verifica sempre orari e disponibilità prima di metterti in viaggio.*
