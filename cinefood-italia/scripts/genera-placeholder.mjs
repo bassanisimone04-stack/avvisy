@@ -37,48 +37,53 @@ function scene(label, subtitle, color, w, h) {
   </svg>`;
 }
 
-/* -------- Locandine film (stile manifesto con pellicola) -------- */
-function poster(title, year, color) {
+/* -------- Locandine film: "key-art" cinematografica (duotone, niente pellicola) --------
+   NB: sono PLACEHOLDER. Le foto/locandine reali dei film sono protette da
+   copyright: sostituiscile con immagini di cui possiedi i diritti mettendo
+   un file con lo stesso nome in src/assets/films/. */
+function poster(title, year, c1, c2) {
   const W = 800, H = 1200;
-  // Perforazioni della pellicola su entrambi i lati.
-  let perfs = "";
-  for (let y = 20; y < H; y += 60) {
-    perfs += `<rect x="14" y="${y}" width="26" height="34" rx="5" fill="#0a0a0d"/>`;
-    perfs += `<rect x="${W-40}" y="${y}" width="26" height="34" rx="5" fill="#0a0a0d"/>`;
-  }
-  // Titolo a capo automatico (max ~12 caratteri per riga).
+  // Titolo a capo automatico (max ~13 caratteri per riga).
   const words = title.split(" ");
   const lines = [];
   let cur = "";
   for (const wd of words) {
-    if ((cur + " " + wd).trim().length > 12) { lines.push(cur.trim()); cur = wd; }
+    if ((cur + " " + wd).trim().length > 13) { lines.push(cur.trim()); cur = wd; }
     else cur += " " + wd;
   }
   if (cur.trim()) lines.push(cur.trim());
-  const startY = 560 - (lines.length - 1) * 44;
+  const baseY = 1010 - (lines.length - 1) * 74;
   const titleSvg = lines
-    .map((l, i) => `<text x="400" y="${startY + i * 88}" font-family="Georgia, serif" font-size="76" fill="#faf7f0" text-anchor="middle" font-weight="bold">${esc(l)}</text>`)
+    .map((l, i) => `<text x="60" y="${baseY + i * 74}" font-family="Georgia, serif" font-size="64" fill="#faf7f0" font-weight="bold">${esc(l)}</text>`)
     .join("");
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
     <defs>
-      <linearGradient id="pg" x1="0" y1="0" x2="0.5" y2="1">
-        <stop offset="0%" stop-color="${color}"/><stop offset="55%" stop-color="#141017"/><stop offset="100%" stop-color="#0a0a0d"/>
+      <linearGradient id="pg" x1="0.1" y1="0" x2="0.9" y2="1">
+        <stop offset="0%" stop-color="${c1}"/><stop offset="100%" stop-color="${c2}"/>
       </linearGradient>
-      <radialGradient id="pglow" cx="50%" cy="34%" r="52%">
-        <stop offset="0%" stop-color="#f5c451" stop-opacity="0.30"/><stop offset="100%" stop-color="#f5c451" stop-opacity="0"/>
+      <radialGradient id="spot" cx="34%" cy="30%" r="60%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
       </radialGradient>
+      <radialGradient id="vig" cx="50%" cy="45%" r="75%">
+        <stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+      </radialGradient>
+      <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0d0d10" stop-opacity="0"/><stop offset="70%" stop-color="#0d0d10" stop-opacity="0.85"/><stop offset="100%" stop-color="#0d0d10" stop-opacity="0.97"/>
+      </linearGradient>
     </defs>
     <rect width="100%" height="100%" fill="url(#pg)"/>
-    <rect width="100%" height="100%" fill="url(#pglow)"/>
-    <!-- bande pellicola -->
-    <rect x="0" y="0" width="54" height="100%" fill="#000" opacity="0.55"/>
-    <rect x="${W-54}" y="0" width="54" height="100%" fill="#000" opacity="0.55"/>
-    ${perfs}
-    <text x="400" y="300" font-size="90" text-anchor="middle">🎬</text>
+    <!-- luci soffuse per profondità "da scena" -->
+    <ellipse cx="250" cy="330" rx="420" ry="300" fill="#f5c451" opacity="0.10"/>
+    <ellipse cx="620" cy="880" rx="460" ry="340" fill="#ffffff" opacity="0.05"/>
+    <rect width="100%" height="100%" fill="url(#spot)"/>
+    <rect width="100%" height="100%" fill="url(#vig)"/>
+    <!-- fascia inferiore per la leggibilità del titolo -->
+    <rect x="0" y="620" width="100%" height="580" fill="url(#band)"/>
+    <rect x="60" y="${baseY - 96}" width="70" height="6" rx="3" fill="#f5c451"/>
+    <text x="60" y="${baseY - 54}" font-family="Arial, sans-serif" font-size="30" fill="#f5c451" letter-spacing="4">${year}</text>
     ${titleSvg}
-    <text x="400" y="${startY + lines.length * 88 + 30}" font-family="Arial, sans-serif" font-size="34" fill="#f5c451" text-anchor="middle" letter-spacing="3">${year}</text>
-    <text x="400" y="1140" font-family="Arial, sans-serif" font-size="24" fill="#fff" opacity="0.6" text-anchor="middle" letter-spacing="2">LOCANDINA · CINEFOOD ITALIA</text>
+    <text x="60" y="1150" font-family="Arial, sans-serif" font-size="21" fill="#fff" opacity="0.5" letter-spacing="2">FOTO PLACEHOLDER · CINEFOOD ITALIA</text>
   </svg>`;
 }
 
@@ -109,21 +114,21 @@ for (const [f, l, c] of locali) await save("placeholder", f, scene(l, "CineFood 
 
 /* ===== Locandine film (2:3) ===== */
 const film = [
-  ["la-grande-bellezza.jpg", "La Grande Bellezza", "2013", "#7c2d12"],
-  ["mangia-prega-ama.jpg", "Mangia Prega Ama", "2010", "#9a3412"],
-  ["il-padrino.jpg", "Il Padrino", "1972", "#1c1917"],
-  ["il-talento-di-mr-ripley.jpg", "Il Talento di Mr. Ripley", "1999", "#134e4a"],
-  ["benvenuti-al-sud.jpg", "Benvenuti al Sud", "2010", "#0e7490"],
-  ["un-americano-a-roma.jpg", "Un Americano a Roma", "1954", "#a16207"],
-  ["chiamami-col-tuo-nome.jpg", "Chiamami col tuo Nome", "2017", "#3f6212"],
-  ["la-dolce-vita.jpg", "La Dolce Vita", "1960", "#3f3f46"],
-  ["il-commissario-montalbano.jpg", "Il Commissario Montalbano", "1999", "#b45309"],
-  ["nuovo-cinema-paradiso.jpg", "Nuovo Cinema Paradiso", "1988", "#7c2d12"],
-  ["il-postino.jpg", "Il Postino", "1994", "#1e3a5f"],
-  ["to-rome-with-love.jpg", "To Rome with Love", "2012", "#9f1239"],
-  ["house-of-gucci.jpg", "House of Gucci", "2021", "#292524"],
+  ["la-grande-bellezza.jpg", "La Grande Bellezza", "2013", "#b4531a", "#2a0d0d"],
+  ["mangia-prega-ama.jpg", "Mangia Prega Ama", "2010", "#c2681a", "#3a1608"],
+  ["il-padrino.jpg", "Il Padrino", "1972", "#4a3b23", "#12100a"],
+  ["il-talento-di-mr-ripley.jpg", "Il Talento di Mr. Ripley", "1999", "#1f7a72", "#08201e"],
+  ["benvenuti-al-sud.jpg", "Benvenuti al Sud", "2010", "#1a86a8", "#07222d"],
+  ["un-americano-a-roma.jpg", "Un Americano a Roma", "1954", "#bb8a2a", "#33240a"],
+  ["chiamami-col-tuo-nome.jpg", "Chiamami col tuo Nome", "2017", "#6f9440", "#182710"],
+  ["la-dolce-vita.jpg", "La Dolce Vita", "1960", "#70707e", "#131318"],
+  ["il-commissario-montalbano.jpg", "Il Commissario Montalbano", "1999", "#cc7c1c", "#331d07"],
+  ["nuovo-cinema-paradiso.jpg", "Nuovo Cinema Paradiso", "1988", "#a03e1a", "#280e07"],
+  ["il-postino.jpg", "Il Postino", "1994", "#2a76a0", "#081b28"],
+  ["to-rome-with-love.jpg", "To Rome with Love", "2012", "#b23a5a", "#260c16"],
+  ["house-of-gucci.jpg", "House of Gucci", "2021", "#3f3f4a", "#0f0f13"],
 ];
-for (const [f, t, y, c] of film) await save("films", f, poster(t, y, c));
+for (const [f, t, y, c1, c2] of film) await save("films", f, poster(t, y, c1, c2));
 
 /* ===== Immagini blog (16:9) ===== */
 const blog = [

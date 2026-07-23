@@ -15,12 +15,12 @@
  * Cambia questi valori per ridipingere tutto il sito.
  */
 @theme {
-  /* Scuri (nero / antracite) */
-  --color-noir-950: #0a0a0d;
-  --color-noir-900: #121217;
-  --color-noir-800: #1c1c24;
-  --color-noir-700: #26262f;
-  --color-noir-600: #33333f;
+  /* Scuri (grigio scuro morbido, non nero puro — più riposante) */
+  --color-noir-950: #191920; /* sfondo pagina */
+  --color-noir-900: #22222b; /* sezioni e card */
+  --color-noir-800: #2c2c37;
+  --color-noir-700: #3a3a46;
+  --color-noir-600: #4b4b57;
 
   /* Chiari (crema caldo) */
   --color-cream-50: #faf7f0;
