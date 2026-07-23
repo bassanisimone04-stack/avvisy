@@ -44,6 +44,17 @@ const t = useT(lang);
         }
       })();
     </script>
+    {/* Rilevamento lingua del browser: solo dalla home italiana, una volta. */}
+    <script is:inline>
+      (function () {
+        try {
+          if (location.pathname !== "/") return;
+          if (localStorage.getItem("cinefood-lang")) return;
+          var l = (navigator.language || "").toLowerCase();
+          if (l && l.indexOf("it") !== 0) location.replace("/en/");
+        } catch (e) {}
+      })();
+    </script>
     <SEO title={title} description={description} image={image} type={type} jsonLd={jsonLd} lang={lang} />
   </head>
   <body class="flex min-h-screen flex-col">

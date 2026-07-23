@@ -1,17 +1,18 @@
 ---
 /**
- * Selettore lingua con bandierine 🇮🇹 / 🇬🇧.
- * Rimanda alla STESSA pagina nell'altra lingua.
+ * Selettore lingua con bandiere DISEGNATE (SVG), così si vedono su ogni
+ * dispositivo (le emoji-bandiera non funzionano su Windows).
+ * Rimanda alla stessa pagina nell'altra lingua e ricorda la scelta.
  */
 import { getLang, stripLang, path } from "../i18n/ui";
 
 const pathname = Astro.url.pathname;
 const current = getLang(pathname);
-const base = stripLang(pathname); // percorso senza prefisso lingua
+const base = stripLang(pathname);
 
 const opzioni = [
-  { code: "it" as const, flag: "🇮🇹", label: "Italiano", href: path(base, "it") },
-  { code: "en" as const, flag: "🇬🇧", label: "English", href: path(base, "en") },
+  { code: "it" as const, label: "Italiano", href: path(base, "it") },
+  { code: "en" as const, label: "English", href: path(base, "en") },
 ];
 ---
 
@@ -21,17 +22,49 @@ const opzioni = [
       <a
         href={o.href}
         hreflang={o.code}
+        data-setlang={o.code}
         aria-label={o.label}
+        title={o.label}
         aria-current={current === o.code ? "true" : undefined}
         class:list={[
-          "inline-flex h-8 w-8 items-center justify-center rounded-full text-lg transition",
+          "inline-flex h-6 w-8 items-center justify-center overflow-hidden rounded-[3px] shadow-sm ring-1 transition",
           current === o.code
-            ? "bg-gold-500/20 ring-1 ring-gold-500/50"
-            : "opacity-55 hover:opacity-100",
+            ? "ring-gold-500"
+            : "opacity-55 ring-black/10 hover:opacity-100 dark:ring-white/15",
         ]}
       >
-        <span aria-hidden="true">{o.flag}</span>
+        {o.code === "it" ? (
+          <svg viewBox="0 0 3 2" class="h-full w-full" aria-hidden="true" preserveAspectRatio="none">
+            <rect width="3" height="2" fill="#fff" />
+            <rect width="1" height="2" fill="#009246" />
+            <rect x="2" width="1" height="2" fill="#ce2b37" />
+          </svg>
+        ) : (
+          <svg viewBox="0 0 60 30" class="h-full w-full" aria-hidden="true" preserveAspectRatio="none">
+            <clipPath id="uk-clip"><rect width="60" height="30" /></clipPath>
+            <g clip-path="url(#uk-clip)">
+              <rect width="60" height="30" fill="#012169" />
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#c8102e" stroke-width="4" />
+              <path d="M30,0 L30,30 M0,15 L60,15" stroke="#fff" stroke-width="10" />
+              <path d="M30,0 L30,30 M0,15 L60,15" stroke="#c8102e" stroke-width="6" />
+            </g>
+          </svg>
+        )}
       </a>
     ))
   }
 </div>
+
+<script>
+  // Memorizza la lingua scelta, così l'auto-rilevamento non la sovrascrive.
+  document.querySelectorAll("[data-setlang]").forEach((el) => {
+    el.addEventListener("click", () => {
+      try {
+        localStorage.setItem("cinefood-lang", (el as HTMLElement).dataset.setlang || "");
+      } catch (e) {
+        /* ignora */
+      }
+    });
+  });
+</script>
