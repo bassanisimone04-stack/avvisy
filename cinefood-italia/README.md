@@ -174,10 +174,19 @@ due modi per avere immagini vere:
 
 ### Netlify (consigliata, ha anche i form)
 
+Il file **`netlify.toml`** è già incluso: contiene comando di build, cartella di
+pubblicazione, versione di Node e lo scaricamento automatico delle foto libere.
+Ti bastano pochi clic:
+
 1. Crea un account gratuito su <https://www.netlify.com>.
-2. Carica il progetto su GitHub (o trascina la cartella su Netlify).
-3. Impostazioni: **Build command** `npm run build`, **Publish directory** `dist`.
-4. **Deploy**: il sito è online in un minuto.
+2. **Add new site → Import an existing project** e collega il repository GitHub.
+3. Nelle impostazioni imposta solo la **Base directory: `cinefood-italia`**
+   (comando di build e publish li legge da `netlify.toml`).
+4. **Deploy**: il sito è online in un minuto e si ricostruisce a ogni push.
+
+> 🖼️ In fase di build, Netlify esegue `scripts/scarica-foto.mjs` e scarica
+> automaticamente le foto libere (licenza Unsplash) per film e città. Se il
+> download non riesce, il sito resta comunque online con i placeholder.
 
 > 📨 I form "Aggiungi il tuo locale" e la newsletter funzionano
 > automaticamente su Netlify (sezione **Forms** della dashboard).
