@@ -1,14 +1,13 @@
 ---
 /**
- * Layout di base condiviso da TUTTE le pagine.
- * Gestisce <head> (SEO + font), il tema scuro di default, header e footer.
+ * Layout di base condiviso da tutte le pagine. `lang` per la lingua.
  */
 import { SITE } from "../config/site";
 import SEO from "../components/SEO.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { useT, type Lang } from "../i18n/ui";
 import "../styles/global.css";
-// Font self-hosted (nessuna richiesta esterna → più veloce e privacy-friendly)
 import "@fontsource-variable/inter";
 import "@fontsource/playfair-display/600.css";
 import "@fontsource/playfair-display/700.css";
@@ -20,43 +19,44 @@ interface Props {
   image?: string;
   type?: "website" | "article";
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  lang?: Lang;
 }
 
-const { title, description, image, type, jsonLd } = Astro.props;
+const { title, description, image, type, jsonLd, lang = "it" } = Astro.props;
+const t = useT(lang);
 ---
 
 <!doctype html>
-<html lang={SITE.lang} class="dark">
+<html lang={lang} class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    {/* Imposta il tema PRIMA del render per evitare lo sfarfallio (FOUC). */}
     <script is:inline>
       (function () {
         try {
-          var t = localStorage.getItem("tema");
-          if (t === "light") document.documentElement.classList.remove("dark");
+          var tm = localStorage.getItem("tema");
+          if (tm === "light") document.documentElement.classList.remove("dark");
           else document.documentElement.classList.add("dark");
         } catch (e) {
           document.documentElement.classList.add("dark");
         }
       })();
     </script>
-    <SEO title={title} description={description} image={image} type={type} jsonLd={jsonLd} />
+    <SEO title={title} description={description} image={image} type={type} jsonLd={jsonLd} lang={lang} />
   </head>
   <body class="flex min-h-screen flex-col">
     <a
       href="#contenuto"
       class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-ink-900"
     >
-      Salta al contenuto
+      {t("a11y.skip")}
     </a>
-    <Header />
+    <Header lang={lang} />
     <main id="contenuto" class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

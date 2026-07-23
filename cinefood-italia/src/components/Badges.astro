@@ -1,9 +1,10 @@
 ---
 /**
  * Piccoli "badge" riutilizzabili. Passa una sola prop tra:
- * `tipo`, `prezzo`, `stato`, `categoria`, `evidenza`.
+ * `tipo`, `prezzo`, `stato`, `categoria`, `evidenza`. `lang` per la lingua.
  */
-import { statoLabel } from "../lib/utils";
+import { statoLabel, categoriaLabel, tipoLabel } from "../lib/utils";
+import { useT, type Lang } from "../i18n/ui";
 
 interface Props {
   tipo?: string;
@@ -11,8 +12,10 @@ interface Props {
   stato?: string;
   categoria?: string;
   evidenza?: boolean;
+  lang?: Lang;
 }
-const { tipo, prezzo, stato, categoria, evidenza } = Astro.props;
+const { tipo, prezzo, stato, categoria, evidenza, lang = "it" } = Astro.props;
+const t = useT(lang);
 
 const statoColor: Record<string, string> = {
   aperto: "bg-green-500/15 text-green-700 dark:text-green-300",
@@ -26,7 +29,7 @@ const base =
 
 {
   evidenza && (
-    <span class={`${base} bg-gold-500 font-semibold text-noir-950`}>⭐ In evidenza</span>
+    <span class={`${base} bg-gold-500 font-semibold text-noir-950`}>⭐ {t("badge.evidenza")}</span>
   )
 }
 {
@@ -40,14 +43,14 @@ const base =
           : "bg-purple-500/15 text-purple-700 dark:text-purple-300",
       ]}
     >
-      {categoria === "set-reale" ? "🎬 Set reale" : "✨ A tema cinema"}
+      {categoria === "set-reale" ? "🎬" : "✨"} {categoriaLabel(categoria, lang)}
     </span>
   )
 }
 {
   tipo && (
     <span class={`${base} bg-ink-500/15 capitalize text-ink-700 dark:text-ink-400`}>
-      {tipo}
+      {tipoLabel(tipo, lang)}
     </span>
   )
 }
@@ -61,7 +64,7 @@ const base =
 {
   stato && (
     <span class:list={[base, statoColor[stato] ?? "bg-ink-500/15 text-ink-700"]}>
-      {statoLabel(stato)}
+      {statoLabel(stato, lang)}
     </span>
   )
 }

@@ -1,0 +1,28 @@
+---
+/** English "About" page. */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE } from "../../config/site";
+import { path } from "../../i18n/ui";
+const lang = "en" as const;
+---
+
+<BaseLayout lang={lang} title="About" description={`What ${SITE.name} is: the directory of Italian venues seen in films and TV series.`}>
+  <section class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="font-display text-4xl font-extrabold">About us</h1>
+
+    <div class="mt-6 space-y-4 text-lg text-ink-700 dark:text-cream-200">
+      <p><strong>{SITE.name}</strong> is an independent guide to Italy's restaurants, bars, cafés, trattorias and pastry shops that have appeared in films and TV series. We bring together two great Italian passions: <em>cinema</em> and <em>good food</em>.</p>
+      <p>For each venue we tell you where it is, what cuisine it serves and in which films or series it appeared, with a scene description. So you can plan tasty itineraries following your favourite characters.</p>
+      <p>We distinguish <strong>real sets</strong> (venues where filming actually took place) from <strong>cinema-themed</strong> venues. The project keeps growing: if you know a place we should include, write to us!</p>
+    </div>
+
+    <div class="mt-8 rounded-3xl border border-gold-500/30 bg-gold-500/10 p-5 text-sm text-ink-700 dark:text-cream-200">
+      <p><strong>A note on the data.</strong> Information about venues and film appearances is gathered with care but should be considered indicative: always check opening hours, addresses and availability. Film and series titles belong to their respective right holders.</p>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href={path("/aggiungi-locale", lang)} class="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-noir-950 hover:bg-gold-400">Suggest a venue</a>
+      <a href={path("/inserzioni", lang)} class="rounded-full border border-ink-500/25 px-5 py-2.5 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800">Advertising for owners</a>
+    </div>
+  </section>
+</BaseLayout>

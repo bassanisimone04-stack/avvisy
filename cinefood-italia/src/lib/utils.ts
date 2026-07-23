@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import { useT, localeCode, type Lang } from "../i18n/ui";
 
 export type Restaurant = CollectionEntry<"restaurants">;
 export type Film = CollectionEntry<"films">;
@@ -13,28 +14,31 @@ export function slugify(text: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-/** Etichetta leggibile per lo stato di apertura. */
-export function statoLabel(stato: string): string {
-  switch (stato) {
-    case "aperto":
-      return "Aperto";
-    case "chiuso":
-      return "Chiuso";
-    case "temporaneamente-chiuso":
-      return "Temporaneamente chiuso";
-    default:
-      return stato;
-  }
+/** Etichetta leggibile per lo stato di apertura (nella lingua richiesta). */
+export function statoLabel(stato: string, lang: Lang = "it"): string {
+  const t = useT(lang);
+  if (stato === "aperto") return t("stato.aperto");
+  if (stato === "chiuso") return t("stato.chiuso");
+  if (stato === "temporaneamente-chiuso") return t("stato.tempChiuso");
+  return stato;
 }
 
 /** Etichetta leggibile per la categoria. */
-export function categoriaLabel(categoria: string): string {
-  return categoria === "a-tema-cinema" ? "A tema cinema" : "Set reale";
+export function categoriaLabel(categoria: string, lang: Lang = "it"): string {
+  const t = useT(lang);
+  return categoria === "a-tema-cinema" ? t("badge.aTema") : t("badge.setReale");
 }
 
-/** Formatta una data in italiano (es. "12 marzo 2025"). */
-export function formatData(data: Date): string {
-  return new Intl.DateTimeFormat("it-IT", {
+/** Etichetta del tipo di locale nella lingua richiesta. */
+export function tipoLabel(tipo: string, lang: Lang = "it"): string {
+  const t = useT(lang);
+  const key = `tipo.${tipo}` as Parameters<typeof t>[0];
+  return t(key);
+}
+
+/** Formatta una data (es. "12 marzo 2025" / "12 March 2025"). */
+export function formatData(data: Date, lang: Lang = "it"): string {
+  return new Intl.DateTimeFormat(localeCode(lang), {
     day: "numeric",
     month: "long",
     year: "numeric",

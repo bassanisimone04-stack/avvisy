@@ -13,6 +13,12 @@ export default defineConfig({
   site: SITE.url,
   // Output statico (SSG) per la massima velocità e SEO.
   output: "static",
+  // Sito bilingue: italiano alla radice, inglese sotto /en/.
+  i18n: {
+    locales: ["it", "en"],
+    defaultLocale: "it",
+    routing: { prefixDefaultLocale: false },
+  },
   integrations: [
     // Genera automaticamente sitemap-index.xml + sitemap-0.xml.
     sitemap(),

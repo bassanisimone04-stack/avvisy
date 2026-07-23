@@ -1,22 +1,21 @@
 ---
-/**
- * Hero a tutto schermo con immagine cinematografica di sfondo, titolo
- * d'impatto, sottotitolo, barra di ricerca e CTA verso la mappa.
- */
+/** Hero a tutto schermo con immagine di sfondo, titolo, ricerca e CTA mappa. */
 import { Image } from "astro:assets";
 import SearchBar from "./SearchBar.astro";
 import heroImg from "../assets/placeholder/hero.jpg";
+import { useT, path, type Lang } from "../i18n/ui";
 
 interface Props {
   titolo: string;
   sottotitolo: string;
   stats?: { valore: number | string; label: string }[];
+  lang?: Lang;
 }
-const { titolo, sottotitolo, stats = [] } = Astro.props;
+const { titolo, sottotitolo, stats = [], lang = "it" } = Astro.props;
+const t = useT(lang);
 ---
 
 <section class="relative isolate flex min-h-[88vh] items-center overflow-hidden">
-  <!-- Immagine di sfondo -->
   <Image
     src={heroImg}
     alt=""
@@ -30,7 +29,7 @@ const { titolo, sottotitolo, stats = [] } = Astro.props;
 
   <div class="mx-auto w-full max-w-4xl px-4 py-20 text-center">
     <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold-400">
-      🎬 Cinema &amp; buona tavola
+      🎬 {t("hero.kicker")}
     </p>
     <h1 class="font-display text-5xl font-extrabold leading-[1.05] text-white sm:text-6xl md:text-7xl">
       {titolo}
@@ -38,12 +37,12 @@ const { titolo, sottotitolo, stats = [] } = Astro.props;
     <p class="mx-auto mt-5 max-w-2xl text-lg text-cream-200">{sottotitolo}</p>
 
     <div class="mt-8 flex flex-col items-center gap-4">
-      <SearchBar variant="hero" />
+      <SearchBar variant="hero" lang={lang} />
       <a
-        href="/mappa"
+        href={path("/mappa", lang)}
         class="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
       >
-        🗺️ Esplora la mappa
+        🗺️ {t("hero.mappa")}
       </a>
     </div>
 
@@ -61,6 +60,5 @@ const { titolo, sottotitolo, stats = [] } = Astro.props;
     }
   </div>
 
-  <!-- Sfumatura di raccordo verso la sezione successiva -->
   <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream-50 to-transparent dark:from-noir-950"></div>
 </section>

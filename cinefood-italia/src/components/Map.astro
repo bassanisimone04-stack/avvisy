@@ -15,15 +15,19 @@ export interface MapMarker {
   url?: string;
 }
 
+import { useT, type Lang } from "../i18n/ui";
+
 interface Props {
   markers: MapMarker[];
   /** Altezza CSS della mappa (es. "500px" o "70vh"). */
   height?: string;
   /** Livello di zoom iniziale (più alto = più vicino). */
   zoom?: number;
+  lang?: Lang;
 }
 
-const { markers, height = "500px", zoom = 6 } = Astro.props;
+const { markers, height = "500px", zoom = 6, lang = "it" } = Astro.props;
+const t = useT(lang);
 ---
 
 <div
@@ -31,6 +35,7 @@ const { markers, height = "500px", zoom = 6 } = Astro.props;
   class="z-0 w-full overflow-hidden rounded-2xl border border-ink-100"
   style={`height:${height}`}
   data-zoom={zoom}
+  data-scopri={`${t("card.scopri")} →`}
 >
 </div>
 
@@ -71,6 +76,7 @@ const { markers, height = "500px", zoom = 6 } = Astro.props;
     };
     const markers: Marker[] = JSON.parse(datiEl.textContent || "[]");
     const zoom = Number(el.dataset.zoom) || 6;
+    const scopri = el.dataset.scopri || "Scopri di più →";
 
     // Centro predefinito: Italia.
     const map = L.map(el).setView([41.9, 12.5], zoom);
@@ -87,7 +93,7 @@ const { markers, height = "500px", zoom = 6 } = Astro.props;
         <strong>${m.nome}</strong>
         ${m.citta ? `<br/><span>📍 ${m.citta}</span>` : ""}
         ${m.tipo ? `<br/><span style="text-transform:capitalize">${m.tipo}</span>` : ""}
-        ${m.url ? `<br/><a href="${m.url}">Scopri di più →</a>` : ""}
+        ${m.url ? `<br/><a href="${m.url}">${scopri}</a>` : ""}
       `;
       L.marker([m.lat, m.lng]).bindPopup(popup).addTo(gruppo);
     }

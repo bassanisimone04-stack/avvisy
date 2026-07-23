@@ -1,8 +1,11 @@
 ---
-/**
- * Modulo newsletter. Pronto per Netlify Forms (data-netlify) oppure da
- * collegare a un servizio esterno cambiando `action` (vedi README).
- */
+/** Modulo newsletter (Netlify Forms). `lang` per la lingua. */
+import { useT, path, type Lang } from "../i18n/ui";
+interface Props {
+  lang?: Lang;
+}
+const { lang = "it" } = Astro.props;
+const t = useT(lang);
 ---
 
 <form
@@ -10,24 +13,24 @@
   method="POST"
   data-netlify="true"
   netlify-honeypot="bot-field"
-  action="/grazie"
+  action={path("/grazie", lang)}
   class="flex w-full max-w-md flex-col gap-2 sm:flex-row"
 >
   <input type="hidden" name="form-name" value="newsletter" />
   <p class="hidden"><label>Non compilare: <input name="bot-field" /></label></p>
-  <label for="newsletter-email" class="sr-only">La tua email</label>
+  <label for="newsletter-email" class="sr-only">{t("footer.emailPh")}</label>
   <input
     id="newsletter-email"
     name="email"
     type="email"
     required
-    placeholder="La tua email"
+    placeholder={t("footer.emailPh")}
     class="min-w-0 flex-1 rounded-full border border-ink-500/20 bg-white px-4 py-2.5 text-sm text-ink-900 placeholder:text-ink-400 dark:border-noir-600 dark:bg-noir-800 dark:text-cream-100"
   />
   <button
     type="submit"
     class="shrink-0 rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-noir-950 transition-colors hover:bg-gold-400"
   >
-    Iscriviti
+    {t("footer.iscriviti")}
   </button>
 </form>

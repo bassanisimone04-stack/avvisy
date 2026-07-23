@@ -1,0 +1,37 @@
+---
+/**
+ * Selettore lingua con bandierine 🇮🇹 / 🇬🇧.
+ * Rimanda alla STESSA pagina nell'altra lingua.
+ */
+import { getLang, stripLang, path } from "../i18n/ui";
+
+const pathname = Astro.url.pathname;
+const current = getLang(pathname);
+const base = stripLang(pathname); // percorso senza prefisso lingua
+
+const opzioni = [
+  { code: "it" as const, flag: "🇮🇹", label: "Italiano", href: path(base, "it") },
+  { code: "en" as const, flag: "🇬🇧", label: "English", href: path(base, "en") },
+];
+---
+
+<div class="flex items-center gap-1" role="group" aria-label="Lingua / Language">
+  {
+    opzioni.map((o) => (
+      <a
+        href={o.href}
+        hreflang={o.code}
+        aria-label={o.label}
+        aria-current={current === o.code ? "true" : undefined}
+        class:list={[
+          "inline-flex h-8 w-8 items-center justify-center rounded-full text-lg transition",
+          current === o.code
+            ? "bg-gold-500/20 ring-1 ring-gold-500/50"
+            : "opacity-55 hover:opacity-100",
+        ]}
+      >
+        <span aria-hidden="true">{o.flag}</span>
+      </a>
+    ))
+  }
+</div>

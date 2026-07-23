@@ -1,0 +1,39 @@
+---
+/** English films index. */
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Reveal from "../../../components/Reveal.astro";
+import { contaLocaliPerFilm } from "../../../lib/utils";
+import { useT, path } from "../../../i18n/ui";
+import { tFilmTitolo } from "../../../i18n/content-en";
+
+const lang = "en" as const;
+const t = useT(lang);
+const films = (await getCollection("films")).sort((a, b) => tFilmTitolo(a, lang).localeCompare(tFilmTitolo(b, lang), "en"));
+const locali = await getCollection("restaurants");
+const conteggi = contaLocaliPerFilm(locali);
+---
+
+<BaseLayout lang={lang} title={t("film.titolo")} description={t("film.sub")}>
+  <section class="mx-auto max-w-6xl px-4 py-12">
+    <h1 class="font-display text-4xl font-extrabold">{t("film.titolo")}</h1>
+    <p class="mt-2 text-ink-600 dark:text-ink-400">{t("film.sub")}</p>
+
+    <div class="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+      {
+        films.map((film, i) => (
+          <Reveal delay={i * 50}>
+            <a href={path(`/film/${film.id}`, lang)} class="group block">
+              <div class="overflow-hidden rounded-2xl shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
+                <Image src={film.data.locandina} alt={film.data.locandinaAlt || tFilmTitolo(film, lang)} width={400} height={600} loading="lazy" class="aspect-[2/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <h2 class="mt-3 font-display text-lg font-bold leading-tight group-hover:text-gold-600 dark:group-hover:text-gold-400">{tFilmTitolo(film, lang)}</h2>
+              <p class="text-sm text-ink-500 dark:text-ink-400">{film.data.anno} · {conteggi.get(film.id) ?? 0} {t("film.locali")}</p>
+            </a>
+          </Reveal>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

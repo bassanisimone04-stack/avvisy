@@ -9,7 +9,7 @@ import { formatData } from "../../lib/utils";
 import { blogPostingJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
 
 export async function getStaticPaths() {
-  const articoli = (await getCollection("blog")).filter((a) => !a.data.bozza);
+  const articoli = (await getCollection("blog")).filter((a) => !a.data.bozza && a.data.lang === "it");
   return articoli.map((articolo) => ({ params: { slug: articolo.id }, props: { articolo } }));
 }
 

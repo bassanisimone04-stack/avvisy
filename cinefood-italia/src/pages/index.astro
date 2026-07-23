@@ -19,7 +19,7 @@ import { websiteJsonLd } from "../lib/schema-org";
 const locali = await getCollection("restaurants");
 const films = await getCollection("films");
 const blog = (await getCollection("blog"))
-  .filter((a) => !a.data.bozza)
+  .filter((a) => !a.data.bozza && a.data.lang === "it")
   .sort((a, b) => b.data.dataPubblicazione.getTime() - a.data.dataPubblicazione.getTime())
   .slice(0, 2);
 

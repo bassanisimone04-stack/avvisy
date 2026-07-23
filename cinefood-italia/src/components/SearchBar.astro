@@ -1,21 +1,17 @@
 ---
-/**
- * Barra di ricerca che rimanda a /locali con il testo cercato (?cerca=...).
- * `variant`: "hero" (grande, per l'hero) o "compact".
- */
+/** Barra di ricerca che rimanda all'elenco locali con il testo cercato. */
+import { useT, path, type Lang } from "../i18n/ui";
 interface Props {
   variant?: "hero" | "compact";
-  placeholder?: string;
+  lang?: Lang;
 }
-const {
-  variant = "hero",
-  placeholder = "Cerca un film, una città o un locale…",
-} = Astro.props;
+const { variant = "hero", lang = "it" } = Astro.props;
+const t = useT(lang);
 const big = variant === "hero";
 ---
 
 <form
-  action="/locali"
+  action={path("/locali", lang)}
   method="get"
   role="search"
   class:list={[
@@ -24,12 +20,12 @@ const big = variant === "hero";
   ]}
 >
   <span class="pl-3 text-ink-400" aria-hidden="true">🔍</span>
-  <label for="q" class="sr-only">Cerca</label>
+  <label for="q" class="sr-only">{t("hero.cerca")}</label>
   <input
     id="q"
     type="search"
     name="cerca"
-    placeholder={placeholder}
+    placeholder={t("hero.cercaPh")}
     autocomplete="off"
     class:list={[
       "min-w-0 flex-1 border-0 bg-transparent text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-0 dark:text-cream-100",
@@ -43,6 +39,6 @@ const big = variant === "hero";
       big ? "px-6 py-2.5" : "px-4 py-2 text-sm",
     ]}
   >
-    Cerca
+    {t("hero.cerca")}
   </button>
 </form>

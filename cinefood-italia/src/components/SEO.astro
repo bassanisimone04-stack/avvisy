@@ -1,72 +1,60 @@
 ---
 /**
- * Componente SEO riutilizzabile.
- * Genera i meta tag (title, description), i tag Open Graph per la
- * condivisione sui social, il link canonical e gli eventuali dati
- * strutturati Schema.org (JSON-LD).
+ * Componente SEO: meta tag, Open Graph, canonical, hreflang e JSON-LD.
  */
 import { SITE } from "../config/site";
+import { type Lang } from "../i18n/ui";
 
 interface Props {
-  /** Titolo della pagina (senza il nome del sito). */
   title?: string;
-  /** Descrizione della pagina per i motori di ricerca. */
   description?: string;
-  /** URL dell'immagine per l'anteprima social (Open Graph). */
   image?: string;
-  /** Tipo Open Graph: "website" o "article". */
   type?: "website" | "article";
-  /** Dati strutturati Schema.org da inserire come JSON-LD. */
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  lang?: Lang;
 }
 
 const {
   title,
-  description = SITE.description,
+  description,
   image,
   type = "website",
   jsonLd,
+  lang = "it",
 } = Astro.props;
 
-// Titolo completo: "Pagina · CineFood Italia" (o solo il brand in home).
+const defaultDesc =
+  lang === "en"
+    ? "The guide to Italian restaurants, bars and cafés seen in films and TV series. Discover the real locations and book your table among the stars."
+    : SITE.description;
+const desc = description ?? defaultDesc;
+
 const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
-
-// URL canonico della pagina corrente.
 const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).href;
-
-// Immagine assoluta per Open Graph.
 const ogImage = image
   ? new URL(image, Astro.site ?? SITE.url).href
   : new URL("/og-default.jpg", Astro.site ?? SITE.url).href;
 ---
 
-<!-- Meta di base -->
 <title>{fullTitle}</title>
-<meta name="description" content={description} />
+<meta name="description" content={desc} />
 <link rel="canonical" href={canonical} />
 
-<!-- Open Graph (Facebook, LinkedIn, ...) -->
 <meta property="og:site_name" content={SITE.name} />
 <meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description} />
+<meta property="og:description" content={desc} />
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={ogImage} />
-<meta property="og:locale" content="it_IT" />
+<meta property="og:locale" content={lang === "en" ? "en_GB" : "it_IT"} />
 
-<!-- Twitter/X Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />
-<meta name="twitter:description" content={description} />
+<meta name="twitter:description" content={desc} />
 <meta name="twitter:image" content={ogImage} />
 
-<!-- Dati strutturati Schema.org -->
 {
   jsonLd && (
-    <script
-      is:inline
-      type="application/ld+json"
-      set:html={JSON.stringify(jsonLd)}
-    />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   )
 }

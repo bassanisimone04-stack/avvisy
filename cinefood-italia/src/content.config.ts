@@ -131,6 +131,8 @@ const blog = defineCollection({
       immagineAlt: z.string().default(""),
       tags: z.array(z.string()).default([]),
       bozza: z.boolean().default(false),
+      /** Lingua dell'articolo: "it" (default) o "en". */
+      lang: z.enum(["it", "en"]).default("it"),
     }),
 });
 

@@ -1,0 +1,90 @@
+---
+/** English film detail page with FAQ. */
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import LocaleCard from "../../../components/LocaleCard.astro";
+import Breadcrumb from "../../../components/Breadcrumb.astro";
+import Reveal from "../../../components/Reveal.astro";
+import { SITE } from "../../../config/site";
+import { ordinaLocali, localiPerFilm, slugify } from "../../../lib/utils";
+import { faqPageJsonLd, breadcrumbJsonLd } from "../../../lib/schema-org";
+import { useT, path } from "../../../i18n/ui";
+import { tFilmTitolo, tFilmSinossi, tFilmFaq } from "../../../i18n/content-en";
+
+const lang = "en" as const;
+const t = useT(lang);
+
+export async function getStaticPaths() {
+  const films = await getCollection("films");
+  const locali = await getCollection("restaurants");
+  return films.map((film) => ({ params: { slug: film.id }, props: { film, locali: ordinaLocali(localiPerFilm(locali, film.id)) } }));
+}
+
+const { film, locali } = Astro.props;
+const d = film.data;
+const titolo = tFilmTitolo(film, lang);
+const sinossi = tFilmSinossi(film, lang);
+const faq = tFilmFaq(film, lang);
+const cittaFilm = d.citta[0];
+
+const title = `${t("film.doveMangiano")} "${titolo}"`;
+const description = `Restaurants, bars and cafés linked to ${titolo} (${d.anno}) by ${d.regista}${cittaFilm ? ` in ${cittaFilm}` : ""}. Discover the real locations and where to eat like in the film.`;
+
+const crumbs = [
+  { name: t("loc.home"), href: path("/", lang) },
+  { name: t("nav.film"), href: path("/film", lang) },
+  { name: titolo },
+];
+const jsonLd: Record<string, unknown>[] = [
+  breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: new URL(c.href ?? "/", SITE.url).href }))),
+];
+if (faq.length > 0) jsonLd.push(faqPageJsonLd(faq));
+---
+
+<BaseLayout lang={lang} title={title} description={description} image={d.locandina.src} type="article" jsonLd={jsonLd}>
+  <section class="border-b border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
+    <div class="mx-auto grid max-w-5xl gap-8 px-4 py-10 md:grid-cols-[240px_1fr]">
+      <Image src={d.locandina} alt={d.locandinaAlt || titolo} width={480} height={720} loading="eager" class="mx-auto w-40 rounded-2xl object-cover shadow-lg md:w-full" />
+      <div>
+        <Breadcrumb items={crumbs} />
+        <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-gold-600 dark:text-gold-400">{d.serieTv ? t("film.serie") : t("film.film")} · {d.anno}</p>
+        <h1 class="mt-1 font-display text-4xl font-extrabold sm:text-5xl">{titolo}</h1>
+        <p class="mt-2 text-ink-500 dark:text-ink-400">{t("film.regia")} {d.regista}</p>
+        <p class="mt-4 text-lg text-ink-700 dark:text-cream-200">{sinossi}</p>
+        {cittaFilm && (<a href={path(`/${slugify(cittaFilm)}`, lang)} class="mt-4 inline-block text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">📍 {t("film.altriLocali")} {cittaFilm} →</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="font-display text-2xl font-bold">{locali.length > 0 ? t("film.legati") : t("film.arrivo")}</h2>
+    {
+      locali.length > 0 ? (
+        <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {locali.map((locale, i) => (<Reveal delay={i * 60}><LocaleCard locale={locale} lang={lang} /></Reveal>))}
+        </div>
+      ) : (
+        <p class="mt-3 text-ink-500 dark:text-ink-400">{t("film.nessuno")}{" "}<a href={path("/aggiungi-locale", lang)} class="font-semibold text-gold-600 dark:text-gold-400">{t("film.segnala")}</a></p>
+      )
+    }
+  </section>
+
+  {
+    faq.length > 0 && (
+      <section class="mx-auto max-w-3xl px-4 pb-16">
+        <h2 class="font-display text-2xl font-bold">{t("film.faq")}</h2>
+        <div class="mt-6 space-y-3">
+          {faq.map((f) => (
+            <details class="group rounded-2xl border border-ink-500/10 bg-white p-5 dark:border-noir-700 dark:bg-noir-900">
+              <summary class="cursor-pointer list-none font-semibold marker:hidden">
+                <span class="flex items-center justify-between gap-3">{f.domanda}<span class="text-gold-500 transition-transform group-open:rotate-45" aria-hidden="true">+</span></span>
+              </summary>
+              <p class="mt-3 text-ink-700 dark:text-cream-200">{f.risposta}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>

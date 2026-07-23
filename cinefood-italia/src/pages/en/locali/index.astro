@@ -1,0 +1,61 @@
+---
+/** English venue listing with filters. */
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import LocaleCard from "../../../components/LocaleCard.astro";
+import FilterBar from "../../../components/FilterBar.astro";
+import { ordinaLocali, cittaUniche, tipiUnici, filmIdsDiLocale } from "../../../lib/utils";
+import { useT } from "../../../i18n/ui";
+import { tFilmTitolo } from "../../../i18n/content-en";
+
+const lang = "en" as const;
+const t = useT(lang);
+const locali = ordinaLocali(await getCollection("restaurants"));
+const films = await getCollection("films");
+const citta = cittaUniche(locali);
+const tipi = tipiUnici(locali);
+const filmUsati = new Set(locali.flatMap(filmIdsDiLocale));
+const filmOpzioni = films
+  .filter((f) => filmUsati.has(f.id))
+  .map((f) => ({ titolo: tFilmTitolo(f, lang), slug: f.id }))
+  .sort((a, b) => a.titolo.localeCompare(b.titolo, "en"));
+
+function datiFiltro(locale: (typeof locali)[number]) {
+  const testo = [locale.data.nome, locale.data.citta, locale.data.regione, locale.data.descrizione]
+    .join(" ").toLowerCase();
+  return {
+    "data-citta": locale.data.citta,
+    "data-tipo": locale.data.tipo,
+    "data-categoria": locale.data.categoria,
+    "data-prezzo": locale.data.prezzo,
+    "data-film": filmIdsDiLocale(locale).join("|"),
+    "data-testo": testo,
+  };
+}
+---
+
+<BaseLayout lang={lang} title={t("locali.titolo")} description={t("locali.sub")}>
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <h1 class="font-display text-4xl font-extrabold">{t("locali.titolo")}</h1>
+    <p class="mt-2 text-ink-600 dark:text-ink-400">{t("locali.sub")}</p>
+
+    <div class="mt-6">
+      <FilterBar citta={citta} tipi={tipi} film={filmOpzioni} lang={lang} />
+    </div>
+
+    <div id="griglia-locali" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        locali.map((locale) => (
+          <div class="locale-card" {...datiFiltro(locale)}>
+            <LocaleCard locale={locale} lang={lang} />
+          </div>
+        ))
+      }
+    </div>
+
+    <p id="nessun-risultato" hidden class="mt-10 text-center text-ink-500 dark:text-ink-400">
+      {t("filtri.nessuno")}
+      <button type="button" onclick="document.getElementById('f-reset')?.click()" class="font-semibold text-gold-600 underline dark:text-gold-400">{t("filtri.azzeraLink")}</button>
+    </p>
+  </section>
+</BaseLayout>
