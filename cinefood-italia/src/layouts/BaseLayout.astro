@@ -44,14 +44,20 @@ const t = useT(lang);
         }
       })();
     </script>
-    {/* Rilevamento lingua del browser: solo dalla home italiana, una volta. */}
+    {/* Rilevamento lingua del browser su TUTTE le pagine italiane:
+        i visitatori non italiani vengono portati alla stessa pagina in inglese.
+        La scelta manuale (clic sulla bandiera) viene sempre rispettata. */}
     <script is:inline>
       (function () {
         try {
-          if (location.pathname !== "/") return;
-          if (localStorage.getItem("cinefood-lang")) return;
+          var p = location.pathname;
+          if (p === "/en" || p.indexOf("/en/") === 0) return; // già in inglese
+          if (localStorage.getItem("cinefood-lang")) return; // scelta salvata
           var l = (navigator.language || "").toLowerCase();
-          if (l && l.indexOf("it") !== 0) location.replace("/en/");
+          if (l && l.indexOf("it") !== 0) {
+            var dest = (p === "/" ? "/en/" : "/en" + p) + location.search;
+            location.replace(dest);
+          }
         } catch (e) {}
       })();
     </script>
