@@ -25,7 +25,7 @@ const films = await getCollection("films");
 const blog = (await getCollection("blog"))
   .filter((a) => !a.data.bozza && a.data.lang === "en")
   .sort((a, b) => b.data.dataPubblicazione.getTime() - a.data.dataPubblicazione.getTime())
-  .slice(0, 2);
+  .slice(0, 3);
 
 const evidenza = ordinaLocali(locali.filter((l) => l.data.inEvidenza)).slice(0, 6);
 const vetrina = evidenza.length > 0 ? evidenza : ordinaLocali(locali).slice(0, 6);
@@ -118,21 +118,35 @@ const stats = [
             <h2 class="font-display text-3xl font-bold">{t("home.blogTitolo")}</h2>
             <a href={path("/blog", lang)} class="shrink-0 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">{t("home.tuttiArticoli")} →</a>
           </div>
-          <div class="grid gap-6 sm:grid-cols-2">
-            {blog.map((a) => (
-              <article class="overflow-hidden rounded-3xl border border-ink-500/10 bg-white dark:border-noir-700 dark:bg-noir-950">
-                {a.data.immagine && (
-                  <a href={path(`/blog/${a.id.replace(/-en$/, "")}`, lang)}>
-                    <Image src={a.data.immagine} alt={a.data.immagineAlt || a.data.titolo} width={640} height={360} loading="lazy" class="aspect-video w-full object-cover" />
-                  </a>
+          <div class="grid gap-6 lg:grid-cols-2">
+            {blog[0] && (
+              <a href={path(`/blog/${blog[0].id.replace(/-en$/, "")}`, lang)} class="group relative flex min-h-[340px] items-end overflow-hidden rounded-3xl">
+                {blog[0].data.immagine && (
+                  <Image src={blog[0].data.immagine} alt={blog[0].data.immagineAlt || blog[0].data.titolo} width={800} height={600} loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 )}
-                <div class="p-5">
-                  <p class="text-xs text-ink-500 dark:text-ink-400">{formatData(a.data.dataPubblicazione, lang)}</p>
-                  <h3 class="mt-1 font-display text-lg font-bold"><a href={path(`/blog/${a.id.replace(/-en$/, "")}`, lang)} class="hover:text-gold-600 dark:hover:text-gold-400">{a.data.titolo}</a></h3>
-                  <p class="mt-2 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{a.data.descrizione}</p>
+                <div class="absolute inset-0 overlay-bottom"></div>
+                <div class="relative p-6">
+                  <span class="inline-block rounded-full bg-gold-500 px-3 py-0.5 text-xs font-semibold text-noir-950">Featured</span>
+                  <p class="mt-3 text-xs text-cream-200">{formatData(blog[0].data.dataPubblicazione, lang)}</p>
+                  <h3 class="mt-1 font-display text-2xl font-bold text-white transition-colors group-hover:text-gold-300">{blog[0].data.titolo}</h3>
+                  <p class="mt-2 line-clamp-2 max-w-xl text-sm text-cream-200">{blog[0].data.descrizione}</p>
                 </div>
-              </article>
-            ))}
+              </a>
+            )}
+            <div class="grid gap-6">
+              {blog.slice(1, 3).map((a) => (
+                <a href={path(`/blog/${a.id.replace(/-en$/, "")}`, lang)} class="group flex items-center gap-4 overflow-hidden rounded-3xl border border-ink-500/10 bg-white p-3 dark:border-noir-700 dark:bg-noir-950">
+                  {a.data.immagine && (
+                    <Image src={a.data.immagine} alt={a.data.immagineAlt || a.data.titolo} width={220} height={220} loading="lazy" class="h-24 w-24 shrink-0 rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105 sm:h-28 sm:w-40" />
+                  )}
+                  <div class="min-w-0">
+                    <p class="text-xs text-ink-500 dark:text-ink-400">{formatData(a.data.dataPubblicazione, lang)}</p>
+                    <h3 class="mt-1 font-display text-base font-bold leading-tight group-hover:text-gold-600 dark:group-hover:text-gold-400">{a.data.titolo}</h3>
+                    <p class="mt-1 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{a.data.descrizione}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
