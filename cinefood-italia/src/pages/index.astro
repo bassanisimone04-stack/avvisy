@@ -1,100 +1,168 @@
 ---
-/** Homepage: hero con ricerca, locali in evidenza e statistiche. */
+/** Homepage-landing: hero, in evidenza, film, città, come funziona, mappa, blog, CTA. */
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import RestaurantCard from "../components/RestaurantCard.astro";
+import Hero from "../components/Hero.astro";
+import LocaleCard from "../components/LocaleCard.astro";
+import FilmChip from "../components/FilmChip.astro";
+import CityCard from "../components/CityCard.astro";
+import StepCard from "../components/StepCard.astro";
+import Reveal from "../components/Reveal.astro";
+import Map from "../components/Map.astro";
+import type { MapMarker } from "../components/Map.astro";
 import { SITE } from "../config/site";
-import { ordinaLocali, cittaUniche, filmUnici } from "../lib/utils";
+import { ordinaLocali, cittaUniche, localiPerCitta, contaLocaliPerFilm, formatData, slugify } from "../lib/utils";
 import { websiteJsonLd } from "../lib/schema-org";
 
-const tutti = await getCollection("restaurants");
-const inEvidenza = ordinaLocali(tutti.filter((l) => l.data.inEvidenza)).slice(0, 6);
-// Se non ci sono locali in evidenza, mostra comunque i primi disponibili.
-const vetrina = inEvidenza.length > 0 ? inEvidenza : ordinaLocali(tutti).slice(0, 6);
+const locali = await getCollection("restaurants");
+const films = await getCollection("films");
+const blog = (await getCollection("blog"))
+  .filter((a) => !a.data.bozza)
+  .sort((a, b) => b.data.dataPubblicazione.getTime() - a.data.dataPubblicazione.getTime())
+  .slice(0, 2);
 
-const nCitta = cittaUniche(tutti).length;
-const nFilm = filmUnici(tutti).length;
+// In evidenza (fallback ai primi se nessuno è in evidenza).
+const evidenza = ordinaLocali(locali.filter((l) => l.data.inEvidenza)).slice(0, 6);
+const vetrina = evidenza.length > 0 ? evidenza : ordinaLocali(locali).slice(0, 6);
+
+// Film con conteggio locali, ordinati per popolarità.
+const conteggi = contaLocaliPerFilm(locali);
+const filmOrdinati = [...films].sort(
+  (a, b) => (conteggi.get(b.id) ?? 0) - (conteggi.get(a.id) ?? 0)
+);
+
+// Città con immagine e conteggio.
+const cityImages = import.meta.glob<{ default: ImageMetadata }>("../assets/cities/*.jpg", { eager: true });
+const cityImg = (slug: string) => {
+  const k = Object.keys(cityImages).find((p) => p.endsWith(`/${slug}.jpg`));
+  return k ? cityImages[k].default : undefined;
+};
+const citta = cittaUniche(locali)
+  .map((nome) => ({ nome, slug: slugify(nome), img: cityImg(slugify(nome)), count: localiPerCitta(locali, nome).length }))
+  .filter((c) => c.img);
+
+// Marker mappa.
+const markers: MapMarker[] = locali.map((l) => ({
+  lat: l.data.coordinate.lat, lng: l.data.coordinate.lng,
+  nome: l.data.nome, citta: l.data.citta, tipo: l.data.tipo, url: `/locale/${l.id}`,
+}));
+
+const stats = [
+  { valore: locali.length, label: "locali" },
+  { valore: citta.length || cittaUniche(locali).length, label: "città" },
+  { valore: films.length, label: "film e serie" },
+];
 ---
 
 <BaseLayout jsonLd={websiteJsonLd()}>
-  <!-- HERO -->
-  <section class="relative overflow-hidden bg-ink-900 text-white">
-    <div class="absolute inset-0 opacity-20" aria-hidden="true">
-      <div class="h-full w-full bg-gradient-to-br from-brand-500 to-ink-900"></div>
-    </div>
-    <div class="relative mx-auto max-w-4xl px-4 py-16 text-center sm:py-24">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-300">
-        🎬 Cinema &amp; buona tavola
-      </p>
-      <h1 class="text-4xl font-extrabold leading-tight sm:text-5xl">
-        {SITE.tagline}
-      </h1>
-      <p class="mx-auto mt-4 max-w-2xl text-lg text-ink-100">
-        Scopri dove hanno mangiato i tuoi personaggi preferiti e prenota il tuo
-        tavolo tra le stelle del cinema italiano.
-      </p>
+  <Hero
+    titolo="Mangia dove nascono i film"
+    sottotitolo="La guida ai ristoranti, bar e caffè italiani apparsi al cinema e in TV. Scopri le location reali e prenota il tuo tavolo tra le stelle."
+    stats={stats}
+  />
 
-      <!-- Ricerca rapida: rimanda a /locali con il testo cercato -->
-      <form action="/locali" method="get" class="mx-auto mt-8 flex max-w-xl gap-2">
-        <label for="hero-cerca" class="sr-only">Cerca un locale</label>
-        <input
-          id="hero-cerca"
-          type="search"
-          name="cerca"
-          placeholder="Cerca un locale, una città o un film…"
-          class="w-full rounded-full border-0 px-5 py-3 text-ink-900 focus:ring-2 focus:ring-brand-400"
-        />
-        <button
-          type="submit"
-          class="shrink-0 rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-700"
-        >
-          Cerca
-        </button>
-      </form>
-
-      <div class="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-ink-100">
-        <span><strong class="text-white">{tutti.length}</strong> locali</span>
-        <span><strong class="text-white">{nCitta}</strong> città</span>
-        <span><strong class="text-white">{nFilm}</strong> film e serie</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCALI IN EVIDENZA -->
+  <!-- IN EVIDENZA -->
   <section class="mx-auto max-w-6xl px-4 py-14">
     <div class="mb-6 flex items-end justify-between gap-4">
       <div>
-        <h2 class="text-2xl font-bold text-ink-900">Locali in evidenza</h2>
-        <p class="mt-1 text-sm text-ink-700">Una selezione dei set più iconici da scoprire.</p>
+        <h2 class="font-display text-3xl font-bold">Locali in evidenza</h2>
+        <p class="mt-1 text-ink-600 dark:text-ink-400">Una selezione dei set più iconici da scoprire.</p>
       </div>
-      <a href="/locali" class="shrink-0 text-sm font-semibold text-brand-600 hover:text-brand-700">
-        Vedi tutti →
-      </a>
+      <a href="/locali" class="shrink-0 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">Vedi tutti →</a>
     </div>
-
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {vetrina.map((locale) => <RestaurantCard locale={locale} />)}
+      {vetrina.map((l, i) => <Reveal delay={i * 60}><LocaleCard locale={l} /></Reveal>)}
     </div>
   </section>
 
-  <!-- CALL TO ACTION -->
-  <section class="mx-auto max-w-6xl px-4 pb-16">
-    <div class="grid gap-6 md:grid-cols-3">
-      <a href="/mappa" class="rounded-2xl border border-ink-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-        <span class="text-3xl">🗺️</span>
-        <h3 class="mt-3 text-lg font-bold">Esplora la mappa</h3>
-        <p class="mt-1 text-sm text-ink-700">Trova i locali vicino a te su una mappa interattiva.</p>
-      </a>
-      <a href="/blog" class="rounded-2xl border border-ink-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-        <span class="text-3xl">📖</span>
-        <h3 class="mt-3 text-lg font-bold">Leggi il blog</h3>
-        <p class="mt-1 text-sm text-ink-700">Itinerari e curiosità sul cinema e la buona tavola.</p>
-      </a>
-      <a href="/inserzioni" class="rounded-2xl border border-brand-200 bg-brand-50 p-6 shadow-sm transition-shadow hover:shadow-md">
-        <span class="text-3xl">⭐</span>
-        <h3 class="mt-3 text-lg font-bold">Sei un ristoratore?</h3>
-        <p class="mt-1 text-sm text-ink-700">Metti in evidenza il tuo locale. Scopri le inserzioni.</p>
-      </a>
+  <!-- SFOGLIA PER FILM -->
+  <section class="border-y border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="font-display text-3xl font-bold">Sfoglia per film</h2>
+      <p class="mt-1 text-ink-600 dark:text-ink-400">Dove mangiano i tuoi personaggi preferiti?</p>
+      <Reveal class="mt-6 flex flex-wrap gap-3">
+        {filmOrdinati.map((f) => <FilmChip slug={f.id} titolo={f.data.titolo} anno={f.data.anno} count={conteggi.get(f.id) ?? 0} />)}
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- SFOGLIA PER CITTÀ -->
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <h2 class="font-display text-3xl font-bold">Sfoglia per città</h2>
+    <p class="mt-1 text-ink-600 dark:text-ink-400">Roma, Milano, Napoli, Crema, Venezia e altre.</p>
+    <div class="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+      {citta.map((c, i) => <Reveal delay={i * 60}><CityCard nome={c.nome} slug={c.slug} immagine={c.img!} count={c.count} /></Reveal>)}
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA -->
+  <section class="border-y border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="font-display text-3xl font-bold">Come funziona</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <Reveal delay={0}><StepCard numero={1} icona="🎬" titolo="Scopri il film" testo="Cerca il film o la serie che ami e trova le location gastronomiche reali." /></Reveal>
+        <Reveal delay={80}><StepCard numero={2} icona="📍" titolo="Trova il locale" testo="Ristoranti, bar e caffè con indirizzo, mappa e descrizione della scena." /></Reveal>
+        <Reveal delay={160}><StepCard numero={3} icona="🍝" titolo="Prenota e vai" testo="Vai sul posto e mangia dove è nato il cinema. Buon appetito!" /></Reveal>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTEPRIMA MAPPA -->
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <div class="mb-6 flex items-end justify-between gap-4">
+      <div>
+        <h2 class="font-display text-3xl font-bold">Esplora sulla mappa</h2>
+        <p class="mt-1 text-ink-600 dark:text-ink-400">Tutti i locali del cinema in un colpo d'occhio.</p>
+      </div>
+      <a href="/mappa" class="shrink-0 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">Apri la mappa →</a>
+    </div>
+    <Map markers={markers} height="440px" zoom={6} />
+  </section>
+
+  <!-- DAL BLOG -->
+  {
+    blog.length > 0 && (
+      <section class="border-t border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
+        <div class="mx-auto max-w-6xl px-4 py-14">
+          <div class="mb-6 flex items-end justify-between gap-4">
+            <h2 class="font-display text-3xl font-bold">Dal blog</h2>
+            <a href="/blog" class="shrink-0 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">Tutti gli articoli →</a>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2">
+            {blog.map((a) => (
+              <article class="overflow-hidden rounded-3xl border border-ink-500/10 bg-white dark:border-noir-700 dark:bg-noir-950">
+                {a.data.immagine && (
+                  <a href={`/blog/${a.id}`}>
+                    <Image src={a.data.immagine} alt={a.data.immagineAlt || a.data.titolo} width={640} height={360} loading="lazy" class="aspect-video w-full object-cover" />
+                  </a>
+                )}
+                <div class="p-5">
+                  <p class="text-xs text-ink-500 dark:text-ink-400">{formatData(a.data.dataPubblicazione)}</p>
+                  <h3 class="mt-1 font-display text-lg font-bold"><a href={`/blog/${a.id}`} class="hover:text-gold-600 dark:hover:text-gold-400">{a.data.titolo}</a></h3>
+                  <p class="mt-2 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{a.data.descrizione}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <!-- CTA RISTORATORI -->
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <div class="relative overflow-hidden rounded-[2rem] bg-noir-900 px-6 py-14 text-center">
+      <div class="absolute inset-0 bg-gradient-to-br from-gold-600/25 to-transparent" aria-hidden="true"></div>
+      <div class="relative">
+        <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Il tuo locale è stato in un film?</h2>
+        <p class="mx-auto mt-3 max-w-xl text-cream-200">Inseriscilo su {SITE.name} e raggiungi migliaia di appassionati di cinema e buona cucina.</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-3">
+          <a href="/aggiungi-locale" class="rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-noir-950 hover:bg-gold-400">Aggiungi il tuo locale</a>
+          <a href="/inserzioni" class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">Scopri le inserzioni</a>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

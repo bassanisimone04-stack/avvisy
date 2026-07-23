@@ -2,38 +2,32 @@
 /** Elenco completo dei locali con ricerca e filtri lato client. */
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import RestaurantCard from "../../components/RestaurantCard.astro";
+import LocaleCard from "../../components/LocaleCard.astro";
 import FilterBar from "../../components/FilterBar.astro";
-import {
-  ordinaLocali,
-  cittaUniche,
-  tipiUnici,
-  filmUnici,
-  slugify,
-} from "../../lib/utils";
+import { ordinaLocali, cittaUniche, tipiUnici, filmIdsDiLocale } from "../../lib/utils";
 
 const locali = ordinaLocali(await getCollection("restaurants"));
+const films = await getCollection("films");
 const citta = cittaUniche(locali);
 const tipi = tipiUnici(locali);
-const film = filmUnici(locali).map((f) => ({ titolo: f.titolo, slug: f.slug }));
+// Solo i film effettivamente collegati ad almeno un locale, per il filtro.
+const filmUsati = new Set(locali.flatMap(filmIdsDiLocale));
+const filmOpzioni = films
+  .filter((f) => filmUsati.has(f.id))
+  .map((f) => ({ titolo: f.data.titolo, slug: f.id }))
+  .sort((a, b) => a.titolo.localeCompare(b.titolo, "it"));
 
-/** Costruisce gli attributi data-* per il filtro lato client di ogni scheda. */
+/** Attributi data-* per il filtro lato client. */
 function datiFiltro(locale: (typeof locali)[number]) {
-  const filmSlugs = locale.data.film.map((f) => slugify(f.titolo)).join("|");
   const testo = [
-    locale.data.nome,
-    locale.data.citta,
-    locale.data.regione,
-    locale.data.descrizione,
-    ...locale.data.film.map((f) => f.titolo),
-  ]
-    .join(" ")
-    .toLowerCase();
+    locale.data.nome, locale.data.citta, locale.data.regione, locale.data.descrizione,
+  ].join(" ").toLowerCase();
   return {
     "data-citta": locale.data.citta,
     "data-tipo": locale.data.tipo,
+    "data-categoria": locale.data.categoria,
     "data-prezzo": locale.data.prezzo,
-    "data-film": filmSlugs,
+    "data-film": filmIdsDiLocale(locale).join("|"),
     "data-testo": testo,
   };
 }
@@ -41,36 +35,31 @@ function datiFiltro(locale: (typeof locali)[number]) {
 
 <BaseLayout
   title="Tutti i locali"
-  description="Cerca e filtra tutti i ristoranti, bar, caffè e trattorie italiani apparsi al cinema e in TV, per città, film, tipo e prezzo."
+  description="Cerca e filtra tutti i ristoranti, bar, caffè e trattorie italiani apparsi al cinema e in TV, per città, film, tipo, prezzo e categoria."
 >
   <section class="mx-auto max-w-6xl px-4 py-10">
-    <h1 class="text-3xl font-extrabold text-ink-900">Tutti i locali</h1>
-    <p class="mt-2 text-ink-700">
-      Filtra per città, film, tipo o prezzo per trovare il tuo prossimo set da visitare.
+    <h1 class="font-display text-4xl font-extrabold">Tutti i locali</h1>
+    <p class="mt-2 text-ink-600 dark:text-ink-400">
+      Filtra per città, film, tipo, prezzo o categoria (set reale / a tema cinema).
     </p>
 
     <div class="mt-6">
-      <FilterBar citta={citta} tipi={tipi} film={film} />
+      <FilterBar citta={citta} tipi={tipi} film={filmOpzioni} />
     </div>
 
-    <div
-      id="griglia-locali"
-      class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-    >
+    <div id="griglia-locali" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         locali.map((locale) => (
           <div class="locale-card" {...datiFiltro(locale)}>
-            <RestaurantCard locale={locale} />
+            <LocaleCard locale={locale} />
           </div>
         ))
       }
     </div>
 
-    <p id="nessun-risultato" hidden class="mt-10 text-center text-ink-700">
-      Nessun locale corrisponde ai filtri selezionati.
-      <button type="button" onclick="document.getElementById('f-reset')?.click()" class="font-semibold text-brand-600 underline">
-        Azzera i filtri
-      </button>
+    <p id="nessun-risultato" hidden class="mt-10 text-center text-ink-500 dark:text-ink-400">
+      Nessun locale corrisponde ai filtri.
+      <button type="button" onclick="document.getElementById('f-reset')?.click()" class="font-semibold text-gold-600 underline dark:text-gold-400">Azzera i filtri</button>
     </p>
   </section>
 </BaseLayout>

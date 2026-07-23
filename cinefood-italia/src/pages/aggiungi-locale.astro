@@ -1,90 +1,41 @@
 ---
 /**
  * Pagina "Aggiungi il tuo locale" con form di contatto.
- *
- * Il form è pronto per NETLIFY FORMS (attributo `data-netlify="true"`):
- * se pubblichi il sito su Netlify, le richieste arrivano automaticamente
- * nella dashboard di Netlify senza scrivere codice.
- * Se usi Vercel o un altro host, puoi sostituirlo con un servizio come
- * Formspree cambiando l'attributo `action` (vedi commento nel README).
+ * Pronto per NETLIFY FORMS (data-netlify). Su altri host cambia `action`
+ * con un servizio come Formspree (vedi README).
  */
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE } from "../config/site";
+
+const inputClass =
+  "w-full rounded-xl border border-ink-500/20 bg-white px-4 py-2.5 text-sm text-ink-900 dark:border-noir-600 dark:bg-noir-800 dark:text-cream-100";
+const labelClass = "mb-1 block text-sm font-medium text-ink-700 dark:text-cream-200";
 ---
 
-<BaseLayout
-  title="Aggiungi il tuo locale"
-  description="Segnala un ristorante, bar o caffè apparso in un film o in una serie TV, oppure richiedi l'inserimento del tuo locale."
->
+<BaseLayout title="Aggiungi il tuo locale" description="Segnala un ristorante, bar o caffè apparso in un film o serie TV, o richiedi l'inserimento del tuo locale.">
   <section class="mx-auto max-w-2xl px-4 py-12">
-    <h1 class="text-3xl font-extrabold text-ink-900">Aggiungi il tuo locale</h1>
-    <p class="mt-3 text-lg text-ink-800">
-      Hai un locale apparso in un film o in una serie TV? Conosci un posto che
-      dovremmo includere? Compila il form: ti risponderemo al più presto.
-    </p>
+    <h1 class="font-display text-4xl font-extrabold">Aggiungi il tuo locale</h1>
+    <p class="mt-3 text-lg text-ink-700 dark:text-cream-200">Hai un locale apparso in un film o in una serie TV? Conosci un posto da includere? Compila il form: ti risponderemo al più presto.</p>
 
-    <form
-      name="aggiungi-locale"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/grazie"
-      class="mt-8 space-y-4 rounded-2xl border border-ink-100 bg-white p-6 shadow-sm"
-    >
-      <!-- Campo nascosto necessario a Netlify Forms -->
+    <form name="aggiungi-locale" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/grazie"
+      class="mt-8 space-y-4 rounded-3xl border border-ink-500/10 bg-white p-6 dark:border-noir-700 dark:bg-noir-900">
       <input type="hidden" name="form-name" value="aggiungi-locale" />
-      <!-- Trappola anti-spam (deve restare vuoto) -->
-      <p class="hidden">
-        <label>Non compilare: <input name="bot-field" /></label>
-      </p>
+      <p class="hidden"><label>Non compilare: <input name="bot-field" /></label></p>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <div>
-          <label for="nome" class="mb-1 block text-sm font-medium text-ink-800">Il tuo nome *</label>
-          <input id="nome" name="nome" type="text" required
-            class="w-full rounded-xl border border-ink-100 px-4 py-2.5 text-sm" />
-        </div>
-        <div>
-          <label for="email" class="mb-1 block text-sm font-medium text-ink-800">Email *</label>
-          <input id="email" name="email" type="email" required
-            class="w-full rounded-xl border border-ink-100 px-4 py-2.5 text-sm" />
-        </div>
+        <div><label for="nome" class={labelClass}>Il tuo nome *</label><input id="nome" name="nome" type="text" required class={inputClass} /></div>
+        <div><label for="email" class={labelClass}>Email *</label><input id="email" name="email" type="email" required class={inputClass} /></div>
       </div>
-
       <div class="grid gap-4 sm:grid-cols-2">
-        <div>
-          <label for="locale" class="mb-1 block text-sm font-medium text-ink-800">Nome del locale *</label>
-          <input id="locale" name="locale" type="text" required
-            class="w-full rounded-xl border border-ink-100 px-4 py-2.5 text-sm" />
-        </div>
-        <div>
-          <label for="citta" class="mb-1 block text-sm font-medium text-ink-800">Città</label>
-          <input id="citta" name="citta" type="text"
-            class="w-full rounded-xl border border-ink-100 px-4 py-2.5 text-sm" />
-        </div>
+        <div><label for="locale" class={labelClass}>Nome del locale *</label><input id="locale" name="locale" type="text" required class={inputClass} /></div>
+        <div><label for="citta" class={labelClass}>Città</label><input id="citta" name="citta" type="text" class={inputClass} /></div>
       </div>
+      <div><label for="film" class={labelClass}>In quale film / serie appare?</label><input id="film" name="film" type="text" class={inputClass} /></div>
+      <div><label for="messaggio" class={labelClass}>Messaggio</label><textarea id="messaggio" name="messaggio" rows="4" class={inputClass}></textarea></div>
 
-      <div>
-        <label for="film" class="mb-1 block text-sm font-medium text-ink-800">In quale film / serie appare?</label>
-        <input id="film" name="film" type="text"
-          class="w-full rounded-xl border border-ink-100 px-4 py-2.5 text-sm" />
-      </div>
-
-      <div>
-        <label for="messaggio" class="mb-1 block text-sm font-medium text-ink-800">Messaggio</label>
-        <textarea id="messaggio" name="messaggio" rows="4"
-          class="w-full rounded-xl border border-ink-100 px-4 py-2.5 text-sm"></textarea>
-      </div>
-
-      <button type="submit"
-        class="w-full rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white hover:bg-brand-700 sm:w-auto">
-        Invia la segnalazione
-      </button>
+      <button type="submit" class="w-full rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-noir-950 hover:bg-gold-400 sm:w-auto">Invia la segnalazione</button>
     </form>
 
-    <p class="mt-4 text-sm text-ink-700">
-      Preferisci scrivere una email? Contattaci a
-      <a class="font-semibold text-brand-600 hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a>.
-    </p>
+    <p class="mt-4 text-sm text-ink-500 dark:text-ink-400">Preferisci scrivere una email? Contattaci a <a class="font-semibold text-gold-600 hover:underline dark:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
   </section>
 </BaseLayout>

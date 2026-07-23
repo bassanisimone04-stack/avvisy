@@ -1,0 +1,48 @@
+---
+/**
+ * Barra di ricerca che rimanda a /locali con il testo cercato (?cerca=...).
+ * `variant`: "hero" (grande, per l'hero) o "compact".
+ */
+interface Props {
+  variant?: "hero" | "compact";
+  placeholder?: string;
+}
+const {
+  variant = "hero",
+  placeholder = "Cerca un film, una città o un locale…",
+} = Astro.props;
+const big = variant === "hero";
+---
+
+<form
+  action="/locali"
+  method="get"
+  role="search"
+  class:list={[
+    "flex w-full items-center gap-2 rounded-full bg-white/95 p-1.5 shadow-2xl ring-1 ring-black/5 backdrop-blur dark:bg-noir-900/90",
+    big ? "max-w-xl" : "max-w-md",
+  ]}
+>
+  <span class="pl-3 text-ink-400" aria-hidden="true">🔍</span>
+  <label for="q" class="sr-only">Cerca</label>
+  <input
+    id="q"
+    type="search"
+    name="cerca"
+    placeholder={placeholder}
+    autocomplete="off"
+    class:list={[
+      "min-w-0 flex-1 border-0 bg-transparent text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-0 dark:text-cream-100",
+      big ? "py-2.5 text-base" : "py-2 text-sm",
+    ]}
+  />
+  <button
+    type="submit"
+    class:list={[
+      "shrink-0 rounded-full bg-gold-500 font-semibold text-noir-950 transition-colors hover:bg-gold-400",
+      big ? "px-6 py-2.5" : "px-4 py-2 text-sm",
+    ]}
+  >
+    Cerca
+  </button>
+</form>

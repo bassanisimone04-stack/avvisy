@@ -51,9 +51,9 @@ export const SITE = {
  */
 export const NAV_LINKS = [
   { label: "Locali", href: "/locali" },
+  { label: "Film", href: "/film" },
   { label: "Mappa", href: "/mappa" },
   { label: "Blog", href: "/blog" },
-  { label: "Chi siamo", href: "/chi-siamo" },
   { label: "Inserzioni", href: "/inserzioni" },
 ] as const;
 

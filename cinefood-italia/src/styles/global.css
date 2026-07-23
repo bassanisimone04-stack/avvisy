@@ -1,30 +1,50 @@
-/* Tailwind CSS v4 — importazione unica */
+/* Tailwind CSS v4 */
 @import "tailwindcss";
 
 /*
- * Tema del sito (colori del brand).
- * Puoi cambiare la palette modificando questi valori.
+ * Dark mode con strategia "class": le utility `dark:` si attivano quando
+ * l'elemento <html> ha la classe .dark. Il sito parte in DARK di default
+ * (vedi lo script anti-FOUC in BaseLayout.astro) e il toggle la rimuove.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * ============================================================
+ *  TEMA — colori del brand (facilmente modificabili)
+ * ============================================================
+ * Cambia questi valori per ridipingere tutto il sito.
  */
 @theme {
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
+  /* Scuri (nero / antracite) */
+  --color-noir-950: #0a0a0d;
+  --color-noir-900: #121217;
+  --color-noir-800: #1c1c24;
+  --color-noir-700: #26262f;
+  --color-noir-600: #33333f;
 
-  --color-ink-50: #f8fafc;
-  --color-ink-100: #f1f5f9;
-  --color-ink-700: #334155;
-  --color-ink-800: #1e293b;
-  --color-ink-900: #0f172a;
+  /* Chiari (crema caldo) */
+  --color-cream-50: #faf7f0;
+  --color-cream-100: #f3eee3;
+  --color-cream-200: #e8e0d0;
 
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  /* Accento oro / ambra (le luci del cinema) */
+  --color-gold-300: #f8d888;
+  --color-gold-400: #f5c451;
+  --color-gold-500: #e0a516;
+  --color-gold-600: #c4880f;
+  --color-gold-700: #9a6a0c;
+
+  /* Neutri per il testo */
+  --color-ink-400: #9ca3af;
+  --color-ink-500: #6b7280;
+  --color-ink-600: #4b5563;
+  --color-ink-700: #374151;
+  --color-ink-800: #1f2937;
+  --color-ink-900: #111827;
+
+  /* Tipografia */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 /* Comportamenti di base */
@@ -33,25 +53,58 @@ html {
 }
 
 body {
-  @apply bg-ink-50 text-ink-900 font-sans antialiased;
+  @apply bg-cream-50 text-ink-900 antialiased;
+  font-family: var(--font-sans);
 }
 
-/* Utility per il "line clamp" (troncamento testo su N righe) */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.dark body {
+  @apply bg-noir-950 text-cream-100;
 }
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+
+/* Titoli display */
+.font-display {
+  font-family: var(--font-display);
 }
 
 /* Focus visibile per accessibilità */
 :focus-visible {
-  outline: 2px solid var(--color-brand-600);
+  outline: 2px solid var(--color-gold-500);
   outline-offset: 2px;
+}
+
+/*
+ * Micro-animazione allo scroll: gli elementi con classe .reveal partono
+ * trasparenti e leggermente spostati, poi compaiono (gestito da Reveal.astro).
+ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Rispetta chi preferisce meno animazioni */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Utility: gradiente scuro per leggibilità del testo sulle foto */
+.overlay-bottom {
+  background-image: linear-gradient(
+    to top,
+    rgba(10, 10, 13, 0.85) 0%,
+    rgba(10, 10, 13, 0.35) 45%,
+    rgba(10, 10, 13, 0) 75%
+  );
 }

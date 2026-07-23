@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 import { glob } from "astro/loaders";
 
 /**
@@ -6,14 +6,14 @@ import { glob } from "astro/loaders";
  *  DEFINIZIONE DEI CONTENUTI (Content Collections)
  * ============================================================
  *
- * Qui definiamo la "forma" dei dati di ogni ristorante e di ogni
- * articolo del blog. Lo schema (fatto con Zod) controlla che ogni
- * file abbia i campi giusti: se sbagli o dimentichi un campo, il
- * sito te lo segnala subito con un errore chiaro durante la build.
+ * Tre "raccolte" di file, ognuna con i suoi campi controllati da Zod:
+ *   - films        → un file per ogni film/serie (con FAQ per la SEO)
+ *   - restaurants  → un file per ogni locale (collegato ai film)
+ *   - blog         → un file per ogni articolo
  *
- * 👉 Per aggiungere un locale NON serve toccare questo file:
- *    basta creare un nuovo file in `src/content/restaurants/`.
- *    (Vedi il README e il file `_template.md`.)
+ * Aggiungere un contenuto = creare un nuovo file. Se sbagli un campo,
+ * il sito te lo segnala con un errore chiaro durante la build.
+ * (Vedi il README e i file `_template.md`.)
  */
 
 /** Tipi di locale ammessi. */
@@ -31,76 +31,93 @@ export const FASCE_PREZZO = ["€", "€€", "€€€", "€€€€"] as co
 /** Stati di apertura ammessi. */
 export const STATI = ["aperto", "chiuso", "temporaneamente-chiuso"] as const;
 
+/** Categoria: location reale di un film oppure locale a tema cinema. */
+export const CATEGORIE = ["set-reale", "a-tema-cinema"] as const;
+
 /**
- * Schema di un singolo film/serie in cui appare il locale.
+ * COLLECTION "films" — le opere (film o serie TV).
+ * Ogni file .md dentro src/content/films/ è una scheda film.
  */
-const filmSchema = z.object({
-  /** Titolo del film o della serie TV. */
-  titolo: z.string(),
-  /** Anno di uscita. */
-  anno: z.number().int().min(1895).max(2100),
-  /** Regista (o creatore, per le serie). */
-  regista: z.string(),
-  /** Descrizione della scena girata/ambientata nel locale. */
-  descrizioneScena: z.string(),
-  /** È una serie TV? (default: false = film) */
-  serieTv: z.boolean().default(false),
+const films = defineCollection({
+  loader: glob({ pattern: ["**/*.{md,mdx}", "!**/_*"], base: "./src/content/films" }),
+  schema: ({ image }) =>
+    z.object({
+      /** Titolo del film o della serie. */
+      titolo: z.string(),
+      /** Anno di uscita. */
+      anno: z.number().int().min(1895).max(2100),
+      /** Regista (o creatore, per le serie). */
+      regista: z.string(),
+      /** È una serie TV? (default: false = film) */
+      serieTv: z.boolean().default(false),
+      /** Breve sinossi dell'opera. */
+      sinossi: z.string(),
+      /** Locandina/immagine del film. */
+      locandina: image(),
+      /** Testo alternativo della locandina. */
+      locandinaAlt: z.string().default(""),
+      /** Città principali legate al film (per l'internal linking). */
+      citta: z.array(z.string()).default([]),
+      /** Domande frequenti (generano i dati strutturati FAQPage). */
+      faq: z
+        .array(z.object({ domanda: z.string(), risposta: z.string() }))
+        .default([]),
+    }),
 });
 
 /**
  * COLLECTION "restaurants" — le schede dei locali.
- * Ogni file .md/.mdx dentro src/content/restaurants/ è una scheda.
  */
 const restaurants = defineCollection({
   loader: glob({
-    // Esclude i file che iniziano con "_" (es. _template.md), così il
-    // modello non viene mai pubblicato come se fosse un locale reale.
+    // Esclude i file che iniziano con "_" (es. _template.md).
     pattern: ["**/*.{md,mdx}", "!**/_*"],
     base: "./src/content/restaurants",
   }),
   schema: ({ image }) =>
     z.object({
-      /** Nome del locale. */
       nome: z.string(),
-      /** Città in cui si trova. */
       citta: z.string(),
-      /** Regione italiana. */
       regione: z.string(),
-      /** Indirizzo completo (via, numero, CAP). */
       indirizzo: z.string(),
-      /** Coordinate geografiche per la mappa. */
       coordinate: z.object({
         lat: z.number().min(-90).max(90),
         lng: z.number().min(-180).max(180),
       }),
-      /** Tipo di locale. */
       tipo: z.enum(TIPI_LOCALE),
-      /** Fascia di prezzo. */
+      /** "set-reale" (girato davvero qui) o "a-tema-cinema" (locale a tema). */
+      categoria: z.enum(CATEGORIE).default("set-reale"),
       prezzo: z.enum(FASCE_PREZZO),
-      /** Stato di apertura. */
       stato: z.enum(STATI).default("aperto"),
-      /** Elenco dei film/serie in cui appare (almeno uno). */
-      film: z.array(filmSchema).min(1),
-      /** Descrizione breve del locale. */
+      /**
+       * Film/serie in cui appare il locale. Ogni voce collega un film della
+       * collection "films" (per slug/nome-file) e descrive la scena.
+       */
+      film: z
+        .array(
+          z.object({
+            /** Slug del film (nome del file in src/content/films/, senza .md). */
+            film: reference("films"),
+            /** Descrizione della scena girata/ambientata nel locale. */
+            descrizioneScena: z.string(),
+          })
+        )
+        .min(1),
       descrizione: z.string(),
-      /** Sito web ufficiale (opzionale). */
       sitoWeb: z.string().url().optional(),
-      /** Link per prenotare (opzionale). */
       prenotazione: z.string().url().optional(),
-      /** In evidenza / sponsorizzato (per la monetizzazione futura). */
       inEvidenza: z.boolean().default(false),
-      /** Immagine principale (messa in src/content/... o src/assets/). */
+      /** Immagine principale. */
       immagine: image(),
-      /** Testo alternativo dell'immagine (accessibilità/SEO). */
       immagineAlt: z.string().default(""),
-      /** Data dell'ultimo aggiornamento della scheda. */
+      /** Galleria di foto aggiuntive (opzionale). */
+      galleria: z.array(image()).default([]),
       ultimoAggiornamento: z.coerce.date(),
     }),
 });
 
 /**
  * COLLECTION "blog" — gli articoli per la SEO.
- * Ogni file .md/.mdx dentro src/content/blog/ è un articolo.
  */
 const blog = defineCollection({
   loader: glob({ pattern: ["**/*.{md,mdx}", "!**/_*"], base: "./src/content/blog" }),
@@ -113,9 +130,8 @@ const blog = defineCollection({
       immagine: image().optional(),
       immagineAlt: z.string().default(""),
       tags: z.array(z.string()).default([]),
-      /** Se true l'articolo non viene pubblicato. */
       bozza: z.boolean().default(false),
     }),
 });
 
-export const collections = { restaurants, blog };
+export const collections = { films, restaurants, blog };

@@ -1,0 +1,43 @@
+---
+/**
+ * Avvolge il contenuto in un elemento che compare con una micro-animazione
+ * quando entra nello schermo (scroll). Rispetta prefers-reduced-motion.
+ *
+ * Uso: <Reveal delay={100}>...contenuto...</Reveal>
+ */
+interface Props {
+  /** Ritardo in millisecondi (per effetto "a cascata" tra più elementi). */
+  delay?: number;
+  /** Classi extra da applicare al contenitore. */
+  class?: string;
+}
+const { delay = 0, class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={["reveal", className]}
+  style={delay ? `transition-delay:${delay}ms` : undefined}
+>
+  <slot />
+</div>
+
+<script>
+  // Un solo observer condiviso per tutti gli elementi .reveal della pagina.
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+  const start = () =>
+    document
+      .querySelectorAll(".reveal:not(.is-visible)")
+      .forEach((el) => io.observe(el));
+  if (document.readyState !== "loading") start();
+  else document.addEventListener("DOMContentLoaded", start);
+</script>

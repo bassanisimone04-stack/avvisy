@@ -7,6 +7,7 @@ coordinate:
   lat: 37.9636
   lng: 15.3364
 tipo: "bar"
+categoria: "set-reale"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: true
@@ -15,10 +16,7 @@ immagineAlt: "Terrazza di un bar storico in un borgo siciliano"
 sitoWeb: "https://www.barvitelli.com"
 ultimoAggiornamento: 2026-07-22
 film:
-  - titolo: "Il Padrino"
-    anno: 1972
-    regista: "Francis Ford Coppola"
-    serieTv: false
+  - film: "il-padrino"
     descrizioneScena: "Nel borgo di Savoca, Michael Corleone chiede al proprietario del bar la mano della figlia Apollonia."
 descrizione: "Storico bar di paese affacciato sulla piazza di Savoca, celebre per la sua granita e per essere una delle location siciliane più visitate dai cinefili."
 ---

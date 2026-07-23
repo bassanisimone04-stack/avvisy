@@ -1,37 +1,36 @@
 ---
-/**
- * Intestazione del sito con logo e menu di navigazione.
- * Il menu si adatta al mobile (menu "hamburger" con solo CSS/JS minimale).
- */
+/** Intestazione del sito con logo, navigazione, toggle tema e menu mobile. */
 import { SITE, NAV_LINKS } from "../config/site";
+import ThemeToggle from "./ThemeToggle.astro";
 
 const path = Astro.url.pathname;
-/** Una voce è "attiva" se l'URL corrente inizia con il suo href. */
 const isActive = (href: string) =>
   href === "/" ? path === "/" : path.startsWith(href);
 ---
 
-<header class="sticky top-0 z-40 border-b border-ink-100 bg-white/90 backdrop-blur">
+<header
+  class="sticky top-0 z-40 border-b border-ink-500/10 bg-cream-50/85 backdrop-blur-md dark:border-noir-800 dark:bg-noir-950/80"
+>
   <nav
     class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3"
     aria-label="Navigazione principale"
   >
-    <!-- Logo / nome del sito -->
-    <a href="/" class="flex items-center gap-2 text-lg font-extrabold text-ink-900">
+    <a href="/" class="flex items-center gap-2 font-display text-xl font-extrabold">
       <span aria-hidden="true" class="text-2xl">🎬</span>
       <span>{SITE.name}</span>
     </a>
 
-    <!-- Menu desktop -->
-    <ul class="hidden items-center gap-6 md:flex">
+    <ul class="hidden items-center gap-7 md:flex">
       {
         NAV_LINKS.map((link) => (
           <li>
             <a
               href={link.href}
               class:list={[
-                "text-sm font-medium transition-colors hover:text-brand-600",
-                isActive(link.href) ? "text-brand-600" : "text-ink-700",
+                "text-sm font-medium transition-colors hover:text-gold-600 dark:hover:text-gold-400",
+                isActive(link.href)
+                  ? "text-gold-600 dark:text-gold-400"
+                  : "text-ink-700 dark:text-cream-200",
               ]}
             >
               {link.label}
@@ -39,35 +38,34 @@ const isActive = (href: string) =>
           </li>
         ))
       }
-      <li>
-        <a
-          href="/aggiungi-locale"
-          class="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
-        >
-          Aggiungi il tuo locale
-        </a>
-      </li>
     </ul>
 
-    <!-- Bottone menu mobile -->
-    <button
-      id="menu-toggle"
-      type="button"
-      class="inline-flex items-center justify-center rounded-md p-2 text-ink-700 md:hidden"
-      aria-label="Apri il menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+    <div class="flex items-center gap-2">
+      <ThemeToggle />
+      <a
+        href="/aggiungi-locale"
+        class="hidden rounded-full bg-gold-500 px-4 py-2 text-sm font-semibold text-noir-950 transition-colors hover:bg-gold-400 sm:inline-block"
+      >
+        Aggiungi locale
+      </a>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="inline-flex items-center justify-center rounded-md p-2 text-ink-700 dark:text-cream-200 md:hidden"
+        aria-label="Apri il menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </nav>
 
-  <!-- Menu mobile (nascosto di default) -->
-  <ul id="mobile-menu" class="hidden border-t border-ink-100 bg-white px-4 py-2 md:hidden">
+  <ul id="mobile-menu" class="hidden border-t border-ink-500/10 px-4 py-2 dark:border-noir-800 md:hidden">
     {
       NAV_LINKS.map((link) => (
         <li>
@@ -75,7 +73,9 @@ const isActive = (href: string) =>
             href={link.href}
             class:list={[
               "block rounded-md px-2 py-2 text-sm font-medium",
-              isActive(link.href) ? "text-brand-600" : "text-ink-700",
+              isActive(link.href)
+                ? "text-gold-600 dark:text-gold-400"
+                : "text-ink-700 dark:text-cream-200",
             ]}
           >
             {link.label}
@@ -84,10 +84,7 @@ const isActive = (href: string) =>
       ))
     }
     <li>
-      <a
-        href="/aggiungi-locale"
-        class="mt-1 block rounded-md bg-brand-600 px-2 py-2 text-center text-sm font-semibold text-white"
-      >
+      <a href="/aggiungi-locale" class="mt-1 block rounded-md bg-gold-500 px-2 py-2 text-center text-sm font-semibold text-noir-950">
         Aggiungi il tuo locale
       </a>
     </li>
@@ -95,11 +92,10 @@ const isActive = (href: string) =>
 </header>
 
 <script>
-  // Apre/chiude il menu mobile.
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("mobile-menu");
   toggle?.addEventListener("click", () => {
-    const open = menu?.classList.toggle("hidden");
-    toggle.setAttribute("aria-expanded", String(open === false));
+    const hidden = menu?.classList.toggle("hidden");
+    toggle.setAttribute("aria-expanded", String(hidden === false));
   });
 </script>

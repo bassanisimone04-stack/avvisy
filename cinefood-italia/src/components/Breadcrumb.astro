@@ -1,0 +1,22 @@
+---
+/** Breadcrumb visivo (i dati strutturati BreadcrumbList si passano via jsonLd). */
+interface Props {
+  items: { name: string; href?: string }[];
+}
+const { items } = Astro.props;
+---
+
+<nav class="text-sm text-ink-500 dark:text-ink-400" aria-label="Percorso">
+  {
+    items.map((it, i) => (
+      <>
+        {i > 0 && <span aria-hidden="true" class="mx-1">/</span>}
+        {it.href ? (
+          <a href={it.href} class="hover:text-gold-600 dark:hover:text-gold-400">{it.name}</a>
+        ) : (
+          <span class="text-ink-800 dark:text-cream-200">{it.name}</span>
+        )}
+      </>
+    ))
+  }
+</nav>

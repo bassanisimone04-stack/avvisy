@@ -7,6 +7,7 @@ coordinate:
   lat: 45.4336
   lng: 12.3383
 tipo: "caffè"
+categoria: "set-reale"
 prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: true
@@ -15,10 +16,7 @@ immagineAlt: "Tavolini di un caffè storico affacciato su una grande piazza"
 sitoWeb: "https://www.caffeflorian.com"
 ultimoAggiornamento: 2026-07-22
 film:
-  - titolo: "Il talento di Mr. Ripley"
-    anno: 1999
-    regista: "Anthony Minghella"
-    serieTv: false
+  - film: "il-talento-di-mr-ripley"
     descrizioneScena: "Ai tavoli del Florian, Tom Ripley incontra Marge e il padre di Dickie: una delle scene veneziane più note del film."
 descrizione: "Aperto nel 1720 sotto le Procuratie Nuove, è considerato il caffè più antico d'Italia ancora in attività. Sale affrescate, orchestrina dal vivo e vista sulla Basilica di San Marco."
 ---

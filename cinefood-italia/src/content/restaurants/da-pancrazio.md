@@ -7,6 +7,7 @@ coordinate:
   lat: 41.8955
   lng: 12.4722
 tipo: "ristorante"
+categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
@@ -15,10 +16,7 @@ immagineAlt: "Sala di un ristorante storico romano con soffitti a volta"
 sitoWeb: "https://www.dapancrazio.it"
 ultimoAggiornamento: 2026-07-22
 film:
-  - titolo: "Mangia prega ama"
-    anno: 2010
-    regista: "Ryan Murphy"
-    serieTv: false
+  - film: "mangia-prega-ama"
     descrizioneScena: "Tra le trattorie romane che fanno da sfondo alla parte italiana del film, con la protagonista alla scoperta della cucina locale."
 descrizione: "Storico ristorante ricavato sopra i resti dell'antico Teatro di Pompeo: le sale nei sotterranei, tra archi e colonne romane, sono una vera esperienza."
 ---

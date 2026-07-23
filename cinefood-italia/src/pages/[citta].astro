@@ -1,0 +1,95 @@
+---
+/** Pagina città a livello root (es. /roma), generata dai dati. */
+import { getCollection, getEntries } from "astro:content";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LocaleCard from "../components/LocaleCard.astro";
+import FilmChip from "../components/FilmChip.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import Reveal from "../components/Reveal.astro";
+import { SITE } from "../config/site";
+import { ordinaLocali, cittaUniche, localiPerCitta, slugify, filmIdsDiLocale } from "../lib/utils";
+import { breadcrumbJsonLd } from "../lib/schema-org";
+
+export async function getStaticPaths() {
+  const locali = await getCollection("restaurants");
+  return cittaUniche(locali).map((citta) => ({
+    params: { citta: slugify(citta) },
+    props: { citta, locali: ordinaLocali(localiPerCitta(locali, citta)) },
+  }));
+}
+
+const { citta, locali } = Astro.props;
+const regione = locali[0]?.data.regione ?? "";
+
+// Immagine della città (se disponibile in src/assets/cities/).
+const cityImages = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/cities/*.jpg",
+  { eager: true }
+);
+const imgKey = Object.keys(cityImages).find((k) => k.endsWith(`/${slugify(citta)}.jpg`));
+const cityImg = imgKey ? cityImages[imgKey].default : undefined;
+
+// Film collegati ai locali di questa città.
+const filmIds = [...new Set(locali.flatMap(filmIdsDiLocale))];
+const filmEntries = await getEntries(
+  filmIds.map((id) => ({ collection: "films" as const, id }))
+);
+
+const title = `Ristoranti di ${citta} visti al cinema`;
+const description = `Ristoranti, trattorie, bar e caffè di ${citta} apparsi in film e serie TV. ${locali.length} locali del cinema da scoprire${regione ? ` in ${regione}` : ""}.`;
+
+const crumbs = [
+  { name: "Home", href: "/" },
+  { name: "Locali", href: "/locali" },
+  { name: citta },
+];
+const jsonLd = breadcrumbJsonLd(
+  crumbs.map((c) => ({ name: c.name, url: new URL(c.href ?? "/", SITE.url).href }))
+);
+---
+
+<BaseLayout title={title} description={description} image={cityImg?.src} jsonLd={jsonLd}>
+  <!-- Header città -->
+  <section class="relative isolate overflow-hidden">
+    {
+      cityImg && (
+        <Image src={cityImg} alt={`${citta} e il cinema`} width={1600} height={600}
+          loading="eager" class="absolute inset-0 -z-10 h-full w-full object-cover" />
+      )
+    }
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-noir-950 via-noir-950/70 to-noir-950/40"></div>
+    <div class="mx-auto max-w-6xl px-4 py-20">
+      <div class="[&_*]:text-cream-200"><Breadcrumb items={crumbs} /></div>
+      <h1 class="mt-3 font-display text-5xl font-extrabold text-white sm:text-6xl">{citta}</h1>
+      <p class="mt-2 text-lg text-cream-200">
+        {locali.length} {locali.length === 1 ? "locale" : "locali"} del cinema{regione ? ` · ${regione}` : ""}
+      </p>
+    </div>
+  </section>
+
+  <!-- Film della città -->
+  {
+    filmEntries.length > 0 && (
+      <section class="mx-auto max-w-6xl px-4 pt-10">
+        <h2 class="font-display text-2xl font-bold">Film ambientati a {citta}</h2>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {filmEntries.map((f) => (
+            <FilmChip slug={f.id} titolo={f.data.titolo} anno={f.data.anno} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Locali -->
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <h2 class="font-display text-2xl font-bold">Locali a {citta}</h2>
+    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {locali.map((locale, i) => (
+        <Reveal delay={i * 60}><LocaleCard locale={locale} /></Reveal>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+/** Card di uno step della sezione "Come funziona". */
+interface Props {
+  numero: number;
+  icona: string;
+  titolo: string;
+  testo: string;
+}
+const { numero, icona, titolo, testo } = Astro.props;
+---
+
+<div class="relative rounded-3xl border border-ink-500/10 bg-white p-6 dark:border-noir-700 dark:bg-noir-900">
+  <div class="mb-4 flex items-center gap-3">
+    <span class="flex h-11 w-11 items-center justify-center rounded-full bg-gold-500/15 text-xl" aria-hidden="true">
+      {icona}
+    </span>
+    <span class="font-display text-4xl font-bold text-gold-500/30">{numero}</span>
+  </div>
+  <h3 class="font-display text-xl font-bold">{titolo}</h3>
+  <p class="mt-2 text-sm text-ink-600 dark:text-ink-400">{testo}</p>
+</div>

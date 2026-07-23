@@ -1,57 +1,61 @@
 ---
-/** Piè di pagina del sito con link utili e social. */
+/** Piè di pagina con newsletter, link utili e social. */
 import { SITE, NAV_LINKS } from "../config/site";
+import Newsletter from "./Newsletter.astro";
 
 const anno = new Date().getFullYear();
 const social = Object.entries(SITE.social).filter(([, url]) => url);
 ---
 
-<footer class="mt-16 border-t border-ink-100 bg-white">
-  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 md:grid-cols-4">
+<footer class="mt-20 border-t border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
+  <!-- Newsletter -->
+  <div class="border-b border-ink-500/10 dark:border-noir-800">
+    <div class="mx-auto flex max-w-6xl flex-col items-start gap-4 px-4 py-10 md:flex-row md:items-center md:justify-between">
+      <div>
+        <h2 class="font-display text-2xl font-bold">Resta aggiornato</h2>
+        <p class="mt-1 text-sm text-ink-600 dark:text-ink-400">
+          Nuovi locali, itinerari e curiosità dal mondo del cinema a tavola.
+        </p>
+      </div>
+      <Newsletter />
+    </div>
+  </div>
+
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
     <div class="sm:col-span-2 md:col-span-1">
-      <p class="flex items-center gap-2 text-lg font-extrabold">
+      <p class="flex items-center gap-2 font-display text-xl font-extrabold">
         <span aria-hidden="true">🎬</span>{SITE.name}
       </p>
-      <p class="mt-2 text-sm text-ink-700">{SITE.tagline}.</p>
+      <p class="mt-2 text-sm text-ink-600 dark:text-ink-400">{SITE.tagline}.</p>
     </div>
 
     <div>
-      <h2 class="text-sm font-semibold text-ink-900">Naviga</h2>
-      <ul class="mt-3 space-y-2 text-sm text-ink-700">
-        {
-          NAV_LINKS.map((link) => (
-            <li>
-              <a class="hover:text-brand-600" href={link.href}>
-                {link.label}
-              </a>
-            </li>
-          ))
-        }
+      <h3 class="text-sm font-semibold">Naviga</h3>
+      <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-400">
+        {NAV_LINKS.map((link) => (
+          <li><a class="hover:text-gold-600 dark:hover:text-gold-400" href={link.href}>{link.label}</a></li>
+        ))}
       </ul>
     </div>
 
     <div>
-      <h2 class="text-sm font-semibold text-ink-900">Informazioni</h2>
-      <ul class="mt-3 space-y-2 text-sm text-ink-700">
-        <li><a class="hover:text-brand-600" href="/chi-siamo">Chi siamo</a></li>
-        <li><a class="hover:text-brand-600" href="/aggiungi-locale">Aggiungi il tuo locale</a></li>
-        <li><a class="hover:text-brand-600" href="/inserzioni">Inserzioni e pubblicità</a></li>
+      <h3 class="text-sm font-semibold">Informazioni</h3>
+      <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-400">
+        <li><a class="hover:text-gold-600 dark:hover:text-gold-400" href="/chi-siamo">Chi siamo</a></li>
+        <li><a class="hover:text-gold-600 dark:hover:text-gold-400" href="/aggiungi-locale">Aggiungi il tuo locale</a></li>
+        <li><a class="hover:text-gold-600 dark:hover:text-gold-400" href="/inserzioni">Inserzioni e pubblicità</a></li>
       </ul>
     </div>
 
     <div>
-      <h2 class="text-sm font-semibold text-ink-900">Contatti</h2>
-      <ul class="mt-3 space-y-2 text-sm text-ink-700">
-        <li>
-          <a class="hover:text-brand-600" href={`mailto:${SITE.email}`}>{SITE.email}</a>
-        </li>
+      <h3 class="text-sm font-semibold">Contatti</h3>
+      <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-400">
+        <li><a class="hover:text-gold-600 dark:hover:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
         {
           social.length > 0 && (
             <li class="flex gap-3 pt-1">
               {social.map(([nome, url]) => (
-                <a class="capitalize hover:text-brand-600" href={url} rel="noopener" target="_blank">
-                  {nome}
-                </a>
+                <a class="capitalize hover:text-gold-600 dark:hover:text-gold-400" href={url} rel="noopener" target="_blank">{nome}</a>
               ))}
             </li>
           )
@@ -60,8 +64,8 @@ const social = Object.entries(SITE.social).filter(([, url]) => url);
     </div>
   </div>
 
-  <div class="border-t border-ink-100 px-4 py-4">
-    <p class="mx-auto max-w-6xl text-center text-xs text-ink-700">
+  <div class="border-t border-ink-500/10 px-4 py-4 dark:border-noir-800">
+    <p class="mx-auto max-w-6xl text-center text-xs text-ink-500 dark:text-ink-400">
       © {anno} {SITE.name}. I dati dei locali sono a scopo dimostrativo e vanno
       verificati. I titoli di film e serie appartengono ai rispettivi aventi diritto.
     </p>

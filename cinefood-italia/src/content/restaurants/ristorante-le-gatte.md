@@ -7,6 +7,7 @@ coordinate:
   lat: 40.2699
   lng: 14.9440
 tipo: "ristorante"
+categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: true
@@ -14,10 +15,7 @@ immagine: "../../assets/placeholder/ristorante-collina.jpg"
 immagineAlt: "Ristorante affacciato su un piccolo porto del Cilento"
 ultimoAggiornamento: 2026-07-22
 film:
-  - titolo: "Benvenuti al Sud"
-    anno: 2010
-    regista: "Luca Miniero"
-    serieTv: false
+  - film: "benvenuti-al-sud"
     descrizioneScena: "Al ristorante è ambientata la cena tra colleghi dell'ufficio postale, uno dei momenti più simpatici del film."
 descrizione: "Ristorante di pesce sul porto di Castellabate, nel Cilento. Piatti di mare freschi e vista sull'acqua, tra le location della commedia campione d'incassi."
 ---

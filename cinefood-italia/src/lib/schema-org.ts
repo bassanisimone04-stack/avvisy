@@ -1,22 +1,22 @@
-import type { Restaurant } from "./utils";
+import type { Restaurant, Film } from "./utils";
 import { SITE } from "../config/site";
 
 /**
- * Costruisce i "dati strutturati" Schema.org di tipo Restaurant.
- * Servono a Google per capire che la pagina descrive un ristorante,
- * con indirizzo, posizione geografica e i film in cui appare.
+ * Dati strutturati Schema.org di tipo Restaurant, con indirizzo, geo e
+ * collegamento alle opere (film/serie) in cui il locale appare.
  *
- * @param locale  La scheda del ristorante.
- * @param canonicalUrl  L'URL completo della pagina di dettaglio.
- * @param immagineUrl  L'URL completo dell'immagine principale.
+ * @param locale       La scheda del ristorante.
+ * @param film         I film collegati (già risolti dalla collection).
+ * @param canonicalUrl URL completo della pagina di dettaglio.
+ * @param immagineUrl  URL completo dell'immagine principale.
  */
 export function restaurantJsonLd(
   locale: Restaurant,
+  film: Film[],
   canonicalUrl: string,
   immagineUrl: string
 ): Record<string, unknown> {
   const d = locale.data;
-
   return {
     "@context": "https://schema.org",
     "@type": "Restaurant",
@@ -38,20 +38,47 @@ export function restaurantJsonLd(
       longitude: d.coordinate.lng,
     },
     ...(d.sitoWeb ? { sameAs: d.sitoWeb } : {}),
-    // Collega il locale alle opere (film/serie) in cui appare.
-    subjectOf: d.film.map((f) => ({
-      "@type": f.serieTv ? "TVSeries" : "Movie",
-      name: f.titolo,
-      datePublished: String(f.anno),
-      director: {
-        "@type": "Person",
-        name: f.regista,
-      },
+    subjectOf: film.map((f) => ({
+      "@type": f.data.serieTv ? "TVSeries" : "Movie",
+      name: f.data.titolo,
+      datePublished: String(f.data.anno),
+      director: { "@type": "Person", name: f.data.regista },
     })),
   };
 }
 
-/** Dati strutturati generici per un articolo del blog (BlogPosting). */
+/** Dati strutturati FAQPage (per le pagine film). */
+export function faqPageJsonLd(
+  faq: { domanda: string; risposta: string }[]
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.domanda,
+      acceptedAnswer: { "@type": "Answer", text: f.risposta },
+    })),
+  };
+}
+
+/** Dati strutturati BreadcrumbList. */
+export function breadcrumbJsonLd(
+  items: { name: string; url: string }[]
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      item: it.url,
+    })),
+  };
+}
+
+/** Dati strutturati per un articolo del blog (BlogPosting). */
 export function blogPostingJsonLd(
   titolo: string,
   descrizione: string,
@@ -68,15 +95,12 @@ export function blogPostingJsonLd(
     author: { "@type": "Person", name: autore },
     datePublished: data.toISOString(),
     url: canonicalUrl,
-    publisher: {
-      "@type": "Organization",
-      name: SITE.name,
-    },
+    publisher: { "@type": "Organization", name: SITE.name },
     ...(immagineUrl ? { image: immagineUrl } : {}),
   };
 }
 
-/** Dati strutturati dell'organizzazione/sito (per la home). */
+/** Dati strutturati del sito, con azione di ricerca (per la home). */
 export function websiteJsonLd(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
@@ -84,5 +108,10 @@ export function websiteJsonLd(): Record<string, unknown> {
     name: SITE.name,
     description: SITE.description,
     url: SITE.url,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE.url}/locali?cerca={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
   };
 }

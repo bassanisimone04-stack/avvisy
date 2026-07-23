@@ -1,0 +1,25 @@
+---
+/** Chip/pillola che rimanda alla pagina di un film. */
+interface Props {
+  slug: string;
+  titolo: string;
+  anno?: number;
+  count?: number;
+}
+const { slug, titolo, anno, count } = Astro.props;
+---
+
+<a
+  href={`/film/${slug}`}
+  class="group inline-flex items-center gap-2 rounded-full border border-ink-500/15 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold-500/40 hover:text-gold-600 dark:border-noir-700 dark:bg-noir-900 dark:hover:text-gold-400"
+>
+  <span aria-hidden="true">🎬</span>
+  <span>{titolo}{anno && <span class="text-ink-400"> ({anno})</span>}</span>
+  {
+    count !== undefined && (
+      <span class="rounded-full bg-gold-500/15 px-2 py-0.5 text-xs font-semibold text-gold-700 dark:text-gold-300">
+        {count}
+      </span>
+    )
+  }
+</a>

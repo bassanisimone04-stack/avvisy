@@ -1,0 +1,168 @@
+---
+/** Pagina di dettaglio di un singolo locale (generata staticamente). */
+import { getCollection, getEntries, render } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Badges from "../../components/Badges.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import Map from "../../components/Map.astro";
+import { SITE } from "../../config/site";
+import { slugify, formatData } from "../../lib/utils";
+import { restaurantJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
+
+export async function getStaticPaths() {
+  const locali = await getCollection("restaurants");
+  return locali.map((locale) => ({
+    params: { slug: locale.id },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props;
+const d = locale.data;
+const { Content } = await render(locale);
+
+// Risolve i film collegati (per titoli, anno, regista, link).
+const filmEntries = await getEntries(d.film.map((f) => f.film));
+
+const canonical = new URL(`/locale/${locale.id}`, Astro.site ?? SITE.url).href;
+const immagineUrl = new URL(d.immagine.src, Astro.site ?? SITE.url).href;
+
+const crumbs = [
+  { name: "Home", href: "/" },
+  { name: "Locali", href: "/locali" },
+  { name: d.citta, href: `/${slugify(d.citta)}` },
+  { name: d.nome },
+];
+const jsonLd = [
+  restaurantJsonLd(locale, filmEntries, canonical, immagineUrl),
+  breadcrumbJsonLd(
+    crumbs.map((c) => ({
+      name: c.name,
+      url: new URL(c.href ?? canonical, Astro.site ?? SITE.url).href,
+    }))
+  ),
+];
+---
+
+<BaseLayout
+  title={`${d.nome} — ${d.citta}`}
+  description={`${d.nome} a ${d.citta}: ${d.descrizione}`}
+  image={d.immagine.src}
+  type="article"
+  jsonLd={jsonLd}
+>
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Breadcrumb items={crumbs} />
+
+    <Image
+      src={d.immagine}
+      alt={d.immagineAlt || d.nome}
+      width={1200}
+      height={800}
+      loading="eager"
+      class="mt-4 aspect-[3/2] w-full rounded-3xl object-cover shadow-lg"
+    />
+
+    <div class="mt-6 flex flex-wrap items-center gap-2">
+      <Badges evidenza={d.inEvidenza} />
+      <Badges categoria={d.categoria} />
+      <Badges tipo={d.tipo} />
+      <Badges prezzo={d.prezzo} />
+      <Badges stato={d.stato} />
+    </div>
+    <h1 class="mt-3 font-display text-4xl font-extrabold sm:text-5xl">{d.nome}</h1>
+    <p class="mt-2 text-ink-500 dark:text-ink-400">📍 {d.indirizzo}</p>
+    <p class="mt-4 text-lg text-ink-700 dark:text-cream-200">{d.descrizione}</p>
+
+    <!-- Azioni -->
+    <div class="mt-6 flex flex-wrap gap-3">
+      {
+        d.prenotazione && (
+          <a href={d.prenotazione} target="_blank" rel="noopener"
+            class="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-noir-950 hover:bg-gold-400">
+            Prenota un tavolo
+          </a>
+        )
+      }
+      {
+        d.sitoWeb && (
+          <a href={d.sitoWeb} target="_blank" rel="noopener"
+            class="rounded-full border border-ink-500/25 px-5 py-2.5 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800">
+            Sito ufficiale
+          </a>
+        )
+      }
+      <a href={`https://www.openstreetmap.org/?mlat=${d.coordinate.lat}&mlon=${d.coordinate.lng}#map=17/${d.coordinate.lat}/${d.coordinate.lng}`}
+        target="_blank" rel="noopener"
+        class="rounded-full border border-ink-500/25 px-5 py-2.5 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800">
+        Indicazioni
+      </a>
+    </div>
+
+    <!-- Galleria -->
+    {
+      d.galleria.length > 0 && (
+        <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {d.galleria.map((img) => (
+            <Image src={img} alt={`${d.nome} — foto`} width={400} height={300} loading="lazy"
+              class="aspect-[4/3] w-full rounded-2xl object-cover" />
+          ))}
+        </div>
+      )
+    }
+
+    <!-- Film collegati -->
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold">🎬 Al cinema e in TV</h2>
+      <ul class="mt-4 space-y-4">
+        {
+          d.film.map((rel) => {
+            const film = filmEntries.find((f) => f.id === rel.film.id);
+            if (!film) return null;
+            return (
+              <li class="rounded-3xl border border-ink-500/10 bg-white p-5 dark:border-noir-700 dark:bg-noir-900">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-display text-lg font-bold">
+                    <a href={`/film/${film.id}`} class="hover:text-gold-600 dark:hover:text-gold-400">
+                      {film.data.titolo}
+                    </a>
+                    <span class="ml-1 text-sm font-normal text-ink-500 dark:text-ink-400">({film.data.anno})</span>
+                  </h3>
+                  <span class="rounded-full bg-ink-500/15 px-2 py-0.5 text-xs">
+                    {film.data.serieTv ? "Serie TV" : "Film"}
+                  </span>
+                </div>
+                <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Regia di {film.data.regista}</p>
+                <p class="mt-2 text-ink-700 dark:text-cream-200">{rel.descrizioneScena}</p>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+
+    <!-- Testo libero dal markdown -->
+    <div class="prose-cinefood mt-8 max-w-none text-ink-700 dark:text-cream-200 [&_h2]:mt-6 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-bold [&_p]:mt-3">
+      <Content />
+    </div>
+
+    <!-- Mappa -->
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold">Dove si trova</h2>
+      <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{d.indirizzo} — {d.citta}, {d.regione}</p>
+      <div class="mt-4">
+        <Map
+          markers={[{ lat: d.coordinate.lat, lng: d.coordinate.lng, nome: d.nome, citta: d.citta, tipo: d.tipo }]}
+          height="380px"
+          zoom={15}
+        />
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs text-ink-500 dark:text-ink-400">
+      Ultimo aggiornamento: {formatData(d.ultimoAggiornamento)}. I dati sono indicativi:
+      verifica sempre orari e disponibilità con il locale.
+    </p>
+  </article>
+</BaseLayout>

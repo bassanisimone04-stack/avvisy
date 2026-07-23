@@ -2,68 +2,59 @@
 # ============================================================
 #  TEMPLATE — SCHEDA DI UN NUOVO LOCALE
 # ============================================================
-#
 #  COME USARLO (per chi NON è tecnico):
-#  1. Fai una COPIA di questo file nella stessa cartella
-#     (src/content/restaurants/).
-#  2. Rinomina la copia con il nome del locale, tutto minuscolo,
-#     con i trattini al posto degli spazi e senza accenti.
-#     Esempio: "Trattoria da Mario" → "trattoria-da-mario.md"
-#     (il nome del file diventa l'indirizzo web della pagina)
-#  3. Compila i campi qui sotto tra virgolette.
-#  4. Salva. Fatto: il locale comparirà automaticamente sul sito.
+#  1. Copia questo file nella stessa cartella (src/content/restaurants/).
+#  2. Rinominalo con il nome del locale: minuscolo, con i trattini al
+#     posto degli spazi e senza accenti. Es. "Trattoria da Mario" →
+#     "trattoria-da-mario.md" (il nome file diventa l'indirizzo web).
+#  3. Compila i campi qui sotto e salva.
+#  I file che iniziano con "_" (come questo) vengono ignorati.
 #
-#  NB: i file che iniziano con "_" (come questo) vengono ignorati
-#      e NON diventano pagine del sito.
+#  IMPORTANTE: nel campo "film" devi usare lo SLUG di un film che esiste
+#  già nella cartella src/content/films/. Se il film non c'è ancora,
+#  crealo prima copiando src/content/films/_template.md.
 # ============================================================
 
 nome: "Nome del Locale"
 citta: "Città"
-regione: "Regione"                     # es. "Lazio", "Sicilia", "Lombardia"
+regione: "Regione"                     # es. "Lazio", "Lombardia"
 indirizzo: "Via Esempio 1, 00100 Città PR"
 
-# Coordinate per la mappa. Come trovarle:
-# apri Google Maps, tasto destro sul locale → "Che cosa c'è qui?"
-# e copia i due numeri (il primo è lat, il secondo è lng).
+# Coordinate per la mappa (tasto destro su Google Maps → "Che cosa c'è qui?").
 coordinate:
   lat: 41.9028
   lng: 12.4964
 
 tipo: "ristorante"                     # ristorante | trattoria | bar | caffè | pasticceria
+categoria: "set-reale"                 # set-reale (girato qui) | a-tema-cinema (a tema)
 prezzo: "€€"                           # € | €€ | €€€ | €€€€
 stato: "aperto"                        # aperto | chiuso | temporaneamente-chiuso
+inEvidenza: false                      # true = mostralo tra i locali in evidenza
 
-# Metti "true" per mostrare il locale tra quelli IN EVIDENZA in home
-# (utile per i locali sponsorizzati). Altrimenti lascia "false".
-inEvidenza: false
-
-# Immagine principale. Metti il file immagine (jpg/png) nella cartella
-# src/assets/placeholder/ e scrivi qui il percorso.
+# Immagine principale (metti il file in src/assets/placeholder/).
 immagine: "../../assets/placeholder/og-default.jpg"
-immagineAlt: "Breve descrizione dell'immagine (per accessibilità e SEO)"
+immagineAlt: "Descrizione dell'immagine (accessibilità e SEO)"
 
-# Link opzionali (puoi cancellare le righe se non li hai).
+# Galleria opzionale (altre foto). Cancella le righe se non ti serve.
+galleria:
+  - "../../assets/placeholder/gallery-1.jpg"
+  - "../../assets/placeholder/gallery-2.jpg"
+
+# Link opzionali (cancella le righe se non li hai).
 sitoWeb: "https://www.esempio.it"
 prenotazione: "https://www.esempio.it/prenota"
 
-# Data dell'ultimo aggiornamento (anno-mese-giorno).
 ultimoAggiornamento: 2026-01-01
 
-# Elenco dei film o serie TV in cui appare il locale.
-# Puoi aggiungerne quanti vuoi copiando il blocco che inizia con "- titolo:".
+# Film/serie collegati. "film" = SLUG di un file in src/content/films/.
+# Copia il blocco "- film:" per aggiungerne altri.
 film:
-  - titolo: "Titolo del Film o della Serie"
-    anno: 2020
-    regista: "Nome del Regista"
-    serieTv: false                     # true se è una serie TV
-    descrizioneScena: "Descrivi in una frase la scena girata o ambientata nel locale."
+  - film: "titolo-del-film"            # es. "la-grande-bellezza"
+    descrizioneScena: "Descrivi in una frase la scena girata o ambientata qui."
 
-# Descrizione breve del locale (1-3 frasi).
 descrizione: "Descrizione breve e invitante del locale."
 ---
 
-<!-- Qui sotto puoi scrivere un testo più lungo (facoltativo) che comparirà
-     nella pagina di dettaglio del locale. Usa un linguaggio semplice. -->
+<!-- Testo lungo facoltativo che comparirà nella pagina di dettaglio. -->
 
-Racconta qui la storia del locale, i piatti tipici e perché vale la pena
-visitarlo.
+Racconta qui la storia del locale, i piatti tipici e perché visitarlo.

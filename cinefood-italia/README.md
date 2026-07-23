@@ -2,11 +2,12 @@
 
 Sito web tipo **directory** dedicato ai ristoranti, bar e caffè italiani
 apparsi in **film e serie TV**. È un sito **statico** (velocissimo e ottimo
-per Google), senza database: ogni locale è un semplice file di testo, quindi
-puoi aggiornarlo **senza saper programmare**.
+per Google), con un look "cinematografico" (tema scuro, accenti oro) e
+**senza database**: ogni locale, film o articolo è un semplice file di testo,
+quindi puoi aggiornarlo **senza saper programmare**.
 
 > Il nome "CineFood Italia" è provvisorio: puoi cambiarlo in un secondo
-> (vedi la sezione [Come rinominare il sito](#-come-rinominare-il-sito)).
+> (vedi [Come rinominare il sito](#-come-rinominare-il-sito)).
 
 ---
 
@@ -14,209 +15,168 @@ puoi aggiornarlo **senza saper programmare**.
 
 1. [Cosa serve per iniziare](#-cosa-serve-per-iniziare)
 2. [Avviare il sito sul tuo computer](#-avviare-il-sito-sul-tuo-computer)
-3. [Come aggiungere un nuovo ristorante (passo passo)](#-come-aggiungere-un-nuovo-ristorante-passo-passo)
-4. [Come aggiungere un articolo al blog](#-come-aggiungere-un-articolo-al-blog)
-5. [Come rinominare il sito](#-come-rinominare-il-sito)
-6. [Pubblicare il sito online gratis](#-pubblicare-il-sito-online-gratis)
-7. [Struttura delle cartelle](#-struttura-delle-cartelle)
-8. [Domande frequenti](#-domande-frequenti)
+3. [Come aggiungere un nuovo ristorante](#-come-aggiungere-un-nuovo-ristorante-passo-passo)
+4. [Come aggiungere un nuovo film](#-come-aggiungere-un-nuovo-film)
+5. [Come aggiungere una città](#-come-aggiungere-una-città)
+6. [Come aggiungere un articolo al blog](#-come-aggiungere-un-articolo-al-blog)
+7. [Rinominare il sito e cambiare colori/font](#-come-rinominare-il-sito)
+8. [Pubblicare online gratis](#-pubblicare-il-sito-online-gratis)
+9. [Struttura delle cartelle](#-struttura-delle-cartelle)
+10. [Domande frequenti](#-domande-frequenti)
 
 ---
 
 ## 🧰 Cosa serve per iniziare
 
-Devi installare **una sola cosa** sul tuo computer: **Node.js**.
+Devi installare **una sola cosa**: **Node.js**.
 
-1. Vai su <https://nodejs.org>
-2. Scarica la versione **LTS** (il pulsante grande a sinistra).
-3. Installa come un normale programma (Avanti → Avanti → Fine).
-
-Fatto! Non serve altro.
+1. Vai su <https://nodejs.org> e scarica la versione **LTS**.
+2. Installa come un normale programma (Avanti → Avanti → Fine).
 
 ---
 
 ## 💻 Avviare il sito sul tuo computer
 
-Apri il **Terminale** (su Mac: "Terminale"; su Windows: "Prompt dei comandi"
-o "PowerShell"), poi scrivi questi comandi **uno alla volta**, premendo Invio
-dopo ognuno:
+Apri il **Terminale** e scrivi questi comandi uno alla volta:
 
 ```bash
-# 1. Entra nella cartella del sito
-cd cinefood-italia
-
-# 2. Installa i componenti (solo la PRIMA volta, ci mette un minuto)
-npm install
-
-# 3. Avvia il sito
-npm run dev
+cd cinefood-italia   # entra nella cartella del sito
+npm install          # installa i componenti (solo la prima volta)
+npm run dev          # avvia il sito
 ```
 
-Ora apri il browser all'indirizzo che compare (di solito
-**http://localhost:4321**). Vedrai il sito in tempo reale: ogni volta che
-salvi una modifica, la pagina si aggiorna da sola. ✨
-
-Per **fermare** il sito, torna nel Terminale e premi `Ctrl + C`.
+Apri il browser su **http://localhost:4321**. Ogni modifica salvata aggiorna
+la pagina da sola. Per fermare il sito: `Ctrl + C`.
 
 ---
 
 ## 🍝 Come aggiungere un nuovo ristorante (passo passo)
 
-Aggiungere un locale significa semplicemente **creare un nuovo file**. Ecco
-come:
+Aggiungere un locale = **creare un file**.
 
-### Passo 1 — Copia il modello
-
-Vai nella cartella `src/content/restaurants/`. Qui trovi un file chiamato
-**`_template.md`**: è il modello già pronto. **Fanne una copia** nella stessa
-cartella.
-
-### Passo 2 — Rinomina la copia
-
-Dai alla copia il nome del locale, tutto in **minuscolo**, con i **trattini**
-al posto degli spazi e **senza accenti**. Il nome del file diventerà
-l'indirizzo web della pagina.
-
-| Nome del locale        | Nome del file                |
-| ---------------------- | ---------------------------- |
-| Trattoria da Mario     | `trattoria-da-mario.md`      |
-| Caffè del Corso        | `caffe-del-corso.md`         |
-| Bar Centrale (Roma)    | `bar-centrale-roma.md`       |
-
-### Passo 3 — Compila i dati
-
-Apri il file con un editor di testo (va benissimo il **Blocco note** o
-**TextEdit**) e compila i campi tra virgolette. Ecco il modello completo con
-le spiegazioni:
+1. Vai in `src/content/restaurants/` e **copia** il file `_template.md`.
+2. **Rinomina** la copia con il nome del locale, minuscolo, con i trattini e
+   senza accenti. Es. "Trattoria da Mario" → `trattoria-da-mario.md`
+   (il nome del file diventa l'indirizzo web `/locale/trattoria-da-mario`).
+3. Apri il file e compila i campi. Ecco quelli principali:
 
 ```yaml
----
 nome: "Nome del Locale"
 citta: "Città"
-regione: "Regione"                 # es. "Lazio", "Sicilia"
+regione: "Regione"
 indirizzo: "Via Esempio 1, 00100 Città PR"
-coordinate:
-  lat: 41.9028                      # latitudine (vedi sotto come trovarla)
-  lng: 12.4964                      # longitudine
-tipo: "ristorante"                  # ristorante | trattoria | bar | caffè | pasticceria
-prezzo: "€€"                        # € | €€ | €€€ | €€€€
-stato: "aperto"                     # aperto | chiuso | temporaneamente-chiuso
-inEvidenza: false                   # true = mostra il locale in evidenza in home
+coordinate: { lat: 41.9028, lng: 12.4964 }   # da Google Maps, tasto destro
+tipo: "ristorante"          # ristorante | trattoria | bar | caffè | pasticceria
+categoria: "set-reale"      # set-reale (girato qui) | a-tema-cinema (a tema)
+prezzo: "€€"                # € | €€ | €€€ | €€€€
+stato: "aperto"             # aperto | chiuso | temporaneamente-chiuso
+inEvidenza: false           # true = compare tra i locali in evidenza
 immagine: "../../assets/placeholder/og-default.jpg"
-immagineAlt: "Descrizione dell'immagine"
-sitoWeb: "https://www.esempio.it"          # opzionale
-prenotazione: "https://www.esempio.it/prenota"  # opzionale
+immagineAlt: "Descrizione della foto"
 ultimoAggiornamento: 2026-01-01
 film:
-  - titolo: "Titolo del Film"
-    anno: 2020
-    regista: "Nome del Regista"
-    serieTv: false                  # true se è una serie TV
-    descrizioneScena: "Cosa succede nella scena girata nel locale."
-descrizione: "Descrizione breve e invitante del locale."
----
-
-Qui puoi scrivere un testo più lungo (facoltativo) che comparirà nella pagina.
+  - film: "la-grande-bellezza"   # SLUG di un film esistente in src/content/films/
+    descrizioneScena: "Cosa succede nella scena girata qui."
+descrizione: "Descrizione breve e invitante."
 ```
 
-> 💡 **Come trovare le coordinate (lat/lng):** apri **Google Maps**, fai clic
-> con il **tasto destro** sul locale e scegli **"Che cosa c'è qui?"**. In
-> basso compaiono due numeri: il **primo** è `lat`, il **secondo** è `lng`.
-> Copiali nel file.
+> ⚠️ **Importante:** nel campo `film` devi usare lo **slug di un film che
+> esiste già** in `src/content/films/`. Se il film non c'è ancora, crealo
+> prima (vedi sotto). Se sbagli, il sito te lo segnala con un errore chiaro.
 
-> 💡 **Più film nello stesso locale:** copia il blocco che inizia con
-> `- titolo:` e incollalo sotto, con i dati del secondo film.
+4. Metti la foto (jpg/png) in `src/assets/placeholder/` e scrivi il percorso
+   nel campo `immagine`. Puoi aggiungere una `galleria` di foto extra.
+5. Salva: il locale compare automaticamente su home, elenco, mappa, pagina
+   città e pagina film.
 
-### Passo 4 — Aggiungi la foto
+**Set reale vs a tema cinema:** usa `categoria: "set-reale"` se il film è
+stato girato davvero lì; `categoria: "a-tema-cinema"` per i locali a tema
+(arredi, menù ispirati al cinema) che non sono location reali.
 
-Metti la foto del locale (formato `.jpg` o `.png`) nella cartella
-`src/assets/placeholder/` e scrivi il suo percorso nel campo `immagine`,
-ad esempio: `immagine: "../../assets/placeholder/trattoria-da-mario.jpg"`.
+---
 
-### Passo 5 — Salva e controlla
+## 🎞️ Come aggiungere un nuovo film
 
-Salva il file. Se il sito è avviato (`npm run dev`), il nuovo locale
-comparirà **automaticamente**! Lo trovi nell'elenco `/locali`, sulla mappa e
-nelle pagine per città e per film.
+I film sono schede a parte (con FAQ per Google). Per aggiungerne uno:
 
-> ✅ **Se hai sbagliato un campo**, il sito te lo dice con un messaggio chiaro
-> (es. "manca il campo città"): correggi e salva di nuovo.
+1. In `src/content/films/` copia `_template.md`.
+2. Rinominalo con lo slug del film. Es. `la-grande-bellezza.md`
+   (diventa la pagina `/film/la-grande-bellezza`).
+3. Compila titolo, anno, regista, sinossi, locandina, città e le FAQ.
+4. Usa questo **stesso slug** nel campo `film` delle schede dei locali per
+   collegarli.
+
+---
+
+## 🏙️ Come aggiungere una città
+
+Le città **si creano da sole**: appena un locale ha un nuovo valore nel campo
+`citta`, la pagina città (es. `/roma`) viene generata in automatico.
+Per darle una bella foto di copertina, metti un'immagine in
+`src/assets/cities/` con il nome-slug della città (es. `firenze.jpg`).
 
 ---
 
 ## ✍️ Come aggiungere un articolo al blog
 
-Uguale ai ristoranti, ma nella cartella `src/content/blog/`. Crea un file
-`.md`, ad esempio `il-cinema-a-firenze.md`, con questa intestazione:
+In `src/content/blog/` crea un file `.md`, es. `il-cinema-a-firenze.md`:
 
 ```yaml
----
 titolo: "Titolo dell'articolo"
-descrizione: "Riassunto breve per Google e i social."
+descrizione: "Riassunto per Google e social."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-01-15
-immagine: "../../assets/placeholder/blog-roma-cinema.jpg"  # opzionale
-immagineAlt: "Descrizione dell'immagine"
+immagine: "../../assets/placeholder/blog-roma-cinema.jpg"   # opzionale
 tags: ["Firenze", "cinema"]
-bozza: false        # metti true se NON vuoi ancora pubblicarlo
----
-
-Qui scrivi l'articolo. Puoi usare titoli con ## e grassetto con **testo**.
+bozza: false     # true = non ancora pubblicato
 ```
 
 ---
 
 ## 🏷️ Come rinominare il sito
 
-Apri il file **`src/config/site.ts`** e cambia la riga:
+Apri **`src/config/site.ts`** e cambia la riga `name: "CineFood Italia"`.
+Il nuovo nome comparirà **ovunque**. Nello stesso file cambi anche slogan,
+email, social e le voci del menu.
 
-```ts
-name: "CineFood Italia",
-```
+### 🎨 Cambiare colori e font
 
-Metti il nome che preferisci: comparirà **ovunque** (menu, footer, titoli,
-SEO). Nello stesso file puoi cambiare anche lo slogan, l'email e i social.
+- **Colori:** apri `src/styles/global.css`, blocco `@theme`. Modifica i valori
+  di `--color-gold-*` (accento), `--color-noir-*` (scuri) e `--color-cream-*`
+  (chiari).
+- **Font:** sempre in `@theme`, le variabili `--font-display` (titoli) e
+  `--font-sans` (testo). I font sono ospitati localmente (nessuna richiesta
+  esterna): per cambiarli, installa un pacchetto `@fontsource/...` e importalo
+  in `src/layouts/BaseLayout.astro`.
+- **Tema scuro/chiaro:** il sito parte in **scuro** e ha un interruttore
+  ☀️/🌙 in alto a destra. Per partire in chiaro, cambia `class="dark"` in
+  `class=""` sul tag `<html>` in `BaseLayout.astro`.
 
 ---
 
 ## 🚀 Pubblicare il sito online gratis
 
-Puoi mettere il sito online **gratuitamente** con Netlify o Vercel. Entrambi
-partono da un account gratuito e ripubblicano il sito da soli ogni volta che
-aggiorni i contenuti (se usi GitHub).
-
-### Opzione A — Netlify (consigliata, ha anche i form)
+### Netlify (consigliata, ha anche i form)
 
 1. Crea un account gratuito su <https://www.netlify.com>.
-2. Carica il progetto su **GitHub** (o trascina la cartella su Netlify).
-3. Quando Netlify chiede le impostazioni, usa:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-4. Clicca **Deploy**. In un minuto il sito è online con un indirizzo tipo
-   `nome-a-caso.netlify.app` (puoi poi collegare un tuo dominio).
+2. Carica il progetto su GitHub (o trascina la cartella su Netlify).
+3. Impostazioni: **Build command** `npm run build`, **Publish directory** `dist`.
+4. **Deploy**: il sito è online in un minuto.
 
-> 📨 **Il form "Aggiungi il tuo locale"** funziona automaticamente su Netlify:
-> le richieste arrivano nella sezione **Forms** della tua dashboard. Non devi
-> fare nulla.
+> 📨 I form "Aggiungi il tuo locale" e la newsletter funzionano
+> automaticamente su Netlify (sezione **Forms** della dashboard).
 
-### Opzione B — Vercel
+### Vercel
 
-1. Crea un account gratuito su <https://vercel.com>.
-2. Collega il progetto da GitHub.
-3. Vercel riconosce Astro da solo:
-   - **Build command:** `npm run build`
-   - **Output directory:** `dist`
-4. Clicca **Deploy**.
-
-> Su Vercel il form di contatto non è incluso: puoi usare un servizio gratuito
-> come [Formspree](https://formspree.io). Basta cambiare l'attributo `action`
-> del form nel file `src/pages/aggiungi-locale.astro`.
+1. Account gratuito su <https://vercel.com>, collega il progetto da GitHub.
+2. Vercel riconosce Astro da solo (Build `npm run build`, Output `dist`).
+3. **Deploy**. Per i form usa un servizio come [Formspree](https://formspree.io)
+   cambiando l'`action` in `src/pages/aggiungi-locale.astro`.
 
 ### ⚠️ Prima di pubblicare
 
-Apri `src/config/site.ts` e cambia l'indirizzo `url:` con quello vero del tuo
-sito (es. `https://ilmiosito.netlify.app`). Serve per la sitemap e per le
-anteprime social corrette.
+In `src/config/site.ts` cambia `url:` con l'indirizzo vero del sito
+(serve per sitemap e anteprime social).
 
 ---
 
@@ -225,64 +185,67 @@ anteprime social corrette.
 ```
 cinefood-italia/
 ├── src/
-│   ├── config/
-│   │   └── site.ts          ← NOME e impostazioni del sito (modifica qui!)
+│   ├── config/site.ts        ← NOME, colori-brand, menu (modifica qui!)
 │   ├── content/
-│   │   ├── restaurants/      ← UN FILE PER OGNI LOCALE (aggiungi qui i ristoranti)
-│   │   │   └── _template.md  ← modello da copiare
-│   │   └── blog/             ← gli articoli del blog
+│   │   ├── restaurants/       ← UN FILE PER LOCALE (+ _template.md)
+│   │   ├── films/             ← UN FILE PER FILM/SERIE (+ _template.md)
+│   │   └── blog/              ← gli articoli
+│   ├── content.config.ts      ← definisce i campi (schema) dei contenuti
 │   ├── assets/
-│   │   └── placeholder/      ← le immagini (metti qui le foto dei locali)
-│   ├── components/           ← pezzi riutilizzabili (schede, mappa, filtri…)
-│   ├── layouts/              ← struttura comune delle pagine
-│   ├── pages/                ← le pagine del sito
-│   ├── lib/                  ← funzioni di supporto (non serve toccarle)
-│   ├── styles/               ← colori e stile del sito
-│   └── content.config.ts     ← definisce i campi di ogni locale (schema)
-├── public/                   ← file pubblici (favicon, robots.txt, immagine social)
-├── scripts/                  ← script per generare le immagini placeholder
-├── astro.config.mjs          ← configurazione tecnica (raramente da toccare)
-└── package.json              ← elenco dei componenti del progetto
+│   │   ├── placeholder/        ← foto dei locali + hero
+│   │   ├── films/              ← locandine dei film
+│   │   └── cities/             ← foto di copertina delle città
+│   ├── components/             ← pezzi riutilizzabili (card, mappa, hero…)
+│   ├── layouts/BaseLayout.astro
+│   ├── pages/                  ← le pagine e gli indirizzi del sito
+│   │   ├── index.astro         → /            (homepage)
+│   │   ├── [citta].astro       → /roma, /milano … (pagine città)
+│   │   ├── film/[slug].astro   → /film/…      (pagine film con FAQ)
+│   │   ├── locale/[slug].astro → /locale/…    (dettaglio locale)
+│   │   ├── locali/index.astro  → /locali      (elenco + filtri)
+│   │   ├── tipo/[tipo].astro   → /tipo/…       (per tipo di locale)
+│   │   ├── mappa · blog · chi-siamo · aggiungi-locale · inserzioni
+│   │   └── robots.txt.ts
+│   ├── lib/                    ← funzioni di supporto (non serve toccarle)
+│   └── styles/global.css       ← colori e font del sito
+├── public/                     ← favicon, robots, immagine social
+├── scripts/                    ← genera le immagini placeholder (cancellabile)
+└── astro.config.mjs
 ```
 
-**Le cartelle che userai più spesso** sono solo due:
-`src/content/restaurants/` (per i locali) e `src/config/site.ts`
-(per il nome e le impostazioni).
+**Le cartelle che userai più spesso:** `src/content/restaurants/`,
+`src/content/films/` e `src/config/site.ts`.
 
 ---
 
 ## ❓ Domande frequenti
 
-**Devo salvare online ogni modifica?**
-Se hai pubblicato con GitHub + Netlify/Vercel, ti basta caricare i file
-aggiornati su GitHub (comando `git add . && git commit -m "nuovo locale" &&
-git push`) e il sito si aggiorna da solo. In alternativa puoi ricaricare la
-cartella su Netlify.
+**Ho aggiunto un locale ma non lo vedo.** Controlla che il file sia in
+`src/content/restaurants/`, che finisca con `.md` e che **non** inizi con `_`
+(i file con `_` sono ignorati, come il modello).
 
-**Ho aggiunto un locale ma non lo vedo.**
-Controlla che il file sia nella cartella `src/content/restaurants/`, che
-finisca con `.md` e che **non** inizi con un trattino basso `_` (quei file
-vengono ignorati apposta, come il modello).
+**Errore "film non trovato" quando aggiungo un locale.** Il valore del campo
+`film` deve corrispondere al nome di un file esistente in `src/content/films/`
+(senza `.md`). Crea prima la scheda del film.
 
-**Posso cambiare i tipi di locale (aggiungere "gelateria")?**
-Sì: apri `src/content.config.ts` e aggiungi la parola all'elenco `TIPI_LOCALE`.
+**Posso aggiungere un tipo (es. "gelateria")?** Sì: apri `src/content.config.ts`
+e aggiungi la parola all'elenco `TIPI_LOCALE`.
 
-**È tutto gratis?**
-Sì. Il sito, la mappa (OpenStreetMap) e gli hosting Netlify/Vercel hanno piani
-gratuiti sufficienti per iniziare.
+**È tutto gratis?** Sì. Sito, font, mappa (OpenStreetMap) e hosting
+Netlify/Vercel hanno piani gratuiti sufficienti per iniziare.
 
 ---
 
-## 🛠️ Comandi tecnici (riepilogo)
+## 🛠️ Comandi (riepilogo)
 
-| Comando           | Cosa fa                                             |
-| ----------------- | --------------------------------------------------- |
-| `npm install`     | Installa i componenti (solo la prima volta)         |
-| `npm run dev`     | Avvia il sito in locale per lavorarci               |
-| `npm run build`   | Crea la versione pronta per la pubblicazione (`dist/`) |
-| `npm run preview` | Mostra un'anteprima della versione pubblicata       |
+| Comando           | Cosa fa                                          |
+| ----------------- | ------------------------------------------------ |
+| `npm install`     | Installa i componenti (prima volta)              |
+| `npm run dev`     | Avvia il sito in locale                          |
+| `npm run build`   | Crea la versione pronta per la pubblicazione     |
+| `npm run preview` | Anteprima della versione pubblicata              |
 
 ---
 
-Realizzato con [Astro](https://astro.build), Tailwind CSS e Leaflet.
-Buon lavoro e… buona visione! 🍿
+Realizzato con [Astro](https://astro.build), Tailwind CSS, Leaflet e i font
+Playfair Display + Inter. Buon lavoro e… buona visione! 🍿

@@ -3,16 +3,14 @@
 import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
 import { SITE } from "../../config/site";
 import { formatData } from "../../lib/utils";
-import { blogPostingJsonLd } from "../../lib/schema-org";
+import { blogPostingJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
 
 export async function getStaticPaths() {
   const articoli = (await getCollection("blog")).filter((a) => !a.data.bozza);
-  return articoli.map((articolo) => ({
-    params: { slug: articolo.id },
-    props: { articolo },
-  }));
+  return articoli.map((articolo) => ({ params: { slug: articolo.id }, props: { articolo } }));
 }
 
 const { articolo } = Astro.props;
@@ -20,68 +18,38 @@ const d = articolo.data;
 const { Content } = await render(articolo);
 
 const canonical = new URL(`/blog/${articolo.id}`, Astro.site ?? SITE.url).href;
-const immagineUrl = d.immagine
-  ? new URL(d.immagine.src, Astro.site ?? SITE.url).href
-  : undefined;
-const jsonLd = blogPostingJsonLd(
-  d.titolo,
-  d.descrizione,
-  d.autore,
-  d.dataPubblicazione,
-  canonical,
-  immagineUrl
-);
+const immagineUrl = d.immagine ? new URL(d.immagine.src, Astro.site ?? SITE.url).href : undefined;
+const crumbs = [{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: d.titolo }];
+const jsonLd = [
+  blogPostingJsonLd(d.titolo, d.descrizione, d.autore, d.dataPubblicazione, canonical, immagineUrl),
+  breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: new URL(c.href ?? "/", SITE.url).href }))),
+];
 ---
 
-<BaseLayout
-  title={d.titolo}
-  description={d.descrizione}
-  image={d.immagine?.src}
-  type="article"
-  jsonLd={jsonLd}
->
+<BaseLayout title={d.titolo} description={d.descrizione} image={d.immagine?.src} type="article" jsonLd={jsonLd}>
   <article class="mx-auto max-w-3xl px-4 py-10">
-    <nav class="mb-4 text-sm text-ink-700">
-      <a href="/blog" class="hover:text-brand-600">Blog</a>
-      <span aria-hidden="true"> / </span>
-      <span class="text-ink-900">{d.titolo}</span>
-    </nav>
-
-    <p class="text-sm text-ink-700">{formatData(d.dataPubblicazione)} · {d.autore}</p>
-    <h1 class="mt-2 text-3xl font-extrabold leading-tight text-ink-900 sm:text-4xl">{d.titolo}</h1>
-    <p class="mt-3 text-lg text-ink-700">{d.descrizione}</p>
+    <Breadcrumb items={crumbs} />
+    <p class="mt-4 text-sm text-ink-500 dark:text-ink-400">{formatData(d.dataPubblicazione)} · {d.autore}</p>
+    <h1 class="mt-2 font-display text-4xl font-extrabold leading-tight sm:text-5xl">{d.titolo}</h1>
+    <p class="mt-3 text-lg text-ink-600 dark:text-ink-400">{d.descrizione}</p>
 
     {
       d.immagine && (
-        <Image
-          src={d.immagine}
-          alt={d.immagineAlt || d.titolo}
-          width={1200}
-          height={675}
-          loading="eager"
-          class="mt-6 aspect-video w-full rounded-2xl object-cover"
-        />
+        <Image src={d.immagine} alt={d.immagineAlt || d.titolo} width={1200} height={675} loading="eager" class="mt-6 aspect-video w-full rounded-3xl object-cover" />
       )
     }
 
-    <div
-      class="mt-8 max-w-none text-lg leading-relaxed text-ink-800 [&_a]:text-brand-600 [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-brand-300 [&_blockquote]:pl-4 [&_blockquote]:text-ink-700 [&_h2]:mt-8 [&_h2]:text-2xl [&_h2]:font-bold [&_li]:mt-1 [&_p]:mt-4 [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-6"
-    >
+    <div class="mt-8 max-w-none text-lg leading-relaxed text-ink-700 dark:text-cream-200 [&_a]:text-gold-600 [&_a]:underline dark:[&_a]:text-gold-400 [&_blockquote]:border-l-4 [&_blockquote]:border-gold-400 [&_blockquote]:pl-4 [&_blockquote]:text-ink-500 dark:[&_blockquote]:text-ink-400 [&_h2]:mt-8 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_li]:mt-1 [&_p]:mt-4 [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:pl-6">
       <Content />
     </div>
 
     {
       d.tags.length > 0 && (
         <div class="mt-8 flex flex-wrap gap-2">
-          {d.tags.map((t) => (
-            <span class="rounded-full bg-ink-100 px-3 py-1 text-xs text-ink-800">#{t}</span>
-          ))}
+          {d.tags.map((t) => <span class="rounded-full bg-ink-500/15 px-3 py-1 text-xs">#{t}</span>)}
         </div>
       )
     }
-
-    <a href="/blog" class="mt-10 inline-block text-sm font-semibold text-brand-600 hover:text-brand-700">
-      ← Torna al blog
-    </a>
+    <a href="/blog" class="mt-10 inline-block text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">← Torna al blog</a>
   </article>
 </BaseLayout>

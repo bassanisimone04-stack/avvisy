@@ -7,6 +7,7 @@ coordinate:
   lat: 41.9013
   lng: 12.4601
 tipo: "ristorante"
+categoria: "set-reale"
 prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
@@ -15,10 +16,7 @@ immagineAlt: "Elegante sala ristorante affrescata a Roma"
 sitoWeb: "https://www.laverandaroma.com"
 ultimoAggiornamento: 2026-07-22
 film:
-  - titolo: "La grande bellezza"
-    anno: 2013
-    regista: "Paolo Sorrentino"
-    serieTv: false
+  - film: "la-grande-bellezza"
     descrizioneScena: "Nel raffinato ristorante affrescato, Jep Gambardella cena con Ramona: una delle scene romane del film premio Oscar."
 descrizione: "Ristorante dagli affreschi rinascimentali a due passi dal Vaticano, dentro l'Hotel Columbus in Borgo Santo Spirito. Atmosfera elegante e cucina raffinata."
 ---

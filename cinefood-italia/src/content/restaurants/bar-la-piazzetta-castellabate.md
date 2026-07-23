@@ -7,6 +7,7 @@ coordinate:
   lat: 40.2789
   lng: 14.9530
 tipo: "bar"
+categoria: "set-reale"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
@@ -14,10 +15,7 @@ immagine: "../../assets/placeholder/gran-caffe.jpg"
 immagineAlt: "Tavolini di un bar nella piazza di un borgo del Cilento"
 ultimoAggiornamento: 2026-07-22
 film:
-  - titolo: "Benvenuti al Sud"
-    anno: 2010
-    regista: "Luca Miniero"
-    serieTv: false
+  - film: "benvenuti-al-sud"
     descrizioneScena: "La piazzetta del borgo — cuore della vita del paese nel film — dove sorge il bar affacciato sulla piazza principale di Castellabate."
 descrizione: "Bar sulla piazza principale di Castellabate, punto d'incontro del borgo cilentano reso celebre da 'Benvenuti al Sud'. Perfetto per un caffè con vista sul mare."
 ---

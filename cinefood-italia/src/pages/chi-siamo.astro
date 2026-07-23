@@ -4,50 +4,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE } from "../config/site";
 ---
 
-<BaseLayout
-  title="Chi siamo"
-  description={`Cos'è ${SITE.name}: la directory dei locali italiani apparsi al cinema e in TV.`}
->
+<BaseLayout title="Chi siamo" description={`Cos'è ${SITE.name}: la directory dei locali italiani apparsi al cinema e in TV.`}>
   <section class="mx-auto max-w-3xl px-4 py-12">
-    <h1 class="text-3xl font-extrabold text-ink-900">Chi siamo</h1>
+    <h1 class="font-display text-4xl font-extrabold">Chi siamo</h1>
 
-    <div class="mt-6 space-y-4 text-lg text-ink-800">
-      <p>
-        <strong>{SITE.name}</strong> è una guida indipendente ai ristoranti, bar,
-        caffè, trattorie e pasticcerie d'Italia che sono apparsi in film e serie
-        TV. Il nostro obiettivo è unire due grandi passioni italiane: il
-        <em>cinema</em> e la <em>buona tavola</em>.
-      </p>
-      <p>
-        Per ogni locale raccontiamo dove si trova, che tipo di cucina propone e
-        in quali film o serie è comparso, con una descrizione della scena. Così
-        puoi organizzare itinerari golosi sulle orme dei tuoi personaggi
-        preferiti.
-      </p>
-      <p>
-        Il progetto è in continua crescita: aggiungiamo nuovi locali di
-        continuo. Se conosci un posto che dovremmo includere, oppure se sei un
-        ristoratore, scrivici!
-      </p>
+    <div class="mt-6 space-y-4 text-lg text-ink-700 dark:text-cream-200">
+      <p><strong>{SITE.name}</strong> è una guida indipendente ai ristoranti, bar, caffè, trattorie e pasticcerie d'Italia apparsi in film e serie TV. Uniamo due grandi passioni italiane: il <em>cinema</em> e la <em>buona tavola</em>.</p>
+      <p>Per ogni locale raccontiamo dove si trova, che cucina propone e in quali film o serie è comparso, con la descrizione della scena. Così puoi organizzare itinerari golosi sulle orme dei tuoi personaggi preferiti.</p>
+      <p>Distinguiamo i <strong>set reali</strong> (locali dove si è girato davvero) dai locali <strong>a tema cinema</strong>. Il progetto cresce di continuo: se conosci un posto da includere, scrivici!</p>
     </div>
 
-    <div class="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
-      <p>
-        <strong>Nota sui dati.</strong> Le informazioni sui locali e sulle
-        apparizioni cinematografiche sono raccolte con cura ma vanno considerate
-        indicative: verifica sempre orari, indirizzi e disponibilità prima di
-        metterti in viaggio. I titoli di film e serie appartengono ai rispettivi
-        aventi diritto.
-      </p>
+    <div class="mt-8 rounded-3xl border border-gold-500/30 bg-gold-500/10 p-5 text-sm text-ink-700 dark:text-cream-200">
+      <p><strong>Nota sui dati.</strong> Le informazioni sui locali e sulle apparizioni sono raccolte con cura ma vanno considerate indicative: verifica sempre orari, indirizzi e disponibilità. I titoli di film e serie appartengono ai rispettivi aventi diritto.</p>
     </div>
 
     <div class="mt-8 flex flex-wrap gap-3">
-      <a href="/aggiungi-locale" class="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700">
-        Segnala un locale
-      </a>
-      <a href="/inserzioni" class="rounded-full border border-ink-100 px-5 py-2.5 text-sm font-semibold text-ink-800 hover:bg-ink-50">
-        Inserzioni per ristoratori
-      </a>
+      <a href="/aggiungi-locale" class="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-noir-950 hover:bg-gold-400">Segnala un locale</a>
+      <a href="/inserzioni" class="rounded-full border border-ink-500/25 px-5 py-2.5 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800">Inserzioni per ristoratori</a>
     </div>
   </section>
 </BaseLayout>

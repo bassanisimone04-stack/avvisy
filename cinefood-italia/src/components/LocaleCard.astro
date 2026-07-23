@@ -1,0 +1,73 @@
+---
+/**
+ * Scheda-anteprima di un locale (griglie di home, archivi, elenco).
+ * Risolve da sola i film collegati per mostrarne i titoli.
+ * Immagine ottimizzata da Astro con lazy loading.
+ */
+import { Image } from "astro:assets";
+import { getEntries } from "astro:content";
+import Badges from "./Badges.astro";
+import type { Restaurant } from "../lib/utils";
+
+interface Props {
+  locale: Restaurant;
+}
+const { locale } = Astro.props;
+const d = locale.data;
+const url = `/locale/${locale.id}`;
+
+// Risolve i film collegati per mostrarne i titoli (max 2).
+const filmEntries = await getEntries(d.film.map((f) => f.film));
+const filmTitoli = filmEntries.map((f) => f?.data.titolo).filter(Boolean) as string[];
+---
+
+<article
+  class="group flex h-full flex-col overflow-hidden rounded-3xl border border-ink-500/10 bg-white shadow-sm ring-1 ring-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-gold-500/30 dark:border-noir-700 dark:bg-noir-900"
+>
+  <a href={url} class="relative block overflow-hidden">
+    <Image
+      src={d.immagine}
+      alt={d.immagineAlt || d.nome}
+      width={640}
+      height={427}
+      loading="lazy"
+      class="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 overlay-bottom opacity-70"></div>
+    <div class="absolute left-3 top-3 flex flex-wrap gap-1.5">
+      <Badges evidenza={d.inEvidenza} />
+      <Badges categoria={d.categoria} />
+    </div>
+  </a>
+
+  <div class="flex flex-1 flex-col p-5">
+    <div class="mb-2 flex flex-wrap items-center gap-1.5">
+      <Badges tipo={d.tipo} />
+      <Badges prezzo={d.prezzo} />
+    </div>
+
+    <h3 class="font-display text-xl font-bold leading-tight">
+      <a href={url} class="transition-colors hover:text-gold-600 dark:hover:text-gold-400">
+        {d.nome}
+      </a>
+    </h3>
+    <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">📍 {d.citta}, {d.regione}</p>
+    <p class="mt-2 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{d.descrizione}</p>
+
+    {
+      filmTitoli.length > 0 && (
+        <p class="mt-3 text-xs text-ink-500 dark:text-ink-400">
+          🎞️ <span class="font-medium text-ink-700 dark:text-cream-200">{filmTitoli.slice(0, 2).join(" · ")}</span>
+          {filmTitoli.length > 2 && <span> +{filmTitoli.length - 2}</span>}
+        </p>
+      )
+    }
+
+    <a
+      href={url}
+      class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gold-600 transition-colors hover:text-gold-500 dark:text-gold-400"
+    >
+      Scopri di più <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</article>
