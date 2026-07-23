@@ -137,6 +137,10 @@ const blog = [
   ["blog-sicilia.jpg", "Sicilia da mangiare", "#b45309"],
   ["blog-dolce-vita.jpg", "La Dolce Vita", "#3f3f46"],
   ["blog-nord.jpg", "Cinema al Nord", "#1e3a5f"],
+  ["blog-borghi.jpg", "Borghi del cinema", "#166534"],
+  ["blog-weekend.jpg", "Weekend da film", "#6b21a8"],
+  ["blog-scene.jpg", "Scene a tavola", "#9f1239"],
+  ["blog-set-tema.jpg", "Set reale o a tema?", "#0e7490"],
 ];
 for (const [f, l, c] of blog) await save("placeholder", f, scene(l, "BLOG", c, 1200, 675));
 

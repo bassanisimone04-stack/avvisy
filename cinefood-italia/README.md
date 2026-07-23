@@ -152,6 +152,22 @@ email, social e le voci del menu.
   ☀️/🌙 in alto a destra. Per partire in chiaro, cambia `class="dark"` in
   `class=""` sul tag `<html>` in `BaseLayout.astro`.
 
+### 📷 Mettere foto reali (al posto dei placeholder)
+
+Le immagini incluse sono **placeholder** grafici. Le foto e le locandine reali
+dei film sono **protette da copyright**, quindi non vanno copiate dal web. Hai
+due modi per avere immagini vere:
+
+1. **Foto tue o con licenza** (consigliato per i locali): metti il file (jpg/png)
+   in `src/assets/…` con lo **stesso nome** di quello attuale. Esempi:
+   `src/assets/films/il-padrino.jpg`, `src/assets/cities/roma.jpg`,
+   `src/assets/placeholder/bar-vitelli.jpg`.
+2. **Foto libere automatiche**: esegui, sul tuo computer,
+   `node scripts/scarica-foto.mjs`. Scarica fotografie **gratuite e legali**
+   (licenza Unsplash, uso commerciale senza attribuzione) e le applica a film e
+   città. Sono immagini d'atmosfera, non le scene dei film: per una foto
+   specifica usa il metodo 1.
+
 ---
 
 ## 🚀 Pubblicare il sito online gratis
