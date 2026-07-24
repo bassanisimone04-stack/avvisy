@@ -116,9 +116,9 @@ const FILM = [
 ];
 
 // Query con monumenti/riferimenti specifici, per foto più pertinenti.
+// NB: roma, milano, napoli, venezia e la hero usano FOTO REALI caricate a mano
+// (già presenti nel repo in src/assets): non vanno riscaricate/sovrascritte.
 const CITTA = [
-  ["roma", "Rome Colosseum Italy"], ["milano", "Milan Duomo cathedral Italy"],
-  ["napoli", "Naples Vesuvius bay Italy"], ["venezia", "Venice Grand Canal Rialto"],
   ["crema", "Crema Lombardy Duomo cathedral"], ["castellabate", "Castellabate Cilento village sea"],
   ["savoca", "Savoca Sicily hilltop village"], ["punta-secca", "Punta Secca lighthouse Sicily"],
   ["palazzo-adriano", "Palazzo Adriano Sicily square"], ["salina", "Salina Aeolian island Pollara"],
@@ -178,17 +178,7 @@ for (const [slug, q] of BLOG) {
   } catch (e) { console.log("  ✗", slug, e.message); ko++; }
 }
 
-console.log("Hero…");
-{
-  const photo = await getPhoto("Rome Italy restaurant night lights", "hero-cinefood", 1920, 1080);
-  if (photo) {
-    try {
-      await sharp(photo).resize(1920, 1080, { fit: "cover" })
-        .modulate({ brightness: 0.7 })
-        .jpeg({ quality: 82 }).toFile(resolve(ASSETS, "placeholder", "hero.jpg"));
-      console.log("  ✓ hero"); ok++;
-    } catch (e) { console.log("  ✗ hero", e.message); ko++; }
-  } else { console.log("  ✗ hero"); ko++; }
-}
+// Hero: si usa la foto reale (Roma al tramonto) già presente in
+// src/assets/placeholder/hero.jpg — nessun download automatico.
 
 console.log(`\nFatto: ${ok} immagini scaricate, ${ko} non riuscite (restano i placeholder).`);
