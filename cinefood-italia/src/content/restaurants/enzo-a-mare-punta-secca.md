@@ -20,10 +20,10 @@ film:
 descrizione: "Ristorante di pesce sul lungomare di Punta Secca, il borgo dove si trova la celebre casa del commissario Montalbano. Cucina di mare della tradizione ragusana."
 ---
 
-<!-- ✅ Apparizione documentata: "Enzo a Mare" è il ristorante realmente
+<!-- Apparizione documentata: "Enzo a Mare" è il ristorante realmente
      esistente a Punta Secca dove pranza il commissario Montalbano nella serie.
      Fonti: GialloZafferano (Luoghi di Montalbano), Tripadvisor, enzoamare.it.
-     ⚠️ Verifica comunque orari e disponibilità. -->
+     Verifica comunque orari e disponibilità. -->
 
 Sul lungomare di Punta Secca, a due passi dalla casa più famosa della fiction
 italiana, si gustano i sapori di mare della Sicilia sud-orientale amati dal

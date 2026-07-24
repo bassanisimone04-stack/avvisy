@@ -1,6 +1,7 @@
 ---
 /** Chip/pillola che rimanda alla pagina di un film. */
 import { path, type Lang } from "../i18n/ui";
+import Icon from "./Icon.astro";
 interface Props {
   slug: string;
   titolo: string;
@@ -15,7 +16,7 @@ const { slug, titolo, anno, count, lang = "it" } = Astro.props;
   href={path(`/film/${slug}`, lang)}
   class="group inline-flex items-center gap-2 rounded-full border border-ink-500/15 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold-500/40 hover:text-gold-600 dark:border-noir-700 dark:bg-noir-900 dark:hover:text-gold-400"
 >
-  <span aria-hidden="true">🎬</span>
+  <Icon name="film" class="h-4 w-4 text-gold-500" />
   <span>{titolo}{anno && <span class="text-ink-400"> ({anno})</span>}</span>
   {
     count !== undefined && (

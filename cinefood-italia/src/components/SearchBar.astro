@@ -1,6 +1,7 @@
 ---
 /** Barra di ricerca che rimanda all'elenco locali con il testo cercato. */
 import { useT, path, type Lang } from "../i18n/ui";
+import Icon from "./Icon.astro";
 interface Props {
   variant?: "hero" | "compact";
   lang?: Lang;
@@ -19,7 +20,7 @@ const big = variant === "hero";
     big ? "max-w-xl" : "max-w-md",
   ]}
 >
-  <span class="pl-3 text-ink-400" aria-hidden="true">🔍</span>
+  <span class="pl-3 text-ink-400"><Icon name="search" class="h-5 w-5" /></span>
   <label for="q" class="sr-only">{t("hero.cerca")}</label>
   <input
     id="q"

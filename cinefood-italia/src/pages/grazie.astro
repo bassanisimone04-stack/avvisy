@@ -1,11 +1,12 @@
 ---
 /** Pagina di conferma mostrata dopo l'invio di un form. */
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <BaseLayout title="Grazie!" description="Messaggio inviato con successo.">
   <section class="mx-auto max-w-xl px-4 py-24 text-center">
-    <p class="text-5xl">✅</p>
+    <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-500/15 text-green-600 dark:text-green-400"><Icon name="check" class="h-8 w-8" /></span>
     <h1 class="mt-4 font-display text-4xl font-extrabold">Grazie!</h1>
     <p class="mt-3 text-lg text-ink-700 dark:text-cream-200">Abbiamo ricevuto il tuo messaggio. Ti risponderemo il prima possibile.</p>
     <a href="/" class="mt-8 inline-block rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-noir-950 hover:bg-gold-400">Torna alla home</a>

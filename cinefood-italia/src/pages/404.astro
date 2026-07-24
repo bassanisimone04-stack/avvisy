@@ -1,11 +1,12 @@
 ---
 /** Pagina di errore 404 (non trovata). */
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <BaseLayout title="Pagina non trovata" description="La pagina che cerchi non esiste.">
   <section class="mx-auto max-w-xl px-4 py-24 text-center">
-    <p class="text-6xl">🎬</p>
+    <Icon name="film" class="mx-auto h-16 w-16 text-gold-500" />
     <h1 class="mt-4 font-display text-4xl font-extrabold">Ciak, si taglia!</h1>
     <p class="mt-3 text-lg text-ink-700 dark:text-cream-200">La pagina che cerchi non esiste o è stata spostata.</p>
     <div class="mt-8 flex flex-wrap justify-center gap-3">

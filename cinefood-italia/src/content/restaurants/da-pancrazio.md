@@ -21,8 +21,8 @@ film:
 descrizione: "Storico ristorante ricavato sopra i resti dell'antico Teatro di Pompeo: le sale nei sotterranei, tra archi e colonne romane, sono una vera esperienza."
 ---
 
-<!-- ✅ Apparizione documentata tra le location romane di Mangia prega ama
-     (2010). ⚠️ Verifica indirizzo, orari e sito web prima di pubblicare. -->
+<!-- Apparizione documentata tra le location romane di Mangia prega ama
+     (2010). Verifica indirizzo, orari e sito web prima di pubblicare. -->
 
 Cenare Da Pancrazio significa mangiare letteralmente dentro la storia di Roma:
 le sale inferiori sorgono sui resti del Teatro di Pompeo, del I secolo a.C.

@@ -21,9 +21,9 @@ film:
 descrizione: "Ristorante dagli affreschi rinascimentali a due passi dal Vaticano, dentro l'Hotel Columbus in Borgo Santo Spirito. Atmosfera elegante e cucina raffinata."
 ---
 
-<!-- ✅ Apparizione documentata: La grande bellezza (2013), premio Oscar —
+<!-- Apparizione documentata: La grande bellezza (2013), premio Oscar —
      la cena di Jep con Ramona è girata alla Veranda dell'Hotel Columbus.
-     ⚠️ Verifica indirizzo, orari e disponibilità prima di pubblicare. -->
+     Verifica indirizzo, orari e disponibilità prima di pubblicare. -->
 
 Sotto gli affreschi cinquecenteschi del Palazzo dei Penitenzieri, La Veranda
 offre un'esperienza sospesa nel tempo. Qui Paolo Sorrentino ha ambientato una

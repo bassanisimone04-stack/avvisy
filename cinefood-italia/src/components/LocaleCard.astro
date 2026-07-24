@@ -3,6 +3,7 @@
 import { Image } from "astro:assets";
 import { getEntries } from "astro:content";
 import Badges from "./Badges.astro";
+import Icon from "./Icon.astro";
 import type { Restaurant } from "../lib/utils";
 import { useT, path, type Lang } from "../i18n/ui";
 import { tLocaleDesc, tFilmTitolo } from "../i18n/content-en";
@@ -53,13 +54,13 @@ const filmTitoli = filmEntries
         {d.nome}
       </a>
     </h3>
-    <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">📍 {d.citta}, {d.regione}</p>
+    <p class="mt-1 inline-flex items-center gap-1 text-sm text-ink-500 dark:text-ink-400"><Icon name="pin" class="h-3.5 w-3.5" /> {d.citta}, {d.regione}</p>
     <p class="mt-2 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{descrizione}</p>
 
     {
       filmTitoli.length > 0 && (
-        <p class="mt-3 text-xs text-ink-500 dark:text-ink-400">
-          🎞️ <span class="font-medium text-ink-700 dark:text-cream-200">{filmTitoli.slice(0, 2).join(" · ")}</span>
+        <p class="mt-3 inline-flex items-center gap-1 text-xs text-ink-500 dark:text-ink-400">
+          <Icon name="film" class="h-3.5 w-3.5 shrink-0" /> <span class="font-medium text-ink-700 dark:text-cream-200">{filmTitoli.slice(0, 2).join(" · ")}</span>
           {filmTitoli.length > 2 && <span> +{filmTitoli.length - 2}</span>}
         </p>
       )

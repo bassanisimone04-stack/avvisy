@@ -1,8 +1,10 @@
 ---
 /** Card di uno step della sezione "Come funziona". */
+import Icon from "./Icon.astro";
+import type { ComponentProps } from "astro/types";
 interface Props {
   numero: number;
-  icona: string;
+  icona: ComponentProps<typeof Icon>["name"];
   titolo: string;
   testo: string;
 }
@@ -11,8 +13,8 @@ const { numero, icona, titolo, testo } = Astro.props;
 
 <div class="relative rounded-3xl border border-ink-500/10 bg-white p-6 dark:border-noir-700 dark:bg-noir-900">
   <div class="mb-4 flex items-center gap-3">
-    <span class="flex h-11 w-11 items-center justify-center rounded-full bg-gold-500/15 text-xl" aria-hidden="true">
-      {icona}
+    <span class="flex h-11 w-11 items-center justify-center rounded-full bg-gold-500/15 text-gold-600 dark:text-gold-400">
+      <Icon name={icona} class="h-5 w-5" />
     </span>
     <span class="font-display text-4xl font-bold text-gold-500/30">{numero}</span>
   </div>

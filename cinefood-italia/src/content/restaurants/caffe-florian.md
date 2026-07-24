@@ -21,9 +21,9 @@ film:
 descrizione: "Aperto nel 1720 sotto le Procuratie Nuove, è considerato il caffè più antico d'Italia ancora in attività. Sale affrescate, orchestrina dal vivo e vista sulla Basilica di San Marco."
 ---
 
-<!-- ✅ Apparizione documentata (Il talento di Mr. Ripley, Anthony Minghella,
+<!-- Apparizione documentata (Il talento di Mr. Ripley, Anthony Minghella,
      1999): il Florian è più volte citato tra le sue location veneziane.
-     ⚠️ Verifica comunque indirizzo, orari e prezzi prima di pubblicare. -->
+     Verifica comunque indirizzo, orari e prezzi prima di pubblicare. -->
 
 Il Florian è un pezzo di storia veneziana dal 1720. Le sue salette, ognuna con
 un nome e uno stile diverso, e l'orchestrina in piazza ne fanno una tappa

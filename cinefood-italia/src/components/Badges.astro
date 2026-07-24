@@ -5,6 +5,7 @@
  */
 import { statoLabel, categoriaLabel, tipoLabel } from "../lib/utils";
 import { useT, type Lang } from "../i18n/ui";
+import Icon from "./Icon.astro";
 
 interface Props {
   tipo?: string;
@@ -29,7 +30,7 @@ const base =
 
 {
   evidenza && (
-    <span class={`${base} bg-gold-500 font-semibold text-noir-950`}>⭐ {t("badge.evidenza")}</span>
+    <span class={`${base} bg-gold-500 font-semibold text-noir-950`}><Icon name="star" class="h-3.5 w-3.5" /> {t("badge.evidenza")}</span>
   )
 }
 {
@@ -43,7 +44,7 @@ const base =
           : "bg-purple-500/15 text-purple-700 dark:text-purple-300",
       ]}
     >
-      {categoria === "set-reale" ? "🎬" : "✨"} {categoriaLabel(categoria, lang)}
+      {categoria === "set-reale" ? <Icon name="film" class="h-3.5 w-3.5" /> : <Icon name="sparkle" class="h-3.5 w-3.5" />} {categoriaLabel(categoria, lang)}
     </span>
   )
 }

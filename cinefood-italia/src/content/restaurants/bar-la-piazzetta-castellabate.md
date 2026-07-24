@@ -20,9 +20,9 @@ film:
 descrizione: "Bar sulla piazza principale di Castellabate, punto d'incontro del borgo cilentano reso celebre da 'Benvenuti al Sud'. Perfetto per un caffè con vista sul mare."
 ---
 
-<!-- ✅ Apparizione documentata: la piazzetta di Castellabate (Piazza 10
+<!-- Apparizione documentata: la piazzetta di Castellabate (Piazza 10
      Ottobre 1123) è al centro di Benvenuti al Sud (2010); sulla piazza si
-     affaccia il bar "La Piazzetta". ⚠️ Verifica il nome esatto e gli orari. -->
+     affaccia il bar "La Piazzetta". Verifica il nome esatto e gli orari. -->
 
 La piazzetta di Castellabate è il cuore pulsante del borgo e del film: da qui
 si gode una delle viste più belle del Cilento. Il bar è il posto ideale per una

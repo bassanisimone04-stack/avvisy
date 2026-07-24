@@ -91,7 +91,7 @@ const t = useT(lang);
     for (const m of markers) {
       const popup = `
         <strong>${m.nome}</strong>
-        ${m.citta ? `<br/><span>📍 ${m.citta}</span>` : ""}
+        ${m.citta ? `<br/><span>${m.citta}</span>` : ""}
         ${m.tipo ? `<br/><span style="text-transform:capitalize">${m.tipo}</span>` : ""}
         ${m.url ? `<br/><a href="${m.url}">${scopri}</a>` : ""}
       `;

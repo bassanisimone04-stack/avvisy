@@ -20,9 +20,9 @@ film:
 descrizione: "Ristorante di pesce sul porto di Castellabate, nel Cilento. Piatti di mare freschi e vista sull'acqua, tra le location della commedia campione d'incassi."
 ---
 
-<!-- ✅ Apparizione documentata: Benvenuti al Sud (2010) — la cena tra
+<!-- Apparizione documentata: Benvenuti al Sud (2010) — la cena tra
      colleghi è girata al ristorante "Le Gatte", che esiste davvero con questo
-     nome. ⚠️ Verifica indirizzo esatto, coordinate e orari. -->
+     nome. Verifica indirizzo esatto, coordinate e orari. -->
 
 Sul porticciolo di San Marco di Castellabate, Le Gatte propone cucina di mare
 del Cilento. Qui è ambientata la spassosa cena dei colleghi in *Benvenuti al

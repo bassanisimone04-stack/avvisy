@@ -20,8 +20,8 @@ film:
 descrizione: "Storico caffè di Via Vittorio Veneto, aperto nel 1948 e reso celebre da 'La dolce vita' di Fellini. Simbolo della Roma glamour degli anni '60, ha chiuso nel 2008."
 ---
 
-<!-- ✅ Apparizione documentata: il Café de Paris (Via Veneto 90) fu immortalato
-     ne "La dolce vita" (Fellini, 1960). ⚠️ NB: il locale ha CHIUSO nel 2008
+<!-- Apparizione documentata: il Café de Paris (Via Veneto 90) fu immortalato
+     ne "La dolce vita" (Fellini, 1960). NB: il locale ha CHIUSO nel 2008
      (stato: chiuso). Fonti: Wikipedia, RomaIT, BFI. -->
 
 Su Via Veneto, la strada resa immortale da *La dolce vita*, il Café de Paris è

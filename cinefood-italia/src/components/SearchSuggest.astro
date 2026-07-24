@@ -5,6 +5,7 @@
  * Con Invio (o il pulsante) va all'elenco completo filtrato.
  */
 import { useT, path, type Lang } from "../i18n/ui";
+import Icon from "./Icon.astro";
 
 interface Item {
   label: string;
@@ -26,7 +27,7 @@ const t = useT(lang);
     role="search"
     class="flex w-full items-center gap-2 rounded-full bg-white/95 p-1.5 shadow-2xl ring-1 ring-black/5 backdrop-blur dark:bg-noir-900/90"
   >
-    <span class="pl-3 text-ink-400" aria-hidden="true">🔍</span>
+    <span class="pl-3 text-ink-400"><Icon name="search" class="h-5 w-5" /></span>
     <label for="suggest-input" class="sr-only">{t("hero.cerca")}</label>
     <input
       id="suggest-input"

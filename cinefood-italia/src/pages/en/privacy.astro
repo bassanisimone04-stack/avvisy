@@ -1,6 +1,7 @@
 ---
 /** English "Privacy & Cookies" page (base template to customise). */
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Icon from "../../components/Icon.astro";
 import { SITE } from "../../config/site";
 const lang = "en" as const;
 const today = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
@@ -11,10 +12,11 @@ const today = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "l
     <h1 class="font-display text-4xl font-extrabold">Privacy &amp; Cookies</h1>
     <p class="mt-2 text-sm text-ink-500 dark:text-ink-400">Last updated: {today}</p>
 
-    <div class="mt-6 rounded-2xl border border-amber-300/40 bg-amber-400/10 p-4 text-sm text-ink-700 dark:text-cream-200">
-      ⚠️ <strong>Note for the site owner:</strong> this is a base template.
+    <div class="mt-6 flex gap-2 rounded-2xl border border-amber-300/40 bg-amber-400/10 p-4 text-sm text-ink-700 dark:text-cream-200">
+      <Icon name="alert" class="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
+      <span><strong>Note for the site owner:</strong> this is a base template.
       Customise it with your details (data controller, real email) and the
-      services you actually use, and have it reviewed by an expert if needed.
+      services you actually use, and have it reviewed by an expert if needed.</span>
     </div>
 
     <div class="prose-cinefood mt-8 space-y-6 text-ink-700 dark:text-cream-200 [&_h2]:mt-8 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_p]:mt-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mt-1">

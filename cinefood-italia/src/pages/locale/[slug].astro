@@ -7,6 +7,7 @@ import Badges from "../../components/Badges.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import Share from "../../components/Share.astro";
 import Map from "../../components/Map.astro";
+import Icon from "../../components/Icon.astro";
 import { SITE } from "../../config/site";
 import { slugify, formatData } from "../../lib/utils";
 import { restaurantJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
@@ -73,8 +74,8 @@ const jsonLd = [
       <Badges stato={d.stato} />
     </div>
     <h1 class="mt-3 font-display text-4xl font-extrabold sm:text-5xl">{d.nome}</h1>
-    <p class="mt-2 text-ink-500 dark:text-ink-400">📍 {d.indirizzo}</p>
-    {d.orari && <p class="mt-1 text-ink-500 dark:text-ink-400">🕒 {d.orari}</p>}
+    <p class="mt-2 inline-flex items-center gap-1.5 text-ink-500 dark:text-ink-400"><Icon name="pin" class="h-4 w-4 shrink-0" /> {d.indirizzo}</p>
+    {d.orari && <p class="mt-1 inline-flex items-center gap-1.5 text-ink-500 dark:text-ink-400"><Icon name="clock" class="h-4 w-4 shrink-0" /> {d.orari}</p>}
     <p class="mt-4 text-lg text-ink-700 dark:text-cream-200">{d.descrizione}</p>
 
     <!-- Azioni -->
@@ -117,7 +118,7 @@ const jsonLd = [
 
     <!-- Film collegati -->
     <section class="mt-10">
-      <h2 class="font-display text-2xl font-bold">🎬 Al cinema e in TV</h2>
+      <h2 class="inline-flex items-center gap-2 font-display text-2xl font-bold"><Icon name="film" class="h-6 w-6 text-gold-500" /> Al cinema e in TV</h2>
       <ul class="mt-4 space-y-4">
         {
           d.film.map((rel) => {

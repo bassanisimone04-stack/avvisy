@@ -20,9 +20,9 @@ film:
 descrizione: "Trattoria a due passi da Piazza Navona, in Largo Febo. Cucina romana tradizionale: dai carciofi alla giudia all'amatriciana, fino alla pasta fatta in casa."
 ---
 
-<!-- ✅ Apparizione documentata: Mangia prega ama (Eat Pray Love, 2010) —
+<!-- Apparizione documentata: Mangia prega ama (Eat Pray Love, 2010) —
      la scena in cui Julia Roberts ordina i piatti romani è girata proprio
-     alla Trattoria Santa Lucia in Largo Febo. ⚠️ Verifica orari e indirizzo. -->
+     alla Trattoria Santa Lucia in Largo Febo. Verifica orari e indirizzo. -->
 
 Nel cuore del centro storico, vicino a Piazza Navona, la Trattoria Santa Lucia
 è una tappa golosa per chi segue le orme del cinema: qui è ambientata una delle

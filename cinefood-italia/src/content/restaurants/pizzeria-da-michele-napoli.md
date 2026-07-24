@@ -20,9 +20,9 @@ film:
 descrizione: "Fondata nel 1870 nel quartiere Forcella, è una delle pizzerie più storiche e famose di Napoli. Menù essenziale — marinara e margherita — cotte nel forno a legna secondo la tradizione. Ambiente semplice e verace, spesso con la fila fuori."
 ---
 
-<!-- ✅ Apparizione documentata: Mangia prega ama (Eat Pray Love, 2010) —
+<!-- Apparizione documentata: Mangia prega ama (Eat Pray Love, 2010) —
      la scena della pizza napoletana con Julia Roberts è girata proprio
-     a L'Antica Pizzeria da Michele, in Via Cesare Sersale. ⚠️ Verifica
+     a L'Antica Pizzeria da Michele, in Via Cesare Sersale. Verifica
      orari e disponibilità prima di andare: spesso c'è da attendere. -->
 
 Nel cuore di Forcella, **L'Antica Pizzeria da Michele** è un tempio della pizza

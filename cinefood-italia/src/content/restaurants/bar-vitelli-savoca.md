@@ -22,9 +22,9 @@ film:
 descrizione: "Storico bar di paese affacciato sulla piazza di Savoca, celebre per la sua granita e per essere una delle location siciliane più visitate dai cinefili."
 ---
 
-<!-- ✅ Apparizione documentata: Savoca fu usata da Coppola per le scene
+<!-- Apparizione documentata: Savoca fu usata da Coppola per le scene
      "siciliane" de Il Padrino (1972); al Bar Vitelli, Michael incontra il
-     padre di Apollonia. ⚠️ Verifica comunque indirizzo, orari e sito web. -->
+     padre di Apollonia. Verifica comunque indirizzo, orari e sito web. -->
 
 Immerso nel borgo medievale di Savoca, il Bar Vitelli è un piccolo museo
 vivente: fotografie d'epoca, oggetti d'antan e la celebre granita al limone.

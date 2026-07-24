@@ -17,14 +17,14 @@ Capire la differenza ti aiuta a scegliere l'esperienza giusta.
 È un locale dove il film è stato **girato davvero** oppure che è **realmente
 esistito** ed è stato usato come ambientazione. Qui la magia è autentica: ti
 siedi dove si sono seduti i personaggi. Sulle nostre schede lo riconosci dal
-badge **🎬 Set reale**.
+badge **Set reale**.
 
 ## A tema cinema
 
 È un locale **ispirato** al cinema — arredi, manifesti, menù a tema — ma **non
 è una location reale**. Sono posti divertenti e scenografici, perfetti per gli
 appassionati, ma non aspettarti di trovarci una scena del film. Li segnaliamo
-con il badge **✨ A tema cinema**.
+con il badge **A tema cinema**.
 
 ## Come distinguerli su CineFood Italia
 

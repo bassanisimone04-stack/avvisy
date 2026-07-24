@@ -5,6 +5,7 @@
  *    che usi davvero (hosting, form, statistiche) prima della pubblicazione.
  */
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
 import { SITE } from "../config/site";
 const oggi = new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
 ---
@@ -14,10 +15,11 @@ const oggi = new Date().toLocaleDateString("it-IT", { day: "numeric", month: "lo
     <h1 class="font-display text-4xl font-extrabold">Privacy e Cookie</h1>
     <p class="mt-2 text-sm text-ink-500 dark:text-ink-400">Ultimo aggiornamento: {oggi}</p>
 
-    <div class="mt-6 rounded-2xl border border-amber-300/40 bg-amber-400/10 p-4 text-sm text-ink-700 dark:text-cream-200">
-      ⚠️ <strong>Nota per il gestore del sito:</strong> questo è un modello di
+    <div class="mt-6 flex gap-2 rounded-2xl border border-amber-300/40 bg-amber-400/10 p-4 text-sm text-ink-700 dark:text-cream-200">
+      <Icon name="alert" class="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
+      <span><strong>Nota per il gestore del sito:</strong> questo è un modello di
       base. Personalizzalo con i tuoi dati (titolare, email reale) e con i
-      servizi che usi davvero, ed eventualmente fallo verificare da un esperto.
+      servizi che usi davvero, ed eventualmente fallo verificare da un esperto.</span>
     </div>
 
     <div class="prose-cinefood mt-8 space-y-6 text-ink-700 dark:text-cream-200 [&_h2]:mt-8 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_p]:mt-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mt-1">

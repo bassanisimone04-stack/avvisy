@@ -17,13 +17,13 @@ Understanding the difference helps you choose the right experience.
 
 It's a venue where the film was **actually shot**, or that **really existed** and
 was used as a setting. Here the magic is authentic: you sit where the characters
-sat. On our cards you recognise it by the **🎬 Real set** badge.
+sat. On our cards you recognise it by the **Real set** badge.
 
 ## Cinema-themed
 
 It's a venue **inspired** by cinema — décor, posters, themed menu — but **not a
 real location**. These are fun, scenic spots, perfect for enthusiasts, but don't
-expect to find a scene from the film there. We mark them with the **✨
+expect to find a scene from the film there. We mark them with the **
 Cinema-themed** badge.
 
 ## How to tell them apart on CineFood Italia
