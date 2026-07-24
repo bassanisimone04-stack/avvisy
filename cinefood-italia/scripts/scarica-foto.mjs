@@ -118,10 +118,10 @@ const FILM = [
 // Query con monumenti/riferimenti specifici, per foto più pertinenti.
 // NB: roma, milano, napoli, venezia e la hero usano FOTO REALI caricate a mano
 // (già presenti nel repo in src/assets): non vanno riscaricate/sovrascritte.
-// Foto reali già nel repo (non riscaricare): roma, milano, napoli, venezia,
-// crema, savoca, punta-secca, palazzo-adriano, salina.
+// Foto reali già nel repo (non riscaricare): tutte le città con un locale
+// (roma, milano, napoli, venezia, crema, castellabate, savoca, punta-secca,
+// palazzo-adriano, salina). Qui restano solo eventuali città senza foto reale.
 const CITTA = [
-  ["castellabate", "Castellabate Cilento village sea"],
   ["como", "Lake Como Italy town"],
 ];
 
