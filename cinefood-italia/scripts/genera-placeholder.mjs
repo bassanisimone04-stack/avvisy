@@ -42,21 +42,9 @@ function scene(label, subtitle, color, w, h) {
    copyright: sostituiscile con immagini di cui possiedi i diritti mettendo
    un file con lo stesso nome in src/assets/films/. */
 function poster(title, year, c1, c2) {
+  // Sfondo d'atmosfera SENZA testo: il titolo del film viene sovrapposto
+  // in HTML (nella pagina) così è sempre nitido e leggibile.
   const W = 800, H = 1200;
-  // Titolo a capo automatico (max ~13 caratteri per riga).
-  const words = title.split(" ");
-  const lines = [];
-  let cur = "";
-  for (const wd of words) {
-    if ((cur + " " + wd).trim().length > 13) { lines.push(cur.trim()); cur = wd; }
-    else cur += " " + wd;
-  }
-  if (cur.trim()) lines.push(cur.trim());
-  const baseY = 1010 - (lines.length - 1) * 74;
-  const titleSvg = lines
-    .map((l, i) => `<text x="60" y="${baseY + i * 74}" font-family="Georgia, serif" font-size="64" fill="#faf7f0" font-weight="bold">${esc(l)}</text>`)
-    .join("");
-
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
     <defs>
       <linearGradient id="pg" x1="0.1" y1="0" x2="0.9" y2="1">
@@ -68,22 +56,12 @@ function poster(title, year, c1, c2) {
       <radialGradient id="vig" cx="50%" cy="45%" r="75%">
         <stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
       </radialGradient>
-      <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#0d0d10" stop-opacity="0"/><stop offset="70%" stop-color="#0d0d10" stop-opacity="0.85"/><stop offset="100%" stop-color="#0d0d10" stop-opacity="0.97"/>
-      </linearGradient>
     </defs>
     <rect width="100%" height="100%" fill="url(#pg)"/>
-    <!-- luci soffuse per profondità "da scena" -->
     <ellipse cx="250" cy="330" rx="420" ry="300" fill="#f5c451" opacity="0.10"/>
     <ellipse cx="620" cy="880" rx="460" ry="340" fill="#ffffff" opacity="0.05"/>
     <rect width="100%" height="100%" fill="url(#spot)"/>
     <rect width="100%" height="100%" fill="url(#vig)"/>
-    <!-- fascia inferiore per la leggibilità del titolo -->
-    <rect x="0" y="620" width="100%" height="580" fill="url(#band)"/>
-    <rect x="60" y="${baseY - 96}" width="70" height="6" rx="3" fill="#f5c451"/>
-    <text x="60" y="${baseY - 54}" font-family="Arial, sans-serif" font-size="30" fill="#f5c451" letter-spacing="4">${year}</text>
-    ${titleSvg}
-    <text x="60" y="1150" font-family="Arial, sans-serif" font-size="21" fill="#fff" opacity="0.5" letter-spacing="2">FOTO PLACEHOLDER · CINEFOOD ITALIA</text>
   </svg>`;
 }
 

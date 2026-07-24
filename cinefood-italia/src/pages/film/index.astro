@@ -28,21 +28,25 @@ const conteggi = contaLocaliPerFilm(locali);
         films.map((film, i) => (
           <Reveal delay={i * 50}>
             <a href={`/film/${film.id}`} class="group block">
-              <div class="overflow-hidden rounded-2xl shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
+              <div class="relative flex aspect-[2/3] items-end overflow-hidden rounded-2xl shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
                 <Image
                   src={film.data.locandina}
                   alt={film.data.locandinaAlt || `Locandina di ${film.data.titolo}`}
                   width={400}
                   height={600}
                   loading="lazy"
-                  class="aspect-[2/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div class="absolute inset-0 overlay-bottom"></div>
+                <div class="relative w-full p-3">
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-gold-400">
+                    {film.data.serieTv ? "Serie TV" : "Film"} · {film.data.anno}
+                  </span>
+                  <h2 class="font-display text-lg font-bold leading-tight text-white">{film.data.titolo}</h2>
+                </div>
               </div>
-              <h2 class="mt-3 font-display text-lg font-bold leading-tight group-hover:text-gold-600 dark:group-hover:text-gold-400">
-                {film.data.titolo}
-              </h2>
-              <p class="text-sm text-ink-500 dark:text-ink-400">
-                {film.data.anno} · {conteggi.get(film.id) ?? 0} locali
+              <p class="mt-2 text-sm text-ink-500 dark:text-ink-400">
+                {conteggi.get(film.id) ?? 0} locali
               </p>
             </a>
           </Reveal>

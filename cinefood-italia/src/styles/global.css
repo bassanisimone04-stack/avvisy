@@ -99,6 +99,20 @@ body {
   }
 }
 
+/* Immagine hero: lento zoom "ken burns" (movimento morbido e continuo) */
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+.hero-zoom {
+  animation: kenburns 22s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom {
+    animation: none;
+  }
+}
+
 /* Utility: gradiente scuro per leggibilità del testo sulle foto */
 .overlay-bottom {
   background-image: linear-gradient(

@@ -76,30 +76,16 @@ async function getPhoto(query, seed, w, h) {
 }
 
 /** Overlay "key-art" per le locandine film: sfumatura + titolo. */
-function posterOverlay(title, year) {
+function posterOverlay() {
+  // Solo una sfumatura scura in basso: il titolo del film è sovrapposto in
+  // HTML nella pagina, così è sempre nitido sopra la foto.
   const W = 800, H = 1200;
-  const words = title.split(" ");
-  const lines = [];
-  let cur = "";
-  for (const wd of words) {
-    if ((cur + " " + wd).trim().length > 13) { lines.push(cur.trim()); cur = wd; }
-    else cur += " " + wd;
-  }
-  if (cur.trim()) lines.push(cur.trim());
-  const baseY = 1010 - (lines.length - 1) * 74;
-  const titleSvg = lines
-    .map((l, i) => `<text x="60" y="${baseY + i * 74}" font-family="Georgia, serif" font-size="64" fill="#faf7f0" font-weight="bold">${esc(l)}</text>`)
-    .join("");
   return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
     <defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#0d0d10" stop-opacity="0"/>
-      <stop offset="62%" stop-color="#0d0d10" stop-opacity="0.82"/>
-      <stop offset="100%" stop-color="#0d0d10" stop-opacity="0.97"/></linearGradient></defs>
+      <stop offset="60%" stop-color="#0d0d10" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d0d10" stop-opacity="0.92"/></linearGradient></defs>
     <rect x="0" y="480" width="100%" height="720" fill="url(#b)"/>
-    <rect x="60" y="${baseY - 96}" width="70" height="6" rx="3" fill="#f5c451"/>
-    <text x="60" y="${baseY - 54}" font-family="Arial, sans-serif" font-size="30" fill="#f5c451" letter-spacing="4">${year}</text>
-    ${titleSvg}
-    <text x="60" y="1150" font-family="Arial, sans-serif" font-size="20" fill="#fff" opacity="0.55" letter-spacing="2">FOTO LIBERA · CINEFOOD ITALIA</text>
   </svg>`);
 }
 
@@ -159,7 +145,7 @@ for (const [slug, title, year, q] of FILM) {
   if (!photo) { console.log("  ✗", slug); ko++; continue; }
   try {
     await sharp(photo).resize(800, 1200, { fit: "cover" })
-      .composite([{ input: posterOverlay(title, year) }])
+      .composite([{ input: posterOverlay() }])
       .jpeg({ quality: 80 }).toFile(resolve(ASSETS, "films", `${slug}.jpg`));
     console.log("  ✓", slug); ok++;
   } catch (e) { console.log("  ✗", slug, e.message); ko++; }
@@ -189,6 +175,19 @@ for (const [slug, q] of BLOG) {
       .jpeg({ quality: 80 }).toFile(resolve(ASSETS, "placeholder", `${slug}.jpg`));
     console.log("  ✓", slug); ok++;
   } catch (e) { console.log("  ✗", slug, e.message); ko++; }
+}
+
+console.log("Hero…");
+{
+  const photo = await getPhoto("Rome Italy restaurant night lights", "hero-cinefood", 1920, 1080);
+  if (photo) {
+    try {
+      await sharp(photo).resize(1920, 1080, { fit: "cover" })
+        .modulate({ brightness: 0.7 })
+        .jpeg({ quality: 82 }).toFile(resolve(ASSETS, "placeholder", "hero.jpg"));
+      console.log("  ✓ hero"); ok++;
+    } catch (e) { console.log("  ✗ hero", e.message); ko++; }
+  } else { console.log("  ✗ hero"); ko++; }
 }
 
 console.log(`\nFatto: ${ok} immagini scaricate, ${ko} non riuscite (restano i placeholder).`);
