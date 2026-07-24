@@ -44,7 +44,7 @@ export const SITE = {
    *    (es. "AbCdEf123..."). Serve per far indicizzare il sito su Google
    *    e monitorare le ricerche. Lascia "" se non l'hai ancora fatto.
    */
-  googleSiteVerification: "bTYw5z2tMiXO-ldlpDUJPa",
+  googleSiteVerification: "bTYw5z2tMiXO-ldlpDUJPa46zwUkjEEEzUIQOwe_a7Q",
 
   /** Link ai social (lascia vuoto "" per nasconderli dal footer). */
   social: {
