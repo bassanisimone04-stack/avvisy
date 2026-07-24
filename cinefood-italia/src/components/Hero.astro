@@ -28,16 +28,16 @@ const t = useT(lang);
     fetchpriority="high"
     class="hero-zoom absolute inset-0 -z-10 h-full w-full object-cover"
   />
-  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-noir-950/80 via-noir-950/60 to-noir-950"></div>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-noir-950/25 via-transparent to-noir-950/45"></div>
 
-  <div class="mx-auto w-full max-w-4xl px-4 py-20 text-center">
-    <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold-400">
+  <div class="mx-auto w-full max-w-4xl px-4 py-20 text-center [text-shadow:_0_2px_16px_rgba(0,0,0,0.55)]">
+    <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold-300">
       🎬 {t("hero.kicker")}
     </p>
     <h1 class="font-display text-5xl font-extrabold leading-[1.05] text-white sm:text-6xl md:text-7xl">
       {titolo}
     </h1>
-    <p class="mx-auto mt-5 max-w-2xl text-lg text-cream-200">{sottotitolo}</p>
+    <p class="mx-auto mt-5 max-w-2xl text-lg text-cream-100">{sottotitolo}</p>
 
     <div class="mt-8 flex flex-col items-center gap-4">
       {suggestItems && suggestItems.length > 0 ? (
