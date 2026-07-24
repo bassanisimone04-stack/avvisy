@@ -23,6 +23,7 @@ export const TIPI_LOCALE = [
   "bar",
   "caffè",
   "pasticceria",
+  "pizzeria",
 ] as const;
 
 /** Fasce di prezzo ammesse. */

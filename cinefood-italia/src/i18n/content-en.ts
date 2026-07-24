@@ -143,6 +143,10 @@ interface RestEn {
 }
 
 export const restaurantsEn: Record<string, RestEn> = {
+  "pizzeria-da-michele-napoli": {
+    descrizione: "Founded in 1870 in the Forcella district, it is one of the most historic and famous pizzerias in Naples. An essential menu — marinara and margherita — baked in a wood-fired oven according to tradition. A simple, authentic setting, often with a queue outside.",
+    scena: { "mangia-prega-ama": "It is the pizzeria where Liz (Julia Roberts) savours the famous Neapolitan margherita pizza, in one of the film's most iconic food scenes." },
+  },
   "bar-vitelli-savoca": {
     descrizione: "Historic village bar overlooking the square of Savoca, famous for its granita and as one of the most visited Sicilian film locations.",
     scena: { "il-padrino": "In the village of Savoca, Michael Corleone asks the bar owner for the hand of his daughter Apollonia." },

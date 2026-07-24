@@ -118,10 +118,10 @@ const FILM = [
 // Query con monumenti/riferimenti specifici, per foto più pertinenti.
 // NB: roma, milano, napoli, venezia e la hero usano FOTO REALI caricate a mano
 // (già presenti nel repo in src/assets): non vanno riscaricate/sovrascritte.
+// Foto reali già nel repo (non riscaricare): roma, milano, napoli, venezia,
+// crema, savoca, punta-secca, palazzo-adriano, salina.
 const CITTA = [
-  ["crema", "Crema Lombardy Duomo cathedral"], ["castellabate", "Castellabate Cilento village sea"],
-  ["savoca", "Savoca Sicily hilltop village"], ["punta-secca", "Punta Secca lighthouse Sicily"],
-  ["palazzo-adriano", "Palazzo Adriano Sicily square"], ["salina", "Salina Aeolian island Pollara"],
+  ["castellabate", "Castellabate Cilento village sea"],
   ["como", "Lake Como Italy town"],
 ];
 

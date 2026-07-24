@@ -73,6 +73,7 @@ export const ui = {
     "tipo.bar": "bar",
     "tipo.caffè": "caffè",
     "tipo.pasticceria": "pasticceria",
+    "tipo.pizzeria": "pizzeria",
     // Filtri
     "filtri.cercaPh": "Cerca per nome, città o film…",
     "filtri.citta": "Città",
@@ -207,6 +208,7 @@ export const ui = {
     "tipo.bar": "bar",
     "tipo.caffè": "café",
     "tipo.pasticceria": "pastry shop",
+    "tipo.pizzeria": "pizzeria",
     "filtri.cercaPh": "Search by name, city or film…",
     "filtri.citta": "City",
     "filtri.film": "Film / Series",
