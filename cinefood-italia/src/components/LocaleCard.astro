@@ -33,13 +33,15 @@ const filmTitoli = filmEntries
       alt={d.immagineAlt || d.nome}
       width={640}
       height={427}
+      densities={[1, 2]}
+      quality={85}
       loading="lazy"
       class="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
     />
     <div class="absolute inset-0 overlay-bottom opacity-70"></div>
     <div class="absolute left-3 top-3 flex flex-wrap gap-1.5">
-      <Badges evidenza={d.inEvidenza} lang={lang} />
-      <Badges categoria={d.categoria} lang={lang} />
+      <Badges evidenza={d.inEvidenza} lang={lang} onImage />
+      <Badges categoria={d.categoria} lang={lang} onImage />
     </div>
   </a>
 

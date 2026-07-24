@@ -14,8 +14,10 @@ interface Props {
   categoria?: string;
   evidenza?: boolean;
   lang?: Lang;
+  /** Se il badge è sovrapposto a una foto: usa sfondi pieni e leggibili. */
+  onImage?: boolean;
 }
-const { tipo, prezzo, stato, categoria, evidenza, lang = "it" } = Astro.props;
+const { tipo, prezzo, stato, categoria, evidenza, lang = "it", onImage = false } = Astro.props;
 const t = useT(lang);
 
 const statoColor: Record<string, string> = {
@@ -40,8 +42,12 @@ const base =
         base,
         "font-semibold",
         categoria === "set-reale"
-          ? "bg-gold-500/15 text-gold-700 dark:text-gold-300"
-          : "bg-purple-500/15 text-purple-700 dark:text-purple-300",
+          ? onImage
+            ? "bg-noir-950/85 text-gold-300 shadow-sm backdrop-blur-sm"
+            : "bg-gold-500/15 text-gold-700 dark:text-gold-300"
+          : onImage
+            ? "bg-noir-950/85 text-purple-200 shadow-sm backdrop-blur-sm"
+            : "bg-purple-500/15 text-purple-700 dark:text-purple-300",
       ]}
     >
       {categoria === "set-reale" ? <Icon name="film" class="h-3.5 w-3.5" /> : <Icon name="sparkle" class="h-3.5 w-3.5" />} {categoriaLabel(categoria, lang)}
