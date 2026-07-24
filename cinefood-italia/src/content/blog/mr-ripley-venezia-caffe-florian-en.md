@@ -1,0 +1,47 @@
+---
+titolo: "The Talented Mr. Ripley in Venice: Caffè Florian and St Mark's Square"
+descrizione: "The Talented Mr. Ripley locations in Venice: Caffè Florian, the oldest café in Italy, in St Mark's Square. An itinerary through the film's locations and where to enjoy a coffee steeped in history."
+autore: "CineFood Italia Editorial Team"
+dataPubblicazione: 2026-07-14
+immagine: "../../assets/placeholder/blog-set-tavola.jpg"
+immagineAlt: "Tables of a historic café under the arcades of St Mark's Square in Venice"
+tags: ["The Talented Mr. Ripley", "Venice", "Caffè Florian", "film tourism"]
+lang: "en"
+bozza: false
+---
+
+Anthony Minghella's *The Talented Mr. Ripley* takes the viewer into 1950s Italy,
+between Ischia, Rome and an elegant, restless **Venice**. It is here, among the
+tables of one of the most famous cafés in the world, that one of the film's most
+memorable scenes takes place: the **[Caffè Florian](/en/locale/caffe-florian)**.
+
+## Caffè Florian in the film
+
+At the tables of the Florian, in St Mark's Square, Tom Ripley (Matt Damon) meets
+Marge and Dickie's father. The café, opened in **1720** under the Procuratie
+Nuove, is considered the oldest in Italy still in business: frescoed rooms, a live
+orchestra and a view of St Mark's Basilica. A perfect frame for the film's
+sophisticated atmosphere.
+
+## What to treat yourself to
+
+The Florian is an experience rather than a simple drink: a **coffee** or a **hot
+chocolate** at its historic tables, perhaps with live music, is a luxury worth the
+price. To be experienced at least once, just like in the film.
+
+## A Venetian itinerary
+
+Beyond St Mark's Square, Ripley's Venice is made of alleys, bridges and canals. A
+walk (or a vaporetto ride) through the film's locations is the best way to breathe
+in the restless elegance of the lagoon city.
+
+You will find the venue page **[Caffè Florian](/en/locale/caffe-florian)**, the
+film's stops on
+**[The Talented Mr. Ripley](/en/film/il-talento-di-mr-ripley)** and the venues of
+**[Venice](/en/venezia)**.
+
+## In short
+
+Sitting at the **[Caffè Florian](/en/locale/caffe-florian)** means stepping into a
+scene of the film and, at the same time, into three centuries of Venetian history.
+The perfect address for a "cinematic" coffee in St Mark's Square.
