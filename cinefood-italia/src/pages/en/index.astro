@@ -6,6 +6,7 @@ import type { ImageMetadata } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/Hero.astro";
 import LocaleCard from "../../components/LocaleCard.astro";
+import Carousel from "../../components/Carousel.astro";
 import FilmChip from "../../components/FilmChip.astro";
 import CityCard from "../../components/CityCard.astro";
 import StepCard from "../../components/StepCard.astro";
@@ -71,9 +72,11 @@ const suggestItems = [
       </div>
       <a href={path("/locali", lang)} class="shrink-0 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">{t("home.vediTutti")} →</a>
     </div>
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {vetrina.map((l, i) => <Reveal delay={i * 60}><LocaleCard locale={l} lang={lang} /></Reveal>)}
-    </div>
+    <Carousel>
+      {vetrina.map((l) => (
+        <div class="w-[280px] shrink-0 snap-start sm:w-[320px]"><LocaleCard locale={l} lang={lang} /></div>
+      ))}
+    </Carousel>
   </section>
 
   <section class="border-y border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">

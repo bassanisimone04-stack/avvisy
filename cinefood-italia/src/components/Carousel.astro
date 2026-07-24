@@ -1,0 +1,62 @@
+---
+/**
+ * Carosello orizzontale interattivo: scorri con le frecce, il dito (swipe)
+ * o il trascinamento del mouse. Metti dentro le card come slot.
+ */
+---
+
+<div class="carousel relative">
+  <!-- Frecce (nascoste su mobile: si usa lo swipe) -->
+  <button
+    type="button"
+    data-dir="-1"
+    class="car-btn absolute -left-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-ink-500/15 bg-white p-2 shadow-md hover:bg-cream-100 dark:border-noir-600 dark:bg-noir-800 dark:hover:bg-noir-700 md:block"
+    aria-label="Precedente"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  </button>
+
+  <div class="car-track flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <slot />
+  </div>
+
+  <button
+    type="button"
+    data-dir="1"
+    class="car-btn absolute -right-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-ink-500/15 bg-white p-2 shadow-md hover:bg-cream-100 dark:border-noir-600 dark:bg-noir-800 dark:hover:bg-noir-700 md:block"
+    aria-label="Successivo"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </button>
+</div>
+
+<script>
+  document.querySelectorAll(".carousel").forEach((car) => {
+    const track = car.querySelector(".car-track") as HTMLElement | null;
+    if (!track) return;
+
+    // Frecce
+    car.querySelectorAll(".car-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const dir = Number((btn as HTMLElement).dataset.dir) || 1;
+        track.scrollBy({ left: dir * Math.round(track.clientWidth * 0.85), behavior: "smooth" });
+      });
+    });
+
+    // Trascinamento col mouse (desktop)
+    let down = false, startX = 0, startLeft = 0;
+    track.addEventListener("pointerdown", (e) => {
+      down = true;
+      startX = e.clientX;
+      startLeft = track.scrollLeft;
+      track.classList.add("cursor-grabbing");
+    });
+    const stop = () => { down = false; track.classList.remove("cursor-grabbing"); };
+    track.addEventListener("pointerup", stop);
+    track.addEventListener("pointerleave", stop);
+    track.addEventListener("pointermove", (e) => {
+      if (!down) return;
+      track.scrollLeft = startLeft - (e.clientX - startX);
+    });
+  });
+</script>

@@ -115,13 +115,14 @@ const FILM = [
   ["house-of-gucci", "House of Gucci", "2021", "Milan cathedral fashion"],
 ];
 
+// Query con monumenti/riferimenti specifici, per foto più pertinenti.
 const CITTA = [
-  ["roma", "Rome Italy skyline"], ["milano", "Milan Italy cathedral"],
-  ["napoli", "Naples Italy bay"], ["venezia", "Venice Italy canal"],
-  ["crema", "Crema Lombardy Italy"], ["castellabate", "Castellabate Cilento Italy"],
-  ["savoca", "Savoca Sicily village"], ["punta-secca", "Punta Secca Sicily sea"],
-  ["palazzo-adriano", "Palazzo Adriano Sicily"], ["salina", "Salina Aeolian island"],
-  ["como", "Lake Como Italy"],
+  ["roma", "Rome Colosseum Italy"], ["milano", "Milan Duomo cathedral Italy"],
+  ["napoli", "Naples Vesuvius bay Italy"], ["venezia", "Venice Grand Canal Rialto"],
+  ["crema", "Crema Lombardy Duomo cathedral"], ["castellabate", "Castellabate Cilento village sea"],
+  ["savoca", "Savoca Sicily hilltop village"], ["punta-secca", "Punta Secca lighthouse Sicily"],
+  ["palazzo-adriano", "Palazzo Adriano Sicily square"], ["salina", "Salina Aeolian island Pollara"],
+  ["como", "Lake Como Italy town"],
 ];
 
 const BLOG = [

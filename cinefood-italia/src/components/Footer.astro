@@ -2,6 +2,7 @@
 /** Piè di pagina con newsletter, link utili e social. `lang` per la lingua. */
 import { SITE } from "../config/site";
 import Newsletter from "./Newsletter.astro";
+import Logo from "./Logo.astro";
 import { useT, path, type Lang } from "../i18n/ui";
 
 interface Props {
@@ -34,9 +35,7 @@ const nav = [
 
   <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
     <div class="sm:col-span-2 md:col-span-1">
-      <p class="flex items-center gap-2 font-display text-xl font-extrabold">
-        <span aria-hidden="true">🎬</span>{SITE.name}
-      </p>
+      <Logo />
       <p class="mt-2 text-sm text-ink-600 dark:text-ink-400">{t("brand.tagline")}.</p>
     </div>
 
