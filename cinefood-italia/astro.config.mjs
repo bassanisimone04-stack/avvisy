@@ -21,7 +21,13 @@ export default defineConfig({
   },
   integrations: [
     // Genera automaticamente sitemap-index.xml + sitemap-0.xml.
-    sitemap(),
+    // Con i18n la sitemap include gli hreflang it/en per ogni pagina.
+    sitemap({
+      i18n: {
+        defaultLocale: "it",
+        locales: { it: "it-IT", en: "en-GB" },
+      },
+    }),
     // Permette di scrivere articoli/contenuti in .mdx se serve.
     mdx(),
   ],

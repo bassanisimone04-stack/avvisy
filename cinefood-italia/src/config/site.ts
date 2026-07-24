@@ -37,6 +37,15 @@ export const SITE = {
   /** Autore/organizzazione (usato nei dati strutturati). */
   author: "CineFood Italia",
 
+  /**
+   * Codice di verifica Google Search Console.
+   * ▶️ Vai su https://search.google.com/search-console, aggiungi il sito,
+   *    scegli "Tag HTML" e incolla QUI solo il valore `content` del meta
+   *    (es. "AbCdEf123..."). Serve per far indicizzare il sito su Google
+   *    e monitorare le ricerche. Lascia "" se non l'hai ancora fatto.
+   */
+  googleSiteVerification: "",
+
   /** Link ai social (lascia vuoto "" per nasconderli dal footer). */
   social: {
     instagram: "https://instagram.com/",

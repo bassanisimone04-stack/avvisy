@@ -102,15 +102,32 @@ export function blogPostingJsonLd(
 
 /** Dati strutturati del sito, con azione di ricerca (per la home). */
 export function websiteJsonLd(): Record<string, unknown> {
+  // Link ai profili social non vuoti (per l'Organization editrice).
+  const sameAs = (Object.values(SITE.social) as string[]).filter((u) => u.length > 0);
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: SITE.name,
+    alternateName: "CineFood",
     description: SITE.description,
     url: SITE.url,
+    inLanguage: ["it", "en"],
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name,
+      url: SITE.url,
+      logo: {
+        "@type": "ImageObject",
+        url: new URL("/favicon.svg", SITE.url).href,
+      },
+      ...(sameAs.length ? { sameAs } : {}),
+    },
     potentialAction: {
       "@type": "SearchAction",
-      target: `${SITE.url}/locali?cerca={search_term_string}`,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE.url}/locali?cerca={search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };
