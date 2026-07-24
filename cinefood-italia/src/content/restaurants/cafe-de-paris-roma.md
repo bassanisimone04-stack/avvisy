@@ -9,20 +9,21 @@ coordinate:
 tipo: "caffè"
 categoria: "set-reale"
 prezzo: "€€€"
-stato: "aperto"
-inEvidenza: true
+stato: "chiuso"
+inEvidenza: false
 immagine: "../../assets/placeholder/cafe-de-paris.jpg"
 immagineAlt: "Tavolini di un caffè elegante su Via Veneto a Roma"
-ultimoAggiornamento: 2026-07-23
+ultimoAggiornamento: 2026-07-24
 film:
   - film: "la-dolce-vita"
-    descrizioneScena: "Su Via Veneto, cuore mondano della 'dolce vita' felliniana, dove sfilavano dive, paparazzi e jet set negli anni '60."
-descrizione: "Storico caffè su Via Vittorio Veneto, simbolo della Roma glamour degli anni '60 immortalata da Fellini. Perfetto per un caffè o un aperitivo d'atmosfera."
+    descrizioneScena: "Su Via Veneto, cuore mondano della 'dolce vita' felliniana, il Café de Paris fu immortalato da Fellini nel 1960, tra dive, paparazzi e jet set."
+descrizione: "Storico caffè di Via Vittorio Veneto, aperto nel 1948 e reso celebre da 'La dolce vita' di Fellini. Simbolo della Roma glamour degli anni '60, ha chiuso nel 2008."
 ---
 
-<!-- DA VERIFICARE: nome, indirizzo, orari e collegamento specifico. Via Veneto
-     è il simbolo de La dolce vita; il locale è un esempio da confermare. -->
+<!-- ✅ Apparizione documentata: il Café de Paris (Via Veneto 90) fu immortalato
+     ne "La dolce vita" (Fellini, 1960). ⚠️ NB: il locale ha CHIUSO nel 2008
+     (stato: chiuso). Fonti: Wikipedia, RomaIT, BFI. -->
 
-Su Via Veneto, la strada resa immortale da *La dolce vita*, il Café de Paris
-evoca l'eleganza e il glamour della Roma anni '60 tra caffè, aperitivi e
-dolce far niente.
+Su Via Veneto, la strada resa immortale da *La dolce vita*, il Café de Paris è
+stato per decenni il salotto del jet set romano. Aperto nel 1948 e chiuso nel
+2008, resta un simbolo della "dolce vita" felliniana.
