@@ -2,6 +2,7 @@
 /** Hero a tutto schermo con immagine di sfondo, titolo, ricerca e CTA mappa. */
 import { Image } from "astro:assets";
 import SearchBar from "./SearchBar.astro";
+import SearchSuggest from "./SearchSuggest.astro";
 import heroImg from "../assets/placeholder/hero.jpg";
 import { useT, path, type Lang } from "../i18n/ui";
 
@@ -10,8 +11,10 @@ interface Props {
   sottotitolo: string;
   stats?: { valore: number | string; label: string }[];
   lang?: Lang;
+  /** Elenco per i suggerimenti istantanei della ricerca (opzionale). */
+  suggestItems?: { label: string; sub: string; url: string }[];
 }
-const { titolo, sottotitolo, stats = [], lang = "it" } = Astro.props;
+const { titolo, sottotitolo, stats = [], lang = "it", suggestItems } = Astro.props;
 const t = useT(lang);
 ---
 
@@ -37,7 +40,11 @@ const t = useT(lang);
     <p class="mx-auto mt-5 max-w-2xl text-lg text-cream-200">{sottotitolo}</p>
 
     <div class="mt-8 flex flex-col items-center gap-4">
-      <SearchBar variant="hero" lang={lang} />
+      {suggestItems && suggestItems.length > 0 ? (
+        <SearchSuggest items={suggestItems} lang={lang} />
+      ) : (
+        <SearchBar variant="hero" lang={lang} />
+      )}
       <a
         href={path("/mappa", lang)}
         class="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"

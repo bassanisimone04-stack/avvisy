@@ -104,6 +104,8 @@ const restaurants = defineCollection({
         )
         .min(1),
       descrizione: z.string(),
+      /** Orari di apertura in testo libero (opzionale), es. "Mar–Dom 12–15, 19–23". */
+      orari: z.string().optional(),
       sitoWeb: z.string().url().optional(),
       prenotazione: z.string().url().optional(),
       inEvidenza: z.boolean().default(false),

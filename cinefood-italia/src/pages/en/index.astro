@@ -52,10 +52,16 @@ const stats = [
   { valore: citta.length || cittaUniche(locali).length, label: t("stats.citta") },
   { valore: films.length, label: t("stats.film") },
 ];
+
+const suggestItems = [
+  ...locali.map((l) => ({ label: l.data.nome, sub: `${l.data.citta} · ${l.data.tipo}`, url: path(`/locale/${l.id}`, lang) })),
+  ...films.map((f) => ({ label: tFilmTitolo(f, lang), sub: t("film.film"), url: path(`/film/${f.id}`, lang) })),
+  ...citta.map((c) => ({ label: c.nome, sub: t("stats.citta"), url: path(`/${c.slug}`, lang) })),
+];
 ---
 
 <BaseLayout lang={lang} jsonLd={websiteJsonLd()}>
-  <Hero titolo={t("hero.titolo")} sottotitolo={t("hero.sottotitolo")} stats={stats} lang={lang} />
+  <Hero titolo={t("hero.titolo")} sottotitolo={t("hero.sottotitolo")} stats={stats} lang={lang} suggestItems={suggestItems} />
 
   <section class="mx-auto max-w-6xl px-4 py-14">
     <div class="mb-6 flex items-end justify-between gap-4">

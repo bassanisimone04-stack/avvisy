@@ -15,6 +15,7 @@ immagine: "../../assets/placeholder/bar-vista-mare.jpg"
 immagineAlt: "Terrazza di un bar storico in un borgo siciliano"
 sitoWeb: "https://www.barvitelli.com"
 ultimoAggiornamento: 2026-07-22
+orari: "Tutti i giorni 9:00–20:00 (da verificare)"
 film:
   - film: "il-padrino"
     descrizioneScena: "Nel borgo di Savoca, Michael Corleone chiede al proprietario del bar la mano della figlia Apollonia."

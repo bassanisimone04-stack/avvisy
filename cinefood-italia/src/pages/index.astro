@@ -54,6 +54,13 @@ const stats = [
   { valore: citta.length || cittaUniche(locali).length, label: "città" },
   { valore: films.length, label: "film e serie" },
 ];
+
+// Indice per i suggerimenti istantanei della ricerca (locali + film + città).
+const suggestItems = [
+  ...locali.map((l) => ({ label: l.data.nome, sub: `${l.data.citta} · ${l.data.tipo}`, url: `/locale/${l.id}` })),
+  ...films.map((f) => ({ label: f.data.titolo, sub: "Film", url: `/film/${f.id}` })),
+  ...citta.map((c) => ({ label: c.nome, sub: "Città", url: `/${c.slug}` })),
+];
 ---
 
 <BaseLayout jsonLd={websiteJsonLd()}>
@@ -61,6 +68,7 @@ const stats = [
     titolo="Mangia dove nascono i film"
     sottotitolo="La guida ai ristoranti, bar e caffè italiani apparsi al cinema e in TV. Scopri le location reali e prenota il tuo tavolo tra le stelle."
     stats={stats}
+    suggestItems={suggestItems}
   />
 
   <!-- IN EVIDENZA -->

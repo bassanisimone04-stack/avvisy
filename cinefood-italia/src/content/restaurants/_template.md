@@ -46,6 +46,9 @@ prenotazione: "https://www.esempio.it/prenota"
 
 ultimoAggiornamento: 2026-01-01
 
+# Orari di apertura (facoltativo, testo libero).
+orari: "Mar–Dom 12:00–15:00 · 19:00–23:00 (lun chiuso)"
+
 # Film/serie collegati. "film" = SLUG di un file in src/content/films/.
 # Copia il blocco "- film:" per aggiungerne altri.
 film:
