@@ -1,0 +1,61 @@
+---
+/**
+ * Pagina "Privacy e Cookie" (modello base da personalizzare).
+ * ⚠️ È un testo di esempio: fallo controllare/adattare in base ai servizi
+ *    che usi davvero (hosting, form, statistiche) prima della pubblicazione.
+ */
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config/site";
+const oggi = new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
+---
+
+<BaseLayout title="Privacy e Cookie" description={`Informativa privacy e cookie di ${SITE.name}.`}>
+  <section class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="font-display text-4xl font-extrabold">Privacy e Cookie</h1>
+    <p class="mt-2 text-sm text-ink-500 dark:text-ink-400">Ultimo aggiornamento: {oggi}</p>
+
+    <div class="mt-6 rounded-2xl border border-amber-300/40 bg-amber-400/10 p-4 text-sm text-ink-700 dark:text-cream-200">
+      ⚠️ <strong>Nota per il gestore del sito:</strong> questo è un modello di
+      base. Personalizzalo con i tuoi dati (titolare, email reale) e con i
+      servizi che usi davvero, ed eventualmente fallo verificare da un esperto.
+    </div>
+
+    <div class="prose-cinefood mt-8 space-y-6 text-ink-700 dark:text-cream-200 [&_h2]:mt-8 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_p]:mt-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mt-1">
+      <section>
+        <h2>Titolare del trattamento</h2>
+        <p>Il titolare del trattamento dei dati è il gestore di {SITE.name}. Per qualsiasi richiesta puoi scrivere a <a class="text-gold-600 underline dark:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      </section>
+
+      <section>
+        <h2>Quali dati raccogliamo</h2>
+        <p>Raccogliamo solo i dati che ci fornisci volontariamente tramite i moduli del sito:</p>
+        <ul>
+          <li><strong>Modulo "Aggiungi il tuo locale"</strong>: nome, email e i dettagli del locale che ci segnali.</li>
+          <li><strong>Newsletter</strong>: il tuo indirizzo email, se scegli di iscriverti.</li>
+        </ul>
+        <p>Non raccogliamo dati particolari e non vendiamo i tuoi dati a terzi.</p>
+      </section>
+
+      <section>
+        <h2>Perché li usiamo</h2>
+        <p>Usiamo i dati esclusivamente per risponderti, valutare le segnalazioni e, se ti sei iscritto, inviarti la newsletter. La base giuridica è il tuo consenso e il nostro legittimo interesse a gestire le richieste.</p>
+      </section>
+
+      <section>
+        <h2>Cookie</h2>
+        <p>Questo sito usa <strong>cookie tecnici</strong> necessari al funzionamento (ad esempio per ricordare la lingua e il tema chiaro/scuro): non richiedono consenso.</p>
+        <p>Potrebbero essere usati cookie o servizi di <strong>terze parti</strong> quando sono attivi:</p>
+        <ul>
+          <li><strong>Mappe (OpenStreetMap / Leaflet)</strong>: caricano le immagini della mappa da server esterni.</li>
+          <li><strong>Statistiche (opzionali)</strong>: se attivate, usiamo Plausible, che <em>non</em> usa cookie e non raccoglie dati personali.</li>
+          <li><strong>Moduli e hosting (Netlify)</strong>: gestiscono l'invio dei form e la pubblicazione del sito.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>I tuoi diritti</h2>
+        <p>Puoi in qualsiasi momento chiedere di accedere, correggere o cancellare i tuoi dati, oppure revocare il consenso, scrivendo a <a class="text-gold-600 underline dark:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a>. Hai inoltre diritto di proporre reclamo all'autorità di controllo (Garante per la protezione dei dati personali).</p>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

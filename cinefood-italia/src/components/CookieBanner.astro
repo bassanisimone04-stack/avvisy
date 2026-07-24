@@ -1,0 +1,54 @@
+---
+/**
+ * Banner informativo cookie. Compare finché l'utente non clicca "Ho capito"
+ * (la scelta viene salvata in localStorage). Semplice e senza tracciamenti.
+ */
+import { useT, path, type Lang } from "../i18n/ui";
+interface Props {
+  lang?: Lang;
+}
+const { lang = "it" } = Astro.props;
+const t = useT(lang);
+---
+
+<div
+  id="cookie-banner"
+  hidden
+  class="fixed inset-x-0 bottom-0 z-50 border-t border-ink-500/10 bg-white/95 backdrop-blur dark:border-noir-700 dark:bg-noir-900/95"
+>
+  <div class="mx-auto flex max-w-6xl flex-col items-start gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+    <p class="text-sm text-ink-700 dark:text-cream-200">
+      🍪 {t("cookie.testo")}
+      <a href={path("/privacy", lang)} class="font-semibold text-gold-600 underline hover:text-gold-500 dark:text-gold-400">
+        {t("cookie.dettagli")}
+      </a>
+    </p>
+    <button
+      id="cookie-accept"
+      type="button"
+      class="shrink-0 rounded-full bg-gold-500 px-5 py-2 text-sm font-semibold text-noir-950 transition-colors hover:bg-gold-400"
+    >
+      {t("cookie.accetta")}
+    </button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var banner = document.getElementById("cookie-banner");
+    if (!banner) return;
+    var KEY = "cinefood-cookie";
+    try {
+      if (!localStorage.getItem(KEY)) banner.hidden = false;
+    } catch (e) {
+      banner.hidden = false;
+    }
+    var btn = document.getElementById("cookie-accept");
+    btn?.addEventListener("click", function () {
+      try {
+        localStorage.setItem(KEY, "1");
+      } catch (e) {}
+      if (banner) banner.hidden = true;
+    });
+  })();
+</script>

@@ -1,0 +1,55 @@
+---
+/**
+ * Pulsante "Condividi": usa la condivisione nativa del telefono se disponibile,
+ * altrimenti copia il link negli appunti.
+ */
+import { useT, type Lang } from "../i18n/ui";
+interface Props {
+  titolo: string;
+  lang?: Lang;
+}
+const { titolo, lang = "it" } = Astro.props;
+const t = useT(lang);
+---
+
+<button
+  class="share-btn inline-flex items-center gap-2 rounded-full border border-ink-500/25 px-5 py-2.5 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800"
+  data-title={titolo}
+  data-copied={t("share.copiato")}
+  type="button"
+>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle>
+    <line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"></line>
+  </svg>
+  <span class="share-label">{t("share.titolo")}</span>
+</button>
+
+<script>
+  document.querySelectorAll(".share-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const url = location.href;
+      const title = (btn as HTMLElement).dataset.title || document.title;
+      if (navigator.share) {
+        try {
+          await navigator.share({ title, url });
+          return;
+        } catch (e) {
+          /* annullato: prosegui col copia */
+        }
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        const label = btn.querySelector(".share-label");
+        const copied = (btn as HTMLElement).dataset.copied || "Link copied!";
+        if (label) {
+          const prev = label.textContent;
+          label.textContent = copied;
+          setTimeout(() => (label.textContent = prev), 1800);
+        }
+      } catch (e) {
+        /* niente clipboard: ignora */
+      }
+    });
+  });
+</script>

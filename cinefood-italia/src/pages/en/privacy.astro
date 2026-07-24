@@ -1,0 +1,54 @@
+---
+/** English "Privacy & Cookies" page (base template to customise). */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE } from "../../config/site";
+const lang = "en" as const;
+const today = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+---
+
+<BaseLayout lang={lang} title="Privacy & Cookies" description={`Privacy and cookie policy of ${SITE.name}.`}>
+  <section class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="font-display text-4xl font-extrabold">Privacy &amp; Cookies</h1>
+    <p class="mt-2 text-sm text-ink-500 dark:text-ink-400">Last updated: {today}</p>
+
+    <div class="mt-6 rounded-2xl border border-amber-300/40 bg-amber-400/10 p-4 text-sm text-ink-700 dark:text-cream-200">
+      ⚠️ <strong>Note for the site owner:</strong> this is a base template.
+      Customise it with your details (data controller, real email) and the
+      services you actually use, and have it reviewed by an expert if needed.
+    </div>
+
+    <div class="prose-cinefood mt-8 space-y-6 text-ink-700 dark:text-cream-200 [&_h2]:mt-8 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_p]:mt-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mt-1">
+      <section>
+        <h2>Data controller</h2>
+        <p>The data controller is the owner of {SITE.name}. For any request you can write to <a class="text-gold-600 underline dark:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      </section>
+      <section>
+        <h2>What data we collect</h2>
+        <p>We only collect the data you voluntarily provide through the site's forms:</p>
+        <ul>
+          <li><strong>"Add your venue" form</strong>: name, email and the details of the venue you suggest.</li>
+          <li><strong>Newsletter</strong>: your email address, if you choose to subscribe.</li>
+        </ul>
+        <p>We do not collect special-category data and we do not sell your data to third parties.</p>
+      </section>
+      <section>
+        <h2>Why we use it</h2>
+        <p>We use the data solely to reply to you, assess suggestions and, if you subscribed, send you the newsletter. The legal basis is your consent and our legitimate interest in handling requests.</p>
+      </section>
+      <section>
+        <h2>Cookies</h2>
+        <p>This site uses <strong>technical cookies</strong> needed to work (for example to remember your language and light/dark theme): these do not require consent.</p>
+        <p>Third-party cookies or services may be used when enabled:</p>
+        <ul>
+          <li><strong>Maps (OpenStreetMap / Leaflet)</strong>: load map tiles from external servers.</li>
+          <li><strong>Analytics (optional)</strong>: if enabled, we use Plausible, which does <em>not</em> use cookies and collects no personal data.</li>
+          <li><strong>Forms and hosting (Netlify)</strong>: handle form submissions and site publishing.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Your rights</h2>
+        <p>You can at any time request access, correction or deletion of your data, or withdraw consent, by writing to <a class="text-gold-600 underline dark:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a>. You also have the right to lodge a complaint with your data protection authority.</p>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

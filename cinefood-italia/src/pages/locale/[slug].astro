@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Badges from "../../components/Badges.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
+import Share from "../../components/Share.astro";
 import Map from "../../components/Map.astro";
 import { SITE } from "../../config/site";
 import { slugify, formatData } from "../../lib/utils";
@@ -98,6 +99,7 @@ const jsonLd = [
         class="rounded-full border border-ink-500/25 px-5 py-2.5 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800">
         Indicazioni
       </a>
+      <Share titolo={d.nome} lang="it" />
     </div>
 
     <!-- Galleria -->

@@ -43,6 +43,15 @@ export const SITE = {
     facebook: "https://facebook.com/",
     tiktok: "",
   },
+
+  /**
+   * Statistiche visite (facoltative e rispettose della privacy).
+   * Per attivarle: crea un account gratuito su https://plausible.io,
+   * poi scrivi qui il dominio del tuo sito (es. "cinefooditalia.it").
+   * Lascia "" per NON caricare alcuno script di tracciamento (default).
+   * Plausible non usa cookie e non raccoglie dati personali.
+   */
+  plausibleDomain: "",
 } as const;
 
 /**

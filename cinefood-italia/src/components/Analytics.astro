@@ -1,0 +1,20 @@
+---
+/**
+ * Statistiche visite rispettose della privacy (Plausible), SENZA cookie.
+ * Si carica SOLO se hai impostato `plausibleDomain` in src/config/site.ts.
+ * Se è vuoto (default), non viene caricato nessuno script di tracciamento.
+ */
+import { SITE } from "../config/site";
+const domain = SITE.plausibleDomain;
+---
+
+{
+  domain && (
+    <script
+      is:inline
+      defer
+      data-domain={domain}
+      src="https://plausible.io/js/script.js"
+    />
+  )
+}
