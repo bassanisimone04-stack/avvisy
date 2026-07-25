@@ -22,6 +22,14 @@ const d = articolo.data;
 const { Content } = await render(articolo);
 const slug = articolo.id.replace(/-en$/, "");
 
+// Related articles: same language, excludes current, ranks by shared tags.
+const correlati = (await getCollection("blog"))
+  .filter((a) => !a.data.bozza && a.data.lang === "en" && a.id !== articolo.id)
+  .map((a) => ({ a, score: a.data.tags.filter((tg) => d.tags.includes(tg)).length }))
+  .sort((x, y) => y.score - x.score || y.a.data.dataPubblicazione.getTime() - x.a.data.dataPubblicazione.getTime())
+  .slice(0, 3)
+  .map((x) => x.a);
+
 const canonical = new URL(path(`/blog/${slug}`, lang), Astro.site ?? SITE.url).href;
 const immagineUrl = d.immagine ? new URL(d.immagine.src, Astro.site ?? SITE.url).href : undefined;
 const crumbs = [{ name: t("loc.home"), href: path("/", lang) }, { name: t("nav.blog"), href: path("/blog", lang) }, { name: d.titolo }];
@@ -47,4 +55,28 @@ const jsonLd = [
     {d.tags.length > 0 && (<div class="mt-8 flex flex-wrap gap-2">{d.tags.map((tag) => <span class="rounded-full bg-ink-500/15 px-3 py-1 text-xs">#{tag}</span>)}</div>)}
     <a href={path("/blog", lang)} class="mt-10 inline-block text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">← {t("blog.torna")}</a>
   </article>
+
+  {
+    correlati.length > 0 && (
+      <section class="border-t border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
+        <div class="mx-auto max-w-5xl px-4 py-12">
+          <h2 class="font-display text-2xl font-bold">Keep reading</h2>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {correlati.map((a) => (
+              <a href={path(`/blog/${a.id.replace(/-en$/, "")}`, lang)} class="group flex flex-col overflow-hidden rounded-3xl border border-ink-500/10 bg-white dark:border-noir-700 dark:bg-noir-950">
+                {a.data.immagine && (
+                  <Image src={a.data.immagine} alt={a.data.immagineAlt || a.data.titolo} width={400} height={225} densities={[1, 2]} loading="lazy" class="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                )}
+                <div class="flex flex-1 flex-col p-4">
+                  <p class="text-xs text-ink-500 dark:text-ink-400">{formatData(a.data.dataPubblicazione, lang)}</p>
+                  <h3 class="mt-1 font-display text-base font-bold leading-tight group-hover:text-gold-600 dark:group-hover:text-gold-400">{a.data.titolo}</h3>
+                  <p class="mt-1 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{a.data.descrizione}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 </BaseLayout>
