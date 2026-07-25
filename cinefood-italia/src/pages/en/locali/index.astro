@@ -5,7 +5,9 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import LocaleCard from "../../../components/LocaleCard.astro";
 import FilterBar from "../../../components/FilterBar.astro";
 import { ordinaLocali, cittaUniche, tipiUnici, filmIdsDiLocale } from "../../../lib/utils";
-import { useT } from "../../../i18n/ui";
+import { itemListJsonLd } from "../../../lib/schema-org";
+import { SITE } from "../../../config/site";
+import { useT, path } from "../../../i18n/ui";
 import { tFilmTitolo } from "../../../i18n/content-en";
 
 const lang = "en" as const;
@@ -32,9 +34,10 @@ function datiFiltro(locale: (typeof locali)[number]) {
     "data-testo": testo,
   };
 }
+const jsonLd = itemListJsonLd(t("locali.titolo"), locali.map((l) => new URL(path(`/locale/${l.id}`, lang), SITE.url).href));
 ---
 
-<BaseLayout lang={lang} title={t("locali.titolo")} description={t("locali.sub")}>
+<BaseLayout lang={lang} title={t("locali.titolo")} description={t("locali.sub")} jsonLd={jsonLd}>
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="font-display text-4xl font-extrabold">{t("locali.titolo")}</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">{t("locali.sub")}</p>

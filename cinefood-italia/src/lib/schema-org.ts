@@ -132,3 +132,21 @@ export function websiteJsonLd(): Record<string, unknown> {
     },
   };
 }
+
+/**
+ * Dati strutturati ItemList per le pagine elenco (film, locali).
+ * `urls` sono URL assoluti degli elementi, nell'ordine mostrato.
+ */
+export function itemListJsonLd(nome: string, urls: string[]): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: nome,
+    numberOfItems: urls.length,
+    itemListElement: urls.map((url, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url,
+    })),
+  };
+}

@@ -10,6 +10,7 @@ import Icon from "../../components/Icon.astro";
 import { SITE } from "../../config/site";
 import { ordinaLocali, localiPerFilm, slugify } from "../../lib/utils";
 import { faqPageJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
+import { ITINERARIO_PER_FILM } from "../../lib/itinerari";
 
 export async function getStaticPaths() {
   const films = await getCollection("films");
@@ -23,6 +24,7 @@ export async function getStaticPaths() {
 const { film, locali } = Astro.props;
 const d = film.data;
 const cittaFilm = d.citta[0];
+const itinerario = ITINERARIO_PER_FILM[film.id];
 
 // SEO: pattern keyword "dove mangiano ne [film]".
 const title = `Dove mangiano ne "${d.titolo}"`;
@@ -65,6 +67,16 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
           cittaFilm && (
             <a href={`/${slugify(cittaFilm)}`} class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">
               <Icon name="pin" class="h-4 w-4" /> Altri locali a {cittaFilm} →
+            </a>
+          )
+        }
+        {
+          itinerario && (
+            <a href={`/blog/${itinerario}`} class="mt-5 flex items-center gap-3 rounded-2xl border border-gold-500/30 bg-gold-500/10 p-4 transition-colors hover:bg-gold-500/15">
+              <Icon name="film" class="h-6 w-6 shrink-0 text-gold-500" />
+              <span class="text-sm">
+                <strong class="font-semibold">Leggi l'itinerario</strong> — i luoghi del film e dove mangiare →
+              </span>
             </a>
           )
         }

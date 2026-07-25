@@ -5,6 +5,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import LocaleCard from "../../components/LocaleCard.astro";
 import FilterBar from "../../components/FilterBar.astro";
 import { ordinaLocali, cittaUniche, tipiUnici, filmIdsDiLocale } from "../../lib/utils";
+import { itemListJsonLd } from "../../lib/schema-org";
+import { SITE } from "../../config/site";
 
 const locali = ordinaLocali(await getCollection("restaurants"));
 const films = await getCollection("films");
@@ -31,11 +33,16 @@ function datiFiltro(locale: (typeof locali)[number]) {
     "data-testo": testo,
   };
 }
+const jsonLd = itemListJsonLd(
+  "Tutti i locali",
+  locali.map((l) => new URL(`/locale/${l.id}`, SITE.url).href)
+);
 ---
 
 <BaseLayout
   title="Tutti i locali"
   description="Cerca e filtra tutti i ristoranti, bar, caffè e trattorie italiani apparsi al cinema e in TV, per città, film, tipo, prezzo e categoria."
+  jsonLd={jsonLd}
 >
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="font-display text-4xl font-extrabold">Tutti i locali</h1>
