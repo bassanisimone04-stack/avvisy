@@ -1,0 +1,42 @@
+---
+titolo: "Under the Tuscan Sun: la Toscana di Cortona tra vino e cucina contadina"
+descrizione: "Il film Under the Tuscan Sun (Sotto il sole della Toscana) è ambientato a Cortona: colline, vino e cucina toscana. Guida ai luoghi del film e ai sapori della Val di Chiana, dalla bistecca ai vini rossi."
+autore: "Redazione CineFood Italia"
+dataPubblicazione: 2026-07-07
+immagine: "../../assets/placeholder/blog-set-tavola.jpg"
+immagineAlt: "Colline della Toscana con vigneti, come in Under the Tuscan Sun"
+tags: ["Under the Tuscan Sun", "Toscana", "Cortona", "vino", "cineturismo"]
+bozza: false
+---
+
+*Under the Tuscan Sun* (*Sotto il sole della Toscana*, 2003) ha fatto sognare
+milioni di viaggiatori con la sua **Toscana** dorata. La protagonista Frances
+compra e ristruttura una villa a **Cortona**, splendido borgo in provincia di
+Arezzo, riscoprendo se stessa tra colline, vino e cucina genuina.
+
+## La Cortona del film
+
+Cortona è un gioiello etrusco affacciato sulla Val di Chiana: vicoli in salita,
+piazze medievali e panorami sconfinati sui vigneti. La villa del film,
+"Bramasole", è diventata una piccola meta di pellegrinaggio.
+
+## I sapori della Toscana
+
+La cucina toscana è schietta e memorabile. Da assaggiare:
+
+- La **bistecca alla fiorentina**, alta e al sangue;
+- I **pici**, pasta fatta a mano tipica della zona, con ragù o cacio e pepe;
+- La **ribollita** e la **pappa al pomodoro**;
+- I grandi **vini rossi** (Chianti, Nobile di Montepulciano, Brunello) e l'olio
+  extravergine.
+
+## Un itinerario tra colline e cantine
+
+Cortona è la base ideale per un itinerario slow tra borghi (Montepulciano,
+Pienza), cantine e agriturismi. Il ritmo lento del film si respira davvero.
+
+## In sintesi
+
+*Under the Tuscan Sun* è la Toscana come la sogniamo: sole, vino e rinascita.
+Cortona è il punto di partenza perfetto per un viaggio di gusto. Scopri gli altri
+**[film](/film)** e le loro location a tavola.

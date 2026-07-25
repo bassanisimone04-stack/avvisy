@@ -1,0 +1,45 @@
+---
+titolo: "Ferrari, il film: Modena tra motori e la miglior cucina d'Italia"
+descrizione: "Il film Ferrari di Michael Mann è ambientato a Modena, patria dei motori e capitale del gusto. Guida alla Modena del film e ai suoi sapori: tortellini, aceto balsamico e la cucina emiliana."
+autore: "Redazione CineFood Italia"
+dataPubblicazione: 2026-07-06
+immagine: "../../assets/placeholder/blog-scene.jpg"
+immagineAlt: "Piatto di tortellini, specialità di Modena"
+tags: ["Ferrari", "Modena", "Emilia-Romagna", "dove mangiare", "cineturismo"]
+bozza: false
+---
+
+*Ferrari* (2023) di Michael Mann racconta la vita di Enzo Ferrari e la sua
+**Modena**, cuore della Motor Valley. Ma Modena non è solo motori: è una delle
+capitali gastronomiche d'Italia, terra di sapori conosciuti in tutto il mondo.
+Ecco la Modena del film e cosa mettere in tavola.
+
+## La Modena di Enzo Ferrari
+
+Il film respira l'aria della Modena anni '50: le strade, le officine, la
+passione per le corse. La città emiliana, elegante e operosa, è lo sfondo perfetto
+per la storia del "Drake".
+
+## I sapori di Modena
+
+Qui la cucina è un patrimonio. Da non perdere:
+
+- I **tortellini in brodo**, regina della tavola emiliana;
+- I **tortelloni** e le **tagliatelle** fatte a mano;
+- L'**Aceto Balsamico Tradizionale di Modena DOP**, invecchiato per decenni;
+- Il **Parmigiano Reggiano**, il **Lambrusco** e lo **zampone**.
+
+Modena è anche patria dell'alta cucina, con ristoranti celebri in tutto il
+mondo: un paradiso per i buongustai.
+
+## Un itinerario nella Motor Valley
+
+Oltre alla tavola, la zona offre i musei dei motori (Ferrari, Lamborghini,
+Pagani) e le città d'arte dell'Emilia. Un weekend tra velocità e lentezza a
+tavola.
+
+## In sintesi
+
+*Ferrari* è un omaggio a Modena, dove i motori e la buona cucina corrono alla
+stessa velocità. La meta perfetta per chi ama il cinema e il gusto. Sfoglia gli
+altri **[film](/film)** e le loro location gastronomiche.
