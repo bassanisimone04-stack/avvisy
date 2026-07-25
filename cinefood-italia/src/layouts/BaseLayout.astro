@@ -7,6 +7,7 @@ import SEO from "../components/SEO.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Analytics from "../components/Analytics.astro";
+import VercelAnalytics from "@vercel/analytics/astro";
 import CookieBanner from "../components/CookieBanner.astro";
 import { useT, type Lang } from "../i18n/ui";
 import "../styles/global.css";
@@ -65,6 +66,7 @@ const t = useT(lang);
     </script>
     <SEO title={title} description={description} image={image} type={type} jsonLd={jsonLd} lang={lang} />
     <Analytics />
+    <VercelAnalytics />
   </head>
   <body class="flex min-h-screen flex-col">
     <a
