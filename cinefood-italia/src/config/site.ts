@@ -26,7 +26,7 @@ export const SITE = {
    * ▶️ CAMBIA QUESTO quando pubblichi online su Netlify/Vercel,
    *    es. "https://cinefooditalia.netlify.app".
    */
-  url: "https://avvisy-gmxa.vercel.app",
+  url: "https://cinefooditalia.com",
 
   /** Lingua del sito (usata nel tag <html lang>). */
   lang: "it",
