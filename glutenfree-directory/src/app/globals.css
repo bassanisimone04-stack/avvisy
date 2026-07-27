@@ -10,21 +10,31 @@
 :root {
   --gf-ink: #12241c;
   --gf-ink-soft: #3d5347;
-  --gf-muted: #6b7c73;
+  --gf-muted: #66766d;
   --gf-canvas: #f6faf7;
   --gf-surface: #ffffff;
   --gf-surface-2: #eef6f1;
   --gf-line: #e2ede6;
   --gf-line-strong: #cadcd1;
 
-  --gf-brand: #189659;
+  --gf-brand: #15844e;
   --gf-brand-dark: #0f7a47;
   --gf-brand-light: #34b374;
   --gf-brand-soft: #e2f5ea;
 
   --gf-accent: #f97316;
-  --gf-accent-dark: #dd5c0a;
+  --gf-accent-dark: #c15205;
+  --gf-accent-darker: #9f4304;
   --gf-accent-soft: #fef0e0;
+
+  /* Riempimenti bottone a tinta unita: fissi in entrambi i temi (a differenza
+     di --gf-brand/--gf-accent, che si schiariscono in dark mode per restare
+     leggibili come testo su sfondo scuro) cosi il testo bianco sopra resta
+     sempre conforme al contrasto WCAG AA. */
+  --gf-btn-primary: #15844e;
+  --gf-btn-primary-hover: #0f7a47;
+  --gf-btn-accent: #c15205;
+  --gf-btn-accent-hover: #9f4304;
 
   --gf-gold: #f2b100;
   --gf-gold-soft: #fdf2d6;
@@ -83,6 +93,7 @@
   --color-brand-dark: var(--gf-brand-dark);
   --color-brand-light: var(--gf-brand-light);
   --color-brand-soft: var(--gf-brand-soft);
+  --color-brand-solid: var(--gf-btn-primary);
   --color-accent: var(--gf-accent);
   --color-accent-dark: var(--gf-accent-dark);
   --color-accent-soft: var(--gf-accent-soft);
@@ -182,10 +193,10 @@ body {
   }
   .btn:focus-visible { outline: 2px solid var(--gf-brand); outline-offset: 2px; }
   .btn:active { transform: translateY(1px); }
-  .btn-primary { background: var(--gf-brand); color: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
-  .btn-primary:hover { background: var(--gf-brand-dark); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
-  .btn-accent { background: var(--gf-accent); color: #fff; }
-  .btn-accent:hover { background: var(--gf-accent-dark); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+  .btn-primary { background: var(--gf-btn-primary); color: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
+  .btn-primary:hover { background: var(--gf-btn-primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+  .btn-accent { background: var(--gf-btn-accent); color: #fff; }
+  .btn-accent:hover { background: var(--gf-btn-accent-hover); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
   .btn-outline { background: var(--gf-surface); color: var(--gf-ink); border-color: var(--gf-line-strong); }
   .btn-outline:hover { background: var(--gf-surface-2); border-color: var(--gf-brand); }
   .btn-ghost { background: transparent; color: var(--gf-ink); }
@@ -416,17 +427,20 @@ body {
     background: var(--article-accent, var(--gf-brand));
   }
 
-  /* Temi per categoria di blog: --article-accent/--article-soft con varianti dark mode. */
-  .cat-alimentazione { --article-accent: #d97706; --article-soft: #fef3c7; }
-  .cat-celiachia { --article-accent: #7c3aed; --article-soft: #ede9fe; }
-  .cat-news { --article-accent: #475569; --article-soft: #e2e8f0; }
-  .cat-ricette { --article-accent: #ea580c; --article-soft: #ffedd5; }
-  .cat-viaggi { --article-accent: #0284c7; --article-soft: #e0f2fe; }
-  .cat-salute { --article-accent: #0d9488; --article-soft: #ccfbf1; }
-  .cat-guide { --article-accent: #0f7a47; --article-soft: #e2f5ea; }
-  .cat-prodotti { --article-accent: #db2777; --article-soft: #fce7f3; }
-  .cat-bambini { --article-accent: #ca8a04; --article-soft: #fef9c3; }
-  .cat-eventi { --article-accent: #4f46e5; --article-soft: #e0e7ff; }
+  /* Temi per categoria di blog: --article-accent/--article-soft con varianti dark mode.
+     --article-accent-solid resta fisso al valore chiaro in entrambi i temi: serve per
+     i riempimenti pieni con testo bianco (es. bottoni CTA), dove la variante piu chiara
+     usata in dark mode per il testo su sfondo scuro non garantirebbe contrasto AA. */
+  .cat-alimentazione { --article-accent: #a75b05; --article-accent-solid: #a75b05; --article-soft: #fef3c7; }
+  .cat-celiachia { --article-accent: #7c3aed; --article-accent-solid: #7c3aed; --article-soft: #ede9fe; }
+  .cat-news { --article-accent: #475569; --article-accent-solid: #475569; --article-soft: #e2e8f0; }
+  .cat-ricette { --article-accent: #bb4709; --article-accent-solid: #bb4709; --article-soft: #ffedd5; }
+  .cat-viaggi { --article-accent: #0272ac; --article-accent-solid: #0272ac; --article-soft: #e0f2fe; }
+  .cat-salute { --article-accent: #0a7b72; --article-accent-solid: #0a7b72; --article-soft: #ccfbf1; }
+  .cat-guide { --article-accent: #0f7a47; --article-accent-solid: #0f7a47; --article-soft: #e2f5ea; }
+  .cat-prodotti { --article-accent: #c8216b; --article-accent-solid: #c8216b; --article-soft: #fce7f3; }
+  .cat-bambini { --article-accent: #976703; --article-accent-solid: #976703; --article-soft: #fef9c3; }
+  .cat-eventi { --article-accent: #4f46e5; --article-accent-solid: #4f46e5; --article-soft: #e0e7ff; }
 
   :root[data-theme="dark"] .cat-alimentazione { --article-accent: #fbbf24; --article-soft: #3a2c0c; }
   :root[data-theme="dark"] .cat-celiachia { --article-accent: #a78bfa; --article-soft: #271b40; }

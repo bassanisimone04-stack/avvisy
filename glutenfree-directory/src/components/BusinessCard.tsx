@@ -29,7 +29,7 @@ export default function BusinessCard({ business, locale = "it" }: { business: Bu
         </div>
         <FavoriteButton id={business.id} className="absolute right-3 top-3" />
         {business.openNow && (
-          <span className="chip absolute bottom-3 left-3 bg-brand text-white">{t.common.openNow}</span>
+          <span className="chip absolute bottom-3 left-3 bg-brand-solid text-white">{t.common.openNow}</span>
         )}
       </div>
       <div className="flex flex-1 flex-col gap-2 p-4">

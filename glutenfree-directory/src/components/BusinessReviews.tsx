@@ -124,6 +124,7 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
               <button
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
+                aria-label={t.business.addPhotos}
                 className="flex h-16 w-16 flex-col items-center justify-center gap-1 rounded-lg border border-dashed border-line-strong text-muted hover:border-brand hover:text-brand-dark"
               >
                 <ImagePlus size={18} />

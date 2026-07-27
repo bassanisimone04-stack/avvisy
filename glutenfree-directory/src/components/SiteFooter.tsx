@@ -22,7 +22,7 @@ export default function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.2fr]">
           <div>
             <Link href={localeHref(locale, "/")} className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-white">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-solid text-white">
                 <Leaf size={19} />
               </span>
               <span className="font-display text-lg font-bold text-white">{SITE_NAME}</span>

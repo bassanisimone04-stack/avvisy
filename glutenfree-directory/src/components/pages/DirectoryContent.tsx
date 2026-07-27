@@ -76,7 +76,7 @@ export default function DirectoryContent({
                   <Link
                     key={i}
                     href={`${dirHref}?${params.toString()}`}
-                    className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium ${page === i + 1 ? "bg-brand text-white" : "bg-surface-2 text-ink-soft hover:bg-surface"}`}
+                    className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium ${page === i + 1 ? "bg-brand-solid text-white" : "bg-surface-2 text-ink-soft hover:bg-surface"}`}
                   >
                     {i + 1}
                   </Link>

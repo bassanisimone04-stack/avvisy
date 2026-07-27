@@ -144,7 +144,7 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
           <div className="card card-soft flex flex-col items-center gap-3 p-8 text-center" style={{ background: "var(--article-soft)" }}>
             <h2 className="text-xl font-bold text-ink">{t.blog.ctaTitle}</h2>
             <p className="max-w-md text-ink-soft">{t.blog.ctaBody}</p>
-            <Link href={localeHref(locale, "/directory")} className="btn text-white" style={{ background: "var(--article-accent)" }}>{t.blog.ctaButton} <ArrowRight size={16} /></Link>
+            <Link href={localeHref(locale, "/directory")} className="btn text-white" style={{ background: "var(--article-accent-solid, var(--article-accent))" }}>{t.blog.ctaButton} <ArrowRight size={16} /></Link>
           </div>
 
           {related.length > 0 && (

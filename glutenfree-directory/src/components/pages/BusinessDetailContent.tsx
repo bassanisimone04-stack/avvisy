@@ -48,7 +48,7 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
               <div className="mb-2 flex flex-wrap items-center gap-2">
                 <span className="chip chip-neutral">{cat ? categoryLabel(cat, locale) : ""}</span>
                 {business.aicCertified && <span className="chip chip-brand"><BadgeCheck size={12} /> {t.business.certifiedAic}</span>}
-                {business.openNow && <span className="chip bg-brand text-white">{t.common.openNow}</span>}
+                {business.openNow && <span className="chip bg-brand-solid text-white">{t.common.openNow}</span>}
               </div>
               <h1 className="font-editorial text-3xl font-semibold text-ink sm:text-4xl">{business.name}</h1>
               <p className="mt-2 flex items-center gap-1.5 text-ink-soft">

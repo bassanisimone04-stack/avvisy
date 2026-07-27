@@ -23,7 +23,7 @@ export default function LoginPage() {
     <div className="container-page flex justify-center py-16">
       <div className="card card-soft w-full max-w-md p-8">
         <div className="mb-6 flex flex-col items-center text-center">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand text-white"><Leaf size={22} /></span>
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-solid text-white"><Leaf size={22} /></span>
           <h1 className="mt-4 text-2xl font-bold text-ink">Bentornato</h1>
           <p className="mt-1 text-sm text-ink-soft">Accedi per salvare i preferiti e scrivere recensioni.</p>
         </div>

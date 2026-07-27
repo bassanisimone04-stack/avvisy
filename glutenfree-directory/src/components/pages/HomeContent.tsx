@@ -266,7 +266,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       {/* NEWSLETTER */}
       <section className="container-page pb-20">
         <Reveal>
-          <div className="card card-soft flex flex-col items-center gap-5 bg-brand px-6 py-12 text-center text-white sm:px-16">
+          <div className="card card-soft flex flex-col items-center gap-5 bg-brand-solid px-6 py-12 text-center text-white sm:px-16">
             <h2 className="font-editorial text-2xl font-semibold sm:text-3xl">{t.home.newsletterTitle}</h2>
             <p className="max-w-xl text-white/85">{t.home.newsletterBody}</p>
             <NewsletterForm dark />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search, MapPin, Newspaper, Tag, Building2, Landmark } from "lucide-react";
 import { searchAutocomplete, typeLabel, type SearchResult, type SearchResultType } from "@/lib/search";
@@ -29,6 +29,7 @@ export default function SearchBar({
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   const { locale, t } = useDictionary();
+  const listboxId = useId();
 
   useEffect(() => {
     setResults(searchAutocomplete(query, locale));
@@ -81,14 +82,18 @@ export default function SearchBar({
             onKeyDown={onKeyDown}
             placeholder={placeholder ?? t.common.searchPlaceholderLong}
             aria-label={t.common.search}
+            role="combobox"
             aria-autocomplete="list"
-            aria-expanded={open}
+            aria-expanded={open && results.length > 0}
+            aria-controls={listboxId}
+            aria-haspopup="listbox"
             className={`field w-full rounded-full shadow-sm ${pad}`}
           />
         </div>
       </form>
       {open && results.length > 0 && (
         <ul
+          id={listboxId}
           role="listbox"
           className="card card-soft absolute z-30 mt-2 w-full max-h-96 overflow-y-auto py-2"
         >

@@ -22,7 +22,7 @@ export default function AccountPage() {
         <div className="mb-6 flex items-center gap-4">
           <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-brand-soft text-xl font-semibold text-brand-dark">
             {user.name.slice(0, 1)}
-            <button type="button" aria-label="Carica una nuova foto profilo" className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-white shadow">
+            <button type="button" aria-label="Carica una nuova foto profilo" className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-brand-solid text-white shadow">
               <Camera size={13} />
             </button>
           </span>

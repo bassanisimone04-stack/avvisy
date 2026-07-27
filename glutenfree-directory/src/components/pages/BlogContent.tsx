@@ -76,7 +76,7 @@ export default function BlogContent({
       {featuredLocalized && featuredTheme && (
         <Link href={localeHref(locale, `/blog/${featuredLocalized.slug}`)} className={`card card-hover card-soft mt-8 grid gap-0 overflow-hidden md:grid-cols-2 ${categoryThemeClass(featured!.category)}`}>
           <div className="p-8 sm:p-10" style={{ background: "var(--article-soft)" }}>
-            <span className="chip" style={{ background: "rgba(255,255,255,0.6)", color: "var(--article-accent)" }}>{t.blog.featured} · {blogCategoryLabel(featuredLocalized.category, locale)}</span>
+            <span className="chip" style={{ background: "var(--gf-surface)", color: "var(--article-accent)" }}>{t.blog.featured} · {blogCategoryLabel(featuredLocalized.category, locale)}</span>
             <h2 className="mt-4 font-serif text-2xl font-semibold leading-tight text-ink sm:text-3xl">{featuredLocalized.title}</h2>
             <p className="mt-3 text-ink-soft">{featuredLocalized.excerpt}</p>
             <p className="mt-5 flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--article-accent)" }}>{t.common.readArticle} <ArrowRight size={14} /></p>
