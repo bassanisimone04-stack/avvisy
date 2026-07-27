@@ -233,6 +233,103 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["news", "regulation", "aic"],
   },
+  "art-11": {
+    title: "Perfect Gluten-Free Pizza: Secrets for a Light, Crispy Crust",
+    excerpt: "The secrets to a light, elastic, crispy gluten-free pizza dough, with proofing and baking times for a true pizzeria result.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "A blend of rice flour, potato starch and corn starch gives an elastic, well-rising base.",
+      "A long cold proof (12-24h) improves the flavor and digestibility of gluten-free dough.",
+      "Baking on a preheated pizza stone or hot tray helps you get a crispy crust.",
+      "A teaspoon of honey in the dough encourages browning and rising.",
+    ],
+    sections: [
+      { h2: "The right flour blend", body: "A successful gluten-free pizza dough starts with a good flour blend: rice, potato starch and corn starch in balanced proportions give elasticity and an airy structure, avoiding a gummy or overly crumbly result." },
+      { h2: "The dough and proofing", body: "Knead flour, lukewarm water, yeast, oil and a pinch of salt into a smooth, sticky mixture, typical of gluten-free flours. A long proof, even 12-24 hours in the fridge, improves flavor, structure and digestibility.", h3: [
+        { title: "Resting at room temperature", body: "Before rolling out the dough, let it come back to room temperature for at least an hour: it will be easier to work with and bake more evenly." },
+        { title: "Shaping without breaking the dough", body: "Shape it directly on a lightly oiled tray or baking paper, using wet hands: gluten-free dough tears easily if rolled out with a pin." },
+      ] },
+      { h2: "The perfect bake", body: "Baking on a preheated pizza stone, or on an already hot tray in a static oven at maximum temperature, helps you get a crispy crust and an even bake in just a few minutes." },
+      { h2: "Tips for light toppings", body: "Avoid overloading the pizza with too many wet ingredients, which can make the base soggy: simple, balanced toppings work best, adding any vegetables already cooked." },
+    ],
+    faqs: [
+      { question: "Why is gluten-free dough stickier?", answer: "Gluten-free flours absorb water differently and lack the gluten network that gives structure: it's normal for the dough to be softer and need wet hands to work with." },
+      { question: "Can gluten-free pizza dough be frozen?", answer: "Yes, freeze it already shaped into a base, ready to be topped and baked straight from frozen with a few extra minutes of baking time." },
+    ],
+    tags: ["recipes", "pizza", "cooking"],
+  },
+  "art-12": {
+    title: "Cross-Contamination in the Kitchen: Golden Rules for a Safe Home",
+    excerpt: "Best practices for avoiding gluten cross-contamination in a kitchen shared with non-celiac family members, from the pantry to the stove.",
+    authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "Even a few milligrams of gluten can trigger a reaction in celiacs: crumbs or shared utensils are enough.",
+      "Cutting boards, toasters and colanders should always be dedicated, or washed thoroughly before use.",
+      "In the pantry, keep gluten-free products in closed, clearly labeled containers, separate from the rest.",
+      "Wash hands, work surfaces and utensils between preparing gluten and gluten-free dishes.",
+    ],
+    sections: [
+      { h2: "Why cross-contamination is dangerous", body: "For a celiac, even trace amounts of gluten equal to a few crumbs can trigger an immune response and damage the intestinal villi: that's why cross-contamination needs the same attention as removing gluten directly from the diet." },
+      { h2: "The riskiest utensils", body: "Some kitchen tools easily trap flour or crumb residue and need particular care.", h3: [
+        { title: "Toasters and grills", body: "The toaster is one of the riskiest items: it's best to have one dedicated exclusively to gluten-free bread, or use dedicated toaster bags." },
+        { title: "Cutting boards and colanders", body: "Wooden cutting boards and pasta colanders easily trap gluten residue in their pores: it's best to have dedicated versions, perhaps a different color so they're easy to spot at a glance." },
+      ] },
+      { h2: "Organizing the pantry", body: "Storing gluten-free products in closed, clearly labeled containers, ideally on a separate shelf, reduces the risk of accidental contact with traditional flour or bread, especially in a kitchen shared with non-celiac family members." },
+      { h2: "Good daily habits", body: "Always washing hands, work surfaces and utensils thoroughly between preparing a dish with gluten and one without, and cooking gluten-free food first when sharing the same stove, are simple habits that dramatically reduce the risk." },
+    ],
+    faqs: [
+      { question: "Is thoroughly washing a utensil enough to make it safe?", answer: "In most cases a thorough wash with hot water and soap is enough, but for porous items like wood or scratched plastic it's safer to have dedicated versions." },
+      { question: "Can the oven be shared between gluten and gluten-free bread?", answer: "Yes, but it's important to clean the racks well and bake gluten-free bread on its own tray, avoiding direct contact with surfaces that have baked gluten-containing products." },
+    ],
+    tags: ["guides", "food safety", "celiac disease"],
+  },
+  "art-13": {
+    title: "Celiac Disease and Pregnancy: What to Know for a Smooth Journey",
+    excerpt: "How to manage a gluten-free diet during pregnancy, covering increased nutritional needs, routine checks and myths worth debunking.",
+    authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "A well-balanced gluten-free diet carries no extra risk in pregnancy compared to a diet with gluten.",
+      "Pregnancy increases the need for iron, folic acid and calcium: choose adequate gluten-free sources.",
+      "Undiagnosed celiac disease, on the other hand, is linked to a higher risk of complications, hence the importance of screening.",
+      "It's worth consulting a nutritionist for a personalized meal plan throughout the nine months.",
+    ],
+    sections: [
+      { h2: "Gluten-free diet and pregnancy: no extra risk", body: "A correctly balanced gluten-free diet carries no particular risk for pregnancy: what matters is ensuring an adequate intake of all necessary nutrients, just like for any other pregnancy." },
+      { h2: "Nutrients to keep an eye on", body: "Pregnancy increases the need for some key nutrients, which need to come from safe sources for those on a gluten-free diet.", h3: [
+        { title: "Iron and folic acid", body: "Legumes, leafy greens and fortified gluten-free cereals are good sources, to be supplemented as directed by your obstetrician." },
+        { title: "Calcium and vitamin D", body: "Dairy, fortified plant-based drinks and oily fish help meet the requirement, particularly important in the third trimester." },
+      ] },
+      { h2: "Undiagnosed celiac disease: the risks to know", body: "Undiagnosed celiac disease, unlike celiac disease properly managed with diet, is linked to a higher risk of complications such as anemia, preterm birth and low birth weight: this is why timely diagnosis matters, including when planning a pregnancy." },
+      { h2: "The support of a nutritionist", body: "Consulting a nutritionist experienced in celiac disease makes it possible to build a personalized meal plan for the nine months, taking into account any prior deficiencies and the specific needs of each trimester." },
+    ],
+    faqs: [
+      { question: "Can celiac disease first be discovered during pregnancy?", answer: "Yes, in some cases symptoms appear or worsen specifically during pregnancy, leading to a diagnosis that hadn't surfaced before." },
+      { question: "Do celiac women need special supplementation during pregnancy?", answer: "The standard supplements recommended in pregnancy (folic acid, iron, vitamin D) still apply: it's important to choose certified gluten-free formulations and check with your doctor." },
+    ],
+    tags: ["celiac disease", "pregnancy", "health"],
+  },
+  "art-14": {
+    title: "The Best Italian Cities for a Gluten-Free Vacation",
+    excerpt: "From Bologna to Milan to Puglia: an overview of the Italian destinations with the highest density of certified venues for celiacs.",
+    authorRole: "Travel writer",
+    keyTakeaways: [
+      "Emilia-Romagna and Lombardy are among the regions with the most AIC-certified venues per capita.",
+      "Many art cities now offer gluten-free food trails designed specifically for celiac tourists.",
+      "Booking ahead at the most popular restaurants helps you avoid waits or being turned away on weekends.",
+      "Local directories remain the most up-to-date tool for discovering newly certified venues.",
+    ],
+    sections: [
+      { h2: "Bologna and Emilia-Romagna", body: "Bologna, historically the capital of Italian food tradition, has seen a growing number of restaurants and artisan pasta shops specializing in gluten-free preparations, often with menus dedicated to homemade fresh pasta." },
+      { h2: "Milan, between restaurants and street food", body: "Milan offers one of the highest concentrations of certified venues in Italy, from gluten-free pizzerias to gourmet restaurants, plus a growing offer of street food and dedicated bakeries downtown and in nearby neighborhoods." },
+      { h2: "Puglia and southern Italy", body: "Southern Italy too, led by Puglia and Sicily, has expanded its range of certified accommodations and restaurants in recent years, making it easier to plan a seaside vacation without dietary compromises." },
+      { h2: "Practical tips for planning the trip", body: "Booking ahead at the most popular venues, especially on weekends and during high season, and checking up-to-date directories with verified reviews helps you build a safe, surprise-free food itinerary." },
+    ],
+    faqs: [
+      { question: "Which Italian regions have the most certified venues for celiacs?", answer: "Emilia-Romagna, Lombardy and Lazio are generally among the regions with the highest concentration of certified venues, but the offer is growing quickly across all of Italy." },
+      { question: "Is it always necessary to book ahead?", answer: "Not always, but at well-known venues and on weekends it's advisable to book to make sure you get a table and avoid waiting." },
+    ],
+    tags: ["travel", "italy", "restaurants"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {
