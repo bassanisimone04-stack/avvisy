@@ -2,7 +2,7 @@
 titolo: "Ferrari, the film: Modena between motors and Italy's finest food"
 descrizione: "Michael Mann's film Ferrari is set in Modena, home of motors and a capital of taste. A guide to the Modena of the film and its flavours: tortellini, balsamic vinegar and Emilian cuisine."
 autore: "CineFood Italia Editorial Team"
-dataPubblicazione: 2026-07-06
+dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "A plate of tortellini, the specialty of Modena"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "where to eat", "film tourism"]

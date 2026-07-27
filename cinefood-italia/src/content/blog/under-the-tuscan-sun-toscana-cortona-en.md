@@ -2,7 +2,7 @@
 titolo: "Under the Tuscan Sun: the Tuscany of Cortona, between wine and country cooking"
 descrizione: "The film Under the Tuscan Sun is set in Cortona: hills, wine and Tuscan cuisine. A guide to the film's places and the flavours of the Val di Chiana, from the fiorentina steak to bold red wines."
 autore: "CineFood Italia Editorial Team"
-dataPubblicazione: 2026-07-07
+dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tuscan hills with vineyards, as in Under the Tuscan Sun"
 tags: ["Under the Tuscan Sun", "Tuscany", "Cortona", "wine", "film tourism"]

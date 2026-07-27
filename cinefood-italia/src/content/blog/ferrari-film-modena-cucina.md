@@ -2,7 +2,7 @@
 titolo: "Ferrari, il film: Modena tra motori e la miglior cucina d'Italia"
 descrizione: "Il film Ferrari di Michael Mann è ambientato a Modena, patria dei motori e capitale del gusto. Guida alla Modena del film e ai suoi sapori: tortellini, aceto balsamico e la cucina emiliana."
 autore: "Redazione CineFood Italia"
-dataPubblicazione: 2026-07-06
+dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "Piatto di tortellini, specialità di Modena"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "dove mangiare", "cineturismo"]

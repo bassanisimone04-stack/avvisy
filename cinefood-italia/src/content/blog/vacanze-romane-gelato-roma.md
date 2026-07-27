@@ -2,7 +2,7 @@
 titolo: "Vacanze Romane: il gelato di Audrey Hepburn e la Roma del film"
 descrizione: "Vacanze Romane (Roman Holiday) con Audrey Hepburn: il gelato di Piazza di Spagna, la Bocca della Verità e la Roma senza tempo del film. Itinerario tra le location e dove concedersi un gelato da star."
 autore: "Redazione CineFood Italia"
-dataPubblicazione: 2026-07-08
+dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Piazza di Spagna a Roma, come in Vacanze Romane"
 tags: ["Vacanze Romane", "Roma", "Audrey Hepburn", "gelato", "cineturismo"]

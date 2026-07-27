@@ -2,7 +2,7 @@
 titolo: "Stanley Tucci: Searching for Italy, le tappe gastronomiche regione per regione"
 descrizione: "Nella serie Stanley Tucci: Searching for Italy, l'attore esplora la cucina italiana regione per regione: Napoli, Roma, Bologna, Toscana, Sicilia e altre. Guida alle tappe e ai piatti da provare."
 autore: "Redazione CineFood Italia"
-dataPubblicazione: 2026-07-01
+dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "Tavola con specialità regionali italiane"
 tags: ["Stanley Tucci", "cucina italiana", "itinerari", "Italia", "cineturismo"]

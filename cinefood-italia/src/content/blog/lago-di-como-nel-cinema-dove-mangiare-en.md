@@ -2,7 +2,7 @@
 titolo: "Lake Como on screen: from Star Wars to 007, where to eat by the lake"
 descrizione: "Lake Como is a movie star: Star Wars, Ocean's Twelve, Casino Royale and House of Gucci. A guide to the villas and locations of the world's most famous lake and where to eat, among Lake Como flavours."
 autore: "CineFood Italia Editorial Team"
-dataPubblicazione: 2026-07-05
+dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "A villa overlooking Lake Como at sunset"
 tags: ["Lake Como", "Star Wars", "007", "itineraries", "film tourism"]

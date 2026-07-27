@@ -2,7 +2,7 @@
 titolo: "Under the Tuscan Sun: la Toscana di Cortona tra vino e cucina contadina"
 descrizione: "Il film Under the Tuscan Sun (Sotto il sole della Toscana) è ambientato a Cortona: colline, vino e cucina toscana. Guida ai luoghi del film e ai sapori della Val di Chiana, dalla bistecca ai vini rossi."
 autore: "Redazione CineFood Italia"
-dataPubblicazione: 2026-07-07
+dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Colline della Toscana con vigneti, come in Under the Tuscan Sun"
 tags: ["Under the Tuscan Sun", "Toscana", "Cortona", "vino", "cineturismo"]

@@ -2,7 +2,7 @@
 titolo: "Roman Holiday: Audrey Hepburn's gelato and the Rome of the film"
 descrizione: "Roman Holiday with Audrey Hepburn: the gelato on the Spanish Steps, the Mouth of Truth and the timeless Rome of the film. An itinerary through the locations and where to enjoy a gelato like a star."
 autore: "CineFood Italia Editorial Team"
-dataPubblicazione: 2026-07-08
+dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "The Spanish Steps in Rome, as in Roman Holiday"
 tags: ["Roman Holiday", "Rome", "Audrey Hepburn", "gelato", "film tourism"]
