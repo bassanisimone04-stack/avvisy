@@ -36,6 +36,7 @@ export interface Review {
   body: string;
   verifiedCeliac?: boolean;
   helpful?: number;
+  photos?: string[];
 }
 
 export interface FaqItem {

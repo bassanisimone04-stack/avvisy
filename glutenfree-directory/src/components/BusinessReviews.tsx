@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { Star, BadgeCheck, ThumbsUp } from "lucide-react";
+import { useRef, useState } from "react";
+import { Star, BadgeCheck, ThumbsUp, ImagePlus, X } from "lucide-react";
 import type { Review } from "@/lib/types";
 import { formatDate } from "@/lib/format";
 import { useStore } from "@/lib/store";
 import { useDictionary } from "@/lib/i18n/useLocale";
+
+const MAX_PHOTOS = 4;
 
 export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
   const { user } = useStore();
@@ -14,17 +16,33 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
   const [rating, setRating] = useState(5);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [photos, setPhotos] = useState<string[]>([]);
   const [sent, setSent] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  function addPhotos(e: React.ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(e.target.files ?? []);
+    e.target.value = "";
+    const room = MAX_PHOTOS - photos.length;
+    const urls = files.slice(0, room).map((f) => URL.createObjectURL(f));
+    setPhotos((p) => [...p, ...urls]);
+  }
+
+  function removePhoto(url: string) {
+    setPhotos((p) => p.filter((u) => u !== url));
+    URL.revokeObjectURL(url);
+  }
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!title.trim() || !body.trim()) return;
     setList((l) => [
-      { id: `local-${Date.now()}`, author: user?.name ?? "GlutenFree Directory user", avatarSeed: 999, rating, date: new Date().toISOString(), title, body, verifiedCeliac: true, helpful: 0 },
+      { id: `local-${Date.now()}`, author: user?.name ?? "GlutenFree Directory user", avatarSeed: 999, rating, date: new Date().toISOString(), title, body, verifiedCeliac: true, helpful: 0, photos: photos.length ? photos : undefined },
       ...l,
     ]);
     setTitle("");
     setBody("");
+    setPhotos([]);
     setSent(true);
   }
 
@@ -54,6 +72,14 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
             </div>
             <p className="mt-3 font-medium text-ink">{r.title}</p>
             <p className="mt-1 text-sm leading-relaxed text-ink-soft">{r.body}</p>
+            {r.photos && r.photos.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {r.photos.map((src, i) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img key={i} src={src} alt="" className="h-16 w-16 rounded-lg object-cover" />
+                ))}
+              </div>
+            )}
             {typeof r.helpful === "number" && (
               <button type="button" className="mt-3 flex items-center gap-1.5 text-xs text-muted hover:text-brand-dark">
                 <ThumbsUp size={13} /> {t.business.helpful} ({r.helpful})
@@ -75,6 +101,38 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
         </div>
         <input className="field" placeholder={t.business.reviewTitlePlaceholder} value={title} onChange={(e) => setTitle(e.target.value)} required />
         <textarea className="field" placeholder={t.business.reviewBodyPlaceholder} rows={3} value={body} onChange={(e) => setBody(e.target.value)} required />
+
+        <div>
+          <p className="field-label">{t.business.addPhotos}</p>
+          <input ref={fileInputRef} type="file" accept="image/*" multiple onChange={addPhotos} className="hidden" />
+          <div className="flex flex-wrap gap-2">
+            {photos.map((src) => (
+              <div key={src} className="relative h-16 w-16 overflow-hidden rounded-lg">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt="" className="h-full w-full object-cover" />
+                <button
+                  type="button"
+                  onClick={() => removePhoto(src)}
+                  aria-label={t.business.removePhoto}
+                  className="absolute right-0.5 top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink/70 text-white"
+                >
+                  <X size={12} />
+                </button>
+              </div>
+            ))}
+            {photos.length < MAX_PHOTOS && (
+              <button
+                type="button"
+                onClick={() => fileInputRef.current?.click()}
+                className="flex h-16 w-16 flex-col items-center justify-center gap-1 rounded-lg border border-dashed border-line-strong text-muted hover:border-brand hover:text-brand-dark"
+              >
+                <ImagePlus size={18} />
+              </button>
+            )}
+          </div>
+          <p className="mt-1.5 text-xs text-muted">{t.business.addPhotosHint}</p>
+        </div>
+
         <button type="submit" className="btn btn-primary">{t.business.publishReview}</button>
       </form>
     </div>

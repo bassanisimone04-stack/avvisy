@@ -132,6 +132,9 @@ export const dictionary = {
       publishReview: "Pubblica recensione",
       reviewThanks: "Grazie! La tua recensione è stata pubblicata.",
       helpful: "Utile",
+      addPhotos: "Aggiungi foto",
+      addPhotosHint: "Mostra piatti, etichette o l'ambiente ad altri celiaci (max 4 foto).",
+      removePhoto: "Rimuovi foto",
     },
     blog: {
       title: "Blog GlutenFree Directory",
@@ -298,6 +301,9 @@ export const dictionary = {
       publishReview: "Publish review",
       reviewThanks: "Thank you! Your review has been published.",
       helpful: "Helpful",
+      addPhotos: "Add photos",
+      addPhotosHint: "Show dishes, labels or the venue to other celiacs (max 4 photos).",
+      removePhoto: "Remove photo",
     },
     blog: {
       title: "GlutenFree Directory Blog",
