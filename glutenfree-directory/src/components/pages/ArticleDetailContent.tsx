@@ -50,7 +50,7 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
         <div className="container-page relative grid gap-10 py-10 sm:py-16 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div>
             <span className="editorial-kicker text-base">{blogCategoryLabel(article.category, locale)}</span>
-            <h1 className="editorial mt-3 text-4xl leading-[1.05] text-ink sm:text-5xl lg:text-[3.2rem]">{article.title}</h1>
+            <h1 className="font-editorial mt-3 text-4xl font-bold leading-[1.05] text-ink sm:text-5xl lg:text-[3.2rem]">{article.title}</h1>
             <p className="mt-5 max-w-xl text-lg text-ink-soft">{article.excerpt}</p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">

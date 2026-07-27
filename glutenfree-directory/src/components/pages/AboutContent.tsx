@@ -12,7 +12,7 @@ export default function AboutContent({ locale }: { locale: Locale }) {
     <div className="container-page py-10">
       <Breadcrumbs locale={locale} items={[{ name: t.footer.about, path: "/chi-siamo" }]} />
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold text-ink sm:text-4xl">{en ? "About us" : "Chi siamo"}</h1>
+        <h1 className="font-editorial text-3xl font-semibold text-ink sm:text-4xl">{en ? "About us" : "Chi siamo"}</h1>
         <p className="mt-4 text-lg text-ink-soft">
           {en
             ? `${SITE_NAME} was born from the direct experience of people with celiac disease who too often struggled to find reliable information on where to eat, sleep and shop safely in Italy.`

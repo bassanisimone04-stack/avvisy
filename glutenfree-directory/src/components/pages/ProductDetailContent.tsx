@@ -34,7 +34,7 @@ export default function ProductDetailContent({ locale, slug }: { locale: Locale;
         <PlaceholderImage seed={product.imageSeed} variant="prodotto" ratio="aspect-square" className="rounded-2xl" label={product.name} />
         <div>
           <p className="text-sm font-medium uppercase tracking-wide text-muted">{product.brand}</p>
-          <h1 className="mt-1 text-3xl font-bold text-ink">{product.name}</h1>
+          <h1 className="font-editorial mt-1 text-3xl font-semibold text-ink">{product.name}</h1>
           <div className="mt-3 flex items-center gap-2">
             <RatingStars rating={product.rating} locale={locale} />
             <span className="text-sm text-ink-soft">{product.rating} · {product.reviewCount} {t.common.reviews}</span>

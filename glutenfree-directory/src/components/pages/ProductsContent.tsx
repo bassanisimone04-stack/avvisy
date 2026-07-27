@@ -21,7 +21,7 @@ export default function ProductsContent({
   return (
     <div className="container-page py-10">
       <Breadcrumbs locale={locale} items={[{ name: t.nav.products, path: "/prodotti" }]} />
-      <h1 className="text-3xl font-bold text-ink sm:text-4xl">{t.products.title}</h1>
+      <h1 className="font-editorial text-3xl font-semibold text-ink sm:text-4xl">{t.products.title}</h1>
       <p className="mt-2 max-w-2xl text-ink-soft">{t.products.subtitle}</p>
 
       <div className="mt-6 flex flex-wrap gap-2">

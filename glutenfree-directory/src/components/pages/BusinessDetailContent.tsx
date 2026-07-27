@@ -50,7 +50,7 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
                 {business.aicCertified && <span className="chip chip-brand"><BadgeCheck size={12} /> {t.business.certifiedAic}</span>}
                 {business.openNow && <span className="chip bg-brand text-white">{t.common.openNow}</span>}
               </div>
-              <h1 className="text-3xl font-bold text-ink sm:text-4xl">{business.name}</h1>
+              <h1 className="font-editorial text-3xl font-semibold text-ink sm:text-4xl">{business.name}</h1>
               <p className="mt-2 flex items-center gap-1.5 text-ink-soft">
                 <MapPin size={16} /> {business.address}, {city} ({business.provinceCode})
               </p>

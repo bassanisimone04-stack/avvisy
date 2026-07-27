@@ -93,6 +93,18 @@
   --font-serif: var(--font-fraunces);
 }
 
+/*
+  @theme inline non espone --font-sans/--font-display/--font-serif come
+  variabili CSS reali (le "inlinea" solo dentro le utility generate). Il
+  nostro CSS scritto a mano le referenzia direttamente, quindi le
+  ridefiniamo qui puntando ai font reali impostati da next/font sul body.
+*/
+body {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), sans-serif;
+  --font-serif: var(--font-fraunces), var(--font-inter), serif;
+}
+
 * {
   border-color: var(--gf-line);
 }
@@ -110,12 +122,24 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display), var(--font-sans), sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  text-wrap: balance;
+/*
+  In un layer @layer base così le regole più specifiche (es. .editorial h2
+  dentro @layer components) vincono senza bisogno di !important: gli
+  "unlayered rules" avrebbero altrimenti sempre la priorità sui layer.
+*/
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-serif) !important;
+  letter-spacing: -0.01em;
 }
 
 .eyebrow {

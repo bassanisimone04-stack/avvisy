@@ -44,7 +44,7 @@ export default function DirectoryContent({
 
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-ink">{title}</h1>
+          <h1 className="font-editorial text-3xl font-semibold text-ink">{title}</h1>
           <p className="mt-1 text-ink-soft">{results.length} {results.length === 1 ? t.directory.resultFound : t.directory.resultsFound}</p>
         </div>
         <SortSelect />

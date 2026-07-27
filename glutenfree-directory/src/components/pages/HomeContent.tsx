@@ -50,7 +50,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
               </span>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="mt-5 text-4xl font-extrabold text-ink sm:text-5xl lg:text-6xl">
+              <h1 className="font-editorial mt-5 text-4xl font-semibold text-ink sm:text-5xl lg:text-6xl">
                 {t.home.title1} <span className="text-brand">{t.home.title2}</span>
               </h1>
             </Reveal>
@@ -98,7 +98,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
               <p className="eyebrow">{t.home.categoryEyebrow}</p>
-              <h2 className="mt-1 text-2xl font-bold text-ink sm:text-3xl">{t.home.categoryTitle}</h2>
+              <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.categoryTitle}</h2>
             </div>
             <Link href={h("/directory")} className="hidden text-sm font-semibold text-brand-dark link-underline sm:block">{t.common.seeAll}</Link>
           </div>
@@ -125,7 +125,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
         <div className="container-page">
           <Reveal>
             <p className="eyebrow">{t.home.cityEyebrow}</p>
-            <h2 className="mt-1 text-2xl font-bold text-ink sm:text-3xl">{t.home.cityTitle}</h2>
+            <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.cityTitle}</h2>
           </Reveal>
           <div className="mt-8 flex flex-wrap gap-3">
             {topCities.map((city, i) => (
@@ -144,7 +144,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       <section className="container-page py-14">
         <Reveal>
           <p className="eyebrow">{t.home.mapEyebrow}</p>
-          <h2 className="mt-1 text-2xl font-bold text-ink sm:text-3xl">{t.home.mapTitle}</h2>
+          <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.mapTitle}</h2>
           <p className="mt-2 max-w-2xl text-ink-soft">{t.home.mapSubtitle}</p>
         </Reveal>
         <div className="mt-8">
@@ -159,7 +159,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
             <Reveal>
               <div>
                 <p className="eyebrow">{t.home.topEyebrow}</p>
-                <h2 className="mt-1 text-2xl font-bold text-ink sm:text-3xl">{t.home.topTitle}</h2>
+                <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.topTitle}</h2>
               </div>
             </Reveal>
             <Link href={`${h("/directory")}?ordina=rating`} className="hidden text-sm font-semibold text-brand-dark link-underline sm:block">{t.common.seeAll}</Link>
@@ -180,7 +180,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           <Reveal>
             <div>
               <p className="eyebrow">{t.home.articlesEyebrow}</p>
-              <h2 className="mt-1 text-2xl font-bold text-ink sm:text-3xl">{t.home.articlesTitle}</h2>
+              <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.articlesTitle}</h2>
             </div>
           </Reveal>
           <Link href={h("/blog")} className="hidden text-sm font-semibold text-brand-dark link-underline sm:block">{t.home.articlesSeeAll}</Link>
@@ -201,7 +201,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
             <Reveal>
               <div>
                 <p className="eyebrow">{t.home.productsEyebrow}</p>
-                <h2 className="mt-1 text-2xl font-bold text-ink sm:text-3xl">{t.home.productsTitle}</h2>
+                <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.productsTitle}</h2>
               </div>
             </Reveal>
             <Link href={h("/prodotti")} className="hidden text-sm font-semibold text-brand-dark link-underline sm:block">{t.common.seeAll}</Link>
@@ -240,7 +240,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
         <div className="container-page">
           <Reveal>
             <p className="eyebrow text-center">{t.home.testimonialsEyebrow}</p>
-            <h2 className="mt-1 text-center text-2xl font-bold text-ink sm:text-3xl">{t.home.testimonialsTitle}</h2>
+            <h2 className="font-editorial mt-1 text-center text-2xl font-semibold text-ink sm:text-3xl">{t.home.testimonialsTitle}</h2>
           </Reveal>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((tm, i) => (
@@ -256,7 +256,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       <section className="container-page py-14">
         <Reveal>
           <p className="eyebrow text-center">{t.home.faqEyebrow}</p>
-          <h2 className="mb-8 mt-1 text-center text-2xl font-bold text-ink sm:text-3xl">{t.home.faqTitle}</h2>
+          <h2 className="font-editorial mb-8 mt-1 text-center text-2xl font-semibold text-ink sm:text-3xl">{t.home.faqTitle}</h2>
         </Reveal>
         <div className="mx-auto max-w-3xl">
           <FaqAccordion items={faqs} />
@@ -267,7 +267,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       <section className="container-page pb-20">
         <Reveal>
           <div className="card card-soft flex flex-col items-center gap-5 bg-brand px-6 py-12 text-center text-white sm:px-16">
-            <h2 className="text-2xl font-bold sm:text-3xl">{t.home.newsletterTitle}</h2>
+            <h2 className="font-editorial text-2xl font-semibold sm:text-3xl">{t.home.newsletterTitle}</h2>
             <p className="max-w-xl text-white/85">{t.home.newsletterBody}</p>
             <NewsletterForm dark />
           </div>
