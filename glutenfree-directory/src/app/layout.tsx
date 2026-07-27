@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   keywords: ["senza glutine", "celiachia", "ristoranti senza glutine", "gluten free Italia", "AIC", "prodotti senza glutine"],
   authors: [{ name: SITE_NAME }],
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", types: { "application/rss+xml": "/feed.xml" } },
   openGraph: {
     title: `${SITE_NAME} — Ristoranti, negozi e prodotti senza glutine`,
     description: SITE_DESCRIPTION,

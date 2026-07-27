@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Clock, CalendarDays, ArrowRight, Quote } from "lucide-react";
+import { Clock, CalendarDays, ArrowRight, Quote, List, ChevronDown } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import TableOfContents from "@/components/TableOfContents";
@@ -85,6 +85,20 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
       <div className="container-page">
         <div className="mx-auto mt-10 grid max-w-5xl gap-8 lg:grid-cols-[1fr_260px]">
           <div className="max-w-3xl">
+            {article.headings.length > 0 && (
+              <details className="group mb-6 lg:hidden">
+                <summary className="card card-soft flex cursor-pointer list-none items-center justify-between gap-2 p-4 text-sm font-semibold text-ink">
+                  <span className="flex items-center gap-2">
+                    <List size={16} style={{ color: "var(--article-accent)" }} />
+                    {t.blog.tocTitle}
+                  </span>
+                  <ChevronDown size={16} className="text-muted transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-2">
+                  <TableOfContents headings={article.headings} accent="var(--article-accent)" sticky={false} hideTitle />
+                </div>
+              </details>
+            )}
             <KeyTakeaways items={article.keyTakeaways} title={t.blog.keyTakeaways} />
             <article className="editorial prose-article" dangerouslySetInnerHTML={{ __html: article.contentHtml }} />
           </div>
@@ -98,7 +112,7 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
           <div className="flex flex-wrap items-center justify-between gap-4 border-y border-line py-4">
             <div className="flex flex-wrap gap-2">
               {article.tags.map((tag) => (
-                <span key={tag} className="chip" style={{ background: "var(--article-soft)", color: "var(--article-accent)" }}>#{tag}</span>
+                <Link key={tag} href={`${localeHref(locale, "/blog")}?tag=${encodeURIComponent(tag)}`} className="chip" style={{ background: "var(--article-soft)", color: "var(--article-accent)" }}>#{tag}</Link>
               ))}
             </div>
             <SocialShare url={url} title={article.title} />

@@ -5,7 +5,7 @@ import type { ArticleHeading } from "@/lib/types";
 import { List } from "lucide-react";
 import { useDictionary } from "@/lib/i18n/useLocale";
 
-export default function TableOfContents({ headings, accent }: { headings: ArticleHeading[]; accent?: string }) {
+export default function TableOfContents({ headings, accent, sticky = true, hideTitle = false }: { headings: ArticleHeading[]; accent?: string; sticky?: boolean; hideTitle?: boolean }) {
   const { t } = useDictionary();
   const [activeId, setActiveId] = useState<string | null>(null);
 
@@ -29,11 +29,13 @@ export default function TableOfContents({ headings, accent }: { headings: Articl
   if (headings.length === 0) return null;
 
   return (
-    <nav aria-label={t.blog.tocTitle} className="card card-soft p-5 sticky top-24">
-      <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
-        <List size={16} style={{ color: accent }} />
-        {t.blog.tocTitle}
-      </div>
+    <nav aria-label={t.blog.tocTitle} className={`card card-soft p-5 ${sticky ? "sticky top-24" : ""}`}>
+      {!hideTitle && (
+        <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
+          <List size={16} style={{ color: accent }} />
+          {t.blog.tocTitle}
+        </div>
+      )}
       <ul className="space-y-2 text-sm">
         {headings.map((h) => {
           const active = h.id === activeId;

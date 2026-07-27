@@ -156,6 +156,9 @@ export const dictionary = {
       commentPlaceholder: "Scrivi il tuo commento…",
       publishComment: "Pubblica commento",
       shareLabel: "Condividi:",
+      tagResultsFor: "Articoli con tag",
+      clearTag: "Rimuovi filtro",
+      rssTitle: "Segui il blog via RSS",
     },
     products: {
       title: "Prodotti senza glutine consigliati",
@@ -325,6 +328,9 @@ export const dictionary = {
       commentPlaceholder: "Write your comment…",
       publishComment: "Post comment",
       shareLabel: "Share:",
+      tagResultsFor: "Articles tagged",
+      clearTag: "Clear filter",
+      rssTitle: "Follow the blog via RSS",
     },
     products: {
       title: "Recommended gluten-free products",

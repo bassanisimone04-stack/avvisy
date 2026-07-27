@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Rss } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 import PlaceholderImage from "@/components/PlaceholderImage";
@@ -19,9 +19,14 @@ export default function BlogContent({
 }) {
   const t = getDictionary(locale);
   const categoriaSlug = Array.isArray(sp.categoria) ? sp.categoria[0] : sp.categoria;
+  const activeTag = Array.isArray(sp.tag) ? sp.tag[0] : sp.tag;
   const activeCategory = BLOG_CATEGORIES.find((c) => slugify(c) === categoriaSlug);
-  const articles = activeCategory ? ARTICLES.filter((a) => a.category === activeCategory) : ARTICLES;
-  const featured = !activeCategory ? ARTICLES.find((a) => a.featured) : undefined;
+  const articles = activeTag
+    ? ARTICLES.filter((a) => a.tags.some((tag) => tag.toLowerCase() === activeTag.toLowerCase()))
+    : activeCategory
+      ? ARTICLES.filter((a) => a.category === activeCategory)
+      : ARTICLES;
+  const featured = !activeCategory && !activeTag ? ARTICLES.find((a) => a.featured) : undefined;
   const rest = featured ? articles.filter((a) => a.id !== featured.id) : articles;
   const blogHref = localeHref(locale, "/blog");
   const featuredLocalized = featured ? getLocalizedArticle(featured, locale) : undefined;
@@ -30,8 +35,15 @@ export default function BlogContent({
   return (
     <div className="container-page py-10">
       <Breadcrumbs locale={locale} items={[{ name: t.nav.blog, path: "/blog" }]} />
-      <h1 className="font-serif text-4xl font-semibold text-ink sm:text-5xl">{t.blog.title}</h1>
-      <p className="mt-3 max-w-2xl text-lg text-ink-soft">{t.blog.subtitle}</p>
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="font-serif text-4xl font-semibold text-ink sm:text-5xl">{t.blog.title}</h1>
+          <p className="mt-3 max-w-2xl text-lg text-ink-soft">{t.blog.subtitle}</p>
+        </div>
+        <a href="/feed.xml" target="_blank" rel="noopener noreferrer" title={t.blog.rssTitle} className="btn btn-outline btn-sm mt-1 shrink-0">
+          <Rss size={14} /> RSS
+        </a>
+      </div>
 
       <div className="mt-7 flex flex-wrap gap-2">
         <Link href={blogHref} className={`chip ${!activeCategory ? "chip-brand" : "chip-neutral"}`}>{t.blog.all}</Link>
@@ -53,6 +65,13 @@ export default function BlogContent({
           );
         })}
       </div>
+
+      {activeTag && (
+        <div className="mt-4 flex items-center gap-2 text-sm text-ink-soft">
+          {t.blog.tagResultsFor} <span className="font-semibold text-ink">#{activeTag}</span>
+          <Link href={blogHref} className="chip chip-neutral">{t.blog.clearTag} ×</Link>
+        </div>
+      )}
 
       {featuredLocalized && featuredTheme && (
         <Link href={localeHref(locale, `/blog/${featuredLocalized.slug}`)} className={`card card-hover card-soft mt-8 grid gap-0 overflow-hidden md:grid-cols-2 ${categoryThemeClass(featured!.category)}`}>
