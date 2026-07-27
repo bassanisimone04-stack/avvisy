@@ -1,6 +1,8 @@
 // Illustrazioni generate via SVG: nessuna dipendenza da immagini esterne,
 // caricamento istantaneo, nitide a qualsiasi risoluzione e coerenti con il
 // brand verde/arancio. Stile "flat illustration" a due toni con profondità.
+// Ogni scena varia in base al seed (props, layout, texture di sfondo) così
+// che due attività della stessa categoria non mostrino la stessa illustrazione.
 
 const palettes: [string, string, string, string][] = [
   ["#eafaf1", "#cdeedb", "#8fd6ae", "#0f7a47"],
@@ -9,94 +11,215 @@ const palettes: [string, string, string, string][] = [
   ["#fdf6e0", "#f8e6ae", "#e8bf5e", "#8a6400"],
 ];
 
-function Motif({ variant, accent, soft }: { variant: string; accent: string; soft: string }) {
+function Shadow({ accent }: { accent: string }) {
+  return <ellipse cx="80" cy="97" rx="30" ry="6" fill={accent} opacity="0.1" />;
+}
+
+function Sparkle({ x, y, accent, s = 1 }: { x: number; y: number; accent: string; s?: number }) {
+  return (
+    <path
+      d={`M${x} ${y - 6 * s}v${12 * s}M${x - 6 * s} ${y}h${12 * s}`}
+      stroke={accent}
+      strokeWidth={2 * s}
+      strokeLinecap="round"
+      opacity="0.7"
+    />
+  );
+}
+
+function Steam({ x, accent }: { x: number; accent: string }) {
+  return (
+    <path
+      d={`M${x} 34c-4 4-4 6 0 10s4 6 0 10`}
+      fill="none"
+      stroke={accent}
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      opacity="0.55"
+    />
+  );
+}
+
+function Motif({ variant, accent, soft, seed }: { variant: string; accent: string; soft: string; seed: number }) {
   const stroke = { fill: "none", stroke: accent, strokeWidth: 3, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   const fillSoft = { fill: soft, stroke: "none" };
+  const k = seed % 3;
+
   switch (variant) {
     case "ristorante":
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <ellipse cx="80" cy="78" rx="22" ry="7" fill="#fff" stroke={accent} strokeWidth="2.5" opacity="0.9" />
           <g {...stroke}>
             <path d="M58 42v22M64 42v22M58 42a6 6 0 0 0 6 6M70 42v36M70 42c6 0 6 8 0 8" />
             <path d="M96 42c-8 0-8 40 0 40" />
           </g>
+          {k === 1 && <Steam x={80} accent={accent} />}
+          {k === 2 && <Sparkle x={108} y={38} accent={accent} s={0.8} />}
         </g>
       );
-    case "pizzeria":
+    case "pizzeria": {
+      const drops = [
+        [[76, 58], [88, 64], [80, 72]],
+        [[72, 54], [90, 56], [82, 68], [70, 70]],
+        [[78, 50], [92, 62], [74, 66], [86, 74]],
+      ][k];
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
           <path d="M50 52 80 40l30 12-30 40z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
-          <circle cx="76" cy="58" r="3" fill={accent} />
-          <circle cx="88" cy="64" r="3" fill={accent} />
-          <circle cx="80" cy="72" r="3" fill={accent} />
+          {drops.map(([cx, cy], i) => (
+            <circle key={i} cx={cx} cy={cy} r={3} fill={accent} />
+          ))}
         </g>
       );
-    case "hotel":
+    }
+    case "hotel": {
+      const windows = k === 0 ? [[58, 58]] : k === 1 ? [[56, 56], [66, 62]] : [[56, 56], [64, 56], [60, 66]];
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
           <g {...stroke}>
             <path d="M46 82V52a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v30" />
             <path d="M46 70h60v12" />
-            <circle cx="58" cy="58" r="4" fill={accent} stroke="none" />
+            {windows.map(([cx, cy], i) => (
+              <circle key={i} cx={cx} cy={cy} r={3.5} fill={accent} stroke="none" />
+            ))}
             <path d="M110 82V60a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v22" />
           </g>
+          {k === 2 && <Sparkle x={124} y={40} accent={accent} s={0.8} />}
         </g>
       );
+    }
     case "farmacia":
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
-          <path d="M64 42h32v14h14v18h-14v14H64V74H50V56h14z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <Shadow accent={accent} />
+          <path
+            d="M64 42h32v14h14v18h-14v14H64V74H50V56h14z"
+            fill={soft}
+            stroke={accent}
+            strokeWidth={3}
+            strokeLinejoin="round"
+            transform={k === 1 ? "rotate(4 80 60)" : k === 2 ? "rotate(-4 80 60)" : undefined}
+          />
+          {k > 0 && <Sparkle x={112} y={40} accent={accent} s={0.7} />}
         </g>
       );
     case "supermercato":
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
           <path d="M48 50h56l-8 30H58z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
           <circle cx="64" cy="88" r="4" fill={accent} />
           <circle cx="92" cy="88" r="4" fill={accent} />
           <path d="M44 44h8l4 6" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />
+          {k === 1 && <circle cx="70" cy="60" r="3" fill={accent} opacity="0.7" />}
+          {k === 2 && (
+            <>
+              <circle cx="70" cy="60" r="3" fill={accent} opacity="0.7" />
+              <circle cx="82" cy="58" r="3" fill={accent} opacity="0.7" />
+            </>
+          )}
         </g>
       );
     case "negozio":
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
           <path d="M48 54h48v30a4 4 0 0 1-4 4H52a4 4 0 0 1-4-4z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
           <path d="M48 54l6-12h36l6 12" fill="none" stroke={accent} strokeWidth={3} strokeLinejoin="round" />
           <path d="M64 54a8 8 0 0 0 16 0" fill="none" stroke={accent} strokeWidth={3} />
+          {k > 0 && <path d={k === 1 ? "M52 66h8M100 66h8" : "M52 66h8M100 66h8M52 76h6M102 76h6"} stroke={accent} strokeWidth="2" strokeLinecap="round" opacity="0.6" />}
         </g>
       );
     case "bar-pasticceria":
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
           <path d="M52 50h36l-4 26a10 10 0 0 1-10 8h-8a10 10 0 0 1-10-8z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
           <path d="M88 54h6a8 8 0 0 1 0 16h-4" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />
           <path d="M60 42c2 3 2 5 0 8M70 42c2 3 2 5 0 8" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />
+          {k === 2 && <path d="M80 42c2 3 2 5 0 8" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />}
         </g>
       );
-    case "gelateria":
+    case "gelateria": {
+      const scoops = k === 2 ? 3 : 2;
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
-          <path d="M64 58a16 16 0 0 1 32 0z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <Shadow accent={accent} />
+          {scoops === 3 ? (
+            <>
+              <circle cx="70" cy="52" r="11" fill={soft} stroke={accent} strokeWidth={2.5} />
+              <circle cx="90" cy="52" r="11" fill={soft} stroke={accent} strokeWidth={2.5} />
+              <circle cx="80" cy="42" r="11" fill={soft} stroke={accent} strokeWidth={2.5} />
+            </>
+          ) : (
+            <path d="M64 58a16 16 0 0 1 32 0z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          )}
           <path d="M70 58l10 32 10-32" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" />
         </g>
       );
-    case "prodotto":
+    }
+    case "prodotto": {
+      if (k === 1) {
+        return (
+          <g>
+            <circle cx="80" cy="60" r="34" {...fillSoft} />
+            <Shadow accent={accent} />
+            <path d="M64 84V52c0-6 16-6 16 0v32" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+            <path d="M64 84h16a4 4 0 0 0 4-4V64H60v16a4 4 0 0 0 4 4z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+            <path d="M68 52h8" stroke={accent} strokeWidth={3} strokeLinecap="round" />
+          </g>
+        );
+      }
+      if (k === 2) {
+        return (
+          <g>
+            <circle cx="80" cy="60" r="34" {...fillSoft} />
+            <Shadow accent={accent} />
+            <path d="M60 50h30l6 10-6 24a4 4 0 0 1-4 4H64a4 4 0 0 1-4-4l-6-24z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+            <path d="M68 50v-4a8 8 0 0 1 16 0v4" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />
+          </g>
+        );
+      }
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
           <rect x="58" y="46" width="24" height="34" rx="4" fill={soft} stroke={accent} strokeWidth={3} />
           <path d="M58 58h24M66 46v-6h8v6" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />
         </g>
       );
-    default:
+    }
+    default: {
+      if (k === 1) {
+        return (
+          <g>
+            <circle cx="80" cy="60" r="34" {...fillSoft} />
+            <path d="M50 66c10-16 24-16 30-30 6 14 20 14 30 30-16 6-24 20-30 30-6-16-14-24-30-30Z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          </g>
+        );
+      }
+      if (k === 2) {
+        return (
+          <g>
+            <circle cx="80" cy="60" r="34" {...fillSoft} />
+            <circle cx="66" cy="52" r="10" fill={soft} stroke={accent} strokeWidth={3} />
+            <circle cx="94" cy="52" r="10" fill={soft} stroke={accent} strokeWidth={3} />
+            <circle cx="80" cy="72" r="10" fill={soft} stroke={accent} strokeWidth={3} />
+          </g>
+        );
+      }
       return (
         <g>
           <circle cx="80" cy="60" r="34" {...fillSoft} />
@@ -105,7 +228,42 @@ function Motif({ variant, accent, soft }: { variant: string; accent: string; sof
           <path d="M80 42v48" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />
         </g>
       );
+    }
   }
+}
+
+function Backdrop({ seed, accent }: { seed: number; accent: string }) {
+  const kind = seed % 3;
+  if (kind === 0) {
+    return (
+      <g stroke={accent} strokeOpacity="0.09" strokeWidth="1">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <line key={`v${i}`} x1={i * 20} y1="0" x2={i * 20} y2="120" />
+        ))}
+        {Array.from({ length: 6 }).map((_, i) => (
+          <line key={`h${i}`} x1="0" y1={i * 20} x2="160" y2={i * 20} />
+        ))}
+      </g>
+    );
+  }
+  if (kind === 1) {
+    return (
+      <g fill={accent} opacity="0.1">
+        {Array.from({ length: 7 }).map((_, row) =>
+          Array.from({ length: 9 }).map((_, col) => (
+            <circle key={`${row}-${col}`} cx={8 + col * 18} cy={8 + row * 18} r="1.6" />
+          ))
+        )}
+      </g>
+    );
+  }
+  return (
+    <g stroke={accent} strokeOpacity="0.08" strokeWidth="1">
+      {Array.from({ length: 12 }).map((_, i) => (
+        <line key={i} x1={i * 18 - 40} y1="0" x2={i * 18 + 40} y2="120" />
+      ))}
+    </g>
+  );
 }
 
 export default function PlaceholderImage({
@@ -147,17 +305,10 @@ export default function PlaceholderImage({
         </defs>
         <rect width="160" height="120" fill={`url(#${gid})`} />
         <rect width="160" height="120" fill={`url(#${vid})`} />
-        <g stroke={accent} strokeOpacity="0.09" strokeWidth="1">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <line key={`v${i}`} x1={i * 20} y1="0" x2={i * 20} y2="120" />
-          ))}
-          {Array.from({ length: 6 }).map((_, i) => (
-            <line key={`h${i}`} x1="0" y1={i * 20} x2="160" y2={i * 20} />
-          ))}
-        </g>
+        <Backdrop seed={seed} accent={accent} />
         <circle cx="24" cy="98" r="26" fill={accent} opacity="0.08" />
         <circle cx="142" cy="14" r="20" fill={accent} opacity="0.08" />
-        <Motif variant={variant} accent={accent} soft={soft} />
+        <Motif variant={variant} accent={accent} soft={soft} seed={seed} />
         <rect width="160" height="120" fill="#0f2418" opacity="0.03" />
       </svg>
     </div>
