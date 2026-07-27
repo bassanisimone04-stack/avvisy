@@ -3,11 +3,13 @@
 import { useState } from "react";
 import { Star, BadgeCheck, ThumbsUp } from "lucide-react";
 import type { Review } from "@/lib/types";
-import { formatDateIt } from "@/lib/format";
+import { formatDate } from "@/lib/format";
 import { useStore } from "@/lib/store";
+import { useDictionary } from "@/lib/i18n/useLocale";
 
 export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
   const { user } = useStore();
+  const { locale, t } = useDictionary();
   const [list, setList] = useState(reviews);
   const [rating, setRating] = useState(5);
   const [title, setTitle] = useState("");
@@ -18,7 +20,7 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
     e.preventDefault();
     if (!title.trim() || !body.trim()) return;
     setList((l) => [
-      { id: `local-${Date.now()}`, author: user?.name ?? "Utente GlutenFree Directory", avatarSeed: 999, rating, date: new Date().toISOString(), title, body, verifiedCeliac: true, helpful: 0 },
+      { id: `local-${Date.now()}`, author: user?.name ?? "GlutenFree Directory user", avatarSeed: 999, rating, date: new Date().toISOString(), title, body, verifiedCeliac: true, helpful: 0 },
       ...l,
     ]);
     setTitle("");
@@ -39,9 +41,9 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
                 <div>
                   <p className="flex items-center gap-1.5 text-sm font-semibold text-ink">
                     {r.author}
-                    {r.verifiedCeliac && <BadgeCheck size={14} className="text-brand" aria-label="Celiaco verificato" />}
+                    {r.verifiedCeliac && <BadgeCheck size={14} className="text-brand" aria-label="Verified celiac" />}
                   </p>
-                  <p className="text-xs text-muted">{formatDateIt(r.date)}</p>
+                  <p className="text-xs text-muted">{formatDate(r.date, locale)}</p>
                 </div>
               </div>
               <div className="flex items-center gap-0.5">
@@ -54,7 +56,7 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
             <p className="mt-1 text-sm leading-relaxed text-ink-soft">{r.body}</p>
             {typeof r.helpful === "number" && (
               <button type="button" className="mt-3 flex items-center gap-1.5 text-xs text-muted hover:text-brand-dark">
-                <ThumbsUp size={13} /> Utile ({r.helpful})
+                <ThumbsUp size={13} /> {t.business.helpful} ({r.helpful})
               </button>
             )}
           </article>
@@ -62,18 +64,18 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
       </div>
 
       <form onSubmit={onSubmit} className="card card-soft space-y-3 p-5">
-        <h3 className="font-semibold text-ink">Lascia una recensione</h3>
-        {sent && <p className="rounded-lg bg-brand-soft px-3 py-2 text-sm text-brand-dark">Grazie! La tua recensione è stata pubblicata.</p>}
+        <h3 className="font-semibold text-ink">{t.business.leaveReview}</h3>
+        {sent && <p className="rounded-lg bg-brand-soft px-3 py-2 text-sm text-brand-dark">{t.business.reviewThanks}</p>}
         <div className="flex items-center gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
-            <button key={i} type="button" onClick={() => setRating(i + 1)} aria-label={`${i + 1} stelle`}>
+            <button key={i} type="button" onClick={() => setRating(i + 1)} aria-label={`${i + 1} stars`}>
               <Star size={22} className={i < rating ? "fill-[var(--gf-gold)] text-[var(--gf-gold)]" : "text-line-strong"} />
             </button>
           ))}
         </div>
-        <input className="field" placeholder="Titolo della recensione" value={title} onChange={(e) => setTitle(e.target.value)} required />
-        <textarea className="field" placeholder="Racconta la tua esperienza…" rows={3} value={body} onChange={(e) => setBody(e.target.value)} required />
-        <button type="submit" className="btn btn-primary">Pubblica recensione</button>
+        <input className="field" placeholder={t.business.reviewTitlePlaceholder} value={title} onChange={(e) => setTitle(e.target.value)} required />
+        <textarea className="field" placeholder={t.business.reviewBodyPlaceholder} rows={3} value={body} onChange={(e) => setBody(e.target.value)} required />
+        <button type="submit" className="btn btn-primary">{t.business.publishReview}</button>
       </form>
     </div>
   );

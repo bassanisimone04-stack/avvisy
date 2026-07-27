@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search, MapPin, Newspaper, Tag, Building2, Landmark } from "lucide-react";
-import { searchAutocomplete, type SearchResult, type SearchResultType } from "@/lib/search";
+import { searchAutocomplete, typeLabel, type SearchResult, type SearchResultType } from "@/lib/search";
+import { useDictionary } from "@/lib/i18n/useLocale";
+import { localeHref } from "@/lib/i18n/locale";
 
 const ICONS: Record<SearchResultType, React.ComponentType<{ size?: number; className?: string }>> = {
   attivita: Building2,
@@ -13,17 +15,9 @@ const ICONS: Record<SearchResultType, React.ComponentType<{ size?: number; class
   categoria: Tag,
 };
 
-const LABELS: Record<SearchResultType, string> = {
-  attivita: "Attività",
-  articolo: "Articolo",
-  citta: "Città",
-  regione: "Regione",
-  categoria: "Categoria",
-};
-
 export default function SearchBar({
   size = "lg",
-  placeholder = "Cerca ristoranti, città, prodotti, articoli…",
+  placeholder,
 }: {
   size?: "lg" | "sm";
   placeholder?: string;
@@ -34,11 +28,12 @@ export default function SearchBar({
   const [activeIndex, setActiveIndex] = useState(-1);
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
+  const { locale, t } = useDictionary();
 
   useEffect(() => {
-    setResults(searchAutocomplete(query));
+    setResults(searchAutocomplete(query, locale));
     setActiveIndex(-1);
-  }, [query]);
+  }, [query, locale]);
 
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -59,7 +54,7 @@ export default function SearchBar({
     if (activeIndex >= 0 && results[activeIndex]) {
       go(results[activeIndex]);
     } else if (query.trim()) {
-      router.push(`/directory?q=${encodeURIComponent(query.trim())}`);
+      router.push(`${localeHref(locale, "/directory")}?q=${encodeURIComponent(query.trim())}`);
       setOpen(false);
     }
   }
@@ -75,7 +70,7 @@ export default function SearchBar({
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <form onSubmit={onSubmit} role="search" aria-label="Ricerca sul sito">
+      <form onSubmit={onSubmit} role="search" aria-label={t.common.search}>
         <div className="relative">
           <Search size={size === "lg" ? 20 : 16} className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted" />
           <input
@@ -84,8 +79,8 @@ export default function SearchBar({
             onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
             onFocus={() => setOpen(true)}
             onKeyDown={onKeyDown}
-            placeholder={placeholder}
-            aria-label="Cerca"
+            placeholder={placeholder ?? t.common.searchPlaceholderLong}
+            aria-label={t.common.search}
             aria-autocomplete="list"
             aria-expanded={open}
             className={`field w-full rounded-full shadow-sm ${pad}`}
@@ -114,7 +109,7 @@ export default function SearchBar({
                     <span className="block truncate font-medium text-ink">{r.label}</span>
                     {r.sublabel && <span className="block truncate text-xs text-muted">{r.sublabel}</span>}
                   </span>
-                  <span className="chip chip-neutral shrink-0">{LABELS[r.type]}</span>
+                  <span className="chip chip-neutral shrink-0">{typeLabel(r.type, locale)}</span>
                 </button>
               </li>
             );

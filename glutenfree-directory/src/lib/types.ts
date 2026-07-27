@@ -12,8 +12,11 @@ export interface CategoryInfo {
   slug: Category;
   label: string;
   labelPlural: string;
+  labelEn: string;
+  labelPluralEn: string;
   icon: string;
   description: string;
+  descriptionEn: string;
 }
 
 export type PriceRange = "€" | "€€" | "€€€";

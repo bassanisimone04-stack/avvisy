@@ -2,14 +2,16 @@
 
 import type { ArticleHeading } from "@/lib/types";
 import { List } from "lucide-react";
+import { useDictionary } from "@/lib/i18n/useLocale";
 
 export default function TableOfContents({ headings }: { headings: ArticleHeading[] }) {
+  const { t } = useDictionary();
   if (headings.length === 0) return null;
   return (
-    <nav aria-label="Indice dell'articolo" className="card card-soft p-5 sticky top-24">
+    <nav aria-label={t.blog.tocTitle} className="card card-soft p-5 sticky top-24">
       <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
         <List size={16} className="text-brand" />
-        Indice dei contenuti
+        {t.blog.tocTitle}
       </div>
       <ul className="space-y-2 text-sm">
         {headings.map((h) => (

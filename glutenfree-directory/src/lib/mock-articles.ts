@@ -1,5 +1,6 @@
 import type { Article, ArticleHeading } from "./types";
 import { slugify } from "./format";
+import type { Locale } from "./i18n/locale";
 
 interface Seed {
   title: string;
@@ -187,7 +188,7 @@ const seeds: Seed[] = [
   },
 ];
 
-function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
+export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
   const list: ArticleHeading[] = [];
   sections.forEach((s) => {
     list.push({ id: slugify(s.h2), text: s.h2, level: 2 });
@@ -196,7 +197,7 @@ function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
   return list;
 }
 
-function makeContentHtml(sections: Seed["sections"]): string {
+export function makeContentHtml(sections: Seed["sections"]): string {
   return sections
     .map((s) => {
       const h3html = s.h3?.map((sub) => `<h3 id="${slugify(sub.title)}">${sub.title}</h3><p>${sub.body}</p>`).join("") ?? "";
@@ -260,3 +261,20 @@ export function getRelatedArticles(article: Article, limit = 3) {
 export const BLOG_CATEGORIES: Article["category"][] = [
   "Alimentazione", "Celiachia", "News", "Ricette", "Viaggi", "Salute", "Guide", "Prodotti", "Bambini", "Eventi",
 ];
+
+export const BLOG_CATEGORY_EN: Record<Article["category"], string> = {
+  Alimentazione: "Nutrition",
+  Celiachia: "Celiac disease",
+  News: "News",
+  Ricette: "Recipes",
+  Viaggi: "Travel",
+  Salute: "Health",
+  Guide: "Guides",
+  Prodotti: "Products",
+  Bambini: "Kids",
+  Eventi: "Events",
+};
+
+export function blogCategoryLabel(category: Article["category"], locale: Locale) {
+  return locale === "en" ? BLOG_CATEGORY_EN[category] : category;
+}

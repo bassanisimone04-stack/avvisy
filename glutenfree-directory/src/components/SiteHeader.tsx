@@ -1,33 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Bell, Heart, UserCircle2 } from "lucide-react";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 import SearchBar from "./SearchBar";
 import { useStore } from "@/lib/store";
-
-const NAV = [
-  { href: "/directory", label: "Directory" },
-  { href: "/blog", label: "Blog" },
-  { href: "/prodotti", label: "Prodotti" },
-  { href: "/chi-siamo", label: "Chi siamo" },
-];
+import { useDictionary } from "@/lib/i18n/useLocale";
+import { localeHref } from "@/lib/i18n/locale";
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const { user, notifications } = useStore();
   const unread = notifications.filter((n) => !n.read).length;
+  const { locale, t } = useDictionary();
+
+  const NAV = [
+    { href: localeHref(locale, "/directory"), label: t.nav.directory },
+    { href: localeHref(locale, "/blog"), label: t.nav.blog },
+    { href: localeHref(locale, "/prodotti"), label: t.nav.products },
+    { href: localeHref(locale, "/chi-siamo"), label: t.nav.about },
+  ];
 
   if (pathname?.startsWith("/admin")) return null;
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur">
       <div className="container-page flex h-16 items-center gap-4">
-        <Logo />
+        <Logo locale={locale} />
         <nav className="ml-2 hidden items-center gap-1 lg:flex">
           {NAV.map((item) => (
             <Link
@@ -41,26 +45,29 @@ export default function SiteHeader() {
         </nav>
         <div className="hidden flex-1 justify-center px-4 md:flex">
           <div className="w-full max-w-md">
-            <SearchBar size="sm" placeholder="Cerca città, locali, prodotti…" />
+            <SearchBar size="sm" placeholder={t.common.searchPlaceholderShort} />
           </div>
         </div>
         <div className="ml-auto flex items-center gap-1.5">
+          <Suspense fallback={<div className="h-8 w-16" />}>
+            <LanguageSwitcher />
+          </Suspense>
           <ThemeToggle />
           {user ? (
             <>
-              <Link href="/account/notifiche" className="btn btn-ghost btn-sm relative !px-2.5" aria-label="Notifiche">
+              <Link href="/account/notifiche" className="btn btn-ghost btn-sm relative !px-2.5" aria-label={t.common.notifications}>
                 <Bell size={18} />
                 {unread > 0 && <span className="absolute right-1 top-1 h-2 w-2 rounded-full bg-accent" />}
               </Link>
-              <Link href="/account/preferiti" className="btn btn-ghost btn-sm !px-2.5" aria-label="Preferiti"><Heart size={18} /></Link>
+              <Link href="/account/preferiti" className="btn btn-ghost btn-sm !px-2.5" aria-label={t.common.favorites}><Heart size={18} /></Link>
               <Link href="/account" className="btn btn-ghost btn-sm hidden items-center gap-2 sm:flex">
                 <UserCircle2 size={18} /> {user.name.split(" ")[0]}
               </Link>
             </>
           ) : (
             <div className="hidden items-center gap-1.5 sm:flex">
-              <Link href="/accedi" className="btn btn-ghost btn-sm">Accedi</Link>
-              <Link href="/registrati" className="btn btn-primary btn-sm">Registrati</Link>
+              <Link href="/accedi" className="btn btn-ghost btn-sm">{t.common.login}</Link>
+              <Link href="/registrati" className="btn btn-primary btn-sm">{t.common.register}</Link>
             </div>
           )}
           <button
@@ -87,8 +94,8 @@ export default function SiteHeader() {
           </nav>
           {!user && (
             <div className="mt-3 flex gap-2 border-t border-line pt-3">
-              <Link href="/accedi" onClick={() => setOpen(false)} className="btn btn-outline btn-sm flex-1">Accedi</Link>
-              <Link href="/registrati" onClick={() => setOpen(false)} className="btn btn-primary btn-sm flex-1">Registrati</Link>
+              <Link href="/accedi" onClick={() => setOpen(false)} className="btn btn-outline btn-sm flex-1">{t.common.login}</Link>
+              <Link href="/registrati" onClick={() => setOpen(false)} className="btn btn-primary btn-sm flex-1">{t.common.register}</Link>
             </div>
           )}
         </div>

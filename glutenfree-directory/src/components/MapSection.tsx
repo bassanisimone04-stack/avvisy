@@ -4,7 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { MapPin, BadgeCheck } from "lucide-react";
 import type { Business } from "@/lib/types";
-import { getCategoryInfo } from "@/lib/categories";
+import { getCategoryInfo, categoryLabel } from "@/lib/categories";
+import { cityName } from "@/lib/i18n/place-names";
+import { localeHref } from "@/lib/i18n/locale";
+import { useDictionary } from "@/lib/i18n/useLocale";
+import { tf } from "@/lib/i18n/dictionary";
 import RatingStars from "./RatingStars";
 
 const LAT_MIN = 36.4, LAT_MAX = 47.2, LNG_MIN = 6.5, LNG_MAX = 18.6;
@@ -18,6 +22,7 @@ function project(lat: number, lng: number) {
 export default function MapSection({ businesses }: { businesses: Business[] }) {
   const [activeId, setActiveId] = useState<string | null>(businesses[0]?.id ?? null);
   const active = businesses.find((b) => b.id === activeId);
+  const { locale, t } = useDictionary();
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
@@ -42,7 +47,7 @@ export default function MapSection({ businesses }: { businesses: Business[] }) {
               onMouseEnter={() => setActiveId(b.id)}
               onFocus={() => setActiveId(b.id)}
               style={{ left: `${x}%`, top: `${y}%` }}
-              aria-label={`${b.name}, ${b.city}`}
+              aria-label={`${b.name}, ${cityName(b.city, locale)}`}
               className={`absolute -translate-x-1/2 -translate-y-full transition-transform ${isActive ? "z-10 scale-125" : "z-0"}`}
             >
               <MapPin
@@ -53,7 +58,7 @@ export default function MapSection({ businesses }: { businesses: Business[] }) {
           );
         })}
         <p className="absolute bottom-3 right-3 rounded-full bg-white/85 px-3 py-1 text-[11px] text-ink-soft backdrop-blur">
-          Mappa stilizzata · {businesses.length} attività in evidenza
+          {tf(t.map.caption, { n: businesses.length })}
         </p>
       </div>
 
@@ -62,7 +67,7 @@ export default function MapSection({ businesses }: { businesses: Business[] }) {
           <>
             <div className="flex items-start justify-between gap-2">
               <div>
-                <p className="eyebrow">{getCategoryInfo(active.category)?.label}</p>
+                <p className="eyebrow">{(() => { const c = getCategoryInfo(active.category); return c ? categoryLabel(c, locale) : ""; })()}</p>
                 <h3 className="mt-1 text-lg font-semibold text-ink">{active.name}</h3>
               </div>
               {active.aicCertified && (
@@ -70,19 +75,19 @@ export default function MapSection({ businesses }: { businesses: Business[] }) {
               )}
             </div>
             <p className="mt-2 flex items-center gap-1 text-sm text-muted">
-              <MapPin size={14} /> {active.address}, {active.city} ({active.provinceCode})
+              <MapPin size={14} /> {active.address}, {cityName(active.city, locale)} ({active.provinceCode})
             </p>
             <div className="mt-2 flex items-center gap-2">
               <RatingStars rating={active.rating} />
-              <span className="text-sm text-muted">{active.rating} · {active.reviewCount} recensioni</span>
+              <span className="text-sm text-muted">{active.rating} · {active.reviewCount} {t.common.reviews}</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">{active.shortDescription}</p>
-            <Link href={`/directory/${active.slug}`} className="btn btn-primary mt-auto self-start">
-              Vedi la scheda completa
+            <Link href={localeHref(locale, `/directory/${active.slug}`)} className="btn btn-primary mt-auto self-start">
+              {t.map.viewBusiness}
             </Link>
           </>
         ) : (
-          <p className="text-sm text-muted">Seleziona un punto sulla mappa per vedere i dettagli.</p>
+          <p className="text-sm text-muted">{t.map.emptyHint}</p>
         )}
         <div className="mt-5 flex flex-wrap gap-2 border-t border-line pt-4">
           {businesses.map((b) => (
@@ -92,7 +97,7 @@ export default function MapSection({ businesses }: { businesses: Business[] }) {
               onClick={() => setActiveId(b.id)}
               className={`chip ${b.id === activeId ? "chip-brand" : "chip-neutral"}`}
             >
-              {b.city}
+              {cityName(b.city, locale)}
             </button>
           ))}
         </div>

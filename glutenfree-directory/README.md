@@ -26,6 +26,10 @@ amministrazione.
   `LocalBusiness`, `Article`, `FAQPage`, `BreadcrumbList`, `Product`,
   `ItemList`
 - Immagine Open Graph generata dinamicamente con `next/og`
+- **Sito bilingue IT/EN** (`src/lib/i18n`): IT è la lingua di default senza
+  prefisso, l'inglese vive sotto `/en/...`; selettore di lingua con bandiere
+  🇮🇹/🇬🇧 in alto a destra nell'header, hreflang `alternates.languages` su
+  ogni pagina
 
 ## Avvio
 
@@ -54,9 +58,14 @@ src/
 │  ├─ admin/                    # Dashboard amministratore
 │  │  ├─ attivita/ articoli/ utenti/ recensioni/ categorie/ banner/ newsletter/ analytics/ seo/
 │  ├─ chi-siamo/ contatti/ per-le-aziende/ privacy/ cookie/ termini/
+│  ├─ en/                       # Mirror inglese delle pagine pubbliche sopra (stessi componenti, locale="en")
 │  ├─ sitemap.ts  robots.ts  opengraph-image.tsx
-├─ components/                  # Componenti UI riutilizzabili (card, filtri, ricerca, mappa, FAQ, TOC, ecc.)
-└─ lib/                         # Tipi, dati mock, SEO helper, ricerca, store client-side
+├─ components/
+│  ├─ pages/                    # Componenti "*Content" condivisi tra rotta IT e rotta /en (locale passato come prop)
+│  └─ ...                       # Componenti UI riutilizzabili (card, filtri, ricerca, mappa, FAQ, TOC, ecc.)
+└─ lib/
+   ├─ i18n/                     # Dizionario stringhe UI, overlay di traduzione contenuti, helper locale
+   └─ ...                       # Tipi, dati mock, SEO helper, ricerca, store client-side
 ```
 
 ## Funzionalità principali
@@ -80,6 +89,12 @@ src/
   controlli automatici e Core Web Vitals dimostrativi.
 - **Dark mode** persistente senza flash iniziale, animazioni leggere allo
   scroll (`Reveal`), rispetto di `prefers-reduced-motion`.
+- **Sito in italiano e inglese**: homepage, directory (elenco + schede),
+  blog (elenco + articoli), prodotti e pagine istituzionali sono disponibili
+  in entrambe le lingue (`/...` per l'italiano, `/en/...` per l'inglese),
+  con contenuti tradotti (non solo l'interfaccia) e cambio lingua rapido
+  dalle bandiere in header. Area utente e dashboard admin restano in
+  italiano in questa versione dimostrativa.
 
 ## Roadmap verso una versione in produzione
 

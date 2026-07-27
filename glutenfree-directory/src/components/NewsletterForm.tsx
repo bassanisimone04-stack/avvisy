@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { Mail, CheckCircle2 } from "lucide-react";
+import { useDictionary } from "@/lib/i18n/useLocale";
 
 export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
+  const { t } = useDictionary();
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -16,7 +18,7 @@ export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
   if (sent) {
     return (
       <div className={`flex items-center gap-2 rounded-full px-5 py-3.5 text-sm font-medium ${dark ? "bg-white/10 text-white" : "bg-brand-soft text-brand-dark"}`}>
-        <CheckCircle2 size={18} /> Iscrizione confermata! Controlla la tua casella email.
+        <CheckCircle2 size={18} /> {t.newsletter.success}
       </div>
     );
   }
@@ -30,13 +32,13 @@ export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="La tua email"
-          aria-label="Indirizzo email per la newsletter"
+          placeholder={t.newsletter.placeholder}
+          aria-label={t.newsletter.placeholder}
           className={`w-full rounded-full py-3 pl-11 pr-4 text-sm outline-none ${dark ? "border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-white/50" : "field"}`}
         />
       </div>
       <button type="submit" className={dark ? "btn btn-accent" : "btn btn-primary"}>
-        Iscriviti gratis
+        {t.newsletter.cta}
       </button>
     </form>
   );

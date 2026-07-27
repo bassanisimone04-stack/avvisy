@@ -1,5 +1,6 @@
 import type { Product } from "./types";
 import { slugify } from "./format";
+import type { Locale } from "./i18n/locale";
 
 interface Seed {
   name: string;
@@ -57,3 +58,16 @@ export function getRecommendedProducts(limit = 8) {
 export const PRODUCT_CATEGORIES: Product["category"][] = [
   "Pasta e cereali", "Pane e sostituti", "Snack e dolci", "Farine e mix", "Prodotti da forno", "Condimenti",
 ];
+
+export const PRODUCT_CATEGORY_EN: Record<Product["category"], string> = {
+  "Pasta e cereali": "Pasta & grains",
+  "Pane e sostituti": "Bread & substitutes",
+  "Snack e dolci": "Snacks & sweets",
+  "Farine e mix": "Flours & mixes",
+  "Prodotti da forno": "Baked goods",
+  Condimenti: "Condiments",
+};
+
+export function productCategoryLabel(category: Product["category"], locale: Locale) {
+  return locale === "en" ? PRODUCT_CATEGORY_EN[category] : category;
+}

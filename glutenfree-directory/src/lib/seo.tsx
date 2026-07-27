@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Article, Business, FaqItem, Product } from "./types";
 import { SITE_NAME, SITE_URL } from "./site-config";
+import { localeHref, type Locale } from "./i18n/locale";
 
 export function pageMetadata({
   title,
@@ -8,25 +9,35 @@ export function pageMetadata({
   path,
   image,
   type = "website",
+  locale = "it",
 }: {
   title: string;
   description: string;
+  /** Percorso canonico IT, senza prefisso (es. "/directory/foo"). */
   path: string;
   image?: string;
   type?: "website" | "article";
+  locale?: Locale;
 }): Metadata {
-  const url = `${SITE_URL}${path}`;
+  const url = `${SITE_URL}${localeHref(locale, path)}`;
   const ogImage = image ?? `${SITE_URL}/opengraph-image`;
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        it: `${SITE_URL}${localeHref("it", path)}`,
+        en: `${SITE_URL}${localeHref("en", path)}`,
+        "x-default": `${SITE_URL}${localeHref("it", path)}`,
+      },
+    },
     openGraph: {
       title,
       description,
       url,
       siteName: SITE_NAME,
-      locale: "it_IT",
+      locale: locale === "en" ? "en_US" : "it_IT",
       type,
       images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },

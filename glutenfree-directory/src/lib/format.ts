@@ -12,8 +12,13 @@ export function formatDateIt(iso: string): string {
   return d.toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
 }
 
-export function formatPrice(n: number): string {
-  return new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR" }).format(n);
+export function formatDate(iso: string, locale: "it" | "en" = "it"): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString(locale === "en" ? "en-GB" : "it-IT", { day: "numeric", month: "long", year: "numeric" });
+}
+
+export function formatPrice(n: number, locale: "it" | "en" = "it"): string {
+  return new Intl.NumberFormat(locale === "en" ? "en-IE" : "it-IT", { style: "currency", currency: "EUR" }).format(n);
 }
 
 export function readingTimeFromWords(words: number): number {
