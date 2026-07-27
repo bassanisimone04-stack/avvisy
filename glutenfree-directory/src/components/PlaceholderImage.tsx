@@ -114,14 +114,21 @@ export default function PlaceholderImage({
   className = "",
   ratio = "aspect-[4/3]",
   label,
+  tint,
 }: {
   seed: number;
   variant?: string;
   className?: string;
   ratio?: string;
   label?: string;
+  /** Sostituisce la palette basata sul seed con i colori di una categoria (es. blog). */
+  tint?: { soft: string; accent: string; bg1: string; bg2: string };
 }) {
-  const [bg1, bg2, soft, accent] = palettes[seed % palettes.length];
+  const [pbg1, pbg2, psoft, paccent] = palettes[seed % palettes.length];
+  const bg1 = tint?.bg1 ?? pbg1;
+  const bg2 = tint?.bg2 ?? pbg2;
+  const soft = tint?.soft ?? psoft;
+  const accent = tint?.accent ?? paccent;
   const gid = `gfd-g${seed}`;
   const vid = `gfd-v${seed}`;
   return (

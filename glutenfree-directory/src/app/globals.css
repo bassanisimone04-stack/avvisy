@@ -90,6 +90,7 @@
   --color-danger: var(--gf-danger);
   --font-sans: var(--font-inter);
   --font-display: var(--font-sora);
+  --font-serif: var(--font-fraunces);
 }
 
 * {
@@ -285,4 +286,132 @@ h1, h2, h3, h4 {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
   html { scroll-behavior: auto; }
+}
+
+/* -------------------------------------------------------------------------
+   Editoriale — layout distintivo per gli articoli del blog
+---------------------------------------------------------------------------- */
+@layer components {
+  .editorial-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(150deg, var(--article-soft, var(--gf-brand-soft)) 0%, var(--gf-surface) 78%);
+  }
+  .editorial-hero::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -12%;
+    width: 60%;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: var(--article-accent, var(--gf-brand));
+    opacity: 0.14;
+    filter: blur(4px);
+  }
+  .editorial-hero::after {
+    content: "";
+    position: absolute;
+    bottom: -35%;
+    left: -8%;
+    width: 40%;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: var(--article-accent, var(--gf-brand));
+    opacity: 0.1;
+  }
+
+  .editorial-kicker {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--article-accent, var(--gf-brand));
+  }
+
+  .editorial h1 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .editorial p:first-of-type::first-letter {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    float: left;
+    font-size: 3.6em;
+    line-height: 0.82;
+    padding-right: 0.1em;
+    padding-top: 0.06em;
+    color: var(--article-accent, var(--gf-brand));
+  }
+
+  .editorial h2 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.9rem;
+    letter-spacing: -0.01em;
+  }
+  .editorial h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .editorial blockquote {
+    position: relative;
+    border-left: none;
+    background: transparent;
+    padding: 0.2em 0 0.2em 1.5em;
+    margin: 1.9em 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 1.5;
+    color: var(--gf-ink);
+  }
+  .editorial blockquote::before {
+    content: "\201C";
+    position: absolute;
+    left: -0.1em;
+    top: -0.2em;
+    font-family: var(--font-serif);
+    font-size: 2.8em;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--article-accent, var(--gf-brand));
+    opacity: 0.45;
+  }
+
+  .toc-link-active {
+    color: var(--article-accent, var(--gf-brand)) !important;
+    font-weight: 600;
+  }
+
+  .reading-progress-bar {
+    height: 100%;
+    background: var(--article-accent, var(--gf-brand));
+  }
+
+  /* Temi per categoria di blog: --article-accent/--article-soft con varianti dark mode. */
+  .cat-alimentazione { --article-accent: #d97706; --article-soft: #fef3c7; }
+  .cat-celiachia { --article-accent: #7c3aed; --article-soft: #ede9fe; }
+  .cat-news { --article-accent: #475569; --article-soft: #e2e8f0; }
+  .cat-ricette { --article-accent: #ea580c; --article-soft: #ffedd5; }
+  .cat-viaggi { --article-accent: #0284c7; --article-soft: #e0f2fe; }
+  .cat-salute { --article-accent: #0d9488; --article-soft: #ccfbf1; }
+  .cat-guide { --article-accent: #0f7a47; --article-soft: #e2f5ea; }
+  .cat-prodotti { --article-accent: #db2777; --article-soft: #fce7f3; }
+  .cat-bambini { --article-accent: #ca8a04; --article-soft: #fef9c3; }
+  .cat-eventi { --article-accent: #4f46e5; --article-soft: #e0e7ff; }
+
+  :root[data-theme="dark"] .cat-alimentazione { --article-accent: #fbbf24; --article-soft: #3a2c0c; }
+  :root[data-theme="dark"] .cat-celiachia { --article-accent: #a78bfa; --article-soft: #271b40; }
+  :root[data-theme="dark"] .cat-news { --article-accent: #94a3b8; --article-soft: #232b36; }
+  :root[data-theme="dark"] .cat-ricette { --article-accent: #fb923c; --article-soft: #3a2410; }
+  :root[data-theme="dark"] .cat-viaggi { --article-accent: #38bdf8; --article-soft: #0e2a38; }
+  :root[data-theme="dark"] .cat-salute { --article-accent: #2dd4bf; --article-soft: #0d2e29; }
+  :root[data-theme="dark"] .cat-guide { --article-accent: #35b874; --article-soft: #163b28; }
+  :root[data-theme="dark"] .cat-prodotti { --article-accent: #f472b6; --article-soft: #3a1830; }
+  :root[data-theme="dark"] .cat-bambini { --article-accent: #facc15; --article-soft: #332c0a; }
+  :root[data-theme="dark"] .cat-eventi { --article-accent: #818cf8; --article-soft: #211f3d; }
 }

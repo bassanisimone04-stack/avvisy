@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Clock, CalendarDays, ArrowRight } from "lucide-react";
+import { Clock, CalendarDays, ArrowRight, Quote } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import TableOfContents from "@/components/TableOfContents";
@@ -8,8 +8,10 @@ import FaqAccordion from "@/components/FaqAccordion";
 import ArticleCard from "@/components/ArticleCard";
 import SocialShare from "@/components/SocialShare";
 import CommentsSection from "@/components/CommentsSection";
+import ReadingProgress from "@/components/ReadingProgress";
 import { getArticleBySlug, getRelatedArticles, blogCategoryLabel } from "@/lib/mock-articles";
 import { getLocalizedArticle } from "@/lib/i18n/content-article";
+import { getCategoryTheme, categoryThemeClass } from "@/lib/blog-theme";
 import { formatDate, slugify } from "@/lib/format";
 import { JsonLd, articleJsonLd, faqJsonLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-config";
@@ -21,83 +23,115 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
   if (!base) notFound();
   const article = getLocalizedArticle(base, locale);
   const t = getDictionary(locale);
+  const theme = getCategoryTheme(base.category);
 
   const related = getRelatedArticles(base);
   const url = `${SITE_URL}${localeHref(locale, `/blog/${article.slug}`)}`;
-  const blogHref = localeHref(locale, "/blog");
 
   return (
-    <div className="container-page py-10">
+    <div className={categoryThemeClass(base.category)}>
+      <ReadingProgress />
       <JsonLd data={articleJsonLd(article)} />
       <JsonLd data={faqJsonLd(article.faqs)} />
 
-      <Breadcrumbs locale={locale} items={[
-        { name: t.nav.blog, path: "/blog" },
-        { name: blogCategoryLabel(article.category, locale), path: `/blog?categoria=${slugify(article.category)}` },
-        { name: article.title, path: `/blog/${article.slug}` },
-      ]} />
+      <div className="container-page pt-6">
+        <Breadcrumbs locale={locale} items={[
+          { name: t.nav.blog, path: "/blog" },
+          { name: blogCategoryLabel(article.category, locale), path: `/blog?categoria=${slugify(article.category)}` },
+          { name: article.title, path: `/blog/${article.slug}` },
+        ]} />
+      </div>
 
-      <div className="mx-auto max-w-3xl">
-        <span className="chip chip-accent">{blogCategoryLabel(article.category, locale)}</span>
-        <h1 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">{article.title}</h1>
-        <p className="mt-3 text-lg text-ink-soft">{article.excerpt}</p>
+      {/* HERO EDITORIALE */}
+      <section className="editorial-hero">
+        <div className="container-page relative grid gap-10 py-10 sm:py-16 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+          <div>
+            <span className="editorial-kicker text-base">{blogCategoryLabel(article.category, locale)}</span>
+            <h1 className="editorial mt-3 text-4xl leading-[1.05] text-ink sm:text-5xl lg:text-[3.2rem]">{article.title}</h1>
+            <p className="mt-5 max-w-xl text-lg text-ink-soft">{article.excerpt}</p>
 
-        <div className="mt-5 flex flex-wrap items-center gap-4 border-y border-line py-4">
-          <div className="flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-soft text-sm font-semibold text-brand-dark">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-2.5">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-surface text-sm font-semibold text-ink shadow-sm">
+                  {article.author.split(" ").map((p) => p[0]).join("")}
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-ink">{article.author}</p>
+                  <p className="text-xs text-muted">{article.authorRole}</p>
+                </div>
+              </div>
+              <span className="hidden h-8 w-px bg-line sm:block" />
+              <span className="flex items-center gap-1.5 text-sm text-ink-soft"><CalendarDays size={14} /> {formatDate(article.publishedAt, locale)}</span>
+              <span className="flex items-center gap-1.5 text-sm text-ink-soft"><Clock size={14} /> {article.readingTime} {t.blog.readingTime}</span>
+            </div>
+          </div>
+
+          <div className="relative hidden lg:block">
+            <PlaceholderImage
+              seed={article.coverSeed}
+              variant="default"
+              ratio="aspect-square"
+              className="rounded-[2rem] shadow-lg"
+              label={article.title}
+              tint={{ soft: theme.soft, accent: theme.accent, bg1: theme.soft, bg2: theme.soft }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <div className="container-page">
+        <div className="mx-auto mt-10 grid max-w-5xl gap-8 lg:grid-cols-[1fr_260px]">
+          <article className="editorial prose-article max-w-3xl" dangerouslySetInnerHTML={{ __html: article.contentHtml }} />
+
+          <div className="hidden lg:block">
+            <TableOfContents headings={article.headings} accent="var(--article-accent)" />
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-3xl space-y-10 pb-20">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-y border-line py-4">
+            <div className="flex flex-wrap gap-2">
+              {article.tags.map((tag) => (
+                <span key={tag} className="chip" style={{ background: "var(--article-soft)", color: "var(--article-accent)" }}>#{tag}</span>
+              ))}
+            </div>
+            <SocialShare url={url} title={article.title} />
+          </div>
+
+          <div className="card card-soft flex flex-col gap-4 p-6 sm:flex-row sm:items-center">
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-lg font-semibold" style={{ background: "var(--article-soft)", color: "var(--article-accent)" }}>
               {article.author.split(" ").map((p) => p[0]).join("")}
             </span>
             <div>
-              <p className="text-sm font-semibold text-ink">{article.author}</p>
-              <p className="text-xs text-muted">{article.authorRole}</p>
+              <p className="font-semibold text-ink">{article.author}</p>
+              <p className="text-sm text-muted">{article.authorRole}</p>
             </div>
           </div>
-          <div className="ml-auto flex items-center gap-4 text-sm text-muted">
-            <span className="flex items-center gap-1.5"><CalendarDays size={14} /> {formatDate(article.publishedAt, locale)}</span>
-            <span className="flex items-center gap-1.5"><Clock size={14} /> {article.readingTime} {t.blog.readingTime}</span>
-          </div>
-        </div>
 
-        <PlaceholderImage seed={article.coverSeed} variant="default" ratio="aspect-[16/9]" className="mt-6 rounded-2xl" label={article.title} />
-      </div>
-
-      <div className="mx-auto mt-8 grid max-w-5xl gap-8 lg:grid-cols-[1fr_260px]">
-        <article className="prose-article max-w-3xl" dangerouslySetInnerHTML={{ __html: article.contentHtml }} />
-
-        <div className="hidden lg:block">
-          <TableOfContents headings={article.headings} />
-        </div>
-      </div>
-
-      <div className="mx-auto mt-8 max-w-3xl space-y-10">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-y border-line py-4">
-          <div className="flex flex-wrap gap-2">
-            {article.tags.map((tag) => <span key={tag} className="chip chip-neutral">#{tag}</span>)}
-          </div>
-          <SocialShare url={url} title={article.title} />
-        </div>
-
-        <div>
-          <h2 className="mb-4 text-xl font-bold text-ink">{t.blog.faqTitle}</h2>
-          <FaqAccordion items={article.faqs} />
-        </div>
-
-        <div className="card card-soft flex flex-col items-center gap-3 p-8 text-center">
-          <h2 className="text-xl font-bold text-ink">{t.blog.ctaTitle}</h2>
-          <p className="max-w-md text-ink-soft">{t.blog.ctaBody}</p>
-          <Link href={localeHref(locale, "/directory")} className="btn btn-primary">{t.blog.ctaButton} <ArrowRight size={16} /></Link>
-        </div>
-
-        {related.length > 0 && (
           <div>
-            <h2 className="mb-4 text-xl font-bold text-ink">{t.blog.relatedTitle}</h2>
-            <div className="grid gap-5 sm:grid-cols-3">
-              {related.map((a) => <ArticleCard key={a.id} article={a} compact locale={locale} />)}
-            </div>
+            <h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-ink">
+              <Quote size={18} style={{ color: "var(--article-accent)" }} /> {t.blog.faqTitle}
+            </h2>
+            <FaqAccordion items={article.faqs} />
           </div>
-        )}
 
-        <CommentsSection comments={article.comments} />
+          <div className="card card-soft flex flex-col items-center gap-3 p-8 text-center" style={{ background: "var(--article-soft)" }}>
+            <h2 className="text-xl font-bold text-ink">{t.blog.ctaTitle}</h2>
+            <p className="max-w-md text-ink-soft">{t.blog.ctaBody}</p>
+            <Link href={localeHref(locale, "/directory")} className="btn text-white" style={{ background: "var(--article-accent)" }}>{t.blog.ctaButton} <ArrowRight size={16} /></Link>
+          </div>
+
+          {related.length > 0 && (
+            <div>
+              <h2 className="mb-4 text-xl font-bold text-ink">{t.blog.relatedTitle}</h2>
+              <div className="grid gap-5 sm:grid-cols-3">
+                {related.map((a) => <ArticleCard key={a.id} article={a} compact locale={locale} />)}
+              </div>
+            </div>
+          )}
+
+          <CommentsSection comments={article.comments} />
+        </div>
       </div>
     </div>
   );
