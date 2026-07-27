@@ -32,7 +32,7 @@ export const SITE = {
   lang: "it",
 
   /** Email di contatto mostrata nelle pagine e nei form. */
-  email: "info@cinefood-italia.example.com",
+  email: "info@cinefooditalia.com",
 
   /** Autore/organizzazione (usato nei dati strutturati). */
   author: "CineFood Italia",
