@@ -9,9 +9,11 @@ import ArticleCard from "@/components/ArticleCard";
 import SocialShare from "@/components/SocialShare";
 import CommentsSection from "@/components/CommentsSection";
 import ReadingProgress from "@/components/ReadingProgress";
+import KeyTakeaways from "@/components/KeyTakeaways";
 import { getArticleBySlug, getRelatedArticles, blogCategoryLabel } from "@/lib/mock-articles";
 import { getLocalizedArticle } from "@/lib/i18n/content-article";
 import { getCategoryTheme, categoryThemeClass } from "@/lib/blog-theme";
+import { getAuthorByName, authorBio } from "@/lib/authors";
 import { formatDate, slugify } from "@/lib/format";
 import { JsonLd, articleJsonLd, faqJsonLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-config";
@@ -27,6 +29,7 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
 
   const related = getRelatedArticles(base);
   const url = `${SITE_URL}${localeHref(locale, `/blog/${article.slug}`)}`;
+  const author = getAuthorByName(article.author);
 
   return (
     <div className={categoryThemeClass(base.category)}>
@@ -81,7 +84,10 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
 
       <div className="container-page">
         <div className="mx-auto mt-10 grid max-w-5xl gap-8 lg:grid-cols-[1fr_260px]">
-          <article className="editorial prose-article max-w-3xl" dangerouslySetInnerHTML={{ __html: article.contentHtml }} />
+          <div className="max-w-3xl">
+            <KeyTakeaways items={article.keyTakeaways} title={t.blog.keyTakeaways} />
+            <article className="editorial prose-article" dangerouslySetInnerHTML={{ __html: article.contentHtml }} />
+          </div>
 
           <div className="hidden lg:block">
             <TableOfContents headings={article.headings} accent="var(--article-accent)" />
@@ -98,13 +104,19 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
             <SocialShare url={url} title={article.title} />
           </div>
 
-          <div className="card card-soft flex flex-col gap-4 p-6 sm:flex-row sm:items-center">
+          <div className="card card-soft flex flex-col gap-4 p-6 sm:flex-row sm:items-start">
             <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-lg font-semibold" style={{ background: "var(--article-soft)", color: "var(--article-accent)" }}>
               {article.author.split(" ").map((p) => p[0]).join("")}
             </span>
             <div>
               <p className="font-semibold text-ink">{article.author}</p>
               <p className="text-sm text-muted">{article.authorRole}</p>
+              {author && <p className="mt-2 text-sm text-ink-soft">{authorBio(author, locale)}</p>}
+              {author && (
+                <Link href={localeHref(locale, `/blog/autore/${author.slug}`)} className="mt-2 inline-block text-sm font-semibold" style={{ color: "var(--article-accent)" }}>
+                  {t.blog.viewProfile}
+                </Link>
+              )}
             </div>
           </div>
 

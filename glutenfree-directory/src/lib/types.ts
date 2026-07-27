@@ -122,6 +122,7 @@ export interface Article {
   readingTime: number;
   headings: ArticleHeading[];
   contentHtml: string;
+  keyTakeaways: string[];
   faqs: FaqItem[];
   tags: string[];
   comments: Comment[];

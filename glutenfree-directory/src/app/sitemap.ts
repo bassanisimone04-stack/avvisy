@@ -3,6 +3,7 @@ import { BUSINESSES } from "@/lib/mock-businesses";
 import { ARTICLES } from "@/lib/mock-articles";
 import { PRODUCTS } from "@/lib/mock-products";
 import { CATEGORIES } from "@/lib/categories";
+import { AUTHORS } from "@/lib/authors";
 import { SITE_URL } from "@/lib/site-config";
 import { localeHref } from "@/lib/i18n/locale";
 
@@ -51,5 +52,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/prodotti/${p.slug}`, { changeFrequency: "monthly", priority: 0.5 }),
   );
 
-  return [...staticPages, ...categoryPages, ...businessPages, ...articlePages, ...productPages];
+  const authorPages: MetadataRoute.Sitemap = AUTHORS.map((a) =>
+    entry(`/blog/autore/${a.slug}`, { changeFrequency: "monthly", priority: 0.4 }),
+  );
+
+  return [...staticPages, ...categoryPages, ...businessPages, ...articlePages, ...productPages, ...authorPages];
 }

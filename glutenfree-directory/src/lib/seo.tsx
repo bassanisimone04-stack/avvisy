@@ -113,6 +113,8 @@ export function localBusinessJsonLd(b: Business) {
 }
 
 export function articleJsonLd(a: Article) {
+  const plainText = a.contentHtml.replace(/<[^>]+>/g, " ");
+  const wordCount = plainText.split(/\s+/).filter(Boolean).length;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -122,6 +124,10 @@ export function articleJsonLd(a: Article) {
     author: { "@type": "Person", name: a.author },
     datePublished: a.publishedAt,
     dateModified: a.updatedAt,
+    wordCount,
+    timeRequired: `PT${a.readingTime}M`,
+    articleSection: a.category,
+    keywords: a.tags.join(", "),
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,

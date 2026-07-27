@@ -9,6 +9,7 @@ interface ArticleTranslation {
   excerpt: string;
   authorRole: string;
   sections: Section[];
+  keyTakeaways: string[];
   faqs: { question: string; answer: string }[];
   tags: string[];
 }
@@ -18,6 +19,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Celiac Disease: What It Is, Symptoms and How It's Diagnosed",
     excerpt: "A complete guide to celiac disease: causes, the most common symptoms in adults and children, the diagnostic path, and what to do after diagnosis.",
     authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "Celiac disease is an autoimmune condition triggered by gluten, not a food allergy or intolerance.",
+      "Diagnosis requires blood tests and a duodenal biopsy: don't remove gluten from your diet before completing them.",
+      "The only treatment is a lifelong gluten-free diet, which allows symptoms to go into remission.",
+      "Screening is recommended for first-degree relatives too, given the genetic component of the disease.",
+    ],
     sections: [
       { h2: "What is celiac disease", body: "Celiac disease is an autoimmune condition triggered by ingesting gluten, the protein found in wheat, barley and rye. In genetically predisposed people, gluten triggers an immune response that damages the intestinal villi, impairing nutrient absorption." },
       { h2: "The most common symptoms", body: "Symptoms vary widely from person to person and can appear at any age.", h3: [
@@ -38,6 +45,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "How to Read Food Labels If You Have Celiac Disease",
     excerpt: "A practical guide to spotting risky ingredients on labels, the Crossed Grain symbol, and the wording you should always check.",
     authorRole: "Food safety content specialist",
+    keyTakeaways: [
+      "The Crossed Grain symbol is the fastest way to spot an AIC-verified product on the shelf.",
+      "Starch, flavorings and yeast can hide gluten: check the AIC Food Guide whenever you're unsure.",
+      "The 'gluten-free' claim is regulated in Europe and guarantees a content below 20 ppm.",
+      "Even a certified product can get contaminated at home: use dedicated utensils for gluten-free prep.",
+    ],
     sections: [
       { h2: "The Crossed Grain symbol", body: "The Crossed Grain is the trademark registered by the Italian Celiac Association (AIC) that identifies products subject to strict annual auditing. It's the fastest and most reliable way to recognize a safe product on the shelf." },
       { h2: "Ingredients to watch out for", body: "Some ingredients require attention because they can hide gluten even in unsuspected products.", h3: [
@@ -58,6 +71,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Recipe: Homemade Gluten-Free Fresh Pasta",
     excerpt: "The step-by-step method for making elastic, tasty gluten-free fresh pasta, with the right flour blend.",
     authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "A good bread-and-pasta flour blend based on rice, potato and corn starch gets closest to traditional pasta.",
+      "Gluten-free dough is more delicate: work it gently and roll it between two sheets of baking paper.",
+      "Gluten-free pasta cooks faster than traditional pasta, so check it often while boiling.",
+      "A pinch of xanthan gum and 30 minutes of resting noticeably improve the dough's elasticity.",
+    ],
     sections: [
       { h2: "Ingredients for 4 people", body: "250 g of gluten-free flour blend for bread and pasta, 2 whole eggs, 1 tablespoon of extra virgin olive oil, a pinch of salt, lukewarm water as needed." },
       { h2: "Method", body: "Knead flour, eggs, oil and salt until you get a smooth mixture, adding lukewarm water one tablespoon at a time. Unlike traditional dough, gluten-free dough is more delicate and should be worked gently.", h3: [
@@ -76,6 +95,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Traveling Gluten-Free: 7 Tips for a Safe Holiday",
     excerpt: "How to plan a trip in Italy and abroad as a celiac, from useful apps to translation cards and safe bookings.",
     authorRole: "Travel writer",
+    keyTakeaways: [
+      "Look up certified restaurants and hotels at your destination before you leave and save them to a shared map.",
+      "The multilingual AIC card helps you explain celiac disease to restaurant staff abroad.",
+      "Request gluten-free airline meals at least 48 hours ahead, and always pack safe snacks as backup.",
+      "Local directories and online communities are the most reliable resource off the beaten tourist path.",
+    ],
     sections: [
       { h2: "Before you leave", body: "Looking up certified restaurants and hotels at your destination ahead of time, saving addresses to a shared map, reduces stress during the trip." },
       { h2: "The celiac translation card", body: "AIC provides a card explaining celiac disease translated into several languages, extremely useful for communicating with restaurant staff abroad." },
@@ -92,6 +117,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Celiac Kids at School: Managing Cafeterias and Field Trips",
     excerpt: "Practical advice for parents on organizing the school cafeteria, field trips and birthday parties for a celiac child.",
     authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "A gluten-free school meal is a legal right in Italy, at no extra cost for the family.",
+      "A medical certificate submitted to the school office is enough to agree on the menu with catering.",
+      "Informing teachers ahead of time and packing safe snacks prevents issues during field trips.",
+      "Involving your child in choosing gluten-free treats to share helps them enjoy socializing without feeling different.",
+    ],
     sections: [
       { h2: "The school cafeteria", body: "Italian law guarantees the right to a gluten-free meal in school cafeterias: it's enough to submit the medical certificate to the school office and agree on the menu with the catering service." },
       { h2: "Field trips and school outings", body: "Informing teachers ahead of time and, if needed, providing safe snacks to bring along prevents uncomfortable situations during outings away from school." },
@@ -107,6 +138,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Gluten-Free Products: The Most Interesting Novelties of 2026",
     excerpt: "A roundup of the most innovative gluten-free products that hit the shelves this year, from flours to snacks and bread substitutes.",
     authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "The latest buckwheat- and teff-based mixes come much closer to traditional bread.",
+      "Protein snacks made from certified legumes are on the rise, great for a healthy snack on the go.",
+      "Frozen fresh gluten-free bread is increasingly available even in large retail chains.",
+      "New products can be found in supermarkets with a dedicated corner, specialty shops and online.",
+    ],
     sections: [
       { h2: "New flours and bread mixes", body: "The latest generation of mixes based on buckwheat and teff flour offer a richer flavor and a structure closer to traditional bread compared to classic starch-based mixes." },
       { h2: "Gluten-free protein snacks", body: "Protein snacks based on certified legumes are on the rise, designed for those looking for healthy, practical options on the go." },
@@ -121,6 +158,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Gluten-Free Events and Trade Fairs in 2026",
     excerpt: "The calendar of major trade fairs, markets and information days dedicated to celiac disease and gluten-free living in Italy.",
     authorRole: "Food safety content specialist",
+    keyTakeaways: [
+      "Several Italian cities host gluten-free food fairs every year, with tastings and workshops open to the public.",
+      "AIC's regional offices run free meetings on diagnosis and regulatory news for the newly diagnosed.",
+      "Celiac communities are increasingly organizing social dinners at certified venues.",
+      "The GlutenFree Directory newsletter and local social channels are the easiest way to stay updated.",
+    ],
     sections: [
       { h2: "National trade fairs", body: "Every year several Italian cities host gluten-free food fairs, with tastings, workshops and meetings with nutritionists open to the public." },
       { h2: "Local information days", body: "AIC's regional offices regularly organize free meetings on diagnosis, nutrition and regulatory updates, a useful occasion for the newly diagnosed and their families." },
@@ -135,6 +178,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Gluten-Free Diet and Sports: What to Know for Performance",
     excerpt: "How to plan sports nutrition when following a gluten-free diet, covering carbohydrates, supplementation and practical ideas.",
     authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "Rice, quinoa, buckwheat and sweet potatoes are ideal complex carbs for pre-race fueling and recovery.",
+      "An unbalanced gluten-free diet can be low in fiber and iron: vary the whole grains you eat.",
+      "Many energy bars use gluten as a thickener: always choose certified products.",
+      "Periodically monitor iron, vitamin D and B vitamins with your doctor or nutritionist.",
+    ],
     sections: [
       { h2: "Gluten-free carbohydrates for energy", body: "Rice, quinoa, buckwheat and sweet potatoes are excellent sources of complex carbohydrates, perfect for pre-race fueling and post-workout recovery." },
       { h2: "Watch out for nutritional gaps", body: "A poorly balanced gluten-free diet can be low in fiber and iron: it's important to vary the whole gluten-free grains available and periodically monitor blood values." },
@@ -149,6 +198,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "A Balanced Gluten-Free Diet: A Guide to Macronutrients",
     excerpt: "How to build a varied, balanced gluten-free diet, avoiding an excess of industrial substitute products.",
     authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "Rice, corn, buckwheat, quinoa, legumes and vegetables are naturally gluten-free and should be the base of your diet.",
+      "Whole rice and corn versions help cover the fiber intake often lacking in refined gluten-free products.",
+      "A simple, repeatable meal plan reduces reliance on industrial substitutes.",
+      "Not all industrial gluten-free products are equal: they often have a higher glycemic index and less fiber.",
+    ],
     sections: [
       { h2: "Not just industrial substitutes", body: "Rice, corn, buckwheat, quinoa, legumes and vegetables are naturally gluten-free and should form the basis of the diet, more so than packaged substitute products." },
       { h2: "Fiber and gluten-free whole grains", body: "Choosing whole versions of rice and corn, together with legumes and seeds, helps maintain adequate fiber intake, often lacking in diets based on refined gluten-free products." },
@@ -163,6 +218,12 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "2026 Regulatory Updates: What Changes for Celiacs in Italy",
     excerpt: "The latest news on reimbursements, food vouchers and regulations for people with celiac disease in Italy, updated for 2026.",
     authorRole: "Food safety content specialist",
+    keyTakeaways: [
+      "The monthly spending cap for gluten-free products provided by Italy's health service is reviewed periodically.",
+      "Always check the updated amounts directly with your local health authority (ASL).",
+      "Several regions are updating HACCP guidelines for celiac-friendly restaurant certification.",
+      "The voucher can be used at pharmacies and participating retailers after presenting your diagnosis.",
+    ],
     sections: [
       { h2: "Monthly food voucher update", body: "The monthly spending cap provided by the National Health Service for gluten-free products is periodically reviewed: it's advisable to check the updated amounts with your local health authority (ASL)." },
       { h2: "New guidelines for the restaurant industry", body: "Several Italian regions are updating HACCP guidelines for restaurants, with stricter requirements for venues seeking celiac certification." },
@@ -193,6 +254,7 @@ export function getLocalizedArticle(article: Article, locale: Locale): Article {
     authorRole: tr.authorRole,
     headings: makeHeadings(tr.sections),
     contentHtml: makeContentHtml(tr.sections),
+    keyTakeaways: tr.keyTakeaways,
     faqs: tr.faqs,
     tags: tr.tags,
     comments: article.comments.map((c) => ({ ...c, body: COMMENT_EN[c.author] ?? c.body })),

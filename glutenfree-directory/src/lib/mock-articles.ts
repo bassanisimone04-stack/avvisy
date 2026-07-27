@@ -11,6 +11,7 @@ interface Seed {
   authorRole: string;
   publishedAt: string;
   tags: string[];
+  keyTakeaways: string[];
   sections: { h2: string; body: string; h3?: { title: string; body: string }[] }[];
   faqs: { question: string; answer: string }[];
   featured?: boolean;
@@ -23,6 +24,12 @@ const seeds: Seed[] = [
     excerpt: "Una guida completa alla celiachia: cause, sintomi più comuni nell'adulto e nel bambino, percorso diagnostico e cosa fare dopo la diagnosi.",
     coverSeed: 101, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-06-02",
     tags: ["celiachia", "diagnosi", "salute"],
+    keyTakeaways: [
+      "La celiachia è una malattia autoimmune scatenata dal glutine, non un'allergia o un'intolleranza alimentare.",
+      "La diagnosi richiede esami del sangue e biopsia duodenale: non eliminare il glutine prima di completarli.",
+      "L'unica terapia è la dieta senza glutine per tutta la vita, che permette la remissione dei sintomi.",
+      "È consigliato lo screening anche per i parenti di primo grado, per la componente genetica della malattia.",
+    ],
     sections: [
       { h2: "Che cos'è la celiachia", body: "La celiachia è una condizione autoimmune scatenata dall'ingestione di glutine, la proteina presente in grano, orzo e segale. Nei soggetti predisposti geneticamente, il glutine innesca una risposta immunitaria che danneggia i villi intestinali, compromettendo l'assorbimento dei nutrienti." },
       { h2: "I sintomi più comuni", body: "I sintomi variano molto da persona a persona e possono comparire a qualunque età.", h3: [
@@ -45,6 +52,12 @@ const seeds: Seed[] = [
     excerpt: "La guida pratica per riconoscere in etichetta gli ingredienti a rischio, il marchio della spiga barrata e le diciture da controllare sempre.",
     coverSeed: 102, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-05-20",
     tags: ["etichette", "guide", "sicurezza alimentare"],
+    keyTakeaways: [
+      "La Spiga Barrata è il modo più rapido per riconoscere un prodotto verificato da AIC sullo scaffale.",
+      "Amido, aromi e lieviti possono nascondere glutine: in caso di dubbio consulta il Prontuario AIC.",
+      "La dicitura 'senza glutine' in Europa è regolamentata e garantisce un contenuto sotto i 20 ppm.",
+      "Anche un prodotto certificato può contaminarsi in cucina: usa utensili dedicati alla preparazione gluten free.",
+    ],
     sections: [
       { h2: "Il marchio della Spiga Barrata", body: "La Spiga Barrata è il marchio registrato dall'Associazione Italiana Celiachia che identifica i prodotti sottoposti a un rigoroso controllo annuale. È il modo più rapido e affidabile per riconoscere un prodotto sicuro sullo scaffale." },
       { h2: "Ingredienti da tenere sott'occhio", body: "Alcuni ingredienti richiedono attenzione perché possono nascondere glutine anche in prodotti insospettabili.", h3: [
@@ -66,6 +79,12 @@ const seeds: Seed[] = [
     excerpt: "Il procedimento passo passo per preparare una pasta fresca gluten free elastica e saporita, con il giusto mix di farine.",
     coverSeed: 103, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-05-05",
     tags: ["ricette", "pasta", "cucina"],
+    keyTakeaways: [
+      "Un buon mix per pane e pasta a base di riso, patate e mais dà i risultati più simili alla pasta tradizionale.",
+      "L'impasto gluten free è più delicato: va lavorato con dolcezza e steso tra due fogli di carta forno.",
+      "La pasta senza glutine cuoce più rapidamente di quella tradizionale: va controllata spesso in cottura.",
+      "Un pizzico di gomma di xantano e 30 minuti di riposo migliorano sensibilmente l'elasticità dell'impasto.",
+    ],
     sections: [
       { h2: "Ingredienti per 4 persone", body: "250 g di mix di farine senza glutine per pane e pasta, 2 uova intere, 1 cucchiaio di olio extravergine, un pizzico di sale, acqua tiepida quanto basta." },
       { h2: "Procedimento", body: "Impastare farina, uova, olio e sale fino a ottenere un composto omogeneo, aggiungendo acqua tiepida un cucchiaio alla volta. A differenza dell'impasto tradizionale, quello gluten free è più delicato e va lavorato con dolcezza.", h3: [
@@ -85,6 +104,12 @@ const seeds: Seed[] = [
     excerpt: "Come organizzare un viaggio in Italia e all'estero da celiaco, tra app utili, tesserini di traduzione e prenotazioni sicure.",
     coverSeed: 104, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-04-18",
     tags: ["viaggi", "vacanze", "consigli"],
+    keyTakeaways: [
+      "Cerca ristoranti e hotel certificati a destinazione prima di partire e salvali in una mappa condivisa.",
+      "Il tesserino AIC multilingue aiuta a comunicare la celiachia al personale di sala all'estero.",
+      "Richiedi i pasti gluten free in aereo con almeno 48 ore d'anticipo e porta sempre snack sicuri di scorta.",
+      "Le directory locali e le community online restano la risorsa più affidabile fuori dai circuiti turistici.",
+    ],
     sections: [
       { h2: "Prima della partenza", body: "Cercare in anticipo ristoranti e hotel certificati nella destinazione scelta, salvando gli indirizzi in una mappa condivisa, riduce lo stress durante il viaggio." },
       { h2: "Il tesserino di traduzione per celiaci", body: "AIC mette a disposizione un tesserino con la spiegazione della celiachia tradotta in più lingue, utilissimo per comunicare con il personale di sala nei paesi esteri." },
@@ -102,6 +127,12 @@ const seeds: Seed[] = [
     excerpt: "Consigli pratici per genitori su come organizzare la mensa scolastica, le gite e le feste di compleanno per un bambino celiaco.",
     coverSeed: 105, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-04-02",
     tags: ["bambini", "scuola", "celiachia"],
+    keyTakeaways: [
+      "Il pasto senza glutine nelle mense scolastiche è un diritto garantito per legge, senza costi extra per la famiglia.",
+      "Basta il certificato medico in segreteria per concordare il menu con il servizio di ristorazione.",
+      "Informare gli insegnanti in anticipo e portare snack sicuri evita disagi durante le gite scolastiche.",
+      "Coinvolgere il bambino nella scelta di dolci gluten free aiuta a vivere la socialità senza sentirsi diverso.",
+    ],
     sections: [
       { h2: "La mensa scolastica", body: "La legge italiana garantisce il diritto al pasto senza glutine nelle mense scolastiche: è sufficiente presentare il certificato medico alla segreteria e concordare il menu con il servizio di ristorazione." },
       { h2: "Gite e uscite didattiche", body: "Informare per tempo gli insegnanti e, se necessario, fornire snack sicuri da portare con sé evita situazioni di disagio durante le uscite fuori dal contesto scolastico." },
@@ -118,6 +149,12 @@ const seeds: Seed[] = [
     excerpt: "Una rassegna dei prodotti gluten free più innovativi arrivati sugli scaffali quest'anno, tra farine, snack e sostituti del pane.",
     coverSeed: 106, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-03-22",
     tags: ["prodotti", "novità", "spesa"],
+    keyTakeaways: [
+      "I mix di ultima generazione a base di grano saraceno e teff si avvicinano molto al pane tradizionale.",
+      "Crescono gli snack proteici a base di legumi certificati, pratici per una spuntino sano fuori casa.",
+      "Il pane fresco surgelato gluten free è sempre più diffuso anche nella grande distribuzione.",
+      "I nuovi prodotti si trovano in supermercati con corner dedicato, negozi specializzati e online.",
+    ],
     sections: [
       { h2: "Nuove farine e mix per il pane", body: "I mix di ultima generazione a base di farina di grano saraceno e teff offrono un sapore più ricco e una struttura più simile al pane tradizionale rispetto ai mix classici a base di amido." },
       { h2: "Snack proteici gluten free", body: "Crescono le proposte di snack proteici a base di legumi certificati, pensati per chi cerca alternative sane e pratiche fuori casa." },
@@ -133,6 +170,12 @@ const seeds: Seed[] = [
     excerpt: "Il calendario delle principali fiere, mercatini e giornate informative dedicate alla celiachia e al senza glutine in Italia.",
     coverSeed: 107, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-03-10",
     tags: ["eventi", "fiere", "community"],
+    keyTakeaways: [
+      "Ogni anno diverse città italiane ospitano fiere food senza glutine con degustazioni e workshop aperti al pubblico.",
+      "Le sedi regionali AIC organizzano incontri gratuiti su diagnosi e novità normative per i neo-diagnosticati.",
+      "Le community di celiaci organizzano sempre più cene sociali presso locali certificati.",
+      "La newsletter di GlutenFree Directory e i canali social locali sono il modo più semplice per restare aggiornati.",
+    ],
     sections: [
       { h2: "Le fiere nazionali", body: "Ogni anno diverse città italiane ospitano fiere dedicate al food senza glutine, con degustazioni, workshop e incontri con nutrizionisti aperti al pubblico." },
       { h2: "Giornate informative locali", body: "Le sedi regionali AIC organizzano periodicamente incontri gratuiti su diagnosi, alimentazione e novità normative, un'occasione utile per neo-diagnosticati e famiglie." },
@@ -148,6 +191,12 @@ const seeds: Seed[] = [
     excerpt: "Come impostare l'alimentazione sportiva quando si segue una dieta senza glutine, tra carboidrati, integrazione e idee pratiche.",
     coverSeed: 108, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-02-27",
     tags: ["sport", "salute", "alimentazione"],
+    keyTakeaways: [
+      "Riso, quinoa, grano saraceno e patate dolci sono carboidrati complessi ideali per pre-gara e recupero.",
+      "Una dieta senza glutine sbilanciata può essere povera di fibre e ferro: varia i cereali integrali disponibili.",
+      "Molte barrette energetiche contengono glutine come addensante: scegli sempre prodotti certificati.",
+      "Monitora periodicamente ferro, vitamina D e vitamine del gruppo B con il tuo medico o nutrizionista.",
+    ],
     sections: [
       { h2: "Carboidrati senza glutine per l'energia", body: "Riso, quinoa, grano saraceno e patate dolci sono fonti eccellenti di carboidrati complessi, perfette per il pre-gara e il recupero post-allenamento." },
       { h2: "Attenzione a carenze nutrizionali", body: "Una dieta senza glutine mal bilanciata può essere povera di fibre e ferro: è importante variare i cereali integrali senza glutine disponibili e monitorare periodicamente i valori ematici." },
@@ -163,6 +212,12 @@ const seeds: Seed[] = [
     excerpt: "Come costruire una dieta senza glutine varia ed equilibrata, evitando gli eccessi di prodotti industriali sostitutivi.",
     coverSeed: 109, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-02-10",
     tags: ["alimentazione", "nutrizione", "salute"],
+    keyTakeaways: [
+      "Riso, mais, grano saraceno, quinoa, legumi e verdure sono naturalmente senza glutine e dovrebbero essere la base della dieta.",
+      "Le versioni integrali di riso e mais aiutano a coprire un apporto di fibre spesso carente nei prodotti raffinati.",
+      "Un piano alimentare semplice, ripetibile ogni giorno, riduce la dipendenza dai sostituti industriali.",
+      "Non tutti i prodotti gluten free industriali sono uguali: hanno spesso indice glicemico più alto e meno fibre.",
+    ],
     sections: [
       { h2: "Non solo sostituti industriali", body: "Riso, mais, grano saraceno, quinoa, legumi e verdure sono naturalmente privi di glutine e dovrebbero costituire la base della dieta, più dei prodotti confezionati sostitutivi." },
       { h2: "Fibre e cereali integrali gluten free", body: "Scegliere versioni integrali di riso e mais, insieme a legumi e semi, aiuta a mantenere un adeguato apporto di fibre spesso carente nelle diete a base di prodotti raffinati senza glutine." },
@@ -178,6 +233,12 @@ const seeds: Seed[] = [
     excerpt: "Le ultime novità su rimborsi, buoni spesa e normative per le persone celiache in Italia aggiornate al 2026.",
     coverSeed: 110, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-01-15",
     tags: ["news", "normativa", "aic"],
+    keyTakeaways: [
+      "Il tetto di spesa mensile per prodotti senza glutine erogato dal SSN viene rivisto periodicamente.",
+      "Verifica sempre gli importi aggiornati direttamente presso la tua ASL di riferimento.",
+      "Diverse regioni stanno aggiornando le linee guida HACCP per la certificazione dei locali per celiaci.",
+      "Il buono spesa è utilizzabile in farmacia e nei punti vendita convenzionati dopo la presentazione della diagnosi.",
+    ],
     sections: [
       { h2: "Aggiornamento dei buoni spesa mensili", body: "Il tetto di spesa mensile erogato dal Servizio Sanitario Nazionale per i prodotti senza glutine viene periodicamente rivisto: è consigliato verificare gli importi aggiornati presso la propria ASL di riferimento." },
       { h2: "Nuove linee guida per la ristorazione", body: "Diverse regioni stanno aggiornando le linee guida HACCP per la ristorazione, con requisiti più stringenti per i locali che vogliono ottenere la certificazione per celiaci." },
@@ -235,6 +296,7 @@ export const ARTICLES: Article[] = seeds.map((s, idx) => {
     readingTime: Math.max(2, Math.round(words / 180)),
     headings: makeHeadings(s.sections),
     contentHtml: makeContentHtml(s.sections),
+    keyTakeaways: s.keyTakeaways,
     faqs: s.faqs,
     tags: s.tags,
     comments: [commentPool[idx % commentPool.length], commentPool[(idx + 1) % commentPool.length]].map((c, i) => ({
