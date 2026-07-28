@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-set-tema.jpg"
 immagineAlt: "A film clapperboard next to a plate"
 tags: ["guide", "tips", "cinema"]
+faq:
+  - domanda: "What is the difference between a real set and a themed venue?"
+    risposta: "A real set is a venue where the film was actually shot; a themed venue is inspired by cinema but is not a real location."
+  - domanda: "How can you spot a true film restaurant?"
+    risposta: "Look for documented sources; on our site the real venues carry the 'Real set' badge."
+  - domanda: "Are themed venues worth a visit?"
+    risposta: "Yes, they are scenic and fun for enthusiasts, but don't expect to find the film's scene there."
 lang: "en"
 bozza: false
 ---

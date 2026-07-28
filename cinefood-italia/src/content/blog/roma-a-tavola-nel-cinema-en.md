@@ -6,6 +6,13 @@ dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Tables of a Roman trattoria in the historic centre"
 tags: ["Rome", "trattorias", "cinema", "itineraries"]
+faq:
+  - domanda: "Which Roman trattorias have appeared in films?"
+    risposta: "Da Pancrazio, Trattoria Santa Lucia and Trattoria del Biscione, in the historic centre of Rome."
+  - domanda: "Where to eat in Rome's historic centre?"
+    risposta: "Between Campo de' Fiori, Piazza Navona and the Ghetto, the realm of Roman trattorias."
+  - domanda: "Which Roman dishes should you try?"
+    risposta: "Cacio e pepe, carbonara, amatriciana, artichokes and oxtail stew."
 lang: "en"
 bozza: false
 ---

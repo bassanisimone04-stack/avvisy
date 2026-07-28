@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["cinema italiano", "food", "curiosità"]
+faq:
+  - domanda: "Qual è la scena a tavola più famosa del cinema italiano?"
+    risposta: "I maccheroni di Alberto Sordi in Un Americano a Roma sono tra le più celebri di sempre."
+  - domanda: "Perché il cibo è così presente nel cinema italiano?"
+    risposta: "È parte dell'identità culturale: la tavola racconta famiglia, territorio e convivialità."
+  - domanda: "Quali film italiani hanno scene a tavola memorabili?"
+    risposta: "Un Americano a Roma, La Grande Bellezza, Benvenuti al Sud e le fiction del Commissario Montalbano."
 bozza: false
 ---
 

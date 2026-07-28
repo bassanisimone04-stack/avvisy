@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-05
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
 immagineAlt: "Via Veneto a Roma con i tavolini dei caffè storici"
 tags: ["Roma", "Fellini", "caffè", "cinema"]
+faq:
+  - domanda: "Dov'è ambientata La Dolce Vita?"
+    risposta: "A Roma, con Via Vittorio Veneto come cuore mondano del film di Fellini."
+  - domanda: "I caffè de La Dolce Vita esistono ancora?"
+    risposta: "Il Café de Paris, simbolo di Via Veneto, ha chiuso nel 2008, ma la via conserva il suo fascino."
+  - domanda: "Chi ha diretto La Dolce Vita?"
+    risposta: "Federico Fellini (1960), con Marcello Mastroianni e Anita Ekberg."
 bozza: false
 ---
 

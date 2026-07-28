@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-01
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Table set with dishes of the Italian tradition"
 tags: ["itineraries", "food", "cinema", "Sicily", "Cilento"]
+faq:
+  - domanda: "Which film restaurants can you actually visit?"
+    risposta: "Among the verified ones: Bar Vitelli (Savoca), Caffè Florian (Venice), Da Michele (Naples) and Enzo a Mare (Punta Secca)."
+  - domanda: "How can you tell if a venue is a real location?"
+    risposta: "Check reliable sources: on our site the real venues carry the 'Real set' badge."
+  - domanda: "Do you need to book at these venues?"
+    risposta: "It depends: some restaurants yes, while historic bars and pizzerias like Da Michele work with a queue."
 lang: "en"
 bozza: false
 ---

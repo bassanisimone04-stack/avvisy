@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-10
 immagine: "../../assets/placeholder/blog-sicilia.jpg"
 immagineAlt: "Piatto di pesce siciliano su un tavolo affacciato sul mare"
 tags: ["Sicilia", "Montalbano", "itinerari", "cinema"]
+faq:
+  - domanda: "Quali film sono stati girati in Sicilia?"
+    risposta: "Il Padrino (Savoca), Il commissario Montalbano (Punta Secca e il ragusano) e Nuovo Cinema Paradiso (Palazzo Adriano)."
+  - domanda: "Dove mangiava Montalbano in Sicilia?"
+    risposta: "Al ristorante Enzo a Mare, sul lungomare di Punta Secca."
+  - domanda: "Cosa mangiare in Sicilia sulle orme del cinema?"
+    risposta: "Arancini, pasta 'ncasciata, granita, cannoli e pesce fresco."
 bozza: false
 ---
 

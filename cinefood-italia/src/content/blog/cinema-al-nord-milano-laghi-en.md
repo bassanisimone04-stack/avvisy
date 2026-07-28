@@ -6,6 +6,13 @@ dataPubblicazione: 2026-06-28
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "View of a Northern Italian lake at sunset"
 tags: ["Milan", "Crema", "cinema", "itineraries"]
+faq:
+  - domanda: "Which films were shot in Northern Italy?"
+    risposta: "Call Me by Your Name (Crema), House of Gucci (Milan and Como), Star Wars and Casino Royale (Lake Como)."
+  - domanda: "What should you eat in Milan?"
+    risposta: "Saffron risotto, veal cutlet alla milanese, ossobuco and the classic aperitivo."
+  - domanda: "Which northern lakes have appeared on screen?"
+    risposta: "Lake Como (Villa del Balbianello) and Lake Garda (Quantum of Solace)."
 lang: "en"
 bozza: false
 ---

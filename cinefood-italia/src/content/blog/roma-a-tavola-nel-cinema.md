@@ -6,6 +6,13 @@ dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Tavolini di una trattoria romana nel centro storico"
 tags: ["Roma", "trattorie", "cinema", "itinerari"]
+faq:
+  - domanda: "Quali trattorie romane sono comparse nei film?"
+    risposta: "Da Pancrazio, Trattoria Santa Lucia e Trattoria del Biscione, nel centro storico di Roma."
+  - domanda: "Dove mangiare nel centro storico di Roma?"
+    risposta: "Tra Campo de' Fiori, Piazza Navona e il Ghetto, regno delle trattorie romane."
+  - domanda: "Quali piatti romani provare?"
+    risposta: "Cacio e pepe, carbonara, amatriciana, carciofi e coda alla vaccinara."
 bozza: false
 ---
 

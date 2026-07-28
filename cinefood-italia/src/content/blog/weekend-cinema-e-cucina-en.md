@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Suitcase and map for a weekend in Italy"
 tags: ["guide", "itineraries", "weekend", "tips"]
+faq:
+  - domanda: "How do you plan a film-tourism weekend in Italy?"
+    risposta: "Choose a film and its city, identify the connected locations and restaurants and build a two-day itinerary."
+  - domanda: "Which destinations for a cinema-and-food weekend?"
+    risposta: "Rome, Montalbano's Sicily, the Cilento of Welcome to the South or the Crema of Call Me by Your Name."
+  - domanda: "Do you need to book in advance?"
+    risposta: "Yes, especially for the most famous restaurants and in high season."
 lang: "en"
 bozza: false
 ---

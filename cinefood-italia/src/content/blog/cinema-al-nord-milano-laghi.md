@@ -6,6 +6,13 @@ dataPubblicazione: 2026-06-28
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "Vista di un lago del Nord Italia al tramonto"
 tags: ["Milano", "Crema", "cinema", "itinerari"]
+faq:
+  - domanda: "Quali film sono stati girati al Nord Italia?"
+    risposta: "Chiamami col tuo nome (Crema), House of Gucci (Milano e Como), Star Wars e Casino Royale (Lago di Como)."
+  - domanda: "Cosa mangiare a Milano?"
+    risposta: "Risotto allo zafferano, cotoletta alla milanese, ossobuco e l'immancabile aperitivo."
+  - domanda: "Quali laghi del Nord sono comparsi al cinema?"
+    risposta: "Il Lago di Como (Villa del Balbianello) e il Lago di Garda (Quantum of Solace)."
 bozza: false
 ---
 

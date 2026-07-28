@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-01
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tavola apparecchiata con piatti della tradizione italiana"
 tags: ["itinerari", "food", "cinema", "Sicilia", "Cilento"]
+faq:
+  - domanda: "Quali ristoranti dei film si possono visitare davvero?"
+    risposta: "Tra i verificati: Bar Vitelli (Savoca), Caffè Florian (Venezia), Da Michele (Napoli) ed Enzo a Mare (Punta Secca)."
+  - domanda: "Come capire se un locale è una vera location?"
+    risposta: "Verifica fonti attendibili: sul nostro sito i locali reali hanno il badge 'Set reale'."
+  - domanda: "Serve prenotare in questi locali?"
+    risposta: "Dipende: alcuni ristoranti sì, mentre bar e pizzerie storiche come Da Michele funzionano con la fila."
 bozza: false
 ---
 

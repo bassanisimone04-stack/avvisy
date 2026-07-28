@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "Alley of an Italian village at sunset"
 tags: ["villages", "itineraries", "cinema", "Italy"]
+faq:
+  - domanda: "Which Italian villages are famous for cinema?"
+    risposta: "Among others: Savoca (The Godfather), Castellabate (Welcome to the South), Palazzo Adriano (Cinema Paradiso) and Crema (Call Me by Your Name)."
+  - domanda: "Which village is from The Godfather?"
+    risposta: "Savoca, in the province of Messina, home to the famous Bar Vitelli."
+  - domanda: "What do you eat in the film villages?"
+    risposta: "It depends on the region: granita and cannoli in Sicily, buffalo mozzarella in Cilento, tortelli in Lombardy."
 lang: "en"
 bozza: false
 ---

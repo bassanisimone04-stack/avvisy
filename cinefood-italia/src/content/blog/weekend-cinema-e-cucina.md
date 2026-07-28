@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Valigia e mappa per un weekend in Italia"
 tags: ["guida", "itinerari", "weekend", "consigli"]
+faq:
+  - domanda: "Come organizzare un weekend di cineturismo in Italia?"
+    risposta: "Scegli un film e la sua città, individua le location e i ristoranti collegati e costruisci un itinerario di due giorni."
+  - domanda: "Quali mete scegliere per un weekend cinema e cibo?"
+    risposta: "Roma, la Sicilia di Montalbano, il Cilento di Benvenuti al Sud o la Crema di Chiamami col tuo nome."
+  - domanda: "Serve prenotare in anticipo?"
+    risposta: "Sì, soprattutto per i ristoranti più famosi e in alta stagione."
 bozza: false
 ---
 

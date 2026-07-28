@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-10
 immagine: "../../assets/placeholder/blog-sicilia.jpg"
 immagineAlt: "A plate of Sicilian fish on a table by the sea"
 tags: ["Sicily", "Montalbano", "itineraries", "cinema"]
+faq:
+  - domanda: "Which films were shot in Sicily?"
+    risposta: "The Godfather (Savoca), Inspector Montalbano (Punta Secca and the Ragusa area) and Cinema Paradiso (Palazzo Adriano)."
+  - domanda: "Where did Montalbano eat in Sicily?"
+    risposta: "At the Enzo a Mare restaurant, on the seafront of Punta Secca."
+  - domanda: "What should you eat in Sicily following the films?"
+    risposta: "Arancini, pasta 'ncasciata, granita, cannoli and fresh fish."
 lang: "en"
 bozza: false
 ---

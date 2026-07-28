@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-05
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
 immagineAlt: "Via Veneto in Rome with the tables of the historic cafés"
 tags: ["Rome", "Fellini", "cafés", "cinema"]
+faq:
+  - domanda: "Where is La Dolce Vita set?"
+    risposta: "In Rome, with Via Vittorio Veneto as the worldly heart of Fellini's film."
+  - domanda: "Do the cafés from La Dolce Vita still exist?"
+    risposta: "The Café de Paris, symbol of Via Veneto, closed in 2008, but the street keeps its charm."
+  - domanda: "Who directed La Dolce Vita?"
+    risposta: "Federico Fellini (1960), with Marcello Mastroianni and Anita Ekberg."
 lang: "en"
 bozza: false
 ---

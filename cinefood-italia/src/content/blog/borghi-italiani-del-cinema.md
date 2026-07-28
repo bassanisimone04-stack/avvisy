@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "Vicolo di un borgo italiano al tramonto"
 tags: ["borghi", "itinerari", "cinema", "Italia"]
+faq:
+  - domanda: "Quali borghi italiani sono famosi per il cinema?"
+    risposta: "Tra gli altri: Savoca (Il Padrino), Castellabate (Benvenuti al Sud), Palazzo Adriano (Nuovo Cinema Paradiso) e Crema (Chiamami col tuo nome)."
+  - domanda: "Qual è il borgo del Padrino?"
+    risposta: "Savoca, in provincia di Messina, dove si trova il celebre Bar Vitelli."
+  - domanda: "Cosa si mangia nei borghi del cinema?"
+    risposta: "Dipende dalla regione: granita e cannoli in Sicilia, mozzarella di bufala nel Cilento, tortelli in Lombardia."
 bozza: false
 ---
 
