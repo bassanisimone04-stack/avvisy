@@ -1,0 +1,455 @@
+@import "tailwindcss";
+
+/*
+  GlutenFree Directory — design system "verde naturale premium".
+  Verde come colore guida (fiducia, salute, natura), bianco per lo spazio
+  e la leggibilità, arancione come accento caldo per CTA e evidenze.
+  Tipografia Sora (titoli) + Inter (testo).
+*/
+
+:root {
+  --gf-ink: #12241c;
+  --gf-ink-soft: #3d5347;
+  --gf-muted: #66766d;
+  --gf-canvas: #f6faf7;
+  --gf-surface: #ffffff;
+  --gf-surface-2: #eef6f1;
+  --gf-line: #e2ede6;
+  --gf-line-strong: #cadcd1;
+
+  --gf-brand: #15844e;
+  --gf-brand-dark: #0f7a47;
+  --gf-brand-light: #34b374;
+  --gf-brand-soft: #e2f5ea;
+
+  --gf-accent: #f97316;
+  --gf-accent-dark: #c15205;
+  --gf-accent-darker: #9f4304;
+  --gf-accent-soft: #fef0e0;
+
+  /* Riempimenti bottone a tinta unita: fissi in entrambi i temi (a differenza
+     di --gf-brand/--gf-accent, che si schiariscono in dark mode per restare
+     leggibili come testo su sfondo scuro) cosi il testo bianco sopra resta
+     sempre conforme al contrasto WCAG AA. */
+  --gf-btn-primary: #15844e;
+  --gf-btn-primary-hover: #0f7a47;
+  --gf-btn-accent: #c15205;
+  --gf-btn-accent-hover: #9f4304;
+
+  --gf-gold: #f2b100;
+  --gf-gold-soft: #fdf2d6;
+
+  --gf-danger: #d6483f;
+  --gf-danger-soft: #fbe6e3;
+
+  --gf-panel: #0e1f17;
+  --gf-texture: rgba(18, 36, 28, 0.05);
+  --gf-shadow: rgba(15, 35, 25, 1);
+
+  --radius-card: 1.1rem;
+  --shadow-soft: 0 1px 2px rgba(15, 35, 25, 0.04), 0 12px 28px -18px rgba(15, 35, 25, 0.22);
+  --shadow-lift: 0 4px 10px rgba(15, 35, 25, 0.08), 0 26px 54px -24px rgba(15, 35, 25, 0.32);
+}
+
+:root[data-theme="dark"] {
+  --gf-ink: #eaf3ec;
+  --gf-ink-soft: #b9c9bf;
+  --gf-muted: #8ea298;
+  --gf-canvas: #0d1712;
+  --gf-surface: #12211a;
+  --gf-surface-2: #182b21;
+  --gf-line: #23392c;
+  --gf-line-strong: #2f4a3a;
+
+  --gf-brand: #35b874;
+  --gf-brand-dark: #4fd08c;
+  --gf-brand-light: #35b874;
+  --gf-brand-soft: #163b28;
+
+  --gf-accent: #fb923c;
+  --gf-accent-dark: #ffb066;
+  --gf-accent-soft: #3a2412;
+
+  --gf-gold: #f2c14e;
+  --gf-gold-soft: #3a300f;
+
+  --gf-danger: #ef7a6f;
+  --gf-danger-soft: #3a1e1a;
+
+  --gf-panel: #08120d;
+  --gf-texture: rgba(255, 255, 255, 0.05);
+}
+
+@theme inline {
+  --color-ink: var(--gf-ink);
+  --color-ink-soft: var(--gf-ink-soft);
+  --color-muted: var(--gf-muted);
+  --color-canvas: var(--gf-canvas);
+  --color-surface: var(--gf-surface);
+  --color-surface-2: var(--gf-surface-2);
+  --color-line: var(--gf-line);
+  --color-line-strong: var(--gf-line-strong);
+  --color-brand: var(--gf-brand);
+  --color-brand-dark: var(--gf-brand-dark);
+  --color-brand-light: var(--gf-brand-light);
+  --color-brand-soft: var(--gf-brand-soft);
+  --color-brand-solid: var(--gf-btn-primary);
+  --color-accent: var(--gf-accent);
+  --color-accent-dark: var(--gf-accent-dark);
+  --color-accent-soft: var(--gf-accent-soft);
+  --color-gold: var(--gf-gold);
+  --color-danger: var(--gf-danger);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-sora);
+  --font-serif: var(--font-fraunces);
+}
+
+/*
+  @theme inline non espone --font-sans/--font-display/--font-serif come
+  variabili CSS reali (le "inlinea" solo dentro le utility generate). Il
+  nostro CSS scritto a mano le referenzia direttamente, quindi le
+  ridefiniamo qui puntando ai font reali impostati da next/font sul body.
+*/
+body {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), sans-serif;
+  --font-serif: var(--font-fraunces), var(--font-inter), serif;
+}
+
+* {
+  border-color: var(--gf-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--gf-canvas);
+  color: var(--gf-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/*
+  In un layer @layer base così le regole più specifiche (es. .editorial h2
+  dentro @layer components) vincono senza bisogno di !important: gli
+  "unlayered rules" avrebbero altrimenti sempre la priorità sui layer.
+*/
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-serif) !important;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gf-brand-dark);
+}
+
+.container-page {
+  width: 100%;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) {
+  .container-page { padding-inline: 2rem; }
+}
+@media (min-width: 1024px) {
+  .container-page { padding-inline: 2.5rem; }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1;
+    padding: 0.8rem 1.35rem;
+    border-radius: 0.7rem;
+    border: 1px solid transparent;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+      box-shadow 0.15s ease, transform 0.04s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn:focus-visible { outline: 2px solid var(--gf-brand); outline-offset: 2px; }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--gf-btn-primary); color: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
+  .btn-primary:hover { background: var(--gf-btn-primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+  .btn-accent { background: var(--gf-btn-accent); color: #fff; }
+  .btn-accent:hover { background: var(--gf-btn-accent-hover); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+  .btn-outline { background: var(--gf-surface); color: var(--gf-ink); border-color: var(--gf-line-strong); }
+  .btn-outline:hover { background: var(--gf-surface-2); border-color: var(--gf-brand); }
+  .btn-ghost { background: transparent; color: var(--gf-ink); }
+  .btn-ghost:hover { background: var(--gf-surface-2); }
+  .btn-sm { padding: 0.55rem 0.95rem; font-size: 0.875rem; border-radius: 0.55rem; }
+  .btn-block { width: 100%; }
+
+  .card {
+    background: var(--gf-surface);
+    border: 1px solid var(--gf-line);
+    border-radius: var(--radius-card);
+  }
+  .card-hover { transition: transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s ease, border-color 0.2s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: var(--gf-line-strong); }
+  .card-soft { box-shadow: var(--shadow-soft); }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.3rem 0.62rem;
+    border-radius: 999px;
+    line-height: 1.2;
+  }
+  .chip-brand { background: var(--gf-brand-soft); color: var(--gf-brand-dark); }
+  .chip-accent { background: var(--gf-accent-soft); color: var(--gf-accent-dark); }
+  .chip-gold { background: var(--gf-gold-soft); color: #8a6400; }
+  .chip-neutral { background: var(--gf-surface-2); color: var(--gf-ink-soft); }
+
+  .field {
+    width: 100%;
+    background: var(--gf-surface);
+    border: 1px solid var(--gf-line-strong);
+    border-radius: 0.7rem;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9375rem;
+    color: var(--gf-ink);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .field:focus { outline: none; border-color: var(--gf-brand); box-shadow: 0 0 0 3px var(--gf-brand-soft); }
+  .field-label { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--gf-ink-soft); margin-bottom: 0.35rem; }
+
+  .rule { height: 1px; background: var(--gf-line); }
+  .grid-texture {
+    background-image: radial-gradient(var(--gf-texture) 1.4px, transparent 1.4px);
+    background-size: 22px 22px;
+  }
+  .section-dark { background: var(--gf-panel); color: #fff; }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease;
+  }
+  .link-underline:hover { background-size: 100% 1.5px; }
+}
+
+@keyframes gf-fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes gf-pop { 0% { transform: scale(1); } 40% { transform: scale(1.3); } 100% { transform: scale(1); } }
+@keyframes gf-toast-in { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes gf-shimmer { 100% { transform: translateX(100%); } }
+@keyframes gf-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+@layer components {
+  .reveal { opacity: 0; transform: translateY(18px); }
+  .reveal.is-visible { animation: gf-fade-up 0.6s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+  .animate-pop { animation: gf-pop 0.42s ease; }
+  .animate-float { animation: gf-float 5s ease-in-out infinite; }
+
+  .shimmer { position: relative; overflow: hidden; background: var(--gf-surface-2); }
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: gf-shimmer 1.6s infinite;
+  }
+
+  .prose-article {
+    color: var(--gf-ink);
+    line-height: 1.75;
+    font-size: 1.0625rem;
+  }
+  .prose-article h2 { margin-top: 2.2em; margin-bottom: 0.6em; font-size: 1.5rem; scroll-margin-top: 6rem; }
+  .prose-article h3 { margin-top: 1.8em; margin-bottom: 0.5em; font-size: 1.2rem; scroll-margin-top: 6rem; }
+  .prose-article p { margin-bottom: 1.15em; }
+  .prose-article ul, .prose-article ol { margin-bottom: 1.15em; padding-left: 1.4em; }
+  .prose-article li { margin-bottom: 0.4em; }
+  .prose-article a { color: var(--gf-brand-dark); text-decoration: underline; text-underline-offset: 2px; }
+  .prose-article blockquote {
+    border-left: 3px solid var(--gf-brand);
+    background: var(--gf-brand-soft);
+    padding: 0.9em 1.2em;
+    border-radius: 0.6rem;
+    margin: 1.4em 0;
+    font-style: italic;
+    color: var(--gf-ink-soft);
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--gf-brand);
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0 0 0.6rem 0;
+    z-index: 100;
+  }
+  .skip-link:focus { left: 0; }
+}
+
+::selection { background: var(--gf-brand-soft); color: var(--gf-brand-dark); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* -------------------------------------------------------------------------
+   Editoriale — layout distintivo per gli articoli del blog
+---------------------------------------------------------------------------- */
+@layer components {
+  .editorial-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(150deg, var(--article-soft, var(--gf-brand-soft)) 0%, var(--gf-surface) 78%);
+  }
+  .editorial-hero::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -12%;
+    width: 60%;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: var(--article-accent, var(--gf-brand));
+    opacity: 0.14;
+    filter: blur(4px);
+  }
+  .editorial-hero::after {
+    content: "";
+    position: absolute;
+    bottom: -35%;
+    left: -8%;
+    width: 40%;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: var(--article-accent, var(--gf-brand));
+    opacity: 0.1;
+  }
+
+  .editorial-kicker {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--article-accent, var(--gf-brand));
+  }
+
+  .editorial h1 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .editorial p:first-of-type::first-letter {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    float: left;
+    font-size: 3.6em;
+    line-height: 0.82;
+    padding-right: 0.1em;
+    padding-top: 0.06em;
+    color: var(--article-accent, var(--gf-brand));
+  }
+
+  .editorial h2 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.9rem;
+    letter-spacing: -0.01em;
+  }
+  .editorial h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .editorial blockquote {
+    position: relative;
+    border-left: none;
+    background: transparent;
+    padding: 0.2em 0 0.2em 1.5em;
+    margin: 1.9em 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 1.5;
+    color: var(--gf-ink);
+  }
+  .editorial blockquote::before {
+    content: "\201C";
+    position: absolute;
+    left: -0.1em;
+    top: -0.2em;
+    font-family: var(--font-serif);
+    font-size: 2.8em;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--article-accent, var(--gf-brand));
+    opacity: 0.45;
+  }
+
+  .toc-link-active {
+    color: var(--article-accent, var(--gf-brand)) !important;
+    font-weight: 600;
+  }
+
+  .reading-progress-bar {
+    height: 100%;
+    background: var(--article-accent, var(--gf-brand));
+  }
+
+  /* Temi per categoria di blog: --article-accent/--article-soft con varianti dark mode.
+     --article-accent-solid resta fisso al valore chiaro in entrambi i temi: serve per
+     i riempimenti pieni con testo bianco (es. bottoni CTA), dove la variante piu chiara
+     usata in dark mode per il testo su sfondo scuro non garantirebbe contrasto AA. */
+  .cat-alimentazione { --article-accent: #a75b05; --article-accent-solid: #a75b05; --article-soft: #fef3c7; }
+  .cat-celiachia { --article-accent: #7c3aed; --article-accent-solid: #7c3aed; --article-soft: #ede9fe; }
+  .cat-news { --article-accent: #475569; --article-accent-solid: #475569; --article-soft: #e2e8f0; }
+  .cat-ricette { --article-accent: #bb4709; --article-accent-solid: #bb4709; --article-soft: #ffedd5; }
+  .cat-viaggi { --article-accent: #0272ac; --article-accent-solid: #0272ac; --article-soft: #e0f2fe; }
+  .cat-salute { --article-accent: #0a7b72; --article-accent-solid: #0a7b72; --article-soft: #ccfbf1; }
+  .cat-guide { --article-accent: #0f7a47; --article-accent-solid: #0f7a47; --article-soft: #e2f5ea; }
+  .cat-prodotti { --article-accent: #c8216b; --article-accent-solid: #c8216b; --article-soft: #fce7f3; }
+  .cat-bambini { --article-accent: #976703; --article-accent-solid: #976703; --article-soft: #fef9c3; }
+  .cat-eventi { --article-accent: #4f46e5; --article-accent-solid: #4f46e5; --article-soft: #e0e7ff; }
+
+  :root[data-theme="dark"] .cat-alimentazione { --article-accent: #fbbf24; --article-soft: #3a2c0c; }
+  :root[data-theme="dark"] .cat-celiachia { --article-accent: #a78bfa; --article-soft: #271b40; }
+  :root[data-theme="dark"] .cat-news { --article-accent: #94a3b8; --article-soft: #232b36; }
+  :root[data-theme="dark"] .cat-ricette { --article-accent: #fb923c; --article-soft: #3a2410; }
+  :root[data-theme="dark"] .cat-viaggi { --article-accent: #38bdf8; --article-soft: #0e2a38; }
+  :root[data-theme="dark"] .cat-salute { --article-accent: #2dd4bf; --article-soft: #0d2e29; }
+  :root[data-theme="dark"] .cat-guide { --article-accent: #35b874; --article-soft: #163b28; }
+  :root[data-theme="dark"] .cat-prodotti { --article-accent: #f472b6; --article-soft: #3a1830; }
+  :root[data-theme="dark"] .cat-bambini { --article-accent: #facc15; --article-soft: #332c0a; }
+  :root[data-theme="dark"] .cat-eventi { --article-accent: #818cf8; --article-soft: #211f3d; }
+}
