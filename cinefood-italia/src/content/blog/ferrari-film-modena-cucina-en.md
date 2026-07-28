@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "A plate of tortellini, the specialty of Modena"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where is the film Ferrari set?"
+    risposta: "In Modena, in Emilia-Romagna, the heart of the Motor Valley."
+  - domanda: "What should you eat in Modena?"
+    risposta: "Tortellini in broth, tagliatelle, traditional balsamic vinegar, Parmigiano Reggiano and Lambrusco."
+  - domanda: "Who directed Ferrari?"
+    risposta: "Michael Mann (2023), with Adam Driver as Enzo Ferrari."
 lang: "en"
 bozza: false
 ---

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tavola imbandita con piatti della cucina italiana"
 tags: ["The Trip to Italy", "itinerari", "ristoranti", "Italia", "cineturismo"]
+faq:
+  - domanda: "Di cosa parla The Trip to Italy?"
+    risposta: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando nei ristoranti più belli, dalla Liguria alla Costiera Amalfitana."
+  - domanda: "Quali regioni tocca The Trip to Italy?"
+    risposta: "Liguria, Toscana, Roma, Costiera Amalfitana e Capri."
+  - domanda: "È un film o una serie?"
+    risposta: "Nasce come serie TV della BBC, poi montata anche in versione film."
 bozza: false
 ---
 

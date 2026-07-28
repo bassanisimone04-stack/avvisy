@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-17
 immagine: "../../assets/placeholder/blog-set-tema.jpg"
 immagineAlt: "Square of a Sicilian village with a fountain, like Palazzo Adriano"
 tags: ["Cinema Paradiso", "Palazzo Adriano", "Sicily", "film tourism", "Tornatore"]
+faq:
+  - domanda: "Where was Cinema Paradiso filmed?"
+    risposta: "Mainly in Palazzo Adriano, in the province of Palermo, in the scenic Piazza Umberto I."
+  - domanda: "Does the Cinema Paradiso still exist?"
+    risposta: "The cinema facade was built for the film and dismantled after shooting; the interior scenes were filmed in the Church of the Carmelo."
+  - domanda: "What should you eat in Palazzo Adriano?"
+    risposta: "Homemade bread, local cheeses, cured meats and traditional almond sweets of the Sicani Mountains."
 lang: "en"
 bozza: false
 ---

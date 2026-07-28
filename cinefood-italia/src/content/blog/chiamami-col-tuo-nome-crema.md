@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-21
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "Piazza di una cittadina lombarda con campanile, come Crema"
 tags: ["Chiamami col tuo nome", "Crema", "Lombardia", "itinerari", "cineturismo"]
+faq:
+  - domanda: "Dove è stato girato Chiamami col tuo nome?"
+    risposta: "Principalmente a Crema e nel Cremasco, in Lombardia, con alcune scene al Laghetto dei Riflessi di Ricengo."
+  - domanda: "Cosa mangiare a Crema?"
+    risposta: "Il piatto tipico sono i tortelli cremaschi, dal ripieno dolce-speziato con amaretti, uvetta e mostaccino."
+  - domanda: "C'è un itinerario ufficiale del film a Crema?"
+    risposta: "Sì, il Comune di Crema propone un tour a piedi o in bici tra i luoghi del film."
 bozza: false
 ---
 

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "Plate of traditional Roman macaroni"
 tags: ["An American in Rome", "Alberto Sordi", "Rome", "where to eat", "film tourism"]
+faq:
+  - domanda: "What is Alberto Sordi's macaroni scene?"
+    risposta: "In An American in Rome (1954), Nando Mericoni gives in to macaroni with the famous line 'Maccarone, you provoked me...'."
+  - domanda: "Where can you eat authentic Roman cuisine?"
+    risposta: "In the trattorias of the historic centre, such as Trattoria del Biscione between Campo de' Fiori and the Theatre of Pompey."
+  - domanda: "Which Roman dishes should you try?"
+    risposta: "Cacio e pepe, amatriciana, carbonara, Roman-style artichokes and oxtail stew."
 lang: "en"
 bozza: false
 ---

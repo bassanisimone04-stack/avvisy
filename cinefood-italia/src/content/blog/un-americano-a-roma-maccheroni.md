@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "Piatto di maccheroni della tradizione romana"
 tags: ["Un Americano a Roma", "Alberto Sordi", "Roma", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Qual è la scena dei maccheroni di Alberto Sordi?"
+    risposta: "In Un Americano a Roma (1954), Nando Mericoni cede ai maccheroni con la celebre battuta 'Maccarone, m'hai provocato...'."
+  - domanda: "Dove mangiare cucina romana verace?"
+    risposta: "Nelle trattorie del centro storico, come la Trattoria del Biscione tra Campo de' Fiori e il Teatro di Pompeo."
+  - domanda: "Quali piatti romani provare?"
+    risposta: "Cacio e pepe, amatriciana, carbonara, carciofi alla romana e coda alla vaccinara."
 bozza: false
 ---
 

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "Borgo colorato della Riviera Ligure come nel film Luca"
 tags: ["Luca", "Pixar", "Liguria", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove è ambientato Luca della Pixar?"
+    risposta: "Nell'immaginaria Portorosso, ispirata alla Riviera Ligure e alle Cinque Terre."
+  - domanda: "Cosa mangiare in Liguria come in Luca?"
+    risposta: "Trofie al pesto, focaccia genovese, trenette, farinata e gelato."
+  - domanda: "Le Cinque Terre sono adatte alle famiglie?"
+    risposta: "Sì: borghi colorati, treni panoramici, sentieri e spiaggette le rendono ideali per un viaggio in famiglia."
 bozza: false
 ---
 

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "A villa overlooking Lake Como at sunset"
 tags: ["Lake Como", "Star Wars", "007", "itineraries", "film tourism"]
+faq:
+  - domanda: "Which films were shot on Lake Como?"
+    risposta: "Star Wars (Villa del Balbianello), Casino Royale, Ocean's Twelve and House of Gucci."
+  - domanda: "Where is the Star Wars villa on Lake Como?"
+    risposta: "Villa del Balbianello in Lenno, used as the planet Naboo."
+  - domanda: "What should you eat on Lake Como?"
+    risposta: "Risotto with perch, missoltini with polenta and the wines of Valtellina."
 lang: "en"
 bozza: false
 ---

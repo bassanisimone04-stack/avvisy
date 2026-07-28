@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "A table laid with dishes of Italian cuisine"
 tags: ["The Trip to Italy", "itineraries", "restaurants", "Italy", "film tourism"]
+faq:
+  - domanda: "What is The Trip to Italy about?"
+    risposta: "Steve Coogan and Rob Brydon cross Italy eating in the finest restaurants, from Liguria to the Amalfi Coast."
+  - domanda: "Which regions does The Trip to Italy cover?"
+    risposta: "Liguria, Tuscany, Rome, the Amalfi Coast and Capri."
+  - domanda: "Is it a film or a series?"
+    risposta: "It began as a BBC TV series, later edited into a film version too."
 lang: "en"
 bozza: false
 ---

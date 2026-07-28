@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Piazza Navona a Roma al tramonto"
 tags: ["To Rome with Love", "Roma", "Woody Allen", "cineturismo"]
+faq:
+  - domanda: "Dove è ambientato To Rome with Love?"
+    risposta: "Interamente a Roma: Piazza Navona, il centro storico, Trastevere e le terrazze della città."
+  - domanda: "Chi ha diretto To Rome with Love?"
+    risposta: "Woody Allen (2012), dopo i film ambientati a Parigi e Barcellona."
+  - domanda: "Cosa mangiare nella Roma del film?"
+    risposta: "Gelato in piazza, supplì e la cucina romana: cacio e pepe, carbonara, carciofi."
 bozza: false
 ---
 

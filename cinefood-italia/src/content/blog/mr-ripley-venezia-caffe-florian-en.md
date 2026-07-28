@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tables of a historic café under the arcades of St Mark's Square in Venice"
 tags: ["The Talented Mr. Ripley", "Venice", "Caffè Florian", "film tourism"]
+faq:
+  - domanda: "Where is Caffè Florian?"
+    risposta: "In St Mark's Square in Venice, under the Procuratie Nuove; opened in 1720, it is the oldest café in Italy."
+  - domanda: "Which film features Caffè Florian?"
+    risposta: "The Talented Mr. Ripley, where Tom Ripley meets Marge and Dickie's father."
+  - domanda: "What should you enjoy at Caffè Florian?"
+    risposta: "A coffee or hot chocolate at the historic tables, with the frescoed hall and live music: more an experience than a drink."
 lang: "en"
 bozza: false
 ---

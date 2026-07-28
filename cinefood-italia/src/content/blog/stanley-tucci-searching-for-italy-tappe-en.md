@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "A table with regional Italian specialties"
 tags: ["Stanley Tucci", "Italian cuisine", "itineraries", "Italy", "film tourism"]
+faq:
+  - domanda: "What is Stanley Tucci: Searching for Italy about?"
+    risposta: "The actor explores Italian cuisine region by region, among markets, trattorias and fine restaurants."
+  - domanda: "Which regions does Stanley Tucci visit?"
+    risposta: "Naples, Rome, Bologna, Tuscany, Sicily, Milan and more."
+  - domanda: "Where can you watch Searching for Italy?"
+    risposta: "It is a series produced by CNN, released in 2021."
 lang: "en"
 bozza: false
 ---

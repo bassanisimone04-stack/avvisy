@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-20
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Seaside village of Cilento, like Castellabate"
 tags: ["Welcome to the South", "Castellabate", "Cilento", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where was Welcome to the South filmed?"
+    risposta: "In Castellabate, in the Cilento (Campania), between the old village, Santa Maria and San Marco di Castellabate."
+  - domanda: "Where is the film's post office?"
+    risposta: "It doesn't really exist: the scene is set in Castellabate's little square, Piazza 10 Ottobre 1123."
+  - domanda: "What should you eat in Castellabate?"
+    risposta: "Cilento buffalo mozzarella, menaica anchovies, hand-rolled fusilli and fresh Tyrrhenian fish."
 lang: "en"
 bozza: false
 ---

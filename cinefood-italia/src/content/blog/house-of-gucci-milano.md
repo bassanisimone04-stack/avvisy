@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "Galleria Vittorio Emanuele II a Milano"
 tags: ["House of Gucci", "Milano", "moda", "cineturismo"]
+faq:
+  - domanda: "Dove è stato girato House of Gucci?"
+    risposta: "In Italia tra Milano, il Lago di Como, Roma e Firenze; a Milano la Galleria Vittorio Emanuele e le ville storiche."
+  - domanda: "Cosa mangiare a Milano?"
+    risposta: "Risotto allo zafferano, cotoletta alla milanese, ossobuco e l'immancabile aperitivo."
+  - domanda: "Chi ha diretto House of Gucci?"
+    risposta: "Ridley Scott (2021), con Lady Gaga e Adam Driver."
 bozza: false
 ---
 

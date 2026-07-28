@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-17
 immagine: "../../assets/placeholder/blog-set-tema.jpg"
 immagineAlt: "Piazza di un borgo siciliano con fontana, come Palazzo Adriano"
 tags: ["Nuovo Cinema Paradiso", "Palazzo Adriano", "Sicilia", "cineturismo", "Tornatore"]
+faq:
+  - domanda: "Dove è stato girato Nuovo Cinema Paradiso?"
+    risposta: "Principalmente a Palazzo Adriano, in provincia di Palermo, nella scenografica Piazza Umberto I."
+  - domanda: "Esiste ancora il Cinema Paradiso?"
+    risposta: "La facciata del cinema fu costruita per il film e smontata a fine riprese; le scene interne furono girate nella Chiesa del Carmelo."
+  - domanda: "Cosa mangiare a Palazzo Adriano?"
+    risposta: "Pane casereccio, formaggi locali, salumi e dolci di mandorla della tradizione dei Monti Sicani."
 bozza: false
 ---
 

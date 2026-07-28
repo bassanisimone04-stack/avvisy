@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-20
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Borgo sul mare del Cilento, come Castellabate"
 tags: ["Benvenuti al Sud", "Castellabate", "Cilento", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove è stato girato Benvenuti al Sud?"
+    risposta: "A Castellabate, nel Cilento (Campania), tra il borgo antico, Santa Maria e San Marco di Castellabate."
+  - domanda: "Dove si trova l'ufficio postale del film?"
+    risposta: "Non esiste realmente: la scena è ambientata nella piazzetta di Castellabate, Piazza 10 Ottobre 1123."
+  - domanda: "Cosa mangiare a Castellabate?"
+    risposta: "Mozzarella di bufala del Cilento, alici di menaica, fusilli fatti a mano e pesce fresco del Tirreno."
 bozza: false
 ---
 

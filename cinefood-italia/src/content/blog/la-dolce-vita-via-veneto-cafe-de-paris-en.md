@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-15
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
 immagineAlt: "Via Veneto in Rome, the worldly heart of La Dolce Vita"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Rome", "film tourism"]
+faq:
+  - domanda: "Where is the Café de Paris from La Dolce Vita?"
+    risposta: "On Via Vittorio Veneto in Rome; opened in 1948, it has however been closed since 2008."
+  - domanda: "Why is Via Veneto famous?"
+    risposta: "It was the worldly heart of 1960s Rome's 'dolce vita', immortalised by Fellini among stars and paparazzi."
+  - domanda: "What can you see today on Via Veneto?"
+    risposta: "The grand historic hotels, the cafés, the climb up to Porta Pinciana and the gardens of Villa Borghese."
 lang: "en"
 bozza: false
 ---

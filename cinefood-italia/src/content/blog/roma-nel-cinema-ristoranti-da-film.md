@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-11
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
 immagineAlt: "Vicolo di Roma con tavolini di una trattoria"
 tags: ["Roma", "ristoranti", "cinema", "itinerari", "cineturismo"]
+faq:
+  - domanda: "Quali ristoranti di Roma sono comparsi nei film?"
+    risposta: "Tra gli altri: La Veranda dell'Hotel Columbus (La Grande Bellezza), Da Pancrazio e Trattoria Santa Lucia (Mangia prega ama), Trattoria del Biscione (Un Americano a Roma)."
+  - domanda: "Dove cena Jep ne La Grande Bellezza?"
+    risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito."
+  - domanda: "Qual è il caffè de La Dolce Vita?"
+    risposta: "Il Café de Paris su Via Veneto, oggi chiuso ma simbolo della Roma di Fellini."
 bozza: false
 ---
 

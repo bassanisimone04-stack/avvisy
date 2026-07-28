@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-11
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
 immagineAlt: "A Roman alley with the tables of a trattoria"
 tags: ["Rome", "restaurants", "cinema", "itineraries", "film tourism"]
+faq:
+  - domanda: "Which Rome restaurants have appeared in films?"
+    risposta: "Among others: La Veranda dell'Hotel Columbus (The Great Beauty), Da Pancrazio and Trattoria Santa Lucia (Eat Pray Love), Trattoria del Biscione (An American in Rome)."
+  - domanda: "Where does Jep dine in The Great Beauty?"
+    risposta: "At La Veranda dell'Hotel Columbus, in Borgo Santo Spirito."
+  - domanda: "What is the café from La Dolce Vita?"
+    risposta: "The Café de Paris on Via Veneto, now closed but a symbol of Fellini's Rome."
 lang: "en"
 bozza: false
 ---

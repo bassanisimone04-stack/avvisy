@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "Vicolo di Verona con balcone, come nella casa di Giulietta"
 tags: ["Letters to Juliet", "Verona", "Toscana", "vino", "cineturismo"]
+faq:
+  - domanda: "Dove è ambientato Letters to Juliet?"
+    risposta: "Tra Verona, con la Casa di Giulietta, e le colline della Toscana tra vigneti e cantine."
+  - domanda: "Si può visitare la Casa di Giulietta a Verona?"
+    risposta: "Sì, con il celebre balcone e il muro delle lettere d'amore: è tra le attrazioni più visitate della città."
+  - domanda: "Cosa mangiare a Verona?"
+    risposta: "Risotto all'Amarone, bigoli con ragù d'anatra e i vini della Valpolicella."
 bozza: false
 ---
 

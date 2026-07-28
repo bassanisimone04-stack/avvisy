@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-19
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Terrazza e vicoli di Roma di notte, come ne La Grande Bellezza"
 tags: ["La Grande Bellezza", "Roma", "ristoranti", "cineturismo", "Sorrentino"]
+faq:
+  - domanda: "Dove cena Jep Gambardella ne La Grande Bellezza?"
+    risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito a Roma, in una sala affrescata del Palazzo della Rovere."
+  - domanda: "Quali luoghi di Roma compaiono nel film?"
+    risposta: "Il Fontanone del Gianicolo, i Musei Capitolini, Palazzo Spada, Villa Medici e i giardini dell'Aventino."
+  - domanda: "Cosa mangiare a Roma come nel film?"
+    risposta: "Cucina romana: cacio e pepe, carbonara, carciofi alla giudia e coda alla vaccinara."
 bozza: false
 ---
 

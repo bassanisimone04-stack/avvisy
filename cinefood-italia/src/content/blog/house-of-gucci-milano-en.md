@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "Galleria Vittorio Emanuele II in Milan"
 tags: ["House of Gucci", "Milan", "fashion", "film tourism"]
+faq:
+  - domanda: "Where was House of Gucci filmed?"
+    risposta: "In Italy between Milan, Lake Como, Rome and Florence; in Milan the Galleria Vittorio Emanuele and the historic villas."
+  - domanda: "What should you eat in Milan?"
+    risposta: "Saffron risotto, veal cutlet alla milanese, ossobuco and the classic aperitivo."
+  - domanda: "Who directed House of Gucci?"
+    risposta: "Ridley Scott (2021), with Lady Gaga and Adam Driver."
 lang: "en"
 bozza: false
 ---

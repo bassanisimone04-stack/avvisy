@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Canals and bridges of Venice"
 tags: ["Spider-Man", "Venice", "Marvel", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where is Spider-Man Far From Home set in Italy?"
+    risposta: "In Venice, among the canals and bridges, where Spider-Man faces the water monster."
+  - domanda: "What are Venetian cicchetti?"
+    risposta: "Small snacks served in the bacari: creamed cod, sarde in saor, meatballs, with a small glass of wine or a spritz."
+  - domanda: "Where can you eat like a Venetian?"
+    risposta: "In the bacari, the typical taverns, away from the tourist restaurants."
 lang: "en"
 bozza: false
 ---

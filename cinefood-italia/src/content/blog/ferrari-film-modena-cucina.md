@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "Piatto di tortellini, specialità di Modena"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove è ambientato il film Ferrari?"
+    risposta: "A Modena, in Emilia-Romagna, cuore della Motor Valley."
+  - domanda: "Cosa mangiare a Modena?"
+    risposta: "Tortellini in brodo, tagliatelle, aceto balsamico tradizionale, Parmigiano Reggiano e Lambrusco."
+  - domanda: "Chi ha diretto Ferrari?"
+    risposta: "Michael Mann (2023), con Adam Driver nel ruolo di Enzo Ferrari."
 bozza: false
 ---
 

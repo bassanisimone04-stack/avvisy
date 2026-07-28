@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "The Spanish Steps in Rome, as in Roman Holiday"
 tags: ["Roman Holiday", "Rome", "Audrey Hepburn", "gelato", "film tourism"]
+faq:
+  - domanda: "Where was the gelato scene in Roman Holiday filmed?"
+    risposta: "On the Spanish Steps in Rome, with Audrey Hepburn."
+  - domanda: "Which places appear in Roman Holiday?"
+    risposta: "The Spanish Steps, the Mouth of Truth, the Colosseum and Castel Sant'Angelo."
+  - domanda: "What should you taste in Rome?"
+    risposta: "Artisan gelato, maritozzo with cream, cappuccino and Roman cuisine."
 lang: "en"
 bozza: false
 ---

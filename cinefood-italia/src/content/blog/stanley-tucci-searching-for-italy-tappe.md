@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-scene.jpg"
 immagineAlt: "Tavola con specialità regionali italiane"
 tags: ["Stanley Tucci", "cucina italiana", "itinerari", "Italia", "cineturismo"]
+faq:
+  - domanda: "Di cosa parla Stanley Tucci: Searching for Italy?"
+    risposta: "L'attore esplora la cucina italiana regione per regione, tra mercati, trattorie e grandi ristoranti."
+  - domanda: "Quali regioni visita Stanley Tucci?"
+    risposta: "Napoli, Roma, Bologna, Toscana, Sicilia, Milano e altre."
+  - domanda: "Dove vedere Searching for Italy?"
+    risposta: "È una serie prodotta da CNN, uscita nel 2021."
 bozza: false
 ---
 

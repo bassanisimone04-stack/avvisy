@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tavolini di un caffè storico sotto i portici di Piazza San Marco a Venezia"
 tags: ["Il talento di Mr. Ripley", "Venezia", "Caffè Florian", "cineturismo"]
+faq:
+  - domanda: "Dove si trova il Caffè Florian?"
+    risposta: "In Piazza San Marco a Venezia, sotto le Procuratie Nuove; aperto nel 1720, è il caffè più antico d'Italia."
+  - domanda: "In quale film compare il Caffè Florian?"
+    risposta: "Ne Il talento di Mr. Ripley, dove Tom Ripley incontra Marge e il padre di Dickie."
+  - domanda: "Cosa concedersi al Caffè Florian?"
+    risposta: "Un caffè o una cioccolata ai tavolini storici, con la sala affrescata e la musica dal vivo: più un'esperienza che una consumazione."
 bozza: false
 ---
 

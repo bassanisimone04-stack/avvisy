@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "An alley in Verona with a balcony, like Juliet's house"
 tags: ["Letters to Juliet", "Verona", "Tuscany", "wine", "film tourism"]
+faq:
+  - domanda: "Where is Letters to Juliet set?"
+    risposta: "Between Verona, with the House of Juliet, and the hills of Tuscany among vineyards and wineries."
+  - domanda: "Can you visit the House of Juliet in Verona?"
+    risposta: "Yes, with the famous balcony and the wall of love letters: it is one of the city's most visited attractions."
+  - domanda: "What should you eat in Verona?"
+    risposta: "Amarone risotto, bigoli with duck ragù and the wines of Valpolicella."
 lang: "en"
 bozza: false
 ---

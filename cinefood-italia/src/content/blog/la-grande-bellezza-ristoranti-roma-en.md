@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-19
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Terrace and alleys of Rome at night, like in The Great Beauty"
 tags: ["The Great Beauty", "Rome", "restaurants", "film tourism", "Sorrentino"]
+faq:
+  - domanda: "Where does Jep Gambardella dine in The Great Beauty?"
+    risposta: "At La Veranda dell'Hotel Columbus, in Borgo Santo Spirito in Rome, in a frescoed hall of Palazzo della Rovere."
+  - domanda: "Which places in Rome appear in the film?"
+    risposta: "The Fontanone del Gianicolo, the Capitoline Museums, Palazzo Spada, Villa Medici and the Aventine gardens."
+  - domanda: "What should you eat in Rome like in the film?"
+    risposta: "Roman cuisine: cacio e pepe, carbonara, Jewish-style artichokes and oxtail stew."
 lang: "en"
 bozza: false
 ---

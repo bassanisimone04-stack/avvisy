@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-15
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
 immagineAlt: "Via Veneto a Roma, cuore mondano de La Dolce Vita"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Roma", "cineturismo"]
+faq:
+  - domanda: "Dove si trova il Café de Paris de La Dolce Vita?"
+    risposta: "Su Via Vittorio Veneto a Roma; aperto nel 1948, è però chiuso dal 2008."
+  - domanda: "Perché Via Veneto è famosa?"
+    risposta: "Fu il cuore mondano della 'dolce vita' romana degli anni '60, immortalata da Fellini tra star e paparazzi."
+  - domanda: "Cosa vedere oggi in Via Veneto?"
+    risposta: "I grandi hotel storici, i caffè, la salita verso Porta Pinciana e i giardini di Villa Borghese."
 bozza: false
 ---
 

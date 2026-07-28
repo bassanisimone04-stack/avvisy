@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "Villa affacciata sul Lago di Como al tramonto"
 tags: ["Lago di Como", "Star Wars", "007", "itinerari", "cineturismo"]
+faq:
+  - domanda: "Quali film sono stati girati sul Lago di Como?"
+    risposta: "Star Wars (Villa del Balbianello), Casino Royale, Ocean's Twelve e House of Gucci."
+  - domanda: "Dov'è la villa di Star Wars sul Lago di Como?"
+    risposta: "Villa del Balbianello a Lenno, usata come pianeta Naboo."
+  - domanda: "Cosa mangiare sul Lago di Como?"
+    risposta: "Risotto con pesce persico, missoltini con polenta e i vini della Valtellina."
 bozza: false
 ---
 

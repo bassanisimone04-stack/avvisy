@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "Colourful village of the Italian Riviera as in the film Luca"
 tags: ["Luca", "Pixar", "Liguria", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where is Pixar's Luca set?"
+    risposta: "In the fictional Portorosso, inspired by the Italian Riviera and the Cinque Terre."
+  - domanda: "What should you eat in Liguria like in Luca?"
+    risposta: "Trofie al pesto, Genoese focaccia, trenette, farinata and gelato."
+  - domanda: "Are the Cinque Terre suitable for families?"
+    risposta: "Yes: colourful villages, scenic trains, trails and little beaches make them ideal for a family trip."
 lang: "en"
 bozza: false
 ---

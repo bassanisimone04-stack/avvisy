@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-21
 immagine: "../../assets/placeholder/blog-nord.jpg"
 immagineAlt: "Square of a Lombard town with a bell tower, like Crema"
 tags: ["Call Me by Your Name", "Crema", "Lombardy", "itineraries", "film tourism"]
+faq:
+  - domanda: "Where was Call Me by Your Name filmed?"
+    risposta: "Mainly in Crema and the surrounding Cremasco area, in Lombardy, with some scenes at the Laghetto dei Riflessi in Ricengo."
+  - domanda: "What should you eat in Crema?"
+    risposta: "The signature dish is tortelli cremaschi, with a sweet-spiced filling of amaretti, raisins and mostaccino."
+  - domanda: "Is there an official film itinerary in Crema?"
+    risposta: "Yes, the town of Crema offers a walking or cycling tour through the film's locations."
 lang: "en"
 bozza: false
 ---

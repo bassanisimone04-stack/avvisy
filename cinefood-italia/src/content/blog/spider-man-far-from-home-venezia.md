@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Canali e ponti di Venezia"
 tags: ["Spider-Man", "Venezia", "Marvel", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove è ambientato Spider-Man Far From Home in Italia?"
+    risposta: "A Venezia, tra i canali e i ponti, dove Spider-Man affronta il mostro d'acqua."
+  - domanda: "Cosa sono i cicchetti veneziani?"
+    risposta: "Piccoli stuzzichini serviti nei bacari: baccalà mantecato, sarde in saor, polpette, con un'ombra di vino o uno spritz."
+  - domanda: "Dove mangiare come un veneziano?"
+    risposta: "Nei bacari, le osterie tipiche, lontano dai ristoranti turistici."
 bozza: false
 ---
 

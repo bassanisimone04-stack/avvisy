@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Piazza Navona in Rome at sunset"
 tags: ["To Rome with Love", "Rome", "Woody Allen", "film tourism"]
+faq:
+  - domanda: "Where is To Rome with Love set?"
+    risposta: "Entirely in Rome: Piazza Navona, the historic centre, Trastevere and the city's terraces."
+  - domanda: "Who directed To Rome with Love?"
+    risposta: "Woody Allen (2012), after his films set in Paris and Barcelona."
+  - domanda: "What should you eat in the Rome of the film?"
+    risposta: "Gelato in the square, supplì and Roman cuisine: cacio e pepe, carbonara, artichokes."
 lang: "en"
 bozza: false
 ---

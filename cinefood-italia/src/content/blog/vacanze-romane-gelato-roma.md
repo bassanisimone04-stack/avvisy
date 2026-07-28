@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
 immagineAlt: "Piazza di Spagna a Roma, come in Vacanze Romane"
 tags: ["Vacanze Romane", "Roma", "Audrey Hepburn", "gelato", "cineturismo"]
+faq:
+  - domanda: "Dove è girata la scena del gelato di Vacanze Romane?"
+    risposta: "Sulla scalinata di Piazza di Spagna a Roma, con Audrey Hepburn."
+  - domanda: "Quali luoghi compaiono in Vacanze Romane?"
+    risposta: "Piazza di Spagna, la Bocca della Verità, il Colosseo e Castel Sant'Angelo."
+  - domanda: "Cosa assaggiare a Roma?"
+    risposta: "Gelato artigianale, maritozzo con la panna, cappuccino e la cucina romana."
 bozza: false
 ---
 
