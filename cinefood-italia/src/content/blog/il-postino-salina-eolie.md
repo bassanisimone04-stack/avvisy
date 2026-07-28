@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/blog-sicilia.jpg"
 immagineAlt: "Costa dell'isola di Salina alle Eolie, come ne Il Postino"
 tags: ["Il Postino", "Salina", "Eolie", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove è stato girato Il Postino?"
+    risposta: "Le scene principali sono girate a Pollara, sull'isola di Salina, nelle Eolie, con alcune riprese anche a Procida e Pantelleria."
+  - domanda: "Cosa si mangia a Salina?"
+    risposta: "Piatti eoliani: pesce fresco, i pregiati capperi di Salina, il pane cunzato e la dolce Malvasia delle Lipari."
+  - domanda: "Come si arriva a Salina?"
+    risposta: "Si raggiunge in traghetto o aliscafo da Milazzo, Messina o Napoli."
 bozza: false
 ---
 

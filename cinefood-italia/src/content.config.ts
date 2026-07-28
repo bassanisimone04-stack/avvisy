@@ -134,6 +134,10 @@ const blog = defineCollection({
       immagineAlt: z.string().default(""),
       tags: z.array(z.string()).default([]),
       bozza: z.boolean().default(false),
+      /** Domande frequenti (FAQ) → dati strutturati FAQPage per la SEO. */
+      faq: z
+        .array(z.object({ domanda: z.string(), risposta: z.string() }))
+        .default([]),
       /** Lingua dell'articolo: "it" (default) o "en". */
       lang: z.enum(["it", "en"]).default("it"),
     }),

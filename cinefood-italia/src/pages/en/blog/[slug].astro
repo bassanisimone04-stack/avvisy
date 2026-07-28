@@ -6,7 +6,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumb from "../../../components/Breadcrumb.astro";
 import { SITE } from "../../../config/site";
 import { formatData } from "../../../lib/utils";
-import { blogPostingJsonLd, breadcrumbJsonLd } from "../../../lib/schema-org";
+import { blogPostingJsonLd, breadcrumbJsonLd, faqPageJsonLd } from "../../../lib/schema-org";
 import { useT, path } from "../../../i18n/ui";
 
 const lang = "en" as const;
@@ -37,6 +37,7 @@ const jsonLd = [
   blogPostingJsonLd(d.titolo, d.descrizione, d.autore, d.dataPubblicazione, canonical, immagineUrl),
   breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: new URL(c.href ?? "/", SITE.url).href }))),
 ];
+if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
 ---
 
 <BaseLayout lang={lang} title={d.titolo} description={d.descrizione} image={d.immagine?.src} type="article" jsonLd={jsonLd}>
@@ -53,6 +54,23 @@ const jsonLd = [
     </div>
 
     {d.tags.length > 0 && (<div class="mt-8 flex flex-wrap gap-2">{d.tags.map((tag) => <span class="rounded-full bg-ink-500/15 px-3 py-1 text-xs">#{tag}</span>)}</div>)}
+    {
+      d.faq.length > 0 && (
+        <section class="mt-12">
+          <h2 class="font-display text-2xl font-bold">Frequently asked questions</h2>
+          <div class="mt-4 divide-y divide-ink-500/10 dark:divide-noir-700">
+            {d.faq.map((f) => (
+              <details class="group py-3">
+                <summary class="cursor-pointer list-none font-semibold marker:content-none">
+                  <span class="text-gold-600 dark:text-gold-400">▸ </span>{f.domanda}
+                </summary>
+                <p class="mt-2 text-ink-600 dark:text-ink-300">{f.risposta}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )
+    }
     <a href={path("/blog", lang)} class="mt-10 inline-block text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">← {t("blog.torna")}</a>
   </article>
 

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Scorcio panoramico italiano da film di James Bond"
 tags: ["James Bond", "007", "Italia", "itinerari", "cineturismo"]
+faq:
+  - domanda: "In quali città italiane è stato girato James Bond?"
+    risposta: "Tra le altre: Matera (No Time to Die), Venezia e il Lago di Como (Casino Royale), Siena e il Lago di Garda (Quantum of Solace) e Roma (Spectre)."
+  - domanda: "Dove è girato l'inseguimento di No Time to Die?"
+    risposta: "Nei Sassi di Matera, in Basilicata, patrimonio UNESCO."
+  - domanda: "Cosa mangiare a Matera?"
+    risposta: "Pane di Matera IGP, peperoni cruschi, cavatelli e caciocavallo podolico."
 bozza: false
 ---
 

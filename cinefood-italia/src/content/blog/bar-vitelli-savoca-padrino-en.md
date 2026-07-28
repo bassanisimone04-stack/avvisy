@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-23
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "Sicilian village perched on the hillside, like Savoca"
 tags: ["The Godfather", "Savoca", "Sicily", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where is Bar Vitelli?"
+    risposta: "Bar Vitelli is in Savoca, a village in the province of Messina, Sicily, in the small square of the town."
+  - domanda: "Which film features Bar Vitelli?"
+    risposta: "The Godfather by Francis Ford Coppola: this is where Michael Corleone asks the owner for the hand of his daughter Apollonia."
+  - domanda: "What should you order at Bar Vitelli?"
+    risposta: "The famous Sicilian granita (lemon, almond, mulberry) served with brioche, and the local wine."
 lang: "en"
 bozza: false
 ---

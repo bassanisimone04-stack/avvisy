@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/blog-weekend.jpg"
 immagineAlt: "Panoramic Italian view from a James Bond film"
 tags: ["James Bond", "007", "Italy", "itineraries", "film tourism"]
+faq:
+  - domanda: "Which Italian cities were used in James Bond films?"
+    risposta: "Among others: Matera (No Time to Die), Venice and Lake Como (Casino Royale), Siena and Lake Garda (Quantum of Solace), and Rome (Spectre)."
+  - domanda: "Where was the No Time to Die chase filmed?"
+    risposta: "In the Sassi of Matera, in Basilicata, a UNESCO World Heritage site."
+  - domanda: "What should you eat in Matera?"
+    risposta: "Matera PGI bread, crispy 'cruschi' peppers, cavatelli and caciocavallo podolico."
 lang: "en"
 bozza: false
 ---

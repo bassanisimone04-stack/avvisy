@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-23
 immagine: "../../assets/placeholder/blog-borghi.jpg"
 immagineAlt: "Borgo siciliano arroccato sulla collina, come Savoca"
 tags: ["Il Padrino", "Savoca", "Sicilia", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove si trova il Bar Vitelli?"
+    risposta: "Il Bar Vitelli si trova a Savoca, borgo in provincia di Messina, in Sicilia, nella piazzetta del paese."
+  - domanda: "In quale film compare il Bar Vitelli?"
+    risposta: "Ne Il Padrino di Francis Ford Coppola: è qui che Michael Corleone chiede al proprietario la mano di sua figlia Apollonia."
+  - domanda: "Cosa ordinare al Bar Vitelli?"
+    risposta: "La celebre granita siciliana (limone, mandorla, gelso) accompagnata dalla brioche, e il vino locale."
 bozza: false
 ---
 

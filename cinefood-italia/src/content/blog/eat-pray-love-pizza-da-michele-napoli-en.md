@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Table with a freshly baked Neapolitan margherita pizza"
 tags: ["Eat Pray Love", "Naples", "pizza", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where did Julia Roberts eat pizza in Eat Pray Love?"
+    risposta: "At L'Antica Pizzeria da Michele, on Via Cesare Sersale in the Forcella district of Naples."
+  - domanda: "What pizza do they serve at Da Michele?"
+    risposta: "The historic menu has only two pizzas: marinara and margherita, baked in a wood-fired oven."
+  - domanda: "Do you need to book at Da Michele?"
+    risposta: "You can't book: you take a number and wait your turn, often with a queue outside."
 lang: "en"
 bozza: false
 ---

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/blog-sicilia.jpg"
 immagineAlt: "Coast of the island of Salina in the Aeolian Islands, like in Il Postino"
 tags: ["Il Postino", "Salina", "Aeolian Islands", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where was Il Postino filmed?"
+    risposta: "The main scenes were filmed in Pollara, on the island of Salina in the Aeolian Islands, with some shots also in Procida and Pantelleria."
+  - domanda: "What do you eat in Salina?"
+    risposta: "Aeolian dishes: fresh fish, the prized Salina capers, pane cunzato and the sweet Malvasia delle Lipari wine."
+  - domanda: "How do you get to Salina?"
+    risposta: "It is reached by ferry or hydrofoil from Milazzo, Messina or Naples."
 lang: "en"
 bozza: false
 ---

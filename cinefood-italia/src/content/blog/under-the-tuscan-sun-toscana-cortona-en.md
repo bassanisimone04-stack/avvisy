@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tuscan hills with vineyards, as in Under the Tuscan Sun"
 tags: ["Under the Tuscan Sun", "Tuscany", "Cortona", "wine", "film tourism"]
+faq:
+  - domanda: "Where is Under the Tuscan Sun set?"
+    risposta: "In Cortona, a town in the province of Arezzo, Tuscany. The film's villa is called 'Bramasole'."
+  - domanda: "What should you eat in Cortona and the Val di Chiana?"
+    risposta: "Bistecca alla fiorentina, hand-rolled pici, ribollita and the great Tuscan red wines (Chianti, Nobile di Montepulciano, Brunello)."
+  - domanda: "Can you visit the Bramasole villa?"
+    risposta: "It is a private property and cannot be visited inside, but it can be seen from the outside while walking around Cortona."
 lang: "en"
 bozza: false
 ---

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"
 immagineAlt: "Tavolo con pizza margherita napoletana appena sfornata"
 tags: ["Eat Pray Love", "Napoli", "pizza", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove ha mangiato la pizza Julia Roberts in Eat Pray Love?"
+    risposta: "All'Antica Pizzeria da Michele, in Via Cesare Sersale nel quartiere Forcella a Napoli."
+  - domanda: "Che pizza si mangia da Michele?"
+    risposta: "Il menù storico ha solo due pizze: marinara e margherita, cotte nel forno a legna."
+  - domanda: "Serve prenotare da Michele?"
+    risposta: "Non si prenota: si ritira un numero e si aspetta il proprio turno, spesso con la fila fuori."
 bozza: false
 ---
 

@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-24
 immagine: "../../assets/placeholder/blog-sicilia.jpg"
 immagineAlt: "Sicilian coast with a lighthouse, like the Inspector Montalbano locations"
 tags: ["Montalbano", "Sicily", "itineraries", "where to eat", "film tourism"]
+faq:
+  - domanda: "Where is Inspector Montalbano's house?"
+    risposta: "Montalbano's house is in Punta Secca, a hamlet of Santa Croce Camerina (Ragusa), right on the seafront. Today it is a guesthouse."
+  - domanda: "Where did Montalbano eat in the series?"
+    risposta: "The signature restaurant is Enzo a Mare, on the seafront of Punta Secca, a few steps from the inspector's house, where he enjoyed the fresh fish of the Ragusa coast."
+  - domanda: "What dishes does Inspector Montalbano eat?"
+    risposta: "Dishes of Sicilian tradition: pasta 'ncasciata, arancini, caponata and, above all, fresh fish cooked simply."
 lang: "en"
 bozza: false
 ---

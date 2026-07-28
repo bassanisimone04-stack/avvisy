@@ -6,6 +6,13 @@ dataPubblicazione: 2026-07-24
 immagine: "../../assets/placeholder/blog-sicilia.jpg"
 immagineAlt: "Costa siciliana con faro, come nei luoghi del Commissario Montalbano"
 tags: ["Montalbano", "Sicilia", "itinerari", "dove mangiare", "cineturismo"]
+faq:
+  - domanda: "Dove si trova la casa del Commissario Montalbano?"
+    risposta: "La casa di Montalbano si trova a Punta Secca, frazione di Santa Croce Camerina (Ragusa), affacciata sul lungomare. Oggi è una struttura ricettiva."
+  - domanda: "Dove mangiava Montalbano nella fiction?"
+    risposta: "Il ristorante di riferimento è Enzo a Mare, sul lungomare di Punta Secca, a pochi passi dalla casa del commissario, dove gustava il pesce fresco della costa ragusana."
+  - domanda: "Quali piatti mangia il Commissario Montalbano?"
+    risposta: "Piatti della tradizione siciliana: pasta 'ncasciata, arancini, caponata e soprattutto pesce fresco cucinato in modo semplice."
 bozza: false
 ---
 
