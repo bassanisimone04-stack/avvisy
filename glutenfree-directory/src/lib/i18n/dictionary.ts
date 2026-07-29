@@ -34,7 +34,13 @@ export const dictionary = {
       cookie: "Cookie policy",
       terms: "Termini di servizio",
       rights: "Tutti i diritti riservati.",
+      faq: "FAQ",
       demoNote: "Prototipo dimostrativo — dati ed attività mostrati a scopo illustrativo.",
+      disclaimer: "Le informazioni presenti sul sito hanno scopo puramente divulgativo e non sostituiscono il parere di un medico, nutrizionista o altro professionista qualificato. Prima di utilizzare un prodotto o un servizio, verifica sempre le informazioni direttamente con il locale o il produttore.",
+    },
+    faqPage: {
+      title: "Domande frequenti",
+      subtitle: "Le risposte alle domande più cercate su celiachia, ristoranti senza glutine, contaminazione crociata e prodotti certificati.",
     },
     newsletter: { placeholder: "La tua email", cta: "Iscriviti gratis", success: "Iscrizione confermata! Controlla la tua casella email." },
     home: {
@@ -210,7 +216,13 @@ export const dictionary = {
       cookie: "Cookie policy",
       terms: "Terms of service",
       rights: "All rights reserved.",
+      faq: "FAQ",
       demoNote: "Demo prototype — businesses and data shown for illustrative purposes only.",
+      disclaimer: "The information on this site is for informational purposes only and does not replace the advice of a doctor, nutritionist or other qualified professional. Before using a product or service, always verify the information directly with the venue or manufacturer.",
+    },
+    faqPage: {
+      title: "Frequently asked questions",
+      subtitle: "Answers to the most searched questions about celiac disease, gluten-free restaurants, cross-contamination and certified products.",
     },
     newsletter: { placeholder: "Your email", cta: "Subscribe free", success: "Subscription confirmed! Check your inbox." },
     home: {

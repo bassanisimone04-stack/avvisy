@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Leaf, Instagram, Facebook, Twitter } from "lucide-react";
+import { Leaf, Instagram, Facebook, Twitter, AlertTriangle } from "lucide-react";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
 import { BLOG_CATEGORIES, blogCategoryLabel } from "@/lib/mock-articles";
 import { slugify } from "@/lib/format";
@@ -57,6 +57,7 @@ export default function SiteFooter() {
             <h3 className="mb-3 text-sm font-semibold text-white">{t.footer.company}</h3>
             <ul className="space-y-2 text-sm text-white/60">
               <li><Link href={localeHref(locale, "/chi-siamo")} className="hover:text-white">{t.footer.about}</Link></li>
+              <li><Link href={localeHref(locale, "/faq")} className="hover:text-white">{t.footer.faq}</Link></li>
               <li><Link href={localeHref(locale, "/contatti")} className="hover:text-white">{t.footer.contact}</Link></li>
               <li><Link href={localeHref(locale, "/per-le-aziende")} className="hover:text-white">{t.footer.addBusiness}</Link></li>
               <li><Link href={localeHref(locale, "/privacy")} className="hover:text-white">{t.footer.privacy}</Link></li>
@@ -72,7 +73,12 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row">
+        <div className="mt-12 flex items-start gap-2 rounded-xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/60">
+          <AlertTriangle size={15} className="mt-0.5 shrink-0" />
+          <p>{t.footer.disclaimer}</p>
+        </div>
+
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row">
           <p>© {new Date().getFullYear()} {SITE_NAME}. {t.footer.rights}</p>
           <p>{t.footer.demoNote}</p>
         </div>
