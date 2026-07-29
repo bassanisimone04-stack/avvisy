@@ -12,7 +12,7 @@ interface Seed {
   publishedAt: string;
   tags: string[];
   keyTakeaways: string[];
-  sections: { h2: string; body: string; h3?: { title: string; body: string }[] }[];
+  sections: { h2: string; body: string; h3?: { title: string; body: string; image?: { src: string; alt: string } }[] }[];
   faqs: { question: string; answer: string }[];
   featured?: boolean;
 }
@@ -369,10 +369,10 @@ const seeds: Seed[] = [
         { title: "Come faccio a trovare velocemente un ristorante senza glutine vicino a me a Milano?", body: "Il modo più rapido è usare una directory geolocalizzata con filtri per certificazione AIC e categoria di locale. Cercare solo su Google Maps generico spesso restituisce locali non verificati: meglio affidarsi a fonti come la nostra, che raccolgono segnalazioni reali della community celiaca." },
       ] },
       { h2: "Le migliori pizzerie senza glutine a Milano", body: "La pizza resta uno dei piatti più a rischio contaminazione, perché la farina di grano vola facilmente in un forno condiviso: per questo cerchiamo sempre locali con <strong>forno separato o dedicato</strong> alle pizze gluten free.", h3: [
-        { title: "Be Bop", body: "A due passi dai Navigli, <a href=\"/directory/be-bop-milano\">Be Bop</a> è un ristorante e pizzeria attivo dal 1986 che propone pizza e piatti tradizionali anche in versione senza glutine, oltre a opzioni vegan. Un indirizzo comodo per chi cerca la pizza gluten free in zona Navigli senza rinunciare alla scelta del menu." },
+        { title: "Be Bop", body: "A due passi dai Navigli, <a href=\"/directory/be-bop-milano\">Be Bop</a> è un ristorante e pizzeria attivo dal 1986 che propone pizza e piatti tradizionali anche in versione senza glutine, oltre a opzioni vegan. Un indirizzo comodo per chi cerca la pizza gluten free in zona Navigli senza rinunciare alla scelta del menu.", image: { src: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=75", alt: "Pizza senza glutine appena sfornata" } },
       ] },
       { h2: "Ristoranti senza glutine a Milano: dove sedersi senza pensieri", body: "Per una cena più strutturata, questo è il ristorante che consigliamo a chi cerca il massimo della tranquillità in fatto di contaminazione crociata.", h3: [
-        { title: "La Rosa dei Venti", body: "Nella zona Sempione/Bullona, <a href=\"/directory/la-rosa-dei-venti-milano\">La Rosa dei Venti</a> è uno storico ristorante di pesce aperto dal 2001, segnalato anche dalla Guida Michelin e <strong>certificato AIC</strong>: propone una selezione di piatti senza glutine, tra cui pane e pasta preparati per l'occasione." },
+        { title: "La Rosa dei Venti", body: "Nella zona Sempione/Bullona, <a href=\"/directory/la-rosa-dei-venti-milano\">La Rosa dei Venti</a> è uno storico ristorante di pesce aperto dal 2001, segnalato anche dalla Guida Michelin e <strong>certificato AIC</strong>: propone una selezione di piatti senza glutine, tra cui pane e pasta preparati per l'occasione.", image: { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=75", alt: "Piatto servito in ristorante elegante" } },
       ] },
       { h2: "AIC, menu e cucina dedicata: le domande tecniche sulla sicurezza", body: "Dopo aver visto i locali, è utile capire cosa distingue davvero un'esperienza sicura da una rischiosa: ecco le domande più tecniche che riceviamo sulla sicurezza alimentare.", h3: [
         { title: "Qual è la differenza tra un ristorante certificato AIC e uno non certificato?", body: "Un locale certificato AIC ha superato controlli annuali su procedure, fornitori e formazione dello staff sulla contaminazione crociata. Un locale non certificato può comunque essere sicuro, ma la garanzia dipende solo dall'esperienza diretta di chi lo ha provato: la certificazione riduce il margine di errore." },
@@ -501,10 +501,10 @@ const seeds: Seed[] = [
         { title: "Come faccio a trovare velocemente un ristorante senza glutine vicino a me a Roma?", body: "Il modo più rapido è usare una directory geolocalizzata con filtri per certificazione AIC e categoria di locale. Cercare solo su Google Maps generico spesso restituisce locali non verificati: meglio affidarsi a fonti come la nostra, che raccolgono segnalazioni reali della community celiaca." },
       ] },
       { h2: "Le migliori pizzerie senza glutine a Roma", body: "La pizza romana, sottile e scrocchiarella, richiede un impasto delicato da gestire: per questo cerchiamo sempre locali con <strong>forno separato o dedicato</strong> alle pizze gluten free.", h3: [
-        { title: "Il Secchio e l'Olivaro", body: "Nel quartiere Ostiense, <a href=\"/directory/il-secchio-e-l-olivaro-roma\">Il Secchio e l'Olivaro</a> è una pizzeria e bruschetteria attiva dal 1999, nota per le pizze alte cotte in <strong>forno a legna</strong>: propone un menu senza glutine preparato in un laboratorio dedicato." },
+        { title: "Il Secchio e l'Olivaro", body: "Nel quartiere Ostiense, <a href=\"/directory/il-secchio-e-l-olivaro-roma\">Il Secchio e l'Olivaro</a> è una pizzeria e bruschetteria attiva dal 1999, nota per le pizze alte cotte in <strong>forno a legna</strong>: propone un menu senza glutine preparato in un laboratorio dedicato.", image: { src: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=75", alt: "Pizza alta appena sfornata" } },
       ] },
       { h2: "Ristoranti e trattorie senza glutine a Roma: dove sedersi senza pensieri", body: "Per una cena più strutturata, questo è il locale che consigliamo a chi cerca il massimo della tranquillità in fatto di contaminazione crociata.", h3: [
-        { title: "Fornerie Alessandrino", body: "Nel quartiere Alessandrino, <a href=\"/directory/fornerie-alessandrino-roma\">Fornerie Alessandrino</a> unisce ristorante, braceria, pizzeria e hamburgheria con una <strong>cucina interamente certificata AIC</strong> e separata dal resto della struttura: propone pizza, griglia e hamburger senza glutine, oltre a opzioni vegan e senza lattosio." },
+        { title: "Fornerie Alessandrino", body: "Nel quartiere Alessandrino, <a href=\"/directory/fornerie-alessandrino-roma\">Fornerie Alessandrino</a> unisce ristorante, braceria, pizzeria e hamburgheria con una <strong>cucina interamente certificata AIC</strong> e separata dal resto della struttura: propone pizza, griglia e hamburger senza glutine, oltre a opzioni vegan e senza lattosio.", image: { src: "https://images.unsplash.com/photo-1428515613728-6b4607e44363?auto=format&fit=crop&w=800&q=75", alt: "Tavola con piatti in ristorante" } },
       ] },
       { h2: "Pasticcerie e colazioni senza glutine a Roma", body: "Anche la colazione può diventare un momento di relax, non di ansia: cerca laboratori con un angolo o un forno interamente dedicato al senza glutine, verificato da certificazione AIC o da recensioni reali della community, prima di scegliere dove fare colazione. Sulla directory di Mappa Senza Glutine trovi le pasticcerie e i bar di Roma verificati, aggiornati man mano che nuovi locali vengono controllati." },
       { h2: "AIC, menu e cucina dedicata: le domande tecniche sulla sicurezza", body: "Dopo aver visto i locali, è utile capire cosa distingue davvero un'esperienza sicura da una rischiosa a Roma.", h3: [
@@ -540,7 +540,10 @@ export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
 export function makeContentHtml(sections: Seed["sections"]): string {
   return sections
     .map((s) => {
-      const h3html = s.h3?.map((sub) => `<h3 id="${slugify(sub.title)}">${sub.title}</h3><p>${sub.body}</p>`).join("") ?? "";
+      const h3html = s.h3?.map((sub) => {
+        const img = sub.image ? `<img src="${sub.image.src}" alt="${sub.image.alt}" loading="lazy" class="article-inline-photo" />` : "";
+        return `<h3 id="${slugify(sub.title)}">${sub.title}</h3>${img}<p>${sub.body}</p>`;
+      }).join("") ?? "";
       return `<h2 id="${slugify(s.h2)}">${s.h2}</h2><p>${s.body}</p>${h3html}`;
     })
     .join("");

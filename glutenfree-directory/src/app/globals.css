@@ -294,6 +294,13 @@ body {
   .prose-article ul, .prose-article ol { margin-bottom: 1.15em; padding-left: 1.4em; }
   .prose-article li { margin-bottom: 0.4em; }
   .prose-article a { color: var(--gf-brand-dark); text-decoration: underline; text-underline-offset: 2px; }
+  .prose-article .article-inline-photo {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
   .prose-article blockquote {
     border-left: 3px solid var(--gf-brand);
     background: var(--gf-brand-soft);
