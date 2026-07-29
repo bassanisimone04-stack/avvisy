@@ -13,6 +13,8 @@ import FavoriteButton from "./FavoriteButton";
 export default function BusinessCard({ business, locale = "it" }: { business: Business; locale?: Locale }) {
   const cat = getCategoryInfo(business.category);
   const t = getDictionary(locale);
+  const catLabel = cat ? categoryLabel(cat, locale) : "";
+  const photoAlt = `${business.name}, ${catLabel.toLowerCase()} senza glutine a ${cityName(business.city, locale)}: ${business.shortDescription}`;
   return (
     <Link
       href={localeHref(locale, `/directory/${business.slug}`)}
@@ -23,7 +25,7 @@ export default function BusinessCard({ business, locale = "it" }: { business: Bu
           photoUrl={businessCoverPhoto(business.category, business.gallerySeeds[0])}
           seed={business.gallerySeeds[0]}
           variant={business.category}
-          label={business.name}
+          label={photoAlt}
           className="transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">

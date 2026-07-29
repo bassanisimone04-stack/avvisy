@@ -3,6 +3,7 @@ import { SlidersHorizontal, SearchX } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessCard from "@/components/BusinessCard";
 import DirectoryFilters from "@/components/DirectoryFilters";
+import QuickFilters from "@/components/QuickFilters";
 import SortSelect from "@/components/SortSelect";
 import { JsonLd, itemListJsonLd } from "@/lib/seo";
 import { parseFilters, filterBusinesses } from "@/lib/filter-businesses";
@@ -54,6 +55,7 @@ export default function DirectoryContent({
         <DirectoryFilters />
 
         <div>
+          <QuickFilters />
           {pageResults.length === 0 ? (
             <div className="card card-soft flex flex-col items-center gap-3 p-14 text-center">
               <SearchX size={32} className="text-muted" />
