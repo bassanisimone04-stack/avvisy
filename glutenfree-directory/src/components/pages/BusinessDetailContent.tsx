@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  Phone, Globe, Instagram, Facebook, MapPin, Clock, BadgeCheck,
+  Phone, Globe, Instagram, Facebook, MapPin, Clock, BadgeCheck, Heart,
   Truck, ShoppingBag, ExternalLink, UtensilsCrossed,
 } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -47,7 +47,11 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
             <div>
               <div className="mb-2 flex flex-wrap items-center gap-2">
                 <span className="chip chip-neutral">{cat ? categoryLabel(cat, locale) : ""}</span>
-                {business.aicCertified && <span className="chip chip-brand"><BadgeCheck size={12} /> {t.business.certifiedAic}</span>}
+                {business.aicCertified ? (
+                  <span className="chip chip-brand"><BadgeCheck size={12} /> {t.business.certifiedAic}</span>
+                ) : (
+                  <span className="chip text-accent-dark" style={{ background: "var(--gf-accent-soft)" }}><Heart size={12} /> {t.business.communityVerified}</span>
+                )}
                 {business.openNow && <span className="chip bg-brand-solid text-white">{t.common.openNow}</span>}
               </div>
               <h1 className="font-editorial text-3xl font-semibold text-ink sm:text-4xl">{business.name}</h1>

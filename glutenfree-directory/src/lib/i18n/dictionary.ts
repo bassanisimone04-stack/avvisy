@@ -114,6 +114,8 @@ export const dictionary = {
     },
     business: {
       certifiedAic: "Certificato AIC",
+      communityVerified: "Verificato dalla community",
+      communityVerifiedShort: "Community",
       about: "Chi siamo",
       menuTitle: "Menu senza glutine",
       servicesTitle: "Servizi",
@@ -286,6 +288,8 @@ export const dictionary = {
     },
     business: {
       certifiedAic: "AIC certified",
+      communityVerified: "Community verified",
+      communityVerifiedShort: "Community",
       about: "About",
       menuTitle: "Gluten-free menu",
       servicesTitle: "Services",

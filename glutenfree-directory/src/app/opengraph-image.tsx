@@ -15,7 +15,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "linear-gradient(135deg, #e2f5ea 0%, #cfe9db 100%)",
+          background: "linear-gradient(135deg, #e7f0ea 0%, #cfe0d4 100%)",
           padding: "72px",
           fontFamily: "sans-serif",
         }}
@@ -29,7 +29,7 @@ export default function OpengraphImage() {
               width: "108px",
               height: "108px",
               borderRadius: "26px",
-              background: "#189659",
+              background: "#1b4332",
               color: "#fff",
               fontSize: "56px",
               fontWeight: 900,
@@ -38,7 +38,7 @@ export default function OpengraphImage() {
             MSG
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: "48px", fontWeight: 800, color: "#0f7a47", letterSpacing: "-1px" }}>
+            <div style={{ fontSize: "48px", fontWeight: 800, color: "#1b4332", letterSpacing: "-1px" }}>
               Mappa Senza Glutine
             </div>
             <div style={{ fontSize: "26px", color: "#3d5347", marginTop: "2px" }}>
@@ -59,7 +59,7 @@ export default function OpengraphImage() {
                   fontSize: "24px",
                   color: "#12241c",
                   background: "#fff",
-                  border: "2px solid #189659",
+                  border: "2px solid #1b4332",
                   borderRadius: "999px",
                   padding: "10px 22px",
                 }}

@@ -1,40 +1,41 @@
 @import "tailwindcss";
 
 /*
-  Mappa Senza Glutine — design system "verde naturale premium".
-  Verde come colore guida (fiducia, salute, natura), bianco per lo spazio
-  e la leggibilità, arancione come accento caldo per CTA e evidenze.
+  Mappa Senza Glutine — design system "verde foresta professionale".
+  Verde foresta scuro come colore guida (fiducia, sicurezza alimentare),
+  bianco caldo per lo spazio e la leggibilità, corallo/arancio bruciato
+  come accento per CTA e evidenze che devono stimolare l'appetito.
   Tipografia Sora (titoli) + Inter (testo).
 */
 
 :root {
-  --gf-ink: #12241c;
+  --gf-ink: #14231c;
   --gf-ink-soft: #3d5347;
   --gf-muted: #66766d;
-  --gf-canvas: #f6faf7;
+  --gf-canvas: #fafaf7;
   --gf-surface: #ffffff;
-  --gf-surface-2: #eef6f1;
-  --gf-line: #e2ede6;
-  --gf-line-strong: #cadcd1;
+  --gf-surface-2: #eef3ee;
+  --gf-line: #e2e9e3;
+  --gf-line-strong: #c9d5cb;
 
-  --gf-brand: #15844e;
-  --gf-brand-dark: #0f7a47;
-  --gf-brand-light: #34b374;
-  --gf-brand-soft: #e2f5ea;
+  --gf-brand: #1b4332;
+  --gf-brand-dark: #122b20;
+  --gf-brand-light: #2d6a4f;
+  --gf-brand-soft: #e7f0ea;
 
-  --gf-accent: #f97316;
-  --gf-accent-dark: #c15205;
-  --gf-accent-darker: #9f4304;
-  --gf-accent-soft: #fef0e0;
+  --gf-accent: #c2431f;
+  --gf-accent-dark: #963316;
+  --gf-accent-darker: #7a2811;
+  --gf-accent-soft: #fbe7de;
 
   /* Riempimenti bottone a tinta unita: fissi in entrambi i temi (a differenza
      di --gf-brand/--gf-accent, che si schiariscono in dark mode per restare
      leggibili come testo su sfondo scuro) cosi il testo bianco sopra resta
      sempre conforme al contrasto WCAG AA. */
-  --gf-btn-primary: #15844e;
-  --gf-btn-primary-hover: #0f7a47;
-  --gf-btn-accent: #c15205;
-  --gf-btn-accent-hover: #9f4304;
+  --gf-btn-primary: #1b4332;
+  --gf-btn-primary-hover: #122b20;
+  --gf-btn-accent: #c2431f;
+  --gf-btn-accent-hover: #963316;
 
   --gf-gold: #f2b100;
   --gf-gold-soft: #fdf2d6;
@@ -55,20 +56,20 @@
   --gf-ink: #eaf3ec;
   --gf-ink-soft: #b9c9bf;
   --gf-muted: #8ea298;
-  --gf-canvas: #0d1712;
-  --gf-surface: #12211a;
-  --gf-surface-2: #182b21;
-  --gf-line: #23392c;
-  --gf-line-strong: #2f4a3a;
+  --gf-canvas: #0e1712;
+  --gf-surface: #16241d;
+  --gf-surface-2: #1c2e25;
+  --gf-line: #2a3d33;
+  --gf-line-strong: #37503f;
 
-  --gf-brand: #35b874;
-  --gf-brand-dark: #4fd08c;
-  --gf-brand-light: #35b874;
-  --gf-brand-soft: #163b28;
+  --gf-brand: #5fb78c;
+  --gf-brand-dark: #7fcba3;
+  --gf-brand-light: #5fb78c;
+  --gf-brand-soft: #1c3a2c;
 
-  --gf-accent: #fb923c;
-  --gf-accent-dark: #ffb066;
-  --gf-accent-soft: #3a2412;
+  --gf-accent: #ff8f66;
+  --gf-accent-dark: #ffab84;
+  --gf-accent-soft: #3a2317;
 
   --gf-gold: #f2c14e;
   --gf-gold-soft: #3a300f;

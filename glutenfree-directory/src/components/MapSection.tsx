@@ -3,7 +3,7 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { MapPin, BadgeCheck } from "lucide-react";
+import { MapPin, BadgeCheck, Heart } from "lucide-react";
 import type { Business } from "@/lib/types";
 import { getCategoryInfo, categoryLabel } from "@/lib/categories";
 import { cityName } from "@/lib/i18n/place-names";
@@ -39,8 +39,10 @@ export default function MapSection({ businesses }: { businesses: Business[] }) {
                 <p className="eyebrow">{(() => { const c = getCategoryInfo(active.category); return c ? categoryLabel(c, locale) : ""; })()}</p>
                 <h3 className="mt-1 text-lg font-semibold text-ink">{active.name}</h3>
               </div>
-              {active.aicCertified && (
+              {active.aicCertified ? (
                 <span className="chip chip-brand shrink-0"><BadgeCheck size={12} /> AIC</span>
+              ) : (
+                <span className="chip shrink-0 text-accent-dark" style={{ background: "var(--gf-accent-soft)" }}><Heart size={12} /> {t.business.communityVerified}</span>
               )}
             </div>
             <p className="mt-2 flex items-center gap-1 text-sm text-muted">
