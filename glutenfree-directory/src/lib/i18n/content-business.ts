@@ -105,6 +105,18 @@ export const BUSINESS_EN: Record<string, BusinessTranslation> = {
     services: ["Dedicated oven", "Fast delivery", "Family friendly"],
     glutenFreeMenu: ["Gluten-free round pizza", "Stuffed focaccia", "Gluten-free desserts"],
   },
+  "biz-20": {
+    shortDescription: "Traditional 100% gluten-free Roman cuisine in the heart of Trastevere.",
+    description: "A trattoria in the heart of Trastevere specializing in classic Roman cuisine reinvented gluten-free: from house-made fresh pasta to suppli fried in dedicated oil, with an AIC-certified kitchen and staff trained on cross-contamination.",
+    services: ["Dedicated kitchen", "Online booking", "Traditional Roman menu", "Kid-friendly"],
+    glutenFreeMenu: ["Gluten-free cacio e pepe", "Amatriciana with gluten-free pasta", "Gluten-free suppli al telefono", "Gluten-free tiramisù"],
+  },
+  "biz-21": {
+    shortDescription: "AIC-certified dedicated oven for crispy gluten-free Roman-style pizza.",
+    description: "A pizzeria in the Testaccio district with a separate AIC-certified oven, specializing in crispy Roman-style gluten-free pizza and pizza by the slice, plus a selection of Roman fried snacks prepared in dedicated oil.",
+    services: ["AIC-certified dedicated oven", "Round and by-the-slice pizza", "Delivery", "Family friendly"],
+    glutenFreeMenu: ["Crispy Roman gluten-free pizza", "Gluten-free pizza by the slice", "Dedicated fried snacks", "Gluten-free trapizzino"],
+  },
 };
 
 const REVIEW_EN: Record<string, { title: string; body: string }> = {

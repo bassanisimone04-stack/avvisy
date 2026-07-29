@@ -342,6 +342,11 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     sections: [
       { h2: "Eating gluten-free in Milan: don't let the fear of contamination hold you back", body: "Anyone with celiac disease knows it well: the hardest part of eating out isn't choosing what to order, it's trusting the venue. The fear of cross-contamination can turn even a simple pizza night with friends into a source of anxiety. The good news is that <strong>Milan is now one of the best-equipped Italian cities for gluten-free dining</strong>: from pizzerias with dedicated ovens to restaurants with fully gluten-free kitchens, gluten-free venues in Milan keep growing. In this guide we've gathered our trusted picks, verified by the Mappa Senza Glutine community, to help you find where to eat gluten-free in Milan without compromising on safety." },
+      { h2: "Frequently asked questions about eating gluten-free in Milan", body: "Before we get to the addresses, let's answer the questions we hear most from celiacs planning a dinner or a weekend in the city.", h3: [
+        { title: "Where can I eat gluten-free safely in Milan?", body: "The safest venues in Milan are those with AIC certification, a dedicated kitchen or oven, and reviews verified by the celiac community, like Osteria Senza Confini or Pizzeria La Spiga d'Oro. Avoid venues that only offer generic \"gluten-free options\" without specific contamination controls: always check the Mappa Senza Glutine directory before booking." },
+        { title: "Is it risky to eat out in Milan if I have celiac disease?", body: "It isn't risky if you choose venues equipped with verified anti-contamination procedures, which are increasingly common in the city. The risk rises at generic restaurants that add \"gluten-free\" dishes to the menu without training staff or separating cooking equipment: checking in advance remains the golden rule." },
+        { title: "How can I quickly find a gluten-free restaurant near me in Milan?", body: "The fastest way is to use a geolocated directory with filters for AIC certification and venue category. Searching only on generic Google Maps often returns unverified venues: it's better to rely on sources like ours, which collect real reports from the celiac community." },
+      ] },
       { h2: "The best gluten-free pizzerias in Milan", body: "Pizza remains one of the highest cross-contamination risks, since wheat flour spreads easily in a shared oven: that's why we always look for venues with a <strong>separate or dedicated oven</strong> for gluten-free pizzas.", h3: [
         { title: "Pizzeria La Spiga d'Oro", body: "Just outside Milan, in Monza, <a href=\"/en/directory/pizzeria-la-spiga-d-oro-monza\">Pizzeria La Spiga d'Oro</a> is one of our trusted picks: an <strong>AIC-certified separate oven</strong> and a long-leavened gluten-free dough, cooked strictly in a wood-fired oven. Don't miss the gluten-free margherita and the pan-baked pizza, plus the gluten-free fried starters if you want to begin with something indulgent." },
         { title: "Forno di Brera", body: "In the heart of the Brera district, this small bakery reserves a corner entirely dedicated to gluten-free preparation, with take-away pizza by the slice, perfect for a quick, worry-free lunch break." },
@@ -351,11 +356,22 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
         { title: "Il Molo dei Navigli", body: "Focused on seafood, this restaurant along the Navigli canals uses frying oil dedicated exclusively to gluten-free dishes and makes both its pasta and bread in-house, keeping cross-contamination risk to a minimum." },
         { title: "Trattoria Meneghina Gluten Free", body: "For traditional Milanese dishes eaten with total peace of mind, this trattoria serves breaded veal cutlet, saffron risotto and ossobuco, with a <strong>dedicated breading station</strong> to avoid any contact with wheat flour." },
       ] },
+      { h2: "AIC certification, menus and dedicated kitchens: the technical safety questions", body: "Now that you've seen the venues, it's worth understanding what actually separates a safe experience from a risky one: here are the more technical questions we get about food safety.", h3: [
+        { title: "What's the difference between an AIC-certified restaurant and a non-certified one?", body: "An AIC-certified venue has passed annual checks on procedures, suppliers and staff training on cross-contamination. A non-certified venue can still be safe, but the guarantee depends only on the direct experience of those who've tried it: certification reduces the margin for error." },
+        { title: "How do I read a gluten-free menu at a restaurant?", body: "A good gluten-free menu clearly marks \"gluten-free\" dishes and specifies whether they're prepared in a dedicated area or with the same equipment as other dishes. If the menu doesn't make this clear, it's always best to ask directly before ordering, rather than assuming." },
+        { title: "What does \"dedicated kitchen\" mean and why does it matter so much?", body: "A dedicated kitchen is a separate area used exclusively for gluten-free preparation, with no contact with flour or \"regular\" utensils. It's the element that offers the strongest guarantee against cross-contamination, more than simply having gluten-free dishes on the menu." },
+        { title: "Can a \"gluten-free\" dish still get contaminated during cooking?", body: "Yes, if it's cooked in the same water, fryer or grill used for dishes containing gluten, even if the starting ingredient is gluten-free. That's why asking whether cooking is done with dedicated equipment matters more than the label on the dish alone." },
+      ] },
       { h2: "Gluten-free bakeries and breakfast spots in Milan", body: "Breakfast can be a moment of relaxation too, not stress, thanks to these addresses.", h3: [
         { title: "Pasticceria Dolce Vita Gluten Free", body: "A lab entirely dedicated to gluten-free baking, with croissants, cakes and biscuits made fresh every day: the ideal choice for breakfast or a treat to take home worry-free." },
         { title: "Caffè Corso Senza Glutine", body: "Right in the city center, it offers a pastry case refreshed daily and a wide selection of gluten-free bread and sandwiches, also great for a quick lunch between appointments." },
       ] },
       { h2: "Practical tips for eating gluten-free in Milan safely", body: "A few extra precautions help you enjoy the experience without stress: <ul><li><strong>Book ahead</strong>, especially at the most popular venues and on weekends, when the kitchen is at full capacity.</li><li><strong>Always mention celiac disease</strong> when booking, not just at the table, so the staff can prepare in advance.</li><li><strong>Ask whether the kitchen or oven is dedicated</strong> or shared: well-trained staff will answer confidently and without hesitation.</li><li><strong>Check the venue's AIC certification</strong>, an extra guarantee of periodic food-safety checks.</li><li><strong>Always carry a few safe snacks</strong>, useful in case of unexpected delays.</li></ul>" },
+      { h2: "Bookings, takeaway and kids: the practical questions before you go out", body: "One last set of practical questions, useful for planning your gluten-free outing in Milan.", h3: [
+        { title: "Do I need to book ahead at gluten-free restaurants in Milan?", body: "Yes, it's strongly recommended at the most popular venues, especially on weekends, because the dedicated kitchen can only handle a limited number of gluten-free covers. Booking also lets you mention celiac disease in advance, so staff can prepare before you arrive." },
+        { title: "Can I bring celiac children to a gluten-free restaurant in Milan?", body: "Yes, venues with a dedicated kitchen are generally the safest choice for celiac children too, often with menus designed specifically for them. It's still useful to mention this when booking, specifying the child's age for more attentive service." },
+        { title: "Are there safe gluten-free takeaway options in Milan?", body: "Yes, many certified venues also offer takeaway prepared with the same dedicated procedures as dine-in service. Always check that the packaging is sealed separately from other orders, to avoid contamination during transport." },
+      ] },
     ],
     faqs: [
       { question: "What are the best gluten-free restaurants in Milan?", answer: "Among our trusted picks are Osteria Senza Confini in Milan and Pizzeria La Spiga d'Oro in Monza, both verified by our community and listed in the Mappa Senza Glutine directory." },
@@ -363,6 +379,140 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "Do I always need to book ahead at gluten-free restaurants in Milan?", answer: "Not always, but it's strongly recommended at the most popular venues and on weekends, when demand is higher and dedicated spots can fill up quickly." },
     ],
     tags: ["milan", "restaurants", "pizzerias", "guides"],
+  },
+  "art-16": {
+    title: "What Can a Celiac Eat? The Complete Guide to Safe and Unsafe Foods",
+    excerpt: "Which foods are safe for celiacs and which should always be avoided: a practical guide to grocery shopping and cooking gluten-free without doubts or contamination risks.",
+    authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "Grains like wheat, barley, rye and their derivatives should always be avoided: they're the main sources of gluten in the Italian diet.",
+      "Rice, corn, buckwheat, quinoa and legumes are naturally gluten-free and can be eaten freely.",
+      "Many processed foods (sauces, stock cubes, cold cuts) can contain hidden gluten: always check the label or the AIC Food Guide.",
+      "The Crossed Grain symbol on packaging remains the fastest way to spot a safe product on the shelf.",
+    ],
+    sections: [
+      { h2: "What does \"eating gluten-free\" really mean", body: "Getting a celiac disease diagnosis means rethinking your grocery shopping and kitchen habits from scratch, and in the first weeks the most common question is always the same: <strong>what can I actually eat without risk?</strong> The good news is that there are plenty of naturally gluten-free foods, and the diet can stay varied and enjoyable. The real challenge lies in processed foods, where gluten can hide in ingredients you wouldn't expect, like thickeners, stock cubes or ready-made sauces." },
+      { h2: "Foods that are always safe for a celiac", body: "These are the food groups you can rely on without worry, naturally gluten-free.", h3: [
+        { title: "Gluten-free grains and flours", body: "Rice, corn, buckwheat, quinoa, amaranth, millet and the flours made from them are naturally gluten-free and form the safe backbone of a celiac's diet, as long as they haven't been contaminated during processing or packaging." },
+        { title: "Fresh fruit, vegetables, meat and fish", body: "Fresh fruit and vegetables, meat, fish and plain eggs contain no gluten: the risk only appears if they're breaded, floured, or cooked alongside gluten-containing foods on the same surface." },
+        { title: "Legumes and nuts", body: "Legumes such as chickpeas, lentils and beans, as well as plain nuts, are safe and provide an excellent source of plant protein and fiber in a gluten-free diet." },
+      ] },
+      { h2: "Foods to always avoid", body: "On the other hand, these foods naturally contain gluten and should always be excluded from a celiac's diet.", h3: [
+        { title: "Wheat, barley, rye and their derivatives", body: "Wheat, spelt, barley, rye, kamut and their derivatives (bread, pasta, pizza, traditional biscuits) contain gluten and should always be avoided, unless explicitly formulated and certified gluten-free." },
+        { title: "Oats: a special case", body: "Oats don't naturally contain gluten, but are often contaminated during growing or processing: only eat oats specifically certified \"gluten-free\" on the packaging." },
+      ] },
+      { h2: "Hidden-risk foods: when you need to read the label", body: "Some processed products can contain gluten even when you'd least expect it: <ul><li><strong>Ready-made sauces and condiments</strong>, often thickened with wheat flour.</li><li><strong>Stock cubes and soup mixes</strong>, which may contain wheat starch.</li><li><strong>Cold cuts and cured meats</strong>, where gluten can appear as a thickener or flavoring.</li><li><strong>Ice cream and industrial desserts</strong>, due to wafers, crumbled biscuits or wheat-based thickeners.</li><li><strong>Traditional beer</strong>, made with malted barley, unlike certified gluten-free beers.</li></ul> In all these cases, there's only one golden rule: <strong>always check the label</strong> or consult the AIC Food Guide before buying." },
+      { h2: "How to recognize a safe product: the Crossed Grain symbol and label wording", body: "The Crossed Grain symbol, managed by AIC, is the fastest way to spot a product verified annually on the shelf. Alternatively, the \"gluten-free\" claim is regulated at the European level and guarantees a content below 20 ppm, the safety threshold recognized even for the most sensitive celiacs." },
+    ],
+    faqs: [
+      { question: "Can a celiac eat rice and corn without any problems?", answer: "Yes, rice and corn are naturally gluten-free and form a safe base for the diet, provided they haven't been processed in facilities at risk of cross-contamination with gluten-containing grains." },
+      { question: "Does gluten-free oats really exist?", answer: "Yes, there are oat varieties grown and processed in dedicated supply chains, certified \"gluten-free\" on the label: only these are safe for celiacs, while regular oats should be avoided due to contamination risk." },
+      { question: "How can I tell if a processed product contains hidden gluten?", answer: "Always check the ingredient list and look for the \"gluten-free\" claim or the Crossed Grain symbol: when in doubt, the AIC Food Guide is the most reliable tool for checking thousands of products." },
+    ],
+    tags: ["nutrition", "celiac disease", "guides"],
+  },
+  "art-17": {
+    title: "How Much Does a Gluten-Free Diet Cost? Costs, AIC Vouchers and Tax Deductions",
+    excerpt: "How much more people on a gluten-free diet spend, how the AIC card and pharmacy vouchers work, and which tax deductions celiacs are entitled to in Italy.",
+    authorRole: "Food safety content specialist",
+    keyTakeaways: [
+      "Gluten-free products cost on average 2 to 4 times more than their gluten-containing equivalents, especially bread and pasta.",
+      "Italy's National Health Service provides a monthly voucher usable at pharmacies and partner stores to buy certified substitute products.",
+      "The voucher amount varies by age and gender and is periodically updated by the Ministry of Health.",
+      "Some healthcare expenses related to celiac disease are also tax-deductible on your annual tax return.",
+    ],
+    sections: [
+      { h2: "Why a gluten-free diet costs more", body: "Anyone diagnosed with celiac disease soon runs into a practical reality: gluten-free products, especially bread, pasta and baked goods, are on average priced higher than their traditional equivalents, due to dedicated production chains, stricter controls and lower production volumes. Knowing the economic support tools provided by Italy's National Health Service helps manage this expense without giving up quality or food safety." },
+      { h2: "The AIC card and the monthly voucher for gluten-free products", body: "Here's how Italy's main economic support tool for celiacs actually works.", h3: [
+        { title: "How to get the monthly voucher", body: "After a celiac disease diagnosis, the specialist doctor issues a certification that lets you apply at your local ASL (health authority) for a monthly voucher, usable at pharmacies and partner stores to buy gluten-free substitute products listed in the AIC Food Guide." },
+        { title: "How much the voucher is worth and how it works", body: "The amount varies by age and gender brackets, set and updated by the Ministry of Health, and is generally higher for teenagers still growing. The voucher is loaded onto a health card or issued via a paper list, depending on the region of residence, and can only be used for products actually listed in the Food Guide." },
+      ] },
+      { h2: "Tax deductions related to celiac disease", body: "Besides the monthly voucher, some healthcare expenses closely tied to managing celiac disease, such as specialist visits or diagnostic tests not covered by the National Health Service, may qualify as deductible expenses on your tax return: it's always advisable to keep receipts and check with an accountant or tax assistance center which items are actually deductible for the relevant tax year." },
+      { h2: "How to save money without compromising on safety", body: "A few precautions help keep costs down without ever compromising on food safety: <ul><li><strong>Always use the monthly voucher</strong> for staples like bread, pasta and flours, where the savings are greatest.</li><li><strong>Focus on naturally gluten-free foods</strong> like rice, corn, legumes and vegetables, often cheaper than packaged substitute products.</li><li><strong>Compare prices between pharmacies, supermarkets and specialty stores</strong>, which can vary significantly for the same product.</li><li><strong>Cook at home when possible</strong>, such as fresh pasta, to cut the cost of ready-made products.</li></ul>" },
+    ],
+    faqs: [
+      { question: "Who is entitled to the monthly voucher for gluten-free products?", answer: "The voucher is available to anyone diagnosed with celiac disease or dermatitis herpetiformis certified by a specialist, and can be requested at the ASL of residence regardless of age." },
+      { question: "Does the voucher cover the entire cost of gluten-free products?", answer: "Not always: the amount is calculated monthly and by age bracket, so it may not cover the full expense, especially for families with higher consumption or specific needs." },
+      { question: "Are gluten-free restaurant meals tax-deductible?", answer: "No, the voucher and tax deductions mainly cover substitute products bought at pharmacies or partner stores and certain healthcare expenses, not restaurant meals." },
+    ],
+    tags: ["celiac disease", "vouchers", "guides", "rights"],
+  },
+  "art-18": {
+    title: "Gluten Sensitivity or Celiac Disease? The Differences You Need to Know",
+    excerpt: "Celiac disease, non-celiac gluten sensitivity and wheat allergy aren't the same thing: here's how the symptoms, diagnosis and management of each condition differ.",
+    authorRole: "Nutritionist & biologist",
+    keyTakeaways: [
+      "Celiac disease is an autoimmune condition with documentable intestinal damage; gluten sensitivity is not.",
+      "Non-celiac gluten sensitivity causes similar symptoms but without the antibodies or villous damage typical of celiac disease.",
+      "Wheat allergy is a third, distinct condition, immune-mediated but not autoimmune, with reactions that can occur quickly after ingestion.",
+      "Only a medical diagnosis, not self-assessment of symptoms, can reliably distinguish between the three conditions.",
+    ],
+    sections: [
+      { h2: "Why it's easy to confuse celiac disease and gluten sensitivity", body: "Bloating, fatigue, headaches and intestinal discomfort after eating gluten-containing foods can have very different origins, and it's common for people experiencing them to wonder whether it's celiac disease, simple sensitivity, or something else. Correctly distinguishing between these conditions isn't just a matter of terminology: it radically changes the diagnostic path and day-to-day management." },
+      { h2: "Celiac disease: an autoimmune condition with documentable damage", body: "Celiac disease is an autoimmune condition in which gluten triggers an immune response that damages the intestinal villi, damage that can be detected with specific blood tests and confirmed with a duodenal biopsy. It's the only one of the three conditions with an objective, internationally standardized diagnostic path." },
+      { h2: "Non-celiac gluten sensitivity: similar symptoms, different mechanism", body: "A real but still less understood condition than celiac disease, which deserves to be carefully distinguished.", h3: [
+        { title: "How it shows up", body: "People with non-celiac gluten sensitivity can have symptoms very similar to celiac disease, such as bloating, abdominal pain and fatigue, but without the specific antibodies of celiac disease or the villous damage found on biopsy." },
+        { title: "How it's diagnosed", body: "There's no specific test for gluten sensitivity: diagnosis is reached by exclusion, after ruling out celiac disease and wheat allergy with the appropriate tests, then observing symptom improvement on a gluten-free diet." },
+      ] },
+      { h2: "Wheat allergy: a third condition, not to be confused with the first two", body: "Wheat allergy is an immune reaction mediated by IgE antibodies, similar to other food allergies, which can appear quickly after ingestion with symptoms like hives, swelling or, in more severe cases, breathing difficulties. Unlike celiac disease, it doesn't concern gluten alone but wheat proteins as a whole, and is diagnosed with specific allergy tests such as skin prick tests or specific IgE blood tests." },
+      { h2: "Why a medical diagnosis is always essential", body: "Removing gluten from your diet without a clear diagnosis carries more than one concrete risk: <ul><li><strong>It makes a celiac disease diagnosis impossible</strong>, since testing requires gluten to still be present in the diet.</li><li><strong>It can mask other conditions</strong> that require specific treatment beyond diet alone.</li><li><strong>It risks leading to an unbalanced diet</strong> if started without the support of a specialist or nutritionist.</li></ul> That's why, faced with persistent symptoms after eating gluten, the first step should always be a medical evaluation, not removing gluten from your diet on your own." },
+    ],
+    faqs: [
+      { question: "Is gluten sensitivity as dangerous as celiac disease?", answer: "No, non-celiac gluten sensitivity doesn't cause the autoimmune damage to the intestinal villi typical of celiac disease, even though the symptoms experienced can be just as bothersome in daily life." },
+      { question: "Can I test for gluten sensitivity on my own?", answer: "No, there's no specific lab test for gluten sensitivity: diagnosis first requires ruling out celiac disease and wheat allergy with the support of a specialist doctor." },
+      { question: "Do I need to stop eating gluten before testing if I suspect celiac disease?", answer: "No, it's essential to keep eating gluten until all testing is complete: removing it early can skew the results of blood tests and biopsy." },
+    ],
+    tags: ["celiac disease", "gluten sensitivity", "health"],
+  },
+  "art-19": {
+    title: "The Best Gluten-Free Restaurants and Pizzerias in Rome: The Complete 2026 Guide",
+    excerpt: "Where to eat gluten-free in Rome with confidence: traditional trattorias, pizzerias with dedicated ovens and certified bakeries, from gluten-free cacio e pepe to scrupulous attention to cross-contamination.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Rome now has AIC-certified trattorias and pizzerias able to reinvent classics like cacio e pepe and crispy Roman-style pizza gluten-free.",
+      "Mentioning celiac disease when booking, not just at the table, helps staff prepare in advance.",
+      "Venues with dedicated kitchens or ovens and AIC certification offer the strongest guarantees against cross-contamination.",
+      "On weekends and in the most touristy neighborhoods, booking ahead is almost always necessary.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Rome: between classic dishes and the fear of contamination", body: "Cacio e pepe, amatriciana, suppli: Roman cuisine is among Italy's most beloved, but for celiacs it can also seem among the hardest to navigate safely, given how many dishes rely on fresh pasta and shared frying. The good news is that <strong>Rome now counts a growing number of certified venues</strong>, able to reinvent even the most traditional dishes gluten-free. In this guide we've gathered our trusted picks, verified by the Mappa Senza Glutine community, to help you find where to eat gluten-free in Rome without giving up tradition or safety." },
+      { h2: "Frequently asked questions about eating gluten-free in Rome", body: "Before we get to the addresses, let's answer the questions we hear most from celiacs visiting or living in the city.", h3: [
+        { title: "Where can I eat gluten-free safely in Rome?", body: "The safest venues in Rome are those with AIC certification, a dedicated kitchen or oven, and reviews verified by the celiac community, like Trattoria de Roma Senza Glutine or Pizzeria Testaccio Gluten Free. Avoid venues that only offer generic \"gluten-free options\" without specific contamination controls: always check the Mappa Senza Glutine directory before booking." },
+        { title: "Is it risky to eat out in Rome if I have celiac disease?", body: "It isn't risky if you choose venues equipped with verified anti-contamination procedures, increasingly common even in the most touristy neighborhoods. The risk rises at generic trattorias that add \"gluten-free\" dishes to the menu without training staff or separating cooking equipment: checking in advance remains the golden rule." },
+        { title: "How can I quickly find a gluten-free restaurant near me in Rome?", body: "The fastest way is to use a geolocated directory with filters for AIC certification and venue category. Searching only on generic Google Maps often returns unverified venues: it's better to rely on sources like ours, which collect real reports from the celiac community." },
+      ] },
+      { h2: "The best gluten-free pizzerias in Rome", body: "Roman-style pizza, thin and crispy, requires delicate dough handling: that's why we always look for venues with a <strong>separate or dedicated oven</strong> for gluten-free pizzas.", h3: [
+        { title: "Pizzeria Testaccio Gluten Free", body: "In the Testaccio district, <a href=\"/en/directory/pizzeria-testaccio-gluten-free-roma\">Pizzeria Testaccio Gluten Free</a> is one of our trusted picks: an <strong>AIC-certified separate oven</strong> dedicated to crispy Roman-style gluten-free pizza, plus excellent pizza by the slice and Roman fried snacks prepared in dedicated oil." },
+        { title: "Forno Prati Senza Glutine", body: "In the Prati district, this small bakery reserves a corner entirely dedicated to gluten-free preparation, with take-away pizza by the slice, perfect for a quick lunch break near the Vatican Museums." },
+      ] },
+      { h2: "Gluten-free restaurants and trattorias in Rome: where you can sit down worry-free", body: "For a more structured dinner, here are the restaurants we recommend to anyone looking for maximum peace of mind about cross-contamination.", h3: [
+        { title: "Trattoria de Roma Senza Glutine", body: "In the heart of Trastevere, <a href=\"/en/directory/trattoria-de-roma-senza-glutine-roma\">Trattoria de Roma Senza Glutine</a> serves <strong>Roman classics reinvented gluten-free</strong>, from cacio e pepe to amatriciana, with a dedicated kitchen and suppli fried in reserved oil. Don't miss the gluten-free tiramisù and the house-made fresh pasta." },
+        { title: "Osteria Monti Senza Pensieri", body: "In the Monti district, this osteria offers an almost entirely gluten-free menu, with a dedicated wood-fired oven for bread and meticulous attention to separating kitchen utensils." },
+        { title: "Antica Trattoria dei Fori", body: "Near the Roman Forum, this historic trattoria has carved out a cooking line entirely dedicated to gluten-free, with carbonara, ossobuco and Roman classics reinvented without compromise." },
+      ] },
+      { h2: "Gluten-free bakeries and breakfast spots in Rome", body: "Breakfast can be a moment of relaxation too, not stress, thanks to these addresses.", h3: [
+        { title: "Pasticceria Trionfale Gluten Free", body: "Near the Trionfale market, this lab is entirely dedicated to gluten-free baking, with maritozzi, croissants and Roman biscuits baked fresh every morning." },
+        { title: "Caffè Navona Senza Glutine", body: "A short walk from Piazza Navona, it offers a pastry case refreshed daily and a wide selection of gluten-free bread and sandwiches, also great for a break during sightseeing." },
+      ] },
+      { h2: "AIC certification, menus and dedicated kitchens: the technical safety questions", body: "Now that you've seen the venues, it's worth understanding what actually separates a safe experience from a risky one in Rome.", h3: [
+        { title: "What's the difference between an AIC-certified venue and a non-certified one?", body: "An AIC-certified venue has passed annual checks on procedures, suppliers and staff training on cross-contamination. A non-certified venue can still turn out to be safe, but the guarantee rests only on the direct experience of those who've tried it: certification significantly reduces the margin for error." },
+        { title: "How do I read a gluten-free menu at a Roman trattoria?", body: "A good gluten-free menu clearly marks which dishes are \"gluten-free\" and whether they're prepared in a dedicated area or with the same equipment used for other dishes. If it isn't specified, it's better to ask directly before ordering, especially for complex preparations like fresh pasta." },
+        { title: "Why is a dedicated kitchen so important for dishes like cacio e pepe?", body: "Dishes like cacio e pepe or carbonara require handmade fresh pasta: without a dedicated work area, the risk of contact with wheat flour while rolling it out is very high. A separate kitchen drastically reduces this risk compared to a simple \"gluten-free\" variant of the traditional dish." },
+        { title: "Can a \"gluten-free\" Roman dish still get contaminated during cooking?", body: "Yes, if cooked in the same water, fryer or pan used for gluten-containing dishes, even starting from a gluten-free ingredient. That's why, with dishes like suppli or Roman fried snacks, it's always worth asking whether frying is done in dedicated oil." },
+      ] },
+      { h2: "Practical tips for eating gluten-free in Rome safely", body: "A few extra precautions help you enjoy the experience without stress, especially in the city's most touristy neighborhoods: <ul><li><strong>Book ahead</strong>, especially near the most touristy areas like the historic center, where tables fill up fast.</li><li><strong>Always mention celiac disease</strong> when booking, not just at the table, so staff can prepare in advance.</li><li><strong>Ask whether the kitchen or oven is dedicated</strong> or shared: well-trained staff will answer confidently and without hesitation.</li><li><strong>Check the venue's AIC certification</strong>, an extra guarantee of periodic food-safety checks.</li><li><strong>Always carry a few safe snacks</strong>, useful for long days spent between sights.</li></ul>" },
+      { h2: "Bookings, takeaway and kids: the practical questions before you go out", body: "One last set of practical questions, useful for planning your gluten-free outing in Rome.", h3: [
+        { title: "Do I need to book ahead at gluten-free restaurants in Rome?", body: "Yes, it's strongly recommended especially in the most touristy areas and on weekends, because the dedicated kitchen can only handle a limited number of gluten-free covers. Booking also lets you mention celiac disease in advance, so staff can prepare before you arrive." },
+        { title: "Can I bring celiac children to a gluten-free restaurant in Rome?", body: "Yes, venues with a dedicated kitchen are generally the safest choice for celiac children too, often with dishes designed just for them. It's still useful to mention this when booking, specifying the child's age for more attentive service." },
+        { title: "Are there safe gluten-free takeaway options in Rome?", body: "Yes, many certified venues also offer takeaway prepared with the same dedicated procedures as dine-in service, handy for a quick lunch between sightseeing stops. Always check that the packaging is sealed separately from other orders, to avoid contamination during transport." },
+      ] },
+    ],
+    faqs: [
+      { question: "What are the best gluten-free restaurants in Rome?", answer: "Among our trusted picks are Trattoria de Roma Senza Glutine in Trastevere and Pizzeria Testaccio Gluten Free, both verified by our community and listed in the Mappa Senza Glutine directory." },
+      { question: "How can I tell if a Roman trattoria is really safe for celiacs?", answer: "Check for AIC certification, ask whether the kitchen and oven are dedicated or separate, and rely on verified reviews from other celiacs, like the ones in our directory." },
+      { question: "Do I always need to book ahead at gluten-free restaurants in Rome?", answer: "Not always, but it's strongly recommended in the most touristy areas and on weekends, when demand is higher and dedicated spots can fill up quickly." },
+    ],
+    tags: ["rome", "restaurants", "pizzerias", "guides"],
   },
 };
 
