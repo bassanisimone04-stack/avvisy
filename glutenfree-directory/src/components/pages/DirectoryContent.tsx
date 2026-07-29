@@ -5,13 +5,15 @@ import BusinessCard from "@/components/BusinessCard";
 import DirectoryFilters from "@/components/DirectoryFilters";
 import QuickFilters from "@/components/QuickFilters";
 import SortSelect from "@/components/SortSelect";
-import { JsonLd, itemListJsonLd } from "@/lib/seo";
+import FaqAccordion from "@/components/FaqAccordion";
+import { JsonLd, itemListJsonLd, faqJsonLd } from "@/lib/seo";
 import { parseFilters, filterBusinesses } from "@/lib/filter-businesses";
 import { getCategoryInfo, categoryLabelPlural } from "@/lib/categories";
 import { getLocalizedBusiness } from "@/lib/i18n/content-business";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary, tf } from "@/lib/i18n/dictionary";
+import { directoryFaqs } from "@/lib/directory-faqs";
 
 const PAGE_SIZE = 9;
 
@@ -31,6 +33,7 @@ export default function DirectoryContent({
   const catInfo = filters.categoria ? getCategoryInfo(filters.categoria) : undefined;
   const dirHref = localeHref(locale, "/directory");
   const cityLabel = filters.comune ? cityName(filters.comune, locale) : undefined;
+  const faqs = directoryFaqs(locale, cityLabel, catInfo ? categoryLabelPlural(catInfo, locale) : undefined);
 
   const title = catInfo
     ? tf(cityLabel ? t.directory.titleCategoryCity : t.directory.titleCategory, { category: categoryLabelPlural(catInfo, locale), city: cityLabel ?? "" })
@@ -41,6 +44,7 @@ export default function DirectoryContent({
   return (
     <div className="container-page py-10">
       <JsonLd data={itemListJsonLd(pageResults.map((b) => ({ name: b.name, path: localeHref(locale, `/directory/${b.slug}`) })))} />
+      <JsonLd data={faqJsonLd(faqs)} />
       <Breadcrumbs locale={locale} items={[{ name: t.nav.directory, path: "/directory" }]} />
 
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
@@ -86,6 +90,11 @@ export default function DirectoryContent({
               })}
             </nav>
           )}
+
+          <div className="mt-12">
+            <h2 className="mb-4 font-editorial text-xl font-semibold text-ink">{t.directory.faqTitle}</h2>
+            <FaqAccordion items={faqs} />
+          </div>
         </div>
       </div>
     </div>
