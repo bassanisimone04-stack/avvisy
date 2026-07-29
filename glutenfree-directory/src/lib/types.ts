@@ -74,6 +74,8 @@ export interface Business {
   services: string[];
   glutenFreeMenu: string[];
   gallerySeeds: number[];
+  /** Foto reale caricata dal locale o verificata da noi; se assente si usa l'illustrazione SVG. */
+  photoUrl?: string;
   reviews: Review[];
   faqs: FaqItem[];
   featured?: boolean;

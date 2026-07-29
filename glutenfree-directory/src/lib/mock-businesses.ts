@@ -41,6 +41,7 @@ interface Seed {
   description: string;
   shortDescription: string;
   gallerySeeds: number[];
+  photoUrl?: string;
   featured?: boolean;
 }
 
@@ -150,6 +151,7 @@ export const BUSINESSES: Business[] = seeds.map((s, idx) => {
     services: s.services,
     glutenFreeMenu: s.glutenFreeMenu,
     gallerySeeds: s.gallerySeeds,
+    photoUrl: s.photoUrl,
     reviews: [],
     faqs: toFaqs(s.name, s.city, s.category),
     featured: s.featured,

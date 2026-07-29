@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import CoverPhoto from "@/components/CoverPhoto";
 import RatingStars from "@/components/RatingStars";
 import FavoriteButton from "@/components/FavoriteButton";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -74,7 +75,11 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
 
           {/* Gallery */}
           <div className="mt-6 grid grid-cols-4 gap-2 sm:grid-cols-4">
-            <PlaceholderImage seed={business.gallerySeeds[0]} variant={business.category} className="col-span-4 rounded-2xl sm:col-span-2 sm:row-span-2" ratio="aspect-[16/10]" label={business.name} />
+            {business.photoUrl ? (
+              <CoverPhoto photoUrl={business.photoUrl} seed={business.gallerySeeds[0]} variant={business.category} className="col-span-4 rounded-2xl sm:col-span-2 sm:row-span-2" ratio="aspect-[16/10]" label={business.name} priority />
+            ) : (
+              <PlaceholderImage seed={business.gallerySeeds[0]} variant={business.category} className="col-span-4 rounded-2xl sm:col-span-2 sm:row-span-2" ratio="aspect-[16/10]" label={business.name} />
+            )}
             {business.gallerySeeds.slice(1).map((s) => (
               <PlaceholderImage key={s} seed={s} variant={business.category} className="col-span-2 rounded-xl sm:col-span-1" ratio="aspect-square" label={business.name} />
             ))}
