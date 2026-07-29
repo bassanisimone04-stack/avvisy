@@ -36,8 +36,11 @@ export const FAQ_GROUPS_IT: FaqGroup[] = [
     ],
   },
   {
-    title: "Usare Mappa Senza Glutine",
+    title: "Mappa senza glutine e gluten free: come funziona",
     items: [
+      { question: "Cos'è una mappa senza glutine e a cosa serve?", answer: "Una mappa senza glutine è uno strumento che geolocalizza ristoranti, pizzerie, hotel e negozi verificati per celiaci: Mappa Senza Glutine raccoglie certificazioni AIC, cucine dedicate e recensioni della community in un'unica mappa interattiva, gratuita da consultare via browser o smartphone." },
+      { question: "Dove trovo una mappa dei ristoranti gluten free vicino a me?", answer: "Su mappasenzaglutine.it: apri la mappa interattiva in home o nella sezione Directory, attiva la geolocalizzazione e filtra per categoria o certificazione AIC per vedere subito i locali gluten free più vicini a te." },
+      { question: "Qual è la differenza tra \"senza glutine\" e \"gluten free\"?", answer: "Nessuna: indicano la stessa cosa. \"Gluten free\" è semplicemente la dicitura inglese, molto usata in etichetta e nelle ricerche online, mentre \"senza glutine\" è il termine ufficiale in italiano." },
       { question: "Come trovo ristoranti senza glutine vicino a me?", answer: "Usa la mappa interattiva e la directory: filtra per certificazione AIC, categoria e distanza per trovare in pochi secondi i locali verificati più vicini a te, ovunque tu sia in Italia." },
       { question: "Cos'è la certificazione AIC e perché è importante?", answer: "È il marchio rilasciato dall'Associazione Italiana Celiachia ai locali che rispettano un protocollo rigoroso su acquisti, stoccaggio e preparazione dei pasti senza glutine, verificato con controlli periodici." },
       { question: "Posso segnalare un errore su un'attività o un prodotto?", answer: "Sì, dal tuo profilo utente puoi segnalare informazioni non aggiornate: il nostro team verifica ogni segnalazione entro 48 ore lavorative." },
@@ -77,8 +80,11 @@ export const FAQ_GROUPS_EN: FaqGroup[] = [
     ],
   },
   {
-    title: "Using Mappa Senza Glutine",
+    title: "Gluten-free map: how it works",
     items: [
+      { question: "What is a gluten-free map and what is it for?", answer: "A gluten-free map is a tool that geolocates verified restaurants, pizzerias, hotels and shops for celiacs: Mappa Senza Glutine brings together AIC certifications, dedicated kitchens and community reviews in a single interactive map, free to use from browser or smartphone." },
+      { question: "Where can I find a map of gluten-free restaurants near me?", answer: "On mappasenzaglutine.it: open the interactive map on the homepage or in the Directory section, enable location and filter by category or AIC certification to instantly see the nearest gluten-free venues." },
+      { question: "Is there a difference between \"gluten-free\" and \"senza glutine\"?", answer: "No, they mean the same thing: \"senza glutine\" is simply the Italian term for \"gluten-free\", used interchangeably on labels and in online searches in Italy." },
       { question: "How do I find gluten-free restaurants near me?", answer: "Use the interactive map and directory: filter by AIC certification, category and distance to find verified nearby venues in seconds, wherever you are in Italy." },
       { question: "What is AIC certification and why does it matter?", answer: "It's the trademark awarded by the Italian Celiac Association to venues that follow a strict protocol on purchasing, storage and preparation of gluten-free meals, verified through periodic audits." },
       { question: "Can I report an error on a business or product?", answer: "Yes, from your user profile you can report outdated information: our team reviews every report within 48 business hours." },
