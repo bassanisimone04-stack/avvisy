@@ -1,5 +1,8 @@
 import type { Business, OpeningHoursDay, Review } from "./types";
 import { slugify } from "./format";
+import { getCategoryInfo, categoryLabelPlural } from "./categories";
+
+const FEMININE_CATEGORIES = new Set(["pizzeria", "farmacia", "gelateria"]);
 
 const DAYS = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
 
@@ -314,10 +317,16 @@ const seeds: Seed[] = [
   },
 ];
 
-function toFaqs(name: string): Business["faqs"] {
+function toFaqs(name: string, city: string, categorySlug: Business["category"]): Business["faqs"] {
+  const cat = getCategoryInfo(categorySlug);
+  const catLabel = (cat ? categoryLabelPlural(cat, "it") : "locali").toLowerCase();
+  const feminine = FEMININE_CATEGORIES.has(categorySlug);
+  const altri = feminine ? "altre" : "altri";
+  const tutti = feminine ? "tutte le" : "tutti i";
   return [
-    { question: `${name} ha una cucina davvero priva di contaminazioni?`, answer: "Sì, l'attività utilizza attrezzature, superfici e, dove indicato, ambienti separati per la preparazione dei piatti senza glutine, riducendo al minimo il rischio di contaminazione crociata." },
-    { question: "È necessario prenotare in anticipo?", answer: "Consigliamo di prenotare, soprattutto nei weekend, segnalando l'esigenza di menu senza glutine al momento della prenotazione." },
+    { question: `${name} a ${city} ha una cucina davvero priva di contaminazioni?`, answer: "Sì, l'attività utilizza attrezzature, superfici e, dove indicato, ambienti separati per la preparazione dei piatti senza glutine, riducendo al minimo il rischio di contaminazione crociata." },
+    { question: `È necessario prenotare in anticipo da ${name}?`, answer: "Consigliamo di prenotare, soprattutto nei weekend, segnalando l'esigenza di menu senza glutine al momento della prenotazione." },
+    { question: `Ci sono ${altri} ${catLabel} senza glutine a ${city} oltre a ${name}?`, answer: `Sì, nella directory di Mappa Senza Glutine trovi ${tutti} ${catLabel} senza glutine ${feminine ? "verificate" : "verificati"} a ${city}, con certificazione AIC o dalla community.` },
     { question: "Sono disponibili opzioni anche per altre intolleranze?", answer: "Molte proposte sono adattabili anche a intolleranze al lattosio o scelte vegetariane: verifica direttamente con l'attività per esigenze specifiche." },
   ];
 }
@@ -355,7 +364,7 @@ export const BUSINESSES: Business[] = seeds.map((s, idx) => {
     glutenFreeMenu: s.glutenFreeMenu,
     gallerySeeds: s.gallerySeeds,
     reviews,
-    faqs: toFaqs(s.name),
+    faqs: toFaqs(s.name, s.city, s.category),
     featured: s.featured,
     createdAt: "2025-09-01",
   };

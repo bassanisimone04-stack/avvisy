@@ -1,5 +1,7 @@
 import type { Business } from "../types";
 import type { Locale } from "./locale";
+import { getCategoryInfo, categoryLabelPlural } from "../categories";
+import { cityName } from "./place-names";
 
 interface BusinessTranslation {
   shortDescription: string;
@@ -128,10 +130,13 @@ const REVIEW_EN: Record<string, { title: string; body: string }> = {
   "Giorgio T.": { title: "Best for celiacs", body: "AIC certification on display and trained staff. The perfect place for a worry-free dinner." },
 };
 
-function faqsEn(name: string): Business["faqs"] {
+function faqsEn(name: string, city: string, categorySlug: Business["category"]): Business["faqs"] {
+  const cat = getCategoryInfo(categorySlug);
+  const catLabel = (cat ? categoryLabelPlural(cat, "en") : "venues").toLowerCase();
   return [
-    { question: `Does ${name} really have a contamination-free kitchen?`, answer: "Yes, the business uses dedicated equipment, surfaces and, where indicated, separate areas for preparing gluten-free dishes, minimizing the risk of cross-contamination." },
-    { question: "Do I need to book in advance?", answer: "We recommend booking, especially on weekends, and mentioning your need for a gluten-free menu when you reserve." },
+    { question: `Does ${name} in ${city} really have a contamination-free kitchen?`, answer: "Yes, the business uses dedicated equipment, surfaces and, where indicated, separate areas for preparing gluten-free dishes, minimizing the risk of cross-contamination." },
+    { question: `Do I need to book in advance at ${name}?`, answer: "We recommend booking, especially on weekends, and mentioning your need for a gluten-free menu when you reserve." },
+    { question: `Are there other gluten-free ${catLabel} in ${city} besides ${name}?`, answer: `Yes, the Mappa Senza Glutine directory lists all the gluten-free ${catLabel} verified in ${city}, with AIC certification or community verification.` },
     { question: "Are there options for other intolerances too?", answer: "Many dishes can be adapted for lactose intolerance or vegetarian diets: check directly with the business for specific needs." },
   ];
 }
@@ -158,6 +163,6 @@ export function getLocalizedBusiness(business: Business, locale: Locale): Busine
     glutenFreeMenu: tr.glutenFreeMenu,
     hours: business.hours.map((h) => ({ ...h, day: DAY_EN[h.day] ?? h.day, hours: h.hours === "Chiuso" ? "Closed" : h.hours })),
     reviews: business.reviews.map((r) => ({ ...r, ...(REVIEW_EN[r.author] ?? {}) })),
-    faqs: faqsEn(business.name),
+    faqs: faqsEn(business.name, cityName(business.city, "en"), business.category),
   };
 }
