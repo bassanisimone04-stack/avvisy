@@ -330,6 +330,40 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["travel", "italy", "restaurants"],
   },
+  "art-15": {
+    title: "The Best Gluten-Free Restaurants and Pizzerias in Milan: The Complete 2026 Guide",
+    excerpt: "Where to eat gluten-free in Milan with confidence: our selection of certified restaurants, pizzerias and bakeries, from dedicated kitchens to scrupulous attention to cross-contamination.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Milan now offers dozens of AIC-certified venues, from restaurants with 100% gluten-free kitchens to pizzerias with dedicated ovens.",
+      "Always mention celiac disease when booking, not just at the table, to reduce the risk of mistakes in the kitchen.",
+      "Venues with AIC certification and separate kitchens or ovens offer the strongest guarantees against cross-contamination.",
+      "Booking ahead is almost mandatory at the most popular venues, especially on weekends.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Milan: don't let the fear of contamination hold you back", body: "Anyone with celiac disease knows it well: the hardest part of eating out isn't choosing what to order, it's trusting the venue. The fear of cross-contamination can turn even a simple pizza night with friends into a source of anxiety. The good news is that <strong>Milan is now one of the best-equipped Italian cities for gluten-free dining</strong>: from pizzerias with dedicated ovens to restaurants with fully gluten-free kitchens, gluten-free venues in Milan keep growing. In this guide we've gathered our trusted picks, verified by the Mappa Senza Glutine community, to help you find where to eat gluten-free in Milan without compromising on safety." },
+      { h2: "The best gluten-free pizzerias in Milan", body: "Pizza remains one of the highest cross-contamination risks, since wheat flour spreads easily in a shared oven: that's why we always look for venues with a <strong>separate or dedicated oven</strong> for gluten-free pizzas.", h3: [
+        { title: "Pizzeria La Spiga d'Oro", body: "Just outside Milan, in Monza, <a href=\"/en/directory/pizzeria-la-spiga-d-oro-monza\">Pizzeria La Spiga d'Oro</a> is one of our trusted picks: an <strong>AIC-certified separate oven</strong> and a long-leavened gluten-free dough, cooked strictly in a wood-fired oven. Don't miss the gluten-free margherita and the pan-baked pizza, plus the gluten-free fried starters if you want to begin with something indulgent." },
+        { title: "Forno di Brera", body: "In the heart of the Brera district, this small bakery reserves a corner entirely dedicated to gluten-free preparation, with take-away pizza by the slice, perfect for a quick, worry-free lunch break." },
+      ] },
+      { h2: "Gluten-free restaurants in Milan: where you can sit down worry-free", body: "For a more structured dinner, here are the restaurants we recommend to anyone looking for maximum peace of mind about cross-contamination.", h3: [
+        { title: "Osteria Senza Confini", body: "<a href=\"/en/directory/osteria-senza-confini-milano\">Osteria Senza Confini</a>, in the Tortona area, serves <strong>contemporary Milanese cuisine that's entirely gluten-free</strong>, with an in-house lab dedicated to fresh pasta and a separate oven for bread. Don't miss the beef tagliata and the gluten-free tiramisù." },
+        { title: "Il Molo dei Navigli", body: "Focused on seafood, this restaurant along the Navigli canals uses frying oil dedicated exclusively to gluten-free dishes and makes both its pasta and bread in-house, keeping cross-contamination risk to a minimum." },
+        { title: "Trattoria Meneghina Gluten Free", body: "For traditional Milanese dishes eaten with total peace of mind, this trattoria serves breaded veal cutlet, saffron risotto and ossobuco, with a <strong>dedicated breading station</strong> to avoid any contact with wheat flour." },
+      ] },
+      { h2: "Gluten-free bakeries and breakfast spots in Milan", body: "Breakfast can be a moment of relaxation too, not stress, thanks to these addresses.", h3: [
+        { title: "Pasticceria Dolce Vita Gluten Free", body: "A lab entirely dedicated to gluten-free baking, with croissants, cakes and biscuits made fresh every day: the ideal choice for breakfast or a treat to take home worry-free." },
+        { title: "Caffè Corso Senza Glutine", body: "Right in the city center, it offers a pastry case refreshed daily and a wide selection of gluten-free bread and sandwiches, also great for a quick lunch between appointments." },
+      ] },
+      { h2: "Practical tips for eating gluten-free in Milan safely", body: "A few extra precautions help you enjoy the experience without stress: <ul><li><strong>Book ahead</strong>, especially at the most popular venues and on weekends, when the kitchen is at full capacity.</li><li><strong>Always mention celiac disease</strong> when booking, not just at the table, so the staff can prepare in advance.</li><li><strong>Ask whether the kitchen or oven is dedicated</strong> or shared: well-trained staff will answer confidently and without hesitation.</li><li><strong>Check the venue's AIC certification</strong>, an extra guarantee of periodic food-safety checks.</li><li><strong>Always carry a few safe snacks</strong>, useful in case of unexpected delays.</li></ul>" },
+    ],
+    faqs: [
+      { question: "What are the best gluten-free restaurants in Milan?", answer: "Among our trusted picks are Osteria Senza Confini in Milan and Pizzeria La Spiga d'Oro in Monza, both verified by our community and listed in the Mappa Senza Glutine directory." },
+      { question: "How can I tell if a restaurant in Milan is really safe for celiacs?", answer: "Check for AIC certification, ask whether the kitchen and oven are dedicated or separate, and rely on verified reviews from other celiacs, like the ones in our directory." },
+      { question: "Do I always need to book ahead at gluten-free restaurants in Milan?", answer: "Not always, but it's strongly recommended at the most popular venues and on weekends, when demand is higher and dedicated spots can fill up quickly." },
+    ],
+    tags: ["milan", "restaurants", "pizzerias", "guides"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {

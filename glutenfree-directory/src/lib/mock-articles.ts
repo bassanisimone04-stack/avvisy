@@ -349,6 +349,41 @@ const seeds: Seed[] = [
       { question: "È necessario prenotare sempre in anticipo?", answer: "Non sempre, ma nei locali più noti e nei weekend è consigliabile prenotare per essere sicuri di trovare posto ed evitare attese." },
     ],
   },
+  {
+    title: "I migliori ristoranti e pizzerie senza glutine a Milano: la guida completa 2026",
+    category: "Guide",
+    excerpt: "Dove mangiare senza glutine a Milano in sicurezza: la nostra selezione di ristoranti, pizzerie e pasticcerie certificate, tra cucine dedicate e attenzione scrupolosa alla contaminazione crociata.",
+    coverSeed: 115, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-29",
+    tags: ["milano", "ristoranti", "pizzerie", "guide"],
+    keyTakeaways: [
+      "Milano offre ormai decine di locali certificati AIC, dai ristoranti con cucina 100% gluten free alle pizzerie con forno dedicato.",
+      "Avvisare sempre della celiachia al momento della prenotazione, non solo al tavolo, riduce il rischio di errori in cucina.",
+      "I locali con certificazione AIC e cucina/forno separati offrono le maggiori garanzie contro la contaminazione crociata.",
+      "Prenotare con anticipo è quasi obbligatorio nei locali più noti, soprattutto nei weekend.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Milano: la paura della contaminazione non deve fermarti", body: "Chi è celiaco lo sa bene: la parte più difficile di una cena fuori non è scegliere cosa mangiare, ma fidarsi del locale. La paura della contaminazione crociata può trasformare anche una semplice pizza tra amici in una fonte d'ansia. La buona notizia è che <strong>Milano è oggi una delle città italiane più attrezzate per chi cerca ristoranti senza glutine</strong>: dalle pizzerie con forno dedicato ai ristoranti con cucina interamente gluten free, i locali celiaci a Milano sono in costante crescita. In questa guida raccogliamo i nostri indirizzi di fiducia, verificati dalla community di Mappa Senza Glutine, per aiutarti a scoprire dove mangiare senza glutine a Milano senza rinunciare alla sicurezza." },
+      { h2: "Le migliori pizzerie senza glutine a Milano", body: "La pizza resta uno dei piatti più a rischio contaminazione, perché la farina di grano vola facilmente in un forno condiviso: per questo cerchiamo sempre locali con <strong>forno separato o dedicato</strong> alle pizze gluten free.", h3: [
+        { title: "Pizzeria La Spiga d'Oro", body: "A pochi passi da Milano, a Monza, la <a href=\"/directory/pizzeria-la-spiga-d-oro-monza\">Pizzeria La Spiga d'Oro</a> è uno dei nostri indirizzi di fiducia: <strong>forno separato certificato AIC</strong> e impasto a lunga lievitazione senza glutine, cotto rigorosamente a legna. Da provare la margherita gluten free e la pizza al padellino, oltre ai fritti senza glutine per chi vuole iniziare con un antipasto sfizioso." },
+        { title: "Forno di Brera", body: "Nel cuore del quartiere di Brera, questo piccolo forno riserva un angolo dedicato esclusivamente alla preparazione gluten free, con pizza al trancio da asporto perfetta per una pausa pranzo veloce in totale sicurezza." },
+      ] },
+      { h2: "Ristoranti senza glutine a Milano: dove sedersi senza pensieri", body: "Per una cena più strutturata, questi sono i ristoranti che consigliamo a chi cerca il massimo della tranquillità in fatto di contaminazione crociata.", h3: [
+        { title: "Osteria Senza Confini", body: "L'<a href=\"/directory/osteria-senza-confini-milano\">Osteria Senza Confini</a>, in zona Tortona, propone <strong>cucina milanese contemporanea interamente gluten free</strong>, con un laboratorio interno dedicato alla pasta fresca e un forno separato per il pane. Imperdibili la tagliata di manzo e il tiramisù gluten free." },
+        { title: "Il Molo dei Navigli", body: "Specializzato in cucina di mare, questo ristorante lungo i Navigli utilizza un olio di frittura dedicato esclusivamente alle preparazioni senza glutine e prepara in casa sia la pasta che il pane, riducendo al minimo il rischio di contaminazione." },
+        { title: "Trattoria Meneghina Gluten Free", body: "Per chi cerca la tradizione meneghina in totale sicurezza, questa trattoria propone cotoletta, risotto allo zafferano e ossobuco, con una <strong>postazione di impanatura dedicata</strong> per evitare qualsiasi contatto con farine di grano." },
+      ] },
+      { h2: "Pasticcerie e colazioni senza glutine a Milano", body: "Anche la colazione può diventare un momento di relax, non di ansia, grazie a questi indirizzi.", h3: [
+        { title: "Pasticceria Dolce Vita Gluten Free", body: "Laboratorio interamente dedicato al senza glutine, con cornetti, torte e biscotti sfornati ogni giorno: la scelta ideale per una colazione o un dolce da portare a casa senza pensieri." },
+        { title: "Caffè Corso Senza Glutine", body: "In pieno centro, propone una vetrina di paste fresche rinnovata quotidianamente e un'ampia scelta di pane e panini senza glutine, perfetti anche per un pranzo veloce tra un appuntamento e l'altro." },
+      ] },
+      { h2: "Consigli pratici per mangiare senza glutine a Milano in sicurezza", body: "Qualche accorgimento in più aiuta a vivere l'esperienza senza stress: <ul><li><strong>Prenota in anticipo</strong>, soprattutto nei locali più noti e nei weekend, quando la cucina lavora a pieno ritmo.</li><li><strong>Avvisa sempre della celiachia</strong> già in fase di prenotazione, non solo al tavolo, così lo staff può organizzarsi per tempo.</li><li><strong>Chiedi se cucina o forno sono dedicati</strong> oppure condivisi: uno staff preparato risponderà con sicurezza e senza esitazioni.</li><li><strong>Verifica la certificazione AIC</strong> del locale, un'ulteriore garanzia di controlli periodici sulla sicurezza alimentare.</li><li><strong>Porta sempre con te qualche snack sicuro</strong>, utile in caso di imprevisti o lunghe attese.</li></ul>" },
+    ],
+    faqs: [
+      { question: "Quali sono i migliori ristoranti senza glutine a Milano?", answer: "Tra i nostri indirizzi di fiducia spiccano l'Osteria Senza Confini a Milano e la Pizzeria La Spiga d'Oro a Monza, entrambi verificati dalla nostra community e presenti nella directory di Mappa Senza Glutine." },
+      { question: "Come faccio a sapere se un ristorante a Milano è davvero sicuro per celiaci?", answer: "Controlla la certificazione AIC, chiedi se cucina e forno sono dedicati o separati e affidati a recensioni verificate da altri celiaci, come quelle presenti nella nostra directory." },
+      { question: "È necessario prenotare sempre nei ristoranti senza glutine a Milano?", answer: "Non è sempre obbligatorio, ma è fortemente consigliato nei locali più conosciuti e nei weekend, quando la richiesta è più alta e i posti dedicati possono esaurirsi rapidamente." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
