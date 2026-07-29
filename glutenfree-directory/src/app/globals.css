@@ -453,3 +453,34 @@ body {
   :root[data-theme="dark"] .cat-bambini { --article-accent: #facc15; --article-soft: #332c0a; }
   :root[data-theme="dark"] .cat-eventi { --article-accent: #818cf8; --article-soft: #211f3d; }
 }
+
+/* -------------------------------------------------------------------------
+   Mappa interattiva (Leaflet) — mappa dei locali in home
+---------------------------------------------------------------------------- */
+@layer components {
+  .leaflet-container {
+    height: 100%;
+    width: 100%;
+    font: inherit;
+    background: var(--gf-brand-soft);
+  }
+  .gf-map-pin {
+    background: transparent;
+    border: none;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
+    transition: transform 0.15s ease;
+  }
+  .leaflet-control-attribution {
+    font-size: 10px;
+    background: color-mix(in srgb, var(--gf-surface) 85%, transparent);
+    color: var(--gf-muted);
+  }
+  .leaflet-control-zoom a {
+    background: var(--gf-surface);
+    color: var(--gf-ink);
+    border-color: var(--gf-line) !important;
+  }
+  .leaflet-control-zoom a:hover {
+    background: var(--gf-brand-soft);
+  }
+}

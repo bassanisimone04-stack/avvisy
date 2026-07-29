@@ -168,7 +168,7 @@ export const dictionary = {
       similarTitle: "Prodotti simili",
     },
     map: {
-      caption: "Mappa stilizzata · {n} attività in evidenza",
+      caption: "{n} attività in evidenza sulla mappa",
       emptyHint: "Seleziona un punto sulla mappa per vedere i dettagli.",
       viewBusiness: "Vedi la scheda completa",
     },
@@ -340,7 +340,7 @@ export const dictionary = {
       similarTitle: "Similar products",
     },
     map: {
-      caption: "Stylized map · {n} featured businesses",
+      caption: "{n} featured businesses on the map",
       emptyHint: "Select a pin on the map to see the details.",
       viewBusiness: "View full listing",
     },

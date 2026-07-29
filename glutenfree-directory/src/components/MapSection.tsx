@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { MapPin, BadgeCheck } from "lucide-react";
 import type { Business } from "@/lib/types";
@@ -11,13 +12,10 @@ import { useDictionary } from "@/lib/i18n/useLocale";
 import { tf } from "@/lib/i18n/dictionary";
 import RatingStars from "./RatingStars";
 
-const LAT_MIN = 36.4, LAT_MAX = 47.2, LNG_MIN = 6.5, LNG_MAX = 18.6;
-
-function project(lat: number, lng: number) {
-  const x = ((lng - LNG_MIN) / (LNG_MAX - LNG_MIN)) * 100;
-  const y = ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * 100;
-  return { x: Math.min(96, Math.max(4, x)), y: Math.min(96, Math.max(4, y)) };
-}
+const InteractiveMap = dynamic(() => import("./InteractiveMap"), {
+  ssr: false,
+  loading: () => <div className="h-full w-full animate-pulse bg-brand-soft" />,
+});
 
 export default function MapSection({ businesses }: { businesses: Business[] }) {
   const [activeId, setActiveId] = useState<string | null>(businesses[0]?.id ?? null);
@@ -27,37 +25,8 @@ export default function MapSection({ businesses }: { businesses: Business[] }) {
   return (
     <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
       <div className="card card-soft relative aspect-[4/5] max-h-[520px] overflow-hidden bg-brand-soft sm:aspect-[5/4] lg:aspect-auto">
-        <div className="grid-texture absolute inset-0 opacity-70" />
-        <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" preserveAspectRatio="none" aria-hidden="true">
-          <path
-            d="M46 4 C50 3 54 6 55 10 C57 15 62 16 63 20 C64 25 60 27 61 31 C62 36 68 37 69 42 C70 47 65 49 66 54 C67 59 72 61 71 66 C70 71 64 70 62 74 C60 78 62 82 58 85 C55 87 53 84 51 87 C49 90 51 93 47 94 C44 95 43 91 41 89 C38 86 34 88 33 84 C32 80 36 78 35 74 C34 70 29 69 30 64 C31 60 36 60 37 55 C38 50 34 47 36 43 C38 39 43 40 44 35 C45 31 41 28 43 24 C45 20 44 16 45 12 C45.5 9 43 6 46 4 Z"
-            fill="var(--gf-brand-light)"
-            fillOpacity="0.35"
-            stroke="var(--gf-brand)"
-            strokeWidth="0.6"
-          />
-        </svg>
-        {businesses.map((b) => {
-          const { x, y } = project(b.lat, b.lng);
-          const isActive = b.id === activeId;
-          return (
-            <button
-              key={b.id}
-              type="button"
-              onMouseEnter={() => setActiveId(b.id)}
-              onFocus={() => setActiveId(b.id)}
-              style={{ left: `${x}%`, top: `${y}%` }}
-              aria-label={`${b.name}, ${cityName(b.city, locale)}`}
-              className={`absolute -translate-x-1/2 -translate-y-full transition-transform ${isActive ? "z-10 scale-125" : "z-0"}`}
-            >
-              <MapPin
-                size={isActive ? 30 : 24}
-                className={isActive ? "fill-accent text-accent-dark drop-shadow-md" : "fill-brand text-brand-dark drop-shadow-sm"}
-              />
-            </button>
-          );
-        })}
-        <p className="absolute bottom-3 right-3 rounded-full bg-white/85 px-3 py-1 text-[11px] text-ink-soft backdrop-blur">
+        <InteractiveMap businesses={businesses} activeId={activeId} onSelect={setActiveId} />
+        <p className="pointer-events-none absolute bottom-3 right-3 z-[500] rounded-full bg-white/85 px-3 py-1 text-[11px] text-ink-soft backdrop-blur">
           {tf(t.map.caption, { n: businesses.length })}
         </p>
       </div>
