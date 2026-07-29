@@ -9,7 +9,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import NewsletterForm from "@/components/NewsletterForm";
 import MapSection from "@/components/MapSection";
-import HeroBrandMark from "@/components/HeroBrandMark";
+import HeroPhotoCollage from "@/components/HeroPhotoCollage";
 import Reveal from "@/components/Reveal";
 import { JsonLd, faqJsonLd } from "@/lib/seo";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
@@ -46,10 +46,10 @@ export default function HomeContent({ locale }: { locale: Locale }) {
         <div className="container-page relative py-16 sm:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
-              <HeroBrandMark label={t.home.title1} />
+              <HeroPhotoCollage label={t.home.title1} />
             </Reveal>
             <Reveal delay={40}>
-              <span className="eyebrow mt-6 inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 shadow-sm">
+              <span className="eyebrow mt-8 inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 shadow-sm">
                 <Sparkles size={13} /> {t.home.eyebrow}
               </span>
             </Reveal>
