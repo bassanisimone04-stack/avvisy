@@ -59,6 +59,7 @@ const seeds: Seed[] = [
     description: "Storico ristorante di pesce nella zona di Sempione/Bullona a Milano, aperto dal 2001 e segnalato anche dalla Guida Michelin. Certificato AIC, propone una selezione di piatti senza glutine tra cui pane e pasta.",
     shortDescription: "Ristorante di pesce certificato AIC, dal 2001 a Milano.",
     gallerySeeds: [1, 2, 3, 4],
+    photoUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -74,6 +75,7 @@ const seeds: Seed[] = [
     description: "Ristorante e pizzeria a due passi dai Navigli, attivo dal 1986, con un ampio menu che include pizza e piatti tradizionali in versione senza glutine oltre a opzioni vegan.",
     shortDescription: "Ristorante e pizzeria vicino ai Navigli, dal 1986, con pizza senza glutine.",
     gallerySeeds: [5, 6, 7, 8],
+    photoUrl: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -89,6 +91,7 @@ const seeds: Seed[] = [
     description: "Pizzeria e bruschetteria nel quartiere Ostiense a Roma, attiva dal 1999, nota per le pizze alte cotte in forno a legna. Propone un menu senza glutine preparato in un laboratorio dedicato.",
     shortDescription: "Pizzeria e bruschetteria a Ostiense, dal 1999, menu senza glutine dedicato.",
     gallerySeeds: [9, 10, 11, 12],
+    photoUrl: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -104,6 +107,7 @@ const seeds: Seed[] = [
     description: "Locale nel quartiere Alessandrino a Roma con cucina interamente certificata AIC, separata dal resto della struttura. Offre pizza, griglia e hamburger senza glutine, oltre a opzioni vegan e senza lattosio.",
     shortDescription: "Pizzeria, braceria e hamburgheria certificata AIC nel quartiere Alessandrino.",
     gallerySeeds: [13, 14, 15, 16],
+    photoUrl: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
 ];
