@@ -33,7 +33,7 @@ export default function DirectoryContent({
   const catInfo = filters.categoria ? getCategoryInfo(filters.categoria) : undefined;
   const dirHref = localeHref(locale, "/directory");
   const cityLabel = filters.comune ? cityName(filters.comune, locale) : undefined;
-  const faqs = directoryFaqs(locale, cityLabel, catInfo ? categoryLabelPlural(catInfo, locale) : undefined);
+  const faqs = directoryFaqs(locale, cityLabel, catInfo ? { slug: catInfo.slug, label: categoryLabelPlural(catInfo, locale) } : undefined);
 
   const title = catInfo
     ? tf(cityLabel ? t.directory.titleCategoryCity : t.directory.titleCategory, { category: categoryLabelPlural(catInfo, locale), city: cityLabel ?? "" })

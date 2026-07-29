@@ -5,12 +5,14 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import RatingStars from "@/components/RatingStars";
 import ProductCard from "@/components/ProductCard";
-import { PRODUCTS, getProductBySlug } from "@/lib/mock-products";
+import FaqAccordion from "@/components/FaqAccordion";
+import { PRODUCTS, getProductBySlug, productCategoryLabel } from "@/lib/mock-products";
 import { getLocalizedProduct } from "@/lib/i18n/content-product";
 import { getBusinessBySlug, BUSINESSES } from "@/lib/mock-businesses";
 import { cityName } from "@/lib/i18n/place-names";
 import { formatPrice, slugify } from "@/lib/format";
-import { JsonLd, productJsonLd } from "@/lib/seo";
+import { JsonLd, productJsonLd, faqJsonLd } from "@/lib/seo";
+import { productDetailFaqs } from "@/lib/product-faqs";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
 
@@ -24,10 +26,12 @@ export default function ProductDetailContent({ locale, slug }: { locale: Locale;
   const stores = product.whereToBuy
     .map((name) => BUSINESSES.find((b) => b.name === name) ?? getBusinessBySlug(slugify(name)))
     .filter(Boolean);
+  const faqs = productDetailFaqs(locale, product.name, product.brand, productCategoryLabel(base.category, locale));
 
   return (
     <div className="container-page py-10">
       <JsonLd data={productJsonLd(product)} />
+      <JsonLd data={faqJsonLd(faqs)} />
       <Breadcrumbs locale={locale} items={[{ name: t.nav.products, path: "/prodotti" }, { name: product.name, path: `/prodotti/${product.slug}` }]} />
 
       <div className="grid gap-10 lg:grid-cols-2">
@@ -71,6 +75,11 @@ export default function ProductDetailContent({ locale, slug }: { locale: Locale;
           </div>
         </div>
       )}
+
+      <div className="mt-14 max-w-3xl">
+        <h2 className="mb-4 font-editorial text-xl font-semibold text-ink">{t.directory.faqTitle}</h2>
+        <FaqAccordion items={faqs} />
+      </div>
     </div>
   );
 }
