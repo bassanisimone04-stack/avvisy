@@ -16,7 +16,7 @@ export default function CommentsSection({ comments }: { comments: Comment[] }) {
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!text.trim()) return;
-    setList((l) => [...l, { id: `local-${Date.now()}`, author: user?.name ?? "GlutenFree Directory user", avatarSeed: 900, date: new Date().toISOString(), body: text }]);
+    setList((l) => [...l, { id: `local-${Date.now()}`, author: user?.name ?? "Mappa Senza Glutine user", avatarSeed: 900, date: new Date().toISOString(), body: text }]);
     setText("");
   }
 

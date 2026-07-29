@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Termini di servizio",
-  description: "Termini e condizioni di utilizzo della piattaforma GlutenFree Directory.",
+  description: "Termini e condizioni di utilizzo della piattaforma Mappa Senza Glutine.",
   path: "/termini",
   locale: "it",
 });

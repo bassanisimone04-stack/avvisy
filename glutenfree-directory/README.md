@@ -1,6 +1,6 @@
-# GlutenFree Directory
+# Mappa Senza Glutine
 
-Prototipo navigabile di **GlutenFree Directory**, la directory italiana di
+Prototipo navigabile di **Mappa Senza Glutine**, la directory italiana di
 ristoranti, pizzerie, hotel, farmacie, supermercati e negozi senza glutine,
 con blog editoriale, sezione prodotti, area utente e pannello di
 amministrazione.

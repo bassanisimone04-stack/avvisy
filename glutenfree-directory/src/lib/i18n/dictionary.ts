@@ -137,7 +137,7 @@ export const dictionary = {
       removePhoto: "Rimuovi foto",
     },
     blog: {
-      title: "Blog GlutenFree Directory",
+      title: "Blog Mappa Senza Glutine",
       subtitle: "Guide pratiche, ricette e approfondimenti su celiachia e alimentazione senza glutine, aggiornati regolarmente dal nostro team editoriale.",
       all: "Tutti",
       featured: "In evidenza",
@@ -309,7 +309,7 @@ export const dictionary = {
       removePhoto: "Remove photo",
     },
     blog: {
-      title: "GlutenFree Directory Blog",
+      title: "Mappa Senza Glutine Blog",
       subtitle: "Practical guides, recipes and in-depth articles on celiac disease and gluten-free living, updated regularly by our editorial team.",
       all: "All",
       featured: "Featured",

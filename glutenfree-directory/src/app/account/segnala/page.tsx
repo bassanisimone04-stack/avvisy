@@ -19,7 +19,7 @@ export default function ReportErrorPage() {
           <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-4">
             <div>
               <label htmlFor="url" className="field-label">Link della pagina interessata</label>
-              <input id="url" className="field" placeholder="https://www.glutenfreedirectory.it/directory/…" />
+              <input id="url" className="field" placeholder="https://www.mappasenzaglutine.it/directory/…" />
             </div>
             <div>
               <label htmlFor="tipo" className="field-label">Tipo di errore</label>

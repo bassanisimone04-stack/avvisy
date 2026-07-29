@@ -37,7 +37,7 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
     e.preventDefault();
     if (!title.trim() || !body.trim()) return;
     setList((l) => [
-      { id: `local-${Date.now()}`, author: user?.name ?? "GlutenFree Directory user", avatarSeed: 999, rating, date: new Date().toISOString(), title, body, verifiedCeliac: true, helpful: 0, photos: photos.length ? photos : undefined },
+      { id: `local-${Date.now()}`, author: user?.name ?? "Mappa Senza Glutine user", avatarSeed: 999, rating, date: new Date().toISOString(), title, body, verifiedCeliac: true, helpful: 0, photos: photos.length ? photos : undefined },
       ...l,
     ]);
     setTitle("");

@@ -4,7 +4,7 @@ import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   title: `About us — ${SITE_NAME}`,
-  description: "GlutenFree Directory's mission: becoming Italy's go-to reference for reliable gluten-free places, products and information.",
+  description: "Mappa Senza Glutine's mission: becoming Italy's go-to reference for reliable gluten-free places, products and information.",
   path: "/chi-siamo",
   locale: "en",
 });

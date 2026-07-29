@@ -12,8 +12,8 @@ export const AUTHORS: AuthorInfo[] = [
   {
     slug: slugify("Dott.ssa Elena Rossi"),
     name: "Dott.ssa Elena Rossi",
-    bio: "Biologa nutrizionista specializzata in intolleranze alimentari, scrive su GlutenFree Directory guide basate su evidenze scientifiche su celiachia, alimentazione e salute.",
-    bioEn: "Nutritionist and biologist specializing in food intolerances, writing evidence-based guides for GlutenFree Directory on celiac disease, nutrition and health.",
+    bio: "Biologa nutrizionista specializzata in intolleranze alimentari, scrive su Mappa Senza Glutine guide basate su evidenze scientifiche su celiachia, alimentazione e salute.",
+    bioEn: "Nutritionist and biologist specializing in food intolerances, writing evidence-based guides for Mappa Senza Glutine on celiac disease, nutrition and health.",
   },
   {
     slug: slugify("Marco Bianchi"),

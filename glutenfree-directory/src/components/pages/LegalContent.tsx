@@ -16,7 +16,7 @@ export function PrivacyContent({ locale }: { locale: Locale }) {
             <h2>Data collected</h2>
             <p>Accounts, favorites and reviews entered in this prototype are stored exclusively in the local browser (localStorage) and are never transmitted to any external server.</p>
             <h2>Contact</h2>
-            <p>For any privacy-related question, write to privacy@glutenfreedirectory.it.</p>
+            <p>For any privacy-related question, write to privacy@mappasenzaglutine.it.</p>
           </>
         ) : (
           <>
@@ -24,7 +24,7 @@ export function PrivacyContent({ locale }: { locale: Locale }) {
             <h2>Dati raccolti</h2>
             <p>Account, preferiti e recensioni inseriti in questo prototipo sono salvati esclusivamente nel browser locale (localStorage) e non vengono trasmessi a nessun server esterno.</p>
             <h2>Contatti</h2>
-            <p>Per qualsiasi domanda relativa alla privacy scrivi a privacy@glutenfreedirectory.it.</p>
+            <p>Per qualsiasi domanda relativa alla privacy scrivi a privacy@mappasenzaglutine.it.</p>
           </>
         )}
       </div>
@@ -68,7 +68,7 @@ export function TermsContent({ locale }: { locale: Locale }) {
         <h1>{en ? "Terms of Service" : "Termini di servizio"}</h1>
         {en ? (
           <>
-            <p>GlutenFree Directory is a demo prototype. Information on businesses, products and reviews shown on the site is fictional and for illustrative purposes only, and does not represent real data.</p>
+            <p>Mappa Senza Glutine is a demo prototype. Information on businesses, products and reviews shown on the site is fictional and for illustrative purposes only, and does not represent real data.</p>
             <h2>Use of the service</h2>
             <p>Use of the platform is free. Users agree to publish truthful content (reviews, comments, reports) that is respectful of the community.</p>
             <h2>Limitation of liability</h2>
@@ -76,7 +76,7 @@ export function TermsContent({ locale }: { locale: Locale }) {
           </>
         ) : (
           <>
-            <p>GlutenFree Directory è un prototipo dimostrativo. Le informazioni su attività, prodotti e recensioni presenti nel sito sono inventate a scopo illustrativo e non rappresentano dati reali.</p>
+            <p>Mappa Senza Glutine è un prototipo dimostrativo. Le informazioni su attività, prodotti e recensioni presenti nel sito sono inventate a scopo illustrativo e non rappresentano dati reali.</p>
             <h2>Uso del servizio</h2>
             <p>L&apos;utilizzo della piattaforma è gratuito. Gli utenti si impegnano a pubblicare contenuti (recensioni, commenti, segnalazioni) veritieri e rispettosi della community.</p>
             <h2>Limitazione di responsabilità</h2>

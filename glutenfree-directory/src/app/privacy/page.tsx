@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: "Informativa sulla privacy di GlutenFree Directory: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
+  description: "Informativa sulla privacy di Mappa Senza Glutine: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
   path: "/privacy",
   locale: "it",
 });

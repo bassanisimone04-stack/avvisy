@@ -4,7 +4,7 @@ import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   title: `Chi siamo — ${SITE_NAME}`,
-  description: "La missione di GlutenFree Directory: diventare il punto di riferimento italiano per chi cerca locali, prodotti e informazioni affidabili sul senza glutine.",
+  description: "La missione di Mappa Senza Glutine: diventare il punto di riferimento italiano per chi cerca locali, prodotti e informazioni affidabili sul senza glutine.",
   path: "/chi-siamo",
   locale: "it",
 });

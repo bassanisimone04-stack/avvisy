@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const cat = getCategoryInfo(business.category);
   return pageMetadata({
     title: `${business.name} — ${cat?.label} a ${business.city} senza glutine`,
-    description: `${business.shortDescription} Indirizzo, orari, telefono, menu senza glutine e recensioni verificate su GlutenFree Directory.`,
+    description: `${business.shortDescription} Indirizzo, orari, telefono, menu senza glutine e recensioni verificate su Mappa Senza Glutine.`,
     path: `/directory/${business.slug}`,
     type: "article",
     locale: "it",

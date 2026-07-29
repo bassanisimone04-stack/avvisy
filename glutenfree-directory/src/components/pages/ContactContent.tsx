@@ -21,7 +21,7 @@ export default function ContactContent({ locale }: { locale: Locale }) {
             {en ? "Have questions, suggestions or want to report a business? Write to us, we'll reply within 48 business hours." : "Hai domande, suggerimenti o vuoi segnalare un'attività? Scrivici, ti risponderemo entro 48 ore lavorative."}
           </p>
           <div className="mt-6 space-y-3 text-sm text-ink-soft">
-            <p className="flex items-center gap-2"><Mail size={16} className="text-brand" /> info@glutenfreedirectory.it</p>
+            <p className="flex items-center gap-2"><Mail size={16} className="text-brand" /> info@mappasenzaglutine.it</p>
             <p className="flex items-center gap-2"><MapPin size={16} className="text-brand" /> {en ? "Milan, Italy" : "Milano, Italia"}</p>
           </div>
         </div>

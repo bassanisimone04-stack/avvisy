@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const author = getAuthorBySlug(slug);
   if (!author) return {};
   return pageMetadata({
-    title: `${author.name} — Author at GlutenFree Directory`,
+    title: `${author.name} — Author at Mappa Senza Glutine`,
     description: authorBio(author, "en"),
     path: `/blog/autore/${author.slug}`,
     locale: "en",

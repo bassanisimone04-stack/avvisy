@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Per le aziende: inserisci la tua attività",
-  description: "Pubblica gratuitamente la tua attività su GlutenFree Directory e raggiungi la community celiaca italiana.",
+  description: "Pubblica gratuitamente la tua attività su Mappa Senza Glutine e raggiungi la community celiaca italiana.",
   path: "/per-le-aziende",
   locale: "it",
 });

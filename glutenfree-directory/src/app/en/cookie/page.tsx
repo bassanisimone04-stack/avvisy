@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Cookie Policy",
-  description: "Notice on technical and preference cookies used by GlutenFree Directory.",
+  description: "Notice on technical and preference cookies used by Mappa Senza Glutine.",
   path: "/cookie",
   locale: "en",
 });

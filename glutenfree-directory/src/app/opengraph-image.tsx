@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "GlutenFree Directory — Ristoranti, negozi e prodotti senza glutine in Italia";
+export const alt = "Mappa Senza Glutine — Ristoranti, negozi e prodotti senza glutine in Italia";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -35,11 +35,11 @@ export default function OpengraphImage() {
               fontWeight: 900,
             }}
           >
-            GF
+            MSG
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: "52px", fontWeight: 800, color: "#0f7a47", letterSpacing: "-1px" }}>
-              GlutenFree Directory
+            <div style={{ fontSize: "48px", fontWeight: 800, color: "#0f7a47", letterSpacing: "-1px" }}>
+              Mappa Senza Glutine
             </div>
             <div style={{ fontSize: "26px", color: "#3d5347", marginTop: "2px" }}>
               La directory italiana del senza glutine

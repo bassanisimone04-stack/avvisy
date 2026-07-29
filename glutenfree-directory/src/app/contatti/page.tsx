@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contatti",
-  description: "Contatta il team di GlutenFree Directory per domande, suggerimenti o segnalazioni.",
+  description: "Contatta il team di Mappa Senza Glutine per domande, suggerimenti o segnalazioni.",
   path: "/contatti",
   locale: "it",
 });
