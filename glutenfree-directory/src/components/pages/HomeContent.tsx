@@ -14,7 +14,7 @@ import Reveal from "@/components/Reveal";
 import { JsonLd, faqJsonLd } from "@/lib/seo";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
 import { REGIONS } from "@/lib/regions";
-import { getFeaturedBusinesses, getTopRatedBusinesses, BUSINESSES } from "@/lib/mock-businesses";
+import { getFeaturedBusinesses, getTopRatedBusinesses } from "@/lib/mock-businesses";
 import { getLatestArticles } from "@/lib/mock-articles";
 import { getRecommendedProducts } from "@/lib/mock-products";
 import { TESTIMONIALS, HOME_FAQS } from "@/lib/mock-site";
@@ -35,8 +35,6 @@ export default function HomeContent({ locale }: { locale: Locale }) {
   const products = getRecommendedProducts(8);
   const testimonials = TESTIMONIALS.map((x) => getLocalizedTestimonial(x, locale));
   const h = (path: string) => localeHref(locale, path);
-  const totalReviews = BUSINESSES.reduce((sum, b) => sum + b.reviewCount, 0);
-  const totalCities = new Set(BUSINESSES.map((b) => b.city)).size;
 
   return (
     <>
@@ -76,22 +74,6 @@ export default function HomeContent({ locale }: { locale: Locale }) {
                 <Link href={h("/per-le-aziende")} className="btn btn-outline">
                   {t.home.ctaBusiness}
                 </Link>
-              </div>
-            </Reveal>
-            <Reveal delay={320}>
-              <div className="mx-auto mt-10 grid max-w-2xl grid-cols-3 gap-4 text-center">
-                <div>
-                  <p className="font-display text-2xl font-extrabold text-brand-dark sm:text-3xl">{BUSINESSES.length}</p>
-                  <p className="text-xs text-ink-soft sm:text-sm">{t.home.statBusinesses}</p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl font-extrabold text-brand-dark sm:text-3xl">{totalReviews}</p>
-                  <p className="text-xs text-ink-soft sm:text-sm">{t.home.statReviews}</p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl font-extrabold text-brand-dark sm:text-3xl">{totalCities}</p>
-                  <p className="text-xs text-ink-soft sm:text-sm">{t.home.statCities}</p>
-                </div>
               </div>
             </Reveal>
           </div>

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "prodotti senza glutine",
   ],
   authors: [{ name: SITE_NAME }],
-  alternates: { canonical: "/", types: { "application/rss+xml": "/feed.xml" } },
+  alternates: { canonical: "/" },
   openGraph: {
     title: `${SITE_NAME} — Ristoranti, negozi e prodotti senza glutine in Italia`,
     description: SITE_DESCRIPTION,

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Rss } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 import CoverPhoto from "@/components/CoverPhoto";
@@ -36,14 +36,9 @@ export default function BlogContent({
   return (
     <div className="container-page py-10">
       <Breadcrumbs locale={locale} items={[{ name: t.nav.blog, path: "/blog" }]} />
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="font-serif text-4xl font-semibold text-ink sm:text-5xl">{t.blog.title}</h1>
-          <p className="mt-3 max-w-2xl text-lg text-ink-soft">{t.blog.subtitle}</p>
-        </div>
-        <a href="/feed.xml" target="_blank" rel="noopener noreferrer" title={t.blog.rssTitle} className="btn btn-outline btn-sm mt-1 shrink-0">
-          <Rss size={14} /> RSS
-        </a>
+      <div>
+        <h1 className="font-serif text-4xl font-semibold text-ink sm:text-5xl">{t.blog.title}</h1>
+        <p className="mt-3 max-w-2xl text-lg text-ink-soft">{t.blog.subtitle}</p>
       </div>
 
       <div className="mt-7 flex flex-wrap gap-2">
