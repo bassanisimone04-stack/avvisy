@@ -318,9 +318,18 @@ body {
 
 ::selection { background: var(--gf-brand-soft); color: var(--gf-brand-dark); }
 
+@keyframes brand-mark-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.brand-mark-float { animation: brand-mark-float 3.5s ease-in-out infinite; }
+.brand-mark-float:hover { animation-play-state: paused; }
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
   html { scroll-behavior: auto; }
+  .brand-mark-float { animation: none !important; }
 }
 
 /* -------------------------------------------------------------------------
