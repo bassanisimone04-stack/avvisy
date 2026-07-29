@@ -59,8 +59,14 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
                 <MapPin size={16} /> {business.address}, {city} ({business.provinceCode})
               </p>
               <div className="mt-2 flex items-center gap-2">
-                <RatingStars rating={business.rating} locale={locale} />
-                <span className="text-sm text-ink-soft">{business.rating} · {business.reviewCount} {t.common.reviews} · {business.priceRange}</span>
+                {business.reviewCount > 0 ? (
+                  <>
+                    <RatingStars rating={business.rating} locale={locale} />
+                    <span className="text-sm text-ink-soft">{business.rating} · {business.reviewCount} {t.common.reviews} · {business.priceRange}</span>
+                  </>
+                ) : (
+                  <span className="text-sm text-ink-soft">{t.common.noReviewsYet} · {business.priceRange}</span>
+                )}
               </div>
             </div>
             <FavoriteButton id={business.id} className="static" />

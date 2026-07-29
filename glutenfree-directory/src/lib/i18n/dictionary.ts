@@ -19,6 +19,7 @@ export const dictionary = {
       searchPlaceholderShort: "Cerca città, locali, prodotti…",
       searchPlaceholderLong: "Cerca ristoranti, città, prodotti, articoli…",
       reviews: "recensioni",
+      noReviewsYet: "Nessuna recensione ancora",
     },
     footer: {
       description: "La directory italiana di riferimento per chi cerca ristoranti, negozi, hotel e prodotti senza glutine certificati.",
@@ -125,6 +126,7 @@ export const dictionary = {
       certifiedAic: "Certificato AIC",
       communityVerified: "Verificato dalla community",
       communityVerifiedShort: "Community",
+      noReviewsYetLong: "Nessuna recensione ancora: sii il primo a raccontare la tua esperienza in questo locale.",
       about: "Chi siamo",
       menuTitle: "Menu senza glutine",
       servicesTitle: "Servizi",
@@ -202,6 +204,7 @@ export const dictionary = {
       searchPlaceholderShort: "Search cities, places, products…",
       searchPlaceholderLong: "Search restaurants, cities, products, articles…",
       reviews: "reviews",
+      noReviewsYet: "No reviews yet",
     },
     footer: {
       description: "Italy's go-to directory for certified gluten-free restaurants, shops, hotels and products.",
@@ -308,6 +311,7 @@ export const dictionary = {
       certifiedAic: "AIC certified",
       communityVerified: "Community verified",
       communityVerifiedShort: "Community",
+      noReviewsYetLong: "No reviews yet: be the first to share your experience at this venue.",
       about: "About",
       menuTitle: "Gluten-free menu",
       servicesTitle: "Services",

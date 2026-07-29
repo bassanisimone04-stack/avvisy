@@ -56,8 +56,14 @@ export default function BusinessCard({ business, locale = "it" }: { business: Bu
         <p className="line-clamp-2 text-sm text-ink-soft">{business.shortDescription}</p>
         <div className="mt-auto flex items-center justify-between pt-2">
           <div className="flex items-center gap-1.5">
-            <RatingStars rating={business.rating} />
-            <span className="text-xs text-muted">{business.rating} ({business.reviewCount})</span>
+            {business.reviewCount > 0 ? (
+              <>
+                <RatingStars rating={business.rating} />
+                <span className="text-xs text-muted">{business.rating} ({business.reviewCount})</span>
+              </>
+            ) : (
+              <span className="text-xs text-muted">{t.common.noReviewsYet}</span>
+            )}
           </div>
           <div className="flex items-center gap-1.5 text-ink-soft">
             {business.delivery && <Truck size={15} aria-label="Delivery" />}

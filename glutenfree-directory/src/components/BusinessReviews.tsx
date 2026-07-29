@@ -49,6 +49,9 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
   return (
     <div className="space-y-5">
       <div className="space-y-5">
+        {list.length === 0 && (
+          <p className="rounded-xl border border-line bg-surface-2 p-5 text-sm text-ink-soft">{t.business.noReviewsYetLong}</p>
+        )}
         {list.map((r) => (
           <article key={r.id} className="card p-5">
             <div className="flex items-start justify-between gap-3">
