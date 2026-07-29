@@ -5,7 +5,8 @@ import { getCategoryInfo, categoryLabel } from "@/lib/categories";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
-import PlaceholderImage from "./PlaceholderImage";
+import { businessCoverPhoto } from "@/lib/cover-photos";
+import CoverPhoto from "./CoverPhoto";
 import RatingStars from "./RatingStars";
 import FavoriteButton from "./FavoriteButton";
 
@@ -18,7 +19,13 @@ export default function BusinessCard({ business, locale = "it" }: { business: Bu
       className="card card-hover card-soft group flex flex-col overflow-hidden"
     >
       <div className="relative">
-        <PlaceholderImage seed={business.gallerySeeds[0]} variant={business.category} label={business.name} className="transition-transform duration-500 group-hover:scale-105" />
+        <CoverPhoto
+          photoUrl={businessCoverPhoto(business.category, business.gallerySeeds[0])}
+          seed={business.gallerySeeds[0]}
+          variant={business.category}
+          label={business.name}
+          className="transition-transform duration-500 group-hover:scale-105"
+        />
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
           <span className="chip chip-neutral bg-white/90 backdrop-blur">{cat ? categoryLabel(cat, locale) : ""}</span>
           {business.aicCertified && (

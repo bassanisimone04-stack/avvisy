@@ -2,10 +2,11 @@ import Link from "next/link";
 import { ArrowRight, Rss } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
-import PlaceholderImage from "@/components/PlaceholderImage";
+import CoverPhoto from "@/components/CoverPhoto";
 import { ARTICLES, BLOG_CATEGORIES, blogCategoryLabel } from "@/lib/mock-articles";
 import { getLocalizedArticle } from "@/lib/i18n/content-article";
 import { getCategoryTheme, categoryThemeClass } from "@/lib/blog-theme";
+import { blogCoverPhoto } from "@/lib/cover-photos";
 import { slugify } from "@/lib/format";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
@@ -81,7 +82,8 @@ export default function BlogContent({
             <p className="mt-3 text-ink-soft">{featuredLocalized.excerpt}</p>
             <p className="mt-5 flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--article-accent)" }}>{t.common.readArticle} <ArrowRight size={14} /></p>
           </div>
-          <PlaceholderImage
+          <CoverPhoto
+            photoUrl={blogCoverPhoto(featured!.category, featuredLocalized.coverSeed)}
             seed={featuredLocalized.coverSeed}
             variant="default"
             ratio="aspect-[4/3]"

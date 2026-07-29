@@ -7,7 +7,8 @@ import { getLocalizedArticle } from "@/lib/i18n/content-article";
 import { getCategoryTheme } from "@/lib/blog-theme";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
-import PlaceholderImage from "./PlaceholderImage";
+import { blogCoverPhoto } from "@/lib/cover-photos";
+import CoverPhoto from "./CoverPhoto";
 
 export default function ArticleCard({ article, compact = false, locale = "it" }: { article: Article; compact?: boolean; locale?: Locale }) {
   const a = getLocalizedArticle(article, locale);
@@ -16,7 +17,8 @@ export default function ArticleCard({ article, compact = false, locale = "it" }:
   return (
     <Link href={localeHref(locale, `/blog/${article.slug}`)} className="card card-hover card-soft group flex flex-col overflow-hidden">
       <div className="relative">
-        <PlaceholderImage
+        <CoverPhoto
+          photoUrl={blogCoverPhoto(article.category, a.coverSeed)}
           seed={a.coverSeed}
           variant="default"
           label={a.title}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Clock, CalendarDays, ArrowRight, Quote, List, ChevronDown } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import PlaceholderImage from "@/components/PlaceholderImage";
+import CoverPhoto from "@/components/CoverPhoto";
 import TableOfContents from "@/components/TableOfContents";
 import FaqAccordion from "@/components/FaqAccordion";
 import ArticleCard from "@/components/ArticleCard";
@@ -13,6 +13,7 @@ import KeyTakeaways from "@/components/KeyTakeaways";
 import { getArticleBySlug, getRelatedArticles, blogCategoryLabel } from "@/lib/mock-articles";
 import { getLocalizedArticle } from "@/lib/i18n/content-article";
 import { getCategoryTheme, categoryThemeClass } from "@/lib/blog-theme";
+import { blogCoverPhoto } from "@/lib/cover-photos";
 import { getAuthorByName, authorBio } from "@/lib/authors";
 import { formatDate, slugify } from "@/lib/format";
 import { JsonLd, articleJsonLd, faqJsonLd } from "@/lib/seo";
@@ -70,13 +71,15 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
           </div>
 
           <div className="relative hidden lg:block">
-            <PlaceholderImage
+            <CoverPhoto
+              photoUrl={blogCoverPhoto(base.category, article.coverSeed)}
               seed={article.coverSeed}
               variant="default"
               ratio="aspect-square"
               className="rounded-[2rem] shadow-lg"
               label={article.title}
               tint={{ soft: theme.soft, accent: theme.accent, bg1: theme.soft, bg2: theme.soft }}
+              priority
             />
           </div>
         </div>
