@@ -20,7 +20,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} — Ristoranti, negozi e prodotti senza glutine in Italia`, template: `%s · ${SITE_NAME}` },
+  title: { default: `${SITE_NAME} — Ristoranti, negozi e locali senza glutine in Italia`, template: `%s · ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: [
@@ -32,12 +32,11 @@ export const metadata: Metadata = {
     "dove mangiare senza glutine",
     "gluten free Italia",
     "AIC",
-    "prodotti senza glutine",
   ],
   authors: [{ name: SITE_NAME }],
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${SITE_NAME} — Ristoranti, negozi e prodotti senza glutine in Italia`,
+    title: `${SITE_NAME} — Ristoranti, negozi e locali senza glutine in Italia`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,

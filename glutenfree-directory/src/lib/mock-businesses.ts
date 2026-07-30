@@ -522,7 +522,7 @@ const seeds: Seed[] = [
     description: "Panificio e pasticceria a Bari con un laboratorio autorizzato dal Ministero della Salute per la produzione certificata senza glutine. Propone focaccia barese, panzerotti, pane e prodotti da forno gluten free accanto alla produzione tradizionale.",
     shortDescription: "Panificio a Bari con laboratorio autorizzato per produzione senza glutine.",
     gallerySeeds: [121, 122, 123, 124],
-    photoUrl: "https://images.unsplash.com/photo-1585478259715-4d3a5f4c1c1e?auto=format&fit=crop&w=800&q=75",
+    photoUrl: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Solho",

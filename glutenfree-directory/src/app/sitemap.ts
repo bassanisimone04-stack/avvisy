@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { BUSINESSES } from "@/lib/mock-businesses";
 import { ARTICLES } from "@/lib/mock-articles";
-import { PRODUCTS } from "@/lib/mock-products";
 import { CATEGORIES } from "@/lib/categories";
 import { AUTHORS } from "@/lib/authors";
 import { SITE_URL } from "@/lib/site-config";
@@ -30,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/", { changeFrequency: "daily", priority: 1 }),
     entry("/directory", { changeFrequency: "daily", priority: 0.9 }),
     entry("/blog", { changeFrequency: "daily", priority: 0.8 }),
-    entry("/prodotti", { changeFrequency: "weekly", priority: 0.7 }),
     entry("/faq", { changeFrequency: "monthly", priority: 0.7 }),
     entry("/chi-siamo", { changeFrequency: "monthly", priority: 0.3 }),
     entry("/contatti", { changeFrequency: "monthly", priority: 0.3 }),
@@ -49,13 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/blog/${a.slug}`, { changeFrequency: "monthly", priority: 0.6, lastModified: a.updatedAt }),
   );
 
-  const productPages: MetadataRoute.Sitemap = PRODUCTS.map((p) =>
-    entry(`/prodotti/${p.slug}`, { changeFrequency: "monthly", priority: 0.5 }),
-  );
-
   const authorPages: MetadataRoute.Sitemap = AUTHORS.map((a) =>
     entry(`/blog/autore/${a.slug}`, { changeFrequency: "monthly", priority: 0.4 }),
   );
 
-  return [...staticPages, ...categoryPages, ...businessPages, ...articlePages, ...productPages, ...authorPages];
+  return [...staticPages, ...categoryPages, ...businessPages, ...articlePages, ...authorPages];
 }

@@ -68,7 +68,7 @@ export function TermsContent({ locale }: { locale: Locale }) {
         <h1>{en ? "Terms of Service" : "Termini di servizio"}</h1>
         {en ? (
           <>
-            <p>Mappa Senza Glutine is a demo prototype. Information on businesses, products and reviews shown on the site is fictional and for illustrative purposes only, and does not represent real data.</p>
+            <p>Mappa Senza Glutine is an independent directory. Business listings are individually verified through public official sources (official websites, the AIC register, phone confirmation) and are not invented or auto-generated; reviews, on the other hand, are content submitted by users, and their accuracy depends on whoever wrote them.</p>
             <h2>Use of the service</h2>
             <p>Use of the platform is free. Users agree to publish truthful content (reviews, comments, reports) that is respectful of the community.</p>
             <h2>Limitation of liability</h2>
@@ -76,7 +76,7 @@ export function TermsContent({ locale }: { locale: Locale }) {
           </>
         ) : (
           <>
-            <p>Mappa Senza Glutine è un prototipo dimostrativo. Le informazioni su attività, prodotti e recensioni presenti nel sito sono inventate a scopo illustrativo e non rappresentano dati reali.</p>
+            <p>Mappa Senza Glutine è una directory indipendente. Le schede delle attività sono verificate singolarmente tramite fonti pubbliche ufficiali (siti ufficiali, registro AIC, conferma telefonica) e non sono inventate né generate automaticamente; le recensioni, invece, sono contenuti pubblicati dagli utenti e la loro accuratezza dipende da chi le scrive.</p>
             <h2>Uso del servizio</h2>
             <p>L&apos;utilizzo della piattaforma è gratuito. Gli utenti si impegnano a pubblicare contenuti (recensioni, commenti, segnalazioni) veritieri e rispettosi della community.</p>
             <h2>Limitazione di responsabilità</h2>

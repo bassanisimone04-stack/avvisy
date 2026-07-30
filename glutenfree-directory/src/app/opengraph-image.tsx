@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Mappa Senza Glutine — Ristoranti, negozi e prodotti senza glutine in Italia";
+export const alt = "Mappa Senza Glutine — Ristoranti, negozi e locali senza glutine in Italia";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -49,7 +49,7 @@ export default function OpengraphImage() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
           <div style={{ fontSize: "56px", fontWeight: 800, color: "#12241c", lineHeight: 1.15, maxWidth: "980px" }}>
-            Ristoranti, hotel, negozi e prodotti certificati, vicino a te.
+            Ristoranti, hotel e negozi certificati, vicino a te.
           </div>
           <div style={{ display: "flex", gap: "14px" }}>
             {["Certificati AIC", "Recensioni verificate", "In tutta Italia"].map((t) => (

@@ -66,7 +66,7 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
                     <span className="text-sm text-ink-soft">{business.rating} · {business.reviewCount} {t.common.reviews} · {business.priceRange}</span>
                   </>
                 ) : (
-                  <span className="text-sm text-ink-soft">{t.common.noReviewsYet} · {business.priceRange}</span>
+                  <span className="text-sm text-ink-soft">{business.priceRange}</span>
                 )}
               </div>
             </div>

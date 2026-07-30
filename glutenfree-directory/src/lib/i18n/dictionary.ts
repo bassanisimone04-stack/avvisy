@@ -2,7 +2,7 @@ import type { Locale } from "./locale";
 
 export const dictionary = {
   it: {
-    nav: { directory: "Directory", blog: "Blog", products: "Prodotti", about: "Chi siamo" },
+    nav: { directory: "Locali", blog: "Blog", products: "Prodotti", faq: "FAQ", about: "Chi siamo" },
     common: {
       home: "Home",
       login: "Accedi",
@@ -185,7 +185,7 @@ export const dictionary = {
     },
   },
   en: {
-    nav: { directory: "Directory", blog: "Blog", products: "Products", about: "About us" },
+    nav: { directory: "Directory", blog: "Blog", products: "Products", faq: "FAQ", about: "About us" },
     common: {
       home: "Home",
       login: "Log in",

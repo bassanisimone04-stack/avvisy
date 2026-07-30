@@ -4,7 +4,6 @@ import SearchBar from "@/components/SearchBar";
 import CategoryIcon from "@/components/CategoryIcon";
 import BusinessCard from "@/components/BusinessCard";
 import ArticleCard from "@/components/ArticleCard";
-import ProductCard from "@/components/ProductCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import NewsletterForm from "@/components/NewsletterForm";
 import MapSection from "@/components/MapSection";
@@ -15,7 +14,6 @@ import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
 import { REGIONS } from "@/lib/regions";
 import { getFeaturedBusinesses, getTopRatedBusinesses } from "@/lib/mock-businesses";
 import { getLatestArticles } from "@/lib/mock-articles";
-import { getRecommendedProducts } from "@/lib/mock-products";
 import { HOME_FAQS } from "@/lib/mock-site";
 import { getLocalizedBusiness } from "@/lib/i18n/content-business";
 import { HOME_FAQS_EN } from "@/lib/i18n/content-site";
@@ -31,7 +29,6 @@ export default function HomeContent({ locale }: { locale: Locale }) {
   const featured = getFeaturedBusinesses(6).map((b) => getLocalizedBusiness(b, locale));
   const topRated = getTopRatedBusinesses(6).map((b) => getLocalizedBusiness(b, locale));
   const latestArticles = getLatestArticles(3);
-  const products = getRecommendedProducts(8);
   const h = (path: string) => localeHref(locale, path);
 
   return (
@@ -177,28 +174,6 @@ export default function HomeContent({ locale }: { locale: Locale }) {
               <ArticleCard article={a} locale={locale} />
             </Reveal>
           ))}
-        </div>
-      </section>
-
-      {/* PRODOTTI CONSIGLIATI */}
-      <section className="bg-surface-2 py-14">
-        <div className="container-page">
-          <div className="mb-8 flex items-end justify-between gap-4">
-            <Reveal>
-              <div>
-                <p className="eyebrow">{t.home.productsEyebrow}</p>
-                <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.productsTitle}</h2>
-              </div>
-            </Reveal>
-            <Link href={h("/prodotti")} className="hidden text-sm font-semibold text-brand-dark link-underline sm:block">{t.common.seeAll}</Link>
-          </div>
-          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
-            {products.map((p, i) => (
-              <Reveal key={p.id} delay={i * 50}>
-                <ProductCard product={p} locale={locale} />
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

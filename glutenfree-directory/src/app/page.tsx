@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
-  title: `${SITE_NAME} — Ristoranti, negozi e prodotti senza glutine in Italia`,
+  title: `${SITE_NAME} — Ristoranti, negozi e locali senza glutine in Italia`,
   description: SITE_DESCRIPTION,
   path: "/",
   locale: "it",

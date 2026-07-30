@@ -22,7 +22,7 @@ export default function SiteHeader() {
   const NAV = [
     { href: localeHref(locale, "/directory"), label: t.nav.directory },
     { href: localeHref(locale, "/blog"), label: t.nav.blog },
-    { href: localeHref(locale, "/prodotti"), label: t.nav.products },
+    { href: localeHref(locale, "/faq"), label: t.nav.faq },
     { href: localeHref(locale, "/chi-siamo"), label: t.nav.about },
   ];
 
