@@ -67,6 +67,14 @@ export const REGIONS: RegionData[] = [
       { name: "Torino", code: "TO", slug: "torino", comuni: ["Torino", "Moncalieri"] },
     ],
   },
+  {
+    name: "Puglia",
+    slug: "puglia",
+    provinces: [
+      { name: "Bari", code: "BA", slug: "bari", comuni: ["Bari", "Modugno"] },
+      { name: "Lecce", code: "LE", slug: "lecce", comuni: ["Lecce", "Otranto"] },
+    ],
+  },
 ];
 
 export function allComuni() {

@@ -167,6 +167,42 @@ export const BUSINESS_EN: Record<string, BusinessTranslation> = {
     services: ["Sweet and savory gluten-free products", "Vegan and lactose-free options", "San Lorenzo area"],
     glutenFreeMenu: ["Gluten-free cakes and desserts", "Savory gluten-free products"],
   },
+  "biz-27": {
+    shortDescription: "Gelateria in Dorsoduro with artisan gelato in dedicated gluten-free cones.",
+    description: "Gelateria of the Grom chain in Dorsoduro, with artisan gelato made in dedicated gluten-free cones at every location of the brand, to reduce the risk of cross-contamination.",
+    services: ["Artisan gelato in dedicated gluten-free cones", "Attention to cross-contamination", "Dorsoduro area"],
+    glutenFreeMenu: ["Artisan gluten-free gelato", "Dedicated gluten-free cones"],
+  },
+  "biz-28": {
+    shortDescription: "AIC-certified hotel in Castello, entirely gluten-free breakfast.",
+    description: "Hotel in the Castello district, near St. Mark's Square, noted as one of the few AIC-certified hotels in Venice. It offers an entirely gluten-free breakfast, with dedicated bread, cookies, cereals and pastries, plus lactose-free options on request.",
+    services: ["AIC certified", "Entirely gluten-free breakfast", "Lactose-free options on request"],
+    glutenFreeMenu: ["Gluten-free bread, cookies and cereal at breakfast", "Gluten-free sweet and savory items"],
+  },
+  "biz-29": {
+    shortDescription: "AIC-trained pizzeria on the Zattere, separate kitchens and delivery.",
+    description: "Pizzeria and restaurant on the Zattere, among the first venues in Venice trained by AIC, with two physically separate kitchens: one dedicated exclusively to dishes made without gluten-containing flours. It also offers home delivery in some areas of the city.",
+    services: ["AIC certified", "Physically separate kitchens", "Delivery to San Polo, Santa Croce and Cannaregio"],
+    glutenFreeMenu: ["Gluten-free pizza", "Gluten-free starters, first and second courses", "Fried dishes with rice flour"],
+  },
+  "biz-30": {
+    shortDescription: "100% gluten-free pastry and deli shop in Bari, since 2013.",
+    description: "Pastry and deli shop in Bari, 100% dedicated to gluten-free production since 2013, the first of its kind in the city. It offers sweet and savory items, deli food and packaged products also available with a regional health voucher.",
+    services: ["100% gluten-free lab since 2013", "Products available with regional health voucher", "Deli and pastry"],
+    glutenFreeMenu: ["Gluten-free sweet and savory items", "Gluten-free deli food", "Packaged reimbursable products"],
+  },
+  "biz-31": {
+    shortDescription: "Bakery in Bari with a lab authorized for gluten-free production.",
+    description: "Bakery and pastry shop in Bari with a lab authorized by the Ministry of Health for certified gluten-free production. It offers Bari-style focaccia, panzerotti, bread and baked goods gluten-free alongside traditional production.",
+    services: ["Lab authorized by the Ministry of Health for gluten-free production", "Bari-style focaccia and panzerotti", "Traceable baked goods"],
+    glutenFreeMenu: ["Gluten-free Bari-style focaccia", "Gluten-free panzerotti and bread", "Gluten-free baked goods"],
+  },
+  "biz-32": {
+    shortDescription: "Pizzeria in central Bari with gluten-free pan pizza.",
+    description: "Pizzeria in central Bari, on Via Sparano, offering pan pizza made with a rice-flour dough as a gluten-free alternative, alongside traditional Apulian cuisine.",
+    services: ["Rice-flour pan pizza", "Apulian cuisine", "Central Bari"],
+    glutenFreeMenu: ["Gluten-free pan pizza", "Traditional Apulian dishes"],
+  },
 };
 
 const REVIEW_EN: Record<string, { title: string; body: string }> = {
