@@ -17,7 +17,7 @@ export default function BusinessOnboardingContent({ locale }: { locale: Locale }
       <div className="grid gap-10 lg:grid-cols-2">
         <div>
           <h1 className="text-3xl font-bold text-ink sm:text-4xl">{en ? "List your business" : "Inserisci la tua attività"}</h1>
-          <p className="mt-3 text-ink-soft">{en ? "Reach thousands of people with celiac disease looking for safe places in your area every day." : "Raggiungi migliaia di persone celiache che cercano ogni giorno locali sicuri nella tua zona."}</p>
+          <p className="mt-3 text-ink-soft">{en ? "Get in front of people with celiac disease looking for safe places in your area." : "Fatti trovare dalle persone celiache che cercano locali sicuri nella tua zona."}</p>
           <div className="mt-6 space-y-4">
             {[
               { icon: Store, title: en ? "Free listing" : "Scheda gratuita", body: en ? "Publish your business listing with photos, menu and hours at no activation cost." : "Pubblica la scheda della tua attività con foto, menu e orari senza costi di attivazione." },
