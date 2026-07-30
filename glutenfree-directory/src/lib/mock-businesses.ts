@@ -416,7 +416,7 @@ const seeds: Seed[] = [
     description: "Ristorante-griglieria e pizzeria a Roma, certificato AIC, con cucina separata dedicata alla preparazione dei piatti senza glutine per evitare contaminazioni crociate. Ampi spazi interni ed esterni.",
     shortDescription: "Pizzeria e griglieria certificata AIC a Roma, cucina separata senza glutine.",
     gallerySeeds: [93, 94, 95, 96],
-    photoUrl: "https://images.unsplash.com/photo-1548365328-9f547fb0953b?auto=format&fit=crop&w=800&q=75",
+    photoUrl: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Ramè - Sushi Naturale Italiano",

@@ -154,6 +154,8 @@ export interface Product {
   aicCertified: boolean;
   whereToBuy: string[];
   tags: string[];
+  /** Foto reale del prodotto/alimento; se assente si usa l'illustrazione SVG. */
+  photoUrl?: string;
 }
 
 export interface Testimonial {
