@@ -8,18 +8,18 @@ interface ProductTranslation {
 }
 
 export const PRODUCT_EN: Record<string, ProductTranslation> = {
-  "prod-1": { name: "Corn and rice fusilli", description: "A classic bronze-cut shape that holds up well when cooked, ideal for rich sauces.", tags: ["pasta", "lactose-free"] },
-  "prod-2": { name: "Gluten-free sandwich bread", description: "Soft, long-life bread, great toasted too, with no eggs or milk.", tags: ["bread", "vegan"] },
-  "prod-3": { name: "Pizza flour mix", description: "Ready-to-use mix for an elastic, light dough, very close to traditional pizza.", tags: ["flour", "pizza"] },
-  "prod-4": { name: "Classic butter shortbread cookies", description: "Crumbly butter shortbread, perfect for breakfast or a snack for the little ones.", tags: ["sweets", "kids"] },
-  "prod-5": { name: "Seed crackers", description: "Crunchy snack with flax and sesame seeds, ideal for a worry-free savory snack.", tags: ["snack", "seeds"] },
-  "prod-6": { name: "Whole buckwheat flour", description: "100% stone-ground buckwheat flour, perfect for pancakes and rustic baked goods.", tags: ["flour", "whole grain"] },
-  "prod-7": { name: "Gluten-free Apulian taralli", description: "Classic EVO oil taralli, crunchy and thin like the traditional Apulian recipe.", tags: ["snack", "tradition"] },
-  "prod-8": { name: "Gluten-free breadcrumbs", description: "Fine breadcrumbs ideal for crunchy coatings, made from dried gluten-free bread.", tags: ["condiments"] },
-  "prod-9": { name: "Red lentil penne rigate", description: "High-protein pasta made from red lentil flour, with no other grains.", tags: ["pasta", "protein"] },
-  "prod-10": { name: "Ready-made chocolate cake mix", description: "Dark chocolate cake mix, just add eggs, oil and milk of your choice.", tags: ["sweets", "mixes"] },
-  "prod-11": { name: "Gluten-free Romagna piadina", description: "Ready-to-warm piadina in a pan in a few minutes, soft and thin like the original.", tags: ["bread"] },
-  "prod-12": { name: "Rustic bread flour mix", description: "Mix with whole rice flour and teff, for a rustic bread with a crunchy crust.", tags: ["flour", "bread"] },
+  "prod-1": { name: "Gluten-Free Fusilli 400g", description: "White corn, yellow corn and whole rice fusilli, with no added starches. Cooks in 11 minutes, same quality as traditional Barilla pasta. Crossed Grain and Ministry of Health marks.", tags: ["pasta", "lactose-free", "reimbursable"] },
+  "prod-2": { name: "Corn Eliche 250g", description: "100% Italian corn pasta, made with the exclusive Molino di Ferro method passed down for 6 generations. Cooks in 8-9 minutes, holds sauces very well.", tags: ["pasta", "lactose-free", "egg-free"] },
+  "prod-3": { name: "Country Bread 240g", description: "Sliced bread with buckwheat flour (8%), soft with a rustic taste. Gluten-free, lactose-free and preservative-free. Shelf-stable at room temperature.", tags: ["bread", "lactose-free", "preservative-free"] },
+  "prod-4": { name: "Sliced Country Bread 300g", description: "Soft sliced bread in single-serve packs of 2 slices, with extra virgin olive oil (2%). No wheat starch, soy, milk, eggs or preservatives.", tags: ["bread", "lactose-free", "soy-free"] },
+  "prod-5": { name: "Chocolix 110g", description: "Wafer bar coated in milk chocolate (32%) with caramel filling (30%), individually wrapped in 5 portions. A gluten-free indulgent snack.", tags: ["snack", "chocolate", "single-serve"] },
+  "prod-6": { name: "Chocolate Chip Cookies 150g", description: "Shortbread cookies with dark chocolate chips (9.1%), gluten-free, lactose-free and palm-oil-free. In single-serve packs of 3 cookies, ideal for breakfast or a snack.", tags: ["cookies", "lactose-free", "palm-oil-free"] },
+  "prod-7": { name: "Mix It! All-Purpose Flour 1kg", description: "All-purpose gluten-free flour for any baking recipe: cakes, bread, focaccia, fresh pasta and breading. Made from corn starch, rice flour and sorghum flour.", tags: ["flour", "versatile", "vegan"] },
+  "prod-8": { name: "Cake Mix 1kg", description: "Gluten-free flour blend specifically for cakes and cookies, low in sugar and saturated fat. Lactose-free and free from milk proteins.", tags: ["flour", "for baking", "lactose-free"] },
+  "prod-9": { name: "Crackers 210g", description: "Classic gluten-free crackers, light and crumbly, in single-serve 35g packs. Ideal as a bread substitute or appetizer base. Made from corn starch and multigrain flours.", tags: ["crackers", "single-serve", "lactose-free"] },
+  "prod-10": { name: "Crispbread 150g", description: "Gluten-free and lactose-free crispbread, made from corn flour and rice flour. Crunchy with a delicate taste, a light alternative to traditional bread.", tags: ["crispbread", "lactose-free", "bread substitute"] },
+  "prod-11": { name: "Genovese Pesto 190g", description: "Pesto with fresh Italian basil (30%) and Parmigiano Reggiano DOP (5%). Gluten-free, preservative-free ready sauce, ideal for gluten-free pasta.", tags: ["pesto", "preservative-free", "with Parmigiano Reggiano DOP"] },
+  "prod-12": { name: "Organic Pesto 130g", description: "Organic pesto with fresh basil (55%), extra virgin olive oil and pine nuts. Garlic-free and cheese-free, ideal for pasta, bruschetta or salads. Certified organic and gluten-free.", tags: ["organic", "vegan", "garlic-free"] },
 };
 
 export function getLocalizedProduct(product: Product, locale: Locale): Product {

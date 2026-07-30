@@ -5,7 +5,6 @@ import CategoryIcon from "@/components/CategoryIcon";
 import BusinessCard from "@/components/BusinessCard";
 import ArticleCard from "@/components/ArticleCard";
 import ProductCard from "@/components/ProductCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import NewsletterForm from "@/components/NewsletterForm";
 import MapSection from "@/components/MapSection";
@@ -17,9 +16,9 @@ import { REGIONS } from "@/lib/regions";
 import { getFeaturedBusinesses, getTopRatedBusinesses } from "@/lib/mock-businesses";
 import { getLatestArticles } from "@/lib/mock-articles";
 import { getRecommendedProducts } from "@/lib/mock-products";
-import { TESTIMONIALS, HOME_FAQS } from "@/lib/mock-site";
+import { HOME_FAQS } from "@/lib/mock-site";
 import { getLocalizedBusiness } from "@/lib/i18n/content-business";
-import { getLocalizedTestimonial, HOME_FAQS_EN } from "@/lib/i18n/content-site";
+import { HOME_FAQS_EN } from "@/lib/i18n/content-site";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary, tf } from "@/lib/i18n/dictionary";
@@ -33,7 +32,6 @@ export default function HomeContent({ locale }: { locale: Locale }) {
   const topRated = getTopRatedBusinesses(6).map((b) => getLocalizedBusiness(b, locale));
   const latestArticles = getLatestArticles(3);
   const products = getRecommendedProducts(8);
-  const testimonials = TESTIMONIALS.map((x) => getLocalizedTestimonial(x, locale));
   const h = (path: string) => localeHref(locale, path);
 
   return (
@@ -220,23 +218,6 @@ export default function HomeContent({ locale }: { locale: Locale }) {
               </div>
             </Reveal>
           ))}
-        </div>
-      </section>
-
-      {/* TESTIMONIANZE */}
-      <section className="bg-surface-2 py-14">
-        <div className="container-page">
-          <Reveal>
-            <p className="eyebrow text-center">{t.home.testimonialsEyebrow}</p>
-            <h2 className="font-editorial mt-1 text-center text-2xl font-semibold text-ink sm:text-3xl">{t.home.testimonialsTitle}</h2>
-          </Reveal>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((tm, i) => (
-              <Reveal key={tm.id} delay={i * 60}>
-                <TestimonialCard t={tm} />
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

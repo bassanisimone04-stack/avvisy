@@ -2,14 +2,17 @@ import type { Product } from "./types";
 import { slugify } from "./format";
 import type { Locale } from "./i18n/locale";
 
+// Prodotti reali verificati, in vendita in Italia (supermercati, farmacie,
+// online). Prezzi indicativi mid-2026; certificazione AIC Spiga Barrata
+// confermata dai siti ufficiali dei produttori. Nessuna recensione o
+// valutazione inventata: rating e reviewCount restano a 0 finche' non
+// arrivano valutazioni reali dagli utenti.
 interface Seed {
   name: string;
   brand: string;
   category: Product["category"];
   description: string;
   price: number;
-  rating: number;
-  reviewCount: number;
   aicCertified: boolean;
   imageSeed: number;
   whereToBuy: string[];
@@ -17,18 +20,18 @@ interface Seed {
 }
 
 const seeds: Seed[] = [
-  { name: "Fusilli di mais e riso", brand: "Naturis", category: "Pasta e cereali", description: "Formato classico trafilato al bronzo, tiene bene la cottura ed è ideale per condimenti ricchi.", price: 2.4, rating: 4.6, reviewCount: 312, aicCertified: true, imageSeed: 401, whereToBuy: ["Supermercato Naturasì Bio", "Negozio Senza G"], tags: ["pasta", "senza lattosio"] },
-  { name: "Pane in cassetta senza glutine", brand: "Panfree", category: "Pane e sostituti", description: "Pane morbido a lunga conservazione, ottimo anche tostato, senza uova né latte.", price: 3.9, rating: 4.3, reviewCount: 187, aicCertified: true, imageSeed: 402, whereToBuy: ["Supermercato Naturasì Bio"], tags: ["pane", "vegano"] },
-  { name: "Mix farina per pizza", brand: "Molino Verde", category: "Farine e mix", description: "Mix pronto per un impasto elastico e leggero, risultato molto simile alla pizza tradizionale.", price: 5.5, rating: 4.7, reviewCount: 421, aicCertified: true, imageSeed: 403, whereToBuy: ["Negozio Senza G", "Pizzeria La Spiga d'Oro"], tags: ["farina", "pizza"] },
-  { name: "Biscotti frollini classici", brand: "Dolciaria Rossi", category: "Snack e dolci", description: "Frollini friabili al burro, perfetti per la colazione o la merenda dei più piccoli.", price: 3.2, rating: 4.5, reviewCount: 264, aicCertified: true, imageSeed: 404, whereToBuy: ["Bar Pasticceria Il Chicco Verde"], tags: ["dolci", "bambini"] },
-  { name: "Crackers ai semi", brand: "Naturis", category: "Snack e dolci", description: "Snack croccante ai semi di lino e sesamo, ideale per uno spuntino salato senza pensieri.", price: 2.8, rating: 4.4, reviewCount: 156, aicCertified: true, imageSeed: 405, whereToBuy: ["Supermercato Naturasì Bio", "Negozio Senza G"], tags: ["snack", "semi"] },
-  { name: "Farina di grano saraceno integrale", brand: "Molino Verde", category: "Farine e mix", description: "Farina 100% grano saraceno macinata a pietra, perfetta per pancake e prodotti da forno rustici.", price: 4.6, rating: 4.8, reviewCount: 198, aicCertified: true, imageSeed: 406, whereToBuy: ["Negozio Senza G"], tags: ["farina", "integrale"] },
-  { name: "Taralli pugliesi senza glutine", brand: "Sapori del Sud", category: "Prodotti da forno", description: "Taralli classici all'olio EVO, croccanti e sottili come la ricetta tradizionale pugliese.", price: 3.5, rating: 4.6, reviewCount: 233, aicCertified: true, imageSeed: 407, whereToBuy: ["Trattoria dei Sapori Antichi"], tags: ["snack", "tradizione"] },
-  { name: "Pangrattato senza glutine", brand: "Panfree", category: "Condimenti", description: "Pangrattato fine ideale per impanature croccanti, ottenuto da pane gluten free essiccato.", price: 2.2, rating: 4.2, reviewCount: 94, aicCertified: true, imageSeed: 408, whereToBuy: ["Supermercato Naturasì Bio"], tags: ["condimenti"] },
-  { name: "Penne rigate di lenticchie rosse", brand: "Legum Pasta", category: "Pasta e cereali", description: "Pasta ad alto contenuto proteico ricavata da farina di lenticchie rosse, senza altri cereali.", price: 3.1, rating: 4.5, reviewCount: 145, aicCertified: true, imageSeed: 409, whereToBuy: ["Negozio Senza G"], tags: ["pasta", "proteine"] },
-  { name: "Torta al cioccolato pronta", brand: "Dolciaria Rossi", category: "Snack e dolci", description: "Preparato per torta al cioccolato fondente, basta aggiungere uova, olio e latte a scelta.", price: 4.1, rating: 4.4, reviewCount: 112, aicCertified: true, imageSeed: 410, whereToBuy: ["Bar Pasticceria Il Chicco Verde"], tags: ["dolci", "preparati"] },
-  { name: "Piadina romagnola senza glutine", brand: "Sapori del Sud", category: "Pane e sostituti", description: "Piadina pronta da scaldare in padella pochi minuti, morbida e sottile come l'originale.", price: 3.8, rating: 4.3, reviewCount: 78, aicCertified: true, imageSeed: 411, whereToBuy: ["Supermercato Naturasì Bio"], tags: ["pane"] },
-  { name: "Mix farina per pane rustico", brand: "Molino Verde", category: "Farine e mix", description: "Mix con farina di riso integrale e teff, per un pane rustico dalla crosta croccante.", price: 5.9, rating: 4.7, reviewCount: 167, aicCertified: true, imageSeed: 412, whereToBuy: ["Negozio Senza G"], tags: ["farina", "pane"] },
+  { name: "Fusilli Senza Glutine 400g", brand: "Barilla", category: "Pasta e cereali", description: "Fusilli di mais bianco, mais giallo e riso integrale, senza aggiunta di amidi. Cottura 11 minuti, stessa qualità della pasta tradizionale Barilla. Marchio Spiga Barrata e Ministero della Salute.", price: 2.00, aicCertified: true, imageSeed: 401, whereToBuy: ["Supermercato (Carrefour, Esselunga, Conad, Coop)", "Farmacia", "Online"], tags: ["pasta", "senza lattosio", "erogabile SSN"] },
+  { name: "Eliche di Mais 250g", brand: "Le Veneziane", category: "Pasta e cereali", description: "Pasta di mais 100% italiano, lavorata secondo il metodo esclusivo Molino di Ferro tramandato da 6 generazioni. Cottura 8-9 minuti, ottima tenuta e capacità di trattenere i condimenti.", price: 2.30, aicCertified: true, imageSeed: 402, whereToBuy: ["Farmacia", "Supermercato", "Online"], tags: ["pasta", "senza lattosio", "senza uova"] },
+  { name: "Pane Casereccio 240g", brand: "Schär", category: "Pane e sostituti", description: "Pane a fette con farina di grano saraceno (8%), soffice e dal gusto rustico. Senza glutine, senza lattosio e senza conservanti. Conservazione a temperatura ambiente.", price: 4.75, aicCertified: true, imageSeed: 403, whereToBuy: ["Farmacia", "Supermercato", "Online"], tags: ["pane", "senza lattosio", "senza conservanti"] },
+  { name: "Panfette Pane Casereccio 300g", brand: "Nutrifree", category: "Pane e sostituti", description: "Pane a fette morbido in monoporzioni da 2 fette, con olio extravergine di oliva (2%). Senza amido di frumento, senza soia, senza latte, senza uova e senza conservanti.", price: 3.50, aicCertified: true, imageSeed: 404, whereToBuy: ["Farmacia", "Supermercato", "Online"], tags: ["pane", "senza lattosio", "senza soia"] },
+  { name: "Chocolix 110g", brand: "Schär", category: "Snack e dolci", description: "Barretta wafer ricoperta di cioccolato al latte (32%) con ripieno al caramello (30%), confezionata singolarmente in 5 porzioni. Snack goloso senza glutine.", price: 3.50, aicCertified: true, imageSeed: 405, whereToBuy: ["Farmacia", "Supermercato", "Online"], tags: ["snack", "cioccolato", "monoporzione"] },
+  { name: "Buoni Senza Biscotti con Gocce di Cioccolato 150g", brand: "Céréal", category: "Snack e dolci", description: "Biscotti frollini con gocce di cioccolato fondente (9,1%), senza glutine, senza lattosio e senza olio di palma. In monoporzioni da 3 biscotti, ideali per colazione o merenda.", price: 3.50, aicCertified: true, imageSeed: 406, whereToBuy: ["Supermercato (Esselunga, Carrefour, Iper)", "Online"], tags: ["biscotti", "senza lattosio", "senza olio di palma"] },
+  { name: "Mix It! Universale 1kg", brand: "Schär", category: "Farine e mix", description: "Farina universale senza glutine per qualsiasi ricetta da forno: dolci, pane, focacce, pasta fresca e impanature. A base di amido di mais, farina di riso e farina di sorgo.", price: 4.50, aicCertified: true, imageSeed: 407, whereToBuy: ["Farmacia", "Supermercato (Carrefour)", "Online"], tags: ["farina", "versatile", "vegano"] },
+  { name: "Mix per Dolci 1kg", brand: "Nutrifree", category: "Farine e mix", description: "Miscela di farine senza glutine specifica per torte e biscotti, a basso contenuto di zuccheri e grassi saturi. Senza lattosio e senza proteine del latte.", price: 5.50, aicCertified: true, imageSeed: 408, whereToBuy: ["Farmacia", "Supermercato", "Online"], tags: ["farina", "per pasticceria", "senza lattosio"] },
+  { name: "Crackers 210g", brand: "Schär", category: "Prodotti da forno", description: "Crackers classici senza glutine, leggeri e friabili, in monoporzioni da 35g. Ideali come sostituto del pane o base per aperitivi. A base di amido di mais e farine multicereali.", price: 3.00, aicCertified: true, imageSeed: 409, whereToBuy: ["Farmacia", "Supermercato (Carrefour)", "Online"], tags: ["crackers", "monoporzione", "senza lattosio"] },
+  { name: "Fette Croccanti 150g", brand: "Céréal", category: "Prodotti da forno", description: "Fette croccanti senza glutine e senza lattosio, a base di farina di mais e farina di riso. Friabili e dal gusto delicato, alternativa leggera al pane tradizionale.", price: 3.20, aicCertified: true, imageSeed: 410, whereToBuy: ["Supermercato (Carrefour, Esselunga)", "Farmacia", "Online"], tags: ["fette", "senza lattosio", "sostituto del pane"] },
+  { name: "Pesto alla Genovese 190g", brand: "Barilla", category: "Condimenti", description: "Pesto con basilico fresco italiano (30%) e Parmigiano Reggiano DOP (5%). Sugo pronto senza glutine e senza conservanti, ideale per condire pasta senza glutine.", price: 2.20, aicCertified: false, imageSeed: 411, whereToBuy: ["Supermercato (Carrefour, Esselunga, Conad, Coop)", "Online"], tags: ["pesto", "senza conservanti", "con Parmigiano Reggiano DOP"] },
+  { name: "Pesto Bio 130g", brand: "Sarchio", category: "Condimenti", description: "Pesto biologico con basilico fresco (55%), olio extra vergine d'oliva e pinoli. Senza aglio e senza formaggio, ideale per primi piatti, bruschette o insalate. Certificato biologico e senza glutine.", price: 4.48, aicCertified: true, imageSeed: 412, whereToBuy: ["Supermercato (Coop, negozi bio)", "Farmacia", "Online"], tags: ["biologico", "vegano", "senza aglio"] },
 ];
 
 export const PRODUCTS: Product[] = seeds.map((s, idx) => ({
@@ -40,8 +43,8 @@ export const PRODUCTS: Product[] = seeds.map((s, idx) => ({
   description: s.description,
   imageSeed: s.imageSeed,
   price: s.price,
-  rating: s.rating,
-  reviewCount: s.reviewCount,
+  rating: 0,
+  reviewCount: 0,
   aicCertified: s.aicCertified,
   whereToBuy: s.whereToBuy,
   tags: s.tags,
@@ -52,7 +55,7 @@ export function getProductBySlug(slug: string) {
 }
 
 export function getRecommendedProducts(limit = 8) {
-  return [...PRODUCTS].sort((a, b) => b.rating - a.rating).slice(0, limit);
+  return PRODUCTS.slice(0, limit);
 }
 
 export const PRODUCT_CATEGORIES: Product["category"][] = [
