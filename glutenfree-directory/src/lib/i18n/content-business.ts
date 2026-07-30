@@ -107,6 +107,66 @@ export const BUSINESS_EN: Record<string, BusinessTranslation> = {
     services: ["AIC certified", "100% gluten-free kitchen", "Sunday brunch", "Urban garden in the cloister"],
     glutenFreeMenu: ["Homemade potato gnocchi", "Quinoa and lentil burger", "Gluten-free Tuscan tradition", "Fusion dishes"],
   },
+  "biz-17": {
+    shortDescription: "100% gluten-free bakery and pastry shop in Milan, AIC certified.",
+    description: "Bakery and pastry shop in Milan with a lab entirely dedicated to gluten-free production. Every day it offers bread, croissants, pastries, pizza and arancini prepared with no risk of cross-contamination, part of the AIC-recognized network.",
+    services: ["AIC certified", "100% gluten-free lab", "Porta Romana area"],
+    glutenFreeMenu: ["Gluten-free croissants and bread", "Baked pastries", "Gluten-free pizza and arancini"],
+  },
+  "biz-18": {
+    shortDescription: "100% gluten-free and lactose-free pastry shop in Milan, with home delivery.",
+    description: "Pastry shop in Milan with entirely gluten-free and lactose-free production, with no risk of cross-contamination. It offers cakes, mignon pastries, bread, breadsticks and savory pies, with several vegan options, available for pickup and home delivery.",
+    services: ["100% gluten-free and lactose-free pastry", "Vegan options", "Home delivery in Milan"],
+    glutenFreeMenu: ["Gluten-free cakes and mignon pastries", "Bread and breadsticks", "Savory pies"],
+  },
+  "biz-19": {
+    shortDescription: "AIC-certified sushi restaurant on the Navigli, an almost entirely gluten-free menu.",
+    description: "Fusion sushi restaurant on the Navigli, among the first in Milan to offer an almost entirely gluten-free menu, AIC certified. It serves reinterpreted Japanese cuisine prepared following the Italian Celiac Association's protocols.",
+    services: ["AIC certified", "Japanese fusion cuisine", "Navigli area"],
+    glutenFreeMenu: ["Gluten-free sushi and sashimi", "Japanese fusion dishes"],
+  },
+  "biz-20": {
+    shortDescription: "Gelateria in Milan with entirely gluten-free flavors.",
+    description: "Gelateria in Milan offering flavors made entirely gluten-free, many of them also lactose-free. Featured in the main specialized gluten-free guides for Milan.",
+    services: ["Entirely gluten-free flavors", "Many lactose-free options"],
+    glutenFreeMenu: ["Artisan gluten-free gelato", "Lactose-free variants"],
+  },
+  "biz-21": {
+    shortDescription: "Historic pizzeria in Milan since 1977, AIC certified, over 50 gluten-free pizzas.",
+    description: "Historic pizzeria in Milan, open since 1977, with over 50 wood-fired pizza varieties available gluten-free, plus gluten-free beers. AIC certified after years of collaboration with the Association.",
+    services: ["AIC certified", "Historic pizzeria since 1977", "Over 50 pizza varieties"],
+    glutenFreeMenu: ["Wood-fired gluten-free pizza", "Gluten-free beers"],
+  },
+  "biz-22": {
+    shortDescription: "Artisan 100% gluten-free and lactose-free bakery and pastry shop in Rome.",
+    description: "Artisan bakery and pastry shop in Rome, with a lab entirely dedicated to gluten-free and lactose-free production. It offers bread, Sicilian cannoli, seasonal treats like panettone and pandoro, plus everyday pastries.",
+    services: ["100% gluten-free and lactose-free lab", "Garbatella area", "Seasonal treats"],
+    glutenFreeMenu: ["Gluten-free Sicilian cannoli", "Everyday bread and pastries", "Gluten-free panettone and pandoro"],
+  },
+  "biz-23": {
+    shortDescription: "AIC-certified trattoria and grill in Rome, an almost entirely gluten-free menu.",
+    description: "Trattoria and grill restaurant in Rome, AIC certified, where almost the entire menu is available gluten-free: pasta dishes, fried foods, grilled meat, pizza and bread.",
+    services: ["AIC certified", "Trattoria and grill", "Termini area"],
+    glutenFreeMenu: ["Gluten-free pasta dishes", "Fried foods and grilled meat", "Gluten-free pizza and bread"],
+  },
+  "biz-24": {
+    shortDescription: "AIC-certified pizzeria and grill in Rome, separate gluten-free kitchen.",
+    description: "Restaurant-grill and pizzeria in Rome, AIC certified, with a separate kitchen dedicated to preparing gluten-free dishes to avoid cross-contamination. Large indoor and outdoor spaces.",
+    services: ["AIC certified", "Separate dedicated kitchen", "Sunday brunch"],
+    glutenFreeMenu: ["Gluten-free pizza", "Grilled meat", "Gluten-free fried foods"],
+  },
+  "biz-25": {
+    shortDescription: "AIC-certified sushi restaurant in Rome, with home delivery.",
+    description: "Sushi restaurant in Rome, AIC certified, with original recipes and guaranteed gluten-free preparations. It offers delivery and takeaway also through food delivery platforms.",
+    services: ["AIC certified", "Original gluten-free recipes", "Delivery also via Deliveroo"],
+    glutenFreeMenu: ["Gluten-free sushi and sashimi", "Italian-Japanese fusion recipes"],
+  },
+  "biz-26": {
+    shortDescription: "Gluten-free bakery in San Lorenzo, Rome, with vegan and lactose-free options.",
+    description: "Pastry shop and bakery in Rome's San Lorenzo district, with sweet and savory gluten-free products, many also lactose-free and vegan. You can eat in, order, or take away.",
+    services: ["Sweet and savory gluten-free products", "Vegan and lactose-free options", "San Lorenzo area"],
+    glutenFreeMenu: ["Gluten-free cakes and desserts", "Savory gluten-free products"],
+  },
 };
 
 const REVIEW_EN: Record<string, { title: string; body: string }> = {
