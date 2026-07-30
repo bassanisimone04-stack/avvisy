@@ -158,15 +158,6 @@ export interface Product {
   photoUrl?: string;
 }
 
-export interface Testimonial {
-  id: string;
-  name: string;
-  role: string;
-  avatarSeed: number;
-  quote: string;
-  rating: number;
-}
-
 export interface RegionData {
   name: string;
   slug: string;
