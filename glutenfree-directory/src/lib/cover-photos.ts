@@ -25,6 +25,7 @@ const BLOG_COVER: Record<number, string> = {
   117: unsplash("photo-1559339352-11d035aa65de"),
   118: unsplash("photo-1631815589968-fdb09a223b1e"),
   119: unsplash("photo-1552566626-52f8b828add9"),
+  120: unsplash("photo-1493770348161-369560ae357d"),
 };
 
 const FALLBACK = unsplash("photo-1466978913421-dad2ebd01d17");
