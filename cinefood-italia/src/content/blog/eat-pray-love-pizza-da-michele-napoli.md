@@ -3,8 +3,8 @@ titolo: "La pizza di Eat Pray Love: Da Michele a Napoli"
 descrizione: "Dove Julia Roberts mangia la pizza in Eat Pray Love: L'Antica Pizzeria da Michele a Napoli. Indirizzo e cosa ordinare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-22
-immagine: "../../assets/placeholder/blog-set-tavola.jpg"
-immagineAlt: "Tavolo con pizza margherita napoletana appena sfornata"
+immagine: "../../assets/placeholder/pizzeria-michele.webp"
+immagineAlt: "Ingresso dell'Antica Pizzeria da Michele a Napoli con una pizza margherita in primo piano"
 tags: ["Eat Pray Love", "Napoli", "pizza", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove ha mangiato la pizza Julia Roberts in Eat Pray Love?"
