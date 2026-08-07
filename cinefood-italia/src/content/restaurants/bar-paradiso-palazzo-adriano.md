@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/bar-paradiso.jpg"
-immagineAlt: "Bar affacciato sulla piazza barocca di un borgo siciliano"
+immagine: "../../assets/placeholder/palazzo-adriano-piazza.png"
+immagineAlt: "Piazza Umberto I a Palazzo Adriano, con la fontana e la chiesa madre"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "nuovo-cinema-paradiso"

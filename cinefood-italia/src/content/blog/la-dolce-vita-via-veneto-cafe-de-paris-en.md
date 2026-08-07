@@ -3,8 +3,8 @@ titolo: "The Café de Paris from La Dolce Vita"
 descrizione: "Via Veneto and the Café de Paris in Fellini's La Dolce Vita: the story of 1960s Rome's symbol café, now closed."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-15
-immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
-immagineAlt: "Via Veneto in Rome, the worldly heart of La Dolce Vita"
+immagine: "../../assets/placeholder/cafe-de-paris-via-veneto.png"
+immagineAlt: "The historic terrace of Café de Paris on Via Veneto in Rome"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Rome", "film tourism"]
 faq:
   - domanda: "Where is the Café de Paris from La Dolce Vita?"
