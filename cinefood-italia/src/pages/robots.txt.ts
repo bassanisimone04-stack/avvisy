@@ -11,6 +11,7 @@ export const GET: APIRoute = ({ site }) => {
 Allow: /
 
 Sitemap: ${new URL("sitemap-index.xml", base).href}
+Sitemap: ${new URL("sitemap-images.xml", base).href}
 `;
   return new Response(body, {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
