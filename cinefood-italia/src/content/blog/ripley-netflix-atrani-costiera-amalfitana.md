@@ -1,6 +1,6 @@
 ---
-titolo: "Ripley di Netflix: Atrani, la Costiera Amalfitana e dove mangiare"
-descrizione: "La serie Netflix Ripley, vincitrice dell'Emmy 2024, è stata girata ad Atrani sulla Costiera Amalfitana, oltre a Napoli, Venezia e Roma. Guida alle location e ai sapori della costa."
+titolo: "Ripley Netflix: Atrani e Costiera Amalfitana"
+descrizione: "La serie Netflix Ripley, Emmy 2024, è girata ad Atrani sulla Costiera Amalfitana. Location e sapori della costa."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-06
 immagine: "../../assets/placeholder/blog-weekend.jpg"

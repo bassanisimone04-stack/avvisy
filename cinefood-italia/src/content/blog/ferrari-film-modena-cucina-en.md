@@ -1,6 +1,6 @@
 ---
-titolo: "Ferrari, the film: Modena between motors and Italy's finest food"
-descrizione: "Michael Mann's film Ferrari is set in Modena, home of motors and a capital of taste. A guide to the Modena of the film and its flavours: tortellini, balsamic vinegar and Emilian cuisine."
+titolo: "Ferrari the Film: Modena's Motors and Food"
+descrizione: "Michael Mann's Ferrari is set in Modena, capital of motors and taste: tortellini, balsamic vinegar and Emilian cuisine."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/blog-scene.jpg"

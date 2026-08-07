@@ -1,6 +1,6 @@
 ---
-titolo: "Real set or themed? How to spot the true film restaurants"
-descrizione: "The difference between locations where filming really happened and cinema-themed venues, so you get no surprises on your food tour."
+titolo: "Real Set or Themed? How to Tell the Difference"
+descrizione: "The difference between a real film set and a themed venue: how to spot the true restaurants from the movies."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-set-tema.jpg"

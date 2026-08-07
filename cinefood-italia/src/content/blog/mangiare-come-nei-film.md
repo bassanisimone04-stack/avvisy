@@ -1,6 +1,6 @@
 ---
-titolo: "Mangiare come nei film: 4 tappe verificate sul set del cinema italiano"
-descrizione: "Dal Bar Vitelli de Il Padrino al Cilento di Benvenuti al Sud: un itinerario goloso tra location cinematografiche realmente esistenti."
+titolo: "Mangiare come nei film: 4 tappe verificate"
+descrizione: "Quattro ristoranti veri, location di film italiani, verificati con fonti attendibili. Dove mangiare come al cinema."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-01
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"

@@ -1,6 +1,6 @@
 ---
-titolo: "Cinema Paradiso in Palazzo Adriano: the film's square and where to eat"
-descrizione: "The Cinema Paradiso locations in Palazzo Adriano: Piazza Umberto I, the set of Tornatore's masterpiece. An itinerary through the Sicilian locations and where to stop and eat."
+titolo: "Cinema Paradiso: Palazzo Adriano Locations"
+descrizione: "The Cinema Paradiso locations in Palazzo Adriano: Piazza Umberto I, the set of Tornatore's masterpiece."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-17
 immagine: "../../assets/placeholder/blog-set-tema.jpg"

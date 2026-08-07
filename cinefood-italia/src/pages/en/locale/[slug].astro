@@ -12,7 +12,7 @@ import { SITE } from "../../../config/site";
 import { slugify, formatData } from "../../../lib/utils";
 import { restaurantJsonLd, breadcrumbJsonLd } from "../../../lib/schema-org";
 import { useT, path } from "../../../i18n/ui";
-import { tLocaleDesc, tFilmTitolo, tScena } from "../../../i18n/content-en";
+import { tLocaleDesc, tFilmTitolo, tScena, tCitta } from "../../../i18n/content-en";
 
 const lang = "en" as const;
 const t = useT(lang);
@@ -30,10 +30,11 @@ const filmEntries = await getEntries(d.film.map((f) => f.film));
 const canonical = new URL(path(`/locale/${locale.id}`, lang), Astro.site ?? SITE.url).href;
 const immagineUrl = new URL(d.immagine.src, Astro.site ?? SITE.url).href;
 
+const cittaEn = tCitta(d.citta, lang);
 const crumbs = [
   { name: t("loc.home"), href: path("/", lang) },
   { name: t("loc.locali"), href: path("/locali", lang) },
-  { name: d.citta, href: path(`/${slugify(d.citta)}`, lang) },
+  { name: cittaEn, href: path(`/${slugify(d.citta)}`, lang) },
   { name: d.nome },
 ];
 const jsonLd = [
@@ -43,7 +44,7 @@ const jsonLd = [
 const desc = tLocaleDesc(locale, lang);
 ---
 
-<BaseLayout lang={lang} title={`${d.nome} — ${d.citta}`} description={`${d.nome} in ${d.citta}: ${desc}`} image={d.immagine.src} type="article" jsonLd={jsonLd}>
+<BaseLayout lang={lang} title={`${d.nome} — ${cittaEn}`} description={`${d.nome} in ${cittaEn}: ${desc}`} image={d.immagine.src} type="article" jsonLd={jsonLd}>
   <article class="mx-auto max-w-4xl px-4 py-8">
     <Breadcrumb items={crumbs} />
 
@@ -107,7 +108,7 @@ const desc = tLocaleDesc(locale, lang);
 
     <section class="mt-10">
       <h2 class="font-display text-2xl font-bold">{t("loc.dove")}</h2>
-      <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{d.indirizzo} — {d.citta}, {d.regione}</p>
+      <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{d.indirizzo} — {cittaEn}, {d.regione}</p>
       <div class="mt-4">
         <Map markers={[{ lat: d.coordinate.lat, lng: d.coordinate.lng, nome: d.nome, citta: d.citta, tipo: d.tipo }]} height="380px" zoom={15} lang={lang} />
       </div>

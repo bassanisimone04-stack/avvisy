@@ -1,6 +1,6 @@
 ---
-titolo: "La Grande Bellezza: i ristoranti di Roma nel film di Sorrentino"
-descrizione: "Dove cena Jep Gambardella ne La Grande Bellezza: La Veranda dell'Hotel Columbus e la Roma da sogno del film premio Oscar di Sorrentino. Location e ristoranti da vivere nella Capitale."
+titolo: "La Grande Bellezza: i ristoranti di Roma"
+descrizione: "Dove cena Jep Gambardella ne La Grande Bellezza: La Veranda dell'Hotel Columbus e la Roma da sogno di Sorrentino."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-19
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"

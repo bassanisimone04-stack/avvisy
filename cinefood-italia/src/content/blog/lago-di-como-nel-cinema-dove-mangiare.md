@@ -1,6 +1,6 @@
 ---
-titolo: "Il Lago di Como nel cinema: da Star Wars a 007, dove mangiare sul lago"
-descrizione: "Il Lago di Como è una star del cinema: Star Wars, Ocean's Twelve, Casino Royale e House of Gucci. Guida alle ville e alle location del lago più famoso del mondo e dove mangiare tra sapori lariani."
+titolo: "Il Lago di Como nel cinema: dove mangiare"
+descrizione: "Star Wars, 007 e House of Gucci: il Lago di Como è una star del cinema. Ville, location e dove mangiare sul lago."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-nord.jpg"

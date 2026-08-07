@@ -1,6 +1,6 @@
 ---
-titolo: "Stanley Tucci: Searching for Italy, the food stops region by region"
-descrizione: "In the series Stanley Tucci: Searching for Italy, the actor explores Italian cuisine region by region: Naples, Rome, Bologna, Tuscany, Sicily and more. A guide to the stops and dishes to try."
+titolo: "Stanley Tucci: Searching for Italy's Stops"
+descrizione: "The actor explores Italian cuisine region by region: Naples, Rome, Tuscany, Sicily and more stops to try."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-scene.jpg"

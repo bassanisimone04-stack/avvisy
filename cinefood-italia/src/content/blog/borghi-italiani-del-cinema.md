@@ -1,6 +1,6 @@
 ---
-titolo: "8 borghi italiani da scoprire (e assaggiare) grazie al cinema"
-descrizione: "Da Savoca a Castellabate, da Palazzo Adriano a Crema: i borghi più belli d'Italia diventati set cinematografici, con le loro specialità a tavola."
+titolo: "8 borghi italiani da scoprire grazie al cinema"
+descrizione: "Da Savoca a Castellabate, i borghi più belli d'Italia diventati set cinematografici, con le loro specialità a tavola."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/blog-borghi.jpg"

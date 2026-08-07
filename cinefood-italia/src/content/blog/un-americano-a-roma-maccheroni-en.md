@@ -1,6 +1,6 @@
 ---
-titolo: "An American in Rome: Alberto Sordi's macaroni and authentic Roman food"
-descrizione: "The famous macaroni scene with Alberto Sordi in An American in Rome and the working-class Rome of the film. Where to find the atmosphere and authentic Roman cuisine, among trattorias and traditional dishes."
+titolo: "Alberto Sordi's Macaroni Scene in Rome"
+descrizione: "The famous macaroni scene in An American in Rome and the working-class Rome of the film: where to find authentic food."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-scene.jpg"

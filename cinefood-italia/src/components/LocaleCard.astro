@@ -6,7 +6,7 @@ import Badges from "./Badges.astro";
 import Icon from "./Icon.astro";
 import type { Restaurant } from "../lib/utils";
 import { useT, path, type Lang } from "../i18n/ui";
-import { tLocaleDesc, tFilmTitolo } from "../i18n/content-en";
+import { tLocaleDesc, tFilmTitolo, tCitta } from "../i18n/content-en";
 
 interface Props {
   locale: Restaurant;
@@ -17,6 +17,7 @@ const d = locale.data;
 const t = useT(lang);
 const url = path(`/locale/${locale.id}`, lang);
 const descrizione = tLocaleDesc(locale, lang);
+const cittaEn = tCitta(d.citta, lang);
 
 const filmEntries = await getEntries(d.film.map((f) => f.film));
 const filmTitoli = filmEntries
@@ -56,7 +57,7 @@ const filmTitoli = filmEntries
         {d.nome}
       </a>
     </h3>
-    <p class="mt-1 inline-flex items-center gap-1 text-sm text-ink-500 dark:text-ink-400"><Icon name="pin" class="h-3.5 w-3.5" /> {d.citta}, {d.regione}</p>
+    <p class="mt-1 inline-flex items-center gap-1 text-sm text-ink-500 dark:text-ink-400"><Icon name="pin" class="h-3.5 w-3.5" /> {cittaEn}, {d.regione}</p>
     <p class="mt-2 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{descrizione}</p>
 
     {

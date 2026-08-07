@@ -1,6 +1,6 @@
 ---
-titolo: "Eat like in the movies: 4 verified stops on Italian film sets"
-descrizione: "From The Godfather's Bar Vitelli to the Cilento of Welcome to the South: a tasty itinerary through real, existing film locations."
+titolo: "Eat Like in the Movies: 4 Verified Stops"
+descrizione: "Four real restaurants, verified Italian film locations, backed by reliable sources. Where to eat like in the movies."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-01
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"

@@ -1,6 +1,6 @@
 ---
-titolo: "Letters to Juliet: Juliet's Verona and the wine of Tuscany"
-descrizione: "Letters to Juliet is set between Verona and Tuscany: Juliet's house, the hills and the vineyards. A guide to the film's places and flavours, from Amarone risotto to great wines."
+titolo: "Letters to Juliet: Verona and Tuscany"
+descrizione: "The Letters to Juliet locations between Verona, with the House of Juliet, and the wine hills of Tuscany."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-borghi.jpg"

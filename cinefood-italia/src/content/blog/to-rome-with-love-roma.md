@@ -1,6 +1,6 @@
 ---
-titolo: "To Rome with Love: la Roma di Woody Allen e dove mangiare"
-descrizione: "La Roma di To Rome with Love, la commedia di Woody Allen ambientata nella Capitale: Piazza Navona, Trastevere e i vicoli del centro. Itinerario tra i luoghi del film e dove fermarsi a mangiare."
+titolo: "To Rome with Love: la Roma di Woody Allen"
+descrizione: "La Roma di To Rome with Love, la commedia di Woody Allen: Piazza Navona, Trastevere e dove fermarsi a mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"

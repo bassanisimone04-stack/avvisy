@@ -1,6 +1,6 @@
 ---
-titolo: "Spider-Man: Far From Home a Venezia: la città del film e i suoi cicchetti"
-descrizione: "Spider-Man: Far From Home porta l'Uomo Ragno a Venezia. Guida alla Venezia del film e alla sua cucina: cicchetti, bacari e spritz, per vivere la città come nel blockbuster Marvel."
+titolo: "Spider-Man Far From Home: Venezia nel film"
+descrizione: "Spider-Man: Far From Home porta l'Uomo Ragno a Venezia. Guida alla città del film e ai cicchetti veneziani."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-weekend.jpg"

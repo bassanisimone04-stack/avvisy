@@ -1,6 +1,6 @@
 ---
-titolo: "Pixar's Luca: the Liguria of the film, with trofie al pesto and focaccia"
-descrizione: "Pixar's Luca is set on the Italian Riviera: colourful villages, sea and seafood cuisine. A guide to the flavours of Luca's Liguria, from trofie al pesto to focaccia, for a tasty family trip."
+titolo: "Pixar's Luca: the Liguria of the Film"
+descrizione: "Pixar's Luca is set in Liguria: colourful villages and sea. What to eat, from trofie al pesto to focaccia."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/blog-borghi.jpg"

@@ -1,6 +1,6 @@
 ---
-titolo: "La Dolce Vita and Via Veneto: the Café de Paris and Fellini's Rome"
-descrizione: "The Via Veneto of Fellini's La Dolce Vita and the famous Café de Paris: the story of the symbol of 1960s Rome, among paparazzi and the jet set. What to see today along the film's street."
+titolo: "The Café de Paris from La Dolce Vita"
+descrizione: "Via Veneto and the Café de Paris in Fellini's La Dolce Vita: the story of 1960s Rome's symbol café, now closed."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-15
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"

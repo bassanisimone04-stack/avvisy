@@ -1,6 +1,6 @@
 ---
-titolo: "Il Postino in Salina: the film's locations in the Aeolian Islands and where to eat"
-descrizione: "The Il Postino (The Postman) locations in Salina, between Pollara and the Aeolian sea. An itinerary through the Massimo Troisi film locations and where to taste pane cunzato, capers and malvasia wine."
+titolo: "Il Postino in Salina: the Film's Locations"
+descrizione: "The Il Postino locations in Salina, between Pollara and the Aeolian sea. Where to taste pane cunzato, capers and malvasia."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/blog-sicilia.jpg"

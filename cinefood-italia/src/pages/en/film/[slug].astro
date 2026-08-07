@@ -12,7 +12,7 @@ import { ordinaLocali, localiPerFilm, slugify } from "../../../lib/utils";
 import { faqPageJsonLd, breadcrumbJsonLd } from "../../../lib/schema-org";
 import { ITINERARIO_PER_FILM } from "../../../lib/itinerari";
 import { useT, path } from "../../../i18n/ui";
-import { tFilmTitolo, tFilmSinossi, tFilmFaq } from "../../../i18n/content-en";
+import { tFilmTitolo, tFilmSinossi, tFilmFaq, tCitta } from "../../../i18n/content-en";
 
 const lang = "en" as const;
 const t = useT(lang);
@@ -29,10 +29,11 @@ const titolo = tFilmTitolo(film, lang);
 const sinossi = tFilmSinossi(film, lang);
 const faq = tFilmFaq(film, lang);
 const cittaFilm = d.citta[0];
+const cittaFilmEn = cittaFilm ? tCitta(cittaFilm, lang) : undefined;
 const itinerario = ITINERARIO_PER_FILM[film.id];
 
 const title = `${t("film.doveMangiano")} "${titolo}"`;
-const description = `Restaurants, bars and cafés linked to ${titolo} (${d.anno}) by ${d.regista}${cittaFilm ? ` in ${cittaFilm}` : ""}. Discover the real locations and where to eat like in the film.`;
+const description = `Restaurants, bars and cafés linked to ${titolo} (${d.anno}) by ${d.regista}${cittaFilmEn ? ` in ${cittaFilmEn}` : ""}. Discover the real locations and where to eat like in the film.`;
 
 const crumbs = [
   { name: t("loc.home"), href: path("/", lang) },
@@ -55,7 +56,7 @@ if (faq.length > 0) jsonLd.push(faqPageJsonLd(faq));
         <h1 class="mt-1 font-display text-4xl font-extrabold sm:text-5xl">{titolo}</h1>
         <p class="mt-2 text-ink-500 dark:text-ink-400">{t("film.regia")} {d.regista}</p>
         <p class="mt-4 text-lg text-ink-700 dark:text-cream-200">{sinossi}</p>
-        {cittaFilm && (<a href={path(`/${slugify(cittaFilm)}`, lang)} class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400"><Icon name="pin" class="h-4 w-4" /> {t("film.altriLocali")} {cittaFilm} →</a>)}
+        {cittaFilm && (<a href={path(`/${slugify(cittaFilm)}`, lang)} class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400"><Icon name="pin" class="h-4 w-4" /> {t("film.altriLocali")} {cittaFilmEn} →</a>)}
         {itinerario && (
           <a href={path(`/blog/${itinerario}`, lang)} class="mt-5 flex items-center gap-3 rounded-2xl border border-gold-500/30 bg-gold-500/10 p-4 transition-colors hover:bg-gold-500/15">
             <Icon name="film" class="h-6 w-6 shrink-0 text-gold-500" />

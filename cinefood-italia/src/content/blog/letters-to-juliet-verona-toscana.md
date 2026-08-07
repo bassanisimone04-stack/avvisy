@@ -1,6 +1,6 @@
 ---
-titolo: "Letters to Juliet: la Verona di Giulietta e la Toscana del vino"
-descrizione: "Letters to Juliet (Lettere a Giulietta) è ambientato tra Verona e la Toscana: la casa di Giulietta, le colline e i vigneti. Guida ai luoghi del film e ai sapori, dal risotto all'Amarone ai grandi vini."
+titolo: "Letters to Juliet: Verona e la Toscana"
+descrizione: "I luoghi di Letters to Juliet tra Verona, con la Casa di Giulietta, e le colline del vino in Toscana."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-borghi.jpg"

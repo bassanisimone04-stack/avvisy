@@ -16,7 +16,7 @@ import type { MapMarker } from "../../components/Map.astro";
 import { ordinaLocali, cittaUniche, localiPerCitta, contaLocaliPerFilm, formatData, slugify } from "../../lib/utils";
 import { websiteJsonLd } from "../../lib/schema-org";
 import { useT, path } from "../../i18n/ui";
-import { tFilmTitolo } from "../../i18n/content-en";
+import { tFilmTitolo, tCitta } from "../../i18n/content-en";
 
 const lang = "en" as const;
 const t = useT(lang);
@@ -40,7 +40,7 @@ const cityImg = (slug: string) => {
   return k ? cityImages[k].default : undefined;
 };
 const citta = cittaUniche(locali)
-  .map((nome) => ({ nome, slug: slugify(nome), img: cityImg(slugify(nome)), count: localiPerCitta(locali, nome).length }))
+  .map((nome) => ({ nome: tCitta(nome, lang), slug: slugify(nome), img: cityImg(slugify(nome)), count: localiPerCitta(locali, nome).length }))
   .filter((c) => c.img);
 
 const markers: MapMarker[] = locali.map((l) => ({
@@ -55,7 +55,7 @@ const stats = [
 ];
 
 const suggestItems = [
-  ...locali.map((l) => ({ label: l.data.nome, sub: `${l.data.citta} · ${l.data.tipo}`, url: path(`/locale/${l.id}`, lang) })),
+  ...locali.map((l) => ({ label: l.data.nome, sub: `${tCitta(l.data.citta, lang)} · ${l.data.tipo}`, url: path(`/locale/${l.id}`, lang) })),
   ...films.map((f) => ({ label: tFilmTitolo(f, lang), sub: t("film.film"), url: path(`/film/${f.id}`, lang) })),
   ...citta.map((c) => ({ label: c.nome, sub: t("stats.citta"), url: path(`/${c.slug}`, lang) })),
 ];

@@ -1,6 +1,6 @@
 ---
-titolo: "Come organizzare un weekend tra cinema e buona tavola in Italia"
-descrizione: "Guida pratica per costruire un itinerario di due giorni sulle orme dei film, tra location, ristoranti e specialità del territorio."
+titolo: "Weekend tra cinema e buona tavola in Italia"
+descrizione: "Guida pratica per un weekend di due giorni sulle orme dei film italiani, tra location, ristoranti e specialità locali."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-weekend.jpg"

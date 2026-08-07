@@ -1,6 +1,6 @@
 ---
-titolo: "I luoghi del Commissario Montalbano: dove mangiava (e dove mangiare oggi)"
-descrizione: "Dalla casa di Punta Secca al ristorante sul mare Enzo a Mare: la guida ai luoghi del Commissario Montalbano in Sicilia e ai piatti da assaggiare, dalla pasta 'ncasciata agli arancini."
+titolo: "Dove mangiava Montalbano: i luoghi in Sicilia"
+descrizione: "Dalla casa di Punta Secca al ristorante Enzo a Mare: dove mangiava Montalbano in Sicilia, tra pasta 'ncasciata e arancini."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-24
 immagine: "../../assets/placeholder/blog-sicilia.jpg"

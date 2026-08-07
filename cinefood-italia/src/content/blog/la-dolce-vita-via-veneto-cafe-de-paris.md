@@ -1,6 +1,6 @@
 ---
-titolo: "La Dolce Vita e Via Veneto: il Café de Paris e la Roma di Fellini"
-descrizione: "La Via Veneto de La Dolce Vita di Fellini e il celebre Café de Paris: storia del locale-simbolo della Roma anni '60, tra paparazzi e jet set. Cosa vedere oggi lungo la via del film."
+titolo: "Il Café de Paris de La Dolce Vita a Roma"
+descrizione: "Via Veneto e il Café de Paris ne La Dolce Vita di Fellini: storia del locale simbolo della Roma anni '60, oggi chiuso."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-15
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"

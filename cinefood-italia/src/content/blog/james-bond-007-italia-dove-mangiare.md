@@ -1,6 +1,6 @@
 ---
-titolo: "James Bond in Italia: dove mangiare tra Matera, Venezia e il Lago di Como"
-descrizione: "Le location italiane di 007 James Bond, da Matera (No Time to Die) a Venezia e al Lago di Como (Casino Royale). Itinerario tra i luoghi del film e dove mangiare da veri agenti segreti."
+titolo: "James Bond in Italia: dove mangiare"
+descrizione: "Le location italiane di 007: Matera, Venezia e il Lago di Como. Dove mangiare da veri agenti segreti tra un film e l'altro."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/blog-weekend.jpg"

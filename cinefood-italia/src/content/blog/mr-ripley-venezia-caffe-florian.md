@@ -1,6 +1,6 @@
 ---
-titolo: "Il talento di Mr. Ripley a Venezia: il Caffè Florian e Piazza San Marco"
-descrizione: "I luoghi de Il talento di Mr. Ripley a Venezia: il Caffè Florian, il più antico d'Italia, in Piazza San Marco. Itinerario tra le location del film e dove concedersi un caffè con la storia."
+titolo: "Mr. Ripley a Venezia: il Caffè Florian"
+descrizione: "I luoghi de Il talento di Mr. Ripley a Venezia: il Caffè Florian, il più antico d'Italia, in Piazza San Marco."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"

@@ -1,6 +1,6 @@
 ---
-titolo: "Roma nel cinema: 6 ristoranti e caffè da film nella Capitale"
-descrizione: "I ristoranti e i caffè di Roma diventati celebri grazie al cinema: da La Grande Bellezza a Mangia prega ama, da Un Americano a Roma a La Dolce Vita. La guida ai locali da film della Capitale e dove mangiare."
+titolo: "Roma nel cinema: 6 ristoranti da film"
+descrizione: "I ristoranti e caffè di Roma diventati celebri col cinema: da La Grande Bellezza a Mangia prega ama, dove mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-11
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"

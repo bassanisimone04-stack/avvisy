@@ -1,6 +1,6 @@
 ---
-titolo: "Roma a tavola nel cinema: 3 trattorie da film nel centro storico"
-descrizione: "Da Mangia prega ama a La grande bellezza: i ristoranti del centro di Roma dove sono state girate scene indimenticabili."
+titolo: "Roma a tavola nel cinema: 3 trattorie da film"
+descrizione: "Da Pancrazio, Trattoria Santa Lucia e Trattoria del Biscione: tre trattorie romane comparse nei film, nel centro storico."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"

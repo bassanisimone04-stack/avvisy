@@ -1,6 +1,6 @@
 ---
-titolo: "Cinema in the North: Milan, the lakes and the film lowlands"
-descrizione: "From the glamour of House of Gucci in Milan to the summer of Call Me by Your Name in Crema: Northern Italy as a set for the big screen."
+titolo: "Cinema in the North: Milan and the Lakes"
+descrizione: "Call Me by Your Name, House of Gucci and 007: films shot between Milan and Northern Italy's lakes, and where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-28
 immagine: "../../assets/placeholder/blog-nord.jpg"

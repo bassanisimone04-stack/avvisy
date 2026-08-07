@@ -1,6 +1,6 @@
 ---
-titolo: "Call Me by Your Name in Crema: an itinerary of locations and flavours"
-descrizione: "The Call Me by Your Name locations in Crema: from Piazza del Duomo to the Torrazzo Arch. An itinerary through Guadagnino's film locations and where to stop and eat, from tortelli to coffee in the square."
+titolo: "Call Me by Your Name: a Crema Itinerary"
+descrizione: "The Call Me by Your Name locations in Crema: Piazza del Duomo and the Torrazzo Arch. Where to stop for tortelli and coffee."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-21
 immagine: "../../assets/placeholder/blog-nord.jpg"

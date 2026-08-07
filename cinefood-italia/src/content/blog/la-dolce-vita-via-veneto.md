@@ -1,6 +1,6 @@
 ---
-titolo: "La Dolce Vita a Roma: Via Veneto e i caffè del cinema"
-descrizione: "Sulle orme di Fellini: Via Veneto, i caffè storici e le piazze di Roma che hanno fatto la storia del cinema mondiale."
+titolo: "La Dolce Vita a Roma: Via Veneto nel cinema"
+descrizione: "Dove è ambientata La Dolce Vita di Fellini: Via Veneto, i caffè storici e il fascino della Roma anni '60."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-05
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"

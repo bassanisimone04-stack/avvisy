@@ -1,6 +1,6 @@
 ---
-titolo: "8 Italian villages to discover (and taste) thanks to cinema"
-descrizione: "From Savoca to Castellabate, from Palazzo Adriano to Crema: Italy's most beautiful villages turned into film sets, with their specialities at the table."
+titolo: "8 Italian Villages to Discover Thanks to Cinema"
+descrizione: "From Savoca to Castellabate, Italy's most beautiful villages turned into film sets, with their local specialities."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/blog-borghi.jpg"
