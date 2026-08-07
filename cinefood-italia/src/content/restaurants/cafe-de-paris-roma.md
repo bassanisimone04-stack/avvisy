@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "chiuso"
 inEvidenza: false
-immagine: "../../assets/placeholder/cafe-de-paris.jpg"
-immagineAlt: "Tavolini di un caffè elegante su Via Veneto a Roma"
+immagine: "../../assets/placeholder/cafe-de-paris-via-veneto.png"
+immagineAlt: "Il dehors storico del Café de Paris su Via Veneto a Roma"
 ultimoAggiornamento: 2026-07-24
 film:
   - film: "la-dolce-vita"

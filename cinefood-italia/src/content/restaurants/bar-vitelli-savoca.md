@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/bar-vista-mare.jpg"
-immagineAlt: "Terrazza di un bar storico in un borgo siciliano"
+immagine: "../../assets/placeholder/bar-vitelli-savoca.webp"
+immagineAlt: "Terrazza del Bar Vitelli a Savoca, con l'insegna storica sull'ingresso ad arco"
 sitoWeb: "https://www.barvitelli.com"
 ultimoAggiornamento: 2026-07-22
 orari: "Tutti i giorni 9:00–20:00 (da verificare)"

@@ -3,8 +3,8 @@ titolo: "Nuovo Cinema Paradiso: Palazzo Adriano"
 descrizione: "I luoghi di Nuovo Cinema Paradiso a Palazzo Adriano: Piazza Umberto I, set del capolavoro di Tornatore."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-17
-immagine: "../../assets/placeholder/blog-set-tema.jpg"
-immagineAlt: "Piazza di un borgo siciliano con fontana, come Palazzo Adriano"
+immagine: "../../assets/placeholder/palazzo-adriano-piazza.png"
+immagineAlt: "Piazza Umberto I a Palazzo Adriano, con la fontana e la chiesa madre"
 tags: ["Nuovo Cinema Paradiso", "Palazzo Adriano", "Sicilia", "cineturismo", "Tornatore"]
 faq:
   - domanda: "Dove è stato girato Nuovo Cinema Paradiso?"

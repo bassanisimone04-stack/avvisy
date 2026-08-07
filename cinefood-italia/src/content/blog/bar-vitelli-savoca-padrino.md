@@ -3,8 +3,8 @@ titolo: "Bar Vitelli, Savoca: il vero bar de Il Padrino"
 descrizione: "Bar Vitelli a Savoca, Sicilia: qui Michael Corleone chiede la mano di Apollonia. Cosa ordinare, dalla granita al vino locale."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-23
-immagine: "../../assets/placeholder/blog-borghi.jpg"
-immagineAlt: "Borgo siciliano arroccato sulla collina, come Savoca"
+immagine: "../../assets/placeholder/bar-vitelli-savoca.webp"
+immagineAlt: "Terrazza del Bar Vitelli a Savoca, con l'insegna storica sull'ingresso ad arco"
 tags: ["Il Padrino", "Savoca", "Sicilia", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove si trova il Bar Vitelli?"
