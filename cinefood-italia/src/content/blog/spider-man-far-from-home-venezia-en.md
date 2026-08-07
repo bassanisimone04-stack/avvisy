@@ -1,6 +1,6 @@
 ---
-titolo: "Spider-Man: Far From Home in Venice: the film's city and its cicchetti"
-descrizione: "Spider-Man: Far From Home brings Spider-Man to Venice. A guide to the Venice of the film and its cuisine: cicchetti, bacari and spritz, to experience the city like in the Marvel blockbuster."
+titolo: "Spider-Man: Far From Home in Venice"
+descrizione: "Spider-Man: Far From Home brings Spider-Man to Venice. A guide to the film's city and its Venetian cicchetti."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-weekend.jpg"

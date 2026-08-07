@@ -1,6 +1,6 @@
 ---
-titolo: "How to plan a weekend of cinema and good food in Italy"
-descrizione: "A practical guide to building a two-day itinerary following the films, among locations, restaurants and local specialities."
+titolo: "A Weekend of Cinema and Good Food in Italy"
+descrizione: "A practical guide for a two-day trip in the footsteps of Italian films, between locations, restaurants and local dishes."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-weekend.jpg"

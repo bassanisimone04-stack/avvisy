@@ -1,6 +1,6 @@
 ---
-titolo: "House of Gucci: la Milano del film e dove mangiare in città"
-descrizione: "La Milano di House of Gucci di Ridley Scott, tra la Galleria Vittorio Emanuele e i luoghi della moda. Itinerario nella città del film e dove fermarsi a mangiare tra eleganza e tradizione."
+titolo: "House of Gucci: la Milano del film"
+descrizione: "La Milano di House of Gucci di Ridley Scott, tra la Galleria Vittorio Emanuele e i luoghi della moda. Dove mangiare in città."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-nord.jpg"

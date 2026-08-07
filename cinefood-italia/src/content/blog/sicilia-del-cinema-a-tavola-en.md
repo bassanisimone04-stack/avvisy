@@ -1,6 +1,6 @@
 ---
-titolo: "Sicily on screen at the table: from Montalbano to The Godfather"
-descrizione: "A tasty journey through the Sicily of the big screen: the villages of The Godfather and Cinema Paradiso and Inspector Montalbano's seafood cuisine."
+titolo: "Sicily on Screen, at the Table"
+descrizione: "From Montalbano to The Godfather: Sicily's film locations and what to put on the table, from arancini to granita."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-10
 immagine: "../../assets/placeholder/blog-sicilia.jpg"

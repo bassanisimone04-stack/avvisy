@@ -1,6 +1,6 @@
 ---
-titolo: "James Bond in Italy: where to eat between Matera, Venice and Lake Como"
-descrizione: "The Italian locations of 007 James Bond, from Matera (No Time to Die) to Venice and Lake Como (Casino Royale). An itinerary through the film locations and where to eat like a real secret agent."
+titolo: "James Bond in Italy: Where to Eat"
+descrizione: "The Italian 007 locations: Matera, Venice and Lake Como. Where to eat like a real secret agent along the way."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/blog-weekend.jpg"

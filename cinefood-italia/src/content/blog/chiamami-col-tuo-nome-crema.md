@@ -1,6 +1,6 @@
 ---
-titolo: "Chiamami col tuo nome a Crema: itinerario tra le location e i sapori"
-descrizione: "I luoghi di Chiamami col tuo nome a Crema: dalla Piazza del Duomo all'Arco del Torrazzo. L'itinerario tra le location del film di Guadagnino e dove fermarsi a mangiare, tra tortelli e caffè in piazza."
+titolo: "Chiamami col tuo nome: itinerario a Crema"
+descrizione: "I luoghi di Chiamami col tuo nome a Crema: Piazza del Duomo e l'Arco del Torrazzo. Dove fermarsi tra tortelli e caffè."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-21
 immagine: "../../assets/placeholder/blog-nord.jpg"

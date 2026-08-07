@@ -1,6 +1,6 @@
 ---
-titolo: "The Trip to Italy: il viaggio gastronomico da film lungo lo Stivale"
-descrizione: "The Trip to Italy con Steve Coogan e Rob Brydon è un film-viaggio tra i ristoranti d'Italia, dalla Liguria alla Costiera Amalfitana. Guida alle tappe gastronomiche del film e ai piatti da assaggiare."
+titolo: "The Trip to Italy: il viaggio gastronomico"
+descrizione: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando nei ristoranti più belli, dalla Liguria alla Costiera Amalfitana."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/blog-set-tavola.jpg"

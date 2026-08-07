@@ -1,6 +1,6 @@
 ---
-titolo: "Nolan's The Odyssey in Sicily: Favignana, the Aeolian Islands and tuna"
-descrizione: "Christopher Nolan's The Odyssey was filmed between Favignana, the Egadi Islands and the Aeolian Islands in Sicily. A guide to the film's locations and island flavours, from tuna to the mattanza."
+titolo: "Nolan's The Odyssey in Sicily: Favignana"
+descrizione: "Christopher Nolan's The Odyssey was filmed in Favignana, Sicily. Film locations and island flavours: tuna and the mattanza."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-07
 immagine: "../../assets/placeholder/blog-sicilia.jpg"

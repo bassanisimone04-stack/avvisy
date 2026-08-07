@@ -1,6 +1,6 @@
 ---
-titolo: "Rome at the table on screen: 3 film trattorias in the historic centre"
-descrizione: "From Eat Pray Love to The Great Beauty: the restaurants of central Rome where unforgettable scenes were shot."
+titolo: "Rome at the Table on Screen: 3 Film Trattorias"
+descrizione: "Da Pancrazio, Trattoria Santa Lucia and Trattoria del Biscione: three Roman trattorias seen on screen, in the old centre."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"

@@ -1,6 +1,6 @@
 ---
-titolo: "Benvenuti al Sud a Castellabate: le location e dove mangiare nel Cilento"
-descrizione: "I luoghi di Benvenuti al Sud a Castellabate: la piazzetta del film, il ristorante Le Gatte e i sapori del Cilento. Guida alle location e a dove mangiare tra mare e cucina mediterranea."
+titolo: "Benvenuti al Sud: le location a Castellabate"
+descrizione: "I luoghi di Benvenuti al Sud a Castellabate: la piazzetta del film, il ristorante Le Gatte e i sapori del Cilento."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-20
 immagine: "../../assets/placeholder/blog-weekend.jpg"

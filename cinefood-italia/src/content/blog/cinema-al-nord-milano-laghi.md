@@ -1,6 +1,6 @@
 ---
-titolo: "Il cinema al Nord: Milano, i laghi e la Bassa da film"
-descrizione: "Dal glamour di House of Gucci a Milano all'estate di Chiamami col tuo nome a Crema: il Nord Italia come set del grande schermo."
+titolo: "Il cinema al Nord: Milano e i laghi da film"
+descrizione: "Chiamami col tuo nome, House of Gucci e 007: i film girati tra Milano e i laghi del Nord Italia, e dove mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-28
 immagine: "../../assets/placeholder/blog-nord.jpg"

@@ -15,6 +15,24 @@ interface FilmEn {
   faq?: { domanda: string; risposta: string }[];
 }
 
+/**
+ * Nomi delle città che cambiano in inglese (le altre restano invariate).
+ * Usata solo per il TESTO visibile in inglese: gli slug delle pagine e gli
+ * indirizzi reali restano in italiano (es. /en/roma, "00186 Roma RM").
+ */
+const CITTA_EN: Record<string, string> = {
+  Roma: "Rome",
+  Milano: "Milan",
+  Napoli: "Naples",
+  Venezia: "Venice",
+};
+
+/** Traduce il nome di una città per la lingua data (solo per il testo mostrato). */
+export function tCitta(cittaIt: string, lang: Lang): string {
+  if (lang !== "en") return cittaIt;
+  return CITTA_EN[cittaIt] ?? cittaIt;
+}
+
 export const filmsEn: Record<string, FilmEn> = {
   "il-padrino": {
     titolo: "The Godfather",

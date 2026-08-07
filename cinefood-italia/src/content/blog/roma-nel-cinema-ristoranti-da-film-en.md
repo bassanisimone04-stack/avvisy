@@ -1,6 +1,6 @@
 ---
-titolo: "Rome on screen: 6 film restaurants and cafés in the capital"
-descrizione: "The restaurants and cafés of Rome made famous by cinema: from The Great Beauty to Eat Pray Love, from An American in Rome to La Dolce Vita. A guide to the capital's film venues and where to eat."
+titolo: "Rome on Screen: 6 Film Restaurants"
+descrizione: "The Rome restaurants and cafés made famous by cinema: from The Great Beauty to Eat Pray Love, where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-11
 immagine: "../../assets/placeholder/blog-dolce-vita.jpg"

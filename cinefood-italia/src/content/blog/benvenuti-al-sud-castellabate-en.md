@@ -1,6 +1,6 @@
 ---
-titolo: "Welcome to the South in Castellabate: locations and where to eat in Cilento"
-descrizione: "The Welcome to the South (Benvenuti al Sud) locations in Castellabate: the film's little square, the Le Gatte restaurant and the flavours of Cilento. A guide to the locations and where to eat between sea and Mediterranean cuisine."
+titolo: "Welcome to the South: Castellabate Locations"
+descrizione: "The Welcome to the South film locations in Castellabate: the little square, Le Gatte restaurant and Cilento flavours."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-20
 immagine: "../../assets/placeholder/blog-weekend.jpg"

@@ -1,6 +1,6 @@
 ---
-titolo: "Un Americano a Roma: i maccheroni di Alberto Sordi e la Roma verace"
-descrizione: "La celebre scena dei maccheroni di Alberto Sordi in Un Americano a Roma e la Roma popolare del film. Dove ritrovare l'atmosfera e la cucina romana verace, tra trattorie e piatti tradizionali."
+titolo: "I maccheroni di Alberto Sordi a Roma"
+descrizione: "La celebre scena dei maccheroni in Un Americano a Roma e la Roma popolare del film: dove trovare la cucina verace."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/blog-scene.jpg"

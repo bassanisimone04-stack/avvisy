@@ -1,6 +1,6 @@
 ---
-titolo: "La Sicilia del cinema a tavola: da Montalbano a Il Padrino"
-descrizione: "Un viaggio goloso nella Sicilia del grande schermo: i borghi di Il Padrino e Nuovo Cinema Paradiso e la cucina di mare del commissario Montalbano."
+titolo: "La Sicilia del cinema a tavola"
+descrizione: "Da Montalbano a Il Padrino: i luoghi siciliani del cinema e cosa mettere in tavola, tra arancini e granita."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-10
 immagine: "../../assets/placeholder/blog-sicilia.jpg"

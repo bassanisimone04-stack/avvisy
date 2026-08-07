@@ -1,6 +1,6 @@
 ---
-titolo: "Nuovo Cinema Paradiso a Palazzo Adriano: la piazza del film e dove mangiare"
-descrizione: "I luoghi di Nuovo Cinema Paradiso a Palazzo Adriano: Piazza Umberto I, set del capolavoro di Tornatore. Itinerario tra le location in Sicilia e dove fermarsi a mangiare."
+titolo: "Nuovo Cinema Paradiso: Palazzo Adriano"
+descrizione: "I luoghi di Nuovo Cinema Paradiso a Palazzo Adriano: Piazza Umberto I, set del capolavoro di Tornatore."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-17
 immagine: "../../assets/placeholder/blog-set-tema.jpg"

@@ -1,6 +1,6 @@
 ---
-titolo: "House of Gucci: the Milan of the film and where to eat in the city"
-descrizione: "The Milan of Ridley Scott's House of Gucci, between the Galleria Vittorio Emanuele and the places of fashion. An itinerary in the city of the film and where to stop and eat, between elegance and tradition."
+titolo: "House of Gucci: the Milan of the Film"
+descrizione: "The Milan of Ridley Scott's House of Gucci, from the Galleria Vittorio Emanuele to the places of fashion. Where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-nord.jpg"

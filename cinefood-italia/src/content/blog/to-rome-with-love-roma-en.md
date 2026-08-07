@@ -1,6 +1,6 @@
 ---
-titolo: "To Rome with Love: Woody Allen's Rome and where to eat"
-descrizione: "The Rome of To Rome with Love, Woody Allen's comedy set in the capital: Piazza Navona, Trastevere and the alleys of the centre. An itinerary through the film's places and where to stop and eat."
+titolo: "To Rome with Love: Woody Allen's Rome"
+descrizione: "The Rome of To Rome with Love, Woody Allen's comedy: Piazza Navona, Trastevere and where to stop for a bite."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
