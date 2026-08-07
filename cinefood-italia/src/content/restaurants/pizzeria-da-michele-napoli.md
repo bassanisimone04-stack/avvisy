@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/pizzeria-michele.jpg"
-immagineAlt: "Storica pizzeria napoletana, tavoli in marmo e forno a legna"
+immagine: "../../assets/placeholder/pizzeria-michele.webp"
+immagineAlt: "Ingresso storico dell'Antica Pizzeria da Michele in Via Cesare Sersale a Napoli, con una pizza margherita in primo piano"
 ultimoAggiornamento: 2026-07-24
 film:
   - film: "mangia-prega-ama"
