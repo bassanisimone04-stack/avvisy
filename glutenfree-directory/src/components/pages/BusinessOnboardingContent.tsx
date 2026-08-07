@@ -1,0 +1,72 @@
+"use client";
+
+import { useState } from "react";
+import { CheckCircle2, Store, TrendingUp, Users } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import type { Locale } from "@/lib/i18n/locale";
+import { getDictionary } from "@/lib/i18n/dictionary";
+
+export default function BusinessOnboardingContent({ locale }: { locale: Locale }) {
+  const [sent, setSent] = useState(false);
+  const t = getDictionary(locale);
+  const en = locale === "en";
+
+  return (
+    <div className="container-page py-10">
+      <Breadcrumbs locale={locale} items={[{ name: t.footer.addBusiness, path: "/per-le-aziende" }]} />
+      <div className="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h1 className="text-3xl font-bold text-ink sm:text-4xl">{en ? "List your business" : "Inserisci la tua attività"}</h1>
+          <p className="mt-3 text-ink-soft">{en ? "Get in front of people with celiac disease looking for safe places in your area." : "Fatti trovare dalle persone celiache che cercano locali sicuri nella tua zona."}</p>
+          <div className="mt-6 space-y-4">
+            {[
+              { icon: Store, title: en ? "Free listing" : "Scheda gratuita", body: en ? "Publish your business listing with photos, menu and hours at no activation cost." : "Pubblica la scheda della tua attività con foto, menu e orari senza costi di attivazione." },
+              { icon: Users, title: en ? "Qualified community" : "Community qualificata", body: en ? "Direct visibility to celiac users genuinely interested in what you offer." : "Visibilità diretta verso utenti celiaci realmente interessati alla tua offerta." },
+              { icon: TrendingUp, title: en ? "Measurable growth" : "Crescita misurabile", body: en ? "Stats on views, clicks and reviews to track your results." : "Statistiche su visualizzazioni, click e recensioni per monitorare i risultati." },
+            ].map((item) => (
+              <div key={item.title} className="flex gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand-dark"><item.icon size={18} /></span>
+                <div>
+                  <p className="font-semibold text-ink">{item.title}</p>
+                  <p className="text-sm text-ink-soft">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="card card-soft p-6">
+          {sent ? (
+            <div className="flex items-center gap-2 text-brand-dark"><CheckCircle2 size={20} /> {en ? "Request sent! Our team will verify the requirements within 3 business days." : "Richiesta inviata! Il nostro team verificherà i requisiti entro 3 giorni lavorativi."}</div>
+          ) : (
+            <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-4">
+              <div>
+                <label htmlFor="ragione" className="field-label">{en ? "Business name" : "Nome attività"}</label>
+                <input id="ragione" className="field" required />
+              </div>
+              <div>
+                <label htmlFor="categoria" className="field-label">{en ? "Category" : "Categoria"}</label>
+                <select id="categoria" className="field">
+                  <option>{en ? "Restaurant" : "Ristorante"}</option>
+                  <option>Pizzeria</option>
+                  <option>Hotel</option>
+                  <option>{en ? "Pharmacy" : "Farmacia"}</option>
+                  <option>{en ? "Supermarket" : "Supermercato"}</option>
+                  <option>{en ? "Specialty shop" : "Negozio specializzato"}</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="citta" className="field-label">{en ? "City" : "Città"}</label>
+                <input id="citta" className="field" required />
+              </div>
+              <div>
+                <label htmlFor="email" className="field-label">{en ? "Contact email" : "Email di contatto"}</label>
+                <input id="email" type="email" className="field" required />
+              </div>
+              <button type="submit" className="btn btn-primary btn-block">{en ? "Request listing" : "Richiedi l'inserimento"}</button>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
