@@ -13,13 +13,30 @@ faq:
     risposta: "Piatti eoliani: pesce fresco, i pregiati capperi di Salina, il pane cunzato e la dolce Malvasia delle Lipari."
   - domanda: "Come si arriva a Salina?"
     risposta: "Si raggiunge in traghetto o aliscafo da Milazzo, Messina o Napoli."
+  - domanda: "Perché Il Postino è il film-testamento di Massimo Troisi?"
+    risposta: "Perché Troisi girò il film sapendo di dover affrontare urgentemente un intervento al cuore, ma scelse di completare prima le riprese. Morì nel sonno poche ore dopo la fine delle riprese, l'ultima notte di lavorazione."
+  - domanda: "Il Postino è tratto da un libro?"
+    risposta: "Sì, liberamente ispirato al romanzo Il postino di Neruda (Ardiente paciencia) dello scrittore cileno Antonio Skármeta, molto amato dallo stesso Troisi."
 bozza: false
 ---
 
-*Il Postino*, l'ultimo film di **Massimo Troisi**, ha reso immortale l'isola di
-**Salina**, nell'arcipelago delle Eolie. Le sue spiagge di ciottoli, i muretti a
-secco e il mare azzurrissimo sono lo sfondo dell'amicizia tra il postino Mario e
-il poeta Pablo Neruda. Ecco l'itinerario tra le location e i sapori dell'isola.
+*Il Postino*, l'ultimo film di **Massimo Troisi** (1994, regia di Michael
+Radford), ha reso immortale l'isola di **Salina**, nell'arcipelago delle
+Eolie. Le sue spiagge di ciottoli, i muretti a secco e il mare azzurrissimo
+sono lo sfondo dell'amicizia tra il postino Mario e il poeta Pablo Neruda.
+Il film è liberamente ispirato al romanzo *Il postino di Neruda* (*Ardiente
+paciencia*) dello scrittore cileno **Antonio Skármeta**. Ecco l'itinerario
+tra le location e i sapori dell'isola.
+
+## Una lavorazione entrata nella storia del cinema italiano
+
+Le riprese, cominciate il 14 marzo 1994 e durate 12 settimane, si sono
+svolte tra Cinecittà, **Salina** e **Procida**. Dietro la leggerezza
+poetica del film si nasconde una storia produttiva commovente: Troisi
+avrebbe dovuto sottoporsi con urgenza a un delicato intervento al cuore, ma
+scelse di completare prima le riprese. Morì nel sonno poche ore dopo la
+fine delle lavorazioni, l'ultima notte sul set: *Il Postino* resta così il
+suo film-testamento.
 
 ## Le location del film a Salina
 

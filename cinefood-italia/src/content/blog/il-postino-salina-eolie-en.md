@@ -13,15 +13,30 @@ faq:
     risposta: "Aeolian dishes: fresh fish, the prized Salina capers, pane cunzato and the sweet Malvasia delle Lipari wine."
   - domanda: "How do you get to Salina?"
     risposta: "It is reached by ferry or hydrofoil from Milazzo, Messina or Naples."
+  - domanda: "Why is Il Postino considered Massimo Troisi's testament film?"
+    risposta: "Troisi filmed it knowing he urgently needed heart surgery, but chose to finish shooting first. He died in his sleep just hours after filming wrapped, on the last night of production."
+  - domanda: "Is Il Postino based on a book?"
+    risposta: "Yes, loosely inspired by the novel Il postino di Neruda (Ardiente paciencia) by Chilean writer Antonio Skármeta, a book Troisi himself loved deeply."
 lang: "en"
 bozza: false
 ---
 
-*Il Postino* (*The Postman*), Massimo **Troisi**'s final film, made the island of
-**Salina** in the Aeolian archipelago immortal. Its pebble beaches, dry-stone
-walls and deep-blue sea are the backdrop to the friendship between the postman
-Mario and the poet Pablo Neruda. Here is the itinerary through the locations and
-the island's flavours.
+*Il Postino* (*The Postman*), Massimo **Troisi**'s final film (1994,
+directed by Michael Radford), made the island of **Salina** in the Aeolian
+archipelago immortal. Its pebble beaches, dry-stone walls and deep-blue sea
+are the backdrop to the friendship between the postman Mario and the poet
+Pablo Neruda. The film is loosely based on the novel *Il postino di Neruda*
+(*Ardiente paciencia*) by Chilean writer **Antonio Skármeta**. Here is the
+itinerary through the locations and the island's flavours.
+
+## A production that made Italian film history
+
+Filming began on March 14, 1994, and lasted 12 weeks, taking place between
+Cinecittà, **Salina** and **Procida**. Behind the film's poetic lightness
+lies a moving production story: Troisi urgently needed delicate heart
+surgery, but chose to finish filming first. He died in his sleep just hours
+after shooting wrapped, on the very last night of production — which is why
+*Il Postino* is still remembered as his testament film.
 
 ## The film's locations in Salina
 

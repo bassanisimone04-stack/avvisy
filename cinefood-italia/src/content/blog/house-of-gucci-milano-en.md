@@ -13,21 +13,35 @@ faq:
     risposta: "Saffron risotto, veal cutlet alla milanese, ossobuco and the classic aperitivo."
   - domanda: "Who directed House of Gucci?"
     risposta: "Ridley Scott (2021), with Lady Gaga and Adam Driver."
+  - domanda: "Where is the Gucci family villa in the film?"
+    risposta: "The scenes set in the family villa on Lake Como were filmed at Villa Balbiano, a historic residence built in the late 16th century by Cardinal Tolomeo Gallio."
+  - domanda: "What other Italian cities appear in House of Gucci?"
+    risposta: "Besides Milan and Lake Como (Ossuccio, Tremezzina), the film was also shot in Rome and Florence, plus some scenes in the Alps at Gressoney."
 lang: "en"
 bozza: false
 ---
 
-Ridley Scott's *House of Gucci* tells the rise and fall of the famous fashion
-family, with Italy as its elegant backdrop: **Milan**, Lake Como, Rome and
-Florence. The fashion capital par excellence takes centre stage. Here is an
-itinerary through the Milan of the film and where to eat.
+Ridley Scott's *House of Gucci* (2021), starring **Lady Gaga** and **Adam
+Driver**, tells the rise and fall of the famous fashion family, with Italy
+as its elegant backdrop: **Milan**, Lake Como, Rome and Florence. The
+fashion capital par excellence takes centre stage. Here is an itinerary
+through the Milan of the film and where to eat.
 
 ## The Milan of the film
 
 The film breathes Milanese elegance: the **Galleria Vittorio Emanuele II**, the
-**Duomo**, the historic palaces and the Liberty-style villas (like Villa Necchi
-Campiglio) that tell the story of fashion's luxury. A refined Milan, perfect for
-an itinerary of shopping, architecture and good food.
+**Duomo**, the historic palaces and the Liberty-style villas that tell the
+story of fashion's luxury. A refined Milan, perfect for an itinerary of
+shopping, architecture and good food.
+
+## The family villa on Lake Como
+
+The scenes set in the lavish family villa, where **Al Pacino** plays
+patriarch Aldo Gucci, were filmed at **Villa Balbiano** on Lake Como: a
+historic residence built at the end of the 16th century by Cardinal
+Tolomeo Gallio as his private home. Filming on the lake also touched
+Ossuccio and Tremezzina, while other scenes were shot in Rome, Florence and
+even in the Alps, at Gressoney.
 
 ## Where to eat in Milan
 
