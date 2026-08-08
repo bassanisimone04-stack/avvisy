@@ -13,6 +13,8 @@ faq:
     risposta: "Small snacks served in the bacari: creamed cod, sarde in saor, meatballs, with a small glass of wine or a spritz."
   - domanda: "Where can you eat like a Venetian?"
     risposta: "In the bacari, the typical taverns, away from the tourist restaurants."
+  - domanda: "Was the Venice scene really filmed on location?"
+    risposta: "Partly: the crew genuinely filmed in Venice (Campo Santa Maria Formosa, the Rialto area, St Mark's Square, the Grand Canal), but the spectacular action sequence with the water monster was rebuilt on a massive set at Leavesden Studios in England."
 lang: "en"
 bozza: false
 ---
@@ -22,11 +24,17 @@ In *Spider-Man: Far From Home*, Peter Parker begins his European trip right in
 city, star of one of the film's most spectacular sequences, is also a surprising
 food destination. Here is how to experience it.
 
-## The Venice of the film
+## The real and the rebuilt Venice
 
-Between the Grand Canal, the little squares and the palaces on the water, Venice
-offers unique scenery. The film captures its magical atmosphere, among reflections
-and timeless architecture.
+Between the Grand Canal, the little squares and the palaces on the water,
+Venice offers unique scenery. The crew genuinely filmed in the city in
+2018, in spots like **Campo Santa Maria Formosa**, the **Rialto** area and
+**St Mark's Square**. For scale and safety reasons, though, the
+spectacular action sequence with the water monster was rebuilt on a huge
+set at **Leavesden Studios** in England (the same studios used for Harry
+Potter), with the boat scene shot against green screen on a soundstage. A
+mix of real locations and special effects that still captures the real
+city's atmosphere faithfully.
 
 ## Where to eat like a Venetian
 

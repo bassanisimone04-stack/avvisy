@@ -13,6 +13,8 @@ faq:
     risposta: "Nei Sassi di Matera, in Basilicata, patrimonio UNESCO."
   - domanda: "Cosa mangiare a Matera?"
     risposta: "Pane di Matera IGP, peperoni cruschi, cavatelli e caciocavallo podolico."
+  - domanda: "Villa del Balbianello è comparsa anche in altri film famosi?"
+    risposta: "Sì: oltre a Casino Royale, la villa sul Lago di Como è nota per la scena del primo bacio tra Anakin e Padmé in Star Wars - Episodio II: L'attacco dei cloni. È aperta al pubblico da metà marzo a novembre."
 bozza: false
 ---
 
@@ -35,9 +37,14 @@ nei bacari e uno spritz sono d'obbligo. E per un caffè "da cinema", c'è lo sto
 **[Venezia](/venezia)**.
 
 ## Lago di Como — *Casino Royale*
-Sul Lago di Como, Bond si riprende alla splendida **Villa del Balbianello**. La
-cucina lariana è raffinata e lacustre: **risotto con pesce persico**, missoltini,
-e i grandi vini della vicina Valtellina. Un finale elegante come il personaggio.
+Sul Lago di Como, Bond si riprende alla splendida **Villa del Balbianello**, a
+Lenno, dove Vesper Lynd lo assiste dopo la tortura di Le Chiffre. Non è solo
+una location Bond: la stessa villa ha ospitato il primo bacio tra Anakin e
+Padmé in *Star Wars - Episodio II*, ed è considerata una delle location più
+fotografate della storia del cinema. È visitabile dal pubblico da metà marzo
+a novembre. La cucina lariana è raffinata e lacustre: **risotto con pesce
+persico**, missoltini, e i grandi vini della vicina Valtellina. Un finale
+elegante come il personaggio.
 
 ## In sintesi
 

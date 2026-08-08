@@ -13,6 +13,10 @@ faq:
     risposta: "Sì, con il celebre balcone e il muro delle lettere d'amore: è tra le attrazioni più visitate della città."
   - domanda: "Cosa mangiare a Verona?"
     risposta: "Risotto all'Amarone, bigoli con ragù d'anatra e i vini della Valpolicella."
+  - domanda: "Il balcone della Casa di Giulietta è quello originale?"
+    risposta: "No: è un'aggiunta turistica del '900, non parte dell'architettura originaria del palazzo trecentesco. Nel film, inoltre, fu aggiunto un finto muro di mattoni per la scena delle lettere, diverso dalla vera cassetta postale rossa dove si lasciano i bigliettini."
+  - domanda: "Dove sono girate le scene toscane del film?"
+    risposta: "Soprattutto a Siena, con vedute della celebre Piazza del Campo dove si corre il Palio, e a Villa Arvedi, usata come il palazzo del Conte Lorenzo."
 bozza: false
 ---
 
@@ -23,9 +27,14 @@ gli innamorati del cinema e del buon vino.
 
 ## La Verona di Giulietta
 
-Il film parte dalla celebre **Casa di Giulietta**, col balcone e il muro coperto
-di lettere d'amore. Verona è una città elegante e romantica, con l'Arena, le
-piazze e i palazzi medievali.
+Il film parte dalla celebre **Casa di Giulietta**, col balcone e il muro
+coperto di lettere d'amore. Una curiosità che sorprende molti visitatori:
+il balcone non è originale del palazzo trecentesco, ma un'aggiunta
+turistica del '900. Per il film fu addirittura costruito un finto muro di
+mattoni apposta per la scena delle lettere — nella realtà, i biglietti
+d'amore si lasciano in una piccola cassetta postale rossa dedicata alle
+"segretarie di Giulietta". Verona resta comunque una città elegante e
+romantica, con l'Arena, le piazze e i palazzi medievali.
 
 ## I sapori di Verona
 
@@ -38,9 +47,12 @@ La cucina veronese è ricca e legata al vino:
 
 ## La Toscana del film
 
-La seconda parte si sposta tra le colline toscane e le cantine, tra degustazioni
-e panorami dorati. Qui regnano la **bistecca alla fiorentina**, i **pici** e i
-vini rossi (Chianti, Brunello).
+La seconda parte si sposta tra le colline toscane e le cantine, tra
+degustazioni e panorami dorati. Molte scene sono girate a **Siena**, con
+vedute della celebre **Piazza del Campo**, dove ogni anno si corre il Palio.
+Il palazzo del Conte Lorenzo, personaggio interpretato da Vanessa Redgrave e
+Franco Nero, è **Villa Arvedi**, dimora storica veneta. Qui regnano la
+**bistecca alla fiorentina**, i **pici** e i vini rossi (Chianti, Brunello).
 
 ## In sintesi
 

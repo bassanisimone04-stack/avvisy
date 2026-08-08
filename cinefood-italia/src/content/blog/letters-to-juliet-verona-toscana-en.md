@@ -13,6 +13,10 @@ faq:
     risposta: "Yes, with the famous balcony and the wall of love letters: it is one of the city's most visited attractions."
   - domanda: "What should you eat in Verona?"
     risposta: "Amarone risotto, bigoli with duck ragù and the wines of Valpolicella."
+  - domanda: "Is Juliet's balcony the original one?"
+    risposta: "No: it's a 20th-century tourist addition, not part of the original 14th-century palace. For the film, a fake brick wall was even built for the letters scene — different from the real red postbox where visitors actually leave notes."
+  - domanda: "Where were the film's Tuscany scenes filmed?"
+    risposta: "Mainly in Siena, with views of the famous Piazza del Campo where the Palio horse race is run, and at Villa Arvedi, used as Count Lorenzo's palace."
 lang: "en"
 bozza: false
 ---
@@ -23,9 +27,14 @@ vineyards and wineries. A perfect itinerary for lovers of cinema and good wine.
 
 ## The Verona of Juliet
 
-The film starts at the famous **House of Juliet**, with its balcony and the wall
-covered in love letters. Verona is an elegant, romantic city, with the Arena, the
-squares and the medieval palaces.
+The film starts at the famous **House of Juliet**, with its balcony and the
+wall covered in love letters. A detail that surprises many visitors: the
+balcony isn't original to the 14th-century palace, but a 20th-century
+tourist addition. For the film, a fake brick wall was even built just for
+the letters scene — in real life, love notes are left in a small red
+postbox dedicated to "Juliet's secretaries". Verona remains an elegant,
+romantic city all the same, with the Arena, the squares and the medieval
+palaces.
 
 ## The flavours of Verona
 
@@ -38,8 +47,12 @@ Verona's cuisine is rich and tied to wine:
 
 ## The Tuscany of the film
 
-The second part moves among the Tuscan hills and wineries, between tastings and
-golden panoramas. Here the **bistecca alla fiorentina**, **pici** and red wines
+The second part moves among the Tuscan hills and wineries, between
+tastings and golden panoramas. Many scenes were filmed in **Siena**, with
+views of the famous **Piazza del Campo**, where the Palio horse race is
+run every year. Count Lorenzo's palace, played by Vanessa Redgrave and
+Franco Nero's characters, is **Villa Arvedi**, a historic estate in the
+Veneto. Here the **bistecca alla fiorentina**, **pici** and red wines
 (Chianti, Brunello) reign.
 
 ## In short
