@@ -13,18 +13,33 @@ faq:
     risposta: "Look for documented sources; on our site the real venues carry the 'Real set' badge."
   - domanda: "Are themed venues worth a visit?"
     risposta: "Yes, they are scenic and fun for enthusiasts, but don't expect to find the film's scene there."
+  - domanda: "Why do even some real sets need extra nuance?"
+    risposta: "Because not every scene 'set' in a place was physically filmed there: for instance Via Veneto in La Dolce Vita was largely rebuilt at Cinecittà, even though it was inspired by the real Café de Paris. We always flag these details in our articles."
 lang: "en"
 bozza: false
 ---
 
-When you look for "a film's restaurant" you can run into two different things.
-Understanding the difference helps you choose the right experience.
+When you look for "a film's restaurant" you can run into two different
+things. Understanding the difference helps you choose the right
+experience — which is why every card on our site cites the source used to
+verify it.
 
 ## Real set
 
 It's a venue where the film was **actually shot**, or that **really existed** and
-was used as a setting. Here the magic is authentic: you sit where the characters
-sat. On our cards you recognise it by the **Real set** badge.
+directly inspired the scene. Here the magic is authentic: you sit where the
+characters sat, or in the very place the director set out to portray. On
+our cards you recognise it by the **Real set** badge.
+
+## An important nuance: real location doesn't always mean "filmed there"
+
+Even among real sets there are differences: some venues appear literally
+on screen (like **[Bar Vitelli](/en/locale/bar-vitelli-savoca)** in
+Savoca), while others are the real place that **inspired** a scene
+rebuilt elsewhere — that's the case of the **[Café de
+Paris](/en/locale/cafe-de-paris-roma)** on Via Veneto, the real heart of
+Rome's "dolce vita", while the street scenes were actually shot on a set
+at Cinecittà. We always explain this clearly in the dedicated article.
 
 ## Cinema-themed
 
@@ -40,6 +55,7 @@ only the real sets or only the themed venues. Each card shows the matching badge
 so you always know what to expect.
 
 > A tip: always check the sources. Film appearances can be told in different ways,
-> and the data must be confirmed.
+> and the data must be confirmed. On our site, we always cite the sources
+> used to verify each location.
 
 Explore the [directory](/en/locali) and filter by the category you prefer.

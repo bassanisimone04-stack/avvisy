@@ -12,7 +12,9 @@ faq:
   - domanda: "Dove cena Jep ne La Grande Bellezza?"
     risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito."
   - domanda: "Qual è il caffè de La Dolce Vita?"
-    risposta: "Il Café de Paris su Via Veneto, oggi chiuso ma simbolo della Roma di Fellini."
+    risposta: "Il Café de Paris su Via Veneto, oggi chiuso ma simbolo della Roma di Fellini che ispirò il film — le scene di Via Veneto furono in realtà ricostruite a Cinecittà."
+  - domanda: "Qual è il locale più antico tra questi sei?"
+    risposta: "Il Café de Paris (1948) e Da Pancrazio, costruito sui resti del Teatro di Pompeo del I secolo a.C., dove secondo la tradizione fu ucciso Giulio Cesare."
 bozza: false
 ---
 
@@ -32,8 +34,10 @@ il piacere della cucina italiana.
 → **[Trattoria Santa Lucia](/locale/trattoria-santa-lucia)**
 
 ## 3. Da Pancrazio — *Mangia prega ama*
-Storico ristorante costruito sui resti del Teatro di Pompeo: le sale inferiori,
-tra archi e colonne romane, sono un'esperienza.
+Storico ristorante costruito sui resti del **Teatro di Pompeo**, del I secolo
+a.C. — lo stesso teatro dove, secondo la tradizione storica, fu ucciso
+Giulio Cesare: le sale inferiori, tra archi e colonne romane, sono
+un'esperienza letteralmente dentro la storia antica.
 → **[Da Pancrazio](/locale/da-pancrazio)**
 
 ## 4. Trattoria del Biscione — *Un Americano a Roma*
