@@ -13,13 +13,18 @@ faq:
     risposta: "Woody Allen (2012), dopo i film ambientati a Parigi e Barcellona."
   - domanda: "Cosa mangiare nella Roma del film?"
     risposta: "Gelato in piazza, supplì e la cucina romana: cacio e pepe, carbonara, carciofi."
+  - domanda: "Che struttura ha To Rome with Love?"
+    risposta: "È un film corale diviso in quattro storie separate ambientate a Roma, con un cast che include tre premi Oscar (Woody Allen, Roberto Benigni, Penélope Cruz) e cinque candidati (tra cui Alec Baldwin e Jesse Eisenberg)."
 bozza: false
 ---
 
-Con *To Rome with Love* (2012), **Woody Allen** ha firmato la sua lettera d'amore
-a **Roma**, dopo Parigi e Barcellona. Un film corale che gira tra piazze, vicoli
-e terrazze della Capitale, mostrando la città nel suo lato più solare e ironico.
-Ecco un itinerario nella Roma del film e dove fermarsi a tavola.
+Con *To Rome with Love* (2012), **Woody Allen** ha firmato la sua lettera
+d'amore a **Roma**, dopo Parigi e Barcellona. Il film è diviso in **quattro
+storie separate** ambientate nella Capitale, con un cast che vanta tre
+premi Oscar — lo stesso Allen, **Roberto Benigni** e **Penélope Cruz** —
+oltre a cinque candidati, tra cui **Alec Baldwin** e **Jesse Eisenberg**.
+Fu anche il ritorno di Benigni in un grande film americano dopo *Pinocchio*
+(2002). Ecco un itinerario nella Roma del film e dove fermarsi a tavola.
 
 ## La Roma del film
 

@@ -13,14 +13,19 @@ faq:
     risposta: "Woody Allen (2012), after his films set in Paris and Barcelona."
   - domanda: "What should you eat in the Rome of the film?"
     risposta: "Gelato in the square, supplì and Roman cuisine: cacio e pepe, carbonara, artichokes."
+  - domanda: "What's the structure of To Rome with Love?"
+    risposta: "It's an ensemble film split into four separate stories set in Rome, with a cast including three Oscar winners (Woody Allen, Roberto Benigni, Penélope Cruz) and five nominees, including Alec Baldwin and Jesse Eisenberg."
 lang: "en"
 bozza: false
 ---
 
 With *To Rome with Love* (2012), **Woody Allen** wrote his love letter to
-**Rome**, after Paris and Barcelona. An ensemble film that moves between squares,
-alleys and terraces of the capital, showing the city at its sunniest and most
-ironic. Here is an itinerary through the film's Rome and where to stop for a bite.
+**Rome**, after Paris and Barcelona. The film is split into **four separate
+stories** set in the capital, with a cast boasting three Oscar winners —
+Allen himself, **Roberto Benigni** and **Penélope Cruz** — plus five
+nominees, including **Alec Baldwin** and **Jesse Eisenberg**. It also
+marked Benigni's return to a major American film after *Pinocchio*
+(2002). Here is an itinerary through the film's Rome and where to stop for a bite.
 
 ## The Rome of the film
 

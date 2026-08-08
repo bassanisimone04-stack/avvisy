@@ -13,13 +13,18 @@ faq:
     risposta: "Non esiste realmente: la scena è ambientata nella piazzetta di Castellabate, Piazza 10 Ottobre 1123."
   - domanda: "Cosa mangiare a Castellabate?"
     risposta: "Mozzarella di bufala del Cilento, alici di menaica, fusilli fatti a mano e pesce fresco del Tirreno."
+  - domanda: "Benvenuti al Sud è un remake?"
+    risposta: "Sì, del film francese Giù al Nord (Bienvenue chez les Ch'tis, 2008). La versione italiana di Luca Miniero incassò circa 30 milioni di euro, debuttando al primo posto al botteghino davanti a Inception."
 bozza: false
 ---
 
-*Benvenuti al Sud* ha portato milioni di italiani a scoprire **Castellabate**,
-gioiello del Cilento affacciato sul mare. Il film di Luca Miniero, campione
-d'incassi, ha reso celebri la sua piazzetta, i vicoli e — naturalmente — la sua
-cucina. Ecco l'itinerario tra le location e la buona tavola.
+*Benvenuti al Sud* (2010), remake italiano del film francese **Giù al Nord**
+(*Bienvenue chez les Ch'tis*), ha portato milioni di italiani a scoprire
+**Castellabate**, gioiello del Cilento affacciato sul mare. Il film di
+**Luca Miniero**, campione d'incassi con circa **30 milioni di euro**
+raccolti (debuttò al primo posto al botteghino italiano, superando anche
+*Inception*), ha reso celebri la sua piazzetta, i vicoli e — naturalmente
+— la sua cucina. Ecco l'itinerario tra le location e la buona tavola.
 
 ## Le location del film
 

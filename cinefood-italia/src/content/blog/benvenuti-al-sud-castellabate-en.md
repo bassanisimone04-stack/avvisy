@@ -13,14 +13,20 @@ faq:
     risposta: "It doesn't really exist: the scene is set in Castellabate's little square, Piazza 10 Ottobre 1123."
   - domanda: "What should you eat in Castellabate?"
     risposta: "Cilento buffalo mozzarella, menaica anchovies, hand-rolled fusilli and fresh Tyrrhenian fish."
+  - domanda: "Is Welcome to the South a remake?"
+    risposta: "Yes, of the French film Welcome to the Sticks (Bienvenue chez les Ch'tis, 2008). Luca Miniero's Italian version grossed about €30 million, opening at number one at the Italian box office, ahead of Inception."
 lang: "en"
 bozza: false
 ---
 
-*Welcome to the South* (*Benvenuti al Sud*) led millions of Italians to discover
-**Castellabate**, a jewel of Cilento overlooking the sea. Luca Miniero's
-box-office hit made its little square, its alleys and — of course — its cuisine
-famous. Here is the itinerary through the locations and the good food.
+*Welcome to the South* (*Benvenuti al Sud*, 2010), the Italian remake of
+the French film **Welcome to the Sticks** (*Bienvenue chez les Ch'tis*),
+led millions of Italians to discover **Castellabate**, a jewel of Cilento
+overlooking the sea. **Luca Miniero**'s box-office hit grossed about
+**€30 million** (it opened at number one at the Italian box office, ahead
+of *Inception*), and made its little square, its alleys and — of course —
+its cuisine famous. Here is the itinerary through the locations and the
+good food.
 
 ## The film's locations
 
