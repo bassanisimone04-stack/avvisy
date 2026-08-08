@@ -12,18 +12,26 @@ faq:
   - domanda: "Quali regioni tocca The Trip to Italy?"
     risposta: "Liguria, Toscana, Roma, Costiera Amalfitana e Capri."
   - domanda: "È un film o una serie?"
-    risposta: "Nasce come serie TV della BBC, poi montata anche in versione film."
+    risposta: "Nasce come serie TV della BBC diretta da Michael Winterbottom, poi montata anche in versione film per il cinema."
+  - domanda: "Il viaggio segue davvero ristoranti reali?"
+    risposta: "Sì: la struttura del film ruota attorno a sei pasti in sei ristoranti veri, in sei giorni, che nella finzione Coogan deve recensire per l'Observer Magazine."
 bozza: false
 ---
 
-Se esiste un film perfetto per chi ama cinema e cucina, è *The Trip to Italy*
-(2014): **Steve Coogan** e **Rob Brydon** attraversano l'Italia mangiando nei
-ristoranti più belli, tra battute e paesaggi mozzafiato. Un vero itinerario
+Se esiste un film perfetto per chi ama cinema e cucina, è *The Trip to
+Italy* (2014), diretto da **Michael Winterbottom**: **Steve Coogan** e
+**Rob Brydon** attraversano l'Italia mangiando nei ristoranti più belli,
+tra battute e paesaggi mozzafiato. La struttura del film è tutta
+gastronomica: sei pasti in sei ristoranti veri, in sei giorni, che nella
+finzione Coogan deve recensire per l'Observer Magazine — un vero itinerario
 gastronomico da rifare tappa per tappa.
 
 ## Le tappe del viaggio
 
-Il film segue lo Stivale da nord a sud, toccando alcune delle mete più golose:
+Il film segue lo Stivale da nord a sud, con tappe reali a **Camogli**, sulla
+riviera ligure, **Pievescola** in Toscana, **Roma**, **Ravello** sopra la
+Costiera Amalfitana, fino alla costa di **Sorrento**, con vista su
+**Capri**:
 
 - La **Liguria** e le Cinque Terre, con il pesto e il mare;
 - La **Toscana**, tra colline e vino;

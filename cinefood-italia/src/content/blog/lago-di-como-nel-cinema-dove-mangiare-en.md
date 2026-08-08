@@ -13,6 +13,8 @@ faq:
     risposta: "Villa del Balbianello in Lenno, used as the planet Naboo."
   - domanda: "What should you eat on Lake Como?"
     risposta: "Risotto with perch, missoltini with polenta and the wines of Valtellina."
+  - domanda: "Is Villa del Balbianello the same location from Casino Royale and Star Wars?"
+    risposta: "Yes: the villa in Lenno appears in both Casino Royale (where Bond recovers after his torture) and Star Wars: Episode II, for Anakin and Padmé's kiss. It's open to the public from mid-March to November."
 lang: "en"
 bozza: false
 ---

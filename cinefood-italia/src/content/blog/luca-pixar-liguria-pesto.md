@@ -13,19 +13,31 @@ faq:
     risposta: "Trofie al pesto, focaccia genovese, trenette, farinata e gelato."
   - domanda: "Le Cinque Terre sono adatte alle famiglie?"
     risposta: "Sì: borghi colorati, treni panoramici, sentieri e spiaggette le rendono ideali per un viaggio in famiglia."
+  - domanda: "Chi ha diretto Luca ed è davvero ligure?"
+    risposta: "Sì: il regista Enrico Casarosa è genovese, ed è cresciuto in Riviera. Ha attinto ai propri ricordi d'infanzia per costruire l'atmosfera del film, uscito su Disney+ il 18 giugno 2021."
+  - domanda: "Quale borgo ha ispirato la piazza di Portorosso?"
+    risposta: "La piazza principale di Portorosso è ispirata a quella di Vernazza; la casa rossa sul porticciolo di Riomaggiore ha invece ispirato la casa di Giulia, mentre Camogli ha ispirato l'architettura degli edifici del film."
 bozza: false
 ---
 
-Il film Pixar **Luca** ha portato il mondo intero a sognare la **Riviera
-Ligure**. La cittadina immaginaria di Portorosso, coi suoi vicoli colorati e il
-mare cristallino, è ispirata alle Cinque Terre e ai borghi liguri. Ed è un film
-in cui il cibo è ovunque: perfetto per un viaggio di gusto in famiglia.
+Il film Pixar **Luca** (2021) ha portato il mondo intero a sognare la
+**Riviera Ligure**. Il regista **Enrico Casarosa**, genovese, ha attinto
+alla propria infanzia in Riviera per costruire l'atmosfera del film,
+uscito su Disney+ il 18 giugno 2021. La cittadina immaginaria di
+Portorosso, coi suoi vicoli colorati e il mare cristallino, è un
+collage delle Cinque Terre e dei borghi liguri, ed è un film in cui il
+cibo è ovunque: perfetto per un viaggio di gusto in famiglia.
 
-## La Liguria di Luca
+## La Liguria di Luca, borgo per borgo
 
-Portorosso è un concentrato di Liguria: case pastello, barche, piazzette e il
-profumo del mare. I borghi che l'hanno ispirata — Riomaggiore, Vernazza,
-Monterosso — sono tra i più fotografati d'Italia.
+Portorosso è un concentrato di Liguria: case pastello, barche, piazzette e
+il profumo del mare. La scenografa del film ha raccontato come ogni paese
+delle Cinque Terre abbia contribuito con un dettaglio: la **piazza
+principale** di Portorosso è ispirata a quella di **Vernazza**; la
+caratteristica **casa rossa sul porticciolo** di **Riomaggiore** ha
+ispirato la casa di Giulia, una delle protagoniste; **Camogli**, con le sue
+facciate dipinte, ha ispirato l'architettura degli edifici, ricostruita
+anche grazie a foto d'epoca degli anni '50.
 
 ## Cosa mangiare (come nel film)
 

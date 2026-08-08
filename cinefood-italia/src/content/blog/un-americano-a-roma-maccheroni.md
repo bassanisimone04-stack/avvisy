@@ -13,20 +13,30 @@ faq:
     risposta: "Nelle trattorie del centro storico, come la Trattoria del Biscione tra Campo de' Fiori e il Teatro di Pompeo."
   - domanda: "Quali piatti romani provare?"
     risposta: "Cacio e pepe, amatriciana, carbonara, carciofi alla romana e coda alla vaccinara."
+  - domanda: "Dove è ambientato il personaggio di Nando Mericoni?"
+    risposta: "A Trastevere: Nando è un giovane romano del popolare quartiere trasteverino, ossessionato dal mito dell'America, che finisce per fare da specchio comico agli italiani di quegli anni."
+  - domanda: "Dove è stato girato Un Americano a Roma?"
+    risposta: "Tra le location reali: via del Portico d'Ottavia e vicolo Savini, dove fu ricostruita l'osteria della celebre scena, oltre ad alcune zone periferiche di Roma per le scene in motocicletta."
 bozza: false
 ---
 
 "Maccarone, m'hai provocato e io te distruggo!" — poche battute del cinema
-italiano sono celebri come quella di **Alberto Sordi** in *Un Americano a Roma*
-(1954). La scena in cui Nando Mericoni, dopo aver snobbato la pasta in nome del
-mito americano, cede ai maccheroni è entrata nella storia. Ecco come ritrovare
+italiano sono celebri come quella di **Alberto Sordi** in *Un Americano a
+Roma* (1954), diretto da **Steno**. La scena in cui Nando Mericoni, giovane
+trasteverino ossessionato dal mito dell'America, dopo aver snobbato la
+pasta cede ai maccheroni, è entrata nella storia. Ecco come ritrovare
 quella Roma popolare e la sua cucina.
 
 ## Lo spirito del film: la Roma verace
 
 *Un Americano a Roma* è un ritratto affettuoso della Roma popolare del
-dopoguerra, fatta di vicoli, trattorie e piatti generosi. Per rivivere quel
-clima, il posto giusto è una **trattoria romana del centro storico** come la
+dopoguerra, fatta di vicoli, trattorie e piatti generosi — con Nando
+Mericoni presentato come un ragazzo di **Trastevere**, quartiere che
+incarna l'anima popolare della Capitale. Le riprese si sono svolte in
+diverse location reali, tra cui **via del Portico d'Ottavia** e **vicolo
+Savini**, dove fu ricostruita l'osteria della scena dei maccheroni. Per
+rivivere quel clima, il posto giusto oggi è una **trattoria romana del
+centro storico** come la
 **[Trattoria del Biscione](/locale/trattoria-del-biscione)**, tra Campo de' Fiori
 e il Teatro di Pompeo: cucina tradizionale e atmosfera d'altri tempi.
 

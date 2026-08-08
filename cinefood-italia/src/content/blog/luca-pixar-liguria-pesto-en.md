@@ -13,20 +13,32 @@ faq:
     risposta: "Trofie al pesto, Genoese focaccia, trenette, farinata and gelato."
   - domanda: "Are the Cinque Terre suitable for families?"
     risposta: "Yes: colourful villages, scenic trains, trails and little beaches make them ideal for a family trip."
+  - domanda: "Who directed Luca, and are they really from Liguria?"
+    risposta: "Yes: director Enrico Casarosa is from Genoa and grew up on the Riviera. He drew on his own childhood memories to build the film's atmosphere, released on Disney+ on June 18, 2021."
+  - domanda: "Which village inspired Portorosso's main square?"
+    risposta: "Portorosso's main square is inspired by Vernazza's; the red house on Riomaggiore's little harbor inspired Giulia's house, while Camogli inspired the architecture of the film's buildings."
 lang: "en"
 bozza: false
 ---
 
-Pixar's **Luca** made the whole world dream of the **Italian Riviera**. The
-fictional town of Portorosso, with its colourful alleys and crystal-clear sea, is
-inspired by the Cinque Terre and the villages of Liguria. And it is a film in
-which food is everywhere: perfect for a tasty family trip.
+Pixar's **Luca** (2021) made the whole world dream of the **Italian
+Riviera**. Director **Enrico Casarosa**, from Genoa, drew on his own
+childhood on the Riviera to build the film's atmosphere, released on
+Disney+ on June 18, 2021. The fictional town of Portorosso, with its
+colourful alleys and crystal-clear sea, is a collage of the Cinque Terre
+and the villages of Liguria, and it is a film in which food is
+everywhere: perfect for a tasty family trip.
 
-## The Liguria of Luca
+## The Liguria of Luca, village by village
 
-Portorosso is Liguria in a nutshell: pastel houses, boats, little squares and the
-scent of the sea. The villages that inspired it — Riomaggiore, Vernazza,
-Monterosso — are among the most photographed in Italy.
+Portorosso is Liguria in a nutshell: pastel houses, boats, little squares
+and the scent of the sea. The film's production designer explained how
+each Cinque Terre village contributed a detail: Portorosso's **main
+square** is inspired by **Vernazza**'s; the distinctive **red house on the
+little harbor** of **Riomaggiore** inspired the home of Giulia, one of the
+film's main characters; **Camogli**, with its painted façades, inspired
+the architecture of the buildings, recreated with help from 1950s archive
+photographs.
 
 ## What to eat (just like in the film)
 
