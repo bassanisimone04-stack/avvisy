@@ -13,6 +13,8 @@ faq:
     risposta: "In the Sassi of Matera, in Basilicata, a UNESCO World Heritage site."
   - domanda: "What should you eat in Matera?"
     risposta: "Matera PGI bread, crispy 'cruschi' peppers, cavatelli and caciocavallo podolico."
+  - domanda: "Has Villa del Balbianello appeared in other famous films?"
+    risposta: "Yes: besides Casino Royale, the Lake Como villa is known for Anakin and Padmé's first kiss in Star Wars: Episode II - Attack of the Clones. It's open to the public from mid-March to November."
 lang: "en"
 bozza: false
 ---
@@ -36,9 +38,14 @@ historic **[Caffè Florian](/en/locale/caffe-florian)** in St Mark's Square.
 Discover the venues of **[Venice](/en/venezia)**.
 
 ## Lake Como — *Casino Royale*
-On Lake Como, Bond recovers at the splendid **Villa del Balbianello**. Lake Como
-cuisine is refined and lake-based: **risotto with perch**, missoltini, and the
-great wines of nearby Valtellina. An elegant finale, just like the character.
+On Lake Como, Bond recovers at the splendid **Villa del Balbianello**, in
+Lenno, where Vesper Lynd nurses him back to health after Le Chiffre's
+torture. It's not just a Bond location: the same villa hosted Anakin and
+Padmé's first kiss in *Star Wars: Episode II*, and is considered one of
+the most photographed film locations in history. It's open to visitors
+from mid-March to November. Lake Como cuisine is refined and lake-based:
+**risotto with perch**, missoltini, and the great wines of nearby
+Valtellina. An elegant finale, just like the character.
 
 ## In short
 

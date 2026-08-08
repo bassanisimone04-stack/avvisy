@@ -13,6 +13,10 @@ faq:
     risposta: "Tortellini in brodo, tagliatelle, aceto balsamico tradizionale, Parmigiano Reggiano e Lambrusco."
   - domanda: "Chi ha diretto Ferrari?"
     risposta: "Michael Mann (2023), con Adam Driver nel ruolo di Enzo Ferrari."
+  - domanda: "Il film Ferrari è girato davvero a Modena?"
+    risposta: "Sì, quasi interamente: tra agosto e ottobre 2022 la produzione ha girato nelle location originali della città, con pochissimo ricorso alla computer grafica, incluse Piazza Grande, il Teatro Comunale e persino il vero barbiere di Enzo Ferrari."
+  - domanda: "Quali luoghi reali di Modena appaiono nel film?"
+    risposta: "Piazza Roma, Piazza Grande col Duomo e la Ghirlandina, il Teatro Comunale Pavarotti-Freni (scena dell'opera), il Cimitero di San Cataldo e il barbiere Da Antonio, quello realmente frequentato da Enzo Ferrari."
 bozza: false
 ---
 
@@ -21,11 +25,19 @@ bozza: false
 capitali gastronomiche d'Italia, terra di sapori conosciuti in tutto il mondo.
 Ecco la Modena del film e cosa mettere in tavola.
 
-## La Modena di Enzo Ferrari
+## La Modena di Enzo Ferrari, girata (quasi) tutta dal vero
 
 Il film respira l'aria della Modena anni '50: le strade, le officine, la
-passione per le corse. La città emiliana, elegante e operosa, è lo sfondo perfetto
-per la storia del "Drake".
+passione per le corse. Un dettaglio raro per una produzione hollywoodiana:
+tra agosto e ottobre 2022 la troupe ha girato **quasi interamente nelle
+location reali** della città, con pochissima computer grafica. Tra i luoghi
+riconoscibili: **Piazza Roma**, con Palazzo Ducale sullo sfondo, **Piazza
+Grande** col Duomo e la torre della Ghirlandina, il **Teatro Comunale
+Pavarotti-Freni** (dove è ambientata la scena all'opera), il **Cimitero
+monumentale di San Cataldo** e persino il barbiere **"Da Antonio"**, vicino
+al Duomo — lo stesso realmente frequentato da Enzo Ferrari. La città
+emiliana, elegante e operosa, è lo sfondo perfetto per la storia del
+"Drake".
 
 ## I sapori di Modena
 

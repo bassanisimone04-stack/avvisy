@@ -13,6 +13,8 @@ faq:
     risposta: "Piccoli stuzzichini serviti nei bacari: baccalà mantecato, sarde in saor, polpette, con un'ombra di vino o uno spritz."
   - domanda: "Dove mangiare come un veneziano?"
     risposta: "Nei bacari, le osterie tipiche, lontano dai ristoranti turistici."
+  - domanda: "La scena di Venezia è girata davvero sul posto?"
+    risposta: "In parte: la troupe ha girato realmente a Venezia (Campo Santa Maria Formosa, l'area di Rialto, Piazza San Marco, il Canal Grande), ma la spettacolare sequenza d'azione con il mostro d'acqua è stata ricostruita su un set enorme agli studios Leavesden, in Inghilterra."
 bozza: false
 ---
 
@@ -21,11 +23,17 @@ proprio a **Venezia**, dove affronta il mostro d'acqua tra canali e ponti. La
 città lagunare, protagonista di una delle sequenze più spettacolari del film, è
 anche una meta gastronomica sorprendente. Ecco come viverla.
 
-## La Venezia del film
+## La Venezia del film: reale e ricostruita
 
 Tra il Canal Grande, i campielli e i palazzi affacciati sull'acqua, Venezia
-regala scenografie uniche. Il film ne cattura l'atmosfera magica, tra riflessi e
-architetture senza tempo.
+regala scenografie uniche. La troupe ha girato davvero in città nel 2018,
+in luoghi come **Campo Santa Maria Formosa**, l'area di **Rialto** e
+**Piazza San Marco**. La spettacolare sequenza d'azione con il mostro
+d'acqua, però, per ragioni di scala e sicurezza è stata ricostruita su un
+enorme set costruito agli **studios Leavesden**, in Inghilterra (gli stessi
+usati per Harry Potter), con la scena in barca girata in green screen su un
+palcoscenico. Un mix di location vere ed effetti speciali che restituisce
+comunque un'atmosfera fedele alla città reale.
 
 ## Dove mangiare come un veneziano
 
