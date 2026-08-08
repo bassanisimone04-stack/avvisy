@@ -13,21 +13,31 @@ faq:
     risposta: "In the trattorias of the historic centre, such as Trattoria del Biscione between Campo de' Fiori and the Theatre of Pompey."
   - domanda: "Which Roman dishes should you try?"
     risposta: "Cacio e pepe, amatriciana, carbonara, Roman-style artichokes and oxtail stew."
+  - domanda: "Where is Nando Mericoni's character supposed to be from?"
+    risposta: "From Trastevere: Nando is a young Roman from the working-class Trastevere district, obsessed with the myth of America, who ends up becoming a comic mirror for Italians of that era."
+  - domanda: "Where was An American in Rome filmed?"
+    risposta: "Among the real locations: Via del Portico d'Ottavia and Vicolo Savini, where the tavern from the famous scene was recreated, plus some outlying areas of Rome for the motorcycle scenes."
 lang: "en"
 bozza: false
 ---
 
-"Maccarone, you provoked me and I'll destroy you!" — few lines of Italian cinema
-are as famous as **Alberto Sordi**'s in *An American in Rome* (1954). The scene in
-which Nando Mericoni, after snubbing pasta in the name of the American dream,
-finally gives in to macaroni has gone down in history. Here is how to find that
-working-class Rome and its cuisine.
+"Maccarone, you provoked me and I'll destroy you!" — few lines of Italian
+cinema are as famous as **Alberto Sordi**'s in *An American in Rome*
+(1954), directed by **Steno**. The scene in which Nando Mericoni, a young
+man from Trastevere obsessed with the myth of America, finally gives in to
+macaroni after snubbing pasta, has gone down in history. Here is how to
+find that working-class Rome and its cuisine.
 
 ## The spirit of the film: authentic Rome
 
-*An American in Rome* is an affectionate portrait of post-war working-class Rome,
-made of alleys, trattorias and generous dishes. To relive that mood, the right
-place is a **Roman trattoria in the historic centre** such as the
+*An American in Rome* is an affectionate portrait of post-war working-class
+Rome, made of alleys, trattorias and generous dishes — with Nando Mericoni
+presented as a young man from **Trastevere**, the district that embodies
+the capital's working-class soul. Filming took place at several real
+locations, including **Via del Portico d'Ottavia** and **Vicolo Savini**,
+where the tavern from the macaroni scene was recreated. To relive that
+mood today, the right place is a **Roman trattoria in the historic
+centre** such as the
 **[Trattoria del Biscione](/en/locale/trattoria-del-biscione)**, between Campo de'
 Fiori and the Theatre of Pompey: traditional cuisine and an old-world atmosphere.
 

@@ -12,14 +12,22 @@ faq:
   - domanda: "Quali regioni visita Stanley Tucci?"
     risposta: "Napoli, Roma, Bologna, Toscana, Sicilia, Milano e altre."
   - domanda: "Dove vedere Searching for Italy?"
-    risposta: "È una serie prodotta da CNN, uscita nel 2021."
+    risposta: "È una serie prodotta da CNN, uscita il 14 febbraio 2021, con 2 stagioni (l'ultima nel 2022)."
+  - domanda: "Stanley Tucci ha vinto premi per la serie?"
+    risposta: "Sì, la serie ha vinto 3 Emmy Award come Miglior serie non-fiction condotta (2021, 2022 e 2024) e ha ricevuto 7 nomination totali."
+  - domanda: "Da dove vengono le origini italiane di Stanley Tucci?"
+    risposta: "Dalla Calabria: il nonno Stanislao Tucci era di Marzi (Cosenza), la nonna Teresa Pisani di Serra San Bruno (Vibo Valentia), e la madre Joan Tropiano è nata a Cittanova (Reggio Calabria)."
 bozza: false
 ---
 
 C'è una serie che ha fatto innamorare il mondo della cucina italiana:
-**Stanley Tucci: Searching for Italy**. L'attore, di origini italiane, viaggia
-regione per regione alla scoperta dei piatti autentici, tra mercati, trattorie e
-grandi ristoranti. Un itinerario gastronomico perfetto da rifare.
+**Stanley Tucci: Searching for Italy**, andata in onda su **CNN** dal 14
+febbraio 2021, per due stagioni, vincendo **3 Emmy Award** come miglior
+serie non-fiction condotta. L'attore, di origini calabresi (il nonno era
+di Marzi, in provincia di Cosenza, la nonna di Serra San Bruno), viaggia
+regione per regione alla scoperta dei piatti autentici, tra mercati,
+trattorie e grandi ristoranti. Un itinerario gastronomico perfetto da
+rifare.
 
 ## Le regioni del viaggio
 

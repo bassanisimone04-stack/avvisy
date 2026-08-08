@@ -12,20 +12,27 @@ faq:
   - domanda: "Which regions does The Trip to Italy cover?"
     risposta: "Liguria, Tuscany, Rome, the Amalfi Coast and Capri."
   - domanda: "Is it a film or a series?"
-    risposta: "It began as a BBC TV series, later edited into a film version too."
+    risposta: "It began as a BBC TV series directed by Michael Winterbottom, later edited into a film version too."
+  - domanda: "Does the journey really follow real restaurants?"
+    risposta: "Yes: the film's structure is built around six meals at six real restaurants, over six days, which Coogan's character is fictionally reviewing for the Observer Magazine."
 lang: "en"
 bozza: false
 ---
 
-If there is one film made for lovers of cinema and food, it is *The Trip to Italy*
-(2014): **Steve Coogan** and **Rob Brydon** cross Italy eating in the most
-beautiful restaurants, between jokes and breathtaking landscapes. A real food
-itinerary to retrace stop by stop.
+If there is one film made for lovers of cinema and food, it is *The Trip to
+Italy* (2014), directed by **Michael Winterbottom**: **Steve Coogan** and
+**Rob Brydon** cross Italy eating in the most beautiful restaurants,
+between jokes and breathtaking landscapes. The film's structure is
+entirely built around food: six meals at six real restaurants, over six
+days, which Coogan's character is fictionally reviewing for the Observer
+Magazine — a real food itinerary to retrace stop by stop.
 
 ## The journey's stops
 
-The film follows the boot from north to south, touching some of the tastiest
-destinations:
+The film follows the boot from north to south, with real stops in
+**Camogli** on the Ligurian Riviera, **Pievescola** in Tuscany, **Rome**,
+**Ravello** above the Amalfi Coast, and finally the **Sorrento** coast,
+overlooking **Capri**:
 
 - **Liguria** and the Cinque Terre, with pesto and the sea;
 - **Tuscany**, among hills and wine;
