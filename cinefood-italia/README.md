@@ -152,51 +152,32 @@ email, social e le voci del menu.
   ☀️/🌙 in alto a destra. Per partire in chiaro, cambia `class="dark"` in
   `class=""` sul tag `<html>` in `BaseLayout.astro`.
 
-### 📷 Mettere foto reali (al posto dei placeholder)
+### 📷 Aggiungere o sostituire una foto
 
-Le immagini incluse sono **placeholder** grafici. Le foto e le locandine reali
-dei film sono **protette da copyright**, quindi non vanno copiate dal web. Hai
-due modi per avere immagini vere:
-
-1. **Foto tue o con licenza** (consigliato per i locali): metti il file (jpg/png)
-   in `src/assets/…` con lo **stesso nome** di quello attuale. Esempi:
-   `src/assets/films/il-padrino.jpg`, `src/assets/cities/roma.jpg`,
-   `src/assets/placeholder/bar-vitelli.jpg`.
-2. **Foto libere automatiche**: esegui, sul tuo computer,
-   `node scripts/scarica-foto.mjs`. Scarica fotografie **gratuite e legali**
-   (licenza Unsplash, uso commerciale senza attribuzione) e le applica a film e
-   città. Sono immagini d'atmosfera, non le scene dei film: per una foto
-   specifica usa il metodo 1.
+Tutte le foto del sito sono **immagini reali** (locali, città, articoli).
+Per aggiungerne una nuova o sostituirne una: metti il file (jpg/png/webp) in
+`src/assets/…` con lo **stesso nome** di quello che vuoi sostituire, oppure
+un nome nuovo se stai aggiungendo un locale/articolo — poi aggiorna il
+percorso nel campo `immagine:` del file di contenuto corrispondente. Esempi:
+`src/assets/films/il-padrino.jpg`, `src/assets/cities/roma.jpg`,
+`src/assets/placeholder/bar-vitelli-savoca.webp`. Le locandine dei film e le
+foto dei locali sono protette da copyright quando non sono tue: usa solo
+immagini di cui hai i diritti (foto proprie, materiale con licenza libera,
+o materiale stampa fornito dal locale/distributore).
 
 ---
 
 ## 🚀 Pubblicare il sito online gratis
 
-### Netlify (consigliata, ha anche i form)
-
-Il file **`netlify.toml`** è già incluso: contiene comando di build, cartella di
-pubblicazione, versione di Node e lo scaricamento automatico delle foto libere.
-Ti bastano pochi clic:
-
-1. Crea un account gratuito su <https://www.netlify.com>.
-2. **Add new site → Import an existing project** e collega il repository GitHub.
-3. Nelle impostazioni imposta solo la **Base directory: `cinefood-italia`**
-   (comando di build e publish li legge da `netlify.toml`).
-4. **Deploy**: il sito è online in un minuto e si ricostruisce a ogni push.
-
-> 🖼️ In fase di build, Netlify esegue `scripts/scarica-foto.mjs` e scarica
-> automaticamente le foto libere (licenza Unsplash) per film e città. Se il
-> download non riesce, il sito resta comunque online con i placeholder.
-
-> 📨 I form "Aggiungi il tuo locale" e la newsletter funzionano
-> automaticamente su Netlify (sezione **Forms** della dashboard).
-
-### Vercel
+### Vercel (usato per il sito in produzione)
 
 1. Account gratuito su <https://vercel.com>, collega il progetto da GitHub.
 2. Vercel riconosce Astro da solo (Build `npm run build`, Output `dist`).
-3. **Deploy**. Per i form usa un servizio come [Formspree](https://formspree.io)
-   cambiando l'`action` in `src/pages/aggiungi-locale.astro`.
+   Se il repository contiene più progetti, imposta la **Root Directory** su
+   `cinefood-italia`.
+3. **Deploy**: il sito si aggiorna automaticamente a ogni push. Per i form
+   usa un servizio come [Formspree](https://formspree.io) cambiando
+   l'`action` in `src/pages/aggiungi-locale.astro`.
 
 ### ⚠️ Prima di pubblicare
 
@@ -234,7 +215,6 @@ cinefood-italia/
 │   ├── lib/                    ← funzioni di supporto (non serve toccarle)
 │   └── styles/global.css       ← colori e font del sito
 ├── public/                     ← favicon, robots, immagine social
-├── scripts/                    ← genera le immagini placeholder (cancellabile)
 └── astro.config.mjs
 ```
 
@@ -256,8 +236,8 @@ cinefood-italia/
 **Posso aggiungere un tipo (es. "gelateria")?** Sì: apri `src/content.config.ts`
 e aggiungi la parola all'elenco `TIPI_LOCALE`.
 
-**È tutto gratis?** Sì. Sito, font, mappa (OpenStreetMap) e hosting
-Netlify/Vercel hanno piani gratuiti sufficienti per iniziare.
+**È tutto gratis?** Sì. Sito, font, mappa (OpenStreetMap) e hosting su
+Vercel hanno piani gratuiti sufficienti per iniziare.
 
 ---
 
