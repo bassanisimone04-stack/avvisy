@@ -16,14 +16,20 @@ immagineAlt: "Il dehors storico del Café de Paris su Via Veneto a Roma"
 ultimoAggiornamento: 2026-07-24
 film:
   - film: "la-dolce-vita"
-    descrizioneScena: "Su Via Veneto, cuore mondano della 'dolce vita' felliniana, il Café de Paris fu immortalato da Fellini nel 1960, tra dive, paparazzi e jet set."
-descrizione: "Storico caffè di Via Vittorio Veneto, aperto nel 1948 e reso celebre da 'La dolce vita' di Fellini. Simbolo della Roma glamour degli anni '60, ha chiuso nel 2008."
+    descrizioneScena: "Il vero salotto mondano di Via Veneto che ispirò Fellini: qui, nella Roma reale di fine anni '50, i paparazzi fotografavano dive e jet set, la stessa scena che il regista ricreò poi in studio a Cinecittà per il film."
+descrizione: "Storico caffè di Via Vittorio Veneto, aperto nel 1948, cuore reale della 'dolce vita' romana che ispirò il film di Fellini. Simbolo della Roma glamour degli anni '60, ha chiuso nel 2008."
 ---
 
-<!-- Apparizione documentata: il Café de Paris (Via Veneto 90) fu immortalato
-     ne "La dolce vita" (Fellini, 1960). NB: il locale ha CHIUSO nel 2008
-     (stato: chiuso). Fonti: Wikipedia, RomaIT, BFI. -->
+<!-- Apparizione documentata: il Café de Paris (Via Veneto 90) fu il vero
+     ritrovo mondano che ispirò "La dolce vita" (Fellini, 1960) — NB: le
+     scene di Via Veneto nel film furono girate su una ricostruzione a
+     Cinecittà (Teatro 5), non sulla strada reale; il locale è comunque il
+     vero luogo storico legato al fenomeno dei paparazzi che il film
+     racconta. Il locale ha CHIUSO nel 2008 (stato: chiuso).
+     Fonti: Wikipedia, RomaIT, BFI, Taxidrivers.it. -->
 
-Su Via Veneto, la strada resa immortale da *La dolce vita*, il Café de Paris è
-stato per decenni il salotto del jet set romano. Aperto nel 1948 e chiuso nel
-2008, resta un simbolo della "dolce vita" felliniana.
+Su Via Veneto, la strada che ispirò *La dolce vita*, il Café de Paris è stato
+per decenni il salotto del jet set romano — il luogo reale dove i paparazzi
+fotografavano le star, la stessa scena mondana che Fellini portò poi sullo
+schermo. Aperto nel 1948 e chiuso nel 2008, resta un simbolo della "dolce
+vita" degli anni '60.

@@ -13,36 +13,63 @@ faq:
     risposta: "The Godfather by Francis Ford Coppola: this is where Michael Corleone asks the owner for the hand of his daughter Apollonia."
   - domanda: "What should you order at Bar Vitelli?"
     risposta: "The famous Sicilian granita (lemon, almond, mulberry) served with brioche, and the local wine."
+  - domanda: "Was the bar already called Bar Vitelli before the film?"
+    risposta: "No: before 1971 the bar had no official name. Francis Ford Coppola chose it for the screenplay, and the owners later adopted it as the venue's real name."
+  - domanda: "How do you get to Savoca without a car?"
+    risposta: "Public transport requires a change: a bus from Taormina to Santa Teresa di Riva, then a local bus (Jonica Trasporti) up to Savoca, or a taxi for the final stretch."
 lang: "en"
 bozza: false
 ---
 
 When Francis Ford Coppola looked for a town for the Sicilian scenes of *The
-Godfather*, the real Corleone had become too modern. So he chose **Savoca**, a
-village perched on the mountains above Taormina. And in a small square of this
-town stands one of the most visited film locations in Italy: the
+Godfather* (1971), the real Corleone had become too modern to pass for an
+early-20th-century village. So he chose **Savoca**, a village of just over
+1,700 people perched on the mountains above Taormina. And in a small square
+of this town stands one of the most visited film locations in Italy: the
 **[Bar Vitelli](/en/locale/bar-vitelli-savoca)**.
 
 ## The scene that made Bar Vitelli famous
 
-This is where Michael Corleone (Al Pacino), in hiding in Sicily, asks the bar
-owner for permission to meet his daughter **Apollonia**. A scene written into
-cinema history, filmed right in front of this historic village bar, which has
-kept its old-world charm almost intact: vintage photographs, farming tools, the
-vine-covered pergola.
+This is where Michael Corleone (Al Pacino), in hiding in Sicily after the
+family war back in New York, asks the bar owner for permission to meet his
+daughter **Apollonia**. A scene written into cinema history, filmed right in
+front of this historic village bar, which has kept its old-world charm
+almost intact: vintage photographs, farming tools, and the vine-covered
+pergola where the scene still plays out for visitors today.
+
+## A curiosity: the name didn't exist before the film
+
+A detail that surprises many visitors: before 1971 the bar had no official
+name at all. It was **Coppola himself** who chose "Bar Vitelli" for the
+screenplay, and the owners at the time later decided to adopt it as the
+venue's real name. The bar occupies the ground floor of **Palazzo
+Trimarchi**, a Sicilian neoclassical noble building constructed between the
+late 17th and early 18th century and restored in 1773 — so the location
+isn't just cinematically authentic, it's also a genuine piece of history.
 
 ## What to taste
 
-Bar Vitelli is famous above all for its **Sicilian granita** — lemon, almond,
-mulberry — served with a brioche col tuppo, the summer breakfast ritual. Also
-worth trying are the **local wine** and the small almond pastries. Sitting at
-its shaded tables is a little journey back in time.
+Bar Vitelli is famous above all for its **Sicilian granita** — lemon,
+almond, mulberry — served with a brioche col tuppo, the classic Sicilian
+summer breakfast ritual. Also worth trying are the **local wine** and small
+almond pastries. Sitting at its shaded tables under the pergola is a little
+journey back in time: much of the interior décor is the same seen in the
+film.
 
-## How to plan a visit to Savoca
+## How to get to Savoca
 
-Savoca is about a 30-minute drive from Taormina. Besides the bar, it is worth
-climbing up to the **Church of San Nicolò**, where the film's wedding of Michael
-and Apollonia is celebrated, and enjoying the view over the Ionian coast.
+Savoca is about 21 km (13 miles) from **Taormina**, a little over a
+30-minute drive — the easiest way to get there. By public transport you'll
+need a change: a bus from Taormina to Santa Teresa di Riva on the coast,
+then a local bus (Jonica Trasporti) up to Savoca, or a taxi for the final
+stretch if the timetables don't line up.
+
+## What else to see
+
+Besides the bar, it is worth climbing up to the **Church of San Nicolò**,
+where the film's wedding of Michael and Apollonia is celebrated, and
+wandering the medieval alleys of the village — among the most beautiful in
+Italy — with views over the Ionian coast and, on clear days, Mount Etna.
 
 You will find the full venue page, with map and address, at
 **[Bar Vitelli](/en/locale/bar-vitelli-savoca)**, and all the film's locations on
@@ -51,6 +78,7 @@ You will find the full venue page, with map and address, at
 ## In short
 
 A coffee or a granita at Savoca's **[Bar Vitelli](/en/locale/bar-vitelli-savoca)**
-is far more than a break: it is stepping, for a few minutes, into one of the most
-famous sequences in film history, with the authentic flavours of Sicily in the
-background.
+is far more than a break: it is stepping, for a few minutes, into one of the
+most famous sequences in film history, inside an 18th-century noble palace
+that took its very name from that film, with the authentic flavours of
+Sicily in the background.

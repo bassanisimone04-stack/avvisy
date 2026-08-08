@@ -206,8 +206,8 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "la-grande-bellezza": "THEMED venue (not a real location): the room pays homage to the baroque elegance and atmosphere of The Great Beauty." },
   },
   "cafe-de-paris-roma": {
-    descrizione: "A historic café on Via Vittorio Veneto, opened in 1948 and made famous by Fellini's 'La Dolce Vita'. A symbol of glamorous 1960s Rome, it closed in 2008.",
-    scena: { "la-dolce-vita": "On Via Veneto, the worldly heart of Fellini's 'dolce vita', the Café de Paris was immortalised by Fellini in 1960, amid stars, paparazzi and the jet set." },
+    descrizione: "A historic café on Via Vittorio Veneto, opened in 1948, the real heart of the Roman 'dolce vita' that inspired Fellini's film. A symbol of glamorous 1960s Rome, it closed in 2008.",
+    scena: { "la-dolce-vita": "The real worldly hangout on Via Veneto that inspired Fellini: here, in real late-1950s Rome, paparazzi photographed stars and the jet set — the very scene the director later recreated on a soundstage at Cinecittà for the film." },
   },
   "enzo-a-mare-punta-secca": {
     descrizione: "A seafood restaurant on the seafront of Punta Secca, the village with the famous house of Inspector Montalbano. Sea cuisine of the Ragusa tradition.",
