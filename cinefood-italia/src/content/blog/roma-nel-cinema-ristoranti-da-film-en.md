@@ -12,7 +12,9 @@ faq:
   - domanda: "Where does Jep dine in The Great Beauty?"
     risposta: "At La Veranda dell'Hotel Columbus, in Borgo Santo Spirito."
   - domanda: "What is the café from La Dolce Vita?"
-    risposta: "The Café de Paris on Via Veneto, now closed but a symbol of Fellini's Rome."
+    risposta: "The Café de Paris on Via Veneto, now closed but a symbol of the real Rome that inspired the film — the Via Veneto scenes were actually rebuilt at Cinecittà."
+  - domanda: "Which is the oldest venue on this list?"
+    risposta: "The Café de Paris (1948) and Da Pancrazio, built over the remains of the 1st-century BC Theatre of Pompey, where tradition holds that Julius Caesar was killed."
 lang: "en"
 bozza: false
 ---
@@ -33,8 +35,10 @@ rediscovers the pleasure of Italian food.
 → **[Trattoria Santa Lucia](/en/locale/trattoria-santa-lucia)**
 
 ## 3. Da Pancrazio — *Eat Pray Love*
-A historic restaurant built over the remains of the Theatre of Pompey: the lower
-rooms, among Roman arches and columns, are an experience.
+A historic restaurant built over the remains of the **Theatre of Pompey**,
+from the 1st century BC — the very theatre where, according to historical
+tradition, Julius Caesar was killed: the lower rooms, among Roman arches
+and columns, are an experience literally inside ancient history.
 → **[Da Pancrazio](/en/locale/da-pancrazio)**
 
 ## 4. Trattoria del Biscione — *An American in Rome*

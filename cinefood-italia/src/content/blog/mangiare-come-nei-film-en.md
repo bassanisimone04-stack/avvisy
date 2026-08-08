@@ -13,31 +13,37 @@ faq:
     risposta: "Check reliable sources: on our site the real venues carry the 'Real set' badge."
   - domanda: "Do you need to book at these venues?"
     risposta: "It depends: some restaurants yes, while historic bars and pizzerias like Da Michele work with a queue."
+  - domanda: "What makes these four venues different from an ordinary tourist restaurant?"
+    risposta: "They're real locations documented across multiple sources (not themed lookalikes): the film was genuinely shot there, or the venue directly inspired the scene."
 lang: "en"
 bozza: false
 ---
 
 There is a special way to travel in Italy: sitting at the very tables of our
 favourite characters. Here are four **real, existing** and documented stops
-where scenes of famous films were shot.
+where scenes of famous films were shot, from north to south.
 
 ## 1. Bar Vitelli, Savoca (Sicily) — *The Godfather* (1972)
 
-In the village of **Savoca**, Bar Vitelli is tied to one of the best-known
-scenes of *The Godfather*: here Michael Corleone meets Apollonia's father. The
-place has remained almost identical to how it looked in 1972.
+In the village of **Savoca**, **[Bar Vitelli](/en/locale/bar-vitelli-savoca)**
+is tied to one of the best-known scenes of *The Godfather*: here Michael
+Corleone meets Apollonia's father. The venue, inside the 18th-century
+Palazzo Trimarchi, didn't even have an official name before filming in
+1971 — it was Coppola himself who chose it.
 
 ## 2. Le Gatte restaurant, Castellabate (Cilento) — *Welcome to the South* (2010)
 
-On the port of **Castellabate**, Le Gatte is the restaurant where the hilarious
-dinner among colleagues in *Welcome to the South* is set — the comedy that made
-this beautiful Campanian village famous.
+On the port of **Castellabate**, **[Le Gatte](/en/locale/ristorante-le-gatte)**
+is the restaurant where the hilarious dinner among colleagues in *Welcome
+to the South* is set — the box-office hit comedy that made this beautiful
+Campanian village famous.
 
 ## 3. Caffè Florian, Venice — *The Talented Mr. Ripley* (1999)
 
-In St Mark's Square, at the tables of Italy's oldest café, Tom Ripley meets
-Marge and Dickie's father. A toast at the Florian is a cinematic — and grand —
-experience.
+In St Mark's Square, at the tables of **[Caffè Florian](/en/locale/caffe-florian)**,
+Italy's oldest café (since 1720), Tom Ripley meets Marge and Dickie's
+father. A toast at the Florian is a cinematic — and grand — experience, in
+the same rooms once frequented by Casanova and Byron.
 
 ## 4. Trattoria Santa Lucia, Rome — *Eat Pray Love* (2010)
 
