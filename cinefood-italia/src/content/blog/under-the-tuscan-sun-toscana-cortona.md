@@ -13,13 +13,21 @@ faq:
     risposta: "Bistecca alla fiorentina, pici fatti a mano, ribollita e i grandi vini rossi toscani (Chianti, Nobile di Montepulciano, Brunello)."
   - domanda: "Si può visitare la villa Bramasole?"
     risposta: "È una proprietà privata e non è visitabile all'interno, ma si può ammirare dall'esterno passeggiando nei dintorni di Cortona."
+  - domanda: "Under the Tuscan Sun è una storia vera?"
+    risposta: "Sì, è tratto dal memoir omonimo (1996) della scrittrice americana Frances Mayes, che comprò e ristrutturò davvero Villa Bramasole a Cortona. Il libro resto per oltre due anni ai primi posti della classifica bestseller del New York Times."
 bozza: false
 ---
 
-*Under the Tuscan Sun* (*Sotto il sole della Toscana*, 2003) ha fatto sognare
-milioni di viaggiatori con la sua **Toscana** dorata. La protagonista Frances
-compra e ristruttura una villa a **Cortona**, splendido borgo in provincia di
-Arezzo, riscoprendo se stessa tra colline, vino e cucina genuina.
+*Under the Tuscan Sun* (*Sotto il sole della Toscana*, 2003) ha fatto
+sognare milioni di viaggiatori con la sua **Toscana** dorata — ed è
+tratto da una storia vera. Il film si ispira al memoir omonimo (1996)
+della scrittrice americana **Frances Mayes**, che comprò e ristrutturò
+davvero una villa abbandonata a **Cortona**, chiamandola "Bramasole" ("che
+brama il sole"). Il libro restò per oltre due anni ai primi posti della
+classifica bestseller del New York Times. Nel film, la protagonista
+Frances (Diane Lane) rivive lo stesso percorso: comprare casa a Cortona,
+splendido borgo in provincia di Arezzo, e riscoprire se stessa tra
+colline, vino e cucina genuina.
 
 ## La Cortona del film
 

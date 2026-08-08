@@ -13,13 +13,20 @@ faq:
     risposta: "Il piatto tipico sono i tortelli cremaschi, dal ripieno dolce-speziato con amaretti, uvetta e mostaccino."
   - domanda: "C'è un itinerario ufficiale del film a Crema?"
     risposta: "Sì, il Comune di Crema propone un tour a piedi o in bici tra i luoghi del film."
+  - domanda: "Chiamami col tuo nome è tratto da un libro?"
+    risposta: "Sì, dal romanzo omonimo di André Aciman, sceneggiato da James Ivory. Il film ottenne 4 candidature Oscar (miglior film, Timothée Chalamet come miglior attore, sceneggiatura non originale e canzone, per 'Mystery of Love' di Sufjan Stevens)."
 bozza: false
 ---
 
-Il premio Oscar *Chiamami col tuo nome* di Luca Guadagnino ha trasformato
-**Crema** e il Cremasco in una meta di cineturismo. Il Comune propone persino un
-**itinerario ufficiale** — a piedi o in bici — tra i luoghi del film. Ecco le
-tappe principali e dove concedersi una pausa golosa.
+Il premio Oscar *Chiamami col tuo nome* di **Luca Guadagnino**, tratto dal
+romanzo di **André Aciman** e sceneggiato da **James Ivory**, ha
+trasformato **Crema** e il Cremasco in una meta di cineturismo. Il film
+ottenne **4 candidature agli Oscar** (miglior film, Timothée Chalamet come
+miglior attore, sceneggiatura non originale, e miglior canzone per
+"Mystery of Love" di **Sufjan Stevens**, che per il film scrisse due brani
+originali). Il Comune propone persino un **itinerario ufficiale** — a
+piedi o in bici — tra i luoghi del film. Ecco le tappe principali e dove
+concedersi una pausa golosa.
 
 ## Le location nel centro di Crema
 

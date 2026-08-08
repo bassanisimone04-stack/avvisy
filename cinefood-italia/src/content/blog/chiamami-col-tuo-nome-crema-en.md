@@ -13,14 +13,21 @@ faq:
     risposta: "The signature dish is tortelli cremaschi, with a sweet-spiced filling of amaretti, raisins and mostaccino."
   - domanda: "Is there an official film itinerary in Crema?"
     risposta: "Yes, the town of Crema offers a walking or cycling tour through the film's locations."
+  - domanda: "Is Call Me by Your Name based on a book?"
+    risposta: "Yes, on the novel of the same name by André Aciman, scripted by James Ivory. The film received 4 Oscar nominations (Best Picture, Timothée Chalamet for Best Actor, Best Adapted Screenplay, and Best Song for 'Mystery of Love' by Sufjan Stevens)."
 lang: "en"
 bozza: false
 ---
 
-Luca Guadagnino's Oscar-winning *Call Me by Your Name* turned **Crema** and its
-surroundings into a film-tourism destination. The town even offers an
-**official itinerary** — on foot or by bike — through the film's locations. Here
-are the main stops and where to treat yourself to a tasty break.
+Luca Guadagnino's Oscar-winning *Call Me by Your Name*, based on the novel
+by **André Aciman** and scripted by **James Ivory**, turned **Crema** and
+its surroundings into a film-tourism destination. The film received **4
+Oscar nominations** (Best Picture, Timothée Chalamet for Best Actor, Best
+Adapted Screenplay, and Best Song for "Mystery of Love" by **Sufjan
+Stevens**, who wrote two original songs for the film). The town even
+offers an **official itinerary** — on foot or by bike — through the
+film's locations. Here are the main stops and where to treat yourself to
+a tasty break.
 
 ## The locations in central Crema
 
