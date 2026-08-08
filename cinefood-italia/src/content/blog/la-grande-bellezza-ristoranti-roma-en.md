@@ -13,14 +13,20 @@ faq:
     risposta: "The Fontanone del Gianicolo, the Capitoline Museums, Palazzo Spada, Villa Medici and the Aventine gardens."
   - domanda: "What should you eat in Rome like in the film?"
     risposta: "Roman cuisine: cacio e pepe, carbonara, Jewish-style artichokes and oxtail stew."
+  - domanda: "Where does Viola live in The Great Beauty?"
+    risposta: "In Palazzo Sacchetti, on Via Giulia, a historic Renaissance palace with halls frescoed by Francesco Salviati, also used for other interior scenes in the film."
+  - domanda: "Who plays Jep Gambardella, and when did the film win its Oscar?"
+    risposta: "Toni Servillo plays Jep Gambardella. The film won the Academy Award for Best Foreign Language Film in 2014, directed by Paolo Sorrentino."
 lang: "en"
 bozza: false
 ---
 
 Paolo Sorrentino's *The Great Beauty*, winner of the Oscar for Best Foreign
-Language Film, is a long declaration of love to **Rome**. Amid night-time
-terraces, palaces and decadent parties, the film also offers unforgettable scenes
-at the table. Here is where to find Jep Gambardella's Rome, fork in hand.
+Language Film in **2014**, is a long declaration of love to **Rome**, with
+**Toni Servillo** as Jep Gambardella, a failed writer drifting through
+parties and disillusionment in Rome's high society. Amid night-time
+terraces, palaces and decadent parties, the film also offers unforgettable
+scenes at the table. Here is where to find Jep's Rome, fork in hand.
 
 ## Where Jep Gambardella dines
 
@@ -30,6 +36,15 @@ Santo Spirito, a stone's throw from St Peter's. The restaurant is inside the
 Palazzo della Rovere, in a frescoed 15th-century hall: the perfect frame for the
 film's melancholy elegance. This is where Jep dines with Ramona, in one of the
 most refined Roman sequences.
+
+## Palazzo Sacchetti, Viola's home
+
+Another key location in the film is **Palazzo Sacchetti**, on Via Giulia:
+this is where Viola lives, one of the characters in Jep's circle of
+friends, in Renaissance halls frescoed by **Francesco Salviati**. The
+palace's front door becomes, in the film, the entrance to the residence of
+the Colonna counts, while the interiors host several scenes with Viola's
+son, Andrea.
 
 ## The cinematic Rome to experience
 

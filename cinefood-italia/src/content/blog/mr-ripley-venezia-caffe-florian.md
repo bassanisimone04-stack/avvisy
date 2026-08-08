@@ -13,6 +13,10 @@ faq:
     risposta: "Ne Il talento di Mr. Ripley, dove Tom Ripley incontra Marge e il padre di Dickie."
   - domanda: "Cosa concedersi al Caffè Florian?"
     risposta: "Un caffè o una cioccolata ai tavolini storici, con la sala affrescata e la musica dal vivo: più un'esperienza che una consumazione."
+  - domanda: "Chi ha frequentato il Caffè Florian nella storia?"
+    risposta: "Tra gli altri Giacomo Casanova, Lord Byron, Goethe, Charles Dickens ed Ernest Hemingway. Fu anche il primo caffè veneziano ad ammettere le donne al proprio interno, il che lo rese particolarmente amato da Casanova."
+  - domanda: "Da chi fu fondato il Caffè Florian e con che nome?"
+    risposta: "Fu inaugurato il 29 dicembre 1720 da Floriano Francesconi con il nome 'Alla Venezia Trionfante'. I veneziani, dicendo 'andemo da Florian', gli diedero il nome con cui è conosciuto ancora oggi."
 bozza: false
 ---
 
@@ -29,11 +33,22 @@ Nuove, è considerato il più antico d'Italia ancora in attività: sale affresca
 orchestrina dal vivo e la vista sulla Basilica di San Marco. Una cornice perfetta
 per l'atmosfera sofisticata del film.
 
+## Tre secoli di storia prima del film
+
+Il Florian fu inaugurato il **29 dicembre 1720** da Floriano Francesconi
+con il nome "Alla Venezia Trionfante" — il nome Florian nacque dall'uso dei
+veneziani di dire "andemo da Florian" per indicarlo. Nei secoli è stato
+frequentato da **Giacomo Casanova**, **Lord Byron**, **Goethe**, **Carlo
+Goldoni**, **Charles Dickens** ed **Ernest Hemingway**. Un dettaglio curioso:
+fu il primo caffè di Venezia ad ammettere le donne al proprio interno, il
+che lo rendeva particolarmente prezioso agli occhi di Casanova.
+
 ## Cosa concedersi
 
 Il Florian è un'esperienza più che una semplice consumazione: un **caffè** o una
 **cioccolata** ai suoi tavolini storici, magari con la musica dal vivo, è un lusso
-che vale il prezzo. Da vivere almeno una volta, come nel film.
+che vale il prezzo. Da vivere almeno una volta, come nel film — sedendosi negli
+stessi saloni frequentati da tre secoli di scrittori, artisti e viaggiatori.
 
 ## Un itinerario veneziano
 

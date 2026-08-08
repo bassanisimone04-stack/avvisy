@@ -13,6 +13,10 @@ faq:
     risposta: "The Talented Mr. Ripley, where Tom Ripley meets Marge and Dickie's father."
   - domanda: "What should you enjoy at Caffè Florian?"
     risposta: "A coffee or hot chocolate at the historic tables, with the frescoed hall and live music: more an experience than a drink."
+  - domanda: "Who famously frequented Caffè Florian throughout history?"
+    risposta: "Among others, Giacomo Casanova, Lord Byron, Goethe, Charles Dickens and Ernest Hemingway. It was also the first Venetian café to admit women, which made it especially popular with Casanova."
+  - domanda: "Who founded Caffè Florian, and what was it originally called?"
+    risposta: "It opened on December 29, 1720, founded by Floriano Francesconi under the name 'Alla Venezia Trionfante'. Venetians saying 'andemo da Florian' ('let's go to Florian's') gave it the name it still carries today."
 lang: "en"
 bozza: false
 ---
@@ -29,6 +33,16 @@ Marge and Dickie's father. The café, opened in **1720** under the Procuratie
 Nuove, is considered the oldest in Italy still in business: frescoed rooms, a live
 orchestra and a view of St Mark's Basilica. A perfect frame for the film's
 sophisticated atmosphere.
+
+## Three centuries of history before the film
+
+The Florian opened on **December 29, 1720**, founded by Floriano
+Francesconi under the name "Alla Venezia Trionfante" — the name Florian
+comes from Venetians' habit of saying "andemo da Florian" ("let's go to
+Florian's"). Over the centuries it has hosted **Giacomo Casanova**, **Lord
+Byron**, **Goethe**, **Carlo Goldoni**, **Charles Dickens** and **Ernest
+Hemingway**. A curious detail: it was the first café in Venice to admit
+women, which made it especially valuable in Casanova's eyes.
 
 ## What to treat yourself to
 
