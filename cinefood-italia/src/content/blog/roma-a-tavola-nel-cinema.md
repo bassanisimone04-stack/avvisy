@@ -13,31 +13,36 @@ faq:
     risposta: "Tra Campo de' Fiori, Piazza Navona e il Ghetto, regno delle trattorie romane."
   - domanda: "Quali piatti romani provare?"
     risposta: "Cacio e pepe, carbonara, amatriciana, carciofi e coda alla vaccinara."
+  - domanda: "Cosa hanno in comune queste tre trattorie?"
+    risposta: "Tutte e tre sono location reali confermate (non locali a tema), nel cuore del centro storico di Roma, raggiungibili a piedi l'una dall'altra in circa 15-20 minuti."
 bozza: false
 ---
 
 Roma è da sempre una città-cinema, e le sue **trattorie** hanno fatto da
 sfondo a scene entrate nell'immaginario collettivo. Ecco tre indirizzi del
-centro storico dove il grande schermo incontra la buona tavola.
+centro storico dove il grande schermo incontra la buona tavola, tutte
+raggiungibili a piedi l'una dall'altra.
 
 ## Trattoria Santa Lucia — *Mangia prega ama* (2010)
 
 A due passi da Piazza Navona, in Largo Febo, è qui che **Julia Roberts** gusta
 i piatti della cucina romana in una delle scene "food" più celebri di *Mangia
-prega ama* (Eat Pray Love). Un vero inno alla cucina della capitale.
+prega ama* (Eat Pray Love). Un vero inno alla cucina della capitale, in
+un ambiente che ha conservato l'atmosfera vista sullo schermo.
 
 ## Da Pancrazio — *Mangia prega ama* (2010)
 
 Poco distante, in Piazza del Biscione, **Da Pancrazio** è tra le location
 romane dello stesso film. La particolarità? Le sale inferiori sorgono sui
-resti del **Teatro di Pompeo**, del I secolo a.C.: si cena letteralmente dentro
-la storia di Roma.
+resti del **Teatro di Pompeo**, del I secolo a.C. — lo stesso teatro dove,
+secondo la tradizione storica, fu ucciso Giulio Cesare: si cena
+letteralmente dentro la storia di Roma.
 
 ## La Veranda dell'Hotel Columbus — *La grande bellezza* (2013)
 
-Sotto gli affreschi rinascimentali del Palazzo dei Penitenzieri, vicino al
+Sotto gli affreschi rinascimentali del Palazzo della Rovere, vicino al
 Vaticano, **Paolo Sorrentino** ha ambientato una delle cene più eleganti del
-suo film premio Oscar, con Jep Gambardella e Ramona.
+suo film premio Oscar 2014, con Jep Gambardella (Toni Servillo) e Ramona.
 
 > Suggerimento: costruisci il tuo itinerario partendo da Piazza Navona e
 > muovendoti verso Campo de' Fiori. Ricorda di verificare sempre orari e
