@@ -43,6 +43,14 @@ storia del cinema: ha ospitato sia il recupero di James Bond in *Casino
 Royale* sia il primo bacio tra Anakin e Padmé in *Star Wars - Episodio II*.
 È aperta al pubblico da metà marzo a novembre.
 
+## Cosa mangiare tra Milano e i laghi
+
+La cucina del Nord è sostanziosa e raffinata: a Milano il **risotto allo
+zafferano** e la **cotoletta**, sul Lago di Como il **risotto con pesce
+persico** e i **missoltini**, sul Lago di Garda i **pizzoccheri** della
+vicina Valtellina. Un itinerario che unisce metropoli e natura, senza mai
+rinunciare alla buona tavola.
+
 ---
 
 Scopri i locali del Nord nella nostra [directory](/locali) e filtra per città o

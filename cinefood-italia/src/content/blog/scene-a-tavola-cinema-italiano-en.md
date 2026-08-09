@@ -52,5 +52,14 @@ The refined dinners of *[The Great Beauty](/en/film/la-grande-bellezza)*
 (2013), Sorrentino's Oscar winner, and the timeless cafés tell of an Italy
 suspended between beauty and melancholy.
 
+## Food as investigation: Montalbano
+
+Even television has its own ritual at the table: Inspector
+*[Montalbano](/en/film/il-commissario-montalbano)*, based on Andrea
+Camilleri's novels, never solves a case on an empty stomach. His solitary
+lunches of fresh fish, often eaten in silence facing the sea at Punta
+Secca, have become as iconic as the investigations themselves — another
+way Italian screens turn food into a pause, a thought, a pleasure.
+
 Want to live these atmospheres? Discover the [venues](/en/locali) where these
 scenes were shot or set. *Happy viewing — and buon appetito!*
