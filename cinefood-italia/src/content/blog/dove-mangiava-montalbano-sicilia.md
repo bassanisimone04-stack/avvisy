@@ -13,6 +13,9 @@ faq:
     risposta: "Il ristorante di riferimento è Enzo a Mare, sul lungomare di Punta Secca, a pochi passi dalla casa del commissario, dove gustava il pesce fresco della costa ragusana."
   - domanda: "Quali piatti mangia il Commissario Montalbano?"
     risposta: "Piatti della tradizione siciliana: pasta 'ncasciata, arancini, caponata e soprattutto pesce fresco cucinato in modo semplice."
+esperienze:
+  - nome: "Tour dei luoghi di Montalbano"
+    query: "Montalbano tour Ragusa Scicli"
 bozza: false
 ---
 

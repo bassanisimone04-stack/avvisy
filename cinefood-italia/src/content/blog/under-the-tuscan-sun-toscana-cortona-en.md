@@ -16,6 +16,9 @@ faq:
   - domanda: "Is Under the Tuscan Sun a true story?"
     risposta: "Yes, it's based on the 1996 memoir of the same name by American writer Frances Mayes, who really bought and restored Villa Bramasole in Cortona. The book stayed near the top of the New York Times bestseller list for over two years."
 lang: "en"
+esperienze:
+  - nome: "Val di Chiana Wine Tour"
+    query: "Tuscany wine tour Val di Chiana Cortona"
 bozza: false
 ---
 

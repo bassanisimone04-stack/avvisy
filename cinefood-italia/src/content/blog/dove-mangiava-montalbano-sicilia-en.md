@@ -14,6 +14,9 @@ faq:
   - domanda: "What dishes does Inspector Montalbano eat?"
     risposta: "Dishes of Sicilian tradition: pasta 'ncasciata, arancini, caponata and, above all, fresh fish cooked simply."
 lang: "en"
+esperienze:
+  - nome: "Montalbano Locations Tour"
+    query: "Montalbano tour Ragusa Scicli"
 bozza: false
 ---
 

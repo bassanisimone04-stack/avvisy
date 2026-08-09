@@ -18,6 +18,9 @@ faq:
   - domanda: "Was the Mouth of Truth scene scripted?"
     risposta: "Not entirely: Gregory Peck's gesture of pretending to lose his hand was an improvisation meant to scare Audrey Hepburn, who hadn't been warned — her surprised reaction and scream in the scene are completely real."
 lang: "en"
+esperienze:
+  - nome: "Rome Vespa Tour"
+    query: "Rome Vespa tour"
 bozza: false
 ---
 

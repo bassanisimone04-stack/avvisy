@@ -18,6 +18,9 @@ faq:
   - domanda: "Is Il Postino based on a book?"
     risposta: "Yes, loosely inspired by the novel Il postino di Neruda (Ardiente paciencia) by Chilean writer Antonio Skármeta, a book Troisi himself loved deeply."
 lang: "en"
+esperienze:
+  - nome: "Aeolian Islands Boat Tour"
+    query: "Aeolian Islands boat tour Salina"
 bozza: false
 ---
 
