@@ -3,8 +3,8 @@ titolo: "I maccheroni di Alberto Sordi a Roma"
 descrizione: "La celebre scena dei maccheroni in Un Americano a Roma e la Roma popolare del film: dove trovare la cucina verace."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-16
-immagine: "../../assets/placeholder/blog-scene.jpg"
-immagineAlt: "Piatto di maccheroni della tradizione romana"
+immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["Un Americano a Roma", "Alberto Sordi", "Roma", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Qual è la scena dei maccheroni di Alberto Sordi?"

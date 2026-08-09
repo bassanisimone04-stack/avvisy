@@ -3,8 +3,8 @@ titolo: "The Talented Mr. Ripley in Venice: Caffè Florian"
 descrizione: "The Talented Mr. Ripley locations in Venice: Caffè Florian, the oldest café in Italy, in St Mark's Square."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-14
-immagine: "../../assets/placeholder/blog-set-tavola.jpg"
-immagineAlt: "Tables of a historic café under the arcades of St Mark's Square in Venice"
+immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagineAlt: "A table laid with dishes from the Italian tradition"
 tags: ["The Talented Mr. Ripley", "Venice", "Caffè Florian", "film tourism"]
 faq:
   - domanda: "Where is Caffè Florian?"

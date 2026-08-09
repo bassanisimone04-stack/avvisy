@@ -3,8 +3,8 @@ titolo: "Real Set or Themed? How to Tell the Difference"
 descrizione: "The difference between a real film set and a themed venue: how to spot the true restaurants from the movies."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12
-immagine: "../../assets/placeholder/blog-set-tema.jpg"
-immagineAlt: "A film clapperboard next to a plate"
+immagine: "../../assets/placeholder/blog-set-cinema-vero.jpg"
+immagineAlt: "A film crew at work on set, among lights and camera rigs"
 tags: ["guide", "tips", "cinema"]
 faq:
   - domanda: "What is the difference between a real set and a themed venue?"

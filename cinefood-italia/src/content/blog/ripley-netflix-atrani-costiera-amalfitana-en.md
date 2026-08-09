@@ -3,8 +3,8 @@ titolo: "Netflix's Ripley: Atrani and the Amalfi Coast"
 descrizione: "Netflix's Ripley, winner of two 2024 Emmys, was filmed in Atrani on the Amalfi Coast. Locations and coastal flavours."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-06
-immagine: "../../assets/placeholder/blog-weekend.jpg"
-immagineAlt: "A village on the Amalfi Coast overlooking the sea, like Atrani"
+immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
 tags: ["Ripley", "Netflix", "Amalfi Coast", "Atrani", "film tourism"]
 faq:
   - domanda: "Where was Netflix's Ripley filmed?"

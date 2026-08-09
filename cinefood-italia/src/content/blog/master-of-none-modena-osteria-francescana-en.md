@@ -3,8 +3,8 @@ titolo: "Master of None: Modena and Osteria Francescana"
 descrizione: "Master of None really visits Modena: Dev discovers Osteria Francescana, one of the world's best restaurants, and Emilia's food capital."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-set-tavola.jpg"
-immagineAlt: "A table set in Emilian style, like the Modena of Master of None"
+immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagineAlt: "A table laid with dishes from the Italian tradition"
 tags: ["Master of None", "Modena", "Netflix", "Osteria Francescana", "film tourism"]
 faq:
   - domanda: "Was Master of None really filmed in Modena?"

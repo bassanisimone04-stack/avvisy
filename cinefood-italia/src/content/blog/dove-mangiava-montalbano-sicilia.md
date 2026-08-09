@@ -3,8 +3,8 @@ titolo: "Dove mangiava Montalbano: i luoghi in Sicilia"
 descrizione: "Dalla casa di Punta Secca al ristorante Enzo a Mare: dove mangiava Montalbano in Sicilia, tra pasta 'ncasciata e arancini."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-24
-immagine: "../../assets/placeholder/blog-sicilia.jpg"
-immagineAlt: "Costa siciliana con faro, come nei luoghi del Commissario Montalbano"
+immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
 tags: ["Montalbano", "Sicilia", "itinerari", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove si trova la casa del Commissario Montalbano?"

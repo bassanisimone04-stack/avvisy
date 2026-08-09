@@ -3,8 +3,8 @@ titolo: "Chiamami col tuo nome: itinerario a Crema"
 descrizione: "I luoghi di Chiamami col tuo nome a Crema: Piazza del Duomo e l'Arco del Torrazzo. Dove fermarsi tra tortelli e caffè."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-21
-immagine: "../../assets/placeholder/blog-nord.jpg"
-immagineAlt: "Piazza di una cittadina lombarda con campanile, come Crema"
+immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"
+immagineAlt: "Borgo sul lago del Nord Italia, tra montagne e riflessi sull'acqua"
 tags: ["Chiamami col tuo nome", "Crema", "Lombardia", "itinerari", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Chiamami col tuo nome?"

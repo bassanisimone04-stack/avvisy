@@ -3,8 +3,8 @@ titolo: "Le scene a tavola più amate del cinema italiano"
 descrizione: "Dai maccheroni di Alberto Sordi alla dolce vita romana: perché il cibo è da sempre protagonista del grande schermo italiano."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-14
-immagine: "../../assets/placeholder/blog-scene.jpg"
-immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
+immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["cinema italiano", "food", "curiosità"]
 faq:
   - domanda: "Qual è la scena a tavola più famosa del cinema italiano?"

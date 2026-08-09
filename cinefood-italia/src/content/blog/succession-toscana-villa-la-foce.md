@@ -3,8 +3,8 @@ titolo: "Succession: la Toscana vera di Villa La Foce"
 descrizione: "Dove è stata girata Succession in Toscana: Villa La Foce, Villa Cetinale e il Val d'Orcia, con Dopolavoro La Foce, il ristorante reale della tenuta."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-borghi.jpg"
-immagineAlt: "Colline del Val d'Orcia con cipressi, come nella Toscana di Succession"
+immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagineAlt: "Vicolo in pietra di un borgo italiano, con vasi di piante sulle scale"
 tags: ["Succession", "Toscana", "Val d'Orcia", "HBO", "cineturismo"]
 faq:
   - domanda: "Dove è stata girata Succession in Toscana?"

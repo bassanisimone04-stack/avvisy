@@ -3,8 +3,8 @@ titolo: "Il Postino in Salina: the Film's Locations"
 descrizione: "The Il Postino locations in Salina, between Pollara and the Aeolian sea. Where to taste pane cunzato, capers and malvasia."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
-immagine: "../../assets/placeholder/blog-sicilia.jpg"
-immagineAlt: "Coast of the island of Salina in the Aeolian Islands, like in Il Postino"
+immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
 tags: ["Il Postino", "Salina", "Aeolian Islands", "where to eat", "film tourism"]
 faq:
   - domanda: "Where was Il Postino filmed?"

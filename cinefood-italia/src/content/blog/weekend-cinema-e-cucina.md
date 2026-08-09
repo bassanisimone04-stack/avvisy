@@ -3,8 +3,8 @@ titolo: "Weekend tra cinema e buona tavola in Italia"
 descrizione: "Guida pratica per un weekend di due giorni sulle orme dei film italiani, tra location, ristoranti e specialità locali."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-16
-immagine: "../../assets/placeholder/blog-weekend.jpg"
-immagineAlt: "Valigia e mappa per un weekend in Italia"
+immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
 tags: ["guida", "itinerari", "weekend", "consigli"]
 faq:
   - domanda: "Come organizzare un weekend di cineturismo in Italia?"

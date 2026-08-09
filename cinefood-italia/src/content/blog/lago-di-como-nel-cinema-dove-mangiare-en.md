@@ -3,8 +3,8 @@ titolo: "Lake Como on Screen: Where to Eat"
 descrizione: "Star Wars, 007 and House of Gucci: Lake Como is a movie star. Villas, locations and where to eat by the water."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-nord.jpg"
-immagineAlt: "A villa overlooking Lake Como at sunset"
+immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"
+immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
 tags: ["Lake Como", "Star Wars", "007", "itineraries", "film tourism"]
 faq:
   - domanda: "Which films were shot on Lake Como?"

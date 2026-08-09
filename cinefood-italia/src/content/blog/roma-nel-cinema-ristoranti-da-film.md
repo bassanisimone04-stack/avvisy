@@ -3,8 +3,8 @@ titolo: "Roma nel cinema: 5 ristoranti da film"
 descrizione: "I ristoranti e caffè di Roma diventati celebri col cinema: da La Grande Bellezza a Mangia prega ama, dove mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-11
-immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
-immagineAlt: "Vicolo di Roma con tavolini di una trattoria"
+immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["Roma", "ristoranti", "cinema", "itinerari", "cineturismo"]
 faq:
   - domanda: "Quali ristoranti di Roma sono comparsi nei film?"

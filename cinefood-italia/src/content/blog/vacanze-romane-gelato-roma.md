@@ -3,8 +3,8 @@ titolo: "Vacanze Romane: il gelato di Audrey Hepburn"
 descrizione: "Il gelato di Piazza di Spagna in Vacanze Romane con Audrey Hepburn e la Roma senza tempo del film. Dove assaggiarlo."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26
-immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
-immagineAlt: "Piazza di Spagna a Roma, come in Vacanze Romane"
+immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["Vacanze Romane", "Roma", "Audrey Hepburn", "gelato", "cineturismo"]
 faq:
   - domanda: "Dove è girata la scena del gelato di Vacanze Romane?"

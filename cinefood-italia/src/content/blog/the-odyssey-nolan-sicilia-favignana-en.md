@@ -3,8 +3,8 @@ titolo: "Nolan's The Odyssey in Sicily: Favignana"
 descrizione: "Christopher Nolan's The Odyssey was filmed in Favignana, Sicily. Film locations and island flavours: tuna and the mattanza."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-07
-immagine: "../../assets/placeholder/blog-sicilia.jpg"
-immagineAlt: "Rocky Sicilian coastline with crystal-clear sea, like Favignana"
+immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
 tags: ["The Odyssey", "Nolan", "Sicily", "Favignana", "film tourism"]
 faq:
   - domanda: "Where was Christopher Nolan's The Odyssey filmed?"
