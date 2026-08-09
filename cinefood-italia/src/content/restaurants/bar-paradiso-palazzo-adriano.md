@@ -11,7 +11,7 @@ categoria: "set-reale"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/palazzo-adriano-piazza.png"
+immagine: "../../assets/placeholder/palazzo-adriano-piazza.jpg"
 immagineAlt: "Piazza Umberto I a Palazzo Adriano, con la fontana e la chiesa madre"
 ultimoAggiornamento: 2026-07-23
 film:

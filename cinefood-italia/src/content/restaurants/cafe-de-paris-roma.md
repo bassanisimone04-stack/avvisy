@@ -11,7 +11,7 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "chiuso"
 inEvidenza: false
-immagine: "../../assets/placeholder/cafe-de-paris-via-veneto.png"
+immagine: "../../assets/placeholder/cafe-de-paris-via-veneto.jpg"
 immagineAlt: "Il dehors storico del Café de Paris su Via Veneto a Roma"
 ultimoAggiornamento: 2026-07-24
 film:
