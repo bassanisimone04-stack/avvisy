@@ -3,8 +3,8 @@ titolo: "The Monster of Florence: Real Tuscany Locations"
 descrizione: "Where Netflix's The Monster of Florence was filmed: real locations in Florence, Montalcino, Siena and the Tuscany behind the true story."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-07
-immagine: "../../assets/placeholder/blog-borghi.jpg"
-immagineAlt: "Stone alley in a Tuscan village, similar to The Monster of Florence's real locations"
+immagine: "../../assets/placeholder/il-mostro-firenze-vero.jpg"
+immagineAlt: "Florence at sunset, with the Duomo and Ponte Vecchio, among The Monster of Florence's real locations"
 tags: ["Il Mostro", "The Monster of Florence", "Netflix", "Tuscany", "Florence", "Montalcino", "Siena", "filming locations"]
 faq:
   - domanda: "Is Netflix's The Monster of Florence based on a true story?"

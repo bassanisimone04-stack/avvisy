@@ -3,8 +3,8 @@ titolo: "Hotel Costiera: The Real Positano of Villa Treville"
 descrizione: "Hotel Costiera, the Prime Video series with Jesse Williams, is filmed at Villa Treville, Positano: the real hotel and Maestro's restaurant."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-weekend.jpg"
-immagineAlt: "Amalfi Coast seen from above, like Positano in Hotel Costiera"
+immagine: "../../assets/placeholder/hotel-costiera-positano-vero.jpg"
+immagineAlt: "Positano seen from the sea, the Amalfi Coast of Hotel Costiera"
 tags: ["Hotel Costiera", "Positano", "Amalfi Coast", "Prime Video", "film tourism"]
 faq:
   - domanda: "Is Hotel Costiera really filmed in Positano?"

@@ -3,8 +3,8 @@ titolo: "In the Hand of Dante: Real Filming Locations"
 descrizione: "Where Julian Schnabel's In the Hand of Dante was filmed: Venice, Verona, Padua and Palermo, the real cities behind the Netflix film."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-07
-immagine: "../../assets/placeholder/blog-scene.jpg"
-immagineAlt: "Venetian alley at dawn, similar to In the Hand of Dante's real locations"
+immagine: "../../assets/placeholder/la-mano-di-dante-venezia-vero.jpg"
+immagineAlt: "Venetian canal lined with colourful houses, among In the Hand of Dante's real locations"
 tags: ["In the Hand of Dante", "Netflix", "Venice", "Verona", "Palermo", "filming locations"]
 faq:
   - domanda: "Is In the Hand of Dante based on a true story?"

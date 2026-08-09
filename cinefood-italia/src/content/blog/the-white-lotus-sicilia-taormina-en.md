@@ -3,8 +3,8 @@ titolo: "The White Lotus: The Real Sicily of Taormina"
 descrizione: "The White Lotus season 2 was really filmed in Sicily: San Domenico Palace, Cefalù, Noto. The show's real locations and what to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-sicilia.jpg"
-immagineAlt: "Sicilian coast with crystal-clear water, like The White Lotus locations"
+immagine: "../../assets/placeholder/white-lotus-taormina-vero.jpg"
+immagineAlt: "Aerial view of the San Domenico Palace in Taormina, The White Lotus's real filming location"
 tags: ["The White Lotus", "Sicily", "Taormina", "HBO", "film tourism"]
 faq:
   - domanda: "Where was The White Lotus season 2 filmed?"

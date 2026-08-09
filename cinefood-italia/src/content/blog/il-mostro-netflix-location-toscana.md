@@ -3,8 +3,8 @@ titolo: "Il Mostro (Netflix): le location vere in Toscana"
 descrizione: "Dove è stata girata la serie Netflix Il Mostro di Stefano Sollima: Firenze, Montalcino, Siena e la Toscana vera dietro la storia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-07
-immagine: "../../assets/placeholder/blog-borghi.jpg"
-immagineAlt: "Vicolo di un borgo toscano in pietra, come quelli delle location de Il Mostro"
+immagine: "../../assets/placeholder/il-mostro-firenze-vero.jpg"
+immagineAlt: "Firenze al tramonto, con il Duomo e Ponte Vecchio, tra le location de Il Mostro"
 tags: ["Il Mostro", "Netflix", "Toscana", "Firenze", "Montalcino", "Siena", "location cinema"]
 faq:
   - domanda: "Il Mostro di Netflix è basato su una storia vera?"
