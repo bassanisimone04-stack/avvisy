@@ -61,6 +61,27 @@ export const SITE = {
    * Plausible non usa cookie e non raccoglie dati personali.
    */
   plausibleDomain: "",
+
+  /**
+   * Link di affiliazione (monetizzazione). Lascia i valori vuoti "" finché
+   * non hai un account: i box "Prenota" nel blog restano visibili e
+   * funzionanti (portano a Booking.com/GetYourGuide) ma SENZA guadagnare
+   * commissioni. Appena hai l'ID, incollalo qui: tutti i link del sito
+   * iniziano a tracciare automaticamente, senza toccare i contenuti.
+   */
+  affiliates: {
+    /**
+     * ID affiliato Booking.com ("aid"). Iscriviti su
+     * https://www.booking.com/affiliate-program/v2/index.html — gratuito,
+     * nessuna soglia minima di traffico richiesta.
+     */
+    bookingAid: "",
+    /**
+     * ID partner GetYourGuide. Iscriviti su
+     * https://partner.getyourguide.com/ — gratuito, nessuna soglia minima.
+     */
+    getyourguidePartnerId: "",
+  },
 } as const;
 
 /**

@@ -7,6 +7,7 @@ import Breadcrumb from "../../../components/Breadcrumb.astro";
 import { SITE } from "../../../config/site";
 import { formatData } from "../../../lib/utils";
 import { blogPostingJsonLd, breadcrumbJsonLd, faqPageJsonLd } from "../../../lib/schema-org";
+import { bookingUrl } from "../../../lib/affiliate";
 import { useT, path } from "../../../i18n/ui";
 
 const lang = "en" as const;
@@ -53,6 +54,28 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
       <Content />
     </div>
 
+    {
+      d.prenotazioni.length > 0 && (
+        <section class="mt-8 rounded-3xl border border-gold-400/30 bg-gold-400/5 p-6 dark:border-gold-400/20">
+          <h2 class="font-display text-lg font-bold">📍 Book where you read about it</h2>
+          <div class="mt-3 flex flex-wrap gap-3">
+            {d.prenotazioni.map((p) => (
+              <a
+                href={bookingUrl(p.nome, p.citta)}
+                target="_blank"
+                rel="sponsored noopener"
+                class="inline-flex items-center gap-2 rounded-full bg-gold-500 px-4 py-2 text-sm font-semibold text-noir-950 hover:bg-gold-400"
+              >
+                Book {p.nome} on Booking.com →
+              </a>
+            ))}
+          </div>
+          <p class="mt-3 text-xs text-ink-500 dark:text-ink-400">
+            Affiliate link: if you book through this link we may earn a small commission, at no extra cost to you.
+          </p>
+        </section>
+      )
+    }
     {d.tags.length > 0 && (<div class="mt-8 flex flex-wrap gap-2">{d.tags.map((tag) => <span class="rounded-full bg-ink-500/15 px-3 py-1 text-xs">#{tag}</span>)}</div>)}
     {
       d.faq.length > 0 && (

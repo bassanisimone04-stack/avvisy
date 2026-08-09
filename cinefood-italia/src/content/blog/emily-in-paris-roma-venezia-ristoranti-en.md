@@ -14,6 +14,11 @@ faq:
   - domanda: "Where does Emily stay in Venice?"
     risposta: "The Venice scenes feature real places like the Hotel Danieli and the St. Regis Venice, plus St Mark's Square and the church of San Francesco della Vigna."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel Danieli"
+    citta: "Venice"
+  - nome: "The St. Regis Venice"
+    citta: "Venice"
 bozza: false
 ---
 

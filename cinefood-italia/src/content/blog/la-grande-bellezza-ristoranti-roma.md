@@ -17,6 +17,9 @@ faq:
     risposta: "In Palazzo Sacchetti, su Via Giulia, uno storico palazzo rinascimentale con saloni affrescati da Francesco Salviati, usato anche per altre scene interne del film."
   - domanda: "Chi interpreta Jep Gambardella e quando ha vinto l'Oscar il film?"
     risposta: "Toni Servillo interpreta Jep Gambardella. Il film ha vinto l'Oscar come miglior film straniero nel 2014, per la regia di Paolo Sorrentino."
+prenotazioni:
+  - nome: "Hotel Columbus"
+    citta: "Roma"
 bozza: false
 ---
 

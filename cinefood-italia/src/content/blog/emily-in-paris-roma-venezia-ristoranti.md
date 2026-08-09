@@ -13,6 +13,11 @@ faq:
     risposta: "Tra gli altri: Zuma a Palazzo Fendi, Settimo sulla terrazza del Sofitel, Il Giardino Ristorante dell'Hotel Eden e il giardino dell'Hotel de Russie."
   - domanda: "Dove alloggia Emily a Venezia?"
     risposta: "Le scene veneziane toccano luoghi reali come l'Hotel Danieli e il St. Regis Venice, oltre a Piazza San Marco e la chiesa di San Francesco della Vigna."
+prenotazioni:
+  - nome: "Hotel Danieli"
+    citta: "Venezia"
+  - nome: "The St. Regis Venice"
+    citta: "Venezia"
 bozza: false
 ---
 

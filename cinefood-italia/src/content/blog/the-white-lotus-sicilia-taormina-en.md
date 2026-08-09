@@ -14,6 +14,9 @@ faq:
   - domanda: "Can you stay at the hotel from the show?"
     risposta: "Yes, the San Domenico Palace is a real, still-operating luxury hotel you can book in Taormina."
 lang: "en"
+prenotazioni:
+  - nome: "San Domenico Palace, a Four Seasons Hotel"
+    citta: "Taormina"
 bozza: false
 ---
 

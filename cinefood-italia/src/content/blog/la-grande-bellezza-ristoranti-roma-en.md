@@ -18,6 +18,9 @@ faq:
   - domanda: "Who plays Jep Gambardella, and when did the film win its Oscar?"
     risposta: "Toni Servillo plays Jep Gambardella. The film won the Academy Award for Best Foreign Language Film in 2014, directed by Paolo Sorrentino."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel Columbus"
+    citta: "Rome"
 bozza: false
 ---
 

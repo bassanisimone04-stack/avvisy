@@ -14,6 +14,9 @@ faq:
   - domanda: "Does Villa Treville have a film connection before the show?"
     risposta: "Yes: the villa was for years the private residence of director Franco Zeffirelli, whose artistic legacy still lingers in the gardens and spaces of the property."
 lang: "en"
+prenotazioni:
+  - nome: "Villa Treville"
+    citta: "Positano"
 bozza: false
 ---
 
