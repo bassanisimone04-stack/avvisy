@@ -11,7 +11,7 @@ categoria: "set-reale"
 prezzo: "€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/pizzeria-michele.webp"
+immagine: "../../assets/placeholder/pizzeria-michele.jpg"
 immagineAlt: "Ingresso storico dell'Antica Pizzeria da Michele in Via Cesare Sersale a Napoli, con una pizza margherita in primo piano"
 ultimoAggiornamento: 2026-07-24
 film:

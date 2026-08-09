@@ -3,7 +3,7 @@ titolo: "Eat Pray Love Pizza: Julia Roberts' Naples Pizzeria"
 descrizione: "The real Eat Pray Love pizza place: where Julia Roberts eats pizza in Naples. Address, what to order at Da Michele, and tips to skip the queue."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-22
-immagine: "../../assets/placeholder/pizzeria-michele.webp"
+immagine: "../../assets/placeholder/pizzeria-michele.jpg"
 immagineAlt: "Entrance of L'Antica Pizzeria da Michele in Naples with a margherita pizza in the foreground"
 tags: ["Eat Pray Love", "Naples", "pizza", "where to eat", "film tourism"]
 faq:

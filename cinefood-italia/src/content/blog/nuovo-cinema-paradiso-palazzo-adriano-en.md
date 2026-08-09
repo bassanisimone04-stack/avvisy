@@ -3,7 +3,7 @@ titolo: "Cinema Paradiso: Palazzo Adriano Locations"
 descrizione: "The Cinema Paradiso locations in Palazzo Adriano: Piazza Umberto I, the set of Tornatore's masterpiece."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-17
-immagine: "../../assets/placeholder/palazzo-adriano-piazza.png"
+immagine: "../../assets/placeholder/palazzo-adriano-piazza.jpg"
 immagineAlt: "Piazza Umberto I in Palazzo Adriano, with the fountain and the main church"
 tags: ["Cinema Paradiso", "Palazzo Adriano", "Sicily", "film tourism", "Tornatore"]
 faq:
