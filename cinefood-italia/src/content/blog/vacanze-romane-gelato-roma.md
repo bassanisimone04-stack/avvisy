@@ -17,6 +17,9 @@ faq:
     risposta: "Sì: fu il primo grande film hollywoodiano girato interamente sul posto a Roma, tra la città vera e gli studi di Cinecittà, invece che ricostruito in studio a Los Angeles."
   - domanda: "La scena della Bocca della Verità era nel copione?"
     risposta: "No, in parte: il gesto di Gregory Peck che finge di aver perso la mano fu un'improvvisazione dell'attore per spaventare Audrey Hepburn, che infatti reagisce in modo del tutto spontaneo e reale nella scena."
+esperienze:
+  - nome: "Tour in Vespa di Roma"
+    query: "Rome Vespa tour"
 bozza: false
 ---
 

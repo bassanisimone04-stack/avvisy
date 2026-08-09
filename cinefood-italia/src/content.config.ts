@@ -149,6 +149,14 @@ const blog = defineCollection({
       prenotazioni: z
         .array(z.object({ nome: z.string(), citta: z.string() }))
         .default([]),
+      /**
+       * Tour/attività da proporre (box "Vivi l'esperienza", link
+       * GetYourGuide). "query" è il termine di ricerca da usare, es.
+       * "Rome Vespa tour" o "Ragusa Montalbano tour".
+       */
+      esperienze: z
+        .array(z.object({ nome: z.string(), query: z.string() }))
+        .default([]),
     }),
 });
 

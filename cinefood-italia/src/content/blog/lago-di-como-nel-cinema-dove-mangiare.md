@@ -15,6 +15,9 @@ faq:
     risposta: "Risotto con pesce persico, missoltini con polenta e i vini della Valtellina."
   - domanda: "Villa del Balbianello è la stessa location di Casino Royale e Star Wars?"
     risposta: "Sì: la villa di Lenno compare sia in Casino Royale (dove Bond si riprende dopo la tortura) sia in Star Wars - Episodio II, per il bacio tra Anakin e Padmé. È visitabile dal pubblico da metà marzo a novembre."
+esperienze:
+  - nome: "Tour in barca sul Lago di Como"
+    query: "Lake Como boat tour"
 bozza: false
 ---
 

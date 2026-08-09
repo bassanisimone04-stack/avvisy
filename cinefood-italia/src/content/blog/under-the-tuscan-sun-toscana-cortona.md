@@ -15,6 +15,9 @@ faq:
     risposta: "È una proprietà privata e non è visitabile all'interno, ma si può ammirare dall'esterno passeggiando nei dintorni di Cortona."
   - domanda: "Under the Tuscan Sun è una storia vera?"
     risposta: "Sì, è tratto dal memoir omonimo (1996) della scrittrice americana Frances Mayes, che comprò e ristrutturò davvero Villa Bramasole a Cortona. Il libro resto per oltre due anni ai primi posti della classifica bestseller del New York Times."
+esperienze:
+  - nome: "Tour del vino in Val di Chiana"
+    query: "Tuscany wine tour Val di Chiana Cortona"
 bozza: false
 ---
 

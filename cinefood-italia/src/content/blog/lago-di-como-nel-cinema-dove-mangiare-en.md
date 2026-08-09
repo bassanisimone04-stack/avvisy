@@ -16,6 +16,9 @@ faq:
   - domanda: "Is Villa del Balbianello the same location from Casino Royale and Star Wars?"
     risposta: "Yes: the villa in Lenno appears in both Casino Royale (where Bond recovers after his torture) and Star Wars: Episode II, for Anakin and Padmé's kiss. It's open to the public from mid-March to November."
 lang: "en"
+esperienze:
+  - nome: "Lake Como Boat Tour"
+    query: "Lake Como boat tour"
 bozza: false
 ---
 
