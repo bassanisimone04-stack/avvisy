@@ -38,7 +38,7 @@ through the arcades and squares of the centre feels like leafing through the
 film's frames.
 
 For a coffee or an aperitivo with a view of the Duomo, the natural stop is the
-**[Caffè del Duomo](/en/locale/caffe-del-duomo-crema)**, overlooking the very
+**[Duomocafè](/en/locale/caffe-del-duomo-crema)**, overlooking the very
 square that symbolises the film.
 
 ## What to taste in Crema
@@ -61,5 +61,5 @@ You will find all the connected stops on the
 
 Crema proves that film tourism can also be intimate and refined: a square, a café,
 a plate of tortelli. Start from the
-**[Caffè del Duomo](/en/locale/caffe-del-duomo-crema)** and let the film's mood
+**[Duomocafè](/en/locale/caffe-del-duomo-crema)** and let the film's mood
 guide you.

@@ -46,8 +46,8 @@ even in the Alps, at Gressoney.
 ## Where to eat in Milan
 
 For an elegant dinner in the heart of the city, the
-**[Ristorante Brera](/en/locale/ristorante-brera-milano)**, in the artists'
-district of the same name, combines atmosphere and careful cuisine. Discover all
+**[Nabucco](/en/locale/ristorante-brera-milano)**, in the Brera artists'
+district, combines atmosphere and careful cuisine since 1970. Discover all
 the venues of **[Milan](/en/milano)** on our site.
 
 ## What to taste
@@ -63,5 +63,5 @@ venues of **[Milan](/en/milano)**.
 
 *House of Gucci* is a journey into Italian elegance, and Milan is its capital.
 Treat yourself to a refined dinner at the
-**[Ristorante Brera](/en/locale/ristorante-brera-milano)** and experience the city
+**[Nabucco](/en/locale/ristorante-brera-milano)** and experience the city
 as in the film.

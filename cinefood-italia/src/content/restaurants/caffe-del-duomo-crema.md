@@ -1,8 +1,8 @@
 ---
-nome: "Caffè del Duomo"
+nome: "Duomocafè"
 citta: "Crema"
 regione: "Lombardia"
-indirizzo: "Piazza del Duomo 25, 26013 Crema CR"
+indirizzo: "Piazza Duomo 13, 26013 Crema CR"
 coordinate:
   lat: 45.3626
   lng: 9.6866
@@ -16,13 +16,14 @@ immagineAlt: "Tavolini di un caffè nella piazza del Duomo di Crema"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "chiamami-col-tuo-nome"
-    descrizioneScena: "Le piazze e i portici di Crema, cuore scenografico del film, fanno da sfondo alle giornate estive dei protagonisti."
+    descrizioneScena: "Piazza Duomo, cuore scenografico di Crema, la vera location del film: qui il Duomocafè è un punto di sosta reale tra le piazze e i portici sullo sfondo delle giornate estive dei protagonisti."
 descrizione: "Caffè affacciato sulla scenografica Piazza del Duomo di Crema, tappa ideale per una pausa lungo l'itinerario tra le location del film di Guadagnino."
 ---
 
-<!-- DA VERIFICARE: nome, indirizzo, coordinate e la scena specifica. Crema è
-     la location principale del film, ma il locale è un esempio da confermare. -->
+<!-- Locale reale verificato: Duomocafè, Piazza Duomo 13, Crema (tel. 0373
+     257310). Crema è la vera location principale del film; il collegamento
+     è alla piazza-set, non a una scena specifica girata in questo locale. -->
 
-Sulla splendida Piazza del Duomo di Crema, il Caffè del Duomo è il posto giusto
+Sulla splendida Piazza del Duomo di Crema, il Duomocafè è il posto giusto
 per un caffè o un aperitivo tra i portici che hanno fatto da sfondo a
 *Chiamami col tuo nome*.

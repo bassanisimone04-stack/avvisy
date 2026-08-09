@@ -55,10 +55,10 @@ imperdibile per chi arriva fin qui sulle orme di Totò.
 
 ## Dove fermarsi a mangiare
 
-Affacciato sulla piazza-set c'è il
-**[Bar della Piazza](/locale/bar-paradiso-palazzo-adriano)**, tappa ideale per un
-caffè o un dolce tra una passeggiata e l'altra, nel cuore stesso della scenografia
-del film.
+Nel borgo, a pochi minuti dalla piazza-set, si trova lo storico
+**[Albergo Ristorante Pizzeria del Viale](/locale/bar-paradiso-palazzo-adriano)**,
+tappa reale per una sosta tra una passeggiata e l'altra nello stesso paese
+raccontato dal film.
 
 ## I sapori dei Monti Sicani
 
@@ -80,7 +80,8 @@ Trovi le tappe collegate alla scheda
 
 ## In sintesi
 
-A Palazzo Adriano il cinema è ancora nell'aria: siediti al
-**[Bar della Piazza](/locale/bar-paradiso-palazzo-adriano)**, guarda la
-stessa piazza dove Totò sognava davanti al grande schermo, e chiudi la
-visita con una tappa al nuovo museo dedicato al capolavoro di Tornatore.
+A Palazzo Adriano il cinema è ancora nell'aria: fai una sosta
+all'**[Albergo Ristorante Pizzeria del Viale](/locale/bar-paradiso-palazzo-adriano)**,
+guarda la stessa piazza dove Totò sognava davanti al grande schermo, e
+chiudi la visita con una tappa al nuovo museo dedicato al capolavoro di
+Tornatore.

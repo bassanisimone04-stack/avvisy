@@ -49,7 +49,7 @@ vista su tutto l'arcipelago.
 ## Dove mangiare a Salina
 
 Per la sosta a tavola, la
-**[Trattoria dell'Isola](/locale/trattoria-dell-isola-salina)** propone la cucina
+**[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)** propone la cucina
 eoliana verace: pesce fresco, capperi di Salina (tra i più pregiati d'Italia),
 **pane cunzato** e la dolce **malvasia delle Lipari**. Sapori semplici e intensi,
 proprio come l'isola del film.
@@ -66,5 +66,5 @@ di **[Salina](/salina)**.
 ## In sintesi
 
 Salina è *Il Postino* fatto isola: mare, poesia e una cucina schietta. Parti dalla
-**[Trattoria dell'Isola](/locale/trattoria-dell-isola-salina)** e lasciati
+**[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)** e lasciati
 conquistare dai sapori delle Eolie.

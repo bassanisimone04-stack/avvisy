@@ -193,13 +193,9 @@ export const restaurantsEn: Record<string, RestEn> = {
     descrizione: "A bar on the main square of Castellabate, a meeting point of the Cilento village made famous by 'Welcome to the South'. Perfect for a coffee with a sea view.",
     scena: { "benvenuti-al-sud": "The village's little square — the heart of town life in the film — where the bar overlooks the main square of Castellabate." },
   },
-  "trattoria-del-biscione": {
-    descrizione: "A genuine Roman trattoria in the heart of the historic centre, between Campo de' Fiori and the Theatre of Pompey. Traditional cuisine: cacio e pepe, oxtail stew, macaroni.",
-    scena: { "un-americano-a-roma": "The working-class atmosphere of Nando Mericoni's Rome, among macaroni and dishes of the local tradition made famous by the film." },
-  },
   "caffe-del-duomo-crema": {
     descrizione: "A café overlooking Crema's scenic Piazza del Duomo, an ideal stop along the tour of Guadagnino's film locations.",
-    scena: { "chiamami-col-tuo-nome": "The squares and arcades of Crema, the film's scenic heart, form the backdrop to the characters' summer days." },
+    scena: { "chiamami-col-tuo-nome": "Piazza Duomo, the scenic heart of Crema, the film's real location: here Duomocafè is a real stop among the squares and arcades that form the backdrop to the characters' summer days." },
   },
   "cinema-bistrot-milano": {
     descrizione: "A Milanese cinema-themed bistro: vintage posters, soft lighting and a menu that plays with the great Italian films. An example of a 'themed' venue, not a real location.",
@@ -214,20 +210,20 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "il-commissario-montalbano": "A few steps from Montalbano's house in Punta Secca, on the seafront where the inspector loves to enjoy the fresh fish of the Ragusa coast." },
   },
   "bar-paradiso-palazzo-adriano": {
-    descrizione: "A bar overlooking the beautiful Piazza Umberto I of Palazzo Adriano, the village-set of Tornatore's Oscar winner. Ideal for a break between history and cinema.",
-    scena: { "nuovo-cinema-paradiso": "On the scenic Piazza Umberto I, turned into the town of Giancaldo, heart of the Cinema Paradiso set." },
+    descrizione: "A restaurant and pizzeria in Palazzo Adriano, the village-set of Tornatore's Oscar winner, a short walk from the scenic Piazza Umberto I. Ideal for a break between history and cinema.",
+    scena: { "nuovo-cinema-paradiso": "In the village of Palazzo Adriano, where the scenic Piazza Umberto I was turned into the town of Giancaldo, heart of the Cinema Paradiso set: this historic hotel-restaurant is a real stop to eat in the same village as the film." },
   },
   "trattoria-dell-isola-salina": {
-    descrizione: "An Aeolian trattoria in Salina, the island of Il Postino: pane cunzato, capers, malvasia wine and fresh fish with a view over the Aeolian sea.",
-    scena: { "il-postino": "Among the landscapes of Salina, the island-set of Il Postino, where Massimo Troisi gave life to the last, poetic role of his career." },
+    descrizione: "A historic trattoria in the centre of Santa Marina Salina, the island of Il Postino: pane cunzato, capers, malvasia wine and fresh fish with a view over the Aeolian sea.",
+    scena: { "il-postino": "In the historic centre of Santa Marina Salina, the island-set of Il Postino where Massimo Troisi gave life to the last, poetic role of his career: a real trattoria to taste the island's flavours." },
   },
   "caffe-di-piazza-navona": {
     descrizione: "A café overlooking the scenic Piazza Navona, among Bernini's fountains. One of Rome's finest open-air salons, dear to cinema.",
-    scena: { "to-rome-with-love": "Among the tables of Piazza Navona, one of the squares featured in the Roman strolls of Woody Allen's comedy." },
+    scena: { "to-rome-with-love": "Among the tables of Piazza Navona, one of the squares featured in the Roman strolls of Woody Allen's comedy: Bar Navona is a real address for a stop here." },
   },
   "ristorante-brera-milano": {
-    descrizione: "A refined restaurant in the heart of Brera, Milan's bohemian-chic district. Signature Italian cuisine in an elegant setting, between art and fashion.",
-    scena: { "house-of-gucci": "In the elegant, ambitious Milan portrayed by Ridley Scott, between the Brera district and the fashion salons of the Gucci dynasty." },
+    descrizione: "A historic restaurant since 1970 in the heart of Brera, Milan's bohemian-chic district. Signature Italian cuisine in an elegant setting, between art and fashion.",
+    scena: { "house-of-gucci": "In the elegant, ambitious Milan portrayed by Ridley Scott, between the Brera district and the fashion salons of the Gucci dynasty: Nabucco, open since 1970, is a real address in the same district." },
   },
 };
 

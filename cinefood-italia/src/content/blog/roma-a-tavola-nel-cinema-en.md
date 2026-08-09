@@ -1,6 +1,6 @@
 ---
 titolo: "Rome at the Table on Screen: 3 Film Trattorias"
-descrizione: "Da Pancrazio, Trattoria Santa Lucia and Trattoria del Biscione: three Roman trattorias seen on screen, in the old centre."
+descrizione: "Da Pancrazio, Trattoria Santa Lucia and La Veranda dell'Hotel Columbus: three Roman venues seen on screen, in the old centre."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Tables of a Roman trattoria in the historic centre"
 tags: ["Rome", "trattorias", "cinema", "itineraries"]
 faq:
   - domanda: "Which Roman trattorias have appeared in films?"
-    risposta: "Da Pancrazio, Trattoria Santa Lucia and Trattoria del Biscione, in the historic centre of Rome."
+    risposta: "Da Pancrazio, Trattoria Santa Lucia and La Veranda dell'Hotel Columbus, in the historic centre of Rome."
   - domanda: "Where to eat in Rome's historic centre?"
     risposta: "Between Campo de' Fiori, Piazza Navona and the Ghetto, the realm of Roman trattorias."
   - domanda: "Which Roman dishes should you try?"

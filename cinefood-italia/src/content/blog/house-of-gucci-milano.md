@@ -45,8 +45,8 @@ state girate a Roma, Firenze e persino sulle Alpi, a Gressoney.
 ## Dove mangiare a Milano
 
 Per una cena elegante nel cuore della città, il
-**[Ristorante Brera](/locale/ristorante-brera-milano)**, nell'omonimo quartiere
-degli artisti, unisce atmosfera e cucina curata. Scopri tutti i locali di
+**[Nabucco](/locale/ristorante-brera-milano)**, nel quartiere degli artisti
+di Brera, unisce atmosfera e cucina curata dal 1970. Scopri tutti i locali di
 **[Milano](/milano)** sul nostro sito.
 
 ## Cosa assaggiare
@@ -62,5 +62,5 @@ di **[Milano](/milano)**.
 
 *House of Gucci* è un viaggio nell'eleganza italiana, e Milano ne è la capitale.
 Concediti una cena raffinata al
-**[Ristorante Brera](/locale/ristorante-brera-milano)** e vivi la città come nel
+**[Nabucco](/locale/ristorante-brera-milano)** e vivi la città come nel
 film.
