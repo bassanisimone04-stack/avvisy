@@ -3,8 +3,8 @@ titolo: "La mano di Dante (Netflix): le location vere"
 descrizione: "Dove è stato girato La mano di Dante di Julian Schnabel: Venezia, Verona, Padova e Palermo, le città vere dietro il film Netflix."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-07
-immagine: "../../assets/placeholder/blog-scene.jpg"
-immagineAlt: "Calle veneziana all'alba, come le location de La mano di Dante"
+immagine: "../../assets/placeholder/la-mano-di-dante-venezia-vero.jpg"
+immagineAlt: "Canale veneziano tra le case colorate, come le location de La mano di Dante"
 tags: ["La mano di Dante", "In the Hand of Dante", "Netflix", "Venezia", "Verona", "Palermo", "location cinema"]
 faq:
   - domanda: "La mano di Dante è basato su una storia vera?"
