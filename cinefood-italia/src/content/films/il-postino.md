@@ -5,7 +5,7 @@ regista: "Michael Radford"
 serieTv: false
 sinossi: "L'ultimo, poetico film di Massimo Troisi: l'amicizia tra un umile postino e il poeta Pablo Neruda, girato nelle isole di Salina e Procida."
 locandina: "../../assets/films/il-postino.jpg"
-locandinaAlt: "Locandina placeholder de Il postino"
+locandinaAlt: "Locandina in stile manifesto — Il postino (1994)"
 citta: ["Salina"]
 faq:
   - domanda: "Dove è stato girato Il postino?"

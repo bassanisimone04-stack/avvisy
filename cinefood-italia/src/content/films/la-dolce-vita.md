@@ -5,7 +5,7 @@ regista: "Federico Fellini"
 serieTv: false
 sinossi: "Il capolavoro di Fellini con Marcello Mastroianni: la Roma mondana e notturna di Via Veneto, dei caffè e della Fontana di Trevi, tra glamour e malinconia."
 locandina: "../../assets/films/la-dolce-vita.jpg"
-locandinaAlt: "Locandina placeholder de La dolce vita"
+locandinaAlt: "Locandina in stile manifesto — La dolce vita (1960)"
 citta: ["Roma"]
 faq:
   - domanda: "Dov'è ambientata La dolce vita a Roma?"
