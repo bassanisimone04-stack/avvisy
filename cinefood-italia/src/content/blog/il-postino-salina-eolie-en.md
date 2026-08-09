@@ -49,7 +49,7 @@ whole archipelago.
 ## Where to eat in Salina
 
 For a stop at the table, the
-**[Trattoria dell'Isola](/en/locale/trattoria-dell-isola-salina)** serves
+**[Trattoria Cucinotta](/en/locale/trattoria-dell-isola-salina)** serves
 authentic Aeolian cuisine: fresh fish, Salina capers (among the finest in Italy),
 **pane cunzato** and the sweet **Malvasia delle Lipari**. Simple, intense flavours,
 just like the film's island.
@@ -67,5 +67,5 @@ and the venues of **[Salina](/en/salina)**.
 
 Salina is *Il Postino* turned into an island: sea, poetry and honest cooking.
 Start from the
-**[Trattoria dell'Isola](/en/locale/trattoria-dell-isola-salina)** and let the
+**[Trattoria Cucinotta](/en/locale/trattoria-dell-isola-salina)** and let the
 flavours of the Aeolian Islands win you over.

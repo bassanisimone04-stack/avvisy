@@ -55,9 +55,9 @@ must-see stop for anyone visiting in Totò's footsteps.
 
 ## Where to stop and eat
 
-Overlooking the square-set is the
-**[Bar della Piazza](/en/locale/bar-paradiso-palazzo-adriano)**, an ideal stop for
-a coffee or a pastry between strolls, right in the heart of the film's scenery.
+In the village, a short walk from the square-set, is the historic
+**[Albergo Ristorante Pizzeria del Viale](/en/locale/bar-paradiso-palazzo-adriano)**,
+a real stop between strolls in the very village the film portrays.
 
 ## The flavours of the Sicani Mountains
 
@@ -78,7 +78,8 @@ You will find the connected stops on the
 
 ## In short
 
-In Palazzo Adriano cinema is still in the air: sit at the
-**[Bar della Piazza](/en/locale/bar-paradiso-palazzo-adriano)**, look at the
-very square where Totò dreamed in front of the big screen, and finish your
-visit with a stop at the new museum dedicated to Tornatore's masterpiece.
+In Palazzo Adriano cinema is still in the air: stop at the
+**[Albergo Ristorante Pizzeria del Viale](/en/locale/bar-paradiso-palazzo-adriano)**,
+look at the very square where Totò dreamed in front of the big screen, and
+finish your visit with a stop at the new museum dedicated to Tornatore's
+masterpiece.

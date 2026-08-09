@@ -37,7 +37,7 @@ i luoghi più belli della Capitale.
 
 Il cuore pulsante della Roma di Woody Allen è la zona di **Piazza Navona**. Per
 una pausa nel cuore della scena, un caffè o un aperitivo al
-**[Caffè di Piazza Navona](/locale/caffe-di-piazza-navona)** è la sosta ideale,
+**[Bar Navona](/locale/caffe-di-piazza-navona)** è la sosta ideale,
 tra le fontane del Bernini e l'atmosfera del centro storico.
 
 Roma è la città con più location gastronomiche del nostro sito: dalle trattorie

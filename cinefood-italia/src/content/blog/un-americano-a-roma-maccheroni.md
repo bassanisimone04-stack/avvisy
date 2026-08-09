@@ -9,14 +9,14 @@ tags: ["Un Americano a Roma", "Alberto Sordi", "Roma", "dove mangiare", "cinetur
 faq:
   - domanda: "Qual è la scena dei maccheroni di Alberto Sordi?"
     risposta: "In Un Americano a Roma (1954), Nando Mericoni cede ai maccheroni con la celebre battuta 'Maccarone, m'hai provocato...'."
-  - domanda: "Dove mangiare cucina romana verace?"
-    risposta: "Nelle trattorie del centro storico, come la Trattoria del Biscione tra Campo de' Fiori e il Teatro di Pompeo."
+  - domanda: "La scena dei maccheroni è girata in un vero ristorante?"
+    risposta: "No: fu girata in un'osteria ricostruita per il film, non in un locale realmente esistente. Le riprese esterne del film toccarono comunque location reali come via del Portico d'Ottavia e vicolo Savini."
   - domanda: "Quali piatti romani provare?"
     risposta: "Cacio e pepe, amatriciana, carbonara, carciofi alla romana e coda alla vaccinara."
   - domanda: "Dove è ambientato il personaggio di Nando Mericoni?"
     risposta: "A Trastevere: Nando è un giovane romano del popolare quartiere trasteverino, ossessionato dal mito dell'America, che finisce per fare da specchio comico agli italiani di quegli anni."
   - domanda: "Dove è stato girato Un Americano a Roma?"
-    risposta: "Tra le location reali: via del Portico d'Ottavia e vicolo Savini, dove fu ricostruita l'osteria della celebre scena, oltre ad alcune zone periferiche di Roma per le scene in motocicletta."
+    risposta: "Tra le location reali: via del Portico d'Ottavia e vicolo Savini, oltre ad alcune zone periferiche di Roma per le scene in motocicletta."
 bozza: false
 ---
 
@@ -32,13 +32,12 @@ quella Roma popolare e la sua cucina.
 *Un Americano a Roma* è un ritratto affettuoso della Roma popolare del
 dopoguerra, fatta di vicoli, trattorie e piatti generosi — con Nando
 Mericoni presentato come un ragazzo di **Trastevere**, quartiere che
-incarna l'anima popolare della Capitale. Le riprese si sono svolte in
-diverse location reali, tra cui **via del Portico d'Ottavia** e **vicolo
-Savini**, dove fu ricostruita l'osteria della scena dei maccheroni. Per
-rivivere quel clima, il posto giusto oggi è una **trattoria romana del
-centro storico** come la
-**[Trattoria del Biscione](/locale/trattoria-del-biscione)**, tra Campo de' Fiori
-e il Teatro di Pompeo: cucina tradizionale e atmosfera d'altri tempi.
+incarna l'anima popolare della Capitale. Le riprese esterne si sono svolte
+in diverse location reali, tra cui **via del Portico d'Ottavia** e
+**vicolo Savini**. La celebre scena dei maccheroni, invece, fu girata in
+un'osteria ricostruita apposta per il film, non in un locale realmente
+esistente: non esiste quindi "il vero ristorante di Nando Mericoni" da
+visitare, ma il quartiere e l'atmosfera che racconta sono autentici.
 
 ## I piatti da ordinare
 
@@ -49,13 +48,18 @@ romana** e la coda alla vaccinara.
 
 ## Un itinerario nel centro storico
 
-L'area tra Campo de' Fiori, Piazza Navona e il Ghetto è il regno della trattoria
-romana. Un itinerario a piedi, con soste golose, è il modo migliore per assaporare
-la città di Sordi. Scopri tutti i locali di **[Roma](/roma)** e le tappe del film
-**[Un americano a Roma](/film/un-americano-a-roma)**.
+L'area tra Campo de' Fiori, Piazza Navona e il Ghetto — attraversata anche
+dalle riprese esterne del film — è oggi il regno della trattoria romana
+verace. Un itinerario a piedi, con soste golose, è il modo migliore per
+assaporare la città di Sordi. Scopri tutti i locali di **[Roma](/roma)**,
+incluse le altre location gastronomiche reali della città nel nostro
+**[itinerario sui ristoranti di Roma nel cinema](/blog/roma-nel-cinema-ristoranti-da-film)**,
+e le tappe del film **[Un americano a Roma](/film/un-americano-a-roma)**.
 
 ## In sintesi
 
-Rivivere *Un Americano a Roma* è semplice: siediti alla
-**[Trattoria del Biscione](/locale/trattoria-del-biscione)**, ordina un piatto di
-pasta e lascia che i maccheroni ti "provochino" come accadde a Nando Mericoni.
+Rivivere *Un Americano a Roma* significa passeggiare tra Trastevere e il
+Ghetto, sedersi in una trattoria romana verace e ordinare un piatto di
+pasta — lasciando che i maccheroni ti "provochino" come accadde a Nando
+Mericoni, magari in uno dei locali veri raccontati nei nostri altri
+itinerari su Roma.

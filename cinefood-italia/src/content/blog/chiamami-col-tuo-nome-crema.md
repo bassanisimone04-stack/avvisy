@@ -37,7 +37,7 @@ Marzia. Passeggiare tra i portici e le piazze del centro è come sfogliare le
 inquadrature del film.
 
 Per un caffè o un aperitivo con vista sul Duomo, la tappa naturale è il
-**[Caffè del Duomo](/locale/caffe-del-duomo-crema)**, affacciato proprio sulla
+**[Duomocafè](/locale/caffe-del-duomo-crema)**, affacciato proprio sulla
 piazza-simbolo del film.
 
 ## Cosa assaggiare a Crema
@@ -60,5 +60,5 @@ Trovi tutte le tappe collegate alla scheda del film
 
 Crema è la prova che il cineturismo può essere anche intimo e raffinato: una
 piazza, un caffè, un piatto di tortelli. Parti dal
-**[Caffè del Duomo](/locale/caffe-del-duomo-crema)** e lasciati guidare dalle
+**[Duomocafè](/locale/caffe-del-duomo-crema)** e lasciati guidare dalle
 atmosfere del film.

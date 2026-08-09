@@ -1,5 +1,5 @@
 ---
-titolo: "Roma nel cinema: 6 ristoranti da film"
+titolo: "Roma nel cinema: 5 ristoranti da film"
 descrizione: "I ristoranti e caffè di Roma diventati celebri col cinema: da La Grande Bellezza a Mangia prega ama, dove mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-11
@@ -8,20 +8,20 @@ immagineAlt: "Vicolo di Roma con tavolini di una trattoria"
 tags: ["Roma", "ristoranti", "cinema", "itinerari", "cineturismo"]
 faq:
   - domanda: "Quali ristoranti di Roma sono comparsi nei film?"
-    risposta: "Tra gli altri: La Veranda dell'Hotel Columbus (La Grande Bellezza), Da Pancrazio e Trattoria Santa Lucia (Mangia prega ama), Trattoria del Biscione (Un Americano a Roma)."
+    risposta: "Tra gli altri: La Veranda dell'Hotel Columbus (La Grande Bellezza), Da Pancrazio e Trattoria Santa Lucia (Mangia prega ama)."
   - domanda: "Dove cena Jep ne La Grande Bellezza?"
     risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito."
   - domanda: "Qual è il caffè de La Dolce Vita?"
     risposta: "Il Café de Paris su Via Veneto, oggi chiuso ma simbolo della Roma di Fellini che ispirò il film — le scene di Via Veneto furono in realtà ricostruite a Cinecittà."
-  - domanda: "Qual è il locale più antico tra questi sei?"
+  - domanda: "Qual è il locale più antico tra questi cinque?"
     risposta: "Il Café de Paris (1948) e Da Pancrazio, costruito sui resti del Teatro di Pompeo del I secolo a.C., dove secondo la tradizione fu ucciso Giulio Cesare."
 bozza: false
 ---
 
 Nessuna città è stata sul grande schermo come **Roma**. Tra trattorie storiche,
 caffè eleganti e terrazze da sogno, la Capitale è un set a cielo aperto. Ecco
-**sei locali romani** legati al cinema, con il film che li ha resi celebri e cosa
-ordinare.
+**cinque locali romani** legati al cinema, con il film che li ha resi celebri e
+cosa ordinare.
 
 ## 1. La Veranda dell'Hotel Columbus — *La Grande Bellezza*
 Nella sala affrescata del Palazzo della Rovere, Jep Gambardella cena nel film
@@ -40,17 +40,12 @@ Giulio Cesare: le sale inferiori, tra archi e colonne romane, sono
 un'esperienza letteralmente dentro la storia antica.
 → **[Da Pancrazio](/locale/da-pancrazio)**
 
-## 4. Trattoria del Biscione — *Un Americano a Roma*
-Cucina romana verace nel cuore del centro storico, l'atmosfera popolare della Roma
-di Alberto Sordi e dei suoi maccheroni.
-→ **[Trattoria del Biscione](/locale/trattoria-del-biscione)**
-
-## 5. Caffè di Piazza Navona
+## 4. Bar Navona
 Tra le fontane del Bernini, il caffè perfetto per una pausa nel salotto barocco
 della Capitale, spesso sfondo del cinema girato a Roma.
-→ **[Caffè di Piazza Navona](/locale/caffe-di-piazza-navona)**
+→ **[Bar Navona](/locale/caffe-di-piazza-navona)**
 
-## 6. Café de Paris — *La Dolce Vita*
+## 5. Café de Paris — *La Dolce Vita*
 Su Via Veneto, simbolo della Roma mondana di Fellini (oggi chiuso, ma un pezzo di
 storia del costume).
 → **[Café de Paris](/locale/cafe-de-paris-roma)**

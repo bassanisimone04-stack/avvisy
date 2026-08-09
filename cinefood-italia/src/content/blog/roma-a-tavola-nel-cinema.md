@@ -1,6 +1,6 @@
 ---
 titolo: "Roma a tavola nel cinema: 3 trattorie da film"
-descrizione: "Da Pancrazio, Trattoria Santa Lucia e Trattoria del Biscione: tre trattorie romane comparse nei film, nel centro storico."
+descrizione: "Da Pancrazio, Trattoria Santa Lucia e La Veranda dell'Hotel Columbus: tre location romane comparse nei film, nel centro storico."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Tavolini di una trattoria romana nel centro storico"
 tags: ["Roma", "trattorie", "cinema", "itinerari"]
 faq:
   - domanda: "Quali trattorie romane sono comparse nei film?"
-    risposta: "Da Pancrazio, Trattoria Santa Lucia e Trattoria del Biscione, nel centro storico di Roma."
+    risposta: "Da Pancrazio, Trattoria Santa Lucia e La Veranda dell'Hotel Columbus, nel centro storico di Roma."
   - domanda: "Dove mangiare nel centro storico di Roma?"
     risposta: "Tra Campo de' Fiori, Piazza Navona e il Ghetto, regno delle trattorie romane."
   - domanda: "Quali piatti romani provare?"

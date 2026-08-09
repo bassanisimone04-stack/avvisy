@@ -38,7 +38,7 @@ beautiful spots.
 
 The beating heart of Woody Allen's Rome is the **Piazza Navona** area. For a break
 in the heart of the scene, a coffee or an aperitivo at the
-**[Caffè di Piazza Navona](/en/locale/caffe-di-piazza-navona)** is the ideal stop,
+**[Bar Navona](/en/locale/caffe-di-piazza-navona)** is the ideal stop,
 between Bernini's fountains and the atmosphere of the historic centre.
 
 Rome is the city with the most food locations on our site: from historic
