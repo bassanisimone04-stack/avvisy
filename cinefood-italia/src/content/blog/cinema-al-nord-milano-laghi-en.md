@@ -45,5 +45,12 @@ locations in history: it hosted both James Bond's recovery in *Casino
 Royale* and Anakin and Padmé's first kiss in *Star Wars: Episode II*. It's
 open to the public from mid-March to November.
 
+## What to eat between Milan and the lakes
+
+Northern cuisine is hearty and refined: in Milan, **saffron risotto** and
+**veal cutlet**; on Lake Como, **risotto with perch** and **missoltini**;
+on Lake Garda, **pizzoccheri** from nearby Valtellina. An itinerary that
+combines metropolis and nature, without ever giving up good food.
+
 Discover the venues of the North in our [directory](/en/locali) and filter by
 city or film. *Always check opening hours and availability before you leave.*

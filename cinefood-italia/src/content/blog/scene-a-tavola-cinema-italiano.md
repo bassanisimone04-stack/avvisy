@@ -50,6 +50,16 @@ Le cene raffinate de *[La grande bellezza](/film/la-grande-bellezza)* (2013),
 premio Oscar di Sorrentino, e i caffè senza tempo raccontano un'Italia
 sospesa tra bellezza e malinconia.
 
+## Il cibo come indagine: Montalbano
+
+Anche la televisione ha il suo rito a tavola: il commissario
+*[Montalbano](/film/il-commissario-montalbano)*, tratto dai romanzi di
+Andrea Camilleri, non risolve mai un caso a stomaco vuoto. I suoi pranzi
+solitari a base di pesce fresco, spesso in silenzio davanti al mare di
+Punta Secca, sono diventati iconici quanto le indagini stesse — un altro
+modo in cui il cinema italiano racconta il cibo come pausa, pensiero e
+piacere.
+
 ---
 
 Vuoi vivere queste atmosfere? Scopri i [locali](/locali) dove sono state girate
