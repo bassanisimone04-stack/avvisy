@@ -91,7 +91,7 @@ export const SITE = {
    *    "Acquista" nella pagina /guida non compare (nessun link rotto).
    */
   guida: {
-    checkoutUrl: "",
+    checkoutUrl: "https://payhip.com/b/j0UNR",
     prezzo: "5,99 €",
   },
 } as const;
