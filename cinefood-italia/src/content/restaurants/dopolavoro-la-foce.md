@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/dopolavoro-la-foce.jpg"
-immagineAlt: "In attesa di una foto reale di Dopolavoro La Foce a Pienza"
+immagine: "../../assets/placeholder/dopolavoro-la-foce-vero.jpg"
+immagineAlt: "Facciata rustica di Dopolavoro La Foce, nella tenuta di Villa La Foce"
 sitoWeb: "https://www.dopolavorolafoce.it"
 ultimoAggiornamento: 2026-08-09
 film:
