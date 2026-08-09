@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/enzo-a-mare.jpg"
-immagineAlt: "Ristorante di pesce affacciato sul mare in Sicilia"
+immagine: "../../assets/placeholder/enzo-a-mare-vero.jpg"
+immagineAlt: "Veranda blu e bianca di Enzo a Mare sulla spiaggia di Punta Secca"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "il-commissario-montalbano"

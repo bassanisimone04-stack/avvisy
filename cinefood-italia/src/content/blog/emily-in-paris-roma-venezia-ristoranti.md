@@ -3,8 +3,8 @@ titolo: "Emily in Paris: i ristoranti veri di Roma"
 descrizione: "Emily in Paris stagione 5: i veri ristoranti di Roma e Venezia della serie Netflix, da Zuma all'Hotel Eden. Dove mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
-immagineAlt: "Terrazza panoramica romana al tramonto, come nei ristoranti di Emily in Paris"
+immagine: "../../assets/placeholder/emily-in-paris-rooftop-roma.jpg"
+immagineAlt: "Terrazza rooftop sulle cupole di Roma al tramonto, come nei ristoranti di Emily in Paris"
 tags: ["Emily in Paris", "Roma", "Venezia", "Netflix", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Emily in Paris stagione 5 è ambientata anche in Italia?"

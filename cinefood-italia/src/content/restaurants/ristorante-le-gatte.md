@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/ristorante-collina.jpg"
-immagineAlt: "Ristorante affacciato su un piccolo porto del Cilento"
+immagine: "../../assets/placeholder/ristorante-le-gatte-vero.jpg"
+immagineAlt: "Terrazza sul porto di Castellabate al tramonto"
 ultimoAggiornamento: 2026-07-22
 film:
   - film: "benvenuti-al-sud"

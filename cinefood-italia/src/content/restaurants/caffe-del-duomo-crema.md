@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/caffe-crema.jpg"
-immagineAlt: "Tavolini di un caffè nella piazza del Duomo di Crema"
+immagine: "../../assets/placeholder/duomocafe-crema-vero.jpg"
+immagineAlt: "Facciata e dehors di Duomocafè sotto i portici di Crema"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "chiamami-col-tuo-nome"

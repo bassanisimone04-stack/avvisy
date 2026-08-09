@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/ristorante-brera.jpg"
-immagineAlt: "Elegante ristorante nel quartiere Brera di Milano"
+immagine: "../../assets/placeholder/nabucco-brera-vero.jpg"
+immagineAlt: "Dehors di Nabucco tra le vie del quartiere Brera a Milano"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "house-of-gucci"

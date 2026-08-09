@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/caffe-piazza.jpg"
-immagineAlt: "Tavolini di un caffè storico affacciato su una grande piazza"
+immagine: "../../assets/placeholder/caffe-florian-vero.jpg"
+immagineAlt: "Interno dorato e specchiato del Caffè Florian, Venezia"
 sitoWeb: "https://www.caffeflorian.com"
 ultimoAggiornamento: 2026-07-22
 film:

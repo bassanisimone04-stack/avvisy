@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: true
-immagine: "../../assets/placeholder/trattoria-roma.jpg"
-immagineAlt: "Tavoli di una trattoria romana in un vicolo del centro"
+immagine: "../../assets/placeholder/trattoria-santa-lucia-vero.jpg"
+immagineAlt: "Dehors ombreggiato della Trattoria Santa Lucia a Roma"
 ultimoAggiornamento: 2026-07-22
 film:
   - film: "mangia-prega-ama"

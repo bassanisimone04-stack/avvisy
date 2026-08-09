@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/antico-caffe.jpg"
-immagineAlt: "Elegante sala ristorante affrescata a Roma"
+immagine: "../../assets/placeholder/la-veranda-hotel-columbus-vero.jpg"
+immagineAlt: "Sala affrescata rinascimentale de La Veranda dell'Hotel Columbus"
 sitoWeb: "https://www.laverandaroma.com"
 ultimoAggiornamento: 2026-07-22
 film:
