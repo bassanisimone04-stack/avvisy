@@ -82,6 +82,18 @@ export const SITE = {
      */
     getyourguidePartnerId: "",
   },
+
+  /**
+   * Prodotto digitale: "La Guida CineFood Italia" (PDF a pagamento).
+   * ▶️ Carica il PDF su Gumroad (gumroad.com) o Payhip (payhip.com) — gratis,
+   *    gestiscono loro pagamento e download automatico — e incolla qui il
+   *    link della pagina prodotto/checkout. Finché è vuoto "", il bottone
+   *    "Acquista" nella pagina /guida non compare (nessun link rotto).
+   */
+  guida: {
+    checkoutUrl: "",
+    prezzo: "5,99 €",
+  },
 } as const;
 
 /**
