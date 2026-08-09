@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/hosteria-giusti-modena.jpg"
-immagineAlt: "In attesa di una foto reale di Hosteria Giusti a Modena"
+immagine: "../../assets/placeholder/hosteria-giusti-modena-vero.jpg"
+immagineAlt: "Vetrina storica della Salumeria Giuseppe Giusti, dal 1605, accanto a Hosteria Giusti a Modena"
 ultimoAggiornamento: 2026-08-09
 film:
   - film: "master-of-none"
