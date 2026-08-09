@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/trattoria-isola.jpg"
-immagineAlt: "Trattoria eoliana affacciata sul mare a Salina"
+immagine: "../../assets/placeholder/trattoria-cucinotta-salina-vero.jpg"
+immagineAlt: "Terrazza colorata della Trattoria Cucinotta a Salina"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "il-postino"

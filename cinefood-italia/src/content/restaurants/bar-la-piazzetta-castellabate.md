@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/gran-caffe.jpg"
-immagineAlt: "Tavolini di un bar nella piazza di un borgo del Cilento"
+immagine: "../../assets/placeholder/bar-la-piazzetta-vero.jpg"
+immagineAlt: "Dehors con ombrelloni rossi in piazza a Castellabate"
 ultimoAggiornamento: 2026-07-22
 film:
   - film: "benvenuti-al-sud"

@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/osteria-navigli.jpg"
-immagineAlt: "Sala di un ristorante storico romano con soffitti a volta"
+immagine: "../../assets/placeholder/da-pancrazio-vero.jpg"
+immagineAlt: "Sala sotterranea di Da Pancrazio tra gli archi del Teatro di Pompeo"
 sitoWeb: "https://www.dapancrazio.it"
 ultimoAggiornamento: 2026-07-22
 film:

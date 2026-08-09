@@ -3,8 +3,8 @@ titolo: "Emily in Paris: The Real Restaurants in Rome"
 descrizione: "Emily in Paris season 5: the real Rome and Venice restaurants from the Netflix show, from Zuma to Hotel Eden. Where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
-immagineAlt: "Panoramic Roman terrace at sunset, like the restaurants in Emily in Paris"
+immagine: "../../assets/placeholder/emily-in-paris-rooftop-roma.jpg"
+immagineAlt: "Rooftop terrace over Rome's domes at dusk, the kind of setting featured in Emily in Paris"
 tags: ["Emily in Paris", "Rome", "Venice", "Netflix", "where to eat", "film tourism"]
 faq:
   - domanda: "Is Emily in Paris season 5 also set in Italy?"
