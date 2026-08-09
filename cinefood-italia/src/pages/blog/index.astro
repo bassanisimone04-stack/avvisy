@@ -16,6 +16,14 @@ const articoli = (await getCollection("blog"))
     <h1 class="font-display text-4xl font-extrabold">Blog</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">Itinerari, curiosità e storie di cinema e cucina.</p>
 
+    <a href="/guida" class="mt-6 flex flex-col gap-3 rounded-3xl border border-gold-400/30 bg-gold-400/5 p-5 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="font-display text-lg font-bold">📖 La Guida CineFood Italia (PDF)</p>
+        <p class="mt-1 text-sm text-ink-600 dark:text-ink-400">I 17 locali reali con 3 itinerari pronti, da portare in viaggio.</p>
+      </div>
+      <span class="inline-block shrink-0 rounded-full bg-gold-500 px-5 py-2 text-sm font-semibold text-noir-950">Scoprila →</span>
+    </a>
+
     <div class="mt-8 grid gap-8 sm:grid-cols-2">
       {
         articoli.map((a, i) => (
