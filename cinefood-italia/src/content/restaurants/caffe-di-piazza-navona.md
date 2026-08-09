@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/caffe-navona.jpg"
-immagineAlt: "Tavolini di un caffè su Piazza Navona a Roma"
+immagine: "../../assets/placeholder/bar-navona-vero.jpg"
+immagineAlt: "Tavolini all'aperto su Piazza Navona a Roma, di sera"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "to-rome-with-love"
