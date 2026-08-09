@@ -13,6 +13,9 @@ faq:
     risposta: "Sì, si chiama Maestro's: cucina a km0 con ingredienti dell'orto della villa, guidata dallo chef Vincenzo Castaldo con la consulenza dello chef stellato Antonio Mellino."
   - domanda: "Villa Treville ha un legame con il cinema anche prima della serie?"
     risposta: "Sì: la villa fu per anni la residenza privata del regista Franco Zeffirelli, la cui eredità artistica si respira ancora nei giardini e negli spazi della proprietà."
+prenotazioni:
+  - nome: "Villa Treville"
+    citta: "Positano"
 bozza: false
 ---
 

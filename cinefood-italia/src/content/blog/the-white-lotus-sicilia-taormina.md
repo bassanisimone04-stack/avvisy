@@ -13,6 +13,9 @@ faq:
     risposta: "Sì: è il San Domenico Palace, un hotel Four Seasons a Taormina, ex convento del XIV secolo trasformato in albergo nel 1897."
   - domanda: "Si può soggiornare nell'hotel della serie?"
     risposta: "Sì, il San Domenico Palace è un hotel di lusso realmente attivo e prenotabile a Taormina."
+prenotazioni:
+  - nome: "San Domenico Palace, a Four Seasons Hotel"
+    citta: "Taormina"
 bozza: false
 ---
 

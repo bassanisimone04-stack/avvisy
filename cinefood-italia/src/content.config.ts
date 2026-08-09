@@ -140,6 +140,15 @@ const blog = defineCollection({
         .default([]),
       /** Lingua dell'articolo: "it" (default) o "en". */
       lang: z.enum(["it", "en"]).default("it"),
+      /**
+       * Hotel/strutture citate nell'articolo per cui mostrare un box
+       * "Prenota" con link di affiliazione (Booking.com). Ogni voce genera
+       * un link di ricerca per nome+città; l'ID affiliato (se impostato in
+       * src/config/site.ts) viene aggiunto automaticamente a runtime.
+       */
+      prenotazioni: z
+        .array(z.object({ nome: z.string(), citta: z.string() }))
+        .default([]),
     }),
 });
 
