@@ -5,7 +5,7 @@ regista: "Paolo Sorrentino"
 serieTv: false
 sinossi: "Premio Oscar come miglior film straniero. Un ritratto barocco e malinconico di Roma, tra terrazze, palazzi e ristoranti d'atmosfera."
 locandina: "../../assets/films/la-grande-bellezza.jpg"
-locandinaAlt: "Locandina placeholder de La grande bellezza"
+locandinaAlt: "Locandina in stile manifesto — La grande bellezza (2013)"
 citta: ["Roma"]
 faq:
   - domanda: "Dove è stata girata La grande bellezza a Roma?"

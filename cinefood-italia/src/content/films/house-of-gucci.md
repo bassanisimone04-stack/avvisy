@@ -5,7 +5,7 @@ regista: "Ridley Scott"
 serieTv: false
 sinossi: "Il dramma sulla dinastia Gucci con Lady Gaga e Adam Driver, girato tra Milano, il Lago di Como e Roma, tra eleganza e ambizione."
 locandina: "../../assets/films/house-of-gucci.jpg"
-locandinaAlt: "Locandina placeholder di House of Gucci"
+locandinaAlt: "Locandina in stile manifesto — House of Gucci (2021)"
 citta: ["Milano"]
 faq:
   - domanda: "Dove è stato girato House of Gucci in Italia?"

@@ -5,7 +5,7 @@ regista: "Anthony Minghella"
 serieTv: false
 sinossi: "Thriller psicologico con Matt Damon e Jude Law, ambientato nell'Italia degli anni '50 tra la costiera, Roma e Venezia."
 locandina: "../../assets/films/il-talento-di-mr-ripley.jpg"
-locandinaAlt: "Locandina placeholder de Il talento di Mr. Ripley"
+locandinaAlt: "Locandina in stile manifesto — Il talento di Mr. Ripley (1999)"
 citta: ["Venezia"]
 faq:
   - domanda: "Dove è stato girato Il talento di Mr. Ripley a Venezia?"
