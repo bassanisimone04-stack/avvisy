@@ -152,6 +152,23 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Where to feel the film's atmosphere in Milan?", risposta: "In the elegant restaurants of the Brera district and the centre, the chic heart of the Milan portrayed in the film." },
     ],
   },
+  "master-of-none": {
+    sinossi:
+      "The Netflix series created by Aziz Ansari and Alan Yang. Season 2 (2017) opens in Modena, where Dev learns the art of pasta and dines at Osteria Francescana, Massimo Bottura's three-Michelin-star restaurant.",
+    faq: [
+      { domanda: "Was Master of None really filmed in Modena?", risposta: "Yes: the start of season 2 (2017) was filmed entirely in Modena, where Dev moves to learn how to make fresh pasta." },
+      { domanda: "What is the real restaurant that appears in the show?", risposta: "Osteria Francescana, chef Massimo Bottura's three-Michelin-star restaurant, voted the world's best restaurant in both 2016 and 2018." },
+      { domanda: "Did Aziz Ansari really learn to make pasta for the role?", risposta: "Yes: the actor and co-creator actually moved to Modena for weeks, studying Italian and the art of hand-rolled pasta before filming." },
+    ],
+  },
+  "succession": {
+    sinossi:
+      "The Emmy-winning HBO series about the Roy family. The wedding in the season 3 finale is filmed in Tuscany, between Villa La Foce and Villa Cetinale, in the Val d'Orcia.",
+    faq: [
+      { domanda: "Where was Succession filmed in Tuscany?", risposta: "In the Val d'Orcia: the Roy family stays at Villa La Foce, while the season 3 finale wedding is filmed at Villa Cetinale, near Siena." },
+      { domanda: "Can you eat at one of Succession's real locations?", risposta: "Yes: Dopolavoro La Foce, the restaurant on the Villa La Foce estate, is open to the public near Pienza." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -224,6 +241,14 @@ export const restaurantsEn: Record<string, RestEn> = {
   "ristorante-brera-milano": {
     descrizione: "A historic restaurant since 1970 in the heart of Brera, Milan's bohemian-chic district. Signature Italian cuisine in an elegant setting, between art and fashion.",
     scena: { "house-of-gucci": "In the elegant, ambitious Milan portrayed by Ridley Scott, between the Brera district and the fashion salons of the Gucci dynasty: Nabucco, open since 1970, is a real address in the same district." },
+  },
+  "hosteria-giusti-modena": {
+    descrizione: "A four-table osteria in the heart of Modena, carved out in 1989 from the former slaughterhouse behind the historic Giusti delicatessen, running since 1598: one of Europe's oldest food shops.",
+    scena: { "master-of-none": "Among the real locations of Master of None season 2, set in Modena while Dev learns the art of fresh pasta." },
+  },
+  "dopolavoro-la-foce": {
+    descrizione: "A restaurant on the historic Villa La Foce estate, in the Val d'Orcia: built in 1939 as a recreational club for the estate's workers, it now serves Tuscan cuisine grown in the villa's own gardens, minutes from Pienza and Montepulciano.",
+    scena: { "succession": "The restaurant on the Villa La Foce estate, where the Roy family stays in season 3 of Succession, filmed in the Val d'Orcia." },
   },
 };
 
