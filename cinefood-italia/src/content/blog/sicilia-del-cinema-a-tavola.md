@@ -3,8 +3,8 @@ titolo: "La Sicilia del cinema a tavola"
 descrizione: "Da Montalbano a Il Padrino: i luoghi siciliani del cinema e cosa mettere in tavola, tra arancini e granita."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-10
-immagine: "../../assets/placeholder/blog-sicilia.jpg"
-immagineAlt: "Piatto di pesce siciliano su un tavolo affacciato sul mare"
+immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
 tags: ["Sicilia", "Montalbano", "itinerari", "cinema"]
 faq:
   - domanda: "Quali film sono stati girati in Sicilia?"

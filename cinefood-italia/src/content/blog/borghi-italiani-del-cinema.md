@@ -3,8 +3,8 @@ titolo: "8 borghi italiani da scoprire grazie al cinema"
 descrizione: "Da Savoca a Castellabate, i borghi più belli d'Italia diventati set cinematografici, con le loro specialità a tavola."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
-immagine: "../../assets/placeholder/blog-borghi.jpg"
-immagineAlt: "Vicolo di un borgo italiano al tramonto"
+immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagineAlt: "Vicolo in pietra di un borgo italiano, con vasi di piante sulle scale"
 tags: ["borghi", "itinerari", "cinema", "Italia"]
 faq:
   - domanda: "Quali borghi italiani sono famosi per il cinema?"

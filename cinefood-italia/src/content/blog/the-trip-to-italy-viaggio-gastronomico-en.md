@@ -3,8 +3,8 @@ titolo: "The Trip to Italy: a Cinematic Food Journey"
 descrizione: "Steve Coogan and Rob Brydon cross Italy eating in the finest restaurants, from Liguria to the Amalfi Coast."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-set-tavola.jpg"
-immagineAlt: "A table laid with dishes of Italian cuisine"
+immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagineAlt: "A table laid with dishes from the Italian tradition"
 tags: ["The Trip to Italy", "itineraries", "restaurants", "Italy", "film tourism"]
 faq:
   - domanda: "What is The Trip to Italy about?"

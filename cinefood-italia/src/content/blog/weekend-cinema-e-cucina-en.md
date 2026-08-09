@@ -3,8 +3,8 @@ titolo: "A Weekend of Cinema and Good Food in Italy"
 descrizione: "A practical guide for a two-day trip in the footsteps of Italian films, between locations, restaurants and local dishes."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-16
-immagine: "../../assets/placeholder/blog-weekend.jpg"
-immagineAlt: "Suitcase and map for a weekend in Italy"
+immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
 tags: ["guide", "itineraries", "weekend", "tips"]
 faq:
   - domanda: "How do you plan a film-tourism weekend in Italy?"

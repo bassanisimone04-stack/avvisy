@@ -3,8 +3,8 @@ titolo: "Il Postino a Salina: i luoghi del film"
 descrizione: "I luoghi de Il Postino a Salina, tra Pollara e il mare delle Eolie. Dove assaggiare pane cunzato, capperi e malvasia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
-immagine: "../../assets/placeholder/blog-sicilia.jpg"
-immagineAlt: "Costa dell'isola di Salina alle Eolie, come ne Il Postino"
+immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
 tags: ["Il Postino", "Salina", "Eolie", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Il Postino?"

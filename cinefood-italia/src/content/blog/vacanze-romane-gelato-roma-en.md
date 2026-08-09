@@ -3,8 +3,8 @@ titolo: "Roman Holiday: Audrey Hepburn's Gelato"
 descrizione: "The gelato on the Spanish Steps in Roman Holiday with Audrey Hepburn and the timeless Rome of the film. Where to try it."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26
-immagine: "../../assets/placeholder/blog-roma-cinema.jpg"
-immagineAlt: "The Spanish Steps in Rome, as in Roman Holiday"
+immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["Roman Holiday", "Rome", "Audrey Hepburn", "gelato", "film tourism"]
 faq:
   - domanda: "Where was the gelato scene in Roman Holiday filmed?"

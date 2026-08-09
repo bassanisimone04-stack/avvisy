@@ -3,8 +3,8 @@ titolo: "Ferrari the Film: Modena's Motors and Food"
 descrizione: "Michael Mann's Ferrari is set in Modena, capital of motors and taste: tortellini, balsamic vinegar and Emilian cuisine."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26
-immagine: "../../assets/placeholder/blog-scene.jpg"
-immagineAlt: "A plate of tortellini, the specialty of Modena"
+immagine: "../../assets/placeholder/blog-ristorante-elegante-vero.jpg"
+immagineAlt: "An elegant restaurant dining room, a cinematic atmosphere"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "where to eat", "film tourism"]
 faq:
   - domanda: "Where is the film Ferrari set?"

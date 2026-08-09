@@ -3,8 +3,8 @@ titolo: "Succession: The Real Tuscany of Villa La Foce"
 descrizione: "Where Succession was filmed in Tuscany: Villa La Foce, Villa Cetinale and the Val d'Orcia, with Dopolavoro La Foce, the estate's real restaurant."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-borghi.jpg"
-immagineAlt: "Val d'Orcia hills lined with cypress trees, like the Tuscany of Succession"
+immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
 tags: ["Succession", "Tuscany", "Val d'Orcia", "HBO", "film tourism"]
 faq:
   - domanda: "Where was Succession filmed in Tuscany?"

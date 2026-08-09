@@ -3,8 +3,8 @@ titolo: "Welcome to the South: Castellabate Locations"
 descrizione: "The Welcome to the South film locations in Castellabate: the little square, Le Gatte restaurant and Cilento flavours."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-20
-immagine: "../../assets/placeholder/blog-weekend.jpg"
-immagineAlt: "Seaside village of Cilento, like Castellabate"
+immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
 tags: ["Welcome to the South", "Castellabate", "Cilento", "where to eat", "film tourism"]
 faq:
   - domanda: "Where was Welcome to the South filmed?"

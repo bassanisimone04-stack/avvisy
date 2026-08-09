@@ -3,8 +3,8 @@ titolo: "Sicily on Screen, at the Table"
 descrizione: "From Montalbano to The Godfather: Sicily's film locations and what to put on the table, from arancini to granita."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-10
-immagine: "../../assets/placeholder/blog-sicilia.jpg"
-immagineAlt: "A plate of Sicilian fish on a table by the sea"
+immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
 tags: ["Sicily", "Montalbano", "itineraries", "cinema"]
 faq:
   - domanda: "Which films were shot in Sicily?"

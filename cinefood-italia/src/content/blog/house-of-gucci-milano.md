@@ -3,8 +3,8 @@ titolo: "House of Gucci: la Milano del film"
 descrizione: "La Milano di House of Gucci di Ridley Scott, tra la Galleria Vittorio Emanuele e i luoghi della moda. Dove mangiare in città."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-12
-immagine: "../../assets/placeholder/blog-nord.jpg"
-immagineAlt: "Galleria Vittorio Emanuele II a Milano"
+immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"
+immagineAlt: "Borgo sul lago del Nord Italia, tra montagne e riflessi sull'acqua"
 tags: ["House of Gucci", "Milano", "moda", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato House of Gucci?"

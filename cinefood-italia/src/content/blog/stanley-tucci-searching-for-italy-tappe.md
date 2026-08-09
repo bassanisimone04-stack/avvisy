@@ -3,8 +3,8 @@ titolo: "Stanley Tucci: Searching for Italy, le tappe"
 descrizione: "L'attore esplora la cucina italiana regione per regione: Napoli, Roma, Toscana, Sicilia e altre tappe da provare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-scene.jpg"
-immagineAlt: "Tavola con specialità regionali italiane"
+immagine: "../../assets/placeholder/blog-ristorante-elegante-vero.jpg"
+immagineAlt: "Sala di un ristorante elegante, atmosfera da film"
 tags: ["Stanley Tucci", "cucina italiana", "itinerari", "Italia", "cineturismo"]
 faq:
   - domanda: "Di cosa parla Stanley Tucci: Searching for Italy?"

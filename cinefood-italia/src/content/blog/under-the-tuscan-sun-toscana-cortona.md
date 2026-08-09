@@ -3,8 +3,8 @@ titolo: "Under the Tuscan Sun: la Toscana di Cortona"
 descrizione: "Il film Under the Tuscan Sun è ambientato a Cortona: colline, vino e cucina toscana, dalla bistecca ai vini rossi."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26
-immagine: "../../assets/placeholder/blog-set-tavola.jpg"
-immagineAlt: "Colline della Toscana con vigneti, come in Under the Tuscan Sun"
+immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["Under the Tuscan Sun", "Toscana", "Cortona", "vino", "cineturismo"]
 faq:
   - domanda: "Dove è ambientato Under the Tuscan Sun?"

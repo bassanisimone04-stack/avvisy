@@ -3,8 +3,8 @@ titolo: "Benvenuti al Sud: le location a Castellabate"
 descrizione: "I luoghi di Benvenuti al Sud a Castellabate: la piazzetta del film, il ristorante Le Gatte e i sapori del Cilento."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-20
-immagine: "../../assets/placeholder/blog-weekend.jpg"
-immagineAlt: "Borgo sul mare del Cilento, come Castellabate"
+immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
 tags: ["Benvenuti al Sud", "Castellabate", "Cilento", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Benvenuti al Sud?"

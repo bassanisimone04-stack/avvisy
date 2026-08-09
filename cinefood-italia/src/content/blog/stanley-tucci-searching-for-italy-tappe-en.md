@@ -3,8 +3,8 @@ titolo: "Stanley Tucci: Searching for Italy's Stops"
 descrizione: "The actor explores Italian cuisine region by region: Naples, Rome, Tuscany, Sicily and more stops to try."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-scene.jpg"
-immagineAlt: "A table with regional Italian specialties"
+immagine: "../../assets/placeholder/blog-ristorante-elegante-vero.jpg"
+immagineAlt: "An elegant restaurant dining room, a cinematic atmosphere"
 tags: ["Stanley Tucci", "Italian cuisine", "itineraries", "Italy", "film tourism"]
 faq:
   - domanda: "What is Stanley Tucci: Searching for Italy about?"

@@ -3,8 +3,8 @@ titolo: "Rome on Screen: 5 Film Restaurants"
 descrizione: "The Rome restaurants and cafés made famous by cinema: from The Great Beauty to Eat Pray Love, where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-11
-immagine: "../../assets/placeholder/blog-dolce-vita.jpg"
-immagineAlt: "A Roman alley with the tables of a trattoria"
+immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["Rome", "restaurants", "cinema", "itineraries", "film tourism"]
 faq:
   - domanda: "Which Rome restaurants have appeared in films?"
