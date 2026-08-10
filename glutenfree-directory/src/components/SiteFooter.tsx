@@ -56,6 +56,7 @@ export default function SiteFooter() {
             <h3 className="mb-3 text-sm font-semibold text-white">{t.footer.company}</h3>
             <ul className="space-y-2 text-sm text-white/60">
               <li><Link href={localeHref(locale, "/chi-siamo")} className="hover:text-white">{t.footer.about}</Link></li>
+              <li><Link href={localeHref(locale, "/prodotti")} className="hover:text-white">{t.nav.products}</Link></li>
               <li><Link href={localeHref(locale, "/faq")} className="hover:text-white">{t.footer.faq}</Link></li>
               <li><Link href={localeHref(locale, "/contatti")} className="hover:text-white">{t.footer.contact}</Link></li>
               <li><Link href={localeHref(locale, "/per-le-aziende")} className="hover:text-white">{t.footer.addBusiness}</Link></li>
