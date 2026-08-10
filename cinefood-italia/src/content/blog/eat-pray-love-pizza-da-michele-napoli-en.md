@@ -86,4 +86,7 @@ the film's scene, remains only one: Via Cesare Sersale, Naples.
 If you loved the pizza scene in *Eat Pray Love*, sitting down (after the
 queue) at **[Michele](/en/locale/pizzeria-da-michele-napoli)** is a must: it
 is the most authentic way to taste the Naples of the film, one margherita at
-a time, in the same place run by the same family for over 150 years.
+a time, in the same place run by the same family for over 150 years. Stay on
+theme with **[My Brilliant Friend](/en/blog/amica-geniale-napoli-scottojonno)**
+and **[The Hand of God](/en/blog/mano-di-dio-napoli-villa-giusso)**, two more
+Naples stories filmed in real locations across the city.

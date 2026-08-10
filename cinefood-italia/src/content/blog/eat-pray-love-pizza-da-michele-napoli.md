@@ -87,4 +87,7 @@ film, resta una sola: via Cesare Sersale, Napoli.
 Se hai amato la scena della pizza di *Eat Pray Love*, sederti (dopo la fila) da
 **[Michele](/locale/pizzeria-da-michele-napoli)** è d'obbligo: è il modo più
 autentico per assaggiare la Napoli del film, una margherita alla volta, nello
-stesso locale gestito dalla stessa famiglia da oltre 150 anni.
+stesso locale gestito dalla stessa famiglia da oltre 150 anni. Resta in tema
+con **[L'amica geniale](/blog/amica-geniale-napoli-scottojonno)** e
+**[È stata la mano di Dio](/blog/mano-di-dio-napoli-villa-giusso)**, altri due
+racconti di Napoli girati tra vere location della città.
