@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { BUSINESSES } from "@/lib/mock-businesses";
 import { ARTICLES } from "@/lib/mock-articles";
+import { PRODUCTS, PRODUCT_CATEGORIES } from "@/lib/mock-products";
 import { CATEGORIES } from "@/lib/categories";
 import { AUTHORS } from "@/lib/authors";
 import { SITE_URL } from "@/lib/site-config";
@@ -40,6 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/directory?categoria=${c.slug}`, { changeFrequency: "weekly", priority: 0.6 }),
   );
 
+  const productCategoryPages: MetadataRoute.Sitemap = PRODUCT_CATEGORIES.map((c) =>
+    entry(`/prodotti?categoria=${encodeURIComponent(c)}`, { changeFrequency: "weekly", priority: 0.5 }),
+  );
+
+  const productPages: MetadataRoute.Sitemap = PRODUCTS.map((p) =>
+    entry(`/prodotti/${p.slug}`, { changeFrequency: "monthly", priority: 0.6 }),
+  );
+
   const businessPages: MetadataRoute.Sitemap = BUSINESSES.map((b) =>
     entry(`/directory/${b.slug}`, { changeFrequency: "weekly", priority: 0.7, lastModified: b.createdAt }),
   );
@@ -52,5 +61,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/blog/autore/${a.slug}`, { changeFrequency: "monthly", priority: 0.4 }),
   );
 
-  return [...staticPages, ...categoryPages, ...businessPages, ...articlePages, ...authorPages];
+  return [...staticPages, ...categoryPages, ...productCategoryPages, ...productPages, ...businessPages, ...articlePages, ...authorPages];
 }
