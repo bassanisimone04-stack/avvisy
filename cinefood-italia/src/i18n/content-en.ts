@@ -169,6 +169,24 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Can you eat at one of Succession's real locations?", risposta: "Yes: Dopolavoro La Foce, the restaurant on the Villa La Foce estate, is open to the public near Pienza." },
     ],
   },
+  "l-amica-geniale": {
+    titolo: "My Brilliant Friend",
+    sinossi:
+      "The HBO/Rai series based on Elena Ferrante's novels, set in 1950s Naples. The neighbourhood is a built set, but many scenes are filmed in real locations across the city, including the historic Galleria Principe di Napoli.",
+    faq: [
+      { domanda: "Is My Brilliant Friend really filmed in Naples?", risposta: "Partly: the Rione Luzzatti where Lila and Elena live is actually a set built in Marcianise, near Caserta. Many other scenes, though, are shot in real Naples locations: the Galleria Principe di Napoli, the Caracciolo seafront, Piazza dei Martiri, the Teatro San Carlo." },
+      { domanda: "What real venue appears in the show?", risposta: "Season 4 features ScottoJonno, a real café-bistrot inside the Galleria Principe di Napoli, reopened in 2023 in a 19th-century former café-chantant." },
+    ],
+  },
+  "e-stata-la-mano-di-dio": {
+    titolo: "The Hand of God",
+    sinossi:
+      "Paolo Sorrentino's Netflix film, Silver Lion winner in Venice and Oscar nominee, tells the story of his native Naples. Filmed in real city locations, including the Vomero district and Villa Giusso, on the Sorrentine Peninsula.",
+    faq: [
+      { domanda: "Was The Hand of God really filmed in Naples?", risposta: "Yes: among the real locations, the Schisa family home is filmed on Via San Domenico, in the Vomero district, one floor from Sorrentino's real childhood home. Piazza del Plebiscito and the Galleria Umberto I also appear." },
+      { domanda: "Where was the family lunch scene filmed?", risposta: "At Villa Giusso, an agriturismo set in a 17th-century former monastery in Vico Equense, on the Sorrentine Peninsula, overlooking the Gulf of Naples." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -249,6 +267,14 @@ export const restaurantsEn: Record<string, RestEn> = {
   "dopolavoro-la-foce": {
     descrizione: "A restaurant on the historic Villa La Foce estate, in the Val d'Orcia: built in 1939 as a recreational club for the estate's workers, it now serves Tuscan cuisine grown in the villa's own gardens, minutes from Pienza and Montepulciano.",
     scena: { "succession": "The restaurant on the Villa La Foce estate, where the Roy family stays in season 3 of Succession, filmed in the Val d'Orcia." },
+  },
+  "scottojonno-napoli": {
+    descrizione: "A café-bistrot inside the elegant Galleria Principe di Napoli, opposite the National Archaeological Museum. Born as a 19th-century café-chantant, reopened in 2023 by entrepreneur Luca Iannuzzi with cooking by chef Marco Ambrosino.",
+    scena: { "l-amica-geniale": "In the historic Galleria Principe di Napoli, where ScottoJonno, a real café-bistrot reopened in 2023 in a 19th-century former café-chantant, appears in season 4 of the show." },
+  },
+  "villa-giusso-vico-equense": {
+    descrizione: "An agriturismo set in a 17th-century former monastery on the hills above Vico Equense, on the Sorrentine Peninsula, overlooking the Gulf of Naples. Traditional Sorrentine cuisine using produce from the estate.",
+    scena: { "e-stata-la-mano-di-dio": "In the 17th-century former monastery overlooking the Gulf of Naples, where Paolo Sorrentino filmed the family lunch scene." },
   },
 };
 
