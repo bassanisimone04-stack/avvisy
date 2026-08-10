@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   Phone, Globe, Instagram, Facebook, MapPin, Clock, BadgeCheck, Heart,
-  Truck, ShoppingBag, ExternalLink, UtensilsCrossed,
+  Truck, ShoppingBag, ExternalLink, UtensilsCrossed, CalendarCheck,
 } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PlaceholderImage from "@/components/PlaceholderImage";
@@ -18,6 +18,7 @@ import { getLocalizedBusiness } from "@/lib/i18n/content-business";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
+import { formatDate } from "@/lib/format";
 import { JsonLd, faqJsonLd, localBusinessJsonLd } from "@/lib/seo";
 
 export default function BusinessDetailContent({ locale, slug }: { locale: Locale; slug: string }) {
@@ -152,6 +153,9 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
                 {business.facebook && <a href={business.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-ink-soft hover:text-brand-dark"><Facebook size={18} /></a>}
               </li>
             </ul>
+            <p className="mt-4 flex items-center gap-1.5 border-t border-line pt-3 text-xs text-muted">
+              <CalendarCheck size={13} className="shrink-0 text-brand" /> {t.business.verifiedOn} {formatDate(business.createdAt, locale)}
+            </p>
           </div>
 
           <div className="card card-soft p-5">
