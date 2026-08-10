@@ -92,7 +92,7 @@ export const SITE = {
    */
   guida: {
     checkoutUrl: "https://payhip.com/b/j0UNR",
-    prezzo: "5,99 €",
+    prezzo: "$9.97",
   },
 } as const;
 
