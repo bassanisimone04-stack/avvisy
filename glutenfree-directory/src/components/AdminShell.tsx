@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, Store, Newspaper, Users, Star, Tags, Image as ImageIcon,
-  Mail, BarChart3, Search, ArrowLeftCircle,
+  BarChart3, Search, ArrowLeftCircle,
 } from "lucide-react";
 import Logo from "./Logo";
 
@@ -16,7 +16,6 @@ const NAV = [
   { href: "/admin/recensioni", label: "Recensioni", icon: Star },
   { href: "/admin/categorie", label: "Categorie", icon: Tags },
   { href: "/admin/banner", label: "Banner", icon: ImageIcon },
-  { href: "/admin/newsletter", label: "Newsletter", icon: Mail },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/admin/seo", label: "SEO Dashboard", icon: Search },
 ];

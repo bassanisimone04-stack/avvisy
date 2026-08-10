@@ -5,7 +5,6 @@ import CategoryIcon from "@/components/CategoryIcon";
 import BusinessCard from "@/components/BusinessCard";
 import ArticleCard from "@/components/ArticleCard";
 import FaqAccordion from "@/components/FaqAccordion";
-import NewsletterForm from "@/components/NewsletterForm";
 import MapSection from "@/components/MapSection";
 import HeroPhotoCollage from "@/components/HeroPhotoCollage";
 import Reveal from "@/components/Reveal";
@@ -205,17 +204,6 @@ export default function HomeContent({ locale }: { locale: Locale }) {
         <div className="mx-auto max-w-3xl">
           <FaqAccordion items={faqs} />
         </div>
-      </section>
-
-      {/* NEWSLETTER */}
-      <section className="container-page pb-20">
-        <Reveal>
-          <div className="card card-soft flex flex-col items-center gap-5 bg-brand-solid px-6 py-12 text-center text-white sm:px-16">
-            <h2 className="font-editorial text-2xl font-semibold sm:text-3xl">{t.home.newsletterTitle}</h2>
-            <p className="max-w-xl text-white/85">{t.home.newsletterBody}</p>
-            <NewsletterForm dark />
-          </div>
-        </Reveal>
       </section>
     </>
   );

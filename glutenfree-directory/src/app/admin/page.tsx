@@ -14,7 +14,6 @@ const RECENT_ACTIVITY = [
   { text: "Nuova attività in attesa di verifica: 'Panificio Verde' — Bari", time: "2 ore fa" },
   { text: "Recensione segnalata su 'Pizzeria Vesuvio Gluten Free'", time: "5 ore fa" },
   { text: "Articolo pubblicato: 'Novità normative 2026'", time: "1 giorno fa" },
-  { text: "Nuova iscrizione newsletter: +142 contatti questa settimana", time: "2 giorni fa" },
 ];
 
 export default function AdminDashboard() {

@@ -174,7 +174,7 @@ const seeds: Seed[] = [
       "Ogni anno diverse città italiane ospitano fiere food senza glutine con degustazioni e workshop aperti al pubblico.",
       "Le sedi regionali AIC organizzano incontri gratuiti su diagnosi e novità normative per i neo-diagnosticati.",
       "Le community di celiaci organizzano sempre più cene sociali presso locali certificati.",
-      "La newsletter di Mappa Senza Glutine e i canali social locali sono il modo più semplice per restare aggiornati.",
+      "Il blog di Mappa Senza Glutine e i canali social delle associazioni locali sono il modo più semplice per restare aggiornati.",
     ],
     sections: [
       { h2: "Le fiere nazionali", body: "Ogni anno diverse città italiane ospitano fiere dedicate al food senza glutine, con degustazioni, workshop e incontri con nutrizionisti aperti al pubblico." },
@@ -182,7 +182,7 @@ const seeds: Seed[] = [
       { h2: "Eventi social e community online", body: "Sempre più community di celiaci organizzano cene sociali e raduni presso locali certificati, un modo semplice per scoprire nuove attività affidabili nella propria zona." },
     ],
     faqs: [
-      { question: "Come restare aggiornati sugli eventi in programma?", answer: "Iscrivendosi alla newsletter di Mappa Senza Glutine o seguendo i canali social delle associazioni locali si ricevono aggiornamenti periodici sugli eventi in calendario." },
+      { question: "Come restare aggiornati sugli eventi in programma?", answer: "Seguendo il blog di Mappa Senza Glutine e i canali social delle associazioni locali si ricevono aggiornamenti periodici sugli eventi in calendario." },
     ],
   },
   {

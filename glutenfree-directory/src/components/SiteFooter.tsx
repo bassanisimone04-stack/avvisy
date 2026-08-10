@@ -9,7 +9,6 @@ import { slugify } from "@/lib/format";
 import { SITE_NAME } from "@/lib/site-config";
 import { useDictionary } from "@/lib/i18n/useLocale";
 import { localeHref } from "@/lib/i18n/locale";
-import NewsletterForm from "./NewsletterForm";
 
 export default function SiteFooter() {
   const pathname = usePathname();
@@ -19,7 +18,7 @@ export default function SiteFooter() {
   return (
     <footer className="section-dark mt-16">
       <div className="container-page py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.2fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
             <Link href={localeHref(locale, "/")} className="flex items-center gap-2">
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-solid text-white">
@@ -64,12 +63,6 @@ export default function SiteFooter() {
               <li><Link href={localeHref(locale, "/cookie")} className="hover:text-white">{t.footer.cookie}</Link></li>
               <li><Link href={localeHref(locale, "/termini")} className="hover:text-white">{t.footer.terms}</Link></li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-white">{t.footer.newsletter}</h3>
-            <p className="mb-3 text-sm text-white/60">{t.footer.newsletterBlurb}</p>
-            <NewsletterForm dark />
           </div>
         </div>
 

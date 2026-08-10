@@ -162,7 +162,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       "Several Italian cities host gluten-free food fairs every year, with tastings and workshops open to the public.",
       "AIC's regional offices run free meetings on diagnosis and regulatory news for the newly diagnosed.",
       "Celiac communities are increasingly organizing social dinners at certified venues.",
-      "The Mappa Senza Glutine newsletter and local social channels are the easiest way to stay updated.",
+      "The Mappa Senza Glutine blog and local associations' social channels are the easiest way to stay updated.",
     ],
     sections: [
       { h2: "National trade fairs", body: "Every year several Italian cities host gluten-free food fairs, with tastings, workshops and meetings with nutritionists open to the public." },
@@ -170,7 +170,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { h2: "Social events and online communities", body: "More and more celiac communities are organizing social dinners and meetups at certified venues, an easy way to discover new trustworthy businesses in your area." },
     ],
     faqs: [
-      { question: "How can I stay updated on upcoming events?", answer: "Subscribing to the Mappa Senza Glutine newsletter or following local associations' social channels gets you regular updates on scheduled events." },
+      { question: "How can I stay updated on upcoming events?", answer: "Following the Mappa Senza Glutine blog and local associations' social channels gets you regular updates on scheduled events." },
     ],
     tags: ["events", "trade fairs", "community"],
   },
