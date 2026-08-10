@@ -693,6 +693,82 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["breakfast", "bakeries", "cross-contamination", "cafés"],
   },
+  "art-25": {
+    title: "Gluten-Free Pesto Pasta: The Fusilli Recipe in 15 Minutes",
+    excerpt: "The ultimate quick dish, gluten-free: corn fusilli or eliche, basil pesto or organic pesto, ready in a quarter of an hour.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Gluten-free corn fusilli or eliche cook in 8-11 minutes: taste them a minute before the time on the package.",
+      "Diluting the pesto with a ladle of pasta water makes the sauce creamier and easier to coat the pasta with.",
+      "Barilla's basil pesto contains Parmigiano Reggiano PDO; if you want an AIC-certified option, choose Sarchio's organic pesto instead.",
+      "Watch for cross-contamination: drain gluten-free pasta with a dedicated colander, never the one used for wheat pasta.",
+    ],
+    sections: [
+      { h2: "Ingredients for 2 people", body: "160 g of <a href=\"/en/prodotti/barilla-fusilli-senza-glutine-400g\">Barilla gluten-free fusilli</a> (or <a href=\"/en/prodotti/le-veneziane-eliche-di-mais-250g\">Le Veneziane corn eliche</a>), 1 jar of <a href=\"/en/prodotti/barilla-pesto-alla-genovese-190g\">Barilla basil pesto</a> or <a href=\"/en/prodotti/sarchio-pesto-bio-130g\">Sarchio organic pesto</a> if you want an AIC-certified option, a ladle of pasta water, pine nuts and fresh basil to garnish (optional)." },
+      { h2: "Method", body: "Bring plenty of salted water to a boil in a pot dedicated to gluten-free cooking. Add the pasta and cook following the package time, tasting it a minute before it's due: corn and rice pasta tends to overcook faster than wheat pasta.", h3: [
+        { title: "The creamy trick", body: "Before draining, scoop out a ladle of starchy pasta water: it helps bind the pesto to the pasta without needing too much of it, for a creamier, less dry result." },
+        { title: "Watch for cross-contamination", body: "If wheat pasta is also cooked at home, use a pot, colander and wooden spoon dedicated exclusively to gluten-free prep, to avoid even minimal contamination." },
+      ] },
+      { h2: "The finishing touch", body: "Drain the pasta al dente, pour it into a large bowl with the chosen pesto and a spoonful of pasta water, stir well off the heat so the basil doesn't lose its aroma. Finish with toasted pine nuts and a few fresh basil leaves." },
+    ],
+    faqs: [
+      { question: "Can I use rice pasta instead of corn?", answer: "Yes, any gluten-free pasta shape works: only the cooking time changes, always shown on the package." },
+      { question: "Does Barilla's basil pesto contain gluten?", answer: "No, it's gluten-free, but it doesn't carry the AIC (Crossed Grain) certification: if you're looking for that, Sarchio's organic pesto has it." },
+      { question: "How do I store leftover pesto?", answer: "In the fridge, tightly closed, for just a few days: always check the storage instructions on the label." },
+    ],
+    tags: ["recipes", "pasta", "pesto", "first courses"],
+  },
+  "art-26": {
+    title: "Gluten-Free Breakfast: 6 Quick Ideas with Bread, Crisp Slices and Biscuits",
+    excerpt: "Sweet or savory, ready in a few minutes: the simplest combinations for a varied gluten-free breakfast all week long.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Alternating sliced bread, crisp slices and biscuits helps vary a gluten-free breakfast throughout the week.",
+      "Savory versions (avocado, cheese) are a protein-rich alternative to sweet ones with jam or chocolate.",
+      "Single-serve products (crackers, biscuits) are handy to take out of the house, to school or to work.",
+      "Always checking the AIC certification on the label remains the rule, even for a quick breakfast.",
+    ],
+    sections: [
+      { h2: "Sweet breakfast with rustic bread", body: "Toast two slices of <a href=\"/en/prodotti/schar-pane-casereccio-240g\">Schär rustic bread</a> and spread them with jam or honey: the soft crumb and rustic buckwheat flavor hold up well to toasting." },
+      { h2: "Savory toast with Panfette", body: "<a href=\"/en/prodotti/nutrifree-panfette-pane-casereccio-300g\">Nutrifree Panfette</a>, already portioned, are perfect for a quick toast with mashed avocado, a drizzle of oil and a pinch of salt, or with fresh cheese and cherry tomatoes if you prefer." },
+      { h2: "Crisp slices with jam or honey", body: "<a href=\"/en/prodotti/cereal-fette-croccanti-150g\">Céréal crisp slices</a> don't need a toaster: they're ready to eat, crunchy, ideal to spread on the go or nibble on their own.", h3: [
+        { title: "Savory version", body: "The same crisp slices also pair well with cream cheese or hummus, for those who prefer to start the day without something sweet." },
+      ] },
+      { h2: "Crackers for when you're in a rush", body: "<a href=\"/en/prodotti/schar-crackers-210g\">Schär crackers</a>, already split into 35g single-serve packs, are handy to carry in a bag: pair them with cream cheese or nuts." },
+      { h2: "The ready-made sweet option: biscuits or a bar", body: "On busy days, <a href=\"/en/prodotti/cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g\">Céréal Buoni Senza chocolate chip biscuits</a> or a <a href=\"/en/prodotti/schar-chocolix-110g\">Schär Chocolix</a> bar are ready to eat with no prep, still certified gluten-free." },
+    ],
+    faqs: [
+      { question: "Is a sweet or savory breakfast better?", answer: "There's no rule: a savory breakfast with avocado or cheese gives more protein satiety, a sweet one is more traditional. The key is to vary it during the week." },
+      { question: "Are these products also suitable for celiac children?", answer: "They're generic products with no age indications: always check the label and quantities with your pediatrician or nutritionist." },
+      { question: "Can I freeze the rustic bread or the Panfette?", answer: "Many gluten-free breads freeze well already sliced: check the specific storage instructions on the package from the manufacturer." },
+    ],
+    tags: ["recipes", "breakfast"],
+  },
+  "art-27": {
+    title: "Easy Gluten-Free Cake: The Base Recipe with Ready-Made Cake Mix",
+    excerpt: "The go-to cake for when you're short on time: few ingredients, a ready-made flour mix, and a soft, reliable result.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "A flour mix made specifically for cakes gives more reliable results than a homemade mix for those new to gluten-free baking.",
+      "The base ratios (mix, eggs, sugar, oil, baking powder) stay the same as a traditional cake: only the flour changes.",
+      "A conventional oven at 175-180°C for 35-40 minutes is the safest starting point: the toothpick test remains the definitive check.",
+      "Schär's all-purpose mix also works for this cake, with a slightly different texture compared to a mix made specifically for cakes.",
+    ],
+    sections: [
+      { h2: "Ingredients for a 22 cm cake", body: "300 g of <a href=\"/en/prodotti/nutrifree-mix-per-dolci-1kg\">Nutrifree cake flour mix</a> (or, alternatively, <a href=\"/en/prodotti/schar-mix-it-universale-1kg\">Schär Mix It! all-purpose mix</a>), 3 eggs, 150 g sugar, 100 ml seed oil or melted butter, 150 ml milk (or plant-based drink), one sachet of gluten-free baking powder, the zest of one lemon." },
+      { h2: "Method", body: "Preheat a conventional oven to 175-180°C. Beat the eggs with the sugar until pale and fluffy, then fold in the oil in a thin stream while continuing to mix.", h3: [
+        { title: "Adding the dry ingredients", body: "Sift the flour mix with the baking powder and fold it into the egg mixture, alternating with the milk a little at a time to avoid lumps. Finally add the lemon zest." },
+        { title: "Baking and the toothpick test", body: "Pour the batter into a buttered and floured pan (using the same mix) and bake for 35-40 minutes. Check doneness by inserting a toothpick in the center: if it comes out dry, the cake is ready." },
+      ] },
+      { h2: "Variations", body: "For a chocolate version, replace 30 g of the mix with the same amount of unsweetened cocoa; for a more rustic cake, add diced apples or dark chocolate chips to the batter before baking." },
+    ],
+    faqs: [
+      { question: "Can I use loose flours instead of the ready-made mix?", answer: "Yes, but a mix made specifically for cakes already has the starch-to-flour ratios balanced for rising: for beginners it's the safest way to get a soft result." },
+      { question: "Does the cake come out drier than a traditional one?", answer: "If you follow the times and temperatures, the result is comparable: gluten-free flours tend to dry out a bit faster, so keep it well covered." },
+      { question: "Is Nutrifree's cake flour mix AIC-certified?", answer: "Yes, like all Nutrifree products it carries the Crossed Grain trademark from the Italian Celiac Association." },
+    ],
+    tags: ["recipes", "desserts", "cakes", "flours"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {

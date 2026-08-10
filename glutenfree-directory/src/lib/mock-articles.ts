@@ -722,6 +722,85 @@ const seeds: Seed[] = [
       { question: "Cosa porto con me se non trovo un bar sicuro in viaggio?", answer: "Prodotti da forno confezionati senza glutine con marchio certificato, facili da trasportare come riserva." },
     ],
   },
+  {
+    title: "Pasta al pesto senza glutine: la ricetta con i fusilli in 15 minuti",
+    category: "Ricette",
+    excerpt: "Il piatto veloce per eccellenza, senza glutine: fusilli o eliche di mais, pesto alla genovese o pesto bio, pronto in un quarto d'ora.",
+    coverSeed: 130, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
+    tags: ["ricette", "pasta", "pesto", "primi piatti"],
+    keyTakeaways: [
+      "I fusilli o le eliche di mais senza glutine cuociono in 8-11 minuti: assaggiare sempre un minuto prima del tempo indicato in confezione.",
+      "Diluire il pesto con un mestolo di acqua di cottura rende il condimento più cremoso e aiuta ad amalgamarlo alla pasta.",
+      "Il pesto alla genovese Barilla contiene Parmigiano Reggiano DOP; chi cerca un'opzione certificata AIC può scegliere il pesto bio Sarchio.",
+      "Attenzione alla contaminazione crociata: scolare la pasta senza glutine con un colino dedicato, mai lo stesso usato per pasta di grano.",
+    ],
+    sections: [
+      { h2: "Ingredienti per 2 persone", body: "160 g di <a href=\"/prodotti/barilla-fusilli-senza-glutine-400g\">fusilli senza glutine Barilla</a> (o le <a href=\"/prodotti/le-veneziane-eliche-di-mais-250g\">eliche di mais Le Veneziane</a>), 1 vasetto di <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a> oppure di <a href=\"/prodotti/sarchio-pesto-bio-130g\">pesto bio Sarchio</a> se preferisci un'opzione certificata AIC, un mestolo dell'acqua di cottura, pinoli e basilico fresco per guarnire (facoltativi)." },
+      { h2: "Procedimento", body: "Porta a bollore abbondante acqua salata in una pentola dedicata alla cottura senza glutine. Versa la pasta e cuoci seguendo i tempi in confezione, assaggiando un minuto prima della scadenza indicata: la pasta di mais e riso tende a scuocere più in fretta di quella di grano.", h3: [
+        { title: "Il trucco della crema", body: "Prima di scolare, preleva un mestolo di acqua di cottura amidacea: aiuta a legare il pesto alla pasta senza doverne usare troppo, per un risultato più cremoso e meno asciutto." },
+        { title: "Attenzione alla contaminazione crociata", body: "Se in casa si cucina anche pasta di grano, usa una pentola, un colino e un cucchiaio di legno dedicati esclusivamente alla preparazione senza glutine, per evitare contaminazioni anche minime." },
+      ] },
+      { h2: "Il tocco finale", body: "Scola la pasta al dente, versala in una ciotola capiente insieme al pesto scelto e a un cucchiaio di acqua di cottura, mescola bene fuori dal fuoco per non far perdere aroma al basilico. Completa con pinoli tostati e qualche foglia di basilico fresco." },
+    ],
+    faqs: [
+      { question: "Posso usare la pasta di riso invece del mais?", answer: "Sì, qualsiasi formato di pasta senza glutine funziona: cambiano solo i tempi di cottura, sempre indicati in confezione." },
+      { question: "Il pesto alla genovese Barilla contiene glutine?", answer: "No, è senza glutine, ma non porta la certificazione AIC (Spiga Barrata): se la cerchi, il pesto bio Sarchio ce l'ha." },
+      { question: "Come conservo il pesto avanzato?", answer: "In frigorifero, ben chiuso, per pochi giorni: verifica sempre le indicazioni di conservazione riportate in etichetta dal produttore." },
+    ],
+  },
+  {
+    title: "Colazione senza glutine: 6 idee veloci con pane, fette e biscotti",
+    category: "Ricette",
+    excerpt: "Dolce o salata, pronta in pochi minuti: le combinazioni più semplici per una colazione senza glutine varia tutta la settimana.",
+    coverSeed: 131, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
+    tags: ["ricette", "colazione", "prima colazione"],
+    keyTakeaways: [
+      "Alternare pane a fette, fette croccanti e biscotti aiuta a variare la colazione senza glutine durante la settimana.",
+      "Le versioni salate (avocado, formaggio) sono un'alternativa proteica a quelle dolci con marmellata o cioccolato.",
+      "I prodotti in monoporzione (crackers, biscotti) sono comodi da portare fuori casa, a scuola o al lavoro.",
+      "Controllare sempre la certificazione AIC in etichetta resta la regola, anche per una colazione veloce.",
+    ],
+    sections: [
+      { h2: "Colazione dolce con pane casereccio", body: "Tosta due fette di <a href=\"/prodotti/schar-pane-casereccio-240g\">pane casereccio Schär</a> e spalmale con marmellata o miele: la mollica morbida e il gusto rustico del grano saraceno reggono bene la tostatura." },
+      { h2: "Toast salato con le panfette", body: "Le <a href=\"/prodotti/nutrifree-panfette-pane-casereccio-300g\">panfette Nutrifree</a>, già porzionate, sono perfette per un toast veloce con avocado schiacciato, un filo d'olio e un pizzico di sale, o con formaggio fresco e pomodorini per chi preferisce." },
+      { h2: "Fette croccanti con marmellata o miele", body: "Le <a href=\"/prodotti/cereal-fette-croccanti-150g\">fette croccanti Céréal</a> non richiedono il tostapane: sono già pronte, croccanti, ideali da spalmare al volo o da sgranocchiare da sole.", h3: [
+        { title: "Versione salata", body: "Le stesse fette croccanti si abbinano bene anche a formaggio spalmabile o hummus, per chi preferisce iniziare la giornata senza dolce." },
+      ] },
+      { h2: "Crackers per chi va di corsa", body: "I <a href=\"/prodotti/schar-crackers-210g\">crackers Schär</a>, già divisi in monoporzioni da 35g, sono comodi da portare in borsa: abbinali a un formaggio spalmabile o a della frutta secca." },
+      { h2: "L'opzione dolce pronta: biscotti o barretta", body: "Nei giorni di fretta, i <a href=\"/prodotti/cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g\">biscotti Buoni Senza Céréal</a> con gocce di cioccolato o la barretta <a href=\"/prodotti/schar-chocolix-110g\">Chocolix Schär</a> sono pronti da mangiare senza preparazione, comunque certificati senza glutine." },
+    ],
+    faqs: [
+      { question: "Meglio la colazione dolce o salata?", answer: "Non c'è una regola: la colazione salata con avocado o formaggio dà più sazietà proteica, quella dolce è più tradizionale. L'importante è variare durante la settimana." },
+      { question: "Questi prodotti sono adatti anche ai bambini celiaci?", answer: "Sono prodotti generici senza indicazioni di età: verifica sempre etichetta e quantità con il pediatra o il nutrizionista di riferimento." },
+      { question: "Posso congelare il pane casereccio o le panfette?", answer: "Molti pani senza glutine si congelano bene già a fette: verifica le indicazioni di conservazione riportate in confezione dal produttore." },
+    ],
+  },
+  {
+    title: "Torta senza glutine facile: la ricetta base con il mix per dolci",
+    category: "Ricette",
+    excerpt: "La torta \"salva-cena\" per chi ha poco tempo: pochi ingredienti, il mix di farine già pronto e un risultato soffice e sicuro.",
+    coverSeed: 132, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
+    tags: ["ricette", "dolci", "torte", "farine"],
+    keyTakeaways: [
+      "Un mix di farine specifico per dolci dà risultati più affidabili di un mix fai-da-te per chi inizia a cucinare senza glutine.",
+      "Le proporzioni base (mix, uova, zucchero, olio, lievito) restano quelle di una torta tradizionale: cambia solo la farina.",
+      "Il forno statico a 175-180°C con cottura di 35-40 minuti è il punto di partenza più sicuro: la prova stecchino resta il test definitivo.",
+      "Il mix universale Schär funziona anche per questa torta, con una consistenza leggermente diversa rispetto al mix specifico per dolci.",
+    ],
+    sections: [
+      { h2: "Ingredienti per una torta da 22 cm", body: "300 g di <a href=\"/prodotti/nutrifree-mix-per-dolci-1kg\">mix per dolci Nutrifree</a> (o, in alternativa, <a href=\"/prodotti/schar-mix-it-universale-1kg\">Mix It! Universale Schär</a>), 3 uova, 150 g di zucchero, 100 ml di olio di semi o burro fuso, 150 ml di latte (o bevanda vegetale), una bustina di lievito per dolci senza glutine, la scorza di un limone." },
+      { h2: "Procedimento", body: "Accendi il forno statico a 175-180°C. Monta le uova con lo zucchero fino a ottenere un composto chiaro e spumoso, poi incorpora l'olio a filo continuando a mescolare.", h3: [
+        { title: "Unire gli ingredienti secchi", body: "Setaccia il mix di farine con il lievito e incorporalo al composto di uova alternandolo al latte, un po' alla volta, per evitare grumi. Aggiungi infine la scorza di limone." },
+        { title: "Cottura e prova stecchino", body: "Versa l'impasto in uno stampo imburrato e infarinato (con lo stesso mix) e cuoci per 35-40 minuti. Verifica la cottura infilando uno stecchino al centro: se esce asciutto, la torta è pronta." },
+      ] },
+      { h2: "Varianti", body: "Per una versione al cioccolato, sostituisci 30 g di mix con altrettanto cacao amaro; per una torta più rustica, aggiungi mele a cubetti o gocce di cioccolato fondente all'impasto prima di infornare." },
+    ],
+    faqs: [
+      { question: "Posso usare farine sciolte al posto del mix già pronto?", answer: "Sì, ma un mix specifico per dolci ha già le proporzioni tra amidi e farine bilanciate per la lievitazione: per chi inizia è il modo più sicuro per ottenere un risultato soffice." },
+      { question: "La torta viene più asciutta di una tradizionale?", answer: "Se rispetti tempi e temperature indicati, il risultato è paragonabile: le farine senza glutine tendono ad asciugare un po' più in fretta, quindi conservala ben coperta." },
+      { question: "Il mix per dolci Nutrifree è certificato AIC?", answer: "Sì, come tutti i prodotti Nutrifree porta il marchio Spiga Barrata dell'Associazione Italiana Celiachia." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {

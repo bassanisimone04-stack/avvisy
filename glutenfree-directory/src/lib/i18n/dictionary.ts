@@ -173,6 +173,7 @@ export const dictionary = {
       all: "Tutti",
       whereToBuy: "Dove trovarlo",
       similarTitle: "Prodotti simili",
+      recipesTitle: "Ricette con questo prodotto",
     },
     map: {
       caption: "{n} attività in evidenza sulla mappa",
@@ -352,6 +353,7 @@ export const dictionary = {
       all: "All",
       whereToBuy: "Where to buy",
       similarTitle: "Similar products",
+      recipesTitle: "Recipes with this product",
     },
     map: {
       caption: "{n} featured businesses on the map",
