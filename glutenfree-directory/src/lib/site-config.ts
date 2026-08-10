@@ -6,3 +6,15 @@ export const SITE_DESCRIPTION_EN =
   "Italy's map of gluten-free venues: find certified restaurants, pizzerias, hotels, shops and pharmacies near you, read guides on celiac disease and nutrition.";
 export const SITE_LOCALE = "it_IT";
 export const TWITTER_HANDLE = "@mappasenzagluti";
+
+/**
+ * Prodotto digitale: "La Guida Mappa Senza Glutine" (PDF a pagamento).
+ * Carica il PDF su Payhip (payhip.com) o Gumroad (gumroad.com) — gratis,
+ * gestiscono loro pagamento e download automatico — e incolla qui il link
+ * della pagina prodotto/checkout. Finché è vuoto "", il bottone "Acquista"
+ * nella pagina /guida non compare (nessun link rotto).
+ */
+export const GUIDE = {
+  checkoutUrl: "",
+  price: "€6,99",
+};

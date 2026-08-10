@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/directory", { changeFrequency: "daily", priority: 0.9 }),
     entry("/blog", { changeFrequency: "daily", priority: 0.8 }),
     entry("/faq", { changeFrequency: "monthly", priority: 0.7 }),
+    entry("/guida", { changeFrequency: "weekly", priority: 0.6 }),
     entry("/chi-siamo", { changeFrequency: "monthly", priority: 0.3 }),
     entry("/contatti", { changeFrequency: "monthly", priority: 0.3 }),
     entry("/per-le-aziende", { changeFrequency: "monthly", priority: 0.4 }),

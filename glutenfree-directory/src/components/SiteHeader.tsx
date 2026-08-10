@@ -23,6 +23,7 @@ export default function SiteHeader() {
     { href: localeHref(locale, "/directory"), label: t.nav.directory },
     { href: localeHref(locale, "/blog"), label: t.nav.blog },
     { href: localeHref(locale, "/faq"), label: t.nav.faq },
+    { href: localeHref(locale, "/guida"), label: t.nav.guide },
     { href: localeHref(locale, "/chi-siamo"), label: t.nav.about },
   ];
 
