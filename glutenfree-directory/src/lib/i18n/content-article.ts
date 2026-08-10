@@ -547,6 +547,40 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["cross-contamination", "food safety", "AIC", "gluten-free restaurants"],
   },
+  "art-21": {
+    title: "Gluten-Free McDonald's in Italy: What a Celiac Can Really Eat",
+    excerpt: "Gluten-free McDonald's in Italy: what the Gluten Free Burger actually guarantees, why the chain isn't AIC certified, and which other products carry a cross-contamination risk.",
+    authorRole: "Content specialist food safety",
+    keyTakeaways: [
+      "The Gluten Free Burger, developed with Dr. Schär, is the only item on the McDonald's Italy menu explicitly guaranteed gluten-free.",
+      "McDonald's Italy doesn't take part in AIC's Out-of-Home Eating program, so the association doesn't verify its preparation procedures.",
+      "Fries, salads and some ice creams don't contain gluten as an ingredient, but McDonald's doesn't guarantee they're free of cross-contamination.",
+      "For a meal out with the strongest guarantees, AIC-certified venues or those with a dedicated kitchen remain the safest choice for celiacs.",
+    ],
+    sections: [
+      { h2: "Gluten-free McDonald's in Italy: what the company actually says", body: "People searching for information on gluten-free McDonald's in Italy often find conflicting claims online: some say celiacs can eat there without worry, others advise against it entirely. The reality, checked against official sources from McDonald's Italy and the Italian Celiac Association (AIC), is more nuanced: only one item on the menu is guaranteed gluten-free, while the rest carries a margin of risk the company itself can't rule out." },
+      { h2: "The Gluten Free Burger: the only item truly guaranteed", body: "The Gluten Free Burger, developed by McDonald's Italy in collaboration with Dr. Schär, is the only menu item explicitly guaranteed gluten-free: the bun meets the EU threshold for \"gluten-free\" labeling, no more than 20 mg/kg (20 ppm) of product. In terms of the ingredient's composition, it's therefore a verified option for celiacs." },
+      { h2: "McDonald's and AIC certification: why there isn't one", body: "Unlike the AIC-certified venues you'll find in our directory, McDonald's Italy doesn't take part in the Italian Celiac Association's Out-of-Home Eating program (AFC). This means AIC doesn't weigh in on the suitability of the food served, the preparation procedures, or staff training at its locations. The company shares information on allergens and product composition on its own, through its website and in restaurants, but without the periodic external check that comes with the AIC mark." },
+      { h2: "Fries, salads and ice cream: why they aren't guaranteed even though they don't contain gluten as an ingredient", body: "Several menu items don't contain gluten as an ingredient, but that alone isn't enough to make them safe for a celiac in a shared kitchen environment.", h3: [
+        { title: "French fries", body: "McDonald's fries don't contain gluten as an ingredient, but they're fried in a shared kitchen environment: the company itself doesn't guarantee the absence of cross-contamination, especially during periods when the fryers are also used for other breaded products. The official advice is to always ask staff at the location before ordering." },
+        { title: "Salads and ice cream", body: "Green salads without chicken and some ice creams also don't contain gluten as an ingredient, but they share surfaces, utensils or equipment with other menu items: for this reason McDonald's can't guarantee they're fully safe for celiacs, the same way it can't with fries." },
+      ] },
+      { h2: "So is McDonald's safe for a celiac?", body: "It depends on how much risk you're willing to accept. The Gluten Free Burger, on its own, is a verified option in terms of composition. The rest of the menu, including fries, carries a margin of risk that McDonald's itself doesn't eliminate, due to the lack of a dedicated kitchen and AIC certification. Anyone with celiac disease that's particularly sensitive to cross-contamination, or looking for the most reassurance when eating out, will generally find stronger guarantees at AIC-certified venues or those with a dedicated kitchen, like the ones gathered in the <a href=\"/directory\">Mappa Senza Glutine directory</a>." },
+      { h2: "Frequently asked questions about McDonald's and the gluten-free diet", body: "The most searched questions about McDonald's and celiac disease in Italy.", h3: [
+        { title: "Is McDonald's Gluten Free Burger really gluten-free?", body: "Yes, the bun meets the legal threshold for \"gluten-free\" labeling (no more than 20 mg/kg), thanks to the collaboration between McDonald's Italy and Dr. Schär in developing the product. That said, it only covers the bun's composition, not the whole preparation environment at the location." },
+        { title: "Is McDonald's AIC certified?", body: "No, McDonald's Italy doesn't take part in the Italian Celiac Association's Out-of-Home Eating program, so the association doesn't weigh in on the safety of its preparations or staff training at its restaurants." },
+        { title: "Are McDonald's fries safe for celiacs?", body: "They aren't guaranteed: while they don't contain gluten as an ingredient, McDonald's itself doesn't rule out cross-contamination during frying in a shared kitchen, especially when the fryers are also used for other breaded products." },
+        { title: "Where can I find the allergen list for McDonald's products?", body: "The full list is available on the official McDonald's Italy website, on the allergens page, and at individual locations, updated periodically by the company." },
+      ] },
+    ],
+    faqs: [
+      { question: "Is McDonald's Gluten Free Burger really gluten-free?", answer: "Yes, the bun meets the legal threshold for \"gluten-free\" labeling (no more than 20 mg/kg), developed by McDonald's Italy in collaboration with Dr. Schär." },
+      { question: "Is McDonald's AIC certified?", answer: "No, McDonald's Italy doesn't take part in the Italian Celiac Association's Out-of-Home Eating program, so its preparation procedures aren't independently verified." },
+      { question: "Are McDonald's fries safe for celiacs?", answer: "They aren't guaranteed: they don't contain gluten as an ingredient, but McDonald's doesn't rule out cross-contamination during frying in a shared kitchen." },
+      { question: "Where can I find the allergen list for McDonald's products?", answer: "On the official McDonald's Italy website, on the allergens page, and at individual locations." },
+    ],
+    tags: ["McDonald's", "fast food", "food safety", "AIC"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {

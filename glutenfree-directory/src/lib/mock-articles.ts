@@ -572,6 +572,41 @@ const seeds: Seed[] = [
       { question: "Quanta contaminazione serve per stare male se sono celiaco?", answer: "Bastano quantità minime, anche pochi milligrammi di glutine: la normativa europea fissa la soglia \"senza glutine\" a non più di 20 mg/kg (20 ppm) di prodotto." },
     ],
   },
+  {
+    title: "McDonald's senza glutine in Italia: cosa può mangiare davvero un celiaco",
+    category: "Guide",
+    excerpt: "McDonald's senza glutine in Italia: cosa garantisce davvero il Gluten Free Burger, perché la catena non è certificata AIC e quali altri prodotti comportano un rischio di contaminazione crociata.",
+    coverSeed: 121, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-30",
+    tags: ["McDonald's", "fast food", "sicurezza alimentare", "AIC"],
+    keyTakeaways: [
+      "Il Gluten Free Burger, sviluppato con Dr. Schär, è l'unico prodotto del menu McDonald's Italia esplicitamente garantito senza glutine.",
+      "McDonald's Italia non aderisce al programma Alimentazione Fuori Casa dell'AIC, che quindi non verifica le sue procedure di preparazione.",
+      "Patatine, insalate e alcuni gelati non contengono glutine tra gli ingredienti, ma McDonald's non ne garantisce l'assenza di contaminazione crociata.",
+      "Per un pasto fuori casa con le massime garanzie, i locali certificati AIC o con cucina dedicata restano la scelta più sicura per i celiaci.",
+    ],
+    sections: [
+      { h2: "McDonald's senza glutine in Italia: cosa dice davvero l'azienda", body: "Chi cerca informazioni su McDonald's senza glutine in Italia trova spesso indicazioni contrastanti online: c'è chi dice che i celiaci possono mangiarci tranquillamente, chi lo sconsiglia del tutto. La realtà, verificata sulle fonti ufficiali di McDonald's Italia e dell'Associazione Italiana Celiachia (AIC), è più sfumata: un solo prodotto del menu è garantito senza glutine, mentre il resto comporta un margine di rischio che l'azienda stessa non è in grado di escludere." },
+      { h2: "Il Gluten Free Burger: l'unico prodotto davvero garantito", body: "Il Gluten Free Burger, sviluppato da McDonald's Italia in collaborazione con Dr. Schär, è l'unico prodotto del menu esplicitamente garantito senza glutine: il panino rispetta i limiti previsti dalla normativa europea per l'etichettatura \"senza glutine\", non oltre 20 mg/kg (20 ppm) di prodotto. A livello di composizione dell'ingrediente, è quindi un'opzione verificata per chi è celiaco." },
+      { h2: "McDonald's e la certificazione AIC: perché non c'è", body: "A differenza dei locali certificati AIC che trovi nella nostra directory, McDonald's Italia non aderisce al programma Alimentazione Fuori Casa (AFC) dell'Associazione Italiana Celiachia. Questo significa che l'AIC non si esprime sull'idoneità degli alimenti serviti, sulle procedure di preparazione né sulla formazione del personale nei punti vendita. L'azienda comunica autonomamente le informazioni su allergeni e composizione dei prodotti, tramite il proprio sito e nei ristoranti, ma senza una verifica esterna periodica come quella prevista dal marchio AIC." },
+      { h2: "Patatine, insalate e gelati: perché non sono garantiti nonostante non contengano glutine tra gli ingredienti", body: "Diversi prodotti del menu non contengono glutine come ingrediente, ma questo non basta a renderli sicuri per un celiaco in un ambiente di cucina condiviso.", h3: [
+        { title: "Le patatine fritte", body: "Le patatine di McDonald's non contengono glutine tra gli ingredienti, ma vengono fritte in un ambiente di cucina condiviso: l'azienda stessa non garantisce l'assenza di contaminazione crociata, soprattutto nei periodi in cui le friggitrici vengono utilizzate anche per altri prodotti impanati. Il consiglio ufficiale è chiedere sempre al personale del punto vendita prima di ordinare." },
+        { title: "Insalate e gelati", body: "Anche le insalate verdi senza pollo e alcuni gelati non contengono glutine come ingrediente, ma condividono superfici, utensili o macchinari con altri prodotti del menu: per questo McDonald's non può garantirne la totale sicurezza per i celiaci, allo stesso modo delle patatine." },
+      ] },
+      { h2: "Quindi McDonald's è sicuro per un celiaco?", body: "Dipende da quanto rischio sei disposto ad accettare. Il Gluten Free Burger, preso da solo, è un'opzione verificata in termini di composizione. Il resto del menu, incluse le patatine, comporta invece un margine di rischio che McDonald's stesso non azzera, per l'assenza di una cucina dedicata e di una certificazione AIC. Chi ha una celiachia particolarmente sensibile alla contaminazione crociata, o sta valutando dove mangiare fuori con la massima tranquillità, trova generalmente più garanzie nei locali certificati AIC o con cucina dedicata, come quelli raccolti nella <a href=\"/directory\">directory di Mappa Senza Glutine</a>." },
+      { h2: "Domande frequenti su McDonald's e la dieta senza glutine", body: "Le domande più cercate su McDonald's e celiachia in Italia.", h3: [
+        { title: "Il Gluten Free Burger di McDonald's è davvero senza glutine?", body: "Sì, il panino rispetta i limiti di legge per l'etichettatura \"senza glutine\" (non oltre 20 mg/kg), grazie alla collaborazione tra McDonald's Italia e Dr. Schär nello sviluppo del prodotto. Riguarda però solo la composizione del panino, non l'intero ambiente di preparazione del punto vendita." },
+        { title: "McDonald's è certificato AIC?", body: "No, McDonald's Italia non aderisce al programma Alimentazione Fuori Casa dell'Associazione Italiana Celiachia, che quindi non si esprime sulla sicurezza delle sue preparazioni né sulla formazione del personale nei ristoranti." },
+        { title: "Le patatine di McDonald's sono sicure per i celiaci?", body: "Non sono garantite: pur non contenendo glutine tra gli ingredienti, McDonald's stessa non esclude la contaminazione crociata durante la frittura in un ambiente di cucina condiviso, specialmente quando le friggitrici sono usate anche per altri prodotti impanati." },
+        { title: "Dove trovo l'elenco degli allergeni dei prodotti McDonald's?", body: "L'elenco completo è disponibile sul sito ufficiale di McDonald's Italia, alla pagina dedicata agli allergeni, e nei singoli punti vendita, aggiornato periodicamente dall'azienda." },
+      ] },
+    ],
+    faqs: [
+      { question: "Il Gluten Free Burger di McDonald's è davvero senza glutine?", answer: "Sì, il panino rispetta i limiti di legge per l'etichettatura \"senza glutine\" (non oltre 20 mg/kg), sviluppato da McDonald's Italia in collaborazione con Dr. Schär." },
+      { question: "McDonald's è certificato AIC?", answer: "No, McDonald's Italia non aderisce al programma Alimentazione Fuori Casa dell'Associazione Italiana Celiachia, che quindi non verifica le sue procedure di preparazione." },
+      { question: "Le patatine di McDonald's sono sicure per i celiaci?", answer: "Non sono garantite: non contengono glutine tra gli ingredienti, ma McDonald's non esclude la contaminazione crociata durante la frittura in cucina condivisa." },
+      { question: "Dove trovo l'elenco degli allergeni dei prodotti McDonald's?", answer: "Sul sito ufficiale di McDonald's Italia, alla pagina dedicata agli allergeni, e nei singoli punti vendita." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {

@@ -203,6 +203,72 @@ export const BUSINESS_EN: Record<string, BusinessTranslation> = {
     services: ["Rice-flour pan pizza", "Apulian cuisine", "Central Bari"],
     glutenFreeMenu: ["Gluten-free pan pizza", "Traditional Apulian dishes"],
   },
+  "biz-33": {
+    shortDescription: "100% gluten-free pizzeria in Palermo, AIC certified.",
+    description: "Pizzeria in Palermo entirely dedicated to gluten-free from the start, not just an \"also\" gluten-free option: the kitchen, oven and work stations are used exclusively for gluten-free preparations. AIC certified.",
+    services: ["AIC certified", "Kitchen, oven and stations entirely dedicated", "Extensive menu"],
+    glutenFreeMenu: ["Gluten-free pizza", "Gluten-free starters and fried food"],
+  },
+  "biz-34": {
+    shortDescription: "AIC-certified bistrot in central Palermo, almost the entire menu gluten-free.",
+    description: "Bistrot in central Palermo, AIC certified, where almost the entire menu is available gluten-free: fried dishes prepared with a dedicated fryer, arancini, sandwiches and sweet and savory piadinas from Sicilian tradition.",
+    services: ["AIC certified", "Dedicated fryer", "Sicilian cuisine"],
+    glutenFreeMenu: ["Gluten-free arancini", "Fried food with dedicated fryer", "Sweet and savory sandwiches and piadinas"],
+  },
+  "biz-35": {
+    shortDescription: "100% gluten-free bakery in Palermo, with its own production.",
+    description: "Bakery, pastry shop and deli in Palermo with a lab entirely dedicated to gluten-free: no gluten-containing product is handled on site. Own production of brioche, bread, pizza, panelle and pasta.",
+    services: ["100% gluten-free lab", "Own production", "Northern Palermo area"],
+    glutenFreeMenu: ["Gluten-free brioche and bread", "Gluten-free pizza and panelle", "Gluten-free fresh pasta"],
+  },
+  "biz-36": {
+    shortDescription: "Historic gelateria in Palermo since 1976, gluten-free flavors at no extra cost.",
+    description: "Historic gelateria in Palermo, open since 1976, with particular attention to celiac, vegan and lactose-free customers: gluten-free flavors are available at no extra cost compared to the others.",
+    services: ["Historic gelateria since 1976", "Gluten-free flavors at no extra cost", "Also attentive to lactose-free and vegan"],
+    glutenFreeMenu: ["Artisan gluten-free gelato", "Vegan and lactose-free variants"],
+  },
+  "biz-37": {
+    shortDescription: "AIC-certified pizzeria in Sampierdarena, Genoa, with a dedicated oven.",
+    description: "Pizzeria in Sampierdarena, Genoa, AIC certified with an oven dedicated to gluten-free preparation. It offers gluten-free and lactose-free pizzas, plus gluten-free beer and desserts.",
+    services: ["AIC certified", "Dedicated oven", "Home delivery"],
+    glutenFreeMenu: ["Gluten-free and lactose-free pizza", "Gluten-free beer and desserts"],
+  },
+  "biz-38": {
+    shortDescription: "AIC-certified pizzeria in Prà, Genoa, with alternative gluten-free dough.",
+    description: "Bar-pizzeria in the Prà district of Genoa, AIC certified, with alternative doughs including whole wheat, kamut and gluten-free.",
+    services: ["AIC certified", "Alternative doughs", "Prà district"],
+    glutenFreeMenu: ["Gluten-free pizza", "Whole wheat and kamut doughs"],
+  },
+  "biz-39": {
+    shortDescription: "Gluten-free-dedicated bakery in Sestri Ponente, Genoa, part of the AIC network.",
+    description: "Bakery and pastry shop in Sestri Ponente, Genoa, opened in late 2024 as an artisan lab dedicated exclusively to gluten-free, with lactose-free products too. Recently joined the AIC Liguria network.",
+    services: ["Recently joined the AIC Liguria network", "Lab dedicated exclusively to gluten-free", "Also lactose-free"],
+    glutenFreeMenu: ["Gluten-free focaccia and pizza", "Gluten-free snacks and desserts"],
+  },
+  "biz-40": {
+    shortDescription: "AIC-certified vegan and gluten-free restaurant in central Verona.",
+    description: "Restaurant in Verona with an entirely vegan, gluten-free and lactose-free menu, AIC certified. Lunch with a buffet format, à la carte dinner.",
+    services: ["AIC certified", "Entirely vegan and gluten-free menu", "Lactose-free"],
+    glutenFreeMenu: ["Gluten-free vegan lunch buffet", "À la carte gluten-free dinner"],
+  },
+  "biz-41": {
+    shortDescription: "Pizzeria across from the Arena in Verona, AIC-certified gluten-free dough.",
+    description: "Restaurant-pizzeria right across from the Verona Arena, with gluten-free and lactose-free doughs, AIC certified.",
+    services: ["AIC-certified gluten-free pizza", "Lactose-free doughs", "Across from the Arena"],
+    glutenFreeMenu: ["Gluten-free and lactose-free pizza"],
+  },
+  "biz-42": {
+    shortDescription: "Specialty shop in Verona, over 100 gluten-free products, ULSS affiliated.",
+    description: "Specialty shop in Verona with over 100 gluten-free and lactose-free products for celiacs' everyday shopping, affiliated with the Veneto ULSS for redeeming vouchers.",
+    services: ["Over 100 gluten-free and lactose-free products", "ULSS affiliated for celiac vouchers", "Everyday shopping for celiacs"],
+    glutenFreeMenu: ["Wide range of packaged gluten-free products"],
+  },
+  "biz-43": {
+    shortDescription: "Artisan gelateria in Verona, AIC certified since 2010.",
+    description: "Artisan gelateria in Verona, part of the AIC network since 2010, with a genuine selection dedicated to those with gluten intolerance.",
+    services: ["AIC certified since 2010", "Genuine artisan gelato", "Selection dedicated to gluten-free"],
+    glutenFreeMenu: ["Artisan gluten-free gelato"],
+  },
 };
 
 const REVIEW_EN: Record<string, { title: string; body: string }> = {
