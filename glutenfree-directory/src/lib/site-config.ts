@@ -17,5 +17,5 @@ export const TWITTER_HANDLE = "@mappasenzagluti";
  */
 export const GUIDE2 = {
   checkoutUrl: "",
-  price: "€4,99",
+  price: "$9.97",
 };
