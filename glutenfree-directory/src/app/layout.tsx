@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Sora, Fraunces } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { StoreProvider } from "@/lib/store";
 import ThemeInit from "@/components/ThemeInit";
 import SiteHeader from "@/components/SiteHeader";
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main-content">{children}</main>
           <SiteFooter />
         </StoreProvider>
+        <Analytics />
       </body>
     </html>
   );

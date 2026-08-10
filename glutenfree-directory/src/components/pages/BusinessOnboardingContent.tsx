@@ -6,10 +6,27 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
 
+const CONTACT_EMAIL = "info@mappasenzaglutine.it";
+
 export default function BusinessOnboardingContent({ locale }: { locale: Locale }) {
   const [sent, setSent] = useState(false);
   const t = getDictionary(locale);
   const en = locale === "en";
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const ragione = String(data.get("ragione") ?? "");
+    const categoria = String(data.get("categoria") ?? "");
+    const citta = String(data.get("citta") ?? "");
+    const email = String(data.get("email") ?? "");
+    const subject = en ? `Listing request: ${ragione}` : `Richiesta inserimento: ${ragione}`;
+    const body = en
+      ? `Business name: ${ragione}\nCategory: ${categoria}\nCity: ${citta}\nContact email: ${email}`
+      : `Nome attività: ${ragione}\nCategoria: ${categoria}\nCittà: ${citta}\nEmail di contatto: ${email}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSent(true);
+  }
 
   return (
     <div className="container-page py-10">
@@ -36,16 +53,16 @@ export default function BusinessOnboardingContent({ locale }: { locale: Locale }
         </div>
         <div className="card card-soft p-6">
           {sent ? (
-            <div className="flex items-center gap-2 text-brand-dark"><CheckCircle2 size={20} /> {en ? "Request sent! Our team will verify the requirements within 3 business days." : "Richiesta inviata! Il nostro team verificherà i requisiti entro 3 giorni lavorativi."}</div>
+            <div className="flex items-center gap-2 text-brand-dark"><CheckCircle2 size={20} /> {en ? `We opened your email client with the request ready to send. If nothing opened, write to us directly at ${CONTACT_EMAIL}.` : `Abbiamo aperto il tuo client email con la richiesta pronta da inviare. Se non si è aperto nulla, scrivici direttamente a ${CONTACT_EMAIL}.`}</div>
           ) : (
-            <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="ragione" className="field-label">{en ? "Business name" : "Nome attività"}</label>
-                <input id="ragione" className="field" required />
+                <input id="ragione" name="ragione" className="field" required />
               </div>
               <div>
                 <label htmlFor="categoria" className="field-label">{en ? "Category" : "Categoria"}</label>
-                <select id="categoria" className="field">
+                <select id="categoria" name="categoria" className="field">
                   <option>{en ? "Restaurant" : "Ristorante"}</option>
                   <option>Pizzeria</option>
                   <option>Hotel</option>
@@ -56,13 +73,13 @@ export default function BusinessOnboardingContent({ locale }: { locale: Locale }
               </div>
               <div>
                 <label htmlFor="citta" className="field-label">{en ? "City" : "Città"}</label>
-                <input id="citta" className="field" required />
+                <input id="citta" name="citta" className="field" required />
               </div>
               <div>
                 <label htmlFor="email" className="field-label">{en ? "Contact email" : "Email di contatto"}</label>
-                <input id="email" type="email" className="field" required />
+                <input id="email" name="email" type="email" className="field" required />
               </div>
-              <button type="submit" className="btn btn-primary btn-block">{en ? "Request listing" : "Richiedi l'inserimento"}</button>
+              <button type="submit" className="btn btn-primary btn-block">{en ? "Open email to send request" : "Apri email per inviare la richiesta"}</button>
             </form>
           )}
         </div>
