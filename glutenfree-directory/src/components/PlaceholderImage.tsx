@@ -201,6 +201,147 @@ function Motif({ variant, accent, soft, seed }: { variant: string; accent: strin
         </g>
       );
     }
+    case "ricetta-pesto":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M50 66a30 14 0 0 0 60 0" fill="#fff" stroke={accent} strokeWidth={2.5} opacity="0.9" />
+          <path d="M56 66a24 10 0 0 0 48 0" fill="none" stroke={accent} strokeWidth={2.5} />
+          <path d="M62 56c4-6 4-10 0-16M74 58c4-6 4-10 0-16M86 58c-4-6-4-10 0-16M98 56c-4-6-4-10 0-16" fill="none" stroke={accent} strokeWidth={2.5} strokeLinecap="round" />
+          <circle cx="64" cy="40" r="2.5" fill={accent} /><circle cx="90" cy="38" r="2.5" fill={accent} />
+        </g>
+      );
+    case "ricetta-pane":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M52 76V56c0-10 12-16 28-16s28 6 28 16v20z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <path d="M52 76h56M68 44v32M80 42v34M92 44v32" fill="none" stroke={accent} strokeWidth={2.5} strokeLinecap="round" />
+        </g>
+      );
+    case "ricetta-torta":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M58 84 74 42h12l16 42z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <path d="M62 74h36M65 66h30" fill="none" stroke={accent} strokeWidth={2.5} />
+          <circle cx="80" cy="36" r="4" fill={accent} />
+        </g>
+      );
+    case "ricetta-pasta-fredda":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M50 66a30 14 0 0 0 60 0" fill="#fff" stroke={accent} strokeWidth={2.5} opacity="0.9" />
+          <path d="M56 66a24 10 0 0 0 48 0" fill="none" stroke={accent} strokeWidth={2.5} />
+          <path d="M62 56c4-6 4-10 0-16M86 58c-4-6-4-10 0-16" fill="none" stroke={accent} strokeWidth={2.5} strokeLinecap="round" />
+          <circle cx="72" cy="42" r="3.5" fill={accent} /><circle cx="94" cy="46" r="3.5" fill={accent} />
+        </g>
+      );
+    case "ricetta-aperitivo":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <rect x="48" y="52" width="64" height="30" rx="4" fill={soft} stroke={accent} strokeWidth={3} />
+          <rect x="56" y="60" width="10" height="10" fill="none" stroke={accent} strokeWidth={2.5} />
+          <rect x="70" y="60" width="10" height="10" fill="none" stroke={accent} strokeWidth={2.5} />
+          <circle cx="96" cy="65" r="7" fill="#fff" stroke={accent} strokeWidth={2.5} />
+        </g>
+      );
+    case "ricetta-pizza":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <circle cx="80" cy="60" r="26" fill={soft} stroke={accent} strokeWidth={3} />
+          <path d="M80 60 54 46M80 60 106 46M80 60 80 90" fill="none" stroke={accent} strokeWidth={2} opacity="0.7" />
+          <circle cx="70" cy="52" r="2.6" fill={accent} /><circle cx="90" cy="54" r="2.6" fill={accent} /><circle cx="78" cy="70" r="2.6" fill={accent} />
+        </g>
+      );
+    case "ricetta-focaccia":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <rect x="50" y="48" width="60" height="26" rx="10" fill={soft} stroke={accent} strokeWidth={3} />
+          {[62, 74, 86, 98].map((x, i) => (
+            <circle key={x} cx={x} cy={i % 2 === 0 ? 58 : 65} r="2.2" fill={accent} />
+          ))}
+          <path d="M56 44c2-4 2-6 0-8M100 44c2-4 2-6 0-8" fill="none" stroke={accent} strokeWidth={2.2} strokeLinecap="round" />
+        </g>
+      );
+    case "ricetta-merenda":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <rect x="52" y="54" width="44" height="30" rx="5" fill={soft} stroke={accent} strokeWidth={3} />
+          <path d="M64 54v-6a10 10 0 0 1 20 0v6" fill="none" stroke={accent} strokeWidth={3} strokeLinecap="round" />
+          <circle cx="106" cy="70" r="8" fill="#fff" stroke={accent} strokeWidth={2.5} />
+        </g>
+      );
+    case "ricetta-panzanella":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M50 66a30 14 0 0 0 60 0" fill="#fff" stroke={accent} strokeWidth={2.5} opacity="0.9" />
+          <path d="M56 66a24 10 0 0 0 48 0" fill="none" stroke={accent} strokeWidth={2.5} />
+          <rect x="62" y="52" width="8" height="8" fill="none" stroke={accent} strokeWidth={2.2} />
+          <rect x="76" y="48" width="8" height="8" fill="none" stroke={accent} strokeWidth={2.2} />
+          <path d="M92 46 100 46 96 56Z" fill={accent} opacity="0.85" />
+        </g>
+      );
+    case "ricetta-crostini":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          {[54, 76, 98].map((x) => (
+            <g key={x}>
+              <rect x={x} y="58" width="18" height="10" rx="2" fill={soft} stroke={accent} strokeWidth={2.5} />
+              <circle cx={x + 9} cy="54" r="2.4" fill={accent} />
+            </g>
+          ))}
+        </g>
+      );
+    case "ricetta-muffin":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M60 58 64 82h32l4-24z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <path d="M60 58c4-3 4-3 0-6s-4-3 0-6M100 58c-4-3-4-3 0-6s4-3 0-6M70 58c4-3 4-3 0-6M90 58c-4-3-4-3 0-6" fill="none" stroke={accent} strokeWidth={2} opacity="0.7" />
+          <path d="M58 58h44" fill="none" stroke={accent} strokeWidth={3} />
+          <path d="M70 46a10 8 0 0 1 20 0" fill={soft} stroke={accent} strokeWidth={3} />
+        </g>
+      );
+    case "ricetta-grissini":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          {[58, 68, 78, 88, 98].map((x, i) => (
+            <line key={x} x1={x} y1={82} x2={x} y2={40 + (i % 2) * 6} stroke={accent} strokeWidth={2.6} strokeLinecap="round" />
+          ))}
+          <path d="M54 46h50" fill="none" stroke={accent} strokeWidth={2.2} opacity="0.6" />
+        </g>
+      );
+    case "ricetta-pasta-forno":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <rect x="50" y="56" width="60" height="24" rx="3" fill={soft} stroke={accent} strokeWidth={3} />
+          <path d="M50 56c6-4 10 4 16 0s10-4 16 0 10-4 16 0 10-4 12 0" fill="none" stroke={accent} strokeWidth={2.5} strokeLinecap="round" />
+          <circle cx="64" cy="50" r="1.8" fill={accent} /><circle cx="88" cy="48" r="1.8" fill={accent} />
+        </g>
+      );
     default: {
       if (k === 1) {
         return (
