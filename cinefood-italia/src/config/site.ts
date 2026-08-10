@@ -80,7 +80,7 @@ export const SITE = {
      * ID partner GetYourGuide. Iscriviti su
      * https://partner.getyourguide.com/ — gratuito, nessuna soglia minima.
      */
-    getyourguidePartnerId: "",
+    getyourguidePartnerId: "VYL7HGT",
   },
 
   /**
