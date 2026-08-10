@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/villa-giusso-vico-equense.jpg"
-immagineAlt: "In attesa di una foto reale di Villa Giusso, Vico Equense"
+immagine: "../../assets/placeholder/villa-giusso-vico-equense-vero.jpg"
+immagineAlt: "Facciata storica di Villa Giusso, ex monastero del XVII secolo a Vico Equense"
 sitoWeb: "https://www.astapiana.com"
 ultimoAggiornamento: 2026-08-10
 film:

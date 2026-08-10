@@ -3,8 +3,8 @@ titolo: "L'amica geniale: la vera Napoli dietro il set"
 descrizione: "Il rione de L'amica geniale è un set a Marcianise, ma la serie è girata anche in vere location napoletane, tra cui il caffè ScottoJonno."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-10
-immagine: "../../assets/placeholder/scottojonno-napoli.jpg"
-immagineAlt: "In attesa di una foto reale di ScottoJonno, Napoli"
+immagine: "../../assets/placeholder/scottojonno-napoli-vero.jpg"
+immagineAlt: "Il bancone in stile art déco di ScottoJonno, Napoli"
 tags: ["L'amica geniale", "Napoli", "HBO", "Elena Ferrante", "cineturismo"]
 faq:
   - domanda: "Il rione de L'amica geniale è reale?"

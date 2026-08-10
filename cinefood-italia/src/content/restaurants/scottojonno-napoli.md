@@ -11,8 +11,8 @@ categoria: "set-reale"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
-immagine: "../../assets/placeholder/scottojonno-napoli.jpg"
-immagineAlt: "In attesa di una foto reale di ScottoJonno, Napoli"
+immagine: "../../assets/placeholder/scottojonno-napoli-vero.jpg"
+immagineAlt: "Il bancone in stile art déco di ScottoJonno, Napoli"
 ultimoAggiornamento: 2026-08-10
 film:
   - film: "l-amica-geniale"

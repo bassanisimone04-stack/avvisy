@@ -3,8 +3,8 @@ titolo: "È stata la mano di Dio: la Napoli di Sorrentino"
 descrizione: "Il film Netflix di Paolo Sorrentino è girato tra vere strade di Napoli e Villa Giusso, l'agriturismo della penisola sorrentina."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-10
-immagine: "../../assets/placeholder/villa-giusso-vico-equense.jpg"
-immagineAlt: "In attesa di una foto reale di Villa Giusso, Vico Equense"
+immagine: "../../assets/placeholder/villa-giusso-vico-equense-vero.jpg"
+immagineAlt: "Facciata storica di Villa Giusso, ex monastero del XVII secolo a Vico Equense"
 tags: ["È stata la mano di Dio", "Napoli", "Netflix", "Paolo Sorrentino", "cineturismo"]
 faq:
   - domanda: "È stata la mano di Dio è girato davvero a Napoli?"
