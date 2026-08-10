@@ -47,6 +47,24 @@ export const FAQ_GROUPS_IT: FaqGroup[] = [
       { question: "Posso aggiungere la mia attività alla directory?", answer: "Certo, le aziende possono richiedere l'inserimento tramite il pannello dedicato \"Inserisci la tua attività\": dopo una verifica dei requisiti la scheda viene pubblicata gratuitamente." },
     ],
   },
+  {
+    title: "Colazione e gelaterie senza glutine",
+    items: [
+      { question: "Dove posso fare colazione senza glutine in sicurezza?", answer: "Le pasticcerie 100% dedicate al senza glutine offrono le maggiori garanzie; nei bar tradizionali verifica che il prodotto sia conservato separatamente e non tagliato o riscaldato con strumenti usati per prodotti tradizionali." },
+      { question: "Le gelaterie sono sicure per i celiaci?", answer: "Dipende da come vengono gestite palette e vaschette: il rischio principale è la contaminazione tra un gusto con biscotto o wafer e uno senza glutine tramite la stessa paletta non pulita tra un uso e l'altro." },
+      { question: "Il cono gelato contiene glutine?", answer: "Sì, il cono tradizionale è a base di farina di frumento: se la gelateria non offre un'alternativa certificata senza glutine, la coppetta resta la scelta più sicura." },
+      { question: "Cosa devo chiedere al bar prima di ordinare un cornetto senza glutine?", answer: "Se è conservato in un espositore separato dai prodotti tradizionali e se viene riscaldato in un tostapane o forno dedicato: un tostapane condiviso lascia residui che contaminano il prodotto successivo." },
+    ],
+  },
+  {
+    title: "Viaggi, hotel e fast food senza glutine",
+    items: [
+      { question: "Come trovo un hotel adatto ai celiaci per le vacanze?", answer: "Cerca strutture certificate AIC, che garantiscono colazione senza glutine sicura e staff formato: verifica la certificazione direttamente sul sito dell'hotel o nella directory prima di prenotare, senza fidarti di etichette generiche come \"gluten free friendly\"." },
+      { question: "I villaggi turistici con pensione completa sono sicuri per celiaci?", answer: "Possono esserlo se certificati AIC o con postazioni dedicate ai buffet: senza queste garanzie, il rischio di contaminazione crociata nelle formule self-service è più alto rispetto a un ristorante à la carte." },
+      { question: "McDonald's ha opzioni davvero senza glutine?", answer: "Solo il Gluten Free Burger, sviluppato con Dr. Schär, è garantito senza glutine nella composizione: McDonald's Italia non aderisce al programma AFC dell'AIC, quindi patatine, insalate e gelati non hanno garanzia contro la contaminazione crociata." },
+      { question: "Cosa devo portare in viaggio se sono celiaco?", answer: "Una scorta di prodotti senza glutine di base (pane, snack, pasta) per le emergenze, soprattutto se la meta è poco turistica e trovarli sul posto può essere difficile." },
+    ],
+  },
 ];
 
 export const FAQ_GROUPS_EN: FaqGroup[] = [
@@ -89,6 +107,24 @@ export const FAQ_GROUPS_EN: FaqGroup[] = [
       { question: "What is AIC certification and why does it matter?", answer: "It's the trademark awarded by the Italian Celiac Association to venues that follow a strict protocol on purchasing, storage and preparation of gluten-free meals, verified through periodic audits." },
       { question: "Can I report an error on a business or product?", answer: "Yes, from your user profile you can report outdated information: our team reviews every report within 48 business hours." },
       { question: "Can I add my business to the directory?", answer: "Of course, businesses can request a listing through the dedicated \"Add your business\" panel: after a requirements check, the listing is published for free." },
+    ],
+  },
+  {
+    title: "Gluten-free breakfast and gelaterias",
+    items: [
+      { question: "Where can I get gluten-free breakfast safely?", answer: "100% dedicated gluten-free bakeries offer the strongest guarantees; at traditional cafés check that the product is stored separately and not cut or heated with tools used for traditional products." },
+      { question: "Are gelaterias safe for celiacs?", answer: "It depends on how scoops and tubs are managed: the main risk is contamination between a cookie- or wafer-based flavor and a gluten-free one through the same unwashed scoop." },
+      { question: "Does the ice cream cone contain gluten?", answer: "Yes, the traditional cone is made with wheat flour: if the gelateria doesn't offer a certified gluten-free alternative, a cup remains the safer choice." },
+      { question: "What should I ask at a café before ordering a gluten-free croissant?", answer: "Whether it's stored in a display case separate from traditional products and whether it's heated in a dedicated toaster or oven: a shared toaster leaves residue that contaminates the next item." },
+    ],
+  },
+  {
+    title: "Travel, hotels and fast food gluten-free",
+    items: [
+      { question: "How do I find a hotel suitable for celiacs on vacation?", answer: "Look for AIC-certified properties, which guarantee safe gluten-free breakfast and trained staff: check the certification directly on the hotel's website or in the directory before booking, rather than trusting generic \"gluten-free friendly\" labels." },
+      { question: "Are full-board resorts safe for celiacs?", answer: "They can be if AIC certified or with dedicated buffet stations: without these guarantees, the risk of cross-contamination in self-service formats is higher than at an à la carte restaurant." },
+      { question: "Does McDonald's have truly gluten-free options?", answer: "Only the Gluten Free Burger, developed with Dr. Schär, is guaranteed gluten-free in composition: McDonald's Italy doesn't take part in AIC's Out-of-Home Eating program, so fries, salads and ice cream have no guarantee against cross-contamination." },
+      { question: "What should I bring when traveling if I have celiac disease?", answer: "A stock of basic gluten-free products (bread, snacks, pasta) for emergencies, especially if the destination is less touristy and finding them locally can be difficult." },
     ],
   },
 ];
