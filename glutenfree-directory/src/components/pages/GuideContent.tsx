@@ -118,7 +118,21 @@ export default function GuideContent({ locale }: { locale: Locale }) {
         </div>
       </div>
 
-      <p className="mt-14 max-w-2xl text-xs leading-relaxed text-muted">
+      <div className="mt-14 max-w-2xl rounded-2xl border border-line bg-surface-2 p-6">
+        <p className="text-sm text-ink-soft">
+          {en
+            ? "Looking for diagnosis, safety rules and daily life instead? "
+            : "Cerchi invece diagnosi, regole di sicurezza e vita quotidiana? "}
+          <Link href={h("/vivere-senza-glutine")} className="font-semibold text-brand-dark underline">
+            {en ? "\"Live Gluten-Free\"" : "\"Vivere Senza Glutine\""}
+          </Link>{" "}
+          {en
+            ? "is our reference guide compiled from the blog's verified articles."
+            : "è la nostra guida di riferimento compilata dagli articoli verificati del blog."}
+        </p>
+      </div>
+
+      <p className="mt-8 max-w-2xl text-xs leading-relaxed text-muted">
         {en
           ? "The guide is for informational purposes only and isn't sponsored by the venues listed. Hours and availability may change: always check directly with the venue before you go. For the always up-to-date version, with map, filters and reviews, visit "
           : "La guida ha scopo puramente informativo e non è sponsorizzata dai locali citati. Orari e disponibilità possono cambiare: verifica sempre direttamente con il locale prima di partire. Per la versione sempre aggiornata, con mappa, filtri e recensioni, visita "}

@@ -18,3 +18,14 @@ export const GUIDE = {
   checkoutUrl: "",
   price: "€6,99",
 };
+
+/**
+ * Secondo prodotto digitale: "Vivere Senza Glutine" (PDF di riferimento,
+ * compila i contenuti educativi del blog invece dei locali della directory).
+ * Stesso meccanismo di GUIDE: finché checkoutUrl è vuoto, il bottone
+ * "Acquista" non compare.
+ */
+export const GUIDE2 = {
+  checkoutUrl: "",
+  price: "€4,99",
+};
