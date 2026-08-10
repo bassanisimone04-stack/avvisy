@@ -61,13 +61,13 @@ export default function Guide2Content({ locale }: { locale: Locale }) {
     ? [
         { question: "Is this the same content as the blog?", answer: "Yes — this guide compiles 11 already-published, verified blog articles into a single offline PDF, organized as chapters with a summary box at the end of each one. It's a convenience format, not exclusive new content." },
         { question: "How do I get the guide after purchase?", answer: "Download starts right after payment, directly from the checkout page, and you also get an email with the link to re-download it whenever you want." },
-        { question: "What's the difference with the other guide (venues directory)?", answer: "The other guide (\"La Guida Mappa Senza Glutine\") lists real verified venues by city. This one is a reference guide: diagnosis, safety rules, costs, eating out — the \"what to know\", not the \"where to go\"." },
+        { question: "What devices can I read it on?", answer: "It's a standard PDF: it opens on phone, tablet, computer, or can be printed. No app required." },
         { question: "Does this replace medical advice?", answer: "No. The guide is for informational purposes and doesn't replace the advice of a doctor, nutritionist or other qualified professional." },
       ]
     : [
         { question: "È lo stesso contenuto del blog?", answer: "Sì — questa guida compila 11 articoli del blog già pubblicati e verificati in un unico PDF offline, organizzati come capitoli con un box di sintesi alla fine di ciascuno. È un formato comodo, non contenuto esclusivo nuovo." },
         { question: "Come ricevo la guida dopo l'acquisto?", answer: "Il download parte subito dopo il pagamento, direttamente dalla pagina di checkout, e ricevi anche un'email con il link per riscaricarla quando vuoi." },
-        { question: "Che differenza c'è con l'altra guida (locali)?", answer: "L'altra guida (\"La Guida Mappa Senza Glutine\") elenca locali reali verificati per città. Questa è una guida di riferimento: diagnosi, regole di sicurezza, costi, mangiare fuori — il \"cosa sapere\", non il \"dove andare\"." },
+        { question: "Su quali dispositivi posso leggerla?", answer: "È un PDF standard: si apre su telefono, tablet, computer o si può stampare. Nessuna app richiesta." },
         { question: "Sostituisce il parere medico?", answer: "No. La guida ha scopo divulgativo e non sostituisce il parere di un medico, nutrizionista o altro professionista qualificato." },
       ];
 
@@ -145,12 +145,12 @@ export default function Guide2Content({ locale }: { locale: Locale }) {
           {en
             ? "Looking for real venues instead? "
             : "Cerchi invece locali reali? "}
-          <Link href={h("/guida")} className="font-semibold text-brand-dark underline">
-            {en ? `"The ${SITE_NAME} Guide"` : `"La Guida ${SITE_NAME}"`}
+          <Link href={h("/directory")} className="font-semibold text-brand-dark underline">
+            {en ? "The free directory" : "La directory gratuita"}
           </Link>{" "}
           {en
-            ? "lists 40+ verified venues by city and region."
-            : "elenca oltre 40 locali verificati per città e regione."}
+            ? "lists verified restaurants, pizzerias, hotels and shops by city and region."
+            : "elenca ristoranti, pizzerie, hotel e negozi verificati per città e regione."}
         </p>
       </div>
 

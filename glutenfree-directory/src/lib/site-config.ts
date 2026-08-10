@@ -8,22 +8,12 @@ export const SITE_LOCALE = "it_IT";
 export const TWITTER_HANDLE = "@mappasenzagluti";
 
 /**
- * Prodotto digitale: "La Guida Mappa Senza Glutine" (PDF a pagamento).
+ * Prodotto digitale: "Vivere Senza Glutine" (PDF a pagamento, guida di
+ * riferimento compilata dai contenuti verificati del blog).
  * Carica il PDF su Payhip (payhip.com) o Gumroad (gumroad.com) — gratis,
  * gestiscono loro pagamento e download automatico — e incolla qui il link
  * della pagina prodotto/checkout. Finché è vuoto "", il bottone "Acquista"
- * nella pagina /guida non compare (nessun link rotto).
- */
-export const GUIDE = {
-  checkoutUrl: "",
-  price: "€6,99",
-};
-
-/**
- * Secondo prodotto digitale: "Vivere Senza Glutine" (PDF di riferimento,
- * compila i contenuti educativi del blog invece dei locali della directory).
- * Stesso meccanismo di GUIDE: finché checkoutUrl è vuoto, il bottone
- * "Acquista" non compare.
+ * nella pagina /vivere-senza-glutine non compare (nessun link rotto).
  */
 export const GUIDE2 = {
   checkoutUrl: "",
