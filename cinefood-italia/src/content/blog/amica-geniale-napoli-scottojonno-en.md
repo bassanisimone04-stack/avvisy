@@ -49,5 +49,8 @@ Marco Ambrosino. It's a genuinely public venue, not a set.
 
 *My Brilliant Friend* mixes a built set with real Naples streets and
 venues — a great excuse for a walk through the Galleria Principe, the
-seafront and Port'Alba. Discover more **[films and shows](/en/film)**
-shot in Italy on our site.
+seafront and Port'Alba. If you're staying in the city, also discover the
+Naples of **[The Hand of God](/en/blog/mano-di-dio-napoli-villa-giusso)**
+and the pizza of **[Eat Pray Love](/en/blog/eat-pray-love-pizza-da-michele-napoli)**,
+or explore more **[films and shows](/en/film)** shot in Italy on our
+site.

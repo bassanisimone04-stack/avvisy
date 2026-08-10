@@ -44,5 +44,8 @@ own produce.
 *The Hand of God* is an intimate, autobiographical portrait by
 Sorrentino, shot between real Naples streets and the Sorrentine
 countryside. Villa Giusso is still there, open to visitors, for anyone
-who wants to experience the same landscape as the film. Discover more
-**[films and shows](/en/film)** shot in Italy on our site.
+who wants to experience the same landscape as the film. Stay on theme
+with the Naples of **[My Brilliant Friend](/en/blog/amica-geniale-napoli-scottojonno)**
+and the pizza of **[Eat Pray Love](/en/blog/eat-pray-love-pizza-da-michele-napoli)**,
+or discover more **[films and shows](/en/film)** shot in Italy on our
+site.

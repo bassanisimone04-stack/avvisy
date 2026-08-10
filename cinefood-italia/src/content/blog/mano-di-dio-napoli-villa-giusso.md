@@ -43,5 +43,8 @@ valorizza i prodotti dell'azienda agricola.
 *È stata la mano di Dio* è un ritratto intimo e autobiografico di
 Sorrentino, girato tra vere strade di Napoli e la campagna sorrentina.
 Villa Giusso resta lì, visitabile, per chi vuole vivere lo stesso
-paesaggio del film. Scopri gli altri **[film e serie](/film)** girati in
-Italia sul nostro sito.
+paesaggio del film. Resta in tema con la Napoli de
+**[L'amica geniale](/blog/amica-geniale-napoli-scottojonno)** e la pizza
+di **[Eat Pray Love](/blog/eat-pray-love-pizza-da-michele-napoli)**, o
+scopri gli altri **[film e serie](/film)** girati in Italia sul nostro
+sito.

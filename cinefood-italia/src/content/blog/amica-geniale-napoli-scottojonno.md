@@ -49,5 +49,8 @@ un set.
 
 *L'amica geniale* mescola un set ricostruito con vere strade e locali di
 Napoli — un ottimo pretesto per una passeggiata tra Galleria Principe,
-lungomare e Port'Alba. Scopri gli altri **[film e serie](/film)** girati
-in Italia sul nostro sito.
+lungomare e Port'Alba. Se ti va di restare in città, scopri anche la
+Napoli di **[È stata la mano di Dio](/blog/mano-di-dio-napoli-villa-giusso)**
+e quella della pizza di **[Eat Pray Love](/blog/eat-pray-love-pizza-da-michele-napoli)**,
+o esplora gli altri **[film e serie](/film)** girati in Italia sul nostro
+sito.
