@@ -16,6 +16,6 @@ export const TWITTER_HANDLE = "@mappasenzagluti";
  * nella pagina /vivere-senza-glutine non compare (nessun link rotto).
  */
 export const GUIDE2 = {
-  checkoutUrl: "",
+  checkoutUrl: "https://payhip.com/b/BOtuJ",
   price: "$9.97",
 };
