@@ -3,8 +3,8 @@ titolo: "My Brilliant Friend: The Real Naples Behind the Set"
 descrizione: "The neighborhood in My Brilliant Friend is a built set, but the show also films in real Naples locations, including the café ScottoJonno."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-10
-immagine: "../../assets/placeholder/scottojonno-napoli.jpg"
-immagineAlt: "Awaiting a real photo of ScottoJonno, Naples"
+immagine: "../../assets/placeholder/scottojonno-napoli-vero.jpg"
+immagineAlt: "The art déco bar counter at ScottoJonno, Naples"
 tags: ["My Brilliant Friend", "Naples", "HBO", "Elena Ferrante", "film tourism"]
 faq:
   - domanda: "Is the neighborhood in My Brilliant Friend real?"

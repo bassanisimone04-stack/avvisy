@@ -3,8 +3,8 @@ titolo: "The Hand of God: Sorrentino's Real Naples"
 descrizione: "Paolo Sorrentino's Netflix film is shot between real Naples streets and Villa Giusso, an agriturismo on the Sorrentine Peninsula."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-10
-immagine: "../../assets/placeholder/villa-giusso-vico-equense.jpg"
-immagineAlt: "Awaiting a real photo of Villa Giusso, Vico Equense"
+immagine: "../../assets/placeholder/villa-giusso-vico-equense-vero.jpg"
+immagineAlt: "The historic façade of Villa Giusso, a 17th-century former monastery in Vico Equense"
 tags: ["The Hand of God", "Naples", "Netflix", "Paolo Sorrentino", "film tourism"]
 faq:
   - domanda: "Was The Hand of God really filmed in Naples?"
