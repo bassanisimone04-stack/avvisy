@@ -581,6 +581,118 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["McDonald's", "fast food", "food safety", "AIC"],
   },
+  "art-22": {
+    title: "Gluten-Free Gelaterias: How to Spot the Ones That Are Truly Free of Cross-Contamination",
+    excerpt: "Gluten-free gelaterias: how to tell if scoops, tubs and cones are really safe for a celiac, which flavors to avoid, and why summer raises the risk of cross-contamination.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "The main risk at uncertified gelaterias is contamination through scoops and tubs shared between gluten-containing and gluten-free flavors.",
+      "Truly safe gelaterias use dedicated scoops for each flavor, or clean them thoroughly between flavors.",
+      "Cones, wafers and cups can also be a source of contamination if not certified gluten-free.",
+      "AIC-certified gelaterias, or ones flagged as safe in the directory, offer the strongest guarantees, especially in summer months when foot traffic is higher.",
+    ],
+    sections: [
+      { h2: "Why a gelateria can be risky for a celiac", body: "Artisan gelato, on its own, is often naturally gluten-free: milk, cream, sugar and fruit don't contain it. The problem at gluten-free gelaterias is almost never the base ingredient, but cross-contamination during preparation and serving: scoops that go from a cookie flavor to a cream flavor, tubs sitting close together with no separation, uncertified cones. Understanding where the real risk hides is the first step to choosing with confidence." },
+      { h2: "Gluten-free gelaterias: what to ask before ordering", body: "A few direct questions to staff help you gauge the gelateria's level of attention right away.", h3: [
+        { title: "Are the scoops dedicated or shared?", body: "This is the most important question: if the same scoop is used for a flavor with crushed cookies and then for a \"gluten-free\" flavor, contamination is nearly unavoidable. The most careful gelaterias use a different scoop for each tub, or clean it thoroughly between flavors." },
+        { title: "Is the base itself gluten-free?", body: "Some seemingly simple flavors can contain hidden gluten, for example as a thickener or in flavorings: asking staff to confirm, especially for cream-based rather than fruit flavors, avoids surprises." },
+        { title: "Are cones, wafers and cups certified?", body: "The traditional cone contains gluten: if no certified gluten-free alternative is offered, a cup is the safer choice — though it's still worth checking it hasn't been in contact with cone crumbs in the same serving area." },
+      ] },
+      { h2: "The signs of a gelateria that's truly safe for celiacs", body: "A few elements help you spot a trustworthy gelateria even before ordering.", h3: [
+        { title: "AIC certification", body: "AIC-certified gelaterias have passed checks on procedures and staff training specific to celiac disease, with periodic reviews over time. It isn't a legal requirement, so its absence doesn't automatically mean risk, but the mark is an extra guarantee." },
+        { title: "Physically separated tubs and flavors", body: "The most careful gelaterias dedicate a separate, or at least well-spaced, area to gluten-free flavors, reducing the risk of accidental contact during busy service hours." },
+        { title: "Staff who answer without hesitation", body: "A trained staff member answers confidently about scoops, tubs and cones. If the question causes hesitation or gets a vague answer, that's a sign worth noting." },
+      ] },
+      { h2: "Watch out for the riskiest flavors", body: "Some flavors require more caution than others: those with crushed cookies, wafers, waffle cone pieces or hazelnut crunch carry a higher risk, because solid ingredients can leave residue on the scoop or in the tub later used for other flavors. Malt and some ready-made toppings can also contain gluten: when in doubt, simple fruit or cream flavors, confirmed directly with staff, are the safer bet." },
+      { h2: "Why summer raises the risk of contamination", body: "In summer months, gelaterias handle far higher foot traffic than the rest of the year, often with seasonal staff less trained in handling celiac disease. The rush of service during peak hours increases the risk of mistakes with scoops and tubs: this is exactly when it matters most to choose verified venues, like the ones flagged in the <a href=\"/directory?categoria=gelateria\">Mappa Senza Glutine directory</a>, rather than picking a gelateria at random." },
+      { h2: "Frequently asked questions about gluten-free gelaterias", body: "The most common questions from celiacs looking for a safe gelato.", h3: [
+        { title: "Is fruit gelato always gluten-free?", body: "In most cases yes, but it isn't automatically guaranteed: the main risk remains contamination through scoops or tubs shared with cookie- or wafer-based flavors, regardless of the starting ingredient." },
+        { title: "How can I tell if a gelateria is safe for celiacs?", body: "Check whether it's AIC certified, ask staff if scoops are dedicated or cleaned between flavors, and see if gluten-free tubs are physically separated from the others." },
+        { title: "Does the traditional cone contain gluten?", body: "Yes, the classic cone is made with wheat flour and contains gluten: if the gelateria doesn't offer a certified alternative, a cup remains the safer choice." },
+        { title: "Why is it riskier to eat gluten-free gelato in summer?", body: "Because foot traffic increases and seasonal staff are often less trained: the rush of service during peak hours raises the risk of accidental contamination between scoops and tubs." },
+      ] },
+    ],
+    faqs: [
+      { question: "Is fruit gelato always gluten-free?", answer: "In most cases yes, but the main risk remains contamination through scoops or tubs shared with cookie- or wafer-based flavors." },
+      { question: "How can I tell if a gelateria is safe for celiacs?", answer: "Check whether it's AIC certified, ask if scoops are dedicated or cleaned between flavors, and check that gluten-free tubs are separated from the others." },
+      { question: "Does the traditional cone contain gluten?", answer: "Yes, the classic cone contains wheat flour: if there's no certified alternative, a cup is the safer choice." },
+      { question: "Why is it riskier to eat gluten-free gelato in summer?", answer: "Because foot traffic increases and seasonal staff are often less trained, raising the risk of accidental contamination during peak hours." },
+    ],
+    tags: ["gelaterias", "summer", "cross-contamination", "food safety"],
+  },
+  "art-23": {
+    title: "AIC-Certified Hotels and Resorts for Celiacs: How to Choose a Worry-Free Vacation",
+    excerpt: "AIC-certified hotels and resorts: what the certification really guarantees, the difference between breakfast and full board, and how to plan a gluten-free vacation with no surprises.",
+    authorRole: "Travel writer",
+    keyTakeaways: [
+      "An AIC-certified hotel guarantees safe gluten-free breakfast and staff trained on celiac disease, not just generic \"gluten-free-friendly\" claims.",
+      "At full-board resorts, certification covers the entire kitchen and meal management, not just breakfast.",
+      "Even without certification, some properties offer in-room kitchenettes or arrangements with nearby certified restaurants.",
+      "Booking ahead and mentioning celiac disease when you book, not on arrival, remains the golden rule for a surprise-free vacation.",
+    ],
+    sections: [
+      { h2: "AIC-certified hotels: why they make a difference on vacation", body: "On vacation, managing celiac disease changes compared to your routine at home: you don't have your own kitchen, you eat out more often, and often at properties you don't know. Choosing AIC-certified hotels and resorts for celiacs means relying on properties that have passed specific checks on breakfast, kitchen management and staff training, instead of finding out on arrival whether the property is actually equipped. In this guide we look at what the certification really guarantees and how to plan a worry-free vacation." },
+      { h2: "What an AIC-certified hotel actually guarantees", body: "The certification isn't a generic label: it covers specific, verifiable aspects of the property.", h3: [
+        { title: "Safe gluten-free breakfast", body: "Gluten-free bread, cookies, cereal and pastries prepared or stored separately from other products, to avoid the cross-contamination typical of shared buffets." },
+        { title: "Staff trained on celiac disease", body: "Dining room and kitchen staff receive specific training on how to handle gluten-free requests and preparations, reducing the risk of mistakes from carelessness or limited knowledge of the topic." },
+        { title: "Kitchen equipped for full meals", body: "At properties with an in-house restaurant, certification can also cover lunch and dinner, with dishes prepared avoiding contact with gluten-containing ingredients." },
+      ] },
+      { h2: "Full-board resorts: what changes compared to a classic hotel", body: "At full-board resorts, managing celiac disease is more complex, since it covers every meal of the day, often in buffet format.", h3: [
+        { title: "The risk of shared buffets", body: "Self-service buffets, typical of resorts, raise the risk of contamination: utensils shared between different trays, crumbs moving from one dish to another. An AIC-certified resort has dedicated stations or staff who serve gluten-free dishes directly." },
+        { title: "Themed dinners and show cooking", body: "Themed evenings and show cooking, common at resorts, need extra attention: always check with staff whether gluten-free alternatives are planned for that specific evening, ideally mentioning it at check-in." },
+      ] },
+      { h2: "How to find AIC-certified hotels and resorts for your vacation", body: "The most reliable way is to check the certification directly on the property's website or ask for confirmation before booking, rather than trusting generic self-declared labels like \"gluten-free friendly\" found on booking platforms. In the <a href=\"/directory?categoria=hotel\">Mappa Senza Glutine directory</a> you'll find verified properties, with a clear indication of whether the certification is confirmed or not." },
+      { h2: "What to do if the hotel isn't AIC certified", body: "Even without certification, a gluten-free vacation is possible with a bit more care: check if the room has a kitchenette or a small fridge to store safe snacks and products brought from home, look for AIC-certified restaurants or ones flagged by the community nearby for lunch and dinner, and always bring a stock of gluten-free products for emergencies, especially in less touristy destinations where finding them locally can be difficult." },
+      { h2: "Frequently asked questions about gluten-free hotels and resorts", body: "The most common questions from celiacs planning a vacation.", h3: [
+        { title: "What does it mean that a hotel is AIC certified?", body: "It means the property has passed specific checks from the Italian Celiac Association on breakfast, any in-house dining and staff training, with periodic reviews over time." },
+        { title: "Are full-board resorts safe for celiacs?", body: "They can be if AIC certified or with dedicated buffet procedures: without these guarantees, the risk of cross-contamination in self-service formats is higher than at an à la carte restaurant." },
+        { title: "Do I need to tell the hotel about celiac disease before arriving?", body: "Yes, it's strongly recommended to mention it when booking, not at check-in: the kitchen needs time to organize breakfast and meals safely, especially during peak season." },
+        { title: "What should I bring on vacation if the hotel isn't certified?", body: "A stock of basic gluten-free products (bread, snacks, pasta) for emergencies, especially if the destination is less touristy: they can be hard to find locally outside major cities." },
+      ] },
+    ],
+    faqs: [
+      { question: "What does it mean that a hotel is AIC certified?", answer: "It means the property has passed specific AIC checks on breakfast, any in-house dining and staff training, with periodic reviews." },
+      { question: "Are full-board resorts safe for celiacs?", answer: "They can be if AIC certified or with dedicated buffet procedures, otherwise the risk of cross-contamination in self-service formats is higher." },
+      { question: "Do I need to tell the hotel about celiac disease before arriving?", answer: "Yes, it's strongly recommended to mention it when booking, not at check-in, so the kitchen can prepare in advance." },
+      { question: "What should I bring on vacation if the hotel isn't certified?", answer: "A stock of basic gluten-free products for emergencies, especially in less touristy destinations where finding them locally can be difficult." },
+    ],
+    tags: ["hotels", "travel", "AIC", "vacation"],
+  },
+  "art-24": {
+    title: "Where to Get Gluten-Free Breakfast: Croissants, Brioches and Dedicated Bakeries",
+    excerpt: "Where to get gluten-free breakfast without the risk: the difference between an industrial croissant and a dedicated bakery, what to ask at the counter, and how to plan ahead when out or traveling.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Many traditional cafés only offer a prepackaged industrial croissant: that's not the same as a bakery with a dedicated lab.",
+      "100% gluten-free bakeries offer the strongest guarantees against cross-contamination, but they're still mostly concentrated in bigger cities.",
+      "Even at cafés with a \"gluten-free corner\", the risk depends on how the products are stored, cut and served.",
+      "Bringing your own breakfast or looking for verified bakeries in the directory remains the safest choice when you're out or traveling.",
+    ],
+    sections: [
+      { h2: "Gluten-free breakfast: why the café down the street often isn't enough", body: "For celiacs, breakfast at a café is often one of the most missed rituals: the warm croissant fresh from the oven, the smell at the counter, the routine of breakfast out. Finding where to get gluten-free breakfast safely, though, means looking beyond simply \"they have a gluten-free product\": a packaged croissant kept in the same display case as traditional ones, cut with the same knife or toasted in the same toaster, can easily become contaminated. In this guide we look at where to look and what to ask for a truly safe breakfast." },
+      { h2: "Where to get gluten-free breakfast safely", body: "Not every venue offers the same level of guarantee: here are the most reliable options, ranked by safety.", h3: [
+        { title: "100% gluten-free dedicated bakeries", body: "The safest option by far: lab, oven and utensils used exclusively for gluten-free products, with no risk of contamination from traditional flours. Still few in number, but growing in bigger cities." },
+        { title: "Cafés with a certified gluten-free corner", body: "Many traditional cafés offer a small range of gluten-free products, often packaged by outside suppliers: check that they're stored in a separate display case and not cut or heated with the same tools used for traditional products." },
+        { title: "Supermarkets and packaged baked goods", body: "Packaged gluten-free-branded croissants and brioches, found at the supermarket or pharmacy, are a safe alternative for breakfast at home or to bring along, even if less of an \"experience\" than a bakery." },
+      ] },
+      { h2: "What to ask before ordering a croissant or brioche", body: "Before ordering, a few questions help gauge the venue's level of care: is the product individually packaged or loose? Is it stored separately from other baked goods? Is it heated in a dedicated toaster or oven, or the same one used for traditional croissants? If staff can't answer confidently, an unopened packaged product is the safer bet." },
+      { h2: "The hidden risks of breakfast at a café", body: "Even when the starting product is certified gluten-free, a few steps at the counter can compromise it: a shared toaster leaves crumb residue that lands on the next product, a shared display case allows accidental contact between traditional and gluten-free croissants, and staff hands or gloves moving from one product to another without changing are an often underestimated source of contamination." },
+      { h2: "Breakfast while traveling: how to plan ahead", body: "Outside your usual city or area, finding a safe breakfast takes a bit more planning: look up verified bakeries and cafés in the <a href=\"/directory?categoria=bar-pasticceria\">Mappa Senza Glutine directory</a> before you leave, and always carry a packaged baked good as a backup for mornings when you can't find a safe option nearby." },
+      { h2: "Frequently asked questions about gluten-free breakfast", body: "The most common questions from people looking for a safe café or bakery for breakfast.", h3: [
+        { title: "Are packaged gluten-free croissants always safe?", body: "Yes, as long as they stay sealed in the original packaging until eaten: the risk only rises if they're opened, cut or heated in contact with surfaces or utensils used for traditional products." },
+        { title: "How do I recognize a bakery that's truly dedicated to gluten-free?", body: "Check whether the lab is entirely dedicated to gluten-free or also makes traditional products: in the first case the contamination risk is nearly zero, in the second it depends on the separation procedures in place." },
+        { title: "Can I trust a café that only has one gluten-free croissant on the menu?", body: "It depends on how it's handled: always ask if it's stored separately and handled with dedicated tools before ordering, don't rely just on the product being listed on the menu." },
+        { title: "What should I bring if I can't find a safe café while traveling?", body: "Packaged gluten-free baked goods with a certified label, easy to carry and store, useful as a backup for mornings when you can't find a verified option nearby." },
+      ] },
+    ],
+    faqs: [
+      { question: "Are packaged gluten-free croissants always safe?", answer: "Yes, as long as they stay sealed until eaten: the risk only rises if they're opened, cut or heated in contact with traditional products." },
+      { question: "How do I recognize a bakery that's truly dedicated to gluten-free?", answer: "Check whether the lab is entirely dedicated or also makes traditional products: in the first case the contamination risk is nearly zero." },
+      { question: "Can I trust a café that only has one gluten-free croissant on the menu?", answer: "It depends on how it's handled: always ask if it's stored separately and handled with dedicated tools." },
+      { question: "What should I bring if I can't find a safe café while traveling?", answer: "Packaged gluten-free baked goods with a certified label, easy to carry as a backup." },
+    ],
+    tags: ["breakfast", "bakeries", "cross-contamination", "cafés"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {

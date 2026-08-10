@@ -607,6 +607,121 @@ const seeds: Seed[] = [
       { question: "Dove trovo l'elenco degli allergeni dei prodotti McDonald's?", answer: "Sul sito ufficiale di McDonald's Italia, alla pagina dedicata agli allergeni, e nei singoli punti vendita." },
     ],
   },
+  {
+    title: "Gelaterie senza glutine: come riconoscere quelle davvero senza contaminazione crociata",
+    category: "Guide",
+    excerpt: "Gelaterie senza glutine: come capire se palette, vaschette e coni sono davvero sicuri per un celiaco, quali gusti evitare e perché l'estate aumenta il rischio di contaminazione crociata.",
+    coverSeed: 122, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-30",
+    tags: ["gelaterie", "estate", "contaminazione crociata", "sicurezza alimentare"],
+    keyTakeaways: [
+      "Il rischio principale nelle gelaterie non certificate è la contaminazione tramite palette e vaschette condivise tra gusti con glutine e gusti senza glutine.",
+      "Le gelaterie davvero sicure usano palette dedicate per ogni gusto, o le puliscono a ogni utilizzo tra un gusto e l'altro.",
+      "Anche coni, cialde e coppette possono essere fonte di contaminazione se non certificati senza glutine.",
+      "Le gelaterie certificate AIC o segnalate come sicure nella directory offrono le maggiori garanzie, soprattutto nei mesi estivi quando l'afflusso è più alto.",
+    ],
+    sections: [
+      { h2: "Perché una gelateria può essere rischiosa per un celiaco", body: "Il gelato artigianale, di per sé, è spesso naturalmente senza glutine: latte, panna, zucchero e frutta non ne contengono. Il problema nelle gelaterie senza glutine non è quasi mai l'ingrediente di base, ma la contaminazione crociata durante la preparazione e il servizio: palette che passano da un gusto al biscotto a uno alla crema, vaschette vicine senza separazione, coni non certificati. Capire dove si nasconde davvero il rischio è il primo passo per scegliere con sicurezza." },
+      { h2: "Gelaterie senza glutine: cosa chiedere prima di ordinare", body: "Poche domande dirette allo staff aiutano a capire subito il livello di attenzione della gelateria.", h3: [
+        { title: "Le palette sono dedicate o condivise?", body: "È la domanda più importante: se la stessa paletta viene usata per un gusto con biscotto sbriciolato e poi per un gusto \"senza glutine\", la contaminazione è quasi inevitabile. Le gelaterie più attente usano una paletta diversa per ogni vaschetta, o la puliscono accuratamente tra un gusto e l'altro." },
+        { title: "Il gelato alla base è senza glutine?", body: "Alcuni gusti apparentemente semplici possono contenere glutine nascosto, ad esempio come addensante o negli aromi: chiedere conferma allo staff, soprattutto per gusti creme e non alla frutta, evita sorprese." },
+        { title: "Coni, cialde e coppette sono certificati?", body: "Il cono tradizionale contiene glutine: se non viene offerta un'alternativa certificata senza glutine, meglio optare per la coppetta, verificando comunque che non sia stata a contatto con briciole di cono nella stessa area di servizio." },
+      ] },
+      { h2: "I segnali di una gelateria davvero sicura per celiaci", body: "Alcuni elementi aiutano a riconoscere una gelateria affidabile ancora prima di ordinare.", h3: [
+        { title: "Certificazione AIC", body: "Le gelaterie certificate AIC hanno superato controlli su procedure e formazione del personale specifici per la celiachia, con verifiche periodiche nel tempo. Non è un obbligo di legge, quindi la sua assenza non significa automaticamente rischio, ma la presenza del marchio è una garanzia in più." },
+        { title: "Vaschette e gusti separati fisicamente", body: "Le gelaterie più attente dedicano un'area separata, o quantomeno ben distanziata, ai gusti senza glutine, riducendo il rischio di contatto accidentale durante il servizio nelle ore di maggiore affluenza." },
+        { title: "Staff che sa rispondere senza esitazioni", body: "Un addetto formato risponde con sicurezza alle domande su palette, vaschette e coni. Se la richiesta genera esitazione o una risposta vaga, è un segnale a cui prestare attenzione." },
+      ] },
+      { h2: "Attenzione ai gusti più a rischio", body: "Alcuni gusti richiedono più attenzione di altri: quelli con biscotto sbriciolato, wafer, cialde o croccante alle nocciole comportano un rischio maggiore, perché gli ingredienti solidi possono lasciare residui nella paletta o nella vaschetta usata poi per altri gusti. Anche il malto e alcuni topping pronti possono contenere glutine: in caso di dubbio, meglio orientarsi su gusti alla frutta o creme semplici, verificati direttamente con lo staff." },
+      { h2: "Perché l'estate aumenta il rischio di contaminazione", body: "Nei mesi estivi le gelaterie gestiscono un afflusso molto più alto rispetto al resto dell'anno, spesso con personale stagionale meno formato sulla gestione della celiachia. La fretta del servizio nelle ore di punta aumenta il rischio di errori nell'uso di palette e vaschette: è il momento in cui vale ancora di più scegliere locali verificati, come quelli segnalati nella <a href=\"/directory?categoria=gelateria\">directory di Mappa Senza Glutine</a>, invece di affidarsi a una gelateria scelta a caso." },
+      { h2: "Domande frequenti sulle gelaterie senza glutine", body: "Le domande più comuni di chi è celiaco e cerca un gelato sicuro.", h3: [
+        { title: "Il gelato alla frutta è sempre senza glutine?", body: "Nella maggior parte dei casi sì, ma non è garantito automaticamente: il rischio principale resta la contaminazione tramite palette o vaschette condivise con gusti a base di biscotto o cialde, indipendentemente dall'ingrediente di partenza." },
+        { title: "Come faccio a sapere se una gelateria è sicura per celiaci?", body: "Verifica se è certificata AIC, chiedi allo staff se le palette sono dedicate o pulite tra un gusto e l'altro, e osserva se le vaschette senza glutine sono separate fisicamente dalle altre." },
+        { title: "Il cono tradizionale contiene glutine?", body: "Sì, il cono classico è a base di farina di frumento e contiene glutine: se la gelateria non offre un'alternativa certificata, la coppetta resta la scelta più sicura." },
+        { title: "Perché d'estate è più rischioso mangiare un gelato senza glutine?", body: "Perché l'afflusso di clienti aumenta e spesso lavora personale stagionale meno formato: la fretta del servizio nelle ore di punta alza il rischio di contaminazione accidentale tra palette e vaschette." },
+      ] },
+    ],
+    faqs: [
+      { question: "Il gelato alla frutta è sempre senza glutine?", answer: "Nella maggior parte dei casi sì, ma il rischio principale resta la contaminazione tramite palette o vaschette condivise con gusti a base di biscotto o cialde." },
+      { question: "Come faccio a sapere se una gelateria è sicura per celiaci?", answer: "Verifica se è certificata AIC, chiedi se le palette sono dedicate o pulite tra un gusto e l'altro, e controlla che le vaschette senza glutine siano separate dalle altre." },
+      { question: "Il cono tradizionale contiene glutine?", answer: "Sì, il cono classico contiene farina di frumento: se non c'è un'alternativa certificata, la coppetta è la scelta più sicura." },
+      { question: "Perché d'estate è più rischioso mangiare un gelato senza glutine?", answer: "Perché l'afflusso aumenta e spesso lavora personale stagionale meno formato, con più rischio di contaminazione accidentale nelle ore di punta." },
+    ],
+  },
+  {
+    title: "Hotel e villaggi turistici certificati AIC per celiaci: come scegliere una vacanza senza pensieri",
+    category: "Viaggi",
+    excerpt: "Hotel e villaggi turistici certificati AIC: cosa garantisce davvero la certificazione, la differenza tra colazione e pensione completa, e come organizzare una vacanza senza glutine senza sorprese.",
+    coverSeed: 123, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-07-30",
+    tags: ["hotel", "viaggi", "AIC", "vacanze"],
+    keyTakeaways: [
+      "Un hotel certificato AIC garantisce una colazione senza glutine sicura e staff formato sulla celiachia, non solo generiche \"opzioni gluten free\".",
+      "Nei villaggi con pensione completa la certificazione riguarda l'intera gestione dei pasti in cucina, non solo la colazione.",
+      "Anche senza certificazione, alcune strutture offrono cucine attrezzate in camera o accordi con ristoranti certificati nelle vicinanze.",
+      "Prenotare con anticipo e segnalare la celiachia al momento della prenotazione, non all'arrivo, resta la regola d'oro per una vacanza senza sorprese.",
+    ],
+    sections: [
+      { h2: "Hotel certificati AIC: perché fanno la differenza in vacanza", body: "In vacanza, la gestione della celiachia cambia rispetto alla routine di casa: non hai la tua cucina, mangi fuori più spesso e spesso in strutture che non conosci. Scegliere hotel e villaggi turistici certificati AIC per celiaci significa affidarsi a strutture che hanno superato controlli specifici su colazione, gestione della cucina e formazione del personale, invece di scoprire all'arrivo se la struttura è davvero attrezzata. In questa guida vediamo cosa garantisce realmente la certificazione e come organizzare una vacanza senza pensieri." },
+      { h2: "Cosa garantisce davvero un hotel certificato AIC", body: "La certificazione non è un'etichetta generica: copre aspetti specifici e verificabili della struttura.", h3: [
+        { title: "Colazione senza glutine sicura", body: "Pane, biscotti, cereali e dolci senza glutine preparati o conservati separatamente dagli altri prodotti, per evitare la contaminazione crociata tipica dei buffet condivisi." },
+        { title: "Staff formato sulla celiachia", body: "Il personale di sala e cucina riceve una formazione specifica su come gestire richieste e preparazioni senza glutine, riducendo il rischio di errori dovuti a disattenzione o scarsa conoscenza del tema." },
+        { title: "Cucina attrezzata per pasti completi", body: "Nelle strutture con ristorante interno, la certificazione può coprire anche pranzo e cena, con piatti preparati evitando il contatto con ingredienti contenenti glutine." },
+      ] },
+      { h2: "Villaggi turistici e pensione completa: cosa cambia rispetto a un hotel classico", body: "Nei villaggi con pensione completa la gestione della celiachia è più complessa, perché coinvolge tutti i pasti della giornata, spesso in formula buffet.", h3: [
+        { title: "Il rischio dei buffet condivisi", body: "I buffet self-service, tipici dei villaggi turistici, aumentano il rischio di contaminazione: posate condivise tra vassoi diversi, briciole che passano da un piatto all'altro. Un villaggio certificato AIC prevede postazioni dedicate o personale che serve direttamente i piatti senza glutine." },
+        { title: "Ristoranti a tema e show cooking", body: "Le serate a tema e gli show cooking, molto diffusi nei villaggi, richiedono attenzione extra: verifica sempre con lo staff se sono previste alternative senza glutine per quella specifica serata, idealmente comunicandolo al check-in." },
+      ] },
+      { h2: "Come trovare hotel e villaggi certificati AIC per la tua vacanza", body: "Il modo più affidabile è verificare la certificazione direttamente sul sito della struttura o chiedendo conferma prima di prenotare, evitando di fidarsi solo di autodichiarazioni generiche come \"gluten free friendly\" trovate su portali di prenotazione. Nella <a href=\"/directory?categoria=hotel\">directory di Mappa Senza Glutine</a> trovi le strutture verificate, con indicazione chiara se la certificazione è confermata o meno." },
+      { h2: "Cosa fare se l'hotel non è certificato AIC", body: "Anche senza certificazione, una vacanza senza glutine è possibile con qualche accorgimento in più: verifica se la camera ha un angolo cottura o un piccolo frigo per conservare snack e prodotti sicuri portati da casa, cerca ristoranti certificati AIC o segnalati dalla community nella zona per pranzo e cena, e porta sempre con te una scorta di prodotti senza glutine per le emergenze, soprattutto in mete poco turistiche dove trovarli sul posto può essere difficile." },
+      { h2: "Domande frequenti su hotel e villaggi senza glutine", body: "Le domande più comuni di chi organizza una vacanza da celiaco.", h3: [
+        { title: "Cosa significa che un hotel è certificato AIC?", body: "Significa che la struttura ha superato controlli specifici dell'Associazione Italiana Celiachia su colazione, eventuale ristorazione interna e formazione del personale, con verifiche periodiche nel tempo." },
+        { title: "I villaggi con pensione completa sono sicuri per celiaci?", body: "Possono esserlo se certificati AIC o con procedure dedicate per i buffet: senza queste garanzie, il rischio di contaminazione crociata nelle formule self-service è più alto rispetto a un ristorante à la carte." },
+        { title: "Devo avvisare l'hotel della celiachia prima di arrivare?", body: "Sì, è fortemente consigliato segnalarlo già in fase di prenotazione, non al check-in: la cucina ha bisogno di tempo per organizzare colazione e pasti in sicurezza, soprattutto nei periodi di alta stagione." },
+        { title: "Cosa porto con me in vacanza se l'hotel non è certificato?", body: "Una scorta di prodotti senza glutine di base (pane, snack, pasta) per le emergenze, soprattutto se la meta è poco turistica: può essere difficile trovarli sul posto fuori dalle grandi città." },
+      ] },
+    ],
+    faqs: [
+      { question: "Cosa significa che un hotel è certificato AIC?", answer: "Significa che la struttura ha superato controlli specifici dell'AIC su colazione, eventuale ristorazione interna e formazione del personale, con verifiche periodiche." },
+      { question: "I villaggi con pensione completa sono sicuri per celiaci?", answer: "Possono esserlo se certificati AIC o con procedure dedicate per i buffet, altrimenti il rischio di contaminazione crociata nelle formule self-service è più alto." },
+      { question: "Devo avvisare l'hotel della celiachia prima di arrivare?", answer: "Sì, è fortemente consigliato segnalarlo in fase di prenotazione, non al check-in, così la cucina può organizzarsi in anticipo." },
+      { question: "Cosa porto con me in vacanza se l'hotel non è certificato?", answer: "Una scorta di prodotti senza glutine di base per le emergenze, soprattutto in mete poco turistiche dove trovarli sul posto può essere difficile." },
+    ],
+  },
+  {
+    title: "Dove fare colazione senza glutine: cornetti, brioches e pasticcerie dedicate",
+    category: "Guide",
+    excerpt: "Dove fare colazione senza glutine senza rischi: la differenza tra un cornetto industriale e una pasticceria dedicata, cosa chiedere al bar e come organizzarsi quando si è fuori casa o in viaggio.",
+    coverSeed: 124, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-30",
+    tags: ["colazione", "pasticcerie", "contaminazione crociata", "bar"],
+    keyTakeaways: [
+      "Molti bar tradizionali offrono solo un cornetto industriale preconfezionato: non è la stessa cosa di una pasticceria con laboratorio dedicato.",
+      "Le pasticcerie 100% senza glutine offrono le maggiori garanzie contro la contaminazione crociata, ma sono ancora concentrate soprattutto nelle grandi città.",
+      "Anche nei bar con un \"angolo senza glutine\", il rischio dipende da come vengono conservati, tagliati e serviti i prodotti.",
+      "Portare la propria colazione o cercare pasticcerie verificate nella directory resta la scelta più sicura quando si è fuori casa o in viaggio.",
+    ],
+    sections: [
+      { h2: "Colazione senza glutine: perché il bar sotto casa spesso non basta", body: "Per chi è celiaco, la colazione al bar è spesso una delle rinunce più sentite: il cornetto caldo appena sfornato, il profumo del bancone, il rito della colazione fuori casa. Trovare dove fare colazione senza glutine in sicurezza significa però andare oltre il semplice \"hanno il prodotto senza glutine\": un cornetto confezionato tenuto nello stesso espositore di quelli tradizionali, tagliato con lo stesso coltello o tostato nello stesso tostapane, può contaminarsi facilmente. In questa guida vediamo dove cercare e cosa chiedere per una colazione davvero sicura." },
+      { h2: "Dove fare colazione senza glutine in sicurezza", body: "Non tutti i locali offrono lo stesso livello di garanzia: ecco le opzioni più affidabili, in ordine di sicurezza.", h3: [
+        { title: "Pasticcerie 100% dedicate al senza glutine", body: "Sono l'opzione più sicura in assoluto: laboratorio, forno e utensili usati esclusivamente per prodotti senza glutine, senza alcun rischio di contaminazione da farine tradizionali. Sono ancora poche, ma in crescita nelle grandi città." },
+        { title: "Bar con angolo senza glutine certificato", body: "Molti bar tradizionali propongono un piccolo assortimento di prodotti senza glutine, spesso confezionati da fornitori esterni: verifica che siano conservati in un espositore separato e non tagliati o riscaldati con gli stessi strumenti usati per i prodotti tradizionali." },
+        { title: "Supermercati e prodotti da forno confezionati", body: "Cornetti e brioches confezionati con marchio senza glutine, reperibili al supermercato o in farmacia, sono un'alternativa sicura per la colazione a casa o da portare con sé, anche se meno \"esperienziale\" di una pasticceria." },
+      ] },
+      { h2: "Cosa chiedere prima di ordinare un cornetto o una brioche", body: "Prima di ordinare, alcune domande aiutano a capire il livello di attenzione del locale: il prodotto è confezionato singolarmente o sfuso? Viene conservato separato dagli altri prodotti da forno? Viene riscaldato in un tostapane o forno dedicato, o nello stesso usato per i cornetti tradizionali? Se il personale non sa rispondere con sicurezza, meglio optare per un prodotto confezionato non manipolato sul posto." },
+      { h2: "I rischi nascosti della colazione al bar", body: "Anche quando il prodotto di partenza è certificato senza glutine, alcuni passaggi al bancone possono comprometterlo: un tostapane condiviso lascia residui di briciole che si depositano sul prodotto successivo, un espositore comune permette il contatto accidentale tra cornetti tradizionali e senza glutine, e le mani o i guanti dello staff che passano da un prodotto all'altro senza cambiarli sono un veicolo di contaminazione spesso sottovalutato." },
+      { h2: "Colazione in viaggio: come organizzarsi", body: "Fuori dalla propria città o zona abituale, trovare una colazione sicura richiede un po' di pianificazione in più: cerca pasticcerie e bar verificati nella <a href=\"/directory?categoria=bar-pasticceria\">directory di Mappa Senza Glutine</a> prima di partire, e porta sempre con te qualche prodotto da forno confezionato come riserva per le mattine in cui non trovi un'alternativa sicura nelle vicinanze." },
+      { h2: "Domande frequenti sulla colazione senza glutine", body: "Le domande più comuni di chi cerca un bar o una pasticceria sicura per la colazione.", h3: [
+        { title: "I cornetti confezionati senza glutine sono sempre sicuri?", body: "Sì, se rimangono sigillati nella confezione originale fino al momento del consumo: il rischio aumenta solo se vengono aperti, tagliati o riscaldati a contatto con superfici o utensili usati per prodotti tradizionali." },
+        { title: "Come riconosco una pasticceria davvero dedicata al senza glutine?", body: "Verifica se il laboratorio è interamente dedicato al senza glutine oppure se produce anche prodotti tradizionali: nel primo caso il rischio di contaminazione è pressoché azzerato, nel secondo dipende dalle procedure di separazione adottate." },
+        { title: "Posso fidarmi di un bar che ha solo un cornetto senza glutine nel menu?", body: "Dipende da come viene gestito: chiedi sempre se è conservato separatamente e se viene manipolato con strumenti dedicati prima di ordinarlo, non basarti solo sulla presenza del prodotto nel menu." },
+        { title: "Cosa porto con me se non trovo un bar sicuro in viaggio?", body: "Prodotti da forno confezionati senza glutine con marchio certificato, facili da trasportare e da conservare, utili come riserva per le mattine in cui non trovi un'alternativa verificata nelle vicinanze." },
+      ] },
+    ],
+    faqs: [
+      { question: "I cornetti confezionati senza glutine sono sempre sicuri?", answer: "Sì, se rimangono sigillati fino al consumo: il rischio aumenta solo se vengono aperti, tagliati o riscaldati a contatto con prodotti tradizionali." },
+      { question: "Come riconosco una pasticceria davvero dedicata al senza glutine?", answer: "Verifica se il laboratorio è interamente dedicato o se produce anche prodotti tradizionali: nel primo caso il rischio di contaminazione è pressoché azzerato." },
+      { question: "Posso fidarmi di un bar che ha solo un cornetto senza glutine nel menu?", answer: "Dipende da come viene gestito: chiedi sempre se è conservato separatamente e manipolato con strumenti dedicati." },
+      { question: "Cosa porto con me se non trovo un bar sicuro in viaggio?", answer: "Prodotti da forno confezionati senza glutine con marchio certificato, facili da trasportare come riserva." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
