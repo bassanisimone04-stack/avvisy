@@ -723,59 +723,6 @@ const seeds: Seed[] = [
     ],
   },
   {
-    title: "Pasta al pesto senza glutine: la ricetta con i fusilli in 15 minuti",
-    category: "Ricette",
-    excerpt: "Il piatto veloce per eccellenza, senza glutine: fusilli o eliche di mais, pesto alla genovese o pesto bio, pronto in un quarto d'ora.",
-    coverSeed: 130, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "pasta", "pesto", "primi piatti"],
-    keyTakeaways: [
-      "I fusilli o le eliche di mais senza glutine cuociono in 8-11 minuti: assaggiare sempre un minuto prima del tempo indicato in confezione.",
-      "Diluire il pesto con un mestolo di acqua di cottura rende il condimento più cremoso e aiuta ad amalgamarlo alla pasta.",
-      "Il pesto alla genovese Barilla contiene Parmigiano Reggiano DOP; chi cerca un'opzione certificata AIC può scegliere il pesto bio Sarchio.",
-      "Attenzione alla contaminazione crociata: scolare la pasta senza glutine con un colino dedicato, mai lo stesso usato per pasta di grano.",
-    ],
-    sections: [
-      { h2: "Ingredienti per 2 persone", body: "160 g di <a href=\"/prodotti/barilla-fusilli-senza-glutine-400g\">fusilli senza glutine Barilla</a> (o le <a href=\"/prodotti/le-veneziane-eliche-di-mais-250g\">eliche di mais Le Veneziane</a>), 1 vasetto di <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a> oppure di <a href=\"/prodotti/sarchio-pesto-bio-130g\">pesto bio Sarchio</a> se preferisci un'opzione certificata AIC, un mestolo dell'acqua di cottura, pinoli e basilico fresco per guarnire (facoltativi)." },
-      { h2: "Procedimento", body: "Porta a bollore abbondante acqua salata in una pentola dedicata alla cottura senza glutine. Versa la pasta e cuoci seguendo i tempi in confezione, assaggiando un minuto prima della scadenza indicata: la pasta di mais e riso tende a scuocere più in fretta di quella di grano.", h3: [
-        { title: "Il trucco della crema", body: "Prima di scolare, preleva un mestolo di acqua di cottura amidacea: aiuta a legare il pesto alla pasta senza doverne usare troppo, per un risultato più cremoso e meno asciutto." },
-        { title: "Attenzione alla contaminazione crociata", body: "Se in casa si cucina anche pasta di grano, usa una pentola, un colino e un cucchiaio di legno dedicati esclusivamente alla preparazione senza glutine, per evitare contaminazioni anche minime." },
-      ] },
-      { h2: "Il tocco finale", body: "Scola la pasta al dente, versala in una ciotola capiente insieme al pesto scelto e a un cucchiaio di acqua di cottura, mescola bene fuori dal fuoco per non far perdere aroma al basilico. Completa con pinoli tostati e qualche foglia di basilico fresco." },
-    ],
-    faqs: [
-      { question: "Posso usare la pasta di riso invece del mais?", answer: "Sì, qualsiasi formato di pasta senza glutine funziona: cambiano solo i tempi di cottura, sempre indicati in confezione." },
-      { question: "Il pesto alla genovese Barilla contiene glutine?", answer: "No, è senza glutine, ma non porta la certificazione AIC (Spiga Barrata): se la cerchi, il pesto bio Sarchio ce l'ha." },
-      { question: "Come conservo il pesto avanzato?", answer: "In frigorifero, ben chiuso, per pochi giorni: verifica sempre le indicazioni di conservazione riportate in etichetta dal produttore." },
-    ],
-  },
-  {
-    title: "Colazione senza glutine: 6 idee veloci con pane, fette e biscotti",
-    category: "Ricette",
-    excerpt: "Dolce o salata, pronta in pochi minuti: le combinazioni più semplici per una colazione senza glutine varia tutta la settimana.",
-    coverSeed: 131, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "colazione", "prima colazione"],
-    keyTakeaways: [
-      "Alternare pane a fette, fette croccanti e biscotti aiuta a variare la colazione senza glutine durante la settimana.",
-      "Le versioni salate (avocado, formaggio) sono un'alternativa proteica a quelle dolci con marmellata o cioccolato.",
-      "I prodotti in monoporzione (crackers, biscotti) sono comodi da portare fuori casa, a scuola o al lavoro.",
-      "Controllare sempre la certificazione AIC in etichetta resta la regola, anche per una colazione veloce.",
-    ],
-    sections: [
-      { h2: "Colazione dolce con pane casereccio", body: "Tosta due fette di <a href=\"/prodotti/schar-pane-casereccio-240g\">pane casereccio Schär</a> e spalmale con marmellata o miele: la mollica morbida e il gusto rustico del grano saraceno reggono bene la tostatura." },
-      { h2: "Toast salato con le panfette", body: "Le <a href=\"/prodotti/nutrifree-panfette-pane-casereccio-300g\">panfette Nutrifree</a>, già porzionate, sono perfette per un toast veloce con avocado schiacciato, un filo d'olio e un pizzico di sale, o con formaggio fresco e pomodorini per chi preferisce." },
-      { h2: "Fette croccanti con marmellata o miele", body: "Le <a href=\"/prodotti/cereal-fette-croccanti-150g\">fette croccanti Céréal</a> non richiedono il tostapane: sono già pronte, croccanti, ideali da spalmare al volo o da sgranocchiare da sole.", h3: [
-        { title: "Versione salata", body: "Le stesse fette croccanti si abbinano bene anche a formaggio spalmabile o hummus, per chi preferisce iniziare la giornata senza dolce." },
-      ] },
-      { h2: "Crackers per chi va di corsa", body: "I <a href=\"/prodotti/schar-crackers-210g\">crackers Schär</a>, già divisi in monoporzioni da 35g, sono comodi da portare in borsa: abbinali a un formaggio spalmabile o a della frutta secca." },
-      { h2: "L'opzione dolce pronta: biscotti o barretta", body: "Nei giorni di fretta, i <a href=\"/prodotti/cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g\">biscotti Buoni Senza Céréal</a> con gocce di cioccolato o la barretta <a href=\"/prodotti/schar-chocolix-110g\">Chocolix Schär</a> sono pronti da mangiare senza preparazione, comunque certificati senza glutine." },
-    ],
-    faqs: [
-      { question: "Meglio la colazione dolce o salata?", answer: "Non c'è una regola: la colazione salata con avocado o formaggio dà più sazietà proteica, quella dolce è più tradizionale. L'importante è variare durante la settimana." },
-      { question: "Questi prodotti sono adatti anche ai bambini celiaci?", answer: "Sono prodotti generici senza indicazioni di età: verifica sempre etichetta e quantità con il pediatra o il nutrizionista di riferimento." },
-      { question: "Posso congelare il pane casereccio o le panfette?", answer: "Molti pani senza glutine si congelano bene già a fette: verifica le indicazioni di conservazione riportate in confezione dal produttore." },
-    ],
-  },
-  {
     title: "Torta senza glutine facile: la ricetta base con il mix per dolci",
     category: "Ricette",
     excerpt: "La torta \"salva-cena\" per chi ha poco tempo: pochi ingredienti, il mix di farine già pronto e un risultato soffice e sicuro.",
@@ -799,57 +746,6 @@ const seeds: Seed[] = [
       { question: "Posso usare farine sciolte al posto del mix già pronto?", answer: "Sì, ma un mix specifico per dolci ha già le proporzioni tra amidi e farine bilanciate per la lievitazione: per chi inizia è il modo più sicuro per ottenere un risultato soffice." },
       { question: "La torta viene più asciutta di una tradizionale?", answer: "Se rispetti tempi e temperature indicati, il risultato è paragonabile: le farine senza glutine tendono ad asciugare un po' più in fretta, quindi conservala ben coperta." },
       { question: "Il mix per dolci Nutrifree è certificato AIC?", answer: "Sì, come tutti i prodotti Nutrifree porta il marchio Spiga Barrata dell'Associazione Italiana Celiachia." },
-    ],
-  },
-  {
-    title: "Pasta fredda senza glutine con pesto e verdure: la ricetta estiva",
-    category: "Ricette",
-    excerpt: "Il primo piatto perfetto per il caldo: pasta di mais o riso, pesto e verdure di stagione, da preparare in anticipo e servire fredda.",
-    coverSeed: 133, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "pasta", "estate", "pesto"],
-    keyTakeaways: [
-      "Per la pasta fredda scegli formati corti come eliche o fusilli: trattengono meglio pesto e verdure a cubetti.",
-      "Raffredda la pasta passandola sotto l'acqua fredda subito dopo la cottura, per fermarla ed evitare che scuocia.",
-      "Prepara la pasta fredda con qualche ora di anticipo: il riposo in frigorifero aiuta i sapori ad amalgamarsi.",
-      "Aggiungi il pesto solo poco prima di servire, per mantenere il colore verde brillante del basilico.",
-    ],
-    sections: [
-      { h2: "Ingredienti per 4 persone", body: "320 g di <a href=\"/prodotti/le-veneziane-eliche-di-mais-250g\">eliche di mais Le Veneziane</a> (o <a href=\"/prodotti/barilla-fusilli-senza-glutine-400g\">fusilli Barilla</a>), 1 vasetto di <a href=\"/prodotti/sarchio-pesto-bio-130g\">pesto bio Sarchio</a> o di <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a>, pomodorini, mozzarella o feta a cubetti, olive, un filo d'olio extravergine." },
-      { h2: "Procedimento", body: "Cuoci la pasta in acqua bollente salata seguendo i tempi in confezione, poi scolala e passala subito sotto l'acqua fredda per bloccare la cottura: è il passaggio che fa la differenza tra una pasta fredda gommosa e una al punto giusto.", h3: [
-        { title: "Il riposo in frigo", body: "Condisci la pasta con un filo d'olio appena scolata, per evitare che si attacchi, e lasciala raffreddare in frigorifero per almeno un'ora prima di aggiungere gli altri ingredienti." },
-        { title: "Quando aggiungere il pesto", body: "Unisci il pesto solo negli ultimi 15-20 minuti prima di servire: a contatto prolungato con gli altri ingredienti tende a scurirsi e perdere aroma." },
-      ] },
-      { h2: "Assemblaggio finale", body: "Aggiungi pomodorini tagliati a metà, cubetti di mozzarella o feta, olive e un cucchiaio abbondante di pesto. Mescola delicatamente e servi a temperatura ambiente." },
-    ],
-    faqs: [
-      { question: "Posso prepararla il giorno prima?", answer: "Sì, la pasta condita con olio si conserva bene in frigorifero fino al giorno dopo: aggiungi il pesto solo al momento di servire." },
-      { question: "Quale formato di pasta senza glutine tiene meglio per la pasta fredda?", answer: "I formati corti come eliche, fusilli o penne trattengono meglio condimento e verdure a cubetti rispetto a formati lunghi." },
-      { question: "Posso sostituire la mozzarella con un'alternativa vegetale?", answer: "Sì, qualsiasi formaggio o alternativa vegetale a cubetti funziona bene: verifica solo che sia senza glutine in etichetta." },
-    ],
-  },
-  {
-    title: "Aperitivo senza glutine: crackers, pesto e stuzzichini veloci",
-    category: "Ricette",
-    excerpt: "Idee semplici per un aperitivo senza glutine in casa: crackers, fette croccanti, due salse pronte e pochi minuti di preparazione.",
-    coverSeed: 134, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "aperitivo", "stuzzichini"],
-    keyTakeaways: [
-      "Crackers e fette croccanti già pronti riducono i tempi di preparazione di un aperitivo senza glutine a pochi minuti.",
-      "Il pesto, alla genovese o bio, funziona anche come salsa da intingere e non solo come condimento per la pasta.",
-      "Servire ogni prodotto nella propria confezione o ciotola separata evita contaminazioni crociate con snack tradizionali.",
-      "Un aperitivo vario alterna un'opzione a base di formaggio, una vegetale e una più sfiziosa.",
-    ],
-    sections: [
-      { h2: "La base: crackers e fette croccanti", body: "Disponi in due ciotole separate i <a href=\"/prodotti/schar-crackers-210g\">crackers Schär</a> e le <a href=\"/prodotti/cereal-fette-croccanti-150g\">fette croccanti Céréal</a>: sono già porzionati e pronti da servire, senza cottura." },
-      { h2: "Le salse da intingere", body: "Versa in due ciotoline il <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a> e il <a href=\"/prodotti/sarchio-pesto-bio-130g\">pesto bio Sarchio</a>, diluiti con un cucchiaio di olio extravergine per renderli più cremosi da intingere.", h3: [
-        { title: "Attenzione alla contaminazione", body: "Se in casa hai anche snack tradizionali, usa piatti e ciotole separati per i prodotti senza glutine e servili prima di aprire quelli con glutine, per ridurre il rischio di contatto." },
-      ] },
-      { h2: "Come completare il tagliere", body: "Aggiungi formaggi stagionati (naturalmente senza glutine, ma verifica sempre l'etichetta per eventuali trattamenti), olive, verdure crude a bastoncino e frutta secca per un aperitivo completo e vario." },
-    ],
-    faqs: [
-      { question: "Il pesto va bene anche come salsa da intingere e non solo per la pasta?", answer: "Sì, diluito con un filo d'olio diventa una salsa cremosa perfetta per crackers e verdure crude." },
-      { question: "Come evito la contaminazione crociata durante un aperitivo misto?", answer: "Usa ciotole e taglieri separati per i prodotti senza glutine e serviteli prima di aprire snack tradizionali, per ridurre il rischio di contatto con briciole." },
-      { question: "I formaggi stagionati sono sempre senza glutine?", answer: "Generalmente sì, ma alcuni trattamenti superficiali (es. cenere aromatizzata) possono contenere glutine: verifica sempre l'etichetta o chiedi al produttore." },
     ],
   },
   {
@@ -879,32 +775,6 @@ const seeds: Seed[] = [
     ],
   },
   {
-    title: "Focaccia senza glutine morbida: la ricetta base",
-    category: "Ricette",
-    excerpt: "Una focaccia soffice e alveolata anche senza glutine: la ricetta con il mix universale, olio extravergine e sale grosso in superficie.",
-    coverSeed: 136, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "focaccia", "impasti"],
-    keyTakeaways: [
-      "L'acqua in eccesso rispetto a un impasto tradizionale è il segreto per una focaccia senza glutine più soffice.",
-      "I classici buchi con le dita si fanno dopo la lievitazione, non prima, per non far sgonfiare l'impasto.",
-      "Un filo abbondante di olio extravergine prima della cottura aiuta a formare la crosticina dorata tipica della focaccia.",
-      "La focaccia senza glutine si mantiene morbida più a lungo se conservata in un sacchetto chiuso a temperatura ambiente.",
-    ],
-    sections: [
-      { h2: "Ingredienti per una teglia da 30x20 cm", body: "400 g di <a href=\"/prodotti/schar-mix-it-universale-1kg\">Mix It! Universale Schär</a>, 320 ml di acqua tiepida, 8 g di lievito di birra secco, 4 cucchiai di olio extravergine (più altro per la superficie), un cucchiaino di sale, sale grosso e rosmarino per guarnire." },
-      { h2: "Procedimento", body: "Sciogli il lievito nell'acqua tiepida, poi uniscilo al mix con il sale e 2 cucchiai di olio, impastando fino a ottenere un composto morbido e piuttosto idratato: è normale che risulti più liquido di un impasto per pane tradizionale.", h3: [
-        { title: "Prima lievitazione e stesura", body: "Versa l'impasto direttamente nella teglia oliata, senza bisogno di stenderlo con il mattarello, e lascia lievitare coperto per 40-50 minuti in luogo tiepido." },
-        { title: "I buchi e la finitura", body: "Dopo la lievitazione, con le dita unte d'olio forma i classici buchi sulla superficie, versa un filo abbondante di olio extravergine e completa con sale grosso e rosmarino." },
-      ] },
-      { h2: "Cottura", body: "Cuoci a 200°C per 20-25 minuti, finché la superficie non risulta dorata. Sforna e lascia intiepidire prima di tagliare a quadrotti." },
-    ],
-    faqs: [
-      { question: "Perché l'impasto della focaccia senza glutine è più liquido del solito?", answer: "Le farine senza glutine assorbono l'acqua in modo diverso: un impasto più idratato aiuta a ottenere una mollica soffice e alveolata invece che compatta." },
-      { question: "Posso farcire la focaccia prima di infornarla?", answer: "Sì, pomodorini, olive o cipolla si possono aggiungere prima della cottura, premendoli leggermente nell'impasto insieme alla formazione dei buchi." },
-      { question: "Come si conserva la focaccia senza glutine avanzata?", answer: "In un sacchetto per alimenti chiuso, a temperatura ambiente, si mantiene morbida per un paio di giorni; si può anche congelare già a porzioni." },
-    ],
-  },
-  {
     title: "Merenda scuola senza glutine: 5 idee pratiche per la schiscetta",
     category: "Ricette",
     excerpt: "Cosa mettere nello zaino per la merenda senza rischi: prodotti confezionati singolarmente, facili da controllare e da far portare a scuola.",
@@ -927,31 +797,6 @@ const seeds: Seed[] = [
       { question: "È meglio dare merenda confezionata o preparata in casa?", answer: "Entrambe vanno bene: la confezione sigillata originale riduce al minimo il rischio di contaminazione fuori casa, mentre la merenda fatta in casa richiede un contenitore dedicato lavato separatamente." },
       { question: "Devo avvisare la scuola anche se porto la merenda da casa?", answer: "Sì, è comunque utile informare le maestre della celiachia, per gestire situazioni come lo scambio spontaneo di cibo tra bambini durante la ricreazione." },
       { question: "Come evito che il bambino scambi la merenda con i compagni?", answer: "Un'etichetta con il nome sulla confezione e una breve spiegazione al bambino stesso, adatta alla sua età, aiutano a prevenire scambi accidentali." },
-    ],
-  },
-  {
-    title: "Panzanella senza glutine: la ricetta estiva con il pane raffermo",
-    category: "Ricette",
-    excerpt: "Il classico piatto povero toscano, in versione senza glutine: pane raffermo, pomodori maturi, cipolla e basilico.",
-    coverSeed: 138, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "estate", "pane", "piatti unici"],
-    keyTakeaways: [
-      "Il pane senza glutine raffermo funziona come quello tradizionale per la panzanella: basta lasciarlo un giorno fuori dal sacchetto.",
-      "Ammollare il pane in acqua e aceto, poi strizzarlo bene, evita che la panzanella diventi troppo bagnata e sfaldata.",
-      "Un riposo di 30 minuti in frigorifero prima di servire aiuta i sapori di pomodoro, cipolla e basilico ad amalgamarsi.",
-      "La panzanella è un piatto estivo senza cottura: perfetta quando si vuole evitare di accendere il forno o i fornelli.",
-    ],
-    sections: [
-      { h2: "Ingredienti per 4 persone", body: "4 fette di <a href=\"/prodotti/schar-pane-casereccio-240g\">pane casereccio Schär</a> raffermo (o <a href=\"/prodotti/nutrifree-panfette-pane-casereccio-300g\">panfette Nutrifree</a>), 4 pomodori maturi, mezza cipolla rossa, basilico fresco, olio extravergine, aceto di vino, sale." },
-      { h2: "Procedimento", body: "Taglia il pane a cubetti e ammollalo per qualche minuto in acqua fredda con un cucchiaio di aceto, poi strizzalo bene con le mani per eliminare l'acqua in eccesso: deve restare umido ma non bagnato.", h3: [
-        { title: "Il taglio delle verdure", body: "Taglia i pomodori a spicchi, elimina i semi in eccesso e affetta sottilmente la cipolla rossa, meglio se lasciata in ammollo in acqua fredda per 10 minuti per renderla più delicata." },
-      ] },
-      { h2: "Assemblaggio e riposo", body: "Unisci pane, pomodori e cipolla in una ciotola capiente, condisci con olio, un filo di aceto, sale e basilico spezzettato a mano. Lascia riposare in frigorifero almeno 30 minuti prima di servire, per far insaporire bene tutti gli ingredienti." },
-    ],
-    faqs: [
-      { question: "Il pane deve essere per forza raffermo?", answer: "Sì, un pane fresco si sfalda troppo facilmente durante l'ammollo: se hai solo pane fresco, lascialo un giorno fuori dal sacchetto prima di usarlo." },
-      { question: "Posso aggiungere altri ingredienti alla panzanella?", answer: "Sì, cetrioli, olive o tonno sono aggiunte comuni alla ricetta classica: adatta la panzanella ai gusti di famiglia mantenendo pane, pomodoro e cipolla come base." },
-      { question: "Quanto si conserva la panzanella preparata?", answer: "Si mantiene bene in frigorifero per un giorno, ma il pane continua ad ammorbidirsi col tempo: è più buona consumata entro poche ore dalla preparazione." },
     ],
   },
   {
@@ -978,81 +823,6 @@ const seeds: Seed[] = [
       { question: "Meglio preparare i crostini in anticipo o all'ultimo momento?", answer: "Meglio assemblarli poco prima di servire: la base a contatto con condimenti umidi tende ad ammorbidirsi e perdere croccantezza nel tempo." },
       { question: "Posso usare anche il pane casereccio al posto delle fette croccanti?", answer: "Sì, tostato leggermente funziona altrettanto bene come base per crostini e tartine." },
       { question: "Queste basi sono adatte anche a un buffet numeroso?", answer: "Sì, essendo già porzionate permettono di preparare rapidamente grandi quantità: calcola 3-4 pezzi a persona per un aperitivo." },
-    ],
-  },
-  {
-    title: "Muffin salati senza glutine con il mix universale",
-    category: "Ricette",
-    excerpt: "Muffin sofficissimi e salati, perfetti per un buffet o un pranzo veloce: la ricetta base con il mix universale, da farcire come preferisci.",
-    coverSeed: 140, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "muffin", "salato"],
-    keyTakeaways: [
-      "Un mix universale funziona anche per impasti salati, non solo per pane e pizza: basta bilanciare gli ingredienti umidi.",
-      "Non riempire gli stampi oltre i due terzi: i muffin senza glutine lievitano meno di quelli tradizionali in altezza.",
-      "Farciture come prosciutto cotto, formaggio o zucchine grigliate reggono bene la cottura senza appesantire l'impasto.",
-      "I muffin salati si conservano bene anche il giorno dopo, ideali da preparare in anticipo per un buffet.",
-    ],
-    sections: [
-      { h2: "Ingredienti per 12 muffin", body: "250 g di <a href=\"/prodotti/schar-mix-it-universale-1kg\">Mix It! Universale Schär</a>, 3 uova, 100 ml di olio di semi, 150 ml di latte, una bustina di lievito per torte salate senza glutine, 100 g di formaggio a cubetti, 80 g di prosciutto cotto a dadini, sale e pepe." },
-      { h2: "Procedimento", body: "Accendi il forno statico a 180°C. Sbatti le uova con l'olio e il latte, poi incorpora il mix setacciato con il lievito, mescolando fino a ottenere un composto omogeneo senza grumi.", h3: [
-        { title: "Aggiungere il ripieno", body: "Unisci formaggio a cubetti e prosciutto all'impasto, mescolando delicatamente per distribuirli in modo uniforme senza lavorare troppo il composto." },
-        { title: "Cottura", body: "Riempi gli stampini per muffin fino a due terzi e cuoci per 20-25 minuti, finché la superficie non risulta dorata. Verifica la cottura con uno stecchino." },
-      ] },
-    ],
-    faqs: [
-      { question: "Posso fare una versione vegetariana?", answer: "Sì, sostituisci il prosciutto con zucchine grigliate, spinaci saltati o pomodori secchi, mantenendo le stesse proporzioni di formaggio." },
-      { question: "Perché i muffin senza glutine lievitano meno di quelli tradizionali?", answer: "Le farine senza glutine hanno una struttura diversa dal glutine, che normalmente trattiene meglio l'aria durante la lievitazione: il risultato è comunque soffice, solo con meno sviluppo in altezza." },
-      { question: "Si possono congelare i muffin salati?", answer: "Sì, si congelano bene già cotti: scongelali a temperatura ambiente e scaldali qualche minuto in forno prima di servirli." },
-    ],
-  },
-  {
-    title: "Grissini senza glutine fatti in casa, croccanti e sottili",
-    category: "Ricette",
-    excerpt: "La ricetta per grissini senza glutine fatti in casa, con il mix universale: pochi ingredienti e una lavorazione semplice, anche con i bambini.",
-    coverSeed: 141, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "grissini", "impasti"],
-    keyTakeaways: [
-      "L'impasto dei grissini senza glutine va steso più sottile del solito, perché in cottura si gonfia meno di quello tradizionale.",
-      "Un doppio passaggio in olio prima della cottura aiuta a ottenere grissini più dorati e croccanti.",
-      "I grissini fatti in casa si conservano fino a una settimana in un contenitore ermetico, lontano dall'umidità.",
-      "Lavorare l'impasto è un'attività semplice da fare anche con i bambini, essendo poco elastico e facile da modellare.",
-    ],
-    sections: [
-      { h2: "Ingredienti per circa 30 grissini", body: "300 g di <a href=\"/prodotti/schar-mix-it-universale-1kg\">Mix It! Universale Schär</a>, 180 ml di acqua tiepida, 5 g di lievito di birra secco, 3 cucchiai di olio extravergine, un cucchiaino di sale, semi di sesamo o rosmarino tritato (facoltativi)." },
-      { h2: "Procedimento", body: "Sciogli il lievito nell'acqua tiepida, poi impasta con il mix, il sale e l'olio fino a ottenere un composto liscio e non appiccicoso. Lascia riposare 20 minuti coperto con un canovaccio.", h3: [
-        { title: "Formatura", body: "Stacca piccole porzioni di impasto e stendile con le mani in bastoncini sottili e regolari, direttamente sulla teglia foderata di carta forno, distanziandoli tra loro." },
-        { title: "Cottura", body: "Spennella i grissini con un filo d'olio, aggiungi semi o rosmarino se graditi, e cuoci a 190°C per 15-18 minuti, finché non risultano dorati e croccanti." },
-      ] },
-    ],
-    faqs: [
-      { question: "Perché i miei grissini non sono croccanti come quelli in commercio?", answer: "Verifica lo spessore: più sono sottili, più risultano croccanti dopo la cottura. Un ulteriore passaggio in forno di 2-3 minuti a fine cottura aiuta ad asciugarli meglio." },
-      { question: "Quanto si conservano i grissini fatti in casa?", answer: "Fino a una settimana in un contenitore ermetico, in un luogo asciutto: l'umidità è il loro nemico principale." },
-      { question: "Posso aggiungere semi o spezie all'impasto?", answer: "Sì, semi di sesamo, papavero o rosmarino tritato si possono incorporare direttamente nell'impasto oppure cospargere in superficie prima della cottura." },
-    ],
-  },
-  {
-    title: "Pasta al forno senza glutine filante e gratinata",
-    category: "Ricette",
-    excerpt: "Il piatto della domenica in versione senza glutine: fusilli, pesto, besciamella e un generoso strato di formaggio filante gratinato al forno.",
-    coverSeed: 142, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
-    tags: ["ricette", "pasta al forno", "domenica"],
-    keyTakeaways: [
-      "Per la pasta al forno cuoci la pasta 2-3 minuti in meno rispetto ai tempi indicati: completerà la cottura in forno.",
-      "Una besciamella fatta con farina senza glutine si prepara esattamente come quella tradizionale, cambia solo la farina usata.",
-      "Il pesto alla genovese, oltre che condimento a crudo, funziona bene anche mescolato alla besciamella per un gusto più ricco.",
-      "Lasciar riposare la pasta al forno 5-10 minuti dopo la cottura rende più facile porzionarla senza che si sfaldi.",
-    ],
-    sections: [
-      { h2: "Ingredienti per una teglia da 4-6 persone", body: "350 g di <a href=\"/prodotti/barilla-fusilli-senza-glutine-400g\">fusilli senza glutine Barilla</a>, 1 vasetto di <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a>, 500 ml di besciamella (fatta con farina di riso o mais), 200 g di mozzarella a cubetti, parmigiano grattugiato." },
-      { h2: "Procedimento", body: "Cuoci la pasta in acqua bollente salata per 2-3 minuti in meno rispetto al tempo indicato in confezione, poi scolala e condiscila con il pesto e metà della besciamella.", h3: [
-        { title: "Comporre la teglia", body: "Versa metà della pasta condita in una pirofila imburrata, distribuisci metà della mozzarella a cubetti, copri con il resto della pasta e completa con la besciamella rimasta, la mozzarella e una spolverata di parmigiano." },
-        { title: "Cottura in forno", body: "Cuoci a 200°C per 20-25 minuti, finché la superficie non è dorata e gratinata. Lascia riposare 5-10 minuti prima di servire, per facilitare il taglio delle porzioni." },
-      ] },
-    ],
-    faqs: [
-      { question: "Perché cuocere la pasta meno del tempo indicato?", answer: "Perché completerà la cottura in forno insieme al condimento: cuocendola al tempo pieno rischia di risultare scotta dopo la seconda cottura." },
-      { question: "Posso preparare la pasta al forno in anticipo?", answer: "Sì, puoi assemblarla in teglia il giorno prima, coprirla e conservarla in frigorifero: aggiungi qualche minuto al tempo di cottura se la inforni fredda di frigo." },
-      { question: "Come faccio la besciamella senza glutine?", answer: "Come quella tradizionale, sostituendo la farina di grano con farina di riso o di mais nella stessa quantità: il procedimento con burro, farina e latte caldo resta identico." },
     ],
   },
 ];
