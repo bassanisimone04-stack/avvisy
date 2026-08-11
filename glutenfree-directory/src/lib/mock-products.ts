@@ -56,6 +56,31 @@ export function getProductBySlug(slug: string) {
   return PRODUCTS.find((p) => p.slug === slug);
 }
 
+// Illustrazione SVG originale per ogni prodotto specifico, non foto Unsplash:
+// non c'è modo di verificare da questo ambiente che un ID Unsplash sia
+// valido, e infatti quelli assegnati ai prodotti in una sessione precedente
+// non caricavano affatto sul sito live. Un'illustrazione per prodotto
+// specifico (non solo per categoria) garantisce che siano tutte pertinenti
+// e diverse tra loro, verificabile a occhio perché il codice è tutto qui.
+const PRODUCT_ILLUSTRATIONS: Record<string, string> = {
+  "barilla-fusilli-senza-glutine-400g": "prodotto-fusilli",
+  "le-veneziane-eliche-di-mais-250g": "prodotto-eliche",
+  "schar-pane-casereccio-240g": "prodotto-pane",
+  "nutrifree-panfette-pane-casereccio-300g": "prodotto-panfette",
+  "schar-chocolix-110g": "prodotto-wafer",
+  "cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g": "prodotto-biscotti",
+  "schar-mix-it-universale-1kg": "prodotto-mix-universale",
+  "nutrifree-mix-per-dolci-1kg": "prodotto-mix-dolci",
+  "schar-crackers-210g": "prodotto-crackers",
+  "cereal-fette-croccanti-150g": "prodotto-fette-croccanti",
+  "barilla-pesto-alla-genovese-190g": "prodotto-pesto-genovese",
+  "sarchio-pesto-bio-130g": "prodotto-pesto-bio",
+};
+
+export function productIllustration(slug: string): string {
+  return PRODUCT_ILLUSTRATIONS[slug] ?? "prodotto";
+}
+
 export function getRecommendedProducts(limit = 8) {
   return PRODUCTS.slice(0, limit);
 }
