@@ -69,8 +69,10 @@ export function recipeIllustration(seed: number): string | undefined {
 // l'illustrazione SVG quando disponibili. Percorso locale, non Unsplash:
 // serve direttamente da /public, nessuna verifica di rete necessaria.
 const RECIPE_PHOTOS: Record<number, string> = {
+  132: "/images/ricette/03-torta.png",
   135: "/images/ricette/06-pizza.webp",
   137: "/images/ricette/08-merenda.png",
+  139: "/images/ricette/10-crostini.webp",
 };
 
 export function recipePhoto(seed: number): string | undefined {
