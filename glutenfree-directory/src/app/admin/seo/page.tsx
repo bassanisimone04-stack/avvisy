@@ -3,12 +3,7 @@ import { CheckCircle2, AlertTriangle, ExternalLink, Gauge } from "lucide-react";
 import AdminShell from "@/components/AdminShell";
 import { ARTICLES } from "@/lib/mock-articles";
 import { BUSINESSES } from "@/lib/mock-businesses";
-
-const VITALS = [
-  { label: "LCP (Largest Contentful Paint)", value: "1,4s", score: 96 },
-  { label: "CLS (Cumulative Layout Shift)", value: "0,02", score: 99 },
-  { label: "INP (Interaction to Next Paint)", value: "118ms", score: 94 },
-];
+import { SITE_URL } from "@/lib/site-config";
 
 const CHECKS = [
   { label: "Meta title impostato su tutte le pagine", ok: true },
@@ -27,15 +22,20 @@ export default function AdminSeo() {
       <h1 className="text-2xl font-bold text-ink">SEO Dashboard</h1>
       <p className="mt-1 text-ink-soft">Stato dell&apos;ottimizzazione SEO automatizzata della piattaforma</p>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        {VITALS.map((v) => (
-          <div key={v.label} className="card card-soft p-5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-soft text-brand-dark"><Gauge size={18} /></span>
-            <p className="mt-3 text-2xl font-bold text-ink">{v.value}</p>
-            <p className="text-sm text-muted">{v.label}</p>
-            <p className="mt-1 text-xs font-medium text-brand-dark">Punteggio {v.score}/100</p>
-          </div>
-        ))}
+      <div className="card card-soft mt-6 flex flex-col items-center gap-3 p-10 text-center">
+        <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-soft text-brand-dark"><Gauge size={22} /></span>
+        <p className="font-semibold text-ink">Core Web Vitals reali (LCP, CLS, INP)</p>
+        <p className="max-w-md text-sm text-ink-soft">
+          Non misurati qui per evitare di mostrare numeri vecchi o inventati: usa PageSpeed Insights di Google per una misurazione reale e aggiornata del sito.
+        </p>
+        <a
+          href={`https://pagespeed.web.dev/analysis?url=${encodeURIComponent(SITE_URL)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary btn-sm mt-2"
+        >
+          Misura su PageSpeed Insights
+        </a>
       </div>
 
       <div className="card card-soft mt-6 p-5">

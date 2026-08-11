@@ -23,9 +23,13 @@ export default function AdminBanners() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold text-ink">Gestione banner</h1>
-          <p className="mt-1 text-ink-soft">{rows.length} banner promozionali configurati</p>
+          <p className="mt-1 text-ink-soft">{rows.length} banner in bozza</p>
         </div>
         <button type="button" className="btn btn-primary btn-sm"><Plus size={14} /> Nuovo banner</button>
+      </div>
+
+      <div className="card card-soft mt-4 border border-line-strong bg-surface-2 px-4 py-3 text-sm text-ink-soft">
+        Funzione non ancora collegata al sito pubblico: questi banner sono bozze salvate solo qui, non compaiono per i visitatori finché non viene aggiunto il componente sul sito.
       </div>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
