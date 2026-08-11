@@ -1127,6 +1127,13 @@ export function getLatestArticles(limit = 3) {
   return [...ARTICLES].sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt)).slice(0, limit);
 }
 
+export function getRecipeArticles(limit = 3) {
+  return [...ARTICLES]
+    .filter((a) => a.category === "Ricette")
+    .sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt))
+    .slice(0, limit);
+}
+
 export function getRelatedArticles(article: Article, limit = 3) {
   return ARTICLES.filter((a) => a.id !== article.id && (a.category === article.category || a.tags.some((t) => article.tags.includes(t)))).slice(0, limit);
 }
