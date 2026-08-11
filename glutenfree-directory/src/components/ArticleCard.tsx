@@ -7,7 +7,7 @@ import { getLocalizedArticle } from "@/lib/i18n/content-article";
 import { getCategoryTheme } from "@/lib/blog-theme";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
-import { blogCoverPhoto, recipeIllustration } from "@/lib/cover-photos";
+import { blogCoverPhoto, recipeIllustration, recipePhoto } from "@/lib/cover-photos";
 import CoverPhoto from "./CoverPhoto";
 import PlaceholderImage from "./PlaceholderImage";
 
@@ -16,12 +16,23 @@ export default function ArticleCard({ article, compact = false, locale = "it" }:
   const t = getDictionary(locale);
   const theme = getCategoryTheme(article.category);
   const illustration = recipeIllustration(a.coverSeed);
+  const photo = recipePhoto(a.coverSeed);
   const ratio = compact ? "aspect-[16/10]" : "aspect-[16/9]";
   const tint = { soft: theme.soft, accent: theme.accent, bg1: theme.soft, bg2: theme.soft };
   return (
     <Link href={localeHref(locale, `/blog/${article.slug}`)} className="card card-hover card-soft group flex flex-col overflow-hidden">
       <div className="relative">
-        {illustration ? (
+        {photo ? (
+          <CoverPhoto
+            photoUrl={photo}
+            seed={a.coverSeed}
+            variant={illustration ?? "default"}
+            label={a.title}
+            ratio={ratio}
+            className="transition-transform duration-500 group-hover:scale-105"
+            tint={tint}
+          />
+        ) : illustration ? (
           <PlaceholderImage
             seed={a.coverSeed}
             variant={illustration}

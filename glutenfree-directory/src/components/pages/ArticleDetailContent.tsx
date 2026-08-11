@@ -14,7 +14,7 @@ import KeyTakeaways from "@/components/KeyTakeaways";
 import { getArticleBySlug, getRelatedArticles, blogCategoryLabel } from "@/lib/mock-articles";
 import { getLocalizedArticle } from "@/lib/i18n/content-article";
 import { getCategoryTheme, categoryThemeClass } from "@/lib/blog-theme";
-import { blogCoverPhoto, recipeIllustration } from "@/lib/cover-photos";
+import { blogCoverPhoto, recipeIllustration, recipePhoto } from "@/lib/cover-photos";
 import { getAuthorByName, authorBio } from "@/lib/authors";
 import { formatDate, slugify } from "@/lib/format";
 import { JsonLd, articleJsonLd, faqJsonLd } from "@/lib/seo";
@@ -33,6 +33,7 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
   const url = `${SITE_URL}${localeHref(locale, `/blog/${article.slug}`)}`;
   const author = getAuthorByName(article.author);
   const illustration = recipeIllustration(article.coverSeed);
+  const photo = recipePhoto(article.coverSeed);
   const coverTint = { soft: theme.soft, accent: theme.accent, bg1: theme.soft, bg2: theme.soft };
 
   return (
@@ -74,7 +75,18 @@ export default function ArticleDetailContent({ locale, slug }: { locale: Locale;
           </div>
 
           <div className="relative hidden lg:block">
-            {illustration ? (
+            {photo ? (
+              <CoverPhoto
+                photoUrl={photo}
+                seed={article.coverSeed}
+                variant={illustration ?? "default"}
+                ratio="aspect-square"
+                className="rounded-[2rem] shadow-lg"
+                label={article.title}
+                tint={coverTint}
+                priority
+              />
+            ) : illustration ? (
               <PlaceholderImage
                 seed={article.coverSeed}
                 variant={illustration}

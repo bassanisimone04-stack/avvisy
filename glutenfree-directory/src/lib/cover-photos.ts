@@ -65,6 +65,18 @@ export function recipeIllustration(seed: number): string | undefined {
   return RECIPE_ILLUSTRATIONS[seed];
 }
 
+// Foto vere caricate dall'utente (in public/images/ricette/), sostituiscono
+// l'illustrazione SVG quando disponibili. Percorso locale, non Unsplash:
+// serve direttamente da /public, nessuna verifica di rete necessaria.
+const RECIPE_PHOTOS: Record<number, string> = {
+  135: "/images/ricette/06-pizza.webp",
+  137: "/images/ricette/08-merenda.png",
+};
+
+export function recipePhoto(seed: number): string | undefined {
+  return RECIPE_PHOTOS[seed];
+}
+
 export const HERO_COLLAGE_PHOTOS = {
   pizza: unsplash("photo-1513104890138-7c749659a591"),
   pasta: unsplash("photo-1551183053-bf91a1d81141"),
