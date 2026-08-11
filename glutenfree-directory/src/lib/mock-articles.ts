@@ -906,7 +906,7 @@ const seeds: Seed[] = [
   },
   {
     title: "Merenda scuola senza glutine: 5 idee pratiche per la schiscetta",
-    category: "Bambini",
+    category: "Ricette",
     excerpt: "Cosa mettere nello zaino per la merenda senza rischi: prodotti confezionati singolarmente, facili da controllare e da far portare a scuola.",
     coverSeed: 137, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
     tags: ["bambini", "merenda", "scuola"],
