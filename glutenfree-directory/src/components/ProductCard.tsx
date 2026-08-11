@@ -4,16 +4,31 @@ import type { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { getLocalizedProduct } from "@/lib/i18n/content-product";
 import { productIllustration } from "@/lib/mock-products";
+import { productPhoto } from "@/lib/cover-photos";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
+import CoverPhoto from "./CoverPhoto";
 import PlaceholderImage from "./PlaceholderImage";
 import RatingStars from "./RatingStars";
 
 export default function ProductCard({ product, locale = "it" }: { product: Product; locale?: Locale }) {
   const p = getLocalizedProduct(product, locale);
+  const photo = productPhoto(product.slug);
+  const illustration = productIllustration(product.slug);
   return (
     <Link href={localeHref(locale, `/prodotti/${product.slug}`)} className="card card-hover card-soft group flex flex-col overflow-hidden">
       <div className="relative">
-        <PlaceholderImage seed={p.imageSeed} variant={productIllustration(product.slug)} label={p.name} ratio="aspect-square" className="transition-transform duration-500 group-hover:scale-105" />
+        {photo ? (
+          <CoverPhoto
+            photoUrl={photo}
+            seed={p.imageSeed}
+            variant={illustration}
+            label={p.name}
+            ratio="aspect-square"
+            className="transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <PlaceholderImage seed={p.imageSeed} variant={illustration} label={p.name} ratio="aspect-square" className="transition-transform duration-500 group-hover:scale-105" />
+        )}
         {p.aicCertified && (
           <span className="chip absolute left-3 top-3 bg-white/90 text-brand-dark backdrop-blur">
             <BadgeCheck size={12} /> AIC

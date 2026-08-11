@@ -2,11 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BadgeCheck, MapPin, ChefHat } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CoverPhoto from "@/components/CoverPhoto";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import RatingStars from "@/components/RatingStars";
 import ProductCard from "@/components/ProductCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import { PRODUCTS, getProductBySlug, productCategoryLabel, productIllustration } from "@/lib/mock-products";
+import { productPhoto } from "@/lib/cover-photos";
 import { getLocalizedProduct } from "@/lib/i18n/content-product";
 import { ARTICLES } from "@/lib/mock-articles";
 import { getLocalizedArticle } from "@/lib/i18n/content-article";
@@ -39,7 +41,18 @@ export default function ProductDetailContent({ locale, slug }: { locale: Locale;
       <Breadcrumbs locale={locale} items={[{ name: t.nav.products, path: "/prodotti" }, { name: product.name, path: `/prodotti/${product.slug}` }]} />
 
       <div className="grid gap-10 lg:grid-cols-2">
-        <PlaceholderImage seed={product.imageSeed} variant={productIllustration(base.slug)} ratio="aspect-square" className="rounded-2xl" label={product.name} />
+        {productPhoto(base.slug) ? (
+          <CoverPhoto
+            photoUrl={productPhoto(base.slug)!}
+            seed={product.imageSeed}
+            variant={productIllustration(base.slug)}
+            ratio="aspect-square"
+            className="rounded-2xl"
+            label={product.name}
+          />
+        ) : (
+          <PlaceholderImage seed={product.imageSeed} variant={productIllustration(base.slug)} ratio="aspect-square" className="rounded-2xl" label={product.name} />
+        )}
         <div>
           <p className="text-sm font-medium uppercase tracking-wide text-muted">{product.brand}</p>
           <h1 className="font-editorial mt-1 text-3xl font-semibold text-ink">{product.name}</h1>
