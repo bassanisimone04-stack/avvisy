@@ -694,57 +694,6 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     tags: ["breakfast", "bakeries", "cross-contamination", "cafés"],
   },
   "art-25": {
-    title: "Gluten-Free Pesto Pasta: The Fusilli Recipe in 15 Minutes",
-    excerpt: "The ultimate quick dish, gluten-free: corn fusilli or eliche, basil pesto or organic pesto, ready in a quarter of an hour.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "Gluten-free corn fusilli or eliche cook in 8-11 minutes: taste them a minute before the time on the package.",
-      "Diluting the pesto with a ladle of pasta water makes the sauce creamier and easier to coat the pasta with.",
-      "Barilla's basil pesto contains Parmigiano Reggiano PDO; if you want an AIC-certified option, choose Sarchio's organic pesto instead.",
-      "Watch for cross-contamination: drain gluten-free pasta with a dedicated colander, never the one used for wheat pasta.",
-    ],
-    sections: [
-      { h2: "Ingredients for 2 people", body: "160 g of <a href=\"/en/prodotti/barilla-fusilli-senza-glutine-400g\">Barilla gluten-free fusilli</a> (or <a href=\"/en/prodotti/le-veneziane-eliche-di-mais-250g\">Le Veneziane corn eliche</a>), 1 jar of <a href=\"/en/prodotti/barilla-pesto-alla-genovese-190g\">Barilla basil pesto</a> or <a href=\"/en/prodotti/sarchio-pesto-bio-130g\">Sarchio organic pesto</a> if you want an AIC-certified option, a ladle of pasta water, pine nuts and fresh basil to garnish (optional)." },
-      { h2: "Method", body: "Bring plenty of salted water to a boil in a pot dedicated to gluten-free cooking. Add the pasta and cook following the package time, tasting it a minute before it's due: corn and rice pasta tends to overcook faster than wheat pasta.", h3: [
-        { title: "The creamy trick", body: "Before draining, scoop out a ladle of starchy pasta water: it helps bind the pesto to the pasta without needing too much of it, for a creamier, less dry result." },
-        { title: "Watch for cross-contamination", body: "If wheat pasta is also cooked at home, use a pot, colander and wooden spoon dedicated exclusively to gluten-free prep, to avoid even minimal contamination." },
-      ] },
-      { h2: "The finishing touch", body: "Drain the pasta al dente, pour it into a large bowl with the chosen pesto and a spoonful of pasta water, stir well off the heat so the basil doesn't lose its aroma. Finish with toasted pine nuts and a few fresh basil leaves." },
-    ],
-    faqs: [
-      { question: "Can I use rice pasta instead of corn?", answer: "Yes, any gluten-free pasta shape works: only the cooking time changes, always shown on the package." },
-      { question: "Does Barilla's basil pesto contain gluten?", answer: "No, it's gluten-free, but it doesn't carry the AIC (Crossed Grain) certification: if you're looking for that, Sarchio's organic pesto has it." },
-      { question: "How do I store leftover pesto?", answer: "In the fridge, tightly closed, for just a few days: always check the storage instructions on the label." },
-    ],
-    tags: ["recipes", "pasta", "pesto", "first courses"],
-  },
-  "art-26": {
-    title: "Gluten-Free Breakfast: 6 Quick Ideas with Bread, Crisp Slices and Biscuits",
-    excerpt: "Sweet or savory, ready in a few minutes: the simplest combinations for a varied gluten-free breakfast all week long.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "Alternating sliced bread, crisp slices and biscuits helps vary a gluten-free breakfast throughout the week.",
-      "Savory versions (avocado, cheese) are a protein-rich alternative to sweet ones with jam or chocolate.",
-      "Single-serve products (crackers, biscuits) are handy to take out of the house, to school or to work.",
-      "Always checking the AIC certification on the label remains the rule, even for a quick breakfast.",
-    ],
-    sections: [
-      { h2: "Sweet breakfast with rustic bread", body: "Toast two slices of <a href=\"/en/prodotti/schar-pane-casereccio-240g\">Schär rustic bread</a> and spread them with jam or honey: the soft crumb and rustic buckwheat flavor hold up well to toasting." },
-      { h2: "Savory toast with Panfette", body: "<a href=\"/en/prodotti/nutrifree-panfette-pane-casereccio-300g\">Nutrifree Panfette</a>, already portioned, are perfect for a quick toast with mashed avocado, a drizzle of oil and a pinch of salt, or with fresh cheese and cherry tomatoes if you prefer." },
-      { h2: "Crisp slices with jam or honey", body: "<a href=\"/en/prodotti/cereal-fette-croccanti-150g\">Céréal crisp slices</a> don't need a toaster: they're ready to eat, crunchy, ideal to spread on the go or nibble on their own.", h3: [
-        { title: "Savory version", body: "The same crisp slices also pair well with cream cheese or hummus, for those who prefer to start the day without something sweet." },
-      ] },
-      { h2: "Crackers for when you're in a rush", body: "<a href=\"/en/prodotti/schar-crackers-210g\">Schär crackers</a>, already split into 35g single-serve packs, are handy to carry in a bag: pair them with cream cheese or nuts." },
-      { h2: "The ready-made sweet option: biscuits or a bar", body: "On busy days, <a href=\"/en/prodotti/cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g\">Céréal Buoni Senza chocolate chip biscuits</a> or a <a href=\"/en/prodotti/schar-chocolix-110g\">Schär Chocolix</a> bar are ready to eat with no prep, still certified gluten-free." },
-    ],
-    faqs: [
-      { question: "Is a sweet or savory breakfast better?", answer: "There's no rule: a savory breakfast with avocado or cheese gives more protein satiety, a sweet one is more traditional. The key is to vary it during the week." },
-      { question: "Are these products also suitable for celiac children?", answer: "They're generic products with no age indications: always check the label and quantities with your pediatrician or nutritionist." },
-      { question: "Can I freeze the rustic bread or the Panfette?", answer: "Many gluten-free breads freeze well already sliced: check the specific storage instructions on the package from the manufacturer." },
-    ],
-    tags: ["recipes", "breakfast"],
-  },
-  "art-27": {
     title: "Easy Gluten-Free Cake: The Base Recipe with Ready-Made Cake Mix",
     excerpt: "The go-to cake for when you're short on time: few ingredients, a ready-made flour mix, and a soft, reliable result.",
     authorRole: "Gluten-free food blogger",
@@ -769,56 +718,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["recipes", "desserts", "cakes", "flours"],
   },
-  "art-28": {
-    title: "Gluten-Free Cold Pasta Salad with Pesto and Vegetables: The Summer Recipe",
-    excerpt: "The perfect first course for hot days: corn or rice pasta, pesto and seasonal vegetables, made ahead and served cold.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "For cold pasta salad, choose short shapes like eliche or fusilli: they hold pesto and diced vegetables better.",
-      "Cool the pasta under cold running water right after cooking to stop it from overcooking further.",
-      "Make the cold pasta salad a few hours ahead: resting in the fridge helps the flavors come together.",
-      "Add the pesto only shortly before serving, to keep the basil's bright green color.",
-    ],
-    sections: [
-      { h2: "Ingredients for 4 people", body: "320 g of <a href=\"/en/prodotti/le-veneziane-eliche-di-mais-250g\">Le Veneziane corn eliche</a> (or <a href=\"/en/prodotti/barilla-fusilli-senza-glutine-400g\">Barilla fusilli</a>), 1 jar of <a href=\"/en/prodotti/sarchio-pesto-bio-130g\">Sarchio organic pesto</a> or <a href=\"/en/prodotti/barilla-pesto-alla-genovese-190g\">Barilla basil pesto</a>, cherry tomatoes, diced mozzarella or feta, olives, a drizzle of extra virgin olive oil." },
-      { h2: "Method", body: "Cook the pasta in boiling salted water following the package time, then drain it and immediately run it under cold water to stop the cooking: this is the step that makes the difference between rubbery and perfectly cooked cold pasta.", h3: [
-        { title: "Resting in the fridge", body: "Toss the pasta with a drizzle of oil as soon as it's drained, so it doesn't stick, and let it cool in the fridge for at least an hour before adding the other ingredients." },
-        { title: "When to add the pesto", body: "Add the pesto only in the last 15-20 minutes before serving: prolonged contact with the other ingredients tends to darken it and dull its aroma." },
-      ] },
-      { h2: "Final assembly", body: "Add halved cherry tomatoes, diced mozzarella or feta, olives and a generous spoonful of pesto. Toss gently and serve at room temperature." },
-    ],
-    faqs: [
-      { question: "Can I make it the day before?", answer: "Yes, pasta tossed with oil keeps well in the fridge until the next day: add the pesto only right before serving." },
-      { question: "Which gluten-free pasta shape holds up best for cold salads?", answer: "Short shapes like eliche, fusilli or penne hold dressing and diced vegetables better than long shapes." },
-      { question: "Can I swap the mozzarella for a plant-based alternative?", answer: "Yes, any diced cheese or plant-based alternative works well: just check it's gluten-free on the label." },
-    ],
-    tags: ["recipes", "pasta", "summer", "pesto"],
-  },
-  "art-29": {
-    title: "Gluten-Free Aperitivo: Crackers, Pesto and Quick Bites",
-    excerpt: "Simple ideas for a gluten-free aperitivo at home: crackers, crisp slices, two ready-made sauces and just a few minutes of prep.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "Ready-made crackers and crisp slices cut the prep time for a gluten-free aperitivo down to a few minutes.",
-      "Pesto, basil or organic, also works as a dip and not just as a pasta sauce.",
-      "Serving each product in its own package or bowl avoids cross-contamination with traditional snacks.",
-      "A varied aperitivo alternates a cheese-based option, a vegetable one, and a more indulgent one.",
-    ],
-    sections: [
-      { h2: "The base: crackers and crisp slices", body: "Arrange <a href=\"/en/prodotti/schar-crackers-210g\">Schär crackers</a> and <a href=\"/en/prodotti/cereal-fette-croccanti-150g\">Céréal crisp slices</a> in two separate bowls: they're already portioned and ready to serve, no cooking needed." },
-      { h2: "The dips", body: "Pour <a href=\"/en/prodotti/barilla-pesto-alla-genovese-190g\">Barilla basil pesto</a> and <a href=\"/en/prodotti/sarchio-pesto-bio-130g\">Sarchio organic pesto</a> into small bowls, thinned with a spoonful of extra virgin olive oil to make them creamier for dipping.", h3: [
-        { title: "Watch for cross-contamination", body: "If you also have traditional snacks at home, use separate plates and bowls for gluten-free products and serve them before opening anything containing gluten, to reduce the risk of contact." },
-      ] },
-      { h2: "Rounding out the board", body: "Add aged cheeses (naturally gluten-free, but always check the label for any treatments), olives, raw vegetable sticks and nuts for a complete, varied aperitivo." },
-    ],
-    faqs: [
-      { question: "Does pesto work as a dip and not just for pasta?", answer: "Yes, thinned with a drizzle of oil it becomes a creamy sauce perfect for crackers and raw vegetables." },
-      { question: "How do I avoid cross-contamination during a mixed aperitivo?", answer: "Use separate bowls and boards for gluten-free products and serve them before opening traditional snacks, to reduce the risk of contact with crumbs." },
-      { question: "Are aged cheeses always gluten-free?", answer: "Generally yes, but some surface treatments (e.g. flavored ash rinds) can contain gluten: always check the label or ask the producer." },
-    ],
-    tags: ["recipes", "aperitivo", "snacks"],
-  },
-  "art-30": {
+  "art-26": {
     title: "Homemade Gluten-Free Pizza: The Dough with All-Purpose Mix",
     excerpt: "The base recipe for a gluten-free pizza dough with the all-purpose mix: few ingredients and a result closer to traditional pizza.",
     authorRole: "Gluten-free food blogger",
@@ -843,32 +743,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["recipes", "pizza", "dough"],
   },
-  "art-31": {
-    title: "Soft Gluten-Free Focaccia: The Base Recipe",
-    excerpt: "A soft, dimpled focaccia even without gluten: the recipe with all-purpose mix, extra virgin olive oil and coarse salt on top.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "Extra water compared to a traditional dough is the secret to a fluffier gluten-free focaccia.",
-      "The classic finger dimples are made after rising, not before, so the dough doesn't deflate.",
-      "A generous drizzle of extra virgin olive oil before baking helps form focaccia's typical golden crust.",
-      "Gluten-free focaccia stays soft longer if kept in a closed bag at room temperature.",
-    ],
-    sections: [
-      { h2: "Ingredients for a 30x20 cm pan", body: "400 g of <a href=\"/en/prodotti/schar-mix-it-universale-1kg\">Schär Mix It! all-purpose mix</a>, 320 ml lukewarm water, 8 g dry active yeast, 4 tablespoons extra virgin olive oil (plus more for the top), a teaspoon of salt, coarse salt and rosemary to finish." },
-      { h2: "Method", body: "Dissolve the yeast in the lukewarm water, then combine it with the mix, salt and 2 tablespoons of oil, kneading until you get a soft, fairly wet dough: it's normal for it to be runnier than a traditional bread dough.", h3: [
-        { title: "First rise and shaping", body: "Pour the dough directly into the oiled pan, no need to roll it out with a pin, and let it rise covered for 40-50 minutes somewhere warm." },
-        { title: "The dimples and finishing touches", body: "After rising, use oiled fingers to make the classic dimples on the surface, pour on a generous drizzle of extra virgin olive oil and finish with coarse salt and rosemary." },
-      ] },
-      { h2: "Baking", body: "Bake at 200°C for 20-25 minutes, until the surface is golden. Remove from the oven and let it cool slightly before cutting into squares." },
-    ],
-    faqs: [
-      { question: "Why is gluten-free focaccia dough runnier than usual?", answer: "Gluten-free flours absorb water differently: a wetter dough helps achieve a soft, dimpled crumb instead of a dense one." },
-      { question: "Can I top the focaccia before baking?", answer: "Yes, cherry tomatoes, olives or onion can be added before baking, pressed lightly into the dough along with the dimples." },
-      { question: "How do I store leftover gluten-free focaccia?", answer: "In a closed food bag at room temperature it stays soft for a couple of days; it also freezes well already portioned." },
-    ],
-    tags: ["recipes", "focaccia", "dough"],
-  },
-  "art-32": {
+  "art-27": {
     title: "Gluten-Free School Snacks: 5 Practical Ideas for the Lunchbox",
     excerpt: "What to pack for a safe snack: individually wrapped products, easy to check, easy to send to school.",
     authorRole: "Gluten-free food blogger",
@@ -892,31 +767,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["kids", "snacks", "school"],
   },
-  "art-33": {
-    title: "Gluten-Free Panzanella: The Summer Recipe with Stale Bread",
-    excerpt: "The classic Tuscan peasant dish, gluten-free: stale bread, ripe tomatoes, onion and basil.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "Stale gluten-free bread works just like traditional bread for panzanella: just leave it out of the bag for a day.",
-      "Soaking the bread in water and vinegar, then squeezing it well, keeps the panzanella from becoming too soggy.",
-      "Resting it in the fridge for 30 minutes before serving helps the tomato, onion and basil flavors come together.",
-      "Panzanella is a no-cook summer dish: perfect when you'd rather not turn on the oven or stove.",
-    ],
-    sections: [
-      { h2: "Ingredients for 4 people", body: "4 slices of stale <a href=\"/en/prodotti/schar-pane-casereccio-240g\">Schär rustic bread</a> (or <a href=\"/en/prodotti/nutrifree-panfette-pane-casereccio-300g\">Nutrifree Panfette</a>), 4 ripe tomatoes, half a red onion, fresh basil, extra virgin olive oil, wine vinegar, salt." },
-      { h2: "Method", body: "Cut the bread into cubes and soak it for a few minutes in cold water with a tablespoon of vinegar, then squeeze it well with your hands to remove excess water: it should stay moist but not soggy.", h3: [
-        { title: "Cutting the vegetables", body: "Cut the tomatoes into wedges, remove excess seeds, and thinly slice the red onion, ideally soaked in cold water for 10 minutes to mellow it out." },
-      ] },
-      { h2: "Assembly and resting", body: "Combine bread, tomatoes and onion in a large bowl, dress with oil, a splash of vinegar, salt and hand-torn basil. Let it rest in the fridge for at least 30 minutes before serving, so all the flavors develop." },
-    ],
-    faqs: [
-      { question: "Does the bread have to be stale?", answer: "Yes, fresh bread falls apart too easily during soaking: if you only have fresh bread, leave it out of the bag for a day before using it." },
-      { question: "Can I add other ingredients to panzanella?", answer: "Yes, cucumbers, olives or tuna are common additions to the classic recipe: adapt it to your family's taste while keeping bread, tomato and onion as the base." },
-      { question: "How long does prepared panzanella keep?", answer: "It keeps well in the fridge for a day, but the bread keeps softening over time: it's best enjoyed within a few hours of making it." },
-    ],
-    tags: ["recipes", "summer", "bread", "main dishes"],
-  },
-  "art-34": {
+  "art-28": {
     title: "Gluten-Free Crostini and Canapés for a Dinner with Friends",
     excerpt: "Quick ideas for gluten-free crostini and canapés, with ready-made bases and a handful of fresh ingredients to assemble at the last minute.",
     authorRole: "Gluten-free food blogger",
@@ -940,78 +791,6 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "Are these bases suitable for a large buffet?", answer: "Yes, since they're already portioned they let you prepare large quantities quickly: plan for 3-4 pieces per person for an aperitivo." },
     ],
     tags: ["recipes", "aperitivo", "dinner"],
-  },
-  "art-35": {
-    title: "Gluten-Free Savory Muffins with All-Purpose Mix",
-    excerpt: "Super soft savory muffins, perfect for a buffet or a quick lunch: the base recipe with all-purpose mix, filled however you like.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "An all-purpose mix also works for savory batters, not just bread and pizza: just balance the wet ingredients.",
-      "Don't fill the molds past two-thirds: gluten-free muffins rise less in height than traditional ones.",
-      "Fillings like cooked ham, cheese or grilled zucchini hold up well during baking without weighing the batter down.",
-      "Savory muffins keep well the next day too, ideal to prepare ahead for a buffet.",
-    ],
-    sections: [
-      { h2: "Ingredients for 12 muffins", body: "250 g of <a href=\"/en/prodotti/schar-mix-it-universale-1kg\">Schär Mix It! all-purpose mix</a>, 3 eggs, 100 ml seed oil, 150 ml milk, one sachet of gluten-free baking powder for savory cakes, 100 g diced cheese, 80 g diced cooked ham, salt and pepper." },
-      { h2: "Method", body: "Preheat a conventional oven to 180°C. Beat the eggs with the oil and milk, then fold in the mix sifted with the baking powder, mixing until you get a smooth, lump-free batter.", h3: [
-        { title: "Adding the filling", body: "Fold the diced cheese and ham into the batter, mixing gently to distribute them evenly without overworking the mixture." },
-        { title: "Baking", body: "Fill the muffin molds up to two-thirds and bake for 20-25 minutes, until the tops are golden. Check doneness with a toothpick." },
-      ] },
-    ],
-    faqs: [
-      { question: "Can I make a vegetarian version?", answer: "Yes, replace the ham with grilled zucchini, sautéed spinach or sun-dried tomatoes, keeping the same amount of cheese." },
-      { question: "Why do gluten-free muffins rise less than traditional ones?", answer: "Gluten-free flours have a different structure than gluten, which normally traps air better during rising: the result is still soft, just with less height." },
-      { question: "Can savory muffins be frozen?", answer: "Yes, they freeze well once baked: thaw at room temperature and warm them in the oven for a few minutes before serving." },
-    ],
-    tags: ["recipes", "muffins", "savory"],
-  },
-  "art-36": {
-    title: "Homemade Gluten-Free Breadsticks, Thin and Crispy",
-    excerpt: "The recipe for homemade gluten-free breadsticks with all-purpose mix: few ingredients and a simple process, even with kids helping.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "Gluten-free breadstick dough should be rolled thinner than usual, since it puffs up less in the oven than traditional dough.",
-      "A double brush of oil before baking helps the breadsticks turn out more golden and crispy.",
-      "Homemade breadsticks keep for up to a week in an airtight container, away from moisture.",
-      "Working the dough is an easy activity to do with kids too, since it's not very elastic and easy to shape.",
-    ],
-    sections: [
-      { h2: "Ingredients for about 30 breadsticks", body: "300 g of <a href=\"/en/prodotti/schar-mix-it-universale-1kg\">Schär Mix It! all-purpose mix</a>, 180 ml lukewarm water, 5 g dry active yeast, 3 tablespoons extra virgin olive oil, a teaspoon of salt, sesame seeds or chopped rosemary (optional)." },
-      { h2: "Method", body: "Dissolve the yeast in the lukewarm water, then knead it with the mix, salt and oil until you get a smooth, non-sticky dough. Let it rest covered with a towel for 20 minutes.", h3: [
-        { title: "Shaping", body: "Pull off small portions of dough and roll them by hand into thin, even sticks, directly on the parchment-lined baking tray, spacing them apart." },
-        { title: "Baking", body: "Brush the breadsticks with a little oil, add seeds or rosemary if you like, and bake at 190°C for 15-18 minutes, until golden and crispy." },
-      ] },
-    ],
-    faqs: [
-      { question: "Why aren't my breadsticks as crispy as store-bought ones?", answer: "Check the thickness: the thinner they are, the crispier they turn out after baking. An extra 2-3 minutes in the oven at the end helps dry them out better." },
-      { question: "How long do homemade breadsticks keep?", answer: "Up to a week in an airtight container, in a dry place: moisture is their main enemy." },
-      { question: "Can I add seeds or spices to the dough?", answer: "Yes, sesame, poppy seeds or chopped rosemary can be mixed straight into the dough or sprinkled on top before baking." },
-    ],
-    tags: ["recipes", "breadsticks", "dough"],
-  },
-  "art-37": {
-    title: "Gluten-Free Baked Pasta, Cheesy and Gratinated",
-    excerpt: "The Sunday dish in gluten-free form: fusilli, pesto, béchamel and a generous layer of melted, gratinated cheese.",
-    authorRole: "Gluten-free food blogger",
-    keyTakeaways: [
-      "For baked pasta, cook the pasta 2-3 minutes less than the package time: it will finish cooking in the oven.",
-      "A béchamel made with gluten-free flour is prepared exactly like the traditional one, only the flour changes.",
-      "Basil pesto, besides being used raw, also works well mixed into the béchamel for a richer flavor.",
-      "Letting baked pasta rest 5-10 minutes after baking makes it easier to portion without falling apart.",
-    ],
-    sections: [
-      { h2: "Ingredients for a pan serving 4-6", body: "350 g of <a href=\"/en/prodotti/barilla-fusilli-senza-glutine-400g\">Barilla gluten-free fusilli</a>, 1 jar of <a href=\"/en/prodotti/barilla-pesto-alla-genovese-190g\">Barilla basil pesto</a>, 500 ml béchamel (made with rice or corn flour), 200 g diced mozzarella, grated Parmesan." },
-      { h2: "Method", body: "Cook the pasta in boiling salted water for 2-3 minutes less than the package time, then drain it and toss it with the pesto and half the béchamel.", h3: [
-        { title: "Assembling the pan", body: "Pour half the dressed pasta into a buttered baking dish, spread half the diced mozzarella, cover with the rest of the pasta and finish with the remaining béchamel, mozzarella and a sprinkle of Parmesan." },
-        { title: "Baking", body: "Bake at 200°C for 20-25 minutes, until the top is golden and gratinated. Let it rest 5-10 minutes before serving, to make portioning easier." },
-      ] },
-    ],
-    faqs: [
-      { question: "Why cook the pasta less than the package time?", answer: "Because it will finish cooking in the oven along with the sauce: cooking it the full time risks making it mushy after the second cooking." },
-      { question: "Can I prepare baked pasta ahead of time?", answer: "Yes, you can assemble it in the pan the day before, cover it and keep it in the fridge: add a few minutes to the baking time if it goes in cold from the fridge." },
-      { question: "How do I make gluten-free béchamel?", answer: "Just like the traditional one, replacing wheat flour with the same amount of rice or corn flour: the process with butter, flour and hot milk stays the same." },
-    ],
-    tags: ["recipes", "baked pasta", "sunday"],
   },
 };
 

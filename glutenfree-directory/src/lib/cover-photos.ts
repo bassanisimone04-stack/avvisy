@@ -46,19 +46,10 @@ export function blogCoverPhoto(_category: string, seed: number): string {
 // nessuna dipendenza di rete, e ogni copertina è sia pertinente sia diversa
 // dalle altre, verificabile a occhio perché il codice è tutto qui.
 const RECIPE_ILLUSTRATIONS: Record<number, string> = {
-  130: "ricetta-pesto",
-  131: "ricetta-pane",
   132: "ricetta-torta",
-  133: "ricetta-pasta-fredda",
-  134: "ricetta-aperitivo",
   135: "ricetta-pizza",
-  136: "ricetta-focaccia",
   137: "ricetta-merenda",
-  138: "ricetta-panzanella",
   139: "ricetta-crostini",
-  140: "ricetta-muffin",
-  141: "ricetta-grissini",
-  142: "ricetta-pasta-forno",
 };
 
 export function recipeIllustration(seed: number): string | undefined {
