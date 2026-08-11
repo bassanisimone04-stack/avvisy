@@ -25,7 +25,7 @@ export default function SiteHeader() {
     { href: localeHref(locale, "/blog"), label: t.nav.blog },
     { href: localeHref(locale, "/faq"), label: t.nav.faq },
     { href: localeHref(locale, "/vivere-senza-glutine"), label: t.nav.guide },
-    { href: localeHref(locale, "/chi-siamo"), label: t.nav.about },
+    { href: localeHref(locale, "/blog?categoria=ricette"), label: t.nav.recipes },
   ];
 
   if (pathname?.startsWith("/admin")) return null;

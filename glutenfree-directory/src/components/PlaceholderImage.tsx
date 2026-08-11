@@ -332,6 +332,126 @@ function Motif({ variant, accent, soft, seed }: { variant: string; accent: strin
           <path d="M54 46h50" fill="none" stroke={accent} strokeWidth={2.2} opacity="0.6" />
         </g>
       );
+    case "prodotto-fusilli":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M80 36c10 0 10 8 0 8s-10 8 0 8 10 8 0 8-10 8 0 8 10 8 0 8" fill="none" stroke={accent} strokeWidth={3.5} strokeLinecap="round" />
+        </g>
+      );
+    case "prodotto-eliche":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <rect x="56" y="42" width="48" height="36" rx="4" fill="#fff" stroke={accent} strokeWidth={2.5} />
+          <path d="M68 50c6 0 6 6 0 6s-6 6 0 6M92 50c6 0 6 6 0 6s-6 6 0 6" fill="none" stroke={accent} strokeWidth={2.6} strokeLinecap="round" />
+        </g>
+      );
+    case "prodotto-pane":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M54 78V56c0-10 12-16 26-16s26 6 26 16v22z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <path d="M54 78h52M64 46c4 8 4 24 0 32M96 46c-4 8-4 24 0 32" fill="none" stroke={accent} strokeWidth={2} opacity="0.6" />
+        </g>
+      );
+    case "prodotto-panfette":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          {[74, 62, 50].map((y, i) => (
+            <rect key={y} x={54 + i * 3} y={y} width={52 - i * 6} height="10" rx="3" fill={soft} stroke={accent} strokeWidth={2.5} />
+          ))}
+        </g>
+      );
+    case "prodotto-wafer":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <rect x="52" y="46" width="56" height="28" rx="5" fill={soft} stroke={accent} strokeWidth={3} />
+          <path d="M58 52 100 68M58 62 90 74M70 46 108 62" stroke={accent} strokeWidth={2} opacity="0.55" strokeLinecap="round" />
+        </g>
+      );
+    case "prodotto-biscotti":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <circle cx="68" cy="58" r="15" fill={soft} stroke={accent} strokeWidth={2.8} />
+          <circle cx="92" cy="64" r="15" fill={soft} stroke={accent} strokeWidth={2.8} />
+          <circle cx="64" cy="54" r="1.8" fill={accent} /><circle cx="72" cy="62" r="1.8" fill={accent} />
+          <circle cx="88" cy="60" r="1.8" fill={accent} /><circle cx="96" cy="68" r="1.8" fill={accent} />
+        </g>
+      );
+    case "prodotto-mix-universale":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M60 46 100 46 96 82H64Z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <path d="M64 46 68 38h24l4 8" fill="none" stroke={accent} strokeWidth={2.6} strokeLinejoin="round" />
+          <path d="M70 56h20M72 64h16" stroke={accent} strokeWidth={2} opacity="0.55" strokeLinecap="round" />
+        </g>
+      );
+    case "prodotto-mix-dolci":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M60 46 100 46 96 82H64Z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <path d="M64 46 68 38h24l4 8" fill="none" stroke={accent} strokeWidth={2.6} strokeLinejoin="round" />
+          <path d="M70 68 74 56h12l4 12z" fill="none" stroke={accent} strokeWidth={2.4} strokeLinejoin="round" />
+          <circle cx="80" cy="54" r="2" fill={accent} />
+        </g>
+      );
+    case "prodotto-crackers":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          {[[56, 48], [80, 48], [56, 68], [80, 68]].map(([x, y]) => (
+            <rect key={`${x}-${y}`} x={x} y={y} width="18" height="14" rx="2" fill={soft} stroke={accent} strokeWidth={2.4} />
+          ))}
+          {[[65, 55], [89, 55], [65, 75], [89, 75]].map(([x, y]) => (
+            <circle key={`${x}-${y}`} cx={x} cy={y} r="1.4" fill={accent} />
+          ))}
+        </g>
+      );
+    case "prodotto-fette-croccanti":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          {[46, 58, 70].map((y) => (
+            <rect key={y} x="54" y={y} width="52" height="8" rx="2.5" fill={soft} stroke={accent} strokeWidth={2.2} />
+          ))}
+        </g>
+      );
+    case "prodotto-pesto-genovese":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M64 48h32v28a6 6 0 0 1-6 6H70a6 6 0 0 1-6-6z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <rect x="62" y="42" width="36" height="8" rx="2" fill="none" stroke={accent} strokeWidth={2.6} />
+          <path d="M70 60c4-4 6-4 10 0s6 4 10 0" fill="none" stroke={accent} strokeWidth={2.4} strokeLinecap="round" />
+        </g>
+      );
+    case "prodotto-pesto-bio":
+      return (
+        <g>
+          <circle cx="80" cy="60" r="34" {...fillSoft} />
+          <Shadow accent={accent} />
+          <path d="M64 48h32v28a6 6 0 0 1-6 6H70a6 6 0 0 1-6-6z" fill={soft} stroke={accent} strokeWidth={3} strokeLinejoin="round" />
+          <rect x="62" y="42" width="36" height="8" rx="2" fill="none" stroke={accent} strokeWidth={2.6} />
+          <path d="M80 58c-6-8 2-14 8-10-2 8-8 10-8 10Z" fill={accent} opacity="0.85" />
+        </g>
+      );
     case "ricetta-pasta-forno":
       return (
         <g>
