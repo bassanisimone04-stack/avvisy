@@ -75,7 +75,7 @@ export const SITE = {
      * https://www.booking.com/affiliate-program/v2/index.html — gratuito,
      * nessuna soglia minima di traffico richiesta.
      */
-    bookingAid: "",
+    bookingAid: "8039376",
     /**
      * ID partner GetYourGuide. Iscriviti su
      * https://partner.getyourguide.com/ — gratuito, nessuna soglia minima.
