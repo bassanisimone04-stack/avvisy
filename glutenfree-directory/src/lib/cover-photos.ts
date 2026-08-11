@@ -73,8 +73,7 @@ export function recipePhoto(seed: number): string | undefined {
 // Foto reali dei prodotti caricate dall'utente (in public/images/prodotti/).
 // Percorso locale, come per le ricette. Il slug del prodotto fa da chiave.
 const PRODUCT_PHOTOS: Record<string, string> = {
-  // Le foto verranno aggiunte man mano che l'utente le carica su GitHub.
-  // Esempio: "barilla-fusilli-senza-glutine-400g": "/images/prodotti/01-barilla-fusilli.webp",
+  "barilla-fusilli-senza-glutine-400g": "/images/prodotti/barilla-fusilli.webp.png",
 };
 
 export function productPhoto(slug: string): string | undefined {
