@@ -187,6 +187,66 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Where was the family lunch scene filmed?", risposta: "At Villa Giusso, an agriturismo set in a 17th-century former monastery in Vico Equense, on the Sorrentine Peninsula, overlooking the Gulf of Naples." },
     ],
   },
+  hannibal: {
+    titolo: "Hannibal",
+    sinossi:
+      "The sequel to The Silence of the Lambs takes Hannibal Lecter to Florence, where he lives under a false name as curator of the Palazzo Capponi library. Shot in the city in 2000, the film moves through Piazza della Signoria, Palazzo Vecchio, Santa Croce and the Spedale degli Innocenti.",
+    faq: [
+      { domanda: "Was Hannibal really filmed in Florence?", risposta: "Yes. The Florentine shoot took place in spring and summer 2000, and Piazza della Signoria, Palazzo Vecchio, the Basilica of Santa Croce and the Spedale degli Innocenti are all recognisable in the film." },
+      { domanda: "Which historic café appears in Hannibal?", risposta: "Caffè Rivoire, on Piazza della Signoria, is among the places recognisable in the film: the historic café facing Palazzo Vecchio, founded in 1872 and still open today." },
+      { domanda: "Why is the film set in Florence?", risposta: "In Thomas Harris's novel, Lecter hides in Florence under the identity of \"Dr Fell\", curator of the Palazzo Capponi library. It is there that inspector Rinaldo Pazzi, played by Giancarlo Giannini, begins to suspect his true identity." },
+    ],
+  },
+  "the-american": {
+    titolo: "The American",
+    sinossi:
+      "George Clooney plays a gunsmith and assassin who takes refuge in an Abruzzo village after an ambush. Shot across Sulmona, Castel del Monte, Pacentro, Calascio and Campo Imperatore, the film turned the province of L'Aquila into its main landscape.",
+    faq: [
+      { domanda: "Where was The American with George Clooney filmed?", risposta: "In Abruzzo, in the province of L'Aquila: Sulmona, Castel del Monte, Pacentro, Castelvecchio Calvisio, Calascio, Corfinio and Campo Imperatore, as documented by the Abruzzo Region Film Commission." },
+      { domanda: "How long did the Sulmona shoot last?", risposta: "Filming in Piazza Garibaldi lasted four days, with around 1,600 extras and some thirty businesses on the square involved in the production, including Caffè Tucci." },
+      { domanda: "Does Caffè Tucci in Sulmona appear in the film?", risposta: "Caffè Tucci, on Piazza Garibaldi, was involved in the shoot: owner Sante Tucci took down the outdoor gazebo for the production's needs, as reported by the newspaper Il Centro." },
+    ],
+  },
+  "corro-da-te": {
+    titolo: "Running to You (Corro da te)",
+    sinossi:
+      "A comedy with Pierfrancesco Favino and Miriam Leone, shot in Turin in 2020. Gianni, a serial seducer, pretends to use a wheelchair in order to win over Chiara, a paraplegic musician — and ends up having to face himself.",
+    faq: [
+      { domanda: "Where was Corro da te filmed?", risposta: "In Turin, in February 2020, supported by the Film Commission Torino Piemonte. Locations include the Teatro Regio and the Del Cambio restaurant on Piazza Carignano." },
+      { domanda: "Which restaurant appears in Corro da te?", risposta: "Ristorante Del Cambio, the historic venue on Piazza Carignano in Turin, today a Michelin-starred restaurant. It is where Gianni takes Chiara to dinner after her performance at the Teatro Regio." },
+      { domanda: "Who stars in Corro da te?", risposta: "Pierfrancesco Favino as Gianni and Miriam Leone as Chiara, directed by Riccardo Milani. The film was released in cinemas in March 2022." },
+    ],
+  },
+  "il-re": {
+    titolo: "The King (Il Re)",
+    sinossi:
+      "A Sky Original series starring Luca Zingaretti as Bruno Testori, the governor of a border prison who runs it by his own rules. Shot across Rome, Turin, Civitavecchia and Trieste, where the production used Piazza Oberdan, Ponterosso, the Porto Vecchio and the Antico Caffè San Marco.",
+    faq: [
+      { domanda: "Where was the series Il Re with Luca Zingaretti filmed?", risposta: "Across Rome, Turin, Civitavecchia and Trieste. In Trieste, filming covered Piazza Oberdan, Ponterosso, the Porto Vecchio and the Antico Caffè San Marco, as documented by the film tourism portal of the Friuli Venezia Giulia Film Commission." },
+      { domanda: "Which historic café appears in Il Re?", risposta: "The Antico Caffè San Marco in Trieste, founded in 1914 and still open today: some scenes in the series are shot in its interiors." },
+      { domanda: "What is Il Re about?", risposta: "Bruno Testori runs a prison on Italy's eastern border by his own highly personal rules, until internal investigations into several murders and the presence of a suspected terrorist put him under pressure. A second season arrived in 2025." },
+    ],
+  },
+  "rocco-schiavone": {
+    titolo: "Rocco Schiavone",
+    sinossi:
+      "Based on Antonio Manzini's novels, this Rai series follows Roman deputy police chief Rocco Schiavone (Marco Giallini), transferred to Aosta as a punishment. Shot in the Aosta Valley with the support of the regional film commission.",
+    faq: [
+      { domanda: "Where is the series Rocco Schiavone filmed?", risposta: "In the Aosta Valley, in and around Aosta, with the collaboration of the Fondazione Film Commission Vallée d'Aoste and the regional government. Locations include Via Porta Praetoria, the Roman Theatre, the Beauregard Hospital and the Caffè Nazionale on Piazza Chanoux." },
+      { domanda: "Does the Caffè Nazionale in Aosta really exist?", risposta: "Yes: it is a historic café under the arcades of Piazza Émile Chanoux in Aosta. At the time of the season 4 shoot it was closed, and was reopened specifically for filming; it then reopened to the public in August 2022 as \"Paolo Griffa al Caffè Nazionale\"." },
+      { domanda: "Who plays Rocco Schiavone?", risposta: "Marco Giallini, as the Roman deputy police chief transferred to Aosta as a punishment, the lead of the Rai series based on Antonio Manzini's novels." },
+    ],
+  },
+  "the-equalizer-3": {
+    titolo: "The Equalizer 3",
+    sinossi:
+      "Robert McCall (Denzel Washington), badly wounded, is nursed back to health in a small village on the Amalfi Coast and ends up defending it from the Camorra. The fictional town of \"Altamonte\" is in fact Atrani, with filming also in Maiori and Minori.",
+    faq: [
+      { domanda: "Where was The Equalizer 3 filmed?", risposta: "On the Amalfi Coast: the fictional village of \"Altamonte\" is Atrani, Italy's smallest municipality by area, with filming also in Maiori and Minori." },
+      { domanda: "Does Denzel Washington's café in The Equalizer 3 really exist?", risposta: "Yes: the film's \"Aminah's Cafe\" is Ristorante Savò in Atrani, on the village square, dressed as a café for the shoot. The venue tells the story on its own website." },
+      { domanda: "Are the shops in Atrani real?", risposta: "Partly not: the production replaced the shop signs around the square, turning some into a set bakery, grocery and hardware store. The buildings and the square itself, though, are the real Atrani." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -275,6 +335,30 @@ export const restaurantsEn: Record<string, RestEn> = {
   "villa-giusso-vico-equense": {
     descrizione: "An agriturismo set in a 17th-century former monastery on the hills above Vico Equense, on the Sorrentine Peninsula, overlooking the Gulf of Naples. Traditional Sorrentine cuisine using produce from the estate.",
     scena: { "e-stata-la-mano-di-dio": "In the 17th-century former monastery overlooking the Gulf of Naples, where Paolo Sorrentino filmed the family lunch scene." },
+  },
+  "rivoire-firenze": {
+    descrizione: "A historic café and chocolate house founded in 1872 by Enrico Rivoire, chocolatier to the House of Savoy. Under the arcades of Piazza della Signoria, with tables facing Palazzo Vecchio and the Fountain of Neptune. Famous for its thick hot chocolate and its pastries.",
+    scena: { hannibal: "The historic café facing Palazzo Vecchio is among the Florence landmarks recognisable in Ridley Scott's film, shot in the city in 2000." },
+  },
+  "caffe-tucci-sulmona": {
+    descrizione: "A family-run historic bar under the arcades of Piazza Garibaldi, Sulmona's great market square, dominated by the medieval aqueduct. Coffee bar with outdoor tables facing the square.",
+    scena: { "the-american": "The bar on Piazza Garibaldi involved in the four days of filming in Sulmona for the George Clooney film: the owner took down his outdoor gazebo for the production." },
+  },
+  "del-cambio-torino": {
+    descrizione: "A historic restaurant on Piazza Carignano, open since 1757 opposite the Teatro Carignano. Nineteenth-century rooms with mirrors, stucco and red velvet, today holding a Michelin star. Contemporary Piedmontese cuisine.",
+    scena: { "corro-da-te": "Gianni and Chiara's dinner after her performance at the Teatro Regio: the couple sit in the restaurant's historic dining room, she amused by his clumsiness." },
+  },
+  "caffe-san-marco-trieste": {
+    descrizione: "A literary café founded in 1914, at the heart of the Trieste of Svevo and Saba. Liberty-style interiors with wooden masks and marble tables, today also a bookshop and restaurant. One of Italy's most celebrated historic cafés.",
+    scena: { "il-re": "Some scenes of the Sky series starring Luca Zingaretti are shot in the café's interiors, among the Trieste locations used by the production alongside Piazza Oberdan, Ponterosso and the Porto Vecchio." },
+  },
+  "caffe-nazionale-aosta": {
+    descrizione: "A 19th-century historic café under the arcades of the town hall, on Piazza Chanoux. Closed for years, it reopened in August 2022 with chef Paolo Griffa: today it combines a Michelin-starred restaurant, patisserie, salon de thé and cocktail bar, with the historic decagonal room known as \"la Chapelle\".",
+    scena: { "rocco-schiavone": "The historic café on Piazza Chanoux used as a location in season 4 of the series: it was closed at the time and was reopened specifically for filming, under an agreement with the City of Aosta." },
+  },
+  "ristorante-savo-atrani": {
+    descrizione: "A family restaurant on the little square of Atrani, Italy's smallest municipality. Amalfi Coast seafood cooking, run by the Savo family, now in its third generation.",
+    scena: { "the-equalizer-3": "Dressed by the production as the film's \"Aminah's Cafe\": the venue where Denzel Washington's character orders his tea and builds his daily routine in the village." },
   },
 };
 
