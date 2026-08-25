@@ -116,7 +116,17 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
         </section>
       )
     }
-    <a href={path("/blog", lang)} class="mt-10 inline-block text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">← {t("blog.torna")}</a>
+    <a href={path("/guida", lang)} class="mt-10 flex flex-col gap-4 rounded-3xl border border-gold-400/30 bg-gold-400/5 p-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="font-display text-lg font-bold">📖 Need a ready-made itinerary?</p>
+        <p class="mt-1 text-sm text-ink-600 dark:text-ink-400">
+          The CineFood Italia PDF Guide: every real venue with address, price and 3 ready-made itineraries, {SITE.guida.prezzo}.
+        </p>
+      </div>
+      <span class="inline-block shrink-0 rounded-full bg-gold-500 px-5 py-2 text-sm font-semibold text-noir-950">Discover it →</span>
+    </a>
+
+    <a href={path("/blog", lang)} class="mt-6 inline-block text-sm font-semibold text-gold-600 hover:text-gold-500 dark:text-gold-400">← {t("blog.torna")}</a>
   </article>
 
   {
