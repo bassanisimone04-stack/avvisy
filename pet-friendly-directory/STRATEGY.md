@@ -298,6 +298,25 @@ sezioni interne, tutte in italiano e keyword-friendly:
 - `/blog/[slug]` — articoli
 - `/blog/categoria/spiagge-per-cani`, `/blog/categoria/normativa-viaggi`
 
+### 3.3bis Keyword nel copy visibile (non solo nei tag)
+
+Le keyword della sezione 3.4 sono state inserite anche nel **testo visibile**
+dei mockup, non solo nei meta tag — pratica che aiuta sia l'utente (capisce
+subito cosa trova) sia Google (contesto semantico coerente col title/meta):
+
+- **Home**: eyebrow sopra l'H1 ("HOTEL PET FRIENDLY · CANI GRANDI E GIGANTI"),
+  sottotitolo hero con "hotel per cani taglia grande", "b&b che accettano
+  cani senza limiti", "agriturismi per cani giganti"; un breve paragrafo
+  keyword-rich sotto i filtri rapidi con tutte le query transazionali della
+  sezione 3.4 inserite in modo naturale (mai in un elenco/keyword-stuffing).
+- **`/cerca`**: H1 riscritto in "Hotel, B&B e agriturismi per cani grandi in
+  [regione]" (pattern riusabile per ogni landing geografica) con un
+  sottotitolo che ripete "pet friendly", "taglia grande e gigante", "senza
+  limiti di peso o di numero".
+- I link di navigazione (header/footer) restano invece etichette brevi e
+  naturali ("Cerca alloggi", "Blog & Guide") — il keyword stuffing nei menu
+  peggiora la UX senza benefici SEO reali.
+
 ### 3.4 Keyword primarie target (Home)
 
 Transazionali/commerciali ad alto intento (volume IT stimato medio-basso ma
