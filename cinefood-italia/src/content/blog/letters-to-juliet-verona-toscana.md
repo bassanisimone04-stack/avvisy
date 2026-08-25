@@ -17,6 +17,12 @@ faq:
     risposta: "No: è un'aggiunta turistica del '900, non parte dell'architettura originaria del palazzo trecentesco. Nel film, inoltre, fu aggiunto un finto muro di mattoni per la scena delle lettere, diverso dalla vera cassetta postale rossa dove si lasciano i bigliettini."
   - domanda: "Dove sono girate le scene toscane del film?"
     risposta: "Soprattutto a Siena, con vedute della celebre Piazza del Campo dove si corre il Palio, e a Villa Arvedi, usata come il palazzo del Conte Lorenzo."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Verona"
+esperienze:
+  - nome: "Tour della Casa di Giulietta a Verona"
+    query: "Verona Juliet's House tour"
 bozza: false
 ---
 

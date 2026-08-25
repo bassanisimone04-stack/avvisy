@@ -13,6 +13,12 @@ faq:
     risposta: "La Galleria Principe di Napoli, il lungomare Caracciolo, Port'Alba, piazza dei Martiri, il Teatro San Carlo, piazza Municipio e via Chiaia — oltre a Ischia e Gaeta per le scene al mare."
   - domanda: "Qual è il locale reale che appare nella serie?"
     risposta: "ScottoJonno, un caffè-bistrot dentro la Galleria Principe di Napoli, comparso nella quarta stagione (2024): è un locale realmente aperto al pubblico, riaperto nel 2023 in un ex caffè-chantant ottocentesco."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Napoli"
+esperienze:
+  - nome: "Tour a piedi di Napoli"
+    query: "Naples walking tour"
 bozza: false
 ---
 

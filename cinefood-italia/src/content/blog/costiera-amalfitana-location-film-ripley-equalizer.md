@@ -15,6 +15,12 @@ faq:
     risposta: "Sì: è il Ristorante Savò di Atrani, allestito dalla produzione come l'\"Aminah's Cafe\" del film. Il locale lo racconta sul proprio sito ufficiale."
   - domanda: "Qual è la differenza tra Ripley Netflix e Il talento di Mr. Ripley del 1999?"
     risposta: "Sono due adattamenti diversi dello stesso romanzo di Patricia Highsmith: il film del 1999 con Matt Damon è girato tra Venezia e altre location, mentre la serie Netflix del 2024 con Andrew Scott usa Atrani e la Costiera Amalfitana."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Amalfi"
+esperienze:
+  - nome: "Tour in barca della Costiera Amalfitana"
+    query: "Amalfi Coast boat tour"
 bozza: false
 ---
 

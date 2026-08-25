@@ -18,6 +18,12 @@ faq:
   - domanda: "How do you get to Palazzo Adriano from Palermo?"
     risposta: "About 80 km, a little over 1h30 by car via the SS121/SS189 and SS188 roads. Without a car, the most practical option is train plus taxi for the final stretch."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Palermo"
+esperienze:
+  - nome: "Palermo day tour"
+    query: "Palermo day tour"
 bozza: false
 ---
 

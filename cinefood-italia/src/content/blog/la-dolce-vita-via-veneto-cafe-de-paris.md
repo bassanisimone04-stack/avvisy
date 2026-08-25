@@ -17,6 +17,12 @@ faq:
     risposta: "No: furono ricostruite fedelmente da Fellini nel Teatro 5 di Cinecittà, per avere pieno controllo su luci e comparse. Il vero Café de Paris resta però il luogo reale che ispirò il film."
   - domanda: "Da dove viene la parola \"paparazzo\"?"
     risposta: "Dal nome del fotografo del film, ispirato a un personaggio del libro By the Ionian Sea di George Gissing. Da La Dolce Vita è diventato sinonimo internazionale di fotografo di celebrità."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Roma"
+esperienze:
+  - nome: "Tour di Via Veneto e della Roma di Fellini"
+    query: "Rome Via Veneto tour"
 bozza: false
 ---
 

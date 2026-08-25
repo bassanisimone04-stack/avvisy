@@ -13,6 +13,12 @@ faq:
     risposta: "È l'esterno del palazzo di Itaca: sorge sul Monte Santa Caterina a Favignana, a 314 metri sul livello del mare."
   - domanda: "Cosa mangiare a Favignana?"
     risposta: "Il tonno rosso è il re della tavola locale, legato alla tradizione della mattanza; da provare anche il cous cous di pesce e i vini delle Egadi."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Favignana"
+esperienze:
+  - nome: "Tour delle Isole Egadi"
+    query: "Favignana Egadi Islands tour"
 bozza: false
 ---
 

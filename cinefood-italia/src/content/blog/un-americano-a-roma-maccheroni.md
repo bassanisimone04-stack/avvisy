@@ -17,6 +17,12 @@ faq:
     risposta: "A Trastevere: Nando è un giovane romano del popolare quartiere trasteverino, ossessionato dal mito dell'America, che finisce per fare da specchio comico agli italiani di quegli anni."
   - domanda: "Dove è stato girato Un Americano a Roma?"
     risposta: "Tra le location reali: via del Portico d'Ottavia e vicolo Savini, oltre ad alcune zone periferiche di Roma per le scene in motocicletta."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Roma"
+esperienze:
+  - nome: "Tour gastronomico di Roma"
+    query: "Rome food tour"
 bozza: false
 ---
 

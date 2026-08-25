@@ -16,6 +16,12 @@ faq:
   - domanda: "What other Italian locations appear in Succession?"
     risposta: "Lake Como also features as a backdrop in some episodes: we cover it in our dedicated guide to Lake Como on screen."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Siena"
+esperienze:
+  - nome: "Val d'Orcia tour"
+    query: "Val d'Orcia tour"
 bozza: false
 ---
 

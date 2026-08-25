@@ -13,6 +13,9 @@ faq:
     risposta: "Principalmente in Veneto — Venezia (Biblioteca Marciana, Forte di Sant'Andrea, l'hotel The Gritti Palace), Verona (Archivio di Stato, Torre del Museo di Castelvecchio) e Padova (sede del CNR) — e in Sicilia, a Palermo (centro storico, area del porto, Partanna). Alcune scene ambientate nel Medioevo sono state girate nel Lazio, tra Tarquinia, Bracciano e San Pellegrino (Viterbo)."
   - domanda: "Quando esce La mano di Dante e dove si vede?"
     risposta: "Presentato in anteprima alla Mostra del Cinema di Venezia nel settembre 2025, è uscito nelle sale americane il 12 giugno 2026 ed è disponibile su Netflix dal 24 giugno 2026."
+esperienze:
+  - nome: "Tour di Venezia e Verona"
+    query: "Venice Verona day tour"
 bozza: false
 ---
 

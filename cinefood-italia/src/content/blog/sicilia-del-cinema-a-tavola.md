@@ -15,6 +15,12 @@ faq:
     risposta: "Arancini, pasta 'ncasciata, granita, cannoli e pesce fresco."
   - domanda: "Quali sono le zone siciliane più legate al cinema recente?"
     risposta: "Oltre ai classici, la Sicilia occidentale è tornata protagonista con The Odyssey di Nolan, girato a Favignana e alle Isole Egadi, e con le riprese siciliane de La mano di Dante a Palermo."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Taormina"
+esperienze:
+  - nome: "Tour gastronomico della Sicilia"
+    query: "Sicily food tour"
 bozza: false
 ---
 

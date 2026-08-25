@@ -15,6 +15,12 @@ faq:
     risposta: "Sì, è un bar reale in Piazza Fossia a Savoca, dentro il settecentesco Palazzo Trimarchi: è il luogo dove Michael Corleone (Al Pacino) chiede la mano di Apollonia, ed è ancora aperto oggi."
   - domanda: "Cosa vedere a Forza d'Agrò legato al film?"
     risposta: "La chiesa e il sagrato usati per la scena del matrimonio di Michael e Apollonia, oltre al centro storico medievale del borgo, arroccato sopra la costa ionica."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Taormina"
+esperienze:
+  - nome: "Tour de Il Padrino in Sicilia"
+    query: "Godfather Sicily tour"
 bozza: false
 ---
 

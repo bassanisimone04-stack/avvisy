@@ -16,6 +16,12 @@ faq:
   - domanda: "Can you visit Villa del Balbianello?"
     risposta: "Yes, it's open to the public from mid-March to November, with guided tours of the garden and interiors."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Milan"
+esperienze:
+  - nome: "Lake Como day trip from Milan"
+    query: "Lake Como day trip from Milan"
 bozza: false
 ---
 

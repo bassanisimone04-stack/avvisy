@@ -15,6 +15,12 @@ faq:
     risposta: "Tra gli altri, la storica Hosteria Giusti (via Farini 75), aperta dal 1989 accanto alla salumeria Giusti attiva dal 1598, e il bar Cappuccino da Angiolina in Vicolo Forni."
   - domanda: "Aziz Ansari ha davvero imparato a fare la pasta per il ruolo?"
     risposta: "Sì: l'attore e co-creatore della serie si è trasferito realmente a Modena per settimane, studiando italiano e l'arte della sfoglia prima delle riprese."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Modena"
+esperienze:
+  - nome: "Tour gastronomico di Modena"
+    query: "Modena food tour"
 bozza: false
 ---
 

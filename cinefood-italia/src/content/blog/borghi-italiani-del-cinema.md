@@ -17,6 +17,9 @@ faq:
     risposta: "Palazzo Adriano, in Sicilia, e Savoca, in provincia di Messina, sono entrambi piccoli borghi di poco più di mille-duemila abitanti, eppure hanno una fama cinematografica mondiale."
   - domanda: "Meglio visitare i borghi del cinema in bassa o alta stagione?"
     risposta: "La bassa stagione (primavera o inizio autunno) offre meno folla e più autenticità, soprattutto nei borghi più piccoli come Savoca o Palazzo Adriano, spesso presi d'assalto in estate."
+esperienze:
+  - nome: "Tour dei borghi italiani"
+    query: "Italy villages tour"
 bozza: false
 ---
 

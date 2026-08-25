@@ -15,6 +15,12 @@ faq:
     risposta: "Sì, tutti quelli in questa lista sono locali realmente in attività. Segnaliamo eventuali chiusure quando aggiorniamo le schede."
   - domanda: "Si può prenotare in questi locali?"
     risposta: "Dipende dal locale: i ristoranti più richiesti (Del Cambio, Caffè Nazionale) consigliano la prenotazione, mentre bar e pizzerie storiche come Da Michele funzionano a fila."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Roma"
+esperienze:
+  - nome: "Tour delle location cinematografiche in Italia"
+    query: "Italy film locations tour"
 bozza: false
 ---
 

@@ -14,6 +14,12 @@ faq:
   - domanda: "What should you eat on the Amalfi Coast?"
     risposta: "Scialatielli with seafood, lemon delight cake, sfusato amalfitano lemons and fresh Tyrrhenian fish."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Amalfi"
+esperienze:
+  - nome: "Amalfi Coast tour"
+    query: "Amalfi Coast tour"
 bozza: false
 ---
 

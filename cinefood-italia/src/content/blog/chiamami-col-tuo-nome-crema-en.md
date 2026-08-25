@@ -16,6 +16,12 @@ faq:
   - domanda: "Is Call Me by Your Name based on a book?"
     risposta: "Yes, on the novel of the same name by André Aciman, scripted by James Ivory. The film received 4 Oscar nominations (Best Picture, Timothée Chalamet for Best Actor, Best Adapted Screenplay, and Best Song for 'Mystery of Love' by Sufjan Stevens)."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Crema"
+esperienze:
+  - nome: "Lombardy countryside bike tour"
+    query: "Lombardy countryside bike tour"
 bozza: false
 ---
 

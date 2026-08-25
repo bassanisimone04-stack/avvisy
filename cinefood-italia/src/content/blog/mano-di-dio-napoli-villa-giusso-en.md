@@ -14,6 +14,12 @@ faq:
   - domanda: "Is The Hand of God a true story?"
     risposta: "Yes, it's largely autobiographical: it tells the story of Paolo Sorrentino's adolescence in Naples and the tragedy that struck his family. It won the Silver Lion in Venice and was nominated for the Best International Feature Oscar."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Sorrento"
+esperienze:
+  - nome: "Sorrento Amalfi tour"
+    query: "Sorrento Amalfi tour"
 bozza: false
 ---
 

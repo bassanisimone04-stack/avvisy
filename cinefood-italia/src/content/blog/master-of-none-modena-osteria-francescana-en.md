@@ -16,6 +16,12 @@ faq:
   - domanda: "Did Aziz Ansari really learn to make pasta for the role?"
     risposta: "Yes: the actor and co-creator actually moved to Modena for weeks, studying Italian and the art of hand-rolled pasta sheets before filming."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Modena"
+esperienze:
+  - nome: "Modena food tour"
+    query: "Modena food tour"
 bozza: false
 ---
 

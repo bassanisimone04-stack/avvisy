@@ -14,6 +14,12 @@ faq:
   - domanda: "How many episodes does the series have and when was it released?"
     risposta: "The Monster of Florence (Il Mostro) has 4 episodes, directed by Stefano Sollima (Gomorrah, Romanzo Criminale), released on Netflix on October 22, 2025."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Florence"
+esperienze:
+  - nome: "Florence Tuscany tour"
+    query: "Florence Tuscany tour"
 bozza: false
 ---
 

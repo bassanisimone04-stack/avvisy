@@ -18,6 +18,12 @@ faq:
   - domanda: "How do you get to Savoca without a car?"
     risposta: "Public transport requires a change: a bus from Taormina to Santa Teresa di Riva, then a local bus (Jonica Trasporti) up to Savoca, or a taxi for the final stretch."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Taormina"
+esperienze:
+  - nome: "Godfather Sicily tour"
+    query: "Godfather Sicily tour"
 bozza: false
 ---
 

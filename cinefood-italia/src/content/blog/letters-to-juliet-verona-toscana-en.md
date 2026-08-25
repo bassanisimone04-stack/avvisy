@@ -18,6 +18,12 @@ faq:
   - domanda: "Where were the film's Tuscany scenes filmed?"
     risposta: "Mainly in Siena, with views of the famous Piazza del Campo where the Palio horse race is run, and at Villa Arvedi, used as Count Lorenzo's palace."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Verona"
+esperienze:
+  - nome: "Verona Juliet's House tour"
+    query: "Verona Juliet's House tour"
 bozza: false
 ---
 

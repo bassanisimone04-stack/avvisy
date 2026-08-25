@@ -15,6 +15,12 @@ faq:
     risposta: "Il Café de Paris su Via Veneto, oggi chiuso ma simbolo della Roma di Fellini che ispirò il film — le scene di Via Veneto furono in realtà ricostruite a Cinecittà."
   - domanda: "Qual è il locale più antico tra questi cinque?"
     risposta: "Il Café de Paris (1948) e Da Pancrazio, costruito sui resti del Teatro di Pompeo del I secolo a.C., dove secondo la tradizione fu ucciso Giulio Cesare."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Roma"
+esperienze:
+  - nome: "Tour gastronomico di Roma"
+    query: "Rome food tour"
 bozza: false
 ---
 

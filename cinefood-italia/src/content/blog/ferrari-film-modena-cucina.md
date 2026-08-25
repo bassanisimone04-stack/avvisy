@@ -17,6 +17,12 @@ faq:
     risposta: "Sì, quasi interamente: tra agosto e ottobre 2022 la produzione ha girato nelle location originali della città, con pochissimo ricorso alla computer grafica, incluse Piazza Grande, il Teatro Comunale e persino il vero barbiere di Enzo Ferrari."
   - domanda: "Quali luoghi reali di Modena appaiono nel film?"
     risposta: "Piazza Roma, Piazza Grande col Duomo e la Ghirlandina, il Teatro Comunale Pavarotti-Freni (scena dell'opera), il Cimitero di San Cataldo e il barbiere Da Antonio, quello realmente frequentato da Enzo Ferrari."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Modena"
+esperienze:
+  - nome: "Tour del Museo Ferrari a Modena"
+    query: "Ferrari Museum Modena tour"
 bozza: false
 ---
 

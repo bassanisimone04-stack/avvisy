@@ -15,6 +15,12 @@ faq:
     risposta: "Mozzarella di bufala del Cilento, alici di menaica, fusilli fatti a mano e pesce fresco del Tirreno."
   - domanda: "Benvenuti al Sud è un remake?"
     risposta: "Sì, del film francese Giù al Nord (Bienvenue chez les Ch'tis, 2008). La versione italiana di Luca Miniero incassò circa 30 milioni di euro, debuttando al primo posto al botteghino davanti a Inception."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Castellabate"
+esperienze:
+  - nome: "Tour della costa del Cilento"
+    query: "Cilento coast tour"
 bozza: false
 ---
 

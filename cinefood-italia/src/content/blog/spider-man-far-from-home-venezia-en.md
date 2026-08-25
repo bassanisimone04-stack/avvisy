@@ -16,6 +16,12 @@ faq:
   - domanda: "Was the Venice scene really filmed on location?"
     risposta: "Partly: the crew genuinely filmed in Venice (Campo Santa Maria Formosa, the Rialto area, St Mark's Square, the Grand Canal), but the spectacular action sequence with the water monster was rebuilt on a massive set at Leavesden Studios in England."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Venice"
+esperienze:
+  - nome: "Venice gondola tour"
+    query: "Venice gondola tour"
 bozza: false
 ---
 

@@ -16,6 +16,12 @@ faq:
   - domanda: "Is Welcome to the South a remake?"
     risposta: "Yes, of the French film Welcome to the Sticks (Bienvenue chez les Ch'tis, 2008). Luca Miniero's Italian version grossed about €30 million, opening at number one at the Italian box office, ahead of Inception."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Castellabate"
+esperienze:
+  - nome: "Cilento coast tour"
+    query: "Cilento coast tour"
 bozza: false
 ---
 

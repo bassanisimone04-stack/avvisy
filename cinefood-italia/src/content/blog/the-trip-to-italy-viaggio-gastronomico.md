@@ -15,6 +15,9 @@ faq:
     risposta: "Nasce come serie TV della BBC diretta da Michael Winterbottom, poi montata anche in versione film per il cinema."
   - domanda: "Il viaggio segue davvero ristoranti reali?"
     risposta: "Sì: la struttura del film ruota attorno a sei pasti in sei ristoranti veri, in sei giorni, che nella finzione Coogan deve recensire per l'Observer Magazine."
+esperienze:
+  - nome: "Tour on the road gastronomico in Italia"
+    query: "Italy road trip food tour"
 bozza: false
 ---
 

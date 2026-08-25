@@ -18,6 +18,12 @@ faq:
   - domanda: "What other Italian cities appear in House of Gucci?"
     risposta: "Besides Milan and Lake Como (Ossuccio, Tremezzina), the film was also shot in Rome and Florence, plus some scenes in the Alps at Gressoney."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Milan"
+esperienze:
+  - nome: "Milan fashion district tour"
+    query: "Milan fashion district tour"
 bozza: false
 ---
 

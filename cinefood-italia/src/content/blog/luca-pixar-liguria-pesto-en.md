@@ -18,6 +18,12 @@ faq:
   - domanda: "Which village inspired Portorosso's main square?"
     risposta: "Portorosso's main square is inspired by Vernazza's; the red house on Riomaggiore's little harbor inspired Giulia's house, while Camogli inspired the architecture of the film's buildings."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Cinque Terre"
+esperienze:
+  - nome: "Cinque Terre boat tour"
+    query: "Cinque Terre boat tour"
 bozza: false
 ---
 

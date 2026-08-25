@@ -13,6 +13,12 @@ faq:
     risposta: "A Villa Giusso, un agriturismo ricavato in un ex monastero del XVII secolo a Vico Equense, sulla penisola sorrentina, con vista sul golfo di Napoli."
   - domanda: "È stata la mano di Dio è una storia vera?"
     risposta: "Sì, è largamente autobiografico: racconta l'adolescenza di Paolo Sorrentino a Napoli e la tragedia che colpì la sua famiglia. Ha vinto il Leone d'Argento a Venezia ed è stato candidato all'Oscar come miglior film internazionale."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Sorrento"
+esperienze:
+  - nome: "Tour della Penisola Sorrentina"
+    query: "Sorrento Amalfi tour"
 bozza: false
 ---
 

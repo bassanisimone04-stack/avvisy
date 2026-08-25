@@ -18,6 +18,9 @@ faq:
   - domanda: "Is it better to visit these film villages in low or high season?"
     risposta: "Low season (spring or early autumn) means smaller crowds and more authenticity, especially in the smallest villages like Savoca or Palazzo Adriano, which can get crowded in summer."
 lang: "en"
+esperienze:
+  - nome: "Italy villages tour"
+    query: "Italy villages tour"
 bozza: false
 ---
 

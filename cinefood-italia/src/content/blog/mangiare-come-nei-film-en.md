@@ -16,6 +16,9 @@ faq:
   - domanda: "What makes these four venues different from an ordinary tourist restaurant?"
     risposta: "They're real locations documented across multiple sources (not themed lookalikes): the film was genuinely shot there, or the venue directly inspired the scene."
 lang: "en"
+esperienze:
+  - nome: "Italy food tour"
+    query: "Italy food tour"
 bozza: false
 ---
 

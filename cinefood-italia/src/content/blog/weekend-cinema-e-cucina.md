@@ -15,6 +15,9 @@ faq:
     risposta: "Sì, soprattutto per i ristoranti più famosi e in alta stagione."
   - domanda: "Quali weekend cinema-e-cucina consigliate per iniziare?"
     risposta: "Savoca e la costa ionica siciliana (Il Padrino), Castellabate e il Cilento (Benvenuti al Sud), o Crema e il Cremasco (Chiamami col tuo nome): tre mete raggiungibili in un weekend, ognuna con location e cucina molto diverse."
+esperienze:
+  - nome: "Tour di un weekend in Italia"
+    query: "Italy weekend tour"
 bozza: false
 ---
 

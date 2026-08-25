@@ -18,6 +18,12 @@ faq:
   - domanda: "Where does the word \"paparazzo\" come from?"
     risposta: "From the name of the film's photographer character, inspired by a character in George Gissing's book By the Ionian Sea. Since La Dolce Vita it has become an international synonym for celebrity photographer."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Rome"
+esperienze:
+  - nome: "Rome Via Veneto tour"
+    query: "Rome Via Veneto tour"
 bozza: false
 ---
 

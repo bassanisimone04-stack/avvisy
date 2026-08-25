@@ -17,6 +17,12 @@ faq:
     risposta: "Sì, il Museo Nuovo Cinema Paradiso ha aperto il 4 agosto 2025 di fronte alla piazza-set, con fotografie originali, la riproduzione della cabina di Alfredo e l'area 'baci rubati'."
   - domanda: "Come si arriva a Palazzo Adriano da Palermo?"
     risposta: "Circa 80 km, poco più di 1h30 in auto via SS121/SS189 e SS188. Senza auto, la soluzione più pratica è treno più taxi per l'ultimo tratto."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Palermo"
+esperienze:
+  - nome: "Tour di Palermo e dintorni"
+    query: "Palermo day tour"
 bozza: false
 ---
 
