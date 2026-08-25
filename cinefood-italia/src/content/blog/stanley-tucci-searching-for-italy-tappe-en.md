@@ -18,6 +18,9 @@ faq:
   - domanda: "Where does Stanley Tucci's Italian heritage come from?"
     risposta: "From Calabria: his grandfather Stanislao Tucci was from Marzi (Cosenza), his grandmother Teresa Pisani from Serra San Bruno (Vibo Valentia), and his mother Joan Tropiano was born in Cittanova (Reggio Calabria)."
 lang: "en"
+esperienze:
+  - nome: "Italy food tour"
+    query: "Italy food tour"
 bozza: false
 ---
 

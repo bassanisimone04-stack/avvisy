@@ -13,6 +13,12 @@ faq:
     risposta: "Principalmente in Toscana: nel centro storico di Firenze (tra cui Piazza San Firenze e via Ghibellina), a Montalcino e Sant'Angelo in Colle, a Siena, a Lajatico e Terricciola (Pisa), e in alcuni comuni del Chianti fiorentino. Alcune scene sono state girate anche nella Tuscia laziale, tra Viterbo e Bagnoregio."
   - domanda: "Quante puntate ha la serie e quando è uscita?"
     risposta: "Il Mostro è composto da 4 episodi, diretti da Stefano Sollima (Gomorra, Romanzo Criminale), usciti su Netflix il 22 ottobre 2025."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Firenze"
+esperienze:
+  - nome: "Tour di Firenze e della Toscana"
+    query: "Florence Tuscany tour"
 bozza: false
 ---
 

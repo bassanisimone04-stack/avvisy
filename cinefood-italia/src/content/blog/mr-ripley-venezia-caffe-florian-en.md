@@ -18,6 +18,12 @@ faq:
   - domanda: "Who founded Caffè Florian, and what was it originally called?"
     risposta: "It opened on December 29, 1720, founded by Floriano Francesconi under the name 'Alla Venezia Trionfante'. Venetians saying 'andemo da Florian' ('let's go to Florian's') gave it the name it still carries today."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Venice"
+esperienze:
+  - nome: "Venice St Mark's Square tour"
+    query: "Venice St Mark's Square tour"
 bozza: false
 ---
 

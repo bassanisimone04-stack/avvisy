@@ -15,6 +15,12 @@ faq:
     risposta: "Sì: la tenuta cinquecentesca, con i celebri giardini disegnati negli anni '20 per Iris Origo dall'architetto Cecil Pinsent, organizza visite guidate in stagione."
   - domanda: "Quali altri luoghi italiani appaiono in Succession?"
     risposta: "Anche il Lago di Como fa da sfondo ad alcune scene della serie: ne parliamo nella nostra guida dedicata al Lago di Como nel cinema."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Siena"
+esperienze:
+  - nome: "Tour della Val d'Orcia"
+    query: "Val d'Orcia tour"
 bozza: false
 ---
 

@@ -17,6 +17,12 @@ faq:
     risposta: "La storia comincia nel 1870 con Salvatore Condurro. Il figlio Michele apre un locale proprio nel 1906 e nel 1930 la pizzeria si trasferisce nella sede attuale di via Cesare Sersale, gestita ancora oggi dalla stessa famiglia."
   - domanda: "Come si arriva da Michele da Napoli Centrale?"
     risposta: "A piedi in circa 5 minuti dalla Stazione Napoli Centrale, uscita Piazza Garibaldi: è una delle pizzerie storiche più comode da raggiungere in città."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Napoli"
+esperienze:
+  - nome: "Tour gastronomico di Napoli"
+    query: "Naples food tour"
 bozza: false
 ---
 

@@ -15,6 +15,12 @@ faq:
     risposta: "Gelato in piazza, supplì e la cucina romana: cacio e pepe, carbonara, carciofi."
   - domanda: "Che struttura ha To Rome with Love?"
     risposta: "È un film corale diviso in quattro storie separate ambientate a Roma, con un cast che include tre premi Oscar (Woody Allen, Roberto Benigni, Penélope Cruz) e cinque candidati (tra cui Alec Baldwin e Jesse Eisenberg)."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Roma"
+esperienze:
+  - nome: "Tour a piedi di Roma"
+    query: "Rome walking tour"
 bozza: false
 ---
 

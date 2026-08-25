@@ -17,6 +17,12 @@ faq:
     risposta: "No: prima del 1971 il bar non aveva un nome ufficiale. Fu Francis Ford Coppola a sceglierlo per la sceneggiatura, e i proprietari lo adottarono poi come nome reale del locale."
   - domanda: "Come si arriva a Savoca senza auto?"
     risposta: "Con i mezzi pubblici serve un cambio: da Taormina un bus fino a Santa Teresa di Riva, poi un autobus locale (Jonica Trasporti) fino a Savoca, oppure un taxi per l'ultimo tratto."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Taormina"
+esperienze:
+  - nome: "Tour de Il Padrino in Sicilia"
+    query: "Godfather Sicily tour"
 bozza: false
 ---
 

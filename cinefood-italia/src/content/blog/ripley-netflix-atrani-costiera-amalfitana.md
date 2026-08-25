@@ -13,6 +13,12 @@ faq:
     risposta: "Sì, entrambi sono tratti dal romanzo di Patricia Highsmith, ma sono produzioni distinte: il film del 1999 con Matt Damon e la serie del 2024 con Andrew Scott."
   - domanda: "Cosa mangiare sulla Costiera Amalfitana?"
     risposta: "Scialatielli ai frutti di mare, delizia al limone, sfusato amalfitano e pesce fresco del Tirreno."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Amalfi"
+esperienze:
+  - nome: "Tour della Costiera Amalfitana"
+    query: "Amalfi Coast tour"
 bozza: false
 ---
 

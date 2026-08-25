@@ -15,6 +15,12 @@ faq:
     risposta: "Cacio e pepe, carbonara, amatriciana, carciofi e coda alla vaccinara."
   - domanda: "Cosa hanno in comune queste tre trattorie?"
     risposta: "Tutte e tre sono location reali confermate (non locali a tema), nel cuore del centro storico di Roma, raggiungibili a piedi l'una dall'altra in circa 15-20 minuti."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Roma"
+esperienze:
+  - nome: "Tour gastronomico di Roma"
+    query: "Rome food tour"
 bozza: false
 ---
 

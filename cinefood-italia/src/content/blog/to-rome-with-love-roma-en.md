@@ -16,6 +16,12 @@ faq:
   - domanda: "What's the structure of To Rome with Love?"
     risposta: "It's an ensemble film split into four separate stories set in Rome, with a cast including three Oscar winners (Woody Allen, Roberto Benigni, Penélope Cruz) and five nominees, including Alec Baldwin and Jesse Eisenberg."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Rome"
+esperienze:
+  - nome: "Rome walking tour"
+    query: "Rome walking tour"
 bozza: false
 ---
 

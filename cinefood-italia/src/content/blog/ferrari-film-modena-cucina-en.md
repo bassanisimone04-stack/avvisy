@@ -18,6 +18,12 @@ faq:
   - domanda: "Which real Modena locations appear in the film?"
     risposta: "Piazza Roma, Piazza Grande with the Duomo and the Ghirlandina tower, the Teatro Comunale Pavarotti-Freni (the opera scene), the San Cataldo cemetery, and the Da Antonio barbershop, the one Enzo Ferrari really used."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Modena"
+esperienze:
+  - nome: "Ferrari Museum Modena tour"
+    query: "Ferrari Museum Modena tour"
 bozza: false
 ---
 

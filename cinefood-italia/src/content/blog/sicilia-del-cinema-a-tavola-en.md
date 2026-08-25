@@ -16,6 +16,12 @@ faq:
   - domanda: "Which Sicilian areas are linked to more recent films?"
     risposta: "Besides the classics, western Sicily is back in the spotlight thanks to Nolan's The Odyssey, filmed in Favignana and the Aegadian Islands, and the Sicilian scenes of In the Hand of Dante, filmed in Palermo."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Taormina"
+esperienze:
+  - nome: "Sicily food tour"
+    query: "Sicily food tour"
 bozza: false
 ---
 

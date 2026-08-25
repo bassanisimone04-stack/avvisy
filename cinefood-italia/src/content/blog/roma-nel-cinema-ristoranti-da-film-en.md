@@ -16,6 +16,12 @@ faq:
   - domanda: "Which is the oldest venue on this list?"
     risposta: "The Café de Paris (1948) and Da Pancrazio, built over the remains of the 1st-century BC Theatre of Pompey, where tradition holds that Julius Caesar was killed."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Rome"
+esperienze:
+  - nome: "Rome food tour"
+    query: "Rome food tour"
 bozza: false
 ---
 

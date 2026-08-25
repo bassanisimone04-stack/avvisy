@@ -17,6 +17,12 @@ faq:
     risposta: "Tra gli altri Giacomo Casanova, Lord Byron, Goethe, Charles Dickens ed Ernest Hemingway. Fu anche il primo caffè veneziano ad ammettere le donne al proprio interno, il che lo rese particolarmente amato da Casanova."
   - domanda: "Da chi fu fondato il Caffè Florian e con che nome?"
     risposta: "Fu inaugurato il 29 dicembre 1720 da Floriano Francesconi con il nome 'Alla Venezia Trionfante'. I veneziani, dicendo 'andemo da Florian', gli diedero il nome con cui è conosciuto ancora oggi."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Venezia"
+esperienze:
+  - nome: "Tour di Piazza San Marco a Venezia"
+    query: "Venice St Mark's Square tour"
 bozza: false
 ---
 

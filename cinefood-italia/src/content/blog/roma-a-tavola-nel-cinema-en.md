@@ -16,6 +16,12 @@ faq:
   - domanda: "What do these three trattorias have in common?"
     risposta: "All three are confirmed real locations (not themed venues), in the heart of Rome's historic centre, within about a 15-20 minute walk of each other."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Rome"
+esperienze:
+  - nome: "Rome food tour"
+    query: "Rome food tour"
 bozza: false
 ---
 

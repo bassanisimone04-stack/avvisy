@@ -17,6 +17,9 @@ faq:
     risposta: "Sì, la serie ha vinto 3 Emmy Award come Miglior serie non-fiction condotta (2021, 2022 e 2024) e ha ricevuto 7 nomination totali."
   - domanda: "Da dove vengono le origini italiane di Stanley Tucci?"
     risposta: "Dalla Calabria: il nonno Stanislao Tucci era di Marzi (Cosenza), la nonna Teresa Pisani di Serra San Bruno (Vibo Valentia), e la madre Joan Tropiano è nata a Cittanova (Reggio Calabria)."
+esperienze:
+  - nome: "Tour gastronomico in Italia"
+    query: "Italy food tour"
 bozza: false
 ---
 

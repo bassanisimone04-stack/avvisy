@@ -14,6 +14,9 @@ faq:
   - domanda: "When was In the Hand of Dante released and where can you watch it?"
     risposta: "It premiered at the Venice Film Festival in September 2025, opened in US theaters on June 12, 2026, and has been streaming on Netflix since June 24, 2026."
 lang: "en"
+esperienze:
+  - nome: "Venice Verona day tour"
+    query: "Venice Verona day tour"
 bozza: false
 ---
 

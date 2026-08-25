@@ -14,6 +14,12 @@ faq:
   - domanda: "What real venue appears in the show?"
     risposta: "ScottoJonno, a café-bistrot inside the Galleria Principe di Napoli, which appears in season 4 (2024): it's a genuine, publicly open venue, reopened in 2023 in a 19th-century former café-chantant."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Naples"
+esperienze:
+  - nome: "Naples walking tour"
+    query: "Naples walking tour"
 bozza: false
 ---
 

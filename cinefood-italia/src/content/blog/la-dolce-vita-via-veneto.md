@@ -17,6 +17,12 @@ faq:
     risposta: "No: la celebre scena del bagno di Anita Ekberg è alla Fontana di Trevi, in un'altra zona di Roma. Via Veneto è invece il palcoscenico delle scene mondane e dei paparazzi."
   - domanda: "Via Veneto del film è la strada vera?"
     risposta: "In parte no: le scene di Via Veneto furono ricostruite fedelmente da Fellini nel Teatro 5 di Cinecittà, per avere pieno controllo su luci e comparse."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Roma"
+esperienze:
+  - nome: "Tour di Via Veneto e della Roma di Fellini"
+    query: "Rome Via Veneto tour"
 bozza: false
 ---
 

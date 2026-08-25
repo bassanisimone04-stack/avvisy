@@ -14,6 +14,12 @@ faq:
   - domanda: "What should you eat on Favignana?"
     risposta: "Bluefin tuna is the king of the local table, tied to the tradition of the mattanza; also try fish couscous and the wines of the Egadi Islands."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Favignana"
+esperienze:
+  - nome: "Favignana Egadi Islands tour"
+    query: "Favignana Egadi Islands tour"
 bozza: false
 ---
 

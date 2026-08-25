@@ -18,6 +18,12 @@ faq:
   - domanda: "Is the film's Via Veneto the real street?"
     risposta: "Partly not: the Via Veneto scenes were faithfully rebuilt by Fellini on Studio 5 at Cinecittà, to have full control over lighting and extras."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Rome"
+esperienze:
+  - nome: "Rome Via Veneto tour"
+    query: "Rome Via Veneto tour"
 bozza: false
 ---
 

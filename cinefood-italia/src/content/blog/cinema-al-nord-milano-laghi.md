@@ -15,6 +15,12 @@ faq:
     risposta: "Il Lago di Como (Villa del Balbianello, in Star Wars, Casino Royale e House of Gucci) e il Lago di Garda (Quantum of Solace)."
   - domanda: "Villa del Balbianello è visitabile?"
     risposta: "Sì, è aperta al pubblico da metà marzo a novembre, con visite guidate al giardino e agli interni."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Milano"
+esperienze:
+  - nome: "Gita al Lago di Como da Milano"
+    query: "Lake Como day trip from Milan"
 bozza: false
 ---
 

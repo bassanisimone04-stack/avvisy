@@ -15,6 +15,9 @@ faq:
     risposta: "Dipende: alcuni ristoranti sì, mentre bar e pizzerie storiche come Da Michele funzionano con la fila."
   - domanda: "Cosa rende questi quattro locali diversi da un normale ristorante turistico?"
     risposta: "Sono location reali documentate su più fonti (non semplici imitazioni a tema): il film è stato girato davvero lì, o il locale ha ispirato direttamente la scena."
+esperienze:
+  - nome: "Tour gastronomico in Italia"
+    query: "Italy food tour"
 bozza: false
 ---
 

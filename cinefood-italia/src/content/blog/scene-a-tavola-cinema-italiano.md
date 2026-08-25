@@ -15,6 +15,9 @@ faq:
     risposta: "Un Americano a Roma, La Grande Bellezza, Benvenuti al Sud e le fiction del Commissario Montalbano."
   - domanda: "Qual è la battuta cinematografica sul cibo più celebre in Italia?"
     risposta: "'Maccarone, m'hai provocato e io te distruggo!' di Alberto Sordi in Un Americano a Roma (1954), diretto da Steno — probabilmente la scena a tavola più citata del cinema italiano."
+esperienze:
+  - nome: "Tour gastronomico di Roma"
+    query: "Rome food tour"
 bozza: false
 ---
 

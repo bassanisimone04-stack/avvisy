@@ -15,6 +15,12 @@ faq:
     risposta: "Nei bacari, le osterie tipiche, lontano dai ristoranti turistici."
   - domanda: "La scena di Venezia è girata davvero sul posto?"
     risposta: "In parte: la troupe ha girato realmente a Venezia (Campo Santa Maria Formosa, l'area di Rialto, Piazza San Marco, il Canal Grande), ma la spettacolare sequenza d'azione con il mostro d'acqua è stata ricostruita su un set enorme agli studios Leavesden, in Inghilterra."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Venezia"
+esperienze:
+  - nome: "Giro in gondola a Venezia"
+    query: "Venice gondola tour"
 bozza: false
 ---
 

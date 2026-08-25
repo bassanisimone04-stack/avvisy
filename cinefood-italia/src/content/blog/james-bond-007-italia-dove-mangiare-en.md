@@ -16,6 +16,9 @@ faq:
   - domanda: "Has Villa del Balbianello appeared in other famous films?"
     risposta: "Yes: besides Casino Royale, the Lake Como villa is known for Anakin and Padmé's first kiss in Star Wars: Episode II - Attack of the Clones. It's open to the public from mid-March to November."
 lang: "en"
+esperienze:
+  - nome: "Matera cave tour"
+    query: "Matera cave tour"
 bozza: false
 ---
 

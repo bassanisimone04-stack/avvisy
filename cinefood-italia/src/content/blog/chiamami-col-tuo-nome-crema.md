@@ -15,6 +15,12 @@ faq:
     risposta: "Sì, il Comune di Crema propone un tour a piedi o in bici tra i luoghi del film."
   - domanda: "Chiamami col tuo nome è tratto da un libro?"
     risposta: "Sì, dal romanzo omonimo di André Aciman, sceneggiato da James Ivory. Il film ottenne 4 candidature Oscar (miglior film, Timothée Chalamet come miglior attore, sceneggiatura non originale e canzone, per 'Mystery of Love' di Sufjan Stevens)."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Crema"
+esperienze:
+  - nome: "Tour in bici nella Bassa lombarda"
+    query: "Lombardy countryside bike tour"
 bozza: false
 ---
 

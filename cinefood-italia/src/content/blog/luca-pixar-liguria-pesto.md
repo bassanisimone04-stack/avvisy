@@ -17,6 +17,12 @@ faq:
     risposta: "Sì: il regista Enrico Casarosa è genovese, ed è cresciuto in Riviera. Ha attinto ai propri ricordi d'infanzia per costruire l'atmosfera del film, uscito su Disney+ il 18 giugno 2021."
   - domanda: "Quale borgo ha ispirato la piazza di Portorosso?"
     risposta: "La piazza principale di Portorosso è ispirata a quella di Vernazza; la casa rossa sul porticciolo di Riomaggiore ha invece ispirato la casa di Giulia, mentre Camogli ha ispirato l'architettura degli edifici del film."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Cinque Terre"
+esperienze:
+  - nome: "Tour in barca delle Cinque Terre"
+    query: "Cinque Terre boat tour"
 bozza: false
 ---
 

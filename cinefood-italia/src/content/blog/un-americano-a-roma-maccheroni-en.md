@@ -18,6 +18,12 @@ faq:
   - domanda: "Where was An American in Rome filmed?"
     risposta: "Among the real locations: Via del Portico d'Ottavia and Vicolo Savini, plus some outlying areas of Rome for the motorcycle scenes."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Rome"
+esperienze:
+  - nome: "Rome food tour"
+    query: "Rome food tour"
 bozza: false
 ---
 

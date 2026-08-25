@@ -16,6 +16,9 @@ faq:
   - domanda: "Which cinema-and-food weekends would you recommend to start?"
     risposta: "Savoca and Sicily's Ionian coast (The Godfather), Castellabate and Cilento (Welcome to the South), or Crema (Call Me by Your Name): three destinations easily covered in a weekend, each with very different locations and cuisine."
 lang: "en"
+esperienze:
+  - nome: "Italy weekend tour"
+    query: "Italy weekend tour"
 bozza: false
 ---
 

@@ -18,6 +18,12 @@ faq:
   - domanda: "How do you get to Da Michele from Naples Central Station?"
     risposta: "It's about a 5-minute walk from Napoli Centrale station, Piazza Garibaldi exit — one of the easiest historic pizzerias to reach in the city."
 lang: "en"
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Naples"
+esperienze:
+  - nome: "Naples food tour"
+    query: "Naples food tour"
 bozza: false
 ---
 

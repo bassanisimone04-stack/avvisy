@@ -15,6 +15,9 @@ faq:
     risposta: "Pane di Matera IGP, peperoni cruschi, cavatelli e caciocavallo podolico."
   - domanda: "Villa del Balbianello è comparsa anche in altri film famosi?"
     risposta: "Sì: oltre a Casino Royale, la villa sul Lago di Como è nota per la scena del primo bacio tra Anakin e Padmé in Star Wars - Episodio II: L'attacco dei cloni. È aperta al pubblico da metà marzo a novembre."
+esperienze:
+  - nome: "Tour delle grotte di Matera"
+    query: "Matera cave tour"
 bozza: false
 ---
 

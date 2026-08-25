@@ -16,6 +16,9 @@ faq:
   - domanda: "What's the most famous food line in Italian film history?"
     risposta: "\"Maccarone, you provoked me and I'll destroy you!\", Alberto Sordi's line in An American in Rome (1954), directed by Steno — probably the most quoted dining scene in Italian cinema."
 lang: "en"
+esperienze:
+  - nome: "Rome food tour"
+    query: "Rome food tour"
 bozza: false
 ---
 

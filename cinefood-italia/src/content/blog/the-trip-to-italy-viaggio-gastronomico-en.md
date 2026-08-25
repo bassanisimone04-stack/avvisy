@@ -16,6 +16,9 @@ faq:
   - domanda: "Does the journey really follow real restaurants?"
     risposta: "Yes: the film's structure is built around six meals at six real restaurants, over six days, which Coogan's character is fictionally reviewing for the Observer Magazine."
 lang: "en"
+esperienze:
+  - nome: "Italy road trip food tour"
+    query: "Italy road trip food tour"
 bozza: false
 ---
 

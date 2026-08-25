@@ -17,6 +17,12 @@ faq:
     risposta: "Le scene ambientate nella villa di famiglia sul Lago di Como sono girate a Villa Balbiano, storica dimora fatta costruire alla fine del '500 dal cardinale Tolomeo Gallio."
   - domanda: "Quali altre città italiane compaiono in House of Gucci?"
     risposta: "Oltre a Milano e il Lago di Como (Ossuccio, Tremezzina), il film è stato girato anche a Roma e Firenze, oltre ad alcune scene sulle Alpi a Gressoney."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Milano"
+esperienze:
+  - nome: "Tour del quartiere della moda a Milano"
+    query: "Milan fashion district tour"
 bozza: false
 ---
 
