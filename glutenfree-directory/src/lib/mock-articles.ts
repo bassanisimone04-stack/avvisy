@@ -800,6 +800,192 @@ const seeds: Seed[] = [
     ],
   },
   {
+    title: "Dove mangiare senza glutine a Napoli: pizza, sfogliatelle e babà senza rinunce",
+    category: "Guide",
+    excerpt: "La guida per mangiare senza glutine a Napoli: dalla pizza napoletana cotta in forno dedicato alla sfogliatella e al babà senza glutine, tra indirizzi storici e nuove aperture certificate.",
+    coverSeed: 143, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-14",
+    tags: ["napoli", "pizza", "pasticceria", "guide"],
+    keyTakeaways: [
+      "Napoli offre oggi pizzerie storiche e nuove aperture con forno interamente dedicato al senza glutine, per gustare la vera pizza napoletana in sicurezza.",
+      "Anche i grandi classici della pasticceria napoletana, come babà e sfogliatella, esistono oggi in versione senza glutine grazie a laboratori dedicati.",
+      "La certificazione AIC e un forno o bancone separato sono i segnali più concreti da cercare prima di ordinare.",
+      "Prenotare con anticipo resta consigliato nei weekend, soprattutto nelle pizzerie più conosciute.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Napoli: la sfida della vera pizza", body: "Pizza napoletana, babà, sfogliatella: la tradizione gastronomica di Napoli è tra le più identitarie d'Italia, ma anche tra le più temute da chi è celiaco, vista la centralità di impasti e farine lievitate. La buona notizia è che oggi <strong>Napoli conta pizzerie storiche e laboratori di pasticceria interamente dedicati al senza glutine</strong>, capaci di riproporre i grandi classici partenopei senza contaminazioni. In questa guida raccogliamo gli indirizzi verificati dalla community di Mappa Senza Glutine." },
+      { h2: "Le pizzerie senza glutine da provare a Napoli", body: "La pizza napoletana richiede una cottura ad altissima temperatura in forno a legna: per questo cerchiamo sempre locali con <strong>forno o postazione dedicata</strong> al senza glutine.", h3: [
+        { title: "Pizzeria Starita", body: "Nel quartiere Materdei, <a href=\"/directory/pizzeria-starita-napoli\">Pizzeria Starita</a> è una storica pizzeria napoletana fondata nel 1901 e gestita dalla stessa famiglia da generazioni: tutte le pizze, inclusa quella fritta, sono disponibili in versione senza glutine cotte in un <strong>forno separato dedicato</strong>.", image: { src: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=75", alt: "Pizza napoletana appena sfornata" } },
+        { title: "Pizzaioli Veraci", body: "Con tre sedi in città, <a href=\"/directory/pizzaioli-veraci-napoli\">Pizzaioli Veraci</a> è certificata AIC e ha bancone e forno interamente dedicati alla preparazione senza glutine: oltre alla pizza, propone anche fritti e primi piatti in versione gluten free." },
+      ] },
+      { h2: "Colazione e pasticceria: babà, sfogliatelle e taralli senza glutine", body: "Anche la tradizione dolciaria napoletana ha oggi un indirizzo dedicato: da <a href=\"/directory/leopoldo-cafebar-napoli\">Leopoldo Cafebar</a>, di fronte al MANN, il laboratorio al primo piano produce esclusivamente ricette senza glutine, dal <strong>babà napoletano</strong> alla sfogliatella, fino a taralli e pastiera nei periodi delle feste. È il punto di riferimento in città per chi vuole fare colazione senza pensieri." },
+      { h2: "Domande frequenti su dove mangiare senza glutine a Napoli", body: "Le domande più comuni di chi visita o vive a Napoli e cerca un indirizzo sicuro.", h3: [
+        { title: "È facile trovare pizza senza glutine buona a Napoli?", body: "Sì, sempre di più: le pizzerie con forno dedicato e certificazione AIC garantiscono oggi una pizza napoletana senza glutine molto vicina all'originale, cosa che fino a pochi anni fa era più difficile da trovare in città." },
+        { title: "Il babà senza glutine è davvero uguale all'originale?", body: "I laboratori interamente dedicati al senza glutine, come quelli specializzati in pasticceria partenopea, riescono a riprodurre consistenza e gusto molto vicini alla ricetta tradizionale, grazie a mix di farine studiati appositamente." },
+        { title: "Conviene prenotare nelle pizzerie senza glutine di Napoli?", body: "Sì, soprattutto nei weekend: le pizzerie più conosciute gestiscono un numero limitato di infornate dedicate al senza glutine, quindi prenotare e segnalare l'esigenza in anticipo aiuta lo staff a organizzarsi." },
+      ] },
+    ],
+    faqs: [
+      { question: "Quali sono le migliori pizzerie senza glutine a Napoli?", answer: "Tra gli indirizzi verificati segnaliamo Pizzeria Starita a Materdei, storica dal 1901 con forno dedicato, e Pizzaioli Veraci, certificata AIC con tre sedi in città: entrambe presenti nella directory di Mappa Senza Glutine." },
+      { question: "Dove trovo dolci napoletani senza glutine a Napoli?", answer: "Leopoldo Cafebar, di fronte al MANN, ha un laboratorio dedicato esclusivamente al senza glutine e propone babà, sfogliatella e la pasticceria tradizionale napoletana in versione gluten free." },
+      { question: "È sicuro mangiare fuori a Napoli se sono celiaco?", answer: "Sì, scegliendo locali con forno o laboratorio dedicati e, dove possibile, certificazione AIC: il numero di indirizzi verificati in città è in crescita costante." },
+    ],
+  },
+  {
+    title: "Venezia senza glutine: dove mangiare tra cicchetti, pizza e colazione in hotel",
+    category: "Guide",
+    excerpt: "Guida a Venezia senza glutine: gelaterie con coni dedicati, pizzerie con cucine separate e uno dei pochi hotel certificati AIC in città per una colazione senza pensieri.",
+    coverSeed: 144, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-16",
+    tags: ["venezia", "hotel", "pizzerie", "guide"],
+    keyTakeaways: [
+      "Venezia offre pizzerie con cucine fisicamente separate per il senza glutine, oltre a gelaterie con coni dedicati per ridurre la contaminazione crociata.",
+      "Trovare un hotel certificato AIC per la colazione senza glutine semplifica molto un soggiorno in città.",
+      "Nei sestieri più turistici, prenotare in anticipo resta la strategia più efficace nei weekend e in alta stagione.",
+      "Verificare sempre se la consegna a domicilio o l'asporto sono disponibili nel proprio sestiere, per non farsi trovare impreparati.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Venezia: attenzione ai cicchetti", body: "Tra calli e canali, mangiare senza glutine a Venezia richiede attenzione soprattutto ai <strong>cicchetti</strong>, gli stuzzichini tipici dei bacari veneziani, spesso a base di pane o fritture condivise. La città conta però indirizzi verificati che permettono di gustare pizza, gelato e persino la colazione in hotel senza rischi di contaminazione." },
+      { h2: "Pizzeria e gelateria: dove andare a colpo sicuro", body: "Due indirizzi diversi per due momenti diversi della giornata, entrambi verificati dalla community.", h3: [
+        { title: "Pizzeria OKE", body: "Alle Zattere, <a href=\"/directory/pizzeria-oke-venezia\">Pizzeria OKE</a> è tra i primi locali di Venezia formati dall'AIC e ha <strong>due cucine fisicamente separate</strong>: una dedicata esclusivamente alle preparazioni senza glutine, dalla pizza ai primi piatti. Offre anche consegna a domicilio in alcune zone della città.", image: { src: "https://images.unsplash.com/photo-1548365328-9f547fb0953b?auto=format&fit=crop&w=800&q=75", alt: "Pizza tonda cotta al forno" } },
+        { title: "Grom", body: "A Dorsoduro, la gelateria <a href=\"/directory/grom-venezia\">Grom</a> prepara il gelato artigianale in <strong>coni dedicati senza glutine</strong> in tutti i punti vendita del marchio, riducendo il rischio di contaminazione crociata anche nei mesi più affollati." },
+      ] },
+      { h2: "Dove dormire: un hotel con colazione senza glutine", body: "Trovare una colazione sicura in hotel è spesso il punto più delicato di un soggiorno: a Castello, vicino a Piazza San Marco, <a href=\"/directory/hotel-al-piave-venezia\">Hotel Al Piave</a> è uno dei pochi alberghi veneziani certificati AIC e offre una colazione interamente senza glutine, con pane, biscotti e cereali dedicati, oltre a opzioni senza lattosio su richiesta." },
+      { h2: "Domande frequenti su Venezia senza glutine", body: "Le domande più frequenti di chi visita la città con la celiachia.", h3: [
+        { title: "I cicchetti sono sicuri per un celiaco?", body: "Non sempre: molti cicchetti tradizionali sono a base di crostini di pane o fritture condivise con altri ingredienti. Meglio verificare sempre con lo staff del bacaro prima di ordinare, oppure orientarsi su locali con opzioni specificamente senza glutine." },
+        { title: "Conviene prenotare l'hotel con largo anticipo se cerco la colazione senza glutine?", body: "Sì, soprattutto in alta stagione: gli hotel certificati AIC a Venezia sono ancora pochi, quindi prenotare con largo anticipo aumenta le probabilità di trovare disponibilità nei periodi di maggiore affluenza turistica." },
+        { title: "Le pizzerie di Venezia hanno tutte il forno dedicato?", body: "No, non tutte: verifica sempre se la pizzeria ha una cucina o un forno separato per il senza glutine, come nel caso di Pizzeria OKE, prima di considerarla una scelta sicura al 100%." },
+      ] },
+    ],
+    faqs: [
+      { question: "Dove mangiare la pizza senza glutine a Venezia?", answer: "Pizzeria OKE, alle Zattere, ha due cucine fisicamente separate ed è stata tra i primi locali della città formati dall'AIC: la trovi nella directory di Mappa Senza Glutine." },
+      { question: "C'è un hotel a Venezia con colazione senza glutine?", answer: "Sì, Hotel Al Piave a Castello, vicino a Piazza San Marco, è certificato AIC e offre una colazione interamente senza glutine con opzioni anche senza lattosio su richiesta." },
+      { question: "Dove trovo un gelato sicuro a Venezia?", answer: "La gelateria Grom a Dorsoduro utilizza coni dedicati senza glutine in tutti i punti vendita del marchio, riducendo il rischio di contaminazione crociata." },
+    ],
+  },
+  {
+    title: "Bari senza glutine: focaccia, panzerotti e pizza in teglia senza rinunce",
+    category: "Guide",
+    excerpt: "Dove mangiare senza glutine a Bari: la focaccia barese e i panzerotti in versione gluten free, un laboratorio dedicato dal 2013 e dove comprare la spesa senza glutine in città.",
+    coverSeed: 145, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-18",
+    tags: ["bari", "focaccia", "panificio", "guide"],
+    keyTakeaways: [
+      "Bari ha un laboratorio interamente dedicato al senza glutine attivo dal 2013, il primo del suo genere in città, con prodotti erogabili tramite buono ASL.",
+      "La focaccia barese e i panzerotti, simboli della cucina locale, esistono oggi anche in versione senza glutine certificata.",
+      "Un panificio autorizzato dal Ministero della Salute garantisce tracciabilità e controlli sulla produzione senza glutine.",
+      "Per la pizza in teglia, verifica sempre se l'impasto a base di farina di riso viene preparato in un'area separata.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Bari: dalla focaccia ai panzerotti", body: "Focaccia barese, panzerotti, orecchiette: la cucina di Bari è fatta soprattutto di pane e pasta, due categorie che richiedono la massima attenzione per chi è celiaco. La città offre però indirizzi verificati, dal panificio dedicato alla pizzeria con impasto alternativo, per gustare i sapori pugliesi senza glutine." },
+      { h2: "Panificio e gastronomia: il punto di riferimento in città", body: "Due indirizzi dedicati alla panificazione senza glutine, ciascuno con la propria specialità.", h3: [
+        { title: "La Gouterie", body: "<a href=\"/directory/la-gouterie-bari\">La Gouterie</a> è la prima pasticceria e gastronomia interamente dedicata al senza glutine di Bari, attiva dal 2013: propone dolce e salato, rosticceria e prodotti confezionati anche <strong>erogabili con buono ASL</strong>." },
+        { title: "Panificio Magda", body: "<a href=\"/directory/panificio-magda-bari\">Panificio Magda</a> ha un laboratorio <strong>autorizzato dal Ministero della Salute</strong> per la produzione certificata senza glutine, dove trovi focaccia barese, panzerotti e pane, tracciabili accanto alla produzione tradizionale.", image: { src: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=800&q=75", alt: "Focaccia appena sfornata" } },
+      ] },
+      { h2: "Pizza in teglia senza glutine nel centro di Bari", body: "Su Via Sparano, nel cuore della città, <a href=\"/directory/solho-bari\">Solho</a> propone pizza in teglia con impasto a base di <strong>farina di riso</strong> come alternativa senza glutine, accanto alla cucina pugliese tradizionale: un'opzione comoda per chi visita il centro storico." },
+      { h2: "Domande frequenti su Bari senza glutine", body: "Le domande più comuni di chi cerca dove mangiare senza glutine in città.", h3: [
+        { title: "Dove trovo la focaccia barese senza glutine?", body: "Panificio Magda produce focaccia barese senza glutine in un laboratorio autorizzato dal Ministero della Salute, con tracciabilità garantita rispetto alla produzione tradizionale." },
+        { title: "Ci sono prodotti erogabili con buono ASL a Bari?", body: "Sì, La Gouterie propone anche prodotti confezionati erogabili con buono ASL, oltre alla produzione fresca quotidiana di dolce e salato senza glutine." },
+        { title: "La pizza in teglia senza glutine è sicura per un celiaco?", body: "Verifica sempre se l'impasto a base di farina di riso viene preparato in un'area separata da quella della pizza tradizionale, per escludere il rischio di contaminazione crociata durante la lavorazione." },
+      ] },
+    ],
+    faqs: [
+      { question: "Dove mangiare senza glutine a Bari?", answer: "Gli indirizzi verificati includono La Gouterie, pasticceria e gastronomia 100% senza glutine dal 2013, Panificio Magda con laboratorio autorizzato dal Ministero della Salute, e Solho per la pizza in teglia con farina di riso." },
+      { question: "Ci sono panifici dedicati al senza glutine a Bari?", answer: "Sì, Panificio Magda ha un laboratorio autorizzato dal Ministero della Salute per la produzione certificata senza glutine di focaccia barese, panzerotti e pane." },
+      { question: "Posso trovare prodotti erogabili con buono ASL a Bari?", answer: "Sì, La Gouterie propone prodotti confezionati senza glutine anche erogabili con buono ASL, oltre alla produzione fresca quotidiana." },
+    ],
+  },
+  {
+    title: "Palermo senza glutine: pizzerie, arancini e gelato per una città a misura di celiaco",
+    category: "Guide",
+    excerpt: "Guida a Palermo senza glutine: pizzerie interamente dedicate certificate AIC, fritti con friggitrice riservata e una gelateria storica dal 1976 con gusti senza sovrapprezzo.",
+    coverSeed: 146, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-20",
+    tags: ["palermo", "sicilia", "arancini", "guide"],
+    keyTakeaways: [
+      "Palermo ha pizzerie nate interamente dedicate al senza glutine, non semplicemente locali che offrono anche opzioni gluten free.",
+      "Arancini e fritti di strada sono disponibili senza glutine solo dove esiste una friggitrice dedicata: verificalo sempre prima di ordinare.",
+      "La città conta una gelateria storica dal 1976 che offre gusti senza glutine senza alcun sovrapprezzo.",
+      "La zona nord della città ospita un forno-pasticceria con produzione interamente propria e senza rischio di contaminazione.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Palermo: tra street food e tradizione", body: "Arancini, panelle, sfincione: lo street food palermitano è fatto soprattutto di fritture e impasti, categorie delicate per chi è celiaco. Palermo offre però una rete di locali verificati, alcuni nati fin dall'inizio interamente dedicati al senza glutine, che permettono di vivere la tradizione siciliana in sicurezza." },
+      { h2: "Pizzerie e bistrot certificati AIC", body: "Due indirizzi molto diversi tra loro, accomunati dalla certificazione AIC.", h3: [
+        { title: "Pizzicotto", body: "<a href=\"/directory/pizzicotto-palermo\">Pizzicotto</a> è una pizzeria nata interamente dedicata al senza glutine, non semplicemente con qualche opzione gluten free in menu: cucina, forno e postazioni di lavoro sono esclusivamente riservati alle preparazioni senza glutine, con certificazione AIC.", image: { src: "https://images.unsplash.com/photo-1590534247854-e97d5e3feef8?auto=format&fit=crop&w=800&q=75", alt: "Pizza tonda su tavola in legno" } },
+        { title: "Bistrot 107", body: "Nel centro di Palermo, <a href=\"/directory/bistrot-107-palermo\">Bistrot 107</a> è certificato AIC e propone quasi tutto il menu senza glutine, inclusi gli <strong>arancini fritti in friggitrice dedicata</strong>, oltre a panini e piadine della tradizione siciliana." },
+      ] },
+      { h2: "Forno dedicato e gelato storico", body: "Per la spesa quotidiana e una pausa dolce, due indirizzi affidabili in città: <a href=\"/directory/no-gluten-bakery-palermo\">No Gluten Bakery</a>, nella zona nord, ha un laboratorio interamente dedicato con produzione propria di brioche, pane, pizza e panelle senza glutine, mentre <a href=\"/directory/gelato-2-palermo\">Gelato 2</a> è una gelateria storica dal 1976 che offre gusti senza glutine <strong>senza alcun sovrapprezzo</strong> rispetto agli altri." },
+      { h2: "Domande frequenti su Palermo senza glutine", body: "Le domande più comuni di chi visita la città o ci vive con la celiachia.", h3: [
+        { title: "Gli arancini senza glutine sono sicuri a Palermo?", body: "Solo dove esiste una friggitrice dedicata esclusivamente al senza glutine, come da Bistrot 107: senza questa garanzia, il rischio di contaminazione crociata nella frittura condivisa resta concreto." },
+        { title: "Cosa significa che una pizzeria è nata interamente dedicata al senza glutine?", body: "Significa che, a differenza di un locale che aggiunge opzioni gluten free al menu tradizionale, l'intera cucina, il forno e le postazioni di lavoro sono riservati esclusivamente alle preparazioni senza glutine fin dalla nascita del locale, come Pizzicotto." },
+        { title: "Il gelato senza glutine a Palermo costa di più?", body: "Non necessariamente: alla storica Gelato 2, ad esempio, i gusti senza glutine sono proposti allo stesso prezzo degli altri, senza sovrapprezzo." },
+      ] },
+    ],
+    faqs: [
+      { question: "Quali pizzerie senza glutine ci sono a Palermo?", answer: "Pizzicotto è una pizzeria nata interamente dedicata al senza glutine e certificata AIC, mentre Bistrot 107 nel centro città propone quasi tutto il menu senza glutine, arancini inclusi." },
+      { question: "Dove trovo un forno dedicato al senza glutine a Palermo?", answer: "No Gluten Bakery, nella zona nord della città, ha un laboratorio interamente dedicato con produzione propria di brioche, pane, pizza e panelle senza glutine." },
+      { question: "C'è una gelateria storica senza glutine a Palermo?", answer: "Sì, Gelato 2 è attiva dal 1976 e propone gusti senza glutine senza sovrapprezzo, con attenzione anche a lattosio e opzioni vegan." },
+    ],
+  },
+  {
+    title: "Genova senza glutine: pizza, focaccia e forno dedicato tra i quartieri della città",
+    category: "Guide",
+    excerpt: "Dove mangiare senza glutine a Genova: pizzerie certificate AIC a Sampierdarena e Prà, un panificio-pasticceria di recente apertura a Sestri Ponente e impasti alternativi da provare.",
+    coverSeed: 147, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-22",
+    tags: ["genova", "liguria", "pizzerie", "guide"],
+    keyTakeaways: [
+      "Genova conta più pizzerie certificate AIC con forno dedicato, distribuite in diversi quartieri della città.",
+      "Un panificio-pasticceria aperto di recente a Sestri Ponente è entrato nel circuito AIC Liguria con laboratorio esclusivamente senza glutine.",
+      "Alcune pizzerie propongono anche impasti alternativi, come integrale o kamut, accanto a quello senza glutine.",
+      "Verificare sempre certificazione e forno dedicato resta il modo più affidabile per scegliere dove mangiare in sicurezza.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Genova: focaccia e pizza tra i vicoli", body: "Focaccia genovese, pizza, farinata: anche la cucina ligure ruota molto attorno agli impasti lievitati. Genova offre oggi più pizzerie certificate AIC in diversi quartieri, oltre a un panificio-pasticceria di recente apertura interamente dedicato al senza glutine." },
+      { h2: "Le pizzerie certificate AIC in città", body: "Due indirizzi in quartieri diversi, entrambi con forno dedicato e certificazione AIC.", h3: [
+        { title: "Franco Pizzeria", body: "A Sampierdarena, <a href=\"/directory/franco-pizzeria-genova\">Franco Pizzeria</a> è certificata AIC con <strong>forno dedicato</strong> alla preparazione senza glutine: propone pizze senza glutine e senza lattosio, oltre a birra e dolci gluten free, anche con consegna a domicilio.", image: { src: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=75", alt: "Pizza tonda con mozzarella e basilico" } },
+        { title: "I Due Fratelli", body: "Nel quartiere di Prà, <a href=\"/directory/i-due-fratelli-genova\">I Due Fratelli</a> è un bar-pizzeria certificato AIC che propone impasti alternativi, tra cui <strong>integrale, kamut e senza glutine</strong>, per chi cerca più opzioni oltre al classico gluten free." },
+      ] },
+      { h2: "Il panificio più recente: Sestri Ponente", body: "Aperto alla fine del 2024, <a href=\"/directory/randazzo-gluten-free-genova\">Randazzo Gluten Free</a> a Sestri Ponente è un laboratorio artigianale dedicato esclusivamente al senza glutine, con prodotti anche senza lattosio: propone focacce, pizze, snack e dolci, ed è entrato nel circuito AIC Liguria." },
+      { h2: "Domande frequenti su Genova senza glutine", body: "Le domande più comuni di chi cerca dove mangiare senza glutine in città.", h3: [
+        { title: "Le pizzerie di Genova hanno tutte il forno dedicato?", body: "No, verifica sempre singolarmente: Franco Pizzeria a Sampierdarena e I Due Fratelli a Prà sono entrambe certificate AIC con attenzione specifica al senza glutine, ma non è la regola per ogni pizzeria in città." },
+        { title: "Dove trovo focaccia senza glutine a Genova?", body: "Randazzo Gluten Free a Sestri Ponente, aperto di recente, propone focacce senza glutine in un laboratorio dedicato esclusivamente a questo tipo di produzione, senza rischio di contaminazione crociata." },
+        { title: "Esistono impasti alternativi oltre al senza glutine a Genova?", body: "Sì, alcune pizzerie come I Due Fratelli propongono anche impasti integrali o a base di kamut accanto a quello senza glutine, per chi cerca più varietà nelle proprie scelte alimentari." },
+      ] },
+    ],
+    faqs: [
+      { question: "Dove mangiare la pizza senza glutine a Genova?", answer: "Franco Pizzeria a Sampierdarena e I Due Fratelli a Prà sono entrambe certificate AIC con forno dedicato: le trovi nella directory di Mappa Senza Glutine." },
+      { question: "C'è un panificio dedicato al senza glutine a Genova?", answer: "Sì, Randazzo Gluten Free a Sestri Ponente è un laboratorio artigianale aperto di recente, dedicato esclusivamente al senza glutine e entrato nel circuito AIC Liguria." },
+      { question: "Le pizzerie senza glutine di Genova fanno consegna a domicilio?", answer: "Alcune sì, come Franco Pizzeria: verifica sempre la disponibilità del servizio per il tuo quartiere direttamente sul sito o telefonicamente prima di ordinare." },
+    ],
+  },
+  {
+    title: "Verona senza glutine: cosa mangiare tra Arena, centro storico e negozi specializzati",
+    category: "Guide",
+    excerpt: "Guida a Verona senza glutine: un ristorante vegano certificato AIC, la pizzeria di fronte all'Arena, un negozio con oltre 100 prodotti convenzionato ULSS e la gelateria nel circuito AIC dal 2010.",
+    coverSeed: 148, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-24",
+    tags: ["verona", "veneto", "negozi", "guide"],
+    keyTakeaways: [
+      "Verona offre un ristorante certificato AIC con menu interamente vegano e senza glutine, oltre a una pizzeria proprio di fronte all'Arena.",
+      "Un negozio specializzato in città conta oltre 100 prodotti senza glutine ed è convenzionato con l'ULSS per il ritiro dei buoni celiachia.",
+      "Una gelateria artigianale è nel circuito AIC dal 2010, tra le più longeve della città su questo fronte.",
+      "Per la spesa quotidiana, un negozio dedicato può essere più comodo che affidarsi solo al reparto senza glutine del supermercato.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Verona: dal centro all'Arena", body: "Tra le città d'arte del Veneto, Verona offre oggi una rete di indirizzi verificati per chi è celiaco: da un ristorante interamente vegano e senza glutine a una pizzeria proprio di fronte all'Arena, fino a un negozio specializzato per la spesa quotidiana." },
+      { h2: "Ristorante e pizzeria nel cuore della città", body: "Due indirizzi centrali, entrambi certificati AIC.", h3: [
+        { title: "Ristorante Flora", body: "<a href=\"/directory/ristorante-flora-verona\">Ristorante Flora</a> ha un menu interamente <strong>vegano, senza glutine e senza lattosio</strong>, certificato AIC: propone un pranzo a buffet e una cena à la carte, nel centro di Verona." },
+        { title: "La Costa in Bra", body: "Proprio di fronte all'Arena, <a href=\"/directory/la-costa-in-bra-verona\">La Costa in Bra</a> propone impasti senza glutine e senza lattosio certificati AIC, comodi per una pausa pranzo o cena prima di uno spettacolo.", image: { src: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=75", alt: "Pizza tonda vista dall'alto" } },
+      ] },
+      { h2: "Spesa e gelato: gli altri indirizzi verificati", body: "Per la spesa quotidiana, <a href=\"/directory/gusto-libero-verona\">Gusto Libero</a> è un negozio specializzato con <strong>oltre 100 prodotti senza glutine e senza lattosio</strong>, convenzionato con l'ULSS del Veneto per il ritiro dei buoni celiachia. Per il gelato, <a href=\"/directory/gelateria-artigianale-oasi-verona\">Gelateria Artigianale Oasi</a> è nel circuito AIC dal 2010, tra le realtà più longeve della città su questo fronte." },
+      { h2: "Domande frequenti su Verona senza glutine", body: "Le domande più comuni di chi visita la città o ci vive con la celiachia.", h3: [
+        { title: "Dove faccio la spesa senza glutine a Verona?", body: "Gusto Libero è un negozio specializzato con oltre 100 prodotti senza glutine e senza lattosio, comodo per la spesa quotidiana e convenzionato con l'ULSS per il ritiro dei buoni celiachia." },
+        { title: "C'è un ristorante completamente senza glutine a Verona?", body: "Sì, Ristorante Flora ha un menu interamente vegano, senza glutine e senza lattosio, certificato AIC, con formula a buffet a pranzo e à la carte a cena." },
+        { title: "Posso mangiare la pizza senza glutine vicino all'Arena?", body: "Sì, La Costa in Bra si trova proprio di fronte all'Arena e propone impasti senza glutine e senza lattosio certificati AIC, comodi prima o dopo uno spettacolo." },
+      ] },
+    ],
+    faqs: [
+      { question: "Dove mangiare senza glutine vicino all'Arena di Verona?", answer: "La Costa in Bra si trova proprio di fronte all'Arena e propone pizza con impasti senza glutine e senza lattosio certificati AIC." },
+      { question: "C'è un negozio specializzato in prodotti senza glutine a Verona?", answer: "Sì, Gusto Libero ha oltre 100 prodotti senza glutine e senza lattosio ed è convenzionato con l'ULSS del Veneto per il ritiro dei buoni celiachia." },
+      { question: "Dove trovo un gelato sicuro a Verona?", answer: "Gelateria Artigianale Oasi è nel circuito AIC dal 2010 e propone un assortimento genuino dedicato a chi ha intolleranza al glutine." },
+    ],
+  },
+  {
     title: "Crostini e tartine senza glutine per una cena tra amici",
     category: "Ricette",
     excerpt: "Idee veloci per crostini e tartine senza glutine, con basi pronte e pochi ingredienti freschi da assemblare all'ultimo momento.",

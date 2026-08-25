@@ -792,6 +792,186 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["recipes", "aperitivo", "dinner"],
   },
+  "art-30": {
+    title: "Where to Eat Gluten-Free in Naples: Pizza, Sfogliatelle and Babà Without Compromise",
+    excerpt: "The guide to eating gluten-free in Naples: from Neapolitan pizza baked in a dedicated oven to gluten-free sfogliatella and babà, between historic addresses and new certified openings.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Naples now has historic pizzerias and new openings with an oven entirely dedicated to gluten-free, so you can enjoy real Neapolitan pizza safely.",
+      "Even the great classics of Neapolitan pastry, like babà and sfogliatella, now exist in gluten-free versions thanks to dedicated labs.",
+      "AIC certification and a separate oven or counter are the most concrete signs to look for before ordering.",
+      "Booking ahead is still advisable on weekends, especially at the best-known pizzerias.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Naples: the challenge of real pizza", body: "Neapolitan pizza, babà, sfogliatella: Naples's food tradition is one of Italy's most distinctive, but also one of the most feared by people with celiac disease, given how central leavened dough is. The good news is that <strong>Naples now has historic pizzerias and pastry labs entirely dedicated to gluten-free</strong>, able to recreate the great Neapolitan classics without contamination. In this guide we round up the addresses verified by the Mappa Senza Glutine community." },
+      { h2: "Gluten-free pizzerias to try in Naples", body: "Neapolitan pizza requires baking at very high heat in a wood-fired oven: that's why we always look for venues with a <strong>dedicated oven or station</strong> for gluten-free.", h3: [
+        { title: "Pizzeria Starita", body: "In the Materdei neighborhood, <a href=\"/en/directory/pizzeria-starita-napoli\">Pizzeria Starita</a> is a historic Neapolitan pizzeria founded in 1901 and run by the same family for generations: every pizza, including the fried one, is available gluten-free, baked in a <strong>separate dedicated oven</strong>.", image: { src: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=75", alt: "Freshly baked Neapolitan pizza" } },
+        { title: "Pizzaioli Veraci", body: "With three locations in the city, <a href=\"/en/directory/pizzaioli-veraci-napoli\">Pizzaioli Veraci</a> is AIC-certified and has a counter and oven entirely dedicated to gluten-free preparation: besides pizza, it also offers fried dishes and first courses gluten-free." },
+      ] },
+      { h2: "Breakfast and pastry: gluten-free babà, sfogliatelle and taralli", body: "Naples's pastry tradition also has a dedicated address today: at <a href=\"/en/directory/leopoldo-cafebar-napoli\">Leopoldo Cafebar</a>, across from the MANN museum, the first-floor lab produces exclusively gluten-free recipes, from the <strong>Neapolitan babà</strong> to sfogliatella, and taralli and pastiera during the holiday season. It's the go-to spot in the city for a worry-free breakfast." },
+      { h2: "Frequently asked questions about eating gluten-free in Naples", body: "The most common questions from visitors or residents looking for a safe address.", h3: [
+        { title: "Is it easy to find good gluten-free pizza in Naples?", body: "Increasingly so: pizzerias with a dedicated oven and AIC certification now deliver a gluten-free Neapolitan pizza very close to the original, something that was harder to find in the city just a few years ago." },
+        { title: "Is gluten-free babà really the same as the original?", body: "Labs entirely dedicated to gluten-free, like those specializing in Neapolitan pastry, manage to reproduce a texture and taste very close to the traditional recipe, thanks to flour blends designed specifically for this." },
+        { title: "Is it worth booking ahead at gluten-free pizzerias in Naples?", body: "Yes, especially on weekends: the best-known pizzerias handle a limited number of dedicated gluten-free bakes, so booking and flagging the need ahead of time helps staff prepare." },
+      ] },
+    ],
+    faqs: [
+      { question: "What are the best gluten-free pizzerias in Naples?", answer: "Verified addresses include Pizzeria Starita in Materdei, historic since 1901 with a dedicated oven, and Pizzaioli Veraci, AIC-certified with three locations in the city: both listed in the Mappa Senza Glutine directory." },
+      { question: "Where can I find gluten-free Neapolitan pastries in Naples?", answer: "Leopoldo Cafebar, across from the MANN, has a lab dedicated exclusively to gluten-free and offers babà, sfogliatella and traditional Neapolitan pastry gluten-free." },
+      { question: "Is it safe to eat out in Naples if I have celiac disease?", answer: "Yes, by choosing venues with a dedicated oven or lab and, where possible, AIC certification: the number of verified addresses in the city keeps growing." },
+    ],
+    tags: ["naples", "pizza", "pastry", "guides"],
+  },
+  "art-31": {
+    title: "Gluten-Free Venice: Where to Eat Between Cicchetti, Pizza and Hotel Breakfast",
+    excerpt: "A guide to gluten-free Venice: gelaterie with dedicated cones, pizzerias with separate kitchens, and one of the few AIC-certified hotels in the city for a worry-free breakfast.",
+    authorRole: "Food safety content specialist",
+    keyTakeaways: [
+      "Venice has pizzerias with physically separate kitchens for gluten-free, as well as gelaterie with dedicated cones to reduce cross-contamination.",
+      "Finding an AIC-certified hotel for gluten-free breakfast makes a stay in the city much easier.",
+      "In the busiest districts, booking ahead is still the most effective strategy on weekends and during peak season.",
+      "Always check whether home delivery or takeaway is available in your district, so you're never caught unprepared.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Venice: watch out for cicchetti", body: "Between calli and canals, eating gluten-free in Venice requires particular attention to <strong>cicchetti</strong>, the typical small bites served in Venetian bacari, often made with bread or shared frying. The city does have verified addresses, though, that let you enjoy pizza, gelato and even hotel breakfast without risk of contamination." },
+      { h2: "Pizzeria and gelateria: safe bets", body: "Two different addresses for two different moments of the day, both verified by the community.", h3: [
+        { title: "Pizzeria OKE", body: "At the Zattere, <a href=\"/en/directory/pizzeria-oke-venezia\">Pizzeria OKE</a> was among the first venues in Venice trained by AIC and has <strong>two physically separate kitchens</strong>: one dedicated exclusively to gluten-free preparations, from pizza to first courses. It also offers home delivery in some parts of the city.", image: { src: "https://images.unsplash.com/photo-1548365328-9f547fb0953b?auto=format&fit=crop&w=800&q=75", alt: "Round pizza baked in the oven" } },
+        { title: "Grom", body: "In Dorsoduro, the gelateria <a href=\"/en/directory/grom-venezia\">Grom</a> prepares artisanal gelato in <strong>dedicated gluten-free cones</strong> across every location of the brand, reducing the risk of cross-contamination even during the busiest months." },
+      ] },
+      { h2: "Where to stay: a hotel with gluten-free breakfast", body: "Finding a safe breakfast at a hotel is often the trickiest part of a stay: in Castello, near Piazza San Marco, <a href=\"/en/directory/hotel-al-piave-venezia\">Hotel Al Piave</a> is one of the few AIC-certified hotels in Venice and offers an entirely gluten-free breakfast, with dedicated bread, biscuits and cereals, plus dairy-free options on request." },
+      { h2: "Frequently asked questions about gluten-free Venice", body: "The most common questions from visitors dealing with celiac disease.", h3: [
+        { title: "Are cicchetti safe for someone with celiac disease?", body: "Not always: many traditional cicchetti are made with bread crostini or fried items shared with other ingredients. It's best to always check with the bacaro staff before ordering, or head to venues with specifically gluten-free options." },
+        { title: "Is it worth booking the hotel well ahead if I need gluten-free breakfast?", body: "Yes, especially during peak season: AIC-certified hotels in Venice are still few, so booking well in advance increases your chances of finding availability during the busiest periods." },
+        { title: "Do all pizzerias in Venice have a dedicated oven?", body: "No, not all of them: always check whether the pizzeria has a separate kitchen or oven for gluten-free, as at Pizzeria OKE, before considering it a 100% safe choice." },
+      ] },
+    ],
+    faqs: [
+      { question: "Where can I eat gluten-free pizza in Venice?", answer: "Pizzeria OKE, at the Zattere, has two physically separate kitchens and was among the first venues in the city trained by AIC: find it in the Mappa Senza Glutine directory." },
+      { question: "Is there a hotel in Venice with gluten-free breakfast?", answer: "Yes, Hotel Al Piave in Castello, near Piazza San Marco, is AIC-certified and offers an entirely gluten-free breakfast with dairy-free options on request." },
+      { question: "Where can I find safe gelato in Venice?", answer: "The gelateria Grom in Dorsoduro uses dedicated gluten-free cones across every location of the brand, reducing the risk of cross-contamination." },
+    ],
+    tags: ["venice", "hotel", "pizzerias", "guides"],
+  },
+  "art-32": {
+    title: "Gluten-Free Bari: Focaccia, Panzerotti and Tray Pizza Without Compromise",
+    excerpt: "Where to eat gluten-free in Bari: Bari-style focaccia and panzerotti gluten-free, a dedicated lab since 2013, and where to shop for gluten-free groceries in the city.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Bari has a lab entirely dedicated to gluten-free active since 2013, the first of its kind in the city, with products available via a regional health voucher.",
+      "Bari-style focaccia and panzerotti, symbols of local cuisine, now also exist in a certified gluten-free version.",
+      "A bakery authorized by the Ministry of Health guarantees traceability and controls on gluten-free production.",
+      "For tray pizza, always check whether the rice-flour dough is prepared in a separate area.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Bari: from focaccia to panzerotti", body: "Bari-style focaccia, panzerotti, orecchiette: Bari's cuisine is built mostly on bread and pasta, two categories that require the utmost care for someone with celiac disease. The city, though, offers verified addresses, from a dedicated bakery to a pizzeria with an alternative dough, to enjoy Puglia's flavors gluten-free." },
+      { h2: "Bakery and deli: the city's reference point", body: "Two addresses dedicated to gluten-free baking, each with its own specialty.", h3: [
+        { title: "La Gouterie", body: "<a href=\"/en/directory/la-gouterie-bari\">La Gouterie</a> is Bari's first pastry shop and deli entirely dedicated to gluten-free, active since 2013: it offers sweet and savory items, deli food and packaged products, some available <strong>via regional health voucher</strong>." },
+        { title: "Panificio Magda", body: "<a href=\"/en/directory/panificio-magda-bari\">Panificio Magda</a> has a lab <strong>authorized by the Ministry of Health</strong> for certified gluten-free production, where you'll find Bari-style focaccia, panzerotti and bread, traceable alongside traditional production.", image: { src: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=800&q=75", alt: "Freshly baked focaccia" } },
+      ] },
+      { h2: "Gluten-free tray pizza in downtown Bari", body: "On Via Sparano, in the heart of the city, <a href=\"/en/directory/solho-bari\">Solho</a> offers tray pizza with a <strong>rice-flour dough</strong> as a gluten-free alternative, alongside traditional Puglia cuisine: a handy option for anyone visiting the historic center." },
+      { h2: "Frequently asked questions about gluten-free Bari", body: "The most common questions from people looking for where to eat gluten-free in the city.", h3: [
+        { title: "Where can I find gluten-free Bari-style focaccia?", body: "Panificio Magda produces gluten-free Bari-style focaccia in a lab authorized by the Ministry of Health, with guaranteed traceability compared to traditional production." },
+        { title: "Are there products available via health voucher in Bari?", body: "Yes, La Gouterie also offers packaged products available via regional health voucher, alongside daily fresh sweet and savory gluten-free items." },
+        { title: "Is gluten-free tray pizza safe for someone with celiac disease?", body: "Always check whether the rice-flour dough is prepared in an area separate from the traditional pizza dough, to rule out the risk of cross-contamination during preparation." },
+      ] },
+    ],
+    faqs: [
+      { question: "Where can I eat gluten-free in Bari?", answer: "Verified addresses include La Gouterie, a pastry shop and deli 100% gluten-free since 2013, Panificio Magda with a lab authorized by the Ministry of Health, and Solho for tray pizza with rice-flour dough." },
+      { question: "Are there bakeries dedicated to gluten-free in Bari?", answer: "Yes, Panificio Magda has a lab authorized by the Ministry of Health for certified gluten-free production of Bari-style focaccia, panzerotti and bread." },
+      { question: "Can I find products available via health voucher in Bari?", answer: "Yes, La Gouterie offers gluten-free packaged products also available via regional health voucher, alongside daily fresh production." },
+    ],
+    tags: ["bari", "focaccia", "bakery", "guides"],
+  },
+  "art-33": {
+    title: "Gluten-Free Palermo: Pizzerias, Arancini and Gelato in a City Built for Celiacs",
+    excerpt: "A guide to gluten-free Palermo: pizzerias entirely dedicated to gluten-free and AIC-certified, fried food with a dedicated fryer, and a historic gelateria since 1976 with no surcharge on gluten-free flavors.",
+    authorRole: "Food safety content specialist",
+    keyTakeaways: [
+      "Palermo has pizzerias that were born entirely dedicated to gluten-free, not just venues that also offer gluten-free options.",
+      "Arancini and street-food fried items are gluten-free only where a dedicated fryer exists: always check before ordering.",
+      "The city has a historic gelateria since 1976 that offers gluten-free flavors with no surcharge at all.",
+      "The northern part of the city hosts a bakery-pastry shop with entirely in-house production and no risk of contamination.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Palermo: between street food and tradition", body: "Arancini, panelle, sfincione: Palermo's street food is built mostly on frying and dough, delicate categories for someone with celiac disease. Palermo, though, offers a network of verified venues, some born from the start entirely dedicated to gluten-free, letting you experience Sicilian tradition safely." },
+      { h2: "AIC-certified pizzerias and bistros", body: "Two very different addresses, both AIC-certified.", h3: [
+        { title: "Pizzicotto", body: "<a href=\"/en/directory/pizzicotto-palermo\">Pizzicotto</a> is a pizzeria born entirely dedicated to gluten-free, not just with a few gluten-free options on the menu: the kitchen, oven and work stations are exclusively reserved for gluten-free preparation, with AIC certification.", image: { src: "https://images.unsplash.com/photo-1590534247854-e97d5e3feef8?auto=format&fit=crop&w=800&q=75", alt: "Round pizza on a wooden table" } },
+        { title: "Bistrot 107", body: "In downtown Palermo, <a href=\"/en/directory/bistrot-107-palermo\">Bistrot 107</a> is AIC-certified and offers almost the entire menu gluten-free, including <strong>arancini fried in a dedicated fryer</strong>, plus sandwiches and traditional Sicilian flatbreads." },
+      ] },
+      { h2: "Dedicated bakery and historic gelato", body: "For daily groceries and a sweet break, two reliable addresses in the city: <a href=\"/en/directory/no-gluten-bakery-palermo\">No Gluten Bakery</a>, in the northern part of town, has a lab entirely dedicated to in-house production of gluten-free brioche, bread, pizza and panelle, while <a href=\"/en/directory/gelato-2-palermo\">Gelato 2</a> is a historic gelateria since 1976 offering gluten-free flavors with <strong>no surcharge at all</strong> compared to the others." },
+      { h2: "Frequently asked questions about gluten-free Palermo", body: "The most common questions from visitors or residents dealing with celiac disease.", h3: [
+        { title: "Are gluten-free arancini safe in Palermo?", body: "Only where a fryer is dedicated exclusively to gluten-free, as at Bistrot 107: without this guarantee, the risk of cross-contamination in shared frying remains real." },
+        { title: "What does it mean for a pizzeria to be born entirely dedicated to gluten-free?", body: "It means that, unlike a venue that adds gluten-free options to a traditional menu, the entire kitchen, oven and work stations are reserved exclusively for gluten-free preparation from the venue's founding, as at Pizzicotto." },
+        { title: "Does gluten-free gelato cost more in Palermo?", body: "Not necessarily: at the historic Gelato 2, for example, gluten-free flavors are offered at the same price as the others, with no surcharge." },
+      ] },
+    ],
+    faqs: [
+      { question: "What gluten-free pizzerias are there in Palermo?", answer: "Pizzicotto is a pizzeria born entirely dedicated to gluten-free and AIC-certified, while Bistrot 107 in the city center offers almost the entire menu gluten-free, arancini included." },
+      { question: "Where can I find a dedicated gluten-free bakery in Palermo?", answer: "No Gluten Bakery, in the northern part of the city, has a lab entirely dedicated to in-house production of gluten-free brioche, bread, pizza and panelle." },
+      { question: "Is there a historic gluten-free gelateria in Palermo?", answer: "Yes, Gelato 2 has been active since 1976 and offers gluten-free flavors with no surcharge, with attention to lactose and vegan options too." },
+    ],
+    tags: ["palermo", "sicily", "arancini", "guides"],
+  },
+  "art-34": {
+    title: "Gluten-Free Genoa: Pizza, Focaccia and a Dedicated Bakery Across the City's Districts",
+    excerpt: "Where to eat gluten-free in Genoa: AIC-certified pizzerias in Sampierdarena and Prà, a bakery-pastry shop that recently opened in Sestri Ponente, and alternative doughs worth trying.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Genoa has several AIC-certified pizzerias with a dedicated oven, spread across different districts of the city.",
+      "A bakery-pastry shop that opened recently in Sestri Ponente joined the AIC Liguria network with a lab exclusively for gluten-free.",
+      "Some pizzerias also offer alternative doughs, like whole wheat or kamut, alongside the gluten-free one.",
+      "Always checking for certification and a dedicated oven remains the most reliable way to choose where to eat safely.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Genoa: focaccia and pizza among the alleys", body: "Genoese focaccia, pizza, farinata: Ligurian cuisine also revolves heavily around leavened dough. Genoa now offers several AIC-certified pizzerias across different districts, plus a bakery-pastry shop that recently opened, entirely dedicated to gluten-free." },
+      { h2: "AIC-certified pizzerias in the city", body: "Two addresses in different districts, both with a dedicated oven and AIC certification.", h3: [
+        { title: "Franco Pizzeria", body: "In Sampierdarena, <a href=\"/en/directory/franco-pizzeria-genova\">Franco Pizzeria</a> is AIC-certified with a <strong>dedicated oven</strong> for gluten-free preparation: it offers gluten-free and dairy-free pizzas, plus gluten-free beer and desserts, with home delivery available.", image: { src: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=75", alt: "Round pizza with mozzarella and basil" } },
+        { title: "I Due Fratelli", body: "In the Prà district, <a href=\"/en/directory/i-due-fratelli-genova\">I Due Fratelli</a> is an AIC-certified bar-pizzeria offering alternative doughs, including <strong>whole wheat, kamut and gluten-free</strong>, for anyone looking for more options beyond the classic gluten-free choice." },
+      ] },
+      { h2: "The newest bakery: Sestri Ponente", body: "Opened at the end of 2024, <a href=\"/en/directory/randazzo-gluten-free-genova\">Randazzo Gluten Free</a> in Sestri Ponente is an artisanal lab dedicated exclusively to gluten-free, with dairy-free products too: it offers focaccia, pizza, snacks and desserts, and has joined the AIC Liguria network." },
+      { h2: "Frequently asked questions about gluten-free Genoa", body: "The most common questions from people looking for where to eat gluten-free in the city.", h3: [
+        { title: "Do all pizzerias in Genoa have a dedicated oven?", body: "No, always check individually: Franco Pizzeria in Sampierdarena and I Due Fratelli in Prà are both AIC-certified with specific attention to gluten-free, but this isn't the rule for every pizzeria in the city." },
+        { title: "Where can I find gluten-free focaccia in Genoa?", body: "Randazzo Gluten Free in Sestri Ponente, opened recently, offers gluten-free focaccia in a lab dedicated exclusively to this type of production, with no risk of cross-contamination." },
+        { title: "Are there alternative doughs beyond gluten-free in Genoa?", body: "Yes, some pizzerias like I Due Fratelli also offer whole wheat or kamut doughs alongside the gluten-free one, for anyone looking for more variety in their choices." },
+      ] },
+    ],
+    faqs: [
+      { question: "Where can I eat gluten-free pizza in Genoa?", answer: "Franco Pizzeria in Sampierdarena and I Due Fratelli in Prà are both AIC-certified with a dedicated oven: find them in the Mappa Senza Glutine directory." },
+      { question: "Is there a bakery dedicated to gluten-free in Genoa?", answer: "Yes, Randazzo Gluten Free in Sestri Ponente is an artisanal lab that opened recently, dedicated exclusively to gluten-free and part of the AIC Liguria network." },
+      { question: "Do gluten-free pizzerias in Genoa deliver?", answer: "Some do, like Franco Pizzeria: always check availability for your district directly on the website or by phone before ordering." },
+    ],
+    tags: ["genoa", "pizzerias", "guides"],
+  },
+  "art-35": {
+    title: "Gluten-Free Verona: What to Eat Between the Arena, the Old Town and Specialty Shops",
+    excerpt: "A guide to gluten-free Verona: an AIC-certified vegan restaurant, the pizzeria right across from the Arena, a shop with over 100 products partnered with the local health authority, and a gelateria in the AIC network since 2010.",
+    authorRole: "Food safety content specialist",
+    keyTakeaways: [
+      "Verona offers an AIC-certified restaurant with an entirely vegan and gluten-free menu, plus a pizzeria right across from the Arena.",
+      "A specialty shop in the city carries over 100 gluten-free products and is partnered with the local health authority for celiac vouchers.",
+      "An artisanal gelateria has been part of the AIC network since 2010, among the longest-standing in the city on this front.",
+      "For everyday groceries, a dedicated shop can be more convenient than relying only on the supermarket's gluten-free aisle.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Verona: from downtown to the Arena", body: "Among Veneto's art cities, Verona now offers a network of verified addresses for people with celiac disease: from an entirely vegan and gluten-free restaurant to a pizzeria right across from the Arena, all the way to a specialty shop for everyday groceries." },
+      { h2: "Restaurant and pizzeria in the heart of the city", body: "Two central addresses, both AIC-certified.", h3: [
+        { title: "Ristorante Flora", body: "<a href=\"/en/directory/ristorante-flora-verona\">Ristorante Flora</a> has a menu that's entirely <strong>vegan, gluten-free and dairy-free</strong>, AIC-certified: it offers a buffet lunch and an à la carte dinner, in downtown Verona." },
+        { title: "La Costa in Bra", body: "Right across from the Arena, <a href=\"/en/directory/la-costa-in-bra-verona\">La Costa in Bra</a> offers gluten-free and dairy-free doughs, AIC-certified, handy for a lunch or dinner break before a show.", image: { src: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=75", alt: "Round pizza seen from above" } },
+      ] },
+      { h2: "Groceries and gelato: the other verified addresses", body: "For everyday groceries, <a href=\"/en/directory/gusto-libero-verona\">Gusto Libero</a> is a specialty shop with <strong>over 100 gluten-free and dairy-free products</strong>, partnered with the Veneto local health authority for celiac vouchers. For gelato, <a href=\"/en/directory/gelateria-artigianale-oasi-verona\">Gelateria Artigianale Oasi</a> has been part of the AIC network since 2010, among the longest-standing in the city on this front." },
+      { h2: "Frequently asked questions about gluten-free Verona", body: "The most common questions from visitors or residents dealing with celiac disease.", h3: [
+        { title: "Where do I shop for gluten-free groceries in Verona?", body: "Gusto Libero is a specialty shop with over 100 gluten-free and dairy-free products, handy for everyday groceries and partnered with the local health authority for celiac vouchers." },
+        { title: "Is there an entirely gluten-free restaurant in Verona?", body: "Yes, Ristorante Flora has a menu that's entirely vegan, gluten-free and dairy-free, AIC-certified, with a buffet format at lunch and à la carte at dinner." },
+        { title: "Can I eat gluten-free pizza near the Arena?", body: "Yes, La Costa in Bra is right across from the Arena and offers gluten-free and dairy-free doughs, AIC-certified, handy before or after a show." },
+      ] },
+    ],
+    faqs: [
+      { question: "Where can I eat gluten-free near the Arena in Verona?", answer: "La Costa in Bra is right across from the Arena and offers pizza with gluten-free and dairy-free doughs, AIC-certified." },
+      { question: "Is there a specialty shop for gluten-free products in Verona?", answer: "Yes, Gusto Libero carries over 100 gluten-free and dairy-free products and is partnered with the Veneto local health authority for celiac vouchers." },
+      { question: "Where can I find safe gelato in Verona?", answer: "Gelateria Artigianale Oasi has been part of the AIC network since 2010 and offers a genuine selection dedicated to people with gluten intolerance." },
+    ],
+    tags: ["verona", "shops", "guides"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {
