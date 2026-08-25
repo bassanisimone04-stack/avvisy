@@ -14,7 +14,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
     return pageMetadata({
       title: `Gluten-free ${label.toLowerCase()}: verified products | Mappa Senza Glutine`,
       description: `Certified gluten-free ${label.toLowerCase()} on sale in Italy: brand, price and AIC certification verified one by one.`,
-      path: `/prodotti?categoria=${encodeURIComponent(cat)}`,
+      path: "/prodotti",
       locale: "en",
     });
   }
