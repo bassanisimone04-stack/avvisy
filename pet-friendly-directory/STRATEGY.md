@@ -11,9 +11,10 @@
 > **nei title tag, nelle meta description e nei contenuti**, anche se il
 > brand non le contiene letteralmente — è la keyword strategy a portare
 > traffico, non il nome del dominio.
-> 🖼️ **Mockup navigabile della home**: vedi link nel messaggio dell'assistente
-> (artifact pubblicato) — palette, font (Bricolage Grotesque + Karla + IBM
-> Plex Mono) e FAQ complete applicati.
+> 🖼️ **Mockup navigabili**: vedi link nei messaggi dell'assistente (artifact
+> pubblicati) — home page e pagina `/cerca` (risultati con filtri per taglia,
+> numero cani, servizi e prezzo), con palette, font (Grandstander + Nunito +
+> IBM Plex Mono) e illustrazioni vettoriali applicate.
 
 Documento di riferimento per Design (UI/UX), Copy strategico e SEO on-page
 della home page e dell'architettura del sito. Pensato per essere passato
