@@ -96,19 +96,27 @@ export function localBusinessJsonLd(b: Business) {
       addressCountry: "IT",
     },
     geo: { "@type": "GeoCoordinates", latitude: b.lat, longitude: b.lng },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: b.rating,
-      reviewCount: b.reviewCount,
-    },
-    review: b.reviews.slice(0, 5).map((r) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: r.author },
-      datePublished: r.date,
-      reviewBody: r.body,
-      name: r.title,
-      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
-    })),
+    ...(b.reviewCount > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: b.rating,
+            reviewCount: b.reviewCount,
+          },
+        }
+      : {}),
+    ...(b.reviews.length > 0
+      ? {
+          review: b.reviews.slice(0, 5).map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.author },
+            datePublished: r.date,
+            reviewBody: r.body,
+            name: r.title,
+            reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
+          })),
+        }
+      : {}),
   };
 }
 
@@ -158,7 +166,9 @@ export function productJsonLd(p: Product) {
     brand: { "@type": "Brand", name: p.brand },
     description: p.description,
     image: `${SITE_URL}/opengraph-image`,
-    aggregateRating: { "@type": "AggregateRating", ratingValue: p.rating, reviewCount: p.reviewCount },
+    ...(p.reviewCount > 0
+      ? { aggregateRating: { "@type": "AggregateRating", ratingValue: p.rating, reviewCount: p.reviewCount } }
+      : {}),
     offers: { "@type": "Offer", priceCurrency: "EUR", price: p.price, availability: "https://schema.org/InStock" },
   };
 }
