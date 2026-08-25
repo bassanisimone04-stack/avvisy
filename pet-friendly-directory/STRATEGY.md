@@ -15,6 +15,19 @@
 > pubblicati) — home page e pagina `/cerca` (risultati con filtri per taglia,
 > numero cani, servizi e prezzo), con palette, font (Grandstander + Nunito +
 > IBM Plex Mono) e illustrazioni vettoriali applicate.
+>
+> 🐕 **Dati reali nelle card struttura**: le strutture mostrate nei mockup
+> (Agriturismo Bellavita, Baita Gorck, Masseria Le Terrazze di Serranova,
+> Podere il Poggiolo, Agriturismo Podere Bello) sono reali, con taglia/numero
+> cani e servizi presi da fonti pubbliche citate in ogni card — non da
+> verifica telefonica diretta (il processo descritto nella sezione 3 resta
+> il metodo da applicare prima del lancio). Nessun prezzo o punteggio è
+> stato inventato: dove non disponibile, il dato è stato omesso invece di
+> stimarlo. Fonti: [agriturismobellavita.it](https://www.agriturismobellavita.it/agriturismo-per-animali/),
+> [dogwelcome.it — Baita Gorck](https://www.dogwelcome.it/strutture-cani-animali-ammessi/rifugi-e-baite/italia/trentino-alto-adige/trento/rifugio-gorck),
+> [dogwelcome.it — Terrazze di Serranova](https://www.dogwelcome.it/strutture-cani-animali-ammessi/agriturismo-masi-case-rurali/italia/puglia/brindisi/masseria-le-terrazze-di-serranova),
+> [podereilpoggiolo.it](https://www.podereilpoggiolo.it/en/services/holiday-with-your-pets.html),
+> [dogwelcome.it — Podere Bello](https://www.dogwelcome.it/strutture-cani-animali-ammessi/agriturismo-masi-case-rurali/italia/toscana/grosseto/agriturismo-podere-bello).
 
 Documento di riferimento per Design (UI/UX), Copy strategico e SEO on-page
 della home page e dell'architettura del sito. Pensato per essere passato
