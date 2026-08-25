@@ -1,10 +1,19 @@
-# CaniGrandi — Directory-Blog per Alloggi Pet-Friendly Senza Restrizioni
+# Oltre la Taglia — Directory-Blog per Alloggi Pet-Friendly Senza Restrizioni
 
 > **Nicchia**: hotel, B&B e agriturismi italiani che accettano cani di taglia
 > grande/gigante e/o più di un cane, senza le limitazioni tipiche del
 > "pet-friendly generico" (1 cane, max 10kg).
-> **Nome di lavoro**: **CaniGrandi** — payoff: *"Il tuo cane, senza taglia, senza limiti."*
-> Nomi alternativi disponibili: DogSizeFree, SenzaTaglia, GrandiZampe.it
+> **Nome**: **Oltre la Taglia** (dominio `oltrelataglia.it`) — payoff:
+> *"Il tuo cane, senza taglia, senza limiti."*
+> Nomi alternativi valutati: CaniGrandi.it (troppo simile a un exact-match
+> domain, poco protetto/proteggibile), DogSizeFree, SenzaTaglia. "Cani
+> grandi"/"taglia grande" restano comunque le keyword a maggior volume
+> **nei title tag, nelle meta description e nei contenuti**, anche se il
+> brand non le contiene letteralmente — è la keyword strategy a portare
+> traffico, non il nome del dominio.
+> 🖼️ **Mockup navigabile della home**: vedi link nel messaggio dell'assistente
+> (artifact pubblicato) — palette, font (Bricolage Grotesque + Karla + IBM
+> Plex Mono) e FAQ complete applicati.
 
 Documento di riferimento per Design (UI/UX), Copy strategico e SEO on-page
 della home page e dell'architettura del sito. Pensato per essere passato
@@ -49,17 +58,35 @@ ammessi"), a bassa concorrenza e altissima intenzione.
 | Feedback positivo | Verde salvia | `#2A9D8F` | "Nessuna restrizione", check verificati |
 | Bordi/Divider | Grigio perla | `#E2E8F0` | Card, separatori |
 
-Contrasto verificato AA su testo `#03045E` e `#334155` su bianco; il corallo
-`#FF6B4A` su bianco supera 3:1 (adatto a bottoni large, testo bold ≥18px).
+Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
+
+> ⚠️ **Fix contrasto (bug corretto nel mockup)**: il corallo puro `#FF6B4A`
+> su bianco ha un contrasto di ~2.8:1 — insufficiente anche per bottoni
+> (serve ≥3:1 su testo bold ≥14px, ≥4.5:1 su testo normale). Nel mockup si
+> usano due varianti distinte: **`#E8542F`** come sfondo dei bottoni CTA
+> (testo bianco bold, contrasto ~4:1) e **`#D9481F`** per il corallo usato
+> come testo diretto (prezzi, icone). Lo stesso vale per il giallo senape:
+> `#FFB627` è riservato a riempimenti decorativi, mentre per le stelle di
+> valutazione (testo) si usa la variante più scura `#9A6A0E`. Regola
+> generale da portare in produzione: ogni colore ad alto impatto ha una
+> **variante "fill" (decorativa)** e una **variante "text-safe" (più scura)**
+> — non riusare mai il valore decorativo come colore di testo.
 
 ### 1.2 Tipografia
 
-- **Titoli**: *Fraunces* o *Poppins SemiBold/Bold* — un sans/serif con
-  personalità "da viaggio", non troppo corporate. Fallback: `system-ui`.
-- **Corpo testo**: *Inter* o *Manrope* — altissima leggibilità mobile.
+- **Titoli**: *Bricolage Grotesque* (600–800) — grottesca contemporanea con
+  personalità, pensata per brand travel/outdoor, evita l'effetto "template
+  AI" di Inter/Space Grotesk su tutto. Fallback: `system-ui, sans-serif`.
+- **Corpo testo**: *Karla* — umanista, calda, altissima leggibilità mobile,
+  distinta da Inter/Work Sans. Fallback: `system-ui, sans-serif`.
+- **Dati/etichette (taglia, n° cani, prezzo)**: *IBM Plex Mono* — rinforza
+  visivamente il concetto di "specifica verificata" (come un'etichetta
+  tecnica), usata per pillole informative, eyebrow ed etichette dei filtri.
 - Scala tipografica mobile-first: H1 28–32px, H2 22–24px, body 16px, small 14px.
 - Line-height generoso (1.5–1.6) per leggibilità in mobilità (turisti che
   cercano da smartphone in auto/in stazione).
+- Tutti e tre i font sono disponibili su Google Fonts, caricabili con un
+  singolo `<link>`/`@import` per performance.
 
 ### 1.3 Iconografia e immagini
 
@@ -68,7 +95,7 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco; il corallo
 - Fotografia: cani di **taglia grande/gigante reali** (mai stock con Chihuahua
   in borsetta — è l'errore numero uno che allontana il target). Foto
   luminose, ambienti open air, aree verdi, spiagge.
-- Badge distintivo ricorrente: "✅ Verificato CaniGrandi — nessun limite di
+- Badge distintivo ricorrente: "✅ Verificato Oltre la Taglia — nessun limite di
   taglia" da usare su card, hero, meta immagini social.
 
 ### 1.4 Principi UX
@@ -91,7 +118,7 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco; il corallo
 
 ### 2.1 Header (sticky)
 
-Logo "CaniGrandi 🐾" — menu: `Cerca alloggi` · `Blog & Guide` · `Per le
+Logo "Oltre la Taglia 🐾" — menu: `Cerca alloggi` · `Blog & Guide` · `Per le
 strutture` · `Chi siamo` — CTA secondaria a destra: **"Inserisci la tua
 struttura"** (bottone outline azzurro).
 
@@ -227,12 +254,12 @@ strutture` (Come funziona, Linee guida verifica, Login proprietari) ·
 
 ### 3.1 Title tag (≤60 caratteri)
 
-> `Hotel e B&B per Cani Grandi Senza Limiti | CaniGrandi`
+> `Hotel e B&B per Cani Grandi Senza Limiti | Oltre la Taglia`
 (56 caratteri — include keyword transazionale "hotel per cani grandi" + brand)
 
 Varianti A/B testabili:
 - `Alloggi Pet Friendly per Cani Grandi, Senza Taglia` (52 car.)
-- `Hotel Pet Friendly Senza Limiti di Taglia | CaniGrandi` (58 car.)
+- `Hotel Pet Friendly Senza Limiti di Taglia | Oltre la Taglia` (58 car.)
 
 ### 3.2 Meta description (≤155 caratteri)
 
@@ -241,7 +268,7 @@ Varianti A/B testabili:
 
 ### 3.3 URL
 
-`https://www.canigrandi.it/` (dominio) — struttura URL consigliata per le
+`https://www.oltrelataglia.it/` (dominio) — struttura URL consigliata per le
 sezioni interne, tutte in italiano e keyword-friendly:
 
 - `/cerca` — motore di ricerca/listing principale
@@ -275,11 +302,11 @@ Combinazione consigliata per la home:
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "CaniGrandi",
-  "url": "https://www.canigrandi.it/",
+  "name": "Oltre la Taglia",
+  "url": "https://www.oltrelataglia.it/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.canigrandi.it/cerca?q={search_term_string}",
+    "target": "https://www.oltrelataglia.it/cerca?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -296,7 +323,7 @@ Combinazione consigliata per la home:
     {
       "@type": "ListItem",
       "position": 1,
-      "url": "https://www.canigrandi.it/struttura/nome-struttura"
+      "url": "https://www.oltrelataglia.it/struttura/nome-struttura"
     }
   ]
 }
@@ -332,8 +359,8 @@ Testi pronti all'uso, ottimizzati per ricerca vocale (domande colloquiali,
 risposte dirette nelle prime 1–2 frasi, dettaglio a seguire) e per People
 Also Ask. Da marcare con `FAQPage` schema.
 
-**1. Le strutture su CaniGrandi accettano davvero cani di qualsiasi taglia?**
-Sì. A differenza dei portali generalisti, su CaniGrandi pubblichiamo solo
+**1. Le strutture su Oltre la Taglia accettano davvero cani di qualsiasi taglia?**
+Sì. A differenza dei portali generalisti, su Oltre la Taglia pubblichiamo solo
 strutture che abbiamo verificato accettare cani di taglia grande (25–45 kg)
 e gigante (oltre 45 kg), come Alani, Pastori del Caucaso, San Bernardo o
 Mastini. Per ogni struttura indichiamo chiaramente la taglia massima
@@ -347,7 +374,7 @@ subito solo queste opzioni: il numero massimo di animali è sempre indicato
 nella scheda struttura.
 
 **3. Ci sono supplementi nascosti da pagare al check-in?**
-No, se prenoti tramite una struttura verificata CaniGrandi il costo per il
+No, se prenoti tramite una struttura verificata Oltre la Taglia il costo per il
 soggiorno con animali è sempre indicato in modo trasparente nella scheda,
 prima della prenotazione. Alcune strutture applicano un piccolo supplemento
 di pulizia forfettario (non "per cane"), altre non applicano alcun
@@ -388,7 +415,7 @@ Ogni struttura viene contattata direttamente dal nostro team (telefono o
 email) per confermare quattro punti: taglia massima ammessa, numero massimo
 di animali, eventuali supplementi/cauzioni e accesso agli spazi comuni.
 Solo dopo questa verifica la struttura entra nella directory con il badge
-"Verificato CaniGrandi". Le informazioni vengono aggiornate periodicamente
+"Verificato Oltre la Taglia". Le informazioni vengono aggiornate periodicamente
 e ogni utente può segnalarci discrepanze trovate sul posto.
 
 **9. Cosa succede se al check-in la struttura applica regole diverse da quelle indicate sul sito?**
@@ -398,7 +425,7 @@ confermata, aggiorniamo immediatamente la scheda o rimuoviamo il badge
 "Verificato". La trasparenza delle informazioni è il cuore del nostro
 servizio, quindi ogni segnalazione viene gestita con priorità.
 
-**10. Il servizio di ricerca su CaniGrandi è gratuito?**
+**10. Il servizio di ricerca su Oltre la Taglia è gratuito?**
 Sì, la ricerca, la consultazione delle schede e delle guide del blog sono
 completamente gratuite per chi viaggia. Il nostro modello si basa sulla
 collaborazione con le strutture ricettive, che possono richiedere
