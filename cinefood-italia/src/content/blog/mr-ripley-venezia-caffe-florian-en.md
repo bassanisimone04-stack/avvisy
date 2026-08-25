@@ -1,6 +1,6 @@
 ---
-titolo: "The Talented Mr. Ripley in Venice: Caffè Florian"
-descrizione: "The Talented Mr. Ripley locations in Venice: Caffè Florian, the oldest café in Italy, in St Mark's Square."
+titolo: "Matt Damon in Venice: The Talented Mr. Ripley"
+descrizione: "Matt Damon and Jude Law's Venice locations from The Talented Mr. Ripley: Caffè Florian, the oldest café in Italy, in St Mark's Square."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/blog-tavola-vero.jpg"

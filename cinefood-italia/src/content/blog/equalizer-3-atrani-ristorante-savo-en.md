@@ -1,6 +1,6 @@
 ---
-titolo: "The Equalizer 3: the café in Atrani"
-descrizione: "The \"Aminah's Cafe\" in The Equalizer 3 is Ristorante Savò in Atrani, on the Amalfi Coast — the venue tells the story on its own website."
+titolo: "The Equalizer 3: Denzel Washington's café"
+descrizione: "Denzel Washington's café in The Equalizer 3 is Ristorante Savò in Atrani, on the Amalfi Coast — the venue tells the story on its own website."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/ristorante-savo-atrani.jpg"

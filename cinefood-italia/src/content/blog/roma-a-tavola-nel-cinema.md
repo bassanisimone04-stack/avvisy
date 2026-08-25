@@ -28,7 +28,9 @@ raggiungibili a piedi l'una dall'altra.
 A due passi da Piazza Navona, in Largo Febo, è qui che **Julia Roberts** gusta
 i piatti della cucina romana in una delle scene "food" più celebri di *Mangia
 prega ama* (Eat Pray Love). Un vero inno alla cucina della capitale, in
-un ambiente che ha conservato l'atmosfera vista sullo schermo.
+un ambiente che ha conservato l'atmosfera vista sullo schermo. A Napoli,
+nello stesso film, l'attrice si concede anche **[la pizza da
+Michele](/blog/eat-pray-love-pizza-da-michele-napoli)**.
 
 ## Da Pancrazio — *Mangia prega ama* (2010)
 

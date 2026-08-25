@@ -29,7 +29,9 @@ walking distance of each other.
 A stone's throw from Piazza Navona, in Largo Febo, this is where **Julia
 Roberts** enjoys Roman cuisine in one of the most famous food scenes of *Eat
 Pray Love*. A true hymn to the capital's kitchen, in a setting that still
-carries the atmosphere seen on screen.
+carries the atmosphere seen on screen. In Naples, in the same film, the
+actress also treats herself to **[pizza at Da
+Michele](/en/blog/eat-pray-love-pizza-da-michele-napoli)**.
 
 ## Da Pancrazio — *Eat Pray Love* (2010)
 

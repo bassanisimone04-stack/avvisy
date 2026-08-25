@@ -1,6 +1,6 @@
 ---
-titolo: "Bar Vitelli, Savoca: The Godfather's Real Bar"
-descrizione: "Bar Vitelli in Savoca, Sicily: the real bar from The Godfather where Michael Corleone asks for Apollonia's hand. What to order, from granita to local wine."
+titolo: "Al Pacino's Bar Vitelli in Savoca, Sicily"
+descrizione: "Al Pacino's real bar from The Godfather: in Savoca, Sicily, where Michael Corleone asks for Apollonia's hand. What to order, from granita to local wine."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-23
 immagine: "../../assets/placeholder/bar-vitelli-savoca.webp"
