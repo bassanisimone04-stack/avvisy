@@ -48,6 +48,10 @@ occasione, negli stessi saloni frequentati un tempo da Casanova e Byron.
 
 Vicino a Piazza Navona, è la trattoria dove Julia Roberts assapora i piatti
 della cucina romana in una delle scene gastronomiche più amate del film.
+Non è l'unica tappa food del film: a Napoli, Julia Roberts si concede anche
+la celebre pizza margherita da **[Michele](/locale/pizzeria-da-michele-napoli)**,
+raccontata nel nostro articolo su **[la pizza di Eat Pray
+Love](/blog/eat-pray-love-pizza-da-michele-napoli)**.
 
 ---
 

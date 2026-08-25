@@ -1,6 +1,6 @@
 ---
-titolo: "House of Gucci: the Milan of the Film"
-descrizione: "The Milan of Ridley Scott's House of Gucci, from the Galleria Vittorio Emanuele to the places of fashion. Where to eat."
+titolo: "House of Gucci: Lady Gaga's Milan"
+descrizione: "The Milan of Lady Gaga and Adam Driver in House of Gucci, from the Galleria Vittorio Emanuele to the places of fashion. Where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"

@@ -48,7 +48,11 @@ the same rooms once frequented by Casanova and Byron.
 ## 4. Trattoria Santa Lucia, Rome — *Eat Pray Love* (2010)
 
 Near Piazza Navona, this is the trattoria where Julia Roberts savours Roman
-cuisine in one of the film's most loved food scenes.
+cuisine in one of the film's most loved food scenes. It isn't the film's
+only food stop: in Naples, Julia Roberts also treats herself to the famous
+margherita pizza at **[Da Michele](/en/locale/pizzeria-da-michele-napoli)**,
+the subject of our article on **[Eat Pray Love's
+pizza](/en/blog/eat-pray-love-pizza-da-michele-napoli)**.
 
 Want to build your itinerary? Explore our [map](/en/mappa) and filter by city or
 film in the [directory](/en/locali).

@@ -44,7 +44,9 @@ Cinecittà.
 From *[Welcome to the South](/en/film/benvenuti-al-sud)*, with its dinners
 among colleagues, to the culinary discovery of *[Eat Pray
 Love](/en/film/mangia-prega-ama)*: the table becomes the place where
-characters truly meet.
+characters truly meet — the film's high point is the scene, among the most
+quoted in recent cinema, of **[Julia Roberts eating pizza in
+Naples](/en/blog/eat-pray-love-pizza-da-michele-napoli)**.
 
 ## Elegance and nostalgia
 

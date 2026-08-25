@@ -1,6 +1,6 @@
 ---
-titolo: "House of Gucci: la Milano del film"
-descrizione: "La Milano di House of Gucci di Ridley Scott, tra la Galleria Vittorio Emanuele e i luoghi della moda. Dove mangiare in città."
+titolo: "House of Gucci: la Milano di Lady Gaga"
+descrizione: "La Milano di Lady Gaga e Adam Driver in House of Gucci, tra la Galleria Vittorio Emanuele e i luoghi della moda. Dove mangiare in città."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"

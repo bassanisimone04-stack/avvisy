@@ -42,7 +42,9 @@ ricostruite a Cinecittà.
 
 Da *[Benvenuti al Sud](/film/benvenuti-al-sud)*, con le cene tra colleghi, alla
 scoperta gastronomica di *[Mangia prega ama](/film/mangia-prega-ama)*: la tavola
-diventa il luogo dove i personaggi si incontrano davvero.
+diventa il luogo dove i personaggi si incontrano davvero — culmine del film è
+la scena, tra le più citate del cinema recente, de **[la pizza mangiata da
+Julia Roberts a Napoli](/blog/eat-pray-love-pizza-da-michele-napoli)**.
 
 ## Eleganza e nostalgia
 
