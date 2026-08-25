@@ -1,9 +1,9 @@
-# ZampaLibera — Directory-Blog per Alloggi Pet-Friendly Senza Restrizioni
+# CaniGrandi — Directory-Blog per Alloggi Pet-Friendly Senza Restrizioni
 
 > **Nicchia**: hotel, B&B e agriturismi italiani che accettano cani di taglia
 > grande/gigante e/o più di un cane, senza le limitazioni tipiche del
 > "pet-friendly generico" (1 cane, max 10kg).
-> **Nome di lavoro**: **ZampaLibera** — payoff: *"Il tuo cane, senza taglia, senza limiti."*
+> **Nome di lavoro**: **CaniGrandi** — payoff: *"Il tuo cane, senza taglia, senza limiti."*
 > Nomi alternativi disponibili: DogSizeFree, SenzaTaglia, GrandiZampe.it
 
 Documento di riferimento per Design (UI/UX), Copy strategico e SEO on-page
@@ -68,7 +68,7 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco; il corallo
 - Fotografia: cani di **taglia grande/gigante reali** (mai stock con Chihuahua
   in borsetta — è l'errore numero uno che allontana il target). Foto
   luminose, ambienti open air, aree verdi, spiagge.
-- Badge distintivo ricorrente: "✅ Verificato ZampaLibera — nessun limite di
+- Badge distintivo ricorrente: "✅ Verificato CaniGrandi — nessun limite di
   taglia" da usare su card, hero, meta immagini social.
 
 ### 1.4 Principi UX
@@ -91,7 +91,7 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco; il corallo
 
 ### 2.1 Header (sticky)
 
-Logo "ZampaLibera 🐾" — menu: `Cerca alloggi` · `Blog & Guide` · `Per le
+Logo "CaniGrandi 🐾" — menu: `Cerca alloggi` · `Blog & Guide` · `Per le
 strutture` · `Chi siamo` — CTA secondaria a destra: **"Inserisci la tua
 struttura"** (bottone outline azzurro).
 
@@ -227,12 +227,12 @@ strutture` (Come funziona, Linee guida verifica, Login proprietari) ·
 
 ### 3.1 Title tag (≤60 caratteri)
 
-> `Hotel e B&B per Cani Grandi Senza Limiti | ZampaLibera`
+> `Hotel e B&B per Cani Grandi Senza Limiti | CaniGrandi`
 (56 caratteri — include keyword transazionale "hotel per cani grandi" + brand)
 
 Varianti A/B testabili:
 - `Alloggi Pet Friendly per Cani Grandi, Senza Taglia` (52 car.)
-- `Hotel Pet Friendly Senza Limiti di Taglia | ZampaLibera` (58 car.)
+- `Hotel Pet Friendly Senza Limiti di Taglia | CaniGrandi` (58 car.)
 
 ### 3.2 Meta description (≤155 caratteri)
 
@@ -241,7 +241,7 @@ Varianti A/B testabili:
 
 ### 3.3 URL
 
-`https://www.zampalibera.it/` (dominio) — struttura URL consigliata per le
+`https://www.canigrandi.it/` (dominio) — struttura URL consigliata per le
 sezioni interne, tutte in italiano e keyword-friendly:
 
 - `/cerca` — motore di ricerca/listing principale
@@ -275,11 +275,11 @@ Combinazione consigliata per la home:
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "ZampaLibera",
-  "url": "https://www.zampalibera.it/",
+  "name": "CaniGrandi",
+  "url": "https://www.canigrandi.it/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.zampalibera.it/cerca?q={search_term_string}",
+    "target": "https://www.canigrandi.it/cerca?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -296,7 +296,7 @@ Combinazione consigliata per la home:
     {
       "@type": "ListItem",
       "position": 1,
-      "url": "https://www.zampalibera.it/struttura/nome-struttura"
+      "url": "https://www.canigrandi.it/struttura/nome-struttura"
     }
   ]
 }
@@ -332,8 +332,8 @@ Testi pronti all'uso, ottimizzati per ricerca vocale (domande colloquiali,
 risposte dirette nelle prime 1–2 frasi, dettaglio a seguire) e per People
 Also Ask. Da marcare con `FAQPage` schema.
 
-**1. Le strutture su ZampaLibera accettano davvero cani di qualsiasi taglia?**
-Sì. A differenza dei portali generalisti, su ZampaLibera pubblichiamo solo
+**1. Le strutture su CaniGrandi accettano davvero cani di qualsiasi taglia?**
+Sì. A differenza dei portali generalisti, su CaniGrandi pubblichiamo solo
 strutture che abbiamo verificato accettare cani di taglia grande (25–45 kg)
 e gigante (oltre 45 kg), come Alani, Pastori del Caucaso, San Bernardo o
 Mastini. Per ogni struttura indichiamo chiaramente la taglia massima
@@ -347,7 +347,7 @@ subito solo queste opzioni: il numero massimo di animali è sempre indicato
 nella scheda struttura.
 
 **3. Ci sono supplementi nascosti da pagare al check-in?**
-No, se prenoti tramite una struttura verificata ZampaLibera il costo per il
+No, se prenoti tramite una struttura verificata CaniGrandi il costo per il
 soggiorno con animali è sempre indicato in modo trasparente nella scheda,
 prima della prenotazione. Alcune strutture applicano un piccolo supplemento
 di pulizia forfettario (non "per cane"), altre non applicano alcun
@@ -388,7 +388,7 @@ Ogni struttura viene contattata direttamente dal nostro team (telefono o
 email) per confermare quattro punti: taglia massima ammessa, numero massimo
 di animali, eventuali supplementi/cauzioni e accesso agli spazi comuni.
 Solo dopo questa verifica la struttura entra nella directory con il badge
-"Verificato ZampaLibera". Le informazioni vengono aggiornate periodicamente
+"Verificato CaniGrandi". Le informazioni vengono aggiornate periodicamente
 e ogni utente può segnalarci discrepanze trovate sul posto.
 
 **9. Cosa succede se al check-in la struttura applica regole diverse da quelle indicate sul sito?**
@@ -398,7 +398,7 @@ confermata, aggiorniamo immediatamente la scheda o rimuoviamo il badge
 "Verificato". La trasparenza delle informazioni è il cuore del nostro
 servizio, quindi ogni segnalazione viene gestita con priorità.
 
-**10. Il servizio di ricerca su ZampaLibera è gratuito?**
+**10. Il servizio di ricerca su CaniGrandi è gratuito?**
 Sì, la ricerca, la consultazione delle schede e delle guide del blog sono
 completamente gratuite per chi viaggia. Il nostro modello si basa sulla
 collaborazione con le strutture ricettive, che possono richiedere
