@@ -75,11 +75,10 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
 
 ### 1.2 Tipografia
 
-- **Titoli**: *Baloo 2* (500–800) — sans-serif "bubble" chunky e morbida,
-  con terminali molto arrotondati: il tratto più giocoso disponibile su
-  Google Fonts, richiama volutamente la simpatia e la rotondità delle
-  zampe di un cane. Personalità calda e accogliente. Fallback:
-  `system-ui, sans-serif`.
+- **Titoli**: *Grandstander* (600–800) — sans-serif "bouncy" con lettere
+  leggermente ondulate e terminali morbidi: più informale e giocosa di una
+  grottesca classica, richiama la spontaneità e il movimento di un cane
+  che scodinzola, senza risultare infantile. Fallback: `system-ui, sans-serif`.
 - **Corpo testo**: *Nunito* — umanista arrotondata, altissima leggibilità
   mobile, si abbina naturalmente al tratto bubble dei titoli senza
   scontrarsi con esso. Fallback: `system-ui, sans-serif`.
