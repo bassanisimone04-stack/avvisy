@@ -48,9 +48,10 @@ ammessi"), a bassa concorrenza e altissima intenzione.
 
 | Ruolo | Colore | Hex | Uso |
 |---|---|---|---|
-| Primario | Azzurro cielo | `#0077B6` | Header, link, icone, badge "Verificato" |
-| Primario scuro (hover/testo su bianco) | Blu petrolio | `#03045E` | Titoli H1/H2, footer |
-| Primario chiaro | Azzurro polvere | `#CAF0F8` | Sfondi sezione alternati, chip filtri |
+| Primario testo-safe | Azzurro cielo | `#0077B6` | Link, icone piccole, testo su sfondo bianco |
+| Primario intenso | Azzurro vivido | `#0091E6` | Sfondi ampi, hero, badge, mark del logo, illustrazioni |
+| Primario scuro (hover/testo su bianco) | Blu petrolio | `#03045E` | Titoli H1/H2, footer, CTA banner |
+| Primario chiaro | Azzurro polvere saturo | `#A6DFFB` | Sfondi sezione alternati, chip filtri |
 | Accento CTA | Corallo/Arancio | `#FF6B4A` | Bottoni primari, prezzi, badge urgenza |
 | Accento secondario | Giallo senape tenue | `#FFB627` | Stelle recensioni, evidenziazioni |
 | Neutro sfondo | Bianco / Grigio ghiaccio | `#FFFFFF` / `#F7FAFC` | Sfondo pagina |
@@ -74,14 +75,17 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
 
 ### 1.2 Tipografia
 
-- **Titoli**: *Bricolage Grotesque* (600–800) — grottesca contemporanea con
-  personalità, pensata per brand travel/outdoor, evita l'effetto "template
-  AI" di Inter/Space Grotesk su tutto. Fallback: `system-ui, sans-serif`.
-- **Corpo testo**: *Karla* — umanista, calda, altissima leggibilità mobile,
-  distinta da Inter/Work Sans. Fallback: `system-ui, sans-serif`.
-- **Dati/etichette (taglia, n° cani, prezzo)**: *IBM Plex Mono* — rinforza
-  visivamente il concetto di "specifica verificata" (come un'etichetta
-  tecnica), usata per pillole informative, eyebrow ed etichette dei filtri.
+- **Titoli**: *Fredoka* (500–700) — sans-serif "bubble", tratto arrotondato,
+  personalità giocosa e accogliente, coerente con un brand che parla di
+  cani e vacanze senza pensieri. Fallback: `system-ui, sans-serif`.
+- **Corpo testo**: *Nunito* — umanista arrotondata, altissima leggibilità
+  mobile, si abbina naturalmente al tratto bubble dei titoli senza
+  scontrarsi con esso. Fallback: `system-ui, sans-serif`.
+- **Dati/etichette (taglia, n° cani, prezzo)**: *IBM Plex Mono* — lasciata
+  volutamente "tecnica" e non arrotondata: il contrasto con il resto della
+  UI rinforza il concetto di "specifica verificata" (come un'etichetta da
+  scheda tecnica), usata per pillole informative, eyebrow ed etichette dei
+  filtri.
 - Scala tipografica mobile-first: H1 28–32px, H2 22–24px, body 16px, small 14px.
 - Line-height generoso (1.5–1.6) per leggibilità in mobilità (turisti che
   cercano da smartphone in auto/in stazione).
