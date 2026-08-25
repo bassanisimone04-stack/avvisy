@@ -1,0 +1,97 @@
+---
+titolo: "Ristoranti veri visti nei film: la lista completa"
+descrizione: "Da Al Pacino a Julia Roberts, da Denzel Washington a Lady Gaga: tutti i ristoranti, bar e caffè reali apparsi nei film, verificati uno per uno."
+autore: "Redazione CineFood Italia"
+dataPubblicazione: 2026-08-25
+immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
+tags: ["ristoranti dei film", "cineturismo", "lista", "star hollywoodiane"]
+faq:
+  - domanda: "Come faccio a sapere se un ristorante è davvero apparso in un film?"
+    risposta: "Su CineFood Italia pubblichiamo solo location con fonte verificabile: sito ufficiale del locale, film commission regionale o stampa nazionale. Ogni scheda riporta la fonte."
+  - domanda: "Quali sono i ristoranti più famosi visti nei film in Italia?"
+    risposta: "Bar Vitelli a Savoca (Il Padrino), Da Michele a Napoli (Eat Pray Love), Caffè Florian a Venezia (Il talento di Mr. Ripley) e Caffè Rivoire a Firenze (Hannibal) sono tra i più visitati."
+  - domanda: "Questi ristoranti sono ancora aperti?"
+    risposta: "Sì, tutti quelli in questa lista sono locali realmente in attività. Segnaliamo eventuali chiusure quando aggiorniamo le schede."
+  - domanda: "Si può prenotare in questi locali?"
+    risposta: "Dipende dal locale: i ristoranti più richiesti (Del Cambio, Caffè Nazionale) consigliano la prenotazione, mentre bar e pizzerie storiche come Da Michele funzionano a fila."
+bozza: false
+---
+
+Ci sono ristoranti che il cinema ha reso più famosi delle star che li hanno
+attraversati. Ecco la lista completa dei locali **reali e verificati** che
+sono davvero apparsi in un film o in una serie — niente set a tema, solo
+indirizzi che esistono ancora oggi, con il nome dell'attore o dell'attrice
+che li ha resi celebri.
+
+## Al Pacino — Bar Vitelli, Savoca (Sicilia)
+
+Nel borgo di Savoca, il **[Bar Vitelli](/locale/bar-vitelli-savoca)** è dove
+Michael Corleone chiede la mano di Apollonia ne *[Il Padrino](/blog/bar-vitelli-savoca-padrino)*
+(1972). Il locale non aveva nemmeno un nome ufficiale prima del film.
+
+## Julia Roberts — L'Antica Pizzeria da Michele, Napoli
+
+A Forcella, **[Da Michele](/locale/pizzeria-da-michele-napoli)** è la
+pizzeria dove Liz assapora la sua prima vera margherita ne
+*[Mangia prega ama](/blog/eat-pray-love-pizza-da-michele-napoli)* (2010) —
+una delle scene "food" più citate del cinema recente.
+
+## Matt Damon e Jude Law — Caffè Florian, Venezia
+
+In Piazza San Marco, il **[Caffè Florian](/locale/caffe-florian)**, il più
+antico d'Italia (dal 1720), è dove Tom Ripley incontra Marge e il padre di
+Dickie ne *[Il talento di Mr. Ripley](/blog/mr-ripley-venezia-caffe-florian)*
+(1999).
+
+## Denzel Washington — Ristorante Savò, Atrani
+
+Sulla piazzetta del comune più piccolo d'Italia, il
+**[Ristorante Savò](/locale/ristorante-savo-atrani)** diventa
+l'"Aminah's Cafe" di Robert McCall in
+*[The Equalizer 3](/blog/equalizer-3-atrani-ristorante-savo)* (2023) — è il
+locale stesso a raccontarlo sul proprio sito.
+
+## Lady Gaga e Adam Driver — Milano
+
+I luoghi di *[House of Gucci](/blog/house-of-gucci-milano)* (2021)
+attraversano la Galleria Vittorio Emanuele e il centro della moda milanese,
+tra eleganza e ambizione.
+
+## Anthony Hopkins — Caffè Rivoire, Firenze
+
+Affacciato su Piazza della Signoria, il
+**[Caffè Rivoire](/locale/rivoire-firenze)** è tra i luoghi di Firenze
+riconoscibili in *[Hannibal](/blog/hannibal-firenze-caffe-rivoire)* (2001),
+il sequel de *Il silenzio degli innocenti*.
+
+## George Clooney — Caffè Tucci, Sulmona
+
+In Piazza Garibaldi, il **[Caffè Tucci](/locale/caffe-tucci-sulmona)** fu
+coinvolto nelle riprese di *[The American](/blog/the-american-sulmona-caffe-tucci)*
+(2010): il titolare smontò il proprio gazebo per lasciare campo libero alla
+produzione.
+
+## Pierfrancesco Favino e Miriam Leone — Del Cambio, Torino
+
+Dal 1757 in Piazza Carignano, il **[Del Cambio](/locale/del-cambio-torino)**,
+oggi una stella Michelin, è il ristorante della cena tra i due protagonisti
+di *[Corro da te](/blog/corro-da-te-torino-del-cambio)* (2022).
+
+## Marco Giallini — Caffè Nazionale, Aosta
+
+Il caffè storico di piazza Chanoux fu riaperto apposta per girare
+*[Rocco Schiavone](/blog/rocco-schiavone-aosta-caffe-nazionale)*: oggi è di
+nuovo aperto, con lo chef Paolo Griffa.
+
+## Audrey Hepburn — il gelato di Roma
+
+Nessuna lista è completa senza *Vacanze Romane*: scopri
+**[dove Audrey Hepburn mangiava il gelato](/blog/vacanze-romane-gelato-roma)**
+nella Roma degli anni '50.
+
+---
+
+Questa lista si aggiorna ogni volta che verifichiamo un nuovo locale. Esplora
+tutte le location nella nostra **[directory](/locali)** o sulla
+**[mappa interattiva](/mappa)**, filtrando per città o per film.
