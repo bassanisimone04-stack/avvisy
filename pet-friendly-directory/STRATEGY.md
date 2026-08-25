@@ -75,9 +75,11 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
 
 ### 1.2 Tipografia
 
-- **Titoli**: *Fredoka* (500–700) — sans-serif "bubble", tratto arrotondato,
-  personalità giocosa e accogliente, coerente con un brand che parla di
-  cani e vacanze senza pensieri. Fallback: `system-ui, sans-serif`.
+- **Titoli**: *Baloo 2* (500–800) — sans-serif "bubble" chunky e morbida,
+  con terminali molto arrotondati: il tratto più giocoso disponibile su
+  Google Fonts, richiama volutamente la simpatia e la rotondità delle
+  zampe di un cane. Personalità calda e accogliente. Fallback:
+  `system-ui, sans-serif`.
 - **Corpo testo**: *Nunito* — umanista arrotondata, altissima leggibilità
   mobile, si abbina naturalmente al tratto bubble dei titoli senza
   scontrarsi con esso. Fallback: `system-ui, sans-serif`.
