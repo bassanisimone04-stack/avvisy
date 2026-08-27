@@ -14,8 +14,18 @@
 > 🖼️ **Mockup navigabili**: vedi link nei messaggi dell'assistente (artifact
 > pubblicati) — home page, pagina `/cerca` (risultati con filtri per taglia,
 > numero cani, servizi e prezzo) e scheda struttura `/struttura/[slug]`
-> (Agriturismo Bellavita), con palette, font (Grandstander + Nunito + IBM
-> Plex Mono) e illustrazioni vettoriali applicate.
+> (Agriturismo Bellavita), con palette, font (Fraunces + Plus Jakarta Sans +
+> IBM Plex Mono) e illustrazioni vettoriali in stile lineare applicate.
+>
+> 📸 **Sulle foto**: i mockup non contengono fotografie reali. L'ambiente in
+> cui vengono pubblicati questi artifact blocca il caricamento di immagini
+> da host esterni (niente stock photo, niente foto delle strutture) e non è
+> disponibile uno strumento di generazione immagini in questa sessione —
+> quindi al posto delle foto ci sono illustrazioni vettoriali in stile
+> lineare/editoriale (non più i cartoon "bubble" delle versioni precedenti).
+> In sviluppo reale queste vanno sostituite con fotografie vere delle
+> strutture (con licenza/permesso), scattate seguendo le linee guida della
+> sezione 1.3.
 >
 > 🐕 **Dati reali nelle card struttura**: le strutture mostrate nei mockup
 > (Agriturismo Bellavita, Baita Gorck, Masseria Le Terrazze di Serranova,
@@ -61,12 +71,19 @@ ammessi"), a bassa concorrenza e altissima intenzione.
 
 ### 1.1 Palette colori
 
+> ⚠️ **Palette ritoccata per un tono premium**: stessi ruoli, tonalità
+> leggermente desaturate/scurite rispetto alla prima versione — l'azzurro
+> "da app" e il corallo "da caramella" sono stati sostituiti con un blu
+> petrolio più profondo e un terracotta bruciato, più vicini a un'identità
+> da rivista di viaggio che a un prodotto consumer.
+
 | Ruolo | Colore | Hex | Uso |
 |---|---|---|---|
-| Primario testo-safe | Azzurro cielo | `#0077B6` | Link, icone piccole, testo su sfondo bianco |
-| Primario intenso | Azzurro vivido | `#0091E6` | Sfondi ampi, hero, badge, mark del logo, illustrazioni |
-| Primario scuro (hover/testo su bianco) | Blu petrolio | `#03045E` | Titoli H1/H2, footer, CTA banner |
-| Primario chiaro | Azzurro polvere saturo | `#A6DFFB` | Sfondi sezione alternati, chip filtri |
+| Primario testo-safe | Blu petrolio | `#0B5E8C` | Link, icone piccole, testo su sfondo bianco |
+| Primario intenso | Azzurro profondo | `#146FA3` | Sfondi ampi, hero, badge, mark del logo, illustrazioni |
+| Primario scuro (hover/testo su bianco) | Blu notte | `#071426` | Titoli H1/H2, footer, CTA banner |
+| Primario chiaro | Azzurro grigio | `#CBD9E6` | Sfondi sezione alternati, chip filtri |
+| Accento CTA | Terracotta bruciato | `#C25B34` | Bottoni primari, prezzi, badge urgenza (sostituisce il corallo) |
 | Accento CTA | Corallo/Arancio | `#FF6B4A` | Bottoni primari, prezzi, badge urgenza |
 | Accento secondario | Giallo senape tenue | `#FFB627` | Stelle recensioni, evidenziazioni |
 | Neutro sfondo | Bianco / Grigio ghiaccio | `#FFFFFF` / `#F7FAFC` | Sfondo pagina |
@@ -90,13 +107,20 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
 
 ### 1.2 Tipografia
 
-- **Titoli**: *Grandstander* (600–800) — sans-serif "bouncy" con lettere
-  leggermente ondulate e terminali morbidi: più informale e giocosa di una
-  grottesca classica, richiama la spontaneità e il movimento di un cane
-  che scodinzola, senza risultare infantile. Fallback: `system-ui, sans-serif`.
-- **Corpo testo**: *Nunito* — umanista arrotondata, altissima leggibilità
-  mobile, si abbina naturalmente al tratto bubble dei titoli senza
-  scontrarsi con esso. Fallback: `system-ui, sans-serif`.
+> ⚠️ **Aggiornamento**: dopo test con font "bubble" (Fredoka, Baloo 2,
+> Grandstander) il tono risultava troppo infantile per un pubblico che
+> prenota soggiorni reali. Il pairing attuale punta a un registro **editoriale
+> e premium**, coerente con portali di viaggio maturi (pensare a riviste di
+> ospitalità, non ad app per bambini).
+
+- **Titoli**: *Fraunces* (500–600, asse opsz per un tratto più contenuto
+  alle dimensioni piccole) — serif contemporanea con personalità editoriale,
+  ampiamente usata da brand travel/hospitality di fascia alta. Sostituisce
+  i font bubble: stesso calore, registro molto più adulto. Fallback:
+  `Georgia, serif`.
+- **Corpo testo**: *Plus Jakarta Sans* — grottesca moderna e pulita, ottima
+  leggibilità su schermo, meno "app consumer" di Nunito/Inter. Fallback:
+  `system-ui, sans-serif`.
 - **Dati/etichette (taglia, n° cani, prezzo)**: *IBM Plex Mono* — lasciata
   volutamente "tecnica" e non arrotondata: il contrasto con il resto della
   UI rinforza il concetto di "specifica verificata" (come un'etichetta da
