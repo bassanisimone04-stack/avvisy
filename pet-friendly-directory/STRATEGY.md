@@ -583,3 +583,38 @@ proprietari di cani grandi a scegliere con fiducia.
 Prossimo passo naturale: wireframe visivo (Figma o canvas design) e
 implementazione front-end (Next.js + Tailwind, coerente con lo stack già
 in uso nel repository).
+
+---
+
+## 7. Stato di implementazione nel mockup
+
+Il file `mockup/home.html` implementa il brief originale sezione per sezione.
+Riepilogo di cosa è già dentro la pagina e cosa resta da fare in sviluppo.
+
+| Richiesta del brief | Stato nel mockup |
+|---|---|
+| Hero con titolo orientato al beneficio | ✅ H1 "Vacanze senza limiti di taglia…" |
+| Barra di ricerca avanzata **above the fold** | ✅ 5 campi (destinazione, check-in/out, n° cani, taglia) + CTA |
+| Filtri rapidi in evidenza | ✅ 6 chip, numerate, che puntano alle landing di filtro |
+| Vetrina strutture in evidenza | ✅ 3 strutture reali con fonti pubbliche citate |
+| Perché affidarsi a noi (3 vantaggi) | ✅ zero sorprese / zero restrizioni di taglia / strutture testate |
+| Blog e guide recenti | ✅ guida in evidenza + 3 articoli |
+| FAQ ricca (8–10) | ✅ **11 FAQ complete**, allineate al testo della sezione 4 |
+| Title tag ≤ 60 caratteri | ✅ in `og:title` (58 car.); in produzione va nel `<title>` |
+| Meta description ≤ 155 caratteri | ✅ `<meta name="description">` (154 car.) |
+| Schema `WebSite` + `SearchAction` | ✅ JSON-LD |
+| Schema `ItemList` (vetrina) | ✅ JSON-LD, 3 elementi |
+| Schema `FAQPage` | ✅ JSON-LD, 11 domande — combacia con il markup visibile |
+| Keyword nel copy visibile | ✅ eyebrow, H1, sottotitolo hero, paragrafo sotto i filtri |
+
+**Da completare in sviluppo**, fuori dalla portata di un mockup statico:
+`BreadcrumbList` (serve la gerarchia reale delle pagine interne),
+`LodgingBusiness` sulle singole schede struttura, il `<title>` di produzione
+al posto del nome brand, e la sostituzione del campo 3D con fotografie vere
+dove si vuole mostrare la struttura e non il brand.
+
+> ⚠️ **Coerenza fra markup e dati strutturati.** Le 11 domande nel `FAQPage`
+> ripetono parola per parola quelle visibili nella pagina. Non è un vezzo:
+> Google penalizza (e può ignorare del tutto) uno `FAQPage` le cui risposte
+> non compaiono nel contenuto visibile. Se in futuro si modifica una FAQ nel
+> markup, va aggiornata anche nel JSON-LD.
