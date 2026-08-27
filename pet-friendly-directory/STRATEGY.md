@@ -12,9 +12,10 @@
 > brand non le contiene letteralmente — è la keyword strategy a portare
 > traffico, non il nome del dominio.
 > 🖼️ **Mockup navigabili**: vedi link nei messaggi dell'assistente (artifact
-> pubblicati) — home page e pagina `/cerca` (risultati con filtri per taglia,
-> numero cani, servizi e prezzo), con palette, font (Grandstander + Nunito +
-> IBM Plex Mono) e illustrazioni vettoriali applicate.
+> pubblicati) — home page, pagina `/cerca` (risultati con filtri per taglia,
+> numero cani, servizi e prezzo) e scheda struttura `/struttura/[slug]`
+> (Agriturismo Bellavita), con palette, font (Grandstander + Nunito + IBM
+> Plex Mono) e illustrazioni vettoriali applicate.
 >
 > 🐕 **Dati reali nelle card struttura**: le strutture mostrate nei mockup
 > (Agriturismo Bellavita, Baita Gorck, Masseria Le Terrazze di Serranova,
