@@ -11,21 +11,21 @@
 > **nei title tag, nelle meta description e nei contenuti**, anche se il
 > brand non le contiene letteralmente — è la keyword strategy a portare
 > traffico, non il nome del dominio.
-> 🖼️ **Mockup navigabili**: vedi link nei messaggi dell'assistente (artifact
-> pubblicati) — home page, pagina `/cerca` (risultati con filtri per taglia,
-> numero cani, servizi e prezzo) e scheda struttura `/struttura/[slug]`
-> (Agriturismo Bellavita), con palette, font (Fraunces + Plus Jakarta Sans +
-> IBM Plex Mono) e illustrazioni vettoriali in stile lineare applicate.
+> 🖼️ **Mockup**: la home in versione definitiva vive nel repo come file vero
+> — `pet-friendly-directory/mockup/home.html` — ed è pubblicata come artifact
+> (link nei messaggi dell'assistente). Direzione v3: blu Klein, tipografia
+> Onest + Martian Mono, campo 3D di ossi renderizzato in tempo reale. Le
+> pagine `/cerca` e `/struttura/[slug]` esistono come artifact nella
+> direzione v2 (Fraunces) e vanno riallineate alla v3.
 >
-> 📸 **Sulle foto**: i mockup non contengono fotografie reali. L'ambiente in
-> cui vengono pubblicati questi artifact blocca il caricamento di immagini
-> da host esterni (niente stock photo, niente foto delle strutture) e non è
-> disponibile uno strumento di generazione immagini in questa sessione —
-> quindi al posto delle foto ci sono illustrazioni vettoriali in stile
-> lineare/editoriale (non più i cartoon "bubble" delle versioni precedenti).
-> In sviluppo reale queste vanno sostituite con fotografie vere delle
-> strutture (con licenza/permesso), scattate seguendo le linee guida della
-> sezione 1.3.
+> 📸 **Sulle foto**: i mockup non contengono fotografie. L'ambiente in cui
+> vengono pubblicati questi artifact blocca il caricamento di immagini da
+> host esterni (niente stock photo, niente foto delle strutture) e in questa
+> sessione non è disponibile uno strumento di generazione immagini. Il campo
+> 3D è la risposta progettuale a quel vincolo, non un segnaposto. In sviluppo
+> reale servono fotografie vere delle strutture (con licenza o permesso del
+> gestore) ovunque si voglia mostrare *la struttura*; il 3D resta dove si
+> vuole mostrare *il brand*, cioè hero e testate di sezione.
 >
 > 🐕 **Dati reali nelle card struttura**: le strutture mostrate nei mockup
 > (Agriturismo Bellavita, Baita Gorck, Masseria Le Terrazze di Serranova,
@@ -93,38 +93,12 @@ testo, così l'accento resta leggibile su fondo nero. **Il campo 3D resta
 scuro in entrambi i temi**: è un oggetto grafico, non una superficie di
 lettura, ed è dipinto con token propri (`--band`, `--band-ink`).
 
-### 1.2bis L'oggetto 3D
-
-La hero non ospita una foto ma un **render tridimensionale in tempo reale**:
-un grappolo di ossi che ruota lentamente, con parallasse legata al puntatore.
-È scritto a mano come piccolo motore software su Canvas 2D (rotazione 3D,
-proiezione prospettica, ordinamento per profondità, ombreggiatura di sfere e
-cilindri) — nessuna libreria esterna, perché l'ambiente di pubblicazione
-blocca le CDN. Pesa pochi KB e si ferma da solo quando esce dallo schermo.
-
-Traduce nel mondo "pet" ciò che nel riferimento erano tubi geometrici: la
-stessa idea di oggetto scultoreo, ma immediatamente leggibile come cane.
-Sostituisce le illustrazioni vettoriali piatte delle versioni precedenti.
-| Accento CTA | Corallo/Arancio | `#FF6B4A` | Bottoni primari, prezzi, badge urgenza |
-| Accento secondario | Giallo senape tenue | `#FFB627` | Stelle recensioni, evidenziazioni |
-| Neutro sfondo | Bianco / Grigio ghiaccio | `#FFFFFF` / `#F7FAFC` | Sfondo pagina |
-| Neutro testo | Grigio ardesia | `#334155` | Body copy |
-| Feedback positivo | Verde salvia | `#2A9D8F` | "Nessuna restrizione", check verificati |
-| Bordi/Divider | Grigio perla | `#E2E8F0` | Card, separatori |
-
-Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
-
-> ⚠️ **Fix contrasto (bug corretto nel mockup)**: il corallo puro `#FF6B4A`
-> su bianco ha un contrasto di ~2.8:1 — insufficiente anche per bottoni
-> (serve ≥3:1 su testo bold ≥14px, ≥4.5:1 su testo normale). Nel mockup si
-> usano due varianti distinte: **`#E8542F`** come sfondo dei bottoni CTA
-> (testo bianco bold, contrasto ~4:1) e **`#D9481F`** per il corallo usato
-> come testo diretto (prezzi, icone). Lo stesso vale per il giallo senape:
-> `#FFB627` è riservato a riempimenti decorativi, mentre per le stelle di
-> valutazione (testo) si usa la variante più scura `#9A6A0E`. Regola
-> generale da portare in produzione: ogni colore ad alto impatto ha una
-> **variante "fill" (decorativa)** e una **variante "text-safe" (più scura)**
-> — non riusare mai il valore decorativo come colore di testo.
+**Regola di contrasto ereditata dalle versioni precedenti, ancora valida.**
+Ogni colore ad alto impatto ha una variante *fill* (decorativa) e una
+variante *text-safe* (più scura o più chiara a seconda del fondo): non
+riusare mai il valore decorativo come colore di testo. Nella palette v3 lo
+si vede sul blu, che in tema scuro si sdoppia in `#2E2EF5` per i
+riempimenti e `#8E8EFF` per il testo.
 
 ### 1.2 Tipografia
 
@@ -148,6 +122,23 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
   passaggi). La sua larghezza inusuale è il rischio estetico voluto: fa
   leggere quei dati come misurazioni strumentali, che è esattamente la
   promessa del brand. Fallback: `ui-monospace, monospace`.
+
+### 1.2bis L'oggetto 3D
+
+La hero non ospita una foto ma un **render tridimensionale in tempo reale**:
+un grappolo di ossi che ruota lentamente, con parallasse legata al puntatore.
+È scritto a mano come piccolo motore software su Canvas 2D — rotazione 3D,
+proiezione prospettica, ordinamento per profondità, ombreggiatura di sfere e
+cilindri — senza librerie esterne, perché l'ambiente di pubblicazione blocca
+le CDN (quindi niente three.js). Pesa pochi KB e sospende il ciclo di
+animazione quando esce dal viewport.
+
+Ogni osso è modellato come un'asta con **quattro nocche**, due per estremità,
+perché è la sagoma che si riconosce all'istante come osso da cane; una
+capsula liscia leggeva come tubo astratto. Traduce nel mondo pet ciò che nel
+riferimento fornito dal committente erano tubi geometrici: stessa idea di
+oggetto scultoreo, ma inequivocabilmente canina. Sostituisce le illustrazioni
+vettoriali piatte delle versioni precedenti.
 - **Dati/etichette (taglia, n° cani, prezzo)**: *IBM Plex Mono* — lasciata
   volutamente "tecnica" e non arrotondata: il contrasto con il resto della
   UI rinforza il concetto di "specifica verificata" (come un'etichetta da
@@ -204,21 +195,23 @@ struttura"** (bottone outline azzurro).
 > accolgono davvero la tua famiglia a quattro zampe — comprese le taglie
 > giganti e i branchi numerosi.
 
-**Barra di ricerca avanzata (componente centrale, card bianca con ombra su
-sfondo azzurro/foto hero):**
+**Barra di ricerca avanzata — above the fold, non negoziabile.** Nel mockup
+v3 è una barra unica a filo, bordo nero pieno, cinque campi separati da
+filetti a 1px e il pulsante in blu Klein all'estremità:
 
 ```
-[ 📍 Dove vuoi andare? (es. Toscana, Costa Amalfitana...) ]
-[ 📅 Check-in ]  [ 📅 Check-out ]
-[ 🐕 Quanti cani? ▾ ]  [ 📏 Taglia ▾ (Grande 25-45kg / Gigante 45kg+) ]
-              [ CERCA ALLOGGI → ]  (bottone corallo #FF6B4A)
+[ Destinazione | Check-in | Check-out | Quanti cani | Taglia ] [ CERCA ]
+   Toscana…      12 set     15 set      2 cani       45 kg+     ◼ Klein
 ```
 
-- Il bottone CTA è sempre il colore accento (corallo), mai l'azzurro
-  primario, per massimizzare il contrasto e guidare l'occhio.
-- Sotto la barra: micro-trust row — *"🐾 Zero sorprese al check-in · ✅
-  Regole verificate telefonicamente · ⭐ Recensioni da veri proprietari di
-  cani grandi"*.
+- Le etichette dei campi sono in Martian Mono minuscolo maiuscoletto, i
+  valori in Onest semibold: la stessa gerarchia "etichetta tecnica / dato"
+  usata ovunque nel sito.
+- Il pulsante è l'unico blu Klein della hero, così l'occhio ci finisce senza
+  che nient'altro competa.
+- Sotto la barra: micro-trust row — *"Zero sorprese al check-in · Regole
+  verificate una per una · Recensioni di chi ha un cane grande"*, con un
+  punto blu al posto delle emoji.
 
 ### 2.3 Filtri Rapidi in Evidenza (chip/icone cliccabili sotto la hero)
 
