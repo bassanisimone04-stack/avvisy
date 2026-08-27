@@ -71,19 +71,40 @@ ammessi"), a bassa concorrenza e altissima intenzione.
 
 ### 1.1 Palette colori
 
-> ⚠️ **Palette ritoccata per un tono premium**: stessi ruoli, tonalità
-> leggermente desaturate/scurite rispetto alla prima versione — l'azzurro
-> "da app" e il corallo "da caramella" sono stati sostituiti con un blu
-> petrolio più profondo e un terracotta bruciato, più vicini a un'identità
-> da rivista di viaggio che a un prodotto consumer.
+> ⚠️ **Palette definitiva (v3)** — derivata dal riferimento visivo fornito
+> dal committente. Il principio è **un solo accento a piena forza**: niente
+> corallo, niente giallo, niente verde semantico. Tutta l'energia della
+> pagina sta nel blu Klein; tutto il resto è nero, off-white e una scala di
+> grigi con bias lavanda (i neutri "tendono" verso l'accento, non sono grigi
+> neutri di default).
 
 | Ruolo | Colore | Hex | Uso |
 |---|---|---|---|
-| Primario testo-safe | Blu petrolio | `#0B5E8C` | Link, icone piccole, testo su sfondo bianco |
-| Primario intenso | Azzurro profondo | `#146FA3` | Sfondi ampi, hero, badge, mark del logo, illustrazioni |
-| Primario scuro (hover/testo su bianco) | Blu notte | `#071426` | Titoli H1/H2, footer, CTA banner |
-| Primario chiaro | Azzurro grigio | `#CBD9E6` | Sfondi sezione alternati, chip filtri |
-| Accento CTA | Terracotta bruciato | `#C25B34` | Bottoni primari, prezzi, badge urgenza (sostituisce il corallo) |
+| Accento unico | Blu Klein | `#1B1BE8` | Ticker, CTA finale, tag, etichette dati, hover dei chip |
+| Nero | Inchiostro | `#0B0B11` | Testo, bottoni pieni, campo 3D |
+| Sfondo pagina | Off-white lavanda | `#F0EFF7` | Ground chiaro (mai bianco puro) |
+| Superficie | Bianco | `#FFFFFF` | Card, righe struttura in hover |
+| Superficie alt. | Lavanda chiara | `#E7E6F1` | Fascia sezione strutture |
+| Testo secondario | Grigio-lavanda | `#56566A` | Paragrafi, etichette |
+| Filetti | Lavanda tenue | `#D9D8E6` | Bordi e separatori a 1px |
+
+In tema scuro il blu passa a `#2E2EF5` per i riempimenti e `#8E8EFF` per il
+testo, così l'accento resta leggibile su fondo nero. **Il campo 3D resta
+scuro in entrambi i temi**: è un oggetto grafico, non una superficie di
+lettura, ed è dipinto con token propri (`--band`, `--band-ink`).
+
+### 1.2bis L'oggetto 3D
+
+La hero non ospita una foto ma un **render tridimensionale in tempo reale**:
+un grappolo di ossi che ruota lentamente, con parallasse legata al puntatore.
+È scritto a mano come piccolo motore software su Canvas 2D (rotazione 3D,
+proiezione prospettica, ordinamento per profondità, ombreggiatura di sfere e
+cilindri) — nessuna libreria esterna, perché l'ambiente di pubblicazione
+blocca le CDN. Pesa pochi KB e si ferma da solo quando esce dallo schermo.
+
+Traduce nel mondo "pet" ciò che nel riferimento erano tubi geometrici: la
+stessa idea di oggetto scultoreo, ma immediatamente leggibile come cane.
+Sostituisce le illustrazioni vettoriali piatte delle versioni precedenti.
 | Accento CTA | Corallo/Arancio | `#FF6B4A` | Bottoni primari, prezzi, badge urgenza |
 | Accento secondario | Giallo senape tenue | `#FFB627` | Stelle recensioni, evidenziazioni |
 | Neutro sfondo | Bianco / Grigio ghiaccio | `#FFFFFF` / `#F7FAFC` | Sfondo pagina |
@@ -107,20 +128,26 @@ Contrasto verificato AA su testo `#03045E` e `#334155` su bianco.
 
 ### 1.2 Tipografia
 
-> ⚠️ **Aggiornamento**: dopo test con font "bubble" (Fredoka, Baloo 2,
-> Grandstander) il tono risultava troppo infantile per un pubblico che
-> prenota soggiorni reali. Il pairing attuale punta a un registro **editoriale
-> e premium**, coerente con portali di viaggio maturi (pensare a riviste di
-> ospitalità, non ad app per bambini).
+> ⚠️ **Direzione definitiva (v3)**. Le versioni precedenti sono state
+> scartate dal committente: i font "bubble" (Fredoka, Baloo 2, Grandstander)
+> risultavano infantili, la successiva serif editoriale (Fraunces) risultava
+> priva di carattere. La direzione attuale nasce da un riferimento visivo
+> fornito dal committente — sito di uno studio 3D, con blu elettrico su
+> nero e off-white, tipografia enorme e un oggetto tridimensionale come
+> protagonista della hero.
 
-- **Titoli**: *Fraunces* (500–600, asse opsz per un tratto più contenuto
-  alle dimensioni piccole) — serif contemporanea con personalità editoriale,
-  ampiamente usata da brand travel/hospitality di fascia alta. Sostituisce
-  i font bubble: stesso calore, registro molto più adulto. Fallback:
-  `Georgia, serif`.
-- **Corpo testo**: *Plus Jakarta Sans* — grottesca moderna e pulita, ottima
-  leggibilità su schermo, meno "app consumer" di Nunito/Inter. Fallback:
-  `system-ui, sans-serif`.
+- **Titoli e corpo — un'unica famiglia**: *Onest* (400–800), grottesca
+  geometrica con x-height alta e terminali netti; è il parente libero più
+  vicino alle neo-grottesche svizzere usate dagli studi di design. Usare un
+  solo carattere su tutta la pagina è una scelta deliberata: è ciò che fanno
+  i siti del riferimento, e sposta il carattere sulla **scala** (titoli fino
+  a 88px, interlinea 0.94, tracking −0.035em) invece che sulla varietà di
+  font. Fallback: `system-ui, sans-serif`.
+- **Etichette dati**: *Martian Mono* (500), monospace molto larga, riservata
+  alle micro-etichette maiuscole (taglia max, numero cani, numerazione dei
+  passaggi). La sua larghezza inusuale è il rischio estetico voluto: fa
+  leggere quei dati come misurazioni strumentali, che è esattamente la
+  promessa del brand. Fallback: `ui-monospace, monospace`.
 - **Dati/etichette (taglia, n° cani, prezzo)**: *IBM Plex Mono* — lasciata
   volutamente "tecnica" e non arrotondata: il contrasto con il resto della
   UI rinforza il concetto di "specifica verificata" (come un'etichetta da
