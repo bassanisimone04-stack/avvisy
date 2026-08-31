@@ -7,7 +7,7 @@ Traduzione operativa dei riferimenti Dribbble (Afterglow: *Better investments fo
 
 1. **Gradienti iridescenti pastello** come sfondo delle sezioni chiave (lavanda → menta → azzurro
    ghiaccio), mai piatti: sfumature morbide, tipo paesaggio fuori fuoco.
-2. **Titoli in serif display** ad alto contrasto, di grandi dimensioni, su due righe centrate.
+2. **Titoli in Fraunces** (serif variabile ad alto contrasto, peso leggero), di grandi dimensioni, su due righe centrate.
    È l'elemento che dà il tono "premium clinico" e distingue da qualsiasi directory italiana.
 3. **Corpo testo in sans neutro**, piccolo, grigio-blu, molto arioso.
 4. **Vetro smerigliato**: card bianche traslucide con blur, bordo 1px bianco al 60%, ombra ampia
@@ -61,9 +61,9 @@ accenti a saturazione ridotta del 15%. I gradienti diventano profondi (indaco �
 
 | Ruolo | Font | Dimensioni |
 |---|---|---|
-| Display / H1-H2 | **Instrument Serif** (alternative: Fraunces, Playfair Display) | H1 clamp(2.6rem, 6vw, 4.4rem), interlinea .95, `letter-spacing:-.02em` |
-| UI e corpo | **Inter** (alternative: Geist, Manrope) | corpo 16/1.7, small 13.5px |
-| Micro-label / pill | Inter 600, 11.5px, `letter-spacing:.14em`, maiuscolo | |
+| Display / H1-H2 | **Fraunces** variabile (`opsz 9..144`, `wght 300–400`, `SOFT 0`, `WONK 0`) | H1 clamp(2.4rem, 6.2vw, 4.6rem), peso 300, interlinea 1.0, `letter-spacing:-.022em` |
+| UI e corpo | **Manrope** | corpo 16/1.65, small 13,5px, numeri con `tabular-nums` dove sono in colonna |
+| Micro-label / pill | Manrope 600, 11px, `letter-spacing:.14em`, maiuscolo | |
 
 Regola: **il serif solo nei titoli**, mai nel corpo o nei bottoni. È ciò che rende il look
 "editoriale premium" invece che "template".
