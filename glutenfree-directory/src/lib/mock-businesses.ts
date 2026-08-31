@@ -705,6 +705,37 @@ const seeds: Seed[] = [
     gallerySeeds: [169, 170, 171, 172],
     photoUrl: "https://images.unsplash.com/photo-1629385697093-9ba4d6a1c2c5?auto=format&fit=crop&w=800&q=75",
   },
+  // ── Negozio e farmacia ────────────────────────────────────
+  {
+    name: "Milano Senza Glutine",
+    category: "negozio",
+    region: "Lombardia", province: "Milano", provinceCode: "MI", city: "Milano",
+    address: "Via Beato Angelico 17", postalCode: "20133", lat: 45.4709, lng: 9.2274,
+    priceRange: "€", aicCertified: false, delivery: false, takeaway: true, openNow: true,
+    hoursPattern: ["14:30–19:30", "09:30–19:30", "09:30–19:30", "09:30–19:30", "09:30–19:30", "09:30–19:30", null],
+    phone: "02 3668 5890", website: "https://www.milanosenzaglutine.it",
+    services: ["Negozio 100% dedicato al senza glutine", "Laboratorio con pasta fresca e prodotti da forno", "Catena con più punti vendita in Lombardia"],
+    glutenFreeMenu: ["Pane e prodotti da forno senza glutine", "Pasta fresca senza glutine", "Dolci e snack confezionati"],
+    description: "Negozio specializzato a Milano, punto vendita di riferimento della catena Milano Senza Glutine, con laboratorio interno per pane, prodotti da forno e pasta fresca, oltre a un ampio assortimento di prodotti confezionati.",
+    shortDescription: "Negozio 100% dedicato al senza glutine a Milano, con laboratorio interno.",
+    gallerySeeds: [173, 174, 175, 176],
+    photoUrl: "https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=800&q=75",
+  },
+  {
+    name: "Farmacia Santa Rita",
+    category: "farmacia",
+    region: "Lazio", province: "Roma", provinceCode: "RM", city: "Roma",
+    address: "Via Alessandra Macinghi Strozzi 7/9/11", postalCode: "00145", lat: 41.8599, lng: 12.4871,
+    priceRange: "€", aicCertified: false, delivery: false, takeaway: true, openNow: true,
+    hoursPattern: ["08:30–19:30", "08:30–19:30", "08:30–19:30", "08:30–19:30", "08:30–19:30", "08:30–19:30", null],
+    phone: "06 5110148", website: "https://www.farmaciasantaritaroma.it",
+    services: ["Ampio assortimento prodotti per celiaci", "Alimenti per diabetici e celiaci", "Zona Garbatella"],
+    glutenFreeMenu: ["Alimenti senza glutine dolci e salati", "Pasta, pane e snack confezionati"],
+    description: "Farmacia nel quartiere Garbatella a Roma, con un reparto dedicato agli alimenti per celiaci ampio e curato, oltre ai consueti prodotti farmaceutici e dermocosmetici.",
+    shortDescription: "Farmacia a Garbatella, Roma, con ampio reparto alimenti senza glutine per celiaci.",
+    gallerySeeds: [177, 178, 179, 180],
+    photoUrl: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=75",
+  },
 ];
 
 function toFaqs(name: string, city: string, categorySlug: Business["category"]): Business["faqs"] {
