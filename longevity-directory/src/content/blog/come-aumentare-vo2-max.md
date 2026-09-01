@@ -150,6 +150,8 @@ piano da un medico prima di iniziare, soprattutto la componente ad alta intensit
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Allenarsi per invecchiare bene: forza, VO₂max, stabilità](/guide/allenamento-longevita)
+
 [Insulino-resistenza: sintomi, esami e cosa fare](/blog/insulino-resistenza-sintomi-cosa-fare) · [Crioterapia whole body: prezzi, benefici reali e rischi](/blog/crioterapia-whole-body-prezzi-benefici)
 
 ---

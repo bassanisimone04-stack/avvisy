@@ -73,8 +73,9 @@ indice glicemico e picchi glicemici · dieta mediterranea e longevità · restri
 alcol: la dose "sicura" esiste? · ultra-processati e infiammazione · timing dei pasti e ritmo circadiano ·
 fibre e microbiota · la questione carne rossa, senza tifoserie.
 
-### Pilastro 4 — `Allenarsi per invecchiare bene: forza, VO₂max, stabilità`
-`/guide/allenamento-longevita`
+### Pilastro 4 — `Allenarsi per invecchiare bene: forza, VO₂max, stabilità` ✅ pubblicato
+`/guide/allenamento-longevita` — collega il cluster VO₂max; copre in forma più breve zona 2,
+forza di presa, sarcopenia, passi giornalieri, stabilità.
 Cluster: come aumentare il VO₂max (protocolli reali) · allenamento in zona 2: cos'è e come farlo ·
 perché la forza di presa predice la mortalità · massa muscolare come organo endocrino ·
 sarcopenia: prevenirla a 40 anni, non a 70 · quanto camminare davvero serve ·
@@ -88,15 +89,18 @@ CBT-I: la terapia di prima linea per l'insonnia · HRV: cosa misura e come usarl
 temperatura, luce e caffeina: le tre leve che funzionano · melatonina: dosi, evidenze, errori ·
 sonno e rischio di Alzheimer (sistema glinfatico) · turni e jet lag sociale.
 
-### Pilastro 6 — `Integratori per la longevità: cosa ha prove, cosa no`
-`/guide/integratori-longevita` — con **sistema di gradazione dell'evidenza**
+### Pilastro 6 — `Integratori per la longevità: cosa ha prove, cosa no` ✅ pubblicato
+`/guide/integratori-longevita` — con **sistema di gradazione dell'evidenza**; collega il cluster
+NMN/NAD⁺; copre creatina, omega-3, vitamina D, magnesio, collagene, urolitina A, spermidina,
+resveratrolo, rapamicina/metformina.
 Cluster: NMN e NAD⁺, cosa sappiamo davvero · resveratrolo: ascesa e caduta · creatina, il più
 sottovalutato · omega-3: dosi ed EPA/DHA · vitamina D: chi ne ha bisogno · magnesio: forme a confronto ·
 rapamicina e metformina: lo stato della ricerca sull'uomo · collagene: cosa promette e cosa fa ·
 spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una bufala.
 
-### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono`
-`/guide/terapie-biohacking`
+### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
+`/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
+IHHT, PEMF, flebo di NAD⁺, plasmaferesi, ciascuna con livello di evidenza esplicito.
 Cluster: crioterapia whole body (benefici, rischi, prezzi) · sauna e mortalità cardiovascolare:
 lo studio finlandese · doccia fredda e immersione: cosa dicono i dati · ossigenoterapia iperbarica:
 usi approvati vs promesse · red light therapy · IV therapy e NAD⁺ in flebo: serve? · IHHT ·

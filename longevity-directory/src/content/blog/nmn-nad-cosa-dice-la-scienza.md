@@ -144,6 +144,8 @@ disponibili sono per lo più brevi.
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Integratori per la longevità: cosa ha prove, cosa no](/guide/integratori-longevita)
+
 [ApoB: l'esame che il colesterolo non sostituisce](/blog/apob-esame-valori-perche-conta) · [Test dell'età biologica: come funziona e quanto costa](/blog/test-eta-biologica-come-funziona-quanto-costa)
 
 ---

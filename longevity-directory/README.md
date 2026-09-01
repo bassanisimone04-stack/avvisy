@@ -49,17 +49,26 @@ Tutte e dieci le keyword del piano hanno oggi una pagina reale sul sito:
 
 ## Guide pilastro
 
-Oltre ai 9 articoli cluster, il sito ha ora 2 delle 9 guide pilastro previste dal doc 02 (§3) —
-quelle con più cluster già scritti, in linea con il calendario dei 90 giorni (§6):
+Oltre ai 9 articoli cluster, il sito ha ora **5 delle 9 guide pilastro** previste dal doc 02 (§3):
+tutte quelle per cui esistevano già articoli cluster pubblicati.
 
 | Pilastro | Guida | Cluster collegati |
 |---|---|---|
 | 2 — Esami e prevenzione | `/guide/esami-prevenzione-longevita` | ApoB, test età biologica, check-up completo |
 | 3 — Nutrizione | `/guide/alimentazione-longevita` | insulino-resistenza, digiuno intermittente 16/8 |
+| 4 — Allenamento | `/guide/allenamento-longevita` | come aumentare il VO₂max |
+| 6 — Integratori | `/guide/integratori-longevita` | NMN e NAD⁺ |
+| 7 — Terapie e tecnologie | `/guide/terapie-biohacking` | crioterapia, camera iperbarica |
 
-Ogni articolo cluster collegato ora punta anche "in su" alla propria guida pilastro (sezione
-"Approfondimenti correlati"), completando il modello pilastro → cluster → directory del doc 02 §1
-che prima restava solo su carta.
+**Tutti e 9 gli articoli del blog** puntano ora "in su" alla propria guida pilastro (sezione
+"Approfondimenti correlati"), e ogni guida elenca i suoi cluster e punta alla categoria directory
+corrispondente: il ciclo pilastro → cluster → directory del doc 02 §1 è chiuso in entrambe le
+direzioni, non più solo sulla carta.
+
+Le guide 2, 6 e 7 applicano la gradazione dell'evidenza (🟢 solida / 🟡 promettente / 🔴
+insufficiente) molecola per molecola e terapia per terapia — inclusi i giudizi scomodi: revisione
+Cochrane sulla crioterapia, avviso FDA sul "plasma giovane", resveratrolo ridimensionato,
+vitamina D e omega-3 che non funzionano come integrazione universale.
 
 ## Contenuti editoriali sorgente
 
@@ -76,7 +85,7 @@ src/
 ├─ content/
 │  ├─ centri/             # 28 schede — un file .md per struttura
 │  ├─ blog/                # 9 articoli cluster — migrati da contenuti/, stesso standard editoriale
-│  └─ guide/                # 2 guide pilastro (esami, nutrizione), collegano i cluster fratelli
+│  └─ guide/                # 5 guide pilastro, ciascuna collega i propri articoli cluster
 ├─ lib/
 │  ├─ taxonomy.ts          # le 9 categorie + sottocategorie, tipi di struttura, MIN_LISTINGS_FOR_CITY_PAGE, getCityPageCombos()
 │  ├─ seo.ts                # helper JSON-LD (MedicalClinic, Article, FAQPage, BreadcrumbList, ItemList, WebSite)
@@ -185,20 +194,20 @@ Stripe entrambi onestamente "non configurati" in assenza delle rispettive creden
 - **Title e meta description auditati programmaticamente** (script Node su tutto l'HTML di build,
   non lettura a occhio): 0 pagine sopra i limiti di lunghezza, 0 senza H1 univoco, canonical o
   `og:image`, 0 blocchi JSON-LD non parsabili, 0 pagine con `FAQPage` senza FAQ visibili — su
-  tutte le 67 pagine statiche generate.
+  tutte le 70 pagine statiche generate. Un secondo script verifica i link interni: 0 rotti.
 - **Dark mode** completa, persistita, con l'aurora che si ricolora da sola.
-- **67 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
+- **70 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
 
 ## Stato e prossimi passi
 
 Fase implementata: architettura, tassonomia, 28 schede mock, 9 articoli su 10 keyword di lancio,
-2 guide pilastro su 9 previste dal doc 02 (le due con più cluster già scritti), tutte le pagine
+5 guide pilastro su 9 previste dal doc 02 (tutte quelle con cluster già scritti), tutte le pagine
 di servizio, filtri funzionanti, SEO tecnica auditata (incluso il fix delle FAQ invisibili),
 backend reale (SQLite + Astro Actions) per contatti, lead, registrazione, autenticazione e area
-riservata, pannello admin. Mancano ancora 7 guide pilastro (doc 02 §3: healthspan, allenamento,
-sonno, integratori, terapie e tecnologie, prevenzione malattie croniche, guide città e costi) —
-naturale prossimo blocco di lavoro editoriale, ciascuna da scrivere insieme ai cluster che le
-mancano. Richiedono configurazione con le tue credenziali (impossibile fabbricarle in questa
+riservata, pannello admin. Mancano 4 guide pilastro (doc 02 §3: healthspan, sonno, prevenzione
+delle malattie croniche, guide città e costi): sono le uniche per cui **non esiste ancora nessun
+articolo cluster**, quindi il prossimo blocco editoriale sensato è scrivere prima i cluster di uno
+di quei temi e poi il pilastro che li raccoglie, non il contrario. Richiedono configurazione con le tue credenziali (impossibile fabbricarle in questa
 sessione — vedi `.env.example`):
 
 - `ADMIN_PASSWORD` per attivare `/admin`;

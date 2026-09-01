@@ -154,6 +154,8 @@ medica, non paragonabile al listino di un centro wellness.
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Terapie e tecnologie del biohacking: cosa ha prove e cosa no](/guide/terapie-biohacking)
+
 [Crioterapia whole body: prezzi, benefici reali e rischi](/blog/crioterapia-whole-body-prezzi-benefici) · [Check-up completo di prevenzione: cosa include e quanto costa](/blog/check-up-completo-prevenzione-quanto-costa)
 
 ---

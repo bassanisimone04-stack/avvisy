@@ -177,6 +177,8 @@ rendono incomparabilmente di più.
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Terapie e tecnologie del biohacking: cosa ha prove e cosa no](/guide/terapie-biohacking)
+
 [Camera iperbarica: prezzo, indicazioni reali e cosa evitare](/blog/camera-iperbarica-prezzo-indicazioni) · [Come aumentare il VO₂max: i protocolli che funzionano davvero](/blog/come-aumentare-vo2-max)
 
 ---
