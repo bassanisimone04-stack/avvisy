@@ -1,0 +1,180 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Aurora from "../components/Aurora.astro";
+import CategoryBento from "../components/CategoryBento.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import { CATEGORIES } from "../lib/taxonomy";
+import { organization } from "../lib/seo";
+
+const centri = await getCollection("centri");
+const blog = (await getCollection("blog")).sort(
+  (a, b) => b.data.dataPubblicazione.getTime() - a.data.dataPubblicazione.getTime(),
+);
+
+const cities = [...new Set(centri.map((c) => c.data.citta))].sort();
+const verificate = centri.filter((c) => c.data.verificato).length;
+
+const stats = [
+  { n: centri.length, label: "strutture censite in Italia" },
+  { n: CATEGORIES.length, label: "discipline, oltre 60 specializzazioni" },
+  { n: verificate, label: "schede verificate" },
+  { n: blog.length, label: "articoli con revisione medica" },
+];
+---
+
+<BaseLayout jsonLd={organization()} bareTop>
+  <!-- ============ HERO ============ -->
+  <header class="relative overflow-hidden rounded-b-[46px] pt-[158px] pb-24">
+    <Aurora />
+    <div class="pointer-events-none absolute inset-0 z-[1] opacity-[.28] mix-blend-overlay aurora-grain"></div>
+
+    <div class="relative z-[3] mx-auto max-w-[860px] px-6 text-center">
+      <span
+        class="reveal inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] font-bold uppercase tracking-[.13em] backdrop-blur-xl"
+        style="background:var(--glass-2);border-color:var(--brd);color:var(--ink-soft)"
+      >
+        <span class="inline-block h-1.5 w-1.5 rounded-full motion-safe:animate-pulse" style="background:var(--color-mint)"></span>
+        {centri.length} strutture censite in Italia
+      </span>
+      <h1 class="reveal font-display mt-6 mb-4 text-[clamp(2.6rem,7vw,5.2rem)]">
+        La medicina della<br />longevità, <em class="italic not-italic" style="color:var(--color-iris)">vicino a te</em>
+      </h1>
+      <p class="reveal mx-auto max-w-[56ch] text-[17px]" style="color:var(--ink-soft)">
+        Cliniche, diagnostica avanzata, medicina funzionale e terapie. Selezionate con criteri pubblici, con il medico
+        responsabile sempre in chiaro.
+      </p>
+
+      <form
+        id="hero-search"
+        class="reveal mx-auto mt-9 flex max-w-[680px] items-center gap-1.5 rounded-full border p-1.5 pl-2"
+        style="background:var(--surface);border-color:var(--brd);box-shadow:var(--sh)"
+        action="/directory"
+        method="get"
+      >
+        <div class="min-w-0 flex-1 px-3.5 py-1.5 text-left">
+          <label for="q" class="block text-[9.5px] font-bold uppercase tracking-[.16em]" style="color:var(--muted)">Servizio o esame</label>
+          <input id="q" name="q" placeholder="Test dell'età biologica" autocomplete="off" class="w-full border-0 bg-transparent p-0 text-[15px] outline-none" />
+        </div>
+        <div class="h-[30px] w-px shrink-0" style="background:var(--line)"></div>
+        <div class="min-w-0 flex-1 px-3.5 py-1.5 text-left">
+          <label for="citta" class="block text-[9.5px] font-bold uppercase tracking-[.16em]" style="color:var(--muted)">Dove</label>
+          <select id="citta" name="citta" class="w-full border-0 bg-transparent p-0 text-[15px] outline-none">
+            <option value="">Tutta Italia</option>
+            {cities.map((c) => <option value={c}>{c}</option>)}
+          </select>
+        </div>
+        <button type="submit" aria-label="Cerca" class="grid h-[46px] w-[46px] shrink-0 place-items-center rounded-full text-[17px] transition-transform hover:scale-105" style="background:var(--ink);color:var(--bg)">
+          →
+        </button>
+      </form>
+
+      <div class="reveal mt-5 flex flex-wrap justify-center gap-2">
+        {[
+          ["Test età biologica", "/directory/diagnostica-avanzata"],
+          ["Crioterapia", "/directory/terapie-tecnologie"],
+          ["Medicina funzionale", "/directory/medicina-funzionale"],
+          ["Nutrizione clinica", "/directory/nutrizione-metabolismo"],
+        ].map(([label, href]) => (
+          <a
+            href={href}
+            class="rounded-full border px-4 py-2 text-[12.5px] font-medium backdrop-blur-md transition-transform hover:-translate-y-0.5"
+            style="background:var(--glass-2);border-color:var(--brd);color:var(--ink-soft)"
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- pannelli in vetro -->
+    <div class="relative z-[3] mx-auto mt-14 hidden max-w-[1040px] px-6 md:block">
+      <div class="relative h-[290px]">
+        <div class="absolute left-0 top-4 w-[290px] rounded-[var(--r-lg)] border p-[18px] backdrop-blur-xl motion-safe:animate-[float1_9s_ease-in-out_infinite]" style="background:var(--glass-2);border-color:var(--brd);box-shadow:var(--sh)">
+          <h4 class="text-[12px] font-bold">Diagnostica avanzata · Milano</h4>
+          <small style="color:var(--muted)">3 strutture · per rilevanza</small>
+          <div class="mt-2 flex items-center gap-2.5 rounded-[12px] border p-2" style="background:var(--surface);border-color:var(--line)">
+            <span class="cv cv2 h-[34px] w-[34px] shrink-0 rounded-[9px]"></span>
+            <span class="min-w-0"><b class="block text-[12px]">Istituto Bianchi</b><small style="color:var(--muted)">Porta Nuova · 2,4 km</small></span>
+            <span class="ml-auto rounded-full px-2 py-0.5 text-[9px] font-extrabold" style="background:color-mix(in srgb,var(--color-mint) 20%,transparent);color:var(--color-mint)">VERIFICATO</span>
+          </div>
+        </div>
+        <div class="absolute right-0 top-0 w-[250px] rounded-[var(--r-lg)] border p-[18px] text-center backdrop-blur-xl motion-safe:animate-[float2_11s_ease-in-out_infinite]" style="background:var(--glass-2);border-color:var(--brd);box-shadow:var(--sh)">
+          <h4 class="text-left text-[12px] font-bold">Età biologica</h4>
+          <small class="block text-left" style="color:var(--muted)">Ultimo referto</small>
+          <div class="relative mx-auto my-2 grid h-24 w-24 place-items-center rounded-full" style="background:conic-gradient(var(--color-iris) 208deg,var(--line) 0)">
+            <span class="absolute inset-[10px] rounded-full" style="background:var(--surface-2)"></span>
+            <b class="font-display relative z-[1] text-[2rem] font-normal">34</b>
+          </div>
+          <small class="font-bold" style="color:var(--color-mint)">6 anni sotto l'anagrafica</small>
+        </div>
+        <div class="absolute bottom-0 left-1/2 w-[330px] -translate-x-1/2 rounded-[var(--r-lg)] border p-[18px] backdrop-blur-xl motion-safe:animate-[float3_10s_ease-in-out_infinite]" style="background:var(--glass-2);border-color:var(--brd);box-shadow:var(--sh)">
+          <h4 class="text-[12px] font-bold">ApoB · ultimi 12 mesi</h4>
+          <small style="color:var(--muted)">mg/dL</small>
+          <svg viewBox="0 0 260 46" preserveAspectRatio="none" class="mt-1.5 h-[46px] w-full" aria-hidden="true">
+            <path d="M2 10 L45 18 L88 13 L131 26 L174 32 L217 38 L256 41" fill="none" stroke="var(--color-iris)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="256" cy="41" r="3.6" fill="var(--color-iris)"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ STRIP NUMERI ============ -->
+  <section class="mx-auto max-w-[1200px] px-6 pt-20">
+    <div class="reveal grid grid-cols-2 overflow-hidden rounded-[var(--r-lg)] border sm:grid-cols-4" style="border-color:var(--line);background:var(--surface)">
+      {stats.map((s, i) => (
+        <div class:list={["border-b p-6 sm:border-b-0", i < 3 && "sm:border-r"]} style="border-color:var(--line)">
+          <b class="font-display block text-[2.7rem] leading-none" data-count={s.n}>0</b>
+          <span class="mt-1.5 block text-[12.5px]" style="color:var(--muted)">{s.label}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============ DISCIPLINE ============ -->
+  <section class="mx-auto max-w-[1200px] px-6 py-22">
+    <div class="reveal mb-9 max-w-[66ch]">
+      <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Directory</span>
+      <h2 class="font-display mt-3 text-[clamp(1.95rem,4vw,3rem)]">Nove modi di prendersi cura del proprio invecchiamento</h2>
+      <p class="mt-3 text-[15.5px]" style="color:var(--muted)">Clicca una disciplina: si apre già filtrata sulla directory.</p>
+    </div>
+    <CategoryBento />
+  </section>
+
+  <!-- ============ EDITORIALE ============ -->
+  <section class="mx-auto max-w-[1200px] px-6 py-22">
+    <div class="reveal mb-9 max-w-[66ch]">
+      <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Editoriale</span>
+      <h2 class="font-display mt-3 text-[clamp(1.95rem,4vw,3rem)]">Ciò che sappiamo, e quanto lo sappiamo</h2>
+      <p class="mt-3 text-[15.5px]" style="color:var(--muted)">Ogni articolo dichiara la solidità delle prove su cui si regge, cita le fonti e porta la firma del revisore medico.</p>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {blog.slice(0, 3).map((p) => <ArticleCard post={p} />)}
+    </div>
+  </section>
+
+  <!-- ============ CTA STRUTTURE ============ -->
+  <section class="mx-auto max-w-[1200px] px-6 pb-20">
+    <div class="relative overflow-hidden rounded-[var(--r-xl)] py-[74px] text-center">
+      <Aurora />
+      <div class="absolute inset-0 z-[1]" style="background:color-mix(in srgb, var(--bg) 42%, transparent)"></div>
+      <div class="relative z-[3] px-6">
+        <h2 class="font-display text-[clamp(1.9rem,4.4vw,3rem)]">Sei una struttura?</h2>
+        <p class="mx-auto mt-3.5 max-w-[56ch] text-[15.5px]" style="color:var(--ink-soft)">
+          Il profilo base è gratuito. Paghi solo se vuoi il contatto diretto e la posizione in evidenza, che è sempre
+          dichiarata come tale.
+        </p>
+        <a href="/per-i-centri" class="mt-6 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[14.5px] font-semibold transition-transform hover:-translate-y-0.5" style="background:var(--ink);color:var(--bg)">
+          Scopri i piani
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes float1 { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+    @keyframes float2 { 0%,100% { transform: translateY(0) } 50% { transform: translateY(12px) } }
+    @keyframes float3 { 0%,100% { transform: translateX(-50%) translateY(0) } 50% { transform: translateX(-50%) translateY(-10px) } }
+  </style>
+</BaseLayout>

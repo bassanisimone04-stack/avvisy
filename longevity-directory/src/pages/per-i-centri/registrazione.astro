@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CATEGORIES, FACILITY_TYPES } from "../../lib/taxonomy";
+---
+
+<BaseLayout
+  title="Registra la tua struttura"
+  description="Registrazione self-service in 4 passaggi: account, dati struttura, contenuti, piano."
+  noindex
+>
+  <div class="mx-auto max-w-[720px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Per le strutture</span>
+    <h1 class="font-display mt-2.5 mb-3 text-[clamp(2rem,4.6vw,3rem)]">Registra la tua struttura</h1>
+    <p class="mb-8 text-[15px]" style="color:var(--muted)">
+      Passaggio 2 di 4 — dati struttura. Prototipo dimostrativo: l'invio non è collegato a un backend reale (vedi
+      doc 03 §3.4 per il flusso completo con Stripe Checkout e verifica manuale).
+    </p>
+
+    <div class="mb-8 flex gap-1.5">
+      {[1, 2, 3, 4].map((i) => (
+        <div class="h-1.5 flex-1 rounded-full" style={`background:${i <= 2 ? "var(--color-iris)" : "var(--line)"}`}></div>
+      ))}
+    </div>
+
+    <form class="space-y-4 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+      <div>
+        <label class="mb-1.5 block text-[12.5px] font-semibold">Nome della struttura *</label>
+        <input type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label class="mb-1.5 block text-[12.5px] font-semibold">Partita IVA *</label>
+          <input type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+        <div>
+          <label class="mb-1.5 block text-[12.5px] font-semibold">Tipo di struttura *</label>
+          <select required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)">
+            <option value="">Seleziona…</option>
+            {FACILITY_TYPES.map((f) => <option value={f.slug}>{f.label}</option>)}
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="mb-1.5 block text-[12.5px] font-semibold">Indirizzo *</label>
+        <input type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+      <div>
+        <label class="mb-1.5 block text-[12.5px] font-semibold">Discipline offerte * (una o più)</label>
+        <div class="flex flex-wrap gap-2">
+          {CATEGORIES.map((c) => (
+            <label class="flex cursor-pointer items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px]" style="border-color:var(--line)">
+              <input type="checkbox" name="categorie" value={c.slug} /> {c.shortLabel}
+            </label>
+          ))}
+        </div>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label class="mb-1.5 block text-[12.5px] font-semibold">Medico responsabile *</label>
+          <input type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+        <div>
+          <label class="mb-1.5 block text-[12.5px] font-semibold">Numero di iscrizione all'albo *</label>
+          <input type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+      </div>
+      <label class="flex items-start gap-2.5 text-[12.5px]" style="color:var(--ink-soft)">
+        <input type="checkbox" required class="mt-0.5" />
+        Dichiaro di essere responsabile dei contenuti della scheda e di accettare i <a href="/termini" class="underline">termini di servizio</a>.
+      </label>
+      <button type="submit" disabled class="w-full cursor-not-allowed rounded-full py-3 text-[14px] font-semibold opacity-60" style="background:var(--ink);color:var(--bg)">
+        Continua (prototipo — invio non attivo)
+      </button>
+    </form>
+  </div>
+</BaseLayout>

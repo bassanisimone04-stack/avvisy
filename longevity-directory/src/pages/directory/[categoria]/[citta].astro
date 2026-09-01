@@ -1,0 +1,110 @@
+---
+/**
+ * Pagina categoria+città — la "money page" del doc SEO (doc 01 §2).
+ * Generata SOLO quando esistono almeno MIN_LISTINGS_FOR_CITY_PAGE schede:
+ * sotto soglia, niente pagina (mai un contenuto vuoto indicizzato).
+ */
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import DirectoryApp from "../../../components/DirectoryApp.astro";
+import { CATEGORIES, MIN_LISTINGS_FOR_CITY_PAGE, citySlug } from "../../../lib/taxonomy";
+import { itemList, breadcrumbList, faqPage } from "../../../lib/seo";
+import { euro } from "../../../lib/format";
+
+export async function getStaticPaths() {
+  const allCentri = await getCollection("centri");
+  const paths: { params: { categoria: string; citta: string }; props: { cityLabel: string } }[] = [];
+
+  for (const category of CATEGORIES) {
+    const inCategory = allCentri.filter((c) => c.data.categorie.includes(category.slug));
+    const byCity = new Map<string, number>();
+    for (const c of inCategory) byCity.set(c.data.citta, (byCity.get(c.data.citta) || 0) + 1);
+    for (const [citta, count] of byCity) {
+      if (count >= MIN_LISTINGS_FOR_CITY_PAGE) {
+        paths.push({ params: { categoria: category.slug, citta: citySlug(citta) }, props: { cityLabel: citta } });
+      }
+    }
+  }
+  return paths;
+}
+
+const { categoria, citta } = Astro.params;
+const { cityLabel } = Astro.props as { cityLabel: string };
+const category = CATEGORIES.find((c) => c.slug === categoria)!;
+
+const allCentri = await getCollection("centri");
+const centri = allCentri
+  .filter((c) => c.data.categorie.includes(category.slug) && c.data.citta === cityLabel)
+  .sort((a, b) => b.data.valutazione - a.data.valutazione);
+
+const prices = centri.map((c) => c.data.prezzoPrimoConsulto);
+const avgPrice = Math.round(prices.reduce((a, b) => a + b, 0) / prices.length);
+const minPrice = Math.min(...prices);
+
+const faqs = [
+  {
+    domanda: `Quanto costa un primo consulto di ${category.shortLabel.toLowerCase()} a ${cityLabel}?`,
+    risposta: `Tra le strutture selezionate il primo consulto parte da ${euro(minPrice)}, con una media indicativa intorno a ${euro(avgPrice)}. Il prezzo esatto va sempre confermato con il centro, perché dipende dal percorso scelto.`,
+  },
+  {
+    domanda: "Come vengono selezionate le strutture di questa pagina?",
+    risposta: "Ogni scheda dichiara P.IVA, sede fisica e un medico responsabile con numero di iscrizione all'albo. La politica completa di ammissione è su /chi-siamo/metodo-di-valutazione.",
+  },
+  {
+    domanda: "Cosa significa il badge \"In evidenza\"?",
+    risposta: "Indica un profilo a pagamento posizionato tra i primi risultati. È sempre etichettato come tale e non sostituisce la valutazione dell'utente.",
+  },
+];
+
+const jsonLd = [
+  breadcrumbList([
+    { name: "Home", url: "/" },
+    { name: "Directory", url: "/directory" },
+    { name: category.label, url: `/directory/${category.slug}` },
+    { name: cityLabel, url: `/directory/${category.slug}/${citta}` },
+  ]),
+  itemList(centri.map((c) => ({ name: c.data.nome, url: `/centri/${c.id}` }))),
+  faqPage(faqs),
+].filter(Boolean);
+---
+
+<BaseLayout
+  title={`${category.shortLabel} a ${cityLabel}: centri, prezzi e come scegliere`}
+  description={`${centri.length} centri di ${category.shortLabel.toLowerCase()} verificati a ${cityLabel}. Prezzi indicativi da ${euro(minPrice)}, criteri di selezione pubblici.`}
+  jsonLd={jsonLd as Record<string, unknown>[]}
+>
+  <div class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
+    <nav class="mb-4 text-[12.5px]" style="color:var(--muted)">
+      <a href="/directory" class="hover:underline">Directory</a> /
+      <a href={`/directory/${category.slug}`} class="hover:underline">{category.shortLabel}</a> /
+      <span style="color:var(--ink)">{cityLabel}</span>
+    </nav>
+    <h1 class="font-display mb-4 text-[clamp(1.9rem,4vw,2.8rem)]">{category.shortLabel} a {cityLabel}: centri, prezzi e come scegliere</h1>
+
+    <div class="mb-8 max-w-[74ch] space-y-3 text-[15.5px]" style="color:var(--ink-soft)">
+      <p>
+        A {cityLabel} abbiamo selezionato <b style="color:var(--ink)">{centri.length} strutture</b> che offrono {category.shortLabel.toLowerCase()},
+        con un primo consulto che parte da <b style="color:var(--ink)">{euro(minPrice)}</b> e una media indicativa di {euro(avgPrice)}.
+        {category.description}
+      </p>
+      <p>
+        Ogni scheda riporta il medico responsabile e il numero di iscrizione all'albo: è il primo dato da controllare prima di prenotare,
+        insieme alla presenza di uno screening o di un consulto medico incluso nel percorso.
+      </p>
+    </div>
+
+    <DirectoryApp centri={centri} lockCategory={category.slug} lockCity={cityLabel} />
+
+    <div class="mt-16 max-w-[70ch]">
+      <h2 class="font-display mb-5 text-[1.7rem]">Domande frequenti</h2>
+      <div class="space-y-2.5">
+        {faqs.map((f) => (
+          <details class="rounded-[var(--r)] border p-0" style="border-color:var(--line);background:var(--surface)">
+            <summary class="cursor-pointer list-none px-4 py-3.5 text-[14.5px] font-semibold">{f.domanda}</summary>
+            <p class="px-4 pb-4 text-[14px]" style="color:var(--ink-soft)">{f.risposta}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

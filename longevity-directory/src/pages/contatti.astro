@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+import { breadcrumbList } from "../lib/seo";
+
+const jsonLd = breadcrumbList([
+  { name: "Home", url: "/" },
+  { name: "Contatti", url: "/contatti" },
+]);
+---
+
+<BaseLayout title="Contatti" description="Scrivici per segnalare un centro, un errore o per proporre una collaborazione editoriale." jsonLd={jsonLd}>
+  <div class="mx-auto max-w-[720px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Contatti</span>
+    <h1 class="font-display mt-2.5 mb-6 text-[clamp(2rem,4.6vw,3rem)]">Parliamone</h1>
+    <p class="mb-8 text-[15.5px]" style="color:var(--ink-soft)">
+      Scrivi a <a href={`mailto:${SITE.email}`} class="underline" style="color:var(--color-iris)">{SITE.email}</a> oppure usa il modulo qui sotto.
+      Rispondiamo entro 2 giorni lavorativi.
+    </p>
+
+    <form class="space-y-4 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+      <div>
+        <label for="motivo" class="mb-1.5 block text-[12.5px] font-semibold">Motivo del contatto</label>
+        <select id="motivo" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)">
+          <option>Segnala un centro</option>
+          <option>Segnala un errore</option>
+          <option>Collabora con noi (medici e divulgatori)</option>
+          <option>Sono una struttura, voglio essere presente</option>
+          <option>Altro</option>
+        </select>
+      </div>
+      <div>
+        <label for="nome" class="mb-1.5 block text-[12.5px] font-semibold">Nome</label>
+        <input id="nome" type="text" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+      <div>
+        <label for="email" class="mb-1.5 block text-[12.5px] font-semibold">Email</label>
+        <input id="email" type="email" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+      <div>
+        <label for="messaggio" class="mb-1.5 block text-[12.5px] font-semibold">Messaggio</label>
+        <textarea id="messaggio" rows="5" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)"></textarea>
+        <p class="mt-1.5 text-[11.5px]" style="color:var(--muted)">Non inserire dati sulla tua salute in questo modulo.</p>
+      </div>
+      <button type="submit" disabled class="w-full cursor-not-allowed rounded-full py-3 text-[14px] font-semibold opacity-60" style="background:var(--ink);color:var(--bg)">
+        Invia (prototipo — invio non attivo)
+      </button>
+    </form>
+  </div>
+</BaseLayout>

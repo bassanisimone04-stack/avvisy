@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { CATEGORIES } from "../lib/taxonomy";
+---
+
+<BaseLayout title="Pagina non trovata" noindex bareTop>
+  <div class="mx-auto flex min-h-[70vh] max-w-[640px] flex-col items-center justify-center px-6 pt-[120px] text-center">
+    <span class="font-display text-[5rem] leading-none" style="color:var(--color-iris)">404</span>
+    <h1 class="font-display mt-3 text-[1.9rem]">Questa pagina non esiste</h1>
+    <p class="mt-3 text-[15px]" style="color:var(--muted)">Forse cercavi una disciplina della directory o un articolo del blog.</p>
+
+    <form action="/directory" method="get" class="mt-7 flex w-full max-w-[420px] items-center gap-2 rounded-full border p-1.5 pl-4" style="border-color:var(--line);background:var(--surface)">
+      <input name="q" placeholder="Cerca un servizio o un centro…" class="flex-1 border-0 bg-transparent text-[14px] outline-none" />
+      <button type="submit" class="rounded-full px-5 py-2.5 text-[13px] font-semibold" style="background:var(--ink);color:var(--bg)">Cerca</button>
+    </form>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-2">
+      {CATEGORIES.slice(0, 5).map((c) => (
+        <a href={`/directory/${c.slug}`} class="rounded-full border px-4 py-2 text-[12.5px]" style="border-color:var(--line);color:var(--ink-soft)">
+          {c.shortLabel}
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

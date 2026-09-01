@@ -1,0 +1,154 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BusinessCard from "../../components/BusinessCard.astro";
+import { getCategory } from "../../lib/taxonomy";
+import { euro, formatDate } from "../../lib/format";
+import { medicalClinic, faqPage, breadcrumbList } from "../../lib/seo";
+
+export async function getStaticPaths() {
+  const centri = await getCollection("centri");
+  return centri.map((c) => ({ params: { slug: c.id }, props: { entry: c } }));
+}
+
+const { entry } = Astro.props as { entry: Awaited<ReturnType<typeof getCollection<"centri">>>[number] };
+const d = entry.data;
+const { Content } = await render(entry);
+
+const allCentri = await getCollection("centri");
+const simili = allCentri
+  .filter((c) => c.id !== entry.id && c.data.categorie.some((cat) => d.categorie.includes(cat)))
+  .slice(0, 3);
+
+const categorie = d.categorie.map((slug) => getCategory(slug)).filter(Boolean);
+
+const jsonLd = [
+  medicalClinic({
+    nome: d.nome,
+    descrizioneBreve: d.descrizioneBreve,
+    indirizzo: d.indirizzo,
+    citta: d.citta,
+    provincia: d.provincia,
+    regione: d.regione,
+    telefono: d.telefono,
+    sito: d.sito,
+    url: `/centri/${entry.id}`,
+    valutazione: d.valutazione,
+    numeroRecensioni: d.numeroRecensioni,
+  }),
+  breadcrumbList([
+    { name: "Home", url: "/" },
+    { name: "Directory", url: "/directory" },
+    { name: categorie[0]?.label || "Directory", url: `/directory/${d.categorie[0]}` },
+    { name: d.nome, url: `/centri/${entry.id}` },
+  ]),
+  faqPage(d.faqs),
+].filter(Boolean);
+---
+
+<BaseLayout
+  title={`${d.nome} — ${d.citta}`}
+  description={d.descrizioneBreve}
+  jsonLd={jsonLd as Record<string, unknown>[]}
+>
+  <div class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
+    <nav class="mb-4 text-[12.5px]" style="color:var(--muted)">
+      <a href="/directory" class="hover:underline">Directory</a> /
+      {categorie[0] && <a href={`/directory/${categorie[0].slug}`} class="hover:underline">{categorie[0].shortLabel}</a>} /
+      <span style="color:var(--ink)">{d.nome}</span>
+    </nav>
+
+    <div class="relative mb-7 h-[260px] overflow-hidden rounded-[var(--r-lg)]">
+      <span class={`cv ${d.cover} absolute inset-0 block`}></span>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[1.6fr_.95fr] lg:items-start">
+      <div>
+        <span class="text-[10.5px] font-bold uppercase tracking-[.16em]" style="color:var(--muted)">
+          {categorie.map((c) => c!.shortLabel).join(" · ")} · {d.citta}
+        </span>
+        <h1 class="font-display mt-2 mb-3 text-[clamp(2rem,4.4vw,3rem)]">{d.nome}</h1>
+        <p class="mb-4 flex flex-wrap items-center gap-2 text-[13.5px]" style="color:var(--muted)">
+          <b style="color:var(--ink)">{d.valutazione.toFixed(1)}</b> · {d.numeroRecensioni} recensioni
+          {d.direttoreSanitario && <span>· Direttore sanitario {d.direttoreSanitario}</span>}
+          {d.numeroAlbo && <span>· Albo di {d.alboProvincia} n. {d.numeroAlbo}</span>}
+        </p>
+
+        <div class="prose-longevita max-w-[70ch] text-[15.5px] leading-[1.75]" style="color:var(--ink-soft)">
+          <Content />
+        </div>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          {d.tag.map((t) => (
+            <span class="rounded-full border px-3 py-1.5 text-[12px]" style="border-color:var(--line);color:var(--ink-soft)">{t}</span>
+          ))}
+          {d.convenzioni.map((c) => (
+            <span class="rounded-full border px-3 py-1.5 text-[12px]" style="border-color:transparent;background:color-mix(in srgb,var(--color-mint) 14%,transparent);color:color-mix(in srgb,var(--color-mint) 85%,var(--ink))">
+              Convenzionato {c}
+            </span>
+          ))}
+        </div>
+
+        {d.servizi.length > 0 && (
+          <>
+            <h2 class="font-display mb-1 mt-9 text-[1.5rem]">Prestazioni e listino</h2>
+            <div class="mt-2">
+              {d.servizi.map((s) => (
+                <div class="flex justify-between gap-4 border-t py-3.5 text-[14.5px]" style="border-color:var(--line)">
+                  <span>{s.nome}{s.durata && <span style="color:var(--muted)"> · {s.durata}</span>}</span>
+                  {s.prezzo && <b class="shrink-0 tabular-nums">{euro(s.prezzo)}</b>}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {d.faqs.length > 0 && (
+          <>
+            <h2 class="font-display mb-3 mt-9 text-[1.5rem]">Domande frequenti</h2>
+            <div class="space-y-2.5">
+              {d.faqs.map((f) => (
+                <details class="rounded-[var(--r)] border" style="border-color:var(--line);background:var(--surface)">
+                  <summary class="cursor-pointer list-none px-4 py-3.5 text-[14.5px] font-semibold">{f.domanda}</summary>
+                  <p class="px-4 pb-4 text-[14px]" style="color:var(--ink-soft)">{f.risposta}</p>
+                </details>
+              ))}
+            </div>
+          </>
+        )}
+
+        {simili.length > 0 && (
+          <>
+            <h2 class="font-display mb-4 mt-10 text-[1.5rem]">Strutture simili</h2>
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              {simili.map((c) => <BusinessCard centro={c} />)}
+            </div>
+          </>
+        )}
+      </div>
+
+      <aside class="sticky top-[96px] rounded-[var(--r-lg)] border p-6 backdrop-blur-xl" style="background:var(--glass-2);border-color:var(--brd);box-shadow:var(--sh)">
+        <span class="text-[10.5px] font-bold uppercase tracking-[.16em]" style="color:var(--muted)">Contatta la struttura</span>
+        <div class="my-4 space-y-0">
+          <div class="flex justify-between border-b py-2.5 text-[13.5px]" style="border-color:var(--line)"><span style="color:var(--muted)">Primo consulto</span><b class="tabular-nums">{euro(d.prezzoPrimoConsulto)}</b></div>
+          <div class="flex justify-between border-b py-2.5 text-[13.5px]" style="border-color:var(--line)"><span style="color:var(--muted)">Città</span><b>{d.citta}</b></div>
+          <div class="flex justify-between border-b py-2.5 text-[13.5px]" style="border-color:var(--line)"><span style="color:var(--muted)">Valutazione</span><b>{d.valutazione.toFixed(1)} / 5</b></div>
+          <div class="flex justify-between py-2.5 text-[13.5px]"><span style="color:var(--muted)">Aggiunta il</span><b>{formatDate(d.dataAggiunta.toISOString())}</b></div>
+        </div>
+        <a href="/contatti" class="block rounded-full py-3 text-center text-[13.5px] font-semibold" style="background:var(--ink);color:var(--bg)">Richiedi informazioni</a>
+        {d.telefono && (
+          <a href={`tel:${d.telefono.replace(/\s/g, "")}`} class="mt-2.5 block rounded-full border py-3 text-center text-[13.5px] font-semibold" style="border-color:var(--brd);background:var(--glass)">
+            Telefona · {d.telefono}
+          </a>
+        )}
+        <p class="mt-4 text-[11.5px] leading-relaxed" style="color:var(--muted)">
+          Non inserire dati sulla salute nel messaggio. La richiesta viene inoltrata alla struttura, che risponde direttamente.
+        </p>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose-longevita :global(p) { margin-bottom: 1em; }
+</style>

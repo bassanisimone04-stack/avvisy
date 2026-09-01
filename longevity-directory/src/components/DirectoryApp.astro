@@ -1,0 +1,214 @@
+---
+/**
+ * Directory filtrabile lato client. Riceve tutte le schede pertinenti già
+ * risolte lato server (Astro Content Collections) e applica i filtri via
+ * JavaScript, leggendo lo stato iniziale dalla query string (?q=&cat=&citta=)
+ * così il modulo di ricerca dell'header/home può linkare direttamente qui.
+ *
+ * Filtri implementati (doc 01 §4.1): ricerca testuale, categoria (multi),
+ * città, prezzo massimo, solo verificate, ordinamento.
+ */
+import type { CollectionEntry } from "astro:content";
+import BusinessCard from "./BusinessCard.astro";
+import { CATEGORIES } from "../lib/taxonomy";
+import { euro } from "../lib/format";
+
+interface Props {
+  centri: CollectionEntry<"centri">[];
+  /** Precompila il filtro categoria (usato da /directory/[categoria]). */
+  lockCategory?: string;
+  /** Precompila il filtro città (usato da /directory/[categoria]/[citta]). */
+  lockCity?: string;
+}
+const { centri, lockCategory, lockCity } = Astro.props;
+
+const cities = [...new Set(centri.map((c) => c.data.citta))].sort();
+const maxPrice = Math.max(2500, ...centri.map((c) => c.data.prezzoPrimoConsulto));
+---
+
+<div
+  id="directory-app"
+  data-lock-category={lockCategory || ""}
+  data-lock-city={lockCity || ""}
+  data-max-price={maxPrice}
+>
+  <div class="sticky top-[86px] z-20 mb-6 rounded-[var(--r-lg)] border p-4 backdrop-blur-xl" style="background:var(--glass-2);border-color:var(--brd);box-shadow:var(--sh-s)">
+    {!lockCategory && (
+      <div class="flex flex-wrap gap-2" id="cat-chips">
+        {CATEGORIES.map((c) => (
+          <button
+            type="button"
+            class="fchip rounded-full border px-3.5 py-2 text-[12.5px] font-medium transition-transform hover:-translate-y-0.5"
+            style="background:var(--surface);border-color:var(--line);color:var(--ink-soft)"
+            data-cat={c.slug}
+          >
+            {c.shortLabel}
+          </button>
+        ))}
+      </div>
+    )}
+    <div class="mt-3 flex flex-wrap items-center gap-3">
+      <input
+        id="f-q"
+        type="search"
+        placeholder="Cerca per nome, servizio, città…"
+        autocomplete="off"
+        class="min-w-[220px] flex-1 rounded-full border px-4 py-2.5 text-[13.5px] outline-none"
+        style="background:var(--surface);border-color:var(--line)"
+      />
+      <select id="f-city" class="rounded-full border px-3.5 py-2.5 text-[12.5px]" style="background:var(--surface);border-color:var(--line)">
+        <option value="">Tutte le città</option>
+        {cities.map((c) => <option value={c}>{c}</option>)}
+      </select>
+      <label class="flex cursor-pointer items-center gap-2 text-[12.5px]" style="color:var(--ink-soft)">
+        <input id="f-verified" type="checkbox" class="h-[18px] w-[34px] cursor-pointer appearance-none rounded-full transition-colors" style="background:var(--line)" />
+        Solo verificate
+      </label>
+      <label class="flex items-center gap-2 text-[12.5px]" style="color:var(--ink-soft)">
+        Prezzo max
+        <input id="f-price" type="range" min="30" max={maxPrice} step="10" value={maxPrice} class="w-[120px]" style="accent-color:var(--color-iris)" />
+        <b id="f-price-v" class="tabular-nums">{euro(maxPrice)}</b>
+      </label>
+      <select id="f-sort" class="ml-auto rounded-full border px-3.5 py-2.5 text-[12.5px]" style="background:var(--surface);border-color:var(--line)">
+        <option value="rilevanza">Rilevanza</option>
+        <option value="prezzo">Prezzo crescente</option>
+        <option value="voto">Valutazione</option>
+        <option value="recensioni">Più recensite</option>
+      </select>
+      <button id="f-reset" type="button" class="rounded-full border px-3.5 py-2 text-[12.5px] font-medium" style="border-color:var(--line);color:var(--ink-soft)">
+        Azzera
+      </button>
+    </div>
+  </div>
+
+  <p class="mb-4 text-[13px]" style="color:var(--muted)"><b id="n-res" style="color:var(--ink)">0</b> strutture <span id="n-ctx"></span></p>
+
+  <div id="results" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {centri.map((c) => <BusinessCard centro={c} filterable />)}
+  </div>
+
+  <div id="empty" hidden class="rounded-[var(--r-lg)] border border-dashed p-14 text-center" style="border-color:var(--line);color:var(--muted)">
+    Nessuna struttura con questi criteri.<br />
+    In produzione qui compare la provincia più vicina, mai una pagina vuota (vedi doc 01 §2.1).
+  </div>
+</div>
+
+<style>
+  #f-verified:checked {
+    background: var(--color-mint);
+  }
+</style>
+
+<script>
+  const root = document.getElementById("directory-app")!;
+  const cards = Array.from(root.querySelectorAll<HTMLElement>(".js-card"));
+  const chips = Array.from(root.querySelectorAll<HTMLButtonElement>("#cat-chips .fchip"));
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T | null;
+
+  const qEl = $<HTMLInputElement>("f-q");
+  const cityEl = $<HTMLSelectElement>("f-city");
+  const verEl = $<HTMLInputElement>("f-verified");
+  const priceEl = $<HTMLInputElement>("f-price");
+  const priceV = $<HTMLElement>("f-price-v");
+  const sortEl = $<HTMLSelectElement>("f-sort");
+  const nRes = $<HTMLElement>("n-res");
+  const nCtx = $<HTMLElement>("n-ctx");
+  const resultsEl = $<HTMLElement>("results");
+  const emptyEl = $<HTMLElement>("empty");
+
+  const euro = (n: number) => n.toLocaleString("it-IT") + " €";
+
+  let activeCats = new Set<string>();
+  const lockCategory = root.dataset.lockCategory || "";
+  const lockCity = root.dataset.lockCity || "";
+  if (lockCategory) activeCats.add(lockCategory);
+
+  function syncChips() {
+    chips.forEach((c) => {
+      const on = activeCats.has(c.dataset.cat || "");
+      c.style.background = on ? "var(--ink)" : "var(--surface)";
+      c.style.color = on ? "var(--bg)" : "var(--ink-soft)";
+      c.style.borderColor = on ? "var(--ink)" : "var(--line)";
+    });
+  }
+
+  function apply() {
+    const q = (qEl?.value || "").trim().toLowerCase();
+    const city = lockCity || cityEl?.value || "";
+    const onlyVer = verEl?.checked || false;
+    const maxPrice = +(priceEl?.value || "999999");
+    const sort = sortEl?.value || "rilevanza";
+
+    let visible: HTMLElement[] = [];
+    cards.forEach((card) => {
+      const d = card.dataset;
+      const cardCats = (d.cat || "").split("|");
+      const ok =
+        (!activeCats.size || cardCats.some((c) => activeCats.has(c))) &&
+        (!city || d.citta === city) &&
+        (!onlyVer || d.verificato === "1") &&
+        Number(d.prezzo) <= maxPrice &&
+        (!q || (d.testo || "").includes(q));
+      card.hidden = !ok;
+      if (ok) visible.push(card);
+    });
+
+    visible.sort((a, b) => {
+      if (sort === "prezzo") return Number(a.dataset.prezzo) - Number(b.dataset.prezzo);
+      if (sort === "voto") return Number(b.dataset.voto) - Number(a.dataset.voto);
+      if (sort === "recensioni") return Number(b.dataset.recensioni) - Number(a.dataset.recensioni);
+      // rilevanza: piano (premium/esclusiva > verificato > free) poi voto
+      const rank = (p?: string) => (p === "premium" || p === "esclusiva" ? 2 : p === "verificato" ? 1 : 0);
+      return rank(b.dataset.piano) - rank(a.dataset.piano) || Number(b.dataset.voto) - Number(a.dataset.voto);
+    });
+    visible.forEach((el) => resultsEl?.appendChild(el));
+
+    if (nRes) nRes.textContent = String(visible.length);
+    const ctx: string[] = [];
+    if (activeCats.size === 1) ctx.push("in " + [...activeCats][0].replace(/-/g, " "));
+    else if (activeCats.size > 1) ctx.push(`in ${activeCats.size} discipline`);
+    if (city) ctx.push("a " + city);
+    if (onlyVer) ctx.push("verificate");
+    if (q) ctx.push(`per «${q}»`);
+    if (nCtx) nCtx.textContent = ctx.length ? ctx.join(" · ") : "in tutta Italia";
+    if (emptyEl) emptyEl.hidden = visible.length !== 0;
+    if (priceV) priceV.textContent = euro(maxPrice);
+  }
+
+  chips.forEach((c) => {
+    c.addEventListener("click", () => {
+      const cat = c.dataset.cat || "";
+      if (activeCats.has(cat)) activeCats.delete(cat);
+      else activeCats.add(cat);
+      syncChips();
+      apply();
+    });
+  });
+
+  [qEl, cityEl, verEl, priceEl, sortEl].forEach((el) => {
+    el?.addEventListener("input", apply);
+    el?.addEventListener("change", apply);
+  });
+
+  $("f-reset")?.addEventListener("click", () => {
+    if (qEl) qEl.value = "";
+    if (cityEl) cityEl.value = lockCity;
+    if (verEl) verEl.checked = false;
+    if (priceEl) priceEl.value = priceEl.max;
+    if (sortEl) sortEl.value = "rilevanza";
+    activeCats = new Set(lockCategory ? [lockCategory] : []);
+    syncChips();
+    apply();
+  });
+
+  // Stato iniziale dalla query string (?q=&cat=&citta=), usata dalla ricerca dell'header/home.
+  const params = new URLSearchParams(location.search);
+  if (params.get("q") && qEl) qEl.value = params.get("q")!;
+  if (params.get("citta") && cityEl) cityEl.value = params.get("citta")!;
+  if (params.get("cat")) activeCats.add(params.get("cat")!);
+
+  if (cityEl && lockCity) cityEl.value = lockCity;
+
+  syncChips();
+  apply();
+</script>

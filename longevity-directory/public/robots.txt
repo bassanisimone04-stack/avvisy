@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /per-i-centri/registrazione
+
+Sitemap: https://www.longevita-directory.it/sitemap-index.xml

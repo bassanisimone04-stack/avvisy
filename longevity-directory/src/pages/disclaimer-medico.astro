@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+---
+
+<BaseLayout title="Disclaimer medico" description="I contenuti di questo sito sono informativi e non sostituiscono il parere del medico.">
+  <div class="mx-auto max-w-[720px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Informazioni legali</span>
+    <h1 class="font-display mt-2.5 mb-6 text-[clamp(1.9rem,4vw,2.6rem)]">Disclaimer medico</h1>
+    <div class="space-y-4 text-[15px] leading-[1.8]" style="color:var(--ink-soft)">
+      <p>
+        I contenuti pubblicati su {SITE.name} — articoli, guide, schede delle strutture — hanno finalità
+        esclusivamente informativa ed educativa. Non costituiscono consulenza medica, diagnosi o prescrizione, e non
+        sostituiscono in alcun modo il rapporto diretto tra un paziente e il proprio medico.
+      </p>
+      <p>
+        Prima di intraprendere qualsiasi percorso diagnostico, terapeutico, nutrizionale o di allenamento, consulta un
+        medico o un professionista sanitario abilitato, che potrà valutare la tua situazione clinica specifica.
+      </p>
+      <p>
+        Gli articoli dichiarano il livello di solidità delle prove scientifiche disponibili al momento della
+        pubblicazione (evidenza solida, promettente ma incerta, insufficiente) e riportano, dove presente, il nome e
+        il numero di iscrizione all'albo del medico che ha effettuato la revisione. La scienza evolve: un contenuto
+        accurato oggi potrebbe richiedere un aggiornamento in futuro.
+      </p>
+      <p>
+        Le informazioni sulle strutture presenti nella directory (servizi, prezzi, disponibilità) sono fornite dalle
+        strutture stesse o raccolte da fonti pubbliche e vanno sempre verificate direttamente con la struttura prima
+        di prenotare una prestazione.
+      </p>
+      <p style="color:var(--muted)">
+        Questo è un prototipo dimostrativo: le strutture e gli articoli presenti sono dati fittizi.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

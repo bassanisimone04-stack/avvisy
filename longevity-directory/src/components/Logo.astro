@@ -1,0 +1,23 @@
+---
+import { SITE } from "../lib/site";
+interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+---
+
+<a href="/" class={`flex items-center gap-2.5 whitespace-nowrap font-display text-[20px] ${className}`}>
+  <span
+    class="inline-block h-6 w-6 rounded-full shadow-[inset_0_0_0_4.5px_var(--surface)] motion-safe:animate-[spin_14s_linear_infinite]"
+    style="background:conic-gradient(from 210deg,var(--color-iris),var(--color-sky),var(--color-mint),var(--color-rose),var(--color-iris))"
+  ></span>
+  <span>{SITE.name}</span>
+</a>
+
+<style>
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

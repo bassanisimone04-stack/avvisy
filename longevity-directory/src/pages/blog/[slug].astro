@@ -1,0 +1,172 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidencePill from "../../components/EvidencePill.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import { formatDate } from "../../lib/format";
+import { article, faqPage, breadcrumbList } from "../../lib/seo";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((p) => ({ params: { slug: p.id }, props: { entry: p } }));
+}
+
+const { entry } = Astro.props as { entry: Awaited<ReturnType<typeof getCollection<"blog">>>[number] };
+const d = entry.data;
+const { Content, headings } = await render(entry);
+
+const allPosts = await getCollection("blog");
+const correlati = allPosts.filter((p) => p.id !== entry.id && p.data.categoria === d.categoria).slice(0, 3);
+const altri = correlati.length ? correlati : allPosts.filter((p) => p.id !== entry.id).slice(0, 3);
+
+const jsonLd = [
+  article({
+    titolo: d.titolo,
+    descrizione: d.metaDescription,
+    url: `/blog/${entry.id}`,
+    autore: d.autore,
+    revisoreMedico: d.revisoreMedico,
+    dataPubblicazione: d.dataPubblicazione,
+    dataAggiornamento: d.dataAggiornamento,
+  }),
+  breadcrumbList([
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: d.titolo, url: `/blog/${entry.id}` },
+  ]),
+  faqPage(d.faqs),
+].filter(Boolean);
+
+const toc = headings.filter((h) => h.depth === 2);
+---
+
+<BaseLayout title={d.titoloSeo} description={d.metaDescription} type="article" jsonLd={jsonLd as Record<string, unknown>[]}>
+  <article class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
+    <nav class="mb-4 text-[12.5px]" style="color:var(--muted)">
+      <a href="/blog" class="hover:underline">Blog</a> / <span style="color:var(--ink)">{d.categoria}</span>
+    </nav>
+
+    <div class="mb-7 max-w-[74ch]">
+      {d.livelloEvidenza && <EvidencePill level={d.livelloEvidenza} />}
+      <h1 class="font-display mt-3 mb-3 text-[clamp(2rem,4.6vw,3.1rem)]">{d.titolo}</h1>
+      <p class="text-[15.5px]" style="color:var(--ink-soft)">{d.excerpt}</p>
+      <p class="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-[12.5px]" style="color:var(--muted)">
+        <span>{d.autore}</span>
+        <span>· Pubblicato il {formatDate(d.dataPubblicazione.toISOString())}</span>
+        {d.dataAggiornamento && <span>· Aggiornato il {formatDate(d.dataAggiornamento.toISOString())}</span>}
+        {d.revisoreMedico && <span>· Revisionato da {d.revisoreMedico}</span>}
+      </p>
+    </div>
+
+    <div class="relative mb-9 h-[220px] max-w-[900px] overflow-hidden rounded-[var(--r-lg)]">
+      <span class={`cv ${d.cover} absolute inset-0 block`}></span>
+    </div>
+
+    <div class="grid gap-10 lg:grid-cols-[1fr_240px]">
+      <div class="article-body max-w-[70ch] text-[16px] leading-[1.8]" style="color:var(--ink-soft)">
+        <Content />
+
+        <div class="mt-10 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface-2)">
+          <h2 class="font-display mb-2 text-[1.3rem]" style="color:var(--ink)">{d.ctaLabel}</h2>
+          <p class="mb-4 text-[14px]">
+            Trova le strutture selezionate per questa disciplina, con medico responsabile e prezzi in chiaro.
+          </p>
+          <a href={d.ctaDirectory} class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-[13.5px] font-semibold" style="background:var(--ink);color:var(--bg)">
+            {d.ctaLabel} →
+          </a>
+        </div>
+
+        <p class="mt-8 rounded-[var(--r)] border-l-[3px] p-4 text-[12.5px] leading-relaxed" style="border-color:var(--color-iris);background:var(--surface-2);color:var(--muted)">
+          Contenuto informativo, non sostituisce il parere del medico. Consulta il tuo medico prima di intraprendere
+          qualsiasi percorso diagnostico o terapeutico. Leggi il <a href="/disclaimer-medico" class="underline">disclaimer medico</a> completo.
+        </p>
+      </div>
+
+      <aside class="hidden lg:block">
+        {toc.length > 0 && (
+          <div class="sticky top-[96px]">
+            <span class="text-[10.5px] font-bold uppercase tracking-[.16em]" style="color:var(--muted)">In questo articolo</span>
+            <nav class="mt-3 space-y-2 text-[13px]" style="color:var(--ink-soft)">
+              {toc.map((h) => (
+                <a href={`#${h.slug}`} class="block hover:underline">{h.text}</a>
+              ))}
+            </nav>
+          </div>
+        )}
+      </aside>
+    </div>
+
+    {altri.length > 0 && (
+      <div class="mt-16 border-t pt-10" style="border-color:var(--line)">
+        <h2 class="font-display mb-5 text-[1.6rem]">Continua a leggere</h2>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {altri.map((p) => <ArticleCard post={p} />)}
+        </div>
+      </div>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .article-body :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    color: var(--ink);
+    margin: 2em 0 0.6em;
+  }
+  .article-body :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin: 1.6em 0 0.5em;
+  }
+  .article-body :global(p) {
+    margin-bottom: 1.1em;
+  }
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    margin: 0 0 1.1em 1.3em;
+  }
+  .article-body :global(li) {
+    margin-bottom: 0.4em;
+  }
+  .article-body :global(li)::marker {
+    color: var(--color-iris);
+  }
+  .article-body :global(blockquote) {
+    border-left: 3px solid var(--color-mint);
+    background: var(--surface-2);
+    padding: 1em 1.3em;
+    border-radius: var(--r);
+    margin: 1.5em 0;
+    font-size: 0.96em;
+  }
+  .article-body :global(strong) {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .article-body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.92em;
+  }
+  .article-body :global(th),
+  .article-body :global(td) {
+    border: 1px solid var(--line);
+    padding: 0.6em 0.8em;
+    text-align: left;
+  }
+  .article-body :global(th) {
+    background: var(--surface-2);
+  }
+  .article-body :global(hr) {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 2.2em 0;
+  }
+  .article-body :global(a) {
+    color: var(--color-iris);
+    text-decoration: underline;
+  }
+</style>
