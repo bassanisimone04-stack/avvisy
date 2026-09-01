@@ -1,0 +1,63 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { breadcrumbList } from "../../lib/seo";
+import { formatDate } from "../../lib/format";
+
+const guide = (await getCollection("guide")).sort(
+  (a, b) => b.data.dataPubblicazione.getTime() - a.data.dataPubblicazione.getTime(),
+);
+
+const jsonLd = breadcrumbList([
+  { name: "Home", url: "/" },
+  { name: "Guide", url: "/guide" },
+]);
+---
+
+<BaseLayout
+  title="Guide — longevità, esami e prevenzione"
+  description="Le guide pilastro del sito: approfondimenti lunghi e aggiornati che raccolgono gli articoli su ogni grande tema, con link diretto alle strutture."
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Editoriale</span>
+    <h1 class="font-display mt-2.5 mb-3 text-[clamp(1.9rem,4vw,2.8rem)]">Le guide</h1>
+    <p class="mb-9 max-w-[64ch] text-[15.5px]" style="color:var(--muted)">
+      Ogni guida raccoglie in un unico posto tutto quello che sappiamo su un grande tema della prevenzione e della
+      longevità, con i singoli approfondimenti collegati e la revisione medica in calce.
+    </p>
+
+    {guide.length === 0 && (
+      <p class="text-[14.5px]" style="color:var(--muted)">Le prime guide sono in preparazione.</p>
+    )}
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {guide.map((g) => (
+        <a
+          href={`/guide/${g.id}`}
+          class="group block overflow-hidden rounded-[var(--r-lg)] border transition-transform hover:-translate-y-1"
+          style="border-color:var(--line);background:var(--surface);box-shadow:var(--sh-s)"
+        >
+          <div class="relative h-[160px] overflow-hidden">
+            <span class={`cv ${g.data.cover} absolute inset-0 block transition-transform duration-700 group-hover:scale-105`}></span>
+          </div>
+          <div class="p-[18px_20px_22px]">
+            <span
+              class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.1em]"
+              style="background:var(--surface-2);color:var(--color-iris)"
+            >
+              Guida pilastro
+            </span>
+            <h2 class="font-display mt-3 text-[1.5rem] leading-tight">{g.data.titolo}</h2>
+            <p class="mt-2 text-[13.5px]" style="color:var(--muted)">{g.data.excerpt}</p>
+            <p class="mt-3 text-[12px]" style="color:var(--muted)">
+              Aggiornata il {formatDate((g.data.dataAggiornamento ?? g.data.dataPubblicazione).toISOString())}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

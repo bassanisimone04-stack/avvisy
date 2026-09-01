@@ -82,6 +82,20 @@ const toc = headings.filter((h) => h.depth === 2);
           Contenuto informativo, non sostituisce il parere del medico. Consulta il tuo medico prima di intraprendere
           qualsiasi percorso diagnostico o terapeutico. Leggi il <a href="/disclaimer-medico" class="underline">disclaimer medico</a> completo.
         </p>
+
+        {d.faqs.length > 0 && (
+          <div class="mt-14">
+            <h2 class="font-display mb-5 text-[1.6rem]" style="color:var(--ink)">Domande frequenti</h2>
+            <div class="space-y-2.5">
+              {d.faqs.map((f) => (
+                <details class="rounded-[var(--r)] border p-0" style="border-color:var(--line);background:var(--surface)">
+                  <summary class="cursor-pointer list-none px-4 py-3.5 text-[14.5px] font-semibold" style="color:var(--ink)">{f.domanda}</summary>
+                  <p class="px-4 pb-4 text-[14px]" style="color:var(--ink-soft)">{f.risposta}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <aside class="hidden lg:block">

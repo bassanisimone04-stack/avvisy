@@ -188,6 +188,8 @@ problema perché il colesterolo totale è "nella norma".
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Gli esami che contano davvero per la prevenzione](/guide/esami-prevenzione-longevita)
+
 [Test dell'età biologica: come funziona e quanto costa](/blog/test-eta-biologica-come-funziona-quanto-costa) · [Insulino-resistenza: sintomi, esami e cosa fare](/blog/insulino-resistenza-sintomi-cosa-fare)
 
 ---

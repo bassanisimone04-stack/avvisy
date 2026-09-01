@@ -218,6 +218,8 @@ oggetto di ricerca attiva: interessanti da seguire, prematuri da presentare come
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Gli esami che contano davvero per la prevenzione](/guide/esami-prevenzione-longevita)
+
 [ApoB: l'esame che il colesterolo non sostituisce](/blog/apob-esame-valori-perche-conta) · [Check-up completo di prevenzione: cosa include e quanto costa](/blog/check-up-completo-prevenzione-quanto-costa)
 
 ---

@@ -148,6 +148,8 @@ storia, non quando lo sceglie il listino più caro del centro.
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Gli esami che contano davvero per la prevenzione](/guide/esami-prevenzione-longevita)
+
 [Test dell'età biologica: come funziona e quanto costa](/blog/test-eta-biologica-come-funziona-quanto-costa) · [ApoB: l'esame che il colesterolo non sostituisce](/blog/apob-esame-valori-perche-conta)
 
 ---

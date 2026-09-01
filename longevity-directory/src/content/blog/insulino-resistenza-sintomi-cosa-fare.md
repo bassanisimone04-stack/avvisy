@@ -211,6 +211,8 @@ consulto pensando che ci sia solo la forza di volontà tra sé e il risultato.
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Nutrizione per la longevità: cosa sappiamo con ragionevole certezza](/guide/alimentazione-longevita)
+
 [ApoB: l'esame che il colesterolo non sostituisce](/blog/apob-esame-valori-perche-conta) · [Digiuno intermittente 16/8: benefici reali e come iniziare](/blog/digiuno-intermittente-16-8-benefici)
 
 ---

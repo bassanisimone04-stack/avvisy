@@ -49,8 +49,10 @@ età biologica vs età anagrafica · le 4 malattie che determinano quando e come
 cosa dice davvero la ricerca sulle Blue Zones · quanto conta la genetica rispetto allo stile di vita ·
 la "medicina 3.0": dal curare al prevenire · autofagia: cos'è e cosa la attiva davvero.
 
-### Pilastro 2 — `Gli esami che contano davvero per la prevenzione`
-`/guide/esami-prevenzione-longevita`
+### Pilastro 2 — `Gli esami che contano davvero per la prevenzione` ✅ pubblicato
+`/guide/esami-prevenzione-longevita` — collega i 3 cluster già pubblicati (ApoB, età biologica,
+check-up completo) e copre in forma più breve gli esami senza ancora un cluster dedicato (Lp(a),
+HOMA-IR, hs-CRP, calcium score, DEXA, RM total body, VO₂max).
 Cluster: ApoB, il marcatore che il colesterolo totale non ti dice · Lp(a): l'esame che si fa una
 volta nella vita · insulina a digiuno e HOMA-IR · hs-CRP e infiammazione di basso grado ·
 emoglobina glicata e curva glicemica · pannello tiroideo e ormoni · vitamina D, omocisteina, ferritina ·
@@ -60,8 +62,11 @@ test dell'età biologica: cosa misurano e quanto sono affidabili · test del mic
 CGM per non diabetici: utile o moda.
 → **Ogni articolo chiude con: "Dove farlo" + link alla categoria directory + città principali.**
 
-### Pilastro 3 — `Nutrizione per la longevità: cosa sappiamo con ragionevole certezza`
-`/guide/alimentazione-longevita`
+### Pilastro 3 — `Nutrizione per la longevità: cosa sappiamo con ragionevole certezza` ✅ pubblicato
+`/guide/alimentazione-longevita` — collega i 2 cluster già pubblicati (insulino-resistenza,
+digiuno intermittente) e copre in forma più breve i temi senza ancora un cluster dedicato
+(dieta mediterranea/PREDIMED, proteine dopo i 40, restrizione calorica, alcol, ultra-processati,
+fibre e microbiota, timing dei pasti).
 Cluster: quante proteine servono davvero dopo i 40 · digiuno intermittente 16/8: benefici e limiti ·
 dieta mima-digiuno: cosa dicono gli studi · insulino-resistenza: segnali precoci e cosa fare ·
 indice glicemico e picchi glicemici · dieta mediterranea e longevità · restrizione calorica nell'uomo ·

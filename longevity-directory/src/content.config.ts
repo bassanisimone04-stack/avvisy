@@ -111,4 +111,42 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { centri, blog };
+/**
+ * COLLECTION "guide" — guide pilastro (doc 02 §1 e §3): contenuto lungo (2.500–4.000
+ * parole) che collega tra loro un gruppo di articoli /blog dello stesso macro-tema e
+ * punta sempre alla pagina directory di categoria corrispondente.
+ */
+const guide = defineCollection({
+  loader: glob({ pattern: ["**/*.md", "!**/_*"], base: "./src/content/guide" }),
+  schema: z.object({
+    titolo: z.string(),
+    titoloSeo: z.string().max(60),
+    metaDescription: z.string().max(160),
+    cover: z.enum(coverIds).default("cv1"),
+
+    excerpt: z.string().max(240),
+    keyTakeaways: z.array(z.string()).min(3).max(6),
+
+    /** id (slug di file) degli articoli /blog collegati come cluster di questo pilastro. */
+    clusterSlugs: z.array(z.string()).default([]),
+
+    ctaDirectory: z.string(),
+    ctaLabel: z.string().default("Vedi i centri"),
+
+    autore: z.string().default("Redazione"),
+    revisoreMedico: z.string().optional(),
+    dataPubblicazione: z.coerce.date(),
+    dataAggiornamento: z.coerce.date().optional(),
+
+    faqs: z
+      .array(
+        z.object({
+          domanda: z.string(),
+          risposta: z.string(),
+        }),
+      )
+      .default([]),
+  }),
+});
+
+export const collections = { centri, blog, guide };

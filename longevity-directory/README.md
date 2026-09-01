@@ -47,6 +47,20 @@ Tutte e dieci le keyword del piano hanno oggi una pagina reale sul sito:
 | 9 | digiuno intermittente 16/8 | `/blog/digiuno-intermittente-16-8-benefici` | ✅ |
 | 10 | apob esame | `/blog/apob-esame-valori-perche-conta` | ✅ |
 
+## Guide pilastro
+
+Oltre ai 9 articoli cluster, il sito ha ora 2 delle 9 guide pilastro previste dal doc 02 (§3) —
+quelle con più cluster già scritti, in linea con il calendario dei 90 giorni (§6):
+
+| Pilastro | Guida | Cluster collegati |
+|---|---|---|
+| 2 — Esami e prevenzione | `/guide/esami-prevenzione-longevita` | ApoB, test età biologica, check-up completo |
+| 3 — Nutrizione | `/guide/alimentazione-longevita` | insulino-resistenza, digiuno intermittente 16/8 |
+
+Ogni articolo cluster collegato ora punta anche "in su" alla propria guida pilastro (sezione
+"Approfondimenti correlati"), completando il modello pilastro → cluster → directory del doc 02 §1
+che prima restava solo su carta.
+
 ## Contenuti editoriali sorgente
 
 Le bozze originali (con checklist di revisione medica, note sui prezzi da verificare) sono in
@@ -58,10 +72,11 @@ Le bozze originali (con checklist di revisione medica, note sui prezzi da verifi
 
 ```
 src/
-├─ content.config.ts     # schema Zod delle collection "centri" e "blog"
+├─ content.config.ts     # schema Zod delle collection "centri", "blog" e "guide"
 ├─ content/
 │  ├─ centri/             # 28 schede — un file .md per struttura
-│  └─ blog/                # 9 articoli — migrati da contenuti/, stesso standard editoriale
+│  ├─ blog/                # 9 articoli cluster — migrati da contenuti/, stesso standard editoriale
+│  └─ guide/                # 2 guide pilastro (esami, nutrizione), collegano i cluster fratelli
 ├─ lib/
 │  ├─ taxonomy.ts          # le 9 categorie + sottocategorie, tipi di struttura, MIN_LISTINGS_FOR_CITY_PAGE, getCityPageCombos()
 │  ├─ seo.ts                # helper JSON-LD (MedicalClinic, Article, FAQPage, BreadcrumbList, ItemList, WebSite)
@@ -75,6 +90,7 @@ src/
 ├─ components/
 │  ├─ Aurora.astro          # sfondo animato su canvas, riusato in home / CTA / per-i-centri
 │  ├─ DirectoryApp.astro    # filtri + griglia risultati, tutto client-side
+│  ├─ KeyTakeaways.astro    # box "in sintesi" a inizio articolo/guida (doc 02 §4.1)
 │  ├─ BusinessCard.astro, ArticleCard.astro, CategoryBento.astro, EvidencePill.astro
 │  └─ SiteHeader.astro, SiteFooter.astro, SEO.astro, ThemeToggle.astro
 ├─ layouts/BaseLayout.astro # <head>, script anti-FOUC del tema, sistema di reveal allo scroll
@@ -85,7 +101,8 @@ src/
    │  ├─ [categoria]/index.astro         # una per ciascuna delle 9 categorie
    │  └─ [categoria]/[citta].astro       # SOLO dove ≥3 schede (regola anti-thin-content)
    ├─ centri/[slug].astro                # scheda: listino, FAQ, JSON-LD, strutture simili, form lead reale
-   ├─ blog/index.astro, blog/[slug].astro
+   ├─ blog/index.astro, blog/[slug].astro  # FAQ ora renderizzate visibili, non solo nel JSON-LD
+   ├─ guide/index.astro, guide/[slug].astro  # guide pilastro: KeyTakeaways + cluster collegati come card
    ├─ chi-siamo.astro, contatti.astro    # form contatti reale (Astro Action + SQLite)
    ├─ accedi.astro                       # login struttura (SSR)
    ├─ account/index.astro                # area riservata struttura: stato pratica, lead, upsell Stripe (SSR, protetta)
@@ -161,17 +178,27 @@ Stripe entrambi onestamente "non configurati" in assenza delle rispettive creden
 - **og:image reale** (1200×630, generata via script Python nella palette del sito) più
   apple-touch-icon e favicon multi-formato — prima di questo lavoro il sito non aveva alcuna
   immagine di condivisione social.
-- **Title e meta description auditati programmaticamente** su tutte le pagine (statiche e
-  generate): 0 su 64 sopra i limiti di lunghezza, 0 senza H1 univoco o canonical.
+- **FAQ visibili, non solo nel markup**: gli articoli `/blog/[slug]` e le guide `/guide/[slug]`
+  emettevano `FAQPage` JSON-LD senza mai renderizzare le domande in pagina — un disallineamento
+  reale fra dati strutturati e contenuto visibile, contrario alle linee guida sui rich result.
+  Corretto aggiungendo l'accordion delle FAQ visibile su entrambi i template.
+- **Title e meta description auditati programmaticamente** (script Node su tutto l'HTML di build,
+  non lettura a occhio): 0 pagine sopra i limiti di lunghezza, 0 senza H1 univoco, canonical o
+  `og:image`, 0 blocchi JSON-LD non parsabili, 0 pagine con `FAQPage` senza FAQ visibili — su
+  tutte le 67 pagine statiche generate.
 - **Dark mode** completa, persistita, con l'aurora che si ricolora da sola.
-- **64 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
+- **67 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
 
 ## Stato e prossimi passi
 
 Fase implementata: architettura, tassonomia, 28 schede mock, 9 articoli su 10 keyword di lancio,
-tutte le pagine di servizio, filtri funzionanti, SEO tecnica auditata, backend reale (SQLite +
-Astro Actions) per contatti, lead, registrazione, autenticazione e area riservata, pannello
-admin. Richiedono configurazione con le tue credenziali (impossibile fabbricarle in questa
+2 guide pilastro su 9 previste dal doc 02 (le due con più cluster già scritti), tutte le pagine
+di servizio, filtri funzionanti, SEO tecnica auditata (incluso il fix delle FAQ invisibili),
+backend reale (SQLite + Astro Actions) per contatti, lead, registrazione, autenticazione e area
+riservata, pannello admin. Mancano ancora 7 guide pilastro (doc 02 §3: healthspan, allenamento,
+sonno, integratori, terapie e tecnologie, prevenzione malattie croniche, guide città e costi) —
+naturale prossimo blocco di lavoro editoriale, ciascuna da scrivere insieme ai cluster che le
+mancano. Richiedono configurazione con le tue credenziali (impossibile fabbricarle in questa
 sessione — vedi `.env.example`):
 
 - `ADMIN_PASSWORD` per attivare `/admin`;

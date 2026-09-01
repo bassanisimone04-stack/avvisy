@@ -131,6 +131,8 @@ medica o nutrizionale, mentre il 16/8 è più spesso gestito in autonomia.
 
 ## Approfondimenti correlati
 
+Guida pilastro: [Nutrizione per la longevità: cosa sappiamo con ragionevole certezza](/guide/alimentazione-longevita)
+
 [Insulino-resistenza: sintomi, esami e cosa fare](/blog/insulino-resistenza-sintomi-cosa-fare) · [NMN e NAD⁺: cosa dice davvero la scienza (non il marketing)](/blog/nmn-nad-cosa-dice-la-scienza)
 
 ---

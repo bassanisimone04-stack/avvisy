@@ -23,6 +23,7 @@ const STATIC_PAGES = [
   "/contatti",
   "/directory",
   "/blog",
+  "/guide",
   "/per-i-centri",
   "/disclaimer-medico",
   "/privacy",
@@ -33,6 +34,7 @@ const STATIC_PAGES = [
 export async function GET() {
   const centri = await getCollection("centri");
   const posts = await getCollection("blog");
+  const guide = await getCollection("guide");
   const combos = getCityPageCombos(centri);
 
   const urls: { loc: string; lastmod?: string }[] = [
@@ -43,6 +45,10 @@ export async function GET() {
     ...posts.map((p) => ({
       loc: `/blog/${p.id}`,
       lastmod: (p.data.dataAggiornamento ?? p.data.dataPubblicazione).toISOString(),
+    })),
+    ...guide.map((g) => ({
+      loc: `/guide/${g.id}`,
+      lastmod: (g.data.dataAggiornamento ?? g.data.dataPubblicazione).toISOString(),
     })),
   ];
 
