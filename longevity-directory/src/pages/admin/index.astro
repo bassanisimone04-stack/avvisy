@@ -3,7 +3,7 @@
 import { actions } from "astro:actions";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { ADMIN_COOKIE, verifyAdminCookieValue, adminConfigured } from "../../lib/admin-auth";
-import { db, type Submission, type Lead } from "../../lib/db";
+import { all, type Submission, type Lead } from "../../lib/db";
 import { formatDate } from "../../lib/format";
 import { getCategory } from "../../lib/taxonomy";
 
@@ -16,13 +16,11 @@ let leads: Lead[] = [];
 let messages: { id: number; motivo: string; nome: string; email: string; messaggio: string; created_at: string }[] = [];
 
 if (authed) {
-  submissions = db
-    .prepare(
-      `SELECT s.*, u.email FROM submissions s JOIN business_users u ON u.id = s.user_id ORDER BY s.id DESC LIMIT 50`,
-    )
-    .all() as (Submission & { email: string })[];
-  leads = db.prepare("SELECT * FROM leads ORDER BY id DESC LIMIT 30").all() as Lead[];
-  messages = db.prepare("SELECT * FROM contact_messages ORDER BY id DESC LIMIT 30").all() as typeof messages;
+  submissions = await all<Submission & { email: string }>(
+    `SELECT s.*, u.email FROM submissions s JOIN business_users u ON u.id = s.user_id ORDER BY s.id DESC LIMIT 50`,
+  );
+  leads = await all<Lead>("SELECT * FROM leads ORDER BY id DESC LIMIT 30");
+  messages = await all<(typeof messages)[number]>("SELECT * FROM contact_messages ORDER BY id DESC LIMIT 30");
 }
 ---
 

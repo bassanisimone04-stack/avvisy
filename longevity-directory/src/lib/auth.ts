@@ -1,11 +1,13 @@
 import { randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
-import { db, type BusinessUser } from "./db";
+import { run, get, type BusinessUser } from "./db";
 
 /**
  * Autenticazione reale, senza dipendenze esterne: `scrypt` è nativo in
  * Node.js (usato anche da npm stesso per l'hashing), progettato per essere
  * costoso da forzare a forza bruta anche via GPU. Il formato salvato è
  * `salt:hash` in esadecimale, entrambi a lunghezza fissa.
+ * Hash e verifica restano sincroni (pura CPU, nessuna I/O); tutto ciò che
+ * tocca il database è asincrono — vedi lib/db.ts.
  */
 
 const KEY_LEN = 64;
@@ -28,45 +30,44 @@ export function verifyPassword(password: string, stored: string): boolean {
 const SESSION_DAYS = 30;
 export const SESSION_COOKIE = "sessione";
 
-export function createSession(userId: number): { token: string; expiresAt: Date } {
+export async function createSession(userId: number): Promise<{ token: string; expiresAt: Date }> {
   const token = randomBytes(32).toString("hex");
   const expiresAt = new Date(Date.now() + SESSION_DAYS * 24 * 60 * 60 * 1000);
-  db.prepare("INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)").run(
+  await run("INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)", [
     token,
     userId,
     expiresAt.toISOString(),
-  );
+  ]);
   return { token, expiresAt };
 }
 
-export function destroySession(token: string): void {
-  db.prepare("DELETE FROM sessions WHERE token = ?").run(token);
+export async function destroySession(token: string): Promise<void> {
+  await run("DELETE FROM sessions WHERE token = ?", [token]);
 }
 
-export function getUserFromSession(token: string | undefined): BusinessUser | null {
+export async function getUserFromSession(token: string | undefined): Promise<BusinessUser | null> {
   if (!token) return null;
-  const row = db
-    .prepare(
-      `SELECT u.* FROM sessions s
-       JOIN business_users u ON u.id = s.user_id
-       WHERE s.token = ? AND s.expires_at > datetime('now')`,
-    )
-    .get(token) as BusinessUser | undefined;
+  const row = await get<BusinessUser>(
+    `SELECT u.* FROM sessions s
+     JOIN business_users u ON u.id = s.user_id
+     WHERE s.token = ? AND s.expires_at > datetime('now')`,
+    [token],
+  );
   return row ?? null;
 }
 
-export function findUserByEmail(email: string): BusinessUser | null {
-  const row = db.prepare("SELECT * FROM business_users WHERE email = ?").get(email.toLowerCase().trim()) as
-    | BusinessUser
-    | undefined;
+export async function findUserByEmail(email: string): Promise<BusinessUser | null> {
+  const row = await get<BusinessUser>("SELECT * FROM business_users WHERE email = ?", [
+    email.toLowerCase().trim(),
+  ]);
   return row ?? null;
 }
 
-export function createUser(email: string, password: string, nomeStruttura: string): BusinessUser {
-  db.prepare("INSERT INTO business_users (email, password_hash, nome_struttura) VALUES (?, ?, ?)").run(
+export async function createUser(email: string, password: string, nomeStruttura: string): Promise<BusinessUser> {
+  await run("INSERT INTO business_users (email, password_hash, nome_struttura) VALUES (?, ?, ?)", [
     email.toLowerCase().trim(),
     hashPassword(password),
     nomeStruttura,
-  );
-  return findUserByEmail(email)!;
+  ]);
+  return (await findUserByEmail(email))!;
 }

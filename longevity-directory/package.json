@@ -13,17 +13,17 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/node": "^9.5.5",
+    "@astrojs/vercel": "^8.2.11",
     "@fontsource-variable/manrope": "^5.2.5",
     "@fontsource/instrument-serif": "^5.2.5",
+    "@libsql/client": "^0.14.0",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.14.0",
-    "better-sqlite3": "^11.10.0",
     "stripe": "^18.5.0",
     "tailwindcss": "^4.1.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@types/better-sqlite3": "^9.6.0",
     "typescript": "^5.9.3"
   },
   "overrides": {

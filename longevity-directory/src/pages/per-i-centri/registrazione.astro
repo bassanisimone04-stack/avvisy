@@ -5,7 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { CATEGORIES, FACILITY_TYPES } from "../../lib/taxonomy";
 import { SESSION_COOKIE, getUserFromSession } from "../../lib/auth";
 
-const existing = getUserFromSession(Astro.cookies.get(SESSION_COOKIE)?.value);
+const existing = await getUserFromSession(Astro.cookies.get(SESSION_COOKIE)?.value);
 if (existing) return Astro.redirect("/account");
 
 const result = Astro.getActionResult(actions.registerBusiness);

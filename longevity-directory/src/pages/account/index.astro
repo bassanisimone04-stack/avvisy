@@ -3,25 +3,24 @@
 import { actions } from "astro:actions";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { SESSION_COOKIE, getUserFromSession } from "../../lib/auth";
-import { db, type Submission, type Lead } from "../../lib/db";
+import { get, all, type Submission, type Lead } from "../../lib/db";
 import { getCategory } from "../../lib/taxonomy";
 import { formatDate } from "../../lib/format";
 import { stripeEnabled } from "../../lib/stripe";
 
-const user = getUserFromSession(Astro.cookies.get(SESSION_COOKIE)?.value);
+const user = await getUserFromSession(Astro.cookies.get(SESSION_COOKIE)?.value);
 if (!user) return Astro.redirect("/accedi");
 
-const submission = db
-  .prepare("SELECT * FROM submissions WHERE user_id = ? ORDER BY id DESC LIMIT 1")
-  .get(user.id) as Submission | undefined;
+const submission = await get<Submission>(
+  "SELECT * FROM submissions WHERE user_id = ? ORDER BY id DESC LIMIT 1",
+  [user.id],
+);
 
 // I lead sono associati alla scheda tramite lo slug: nel prototipo, in assenza
 // di una scheda pubblicata dal flusso di registrazione, mostriamo i lead per
 // il nome struttura come proxy. In produzione: submission.id -> centro.id reale.
 const leads = submission
-  ? (db
-      .prepare("SELECT * FROM leads WHERE centro_nome = ? ORDER BY id DESC LIMIT 20")
-      .all(submission.nome) as Lead[])
+  ? await all<Lead>("SELECT * FROM leads WHERE centro_nome = ? ORDER BY id DESC LIMIT 20", [submission.nome])
   : [];
 
 const stato = submission?.stato ?? "in_attesa";

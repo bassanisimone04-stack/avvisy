@@ -144,15 +144,23 @@ data/                     # SQLite (app.db), creato al volo, gitignored — non 
 
 ## Backend reale: cosa fa e come è verificato
 
-Il sito è passato da mockup statico a **applicazione ibrida**: `output: "server"` con adapter
-Node (`@astrojs/node`, modalità standalone), ma ogni pagina di contenuto ha
-`export const prerender = true` esplicito — resta generata staticamente in build. Solo le pagine
-che dipendono da una sessione (`/accedi`, `/account`, `/admin`) e le Astro Actions girano on
-demand.
+Il sito è passato da mockup statico a **applicazione ibrida**: `output: "server"`, ma ogni
+pagina di contenuto ha `export const prerender = true` esplicito — resta generata staticamente
+in build. Solo le pagine che dipendono da una sessione (`/accedi`, `/account`, `/admin`) e le
+Astro Actions girano on demand.
 
-- **Persistenza**: SQLite via `better-sqlite3`, file singolo in `data/app.db` (gitignored,
-  creato al primo avvio). Tabelle: `business_users`, `sessions`, `submissions`, `leads`,
-  `contact_messages`.
+L'adapter si sceglie da solo in base all'ambiente (`astro.config.mjs`): Vercel imposta da sé la
+variabile `VERCEL` in build, quindi lì si usa l'adapter Vercel (funzioni serverless); in locale,
+dove `VERCEL` non è definita, si usa l'adapter Node standalone — lo stesso su cui sono stati
+fatti tutti i test end-to-end reali di questo progetto (curl, Playwright).
+
+- **Persistenza**: [libSQL](https://turso.tech) via `@libsql/client` — stesso dialetto SQL di
+  SQLite, ma compatibile anche con ambienti serverless. Senza `TURSO_DATABASE_URL` punta a un
+  file locale (`data/app.db`, gitignored, creato al primo avvio) — zero configurazione in
+  sviluppo, come prima. Con quella variabile impostata (produzione) punta a un database Turso
+  remoto: necessario su Vercel, dove il filesystem di una funzione serverless è effimero e non
+  condiviso tra istanze — un file SQLite locale lì non sopravviverebbe tra una richiesta e
+  l'altra. Tabelle: `business_users`, `sessions`, `submissions`, `leads`, `contact_messages`.
 - **Autenticazione struttura**: password hashate con `crypto.scrypt` nativo di Node (nessuna
   dipendenza esterna tipo bcrypt), sessioni con token casuale + cookie `httpOnly`/`sameSite=lax`.
   Login, logout, redirect automatico se già autenticato.
@@ -169,7 +177,7 @@ demand.
   altrimenti mostra un messaggio onesto di "non configurato" invece di fallire o fingere.
   Richiede le chiavi del tuo account Stripe — non possono essere fabbricate in questa sessione.
 
-Due bug reali trovati e corretti durante l'implementazione (dettagli nel commit):
+Bug reali trovati e corretti durante l'implementazione (dettagli nei commit):
 1. **403 su tutte le Actions** — `security.allowedDomains` vuoto in `astro.config.mjs` fa cadere
    l'header `Host` anche in richieste dirette senza proxy, rompendo il controllo Origin/CSRF.
    Risolto configurando esplicitamente `allowedDomains`.
@@ -178,11 +186,37 @@ Due bug reali trovati e corretti durante l'implementazione (dettagli nel commit)
    di Astro, zod v3 usato dal runtime interno delle Actions). Risolto forzando `"overrides":
    {"zod": "3.25.76"}` in `package.json`. Come conseguenza, `@astrojs/sitemap` (che vuole zod v4)
    è stato rimosso e sostituito da `src/pages/sitemap.xml.ts` scritta a mano.
+3. **Un punto della migrazione a libSQL rimasto sincrono** — `per-i-centri/registrazione.astro`
+   chiamava `getUserFromSession()` (ora asincrona) senza `await`: sarebbe rimasto un redirect
+   rotto per chi arriva già loggato su quella pagina. Trovato con un grep mirato sull'intero
+   `src/`, non solo sui file toccati direttamente, prima di committare.
 
 Verificato con un run Playwright end-to-end completo (browser reale, non solo lettura del
 codice): registrazione → redirect area riservata con stato corretto, logout, login (corretto e
 con password sbagliata), invio lead su una scheda reale, invio contatto, `/admin` e checkout
-Stripe entrambi onestamente "non configurati" in assenza delle rispettive credenziali.
+Stripe entrambi onestamente "non configurati" in assenza delle rispettive credenziali. Rifatto
+identico dopo la migrazione a libSQL, con verifica diretta via query SQL che una singola
+richiesta produca una sola scrittura (nessun doppio insert nascosto).
+
+## Deploy su Vercel
+
+1. Crea un database gratuito su [turso.tech](https://turso.tech) e recupera `TURSO_DATABASE_URL`
+   e `TURSO_AUTH_TOKEN` (vedi `.env.example` per i comandi esatti della CLI Turso).
+2. Su [vercel.com/new](https://vercel.com/new), importa questo repository (serve il tuo account
+   GitHub collegato a Vercel — è un passaggio che solo tu puoi fare, non è automatizzabile da
+   qui) e seleziona il branch da deployare.
+3. Nelle impostazioni del progetto Vercel, imposta le variabili d'ambiente: `TURSO_DATABASE_URL`,
+   `TURSO_AUTH_TOKEN`, e opzionalmente `ADMIN_PASSWORD` / le chiavi Stripe.
+4. Deploy. Vercel imposta da sé la variabile `VERCEL` in build, quindi l'adapter giusto
+   (`@astrojs/vercel`) si attiva automaticamente — non serve toccare `astro.config.mjs`.
+
+Verificato in questa sessione: `astro build` con `VERCEL=1` completa senza errori e produce una
+struttura `.vercel/output/` valida (funzione serverless + asset statici). Non verificabile da
+qui: il comportamento a runtime della funzione serverless vera e propria (cold start, il
+controllo CSRF di Astro sotto il proxy di Vercel) — richiede un account Vercel reale, che questa
+sessione non ha. Se dopo il primo deploy le Actions rispondono 403, il problema è quasi
+certamente lo stesso Origin-check già risolto per l'adapter Node (vedi bug #1 sopra): aggiungi il
+dominio Vercel reale a `security.allowedDomains` in `astro.config.mjs`.
 
 ## Cosa implementa davvero (non solo mockup)
 

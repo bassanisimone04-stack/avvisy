@@ -1,7 +1,7 @@
 import { defineAction, ActionError } from "astro:actions";
 import { z } from "astro:schema";
 import type { AstroCookies } from "astro";
-import { db } from "../lib/db";
+import { run } from "../lib/db";
 import { createUser, findUserByEmail, verifyPassword, createSession, destroySession, getUserFromSession, SESSION_COOKIE } from "../lib/auth";
 import { stripeEnabled, createCheckoutSession as stripeCreateCheckout } from "../lib/stripe";
 import { ADMIN_COOKIE, checkAdminPassword, issueAdminCookieValue, adminConfigured, verifyAdminCookieValue } from "../lib/admin-auth";
@@ -33,12 +33,12 @@ export const server = {
       messaggio: z.string().min(5, "Scrivi qualche parola in più.").max(4000),
     }),
     handler: async (input) => {
-      db.prepare("INSERT INTO contact_messages (motivo, nome, email, messaggio) VALUES (?, ?, ?, ?)").run(
+      await run("INSERT INTO contact_messages (motivo, nome, email, messaggio) VALUES (?, ?, ?, ?)", [
         input.motivo,
         input.nome.trim(),
         input.email.trim(),
         input.messaggio.trim(),
-      );
+      ]);
       return { ok: true as const };
     },
   }),
@@ -55,16 +55,17 @@ export const server = {
       messaggio: z.string().max(2000).optional(),
     }),
     handler: async (input) => {
-      db.prepare(
+      await run(
         `INSERT INTO leads (centro_slug, centro_nome, nome, email, telefono, messaggio)
          VALUES (?, ?, ?, ?, ?, ?)`,
-      ).run(
-        input.centroSlug,
-        input.centroNome,
-        input.nome.trim(),
-        input.email.trim(),
-        input.telefono?.trim() || null,
-        input.messaggio?.trim() || null,
+        [
+          input.centroSlug,
+          input.centroNome,
+          input.nome.trim(),
+          input.email.trim(),
+          input.telefono?.trim() || null,
+          input.messaggio?.trim() || null,
+        ],
       );
       return { ok: true as const };
     },
@@ -91,32 +92,33 @@ export const server = {
       telefono: z.string().max(40).optional(),
     }),
     handler: async (input, context) => {
-      if (findUserByEmail(input.email)) {
+      if (await findUserByEmail(input.email)) {
         throw new ActionError({
           code: "CONFLICT",
           message: "Esiste già un account con questa email. Prova ad accedere invece di registrarti.",
         });
       }
 
-      const user = createUser(input.email, input.password, input.nomeStruttura);
-      db.prepare(
+      const user = await createUser(input.email, input.password, input.nomeStruttura);
+      await run(
         `INSERT INTO submissions
            (user_id, nome, piva, facility_type, categorie, indirizzo, citta, direttore_sanitario, numero_albo, telefono)
          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      ).run(
-        user.id,
-        input.nomeStruttura.trim(),
-        input.piva.trim(),
-        input.facilityType,
-        JSON.stringify(input.categorie),
-        input.indirizzo.trim(),
-        input.citta.trim(),
-        input.direttoreSanitario.trim(),
-        input.numeroAlbo.trim(),
-        input.telefono?.trim() || null,
+        [
+          user.id,
+          input.nomeStruttura.trim(),
+          input.piva.trim(),
+          input.facilityType,
+          JSON.stringify(input.categorie),
+          input.indirizzo.trim(),
+          input.citta.trim(),
+          input.direttoreSanitario.trim(),
+          input.numeroAlbo.trim(),
+          input.telefono?.trim() || null,
+        ],
       );
 
-      const { token, expiresAt } = createSession(user.id);
+      const { token, expiresAt } = await createSession(user.id);
       setSessionCookie(context.cookies, token, expiresAt);
 
       return { ok: true as const };
@@ -130,11 +132,11 @@ export const server = {
       password: z.string().min(1, "Inserisci la password."),
     }),
     handler: async (input, context) => {
-      const user = findUserByEmail(input.email);
+      const user = await findUserByEmail(input.email);
       if (!user || !verifyPassword(input.password, user.password_hash)) {
         throw new ActionError({ code: "UNAUTHORIZED", message: "Email o password non corrette." });
       }
-      const { token, expiresAt } = createSession(user.id);
+      const { token, expiresAt } = await createSession(user.id);
       setSessionCookie(context.cookies, token, expiresAt);
       return { ok: true as const };
     },
@@ -144,7 +146,7 @@ export const server = {
     accept: "form",
     handler: async (_input, context) => {
       const token = context.cookies.get(SESSION_COOKIE)?.value;
-      if (token) destroySession(token);
+      if (token) await destroySession(token);
       context.cookies.delete(SESSION_COOKIE, { path: "/" });
       return { ok: true as const };
     },
@@ -190,7 +192,7 @@ export const server = {
       if (!verifyAdminCookieValue(context.cookies.get(ADMIN_COOKIE)?.value)) {
         throw new ActionError({ code: "UNAUTHORIZED", message: "Accesso admin richiesto." });
       }
-      db.prepare("UPDATE submissions SET stato = ? WHERE id = ?").run(input.decisione, input.id);
+      await run("UPDATE submissions SET stato = ? WHERE id = ?", [input.decisione, input.id]);
       return { ok: true as const };
     },
   }),
@@ -209,7 +211,7 @@ export const server = {
         });
       }
       const token = context.cookies.get(SESSION_COOKIE)?.value;
-      const user = getUserFromSession(token);
+      const user = await getUserFromSession(token);
       if (!user) {
         throw new ActionError({ code: "UNAUTHORIZED", message: "Accedi con l'account della tua struttura prima di scegliere un piano." });
       }
