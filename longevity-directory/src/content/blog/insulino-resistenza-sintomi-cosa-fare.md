@@ -209,6 +209,12 @@ consulto pensando che ci sia solo la forza di volontà tra sé e il risultato.
 
 ---
 
+## Approfondimenti correlati
+
+[ApoB: l'esame che il colesterolo non sostituisce](/blog/apob-esame-valori-perche-conta) · [Digiuno intermittente 16/8: benefici reali e come iniziare](/blog/digiuno-intermittente-16-8-benefici)
+
+---
+
 ## Fonti
 
 Da linkare a PubMed/DOI (verificare l'ultima versione prima di pubblicare):

@@ -175,6 +175,12 @@ rendono incomparabilmente di più.
 
 ---
 
+## Approfondimenti correlati
+
+[Camera iperbarica: prezzo, indicazioni reali e cosa evitare](/blog/camera-iperbarica-prezzo-indicazioni) · [Come aumentare il VO₂max: i protocolli che funzionano davvero](/blog/come-aumentare-vo2-max)
+
+---
+
 ## Fonti
 
 - Costello J.T. et al. *Whole-body cryotherapy for preventing and treating muscle soreness after exercise.* Cochrane Database of Systematic Reviews, 2015.

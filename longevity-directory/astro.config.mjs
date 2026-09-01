@@ -10,7 +10,14 @@ import { SITE } from "./src/lib/site.ts";
 export default defineConfig({
   site: SITE.url,
   output: "static",
-  integrations: [sitemap(), mdx()],
+  integrations: [
+    sitemap({
+      // Esclude dalla sitemap le pagine noindex (evita il segnale contraddittorio
+      // "non indicizzarmi" via meta robots + "eccomi, scansionami" via sitemap).
+      filter: (page) => !page.includes("/per-i-centri/registrazione") && !page.includes("/404"),
+    }),
+    mdx(),
+  ],
   vite: {
     plugins: [/** @type {any} */ (tailwindcss())],
   },

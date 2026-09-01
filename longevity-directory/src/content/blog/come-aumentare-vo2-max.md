@@ -148,6 +148,12 @@ piano da un medico prima di iniziare, soprattutto la componente ad alta intensit
 
 ---
 
+## Approfondimenti correlati
+
+[Insulino-resistenza: sintomi, esami e cosa fare](/blog/insulino-resistenza-sintomi-cosa-fare) · [Crioterapia whole body: prezzi, benefici reali e rischi](/blog/crioterapia-whole-body-prezzi-benefici)
+
+---
+
 ## Fonti
 
 - Mandsager K. et al. *Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing.* JAMA Network Open, 2018.

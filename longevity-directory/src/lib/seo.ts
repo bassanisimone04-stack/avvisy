@@ -57,6 +57,8 @@ export function medicalClinic(x: {
   url: string;
   valutazione: number;
   numeroRecensioni: number;
+  /** € / €€ / €€€ — mappa direttamente sulla convenzione priceRange di schema.org. */
+  fasciaPrezzo?: string;
 }) {
   const base: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -64,6 +66,7 @@ export function medicalClinic(x: {
     name: x.nome,
     description: x.descrizioneBreve,
     url: new URL(x.url, SITE.url).toString(),
+    image: new URL("/og-image.png", SITE.url).toString(),
     address: {
       "@type": "PostalAddress",
       streetAddress: x.indirizzo,
@@ -71,9 +74,11 @@ export function medicalClinic(x: {
       addressRegion: x.regione,
       addressCountry: "IT",
     },
+    areaServed: { "@type": "City", name: x.citta },
   };
   if (x.telefono) base.telephone = x.telefono;
   if (x.sito) base.sameAs = [x.sito];
+  if (x.fasciaPrezzo) base.priceRange = x.fasciaPrezzo;
   // Solo recensioni reali: mai emettere il blocco se non ce ne sono.
   if (x.numeroRecensioni > 0) {
     base.aggregateRating = {
@@ -100,7 +105,14 @@ export function article(x: {
     headline: x.titolo,
     description: x.descrizione,
     url: new URL(x.url, SITE.url).toString(),
+    mainEntityOfPage: new URL(x.url, SITE.url).toString(),
+    image: new URL("/og-image.png", SITE.url).toString(),
     author: { "@type": "Person", name: x.autore },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name,
+      logo: { "@type": "ImageObject", url: new URL("/favicon-32x32.png", SITE.url).toString() },
+    },
     datePublished: x.dataPubblicazione.toISOString(),
     dateModified: (x.dataAggiornamento || x.dataPubblicazione).toISOString(),
   };
@@ -116,5 +128,21 @@ export function organization() {
     "@type": "Organization",
     name: SITE.name,
     url: SITE.url,
+    logo: new URL("/favicon-32x32.png", SITE.url).toString(),
+  };
+}
+
+/** Solo per la home: abilita la sitelinks search box nei risultati Google. */
+export function website() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    url: SITE.url,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${SITE.url}/directory?q={search_term_string}` },
+      "query-input": "required name=search_term_string",
+    },
   };
 }

@@ -8,8 +8,9 @@
 export const SITE = {
   name: "Longevità",
   tagline: "La medicina della longevità, vicino a te",
+  /** ≤160 caratteri: usata come meta description di default (home e pagine senza una propria). */
   description:
-    "Directory italiana di cliniche, centri diagnostici e professionisti della longevità, del biohacking e della medicina preventiva. Criteri di ammissione pubblici, medico responsabile sempre in chiaro.",
+    "Cliniche, diagnostica e professionisti della longevità e della medicina preventiva. Criteri pubblici, medico responsabile sempre in chiaro.",
   /** ▶️ CAMBIA QUESTO quando pubblichi online. */
   url: "https://www.longevita-directory.it",
   lang: "it",

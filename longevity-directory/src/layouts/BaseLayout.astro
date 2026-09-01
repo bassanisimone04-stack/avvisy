@@ -26,6 +26,11 @@ const { title, description, type, jsonLd, noindex, bareTop = false } = Astro.pro
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#F4F6FB" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#070A12" media="(prefers-color-scheme: dark)" />
     <meta name="generator" content={Astro.generator} />
     <script is:inline>
       // Anti-FOUC: applica il tema salvato prima del primo paint.

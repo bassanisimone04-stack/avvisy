@@ -146,6 +146,12 @@ storia, non quando lo sceglie il listino più caro del centro.
 
 ---
 
+## Approfondimenti correlati
+
+[Test dell'età biologica: come funziona e quanto costa](/blog/test-eta-biologica-come-funziona-quanto-costa) · [ApoB: l'esame che il colesterolo non sostituisce](/blog/apob-esame-valori-perche-conta)
+
+---
+
 ## Fonti
 
 - U.S. Preventive Services Task Force. *Screening recommendations by age and risk factor* (aggiornamento continuo, adattare al contesto italiano).

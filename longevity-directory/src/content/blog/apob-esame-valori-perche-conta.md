@@ -186,6 +186,12 @@ problema perché il colesterolo totale è "nella norma".
 
 ---
 
+## Approfondimenti correlati
+
+[Test dell'età biologica: come funziona e quanto costa](/blog/test-eta-biologica-come-funziona-quanto-costa) · [Insulino-resistenza: sintomi, esami e cosa fare](/blog/insulino-resistenza-sintomi-cosa-fare)
+
+---
+
 ## Fonti
 
 Da linkare a PubMed/DOI (verificare l'ultima versione prima di pubblicare):

@@ -142,6 +142,12 @@ disponibili sono per lo più brevi.
 
 ---
 
+## Approfondimenti correlati
+
+[ApoB: l'esame che il colesterolo non sostituisce](/blog/apob-esame-valori-perche-conta) · [Test dell'età biologica: come funziona e quanto costa](/blog/test-eta-biologica-come-funziona-quanto-costa)
+
+---
+
 ## Fonti
 
 - Yoshino M. et al. *Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women.* Science, 2021.
