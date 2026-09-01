@@ -28,7 +28,7 @@ npm run start    # serve la build di produzione (node ./dist/server/entry.mjs)
 | [`docs/01-architettura-informativa.md`](docs/01-architettura-informativa.md) | Alberatura del menu, struttura URL, tassonomia (9 macro-categorie + sottocategorie), regola anti-thin-content per le pagine categoria+città, filtri, modello dati, piani di abbonamento, conformità sanitaria |
 | [`docs/02-strategia-blog-e-keyword.md`](docs/02-strategia-blog-e-keyword.md) | Modello pilastro-cluster, 10 categorie del blog, standard editoriale con gradazione delle evidenze, le 10 keyword di lancio |
 | [`docs/03-acquisizione-centri-outreach.md`](docs/03-acquisizione-centri-outreach.md) | Criteri per i primi 50 centri, cold email, inbound listing, piano operativo a 6 settimane |
-| [`docs/04-design-system.md`](docs/04-design-system.md) | Design system "Aurora / vetro" — token, componenti, e i bug reali trovati e corretti in fase di build |
+| [`docs/04-design-system.md`](docs/04-design-system.md) | Design system "Color Drenching" (terracotta/ruggine, ex "Aurora / vetro") — token, componenti, e i bug reali trovati e corretti in fase di build |
 
 ## Le 10 keyword di lancio — stato
 

@@ -37,10 +37,14 @@ const plans = [
   jsonLd={jsonLd}
   bareTop
 >
-  <header class="relative overflow-hidden rounded-b-[40px] pt-[150px] pb-20 text-center">
+  <header class="hero-drench relative overflow-hidden rounded-b-[40px] pt-[150px] pb-20 text-center">
     <Aurora />
+    <div class="pointer-events-none absolute inset-0 z-[1] opacity-[.28] mix-blend-overlay aurora-grain"></div>
+    <!-- stesso scrim uniforme della home: senza, il testo crema può cadere su una zona chiara
+         dell'Aurora animata in un dato frame (bug reale trovato con uno screenshot, non teorico). -->
+    <div class="pointer-events-none absolute inset-0 z-[2]" style="background:color-mix(in srgb,var(--abase) 46%,transparent)"></div>
     <div class="relative z-[3] mx-auto max-w-[760px] px-6">
-      <span class="reveal inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] font-bold uppercase tracking-[.13em] backdrop-blur-xl" style="background:var(--glass-2);border-color:var(--brd);color:var(--ink-soft)">
+      <span class="reveal inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] font-bold uppercase tracking-[.2em] backdrop-blur-xl" style="background:var(--glass-2);border-color:var(--brd);color:var(--ink-soft)">
         Per cliniche, centri e professionisti
       </span>
       <h1 class="font-display reveal mt-6 mb-4 text-[clamp(2.2rem,5.5vw,3.8rem)]">
@@ -50,7 +54,7 @@ const plans = [
         Ogni mese vengono cercate migliaia di volte espressioni come "crioterapia [città]" o "test età biologica
         prezzo": chi cerca così sta già scegliendo dove andare, non informazioni generiche.
       </p>
-      <a href="/per-i-centri/registrazione" class="reveal mt-7 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[14.5px] font-semibold transition-transform hover:-translate-y-0.5" style="background:var(--ink);color:var(--bg)">
+      <a href="/per-i-centri/registrazione" class="reveal mt-7 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[14.5px] font-semibold transition-transform hover:-translate-y-0.5" style="background:var(--ink);color:var(--abase)">
         Registrazione gratuita →
       </a>
     </div>

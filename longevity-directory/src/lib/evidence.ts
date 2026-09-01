@@ -6,7 +6,7 @@ export const EVIDENCE_LEVELS = ["solida", "promettente", "insufficiente"] as con
 export type EvidenceLevel = (typeof EVIDENCE_LEVELS)[number];
 
 export const EVIDENCE_META: Record<EvidenceLevel, { label: string; dot: string }> = {
-  solida: { label: "Evidenza solida", dot: "var(--mint)" },
+  solida: { label: "Evidenza solida", dot: "var(--color-mint)" },
   promettente: { label: "Promettente ma incerta", dot: "#E0A33E" },
   insufficiente: { label: "Insufficiente / marketing", dot: "#E2685C" },
 };
