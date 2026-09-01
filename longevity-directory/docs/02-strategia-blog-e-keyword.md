@@ -110,19 +110,25 @@ usi approvati vs promesse · red light therapy · IV therapy e NAD⁺ in flebo: 
 PEMF · neurofeedback · plasmaferesi e "giovani plasma": realtà e marketing.
 → **Cluster BOFU: ogni articolo linka alla categoria directory e alle pagine città.**
 
-### Pilastro 8 — `Prevenire le quattro grandi malattie croniche`
-`/guide/prevenzione-malattie-croniche`
-Cluster: rischio cardiovascolare, come si calcola davvero · prevenzione oncologica: screening che
-funzionano · declino cognitivo: fattori di rischio modificabili · sindrome metabolica ·
-menopausa e rischio cardiovascolare · testosterone: quando è un problema clinico ·
-salute orale e infiammazione sistemica · stress cronico e cortisolo.
+### Pilastro 8 — `Prevenire le quattro grandi malattie croniche` ✅ pubblicato
+`/guide/prevenzione-malattie-croniche` — collega 3 cluster scritti insieme al pilastro (rischio
+cardiovascolare/SCORE2, screening oncologici che funzionano davvero vs PSA controverso, declino
+cognitivo — Lancet Commission 2024, 45% dei casi legato a 14 fattori modificabili). Copre in
+forma più breve sindrome metabolica, menopausa, testosterone, salute orale, stress cronico.
 
-### Pilastro 9 (commerciale) — `Guide città e costi`
-`/blog/guide-citta-costi`
-Formato ricorrente, ad alta conversione: *"Longevità a Milano: i centri, i servizi e quanto costa"*,
-*"Quanto costa un check-up completo di prevenzione in Italia (2026)"*,
-*"Test dell'età biologica: prezzi a confronto"*, *"Crioterapia: prezzo a seduta e ad abbonamento"*.
-Sono le pagine che generano lead per i centri: la prova concreta da mostrare in fase di vendita B2B.
+### Pilastro 9 (commerciale) — `Guide città e costi` ✅ pubblicato, ma non come descritto qui
+`/citta/[citta].astro` — **decisione deliberata di implementazione, diversa dal piano originale.**
+Il piano prevedeva articoli scritti a mano in `/blog/guide-citta-costi` con prezzi indicativi.
+Con solo 29 schede centri mock disponibili, scrivere quei prezzi a mano avrebbe significato
+inventarli — in contrasto con la regola non negoziabile del doc 01 §5.1 sui dati mai inventati.
+Al suo posto: una pagina generata a build time da `src/content/centri/` (prezzo minimo, medio,
+massimo e conteggio per categoria, calcolati davvero, non scritti), con la stessa soglia
+anti-thin-content delle altre pagine (`MIN_LISTINGS_FOR_CITY_PAGE`, oggi genera Milano, Roma,
+Torino, Bologna). Cresce da sola quando si aggiungono strutture reali, invece di richiedere una
+riscrittura manuale a ogni prezzo che cambia. Restano da valutare, quando ci saranno più
+strutture reali: articoli editoriali di confronto costi su singole discipline ("test dell'età
+biologica: prezzi a confronto"), che a differenza della panoramica città aggiungono contesto
+editoriale reale a un confronto numerico, non solo numeri.
 
 ---
 

@@ -232,3 +232,21 @@ export function getCityPageCombos(
   }
   return combos;
 }
+
+/**
+ * Le città che superano la soglia anti-thin-content contando TUTTE le
+ * categorie insieme (non una singola combinazione categoria+città) — la
+ * base per le pagine "panoramica città" (pilastro 9 del doc 02, "guide
+ * città e costi"): dati reali aggregati dalla directory, non testo scritto
+ * a mano con prezzi inventati. Stessa soglia, stesso principio di
+ * getCityPageCombos, applicato senza il filtro di categoria.
+ */
+export function getCityOverviewPages(
+  centri: { data: { citta: string } }[],
+): { citta: string; cittaSlug: string }[] {
+  const byCity = new Map<string, number>();
+  for (const c of centri) byCity.set(c.data.citta, (byCity.get(c.data.citta) || 0) + 1);
+  return [...byCity.entries()]
+    .filter(([, count]) => count >= MIN_LISTINGS_FOR_CITY_PAGE)
+    .map(([citta]) => ({ citta, cittaSlug: citySlug(citta) }));
+}

@@ -5,9 +5,11 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import DirectoryApp from "../../components/DirectoryApp.astro";
 import { itemList, breadcrumbList } from "../../lib/seo";
+import { getCityOverviewPages } from "../../lib/taxonomy";
 import { SITE } from "../../lib/site";
 
 const centri = (await getCollection("centri")).sort((a, b) => b.data.dataAggiunta.getTime() - a.data.dataAggiunta.getTime());
+const cityPages = getCityOverviewPages(centri).sort((a, b) => a.citta.localeCompare(b.citta));
 
 const jsonLd = [
   breadcrumbList([
@@ -26,6 +28,22 @@ const jsonLd = [
   <div class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
     <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Directory</span>
     <h1 class="font-display mt-2.5 mb-7 text-[clamp(1.9rem,4vw,2.8rem)]">Trova la struttura giusta</h1>
+
+    {cityPages.length > 0 && (
+      <div class="mb-8 flex flex-wrap items-center gap-2 text-[13px]">
+        <span style="color:var(--muted)">Esplora per città:</span>
+        {cityPages.map((c) => (
+          <a
+            href={`/citta/${c.cittaSlug}`}
+            class="rounded-full border px-3.5 py-1.5 font-medium transition-colors hover:-translate-y-0.5"
+            style="border-color:var(--line);background:var(--surface);color:var(--ink)"
+          >
+            {c.citta}
+          </a>
+        ))}
+      </div>
+    )}
+
     <DirectoryApp centri={centri} />
   </div>
 </BaseLayout>

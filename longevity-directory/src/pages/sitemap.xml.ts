@@ -15,7 +15,7 @@ export const prerender = true;
  */
 import { getCollection } from "astro:content";
 import { SITE } from "../lib/site";
-import { CATEGORIES, getCityPageCombos } from "../lib/taxonomy";
+import { CATEGORIES, getCityPageCombos, getCityOverviewPages } from "../lib/taxonomy";
 
 const STATIC_PAGES = [
   "/",
@@ -36,11 +36,13 @@ export async function GET() {
   const posts = await getCollection("blog");
   const guide = await getCollection("guide");
   const combos = getCityPageCombos(centri);
+  const cityPages = getCityOverviewPages(centri);
 
   const urls: { loc: string; lastmod?: string }[] = [
     ...STATIC_PAGES.map((p) => ({ loc: p })),
     ...CATEGORIES.map((c) => ({ loc: `/directory/${c.slug}` })),
     ...combos.map((combo) => ({ loc: `/directory/${combo.categoria}/${combo.cittaSlug}` })),
+    ...cityPages.map((c) => ({ loc: `/citta/${c.cittaSlug}` })),
     ...centri.map((c) => ({ loc: `/centri/${c.id}`, lastmod: c.data.dataAggiunta.toISOString() })),
     ...posts.map((p) => ({
       loc: `/blog/${p.id}`,
