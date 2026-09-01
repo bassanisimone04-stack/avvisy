@@ -5,7 +5,7 @@ biohacking e della medicina preventiva — con blog editoriale e area B2B per le
 Costruito con **Astro 5 + Tailwind v4**, contenuti (schede centri, articoli) via Content
 Collections, backend reale (SQLite + Astro Actions) per moduli, autenticazione e area riservata.
 
-> Le 28 strutture e i 12 articoli sono **dati mock** pensati per popolare il prototipo. Moduli di
+> Le 28 strutture e i 15 articoli sono **dati mock** pensati per popolare il prototipo. Moduli di
 > contatto/lead, registrazione, login e pannello admin sono invece **backend reale e funzionante**
 > (vedi sotto) — non simulazioni. Pagamenti Stripe e pannello admin richiedono le proprie
 > credenziali per essere attivi (vedi `.env.example`).
@@ -49,9 +49,12 @@ Tutte e dieci le keyword del piano hanno oggi una pagina reale sul sito:
 
 ## Guide pilastro
 
-Oltre ai **12 articoli cluster**, il sito ha ora **6 delle 9 guide pilastro** previste dal doc 02
-(§3). Il pilastro 5 (sonno) è il primo scritto *insieme* ai suoi tre cluster, nell'ordine che il
-doc raccomanda: prima gli approfondimenti, poi la guida che li raccoglie.
+Oltre ai **15 articoli cluster**, il sito ha ora **7 delle 9 guide pilastro** previste dal doc 02
+(§3). I pilastri 5 (sonno) e 1 (healthspan) sono i primi scritti *insieme* ai loro cluster,
+nell'ordine che il doc raccomanda: prima gli approfondimenti, poi la guida che li raccoglie.
+La guida healthspan include un articolo volutamente controcorrente — una lettura critica delle
+Blue Zones, basata sull'analisi demografica 2024 di Newman (premiata con l'Ig Nobel) che mette in
+discussione la qualità dei dati anagrafici dietro gran parte di quella narrazione.
 
 | Pilastro | Guida | Cluster collegati |
 |---|---|---|
@@ -59,10 +62,11 @@ doc raccomanda: prima gli approfondimenti, poi la guida che li raccoglie.
 | 3 — Nutrizione | `/guide/alimentazione-longevita` | insulino-resistenza, digiuno intermittente 16/8 |
 | 4 — Allenamento | `/guide/allenamento-longevita` | come aumentare il VO₂max |
 | 5 — Sonno | `/guide/sonno-longevita` | apnee notturne, quante ore dormire, HRV |
+| 1 — Healthspan | `/guide/healthspan-longevita` | lifespan vs healthspan, 12 meccanismi, Blue Zones |
 | 6 — Integratori | `/guide/integratori-longevita` | NMN e NAD⁺ |
 | 7 — Terapie e tecnologie | `/guide/terapie-biohacking` | crioterapia, camera iperbarica |
 
-**Tutti e 12 gli articoli del blog** puntano ora "in su" alla propria guida pilastro (sezione
+**Tutti e 15 gli articoli del blog** puntano ora "in su" alla propria guida pilastro (sezione
 "Approfondimenti correlati"), e ogni guida elenca i suoi cluster e punta alla categoria directory
 corrispondente: il ciclo pilastro → cluster → directory del doc 02 §1 è chiuso in entrambe le
 direzioni, non più solo sulla carta.
@@ -86,8 +90,8 @@ src/
 ├─ content.config.ts     # schema Zod delle collection "centri", "blog" e "guide"
 ├─ content/
 │  ├─ centri/             # 28 schede — un file .md per struttura
-│  ├─ blog/                # 12 articoli cluster, stesso standard editoriale
-│  └─ guide/                # 6 guide pilastro, ciascuna collega i propri articoli cluster
+│  ├─ blog/                # 15 articoli cluster, stesso standard editoriale
+│  └─ guide/                # 7 guide pilastro, ciascuna collega i propri articoli cluster
 ├─ lib/
 │  ├─ taxonomy.ts          # le 9 categorie + sottocategorie, tipi di struttura, MIN_LISTINGS_FOR_CITY_PAGE, getCityPageCombos()
 │  ├─ seo.ts                # helper JSON-LD (MedicalClinic, Article, FAQPage, BreadcrumbList, ItemList, WebSite)
@@ -196,21 +200,21 @@ Stripe entrambi onestamente "non configurati" in assenza delle rispettive creden
 - **Title e meta description auditati programmaticamente** (script Node su tutto l'HTML di build,
   non lettura a occhio): 0 pagine sopra i limiti di lunghezza, 0 senza H1 univoco, canonical o
   `og:image`, 0 blocchi JSON-LD non parsabili, 0 pagine con `FAQPage` senza FAQ visibili — su
-  tutte le 74 pagine statiche generate, **più il controllo che nessuna data di pubblicazione sia
-  nel futuro** (aggiunto dopo aver trovato 10 contenuti su 14 datati fino a 27 giorni avanti: le
-  date finivano nel JSON-LD `Article` e nel `<lastmod>` della sitemap). Un secondo script verifica
-  i link interni: 0 rotti su 73 pagine.
+  tutte le 78 pagine statiche generate, incluso il controllo che nessuna data di pubblicazione sia
+  nel futuro (aggiunto dopo aver trovato 10 contenuti su 14 datati fino a 27 giorni avanti, poi
+  scattato di nuovo — e verificato — su 4 nuovi contenuti in questa stessa sessione). Un secondo
+  script verifica i link interni: 0 rotti su 77 pagine.
 - **Dark mode** completa, persistita, con l'aurora che si ricolora da sola.
-- **74 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
+- **78 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
 
 ## Stato e prossimi passi
 
 Fase implementata: architettura, tassonomia, 28 schede mock, 9 articoli su 10 keyword di lancio,
-6 guide pilastro su 9 previste dal doc 02, tutte le pagine
+7 guide pilastro su 9 previste dal doc 02, tutte le pagine
 di servizio, filtri funzionanti, SEO tecnica auditata (incluso il fix delle FAQ invisibili),
 backend reale (SQLite + Astro Actions) per contatti, lead, registrazione, autenticazione e area
-riservata, pannello admin. Mancano 3 guide pilastro (doc 02 §3: healthspan, prevenzione delle
-malattie croniche, guide città e costi): come per il sonno, il modo giusto di affrontarle è
+riservata, pannello admin. Mancano 2 guide pilastro (doc 02 §3: prevenzione delle malattie
+croniche, guide città e costi): come per sonno e healthspan, il modo giusto di affrontarle è
 scrivere prima 2–3 cluster del tema e poi la guida che li raccoglie, non un pilastro orfano.
 Le guide città e costi (pilastro 9) sono un caso a parte: sono un formato che può essere generato
 dai dati reali delle schede in directory, non scritto a mano. Richiedono configurazione con le tue credenziali (impossibile fabbricarle in questa

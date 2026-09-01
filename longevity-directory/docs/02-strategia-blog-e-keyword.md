@@ -42,12 +42,13 @@ Regola di link interno (da inserire nella checklist di redazione): ogni articolo
 
 ## 3. Macro-temi e cluster (piano dei contenuti)
 
-### Pilastro 1 — `Healthspan: come allungare gli anni in salute, non solo la vita`
-`/guide/healthspan-longevita`
-Cluster: differenza lifespan/healthspan · i 12 meccanismi dell'invecchiamento spiegati semplice ·
-età biologica vs età anagrafica · le 4 malattie che determinano quando e come moriremo ·
-cosa dice davvero la ricerca sulle Blue Zones · quanto conta la genetica rispetto allo stile di vita ·
-la "medicina 3.0": dal curare al prevenire · autofagia: cos'è e cosa la attiva davvero.
+### Pilastro 1 — `Healthspan: come allungare gli anni in salute, non solo la vita` ✅ pubblicato
+`/guide/healthspan-longevita` — collega 3 cluster scritti insieme al pilastro (lifespan vs
+healthspan, i 12 meccanismi dell'invecchiamento, Blue Zones — con la critica demografica 2024 di
+Newman/Ig Nobel, non solo la narrazione da documentario). Copre in forma più breve le 4 grandi
+categorie di malattia, quanto conta la genetica (studi sui gemelli), "medicina 3.0" come etichetta
+non scientifica. Restano da scrivere come cluster propri: età biologica vs età anagrafica
+(già coperto dal cluster diagnostica-avanzata esistente), autofagia (idem, via digiuno).
 
 ### Pilastro 2 — `Gli esami che contano davvero per la prevenzione` ✅ pubblicato
 `/guide/esami-prevenzione-longevita` — collega i 3 cluster già pubblicati (ApoB, età biologica,
