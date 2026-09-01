@@ -209,3 +209,26 @@ export function citySlug(city: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
+
+/**
+ * Le combinazioni categoria+città che superano la soglia anti-thin-content
+ * (doc 01 §2.1) — stessa regola usata da
+ * `directory/[categoria]/[citta].astro` per `getStaticPaths` e dalla
+ * sitemap, in un solo posto per evitare che le due liste possano divergere.
+ */
+export function getCityPageCombos(
+  centri: { data: { categorie: string[]; citta: string } }[],
+): { categoria: string; citta: string; cittaSlug: string }[] {
+  const combos: { categoria: string; citta: string; cittaSlug: string }[] = [];
+  for (const category of CATEGORIES) {
+    const inCategory = centri.filter((c) => c.data.categorie.includes(category.slug));
+    const byCity = new Map<string, number>();
+    for (const c of inCategory) byCity.set(c.data.citta, (byCity.get(c.data.citta) || 0) + 1);
+    for (const [citta, count] of byCity) {
+      if (count >= MIN_LISTINGS_FOR_CITY_PAGE) {
+        combos.push({ categoria: category.slug, citta, cittaSlug: citySlug(citta) });
+      }
+    }
+  }
+  return combos;
+}

@@ -5,22 +5,28 @@
   "description": "Directory italiana di cliniche, centri e professionisti della longevità, del biohacking e della medicina preventiva.",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "start": "node ./dist/server/entry.mjs",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
-    "@astrojs/sitemap": "^3.6.0",
-    "@fontsource/instrument-serif": "^5.2.5",
+    "@astrojs/node": "^9.5.5",
     "@fontsource-variable/manrope": "^5.2.5",
+    "@fontsource/instrument-serif": "^5.2.5",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.14.0",
+    "better-sqlite3": "^11.10.0",
+    "stripe": "^18.5.0",
     "tailwindcss": "^4.1.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@types/better-sqlite3": "^9.6.0",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "zod": "3.25.76"
   }
 }

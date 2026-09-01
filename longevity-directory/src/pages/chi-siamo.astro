@@ -1,4 +1,6 @@
 ---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { breadcrumbList } from "../lib/seo";
 

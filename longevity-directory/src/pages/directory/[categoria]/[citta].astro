@@ -1,4 +1,6 @@
 ---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
 /**
  * Pagina categoria+città — la "money page" del doc SEO (doc 01 §2).
  * Generata SOLO quando esistono almeno MIN_LISTINGS_FOR_CITY_PAGE schede:
@@ -7,25 +9,16 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import DirectoryApp from "../../../components/DirectoryApp.astro";
-import { CATEGORIES, MIN_LISTINGS_FOR_CITY_PAGE, citySlug } from "../../../lib/taxonomy";
+import { CATEGORIES, getCityPageCombos } from "../../../lib/taxonomy";
 import { itemList, breadcrumbList, faqPage } from "../../../lib/seo";
 import { euro } from "../../../lib/format";
 
 export async function getStaticPaths() {
   const allCentri = await getCollection("centri");
-  const paths: { params: { categoria: string; citta: string }; props: { cityLabel: string } }[] = [];
-
-  for (const category of CATEGORIES) {
-    const inCategory = allCentri.filter((c) => c.data.categorie.includes(category.slug));
-    const byCity = new Map<string, number>();
-    for (const c of inCategory) byCity.set(c.data.citta, (byCity.get(c.data.citta) || 0) + 1);
-    for (const [citta, count] of byCity) {
-      if (count >= MIN_LISTINGS_FOR_CITY_PAGE) {
-        paths.push({ params: { categoria: category.slug, citta: citySlug(citta) }, props: { cityLabel: citta } });
-      }
-    }
-  }
-  return paths;
+  return getCityPageCombos(allCentri).map((combo) => ({
+    params: { categoria: combo.categoria, citta: combo.cittaSlug },
+    props: { cityLabel: combo.citta },
+  }));
 }
 
 const { categoria, citta } = Astro.params;

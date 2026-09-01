@@ -1,4 +1,6 @@
 ---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Aurora from "../components/Aurora.astro";
 import { breadcrumbList } from "../lib/seo";
@@ -10,19 +12,19 @@ const jsonLd = breadcrumbList([
 ]);
 
 const plans = [
-  { nome: "Base", prezzo: "0 €", periodo: "per sempre", evid: false, voci: [
+  { nome: "Base", slug: null, prezzo: "0 €", periodo: "per sempre", evid: false, voci: [
     ["Scheda pubblica e mappa", true], ["Discipline e servizi", true],
     ["Link al sito (dofollow)", false], ["Badge verificato", false], ["Contatto diretto", false],
   ]},
-  { nome: "Verificato", prezzo: "39 €", periodo: "al mese", evid: false, voci: [
+  { nome: "Verificato", slug: "verificato", prezzo: "39 €", periodo: "al mese", evid: false, voci: [
     ["Badge \"Verificato\"", true], ["Link dofollow", true], ["5 foto e listino", true],
     ["Modulo di contatto", true], ["Posizione in evidenza", false],
   ]},
-  { nome: "Premium", prezzo: "119 €", periodo: "al mese", evid: true, voci: [
+  { nome: "Premium", slug: "premium", prezzo: "119 €", periodo: "al mese", evid: true, voci: [
     ["Prime 3 posizioni \"In evidenza\"", true], ["Foto e video illimitati", true],
     ["Lead diretti + WhatsApp", true], ["Dashboard statistiche", true], ["Nessun concorrente in scheda", true],
   ]},
-  { nome: "Esclusiva", prezzo: "299 €", periodo: "al mese", evid: false, voci: [
+  { nome: "Esclusiva", slug: "esclusiva", prezzo: "299 €", periodo: "al mese", evid: false, voci: [
     ["Slot unico per città e disciplina", true], ["2 contenuti editoriali l'anno", true],
     ["Presenza in newsletter", true], ["Report mensile dei lead", true],
   ]},
@@ -98,12 +100,28 @@ const plans = [
               </li>
             ))}
           </ul>
-          <a href="/per-i-centri/registrazione" class:list={["mt-auto rounded-full py-2.5 text-center text-[13px] font-semibold"]} style={p.evid ? "background:var(--ink);color:var(--bg)" : "border:1px solid var(--line)"}>
-            {p.nome === "Esclusiva" ? "Parla con noi" : "Scegli"}
-          </a>
+          {p.slug === null ? (
+            <a href="/per-i-centri/registrazione" class="mt-auto rounded-full py-2.5 text-center text-[13px] font-semibold" style={p.evid ? "background:var(--ink);color:var(--bg)" : "border:1px solid var(--line)"}>
+              Scegli
+            </a>
+          ) : p.nome === "Esclusiva" ? (
+            <a href="/contatti" class="mt-auto rounded-full py-2.5 text-center text-[13px] font-semibold" style="border:1px solid var(--line)">
+              Parla con noi
+            </a>
+          ) : (
+            <button
+              type="button"
+              class="plan-checkout mt-auto rounded-full py-2.5 text-center text-[13px] font-semibold"
+              data-piano={p.slug}
+              style={p.evid ? "background:var(--ink);color:var(--bg)" : "border:1px solid var(--line)"}
+            >
+              Scegli
+            </button>
+          )}
         </div>
       ))}
     </div>
+    <p id="checkout-msg" hidden class="reveal mx-auto mt-5 max-w-[520px] rounded-[var(--r)] border px-4 py-3 text-center text-[13px]"></p>
   </section>
 
   <section class="mx-auto max-w-[900px] px-6 pb-24">
@@ -128,3 +146,48 @@ const plans = [
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  import { actions } from "astro:actions";
+
+  const msg = document.getElementById("checkout-msg") as HTMLParagraphElement | null;
+
+  function showCheckoutMsg(text: string, ok: boolean) {
+    if (!msg) return;
+    msg.hidden = false;
+    msg.textContent = text;
+    msg.style.borderColor = ok ? "var(--color-mint)" : "var(--line)";
+    msg.style.color = "inherit";
+    msg.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  document.querySelectorAll<HTMLButtonElement>(".plan-checkout").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const piano = btn.dataset.piano;
+      if (!piano) return;
+      btn.disabled = true;
+      const original = btn.textContent;
+      btn.textContent = "Un attimo…";
+
+      const form = new FormData();
+      form.set("piano", piano);
+      const { data, error } = await actions.createCheckoutSession(form);
+
+      btn.disabled = false;
+      btn.textContent = original;
+
+      if (error) {
+        if (error.code === "UNAUTHORIZED") {
+          showCheckoutMsg("Accedi con l'account della tua struttura per scegliere un piano a pagamento.", false);
+          setTimeout(() => (window.location.href = `/accedi?redirect=/per-i-centri`), 1400);
+        } else if (error.code === "PRECONDITION_FAILED") {
+          showCheckoutMsg(error.message, false);
+        } else {
+          showCheckoutMsg("Qualcosa non ha funzionato. Riprova tra poco.", false);
+        }
+        return;
+      }
+      if (data?.url) window.location.href = data.url;
+    });
+  });
+</script>

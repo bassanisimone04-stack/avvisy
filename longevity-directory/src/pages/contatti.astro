@@ -1,4 +1,8 @@
 ---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+// Il form sotto è potenziato via JavaScript lato client (vedi <script> in fondo):
+// la pagina resta un file statico, ma l'invio chiama davvero l'Action del server.
+export const prerender = true;
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE } from "../lib/site";
 import { breadcrumbList } from "../lib/seo";
@@ -18,10 +22,11 @@ const jsonLd = breadcrumbList([
       Rispondiamo entro 2 giorni lavorativi.
     </p>
 
-    <form class="space-y-4 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+    <form id="contact-form" class="space-y-4 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+      <p id="contact-msg" hidden class="rounded-[var(--r)] border px-4 py-3 text-[13.5px]"></p>
       <div>
         <label for="motivo" class="mb-1.5 block text-[12.5px] font-semibold">Motivo del contatto</label>
-        <select id="motivo" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)">
+        <select id="motivo" name="motivo" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)">
           <option>Segnala un centro</option>
           <option>Segnala un errore</option>
           <option>Collabora con noi (medici e divulgatori)</option>
@@ -31,20 +36,52 @@ const jsonLd = breadcrumbList([
       </div>
       <div>
         <label for="nome" class="mb-1.5 block text-[12.5px] font-semibold">Nome</label>
-        <input id="nome" type="text" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        <input id="nome" name="nome" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
       </div>
       <div>
         <label for="email" class="mb-1.5 block text-[12.5px] font-semibold">Email</label>
-        <input id="email" type="email" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        <input id="email" name="email" type="email" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
       </div>
       <div>
         <label for="messaggio" class="mb-1.5 block text-[12.5px] font-semibold">Messaggio</label>
-        <textarea id="messaggio" rows="5" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)"></textarea>
+        <textarea id="messaggio" name="messaggio" rows="5" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)"></textarea>
         <p class="mt-1.5 text-[11.5px]" style="color:var(--muted)">Non inserire dati sulla tua salute in questo modulo.</p>
       </div>
-      <button type="submit" disabled class="w-full cursor-not-allowed rounded-full py-3 text-[14px] font-semibold opacity-60" style="background:var(--ink);color:var(--bg)">
-        Invia (prototipo — invio non attivo)
+      <button id="contact-submit" type="submit" class="w-full rounded-full py-3 text-[14px] font-semibold" style="background:var(--ink);color:var(--bg)">
+        Invia
       </button>
     </form>
   </div>
 </BaseLayout>
+
+<script>
+  import { actions, isInputError } from "astro:actions";
+
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const msg = document.getElementById("contact-msg") as HTMLParagraphElement;
+  const submitBtn = document.getElementById("contact-submit") as HTMLButtonElement;
+
+  function showMessage(text: string, ok: boolean) {
+    msg.hidden = false;
+    msg.textContent = text;
+    msg.style.borderColor = ok ? "var(--color-mint)" : "#e2685c";
+    msg.style.background = ok ? "color-mix(in srgb,var(--color-mint) 10%,transparent)" : "color-mix(in srgb,#e2685c 10%,transparent)";
+    msg.style.color = ok ? "inherit" : "#e2685c";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Invio…";
+    const { error } = await actions.sendContactMessage(new FormData(form));
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Invia";
+    if (error) {
+      const detail = isInputError(error) ? Object.values(error.fields).flat().join(" ") : error.message;
+      showMessage(detail || "Qualcosa non ha funzionato. Riprova.", false);
+      return;
+    }
+    showMessage("Messaggio inviato. Ti rispondiamo entro 2 giorni lavorativi.", true);
+    form.reset();
+  });
+</script>

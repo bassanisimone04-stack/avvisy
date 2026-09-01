@@ -10,9 +10,13 @@ node_modules/
 # logs
 npm-debug.log*
 
+# database SQLite del prototipo (leads, account, registrazioni)
+data/
+
 # environment variables
 .env
 .env.production
+.env.local
 
 # macOS-specific files
 .DS_Store

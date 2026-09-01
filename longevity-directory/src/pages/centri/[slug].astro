@@ -1,4 +1,6 @@
 ---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BusinessCard from "../../components/BusinessCard.astro";
@@ -136,12 +138,36 @@ const jsonLd = [
           <div class="flex justify-between border-b py-2.5 text-[13.5px]" style="border-color:var(--line)"><span style="color:var(--muted)">Valutazione</span><b>{d.valutazione.toFixed(1)} / 5</b></div>
           <div class="flex justify-between py-2.5 text-[13.5px]"><span style="color:var(--muted)">Aggiunta il</span><b>{formatDate(d.dataAggiunta.toISOString())}</b></div>
         </div>
-        <a href="/contatti" class="block rounded-full py-3 text-center text-[13.5px] font-semibold" style="background:var(--ink);color:var(--bg)">Richiedi informazioni</a>
+        <button id="lead-toggle" type="button" class="block w-full rounded-full py-3 text-center text-[13.5px] font-semibold" style="background:var(--ink);color:var(--bg)">
+          Richiedi informazioni
+        </button>
         {d.telefono && (
           <a href={`tel:${d.telefono.replace(/\s/g, "")}`} class="mt-2.5 block rounded-full border py-3 text-center text-[13.5px] font-semibold" style="border-color:var(--brd);background:var(--glass)">
             Telefona · {d.telefono}
           </a>
         )}
+
+        <form id="lead-form" hidden class="mt-4 space-y-3">
+          <input type="hidden" name="centroSlug" value={entry.id} />
+          <input type="hidden" name="centroNome" value={d.nome} />
+          <p id="lead-msg" hidden class="rounded-[var(--r)] border px-3 py-2.5 text-[12.5px]"></p>
+          <div>
+            <input name="nome" required placeholder="Nome e cognome" class="w-full rounded-[var(--r)] border px-3 py-2.5 text-[13.5px]" style="border-color:var(--line);background:var(--surface)" />
+          </div>
+          <div>
+            <input name="email" type="email" required placeholder="Email" class="w-full rounded-[var(--r)] border px-3 py-2.5 text-[13.5px]" style="border-color:var(--line);background:var(--surface)" />
+          </div>
+          <div>
+            <input name="telefono" type="tel" placeholder="Telefono (facoltativo)" class="w-full rounded-[var(--r)] border px-3 py-2.5 text-[13.5px]" style="border-color:var(--line);background:var(--surface)" />
+          </div>
+          <div>
+            <textarea name="messaggio" rows="3" placeholder="In cosa siamo utili? (facoltativo)" class="w-full rounded-[var(--r)] border px-3 py-2.5 text-[13.5px]" style="border-color:var(--line);background:var(--surface)"></textarea>
+          </div>
+          <button id="lead-submit" type="submit" class="w-full rounded-full py-2.5 text-[13px] font-semibold" style="background:var(--color-mint);color:#08301f">
+            Invia richiesta
+          </button>
+        </form>
+
         <p class="mt-4 text-[11.5px] leading-relaxed" style="color:var(--muted)">
           Non inserire dati sulla salute nel messaggio. La richiesta viene inoltrata alla struttura, che risponde direttamente.
         </p>
@@ -153,3 +179,42 @@ const jsonLd = [
 <style>
   .prose-longevita :global(p) { margin-bottom: 1em; }
 </style>
+
+<script>
+  import { actions, isInputError } from "astro:actions";
+
+  const toggle = document.getElementById("lead-toggle") as HTMLButtonElement | null;
+  const form = document.getElementById("lead-form") as HTMLFormElement | null;
+  const msg = document.getElementById("lead-msg") as HTMLParagraphElement | null;
+  const submitBtn = document.getElementById("lead-submit") as HTMLButtonElement | null;
+  if (!toggle || !form || !msg || !submitBtn) throw new Error("Elementi del form di contatto mancanti nel DOM");
+
+  toggle.addEventListener("click", () => {
+    form.hidden = !form.hidden;
+    toggle.hidden = !form.hidden;
+    if (!form.hidden) form.querySelector("input")?.focus();
+  });
+
+  function showLeadMessage(text: string, ok: boolean) {
+    msg!.hidden = false;
+    msg!.textContent = text;
+    msg!.style.borderColor = ok ? "var(--color-mint)" : "#e2685c";
+    msg!.style.background = ok ? "color-mix(in srgb,var(--color-mint) 12%,transparent)" : "color-mix(in srgb,#e2685c 12%,transparent)";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    submitBtn!.disabled = true;
+    submitBtn!.textContent = "Invio…";
+    const { error } = await actions.sendLead(new FormData(form));
+    submitBtn!.disabled = false;
+    submitBtn!.textContent = "Invia richiesta";
+    if (error) {
+      const detail = isInputError(error) ? Object.values(error.fields).flat().join(" ") : error.message;
+      showLeadMessage(detail || "Qualcosa non ha funzionato. Riprova.", false);
+      return;
+    }
+    showLeadMessage("Richiesta inviata. La struttura ti risponde direttamente.", true);
+    form.reset();
+  });
+</script>

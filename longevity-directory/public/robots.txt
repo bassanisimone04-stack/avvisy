@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /per-i-centri/registrazione
+Disallow: /account
+Disallow: /admin
+Disallow: /accedi
 
-Sitemap: https://www.longevita-directory.it/sitemap-index.xml
+Sitemap: https://www.longevita-directory.it/sitemap.xml
