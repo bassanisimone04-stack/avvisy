@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri di terapie e tecnologie"
 excerpt: "Il NAD⁺ è probabilmente la molecola più citata nel marketing della longevità degli ultimi dieci anni, e anche una delle più fraintese. È reale, è essenziale per centinaia di reazioni chimiche nel corpo, e diminuisce con l'età — qu…"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott.ssa Elena Conti — Medicina Interna, Albo di Milano n. 11287"
-dataPubblicazione: '2026-09-10'
+dataPubblicazione: '2026-07-21'
 faqs:
   - domanda: "L'NMN funziona davvero?"
     risposta: "Funziona nel senso che alza misurabilmente i livelli di NAD⁺ nel sangue: questo è documentato in diversi studi sull'uomo. Se quell'aumento produca benefici clinici concreti (più energia, più forza, migliore sensibilità insulinica) è meno chiaro: i risultati tra gli studi disponibili sono incoerenti."

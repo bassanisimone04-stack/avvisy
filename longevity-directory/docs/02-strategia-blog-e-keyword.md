@@ -82,8 +82,10 @@ sarcopenia: prevenirla a 40 anni, non a 70 · quanto camminare davvero serve ·
 protocollo norvegese 4×4 · stabilità ed equilibrio: il killer silenzioso dopo i 65 ·
 allenamento e sensibilità insulinica · sollevare pesi dopo i 50: come iniziare in sicurezza.
 
-### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio`
-`/guide/sonno-longevita`
+### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio` ✅ pubblicato
+`/guide/sonno-longevita` — primo pilastro scritto **insieme ai suoi cluster** (apnee notturne,
+quante ore dormire, HRV) invece che dopo. Copre inoltre CBT-I come prima linea per l'insonnia,
+melatonina, le tre leve fisiche (luce, temperatura, caffeina), jet lag sociale e turni.
 Cluster: quante ore servono e cosa succede sotto le 6 · apnee notturne: i segnali che tutti ignorano ·
 CBT-I: la terapia di prima linea per l'insonnia · HRV: cosa misura e come usarla ·
 temperatura, luce e caffeina: le tre leve che funzionano · melatonina: dosi, evidenze, errori ·

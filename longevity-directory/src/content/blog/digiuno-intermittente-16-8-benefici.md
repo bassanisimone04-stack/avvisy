@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri di nutrizione e metabolismo"
 excerpt: "Il digiuno intermittente 16/8 è probabilmente il protocollo nutrizionale più cercato online negli ultimi anni, e anche uno dei più fraintesi. Non è una dieta nel senso classico — non dice cosa mangiare — dice **quando**: si concen…"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott.ssa Alessia Ferretti — Nutrizione Clinica, Albo di Roma n. 19045"
-dataPubblicazione: '2026-09-12'
+dataPubblicazione: '2026-07-28'
 faqs:
   - domanda: "Il digiuno intermittente 16/8 fa dimagrire più di una dieta normale?"
     risposta: "A parità di calorie totali, gli studi disponibili mostrano risultati simili tra digiuno intermittente e restrizione calorica classica. Il vantaggio pratico del 16/8 è che per molte persone rende più facile mangiare meno calorie senza doverle contare esplicitamente."

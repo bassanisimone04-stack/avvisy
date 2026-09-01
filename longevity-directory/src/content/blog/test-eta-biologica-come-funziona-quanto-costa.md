@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri per il test dell'età biologica"
 excerpt: "Due persone nate lo stesso giorno possono avere un rischio di infarto che differisce di cinque volte. L'età sulla carta d'identità è il singolo fattore predittivo più forte che abbiamo per quasi tutte le malattie croniche — eppure…"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott.ssa Elena Conti — Medicina Interna, Albo di Milano n. 11287"
-dataPubblicazione: '2026-08-20'
+dataPubblicazione: '2026-06-09'
 faqs:
   - domanda: "Il test dell'età biologica è affidabile?"
     risposta: "A livello di popolazione sì, per gli orologi di seconda e terza generazione: predicono mortalità e malattia meglio della sola età anagrafica. Sul singolo individuo la variabilità tecnica resta significativa, quindi un valore isolato va interpretato con prudenza e ha senso soprattutto come punto di partenza da riconfrontare a distanza di un anno."

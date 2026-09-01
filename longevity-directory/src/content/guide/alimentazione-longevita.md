@@ -17,7 +17,7 @@ ctaDirectory: "/directory/nutrizione-metabolismo"
 ctaLabel: "Vedi i centri di nutrizione e metabolismo"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott.ssa Alessia Ferretti — Nutrizione Clinica, Albo di Roma n. 19045"
-dataPubblicazione: '2026-09-20'
+dataPubblicazione: '2026-08-13'
 faqs:
   - domanda: "Qual è la dieta con le prove più solide per la longevità?"
     risposta: "La dieta mediterranea, con distacco. È l'unico pattern alimentare verificato in trial randomizzati su decine di migliaia di persone (lo studio PREDIMED e le sue estensioni) con riduzione misurabile di eventi cardiovascolari maggiori. Non è l'unica opzione ragionevole, ma è quella su cui c'è meno da discutere."

@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri di movimento e performance"
 excerpt: "Passare dal quintile più basso al secondo quintile di forma cardiorespiratoria è associato a una riduzione della mortalità per tutte le cause superiore a quella ottenuta smettendo di fumare, in alcune delle coorti più grandi mai s…"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott. Tommaso Landi — Medicina dello Sport, Albo di Firenze n. 09321"
-dataPubblicazione: '2026-09-08'
+dataPubblicazione: '2026-07-14'
 faqs:
   - domanda: "Cos'è un buon valore di VO₂max?"
     risposta: "Dipende fortemente da età e sesso, e le tabelle di riferimento vanno lette come orientamento, non come soglie rigide. In generale, valori sopra la mediana per la propria fascia d'età e sesso sono associati a un rischio di mortalità significativamente più basso rispetto ai quintili inferiori. Un medico dello sport può inquadrare il tuo valore nel contesto corretto dopo un test."

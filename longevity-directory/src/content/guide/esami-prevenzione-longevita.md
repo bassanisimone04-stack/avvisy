@@ -18,7 +18,7 @@ ctaDirectory: "/directory/diagnostica-avanzata"
 ctaLabel: "Vedi i centri di diagnostica avanzata"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott.ssa Elena Conti — Medicina Interna, Albo di Milano n. 11287"
-dataPubblicazione: '2026-09-18'
+dataPubblicazione: '2026-08-10'
 faqs:
   - domanda: "Da dove si comincia se non ho mai fatto un check-up di prevenzione?"
     risposta: "Da un pannello cardiometabolico completo (colesterolo con ApoB, trigliceridi, glicemia e insulina a digiuno, hs-CRP) più la pressione arteriosa e, dopo i 40 anni, la funzione tiroidea. Sono gli esami che, se alterati, cambiano davvero cosa fai nei prossimi mesi. Il resto — imaging, test genetici, età biologica — ha senso aggiungerlo dopo, non prima."
@@ -65,7 +65,7 @@ quasi inutile per un'altra, a seconda dell'età e dei fattori di rischio già pr
 
 La malattia cardiovascolare resta la prima causa di morte nei paesi occidentali, ed è anche quella
 su cui la prevenzione basata su esami ha le prove più solide in assoluto. Il problema è che il
-pannello lipidico "di routine" — colesterolo totale, HDL, LDL calcolato, trigliegli — lascia
+pannello lipidico "di routine" — colesterolo totale, HDL, LDL calcolato, trigliceridi — lascia
 scoperta una fetta non piccola di persone a rischio.
 
 **ApoB** è la misura più diretta del numero di particelle aterogene che circolano nel sangue,

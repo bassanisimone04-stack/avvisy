@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri di terapie e tecnologie"
 excerpt: "L'ossigenoterapia iperbarica è una delle poche terapie di questo settore con **indicazioni mediche ufficialmente riconosciute** — intossicazione da monossido di carbonio, embolia gassosa, alcune infezioni gravi, lesioni da radiazi…"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott. Paolo Greco — Medicina dello Sport, Albo di Milano n. 08765"
-dataPubblicazione: '2026-09-15'
+dataPubblicazione: '2026-08-04'
 faqs:
   - domanda: "Quanto costa una seduta di camera iperbarica?"
     risposta: "Indicativamente 60–100 € per una camera monoposto e 80–120 € per una multiposto, come seduta singola. I pacchetti da dieci sedute vanno da 500 a 900 €. I prezzi variano per città e per pressione di esercizio della camera."

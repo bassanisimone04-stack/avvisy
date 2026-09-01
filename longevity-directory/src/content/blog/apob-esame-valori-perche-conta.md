@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri di diagnostica avanzata"
 excerpt: "Puoi avere il colesterolo LDL nella norma e un rischio cardiovascolare alto. Non è un paradosso né un caso raro: succede a circa una persona su cinque, e succede più spesso a chi ha trigliceridi elevati, girovita in aumento o una …"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott. Marco Rinaldi — Medicina Interna, Albo di Milano n. 09412"
-dataPubblicazione: '2026-08-24'
+dataPubblicazione: '2026-06-16'
 faqs:
   - domanda: "Che cos'è l'ApoB in un esame del sangue?"
     risposta: "È l'apolipoproteina B, la proteina presente in una singola copia su ogni lipoproteina potenzialmente aterogena. Dosarla equivale a contare quante di quelle particelle circolano nel sangue, indipendentemente da quanto colesterolo contengano."

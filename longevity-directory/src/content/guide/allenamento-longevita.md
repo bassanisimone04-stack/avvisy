@@ -16,7 +16,7 @@ ctaDirectory: "/directory/movimento-performance"
 ctaLabel: "Vedi i centri di movimento e performance"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott. Tommaso Landi — Medicina dello Sport, Albo di Firenze n. 09321"
-dataPubblicazione: '2026-09-26'
+dataPubblicazione: '2026-08-20'
 faqs:
   - domanda: "Meglio cardio o pesi per invecchiare bene?"
     risposta: "Entrambi, perché proteggono da cose diverse. Il lavoro aerobico costruisce la capacità cardiorespiratoria, il predittore di mortalità più forte che conosciamo; il lavoro di forza protegge massa muscolare, densità ossea e autonomia funzionale negli ultimi vent'anni di vita. Chi ne fa uno solo lascia scoperto un fianco."

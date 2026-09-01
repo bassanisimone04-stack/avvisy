@@ -17,7 +17,7 @@ ctaDirectory: "/directory/terapie-tecnologie"
 ctaLabel: "Vedi i centri di terapie e tecnologie"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott. Paolo Greco — Medicina dello Sport, Albo di Milano n. 08765"
-dataPubblicazione: '2026-09-24'
+dataPubblicazione: '2026-08-17'
 faqs:
   - domanda: "Quale terapia del biohacking ha le prove migliori?"
     risposta: "La sauna, con distacco — ed è ironico, perché è anche la meno tecnologica. Gli studi di coorte finlandesi mostrano un'associazione dose-dipendente tra frequenza delle sedute e minore mortalità cardiovascolare. Restano studi osservazionali, non trial randomizzati, ma la dimensione dell'effetto e la coerenza dei dati la mettono davanti a tutto il resto di questa lista."

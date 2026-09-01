@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri di medicina della longevità"
 excerpt: "\"Check-up completo\" è probabilmente l'espressione più venduta e meno definita della medicina privata italiana. Sotto lo stesso nome si trovano pacchetti da 90 euro con dieci esami del sangue di routine e percorsi da 2.000 euro con…"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott. Giorgio Sabatini — Medicina Interna, Albo di Roma n. 22187"
-dataPubblicazione: '2026-09-05'
+dataPubblicazione: '2026-07-07'
 faqs:
   - domanda: "Cosa deve includere un check-up completo di prevenzione?"
     risposta: "Non esiste uno standard unico. Un pacchetto di base solido include emocromo, assetto lipidico (idealmente con ApoB), glicemia e insulina a digiuno, funzionalità epatica e renale, tiroide, proteina C reattiva e un consulto medico che interpreta i risultati insieme, non un elenco di valori spediti via email."

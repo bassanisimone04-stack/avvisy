@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri di crioterapia"
 excerpt: "Tre minuti a centoquaranta gradi sotto zero costano fra i trenta e i sessanta euro. È il prezzo di una seduta di crioterapia whole body, la terapia del freddo estremo passata in pochi anni dagli spogliatoi delle squadre di calcio …"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott. Paolo Greco — Medicina dello Sport, Albo di Milano n. 08765"
-dataPubblicazione: '2026-08-31'
+dataPubblicazione: '2026-06-30'
 faqs:
   - domanda: "Quanto costa una seduta di crioterapia?"
     risposta: "Indicativamente 35–60 € a listino, con la prima seduta spesso proposta a 25–40 €. I pacchetti da dieci sedute vanno da 250 a 450 €, gli abbonamenti mensili da 120 a 250 €. I prezzi variano molto per città e per tipo di impianto."

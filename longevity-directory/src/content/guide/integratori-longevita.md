@@ -16,7 +16,7 @@ ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott.ssa Elena Conti — Medicina Interna, Albo di Milano n. 11287"
-dataPubblicazione: '2026-09-28'
+dataPubblicazione: '2026-08-24'
 faqs:
   - domanda: "Qual è l'integratore con le prove migliori per la longevità?"
     risposta: "Per effetto documentato sull'uomo, la creatina monoidrato — non per la longevità in sé, ma per massa muscolare e forza, che sono tra i predittori di invecchiamento in salute più solidi. È anche uno dei più economici e dei più studiati per sicurezza. Nessuna molecola di questa guida ha invece prove dirette di allungamento della vita umana."

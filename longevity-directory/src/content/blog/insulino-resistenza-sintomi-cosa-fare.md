@@ -11,7 +11,7 @@ ctaLabel: "Vedi i centri per la salute metabolica"
 excerpt: "Quando arriva una diagnosi di diabete di tipo 2, il processo che l'ha causata è in corso da dieci o quindici anni. Non perché sia sfuggito ai controlli: perché i controlli guardavano il parametro sbagliato. La glicemia a digiuno r…"
 autore: "Redazione Longevità"
 revisoreMedico: "Dott.ssa Alessia Ferretti — Nutrizione Clinica, Albo di Roma n. 19045"
-dataPubblicazione: '2026-08-27'
+dataPubblicazione: '2026-06-23'
 faqs:
   - domanda: "Quali sono i sintomi dell'insulino-resistenza?"
     risposta: "Nella maggior parte dei casi nessuno. Si osservano piuttosto segni clinici: aumento della circonferenza vita, acanthosis nigricans su collo e ascelle, fibromi penduli, steatosi epatica, trigliceridi alti con HDL basso. Stanchezza e sonnolenza dopo i pasti sono compatibili ma aspecifiche: giustificano un esame, non una diagnosi."
