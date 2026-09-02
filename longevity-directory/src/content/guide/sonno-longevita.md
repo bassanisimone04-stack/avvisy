@@ -14,6 +14,7 @@ clusterSlugs:
   - "apnee-notturne-sintomi-diagnosi"
   - "quante-ore-dormire-davvero"
   - "hrv-cosa-misura-come-usarla"
+  - "melatonina-dosi-evidenze-errori"
 ctaDirectory: "/directory/sonno-mente-stress"
 ctaLabel: "Vedi i centri per sonno, mente e stress"
 autore: "Redazione Longevità"
@@ -89,7 +90,8 @@ Dove funziona meglio è nel **riallineamento del ritmo circadiano**: jet lag, si
 sonno ritardata, alcune situazioni di lavoro a turni. In quel contesto conta più il *quando* la
 prendi che *quanto* ne prendi — e le dosi usate negli studi di cronobiologia sono spesso molto
 basse, inferiori al milligrammo, mentre il mercato propone dosaggi anche dieci o venti volte
-superiori senza che ne derivi maggiore efficacia.
+superiori senza che ne derivi maggiore efficacia. Approfondisci in
+[Melatonina: dosi, evidenze, errori](/blog/melatonina-dosi-evidenze-errori).
 
 ## Apnee notturne: la diagnosi che manca a milioni di persone
 

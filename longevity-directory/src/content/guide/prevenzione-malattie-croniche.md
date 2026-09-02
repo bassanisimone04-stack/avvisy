@@ -14,6 +14,8 @@ clusterSlugs:
   - "rischio-cardiovascolare-come-si-calcola"
   - "screening-oncologici-che-funzionano"
   - "declino-cognitivo-fattori-di-rischio-modificabili"
+  - "menopausa-rischio-cardiovascolare"
+  - "testosterone-quando-e-un-problema-clinico"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -88,12 +90,14 @@ propaga su più aree contemporaneamente, invece di agire su una sola.
 Il calo degli estrogeni legato alla **menopausa** peggiora in modo documentato il profilo lipidico e
 avvicina, nel tempo, il rischio cardiovascolare femminile a quello maschile nella stessa fascia
 d'età — un cambiamento fisiologico da monitorare con il proprio medico, non da minimizzare.
+Approfondisci in [Menopausa e rischio cardiovascolare](/blog/menopausa-rischio-cardiovascolare).
 
 Nell'uomo, un calo graduale del **testosterone** con l'età è normale e non richiede
 automaticamente un trattamento: diventa una questione clinica quando valori bassi si accompagnano a
 sintomi specifici documentati insieme (energia, massa muscolare, libido), non sulla base del solo
 numero di laboratorio isolato — una decisione da individualizzare con il medico, non un intervento
-da iniziare per principio.
+da iniziare per principio. Approfondisci in
+[Testosterone: quando è un problema clinico](/blog/testosterone-quando-e-un-problema-clinico).
 
 ## Due fattori meno discussi: salute orale e stress cronico
 

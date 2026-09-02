@@ -14,6 +14,7 @@ clusterSlugs:
   - "test-eta-biologica-come-funziona-quanto-costa"
   - "check-up-completo-prevenzione-quanto-costa"
   - "apob-esame-valori-perche-conta"
+  - "calcium-score-coronarico-a-chi-serve"
 ctaDirectory: "/directory/diagnostica-avanzata"
 ctaLabel: "Vedi i centri di diagnostica avanzata"
 autore: "Redazione Longevità"
@@ -109,7 +110,8 @@ dello studio MESA (Budoff e colleghi) lo indicano per adulti tra 40 e 75 anni co
 cardiovascolare intermedio, dove il risultato può effettivamente spostare la decisione se iniziare
 o meno una terapia. Non è un esame da fare a 28 anni senza fattori di rischio: a quell'età la
 probabilità pre-test di trovare calcificazioni è talmente bassa che il rapporto tra informazione
-utile e radiazioni ricevute peggiora, non migliora.
+utile e radiazioni ricevute peggiora, non migliora. Approfondisci in
+[Calcium score coronarico: a chi serve](/blog/calcium-score-coronarico-a-chi-serve).
 
 **Risonanza magnetica total body "di screening".** È probabilmente l'esame più marketizzato e meno
 supportato da prove di questa lista. Su persone senza sintomi e senza fattori di rischio noti, le

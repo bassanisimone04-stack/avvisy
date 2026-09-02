@@ -13,6 +13,7 @@ keyTakeaways:
 clusterSlugs:
   - "crioterapia-whole-body-prezzi-benefici"
   - "camera-iperbarica-prezzo-indicazioni"
+  - "sauna-mortalita-cardiovascolare"
 ctaDirectory: "/directory/terapie-tecnologie"
 ctaLabel: "Vedi i centri di terapie e tecnologie"
 autore: "Redazione Longevità"
@@ -57,7 +58,8 @@ Restano dati osservazionali — chi va in sauna quattro volte a settimana in Fin
 semplicemente essere più sano in partenza, e i ricercatori possono correggere solo per i fattori
 che misurano. Ma la dose-risposta, la durata del follow-up e la coerenza con i meccanismi noti
 (stress termico ripetuto, adattamento cardiovascolare simile per certi versi a quello dell'esercizio
-aerobico moderato) la collocano un gradino sopra tutto il resto di questa guida.
+aerobico moderato) la collocano un gradino sopra tutto il resto di questa guida. Approfondisci in
+[Sauna e mortalità cardiovascolare: lo studio finlandese](/blog/sauna-mortalita-cardiovascolare).
 
 **In pratica**: 15–20 minuti, 2–4 volte a settimana, 80–90 °C. Controindicazioni reali per
 ipotensione, aritmie non controllate, gravidanza. Costo: da pochi euro a seduta in palestra a

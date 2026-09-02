@@ -12,6 +12,8 @@ keyTakeaways:
   - "Nessun integratore di questa guida ha un effetto paragonabile a esercizio, sonno e alimentazione: l'ordine delle priorità conta più della scelta del prodotto."
 clusterSlugs:
   - "nmn-nad-cosa-dice-la-scienza"
+  - "vitamina-d-chi-ne-ha-bisogno"
+  - "omega-3-dosi-epa-dha"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -71,6 +73,8 @@ hanno invece mostrato una riduzione significativa degli eventi.
 Conclusione onesta: **dose, formulazione e popolazione determinano il risultato**. Per una persona
 sana che mangia pesce due o tre volte a settimana, il beneficio atteso dall'integrazione è modesto.
 Per chi ha trigliceridi alti e rischio elevato, il discorso è clinico e va fatto con il medico.
+Approfondisci in
+[Omega-3: dosi ed EPA/DHA, cosa cambia davvero](/blog/omega-3-dosi-epa-dha).
 
 ## 🟡 Vitamina D
 
@@ -82,7 +86,8 @@ cardiovascolari o incidenza oncologica nella popolazione generale.
 La regola pratica che ne discende è la stessa che vale per il resto del sito: **misura, poi
 integra**. Il dosaggio della 25-OH vitamina D costa poco ed è tra gli esami più semplici da
 aggiungere a un pannello (vedi la guida
-[Gli esami che contano davvero](/guide/esami-prevenzione-longevita)).
+[Gli esami che contano davvero](/guide/esami-prevenzione-longevita)). Approfondisci in
+[Vitamina D: chi ne ha bisogno davvero](/blog/vitamina-d-chi-ne-ha-bisogno).
 
 ## 🟡 Magnesio, collagene, urolitina A, spermidina
 

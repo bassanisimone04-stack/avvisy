@@ -62,6 +62,7 @@ DEXA e composizione corporea · VO₂max: come si misura e perché predice la mo
 test dell'età biologica: cosa misurano e quanto sono affidabili · test del microbiota: stato dell'arte ·
 CGM per non diabetici: utile o moda.
 → **Ogni articolo chiude con: "Dove farlo" + link alla categoria directory + città principali.**
+→ Scritto come articolo dedicato: **calcium score coronarico: a chi serve** (`/blog/calcium-score-coronarico-a-chi-serve`).
 
 ### Pilastro 3 — `Nutrizione per la longevità: cosa sappiamo con ragionevole certezza` ✅ pubblicato
 `/guide/alimentazione-longevita` — collega i 2 cluster già pubblicati (insulino-resistenza,
@@ -82,6 +83,7 @@ perché la forza di presa predice la mortalità · massa muscolare come organo e
 sarcopenia: prevenirla a 40 anni, non a 70 · quanto camminare davvero serve ·
 protocollo norvegese 4×4 · stabilità ed equilibrio: il killer silenzioso dopo i 65 ·
 allenamento e sensibilità insulinica · sollevare pesi dopo i 50: come iniziare in sicurezza.
+→ Scritto come articolo dedicato: **sarcopenia: prevenirla a 40 anni, non a 70** (`/blog/sarcopenia-prevenirla-a-40-anni`).
 
 ### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio` ✅ pubblicato
 `/guide/sonno-longevita` — primo pilastro scritto **insieme ai suoi cluster** (apnee notturne,
@@ -91,6 +93,7 @@ Cluster: quante ore servono e cosa succede sotto le 6 · apnee notturne: i segna
 CBT-I: la terapia di prima linea per l'insonnia · HRV: cosa misura e come usarla ·
 temperatura, luce e caffeina: le tre leve che funzionano · melatonina: dosi, evidenze, errori ·
 sonno e rischio di Alzheimer (sistema glinfatico) · turni e jet lag sociale.
+→ Scritto come articolo dedicato: **melatonina: dosi, evidenze, errori** (`/blog/melatonina-dosi-evidenze-errori`).
 
 ### Pilastro 6 — `Integratori per la longevità: cosa ha prove, cosa no` ✅ pubblicato
 `/guide/integratori-longevita` — con **sistema di gradazione dell'evidenza**; collega il cluster
@@ -100,6 +103,8 @@ Cluster: NMN e NAD⁺, cosa sappiamo davvero · resveratrolo: ascesa e caduta ·
 sottovalutato · omega-3: dosi ed EPA/DHA · vitamina D: chi ne ha bisogno · magnesio: forme a confronto ·
 rapamicina e metformina: lo stato della ricerca sull'uomo · collagene: cosa promette e cosa fa ·
 spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una bufala.
+→ Scritti come articoli dedicati: **omega-3: dosi ed EPA/DHA** (`/blog/omega-3-dosi-epa-dha`) e
+**vitamina D: chi ne ha bisogno** (`/blog/vitamina-d-chi-ne-ha-bisogno`).
 
 ### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
 `/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
@@ -109,12 +114,17 @@ lo studio finlandese · doccia fredda e immersione: cosa dicono i dati · ossige
 usi approvati vs promesse · red light therapy · IV therapy e NAD⁺ in flebo: serve? · IHHT ·
 PEMF · neurofeedback · plasmaferesi e "giovani plasma": realtà e marketing.
 → **Cluster BOFU: ogni articolo linka alla categoria directory e alle pagine città.**
+→ Scritto come articolo dedicato: **sauna e mortalità cardiovascolare: lo studio finlandese**
+(`/blog/sauna-mortalita-cardiovascolare`).
 
 ### Pilastro 8 — `Prevenire le quattro grandi malattie croniche` ✅ pubblicato
 `/guide/prevenzione-malattie-croniche` — collega 3 cluster scritti insieme al pilastro (rischio
 cardiovascolare/SCORE2, screening oncologici che funzionano davvero vs PSA controverso, declino
 cognitivo — Lancet Commission 2024, 45% dei casi legato a 14 fattori modificabili). Copre in
 forma più breve sindrome metabolica, menopausa, testosterone, salute orale, stress cronico.
+→ Scritti come articoli dedicati: **menopausa e rischio cardiovascolare**
+(`/blog/menopausa-rischio-cardiovascolare`) e **testosterone: quando è un problema clinico**
+(`/blog/testosterone-quando-e-un-problema-clinico`).
 
 ### Pilastro 9 (commerciale) — `Guide città e costi` ✅ pubblicato, ma non come descritto qui
 `/citta/[citta].astro` — **decisione deliberata di implementazione, diversa dal piano originale.**

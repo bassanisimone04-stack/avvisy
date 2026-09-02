@@ -12,6 +12,7 @@ keyTakeaways:
   - "Sotto i 6.000–8.000 passi al giorno ogni passo in più conta molto; sopra, la curva si appiattisce."
 clusterSlugs:
   - "come-aumentare-vo2-max"
+  - "sarcopenia-prevenirla-a-40-anni"
 ctaDirectory: "/directory/movimento-performance"
 ctaLabel: "Vedi i centri di movimento e performance"
 autore: "Redazione Longevità"
@@ -103,7 +104,8 @@ dopo la prima caduta, si recupera qualcosa in condizioni molto più difficili.
 
 L'altro pilastro della prevenzione della sarcopenia non è allenamento ma alimentazione: un apporto
 proteico adeguato, intorno a 1,2–1,6 g/kg al giorno, senza il quale lo stimolo dell'allenamento
-trova poco materiale su cui lavorare.
+trova poco materiale su cui lavorare. Approfondisci in
+[Sarcopenia: prevenirla a 40 anni, non a 70](/blog/sarcopenia-prevenirla-a-40-anni).
 
 ## Camminare: quanto serve davvero
 
