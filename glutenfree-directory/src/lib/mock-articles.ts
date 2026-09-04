@@ -151,7 +151,7 @@ const seeds: Seed[] = [
   },
   {
     title: "Prodotti senza glutine: le novità più interessanti del 2026",
-    category: "Prodotti",
+    category: "Alimentazione",
     excerpt: "Una rassegna dei prodotti gluten free più innovativi arrivati sugli scaffali quest'anno, tra farine, snack e sostituti del pane.",
     coverSeed: 106, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-03-22",
     tags: ["prodotti", "novità", "spesa"],
@@ -1019,6 +1019,144 @@ const seeds: Seed[] = [
       { question: "Queste basi sono adatte anche a un buffet numeroso?", answer: "Sì, essendo già porzionate permettono di preparare rapidamente grandi quantità: calcola 3-4 pezzi a persona per un aperitivo." },
     ],
   },
+  {
+    title: "La dieta senza glutine fa dimagrire? Cosa dice davvero la scienza",
+    category: "Salute",
+    excerpt: "La dieta senza glutine fa dimagrire? La risposta onesta: il calo di peso iniziale spesso dipende da cosa si toglie e cosa si aggiunge in tavola, non dal glutine in sé.",
+    metaTitle: "La dieta senza glutine fa dimagrire? | Mappa Senza Glutine",
+    metaDescription: "La dieta senza glutine fa dimagrire? Cosa dice davvero la scienza: perché il calo di peso spesso dipende da cosa si elimina, non dal glutine in sé.",
+    coverSeed: 149, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-08-26",
+    tags: ["dimagrire", "dieta senza glutine", "nutrizione", "miti"],
+    keyTakeaways: [
+      "Non esistono prove scientifiche che il glutine, di per sé, faccia ingrassare o dimagrire in una persona senza celiachia o sensibilità al glutine.",
+      "Il calo di peso spesso osservato a inizio dieta dipende più dall'eliminazione di cibi processati e dalla nuova attenzione alle etichette che dal glutine in sé.",
+      "Molti prodotti gluten-free confezionati compensano la consistenza con più grassi o zuccheri: non sono automaticamente più 'leggeri' delle versioni tradizionali.",
+      "Per chi è celiaco, la dieta senza glutine resta una necessità medica per la salute intestinale, non una strategia per perdere peso.",
+    ],
+    sections: [
+      { h2: "La dieta senza glutine fa dimagrire? La risposta breve", body: "È una delle domande più cercate su Google, e la risposta onesta è: <strong>no, non per un meccanismo diretto legato al glutine</strong>. Il glutine è una proteina, non contiene più calorie di altri nutrienti e non esistono studi che dimostrino un effetto dimagrante specifico nelle persone senza celiachia o sensibilità al glutine. Se un calo di peso arriva, ha quasi sempre altre cause, che vale la pena capire prima di iniziare una dieta priva di glutine solo per perdere peso." },
+      { h2: "Perché allora molte persone perdono peso quando iniziano", body: "Il calo di peso iniziale che alcune persone notano ha spiegazioni più semplici del glutine in sé.", h3: [
+        { title: "Si eliminano automaticamente molti cibi processati", body: "Pane bianco, pizza da fast food, snack industriali, dolci da forno: molti dei cibi più calorici e meno sazianti della dieta occidentale contengono glutine. Toglierli riduce naturalmente l'apporto calorico complessivo, indipendentemente dal glutine come sostanza." },
+        { title: "Si presta più attenzione a cosa si mangia", body: "Iniziare una dieta con regole precise porta quasi sempre a leggere le etichette con più cura, cucinare più spesso in casa e ridurre gli spuntini impulsivi: un effetto comportamentale che da solo può spiegare buona parte del calo di peso iniziale." },
+      ] },
+      { h2: "Il rovescio della medaglia: i prodotti gluten-free non sono automaticamente 'light'", body: "Per riprodurre la consistenza morbida ed elastica che il glutine garantisce naturalmente, molti prodotti confezionati senza glutine (pane, biscotti, snack da forno) usano più grassi, amidi o zuccheri aggiunti. Il risultato è che, a parità di categoria, un prodotto gluten-free può avere un valore calorico uguale o superiore alla versione tradizionale: leggere sempre l'etichetta nutrizionale resta la scelta più informata, senza dare per scontato che 'senza glutine' equivalga a 'più leggero'." },
+      { h2: "Domande frequenti sulla dieta senza glutine e il peso", body: "Le domande più cercate su questo tema controverso.", h3: [
+        { title: "Chi non è celiaco dovrebbe eliminare il glutine per dimagrire?", body: "Non ci sono evidenze scientifiche che lo giustifichino: una dieta equilibrata con meno cibi processati, indipendentemente dal glutine, porta agli stessi risultati senza le restrizioni e i costi aggiuntivi di una dieta gluten-free non necessaria dal punto di vista medico." },
+        { title: "Perdere peso è un segnale di celiachia?", body: "Il calo di peso involontario può essere uno dei sintomi della celiachia non diagnosticata, insieme ad altri segnali come gonfiore, stanchezza o carenze nutrizionali: se sospetti la celiachia, il percorso corretto è parlarne con un medico prima di eliminare il glutine, non iniziare una dieta fai-da-te." },
+        { title: "Come dimagrire in sicurezza restando senza glutine, se sono celiaco?", body: "Le stesse regole valide per chiunque: attenzione alle porzioni, preferenza per alimenti freschi e non processati rispetto ai sostituti gluten-free confezionati, e attività fisica regolare, idealmente con il supporto di un nutrizionista che conosca la celiachia." },
+      ] },
+    ],
+    faqs: [
+      { question: "La dieta senza glutine fa dimagrire?", answer: "No, non per un effetto diretto del glutine: il calo di peso iniziale che alcuni notano dipende più spesso dall'eliminazione di cibi processati e da una maggiore attenzione alle etichette." },
+      { question: "I prodotti senza glutine sono più leggeri di quelli tradizionali?", answer: "Non necessariamente: molti prodotti da forno gluten-free confezionati contengono più grassi o zuccheri aggiunti per compensare la consistenza, quindi vanno valutati leggendo l'etichetta nutrizionale." },
+      { question: "Una persona non celiaca dovrebbe togliere il glutine per perdere peso?", answer: "Non ci sono evidenze scientifiche a sostegno di questa scelta: una dieta equilibrata con meno cibi processati porta risultati simili senza le restrizioni di una dieta senza glutine non necessaria dal punto di vista medico." },
+    ],
+  },
+  {
+    title: "Spesa senza glutine al discount: Aldi, Lidl ed Eurospin a confronto",
+    category: "Alimentazione",
+    excerpt: "Fare la spesa senza glutine costa meno al discount? Le linee dedicate di Aldi, Lidl ed Eurospin a confronto, e come risparmiare senza rinunciare alla sicurezza.",
+    metaTitle: "Spesa senza glutine al discount: la guida | Mappa Senza Glutine",
+    metaDescription: "Spesa senza glutine al discount: le linee dedicate di Aldi, Lidl ed Eurospin a confronto, e come risparmiare senza rinunciare alla certificazione AIC.",
+    coverSeed: 150, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-27",
+    tags: ["spesa", "discount", "risparmio", "supermercati"],
+    keyTakeaways: [
+      "Eurospin ha una linea propria dedicata, 'Amo Essere Senza Glutine', con prodotti verificati AIC e Spiga Barrata in etichetta.",
+      "Aldi propone la linea 'Enjoy Free', dedicata a prodotti senza glutine e senza lattosio.",
+      "Lidl offre prodotti senza glutine freschi (come pasta fresca) e alcune referenze a marchio Realforno, oltre a marche note sugli scaffali.",
+      "Il risparmio reale va sempre verificato prodotto per prodotto: non tutte le referenze discount costano meno delle marche storiche in offerta.",
+    ],
+    sections: [
+      { h2: "Fare la spesa senza glutine al discount conviene davvero?", body: "Chi vive la dieta senza glutine ogni giorno conosce bene il problema: i prodotti certificati costano spesso più delle versioni tradizionali (ne parliamo nel dettaglio nella nostra <a href=\"/blog/quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali\">guida ai costi della dieta senza glutine</a>). Negli ultimi anni, però, anche le principali catene discount italiane hanno sviluppato linee dedicate: vediamo cosa offrono davvero Eurospin, Aldi e Lidl." },
+      { h2: "Le linee dedicate dei discount italiani", body: "Ogni catena ha un'offerta diversa per struttura e ampiezza.", h3: [
+        { title: "Eurospin: Amo Essere Senza Glutine", body: "Eurospin propone una linea propria, <strong>Amo Essere Senza Glutine</strong>, con prodotti verificati dall'AIC e la Spiga Barrata in etichetta: pasta, prodotti da forno e snack a marchio del discount, pensati specificamente per chi segue una dieta senza glutine." },
+        { title: "Aldi: Enjoy Free", body: "Aldi ha una linea dedicata chiamata <strong>Enjoy Free</strong>, che copre sia i prodotti senza glutine sia quelli senza lattosio, disponibile nei punti vendita della catena in Italia." },
+        { title: "Lidl: prodotti freschi e marchio Realforno", body: "Lidl propone alcuni prodotti senza glutine freschi, come pasta fresca, oltre a referenze del marchio interno <strong>Realforno</strong> disponibili in versione gluten free, accanto a marche note posizionate sugli scaffali dedicati." },
+      ] },
+      { h2: "Come risparmiare senza rinunciare alla sicurezza", body: "Qualche accorgimento utile per fare la spesa senza glutine in modo intelligente: <ul><li><strong>Verifica sempre la Spiga Barrata</strong> in etichetta, indipendentemente dal prezzo o dal discount scelto.</li><li><strong>Confronta il prezzo al chilo</strong>, non solo quello della confezione: le linee a marchio del discount non sono sempre più economiche delle marche storiche in offerta.</li><li><strong>Alterna prodotti freschi e naturalmente senza glutine</strong> (riso, mais, legumi, verdure) ai sostituti confezionati, che restano comunque la voce di spesa più cara.</li><li><strong>Controlla la disponibilità nel tuo punto vendita</strong>: l'assortimento delle linee dedicate può variare da negozio a negozio.</li></ul>" },
+      { h2: "Domande frequenti sulla spesa senza glutine al discount", body: "Le domande più comuni di chi vuole risparmiare senza rinunciare alla sicurezza.", h3: [
+        { title: "I prodotti senza glutine dei discount sono sicuri quanto quelli di marca?", body: "Sì, se riportano la Spiga Barrata o comunque la certificazione richiesta dalla normativa europea sul 'senza glutine': il prezzo più basso non riguarda la sicurezza alimentare, ma la struttura di costo della grande distribuzione discount." },
+        { title: "Conviene sempre scegliere la linea del discount rispetto a una marca storica?", body: "Non sempre: alcune marche storiche in offerta possono costare meno delle linee dedicate del discount. Vale la pena confrontare il prezzo al chilo prodotto per prodotto, soprattutto per pasta e pane, le voci più acquistate." },
+        { title: "Tutti i discount in Italia hanno una linea senza glutine dedicata?", body: "Le principali catene discount hanno sviluppato una propria offerta negli ultimi anni, ma l'ampiezza dell'assortimento varia molto: conviene verificare direttamente nel punto vendita più vicino." },
+      ] },
+    ],
+    faqs: [
+      { question: "Quali discount hanno prodotti senza glutine in Italia?", answer: "Eurospin ha la linea Amo Essere Senza Glutine, Aldi la linea Enjoy Free, mentre Lidl propone prodotti freschi senza glutine e alcune referenze a marchio Realforno." },
+      { question: "I prodotti senza glutine dei discount sono certificati?", answer: "Le linee dedicate come Amo Essere Senza Glutine di Eurospin riportano la Spiga Barrata AIC in etichetta: verificala sempre prima dell'acquisto, indipendentemente dal punto vendita." },
+      { question: "Conviene fare la spesa senza glutine al discount?", answer: "Può convenire per alcuni prodotti, ma non sempre: confronta il prezzo al chilo con le marche storiche in offerta prima di dare per scontato il risparmio." },
+    ],
+  },
+  {
+    title: "Panettone e colomba senza glutine: dove trovarli e quali scegliere",
+    category: "Alimentazione",
+    excerpt: "Panettone e colomba senza glutine per le feste: le proposte di Nutrifree e Schär, dove acquistarli e cosa verificare in etichetta prima di scegliere.",
+    metaTitle: "Panettone e colomba senza glutine | Mappa Senza Glutine",
+    metaDescription: "Panettone e colomba senza glutine: le proposte di Nutrifree e Schär per le feste, dove trovarli e cosa controllare in etichetta prima di acquistarli.",
+    coverSeed: 151, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-28",
+    tags: ["panettone", "colomba", "natale", "pasqua", "dolci delle feste"],
+    keyTakeaways: [
+      "Nutrifree propone un panettone classico con uvetta e canditi, nato dalla collaborazione con il laboratorio siciliano Punto Caldo, oltre a una versione al cioccolato e una gastronomica salata.",
+      "Nutrifree produce anche colombe pasquali senza glutine, tra cui la versione classica e quella con gocce di cioccolato.",
+      "Schär propone un proprio panettone senza glutine dalla consistenza soffice, con uvetta e canditi.",
+      "Verificare sempre la Spiga Barrata in etichetta anche sui prodotti stagionali: la disponibilità nei negozi può variare a ridosso delle feste.",
+    ],
+    sections: [
+      { h2: "Panettone e colomba senza glutine: la sfida dei lievitati delle feste", body: "Panettone e colomba sono tra i dolci più difficili da riprodurre senza glutine: impasti lievitati, morbidi e arricchiti con burro, uova e canditi, dove il glutine gioca normalmente un ruolo chiave nella struttura. Negli ultimi anni, però, alcuni marchi specializzati hanno sviluppato ricette senza glutine capaci di avvicinarsi molto alla tradizione." },
+      { h2: "Le proposte da conoscere per Natale e Pasqua", body: "Due marchi specializzati in prodotti senza glutine offrono oggi un'ampia scelta per le feste.", h3: [
+        { title: "Nutrifree: panettone e colomba", body: "<a href=\"/prodotti\">Nutrifree</a> propone un panettone classico senza glutine con uvetta e canditi, nato dalla collaborazione con il laboratorio artigianale siciliano <strong>Punto Caldo</strong>, oltre a una versione al cioccolato e a un panettone gastronomico salato per l'antipasto delle feste. Per Pasqua, la gamma include una colomba classica e una con gocce di cioccolato, entrambe senza glutine e senza lattosio." },
+        { title: "Schär: il panettone tradizionale", body: "Anche <strong>Schär</strong> propone un proprio panettone senza glutine, con una consistenza soffice pensata per avvicinarsi il più possibile al dolce tradizionale, arricchito con uvetta e canditi." },
+      ] },
+      { h2: "Dove acquistare panettone e colomba senza glutine", body: "Farmacie con reparto dedicato, negozi specializzati come quelli che trovi nella nostra <a href=\"/directory\">directory</a>, e la vendita online sono i canali più affidabili, soprattutto a ridosso delle feste quando la disponibilità nei supermercati generalisti può essere limitata: conviene ordinare con qualche settimana di anticipo per essere sicuri di trovare il prodotto scelto." },
+      { h2: "Domande frequenti su panettone e colomba senza glutine", body: "Le domande più comuni di chi cerca i dolci delle feste senza glutine.", h3: [
+        { title: "Il panettone senza glutine ha lo stesso gusto di quello tradizionale?", body: "I marchi specializzati come Nutrifree e Schär hanno sviluppato ricette pensate per avvicinarsi molto alla consistenza e al gusto del panettone tradizionale, anche se la percezione resta soggettiva: la qualità è comunque nettamente migliorata negli ultimi anni." },
+        { title: "Quando conviene acquistare panettone e colomba senza glutine?", body: "Meglio ordinare con qualche settimana di anticipo rispetto a Natale o Pasqua: la disponibilità nei punti vendita generalisti può essere limitata nei giorni immediatamente precedenti la festività, mentre farmacie e negozi specializzati tendono a garantire scorte più stabili." },
+        { title: "Dove si trovano questi prodotti fuori dal periodo delle feste?", body: "Alcuni negozi specializzati e la vendita online dei marchi produttori mantengono la disponibilità anche fuori stagione, ma la scelta è generalmente più ampia in prossimità di Natale e Pasqua." },
+      ] },
+    ],
+    faqs: [
+      { question: "Quali marche fanno il panettone senza glutine?", answer: "Nutrifree e Schär sono tra i marchi specializzati che propongono un panettone senza glutine, con ricette pensate per avvicinarsi alla consistenza di quello tradizionale." },
+      { question: "Esiste la colomba pasquale senza glutine?", answer: "Sì, Nutrifree propone una colomba pasquale senza glutine, disponibile nella versione classica e in quella con gocce di cioccolato." },
+      { question: "Dove si compra il panettone senza glutine?", answer: "In farmacie con reparto dedicato, nei negozi specializzati della nostra directory e online: conviene ordinare con anticipo, soprattutto a ridosso del Natale." },
+    ],
+  },
+  {
+    title: "Birra senza glutine: le marche da conoscere e cosa sapere prima di berla",
+    category: "Alimentazione",
+    excerpt: "Birra senza glutine: quali marche sono certificate AIC, la differenza tra birre deglutinate e birre nativamente senza glutine, e quanto berne in sicurezza.",
+    metaTitle: "Birra senza glutine: le marche da conoscere | Mappa Senza Glutine",
+    metaDescription: "Birra senza glutine: quali marche sono certificate AIC, come funziona il processo di deglutinazione e quanto consumarne in sicurezza secondo l'AIC.",
+    coverSeed: 152, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-29",
+    tags: ["birra", "bevande", "AIC", "prodotti"],
+    keyTakeaways: [
+      "Peroni Senza Glutine è tra le birre gluten-free più diffuse in Italia, certificata AIC con un contenuto di glutine inferiore a 10 ppm.",
+      "Green's, marchio inglese prodotto in Belgio, è tra le birre senza glutine più apprezzate dalla community celiaca italiana.",
+      "Esistono anche birre italiane certificate come Lol, prodotta in Friuli, reperibile soprattutto nei negozi specializzati.",
+      "L'AIC consiglia comunque un consumo moderato delle birre 'senza glutine' ottenute da malto d'orzo, perché mantengono un residuo fisso di glutine sotto soglia.",
+    ],
+    sections: [
+      { h2: "Perché la birra è un caso particolare per chi è celiaco", body: "La birra tradizionale nasce da cereali come orzo e frumento, entrambi contenenti glutine: per questo, a differenza di pasta o pane, non basta partire da un ingrediente alternativo, ma servono processi produttivi specifici per ottenere una birra sicura per i celiaci, verificati e certificati dall'AIC con la Spiga Barrata in etichetta." },
+      { h2: "Deglutinazione o cereali senza glutine: due strade diverse", body: "Sul mercato esistono due approcci principali per produrre birra senza glutine.", h3: [
+        { title: "Birre deglutinate da malto d'orzo", body: "Sono birre prodotte con malto d'orzo tradizionale, sottoposte poi a un processo enzimatico che scompone le proteine del glutine fino a portarlo sotto la soglia di 20 ppm richiesta dalla normativa europea per la dicitura 'senza glutine'." },
+        { title: "Birre nativamente senza cereali glutinosi", body: "Altre birre sono prodotte fin dall'origine con cereali naturalmente privi di glutine, come riso, mais o sorgo, senza bisogno di un processo di deglutinazione successivo." },
+      ] },
+      { h2: "Le marche di birra senza glutine da conoscere", body: "Alcuni marchi certificati, disponibili con diversa facilità sul mercato italiano.", h3: [
+        { title: "Peroni Senza Glutine", body: "<strong>Peroni Senza Glutine</strong> è una lager prodotta con un processo di eliminazione del glutine che non altera le caratteristiche organolettiche del prodotto, certificata AIC con un contenuto di glutine inferiore a 10 ppm: tra le birre gluten-free più facili da trovare in Italia." },
+        { title: "Green's", body: "<strong>Green's</strong>, marchio inglese prodotto in Belgio, è una delle birre senza glutine più apprezzate dalla community celiaca italiana, reperibile soprattutto nei negozi specializzati e online." },
+        { title: "Lol", body: "<strong>Lol</strong> è una birra italiana senza glutine prodotta in Friuli, un'alternativa nostrana alle proposte estere, disponibile principalmente nei negozi specializzati." },
+      ] },
+      { h2: "Quanto berne in sicurezza secondo l'AIC", body: "L'Associazione Italiana Celiachia consiglia comunque un consumo moderato e saltuario delle birre 'senza glutine' ottenute da malto d'orzo o frumento tramite deglutinazione, perché mantengono un residuo fisso di glutine, seppur sotto la soglia di sicurezza: le birre nativamente prodotte da cereali senza glutine, come riso o mais, non presentano questa stessa limitazione." },
+      { h2: "Domande frequenti sulla birra senza glutine", body: "Le domande più comuni di chi vuole bere birra in sicurezza da celiaco.", h3: [
+        { title: "Tutte le birre 'senza glutine' sono uguali?", body: "No: alcune sono deglutinate a partire da malto d'orzo tradizionale, altre sono prodotte fin dall'origine con cereali senza glutine come riso o mais. Entrambe rispettano la soglia dei 20 ppm, ma l'AIC consiglia più cautela sulle prime." },
+        { title: "Dove si compra la birra senza glutine in Italia?", body: "Peroni Senza Glutine si trova comunemente al supermercato, mentre marchi come Green's o Lol sono più facili da trovare in negozi specializzati o online." },
+        { title: "Quanta birra senza glutine posso bere se sono celiaco?", body: "L'AIC consiglia un consumo moderato e saltuario delle birre deglutinate da malto d'orzo: in caso di dubbi sulla propria tolleranza individuale, meglio confrontarsi con il proprio medico di riferimento." },
+      ] },
+    ],
+    faqs: [
+      { question: "Quali sono le migliori marche di birra senza glutine?", answer: "Peroni Senza Glutine è tra le più diffuse e facili da trovare in Italia, certificata AIC; Green's e Lol sono altre opzioni certificate, reperibili soprattutto in negozi specializzati." },
+      { question: "La birra senza glutine è sicura al 100% per i celiaci?", answer: "Le birre certificate AIC rispettano la soglia di sicurezza di 20 ppm, ma l'AIC consiglia comunque un consumo moderato delle birre deglutinate da malto d'orzo, che mantengono un residuo fisso di glutine sotto soglia." },
+      { question: "Che differenza c'è tra birra deglutinata e birra nativamente senza glutine?", answer: "La birra deglutinata parte da malto d'orzo tradizionale sottoposto a un processo enzimatico; quella nativamente senza glutine è prodotta fin dall'origine con cereali come riso o mais, senza bisogno di deglutinazione." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
@@ -1103,7 +1241,7 @@ export function getRelatedArticles(article: Article, limit = 3) {
 }
 
 export const BLOG_CATEGORIES: Article["category"][] = [
-  "Alimentazione", "Celiachia", "News", "Ricette", "Viaggi", "Salute", "Guide", "Prodotti", "Bambini", "Eventi",
+  "Alimentazione", "Celiachia", "News", "Ricette", "Viaggi", "Salute", "Guide", "Bambini", "Eventi",
 ];
 
 export const BLOG_CATEGORY_EN: Record<Article["category"], string> = {

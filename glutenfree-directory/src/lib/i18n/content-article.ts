@@ -12,6 +12,8 @@ interface ArticleTranslation {
   keyTakeaways: string[];
   faqs: { question: string; answer: string }[];
   tags: string[];
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 export const ARTICLE_EN: Record<string, ArticleTranslation> = {
@@ -972,6 +974,140 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["verona", "shops", "guides"],
   },
+  "art-36": {
+    title: "Does a Gluten-Free Diet Help You Lose Weight? What Science Really Says",
+    excerpt: "Does a gluten-free diet help you lose weight? The honest answer: early weight loss usually comes from what you remove and add to your plate, not from gluten itself.",
+    authorRole: "Nutritionist & biologist",
+    metaTitle: "Does Gluten-Free Help You Lose Weight? | Mappa Senza Glutine",
+    metaDescription: "Does a gluten-free diet help you lose weight? What science really says: why early weight loss usually comes from what you remove, not gluten itself.",
+    keyTakeaways: [
+      "There's no scientific evidence that gluten itself causes weight gain or loss in people without celiac disease or gluten sensitivity.",
+      "The weight loss often seen when starting a gluten-free diet usually comes from cutting processed foods and paying closer attention to labels, not from gluten itself.",
+      "Many packaged gluten-free products make up for texture with more fat or sugar: they aren't automatically 'lighter' than traditional versions.",
+      "For people with celiac disease, a gluten-free diet remains a medical necessity for gut health, not a weight-loss strategy.",
+    ],
+    sections: [
+      { h2: "Does a gluten-free diet help you lose weight? The short answer", body: "It's one of the most searched questions online, and the honest answer is: <strong>no, not through any direct mechanism tied to gluten itself</strong>. Gluten is a protein, it doesn't carry more calories than other nutrients, and no study shows a specific weight-loss effect in people without celiac disease or gluten sensitivity. When weight loss does happen, it almost always has other causes worth understanding before starting a gluten-free diet purely to lose weight." },
+      { h2: "So why do many people lose weight when they start", body: "The initial weight loss some people notice has simpler explanations than gluten itself.", h3: [
+        { title: "Many processed foods get cut automatically", body: "White bread, fast-food pizza, packaged snacks, baked sweets: many of the most calorie-dense, least filling foods in a typical Western diet contain gluten. Removing them naturally lowers overall calorie intake, regardless of gluten as a substance." },
+        { title: "You pay more attention to what you eat", body: "Starting a diet with clear rules almost always leads to reading labels more carefully, cooking at home more often and cutting impulsive snacking: a behavioral effect that alone can explain much of the initial weight loss." },
+      ] },
+      { h2: "The other side of the coin: gluten-free products aren't automatically 'light'", body: "To recreate the soft, elastic texture gluten naturally provides, many packaged gluten-free products (bread, cookies, baked snacks) use more fat, starch or added sugar. The result is that, category for category, a gluten-free product can have an equal or higher calorie count than the traditional version: always reading the nutrition label remains the most informed choice, rather than assuming 'gluten-free' means 'lighter'." },
+      { h2: "Frequently asked questions about gluten-free diets and weight", body: "The most searched questions on this controversial topic.", h3: [
+        { title: "Should someone without celiac disease cut gluten to lose weight?", body: "There's no scientific evidence to support it: a balanced diet with fewer processed foods, regardless of gluten, delivers the same results without the restrictions and extra costs of a medically unnecessary gluten-free diet." },
+        { title: "Is losing weight a sign of celiac disease?", body: "Unintentional weight loss can be one of the symptoms of undiagnosed celiac disease, alongside signs like bloating, fatigue or nutrient deficiencies: if you suspect celiac disease, the right path is talking to a doctor before removing gluten, not starting a DIY diet." },
+        { title: "How can I lose weight safely while staying gluten-free, if I have celiac disease?", body: "The same rules that apply to anyone: mind your portions, prefer fresh, unprocessed foods over packaged gluten-free substitutes, and get regular physical activity, ideally with support from a nutritionist familiar with celiac disease." },
+      ] },
+    ],
+    faqs: [
+      { question: "Does a gluten-free diet help you lose weight?", answer: "No, not through a direct effect of gluten: the initial weight loss some people notice usually comes from cutting processed foods and paying closer attention to labels." },
+      { question: "Are gluten-free products lighter than traditional ones?", answer: "Not necessarily: many packaged gluten-free baked goods contain more fat or added sugar to make up for texture, so they should be judged by reading the nutrition label." },
+      { question: "Should a non-celiac person cut gluten to lose weight?", answer: "There's no scientific evidence supporting this choice: a balanced diet with fewer processed foods delivers similar results without the restrictions of a medically unnecessary gluten-free diet." },
+    ],
+    tags: ["weight loss", "gluten-free diet", "nutrition", "myths"],
+  },
+  "art-37": {
+    title: "Gluten-Free Shopping at Discount Stores: Aldi, Lidl and Eurospin Compared",
+    excerpt: "Is gluten-free grocery shopping cheaper at discount stores? Aldi, Lidl and Eurospin's dedicated lines compared, and how to save without giving up on safety.",
+    authorRole: "Food safety content specialist",
+    metaTitle: "Gluten-Free Shopping at Discount Stores | Mappa Senza Glutine",
+    metaDescription: "Gluten-free shopping at discount stores: Aldi, Lidl and Eurospin's dedicated lines compared, and how to save without giving up on AIC certification.",
+    keyTakeaways: [
+      "Eurospin has its own dedicated line, 'Amo Essere Senza Glutine', with AIC-verified products carrying the Crossed Grain symbol.",
+      "Aldi offers the 'Enjoy Free' line, dedicated to gluten-free and dairy-free products.",
+      "Lidl offers fresh gluten-free products (like fresh pasta) and some items under its Realforno brand, alongside well-known brands on the shelves.",
+      "Real savings should always be checked product by product: not every discount item costs less than a well-known brand on sale.",
+    ],
+    sections: [
+      { h2: "Is gluten-free shopping at discount stores actually worth it?", body: "Anyone living gluten-free every day knows the problem well: certified products often cost more than traditional versions (we cover this in detail in our <a href=\"/en/blog/quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali\">guide to the cost of a gluten-free diet</a>). In recent years, though, Italy's major discount chains have developed dedicated lines: let's see what Eurospin, Aldi and Lidl actually offer." },
+      { h2: "The dedicated lines at Italian discount chains", body: "Each chain has a different range in structure and breadth.", h3: [
+        { title: "Eurospin: Amo Essere Senza Glutine", body: "Eurospin offers its own line, <strong>Amo Essere Senza Glutine</strong>, with products verified by AIC and the Crossed Grain symbol on the label: pasta, baked goods and snacks under the discount chain's own brand, designed specifically for people on a gluten-free diet." },
+        { title: "Aldi: Enjoy Free", body: "Aldi has a dedicated line called <strong>Enjoy Free</strong>, covering both gluten-free and dairy-free products, available at the chain's stores in Italy." },
+        { title: "Lidl: fresh products and the Realforno brand", body: "Lidl offers some fresh gluten-free products, like fresh pasta, plus items from its in-house <strong>Realforno</strong> brand available in gluten-free versions, alongside well-known brands placed on dedicated shelves." },
+      ] },
+      { h2: "How to save without giving up on safety", body: "A few tips for smart gluten-free grocery shopping: <ul><li><strong>Always check for the Crossed Grain symbol</strong> on the label, regardless of price or discount chosen.</li><li><strong>Compare the price per kilo</strong>, not just the package price: discount house-brand lines aren't always cheaper than well-known brands on sale.</li><li><strong>Mix naturally gluten-free fresh foods</strong> (rice, corn, legumes, vegetables) with packaged substitutes, which remain the most expensive category anyway.</li><li><strong>Check availability at your local store</strong>: the range of dedicated lines can vary from store to store.</li></ul>" },
+      { h2: "Frequently asked questions about gluten-free shopping at discount stores", body: "The most common questions from people looking to save without giving up on safety.", h3: [
+        { title: "Are discount stores' gluten-free products as safe as branded ones?", body: "Yes, if they carry the Crossed Grain symbol or otherwise meet the certification required by European 'gluten-free' labeling rules: the lower price relates to the discount chain's cost structure, not food safety." },
+        { title: "Is it always better to choose the discount store's own line over a well-known brand?", body: "Not always: some well-known brands on sale can cost less than dedicated discount lines. It's worth comparing the price per kilo product by product, especially for pasta and bread, the most purchased items." },
+        { title: "Do all discount chains in Italy have a dedicated gluten-free line?", body: "The main discount chains have developed their own offering in recent years, but the range varies a lot: it's worth checking directly at your nearest store." },
+      ] },
+    ],
+    faqs: [
+      { question: "Which discount stores have gluten-free products in Italy?", answer: "Eurospin has the Amo Essere Senza Glutine line, Aldi has the Enjoy Free line, while Lidl offers fresh gluten-free products and some items under its Realforno brand." },
+      { question: "Are discount stores' gluten-free products certified?", answer: "Dedicated lines like Eurospin's Amo Essere Senza Glutine carry the AIC Crossed Grain symbol on the label: always check it before buying, regardless of the store." },
+      { question: "Is it worth shopping gluten-free at discount stores?", answer: "It can be worth it for some products, but not always: compare the price per kilo with well-known brands on sale before assuming you're saving money." },
+    ],
+    tags: ["shopping", "discount", "savings", "supermarkets"],
+  },
+  "art-38": {
+    title: "Gluten-Free Panettone and Colomba: Where to Find Them and What to Choose",
+    excerpt: "Gluten-free panettone and colomba for the holidays: Nutrifree and Schär's offerings, where to buy them and what to check on the label before choosing.",
+    authorRole: "Gluten-free food blogger",
+    metaTitle: "Gluten-Free Panettone and Colomba | Mappa Senza Glutine",
+    metaDescription: "Gluten-free panettone and colomba: Nutrifree and Schär's holiday offerings, where to find them and what to check on the label before you buy.",
+    keyTakeaways: [
+      "Nutrifree offers a classic gluten-free panettone with raisins and candied fruit, born from a collaboration with the Sicilian pastry lab Punto Caldo, plus a chocolate version and a savory one for holiday appetizers.",
+      "Nutrifree also makes gluten-free Easter colombas, including a classic version and one with chocolate chips.",
+      "Schär offers its own gluten-free panettone, with a soft texture designed to get as close as possible to the traditional treat.",
+      "Always check for the Crossed Grain symbol on the label even for seasonal products: availability in stores can vary as the holidays approach.",
+    ],
+    sections: [
+      { h2: "Gluten-free panettone and colomba: the challenge of holiday leavened treats", body: "Panettone and colomba are among the hardest sweets to recreate gluten-free: soft, leavened doughs enriched with butter, eggs and candied fruit, where gluten normally plays a key structural role. In recent years, though, some specialized brands have developed gluten-free recipes that get very close to the tradition." },
+      { h2: "The offerings to know for Christmas and Easter", body: "Two specialized brands now offer a wide choice for the holidays.", h3: [
+        { title: "Nutrifree: panettone and colomba", body: "<a href=\"/en/prodotti\">Nutrifree</a> offers a classic gluten-free panettone with raisins and candied fruit, born from a collaboration with the Sicilian artisanal lab <strong>Punto Caldo</strong>, plus a chocolate version and a savory panettone gastronomico for holiday appetizers. For Easter, the range includes a classic colomba and one with chocolate chips, both gluten-free and dairy-free." },
+        { title: "Schär: the traditional panettone", body: "<strong>Schär</strong> also offers its own gluten-free panettone, with a soft texture designed to get as close as possible to the traditional sweet, enriched with raisins and candied fruit." },
+      ] },
+      { h2: "Where to buy gluten-free panettone and colomba", body: "Pharmacies with a dedicated section, specialty shops like those in our <a href=\"/en/directory\">directory</a>, and online sales are the most reliable channels, especially close to the holidays when availability at general supermarkets can be limited: it's worth ordering a few weeks ahead to make sure you find the product you want." },
+      { h2: "Frequently asked questions about gluten-free panettone and colomba", body: "The most common questions from people looking for gluten-free holiday sweets.", h3: [
+        { title: "Does gluten-free panettone taste the same as the traditional one?", body: "Specialized brands like Nutrifree and Schär have developed recipes designed to get very close to the texture and taste of traditional panettone, though perception remains subjective: quality has improved noticeably in recent years." },
+        { title: "When is the best time to buy gluten-free panettone and colomba?", body: "It's best to order a few weeks ahead of Christmas or Easter: availability at general stores can be limited in the days right before the holiday, while pharmacies and specialty shops tend to keep more stable stock." },
+        { title: "Where can I find these products outside the holiday season?", body: "Some specialty shops and the producers' own online stores keep them available outside the season, but the choice is generally wider close to Christmas and Easter." },
+      ] },
+    ],
+    faqs: [
+      { question: "Which brands make gluten-free panettone?", answer: "Nutrifree and Schär are among the specialized brands offering a gluten-free panettone, with recipes designed to get close to the texture of the traditional one." },
+      { question: "Is there a gluten-free Easter colomba?", answer: "Yes, Nutrifree offers a gluten-free Easter colomba, available in a classic version and one with chocolate chips." },
+      { question: "Where can I buy gluten-free panettone?", answer: "At pharmacies with a dedicated section, at specialty shops in our directory, and online: it's worth ordering ahead, especially close to Christmas." },
+    ],
+    tags: ["panettone", "colomba", "christmas", "easter", "holiday sweets"],
+  },
+  "art-39": {
+    title: "Gluten-Free Beer: The Brands to Know and What to Know Before Drinking It",
+    excerpt: "Gluten-free beer: which brands are AIC-certified, the difference between de-glutenized beers and naturally gluten-free ones, and how much to drink safely.",
+    authorRole: "Food safety content specialist",
+    metaTitle: "Gluten-Free Beer: Brands to Know | Mappa Senza Glutine",
+    metaDescription: "Gluten-free beer: which brands are AIC-certified, how the de-glutenization process works, and how much to drink safely according to AIC.",
+    keyTakeaways: [
+      "Peroni Senza Glutine is among the most widespread gluten-free beers in Italy, AIC-certified with a gluten content below 10 ppm.",
+      "Green's, an English brand brewed in Belgium, is among the gluten-free beers most appreciated by the Italian celiac community.",
+      "There are also certified Italian beers like Lol, brewed in Friuli, mostly found in specialty shops.",
+      "AIC still recommends moderate consumption of 'gluten-free' beers made from barley malt, since they retain a fixed residue of gluten below the threshold.",
+    ],
+    sections: [
+      { h2: "Why beer is a special case for people with celiac disease", body: "Traditional beer is brewed from cereals like barley and wheat, both containing gluten: that's why, unlike pasta or bread, it's not enough to start from an alternative ingredient — specific production processes are needed to get a beer that's safe for celiacs, verified and certified by AIC with the Crossed Grain symbol on the label." },
+      { h2: "De-glutenization or gluten-free cereals: two different paths", body: "There are two main approaches on the market for making gluten-free beer.", h3: [
+        { title: "De-glutenized beers from barley malt", body: "These are beers brewed with traditional barley malt, then put through an enzymatic process that breaks down gluten proteins until the content falls below the 20 ppm threshold required by European rules for the 'gluten-free' label." },
+        { title: "Beers naturally made without gluten-containing cereals", body: "Other beers are brewed from the start with cereals naturally free of gluten, like rice, corn or sorghum, with no need for a later de-glutenization process." },
+      ] },
+      { h2: "Gluten-free beer brands to know", body: "Some certified brands, with varying availability on the Italian market.", h3: [
+        { title: "Peroni Senza Glutine", body: "<strong>Peroni Senza Glutine</strong> is a lager brewed with a gluten-removal process that doesn't alter the product's taste and aroma, AIC-certified with a gluten content below 10 ppm: among the easiest gluten-free beers to find in Italy." },
+        { title: "Green's", body: "<strong>Green's</strong>, an English brand brewed in Belgium, is one of the gluten-free beers most appreciated by the Italian celiac community, mostly found in specialty shops and online." },
+        { title: "Lol", body: "<strong>Lol</strong> is an Italian gluten-free beer brewed in Friuli, a homegrown alternative to foreign options, mainly available in specialty shops." },
+      ] },
+      { h2: "How much to drink safely, according to AIC", body: "The Italian Celiac Association still recommends moderate, occasional consumption of 'gluten-free' beers obtained from barley or wheat malt through de-glutenization, since they retain a fixed residue of gluten, even if below the safety threshold: beers naturally brewed from gluten-free cereals, like rice or corn, don't carry this same limitation." },
+      { h2: "Frequently asked questions about gluten-free beer", body: "The most common questions from people who want to drink beer safely as a celiac.", h3: [
+        { title: "Are all 'gluten-free' beers the same?", body: "No: some are de-glutenized from traditional barley malt, others are brewed from the start with gluten-free cereals like rice or corn. Both meet the 20 ppm threshold, but AIC recommends more caution with the former." },
+        { title: "Where can I buy gluten-free beer in Italy?", body: "Peroni Senza Glutine is commonly found at the supermarket, while brands like Green's or Lol are easier to find at specialty shops or online." },
+        { title: "How much gluten-free beer can I drink if I have celiac disease?", body: "AIC recommends moderate, occasional consumption of beers de-glutenized from barley malt: if you're unsure about your individual tolerance, it's best to check with your doctor." },
+      ] },
+    ],
+    faqs: [
+      { question: "What are the best gluten-free beer brands?", answer: "Peroni Senza Glutine is among the most widespread and easiest to find in Italy, AIC-certified; Green's and Lol are other certified options, mostly found in specialty shops." },
+      { question: "Is gluten-free beer 100% safe for celiacs?", answer: "AIC-certified beers meet the 20 ppm safety threshold, but AIC still recommends moderate consumption of beers de-glutenized from barley malt, which retain a fixed residue of gluten below the threshold." },
+      { question: "What's the difference between de-glutenized beer and naturally gluten-free beer?", answer: "De-glutenized beer starts from traditional barley malt put through an enzymatic process; naturally gluten-free beer is brewed from the start with cereals like rice or corn, with no de-glutenization needed." },
+    ],
+    tags: ["beer", "drinks", "AIC", "products"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {
@@ -987,8 +1123,8 @@ export function getLocalizedArticle(article: Article, locale: Locale): Article {
   return {
     ...article,
     title: tr.title,
-    metaTitle: `${tr.title} | Mappa Senza Glutine`,
-    metaDescription: tr.excerpt,
+    metaTitle: tr.metaTitle ?? `${tr.title} | Mappa Senza Glutine`,
+    metaDescription: tr.metaDescription ?? tr.excerpt,
     excerpt: tr.excerpt,
     authorRole: tr.authorRole,
     headings: makeHeadings(tr.sections),
