@@ -14,6 +14,10 @@ export const FAQ_GROUPS_IT: FaqGroup[] = [
       { question: "La celiachia si può guarire o passare con l'età?", answer: "No, non esiste una cura definitiva né la celiachia scompare con l'età: l'unica terapia efficace è una dieta rigorosamente senza glutine seguita per tutta la vita." },
       { question: "Quali sono i sintomi della celiachia negli adulti?", answer: "Gonfiore, dolore addominale, stanchezza cronica, anemia da carenza di ferro e aftosi ricorrente sono tra i sintomi più comuni, ma possono comparire anche manifestazioni extraintestinali come dermatite erpetiforme o osteoporosi precoce." },
       { question: "Qual è la differenza tra celiachia e sensibilità al glutine?", answer: "La celiachia è una malattia autoimmune con danno intestinale documentabile tramite esami del sangue e biopsia; la sensibilità al glutine non celiaca provoca sintomi simili ma senza questo danno, e si diagnostica per esclusione." },
+      { question: "L'avena contiene glutine?", answer: "L'avena non contiene naturalmente glutine, ma viene spesso contaminata durante coltivazione, trasporto o lavorazione con grano, orzo o segale: un celiaco può consumarla solo se certificata \"senza glutine\", coltivata e lavorata in filiera dedicata." },
+      { question: "Quali cereali deve evitare un celiaco?", answer: "Grano (e le sue varianti come farro, kamut e semola), orzo, segale e i loro derivati come il cous cous: sono le principali fonti di glutine da evitare. Riso, mais, miglio, grano saraceno e quinoa sono invece naturalmente senza glutine." },
+      { question: "Quali sono i sintomi della celiachia nei bambini piccoli?", answer: "Nei bambini più piccoli i segnali più frequenti sono scarsa crescita, pancia gonfia, diarrea cronica, irritabilità e scarso appetito: in presenza di questi sintomi è importante parlarne con il pediatra prima di modificare la dieta." },
+      { question: "Che rapporto c'è tra celiachia e tiroide?", answer: "La celiachia è associata a un rischio più alto di sviluppare patologie autoimmuni della tiroide, come la tiroidite di Hashimoto: per questo motivo alcuni medici consigliano di monitorare la funzionalità tiroidea nei pazienti celiaci, soprattutto in presenza di altri sintomi." },
     ],
   },
   {
@@ -33,6 +37,8 @@ export const FAQ_GROUPS_IT: FaqGroup[] = [
       { question: "Come funzionano i buoni pasto AIC in farmacia?", answer: "Dopo la diagnosi, il medico rilascia una certificazione che permette di richiedere alla propria ASL un buono mensile, utilizzabile in farmacia e nei negozi convenzionati per l'acquisto di prodotti sostitutivi inseriti nel Prontuario AIC." },
       { question: "Cos'è la Spiga Barrata e come si riconosce un prodotto sicuro?", answer: "È il marchio registrato dall'Associazione Italiana Celiachia che identifica i prodotti sottoposti a controlli annuali rigorosi: è il modo più rapido per riconoscere un prodotto verificato sullo scaffale." },
       { question: "Come faccio a sapere se un prodotto trasformato contiene glutine nascosto?", answer: "Controlla sempre la lista ingredienti e cerca la dicitura \"senza glutine\" o il marchio della Spiga Barrata: in caso di dubbio, il Prontuario AIC è lo strumento più affidabile per verificare migliaia di prodotti." },
+      { question: "Il glutine può essere presente nei farmaci?", answer: "Sì, alcuni farmaci usano l'amido di frumento come eccipiente: il foglietto illustrativo indica sempre gli eccipienti, e in caso di dubbio è possibile chiedere conferma al farmacista o consultare le banche dati AIFA sui farmaci senza glutine." },
+      { question: "Il vino contiene glutine?", answer: "Il vino è naturalmente senza glutine, perché ottenuto dalla fermentazione dell'uva: l'unica accortezza riguarda rari casi di chiarificazione con derivati del glutine, oggi in disuso nella maggior parte delle cantine italiane." },
     ],
   },
   {
@@ -76,6 +82,10 @@ export const FAQ_GROUPS_EN: FaqGroup[] = [
       { question: "Can celiac disease be cured or go away with age?", answer: "No, there is no definitive cure and celiac disease doesn't go away with age: the only effective treatment is a strictly gluten-free diet followed for life." },
       { question: "What are the symptoms of celiac disease in adults?", answer: "Bloating, abdominal pain, chronic fatigue, iron-deficiency anemia and recurring mouth ulcers are among the most common symptoms, though extraintestinal signs like dermatitis herpetiformis or early osteoporosis can also occur." },
       { question: "What's the difference between celiac disease and gluten sensitivity?", answer: "Celiac disease is an autoimmune condition with intestinal damage documentable through blood tests and biopsy; non-celiac gluten sensitivity causes similar symptoms without this damage, and is diagnosed by exclusion." },
+      { question: "Does oats contain gluten?", answer: "Oats don't naturally contain gluten, but they're often contaminated with wheat, barley or rye during farming, transport or processing: a celiac can eat oats only if certified gluten-free, grown and processed in a dedicated supply chain." },
+      { question: "Which grains should a celiac avoid?", answer: "Wheat (and its variants like spelt, kamut and semolina), barley, rye and their derivatives like couscous are the main sources of gluten to avoid. Rice, corn, millet, buckwheat and quinoa are naturally gluten-free instead." },
+      { question: "What are the symptoms of celiac disease in young children?", answer: "In young children, the most common signs are poor growth, a bloated belly, chronic diarrhea, irritability and poor appetite: if these symptoms appear, it's important to talk to a pediatrician before changing the diet." },
+      { question: "What's the connection between celiac disease and the thyroid?", answer: "Celiac disease is linked to a higher risk of developing autoimmune thyroid conditions, like Hashimoto's thyroiditis: for this reason, some doctors recommend monitoring thyroid function in celiac patients, especially alongside other symptoms." },
     ],
   },
   {
@@ -95,6 +105,8 @@ export const FAQ_GROUPS_EN: FaqGroup[] = [
       { question: "How do AIC pharmacy vouchers work?", answer: "After diagnosis, the doctor issues a certification that lets you apply at your local ASL for a monthly voucher, usable at pharmacies and partner stores to buy substitute products listed in the AIC Food Guide." },
       { question: "What is the Crossed Grain symbol and how do I recognize a safe product?", answer: "It's the trademark registered by the Italian Celiac Association that identifies products subject to strict annual audits: it's the fastest way to spot a verified product on the shelf." },
       { question: "How can I tell if a processed product contains hidden gluten?", answer: "Always check the ingredient list and look for the \"gluten-free\" claim or the Crossed Grain symbol: when in doubt, the AIC Food Guide is the most reliable tool for checking thousands of products." },
+      { question: "Can medications contain gluten?", answer: "Yes, some medications use wheat starch as an excipient: the package leaflet always lists excipients, and if in doubt you can ask your pharmacist or check official databases on gluten-free medications." },
+      { question: "Does wine contain gluten?", answer: "Wine is naturally gluten-free, since it's made from fermented grapes: the only caveat concerns rare cases of fining with gluten-derived agents, now largely discontinued by most Italian wineries." },
     ],
   },
   {
