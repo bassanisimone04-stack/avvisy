@@ -1,11 +1,10 @@
 export const SITE_NAME = "Mappa Senza Glutine";
 export const SITE_URL = "https://www.mappasenzaglutine.it";
 export const SITE_DESCRIPTION =
-  "La mappa italiana dei locali senza glutine: trova ristoranti, pizzerie, hotel, negozi e farmacie certificati AIC vicino a te, leggi guide su celiachia e alimentazione.";
+  "La mappa italiana dei locali senza glutine: trova ristoranti, pizzerie, hotel, negozi e farmacie certificati AIC vicino a te, scopri prodotti senza glutine verificati e leggi guide su celiachia e alimentazione senza glutine.";
 export const SITE_DESCRIPTION_EN =
-  "Italy's map of gluten-free venues: find certified restaurants, pizzerias, hotels, shops and pharmacies near you, read guides on celiac disease and nutrition.";
+  "Italy's map of gluten-free venues: find certified restaurants, pizzerias, hotels, shops and pharmacies near you, discover verified gluten-free products and read guides on celiac disease and gluten-free nutrition.";
 export const SITE_LOCALE = "it_IT";
-export const TWITTER_HANDLE = "@mappasenzagluti";
 
 /**
  * Prodotto digitale: "Vivere Senza Glutine" (PDF a pagamento, guida di

@@ -21,8 +21,15 @@ export function pageMetadata({
 }): Metadata {
   const url = `${SITE_URL}${localeHref(locale, path)}`;
   const ogImage = image ?? `${SITE_URL}/opengraph-image`;
+  // Garantisce che il nome del sito compaia esattamente una volta nel tag
+  // <title>: alcuni title passati qui lo includono già (es. "X | Mappa
+  // Senza Glutine"), altri no (es. "Prodotto Marca — senza glutine"). Se
+  // manca lo aggiunge; "absolute" impedisce poi a Next.js di applicare
+  // sopra anche il template del layout (`%s · Mappa Senza Glutine`), che
+  // altrimenti duplicherebbe il nome del sito nei title che lo includono già.
+  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
     alternates: {
       canonical: url,

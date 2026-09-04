@@ -9,8 +9,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Restaurant",
     labelPluralEn: "Restaurants",
     icon: "UtensilsCrossed",
-    description: "Cucina completa senza glutine, dalla trattoria al fine dining.",
-    descriptionEn: "Full gluten-free menus, from trattorias to fine dining.",
+    description: "Menu completi senza glutine per celiaci, dalla trattoria di quartiere al ristorante fine dining, con cucina o forno dedicati contro la contaminazione crociata.",
+    descriptionEn: "Full gluten-free menus for celiacs, from neighborhood trattorias to fine dining, with dedicated kitchens against cross-contamination.",
   },
   {
     slug: "pizzeria",
@@ -19,8 +19,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Pizzeria",
     labelPluralEn: "Pizzerias",
     icon: "Pizza",
-    description: "Impasti dedicati e forni separati per una pizza sicura.",
-    descriptionEn: "Dedicated dough and separate ovens for safe pizza.",
+    description: "Pizzerie senza glutine con impasti e forni dedicati, per una pizza napoletana o gourmet sicura al 100% per i celiaci.",
+    descriptionEn: "Gluten-free pizzerias with dedicated dough and separate ovens, for safe Neapolitan or gourmet pizza.",
   },
   {
     slug: "hotel",
@@ -29,8 +29,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Hotel",
     labelPluralEn: "Hotels & B&Bs",
     icon: "BedDouble",
-    description: "Strutture ricettive con colazione e cucina gluten free.",
-    descriptionEn: "Places to stay with gluten-free breakfast and kitchens.",
+    description: "Hotel e B&B con colazione senza glutine certificata AIC e cucina gluten free, ideali per una vacanza senza pensieri da celiaco.",
+    descriptionEn: "Hotels and B&Bs with AIC-certified gluten-free breakfast and kitchens, ideal for a worry-free celiac holiday.",
   },
   {
     slug: "farmacia",
@@ -39,8 +39,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Pharmacy",
     labelPluralEn: "Pharmacies",
     icon: "Stethoscope",
-    description: "Prodotti specifici, integratori e consulenza dedicata.",
-    descriptionEn: "Specific products, supplements and dedicated advice.",
+    description: "Farmacie con prodotti senza glutine erogabili con buono AIC, integratori per celiaci e consulenza dedicata sulla dieta gluten free.",
+    descriptionEn: "Pharmacies with AIC-voucher gluten-free products, celiac supplements and dedicated advice on the gluten-free diet.",
   },
   {
     slug: "supermercato",
@@ -49,8 +49,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Supermarket",
     labelPluralEn: "Supermarkets",
     icon: "ShoppingCart",
-    description: "Reparti e corner assortiti di prodotti certificati.",
-    descriptionEn: "Aisles and corners stocked with certified products.",
+    description: "Supermercati con reparto senza glutine assortito, prodotti certificati con la Spiga Barrata per la spesa quotidiana dei celiaci.",
+    descriptionEn: "Supermarkets with a well-stocked gluten-free aisle, Crossed Grain certified products for everyday celiac shopping.",
   },
   {
     slug: "negozio",
@@ -59,8 +59,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Specialty shop",
     labelPluralEn: "Specialty shops",
     icon: "Store",
-    description: "Botteghe dedicate al 100% al senza glutine.",
-    descriptionEn: "Shops 100% dedicated to gluten-free products.",
+    description: "Negozi specializzati 100% senza glutine, con pane, pasta e dolci freschi certificati AIC per la spesa dei celiaci.",
+    descriptionEn: "Specialty shops 100% dedicated to gluten-free, with fresh AIC-certified bread, pasta and desserts for celiac shopping.",
   },
   {
     slug: "bar-pasticceria",
@@ -69,8 +69,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Café & Bakery",
     labelPluralEn: "Cafés & Bakeries",
     icon: "Croissant",
-    description: "Colazioni, lievitati e dolci senza glutine ogni giorno.",
-    descriptionEn: "Breakfast, pastries and gluten-free treats every day.",
+    description: "Bar e pasticcerie con colazione senza glutine tutti i giorni: cornetti, lievitati e dolci certificati per celiaci.",
+    descriptionEn: "Cafés and bakeries with gluten-free breakfast every day: croissants, pastries and certified treats for celiacs.",
   },
   {
     slug: "gelateria",
@@ -79,8 +79,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Ice cream shop",
     labelPluralEn: "Ice cream shops",
     icon: "IceCreamCone",
-    description: "Gelato artigianale sicuro, senza contaminazioni.",
-    descriptionEn: "Safe artisan gelato, free from cross-contamination.",
+    description: "Gelaterie con gelato artigianale senza glutine, coni e vaschette dedicate per evitare la contaminazione crociata.",
+    descriptionEn: "Ice cream shops with gluten-free artisan gelato, dedicated cones and tubs to avoid cross-contamination.",
   },
 ];
 
