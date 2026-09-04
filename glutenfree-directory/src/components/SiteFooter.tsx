@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Leaf, Instagram, Facebook, Twitter, AlertTriangle } from "lucide-react";
+import { Leaf, AlertTriangle } from "lucide-react";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
 import { BLOG_CATEGORIES, blogCategoryLabel } from "@/lib/mock-articles";
 import { slugify } from "@/lib/format";
@@ -27,11 +27,6 @@ export default function SiteFooter() {
               <span className="font-display text-lg font-bold text-white">{SITE_NAME}</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">{t.footer.description}</p>
-            <div className="mt-5 flex gap-3">
-              <a href="https://instagram.com" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"><Instagram size={16} /></a>
-              <a href="https://facebook.com" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"><Facebook size={16} /></a>
-              <a href="https://twitter.com" aria-label="Twitter/X" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"><Twitter size={16} /></a>
-            </div>
           </div>
 
           <div>

@@ -180,7 +180,6 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/icon.svg`,
-    sameAs: ["https://instagram.com/mappasenzaglutine", "https://facebook.com/mappasenzaglutine"],
   };
 }
 
