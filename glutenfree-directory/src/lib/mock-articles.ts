@@ -15,6 +15,12 @@ interface Seed {
   sections: { h2: string; body: string; h3?: { title: string; body: string; image?: { src: string; alt: string } }[] }[];
   faqs: { question: string; answer: string }[];
   featured?: boolean;
+  /** Override opzionale di title tag/meta description per la SERP, senza
+   * toccare title (H1) né slug: usato per ottimizzare il CTR su pagine che
+   * hanno già impressioni ma un titolo troppo lungo o poco invitante,
+   * senza perdere il posizionamento già acquisito dallo slug esistente. */
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 const seeds: Seed[] = [
@@ -576,6 +582,8 @@ const seeds: Seed[] = [
     title: "McDonald's senza glutine in Italia: cosa può mangiare davvero un celiaco",
     category: "Guide",
     excerpt: "McDonald's senza glutine in Italia: cosa garantisce davvero il Gluten Free Burger, perché la catena non è certificata AIC e quali altri prodotti comportano un rischio di contaminazione crociata.",
+    metaTitle: "McDonald's senza glutine: cosa mangiare davvero | Mappa Senza Glutine",
+    metaDescription: "McDonald's senza glutine in Italia: il Gluten Free Burger, perché la catena non è certificata AIC e cosa rischia davvero un celiaco che mangia lì.",
     coverSeed: 121, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-30",
     tags: ["McDonald's", "fast food", "sicurezza alimentare", "AIC"],
     keyTakeaways: [
@@ -1050,8 +1058,8 @@ export const ARTICLES: Article[] = seeds.map((s, idx) => {
     id: `art-${idx + 1}`,
     slug: slugify(s.title),
     title: s.title,
-    metaTitle: `${s.title} | Mappa Senza Glutine`,
-    metaDescription: s.excerpt,
+    metaTitle: s.metaTitle ?? `${s.title} | Mappa Senza Glutine`,
+    metaDescription: s.metaDescription ?? s.excerpt,
     category: s.category,
     excerpt: s.excerpt,
     coverSeed: s.coverSeed,

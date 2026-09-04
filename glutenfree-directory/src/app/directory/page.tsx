@@ -14,7 +14,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
     return pageMetadata({
       title: `${categoryLabelPlural(cat, "it")} senza glutine in Italia`,
       description: `Trova ${label} senza glutine verificati in Italia: ${cat.description.toLowerCase()}`,
-      path: "/directory",
+      path: `/directory?categoria=${cat.slug}`,
       locale: "it",
     });
   }

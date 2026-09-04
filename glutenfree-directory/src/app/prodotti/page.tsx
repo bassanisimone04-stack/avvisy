@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
     return pageMetadata({
       title: `${cat} senza glutine: prodotti verificati | Mappa Senza Glutine`,
       description: `${cat} certificati senza glutine in vendita in Italia: marca, prezzo e certificazione AIC verificati uno per uno.`,
-      path: "/prodotti",
+      path: `/prodotti?categoria=${encodeURIComponent(cat)}`,
       locale: "it",
     });
   }

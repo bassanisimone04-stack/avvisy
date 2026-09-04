@@ -14,7 +14,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
     return pageMetadata({
       title: `Gluten-free ${label} in Italy`,
       description: `Find verified gluten-free ${label} in Italy: ${cat.descriptionEn.toLowerCase()}`,
-      path: "/directory",
+      path: `/directory?categoria=${cat.slug}`,
       locale: "en",
     });
   }

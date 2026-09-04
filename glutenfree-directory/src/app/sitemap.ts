@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { BUSINESSES } from "@/lib/mock-businesses";
 import { ARTICLES } from "@/lib/mock-articles";
-import { PRODUCTS } from "@/lib/mock-products";
+import { PRODUCTS, PRODUCT_CATEGORIES } from "@/lib/mock-products";
+import { CATEGORIES } from "@/lib/categories";
 import { SITE_URL } from "@/lib/site-config";
 import { localeHref } from "@/lib/i18n/locale";
 
@@ -24,9 +25,6 @@ function entry(
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Solo pagine con contenuto unico — niente URL con query parameter
-  // (le viste filtrate ?categoria= sono la stessa pagina /directory o /prodotti,
-  // includerle causa segnalazioni "pagina duplicata" su Search Console).
   const staticPages: MetadataRoute.Sitemap = [
     entry("/", { changeFrequency: "daily", priority: 1 }),
     entry("/directory", { changeFrequency: "daily", priority: 0.9 }),
@@ -37,6 +35,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/contatti", { changeFrequency: "monthly", priority: 0.3 }),
     entry("/per-le-aziende", { changeFrequency: "monthly", priority: 0.4 }),
   ];
+
+  // Pagine categoria con almeno un locale/prodotto reale: hanno un
+  // canonical auto-referenziante (vedi directory/page.tsx e prodotti/page.tsx)
+  // e ricevono traffico organico proprio, verificato su Search Console
+  // (es. ?categoria=farmacia e ?categoria=hotel già generano click reali).
+  // Escluse solo le categorie ancora senza locali verificati (supermercato).
+  const populatedDirectoryCategories = new Set(BUSINESSES.map((b) => b.category));
+  const categoryPages: MetadataRoute.Sitemap = CATEGORIES
+    .filter((c) => populatedDirectoryCategories.has(c.slug))
+    .map((c) => entry(`/directory?categoria=${c.slug}`, { changeFrequency: "weekly", priority: 0.6 }));
+
+  const productCategoryPages: MetadataRoute.Sitemap = PRODUCT_CATEGORIES.map((c) =>
+    entry(`/prodotti?categoria=${encodeURIComponent(c)}`, { changeFrequency: "weekly", priority: 0.5 }),
+  );
 
   const productPages: MetadataRoute.Sitemap = PRODUCTS.map((p) =>
     entry(`/prodotti/${p.slug}`, { changeFrequency: "monthly", priority: 0.6 }),
@@ -50,5 +62,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/blog/${a.slug}`, { changeFrequency: "monthly", priority: 0.6, lastModified: a.updatedAt }),
   );
 
-  return [...staticPages, ...productPages, ...businessPages, ...articlePages];
+  return [...staticPages, ...categoryPages, ...productCategoryPages, ...productPages, ...businessPages, ...articlePages];
 }
