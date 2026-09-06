@@ -45,21 +45,6 @@
       "last_verified": "2026-09-06"
     },
     {
-      "slug": "los-angeles-county-arboretum",
-      "name": "Los Angeles County Arboretum &amp; Botanic Garden",
-      "city": "Arcadia",
-      "state": "California",
-      "state_slug": "california",
-      "country": "US",
-      "type": "botanical-garden",
-      "official_url": "https://arboretum.org/rentals/weddings/",
-      "capacity_seated": null,
-      "price_tier": null,
-      "blend": null,
-      "summary": "A botanic garden in Arcadia with a wedding rental programme across its grounds and historic structures.",
-      "last_verified": "2026-09-06"
-    },
-    {
       "slug": "uc-botanical-garden-berkeley",
       "name": "UC Botanical Garden at Berkeley",
       "city": "Berkeley",
@@ -345,21 +330,6 @@
       "last_verified": "2026-09-06"
     },
     {
-      "slug": "planting-fields",
-      "name": "Planting Fields",
-      "city": "Oyster Bay",
-      "state": "New York",
-      "state_slug": "new-york",
-      "country": "US",
-      "type": "botanical-garden",
-      "official_url": "https://plantingfields.org/weddings/",
-      "capacity_seated": null,
-      "price_tier": null,
-      "blend": null,
-      "summary": "A historic Long Island estate and arboretum offering wedding ceremony and reception rentals across the house and gardens.",
-      "last_verified": "2026-09-06"
-    },
-    {
       "slug": "north-carolina-arboretum",
       "name": "The North Carolina Arboretum",
       "city": "Asheville",
@@ -441,12 +411,12 @@
       "state": "Oregon",
       "state_slug": "oregon",
       "country": "US",
-      "type": "conservatory",
+      "type": "botanical-garden",
       "official_url": "https://www.oregongardenresort.com/events/weddings",
-      "capacity_seated": null,
+      "capacity_seated": 125,
       "price_tier": null,
-      "blend": null,
-      "summary": "A resort attached to the Oregon Garden's 20 specialty gardens in Silverton, with an indoor Conservatory option alongside its Fireside Room for ceremonies and receptions.",
+      "blend": "hybrid",
+      "summary": "A resort attached to the Oregon Garden's 20 specialty gardens in Silverton, with an indoor Orchid Ballroom that opens via French doors onto the outdoor Wedding Garden.",
       "last_verified": "2026-09-06"
     },
     {
@@ -521,7 +491,7 @@
       "capacity_seated": null,
       "price_tier": null,
       "blend": null,
-      "summary": "A botanical garden in Richmond with a classical domed conservatory available for ceremonies, described as the only one of its kind in the mid-Atlantic, alongside garden and historic-house reception venues.",
+      "summary": "A botanical garden in Richmond with a classical domed conservatory whose patio is available for ceremonies, alongside garden and historic-house reception venues.",
       "last_verified": "2026-09-06"
     },
     {

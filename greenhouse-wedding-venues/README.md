@@ -34,9 +34,10 @@ with a link to the venue's own page. The site says explicitly that a dash means
 
 Consequences, by design:
 
-- **No invented capacities or prices.** Today that means 0 of 36 listings carry
-  either — the capacity, blend and price filters correctly return nothing rather
-  than pretending. Fill them in as you verify, and the filters come alive.
+- **No invented capacities or prices.** Today that means 13 of 34 listings carry
+  a confirmed capacity or layout, and none carry a price — the price filter
+  correctly returns nothing rather than pretending. Fill more in as you verify
+  the rest, and the filters come further alive.
 - **No `aggregateRating`, no reviews.** We hold no first-party reviews, so none
   appear on the site or in the structured data. Invented ratings are both a
   Google spam-policy violation and a lie about someone's business.
@@ -54,7 +55,7 @@ referenced from the `Organization` schema as `publishingPrinciples`.
 
 ### The listings currently in the file
 
-Thirty-six real venues across 22 states and regions, each seeded with name,
+Thirty-four real venues across 22 states and regions, each seeded with name,
 city/state, type and its official events URL. **Verify each one before
 launch** — open `official_url`, confirm the venue still hosts weddings, fill
 in what it publishes, and set `last_verified`.
