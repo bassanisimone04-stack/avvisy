@@ -184,6 +184,13 @@
       </nav>
 
       <div class="flex items-center gap-3">
+        <a href="/shortlist/" data-shortlist-link rel="nofollow"
+           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-600"
+           aria-label="Your shortlist (empty)">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          <span data-shortlist-count hidden class="count-badge">0</span>
+        </a>
+
         <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a glasshouse</a>
 
         <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
@@ -197,6 +204,10 @@
     <div id="mobile-nav" hidden class="border-t border-line bg-cream lg:hidden">
       <nav class="shell space-y-1 py-5" aria-label="Mobile">
         <a class="block rounded-lg px-3 py-2.5 font-medium text-ink-700 hover:bg-botanical-50" href="/venues/">Browse all venues</a>
+        <a class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/shortlist/" data-shortlist-link rel="nofollow" aria-label="Your shortlist (empty)">
+          Your shortlist
+          <span data-shortlist-count hidden class="badge-gold">0</span>
+        </a>
         <p class="px-3 pt-4 eyebrow">Venues by state</p>
         <ul class="space-y-1">
               <li><a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/venues/california/">Greenhouse wedding venues in California</a></li>
@@ -244,7 +255,7 @@
           </p>
         </div>
 
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap items-center gap-3">
           <a class="btn-gold" href="https://selby.org/dsc/visit-downtown-sarasota-campus/contact-us-weddings-private-events-functions/" rel="noopener nofollow" target="_blank">
             Venue&rsquo;s own events page
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
@@ -253,6 +264,7 @@
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
             <span data-copy-label>Share</span>
           </button>
+          <button type="button" class="shortlist-btn !size-11" data-shortlist-toggle data-shortlist-slug="marie-selby-botanical-gardens" data-shortlist-name="Marie Selby Botanical Gardens" aria-pressed="false" aria-label="Save Marie Selby Botanical Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
         </div>
       </div>
     </header>
@@ -352,14 +364,66 @@
         <h2 id="ask">What to ask before you enquire</h2>
         <p>
           Glasshouses differ from ordinary venues in four specific ways, and these are the questions
-          that separate a room that works in your month from one that only photographs well:
+          that separate a room that works in your month from one that only photographs well. Check
+          them off as Marie Selby Botanical Gardens answers them, or copy the list to send by email &mdash; it is
+          saved in this browser against this venue.
         </p>
-        <ol>
-          <li><strong>Seated capacity with a dance floor</strong>, and with the planting where it will be on the day. Glazed rooms lose floor area to beds and structural piers, so the headline number and the usable one often differ.</li>
-          <li><strong>Ventilation and what it holds.</strong> Opening roof vents, side louvers, shade cloth or mechanical cooling — and the temperature the venue will stand behind on a hot afternoon.</li>
-          <li><strong>Heating, and who pays for it.</strong> Included in the hire fee or billed separately, and what temperature is guaranteed in the coldest month you would consider.</li>
-          <li><strong>Power and floors.</strong> The electrical supply available to your caterer and band, and whether floor protection is required before anyone dances.</li>
-        </ol>
+        <div class="not-prose mt-6 overflow-hidden rounded-card border border-line bg-shell" data-checklist data-checklist-key="venue:marie-selby-botanical-gardens" data-checklist-copy-intro="Hi Marie Selby Botanical Gardens team,
+
+We're considering Marie Selby Botanical Gardens for our wedding and wanted to check a few things before we get in touch further:">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-botanical-50/40 p-5">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-botanical-600">Interactive checklist</p>
+              <p class="mt-1 text-sm text-ink-500" data-checklist-progress>0 of 4 checked</p>
+            </div>
+            <div class="flex shrink-0 gap-2">
+              <button type="button" class="btn-outline btn-sm" data-checklist-copy>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span data-copy-label>Copy as list</span>
+              </button>
+              <button type="button" class="btn-outline btn-sm" data-checklist-reset>Reset</button>
+            </div>
+          </div>
+          <ul class="divide-y divide-line">
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-venue:marie-selby-botanical-gardens-0"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-venue:marie-selby-botanical-gardens-0" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Seated capacity with a dance floor</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">With the planting where it will be on the day — glazed rooms lose floor area to beds and structural piers, so the headline number and the usable one often differ.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-venue:marie-selby-botanical-gardens-1"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-venue:marie-selby-botanical-gardens-1" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Ventilation, and what it holds</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Opening roof vents, side louvers, shade cloth or mechanical cooling — and the temperature the venue will stand behind on a hot afternoon.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-venue:marie-selby-botanical-gardens-2"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-venue:marie-selby-botanical-gardens-2" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Heating, and who pays for it</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Included in the hire fee or billed separately, and what temperature is guaranteed in the coldest month you would consider.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-venue:marie-selby-botanical-gardens-3"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-venue:marie-selby-botanical-gardens-3" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Power and floors</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">The electrical supply available to your caterer and band, and whether floor protection is required before anyone dances.</span>
+            </label>
+          </li>
+          </ul>
+          <p class="border-t border-line bg-botanical-50/30 px-5 py-3 text-xs text-ink-400">
+            Checked state is saved in this browser only &mdash;
+            <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="/methodology/">how we handle data</a>.
+          </p>
+        </div>
+
         <p>
           Our <a href="/blog/greenhouse-wedding-cost/">cost guide</a> covers the line items those
           answers feed into.
@@ -501,7 +565,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="fairchild-tropical-botanic-garden" data-shortlist-name="Fairchild Tropical Botanic Garden" aria-pressed="false" aria-label="Save Fairchild Tropical Botanic Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -535,7 +600,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="los-angeles-county-arboretum" data-shortlist-name="Los Angeles County Arboretum &amp;amp; Botanic Garden" aria-pressed="false" aria-label="Save Los Angeles County Arboretum &amp;amp; Botanic Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -569,7 +635,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="uc-botanical-garden-berkeley" data-shortlist-name="UC Botanical Garden at Berkeley" aria-pressed="false" aria-label="Save UC Botanical Garden at Berkeley to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -669,5 +736,7 @@
   </footer>
 
   <script defer src="/assets/js/venue-filters.js"></script>
+  <script defer src="/assets/js/shortlist.js"></script>
+  <script defer src="/assets/js/checklist.js"></script>
 </body>
 </html>

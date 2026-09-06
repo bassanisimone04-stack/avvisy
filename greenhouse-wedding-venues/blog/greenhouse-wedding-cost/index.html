@@ -217,6 +217,13 @@
       </nav>
 
       <div class="flex items-center gap-3">
+        <a href="/shortlist/" data-shortlist-link rel="nofollow"
+           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-600"
+           aria-label="Your shortlist (empty)">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          <span data-shortlist-count hidden class="count-badge">0</span>
+        </a>
+
         <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a glasshouse</a>
 
         <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
@@ -230,6 +237,10 @@
     <div id="mobile-nav" hidden class="border-t border-line bg-cream lg:hidden">
       <nav class="shell space-y-1 py-5" aria-label="Mobile">
         <a class="block rounded-lg px-3 py-2.5 font-medium text-ink-700 hover:bg-botanical-50" href="/venues/">Browse all venues</a>
+        <a class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/shortlist/" data-shortlist-link rel="nofollow" aria-label="Your shortlist (empty)">
+          Your shortlist
+          <span data-shortlist-count hidden class="badge-gold">0</span>
+        </a>
         <p class="px-3 pt-4 eyebrow">Venues by state</p>
         <ul class="space-y-1">
               <li><a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/venues/california/">Greenhouse wedding venues in California</a></li>
@@ -379,30 +390,109 @@
         <h2 id="checklist">The quote checklist</h2>
         <p>
           Send the same list to every venue on your shortlist. The answers, not the headline fee,
-          are what you compare.
+          are what you compare. Check items off as you get them, or copy the list to send by email
+          &mdash; your progress is saved in this browser so you can come back to it per venue.
         </p>
-        <div class="not-prose mt-6 overflow-x-auto rounded-card border border-line">
-          <table class="w-full min-w-[34rem] border-collapse text-left text-sm">
-            <caption class="sr-only">Questions to ask every greenhouse wedding venue when requesting a quote</caption>
-            <thead>
-              <tr>
-                <th scope="col" class="border-b border-line-strong bg-botanical-50 px-4 py-3 font-sans text-xs font-bold uppercase tracking-wider text-botanical-700">Ask</th>
-                <th scope="col" class="border-b border-line-strong bg-botanical-50 px-4 py-3 font-sans text-xs font-bold uppercase tracking-wider text-botanical-700">Why it changes the total</th>
-              </tr>
-            </thead>
-            <tbody class="text-ink-600">
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Hire fee, by day of week and month</th><td class="border-b border-line px-4 py-3">The same room can differ by half between Saturday and Thursday.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Catering: in-house, approved list or open?</th><td class="border-b border-line px-4 py-3">Usually the single largest line in the budget.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Minimum spend, and what counts toward it</th><td class="border-b border-line px-4 py-3">Sets a floor independent of your guest count.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Access and exit times</th><td class="border-b border-line px-4 py-3">Decides whether you pay for extra vendor hours.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Is heating or cooling included?</th><td class="border-b border-line px-4 py-3">Glazed rooms are the venue type where this is most often extra.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Available power supply</th><td class="border-b border-line px-4 py-3">Determines whether you need a generator.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Floor protection for dancing</th><td class="border-b border-line px-4 py-3">Common on gravel, brick and earth floors.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Seated capacity with a dance floor</th><td class="border-b border-line px-4 py-3">Planting beds and piers reduce usable area.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Curfew and noise limits</th><td class="border-b border-line px-4 py-3">Shapes the timeline, and sometimes the band contract.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Deposit, cancellation and postponement terms</th><td class="border-b border-line px-4 py-3">The clause you will care about most if anything changes.</td></tr>
-            </tbody>
-          </table>
+        <div class="not-prose mt-6 overflow-hidden rounded-card border border-line bg-shell" data-checklist data-checklist-key="cost-guide">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-botanical-50/40 p-5">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-botanical-600">Interactive checklist</p>
+              <p class="mt-1 text-sm text-ink-500" data-checklist-progress>0 of 10 checked</p>
+            </div>
+            <div class="flex shrink-0 gap-2">
+              <button type="button" class="btn-outline btn-sm" data-checklist-copy>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span data-copy-label>Copy as list</span>
+              </button>
+              <button type="button" class="btn-outline btn-sm" data-checklist-reset>Reset</button>
+            </div>
+          </div>
+          <ul class="divide-y divide-line">
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-0"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-0" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Hire fee, by day of week and month</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">The same room can differ by half between Saturday and Thursday.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-1"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-1" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Catering: in-house, approved list or open?</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Usually the single largest line in the budget.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-2"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-2" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Minimum spend, and what counts toward it</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Sets a floor independent of your guest count.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-3"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-3" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Access and exit times</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Decides whether you pay for extra vendor hours.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-4"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-4" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Is heating or cooling included?</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Glazed rooms are the venue type where this is most often extra.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-5"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-5" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Available power supply</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Determines whether you need a generator.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-6"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-6" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Floor protection for dancing</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Common on gravel, brick and earth floors.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-7"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-7" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Seated capacity with a dance floor</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Planting beds and piers reduce usable area.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-8"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-8" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Curfew and noise limits</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">Shapes the timeline, and sometimes the band contract.</span>
+            </label>
+          </li>
+          <li data-checklist-row class="checklist-row flex items-start gap-3 p-5">
+            <input type="checkbox" data-checklist-item id="cl-cost-guide-9"
+                   class="mt-0.5 size-4 shrink-0 rounded border-line-strong text-botanical-800 focus:outline-none focus:ring-4 focus:ring-botanical-800/10">
+            <label for="cl-cost-guide-9" class="flex-1 cursor-pointer">
+              <span data-checklist-question class="checklist-q block text-sm font-semibold text-botanical-900">Deposit, cancellation and postponement terms</span>
+              <span class="mt-0.5 block text-[13px] leading-relaxed text-ink-500">The clause you will care about most if anything changes.</span>
+            </label>
+          </li>
+          </ul>
+          <p class="border-t border-line bg-botanical-50/30 px-5 py-3 text-xs text-ink-400">
+            Checked state is saved in this browser only &mdash;
+            <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="/methodology/">how we handle data</a>.
+          </p>
         </div>
 
         <h2 id="vs-tent">Comparing a glasshouse with a marquee</h2>
@@ -701,5 +791,7 @@
   </footer>
 
   <script defer src="/assets/js/venue-filters.js"></script>
+  <script defer src="/assets/js/shortlist.js"></script>
+  <script defer src="/assets/js/checklist.js"></script>
 </body>
 </html>

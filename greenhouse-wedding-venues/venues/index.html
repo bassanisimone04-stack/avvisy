@@ -696,6 +696,13 @@
       </nav>
 
       <div class="flex items-center gap-3">
+        <a href="/shortlist/" data-shortlist-link rel="nofollow"
+           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-600"
+           aria-label="Your shortlist (empty)">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          <span data-shortlist-count hidden class="count-badge">0</span>
+        </a>
+
         <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a glasshouse</a>
 
         <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
@@ -709,6 +716,10 @@
     <div id="mobile-nav" hidden class="border-t border-line bg-cream lg:hidden">
       <nav class="shell space-y-1 py-5" aria-label="Mobile">
         <a class="block rounded-lg px-3 py-2.5 font-medium text-ink-700 hover:bg-botanical-50" href="/venues/">Browse all venues</a>
+        <a class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/shortlist/" data-shortlist-link rel="nofollow" aria-label="Your shortlist (empty)">
+          Your shortlist
+          <span data-shortlist-count hidden class="badge-gold">0</span>
+        </a>
         <p class="px-3 pt-4 eyebrow">Venues by state</p>
         <ul class="space-y-1">
               <li><a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/venues/california/">Greenhouse wedding venues in California</a></li>
@@ -932,7 +943,8 @@
                  width="800" height="600" loading="eager" fetchpriority="high" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="los-angeles-county-arboretum" data-shortlist-name="Los Angeles County Arboretum &amp;amp; Botanic Garden" aria-pressed="false" aria-label="Save Los Angeles County Arboretum &amp;amp; Botanic Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -966,7 +978,8 @@
                  width="800" height="600" loading="eager" fetchpriority="high" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="uc-botanical-garden-berkeley" data-shortlist-name="UC Botanical Garden at Berkeley" aria-pressed="false" aria-label="Save UC Botanical Garden at Berkeley to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1000,7 +1013,8 @@
                  width="800" height="600" loading="eager" fetchpriority="high" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="california-botanic-garden" data-shortlist-name="California Botanic Garden" aria-pressed="false" aria-label="Save California Botanic Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1034,7 +1048,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="sherman-library-and-gardens" data-shortlist-name="Sherman Library &amp;amp; Gardens — Tropical Conservatory" aria-pressed="false" aria-label="Save Sherman Library &amp;amp; Gardens — Tropical Conservatory to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1068,7 +1083,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="san-diego-botanic-garden-conservatory" data-shortlist-name="San Diego Botanic Garden — Dickinson Family Education Conservatory" aria-pressed="false" aria-label="Save San Diego Botanic Garden — Dickinson Family Education Conservatory to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1102,7 +1118,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="south-coast-botanic-garden" data-shortlist-name="South Coast Botanic Garden" aria-pressed="false" aria-label="Save South Coast Botanic Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1136,7 +1153,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Orangery</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="denver-botanic-gardens" data-shortlist-name="Denver Botanic Gardens" aria-pressed="false" aria-label="Save Denver Botanic Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1170,7 +1188,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="fairchild-tropical-botanic-garden" data-shortlist-name="Fairchild Tropical Botanic Garden" aria-pressed="false" aria-label="Save Fairchild Tropical Botanic Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1204,7 +1223,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="marie-selby-botanical-gardens" data-shortlist-name="Marie Selby Botanical Gardens" aria-pressed="false" aria-label="Save Marie Selby Botanical Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1238,7 +1258,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="garfield-park-conservatory" data-shortlist-name="Garfield Park Conservatory" aria-pressed="false" aria-label="Save Garfield Park Conservatory to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1272,7 +1293,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Palm house</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="rawlings-conservatory" data-shortlist-name="H.P. Rawlings Conservatory &amp;amp; Botanic Gardens" aria-pressed="false" aria-label="Save H.P. Rawlings Conservatory &amp;amp; Botanic Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1306,7 +1328,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="matthaei-botanical-gardens" data-shortlist-name="Matthaei Botanical Gardens" aria-pressed="false" aria-label="Save Matthaei Botanical Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1340,7 +1363,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="como-park-conservatory" data-shortlist-name="Como Park Zoo &amp;amp; Conservatory" aria-pressed="false" aria-label="Save Como Park Zoo &amp;amp; Conservatory to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1374,7 +1398,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="missouri-botanical-garden" data-shortlist-name="Missouri Botanical Garden" aria-pressed="false" aria-label="Save Missouri Botanical Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1408,7 +1433,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="lauritzen-gardens" data-shortlist-name="Lauritzen Gardens" aria-pressed="false" aria-label="Save Lauritzen Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1442,7 +1468,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="new-york-botanical-garden" data-shortlist-name="New York Botanical Garden" aria-pressed="false" aria-label="Save New York Botanical Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1476,7 +1503,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Palm house</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="brooklyn-botanic-garden-palm-house" data-shortlist-name="Brooklyn Botanic Garden — Palm House" aria-pressed="false" aria-label="Save Brooklyn Botanic Garden — Palm House to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1510,7 +1538,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="buffalo-erie-county-botanical-gardens" data-shortlist-name="Buffalo and Erie County Botanical Gardens" aria-pressed="false" aria-label="Save Buffalo and Erie County Botanical Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1544,7 +1573,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="planting-fields" data-shortlist-name="Planting Fields" aria-pressed="false" aria-label="Save Planting Fields to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1578,7 +1608,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="north-carolina-arboretum" data-shortlist-name="The North Carolina Arboretum" aria-pressed="false" aria-label="Save The North Carolina Arboretum to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1612,7 +1643,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="daniel-stowe-orchid-conservatory" data-shortlist-name="Daniel Stowe Conservancy — Orchid Conservatory" aria-pressed="false" aria-label="Save Daniel Stowe Conservancy — Orchid Conservatory to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1646,7 +1678,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="sarah-p-duke-gardens" data-shortlist-name="Sarah P. Duke Gardens" aria-pressed="false" aria-label="Save Sarah P. Duke Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1680,7 +1713,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="jc-raulston-arboretum" data-shortlist-name="JC Raulston Arboretum" aria-pressed="false" aria-label="Save JC Raulston Arboretum to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1714,7 +1748,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Palm house</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="franklin-park-conservatory-palm-house" data-shortlist-name="Franklin Park Conservatory — John F. Wolfe Palm House" aria-pressed="false" aria-label="Save Franklin Park Conservatory — John F. Wolfe Palm House to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1748,7 +1783,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="phipps-conservatory" data-shortlist-name="Phipps Conservatory and Botanical Gardens" aria-pressed="false" aria-label="Save Phipps Conservatory and Botanical Gardens to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1782,7 +1818,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="dallas-arboretum" data-shortlist-name="Dallas Arboretum and Botanical Garden" aria-pressed="false" aria-label="Save Dallas Arboretum and Botanical Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1816,7 +1853,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="fort-worth-botanic-garden" data-shortlist-name="Fort Worth Botanic Garden" aria-pressed="false" aria-label="Save Fort Worth Botanic Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1850,7 +1888,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Botanical garden</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="san-antonio-botanical-garden" data-shortlist-name="San Antonio Botanical Garden" aria-pressed="false" aria-label="Save San Antonio Botanical Garden to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1884,7 +1923,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Conservatory</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="olbrich-bolz-conservatory" data-shortlist-name="Olbrich Botanical Gardens — Bolz Conservatory" aria-pressed="false" aria-label="Save Olbrich Botanical Gardens — Bolz Conservatory to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -1918,7 +1958,8 @@
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">Limonaia</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            <button type="button" class="shortlist-btn absolute right-3 top-3" data-shortlist-toggle data-shortlist-slug="villa-la-limonaia" data-shortlist-name="Villa La Limonaia" aria-pressed="false" aria-label="Save Villa La Limonaia to your shortlist"><svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg></button>
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>
@@ -2338,5 +2379,7 @@
   </footer>
 
   <script defer src="/assets/js/venue-filters.js"></script>
+  <script defer src="/assets/js/shortlist.js"></script>
+  <script defer src="/assets/js/checklist.js"></script>
 </body>
 </html>

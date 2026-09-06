@@ -2,7 +2,7 @@
 """Directory pages: /venues/, state pages, the Italy hub, and venue detail pages."""
 from chrome import head, header, footer, ld, breadcrumbs, BASE, STATE_NAV
 from cards import cards, stats, venue_url, TYPE_LABEL, BLEND_SHORT, PRICE_GLYPH, unconfirmed_notice
-from shared import faq_ld, faq_section, ad_slot
+from shared import faq_ld, faq_section, ad_slot, checklist, shortlist_button
 import filters
 import faqs
 
@@ -201,6 +201,27 @@ def venue_page(v, similar, all_venues):
     </section>
 """
 
+    venue_checklist_key = "venue:" + v["slug"]
+    venue_copy_intro = (
+        "Hi " + plain_name + " team,\n\n"
+        "We're considering " + plain_name + " for our wedding and wanted to check a "
+        "few things before we get in touch further:"
+    )
+    venue_checklist_items = [
+        ("Seated capacity with a dance floor",
+         "With the planting where it will be on the day — glazed rooms lose floor area to beds "
+         "and structural piers, so the headline number and the usable one often differ."),
+        ("Ventilation, and what it holds",
+         "Opening roof vents, side louvers, shade cloth or mechanical cooling — and the "
+         "temperature the venue will stand behind on a hot afternoon."),
+        ("Heating, and who pays for it",
+         "Included in the hire fee or billed separately, and what temperature is guaranteed in "
+         "the coldest month you would consider."),
+        ("Power and floors",
+         "The electrical supply available to your caterer and band, and whether floor protection "
+         "is required before anyone dances."),
+    ]
+
     return head(title, desc, path, og_type="article",
                 og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header("venues") + f"""
   <main id="main">
@@ -223,7 +244,7 @@ def venue_page(v, similar, all_venues):
           </p>
         </div>
 
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap items-center gap-3">
           <a class="btn-gold" href="{v['official_url']}" rel="noopener nofollow" target="_blank">
             Venue&rsquo;s own events page
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
@@ -232,6 +253,7 @@ def venue_page(v, similar, all_venues):
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
             <span data-copy-label>Share</span>
           </button>
+          {shortlist_button(v, cls="!size-11")}
         </div>
       </div>
     </header>
@@ -276,14 +298,11 @@ def venue_page(v, similar, all_venues):
         <h2 id="ask">What to ask before you enquire</h2>
         <p>
           Glasshouses differ from ordinary venues in four specific ways, and these are the questions
-          that separate a room that works in your month from one that only photographs well:
+          that separate a room that works in your month from one that only photographs well. Check
+          them off as {plain_name} answers them, or copy the list to send by email &mdash; it is
+          saved in this browser against this venue.
         </p>
-        <ol>
-          <li><strong>Seated capacity with a dance floor</strong>, and with the planting where it will be on the day. Glazed rooms lose floor area to beds and structural piers, so the headline number and the usable one often differ.</li>
-          <li><strong>Ventilation and what it holds.</strong> Opening roof vents, side louvers, shade cloth or mechanical cooling — and the temperature the venue will stand behind on a hot afternoon.</li>
-          <li><strong>Heating, and who pays for it.</strong> Included in the hire fee or billed separately, and what temperature is guaranteed in the coldest month you would consider.</li>
-          <li><strong>Power and floors.</strong> The electrical supply available to your caterer and band, and whether floor protection is required before anyone dances.</li>
-        </ol>
+{checklist(venue_checklist_items, key=venue_checklist_key, copy_intro=venue_copy_intro)}
         <p>
           Our <a href="/blog/greenhouse-wedding-cost/">cost guide</a> covers the line items those
           answers feed into.

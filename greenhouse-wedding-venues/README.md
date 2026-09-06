@@ -4,7 +4,8 @@ A directory and editorial site for **greenhouse, glasshouse and conservatory
 wedding venues** in the United States, with a destination section for Italy.
 
 Static HTML generated from a single data file, one compiled Tailwind CSS v4
-stylesheet, and ~7 KB of vanilla JS. No framework, no CDN, no runtime dependencies.
+stylesheet, and a handful of small vanilla JS files. No framework, no CDN, no
+runtime dependencies.
 
 ```bash
 npm install
@@ -30,7 +31,7 @@ with a link to the venue's own page. The site says explicitly that a dash means
 
 Consequences, by design:
 
-- **No invented capacities or prices.** Today that means 0 of 12 listings carry
+- **No invented capacities or prices.** Today that means 0 of 30 listings carry
   either — the capacity, blend and price filters correctly return nothing rather
   than pretending. Fill them in as you verify, and the filters come alive.
 - **No `aggregateRating`, no reviews.** We hold no first-party reviews, so none
@@ -50,9 +51,10 @@ referenced from the `Organization` schema as `publishingPrinciples`.
 
 ### The listings currently in the file
 
-Twelve real venues, each seeded with name, city/state, type and its official
-events URL. **Verify each one before launch** — open `official_url`, confirm the
-venue still hosts weddings, fill in what it publishes, and set `last_verified`.
+Thirty real venues across 16 states and regions, each seeded with name,
+city/state, type and its official events URL. **Verify each one before
+launch** — open `official_url`, confirm the venue still hosts weddings, fill
+in what it publishes, and set `last_verified`.
 
 ---
 
@@ -63,23 +65,27 @@ data/
   venues.json        ← the only place venue facts live
   site.json          ← site name, base URL, nav states
 build/
-  build.py           ← entry point: renders every page
+  build.py           ← entry point: renders every page + assets/data/venues.json
   chrome.py          ← <head>, header, footer, breadcrumbs, JSON-LD helper
   cards.py           ← data loading + the venue card (handles missing values)
   filters.py         ← the filter component (rail + drawer)
   faqs.py            ← every FAQ set, keyword-targeted
-  shared.py          ← accordion, FAQ schema, ad slots
-  page_home.py  page_directory.py  page_content.py
+  shared.py          ← accordion, FAQ schema, ad slots, shortlist button, checklist
+  page_home.py  page_directory.py  page_content.py  page_shortlist.py
 scripts/
   generate-placeholders.mjs   check-faq-parity.mjs
 src/styles/tailwind.css       ← design system source
-assets/                       ← compiled CSS, JS, generated patterns
+assets/
+  css/site.css       ← compiled Tailwind output
+  js/                ← site.js, venue-filters.js, shortlist.js, checklist.js
+  img/patterns/      ← generated decorative SVGs
+  data/venues.json   ← public trimmed copy, written at build time — client-side only
 ```
 
 Generated output (`index.html`, `venues/`, `blog/`, `italy-destination-weddings/`,
-`methodology/`, `sitemap.xml`) is committed so the site can be served straight
-from the repo, but it is **derived** — edit the data or the builders, then
-`npm run build:html`.
+`methodology/`, `shortlist/`, `sitemap.xml`, `assets/data/venues.json`) is
+committed so the site can be served straight from the repo, but it is
+**derived** — edit the data or the builders, then `npm run build:html`.
 
 ### URL structure
 
@@ -91,7 +97,8 @@ from the repo, but it is **derived** — edit the data or the builders, then
 ├── /italy-destination-weddings/         Destination hub
 │   └── /italy-destination-weddings/{venue}/
 ├── /blog/  →  /blog/{post}/             Guides
-└── /methodology/                        Sourcing and editorial standards
+├── /methodology/                        Sourcing and editorial standards
+└── /shortlist/                          Saved venues + compare (noindex, client-only)
 ```
 
 Adding a venue to `data/venues.json` creates its page, adds it to its state page
@@ -172,7 +179,51 @@ URLs (`/venues/california/under-50-guests/`) — those rank, query strings do no
 
 ---
 
-## 5. Structured data
+## 5. Interactivity: shortlist, compare, checklists
+
+Three tools, all client-side, all `localStorage`-only — there is no backend, so
+there is nothing to build to keep this honest: what a visitor saves lives in
+their browser and nowhere else.
+
+**Shortlist** (`assets/js/shortlist.js`, ~14 KB unminified — it also drives
+the `/shortlist/` page below). A heart toggle on every card
+(`build/shared.py` `shortlist_button()`) and on each venue page saves a slug to
+`localStorage`. The header shows a live count on every page. Buttons render
+unpressed from the server — there is no session — and JS corrects
+`aria-pressed`/`aria-label` on load, the same pattern `.chip[aria-pressed]`
+already used for the filters.
+
+**Compare**, on `/shortlist/` (`build/page_shortlist.py`). The page ships as an
+empty shell and hydrates from `/assets/data/venues.json` — a public, trimmed
+copy of `data/venues.json` that `build/build.py` writes on every build.
+Checking "Compare this venue" on two to four saved listings renders a table of
+their *confirmed* fields only; an unconfirmed one is a dash here exactly as it
+is everywhere else on the site — the compare tool does not get to know more
+than the directory does. The page is `noindex`: it has no content of its own to
+rank for, only a visitor's saved state.
+
+**Interactive checklists** (`assets/js/checklist.js`, ~3 KB), on the cost guide
+and on every venue page (`build/shared.py` `checklist()`). Same question-and-
+why content a static list would carry, just checkable, with progress saved per
+checklist key — a venue page's checklist is keyed to that venue, so a couple
+comparing quotes from several venues can track each one separately. "Copy as
+list" builds a plain-text version (questions only, never the "why" — that
+explanation is for the couple, not the venue) for pasting into an email; on a
+venue page the copied text opens with that venue's real name.
+
+One data-correctness note worth knowing if you touch this code: `data/venues.json`
+stores venue names pre-escaped for HTML (`"Sherman Library &amp; Gardens"`),
+which every Python template relies on by interpolating them unescaped. The
+JS-rendered shortlist/compare cards do the same — they must **not** run venue
+text through an HTML-escaper, or `&amp;` becomes `&amp;amp;`. The one place that
+needs the *opposite* — real plain text for the clipboard — decodes it first via
+a detached `<textarea>` (`decodeEntities()` in `shortlist.js`). Both directions
+are commented in place; if you add a fourth surface that touches venue names,
+match whichever of the two it actually needs.
+
+---
+
+## 6. Structured data
 
 Every page ships JSON-LD; `/schema/` holds standalone commented templates.
 
@@ -198,10 +249,11 @@ Two rules the build enforces:
 
 ---
 
-## 6. Performance
+## 7. Performance
 
 - One stylesheet, minified, ~65 KB (~10 KB gzipped). No CDN, no FOUC.
-- Two deferred JS files, ~7 KB total, zero dependencies.
+- Four deferred JS files (filters, shortlist/compare, checklist, site chrome),
+  ~34 KB unminified combined, zero dependencies, no bundler.
 - Every `<img>` has explicit `width`/`height` (no CLS), `decoding="async"`, and
   `loading="lazy"` below the fold / `fetchpriority="high"` above it.
 - Ad slots reserve their height so late creative cannot shift layout.
@@ -211,7 +263,7 @@ Before launch: self-host the fonts, add real photography with `srcset`, and set
 
 ---
 
-## 7. Before you launch
+## 8. Before you launch
 
 1. **Verify every listing.** Open each `official_url`, confirm the venue still
    hosts weddings, fill in what its site publishes, set `last_verified`, rebuild.

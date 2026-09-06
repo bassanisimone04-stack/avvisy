@@ -192,6 +192,13 @@
       </nav>
 
       <div class="flex items-center gap-3">
+        <a href="/shortlist/" data-shortlist-link rel="nofollow"
+           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-600"
+           aria-label="Your shortlist (empty)">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          <span data-shortlist-count hidden class="count-badge">0</span>
+        </a>
+
         <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a glasshouse</a>
 
         <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
@@ -205,6 +212,10 @@
     <div id="mobile-nav" hidden class="border-t border-line bg-cream lg:hidden">
       <nav class="shell space-y-1 py-5" aria-label="Mobile">
         <a class="block rounded-lg px-3 py-2.5 font-medium text-ink-700 hover:bg-botanical-50" href="/venues/">Browse all venues</a>
+        <a class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/shortlist/" data-shortlist-link rel="nofollow" aria-label="Your shortlist (empty)">
+          Your shortlist
+          <span data-shortlist-count hidden class="badge-gold">0</span>
+        </a>
         <p class="px-3 pt-4 eyebrow">Venues by state</p>
         <ul class="space-y-1">
               <li><a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/venues/california/">Greenhouse wedding venues in California</a></li>
@@ -588,5 +599,7 @@
   </footer>
 
   <script defer src="/assets/js/venue-filters.js"></script>
+  <script defer src="/assets/js/shortlist.js"></script>
+  <script defer src="/assets/js/checklist.js"></script>
 </body>
 </html>

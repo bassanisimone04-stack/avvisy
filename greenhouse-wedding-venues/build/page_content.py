@@ -2,7 +2,7 @@
 """Editorial pages: the guides hub, two guides, and the methodology page."""
 from chrome import head, header, footer, ld, breadcrumbs, BASE, NAME
 from cards import stats
-from shared import faq_ld, faq_section, ad_slot
+from shared import faq_ld, faq_section, ad_slot, checklist
 import faqs
 
 AUTHOR = f"{NAME} editorial"
@@ -233,32 +233,10 @@ def cost_guide(all_venues):
         <h2 id="checklist">The quote checklist</h2>
         <p>
           Send the same list to every venue on your shortlist. The answers, not the headline fee,
-          are what you compare.
+          are what you compare. Check items off as you get them, or copy the list to send by email
+          &mdash; your progress is saved in this browser so you can come back to it per venue.
         </p>
-        <div class="not-prose mt-6 overflow-x-auto rounded-card border border-line">
-          <table class="w-full min-w-[34rem] border-collapse text-left text-sm">
-            <caption class="sr-only">Questions to ask every greenhouse wedding venue when requesting a quote</caption>
-            <thead>
-              <tr>
-                <th scope="col" class="border-b border-line-strong bg-botanical-50 px-4 py-3 font-sans text-xs font-bold uppercase tracking-wider text-botanical-700">Ask</th>
-                <th scope="col" class="border-b border-line-strong bg-botanical-50 px-4 py-3 font-sans text-xs font-bold uppercase tracking-wider text-botanical-700">Why it changes the total</th>
-              </tr>
-            </thead>
-            <tbody class="text-ink-600">
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Hire fee, by day of week and month</th><td class="border-b border-line px-4 py-3">The same room can differ by half between Saturday and Thursday.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Catering: in-house, approved list or open?</th><td class="border-b border-line px-4 py-3">Usually the single largest line in the budget.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Minimum spend, and what counts toward it</th><td class="border-b border-line px-4 py-3">Sets a floor independent of your guest count.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Access and exit times</th><td class="border-b border-line px-4 py-3">Decides whether you pay for extra vendor hours.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Is heating or cooling included?</th><td class="border-b border-line px-4 py-3">Glazed rooms are the venue type where this is most often extra.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Available power supply</th><td class="border-b border-line px-4 py-3">Determines whether you need a generator.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Floor protection for dancing</th><td class="border-b border-line px-4 py-3">Common on gravel, brick and earth floors.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Seated capacity with a dance floor</th><td class="border-b border-line px-4 py-3">Planting beds and piers reduce usable area.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Curfew and noise limits</th><td class="border-b border-line px-4 py-3">Shapes the timeline, and sometimes the band contract.</td></tr>
-              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Deposit, cancellation and postponement terms</th><td class="border-b border-line px-4 py-3">The clause you will care about most if anything changes.</td></tr>
-            </tbody>
-          </table>
-        </div>
-
+##COST_CHECKLIST##
         <h2 id="vs-tent">Comparing a glasshouse with a marquee</h2>
         <p>
           The comparison couples usually make &mdash; venue hire against tent hire &mdash; is the
@@ -305,6 +283,19 @@ def cost_guide(all_venues):
           <a href="/venues/north-carolina/">North Carolina</a>.
         </p>
 """
+    cost_checklist_items = [
+        ("Hire fee, by day of week and month", "The same room can differ by half between Saturday and Thursday."),
+        ("Catering: in-house, approved list or open?", "Usually the single largest line in the budget."),
+        ("Minimum spend, and what counts toward it", "Sets a floor independent of your guest count."),
+        ("Access and exit times", "Decides whether you pay for extra vendor hours."),
+        ("Is heating or cooling included?", "Glazed rooms are the venue type where this is most often extra."),
+        ("Available power supply", "Determines whether you need a generator."),
+        ("Floor protection for dancing", "Common on gravel, brick and earth floors."),
+        ("Seated capacity with a dance floor", "Planting beds and piers reduce usable area."),
+        ("Curfew and noise limits", "Shapes the timeline, and sometimes the band contract."),
+        ("Deposit, cancellation and postponement terms", "The clause you will care about most if anything changes."),
+    ]
+    body = body.replace("##COST_CHECKLIST##", checklist(cost_checklist_items, key="cost-guide"))
     return _article_shell(
         path="/blog/greenhouse-wedding-cost/",
         title="Greenhouse Wedding Cost: How to Work Out Your Real Number",

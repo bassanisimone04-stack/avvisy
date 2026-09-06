@@ -218,6 +218,37 @@
            hover:border-botanical-800 hover:text-white;
   }
 
+  /* Save/heart toggle used by the shortlist feature (assets/js/shortlist.js).
+     Pressed state is driven by aria-pressed, exactly like .chip above — CSS
+     and screen readers read the same source of truth. z-20 keeps it clickable
+     above a card's whole-card link overlay (the h3 a's after:inset-0). */
+  .shortlist-btn {
+    @apply relative z-20 grid size-9 shrink-0 place-items-center rounded-full
+           bg-white/90 text-botanical-700 shadow-soft backdrop-blur-sm
+           transition-all duration-200 hover:bg-white hover:text-champagne-600;
+  }
+  .shortlist-btn svg { @apply transition-transform duration-200; }
+  .shortlist-btn[aria-pressed="true"] {
+    @apply bg-champagne-500 text-botanical-950 hover:bg-champagne-400;
+  }
+  .shortlist-btn[aria-pressed="true"] svg { @apply scale-110; fill: currentColor; }
+
+  /* Small numeric badge anchored to the header shortlist icon. */
+  .count-badge {
+    @apply absolute -right-1.5 -top-1.5 grid size-5 place-items-center rounded-full
+           bg-champagne-500 text-[10px] font-bold text-botanical-950 shadow-soft;
+  }
+
+  /* -- Interactive checklist (venue pages, cost guide) -------------------- */
+  /* Checked state is written to data-checked by assets/js/checklist.js —
+     same pattern as .chip[aria-pressed] and .shortlist-btn[aria-pressed]. */
+  .checklist-row[data-checked="true"] {
+    @apply bg-botanical-50/50;
+  }
+  .checklist-row[data-checked="true"] .checklist-q {
+    @apply text-ink-400 line-through decoration-ink-300;
+  }
+
   /* -- Forms ------------------------------------------------------------ */
   .label {
     @apply mb-1.5 block text-[13px] font-semibold text-ink-700;

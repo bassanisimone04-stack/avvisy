@@ -10,6 +10,8 @@ wrong one about a real business is a large one.
 import json
 from pathlib import Path
 
+from shared import shortlist_button
+
 ROOT = Path(__file__).resolve().parent.parent
 
 PRICE_GLYPH = {1: "$", 2: "$$", 3: "$$$", 4: "$$$$"}
@@ -83,7 +85,8 @@ def card(v, *, priority=False):
                  width="800" height="600" {loading} decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
             <span class="badge-glass absolute left-4 top-4">{TYPE_LABEL.get(v['type'], v['type'])}</span>
-            <span class="absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
+            {shortlist_button(v)}
+            <span class="pointer-events-none absolute bottom-3 right-3 rounded-pill bg-botanical-950/55 px-2.5 py-1 text-[10px] font-medium text-white/80 backdrop-blur-sm">
               No photo on file
             </span>
           </div>

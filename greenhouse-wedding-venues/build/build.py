@@ -20,6 +20,7 @@ import faqs
 from page_directory import directory_page, venue_page
 import page_home
 import page_content
+import page_shortlist
 
 ROOT = Path(__file__).resolve().parent.parent
 VENUES = C.load()
@@ -251,6 +252,22 @@ def build_all():
     write("blog/greenhouse-wedding-cost/index.html", page_content.cost_guide(VENUES))
     write("blog/rain-proof-outdoor-wedding-venues/index.html", page_content.rainproof_guide(VENUES))
     write("methodology/index.html", page_content.methodology(VENUES))
+
+    # -------------------------------------------------- shortlist & compare --
+    # A client-only tool (see build/page_shortlist.py + assets/js/shortlist.js).
+    # It needs a public copy of the venue data to hydrate from — trimmed to the
+    # fields the UI actually uses, nothing internal (no notes, no schema comments).
+    write("shortlist/index.html", page_shortlist.build(VENUES))
+
+    public_fields = ("slug", "name", "city", "state", "state_slug", "country", "type",
+                      "capacity_seated", "price_tier", "blend", "official_url",
+                      "summary", "pattern")
+    public_venues = []
+    for v in VENUES:
+        row = {k: v.get(k) for k in public_fields}
+        row["url"] = C.venue_url(v)
+        public_venues.append(row)
+    write("assets/data/venues.json", json.dumps(public_venues, ensure_ascii=False, indent=2) + "\n")
 
     # ----------------------------------------------------------- sitemap -----
     urls = ["/", "/venues/", "/italy-destination-weddings/", "/blog/",
