@@ -41,7 +41,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/new-york/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/california/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/colorado/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -51,12 +56,37 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/california/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/illinois/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/texas/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/maryland/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/michigan/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/minnesota/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/missouri/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/nebraska/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/new-york/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -66,32 +96,37 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/pennsylvania/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.glasshouseweddings.com/venues/ohio/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/illinois/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/pennsylvania/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/new-york/brooklyn-botanic-garden-palm-house/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/texas/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/florida/fairchild-tropical-botanic-garden/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/wisconsin/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/california/san-diego-botanic-garden-conservatory/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/california/los-angeles-county-arboretum/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/california/uc-botanical-garden-berkeley/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/california/california-botanic-garden/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -101,12 +136,82 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/texas/fort-worth-botanic-garden/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/california/san-diego-botanic-garden-conservatory/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/texas/dallas-arboretum/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/california/south-coast-botanic-garden/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/colorado/denver-botanic-gardens/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/florida/fairchild-tropical-botanic-garden/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/florida/marie-selby-botanical-gardens/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/illinois/garfield-park-conservatory/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/maryland/rawlings-conservatory/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/michigan/matthaei-botanical-gardens/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/minnesota/como-park-conservatory/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/missouri/missouri-botanical-garden/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/nebraska/lauritzen-gardens/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/new-york/new-york-botanical-garden/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/new-york/brooklyn-botanic-garden-palm-house/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/new-york/buffalo-erie-county-botanical-gardens/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/new-york/planting-fields/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/north-carolina/north-carolina-arboretum/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -121,7 +226,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/pennsylvania/phipps-conservatory/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/north-carolina/jc-raulston-arboretum/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -131,7 +236,27 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.glasshouseweddings.com/venues/illinois/garfield-park-conservatory/</loc>
+    <loc>https://www.glasshouseweddings.com/venues/pennsylvania/phipps-conservatory/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/texas/dallas-arboretum/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/texas/fort-worth-botanic-garden/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/texas/san-antonio-botanical-garden/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.glasshouseweddings.com/venues/wisconsin/olbrich-bolz-conservatory/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
