@@ -32,22 +32,6 @@
     "url": "/venues/california/uc-botanical-garden-berkeley/"
   },
   {
-    "slug": "california-botanic-garden",
-    "name": "California Botanic Garden",
-    "city": "Claremont",
-    "state": "California",
-    "state_slug": "california",
-    "country": "US",
-    "type": "botanical-garden",
-    "capacity_seated": null,
-    "price_tier": null,
-    "blend": null,
-    "official_url": "https://www.calbg.org/rentals/weddings",
-    "summary": "A native-plant botanic garden in Claremont that publishes a facility rental packet covering venue options, policies and catering.",
-    "pattern": "pattern-03",
-    "url": "/venues/california/california-botanic-garden/"
-  },
-  {
     "slug": "sherman-library-and-gardens",
     "name": "Sherman Library &amp; Gardens — Tropical Conservatory",
     "city": "Corona del Mar",
@@ -60,7 +44,7 @@
     "blend": null,
     "official_url": "https://shermangardensweddings.org/",
     "summary": "A botanic garden in Corona del Mar with a tropical conservatory, running a dedicated weddings programme.",
-    "pattern": "pattern-04",
+    "pattern": "pattern-03",
     "url": "/venues/california/sherman-library-and-gardens/"
   },
   {
@@ -76,24 +60,8 @@
     "blend": "hybrid",
     "official_url": "https://sdbg.org/wedding-private-events/",
     "summary": "A glass-enclosed conservatory and adjacent outdoor amphitheatre offered by San Diego Botanic Garden for weddings and private events.",
-    "pattern": "pattern-05",
+    "pattern": "pattern-04",
     "url": "/venues/california/san-diego-botanic-garden-conservatory/"
-  },
-  {
-    "slug": "south-coast-botanic-garden",
-    "name": "South Coast Botanic Garden",
-    "city": "Palos Verdes Peninsula",
-    "state": "California",
-    "state_slug": "california",
-    "country": "US",
-    "type": "botanical-garden",
-    "capacity_seated": null,
-    "price_tier": null,
-    "blend": null,
-    "official_url": "https://southcoastbotanicgarden.org/garden-event-rentals/weddings-celebrations/",
-    "summary": "An 87-acre botanic garden on the Palos Verdes Peninsula running a weddings and celebrations programme, with a preferred-caterer list you may also opt out of.",
-    "pattern": "pattern-06",
-    "url": "/venues/california/south-coast-botanic-garden/"
   },
   {
     "slug": "denver-botanic-gardens",
@@ -108,7 +76,7 @@
     "blend": "enclosed",
     "official_url": "https://www.botanicgardens.org/york-street/private-events/york-street-weddings-ceremonies-receptions",
     "summary": "A botanical garden whose wedding venues include a European-inspired Orangery and the Ponderosa Glasshouse.",
-    "pattern": "pattern-01",
+    "pattern": "pattern-05",
     "url": "/venues/colorado/denver-botanic-gardens/"
   },
   {
@@ -119,12 +87,12 @@
     "state_slug": "florida",
     "country": "US",
     "type": "botanical-garden",
-    "capacity_seated": null,
+    "capacity_seated": 50,
     "price_tier": null,
-    "blend": null,
+    "blend": "hybrid",
     "official_url": "https://fairchildgarden.org/garden-wedding-miami/",
-    "summary": "A subtropical botanic garden in the Miami area that runs its own wedding programme across multiple ceremony and reception locations.",
-    "pattern": "pattern-02",
+    "summary": "A subtropical botanic garden in the Miami area whose Glasshouse Cafe — glass walls, an outdoor terrace and a Chihuly glass display — is offered as a wedding reception venue.",
+    "pattern": "pattern-06",
     "url": "/venues/florida/fairchild-tropical-botanic-garden/"
   },
   {
@@ -140,7 +108,7 @@
     "blend": "hybrid",
     "official_url": "https://selby.org/dsc/visit-downtown-sarasota-campus/contact-us-weddings-private-events-functions/",
     "summary": "A bayfront botanical garden in Sarasota with indoor and outdoor wedding spaces across two campuses.",
-    "pattern": "pattern-03",
+    "pattern": "pattern-01",
     "url": "/venues/florida/marie-selby-botanical-gardens/"
   },
   {
@@ -156,7 +124,7 @@
     "blend": null,
     "official_url": "https://atlantabg.org/events-exhibitions/private-events-rentals/",
     "summary": "A botanical garden in Atlanta's Piedmont Park whose venues include the glass-domed Fuqua Orchid Center & Conservatory, alongside garden and historic-house wedding spaces.",
-    "pattern": "pattern-04",
+    "pattern": "pattern-02",
     "url": "/venues/georgia/atlanta-botanical-garden/"
   },
   {
@@ -172,7 +140,7 @@
     "blend": "enclosed",
     "official_url": "https://garfieldconservatory.org/visit/room-rentals-information/",
     "summary": "A large public glasshouse conservatory in Chicago that rents rooms for weddings and private events.",
-    "pattern": "pattern-05",
+    "pattern": "pattern-03",
     "url": "/venues/illinois/garfield-park-conservatory/"
   },
   {
@@ -188,7 +156,7 @@
     "blend": "enclosed",
     "official_url": "https://rawlingsconservatory.org/renting-facility/",
     "summary": "An 1888 Palm House with four further glasshouse rooms — Orchid, Mediterranean, Tropical and Desert — available to rent for weddings and events.",
-    "pattern": "pattern-06",
+    "pattern": "pattern-04",
     "url": "/venues/maryland/rawlings-conservatory/"
   },
   {
@@ -204,7 +172,7 @@
     "blend": "enclosed",
     "official_url": "https://nebg.org/weddings/",
     "summary": "A botanic garden in Boylston offering ceremonies in its Limonaia Conservatory and receptions in an eighteenth-century-style glass Orangerie.",
-    "pattern": "pattern-01",
+    "pattern": "pattern-05",
     "url": "/venues/massachusetts/tower-hill-botanic-garden/"
   },
   {
@@ -220,7 +188,7 @@
     "blend": "enclosed",
     "official_url": "https://mbgna.umich.edu/weddings",
     "summary": "A university botanical garden whose conservatory can be rented for evening weddings from mid-September to early May.",
-    "pattern": "pattern-02",
+    "pattern": "pattern-06",
     "url": "/venues/michigan/matthaei-botanical-gardens/"
   },
   {
@@ -236,7 +204,7 @@
     "blend": "hybrid",
     "official_url": "https://comozooconservatory.org/category/como-weddings/",
     "summary": "A conservatory in Saint Paul with indoor spaces beneath its glass dome, and the Ordway Gardens available year-round for ceremonies and receptions.",
-    "pattern": "pattern-03",
+    "pattern": "pattern-01",
     "url": "/venues/minnesota/como-park-conservatory/"
   },
   {
@@ -252,7 +220,7 @@
     "blend": "hybrid",
     "official_url": "https://www.missouribotanicalgarden.org/events-classes/private-events-rentals",
     "summary": "A historic botanical garden in Saint Louis offering indoor and outdoor spaces for weddings and private events.",
-    "pattern": "pattern-04",
+    "pattern": "pattern-02",
     "url": "/venues/missouri/missouri-botanical-garden/"
   },
   {
@@ -268,7 +236,7 @@
     "blend": "hybrid",
     "official_url": "https://www.lauritzengardens.org/space-rental/",
     "summary": "A botanical garden in Omaha offering event packages built around a choice of indoor rooms and outdoor gardens.",
-    "pattern": "pattern-05",
+    "pattern": "pattern-03",
     "url": "/venues/nebraska/lauritzen-gardens/"
   },
   {
@@ -284,7 +252,7 @@
     "blend": "hybrid",
     "official_url": "https://www.nybg.org/visit/groups/private-events/",
     "summary": "A botanical garden in the Bronx offering indoor and outdoor settings for weddings and private events, including its historic conservatory grounds.",
-    "pattern": "pattern-06",
+    "pattern": "pattern-04",
     "url": "/venues/new-york/new-york-botanical-garden/"
   },
   {
@@ -300,7 +268,7 @@
     "blend": "enclosed",
     "official_url": "https://www.bbg.org/visit/weddings",
     "summary": "A glasshouse events space inside Brooklyn Botanic Garden, offered for weddings and celebrations alongside the garden's Goldman Atrium.",
-    "pattern": "pattern-01",
+    "pattern": "pattern-05",
     "url": "/venues/new-york/brooklyn-botanic-garden-palm-house/"
   },
   {
@@ -316,7 +284,7 @@
     "blend": "enclosed",
     "official_url": "https://www.buffalogardens.com/private-events/weddings/",
     "summary": "A historic glass-domed conservatory in Buffalo offering wedding receptions among its plant collections.",
-    "pattern": "pattern-02",
+    "pattern": "pattern-06",
     "url": "/venues/new-york/buffalo-erie-county-botanical-gardens/"
   },
   {
@@ -332,7 +300,7 @@
     "blend": "hybrid",
     "official_url": "https://ncarboretum.org/weddings-rentals/",
     "summary": "A public arboretum in Asheville offering garden ceremony sites with indoor reception options, priced by season and day of week.",
-    "pattern": "pattern-03",
+    "pattern": "pattern-01",
     "url": "/venues/north-carolina/north-carolina-arboretum/"
   },
   {
@@ -348,7 +316,7 @@
     "blend": "hybrid",
     "official_url": "https://danielstoweconservancy.org/rentals/weddings/",
     "summary": "A glass orchid conservatory within a botanical garden near Charlotte, offered as part of the garden's wedding rentals.",
-    "pattern": "pattern-04",
+    "pattern": "pattern-02",
     "url": "/venues/north-carolina/daniel-stowe-orchid-conservatory/"
   },
   {
@@ -364,7 +332,7 @@
     "blend": "hybrid",
     "official_url": "https://gardens.duke.edu/rentals",
     "summary": "A university botanic garden in Durham that rents ceremony and reception spaces, including indoor locations.",
-    "pattern": "pattern-05",
+    "pattern": "pattern-03",
     "url": "/venues/north-carolina/sarah-p-duke-gardens/"
   },
   {
@@ -380,7 +348,7 @@
     "blend": "hybrid",
     "official_url": "https://jcra.ncsu.edu/rentals/venues/",
     "summary": "A university arboretum in Raleigh renting outdoor garden venues and the indoor York Auditorium for receptions.",
-    "pattern": "pattern-06",
+    "pattern": "pattern-04",
     "url": "/venues/north-carolina/jc-raulston-arboretum/"
   },
   {
@@ -396,7 +364,7 @@
     "blend": null,
     "official_url": "https://www.fpconservatory.org/host-an-event/weddings/",
     "summary": "A historic 1895 glass palm house within Franklin Park Conservatory, currently closed for renovation and expected to reopen for events in fall 2027.",
-    "pattern": "pattern-01",
+    "pattern": "pattern-05",
     "url": "/venues/ohio/franklin-park-conservatory-palm-house/"
   },
   {
@@ -412,7 +380,7 @@
     "blend": "hybrid",
     "official_url": "https://www.oregongardenresort.com/events/weddings",
     "summary": "A resort attached to the Oregon Garden's 20 specialty gardens in Silverton, with an indoor Orchid Ballroom that opens via French doors onto the outdoor Wedding Garden.",
-    "pattern": "pattern-02",
+    "pattern": "pattern-06",
     "url": "/venues/oregon/oregon-garden-resort/"
   },
   {
@@ -428,7 +396,7 @@
     "blend": "hybrid",
     "official_url": "https://www.phipps.conservatory.org/plan-your-event/weddings",
     "summary": "A Victorian glasshouse conservatory in Pittsburgh with multiple rooms available for weddings and events.",
-    "pattern": "pattern-03",
+    "pattern": "pattern-01",
     "url": "/venues/pennsylvania/phipps-conservatory/"
   },
   {
@@ -444,7 +412,7 @@
     "blend": "hybrid",
     "official_url": "https://www.dallasarboretum.org/weddings/",
     "summary": "A botanical garden on White Rock Lake with indoor and outdoor wedding locations across the property.",
-    "pattern": "pattern-04",
+    "pattern": "pattern-02",
     "url": "/venues/texas/dallas-arboretum/"
   },
   {
@@ -460,7 +428,7 @@
     "blend": "hybrid",
     "official_url": "https://fwbg.org/",
     "summary": "Texas's oldest major botanic garden, offering indoor and outdoor ceremony and reception locations.",
-    "pattern": "pattern-05",
+    "pattern": "pattern-03",
     "url": "/venues/texas/fort-worth-botanic-garden/"
   },
   {
@@ -476,7 +444,7 @@
     "blend": "hybrid",
     "official_url": "https://sabgtx.org/private-event-rentals/",
     "summary": "A 39-acre urban botanical garden whose rental venues include the Lucile Halsell Conservatory and the indoor/outdoor Betty Kelso Center.",
-    "pattern": "pattern-06",
+    "pattern": "pattern-04",
     "url": "/venues/texas/san-antonio-botanical-garden/"
   },
   {
@@ -492,7 +460,7 @@
     "blend": null,
     "official_url": "https://www.lewisginter.org/visit/facility-rental/weddings/",
     "summary": "A botanical garden in Richmond with a classical domed conservatory whose patio is available for ceremonies, alongside garden and historic-house reception venues.",
-    "pattern": "pattern-01",
+    "pattern": "pattern-05",
     "url": "/venues/virginia/lewis-ginter-botanical-garden/"
   },
   {
@@ -508,7 +476,7 @@
     "blend": null,
     "official_url": "https://www.volunteerparkconservatory.org/information",
     "summary": "A Victorian-style glass greenhouse in Seattle's Volunteer Park with a Palm House and Cactus House; ceremonies are booked as a City of Seattle Parks & Recreation permit, not directly through the conservatory.",
-    "pattern": "pattern-02",
+    "pattern": "pattern-06",
     "url": "/venues/washington/volunteer-park-conservatory/"
   },
   {
@@ -524,7 +492,7 @@
     "blend": "enclosed",
     "official_url": "https://www.olbrich.org/private-event-rentals/bolz-conservatory",
     "summary": "A glass conservatory in Madison available as an evening ceremony space for small weddings, alongside indoor rooms in the botanical centre.",
-    "pattern": "pattern-03",
+    "pattern": "pattern-01",
     "url": "/venues/wisconsin/olbrich-bolz-conservatory/"
   },
   {
@@ -540,7 +508,7 @@
     "blend": "hybrid",
     "official_url": "https://www.villalalimonaia.it/en/",
     "summary": "An 18th-century villa in Acireale, Sicily, set among lemon groves, offering indoor and outdoor spaces for weddings.",
-    "pattern": "pattern-04",
+    "pattern": "pattern-02",
     "url": "/italy-destination-weddings/villa-la-limonaia/"
   }
 ]

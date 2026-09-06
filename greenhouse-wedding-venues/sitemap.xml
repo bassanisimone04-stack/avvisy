@@ -161,22 +161,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.greenhousevenues.com/venues/california/california-botanic-garden/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.greenhousevenues.com/venues/california/sherman-library-and-gardens/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.greenhousevenues.com/venues/california/san-diego-botanic-garden-conservatory/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.greenhousevenues.com/venues/california/south-coast-botanic-garden/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

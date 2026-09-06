@@ -60,21 +60,6 @@
       "last_verified": "2026-09-06"
     },
     {
-      "slug": "california-botanic-garden",
-      "name": "California Botanic Garden",
-      "city": "Claremont",
-      "state": "California",
-      "state_slug": "california",
-      "country": "US",
-      "type": "botanical-garden",
-      "official_url": "https://www.calbg.org/rentals/weddings",
-      "capacity_seated": null,
-      "price_tier": null,
-      "blend": null,
-      "summary": "A native-plant botanic garden in Claremont that publishes a facility rental packet covering venue options, policies and catering.",
-      "last_verified": "2026-09-06"
-    },
-    {
       "slug": "sherman-library-and-gardens",
       "name": "Sherman Library &amp; Gardens — Tropical Conservatory",
       "city": "Corona del Mar",
@@ -105,21 +90,6 @@
       "last_verified": "2026-09-06"
     },
     {
-      "slug": "south-coast-botanic-garden",
-      "name": "South Coast Botanic Garden",
-      "city": "Palos Verdes Peninsula",
-      "state": "California",
-      "state_slug": "california",
-      "country": "US",
-      "type": "botanical-garden",
-      "official_url": "https://southcoastbotanicgarden.org/garden-event-rentals/weddings-celebrations/",
-      "capacity_seated": null,
-      "price_tier": null,
-      "blend": null,
-      "summary": "An 87-acre botanic garden on the Palos Verdes Peninsula running a weddings and celebrations programme, with a preferred-caterer list you may also opt out of.",
-      "last_verified": "2026-09-06"
-    },
-    {
       "slug": "denver-botanic-gardens",
       "name": "Denver Botanic Gardens",
       "city": "Denver",
@@ -143,10 +113,10 @@
       "country": "US",
       "type": "botanical-garden",
       "official_url": "https://fairchildgarden.org/garden-wedding-miami/",
-      "capacity_seated": null,
+      "capacity_seated": 50,
       "price_tier": null,
-      "blend": null,
-      "summary": "A subtropical botanic garden in the Miami area that runs its own wedding programme across multiple ceremony and reception locations.",
+      "blend": "hybrid",
+      "summary": "A subtropical botanic garden in the Miami area whose Glasshouse Cafe — glass walls, an outdoor terrace and a Chihuly glass display — is offered as a wedding reception venue.",
       "last_verified": "2026-09-06"
     },
     {
