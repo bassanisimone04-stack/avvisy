@@ -151,6 +151,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.greenhousevenues.com/venues/indiana/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.greenhousevenues.com/venues/iowa/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.greenhousevenues.com/venues/new-jersey/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.greenhousevenues.com/venues/arizona/desert-botanical-garden/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -307,6 +322,26 @@
   </url>
   <url>
     <loc>https://www.greenhousevenues.com/italy-destination-weddings/villa-la-limonaia/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.greenhousevenues.com/venues/pennsylvania/longwood-gardens/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.greenhousevenues.com/venues/indiana/foellinger-freimann-conservatory/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.greenhousevenues.com/venues/iowa/greater-des-moines-botanical-garden/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.greenhousevenues.com/venues/new-jersey/madison-hotel-conservatory/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -34,7 +34,7 @@ with a link to the venue's own page. The site says explicitly that a dash means
 
 Consequences, by design:
 
-- **No invented capacities or prices.** Today that means 14 of 32 listings carry
+- **No invented capacities or prices.** Today that means 18 of 36 listings carry
   a confirmed capacity or layout, and none carry a price — the price filter
   correctly returns nothing rather than pretending. Fill more in as you verify
   the rest, and the filters come further alive.
@@ -55,7 +55,7 @@ referenced from the `Organization` schema as `publishingPrinciples`.
 
 ### The listings currently in the file
 
-Thirty-two real venues across 22 states and regions, each seeded with name,
+Thirty-six real venues across 25 states and regions, each seeded with name,
 city/state, type and its official events URL. **Verify each one before
 launch** — open `official_url`, confirm the venue still hosts weddings, fill
 in what it publishes, and set `last_verified`.

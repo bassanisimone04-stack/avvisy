@@ -508,6 +508,66 @@
       "blend": "hybrid",
       "summary": "An 18th-century villa in Acireale, Sicily, set among lemon groves, offering indoor and outdoor spaces for weddings.",
       "last_verified": "2026-09-06"
+    },
+    {
+      "slug": "longwood-gardens",
+      "name": "Longwood Gardens",
+      "city": "Kennett Square",
+      "state": "Pennsylvania",
+      "state_slug": "pennsylvania",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://longwoodgardens.org/events-at-longwood",
+      "capacity_seated": 400,
+      "price_tier": null,
+      "blend": "enclosed",
+      "summary": "A large public garden in Kennett Square whose Historic Main Conservatory is rented exclusively for large wedding receptions, available Wednesdays, Thursdays and select Sundays.",
+      "last_verified": "2026-09-06"
+    },
+    {
+      "slug": "foellinger-freimann-conservatory",
+      "name": "Foellinger-Freimann Botanical Conservatory",
+      "city": "Fort Wayne",
+      "state": "Indiana",
+      "state_slug": "indiana",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://www.botanicalconservatory.org/rentals",
+      "capacity_seated": 250,
+      "price_tier": null,
+      "blend": "hybrid",
+      "summary": "A city-run glass conservatory in Fort Wayne renting its indoor Magnolia Room and outdoor Terrace Garden for weddings.",
+      "last_verified": "2026-09-06"
+    },
+    {
+      "slug": "greater-des-moines-botanical-garden",
+      "name": "Greater Des Moines Botanical Garden",
+      "city": "Des Moines",
+      "state": "Iowa",
+      "state_slug": "iowa",
+      "country": "US",
+      "type": "atrium",
+      "official_url": "https://dmbotanicalgarden.com/weddings/",
+      "capacity_seated": 90,
+      "price_tier": null,
+      "blend": "hybrid",
+      "summary": "An 80-foot geodesic-domed conservatory in Des Moines offering ceremony seating for up to 90 guests inside the dome, alongside separate indoor and outdoor wedding packages.",
+      "last_verified": "2026-09-06"
+    },
+    {
+      "slug": "madison-hotel-conservatory",
+      "name": "The Madison Hotel — Conservatory",
+      "city": "Morristown",
+      "state": "New Jersey",
+      "state_slug": "new-jersey",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://www.madisonhotelweddings.com/weddings-ceremonies/",
+      "capacity_seated": 250,
+      "price_tier": null,
+      "blend": "enclosed",
+      "summary": "A glass conservatory attached to a hotel in Morristown, used for ceremonies that are booked together with a reception on site.",
+      "last_verified": "2026-09-06"
     }
   ]
 }
