@@ -1,0 +1,665 @@
+# -*- coding: utf-8 -*-
+"""Editorial pages: the guides hub, two guides, and the methodology page."""
+from chrome import head, header, footer, ld, breadcrumbs, BASE, NAME
+from cards import stats
+from shared import faq_ld, faq_section, ad_slot
+import faqs
+
+AUTHOR = f"{NAME} editorial"
+
+
+def _breadcrumb_ld(crumbs):
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "name": label,
+                 **({"item": f"{BASE}{href}"} if href else {})}
+                for i, (label, href) in enumerate(crumbs)]}
+
+
+def _posting_ld(*, path, headline, desc, published, modified, section, keywords, words, minutes, image):
+    return {
+        "@context": "https://schema.org", "@type": "BlogPosting",
+        "@id": f"{BASE}{path}#article",
+        "isPartOf": {"@id": f"{BASE}/#website"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": f"{BASE}{path}"},
+        "url": f"{BASE}{path}",
+        "headline": headline,
+        "description": desc,
+        "image": {"@type": "ImageObject", "url": f"{BASE}{image}", "width": 1600, "height": 900},
+        "datePublished": published, "dateModified": modified,
+        # A named person would be a fiction until a real byline exists; the
+        # organisation is the accountable publisher either way.
+        "author": {"@type": "Organization", "name": NAME, "url": f"{BASE}/"},
+        "publisher": {"@id": f"{BASE}/#organization"},
+        "inLanguage": "en-US", "articleSection": section, "keywords": keywords,
+        "wordCount": words, "timeRequired": f"PT{minutes}M",
+    }
+
+
+def _article_shell(*, path, title, desc, h1, dek, section, read, published, modified,
+                   toc, body, faq_items, faq_heading, related, keywords, words, all_venues,
+                   image="/assets/img/patterns/wide-01.svg"):
+    st = stats(all_venues)
+    crumbs = [("Home", "/"), ("Guides", "/blog/"), (h1.split(":")[0], None)]
+    extra = (ld(_posting_ld(path=path, headline=h1, desc=desc, published=published, modified=modified,
+                            section=section, keywords=keywords, words=words,
+                            minutes=read, image=image), "Schema: BlogPosting")
+             + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
+             + ld(faq_ld(faq_items), "Schema: FAQPage — mirrors the visible FAQ"))
+
+    toc_links = "\n".join(
+        f'            <li><a class="block rounded-lg px-3 py-2 text-[13px] leading-snug text-ink-500 '
+        f'transition-colors hover:bg-botanical-50 hover:text-botanical-800 '
+        f'aria-[current=true]:bg-botanical-50 aria-[current=true]:font-semibold '
+        f'aria-[current=true]:text-botanical-800" href="#{sid}">{label}</a></li>'
+        for sid, label in toc)
+
+    related_items = "\n".join(f"""            <li>
+              <a class="group flex gap-3" href="{href}">
+                <span class="mt-1 size-1.5 shrink-0 rounded-full bg-champagne-500"></span>
+                <span>
+                  <span class="block text-[10px] font-bold uppercase tracking-wider text-champagne-600">{cat}</span>
+                  <span class="block text-sm font-medium leading-snug text-ink-700 transition-colors group-hover:text-botanical-800">{label}</span>
+                </span>
+              </a>
+            </li>""" for href, label, cat in related)
+
+    return head(title, desc, path, og_type="article", og_image=image, extra=extra) + header("blog") + f"""
+  <div class="sticky top-[72px] z-40 h-0.5 w-full bg-transparent" aria-hidden="true">
+    <div data-reading-progress class="h-full origin-left scale-x-0 bg-champagne-500 transition-transform duration-150"></div>
+  </div>
+
+  <main id="main">
+{breadcrumbs(crumbs)}
+    <header class="shell pb-10 pt-8">
+      <div class="max-w-3xl">
+        <div class="flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.16em]">
+          <span class="text-champagne-600">{section}</span>
+          <span class="text-ink-300">{read} min read</span>
+        </div>
+
+        <h1 class="mt-4 font-display text-[2.25rem] font-semibold leading-[1.06] sm:text-5xl lg:text-[3.4rem]">{h1}</h1>
+
+        <p class="mt-5 text-xl leading-relaxed text-ink-500">{dek}</p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 text-sm">
+          <p class="font-semibold text-botanical-900">By {AUTHOR}</p>
+          <p class="text-ink-400">
+            Published <time datetime="{published[:10]}">{published[:10]}</time> &middot;
+            Updated <time datetime="{modified[:10]}">{modified[:10]}</time>
+          </p>
+          <button type="button" class="btn-outline btn-sm ml-auto" data-copy-link>
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+            <span data-copy-label>Share</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <figure class="shell m-0">
+      <img src="{image}" alt="" aria-hidden="true" width="1600" height="900"
+           fetchpriority="high" decoding="async"
+           class="aspect-[16/9] w-full rounded-card object-cover sm:aspect-[16/6]">
+    </figure>
+
+    <div class="shell mt-14 grid gap-12 lg:grid-cols-[220px_minmax(0,1fr)_300px] lg:items-start">
+
+      <nav class="hidden min-w-0 lg:block lg:sticky lg:top-24" data-toc aria-labelledby="toc-heading">
+        <h2 id="toc-heading" class="px-3 font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-botanical-800">On this page</h2>
+        <ol class="mt-3 space-y-0.5">
+{toc_links}
+        </ol>
+        <div class="mt-6 border-t border-line px-3 pt-5">
+          <a class="btn-gold btn-sm w-full" href="/venues/">Browse venues</a>
+        </div>
+      </nav>
+
+      <article class="prose-editorial min-w-0 max-w-none" data-article-body>
+{body}
+      </article>
+
+      <aside class="space-y-6 lg:sticky lg:top-24">
+        <div class="card p-6">
+          <h2 class="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-botanical-800">Keep reading</h2>
+          <ul class="mt-4 space-y-4">
+{related_items}
+          </ul>
+        </div>
+
+        <div class="card bg-botanical-900 p-6 text-white">
+          <h2 class="font-display text-lg text-white">Browse the directory</h2>
+          <p class="mt-2 text-sm leading-relaxed text-botanical-100/80">
+            {st['total']} glasshouse, conservatory and botanical garden venues, each linked to its
+            own events page.
+          </p>
+          <a class="btn-gold mt-4 w-full" href="/venues/">See the listings</a>
+        </div>
+
+{ad_slot("Sidebar 300&times;600", 600, tag="div")}
+      </aside>
+    </div>
+
+{faq_section(faq_items, heading=faq_heading, kicker="Quick answers", hid="article-faq")}
+
+    <section class="shell mt-4 pb-8">
+      <div class="card flex flex-col gap-5 p-8 sm:flex-row sm:items-center">
+        <span class="grid size-12 shrink-0 place-items-center rounded-full bg-botanical-800 text-champagne-400">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 10v11h18V10z"/><path d="M12 3v18M3 10h18"/></svg>
+        </span>
+        <div>
+          <p class="eyebrow-gold">About this guide</p>
+          <p class="mt-2 max-w-2xl text-[15px] leading-relaxed text-ink-500">
+            Written by the {NAME} editorial team. It deliberately contains no averages or median
+            prices: we have not surveyed enough venues to publish one honestly, and a number that
+            does not match your market is worse than no number at all. What it gives you instead is
+            the structure to get a real figure from the venues on your shortlist.
+            <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="/methodology/">Our editorial standards</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+""" + footer(st)
+
+
+# ============================================================ COST GUIDE =====
+def cost_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>The catering model usually moves the total more than the hire fee does.</li>
+            <li>A glasshouse hire fee and a marquee hire fee are not comparable numbers &mdash; price the whole marquee build.</li>
+            <li>Working greenhouses are cheap to hire and can be expensive to service; finished conservatories are the reverse.</li>
+            <li>Ask what the building <em>needs</em> before you ask what it <em>costs</em>: power, heat, floor protection.</li>
+          </ul>
+        </aside>
+
+        <h2 id="no-average">Why there is no average price on this page</h2>
+        <p>
+          Every directory will happily tell you what a greenhouse wedding &ldquo;costs on average&rdquo;.
+          We will not, because the category has no meaningful average. A municipal glasshouse that
+          hires by the hour and a private estate conservatory booked for a weekend are both
+          &ldquo;greenhouse wedding venues&rdquo;, and the gap between them is larger than the gap
+          between a village hall and a hotel ballroom.
+        </p>
+        <p>
+          A national median would also be stale the moment it was published, and would tell you
+          nothing about your city or your month. So this guide does something more useful: it sets
+          out the structure of the cost, so that three quotes from three venues become comparable.
+        </p>
+
+        <h2 id="drivers">The five things that actually move the number</h2>
+        <h3>1. The catering model</h3>
+        <p>
+          This is the big one. A venue that permits outside catering lets you buy food at market
+          rate. A venue with in-house catering and a minimum spend sets a floor on your budget that
+          has nothing to do with the room. Two venues quoting a similar hire fee can differ by a
+          factor of two once catering is included, so establish the model before you fall for
+          the building.
+        </p>
+        <h3>2. The day and the season</h3>
+        <p>
+          Saturday in peak season is the most expensive slot at essentially every venue. Fridays,
+          Sundays and weekdays are discounted, often substantially, and off-peak months more so.
+          Glasshouses have a particular quirk here: a heated glazed room is genuinely good in
+          winter, when demand and prices are lowest.
+        </p>
+        <h3>3. Who owns the building</h3>
+        <p>
+          Municipal, university and botanical-garden glasshouses generally charge a hire rate set by
+          an institution. Private estates charge what their market bears. Neither is better value in
+          the abstract &mdash; institutional venues come with approved-caterer lists, load-in windows
+          and public opening hours that constrain the day.
+        </p>
+        <h3>4. What the hire fee already includes</h3>
+        <p>
+          Tables, chairs, a ceremony set-up, staffing, cleaning, and the hours you actually get.
+          Two quotes are not comparable until you know which of these sit inside each one. Ask for
+          the access time, not just the event time: a caterer who cannot get in until 3pm changes
+          what is possible.
+        </p>
+        <h3>5. What the building needs that a hall would not</h3>
+        <p>
+          This is the part specific to glass, and the part couples miss:
+        </p>
+        <ul>
+          <li><strong>Heating or cooling</strong> that may be billed separately from the hire fee.</li>
+          <li><strong>Power.</strong> Growing structures are wired for irrigation, not for a band and a caterer's ovens. Ask for the available amperage in writing and give the figure to your caterer.</li>
+          <li><strong>Floor protection,</strong> where the floor is gravel, brick or packed earth.</li>
+          <li><strong>Restrooms,</strong> which a working greenhouse on a garden site may not have nearby.</li>
+        </ul>
+
+        <h2 id="checklist">The quote checklist</h2>
+        <p>
+          Send the same list to every venue on your shortlist. The answers, not the headline fee,
+          are what you compare.
+        </p>
+        <div class="not-prose mt-6 overflow-x-auto rounded-card border border-line">
+          <table class="w-full min-w-[34rem] border-collapse text-left text-sm">
+            <caption class="sr-only">Questions to ask every greenhouse wedding venue when requesting a quote</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="border-b border-line-strong bg-botanical-50 px-4 py-3 font-sans text-xs font-bold uppercase tracking-wider text-botanical-700">Ask</th>
+                <th scope="col" class="border-b border-line-strong bg-botanical-50 px-4 py-3 font-sans text-xs font-bold uppercase tracking-wider text-botanical-700">Why it changes the total</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-600">
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Hire fee, by day of week and month</th><td class="border-b border-line px-4 py-3">The same room can differ by half between Saturday and Thursday.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Catering: in-house, approved list or open?</th><td class="border-b border-line px-4 py-3">Usually the single largest line in the budget.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Minimum spend, and what counts toward it</th><td class="border-b border-line px-4 py-3">Sets a floor independent of your guest count.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Access and exit times</th><td class="border-b border-line px-4 py-3">Decides whether you pay for extra vendor hours.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Is heating or cooling included?</th><td class="border-b border-line px-4 py-3">Glazed rooms are the venue type where this is most often extra.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Available power supply</th><td class="border-b border-line px-4 py-3">Determines whether you need a generator.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Floor protection for dancing</th><td class="border-b border-line px-4 py-3">Common on gravel, brick and earth floors.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Seated capacity with a dance floor</th><td class="border-b border-line px-4 py-3">Planting beds and piers reduce usable area.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Curfew and noise limits</th><td class="border-b border-line px-4 py-3">Shapes the timeline, and sometimes the band contract.</td></tr>
+              <tr><th scope="row" class="border-b border-line px-4 py-3 text-left font-sans text-sm font-semibold text-botanical-800">Deposit, cancellation and postponement terms</th><td class="border-b border-line px-4 py-3">The clause you will care about most if anything changes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="vs-tent">Comparing a glasshouse with a marquee</h2>
+        <p>
+          The comparison couples usually make &mdash; venue hire against tent hire &mdash; is the
+          wrong one. A marquee is not a venue; it is the first item in a build. To reach what a
+          glazed room already offers, it needs flooring, lighting, heating or cooling, power,
+          restrooms, and somewhere for guests to stand while it rains.
+        </p>
+        <blockquote>
+          Price the whole marquee build, then compare. That is the only version of the comparison
+          that tells you anything.
+        </blockquote>
+        <p>
+          There is one more line that belongs on the glasshouse side of the ledger: the contingency
+          you no longer carry. An outdoor wedding budget usually holds money back against weather. A
+          fully enclosed room retires it &mdash; the argument we make in
+          <a href="/blog/rain-proof-outdoor-wedding-venues/">rain-proof outdoor wedding venues</a>.
+        </p>
+
+        <h2 id="cheaper">Where the savings actually are</h2>
+        <ol>
+          <li><strong>Move off Saturday.</strong> The largest single lever at almost every venue.</li>
+          <li><strong>Consider a heated room off-peak.</strong> Glass is one of the few venue types that improves in bad weather.</li>
+          <li><strong>Prioritise open or approved-list catering</strong> if the budget is tight.</li>
+          <li><strong>Cut the guest list before the venue.</strong> Smaller rooms exist inside most large glasshouses and price differently.</li>
+          <li><strong>Use the planting.</strong> A room full of mature ferns needs far less floral installation than an empty hall.</li>
+          <li><strong>Negotiate the minimum, not the fee.</strong> Hire fees are usually fixed; minimum spends often are not, especially off-peak.</li>
+        </ol>
+
+        <h2 id="worksheet">Build your own estimate</h2>
+        <p>
+          Take the hire fee for your actual date, not the headline weekend rate. Add catering at the
+          venue&rsquo;s minimum, or at a real quote if catering is open. Add anything from the
+          checklist above that the venue confirmed is <em>not</em> included &mdash; heat, power,
+          floor. Subtract any weather contingency you were carrying, if the whole day is under cover.
+        </p>
+        <p>
+          Do that for three venues and you will have three numbers that can honestly be compared,
+          which is more than any national average would have given you. Start with the
+          <a href="/venues/">listings</a>, or narrow by state:
+          <a href="/venues/california/">California</a>,
+          <a href="/venues/texas/">Texas</a>,
+          <a href="/venues/florida/">Florida</a>,
+          <a href="/venues/new-york/">New York</a>,
+          <a href="/venues/north-carolina/">North Carolina</a>.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/greenhouse-wedding-cost/",
+        title="Greenhouse Wedding Cost: How to Work Out Your Real Number",
+        desc=("What drives the cost of a greenhouse, glasshouse or conservatory wedding venue — the "
+              "catering model, the date, what the hire fee includes, and what a glass building needs "
+              "that a hall does not. With a quote checklist to compare venues honestly."),
+        h1="Greenhouse wedding cost: how to work out your real number",
+        dek=("No national average, because the category does not have a useful one. Here is the "
+             "structure of the cost instead — and the checklist that makes three quotes comparable."),
+        section="Costs", read=11,
+        published="2026-09-06T09:00:00-04:00", modified="2026-09-06T09:00:00-04:00",
+        toc=[("no-average", "Why there is no average here"),
+             ("drivers", "The five things that move the number"),
+             ("checklist", "The quote checklist"),
+             ("vs-tent", "Glasshouse vs. marquee"),
+             ("cheaper", "Where the savings are"),
+             ("worksheet", "Build your own estimate")],
+        body=body, faq_items=faqs.BLOG_COST,
+        faq_heading="Greenhouse wedding cost FAQs",
+        related=[("/blog/rain-proof-outdoor-wedding-venues/", "Rain-proof outdoor wedding venues", "Planning"),
+                 ("/venues/", "Browse every listing", "Directory"),
+                 ("/methodology/", "How we source listings", "About")],
+        keywords=["greenhouse wedding cost", "conservatory wedding venues",
+                  "botanical garden wedding venues", "glasshouse wedding venue"],
+        words=1450, all_venues=all_venues, image="/assets/img/patterns/wide-01.svg")
+
+
+# ======================================================== RAIN-PROOF GUIDE ===
+def rainproof_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>&ldquo;Rain-proof&rdquo; means no decision has to be made on the day &mdash; not that a plan B exists.</li>
+            <li>Cover the whole chain: arrival, ceremony, drinks, dinner, dancing, smokers, vendors.</li>
+            <li>A glazed room keeps the daylight and the planting that made you want to be outdoors.</li>
+            <li>Ask whether moving the ceremony indoors costs anything, and how long the re-set takes.</li>
+          </ul>
+        </aside>
+
+        <h2 id="what-it-means">What &ldquo;rain-proof&rdquo; should mean</h2>
+        <p>
+          Most venues marketed as having a wet-weather option are not rain-proof; they are
+          reversible. There is an outdoor plan and an indoor plan, and someone &mdash; usually you,
+          usually at about eleven in the morning &mdash; has to choose between them while looking at
+          a forecast.
+        </p>
+        <p>
+          A rain-proof venue removes the decision. Every part of the day already happens under a
+          solid roof, so rain becomes weather rather than a problem. That is the practical case for
+          glasshouses, conservatories and orangeries: they give you the daylight and the planting
+          that made you want to be outside, without the contingency that being outside requires.
+        </p>
+
+        <h2 id="the-chain">Cover the whole chain, not just the dinner</h2>
+        <p>
+          Rain finds the gaps between spaces. When you walk a venue, walk the whole guest journey and
+          ask what happens to each link in it if it is raining hard:
+        </p>
+        <ul>
+          <li><strong>Arrival.</strong> Where do guests get out of cars, and how far is that from cover?</li>
+          <li><strong>Ceremony.</strong> Indoors by default, or moved indoors by decision?</li>
+          <li><strong>Drinks.</strong> Often the weakest link — the space between ceremony and dinner is frequently the one outdoors.</li>
+          <li><strong>Dinner and dancing.</strong> Usually covered; check whether a re-set is needed between them.</li>
+          <li><strong>Photographs.</strong> A glazed room is unusually good here, because the light stays even when the sky does not.</li>
+          <li><strong>Vendors.</strong> Caterers and bands loading in across wet grass is how timelines slip.</li>
+        </ul>
+
+        <h2 id="options">The three ways to be dry</h2>
+        <h3>A glazed venue</h3>
+        <p>
+          A conservatory, palm house, orangery or working greenhouse where the whole day sits under
+          glass. You keep daylight and planting, and the roof, floor, power and restrooms are already
+          there. The trade-off is climate: glass gains heat quickly, so ventilation matters more here
+          than anywhere else.
+        </p>
+        <h3>A marquee</h3>
+        <p>
+          Flexible and available anywhere, but it is a build, not a venue. Flooring, lighting,
+          heating or cooling, power, restrooms and guest arrival all have to be solved and paid for
+          separately &mdash; which is why the honest cost comparison is against the whole build, as
+          set out in our <a href="/blog/greenhouse-wedding-cost/">cost guide</a>.
+        </p>
+        <h3>An indoor venue with a view</h3>
+        <p>
+          Entirely dry and usually the cheapest to run. What it does not give you is the thing that
+          drew you outdoors in the first place: overhead daylight, and being among planting rather
+          than looking at it.
+        </p>
+
+        <h2 id="ask">What to ask the venue</h2>
+        <ol>
+          <li><strong>Can the ceremony, dinner and dancing all happen under solid cover?</strong> If not, which part cannot?</li>
+          <li><strong>If the ceremony moves indoors, does it cost anything?</strong> Some venues charge for the re-set; some set both from the morning.</li>
+          <li><strong>By when must the call be made?</strong> If there is a decision, there is a deadline — know it before the day.</li>
+          <li><strong>Is the glazed room heated, and is heat included?</strong> Rain in April is a different problem from rain in July.</li>
+          <li><strong>How is the room ventilated?</strong> A sealed glass box in summer solves rain and creates heat.</li>
+          <li><strong>Where do guests arrive under cover?</strong> The car-to-door walk is the detail most often missed.</li>
+        </ol>
+
+        <h2 id="find">Finding one</h2>
+        <p>
+          Filter the directory by venue type &mdash; conservatories, palm houses and orangeries are
+          the most likely to be fully enclosed &mdash; then check each venue&rsquo;s own page for
+          whether every part of the day can happen inside. We mark the indoor/outdoor blend on a
+          listing once we have confirmed it at the source.
+        </p>
+        <p>
+          Start with <a href="/venues/">every listing</a>, or go by state:
+          <a href="/venues/california/">California</a>,
+          <a href="/venues/texas/">Texas</a>,
+          <a href="/venues/florida/">Florida</a>,
+          <a href="/venues/new-york/">New York</a>,
+          <a href="/venues/north-carolina/">North Carolina</a>.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/rain-proof-outdoor-wedding-venues/",
+        title="Rain-Proof Outdoor Wedding Venues: The Garden Without the Gamble",
+        desc=("How to find a genuinely rain-proof outdoor wedding venue: what the phrase should mean, "
+              "the gaps rain finds in a guest journey, and how glasshouse and conservatory wedding "
+              "venues compare with a marquee."),
+        h1="Rain-proof outdoor wedding venues: the garden without the weather decision",
+        dek=("Most 'wet weather options' are a decision waiting to be made. Here is what genuinely "
+             "rain-proof looks like, and the questions that tell the two apart."),
+        section="Planning", read=8,
+        published="2026-09-06T09:00:00-04:00", modified="2026-09-06T09:00:00-04:00",
+        toc=[("what-it-means", "What rain-proof should mean"),
+             ("the-chain", "Cover the whole chain"),
+             ("options", "The three ways to be dry"),
+             ("ask", "What to ask the venue"),
+             ("find", "Finding one")],
+        body=body, faq_items=faqs.BLOG_RAINPROOF,
+        faq_heading="Rain-proof venue FAQs",
+        related=[("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/venues/?type=conservatory", "Conservatory wedding venues", "Directory"),
+                 ("/methodology/", "How we source listings", "About")],
+        keywords=["rain-proof outdoor wedding venues", "greenhouse wedding venues",
+                  "conservatory wedding venues"],
+        words=1050, all_venues=all_venues, image="/assets/img/patterns/wide-02.svg")
+
+
+# ============================================================= BLOG INDEX ====
+def blog_index(all_venues):
+    st = stats(all_venues)
+    path = "/blog/"
+    title = "Greenhouse Wedding Planning Guides | Costs &amp; Rain-Proof Venues"
+    desc = ("Planning guides for greenhouse, glasshouse and conservatory weddings: how venue costs "
+            "are actually built, and how to find a genuinely rain-proof outdoor wedding venue.")
+
+    posts = [
+        ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost: how to work out your real number",
+         "No national average — the structure of the cost, and a checklist that makes three quotes comparable.",
+         "Costs", "11 min", "2026-09-06", "wide-01"),
+        ("/blog/rain-proof-outdoor-wedding-venues/",
+         "Rain-proof outdoor wedding venues: the garden without the weather decision",
+         "What the phrase should mean, the gaps rain finds in a guest journey, and how glass compares with a marquee.",
+         "Planning", "8 min", "2026-09-06", "wide-02"),
+    ]
+
+    blog_ld = {
+        "@context": "https://schema.org", "@type": "Blog", "@id": f"{BASE}{path}#blog",
+        "url": f"{BASE}{path}", "name": f"{NAME} — planning guides",
+        "description": desc, "inLanguage": "en-US",
+        "publisher": {"@id": f"{BASE}/#organization"},
+        "blogPost": [{"@type": "BlogPosting", "headline": t, "url": f"{BASE}{h}",
+                      "datePublished": d, "articleSection": c,
+                      "author": {"@type": "Organization", "name": NAME}}
+                     for h, t, _, c, _, d, _ in posts],
+    }
+    crumbs = [("Home", "/"), ("Guides", None)]
+    extra = (ld(blog_ld, "Schema: Blog + blogPost list")
+             + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
+             + ld(faq_ld(faqs.BLOG_INDEX), "Schema: FAQPage — mirrors the visible FAQ below"))
+
+    cards_html = "\n".join(f"""        <article class="card-interactive group relative flex flex-col overflow-hidden">
+          <div class="aspect-[16/10] overflow-hidden bg-botanical-900">
+            <img src="/assets/img/patterns/{img}.svg" alt="" aria-hidden="true" width="1600" height="900"
+                 loading="lazy" decoding="async"
+                 class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-105">
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
+              <span class="text-champagne-600">{cat}</span>
+              <span class="text-ink-300">{read} read</span>
+            </div>
+            <h2 class="mt-3 text-xl leading-snug">
+              <a href="{href}" class="after:absolute after:inset-0 after:content-['']">{t}</a>
+            </h2>
+            <p class="mt-2 text-sm leading-relaxed text-ink-500">{dek}</p>
+            <p class="mt-4 text-xs text-ink-300">Updated <time datetime="{d}">{d}</time></p>
+          </div>
+        </article>""" for href, t, dek, cat, read, d, img in posts)
+
+    return head(title, desc, path, og_image="/assets/img/patterns/wide-01.svg", extra=extra) + header("blog") + f"""
+  <main id="main">
+{breadcrumbs(crumbs)}
+    <header class="shell pb-10 pt-8">
+      <p class="eyebrow-gold">The journal</p>
+      <h1 class="mt-3 max-w-3xl font-display text-[2.25rem] font-semibold leading-[1.08] sm:text-5xl lg:text-[3.4rem]">
+        Greenhouse wedding planning guides
+      </h1>
+      <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-500">
+        Practical guides to getting married under glass. Two published so far &mdash; we would rather
+        publish two we can stand behind than twenty padded with numbers we cannot source.
+      </p>
+    </header>
+
+    <section class="shell" aria-label="All guides">
+      <div class="grid gap-6 sm:grid-cols-2">
+{cards_html}
+      </div>
+
+{ad_slot("Leaderboard 728&times;90", 90, cls="mt-10")}
+    </section>
+
+{faq_section(faqs.BLOG_INDEX, heading="Greenhouse wedding questions", kicker="Start here",
+             intro="Short answers. Each links to the guide that covers it properly.", hid="blog-faq")}
+
+  </main>
+""" + footer(st)
+
+
+# ============================================================= METHODOLOGY ===
+def methodology(all_venues):
+    st = stats(all_venues)
+    path = "/methodology/"
+    title = "How We Source and Verify Venue Listings | Editorial Standards"
+    desc = ("The sourcing rules behind this greenhouse and conservatory wedding venue directory: "
+            "where listings come from, what an unconfirmed field means, and how to request a "
+            "correction or removal.")
+    crumbs = [("Home", "/"), ("How we source listings", None)]
+
+    page_ld = {
+        "@context": "https://schema.org", "@type": "WebPage",
+        "@id": f"{BASE}{path}#webpage", "url": f"{BASE}{path}",
+        "name": title, "description": desc,
+        "isPartOf": {"@id": f"{BASE}/#website"},
+        "about": {"@id": f"{BASE}/#organization"},
+    }
+    extra = ld(page_ld, "Schema: WebPage — referenced as the Organization's publishingPrinciples") \
+        + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
+
+    return head(title, desc, path, og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header("methodology") + f"""
+  <main id="main">
+{breadcrumbs(crumbs)}
+    <header class="shell pb-10 pt-8">
+      <p class="eyebrow-gold">Editorial standards</p>
+      <h1 class="mt-3 max-w-3xl font-display text-[2.25rem] font-semibold leading-[1.08] sm:text-5xl">
+        How we source and verify listings
+      </h1>
+      <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-500">
+        A directory is only worth reading if you know where its facts come from. Here is exactly
+        where ours do, and what we do when we do not know something.
+      </p>
+    </header>
+
+    <div class="shell grid gap-12 pb-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
+      <article class="prose-editorial min-w-0 max-w-none">
+        <h2 id="sourcing">The sourcing rule</h2>
+        <p>
+          A field is filled in only when it is stated on the venue&rsquo;s own website. Not on a
+          listing marketplace, not on a photographer&rsquo;s blog, not from a review aggregator.
+          Those sources go stale, disagree with each other, and are how directories end up telling
+          couples something untrue about a real business.
+        </p>
+        <p>
+          Every listing links to the venue&rsquo;s own events page. That link is the point of the
+          listing: we are a shortlist and a set of comparable descriptions, not a booking system.
+        </p>
+
+        <h2 id="unconfirmed">What a dash means</h2>
+        <p>
+          Where you see a dash or &ldquo;not confirmed&rdquo;, we have not verified that detail at
+          the source. It does not mean the room is small, cheap, unavailable or unsuitable. It means
+          we do not know yet, and would rather say so.
+        </p>
+        <p>
+          Right now that applies to most capacity, layout and price fields:
+          <strong>{st['with_capacity']} of {st['total']}</strong> listings have a confirmed capacity and
+          <strong>{st['with_price']} of {st['total']}</strong> a confirmed price range. The capacity, blend and
+          price filters only match confirmed listings, which is why they currently return little or
+          nothing. We would rather ship an honest empty filter than a populated dishonest one.
+        </p>
+
+        <h2 id="what-we-dont">What we do not do</h2>
+        <ul>
+          <li><strong>No paid placements.</strong> No venue pays to be listed or to rank, and we take no commission on bookings.</li>
+          <li><strong>No invented ratings.</strong> We hold no first-party reviews, so we publish no star ratings and no <code>aggregateRating</code> in our structured data. A fabricated rating is both a Google spam-policy violation and a lie about someone&rsquo;s business.</li>
+          <li><strong>No scraped prices.</strong> If a venue does not publish a rate, we do not estimate one.</li>
+          <li><strong>No borrowed photography.</strong> The images on this site are generated decorative patterns, marked as such. Venue photographs belong to the venues and their photographers.</li>
+        </ul>
+
+        <h2 id="corrections">Corrections and removals</h2>
+        <p>
+          If you work at a listed venue and something here is wrong or out of date, tell us and we
+          will correct it. If you would rather not be listed at all, tell us and we will remove the
+          listing &mdash; no negotiation, no upsell.
+        </p>
+
+        <h2 id="submit">Suggesting a venue</h2>
+        <p>
+          Send the venue&rsquo;s own events page. We check that the venue exists, hosts weddings, and
+          has glazed space, then add it with whatever its site confirms.
+        </p>
+
+        <form class="not-prose mt-6 grid gap-4 rounded-card border border-line bg-shell p-6 sm:grid-cols-2" action="/api/suggest" method="post">
+          <div class="sm:col-span-2">
+            <label class="label" for="s-url">Venue&rsquo;s events page URL <span class="text-champagne-600">*</span></label>
+            <input class="field" id="s-url" name="url" type="url" required placeholder="https://">
+          </div>
+          <div>
+            <label class="label" for="s-name">Venue name</label>
+            <input class="field" id="s-name" name="venue" type="text">
+          </div>
+          <div>
+            <label class="label" for="s-email">Your email</label>
+            <input class="field" id="s-email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="label" for="s-msg">Anything we should know</label>
+            <textarea class="field min-h-24 resize-y" id="s-msg" name="message" rows="3"
+                      placeholder="A correction, a removal request, or a venue to add"></textarea>
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="btn-primary">Send</button>
+            <p class="mt-3 text-xs text-ink-400">
+              This form has no backend in this build &mdash; point <code>action</code> at your own
+              handler before going live.
+            </p>
+          </div>
+        </form>
+      </article>
+
+      <aside class="space-y-6 lg:sticky lg:top-24">
+        <div class="card p-6">
+          <h2 class="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-botanical-800">Directory at a glance</h2>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="flex items-baseline justify-between gap-3 border-b border-line pb-3">
+              <dt class="text-ink-500">Listings</dt><dd class="font-semibold text-botanical-800">{st['total']}</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3 border-b border-line pb-3">
+              <dt class="text-ink-500">States &amp; regions</dt><dd class="font-semibold text-botanical-800">{st['states']}</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3 border-b border-line pb-3">
+              <dt class="text-ink-500">Confirmed capacity</dt><dd class="font-semibold text-botanical-800">{st['with_capacity']}</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3 border-b border-line pb-3">
+              <dt class="text-ink-500">Confirmed pricing</dt><dd class="font-semibold text-botanical-800">{st['with_price']}</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3">
+              <dt class="text-ink-500">Paid placements</dt><dd class="font-semibold text-botanical-800">0</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </main>
+""" + footer(st)

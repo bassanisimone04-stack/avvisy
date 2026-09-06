@@ -1,9 +1,13 @@
 /**
- * Generates the on-brand SVG placeholders shipped in /assets/img.
+ * Generates the abstract brand patterns shipped in /assets/img/patterns.
  *
- * They exist so every template renders standalone, with real <img> markup and
- * real intrinsic dimensions (no CLS). Swap the files for photography and the
- * markup does not change — keep the same path, width and height attributes.
+ * These are DECORATIVE GRAPHICS, not photographs, and the templates treat them
+ * that way: alt="" aria-hidden, with a visible "No photo on file" label on venue
+ * cards. That matters — a generated illustration presented as a picture of a
+ * real venue would misrepresent it.
+ *
+ * When you licence real photography, drop it in with the same intrinsic
+ * dimensions, give it descriptive alt text, and remove the label.
  *
  *   node scripts/generate-placeholders.mjs
  */
@@ -70,39 +74,26 @@ function glasshouse(w, h, i, label) {
 }
 
 const ASSETS = [
-  // [path, width, height, aria label]
-  ["assets/img/venues/crystal-conservatory-napa-01.svg", 1600, 1000, "Glasshouse ceremony hall"],
-  ["assets/img/venues/crystal-conservatory-napa-02.svg", 800, 800, "Glasshouse aisle detail"],
-  ["assets/img/venues/crystal-conservatory-napa-03.svg", 800, 800, "Reception under glass"],
-  ["assets/img/venues/crystal-conservatory-napa-04.svg", 800, 800, "Evening glasshouse lighting"],
-  ["assets/img/venues/crystal-conservatory-napa-05.svg", 800, 800, "Palm house interior"],
-  ["assets/img/venues/palm-house-pasadena.svg", 800, 600, "Palm house venue"],
-  ["assets/img/venues/orangery-hudson-valley.svg", 800, 600, "Orangery venue"],
-  ["assets/img/venues/fern-glasshouse-austin.svg", 800, 600, "Fern glasshouse venue"],
-  ["assets/img/venues/succulent-atrium-phoenix.svg", 800, 600, "Atrium venue"],
-  ["assets/img/venues/citrus-orangery-charleston.svg", 800, 600, "Citrus orangery venue"],
-  ["assets/img/venues/mangrove-conservatory-miami.svg", 800, 600, "Conservatory venue"],
-  ["assets/img/venues/redwood-greenhouse-mendocino.svg", 800, 600, "Greenhouse venue"],
-  ["assets/img/venues/rose-house-raleigh.svg", 800, 600, "Rose house venue"],
-  ["assets/img/venues/lemon-house-tuscany.svg", 800, 600, "Limonaia venue"],
-  ["assets/img/states/california.svg", 640, 480, "California greenhouse venues"],
-  ["assets/img/states/texas.svg", 640, 480, "Texas greenhouse venues"],
-  ["assets/img/states/florida.svg", 640, 480, "Florida greenhouse venues"],
-  ["assets/img/states/new-york.svg", 640, 480, "New York greenhouse venues"],
-  ["assets/img/states/north-carolina.svg", 640, 480, "North Carolina greenhouse venues"],
-  ["assets/img/states/italy.svg", 640, 480, "Italy destination greenhouse venues"],
-  ["assets/img/blog/greenhouse-wedding-cost-hero.svg", 1600, 900, "Greenhouse wedding cost guide"],
-  ["assets/img/blog/greenhouse-wedding-cost-inline.svg", 1200, 675, "Glasshouse reception layout"],
-  ["assets/img/blog/rain-proof-outdoor-venues.svg", 800, 600, "Rain-proof outdoor wedding venue"],
-  ["assets/img/blog/small-greenhouse-weddings.svg", 800, 600, "Small greenhouse wedding"],
-  ["assets/img/blog/botanical-garden-venues.svg", 800, 600, "Botanical garden wedding venue"],
+  // [path, width, height] — abstract patterns only, no venue-specific names
+  ["assets/img/patterns/pattern-01.svg", 800, 600],
+  ["assets/img/patterns/pattern-02.svg", 800, 600],
+  ["assets/img/patterns/pattern-03.svg", 800, 600],
+  ["assets/img/patterns/pattern-04.svg", 800, 600],
+  ["assets/img/patterns/pattern-05.svg", 800, 600],
+  ["assets/img/patterns/pattern-06.svg", 800, 600],
+  ["assets/img/patterns/hero.svg", 1600, 1000],
+  ["assets/img/patterns/wide-01.svg", 1600, 900],
+  ["assets/img/patterns/wide-02.svg", 1600, 900],
+  ["assets/img/patterns/square-01.svg", 800, 800],
+  ["assets/img/patterns/square-02.svg", 800, 800],
+  ["assets/img/patterns/square-03.svg", 800, 800],
 ];
 
 let n = 0;
-for (const [path, w, h, label] of ASSETS) {
+for (const [path, w, h] of ASSETS) {
   const out = resolve(ROOT, path);
   mkdirSync(dirname(out), { recursive: true });
-  writeFileSync(out, glasshouse(w, h, n, label), "utf8");
+  writeFileSync(out, glasshouse(w, h, n, "Decorative botanical pattern"), "utf8");
   n += 1;
 }
-console.log(`✓ generated ${n} placeholder assets`);
+console.log(`✓ generated ${n} decorative pattern assets`);

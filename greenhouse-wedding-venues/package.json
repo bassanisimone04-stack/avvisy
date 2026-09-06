@@ -7,9 +7,10 @@
     "dev": "tailwindcss -i ./src/styles/tailwind.css -o ./assets/css/site.css --watch",
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./assets/css/site.css --minify",
     "build:img": "node ./scripts/generate-placeholders.mjs",
-    "build": "npm run build:img && npm run build:css && npm run check:faq",
+    "build": "npm run build:img && npm run build:html && npm run build:css && npm run check:faq",
     "serve": "npx --yes serve@14 . -l 4321",
-    "check:faq": "node ./scripts/check-faq-parity.mjs"
+    "check:faq": "node ./scripts/check-faq-parity.mjs",
+    "build:html": "python3 build/build.py"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",

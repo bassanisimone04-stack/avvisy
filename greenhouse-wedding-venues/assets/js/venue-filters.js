@@ -7,13 +7,17 @@
  *
  * Contract — the grid element carries [data-venue-grid] and each card:
  *   data-venue
- *   data-name="Crystal Conservatory"     search text
- *   data-city="Napa"                     search text
+ *   data-name="…"                        search text
+ *   data-city="…"                        search text
  *   data-state="california"              slug
- *   data-capacity="180"                  max seated guests (integer)
- *   data-blend="enclosed|hybrid|openair"
- *   data-price="1|2|3|4"                 $ … $$$$ tier
- *   data-featured="true"                 optional
+ *   data-type="conservatory|palm-house|…"
+ *   data-capacity="180"                  seated guests — EMPTY when unconfirmed
+ *   data-blend="enclosed|hybrid|openair" EMPTY when unconfirmed
+ *   data-price="1|2|3|4"                 EMPTY when unconfirmed
+ *
+ * An empty attribute means "we have not confirmed this at the source". Such a
+ * listing is excluded while that facet is active rather than being guessed into
+ * a bucket — the empty state on the page explains why.
  *
  * Controls are wired declaratively:
  *   <select data-filter="state">                 single value
@@ -55,44 +59,55 @@
   };
   var PRICE_LABEL = { 1: "$", 2: "$$", 3: "$$$", 4: "$$$$" };
 
-  var state = { state: "", capacity: "any", blend: [], price: [], q: "", sort: "featured" };
+  var DEFAULTS = { state: "", type: "", capacity: "any", blend: [], price: [], q: "", sort: "name" };
+  var state = Object.assign({}, DEFAULTS, { blend: [], price: [] });
 
   /* ----------------------------------------------------------- filtering */
   function matches(card) {
     var d = card.dataset;
 
     if (state.state && d.state !== state.state) return false;
+    if (state.type && d.type !== state.type) return false;
 
     var range = CAPACITY[state.capacity];
     if (range) {
-      var cap = parseInt(d.capacity, 10) || 0;
+      if (!d.capacity) return false; // unconfirmed — never guessed into a bucket
+      var cap = parseInt(d.capacity, 10);
       if (cap < range[0] || cap > range[1]) return false;
     }
 
-    if (state.blend.length && state.blend.indexOf(d.blend) === -1) return false;
-    if (state.price.length && state.price.indexOf(d.price) === -1) return false;
+    if (state.blend.length && (!d.blend || state.blend.indexOf(d.blend) === -1)) return false;
+    if (state.price.length && (!d.price || state.price.indexOf(d.price) === -1)) return false;
 
     if (state.q) {
-      var haystack = (d.name + " " + d.city + " " + d.state).toLowerCase();
+      var haystack = (d.name + " " + d.city + " " + d.state + " " + d.type).toLowerCase();
       if (haystack.indexOf(state.q.toLowerCase()) === -1) return false;
     }
     return true;
   }
 
   function sortCards(visible) {
+    // Listings with an unconfirmed value always sort last, whichever direction —
+    // a missing number must never read as a zero.
     var by = {
-      "capacity-asc": function (a, b) { return num(a, "capacity") - num(b, "capacity"); },
-      "capacity-desc": function (a, b) { return num(b, "capacity") - num(a, "capacity"); },
-      "price-asc": function (a, b) { return num(a, "price") - num(b, "price"); },
-      "price-desc": function (a, b) { return num(b, "price") - num(a, "price"); },
-      featured: function (a, b) {
-        return (b.dataset.featured === "true") - (a.dataset.featured === "true");
-      }
+      name: function (a, b) { return a.dataset.name.localeCompare(b.dataset.name); },
+      "capacity-asc": function (a, b) { return cmp(a, b, "capacity", 1); },
+      "capacity-desc": function (a, b) { return cmp(a, b, "capacity", -1); },
+      "price-asc": function (a, b) { return cmp(a, b, "price", 1); },
+      "price-desc": function (a, b) { return cmp(a, b, "price", -1); }
     }[state.sort];
     if (by) visible.slice().sort(by).forEach(function (c) { grid.appendChild(c); });
   }
 
-  function num(el, key) { return parseInt(el.dataset[key], 10) || 0; }
+  function cmp(a, b, key, dir) {
+    var av = parseInt(a.dataset[key], 10);
+    var bv = parseInt(b.dataset[key], 10);
+    var an = isNaN(av), bn = isNaN(bv);
+    if (an && bn) return a.dataset.name.localeCompare(b.dataset.name);
+    if (an) return 1;
+    if (bn) return -1;
+    return (av - bv) * dir;
+  }
 
   /* ------------------------------------------------------------- chips UI */
   function renderActiveFilters() {
@@ -105,6 +120,9 @@
         state.state,
         "State: " + titleCase(state.state.replace(/-/g, " "))
       ]);
+    }
+    if (state.type) {
+      pills.push(["type", state.type, "Type: " + titleCase(state.type.replace(/-/g, " "))]);
     }
     if (state.capacity !== "any") {
       pills.push(["capacity", state.capacity, CAPACITY_LABEL[state.capacity]]);
@@ -151,11 +169,12 @@
   function syncUrl() {
     var p = new URLSearchParams();
     if (state.state) p.set("state", state.state);
+    if (state.type) p.set("type", state.type);
     if (state.capacity !== "any") p.set("capacity", state.capacity);
     if (state.blend.length) p.set("blend", state.blend.join(","));
     if (state.price.length) p.set("price", state.price.join(","));
     if (state.q) p.set("q", state.q);
-    if (state.sort !== "featured") p.set("sort", state.sort);
+    if (state.sort !== "name") p.set("sort", state.sort);
     var qs = p.toString();
     history.replaceState(null, "", qs ? "?" + qs : location.pathname);
   }
@@ -163,11 +182,12 @@
   function readUrl() {
     var p = new URLSearchParams(location.search);
     state.state = p.get("state") || "";
+    state.type = p.get("type") || "";
     state.capacity = CAPACITY.hasOwnProperty(p.get("capacity")) ? p.get("capacity") : "any";
     state.blend = (p.get("blend") || "").split(",").filter(Boolean);
     state.price = (p.get("price") || "").split(",").filter(Boolean);
     state.q = p.get("q") || "";
-    state.sort = p.get("sort") || "featured";
+    state.sort = p.get("sort") || "name";
     syncControls();
   }
 
@@ -230,7 +250,7 @@
 
   resetEls.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      state = { state: "", capacity: "any", blend: [], price: [], q: "", sort: "featured" };
+      state = Object.assign({}, DEFAULTS, { blend: [], price: [] });
       syncControls();
       document.querySelectorAll("[data-filter='q']").forEach(function (i) { i.value = ""; });
       apply();
