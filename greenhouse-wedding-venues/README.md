@@ -9,9 +9,10 @@ framework, no CDN, no runtime dependencies.
 
 ```bash
 npm install
-npm run build       # regenerate placeholder images + compile & minify the CSS
+npm run build       # placeholder images + minified CSS + FAQ parity check
 npm run dev         # watch mode while editing markup
 npm run serve       # http://localhost:4321
+npm run check:faq   # FAQ schema/visible parity + keyword coverage
 ```
 
 ---
@@ -193,7 +194,39 @@ Validate with [validator.schema.org](https://validator.schema.org) and the
 
 ---
 
-## 5. Performance
+## 5. FAQs and keyword coverage
+
+Every page carries a visible FAQ accordion **and** matching `FAQPage` JSON-LD —
+75 questions in total. Each question is written around a keyword from the map in
+§2 rather than invented, so the FAQ block does double duty: it answers the
+objection that stops a booking, and it targets the long-tail phrasing people
+actually type.
+
+| Page | FAQs | Keywords carried by the questions |
+|---|---|---|
+| `/` | 9 | greenhouse wedding venues · greenhouse wedding cost · glasshouse wedding venue near me · conservatory wedding venues · botanical garden wedding venues · rain-proof · small greenhouse wedding venues · greenhouse wedding venue Italy |
+| `/venues/` | 8 | glasshouse wedding venues near me · conservatory wedding venues · botanical garden wedding venues · small greenhouse wedding venues · cost · rain-proof · Italy |
+| `/venues/{state}/` | 6 each | greenhouse wedding venue **in [State]** · small greenhouse wedding venues in [State] · botanical garden wedding venues in [State] · glasshouse wedding venues near me in [State] |
+| `/italy-destination-weddings/` | 8 | greenhouse wedding venue in Italy · conservatory wedding venues in Italy · small greenhouse wedding venues in Italy |
+| Venue detail | 7 | this venue's cost · conservatory wedding venues nearby · small greenhouse wedding venues in California · rain-proof |
+| `/blog/greenhouse-wedding-cost/` | 8 | greenhouse wedding cost · conservatory vs greenhouse cost · botanical garden wedding venues · cost in Italy · rain-proof |
+| `/blog/` | 5 | greenhouse wedding cost · rain-proof outdoor wedding venues · small greenhouse wedding venues · conservatory wedding venues · botanical garden wedding venues |
+
+**The rule that must not break:** every marked-up question appears verbatim in a
+visible `<summary>` on the same page. Marking up an FAQ the user cannot see is a
+structured-data violation. `npm run check:faq` enforces it — it parses the built
+HTML, compares each JSON-LD question against the visible accordion, reports
+keyword coverage, and exits non-zero on a mismatch. It runs as part of `npm run
+build`, so a hand-edit to one half of the pair cannot ship on its own.
+
+Answers are written to be quotable on their own: a direct answer in the first
+sentence, then the qualifier, then a link into the page that covers it properly.
+That is what an answer-engine extracts, and it is also what a couple skim-reading
+on a phone needs.
+
+---
+
+## 6. Performance
 
 - One stylesheet, minified, ~69 KB uncompressed (~10 KB gzipped), no CDN, no FOUC.
 - Two JS files, both `defer`, ~7 KB total, zero dependencies.
@@ -208,7 +241,7 @@ Before launch: self-host fonts, convert the placeholder SVGs to real AVIF/WebP w
 
 ---
 
-## 6. What is placeholder, and what to replace
+## 7. What is placeholder, and what to replace
 
 This is a design-and-architecture deliverable, so the content is realistic sample
 data rather than researched fact. Before publishing anything, replace:
