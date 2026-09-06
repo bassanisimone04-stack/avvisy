@@ -1,0 +1,17 @@
+# Glasshouse Weddings — https://www.glasshouseweddings.com
+User-agent: *
+Allow: /
+
+# Filtered directory views are useful to humans but are thin, near-duplicate
+# pages for crawlers. The canonical tag on /venues/ already points home, and
+# these rules stop crawl budget draining into parameter permutations.
+Disallow: /venues/*?*sort=
+Disallow: /venues/*?*q=
+Disallow: /*?utm_
+Disallow: /api/
+
+# Ad and affiliate networks
+User-agent: AdsBot-Google
+Allow: /
+
+Sitemap: https://www.glasshouseweddings.com/sitemap.xml

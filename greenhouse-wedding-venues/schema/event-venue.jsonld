@@ -1,0 +1,105 @@
+{
+  "$comment": [
+    "READY-TO-USE TEMPLATE — EventVenue / LocalBusiness for a single venue listing page.",
+    "Replace every ALL_CAPS placeholder, delete any property you cannot verify, then paste",
+    "the object inside <script type=\"application/ld+json\"> … </script> in the page <head>.",
+    "Delete this $comment key before shipping — it is not part of the Schema.org vocabulary.",
+    "Validate at https://validator.schema.org and https://search.google.com/test/rich-results"
+  ],
+
+  "@context": "https://schema.org",
+  "@type": ["EventVenue", "LocalBusiness"],
+  "@id": "https://www.example.com/venues/STATE_SLUG/VENUE_SLUG/#venue",
+
+  "name": "VENUE NAME",
+  "alternateName": "VENUE NAME AS LOCALS SAY IT",
+  "url": "https://www.example.com/venues/STATE_SLUG/VENUE_SLUG/",
+  "description": "One or two sentences. Lead with the venue type and the city — 'A restored Victorian glasshouse wedding venue in Napa, California, seating 180 under a retractable roof.'",
+
+  "image": [
+    "https://www.example.com/assets/img/venues/VENUE_SLUG-01.jpg",
+    "https://www.example.com/assets/img/venues/VENUE_SLUG-02.jpg",
+    "https://www.example.com/assets/img/venues/VENUE_SLUG-03.jpg"
+  ],
+  "logo": "https://www.example.com/assets/img/venues/VENUE_SLUG-logo.png",
+
+  "telephone": "+1-XXX-XXX-XXXX",
+  "email": "events@venue.example",
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "STREET",
+    "addressLocality": "CITY",
+    "addressRegion": "CA",
+    "postalCode": "ZIP",
+    "addressCountry": "US"
+  },
+
+  "geo": { "@type": "GeoCoordinates", "latitude": 0.000000, "longitude": 0.000000 },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=LAT,LNG",
+
+  "maximumAttendeeCapacity": 300,
+  "priceRange": "$$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Credit Card, Check, Bank Transfer",
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00",
+      "description": "Site tours by appointment"
+    }
+  ],
+
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Fully glazed reception room", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Retractable roof", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Heated for winter weddings", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Wheelchair accessible", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "On-site parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Outside catering permitted", "value": false }
+  ],
+
+  "isAccessibleForFree": false,
+  "publicAccess": false,
+  "smokingAllowed": false,
+
+  "containedInPlace": {
+    "@type": "Place",
+    "name": "REGION (e.g. Napa Valley)",
+    "address": { "@type": "PostalAddress", "addressRegion": "CA", "addressCountry": "US" }
+  },
+
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Saturday exclusive-use wedding hire, peak season",
+    "priceCurrency": "USD",
+    "price": "18000",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://www.example.com/venues/STATE_SLUG/VENUE_SLUG/#enquire"
+  },
+
+  "sameAs": [
+    "https://www.instagram.com/VENUE_HANDLE",
+    "https://VENUE-OWN-SITE.example"
+  ],
+
+  "$aggregateRating_note": [
+    "DO NOT add aggregateRating or review unless you hold genuine, first-party reviews",
+    "collected on your own site. Fabricated or scraped ratings are a Google spam-policy",
+    "violation and are the fastest way to lose rich results for the whole domain.",
+    "When you DO have real reviews, the shape is:",
+    {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "37",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Greenhouse wedding cost guide">
+  <defs>
+    <linearGradient id="g20" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081c15"/>
+      <stop offset="55%" stop-color="#245741"/>
+      <stop offset="100%" stop-color="#52b788"/>
+    </linearGradient>
+    <radialGradient id="g20s" cx="0.7" cy="0.15" r="0.75">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g20)"/>
+  <rect width="1600" height="900" fill="url(#g20s)"/>
+  <g stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"><line x1="177.8" y1="0" x2="177.8" y2="900" /><line x1="355.6" y1="0" x2="355.6" y2="900" /><line x1="533.3" y1="0" x2="533.3" y2="900" /><line x1="711.1" y1="0" x2="711.1" y2="900" /><line x1="888.9" y1="0" x2="888.9" y2="900" /><line x1="1066.7" y1="0" x2="1066.7" y2="900" /><line x1="1244.4" y1="0" x2="1244.4" y2="900" /><line x1="1422.2" y1="0" x2="1422.2" y2="900" /><line x1="0" y1="150.0" x2="1600" y2="150.0" /><line x1="0" y1="300.0" x2="1600" y2="300.0" /><line x1="0" y1="450.0" x2="1600" y2="450.0" /><line x1="0" y1="600.0" x2="1600" y2="600.0" /><line x1="0" y1="750.0" x2="1600" y2="750.0" /></g>
+  <path d="M192 900 L192 450 Q800 27 1408 450 L1408 900" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M192 900 L192 450 Q800 27 1408 450 L1408 900" fill="#ffffff" fill-opacity="0.05"/>
+  <g fill="none" stroke="#081c15" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"><path d="M100 900 C28 828 157.6 784.8 100 756" /><path d="M300 900 C198 798 381.6 736.8 300 696" /><path d="M500 900 C368 768 605.6 688.8 500 636" /><path d="M700 900 C620.5 820.5 763.6 772.8 700 741" /><path d="M900 900 C790.5 790.5 987.6 724.8 900 681" /><path d="M1100 900 C960.5 760.5 1211.6 676.8 1100 621" /><path d="M1300 900 C1213 813 1369.6 760.8 1300 726" /></g>
+  <rect y="897" width="1600" height="3" fill="#d4af37" fill-opacity="0.7"/>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "$comment": [
+    "READY-TO-USE TEMPLATE — CollectionPage + ItemList for a state category page",
+    "(/venues/california/) or any filtered directory view. List the venues in the order",
+    "they appear on the page. Delete this $comment key before shipping."
+  ],
+
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.example.com/venues/STATE_SLUG/#webpage",
+  "url": "https://www.example.com/venues/STATE_SLUG/",
+  "name": "Greenhouse Wedding Venues in STATE",
+  "description": "The meta description, verbatim.",
+  "isPartOf": { "@id": "https://www.example.com/#website" },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://www.example.com/assets/img/states/STATE_SLUG.jpg"
+  },
+
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 2,
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "EventVenue",
+          "@id": "https://www.example.com/venues/STATE_SLUG/VENUE_SLUG/#venue",
+          "name": "VENUE NAME",
+          "url": "https://www.example.com/venues/STATE_SLUG/VENUE_SLUG/",
+          "image": "https://www.example.com/assets/img/venues/VENUE_SLUG.jpg",
+          "maximumAttendeeCapacity": 180,
+          "priceRange": "$$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "CITY",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "EventVenue",
+          "@id": "https://www.example.com/venues/STATE_SLUG/SECOND_VENUE_SLUG/#venue",
+          "name": "SECOND VENUE NAME",
+          "url": "https://www.example.com/venues/STATE_SLUG/SECOND_VENUE_SLUG/",
+          "image": "https://www.example.com/assets/img/venues/SECOND_VENUE_SLUG.jpg",
+          "maximumAttendeeCapacity": 90,
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "CITY",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          }
+        }
+      }
+    ]
+  }
+}

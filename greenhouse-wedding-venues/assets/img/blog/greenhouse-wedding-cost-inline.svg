@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Glasshouse reception layout">
+  <defs>
+    <linearGradient id="g21" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b4332"/>
+      <stop offset="55%" stop-color="#2d6a4f"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+    <radialGradient id="g21s" cx="0.7" cy="0.15" r="0.75">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g21)"/>
+  <rect width="1200" height="675" fill="url(#g21s)"/>
+  <g stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"><line x1="133.3" y1="0" x2="133.3" y2="675" /><line x1="266.7" y1="0" x2="266.7" y2="675" /><line x1="400.0" y1="0" x2="400.0" y2="675" /><line x1="533.3" y1="0" x2="533.3" y2="675" /><line x1="666.7" y1="0" x2="666.7" y2="675" /><line x1="800.0" y1="0" x2="800.0" y2="675" /><line x1="933.3" y1="0" x2="933.3" y2="675" /><line x1="1066.7" y1="0" x2="1066.7" y2="675" /><line x1="0" y1="112.5" x2="1200" y2="112.5" /><line x1="0" y1="225.0" x2="1200" y2="225.0" /><line x1="0" y1="337.5" x2="1200" y2="337.5" /><line x1="0" y1="450.0" x2="1200" y2="450.0" /><line x1="0" y1="562.5" x2="1200" y2="562.5" /></g>
+  <path d="M144 675 L144 337.5 Q600 20.25 1056 337.5 L1056 675" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M144 675 L144 337.5 Q600 20.25 1056 337.5 L1056 675" fill="#ffffff" fill-opacity="0.05"/>
+  <g fill="none" stroke="#081c15" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"><path d="M75 675 C21 621 118.2 588.6 75 567" /><path d="M225 675 C148.5 598.5 286.2 552.6 225 522" /><path d="M375 675 C276 576 454.2 516.6 375 477" /><path d="M525 675 C465.375 615.375 572.7 579.6 525 555.75" /><path d="M675 675 C592.875 592.875 740.7 543.6 675 510.75" /><path d="M825 675 C720.375 570.375 908.7 507.6 825 465.75" /><path d="M975 675 C909.75 609.75 1027.2 570.6 975 544.5" /></g>
+  <rect y="672" width="1200" height="3" fill="#d4af37" fill-opacity="0.7"/>
+</svg>

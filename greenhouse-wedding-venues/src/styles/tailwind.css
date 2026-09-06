@@ -1,0 +1,343 @@
+/* ==========================================================================
+   Glasshouse Weddings — Design System source
+   Tailwind CSS v4. Compiled to /assets/css/site.css (minified, ~1 file, 0 JS).
+   Build:  npm run build:css      Watch:  npm run dev
+   ========================================================================== */
+
+@import "tailwindcss";
+
+/* Only scan the HTML/JS we actually ship (keeps the compiled bundle small). */
+@source "../../**/*.html";
+@source "../../assets/js/**/*.js";
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS
+   Exposed as Tailwind utilities: bg-botanical-800, text-champagne-500, …
+   -------------------------------------------------------------------------- */
+@theme {
+  /* -- Typography ------------------------------------------------------- */
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+
+  --tracking-editorial: -0.02em;
+
+  /* -- Brand: Deep Botanical Emerald (primary #1B4332) ------------------ */
+  --color-botanical-50:  #edf8f1;
+  --color-botanical-100: #d8f3dc;
+  --color-botanical-200: #b7e4c7;
+  --color-botanical-300: #74c69d;
+  --color-botanical-400: #52b788;
+  --color-botanical-500: #40916c;
+  --color-botanical-600: #2d6a4f;
+  --color-botanical-700: #245741;
+  --color-botanical-800: #1b4332; /* ← PRIMARY */
+  --color-botanical-900: #0f2e21;
+  --color-botanical-950: #081c15;
+
+  /* -- Accent: Warm Soft Champagne Gold (accent #D4AF37) ---------------- */
+  --color-champagne-50:  #fcf8ed;
+  --color-champagne-100: #f8f1dc;
+  --color-champagne-200: #f1e3bc;
+  --color-champagne-300: #e9d48f;
+  --color-champagne-400: #dfc162;
+  --color-champagne-500: #d4af37; /* ← ACCENT */
+  --color-champagne-600: #a9862a;
+  --color-champagne-700: #8a6d1f;
+
+  /* -- Neutrals: warm cream / off-white (#F8F9FA) ------------------------ */
+  --color-cream: #f8f9fa;
+  --color-cream-warm: #f4f1ea;
+  --color-shell: #ffffff;
+  --color-ink-900: #14201b;
+  --color-ink-700: #2f3d36;
+  --color-ink-500: #5a6b63;
+  --color-ink-400: #75837c;
+  --color-ink-300: #8c9a93;
+  --color-line: #e4e9e6;
+  --color-line-strong: #cfd8d3;
+
+  /* -- Elevation (soft, botanical-tinted — never neutral grey) ---------- */
+  --shadow-soft: 0 1px 2px rgb(8 28 21 / 0.04), 0 6px 20px -8px rgb(8 28 21 / 0.10);
+  --shadow-lift: 0 2px 4px rgb(8 28 21 / 0.05), 0 18px 40px -18px rgb(8 28 21 / 0.22);
+  --shadow-gold: 0 10px 30px -12px rgb(212 175 55 / 0.55);
+
+  /* -- Radii ------------------------------------------------------------ */
+  --radius-card: 1rem;
+  --radius-pill: 999px;
+
+  /* -- Motion ----------------------------------------------------------- */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE LAYER
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* sticky header offset for #anchors + TOC */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv05" 1, "ss01" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: var(--tracking-editorial);
+    color: var(--color-botanical-900);
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  /* Visible, on-brand focus ring everywhere (WCAG 2.4.7). */
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-botanical-600);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-champagne-200);
+    color: var(--color-botanical-950);
+  }
+
+  /* Images never blow out the grid, and reserve their box while loading. */
+  img { max-width: 100%; height: auto; }
+}
+
+/* --------------------------------------------------------------------------
+   3. COMPONENT LAYER
+   Small, named primitives so page markup stays readable and consistent.
+   -------------------------------------------------------------------------- */
+@layer components {
+
+  /* -- Layout ----------------------------------------------------------- */
+  .shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+  .shell-narrow {
+    @apply mx-auto w-full max-w-3xl px-5 sm:px-6;
+  }
+
+  /* -- Buttons ---------------------------------------------------------- */
+  /* One selector list carries the base so every variant — and every state rule
+     below — sits in the same cascade layer. In v4 a later layer beats higher
+     specificity, so a base defined as @utility would override .btn-sm. */
+  .btn,
+  .btn-primary,
+  .btn-gold,
+  .btn-outline,
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-6 py-3
+           text-sm font-semibold transition-all duration-200 ease-editorial
+           disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-botanical-800 text-white shadow-soft
+           hover:bg-botanical-700 hover:shadow-lift active:translate-y-px;
+  }
+  .btn-gold {
+    @apply bg-champagne-500 text-botanical-950 shadow-soft
+           hover:bg-champagne-400 hover:shadow-gold active:translate-y-px;
+  }
+  .btn-outline {
+    @apply border border-botanical-800/25 bg-transparent text-botanical-800
+           hover:border-botanical-800/60 hover:bg-botanical-50;
+  }
+  .btn-ghost-light {
+    @apply border border-white/30 bg-white/5 text-white
+           hover:border-white/60 hover:bg-white/10;
+  }
+  .btn-sm { @apply px-4 py-2 text-[13px]; }
+
+  /* -- Surfaces --------------------------------------------------------- */
+  .card,
+  .card-interactive {
+    @apply rounded-card border border-line bg-shell shadow-soft
+           transition-all duration-300 ease-editorial;
+  }
+  .card-interactive {
+    @apply hover:-translate-y-1 hover:border-botanical-200 hover:shadow-lift;
+  }
+
+  /* -- Eyebrow / labels -------------------------------------------------- */
+  .eyebrow,
+  .eyebrow-gold {
+    @apply inline-flex items-center gap-2 text-[11px] font-bold uppercase
+           tracking-[0.18em] text-botanical-600;
+  }
+  .eyebrow-gold { @apply text-champagne-600; }
+
+  /* Thin gold rule used under section eyebrows. */
+  .rule-gold::after {
+    content: "";
+    @apply block h-px w-10 bg-champagne-500;
+  }
+
+  /* -- Badges & chips ---------------------------------------------------- */
+  .badge,
+  .badge-emerald,
+  .badge-gold,
+  .badge-glass {
+    @apply inline-flex items-center gap-1.5 rounded-pill px-3 py-1
+           text-xs font-semibold;
+  }
+  .badge-emerald { @apply bg-botanical-50 text-botanical-700; }
+  .badge-gold    { @apply bg-champagne-100 text-champagne-700; }
+  .badge-glass   { @apply bg-white/15 text-white backdrop-blur-sm; }
+
+  /* Filter chip — the toggle used by the venue filter component. Pressed state
+     is driven by aria-pressed, so screen readers and CSS read the same source. */
+  .chip {
+    @apply inline-flex cursor-pointer items-center gap-2 rounded-pill border
+           border-line-strong bg-shell px-4 py-2 text-sm font-medium text-ink-700
+           transition-colors duration-150 select-none
+           hover:border-botanical-400 hover:text-botanical-800;
+  }
+
+  .chip[aria-pressed="true"] {
+    @apply border-botanical-800 bg-botanical-800 text-white
+           hover:border-botanical-800 hover:text-white;
+  }
+
+  /* -- Forms ------------------------------------------------------------ */
+  .label {
+    @apply mb-1.5 block text-[13px] font-semibold text-ink-700;
+  }
+  .field,
+  .field-select {
+    @apply w-full rounded-xl border border-line-strong bg-shell px-4 py-3
+           text-sm text-ink-900 placeholder:text-ink-300
+           transition-colors duration-150
+           focus:border-botanical-600 focus:outline-none
+           focus:ring-4 focus:ring-botanical-800/10;
+  }
+  .field-select {
+    @apply cursor-pointer appearance-none bg-no-repeat pr-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%235a6b63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-position: right 0.9rem center;
+    background-size: 1rem;
+  }
+
+  /* -- Navigation ------------------------------------------------------- */
+  .nav-link {
+    @apply relative text-sm font-medium text-ink-700 transition-colors
+           hover:text-botanical-800;
+  }
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1.5 left-0 h-px w-0 bg-champagne-500
+           transition-all duration-300 ease-editorial;
+  }
+  .nav-link:hover::after,
+  .nav-link[aria-current="page"]::after { @apply w-full; }
+  .nav-link[aria-current="page"] { @apply text-botanical-800; }
+
+  /* -- Editorial prose (blog body) --------------------------------------- */
+  /* Every descendant rule is guarded with :not(.not-prose *) so a wrapper marked
+     .not-prose (ad slots, spec tables, affiliate boxes, callouts) keeps its own
+     layout instead of inheriting article typography. */
+  .prose-editorial {
+    @apply text-[1.0625rem] leading-[1.75] text-ink-700;
+  }
+  .prose-editorial > * + * { @apply mt-6; }
+
+  .prose-editorial :is(h2):not(.not-prose *) {
+    @apply mt-14 scroll-mt-28 text-3xl leading-tight sm:text-[2rem];
+  }
+  .prose-editorial :is(h3):not(.not-prose *) {
+    @apply mt-10 scroll-mt-28 text-xl font-semibold sm:text-2xl;
+  }
+  .prose-editorial a:not(.btn):not(.no-underline):not(.not-prose *) {
+    @apply font-medium text-botanical-700 underline decoration-champagne-400
+           decoration-2 underline-offset-4 transition-colors
+           hover:text-botanical-900 hover:decoration-champagne-500;
+  }
+  .prose-editorial strong:not(.not-prose *) { @apply font-semibold text-ink-900; }
+
+  .prose-editorial ul:not(.not-prose *) { @apply space-y-2.5 pl-1; }
+  .prose-editorial ul:not(.not-prose *) > li { @apply relative pl-7; }
+  .prose-editorial ul:not(.not-prose *) > li::before {
+    content: "";
+    @apply absolute left-1 top-[0.7em] size-2 rounded-full bg-champagne-400;
+  }
+  .prose-editorial ol:not(.not-prose *) {
+    @apply list-decimal space-y-2.5 pl-6 marker:font-semibold marker:text-botanical-600;
+  }
+
+  .prose-editorial blockquote:not(.not-prose *) {
+    @apply border-l-2 border-champagne-500 bg-champagne-50/60 px-6 py-4
+           font-display text-lg italic text-botanical-900;
+  }
+  .prose-editorial table:not(.not-prose *) { @apply w-full border-collapse text-left text-sm; }
+  .prose-editorial table:not(.not-prose *) thead th {
+    @apply border-b border-line-strong bg-botanical-50 px-4 py-3
+           font-sans text-xs font-bold uppercase tracking-wider text-botanical-700;
+  }
+  .prose-editorial table:not(.not-prose *) tbody td { @apply border-b border-line px-4 py-3 align-top; }
+  .prose-editorial figcaption:not(.not-prose *) { @apply mt-3 text-sm text-ink-400; }
+
+  /* Opt-out marker. Carries no styles itself — it is a hook for the guards above. */
+  .not-prose { }
+
+  /* -- Ad / affiliate slots ---------------------------------------------- */
+  .ad-slot {
+    @apply rounded-card border border-dashed border-line-strong bg-cream-warm/60
+           p-4 text-center;
+  }
+  .ad-label {
+    @apply mb-2 block text-[10px] font-bold uppercase tracking-[0.22em] text-ink-300;
+  }
+
+  /* -- Utilities that read better as names -------------------------------- */
+  .glass-panel {
+    @apply rounded-card border border-white/15 bg-white/10 backdrop-blur-md;
+  }
+  .hairline-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    background-size: 76px 76px;
+  }
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]
+           focus:rounded-pill focus:bg-botanical-800 focus:px-5 focus:py-3
+           focus:text-sm focus:font-semibold focus:text-white;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. UTILITIES
+   -------------------------------------------------------------------------- */
+@utility text-balance-display { text-wrap: balance; }
+
+/* Scroll-reveal: opt-in, and a no-op when JS is off or motion is reduced. */
+@layer utilities {
+  .js .reveal { opacity: 0; transform: translateY(14px); }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.7s var(--ease-editorial), transform 0.7s var(--ease-editorial);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; }
+  }
+}

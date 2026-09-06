@@ -1,0 +1,30 @@
+{
+  "$comment": [
+    "READY-TO-USE TEMPLATE — FAQPage.",
+    "Rule that matters: every question and answer here MUST appear, word for word, in the",
+    "visible HTML of the same page. Marking up questions the user cannot see is a",
+    "structured-data violation. Answers may contain a little inline HTML (<a>, <strong>,",
+    "<em>, <br>, lists) — escape it as text. Delete this $comment key before shipping."
+  ],
+
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a greenhouse wedding venue cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Site fees for greenhouse and conservatory wedding venues in the US typically run $4,000–$22,000, with a national median around $9,800 for a Saturday in peak season. See our <a href=\"/blog/greenhouse-wedding-cost/\">greenhouse wedding cost guide</a>."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are greenhouse wedding venues rain-proof?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fully glazed venues are genuinely rain-proof: ceremony, dinner and dancing all happen under a solid roof, so there is no weather call to make and no tent to hold."
+      }
+    }
+  ]
+}

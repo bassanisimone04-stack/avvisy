@@ -1,0 +1,16 @@
+{
+  "$comment": [
+    "READY-TO-USE TEMPLATE — BreadcrumbList. Put one on every page except the homepage.",
+    "It must mirror the breadcrumb the user can actually see. The final item is the",
+    "current page and carries NO 'item' URL. Delete this $comment key before shipping."
+  ],
+
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.example.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Venues", "item": "https://www.example.com/venues/" },
+    { "@type": "ListItem", "position": 3, "name": "California", "item": "https://www.example.com/venues/california/" },
+    { "@type": "ListItem", "position": 4, "name": "The Crystal Conservatory" }
+  ]
+}
