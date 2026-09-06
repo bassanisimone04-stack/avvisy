@@ -38,11 +38,11 @@
       "country": "US",
       "type": "atrium",
       "official_url": "https://dbg.org/explore/wedding/",
-      "capacity_seated": null,
+      "capacity_seated": 250,
       "price_tier": null,
-      "blend": null,
+      "blend": "hybrid",
       "summary": "A desert botanical garden in Phoenix whose Dorrance Hall reception space has floor-to-ceiling glass walls, alongside open-air pavilions and courtyards across the grounds.",
-      "last_verified": null
+      "last_verified": "2026-09-06"
     },
     {
       "slug": "los-angeles-county-arboretum",
@@ -68,11 +68,11 @@
       "country": "US",
       "type": "botanical-garden",
       "official_url": "https://botanicalgarden.berkeley.edu/private-rentals/",
-      "capacity_seated": null,
+      "capacity_seated": 82,
       "price_tier": null,
-      "blend": null,
+      "blend": "hybrid",
       "summary": "A university botanic garden in the Berkeley hills renting ceremony and reception spaces, including the historic Julia Morgan Hall.",
-      "last_verified": null
+      "last_verified": "2026-09-06"
     },
     {
       "slug": "california-botanic-garden",
@@ -87,7 +87,7 @@
       "price_tier": null,
       "blend": null,
       "summary": "A native-plant botanic garden in Claremont that publishes a facility rental packet covering venue options, policies and catering.",
-      "last_verified": null
+      "last_verified": "2026-09-06"
     },
     {
       "slug": "sherman-library-and-gardens",
@@ -102,7 +102,7 @@
       "price_tier": null,
       "blend": null,
       "summary": "A botanic garden in Corona del Mar with a tropical conservatory, running a dedicated weddings programme.",
-      "last_verified": null
+      "last_verified": "2026-09-06"
     },
     {
       "slug": "san-diego-botanic-garden-conservatory",
@@ -115,9 +115,9 @@
       "official_url": "https://sdbg.org/wedding-private-events/",
       "capacity_seated": null,
       "price_tier": null,
-      "blend": null,
+      "blend": "hybrid",
       "summary": "A glass-enclosed conservatory and adjacent outdoor amphitheatre offered by San Diego Botanic Garden for weddings and private events.",
-      "last_verified": null
+      "last_verified": "2026-09-06"
     },
     {
       "slug": "south-coast-botanic-garden",
