@@ -164,12 +164,12 @@ def venue_page(v, similar, all_venues):
              + ld(faq_ld(faq_items), "Schema: FAQPage"))
 
     def row(label, value, note):
-        shown = value if value else '<span class="text-ink-300">Not confirmed</span>'
+        shown = value if value else '<span class="text-ink-500">Not confirmed</span>'
         return f"""              <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">{label}</dt>
-                <dd class="text-sm text-ink-600">
+                <dd class="text-sm text-ink-500">
                   <span class="font-medium text-ink-900">{shown}</span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">{note}</span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">{note}</span>
                 </dd>
               </div>"""
 
@@ -224,7 +224,7 @@ def venue_page(v, similar, all_venues):
 
     return head(title, desc, path, og_type="article",
                 og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header("venues") + f"""
-  <main id="main">
+  <main id="main" data-venue-slug="{v['slug']}">
 {breadcrumbs(crumbs)}
     <header class="shell pb-8 pt-8">
       <div class="flex flex-wrap items-start justify-between gap-6">
@@ -238,7 +238,7 @@ def venue_page(v, similar, all_venues):
 
           <p class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[15px] text-ink-500">
             <span class="inline-flex items-center gap-1.5">
-              <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 text-champagne-600" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 text-champagne-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               {v['city']}, {v['state']}
             </span>
           </p>
@@ -265,7 +265,7 @@ def venue_page(v, similar, all_venues):
                width="1600" height="900" fetchpriority="high" decoding="async"
                class="size-full object-cover">
         </div>
-        <figcaption class="mt-3 text-[13px] text-ink-400">
+        <figcaption class="mt-3 text-[13px] text-ink-500">
           Decorative pattern &mdash; we hold no licensed photography of this venue. Photographs are on
           the <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="{v['official_url']}" rel="noopener nofollow" target="_blank">venue&rsquo;s own page</a>.
         </figcaption>
@@ -319,12 +319,12 @@ def venue_page(v, similar, all_venues):
           <a class="btn-gold mt-5 w-full" href="{v['official_url']}" rel="noopener nofollow" target="_blank">
             Open the venue&rsquo;s events page
           </a>
-          <p class="mt-3 break-words text-center text-xs text-ink-400">{v['official_url']}</p>
+          <p class="mt-3 break-words text-center text-xs text-ink-500">{v['official_url']}</p>
         </section>
 
         <section class="card border-champagne-200 bg-champagne-50/60 p-6" aria-labelledby="fix-heading">
           <h2 id="fix-heading" class="font-display text-lg text-botanical-900">Is something here wrong?</h2>
-          <p class="mt-1.5 text-sm leading-relaxed text-ink-600">
+          <p class="mt-1.5 text-sm leading-relaxed text-ink-500">
             If you work at this venue, or you have been there and our description is out of date,
             tell us. We will correct it or take the listing down.
           </p>

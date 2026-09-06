@@ -1,19 +1,22 @@
 {
-  "name": "glasshouse-weddings",
+  "name": "greenhousevenues",
   "version": "1.0.0",
   "private": true,
-  "description": "Glasshouse Weddings \u2014 greenhouse, glasshouse & conservatory wedding venue directory (US + Italy). Static HTML + compiled Tailwind CSS v4.",
+  "description": "GreenhouseVenues.com — greenhouse, glasshouse & conservatory wedding venue directory (US + Italy). Static HTML + compiled Tailwind CSS v4.",
   "scripts": {
     "dev": "tailwindcss -i ./src/styles/tailwind.css -o ./assets/css/site.css --watch",
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./assets/css/site.css --minify",
     "build:img": "node ./scripts/generate-placeholders.mjs",
-    "build": "npm run build:img && npm run build:html && npm run build:css && npm run check:faq",
+    "build:js": "node ./scripts/build-js.mjs",
+    "build": "npm run build:img && npm run build:html && npm run build:css && npm run build:js && npm run check:faq",
     "serve": "npx --yes serve@14 . -l 4321",
     "check:faq": "node ./scripts/check-faq-parity.mjs",
-    "build:html": "python3 build/build.py"
+    "build:html": "python3 build/build.py",
+    "fetch-fonts": "bash scripts/fetch-fonts.sh"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",
-    "tailwindcss": "^4.1.0"
+    "tailwindcss": "^4.1.0",
+    "terser": "^5.51.2"
   }
 }

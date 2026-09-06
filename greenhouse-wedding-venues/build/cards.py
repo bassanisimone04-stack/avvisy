@@ -58,10 +58,10 @@ def stats(venues):
 def _fact(label, value):
     """A single fact cell — real value, or an honest gap."""
     if value:
-        return (f'<dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">{label}</dt>'
+        return (f'<dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">{label}</dt>'
                 f'<dd class="mt-0.5 text-sm font-semibold text-botanical-800">{value}</dd>')
-    return (f'<dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">{label}</dt>'
-            f'<dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd>')
+    return (f'<dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">{label}</dt>'
+            f'<dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd>')
 
 
 def card(v, *, priority=False):
@@ -120,7 +120,7 @@ def unconfirmed_notice(stats_, *, compact=False):
             <svg aria-hidden="true" viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 text-champagne-700" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/>
             </svg>
-            <p class="text-[13px] leading-relaxed text-ink-600">
+            <p class="text-[13px] leading-relaxed text-ink-500">
               <strong class="font-semibold text-botanical-900">Capacities and prices are not filled in yet.</strong>
               Each listing here is a real venue with a link to its own events page, but we only publish
               a capacity, a layout or a price once it has been confirmed against that page &mdash;

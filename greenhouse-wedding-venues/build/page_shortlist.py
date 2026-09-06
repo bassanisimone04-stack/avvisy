@@ -23,7 +23,7 @@ HEART_SVG = ('<svg aria-hidden="true" viewBox="0 0 24 24" class="size-6" fill="n
 
 def build(all_venues):
     st = stats(all_venues)
-    title = "Your Shortlist | Glasshouse Weddings"
+    title = "Your Shortlist | GreenhouseVenues"
     desc = ("Venues you have saved while browsing, kept in this browser only, with a tool to "
             "compare their confirmed details side by side.")
     crumbs = [("Home", "/"), ("Your shortlist", None)]
@@ -47,7 +47,7 @@ def build(all_venues):
 
     <section class="shell pb-24" data-shortlist-page>
       <noscript>
-        <div class="card p-6 text-sm text-ink-600">
+        <div class="card p-6 text-sm text-ink-500">
           The shortlist tool needs JavaScript enabled to read what you have saved in this browser.
         </div>
       </noscript>

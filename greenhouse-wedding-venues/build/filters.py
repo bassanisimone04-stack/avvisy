@@ -102,7 +102,7 @@ def _controls(id_prefix, venues, show_state=True):
       <div>
         <label class="label" for="{id_prefix}-capacity">
           Capacity
-          <span class="font-normal text-ink-300">&middot; confirmed listings only</span>
+          <span class="font-normal text-ink-500">&middot; confirmed listings only</span>
         </label>
         <select id="{id_prefix}-capacity" class="field-select" data-filter="capacity">
 {cap_opts}
@@ -112,7 +112,7 @@ def _controls(id_prefix, venues, show_state=True):
       <fieldset>
         <legend class="label">
           Indoor / outdoor blend
-          <span class="font-normal text-ink-300">&middot; confirmed listings only</span>
+          <span class="font-normal text-ink-500">&middot; confirmed listings only</span>
         </legend>
         <div class="grid gap-2">
 {blend_chips}
@@ -122,7 +122,7 @@ def _controls(id_prefix, venues, show_state=True):
       <fieldset>
         <legend class="label">
           Price range
-          <span class="font-normal text-ink-300">&middot; confirmed listings only</span>
+          <span class="font-normal text-ink-500">&middot; confirmed listings only</span>
         </legend>
         <div class="grid grid-cols-4 gap-2">
 {price_chips}

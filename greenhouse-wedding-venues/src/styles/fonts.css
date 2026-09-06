@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Self-hosted fonts.
+
+   These three files are pulled once from Google Fonts (latin subset only,
+   the only one this English-language site needs) and committed here so the
+   site never depends on fonts.googleapis.com / fonts.gstatic.com at runtime
+   — no third-party DNS lookup or connection on the critical path, no FOUC
+   risk from a slow or blocked font CDN.
+
+   Both files are variable fonts: ONE physical file covers the whole weight
+   range for its family/style, and the browser interpolates the exact weight
+   from the `font-weight` range declared below (this is exactly how Google's
+   own CSS serves them — we're just pointing at a local copy). Re-run
+   scripts/fetch-fonts.sh if you ever need to refresh or add a weight/style.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("/assets/fonts/playfair-display-variable.woff2") format("woff2-variations"),
+       url("/assets/fonts/playfair-display-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/playfair-display-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/assets/fonts/plus-jakarta-sans-variable.woff2") format("woff2-variations"),
+       url("/assets/fonts/plus-jakarta-sans-variable.woff2") format("woff2");
+}

@@ -1,17 +1,26 @@
-# Glasshouse Weddings — https://www.glasshouseweddings.com
+# GreenhouseVenues — https://www.greenhousevenues.com/
 User-agent: *
 Allow: /
 
-# Filtered directory views are useful to humans but are thin, near-duplicate
-# pages for crawlers. The canonical tag on /venues/ already points home, and
-# these rules stop crawl budget draining into parameter permutations.
-Disallow: /venues/*?*sort=
+# The venue filters (state, type, capacity, blend, price, search, sort) are
+# all client-side query-string params on /venues/ — every combination serves
+# the identical HTML, so letting crawlers wander through them wastes budget
+# on thin duplicates instead of the canonical /venues/ and /venues/{state}/
+# pages, which already cover the same content deliberately.
+Disallow: /venues/*?*state=
+Disallow: /venues/*?*type=
+Disallow: /venues/*?*capacity=
+Disallow: /venues/*?*blend=
+Disallow: /venues/*?*price=
 Disallow: /venues/*?*q=
+Disallow: /venues/*?*sort=
 Disallow: /*?utm_
+
+# /shortlist/ is a personal, client-only tool (see /methodology/) with
+# nothing for a crawler to index — it is already noindex, this just saves
+# the fetch. /api/ has no GET routes; see the venue-suggestion form on
+# /methodology/ for what it is for.
+Disallow: /shortlist/
 Disallow: /api/
 
-# Ad and affiliate networks
-User-agent: AdsBot-Google
-Allow: /
-
-Sitemap: https://www.glasshouseweddings.com/sitemap.xml
+Sitemap: https://www.greenhousevenues.com/sitemap.xml

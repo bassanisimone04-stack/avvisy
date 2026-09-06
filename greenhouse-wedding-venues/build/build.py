@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from chrome import BASE, STATE_NAV
+from chrome import BASE, NAME, STATE_NAV
 import cards as C
 import faqs
 from page_directory import directory_page, venue_page
@@ -251,6 +251,7 @@ def build_all():
     write("blog/index.html", page_content.blog_index(VENUES))
     write("blog/greenhouse-wedding-cost/index.html", page_content.cost_guide(VENUES))
     write("blog/rain-proof-outdoor-wedding-venues/index.html", page_content.rainproof_guide(VENUES))
+    write("blog/small-greenhouse-wedding-venues/index.html", page_content.small_venues_guide(VENUES))
     write("methodology/index.html", page_content.methodology(VENUES))
 
     # -------------------------------------------------- shortlist & compare --
@@ -272,7 +273,7 @@ def build_all():
     # ----------------------------------------------------------- sitemap -----
     urls = ["/", "/venues/", "/italy-destination-weddings/", "/blog/",
             "/blog/greenhouse-wedding-cost/", "/blog/rain-proof-outdoor-wedding-venues/",
-            "/methodology/"]
+            "/blog/small-greenhouse-wedding-venues/", "/methodology/"]
     urls += [f"/venues/{s}/" for s in state_slugs]
     urls += [C.venue_url(v) for v in VENUES]
     body = "\n".join(f"""  <url>
@@ -289,6 +290,37 @@ def build_all():
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {body}
 </urlset>
+""")
+
+    # ------------------------------------------------------------ robots.txt -
+    # Generated (not hand-maintained) so it can never point at a stale domain
+    # — BASE comes from the same data/site.json the rest of the site does.
+    write("robots.txt", f"""# {NAME} — {BASE}/
+User-agent: *
+Allow: /
+
+# The venue filters (state, type, capacity, blend, price, search, sort) are
+# all client-side query-string params on /venues/ — every combination serves
+# the identical HTML, so letting crawlers wander through them wastes budget
+# on thin duplicates instead of the canonical /venues/ and /venues/{{state}}/
+# pages, which already cover the same content deliberately.
+Disallow: /venues/*?*state=
+Disallow: /venues/*?*type=
+Disallow: /venues/*?*capacity=
+Disallow: /venues/*?*blend=
+Disallow: /venues/*?*price=
+Disallow: /venues/*?*q=
+Disallow: /venues/*?*sort=
+Disallow: /*?utm_
+
+# /shortlist/ is a personal, client-only tool (see /methodology/) with
+# nothing for a crawler to index — it is already noindex, this just saves
+# the fetch. /api/ has no GET routes; see the venue-suggestion form on
+# /methodology/ for what it is for.
+Disallow: /shortlist/
+Disallow: /api/
+
+Sitemap: {BASE}/sitemap.xml
 """)
 
     st = C.stats(VENUES)

@@ -30,6 +30,21 @@
   ],
   "venues": [
     {
+      "slug": "desert-botanical-garden",
+      "name": "Desert Botanical Garden",
+      "city": "Phoenix",
+      "state": "Arizona",
+      "state_slug": "arizona",
+      "country": "US",
+      "type": "atrium",
+      "official_url": "https://dbg.org/explore/wedding/",
+      "capacity_seated": null,
+      "price_tier": null,
+      "blend": null,
+      "summary": "A desert botanical garden in Phoenix whose Dorrance Hall reception space has floor-to-ceiling glass walls, alongside open-air pavilions and courtyards across the grounds.",
+      "last_verified": null
+    },
+    {
       "slug": "los-angeles-county-arboretum",
       "name": "Los Angeles County Arboretum &amp; Botanic Garden",
       "city": "Arcadia",
@@ -165,6 +180,21 @@
       "last_verified": null
     },
     {
+      "slug": "atlanta-botanical-garden",
+      "name": "Atlanta Botanical Garden",
+      "city": "Atlanta",
+      "state": "Georgia",
+      "state_slug": "georgia",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://atlantabg.org/events-exhibitions/private-events-rentals/",
+      "capacity_seated": null,
+      "price_tier": null,
+      "blend": null,
+      "summary": "A botanical garden in Atlanta's Piedmont Park whose venues include the glass-domed Fuqua Orchid Center & Conservatory, alongside garden and historic-house wedding spaces.",
+      "last_verified": null
+    },
+    {
       "slug": "garfield-park-conservatory",
       "name": "Garfield Park Conservatory",
       "city": "Chicago",
@@ -192,6 +222,21 @@
       "price_tier": null,
       "blend": null,
       "summary": "An 1888 Palm House with four further glasshouse rooms — Orchid, Mediterranean, Tropical and Desert — available to rent for weddings and events.",
+      "last_verified": null
+    },
+    {
+      "slug": "tower-hill-botanic-garden",
+      "name": "New England Botanic Garden at Tower Hill",
+      "city": "Boylston",
+      "state": "Massachusetts",
+      "state_slug": "massachusetts",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://nebg.org/weddings/",
+      "capacity_seated": null,
+      "price_tier": null,
+      "blend": null,
+      "summary": "A botanic garden in Boylston offering ceremonies in its Limonaia Conservatory and receptions in an eighteenth-century-style glass Orangerie.",
       "last_verified": null
     },
     {
@@ -390,6 +435,21 @@
       "last_verified": null
     },
     {
+      "slug": "oregon-garden-resort",
+      "name": "Oregon Garden Resort",
+      "city": "Silverton",
+      "state": "Oregon",
+      "state_slug": "oregon",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://www.oregongardenresort.com/events/weddings",
+      "capacity_seated": null,
+      "price_tier": null,
+      "blend": null,
+      "summary": "A resort attached to the Oregon Garden's 20 specialty gardens in Silverton, with an indoor Conservatory option alongside its Fireside Room for ceremonies and receptions.",
+      "last_verified": null
+    },
+    {
       "slug": "phipps-conservatory",
       "name": "Phipps Conservatory and Botanical Gardens",
       "city": "Pittsburgh",
@@ -447,6 +507,36 @@
       "price_tier": null,
       "blend": null,
       "summary": "A 39-acre urban botanical garden whose rental venues include the Lucile Halsell Conservatory and the indoor/outdoor Betty Kelso Center.",
+      "last_verified": null
+    },
+    {
+      "slug": "lewis-ginter-botanical-garden",
+      "name": "Lewis Ginter Botanical Garden",
+      "city": "Richmond",
+      "state": "Virginia",
+      "state_slug": "virginia",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://www.lewisginter.org/visit/facility-rental/weddings/",
+      "capacity_seated": null,
+      "price_tier": null,
+      "blend": null,
+      "summary": "A botanical garden in Richmond with a classical domed conservatory available for ceremonies, described as the only one of its kind in the mid-Atlantic, alongside garden and historic-house reception venues.",
+      "last_verified": null
+    },
+    {
+      "slug": "volunteer-park-conservatory",
+      "name": "Volunteer Park Conservatory",
+      "city": "Seattle",
+      "state": "Washington",
+      "state_slug": "washington",
+      "country": "US",
+      "type": "palm-house",
+      "official_url": "https://www.volunteerparkconservatory.org/information",
+      "capacity_seated": null,
+      "price_tier": null,
+      "blend": null,
+      "summary": "A Victorian-style glass greenhouse in Seattle's Volunteer Park with a Palm House and Cactus House; ceremonies are booked as a City of Seattle Parks & Recreation permit, not directly through the conservatory.",
       "last_verified": null
     },
     {

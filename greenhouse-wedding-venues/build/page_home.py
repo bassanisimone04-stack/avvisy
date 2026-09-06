@@ -189,6 +189,22 @@ def build(venues):
       </div>
     </section>
 
+    <!-- ================= RECENTLY VIEWED (client-only) =================
+         Hidden by default and server-rendered empty — assets/js/recent.js
+         reveals it and fills the grid only for a returning visitor with
+         venue pages in this browser's history. Nothing here is fetched or
+         computed on first load for a new visitor beyond that one check. -->
+    <section class="shell pt-16" data-recent-section hidden aria-label="Recently viewed">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="eyebrow-gold">Welcome back</p>
+          <h2 class="mt-2 text-2xl">Continue where you left off</h2>
+        </div>
+        <button type="button" class="btn-outline btn-sm" data-recent-clear>Clear history</button>
+      </div>
+      <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" data-recent-grid></div>
+    </section>
+
     <!-- ================= VENUES BY STATE ================= -->
     <section class="shell py-20 lg:py-24" aria-labelledby="states-heading">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -201,7 +217,7 @@ def build(venues):
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 {state_cards}
       </div>
-      <p class="mt-6 text-sm text-ink-400">
+      <p class="mt-6 text-sm text-ink-500">
         Listings outside these states appear in
         <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="/venues/">the full directory</a>.
       </p>
@@ -262,7 +278,7 @@ def build(venues):
           {"".join(f'''
           <li class="glass-panel p-6">
             <h3 class="font-display text-lg text-white">{t}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-botanical-100/70">{d}</p>
+            <p class="mt-2 text-sm leading-relaxed text-botanical-100/80">{d}</p>
           </li>''' for t, d in [
             ("Ask about the roof", "Is every part of the day under solid cover, or does the ceremony sit outside?"),
             ("Ask about ventilation", "Opening roof vents, side louvers or mechanical cooling — and what it holds at 4pm."),

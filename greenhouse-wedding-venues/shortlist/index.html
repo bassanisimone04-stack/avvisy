@@ -5,27 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- ============ PRIMARY SEO ============ -->
-  <title>Your Shortlist | Glasshouse Weddings</title>
+  <title>Your Shortlist | GreenhouseVenues</title>
   <meta name="description" content="Venues you have saved while browsing, kept in this browser only, with a tool to compare their confirmed details side by side.">
-  <link rel="canonical" href="https://www.glasshouseweddings.com/shortlist/">
+  <link rel="canonical" href="https://www.greenhousevenues.com/shortlist/">
   <meta name="robots" content="noindex,follow">
   <meta name="theme-color" content="#1B4332">
 
   <!-- ============ SOCIAL ============ -->
-  <meta property="og:site_name" content="Glasshouse Weddings">
+  <meta property="og:site_name" content="GreenhouseVenues">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Your Shortlist | Glasshouse Weddings">
+  <meta property="og:title" content="Your Shortlist | GreenhouseVenues">
   <meta property="og:description" content="Venues you have saved while browsing, kept in this browser only, with a tool to compare their confirmed details side by side.">
-  <meta property="og:url" content="https://www.glasshouseweddings.com/shortlist/">
-  <meta property="og:image" content="https://www.glasshouseweddings.com/assets/img/patterns/wide-01.svg">
+  <meta property="og:url" content="https://www.greenhousevenues.com/shortlist/">
+  <meta property="og:image" content="https://www.greenhousevenues.com/assets/img/patterns/wide-01.svg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- ============ FONTS (preconnected, swap, 2 families only) ============ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <!-- ============ FONTS (self-hosted variable fonts, 2 files on the critical
+       path — no Google Fonts request, no third-party DNS/connection) ======= -->
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/playfair-display-variable.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- ============ STYLES (one compiled, minified file — no CDN, no FOUC) ============ -->
+  <!-- ============ STYLES (one compiled, minified file — no CDN, no FOUC;
+       @font-face rules for the fonts above live inside it) ================ -->
   <link rel="stylesheet" href="/assets/css/site.css">
 
   <link rel="icon" href="/assets/img/brand/favicon.svg" type="image/svg+xml">
@@ -39,13 +40,13 @@
   <header data-header class="sticky top-0 z-50 border-b border-line/70 bg-cream/85 backdrop-blur-md transition-shadow duration-300 [&.is-stuck]:shadow-soft">
     <div class="shell flex h-[72px] items-center justify-between gap-6">
 
-      <a href="/" class="flex items-center gap-2.5" aria-label="Glasshouse Weddings — home">
+      <a href="/" class="flex items-center gap-2.5" aria-label="GreenhouseVenues — home">
         <span class="grid size-9 place-items-center rounded-lg bg-botanical-800 text-champagne-500">
           <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 3 3 10v11h18V10z"/><path d="M12 3v18M3 10h18M7.5 6.5 7.5 21M16.5 6.5V21M3 15.5h18"/>
           </svg>
         </span>
-        <span class="font-display text-lg font-bold leading-none text-botanical-900">Glasshouse<span class="text-champagne-600">Weddings</span></span>
+        <span class="font-display text-lg font-bold leading-none text-botanical-900">Greenhouse<span class="text-champagne-700">Venues</span></span>
       </a>
 
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
@@ -75,13 +76,13 @@
 
       <div class="flex items-center gap-3">
         <a href="/shortlist/" data-shortlist-link rel="nofollow"
-           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-600"
+           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-700"
            aria-label="Your shortlist (empty)">
           <svg aria-hidden="true" viewBox="0 0 24 24" class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
           <span data-shortlist-count hidden class="count-badge">0</span>
         </a>
 
-        <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a glasshouse</a>
+        <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a venue</a>
 
         <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
                 class="grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 lg:hidden">
@@ -111,7 +112,7 @@
         <a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/blog/">Planning guides</a>
         <a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/methodology/">How we source listings</a>
         <div class="pt-4">
-          <a class="btn-gold w-full" href="/venues/">Find a glasshouse</a>
+          <a class="btn-gold w-full" href="/venues/">Find a venue</a>
         </div>
       </nav>
     </div>
@@ -140,7 +141,7 @@
 
     <section class="shell pb-24" data-shortlist-page>
       <noscript>
-        <div class="card p-6 text-sm text-ink-600">
+        <div class="card p-6 text-sm text-ink-500">
           The shortlist tool needs JavaScript enabled to read what you have saved in this browser.
         </div>
       </noscript>
@@ -190,13 +191,13 @@
       <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
 
         <div>
-          <a href="/" class="flex items-center gap-2.5" aria-label="Glasshouse Weddings — home">
+          <a href="/" class="flex items-center gap-2.5" aria-label="GreenhouseVenues — home">
             <span class="grid size-9 place-items-center rounded-lg bg-champagne-500 text-botanical-950">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3 3 10v11h18V10z"/><path d="M12 3v18M3 10h18M7.5 6.5 7.5 21M16.5 6.5V21M3 15.5h18"/>
               </svg>
             </span>
-            <span class="font-display text-lg font-bold leading-none text-white">Glasshouse<span class="text-champagne-500">Weddings</span></span>
+            <span class="font-display text-lg font-bold leading-none text-white">Greenhouse<span class="text-champagne-500">Venues</span></span>
           </a>
           <p class="mt-5 max-w-sm text-sm leading-relaxed text-botanical-200/80">
             A directory of greenhouse, glasshouse and conservatory wedding venues.
@@ -238,6 +239,7 @@
           <ul class="mt-5 space-y-3 text-sm">
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/greenhouse-wedding-cost/">Greenhouse wedding cost</a></li>
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/rain-proof-outdoor-wedding-venues/">Rain-proof outdoor wedding venues</a></li>
+            <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/small-greenhouse-wedding-venues/">Small greenhouse wedding venues</a></li>
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/">All guides</a></li>
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/methodology/">Editorial standards</a></li>
           </ul>
@@ -246,8 +248,8 @@
 
       <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-botanical-200/60 md:flex-row md:items-center md:justify-between">
         <p>
-          &copy; <span data-year>2026</span> Glasshouse Weddings.
-          30 listings across 16 states and regions.
+          &copy; <span data-year>2026</span> GreenhouseVenues.
+          36 listings across 22 states and regions.
           No paid placements.
         </p>
         <p>
@@ -261,5 +263,6 @@
   <script defer src="/assets/js/venue-filters.js"></script>
   <script defer src="/assets/js/shortlist.js"></script>
   <script defer src="/assets/js/checklist.js"></script>
+  <script defer src="/assets/js/recent.js"></script>
 </body>
 </html>

@@ -1,19 +1,22 @@
-# Glasshouse Weddings
+# GreenhouseVenues.com
 
 A directory and editorial site for **greenhouse, glasshouse and conservatory
 wedding venues** in the United States, with a destination section for Italy.
 
 Static HTML generated from a single data file, one compiled Tailwind CSS v4
-stylesheet, and a handful of small vanilla JS files. No framework, no CDN, no
-runtime dependencies.
+stylesheet, self-hosted variable fonts, and a handful of small vanilla JS
+files minified with terser. No framework, no CDN, no runtime dependencies.
 
 ```bash
 npm install
-npm run build       # patterns → HTML → CSS → FAQ parity check
+npm run build       # patterns → HTML → CSS → minified JS → FAQ parity check
 npm run build:html  # regenerate pages from data/venues.json
 npm run dev         # Tailwind watch while editing markup
 npm run serve       # http://localhost:4321
 npm run check:faq   # FAQ schema/visible parity + keyword coverage
+npm run fetch-fonts # (re-)download the self-hosted font files — not part of
+                     # `build`, since they never change unless you add a
+                     # weight, style or family
 ```
 
 ---
@@ -31,7 +34,7 @@ with a link to the venue's own page. The site says explicitly that a dash means
 
 Consequences, by design:
 
-- **No invented capacities or prices.** Today that means 0 of 30 listings carry
+- **No invented capacities or prices.** Today that means 0 of 36 listings carry
   either — the capacity, blend and price filters correctly return nothing rather
   than pretending. Fill them in as you verify, and the filters come alive.
 - **No `aggregateRating`, no reviews.** We hold no first-party reviews, so none
@@ -51,7 +54,7 @@ referenced from the `Organization` schema as `publishingPrinciples`.
 
 ### The listings currently in the file
 
-Thirty real venues across 16 states and regions, each seeded with name,
+Thirty-six real venues across 22 states and regions, each seeded with name,
 city/state, type and its official events URL. **Verify each one before
 launch** — open `official_url`, confirm the venue still hosts weddings, fill
 in what it publishes, and set `last_verified`.
@@ -65,27 +68,37 @@ data/
   venues.json        ← the only place venue facts live
   site.json          ← site name, base URL, nav states
 build/
-  build.py           ← entry point: renders every page + assets/data/venues.json
+  build.py           ← entry point: renders every page + robots.txt/sitemap.xml
+                        + assets/data/venues.json
   chrome.py          ← <head>, header, footer, breadcrumbs, JSON-LD helper
   cards.py           ← data loading + the venue card (handles missing values)
   filters.py         ← the filter component (rail + drawer)
   faqs.py            ← every FAQ set, keyword-targeted
   shared.py          ← accordion, FAQ schema, ad slots, shortlist button, checklist
   page_home.py  page_directory.py  page_content.py  page_shortlist.py
+src/
+  styles/
+    tailwind.css     ← design system source
+    fonts.css        ← local @font-face rules, imported by tailwind.css
+  js/                ← authored JS source: site.js, venue-filters.js,
+                        shortlist.js, checklist.js, recent.js
 scripts/
-  generate-placeholders.mjs   check-faq-parity.mjs
-src/styles/tailwind.css       ← design system source
-assets/
-  css/site.css       ← compiled Tailwind output
-  js/                ← site.js, venue-filters.js, shortlist.js, checklist.js
+  generate-placeholders.mjs  ← decorative SVG patterns
+  build-js.mjs               ← minifies src/js/*.js → assets/js/*.js (terser)
+  fetch-fonts.sh              ← downloads the 3 self-hosted font files
+  check-faq-parity.mjs       ← FAQPage schema ⇄ visible-<summary> parity
+assets/                       ← ALL generated — never hand-edit
+  css/site.css       ← compiled, minified Tailwind output
+  js/                ← minified build of src/js/ (npm run build:js)
+  fonts/             ← 3 self-hosted woff2 files (npm run fetch-fonts, once)
   img/patterns/      ← generated decorative SVGs
-  data/venues.json   ← public trimmed copy, written at build time — client-side only
+  data/venues.json   ← public trimmed copy of data/venues.json, client-side only
 ```
 
 Generated output (`index.html`, `venues/`, `blog/`, `italy-destination-weddings/`,
-`methodology/`, `shortlist/`, `sitemap.xml`, `assets/data/venues.json`) is
-committed so the site can be served straight from the repo, but it is
-**derived** — edit the data or the builders, then `npm run build:html`.
+`methodology/`, `shortlist/`, `robots.txt`, `sitemap.xml`, `assets/`) is
+committed so the site can be served straight from the repo, but all of it is
+**derived** — edit `data/`, `src/`, or `build/`, then `npm run build`.
 
 ### URL structure
 
@@ -113,7 +126,7 @@ the sitemap, the facets and the counters. There is no second place to update.
 | botanical garden wedding venues (14–22k) | Commercial | `/venues/?type=botanical-garden`, on-page copy |
 | glasshouse wedding venue near me (12–18k) | Transactional / local | Nav and FAQ anchor text |
 | greenhouse wedding venue **[State]** (1–4.5k each) | Transactional | `/venues/{state}/` `<h1>` + title |
-| small greenhouse wedding venues (3.5–5.4k) | Transactional | `?capacity=micro`, FAQs |
+| small greenhouse wedding venues (3.5–5.4k) | Transactional | `/blog/small-greenhouse-wedding-venues/` `<h1>`, `?capacity=micro` |
 | greenhouse wedding cost (2.4–4.1k) | Informational | `/blog/greenhouse-wedding-cost/` `<h1>` |
 | conservatory wedding venues (2.9–4.8k) | Commercial | Meta descriptions + on-page synonym |
 | greenhouse wedding venue Italy (1.6–2.9k) | Transactional | `/italy-destination-weddings/` `<h1>` |
@@ -139,12 +152,19 @@ Tailwind utilities (`bg-botanical-800`, `text-champagne-700`).
 | Surface / ink / hairlines | `shell`, `ink-900…300`, `line` | `#FFFFFF` · `#14201B`→`#8C9A93` · `#E4E9E6` |
 
 Rules that keep it looking expensive: gold is punctuation, one gold element per
-viewport, on the action you most want taken; never `#D4AF37` as text on cream
-(fails contrast — use `champagne-700`); shadows are emerald-tinted, never grey.
+viewport, on the action you most want taken; shadows are emerald-tinted, never
+grey. **`champagne-600` is backgrounds/decoration only — never text or icon
+foreground.** Only `champagne-700` (4.65:1+ on cream/white) and darker are used
+as foreground; `500` (2.1:1) and `600` (3.3:1) both fail WCAG AA for text, which
+is exactly the mistake an accessibility audit caught and fixed here (§7).
 
 **Typography** — Playfair Display (500/600/700) on `h1–h4`, Plus Jakarta Sans
-(400–800) for body and UI, two families only, `preconnect` + `display=swap`.
-Self-host both as `woff2` before launch to remove two DNS lookups from LCP.
+(400–800) for body and UI, two families, self-hosted as two variable-font
+`woff2` files (`assets/fonts/`, ~87 KB combined) — no Google Fonts request, no
+third-party DNS lookup on the critical path. `src/styles/fonts.css` declares
+each `@font-face` with a `font-weight` **range** (e.g. `500 700`), which is
+what lets one physical file serve every weight in that range — see the file's
+header comment before adding a fourth weight or a new family.
 
 **Primitives** — `.shell`, `.btn-*`, `.card`, `.chip`, `.badge-*`, `.field`,
 `.nav-link`, `.eyebrow`, `.prose-editorial`, `.ad-slot`, `.glass-panel`,
@@ -155,13 +175,21 @@ Tailwind v4 a later cascade layer beats higher specificity, so a base defined as
 **Accessibility** — visible focus ring everywhere, skip link on every page,
 `aria-pressed` filter chips, a real `role="dialog"` drawer with Escape-to-close,
 decorative SVGs `aria-hidden`, and `prefers-reduced-motion` disabling all motion.
-Body copy `#2F3D36` on `#F8F9FA` is 12.4:1.
+Body copy `#2F3D36` on `#F8F9FA` is 12.4:1; secondary text uses `ink-500`
+(6.3:1+) — `ink-400`/`ink-300` exist for icons and placeholders only, never for
+readable text, again after an audit caught them failing (§7). An axe-core scan
+across all 11 page templates currently returns zero violations at
+wcag2a/wcag2aa/wcag21a/wcag21aa + best-practice; re-run it after any color or
+opacity change (`npm install --no-save axe-core`, then drive it with
+Playwright against the built site — it is not wired into `npm run build`
+because it needs a browser, unlike everything else in this pipeline).
 
 ---
 
 ## 4. The filter component
 
-`assets/js/venue-filters.js` (~5 KB, no dependencies) filters **state**,
+`src/js/venue-filters.js` (~11 KB source, ~5.7 KB minified, no dependencies —
+see §2 for the source/shipped split) filters **state**,
 **venue type**, **capacity**, **indoor/outdoor blend** and **price range**, plus
 free-text search and sort.
 
@@ -179,14 +207,14 @@ URLs (`/venues/california/under-50-guests/`) — those rank, query strings do no
 
 ---
 
-## 5. Interactivity: shortlist, compare, checklists
+## 5. Interactivity: shortlist, compare, checklists, recently viewed
 
-Three tools, all client-side, all `localStorage`-only — there is no backend, so
-there is nothing to build to keep this honest: what a visitor saves lives in
-their browser and nowhere else.
+Four tools, all client-side, all `localStorage`-only, all namespaced
+`greenhousevenues:*` — there is no backend, so there is nothing to build to
+keep this honest: what a visitor saves lives in their browser and nowhere else.
 
-**Shortlist** (`assets/js/shortlist.js`, ~14 KB unminified — it also drives
-the `/shortlist/` page below). A heart toggle on every card
+**Shortlist** (`src/js/shortlist.js`, ~14 KB source / ~7.5 KB minified — it
+also drives the `/shortlist/` page below). A heart toggle on every card
 (`build/shared.py` `shortlist_button()`) and on each venue page saves a slug to
 `localStorage`. The header shows a live count on every page. Buttons render
 unpressed from the server — there is no session — and JS corrects
@@ -202,7 +230,8 @@ is everywhere else on the site — the compare tool does not get to know more
 than the directory does. The page is `noindex`: it has no content of its own to
 rank for, only a visitor's saved state.
 
-**Interactive checklists** (`assets/js/checklist.js`, ~3 KB), on the cost guide
+**Interactive checklists** (`src/js/checklist.js`, ~3 KB source / ~1.6 KB
+minified), on the cost guide
 and on every venue page (`build/shared.py` `checklist()`). Same question-and-
 why content a static list would carry, just checkable, with progress saved per
 checklist key — a venue page's checklist is keyed to that venue, so a couple
@@ -211,10 +240,21 @@ list" builds a plain-text version (questions only, never the "why" — that
 explanation is for the couple, not the venue) for pasting into an email; on a
 venue page the copied text opens with that venue's real name.
 
+**Recently viewed** (`src/js/recent.js`, ~3.8 KB source / ~2 KB minified),
+on the homepage. Every venue
+page's `<main>` carries `data-venue-slug`; the script records it to
+`localStorage` (most-recent-first, deduped, capped at 12) and, wherever a page
+has a `[data-recent-grid]` (currently just the homepage), fetches
+`/assets/data/venues.json` and renders up to 8 mini-cards under a "Continue
+where you left off" heading — hidden entirely for a first-time visitor with no
+history, so nobody ever sees an empty rail. Separate from the shortlist by
+design: viewing a venue does not save it, and clearing one does not touch the
+other.
+
 One data-correctness note worth knowing if you touch this code: `data/venues.json`
 stores venue names pre-escaped for HTML (`"Sherman Library &amp; Gardens"`),
 which every Python template relies on by interpolating them unescaped. The
-JS-rendered shortlist/compare cards do the same — they must **not** run venue
+JS-rendered shortlist/compare/recently-viewed cards do the same — they must **not** run venue
 text through an HTML-escaper, or `&amp;` becomes `&amp;amp;`. The one place that
 needs the *opposite* — real plain text for the clipboard — decodes it first via
 a detached `<textarea>` (`decodeEntities()` in `shortlist.js`). Both directions
@@ -244,22 +284,34 @@ Two rules the build enforces:
 2. **Structured data asserts only confirmed fields.** `maximumAttendeeCapacity`
    and `priceRange` are emitted only when the data holds them.
 
-161 FAQs across the site, all keyword-targeted — coverage is printed by
+388 FAQs across the site, all keyword-targeted — coverage is printed by
 `npm run check:faq`.
 
 ---
 
 ## 7. Performance
 
-- One stylesheet, minified, ~65 KB (~10 KB gzipped). No CDN, no FOUC.
-- Four deferred JS files (filters, shortlist/compare, checklist, site chrome),
-  ~34 KB unminified combined, zero dependencies, no bundler.
+- One stylesheet, minified, ~67 KB (~10 KB gzipped). No CDN, no FOUC.
+- Two self-hosted variable-font files (~87 KB combined, cacheable forever),
+  `<link rel="preload">`ed in `<head>`. Zero requests to Google Fonts or any
+  other third party — nothing on the page depends on an external host being up.
+- Five deferred JS files (filters, shortlist/compare, checklist, recently
+  viewed, site chrome), minified with terser: ~38 KB source → **~20 KB
+  shipped** (`npm run build:js`; source lives in `src/js/`, never edit
+  `assets/js/` directly).
 - Every `<img>` has explicit `width`/`height` (no CLS), `decoding="async"`, and
   `loading="lazy"` below the fold / `fetchpriority="high"` above it.
 - Ad slots reserve their height so late creative cannot shift layout.
+- Zero accessibility violations (axe-core, WCAG 2.0/2.1 A+AA + best practice)
+  across all 11 page templates — see §3's Accessibility note for how to re-run
+  this check, and keep it green: every prior failure here was a real, live bug
+  (see the design-system contrast rule in §3), not a false positive.
 
-Before launch: self-host the fonts, add real photography with `srcset`, and set
-`Cache-Control: public, max-age=31536000, immutable` on `/assets/`.
+Before launch: add real photography with `srcset` in place of the decorative
+patterns, and set `Cache-Control: public, max-age=31536000, immutable` on
+`/assets/` — the fonts and compiled CSS/JS all carry content in their bytes,
+not their filenames, so pair that with cache-busting query strings or
+content-hashed filenames if you add a CDN in front of this.
 
 ---
 
@@ -267,9 +319,11 @@ Before launch: self-host the fonts, add real photography with `srcset`, and set
 
 1. **Verify every listing.** Open each `official_url`, confirm the venue still
    hosts weddings, fill in what its site publishes, set `last_verified`, rebuild.
-2. **Change the domain.** `base_url` in `data/site.json` feeds every canonical,
-   `og:url` and JSON-LD `@id`. Change it there, rebuild, and update
-   `robots.txt`.
+2. **Change the domain.** `data/site.json`'s `base_url` (currently the
+   placeholder `https://www.greenhousevenues.com`) feeds every canonical,
+   `og:url`, JSON-LD `@id`, and `robots.txt`/`sitemap.xml` — all generated, so
+   changing it there and running `npm run build` is the whole job; there is
+   nothing left to hand-edit.
 3. **Point the forms somewhere.** `/api/suggest` has no backend in this build.
 4. **Add the pages a real site needs** and link them in the footer: privacy,
    terms, contact, and an affiliate disclosure if you add affiliate links. They

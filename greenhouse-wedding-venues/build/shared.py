@@ -66,7 +66,7 @@ def checklist(items, *, key, copy_intro=None):
           <ul class="divide-y divide-line">
 {chr(10).join(rows)}
           </ul>
-          <p class="border-t border-line bg-botanical-50/30 px-5 py-3 text-xs text-ink-400">
+          <p class="border-t border-line bg-botanical-50/30 px-5 py-3 text-xs text-ink-500">
             Checked state is saved in this browser only &mdash;
             <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="/methodology/">how we handle data</a>.
           </p>
@@ -127,7 +127,7 @@ def ad_slot(label, min_h, *, cls="", tag="aside"):
     creative from shifting the layout (CLS)."""
     return f"""        <{tag} class="ad-slot {cls}" aria-label="Advertisement">
           <span class="ad-label">Advertising slot</span>
-          <div class="grid place-items-center text-sm text-ink-400" style="min-height:{min_h}px">
+          <div class="grid place-items-center text-sm text-ink-500" style="min-height:{min_h}px">
             {label} &mdash; unsold
           </div>
         </{tag}>

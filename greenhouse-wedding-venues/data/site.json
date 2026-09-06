@@ -1,7 +1,7 @@
 {
-  "name": "Glasshouse Weddings",
-  "base_url": "https://www.glasshouseweddings.com",
-  "$note": "base_url is a placeholder domain — change it here and rebuild; it feeds every canonical, og:url and JSON-LD @id on the site.",
+  "name": "GreenhouseVenues",
+  "base_url": "https://www.greenhousevenues.com",
+  "$note": "base_url feeds every canonical, og:url and JSON-LD @id on the site — change it here and rebuild if it ever moves.",
   "nav_states": [
     { "name": "California", "slug": "california" },
     { "name": "Texas", "slug": "texas" },

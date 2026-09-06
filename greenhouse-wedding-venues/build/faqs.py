@@ -323,6 +323,42 @@ BLOG_RAINPROOF = [
 ]
 
 
+BLOG_SMALL_VENUES = [
+  ('What counts as a small greenhouse wedding venue?',
+   'There is no official line, but the directory treats under 50 guests as the useful threshold — '
+   'small enough that a propagation house or a fern room reads as generous rather than empty, and '
+   'small enough that many venues will release a weekday date at a fraction of their weekend rate. '
+   'Use the <a href="/venues/?capacity=micro">under-50 capacity filter</a> once a listing&rsquo;s '
+   'confirmed capacity is on the page.'),
+
+  ('How many guests fit in a small greenhouse wedding venue?',
+   'It depends entirely on the specific room, and glasshouses vary more than most venue types — '
+   'planting beds and structural piers eat floor area that a plain hall would not lose. Ask every '
+   'venue for the seated capacity <em>with</em> a dance floor and the planting where it will actually '
+   'sit on the day, not the number on its rental brochure.'),
+
+  ('Are small greenhouse wedding venues cheaper?',
+   'Often, but not automatically — a small room inside a grand private estate can cost more than a '
+   'large hall at a municipal garden. What reliably lowers the number is the venue type (municipal '
+   'and university glasshouses release smaller rooms more often than private ones do) and the day '
+   '(a weekday micro-wedding is usually the cheapest date in any venue&rsquo;s calendar). See the '
+   '<a href="/blog/greenhouse-wedding-cost/">cost guide</a> for how to structure the comparison.'),
+
+  ('Can I have a micro-wedding at a botanical garden?',
+   'Often yes, and it is frequently the easiest way in: a botanical garden that only takes large, '
+   'full-buyout weddings on weekends may still release a side room or a weekday morning for a small '
+   'ceremony at a much lower rate. Ask specifically about micro-wedding or elopement packages — some '
+   'gardens have one that is not advertised alongside their main wedding page.'),
+
+  ('What should I ask about a small greenhouse wedding venue?',
+   'Whether there is a minimum guest count as well as a maximum (some private venues will not book '
+   'under a certain number regardless of the room&rsquo;s size); whether the small room is a '
+   'stand-alone booking or a section of a larger space with shared access; and whether a weekday or '
+   'off-season date unlocks a materially different rate. All three change the real cost more than the '
+   'headline capacity does.'),
+]
+
+
 BLOG_INDEX = [
   ('How much does a greenhouse wedding cost?',
    'It depends on the catering model, the day of the week and whether the venue is municipal or '
@@ -335,10 +371,11 @@ BLOG_INDEX = [
    'dinner and dancing all happen under a solid roof. '
    '<a href="/blog/rain-proof-outdoor-wedding-venues/">Read the guide</a>.'),
 
-  ('Are greenhouse wedding venues good for small weddings?',
+  ('Are small greenhouse wedding venues good for small weddings?',
    'They suit them well — a room that would feel cavernous at 150 guests can be right at 40, and '
-   'smaller rooms inside larger glasshouses are often released on weekdays. Ask each venue what it '
-   'offers below 50 guests.'),
+   'smaller rooms inside larger glasshouses are often released on weekdays. Our '
+   '<a href="/blog/small-greenhouse-wedding-venues/">small greenhouse wedding venues guide</a> covers '
+   'what to ask and where to look.'),
 
   ('What should I ask before booking conservatory wedding venues?',
    'Five things, in writing: seated capacity with a dance floor and the planting in place; the '

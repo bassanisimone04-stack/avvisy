@@ -1,14 +1,15 @@
 /* ==========================================================================
-   Glasshouse Weddings — Design System source
-   Tailwind CSS v4. Compiled to /assets/css/site.css (minified, ~1 file, 0 JS).
+   GreenhouseVenues.com — Design System source
+   Tailwind CSS v4. Compiled to /assets/css/site.css (minified, ~1 file).
    Build:  npm run build:css      Watch:  npm run dev
    ========================================================================== */
 
 @import "tailwindcss";
+@import "./fonts.css";
 
 /* Only scan the HTML/JS we actually ship (keeps the compiled bundle small). */
 @source "../../**/*.html";
-@source "../../assets/js/**/*.js";
+@source "../js/**/*.js";
 
 /* --------------------------------------------------------------------------
    1. DESIGN TOKENS
@@ -184,7 +185,7 @@
     @apply inline-flex items-center gap-2 text-[11px] font-bold uppercase
            tracking-[0.18em] text-botanical-600;
   }
-  .eyebrow-gold { @apply text-champagne-600; }
+  .eyebrow-gold { @apply text-champagne-700; }
 
   /* Thin gold rule used under section eyebrows. */
   .rule-gold::after {
@@ -201,7 +202,7 @@
            text-xs font-semibold;
   }
   .badge-emerald { @apply bg-botanical-50 text-botanical-700; }
-  .badge-gold    { @apply bg-champagne-100 text-champagne-700; }
+  .badge-gold    { @apply bg-champagne-50 text-champagne-700; }
   .badge-glass   { @apply bg-white/15 text-white backdrop-blur-sm; }
 
   /* Filter chip — the toggle used by the venue filter component. Pressed state
@@ -225,7 +226,7 @@
   .shortlist-btn {
     @apply relative z-20 grid size-9 shrink-0 place-items-center rounded-full
            bg-white/90 text-botanical-700 shadow-soft backdrop-blur-sm
-           transition-all duration-200 hover:bg-white hover:text-champagne-600;
+           transition-all duration-200 hover:bg-white hover:text-champagne-700;
   }
   .shortlist-btn svg { @apply transition-transform duration-200; }
   .shortlist-btn[aria-pressed="true"] {
@@ -246,7 +247,7 @@
     @apply bg-botanical-50/50;
   }
   .checklist-row[data-checked="true"] .checklist-q {
-    @apply text-ink-400 line-through decoration-ink-300;
+    @apply text-ink-500 line-through decoration-ink-300;
   }
 
   /* -- Forms ------------------------------------------------------------ */
@@ -324,7 +325,7 @@
            font-sans text-xs font-bold uppercase tracking-wider text-botanical-700;
   }
   .prose-editorial table:not(.not-prose *) tbody td { @apply border-b border-line px-4 py-3 align-top; }
-  .prose-editorial figcaption:not(.not-prose *) { @apply mt-3 text-sm text-ink-400; }
+  .prose-editorial figcaption:not(.not-prose *) { @apply mt-3 text-sm text-ink-500; }
 
   /* Opt-out marker. Carries no styles itself — it is a hook for the guards above. */
   .not-prose { }
@@ -335,7 +336,7 @@
            p-4 text-center;
   }
   .ad-label {
-    @apply mb-2 block text-[10px] font-bold uppercase tracking-[0.22em] text-ink-300;
+    @apply mb-2 block text-[10px] font-bold uppercase tracking-[0.22em] text-ink-500;
   }
 
   /* -- Utilities that read better as names -------------------------------- */

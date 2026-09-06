@@ -7,25 +7,26 @@
   <!-- ============ PRIMARY SEO ============ -->
   <title>Lauritzen Gardens | Greenhouse Wedding Venue in Omaha</title>
   <meta name="description" content="Lauritzen Gardens in Omaha, Nebraska — a botanical garden wedding venue. Listing details, what to ask before booking, and a direct link to the venue's own events page.">
-  <link rel="canonical" href="https://www.glasshouseweddings.com/venues/nebraska/lauritzen-gardens/">
+  <link rel="canonical" href="https://www.greenhousevenues.com/venues/nebraska/lauritzen-gardens/">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#1B4332">
 
   <!-- ============ SOCIAL ============ -->
-  <meta property="og:site_name" content="Glasshouse Weddings">
+  <meta property="og:site_name" content="GreenhouseVenues">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Lauritzen Gardens | Greenhouse Wedding Venue in Omaha">
   <meta property="og:description" content="Lauritzen Gardens in Omaha, Nebraska — a botanical garden wedding venue. Listing details, what to ask before booking, and a direct link to the venue's own events page.">
-  <meta property="og:url" content="https://www.glasshouseweddings.com/venues/nebraska/lauritzen-gardens/">
-  <meta property="og:image" content="https://www.glasshouseweddings.com/assets/img/patterns/wide-02.svg">
+  <meta property="og:url" content="https://www.greenhousevenues.com/venues/nebraska/lauritzen-gardens/">
+  <meta property="og:image" content="https://www.greenhousevenues.com/assets/img/patterns/wide-02.svg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- ============ FONTS (preconnected, swap, 2 families only) ============ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <!-- ============ FONTS (self-hosted variable fonts, 2 files on the critical
+       path — no Google Fonts request, no third-party DNS/connection) ======= -->
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/playfair-display-variable.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- ============ STYLES (one compiled, minified file — no CDN, no FOUC) ============ -->
+  <!-- ============ STYLES (one compiled, minified file — no CDN, no FOUC;
+       @font-face rules for the fonts above live inside it) ================ -->
   <link rel="stylesheet" href="/assets/css/site.css">
 
   <link rel="icon" href="/assets/img/brand/favicon.svg" type="image/svg+xml">
@@ -39,9 +40,9 @@
     "EventVenue",
     "LocalBusiness"
   ],
-  "@id": "https://www.glasshouseweddings.com/venues/nebraska/lauritzen-gardens/#venue",
+  "@id": "https://www.greenhousevenues.com/venues/nebraska/lauritzen-gardens/#venue",
   "name": "Lauritzen Gardens",
-  "url": "https://www.glasshouseweddings.com/venues/nebraska/lauritzen-gardens/",
+  "url": "https://www.greenhousevenues.com/venues/nebraska/lauritzen-gardens/",
   "sameAs": "https://www.lauritzengardens.org/space-rental/",
   "description": "A botanical garden in Omaha offering event packages built around a choice of indoor rooms and outdoor gardens.",
   "address": {
@@ -62,19 +63,19 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.glasshouseweddings.com/"
+      "item": "https://www.greenhousevenues.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Venues",
-      "item": "https://www.glasshouseweddings.com/venues/"
+      "item": "https://www.greenhousevenues.com/venues/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Nebraska",
-      "item": "https://www.glasshouseweddings.com/venues/nebraska/"
+      "item": "https://www.greenhousevenues.com/venues/nebraska/"
     },
     {
       "@type": "ListItem",
@@ -149,13 +150,13 @@
   <header data-header class="sticky top-0 z-50 border-b border-line/70 bg-cream/85 backdrop-blur-md transition-shadow duration-300 [&.is-stuck]:shadow-soft">
     <div class="shell flex h-[72px] items-center justify-between gap-6">
 
-      <a href="/" class="flex items-center gap-2.5" aria-label="Glasshouse Weddings — home">
+      <a href="/" class="flex items-center gap-2.5" aria-label="GreenhouseVenues — home">
         <span class="grid size-9 place-items-center rounded-lg bg-botanical-800 text-champagne-500">
           <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 3 3 10v11h18V10z"/><path d="M12 3v18M3 10h18M7.5 6.5 7.5 21M16.5 6.5V21M3 15.5h18"/>
           </svg>
         </span>
-        <span class="font-display text-lg font-bold leading-none text-botanical-900">Glasshouse<span class="text-champagne-600">Weddings</span></span>
+        <span class="font-display text-lg font-bold leading-none text-botanical-900">Greenhouse<span class="text-champagne-700">Venues</span></span>
       </a>
 
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
@@ -185,13 +186,13 @@
 
       <div class="flex items-center gap-3">
         <a href="/shortlist/" data-shortlist-link rel="nofollow"
-           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-600"
+           class="relative grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 transition-colors hover:border-botanical-400 hover:text-champagne-700"
            aria-label="Your shortlist (empty)">
           <svg aria-hidden="true" viewBox="0 0 24 24" class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8.4 2.3 5 5.7 5c1.9 0 3.5 1 4.3 2.5C10.8 6 12.4 5 14.3 5c3.4 0 5.2 3.4 3.7 6.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
           <span data-shortlist-count hidden class="count-badge">0</span>
         </a>
 
-        <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a glasshouse</a>
+        <a class="hidden btn-gold btn-sm md:inline-flex" href="/venues/">Find a venue</a>
 
         <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav"
                 class="grid size-10 place-items-center rounded-lg border border-line-strong text-botanical-800 lg:hidden">
@@ -221,13 +222,13 @@
         <a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/blog/">Planning guides</a>
         <a class="block rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-botanical-50" href="/methodology/">How we source listings</a>
         <div class="pt-4">
-          <a class="btn-gold w-full" href="/venues/">Find a glasshouse</a>
+          <a class="btn-gold w-full" href="/venues/">Find a venue</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" data-venue-slug="lauritzen-gardens">
     <nav aria-label="Breadcrumb" class="shell pt-6">
     <ol class="flex flex-wrap items-center gap-2 text-[13px] text-ink-500">
       <li class="flex items-center gap-2"><a class="transition-colors hover:text-botanical-800" href="/">Home</a><svg aria-hidden="true" viewBox="0 0 24 24" class="size-3.5 text-ink-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg></li>
@@ -249,7 +250,7 @@
 
           <p class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[15px] text-ink-500">
             <span class="inline-flex items-center gap-1.5">
-              <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 text-champagne-600" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 text-champagne-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               Omaha, Nebraska
             </span>
           </p>
@@ -276,7 +277,7 @@
                width="1600" height="900" fetchpriority="high" decoding="async"
                class="size-full object-cover">
         </div>
-        <figcaption class="mt-3 text-[13px] text-ink-400">
+        <figcaption class="mt-3 text-[13px] text-ink-500">
           Decorative pattern &mdash; we hold no licensed photography of this venue. Photographs are on
           the <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="https://www.lauritzengardens.org/space-rental/" rel="noopener nofollow" target="_blank">venue&rsquo;s own page</a>.
         </figcaption>
@@ -305,58 +306,58 @@
         <dl class="not-prose mt-6 rounded-card border border-line bg-shell px-6">
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Venue type</dt>
-                <dd class="text-sm text-ink-600">
+                <dd class="text-sm text-ink-500">
                   <span class="font-medium text-ink-900">Botanical garden</span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Assigned from the venue&rsquo;s own description</span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Assigned from the venue&rsquo;s own description</span>
                 </dd>
               </div>
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Location</dt>
-                <dd class="text-sm text-ink-600">
+                <dd class="text-sm text-ink-500">
                   <span class="font-medium text-ink-900">Omaha, Nebraska</span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Full address on the venue&rsquo;s site</span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Full address on the venue&rsquo;s site</span>
                 </dd>
               </div>
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Seated capacity</dt>
-                <dd class="text-sm text-ink-600">
-                  <span class="font-medium text-ink-900"><span class="text-ink-300">Not confirmed</span></span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Ask for the figure <em>with</em> a dance floor and planting in place</span>
+                <dd class="text-sm text-ink-500">
+                  <span class="font-medium text-ink-900"><span class="text-ink-500">Not confirmed</span></span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Ask for the figure <em>with</em> a dance floor and planting in place</span>
                 </dd>
               </div>
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Indoor / outdoor</dt>
-                <dd class="text-sm text-ink-600">
-                  <span class="font-medium text-ink-900"><span class="text-ink-300">Not confirmed</span></span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Whether the whole day can happen under cover</span>
+                <dd class="text-sm text-ink-500">
+                  <span class="font-medium text-ink-900"><span class="text-ink-500">Not confirmed</span></span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Whether the whole day can happen under cover</span>
                 </dd>
               </div>
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Price range</dt>
-                <dd class="text-sm text-ink-600">
-                  <span class="font-medium text-ink-900"><span class="text-ink-300">Not confirmed</span></span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Request the current rate sheet from the venue</span>
+                <dd class="text-sm text-ink-500">
+                  <span class="font-medium text-ink-900"><span class="text-ink-500">Not confirmed</span></span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Request the current rate sheet from the venue</span>
                 </dd>
               </div>
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Catering</dt>
-                <dd class="text-sm text-ink-600">
-                  <span class="font-medium text-ink-900"><span class="text-ink-300">Not confirmed</span></span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Ask whether outside catering is allowed, and any minimum spend</span>
+                <dd class="text-sm text-ink-500">
+                  <span class="font-medium text-ink-900"><span class="text-ink-500">Not confirmed</span></span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Ask whether outside catering is allowed, and any minimum spend</span>
                 </dd>
               </div>
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Ventilation &amp; heating</dt>
-                <dd class="text-sm text-ink-600">
-                  <span class="font-medium text-ink-900"><span class="text-ink-300">Not confirmed</span></span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Ask what it holds on a hot afternoon, and whether heat is included</span>
+                <dd class="text-sm text-ink-500">
+                  <span class="font-medium text-ink-900"><span class="text-ink-500">Not confirmed</span></span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Ask what it holds on a hot afternoon, and whether heat is included</span>
                 </dd>
               </div>
               <div class="grid gap-1 border-b border-line py-4 last:border-0 sm:grid-cols-[190px_1fr] sm:gap-6">
                 <dt class="text-sm font-semibold text-botanical-800">Accessibility</dt>
-                <dd class="text-sm text-ink-600">
-                  <span class="font-medium text-ink-900"><span class="text-ink-300">Not confirmed</span></span>
-                  <span class="mt-0.5 block text-[13px] text-ink-400">Ask about step-free routes, parking surface and accessible restrooms</span>
+                <dd class="text-sm text-ink-500">
+                  <span class="font-medium text-ink-900"><span class="text-ink-500">Not confirmed</span></span>
+                  <span class="mt-0.5 block text-[13px] text-ink-500">Ask about step-free routes, parking surface and accessible restrooms</span>
                 </dd>
               </div>
         </dl>
@@ -418,7 +419,7 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
             </label>
           </li>
           </ul>
-          <p class="border-t border-line bg-botanical-50/30 px-5 py-3 text-xs text-ink-400">
+          <p class="border-t border-line bg-botanical-50/30 px-5 py-3 text-xs text-ink-500">
             Checked state is saved in this browser only &mdash;
             <a class="font-medium text-botanical-700 underline decoration-champagne-400 underline-offset-4" href="/methodology/">how we handle data</a>.
           </p>
@@ -440,12 +441,12 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
           <a class="btn-gold mt-5 w-full" href="https://www.lauritzengardens.org/space-rental/" rel="noopener nofollow" target="_blank">
             Open the venue&rsquo;s events page
           </a>
-          <p class="mt-3 break-words text-center text-xs text-ink-400">https://www.lauritzengardens.org/space-rental/</p>
+          <p class="mt-3 break-words text-center text-xs text-ink-500">https://www.lauritzengardens.org/space-rental/</p>
         </section>
 
         <section class="card border-champagne-200 bg-champagne-50/60 p-6" aria-labelledby="fix-heading">
           <h2 id="fix-heading" class="font-display text-lg text-botanical-900">Is something here wrong?</h2>
-          <p class="mt-1.5 text-sm leading-relaxed text-ink-600">
+          <p class="mt-1.5 text-sm leading-relaxed text-ink-500">
             If you work at this venue, or you have been there and our description is out of date,
             tell us. We will correct it or take the listing down.
           </p>
@@ -454,7 +455,7 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
 
         <div class="ad-slot " aria-label="Advertisement">
           <span class="ad-label">Advertising slot</span>
-          <div class="grid place-items-center text-sm text-ink-400" style="min-height:250px">
+          <div class="grid place-items-center text-sm text-ink-500" style="min-height:250px">
             Sidebar 300&times;250 &mdash; unsold
           </div>
         </div>
@@ -560,7 +561,7 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
                  data-price=""
                  class="card-interactive group relative flex flex-col overflow-hidden">
           <div class="relative aspect-[4/3] overflow-hidden bg-botanical-900">
-            <img src="/assets/img/patterns/pattern-01.svg"
+            <img src="/assets/img/patterns/pattern-02.svg"
                  alt="" aria-hidden="true"
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
@@ -579,9 +580,9 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
             <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink-500">A botanic garden in Arcadia with a wedding rental programme across its grounds and historic structures.</p>
 
             <dl class="mt-auto grid grid-cols-3 gap-1 border-t border-line pt-4 text-center">
-              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Seats</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
-              <div class="border-x border-line"><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Layout</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
-              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Budget</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
+              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Seats</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
+              <div class="border-x border-line"><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Layout</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
+              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Budget</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
             </dl>
           </div>
         </article>
@@ -595,7 +596,7 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
                  data-price=""
                  class="card-interactive group relative flex flex-col overflow-hidden">
           <div class="relative aspect-[4/3] overflow-hidden bg-botanical-900">
-            <img src="/assets/img/patterns/pattern-02.svg"
+            <img src="/assets/img/patterns/pattern-03.svg"
                  alt="" aria-hidden="true"
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
@@ -614,9 +615,9 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
             <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink-500">A university botanic garden in the Berkeley hills renting ceremony and reception spaces, including the historic Julia Morgan Hall.</p>
 
             <dl class="mt-auto grid grid-cols-3 gap-1 border-t border-line pt-4 text-center">
-              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Seats</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
-              <div class="border-x border-line"><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Layout</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
-              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Budget</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
+              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Seats</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
+              <div class="border-x border-line"><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Layout</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
+              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Budget</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
             </dl>
           </div>
         </article>
@@ -630,7 +631,7 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
                  data-price=""
                  class="card-interactive group relative flex flex-col overflow-hidden">
           <div class="relative aspect-[4/3] overflow-hidden bg-botanical-900">
-            <img src="/assets/img/patterns/pattern-03.svg"
+            <img src="/assets/img/patterns/pattern-04.svg"
                  alt="" aria-hidden="true"
                  width="800" height="600" loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-[1.04]">
@@ -649,9 +650,9 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
             <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink-500">A native-plant botanic garden in Claremont that publishes a facility rental packet covering venue options, policies and catering.</p>
 
             <dl class="mt-auto grid grid-cols-3 gap-1 border-t border-line pt-4 text-center">
-              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Seats</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
-              <div class="border-x border-line"><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Layout</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
-              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-300">Budget</dt><dd class="mt-0.5 text-sm font-medium text-ink-300" title="Not published by the venue">&mdash;</dd></div>
+              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Seats</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
+              <div class="border-x border-line"><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Layout</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
+              <div><dt class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Budget</dt><dd class="mt-0.5 text-sm font-medium text-ink-500" title="Not published by the venue">&mdash;</dd></div>
             </dl>
           </div>
         </article>
@@ -667,13 +668,13 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
       <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
 
         <div>
-          <a href="/" class="flex items-center gap-2.5" aria-label="Glasshouse Weddings — home">
+          <a href="/" class="flex items-center gap-2.5" aria-label="GreenhouseVenues — home">
             <span class="grid size-9 place-items-center rounded-lg bg-champagne-500 text-botanical-950">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3 3 10v11h18V10z"/><path d="M12 3v18M3 10h18M7.5 6.5 7.5 21M16.5 6.5V21M3 15.5h18"/>
               </svg>
             </span>
-            <span class="font-display text-lg font-bold leading-none text-white">Glasshouse<span class="text-champagne-500">Weddings</span></span>
+            <span class="font-display text-lg font-bold leading-none text-white">Greenhouse<span class="text-champagne-500">Venues</span></span>
           </a>
           <p class="mt-5 max-w-sm text-sm leading-relaxed text-botanical-200/80">
             A directory of greenhouse, glasshouse and conservatory wedding venues.
@@ -715,6 +716,7 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
           <ul class="mt-5 space-y-3 text-sm">
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/greenhouse-wedding-cost/">Greenhouse wedding cost</a></li>
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/rain-proof-outdoor-wedding-venues/">Rain-proof outdoor wedding venues</a></li>
+            <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/small-greenhouse-wedding-venues/">Small greenhouse wedding venues</a></li>
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/blog/">All guides</a></li>
             <li><a class="text-botanical-200/85 transition-colors hover:text-white" href="/methodology/">Editorial standards</a></li>
           </ul>
@@ -723,8 +725,8 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
 
       <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-botanical-200/60 md:flex-row md:items-center md:justify-between">
         <p>
-          &copy; <span data-year>2026</span> Glasshouse Weddings.
-          30 listings across 16 states and regions.
+          &copy; <span data-year>2026</span> GreenhouseVenues.
+          36 listings across 22 states and regions.
           No paid placements.
         </p>
         <p>
@@ -738,5 +740,6 @@ We're considering Lauritzen Gardens for our wedding and wanted to check a few th
   <script defer src="/assets/js/venue-filters.js"></script>
   <script defer src="/assets/js/shortlist.js"></script>
   <script defer src="/assets/js/checklist.js"></script>
+  <script defer src="/assets/js/recent.js"></script>
 </body>
 </html>

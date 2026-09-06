@@ -58,7 +58,7 @@ def _article_shell(*, path, title, desc, h1, dek, section, read, published, modi
               <a class="group flex gap-3" href="{href}">
                 <span class="mt-1 size-1.5 shrink-0 rounded-full bg-champagne-500"></span>
                 <span>
-                  <span class="block text-[10px] font-bold uppercase tracking-wider text-champagne-600">{cat}</span>
+                  <span class="block text-[10px] font-bold uppercase tracking-wider text-champagne-700">{cat}</span>
                   <span class="block text-sm font-medium leading-snug text-ink-700 transition-colors group-hover:text-botanical-800">{label}</span>
                 </span>
               </a>
@@ -74,8 +74,8 @@ def _article_shell(*, path, title, desc, h1, dek, section, read, published, modi
     <header class="shell pb-10 pt-8">
       <div class="max-w-3xl">
         <div class="flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.16em]">
-          <span class="text-champagne-600">{section}</span>
-          <span class="text-ink-300">{read} min read</span>
+          <span class="text-champagne-700">{section}</span>
+          <span class="text-ink-500">{read} min read</span>
         </div>
 
         <h1 class="mt-4 font-display text-[2.25rem] font-semibold leading-[1.06] sm:text-5xl lg:text-[3.4rem]">{h1}</h1>
@@ -84,7 +84,7 @@ def _article_shell(*, path, title, desc, h1, dek, section, read, published, modi
 
         <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 text-sm">
           <p class="font-semibold text-botanical-900">By {AUTHOR}</p>
-          <p class="text-ink-400">
+          <p class="text-ink-500">
             Published <time datetime="{published[:10]}">{published[:10]}</time> &middot;
             Updated <time datetime="{modified[:10]}">{modified[:10]}</time>
           </p>
@@ -437,13 +437,115 @@ def rainproof_guide(all_venues):
         words=1050, all_venues=all_venues, image="/assets/img/patterns/wide-02.svg")
 
 
+# ===================================================== SMALL VENUES GUIDE ====
+def small_venues_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>&ldquo;Small&rdquo; is about the room, not just the guest count &mdash; a propagation house built for 40 beats a ballroom half-filled.</li>
+            <li>Municipal and university glasshouses release small rooms and weekday dates more often than private estates do.</li>
+            <li>Ask about a minimum guest count as well as a maximum: some venues will not book below a certain number.</li>
+            <li>A side room inside a larger conservatory is often cheaper than the same conservatory&rsquo;s main hall.</li>
+          </ul>
+        </aside>
+
+        <h2 id="what-counts">What &ldquo;small&rdquo; actually means here</h2>
+        <p>
+          There is no industry-standard cutoff, so this directory uses under 50 guests as the useful
+          line for a small or micro-wedding &mdash; small enough that the room itself becomes part of
+          the decision, not just the price. A glasshouse built to seat 200 can feel like a warehouse at
+          40 people. A propagation house or fern room built for 30 to 60 reads as generous at that
+          size, because it was designed for it.
+        </p>
+        <p>
+          That distinction matters more for glasshouses than for most venue types. Planting beds,
+          potting benches and structural piers take up floor area that a plain hall would not lose,
+          so a room&rsquo;s <em>character</em> at 40 guests depends heavily on whether 40 was ever the
+          number it was built around.
+        </p>
+
+        <h2 id="where">Where small greenhouse wedding venues actually are</h2>
+        <p>
+          Three patterns show up repeatedly:
+        </p>
+        <ul>
+          <li><strong>Municipal and university glasshouses.</strong> Built for teaching and propagation rather than events, they are usually smaller than a private estate conservatory, and they release weekday dates more readily because the calendar is not driven by wedding demand alone.</li>
+          <li><strong>The side room inside a larger garden.</strong> Many botanical gardens with a grand main conservatory also have a smaller attached house &mdash; an orchid room, a fern house, a working greenhouse &mdash; that is not always on the main wedding page. It is worth asking about directly.</li>
+          <li><strong>An off-peak booking of a normally-large room.</strong> A hall built for 200 is not architecturally small, but a weekday morning micro-wedding there can be priced and run like one, with a simplified setup and a fraction of the usual minimum spend.</li>
+        </ul>
+
+        <h2 id="cost">Do small venues actually cost less?</h2>
+        <p>
+          Usually, but not because of the guest count alone. Two things do the real work: who owns the
+          building, and which day you book. A municipal or university glasshouse charges a hire rate
+          rather than a market price, and a weekday or off-season date is discounted almost everywhere
+          &mdash; both apply more easily to a small wedding than a large one, since a 40-guest booking
+          is easier to fit into a quiet Tuesday than a 200-guest one is. The building itself being
+          small is a smaller factor than either. Our
+          <a href="/blog/greenhouse-wedding-cost/">cost guide</a> covers how to structure that
+          comparison venue by venue.
+        </p>
+
+        <h2 id="ask">What to ask that a large-wedding checklist will not cover</h2>
+        <ol>
+          <li><strong>Is there a minimum guest count, not just a maximum?</strong> Some private venues will not book under a set number regardless of how the room reads at that size, because their pricing model assumes a minimum spend per head.</li>
+          <li><strong>Is the small room a stand-alone booking?</strong> A side room inside a larger conservatory may come with shared access, shared restrooms, or public visitors passing through during the day &mdash; ask what exclusivity actually means for that specific space.</li>
+          <li><strong>What does a weekday or off-season date actually save?</strong> Ask for the number, not a general assurance of &ldquo;a discount&rdquo; &mdash; venues that are used to micro-weddings usually have a specific weekday rate already worked out.</li>
+          <li><strong>Is there an elopement or micro-wedding package that is not on the main wedding page?</strong> Several gardens keep one separate from their full-buyout wedding offering, priced and staffed differently.</li>
+        </ol>
+
+        <h2 id="find">Finding one</h2>
+        <p>
+          Filter the directory to <a href="/venues/?capacity=micro">under 50 guests</a> once a
+          listing&rsquo;s capacity is confirmed, or filter by
+          <a href="/venues/?type=greenhouse">working greenhouse</a> and
+          <a href="/venues/?type=botanical-garden">botanical garden</a> venue types, which is where
+          most of the smaller rooms above turn up. Then ask the four questions above directly &mdash;
+          they will tell you more than the headline capacity will.
+        </p>
+        <p>
+          Start with <a href="/venues/">every listing</a>, or go by state:
+          <a href="/venues/california/">California</a>,
+          <a href="/venues/texas/">Texas</a>,
+          <a href="/venues/florida/">Florida</a>,
+          <a href="/venues/new-york/">New York</a>,
+          <a href="/venues/north-carolina/">North Carolina</a>.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/small-greenhouse-wedding-venues/",
+        title="Small Greenhouse Wedding Venues: What to Ask and Where to Look",
+        desc=("Finding a small greenhouse wedding venue for under 50 guests: what actually makes a "
+              "glasshouse work at a small size, where micro-wedding rooms hide inside larger gardens, "
+              "and the questions a large-wedding checklist will not cover."),
+        h1="Small greenhouse wedding venues: what to ask and where to look",
+        dek=("A room built for 200 does not become intimate just because fewer people show up. Here "
+             "is what actually makes a small greenhouse wedding work, and how to find one."),
+        section="Micro-weddings", read=8,
+        published="2026-09-06T09:00:00-04:00", modified="2026-09-06T09:00:00-04:00",
+        toc=[("what-counts", "What 'small' actually means"),
+             ("where", "Where small venues actually are"),
+             ("cost", "Do small venues cost less?"),
+             ("ask", "What to ask"),
+             ("find", "Finding one")],
+        body=body, faq_items=faqs.BLOG_SMALL_VENUES,
+        faq_heading="Small greenhouse wedding venue FAQs",
+        related=[("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/blog/rain-proof-outdoor-wedding-venues/", "Rain-proof outdoor wedding venues", "Planning"),
+                 ("/venues/?capacity=micro", "Browse under-50 listings", "Directory")],
+        keywords=["small greenhouse wedding venues", "greenhouse wedding venues",
+                  "botanical garden wedding venues"],
+        words=1050, all_venues=all_venues, image="/assets/img/patterns/square-01.svg")
+
+
 # ============================================================= BLOG INDEX ====
 def blog_index(all_venues):
     st = stats(all_venues)
     path = "/blog/"
-    title = "Greenhouse Wedding Planning Guides | Costs &amp; Rain-Proof Venues"
+    title = "Greenhouse Wedding Planning Guides | Costs, Rain-Proof &amp; Small Venues"
     desc = ("Planning guides for greenhouse, glasshouse and conservatory weddings: how venue costs "
-            "are actually built, and how to find a genuinely rain-proof outdoor wedding venue.")
+            "are actually built, how to find a genuinely rain-proof venue, and where small greenhouse "
+            "wedding venues for under 50 guests actually are.")
 
     posts = [
         ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost: how to work out your real number",
@@ -453,6 +555,10 @@ def blog_index(all_venues):
          "Rain-proof outdoor wedding venues: the garden without the weather decision",
          "What the phrase should mean, the gaps rain finds in a guest journey, and how glass compares with a marquee.",
          "Planning", "8 min", "2026-09-06", "wide-02"),
+        ("/blog/small-greenhouse-wedding-venues/",
+         "Small greenhouse wedding venues: what to ask and where to look",
+         "What actually makes a glasshouse work at a small size, and where micro-wedding rooms hide inside larger gardens.",
+         "Micro-weddings", "8 min", "2026-09-06", "square-01"),
     ]
 
     blog_ld = {
@@ -478,14 +584,14 @@ def blog_index(all_venues):
           </div>
           <div class="flex flex-1 flex-col p-6">
             <div class="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.14em]">
-              <span class="text-champagne-600">{cat}</span>
-              <span class="text-ink-300">{read} read</span>
+              <span class="text-champagne-700">{cat}</span>
+              <span class="text-ink-500">{read} read</span>
             </div>
             <h2 class="mt-3 text-xl leading-snug">
               <a href="{href}" class="after:absolute after:inset-0 after:content-['']">{t}</a>
             </h2>
             <p class="mt-2 text-sm leading-relaxed text-ink-500">{dek}</p>
-            <p class="mt-4 text-xs text-ink-300">Updated <time datetime="{d}">{d}</time></p>
+            <p class="mt-4 text-xs text-ink-500">Updated <time datetime="{d}">{d}</time></p>
           </div>
         </article>""" for href, t, dek, cat, read, d, img in posts)
 
@@ -498,13 +604,13 @@ def blog_index(all_venues):
         Greenhouse wedding planning guides
       </h1>
       <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-500">
-        Practical guides to getting married under glass. Two published so far &mdash; we would rather
-        publish two we can stand behind than twenty padded with numbers we cannot source.
+        Practical guides to getting married under glass. Three published so far &mdash; we would
+        rather publish three we can stand behind than thirty padded with numbers we cannot source.
       </p>
     </header>
 
     <section class="shell" aria-label="All guides">
-      <div class="grid gap-6 sm:grid-cols-2">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 {cards_html}
       </div>
 
@@ -603,7 +709,7 @@ def methodology(all_venues):
 
         <form class="not-prose mt-6 grid gap-4 rounded-card border border-line bg-shell p-6 sm:grid-cols-2" action="/api/suggest" method="post">
           <div class="sm:col-span-2">
-            <label class="label" for="s-url">Venue&rsquo;s events page URL <span class="text-champagne-600">*</span></label>
+            <label class="label" for="s-url">Venue&rsquo;s events page URL <span class="text-champagne-700">*</span></label>
             <input class="field" id="s-url" name="url" type="url" required placeholder="https://">
           </div>
           <div>
@@ -621,7 +727,7 @@ def methodology(all_venues):
           </div>
           <div class="sm:col-span-2">
             <button type="submit" class="btn-primary">Send</button>
-            <p class="mt-3 text-xs text-ink-400">
+            <p class="mt-3 text-xs text-ink-500">
               This form has no backend in this build &mdash; point <code>action</code> at your own
               handler before going live.
             </p>
