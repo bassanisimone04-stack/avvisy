@@ -274,6 +274,13 @@ def build_all():
     write("blog/rain-proof-outdoor-wedding-venues/index.html", page_content.rainproof_guide(VENUES))
     write("blog/small-greenhouse-wedding-venues/index.html", page_content.small_venues_guide(VENUES))
     write("methodology/index.html", page_content.methodology(VENUES))
+    write("privacy/index.html", page_content.privacy_policy(VENUES))
+    write("terms/index.html", page_content.terms_of_use(VENUES))
+
+    # 404.html at the repo root (not a directory) — GitHub Pages, Netlify,
+    # Cloudflare Pages and S3 all serve this file automatically for any
+    # unmatched path. It is deliberately noindex and left out of the sitemap.
+    write("404.html", page_content.not_found_page(VENUES))
 
     # -------------------------------------------------- shortlist & compare --
     # A client-only tool (see build/page_shortlist.py + assets/js/shortlist.js).
@@ -294,7 +301,7 @@ def build_all():
     # ----------------------------------------------------------- sitemap -----
     urls = ["/", "/venues/", "/italy-destination-weddings/", "/blog/",
             "/blog/greenhouse-wedding-cost/", "/blog/rain-proof-outdoor-wedding-venues/",
-            "/blog/small-greenhouse-wedding-venues/", "/methodology/"]
+            "/blog/small-greenhouse-wedding-venues/", "/methodology/", "/privacy/", "/terms/"]
     urls += [f"/venues/{s}/" for s in state_slugs]
     urls += [C.venue_url(v) for v in VENUES]
     body = "\n".join(f"""  <url>

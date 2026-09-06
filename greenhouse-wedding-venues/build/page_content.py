@@ -6,6 +6,7 @@ from shared import faq_ld, faq_section, ad_slot, checklist
 import faqs
 
 AUTHOR = f"{NAME} editorial"
+LAST_UPDATED = "September 6, 2026"
 
 
 def _breadcrumb_ld(crumbs):
@@ -758,5 +759,227 @@ def methodology(all_venues):
         </div>
       </aside>
     </div>
+  </main>
+""" + footer(st)
+
+
+def privacy_policy(all_venues):
+    """What actually happens to a visitor's data — no more, no less. Every claim here
+    is checked against the codebase: no server, no cookies, no analytics, no ad
+    network wired up yet. If that changes, this page has to change with it."""
+    st = stats(all_venues)
+    path = "/privacy/"
+    title = "Privacy Policy | " + NAME
+    desc = ("What this site collects (almost nothing) and what it does not: no accounts, "
+            "no cookies, no analytics, and no data leaves your browser.")
+    crumbs = [("Home", "/"), ("Privacy policy", None)]
+
+    page_ld = {
+        "@context": "https://schema.org", "@type": "WebPage",
+        "@id": f"{BASE}{path}#webpage", "url": f"{BASE}{path}",
+        "name": title, "description": desc,
+        "isPartOf": {"@id": f"{BASE}/#website"},
+    }
+    extra = ld(page_ld, "Schema: WebPage") + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
+
+    return head(title, desc, path, og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header() + f"""
+  <main id="main">
+{breadcrumbs(crumbs)}
+    <header class="shell pb-10 pt-8">
+      <p class="eyebrow-gold">Legal</p>
+      <h1 class="mt-3 max-w-3xl font-display text-[2.25rem] font-semibold leading-[1.08] sm:text-5xl">
+        Privacy policy
+      </h1>
+      <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-500">
+        This is a static directory with no user accounts and no server-side database of
+        visitors. Here is exactly what that means in practice, not a template.
+      </p>
+    </header>
+
+    <div class="shell pb-16">
+      <article class="prose-editorial mx-auto max-w-2xl">
+        <h2 id="what-we-collect">What this site collects</h2>
+        <p>
+          Nothing, on our end. There is no account to create, no visitor database, and no
+          analytics or tracking script loaded on any page &mdash; check the page source if you
+          want to confirm that yourself. The <a href="/methodology/#submit">venue suggestion
+          form</a> is the one place you can type something in; this build has no backend
+          wired up to receive it yet, so nothing is sent or stored until that changes, and
+          this page will be updated first if it does.
+        </p>
+
+        <h2 id="local-storage">What your browser stores for you</h2>
+        <p>
+          A few features &mdash; your <a href="/shortlist/">shortlist</a>, the venue-comparison
+          table, the booking checklists on guide pages, and the &ldquo;recently viewed&rdquo;
+          row on the homepage &mdash; save small pieces of data using your browser&rsquo;s
+          <code>localStorage</code>. That data:
+        </p>
+        <ul>
+          <li>never leaves your device or reaches us in any form;</li>
+          <li>is not a cookie, and is not shared across websites;</li>
+          <li>persists only in the browser you used, until you clear it yourself (each
+              feature has a &ldquo;clear&rdquo; control, or you can clear your browser&rsquo;s
+              site data); and</li>
+          <li>disappears entirely in a private/incognito window once that window closes.</li>
+        </ul>
+
+        <h2 id="cookies">Cookies</h2>
+        <p>
+          This site does not set any cookies of its own.
+        </p>
+
+        <h2 id="advertising">Advertising</h2>
+        <p>
+          The site currently carries reserved, unsold advertising space and no active ad
+          network. If that changes, an ad provider may set its own cookies or use its own
+          tracking to serve and measure ads &mdash; and this policy will be rewritten to name
+          that provider and explain your choices before it happens, not after.
+        </p>
+
+        <h2 id="outbound-links">Links to venue websites</h2>
+        <p>
+          Every listing links out to a venue&rsquo;s own website, which is a separate business
+          we do not control. Their privacy practices are their own &mdash; check their policy
+          before sharing anything with them directly.
+        </p>
+
+        <h2 id="children">Children&rsquo;s privacy</h2>
+        <p>
+          This site is about wedding venues and is not directed at children. We do not
+          knowingly collect information from anyone, of any age, because we do not collect
+          information from visitors at all.
+        </p>
+
+        <h2 id="changes">Changes to this policy</h2>
+        <p>
+          If what this site collects ever changes &mdash; an analytics tool, an ad network, a
+          working contact form that stores submissions &mdash; this page will be rewritten to
+          say so plainly, with a new date below, before that change ships.
+        </p>
+        <p class="text-sm text-ink-500">Last updated: {LAST_UPDATED}.</p>
+      </article>
+    </div>
+  </main>
+""" + footer(st)
+
+
+def terms_of_use(all_venues):
+    """Plain terms for a free editorial directory: what the content is, what it isn't,
+    and the same no-liability-for-third-party-venues position already stated on
+    /methodology/, restated here in the form a terms page is expected to take."""
+    st = stats(all_venues)
+    path = "/terms/"
+    title = "Terms of Use | " + NAME
+    desc = ("The terms for using this free wedding venue directory: what the listings are, "
+            "what they are not, and where responsibility for a booking sits.")
+    crumbs = [("Home", "/"), ("Terms of use", None)]
+
+    page_ld = {
+        "@context": "https://schema.org", "@type": "WebPage",
+        "@id": f"{BASE}{path}#webpage", "url": f"{BASE}{path}",
+        "name": title, "description": desc,
+        "isPartOf": {"@id": f"{BASE}/#website"},
+    }
+    extra = ld(page_ld, "Schema: WebPage") + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
+
+    return head(title, desc, path, og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header() + f"""
+  <main id="main">
+{breadcrumbs(crumbs)}
+    <header class="shell pb-10 pt-8">
+      <p class="eyebrow-gold">Legal</p>
+      <h1 class="mt-3 max-w-3xl font-display text-[2.25rem] font-semibold leading-[1.08] sm:text-5xl">
+        Terms of use
+      </h1>
+      <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-500">
+        Short, because the site is simple: a free directory, not a booking platform.
+      </p>
+    </header>
+
+    <div class="shell pb-16">
+      <article class="prose-editorial mx-auto max-w-2xl">
+        <h2 id="what-this-is">What this site is</h2>
+        <p>
+          {NAME} is a free, editorial directory of greenhouse, glasshouse and conservatory
+          wedding venues. Listings are compiled from each venue&rsquo;s own website, as
+          described on <a href="/methodology/">how we source and verify listings</a>. Using
+          this site does not create any agreement between you and us beyond these terms.
+        </p>
+
+        <h2 id="not-a-booking-platform">This is not a booking platform</h2>
+        <p>
+          We do not take bookings, payments, deposits or commissions, and we are not a party
+          to any contract between you and a venue. Every listing links to the venue&rsquo;s
+          own events page; availability, pricing and terms come from the venue directly, and
+          only the venue can confirm them.
+        </p>
+
+        <h2 id="accuracy">Accuracy of listings</h2>
+        <p>
+          We source every fact we publish from a venue&rsquo;s own website and mark anything
+          unconfirmed as a dash rather than a guess &mdash; see
+          <a href="/methodology/">our sourcing rules</a>. Venues change their offerings,
+          pricing and policies without telling us, so always confirm directly with the venue
+          before relying on anything you read here.
+        </p>
+
+        <h2 id="no-warranty">No warranty</h2>
+        <p>
+          This site is provided as-is, without warranty of any kind. We do our best to keep
+          listings current and correct, but we make no guarantee that any listing is accurate,
+          complete or up to date at the moment you read it.
+        </p>
+
+        <h2 id="liability">Limitation of liability</h2>
+        <p>
+          To the extent permitted by law, {NAME} is not liable for any loss or damage arising
+          from your use of this site or your dealings with any listed venue, including
+          decisions made on the basis of information published here.
+        </p>
+
+        <h2 id="your-content">Content you send us</h2>
+        <p>
+          If you submit a correction, a removal request or a venue suggestion through the
+          <a href="/methodology/#submit">form on our methodology page</a>, you are giving us
+          permission to use that information to maintain the directory. Do not send us
+          anything confidential.
+        </p>
+
+        <h2 id="changes-terms">Changes to these terms</h2>
+        <p>
+          We may update these terms as the site changes. The date below reflects the last
+          revision.
+        </p>
+        <p class="text-sm text-ink-500">Last updated: {LAST_UPDATED}.</p>
+      </article>
+    </div>
+  </main>
+""" + footer(st)
+
+
+def not_found_page(all_venues):
+    """The 404 page. Most static hosts (GitHub Pages, Netlify, Cloudflare Pages, S3)
+    serve a root-level 404.html automatically for any unmatched path — see build.py."""
+    st = stats(all_venues)
+    title = "Page Not Found | " + NAME
+    desc = "This page does not exist. Browse the directory or search by state and venue type."
+
+    return head(title, desc, "/404.html", og_image="/assets/img/patterns/wide-02.svg",
+                robots="noindex,follow") + header() + f"""
+  <main id="main">
+    <section class="shell flex flex-col items-center py-24 text-center sm:py-32">
+      <p class="eyebrow-gold">404</p>
+      <h1 class="mt-3 max-w-xl font-display text-[2.25rem] font-semibold leading-[1.08] sm:text-5xl">
+        We couldn&rsquo;t find that page
+      </h1>
+      <p class="mt-5 max-w-md text-[17px] leading-relaxed text-ink-500">
+        The link may be old, or the listing may have been removed &mdash; we take venues out
+        of the directory when we can no longer confirm they host weddings.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a class="btn-primary" href="/">Back to the homepage</a>
+        <a class="btn-outline" href="/venues/">Browse every listing</a>
+      </div>
+    </section>
   </main>
 """ + footer(st)
