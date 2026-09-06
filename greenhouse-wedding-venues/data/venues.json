@@ -568,6 +568,36 @@
       "blend": "enclosed",
       "summary": "A glass conservatory attached to a hotel in Morristown, used for ceremonies that are booked together with a reception on site.",
       "last_verified": "2026-09-06"
+    },
+    {
+      "slug": "myriad-gardens-crystal-bridge",
+      "name": "Myriad Botanical Gardens — Crystal Bridge Conservatory",
+      "city": "Oklahoma City",
+      "state": "Oklahoma",
+      "state_slug": "oklahoma",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://myriadgardens.org/visit-us/rentals/inasmuch-foundation-crystal-bridge-conservatory/",
+      "capacity_seated": 100,
+      "price_tier": null,
+      "blend": "enclosed",
+      "summary": "A glass conservatory in downtown Oklahoma City renting ceremony seating for up to 100 guests, with the reception held separately in the garden's south lobby.",
+      "last_verified": "2026-09-06"
+    },
+    {
+      "slug": "roger-williams-park-botanical-center",
+      "name": "Roger Williams Park Botanical Center",
+      "city": "Providence",
+      "state": "Rhode Island",
+      "state_slug": "rhode-island",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://rogerwilliamsparkevents.com/the-botanical-center/",
+      "capacity_seated": 80,
+      "price_tier": null,
+      "blend": "enclosed",
+      "summary": "A city-run glass conservatory in Providence, kept at a constant 70 degrees, rented for wedding ceremonies and receptions after the park closes to the public.",
+      "last_verified": "2026-09-06"
     }
   ]
 }
