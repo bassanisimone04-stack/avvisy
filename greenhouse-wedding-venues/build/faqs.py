@@ -73,6 +73,33 @@ HOME = [
    'consular paperwork and a venue licensed by its comune, so check the requirements with the US '
    'Embassy in Italy early. See the '
    '<a href="/italy-destination-weddings/">greenhouse wedding venue Italy collection</a>.'),
+
+  ('What is the maximum guest capacity at a greenhouse wedding venue?',
+   'There is no category-wide ceiling — it runs from an intimate propagation house to a public palm '
+   'house that seats several hundred, and planting beds and structural piers eat more floor area than '
+   'a plain hall would lose. Confirmed capacities appear on each listing as we verify them against the '
+   'venue&rsquo;s own page; until then, ask the venue directly for the seated number with a dance '
+   'floor in place.'),
+
+  ('Do greenhouse wedding venues require in-house catering, or can we bring our own?',
+   'Both policies exist, and it is usually the single biggest lever on your budget. Private estate '
+   'conservatories more often require in-house catering with a minimum spend; public botanical gardens '
+   'and municipal greenhouses more often work from an approved-caterer list or allow outside catering '
+   'entirely. The policy is normally stated on the venue&rsquo;s own events page — confirm it before '
+   'the room, not after.'),
+
+  ('What is the best season for a greenhouse or conservatory wedding?',
+   'Spring and autumn suit most glasshouses best: enough daylight for the glass to earn its keep, '
+   'without the solar gain of high summer pushing the room past what its ventilation can manage. '
+   'Winter works well in a heated room and is often the cheapest date in the calendar. Ask any venue '
+   'what its ventilation and heating hold for the specific month you are considering.'),
+
+  ('Do we need a permit for a greenhouse wedding, and does it differ for a botanical garden versus a private venue?',
+   'Usually the venue holds whatever permit its use requires and folds that into your booking — but '
+   'the process differs by ownership. A public botanical garden typically operates under a municipal '
+   'or institutional events policy, with fixed load-in windows and an approved-vendor list already '
+   'built in; a private greenhouse or estate conservatory handles its own permitting and can usually '
+   'offer more flexibility. Ask each venue directly whether any part of the permitting is left to you.'),
 ]
 
 

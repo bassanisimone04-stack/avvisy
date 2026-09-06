@@ -5,10 +5,9 @@ from cards import cards, stats, TYPE_LABEL, unconfirmed_notice
 from shared import faq_ld, faq_section, section_heading
 import faqs
 
-TITLE = "Greenhouse Wedding Venues | Glasshouse &amp; Conservatory Directory"
-DESC = ("A directory of greenhouse, glasshouse and conservatory wedding venues in the US and Italy. "
-        "Every listing links to the venue's own events page — including botanical garden wedding "
-        "venues and rain-proof, fully enclosed rooms.")
+TITLE = "Greenhouse Wedding Venues in the US | GreenhouseVenues"
+DESC = ("A directory of glasshouse, conservatory and botanical garden wedding venues in the US and "
+        "Italy, each linked straight to the venue's own events page.")
 
 
 def build(venues):
@@ -90,15 +89,15 @@ def build(venues):
           </p>
 
           <h1 class="mt-6 font-display text-[2.6rem] font-semibold leading-[1.05] text-white sm:text-6xl lg:text-[4.1rem]">
-            Greenhouse wedding venues,
-            <span class="block text-champagne-400">sourced, not scraped.</span>
+            Greenhouse wedding venues
+            <span class="block text-champagne-400">for every season, every state.</span>
           </h1>
 
           <p class="mt-6 max-w-xl text-lg leading-relaxed text-botanical-100/85">
             A directory of <strong class="font-semibold text-white">glasshouse, conservatory and
-            botanical garden wedding venues</strong>. Every listing links straight to the venue&rsquo;s
-            own events page &mdash; and anything we have not confirmed there is marked unconfirmed
-            rather than guessed.
+            botanical garden wedding venues</strong>, sourced rather than scraped. Every listing links
+            straight to the venue&rsquo;s own events page &mdash; and anything we have not confirmed
+            there is marked unconfirmed rather than guessed.
           </p>
 
           <form action="/venues/" method="get" class="mt-9 rounded-2xl border border-white/15 bg-white/10 p-2 backdrop-blur-md sm:flex sm:items-end sm:gap-2">
@@ -157,6 +156,34 @@ def build(venues):
             </dl>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= AUTHORITY INTRO ================= -->
+    <section class="shell py-16 lg:py-20" aria-labelledby="intro-heading">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="eyebrow-gold justify-center">Greenhouse &amp; conservatory weddings</p>
+        <h2 id="intro-heading" class="mt-3 text-3xl sm:text-4xl">
+          An independent directory, not a lead-generation form
+        </h2>
+        <p class="mt-6 text-left text-[17px] leading-relaxed text-ink-500 sm:text-center">
+          GreenhouseVenues is an editorial directory of glasshouse, conservatory, orangery and
+          botanical garden wedding venues across the United States and Italy. We built it because
+          searching for a greenhouse wedding venue usually surfaces sponsored listings, outdated
+          photos and pricing the venue no longer honours. Every listing here links directly to the
+          venue&rsquo;s own events page, so you are always one click from the source &mdash; not a
+          form that sells your details on. We track {st['total']} venues across {st['states']} states
+          and regions, and we add more only once we can verify them against the venue&rsquo;s own
+          website; nothing is invented to fill a gap, and any detail we have not confirmed is shown as
+          a dash rather than a guess. Because &ldquo;greenhouse&rdquo; covers several genuinely
+          different buildings &mdash; a working greenhouse, a glazed conservatory, a masonry orangery,
+          a domed palm house, a modern atrium or an Italian <em>limonaia</em> &mdash; we explain what
+          separates them, so you know what you are actually booking. Whether you are weighing a
+          botanical garden&rsquo;s approved-caterer list, comparing a fully enclosed glasshouse against
+          a tented reception for weather certainty, or planning a destination wedding in Italy, this
+          directory exists to get you to the right venue&rsquo;s own page faster, with nothing
+          sponsored in between.
+        </p>
       </div>
     </section>
 

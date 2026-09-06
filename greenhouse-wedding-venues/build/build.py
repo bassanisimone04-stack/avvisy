@@ -50,9 +50,27 @@ RELATED_ALL = [(s["name"], f"/venues/{s['slug']}/") for s in STATE_NAV] + [
 ]
 
 
-def state_body(name):
+# One extra sentence per state, appended to the "reading" section below. Each is a
+# real, generally-known climate or seasonal fact — never a claim about a specific
+# venue we have not confirmed — used only where it genuinely changes what to ask.
+STATE_CLIMATE_NOTE = {
+    "california": ("California&rsquo;s coastal fog and dry inland heat sit only a short drive apart, "
+                    "so ventilation is what decides whether a glasshouse works in July, not the "
+                    "state&rsquo;s reputation for good weather &mdash; ask what a venue&rsquo;s roof "
+                    "vents and shade systems hold at midday."),
+    "texas": ("Texas summers push glasshouse ventilation to its limit, so ask specifically about "
+              "opening roof vents, side louvers and backup mechanical cooling before booking a "
+              "summer date."),
+    "florida": ("Florida&rsquo;s hurricane season runs June through November, which makes a "
+                "venue&rsquo;s storm and rain-contingency policy worth asking about alongside the "
+                "usual ventilation and heating questions."),
+}
+
+
+def state_body(name, slug=None):
     """Body copy for a state page. Everything here is true of the venue category
     anywhere — the state name localises the page without inventing local facts."""
+    climate_note = STATE_CLIMATE_NOTE.get(slug, "")
     return [
         ("types", f"The kinds of greenhouse wedding venue you will find in {name}",
          f"""        <p>
@@ -84,7 +102,10 @@ def state_body(name):
           conversation with the wrong expectation, and a directory that repeats a price from a
           third-party listing site is usually quoting something out of date. See
           <a href="/methodology/">how we source listings</a>.
-        </p>"""),
+        </p>{f'''
+        <p>
+          {climate_note}
+        </p>''' if climate_note else ''}"""),
 
         ("ask", f"What to ask a {name} venue before you book",
          """        <p>
@@ -173,7 +194,7 @@ def build_all():
             us</a> and we will check it.</p>""",
             crumbs=[("Home", "/"), ("Venues", "/venues/"), (name, None)],
             venue_list=vs, all_venues=VENUES, show_state=False,
-            body_sections=state_body(name),
+            body_sections=state_body(name, slug),
             faq_items=faqs.state(name, slug), nav_key="venues",
             related=[r for r in RELATED_ALL if r[1] != f"/venues/{slug}/"]))
 
