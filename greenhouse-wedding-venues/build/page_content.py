@@ -264,6 +264,15 @@ def cost_guide(all_venues):
           <a href="/blog/rain-proof-outdoor-wedding-venues/">rain-proof outdoor wedding venues</a>.
         </p>
 
+        <figure class="my-10">
+          <img src="/assets/img/blog/cost-guide-inline-2.jpg"
+               alt="An outdoor wedding ceremony under a white marquee tent, with rows of chairs and an aisle."
+               width="1200" height="750" loading="lazy" decoding="async"
+               class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>A marquee is not a venue on its own &mdash; it is the first item in a build
+          that a glazed room already includes.</figcaption>
+        </figure>
+
         <h2 id="cheaper">Where the savings actually are</h2>
         <ol>
           <li><strong>Move off Saturday.</strong> The largest single lever at almost every venue.</li>
@@ -522,6 +531,15 @@ def small_venues_guide(all_venues):
           <li><strong>What does a weekday or off-season date actually save?</strong> Ask for the number, not a general assurance of &ldquo;a discount&rdquo; &mdash; venues that are used to micro-weddings usually have a specific weekday rate already worked out.</li>
           <li><strong>Is there an elopement or micro-wedding package that is not on the main wedding page?</strong> Several gardens keep one separate from their full-buyout wedding offering, priced and staffed differently.</li>
         </ol>
+
+        <figure class="my-10">
+          <img src="/assets/img/blog/small-venues-guide-inline-2.jpg"
+               alt="A small wedding table set for a handful of guests, with candles and a flower arrangement."
+               width="1200" height="750" loading="lazy" decoding="async"
+               class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>A table set for a handful of guests, not a hall built for a hundred &mdash;
+          the room should match the number, not the other way around.</figcaption>
+        </figure>
 
         <h2 id="find">Finding one</h2>
         <p>
