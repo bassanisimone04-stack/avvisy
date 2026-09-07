@@ -2,7 +2,7 @@
 """Directory pages: /venues/, state pages, the Italy hub, and venue detail pages."""
 from chrome import head, header, footer, ld, breadcrumbs, BASE, STATE_NAV
 from cards import cards, stats, venue_url, TYPE_LABEL, BLEND_SHORT, PRICE_GLYPH, unconfirmed_notice
-from shared import faq_ld, faq_section, ad_slot, checklist, shortlist_button
+from shared import faq_ld, faq_section, checklist, shortlist_button
 import filters
 import faqs
 
@@ -88,7 +88,6 @@ def directory_page(*, path, title, desc, h1, kicker, intro, crumbs, venue_list, 
 {cards(venue_list, priority_count=3)}          </div>
 
 {filters.empty_state()}
-{ad_slot("Leaderboard 728&times;90", 90, cls="mt-8")}
         </div>
       </div>
 
@@ -108,7 +107,6 @@ def directory_page(*, path, title, desc, h1, kicker, intro, crumbs, venue_list, 
 {related_links}
             </ul>
           </div>
-{ad_slot("Sidebar 300&times;250", 250, tag="div")}
         </aside>
       </div>
     </section>
@@ -330,8 +328,6 @@ def venue_page(v, similar, all_venues):
           </p>
           <a class="btn-primary mt-4 w-full" href="/methodology/#corrections">Report a correction</a>
         </section>
-
-{ad_slot("Sidebar 300&times;250", 250, tag="div")}
       </aside>
     </div>
 

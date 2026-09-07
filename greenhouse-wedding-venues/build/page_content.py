@@ -2,7 +2,7 @@
 """Editorial pages: the guides hub, two guides, and the methodology page."""
 from chrome import head, header, footer, ld, breadcrumbs, BASE, NAME
 from cards import stats
-from shared import faq_ld, faq_section, ad_slot, checklist
+from shared import faq_ld, faq_section, checklist
 import faqs
 
 AUTHOR = f"{NAME} editorial"
@@ -135,8 +135,6 @@ def _article_shell(*, path, title, desc, h1, dek, section, read, published, modi
           </p>
           <a class="btn-gold mt-4 w-full" href="/venues/">See the listings</a>
         </div>
-
-{ad_slot("Sidebar 300&times;600", 600, tag="div")}
       </aside>
     </div>
 
@@ -614,8 +612,6 @@ def blog_index(all_venues):
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 {cards_html}
       </div>
-
-{ad_slot("Leaderboard 728&times;90", 90, cls="mt-10")}
     </section>
 
 {faq_section(faqs.BLOG_INDEX, heading="Greenhouse wedding questions", kicker="Start here",

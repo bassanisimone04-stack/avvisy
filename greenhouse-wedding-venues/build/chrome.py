@@ -54,6 +54,9 @@ def head(title, description, canonical, *, og_image, og_type="website", extra=""
   <link rel="stylesheet" href="/assets/css/site.css">
 
   <link rel="icon" href="/assets/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <script>document.documentElement.classList.add('js');</script>
   <script defer src="/assets/js/site.js"></script>
 {extra}</head>

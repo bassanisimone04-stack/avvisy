@@ -340,5 +340,7 @@ content-hashed filenames if you add a CDN in front of this.
 5. **Replace the decorative patterns** with licensed photography, give it
    descriptive alt text, and remove the "No photo on file" label in
    `build/cards.py`.
-6. **Fill the ad slots or remove them.** They currently render as empty reserved
-   boxes labelled "unsold".
+6. **Ad slots were removed** (not just emptied) ahead of launch — no network to
+   wire up, no point shipping dead reserved space. `shared.ad_slot()` still
+   exists and is documented; drop a call back into `page_content.py` /
+   `page_directory.py` wherever you want one if you sell inventory later.

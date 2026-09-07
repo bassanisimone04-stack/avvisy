@@ -351,6 +351,23 @@ Disallow: /api/
 Sitemap: {BASE}/sitemap.xml
 """)
 
+    # ------------------------------------------------------ web app manifest -
+    # Lets mobile browsers add a home-screen icon with the right name/colors.
+    # Icons are pre-rendered PNGs in assets/img/brand/ (see icon-192.png,
+    # icon-512.png) — regenerate them from favicon.svg if the mark changes.
+    write("site.webmanifest", json.dumps({
+        "name": f"{NAME} — Greenhouse & Conservatory Wedding Venues",
+        "short_name": NAME,
+        "start_url": "/",
+        "display": "standalone",
+        "background_color": "#F8F9FA",
+        "theme_color": "#1B4332",
+        "icons": [
+            {"src": "/assets/img/brand/icon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": "/assets/img/brand/icon-512.png", "sizes": "512x512", "type": "image/png"},
+        ],
+    }, ensure_ascii=False, indent=2) + "\n")
+
     st = C.stats(VENUES)
     print(f"\n{len(urls)} pages · {st['total']} listings · {st['states']} states and regions")
     print(f"confirmed capacity: {st['with_capacity']}/{st['total']} · "
