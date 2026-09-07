@@ -9,7 +9,8 @@ matching the conventions of the sibling directory projects in this repo.
 ```bash
 npm install
 npm run dev     # http://localhost:3000
-npm run build   # production build (currently 31 static pages)
+npm run build   # production build
+npm test        # outreach engine unit tests
 ```
 
 ## Design system
@@ -62,6 +63,7 @@ still works. Adding keys turns features on progressively — see
 | Billing | `src/lib/stripe.ts`, `src/app/api/stripe/{checkout,webhook}/route.ts` |
 | Dashboard | `src/app/dashboard`, `src/components/{ZipCodeEditor,UpgradeButton}.tsx` |
 | Outreach generator | `scripts/outreach.mjs`, `scripts/outreach/` |
+| Tests | `tests/outreach.test.mjs` (node:test, no dependencies) |
 
 Public directory reads go through a **session-less** Supabase client
 (`supabase/public.ts`) rather than the cookie-backed one. Calling `cookies()`

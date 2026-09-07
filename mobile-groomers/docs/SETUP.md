@@ -113,9 +113,23 @@ server resolves it to a price ID.
   IP used for lead rate limiting, so the hashes are not a reversible lookup
   over the small IPv4 space.
 - Re-enable email confirmation in Supabase **Authentication → Providers**.
-- Point `SITE_URL` in `src/lib/site-config.ts` at the real domain.
+- Leave `NEXT_PUBLIC_SITE_URL` unset in production — it falls back to the real
+  domain. Preview deploys derive their own origin from `NEXT_PUBLIC_VERCEL_URL`
+  and are served `Disallow: /`, so a staging copy never competes with
+  production for the same queries.
 
 ---
+
+## Tests
+
+```bash
+npm test
+```
+
+Covers the outreach engine — CSV parsing, template rendering, and every
+cadence rule. Those rules are the ones that decide whether someone who
+unsubscribed gets emailed again, so they are the part worth guarding against
+a silent regression.
 
 ## What runs where
 

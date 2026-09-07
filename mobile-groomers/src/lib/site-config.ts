@@ -1,6 +1,24 @@
 export const SITE_NAME = "FindMobileGrooming";
 export const SITE_DOMAIN = "findmobilegrooming.com";
-export const SITE_URL = "https://findmobilegrooming.com";
+/**
+ * Canonical origin, used for metadata, JSON-LD, the sitemap and outreach links.
+ *
+ * Env-driven so a preview or staging deploy does not emit canonical tags and
+ * structured data pointing at production — which would have Google consolidate
+ * the staging pages onto the live URLs. Vercel sets NEXT_PUBLIC_VERCEL_URL on
+ * preview builds automatically.
+ */
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit.replace(/\/$/, "");
+
+  const vercel = process.env.NEXT_PUBLIC_VERCEL_URL?.trim();
+  if (vercel) return `https://${vercel.replace(/^https?:\/\//, "").replace(/\/$/, "")}`;
+
+  return `https://${SITE_DOMAIN}`;
+}
+
+export const SITE_URL = resolveSiteUrl();
 export const SITE_DESCRIPTION =
   "Find top-rated mobile dog groomers near you. Compare van-based groomers by zip code, book stress-free at-home grooming, and see real service radius, pricing, and availability.";
 export const SUPPORT_EMAIL = "hello@findmobilegrooming.com";
