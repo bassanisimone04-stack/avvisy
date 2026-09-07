@@ -1,0 +1,83 @@
+# FindMobileGrooming.com
+
+A US local service directory for **mobile dog groomers** — van-based, at-home
+grooming services. Built as a Next.js 15 App Router project with Tailwind CSS 4,
+matching the conventions of the sibling directory projects in this repo.
+
+## Running locally
+
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build (currently 31 static pages)
+```
+
+## Design system
+
+| Token | Value | Role |
+| --- | --- | --- |
+| Navy | `#0F172A` | Primary — trust, authority; headers, footer, dark sections |
+| Teal | `#0EA5E9` | Accent — CTAs, active filters, badges |
+| Slate off-white | `#F8FAFC` | Page canvas |
+| White | `#FFFFFF` | Card and surface backgrounds |
+
+Typography: **Plus Jakarta Sans** (headings, 600–800) + **Inter** (UI and body),
+both loaded via `next/font/google`. Tokens and the component layer
+(`.btn`, `.card`, `.chip`, `.field`, `.container-page`) live in
+`src/app/globals.css`.
+
+## Routes
+
+```
+/                              Homepage — hero + zip search, value props, cities, FAQ
+/cities                        City hub
+/cities/[citySlug]             City listing page
+/groomers/[citySlug]/[slug]    Single groomer listing (monetization surface)
+/pricing                       Tiered plans for groomers
+/for-groomers                  B2B landing page
+/claim                         Listing claim / verification funnel
+/faq                           FAQ hub
+/blog                          Editorial hub (posts pending)
+/about  /privacy  /terms       Company and legal
+/sitemap.xml  /robots.txt      Generated from data at build time
+```
+
+## Monetization
+
+Three tiers defined in `src/lib/site-config.ts` (`PRICING_TIERS`) and rendered by
+`src/components/PricingTable.tsx`:
+
+- **Free ($0)** — name, city, one phone line
+- **Pro Van ($39/mo)** — priority city ranking, website links, verified badge,
+  custom zip coverage, lead forwarding
+- **Multi-Fleet ($99/mo)** — multi-van management, lead distribution, homepage
+  featured placement
+
+Each listing page carries a claim banner and a lead sidebar (call, text, and a
+free-quote form). The quote form currently resolves client-side; wiring it to a
+`/api/leads` endpoint that forwards to the groomer and records the lead against
+their tier is the next step — see the `TODO` in
+`src/components/QuoteForm.tsx`.
+
+## Data
+
+Listings live in `src/data/groomers.json` (three seed records) and are read
+through `src/lib/groomers.ts`. FAQs live in `src/data/faqs.ts` and feed both the
+rendered accordion and the `FAQPage` JSON-LD, so visible text and markup cannot
+drift apart. Featured metros are in `src/lib/site-config.ts`.
+
+Move the JSON to Supabase once listing count passes ~500 — see `docs/SEO.md`
+for the scaling plan.
+
+## Structured data
+
+`src/lib/schema.tsx` generates `Organization`, `FAQPage`, `BreadcrumbList`, and
+a dual-typed `LocalBusiness` + `HomeAndConstructionBusiness` block for listing
+pages, with `areaServed` carrying the van's zip code coverage.
+
+## Documentation
+
+- [`docs/SEO.md`](docs/SEO.md) — metadata, URL architecture, authority copy,
+  schema map, featured-snippet FAQ strategy, scaling plan
+- [`docs/OUTREACH.md`](docs/OUTREACH.md) — cold email, Instagram DM, and SMS
+  templates for B2B groomer acquisition, plus cadence and compliance notes
