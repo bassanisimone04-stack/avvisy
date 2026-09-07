@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ClaimPage() {
   return (
-    <section className="container-page grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr,0.9fr]">
+    <section className="container-page grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr]">
       <div>
         <span className="chip chip-teal">Free — takes 2 minutes</span>
         <h1 className="mt-4 text-4xl">Claim Your Mobile Grooming Listing</h1>

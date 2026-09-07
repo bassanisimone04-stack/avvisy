@@ -93,7 +93,7 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
         </div>
       </header>
 
-      <div className="container-page grid gap-10 py-12 lg:grid-cols-[1.6fr,1fr]">
+      <div className="container-page grid gap-10 py-12 lg:grid-cols-[1.6fr_1fr]">
         {/* ---------- Main column ---------- */}
         <div className="space-y-10">
           <section>
