@@ -236,6 +236,16 @@ def cost_guide(all_venues):
           &mdash; your progress is saved in this browser so you can come back to it per venue.
         </p>
 ##COST_CHECKLIST##
+        <figure class="my-10">
+          <img src="/assets/img/blog/cost-guide-inline.jpg"
+               alt="A gardener tending trays of seedlings inside a working greenhouse."
+               width="1200" height="750" loading="lazy" decoding="async"
+               class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>A working greenhouse, built for propagation rather than events &mdash; the
+          cheapest way to marry under glass, and the one most likely to need power, heat and floor
+          protection brought in.</figcaption>
+        </figure>
+
         <h2 id="vs-tent">Comparing a glasshouse with a marquee</h2>
         <p>
           The comparison couples usually make &mdash; venue hire against tent hire &mdash; is the
@@ -385,6 +395,15 @@ def rainproof_guide(all_venues):
           than looking at it.
         </p>
 
+        <figure class="my-10">
+          <img src="/assets/img/blog/rainproof-guide-inline.jpg"
+               alt="Empty wooden chairs set out for an outdoor garden ceremony among flowering plants."
+               width="1200" height="750" loading="lazy" decoding="async"
+               class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>An outdoor ceremony paired with a glazed reception room: a same-day fallback,
+          not the full weather independence of a fully enclosed glasshouse.</figcaption>
+        </figure>
+
         <h2 id="ask">What to ask the venue</h2>
         <ol>
           <li><strong>Can the ceremony, dinner and dancing all happen under solid cover?</strong> If not, which part cannot?</li>
@@ -474,6 +493,15 @@ def small_venues_guide(all_venues):
           <li><strong>The side room inside a larger garden.</strong> Many botanical gardens with a grand main conservatory also have a smaller attached house &mdash; an orchid room, a fern house, a working greenhouse &mdash; that is not always on the main wedding page. It is worth asking about directly.</li>
           <li><strong>An off-peak booking of a normally-large room.</strong> A hall built for 200 is not architecturally small, but a weekday morning micro-wedding there can be priced and run like one, with a simplified setup and a fraction of the usual minimum spend.</li>
         </ul>
+
+        <figure class="my-10">
+          <img src="/assets/img/blog/small-venues-guide-inline.jpg"
+               alt="A small, quiet sitting room inside a rustic conservatory, with wicker chairs and a glazed door."
+               width="1200" height="750" loading="lazy" decoding="async"
+               class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>A side room inside a larger garden &mdash; the kind of space worth asking about
+          directly, since it is not always on the main wedding page.</figcaption>
+        </figure>
 
         <h2 id="cost">Do small venues actually cost less?</h2>
         <p>
