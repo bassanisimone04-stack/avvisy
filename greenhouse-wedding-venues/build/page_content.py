@@ -39,7 +39,7 @@ def _posting_ld(*, path, headline, desc, published, modified, section, keywords,
 
 def _article_shell(*, path, title, desc, h1, dek, section, read, published, modified,
                    toc, body, faq_items, faq_heading, related, keywords, words, all_venues,
-                   image="/assets/img/patterns/wide-01.svg"):
+                   image="/assets/img/patterns/wide-01.svg", image_alt=""):
     st = stats(all_venues)
     crumbs = [("Home", "/"), ("Guides", "/blog/"), (h1.split(":")[0], None)]
     extra = (ld(_posting_ld(path=path, headline=h1, desc=desc, published=published, modified=modified,
@@ -98,7 +98,7 @@ def _article_shell(*, path, title, desc, h1, dek, section, read, published, modi
     </header>
 
     <figure class="shell m-0">
-      <img src="{image}" alt="" aria-hidden="true" width="1600" height="900"
+      <img src="{image}" alt="{image_alt}"{' aria-hidden="true"' if not image_alt else ''} width="1600" height="900"
            fetchpriority="high" decoding="async"
            class="aspect-[16/9] w-full rounded-card object-cover sm:aspect-[16/6]">
     </figure>
@@ -319,7 +319,8 @@ def cost_guide(all_venues):
                  ("/methodology/", "How we source listings", "About")],
         keywords=["greenhouse wedding cost", "conservatory wedding venues",
                   "botanical garden wedding venues", "glasshouse wedding venue"],
-        words=1450, all_venues=all_venues, image="/assets/img/patterns/wide-01.svg")
+        words=1450, all_venues=all_venues, image="/assets/img/blog/cost-guide.jpg",
+        image_alt="A long reception table set for a wedding dinner inside a glass-roofed conservatory.")
 
 
 # ======================================================== RAIN-PROOF GUIDE ===
@@ -433,7 +434,8 @@ def rainproof_guide(all_venues):
                  ("/methodology/", "How we source listings", "About")],
         keywords=["rain-proof outdoor wedding venues", "greenhouse wedding venues",
                   "conservatory wedding venues"],
-        words=1050, all_venues=all_venues, image="/assets/img/patterns/wide-02.svg")
+        words=1050, all_venues=all_venues, image="/assets/img/blog/rainproof-guide.jpg",
+        image_alt="The glass roof of a Victorian greenhouse against a cloudy sky, with one roof vent open.")
 
 
 # ===================================================== SMALL VENUES GUIDE ====
@@ -534,7 +536,8 @@ def small_venues_guide(all_venues):
                  ("/venues/?capacity=micro", "Browse under-50 listings", "Directory")],
         keywords=["small greenhouse wedding venues", "greenhouse wedding venues",
                   "botanical garden wedding venues"],
-        words=1050, all_venues=all_venues, image="/assets/img/patterns/square-01.svg")
+        words=1050, all_venues=all_venues, image="/assets/img/blog/small-venues-guide.jpg",
+        image_alt="A bride in a veil during an intimate ceremony under string lights in a small glasshouse.")
 
 
 # ============================================================= BLOG INDEX ====
@@ -549,15 +552,18 @@ def blog_index(all_venues):
     posts = [
         ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost: how to work out your real number",
          "No national average — the structure of the cost, and a checklist that makes three quotes comparable.",
-         "Costs", "11 min", "2026-09-06", "wide-01"),
+         "Costs", "11 min", "2026-09-06", "cost-guide.jpg",
+         "A long reception table set for a wedding dinner inside a glass-roofed conservatory."),
         ("/blog/rain-proof-outdoor-wedding-venues/",
          "Rain-proof outdoor wedding venues: the garden without the weather decision",
          "What the phrase should mean, the gaps rain finds in a guest journey, and how glass compares with a marquee.",
-         "Planning", "8 min", "2026-09-06", "wide-02"),
+         "Planning", "8 min", "2026-09-06", "rainproof-guide.jpg",
+         "The glass roof of a Victorian greenhouse against a cloudy sky, with one roof vent open."),
         ("/blog/small-greenhouse-wedding-venues/",
          "Small greenhouse wedding venues: what to ask and where to look",
          "What actually makes a glasshouse work at a small size, and where micro-wedding rooms hide inside larger gardens.",
-         "Micro-weddings", "8 min", "2026-09-06", "square-01"),
+         "Micro-weddings", "8 min", "2026-09-06", "small-venues-guide.jpg",
+         "A bride in a veil during an intimate ceremony under string lights in a small glasshouse."),
     ]
 
     blog_ld = {
@@ -568,7 +574,7 @@ def blog_index(all_venues):
         "blogPost": [{"@type": "BlogPosting", "headline": t, "url": f"{BASE}{h}",
                       "datePublished": d, "articleSection": c,
                       "author": {"@type": "Organization", "name": NAME}}
-                     for h, t, _, c, _, d, _ in posts],
+                     for h, t, _, c, _, d, _, _ in posts],
     }
     crumbs = [("Home", "/"), ("Guides", None)]
     extra = (ld(blog_ld, "Schema: Blog + blogPost list")
@@ -577,7 +583,7 @@ def blog_index(all_venues):
 
     cards_html = "\n".join(f"""        <article class="card-interactive group relative flex flex-col overflow-hidden">
           <div class="aspect-[16/10] overflow-hidden bg-botanical-900">
-            <img src="/assets/img/patterns/{img}.svg" alt="" aria-hidden="true" width="1600" height="900"
+            <img src="/assets/img/blog/{img}" alt="{alt}" width="1600" height="900"
                  loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-105">
           </div>
@@ -592,9 +598,9 @@ def blog_index(all_venues):
             <p class="mt-2 text-sm leading-relaxed text-ink-500">{dek}</p>
             <p class="mt-4 text-xs text-ink-500">Updated <time datetime="{d}">{d}</time></p>
           </div>
-        </article>""" for href, t, dek, cat, read, d, img in posts)
+        </article>""" for href, t, dek, cat, read, d, img, alt in posts)
 
-    return head(title, desc, path, og_image="/assets/img/patterns/wide-01.svg", extra=extra) + header("blog") + f"""
+    return head(title, desc, path, og_image="/assets/img/blog/blog-index.jpg", extra=extra) + header("blog") + f"""
   <main id="main">
 {breadcrumbs(crumbs)}
     <header class="shell pb-10 pt-8">

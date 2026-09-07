@@ -337,9 +337,14 @@ content-hashed filenames if you add a CDN in front of this.
 4. **Add a contact page and an affiliate disclosure** if you add affiliate
    links — privacy and terms are already in place (`/privacy/`, `/terms/`),
    linked from the footer.
-5. **Replace the decorative patterns** with licensed photography, give it
-   descriptive alt text, and remove the "No photo on file" label in
-   `build/cards.py`.
+5. **Blog photography is done**; venue-card photography is not. The three
+   guides and `/blog/` use real, license-free photos (`assets/img/blog/`,
+   Pexels, descriptive alt text) instead of decorative patterns — see
+   `_article_shell()` and `blog_index()` in `build/page_content.py`. Venue
+   cards and pages still use generated patterns and the "No photo on file"
+   label (`build/cards.py`) — replacing those means real photography of each
+   specific listed venue (with permission), not stock, so it stays a
+   per-listing job.
 6. **Ad slots were removed** (not just emptied) ahead of launch — no network to
    wire up, no point shipping dead reserved space. `shared.ad_slot()` still
    exists and is documented; drop a call back into `page_content.py` /
