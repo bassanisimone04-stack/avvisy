@@ -598,6 +598,21 @@
       "blend": "enclosed",
       "summary": "A city-run glass conservatory in Providence, kept at a constant 70 degrees, rented for wedding ceremonies and receptions after the park closes to the public.",
       "last_verified": "2026-09-06"
+    },
+    {
+      "slug": "new-orleans-botanical-garden-conservatory",
+      "name": "New Orleans Botanical Garden — The Conservatory",
+      "city": "New Orleans",
+      "state": "Louisiana",
+      "state_slug": "louisiana",
+      "country": "US",
+      "type": "conservatory",
+      "official_url": "https://neworleanscitypark.org/events-permitting/weddings/",
+      "capacity_seated": null,
+      "price_tier": null,
+      "blend": "enclosed",
+      "summary": "A 1,000-square-foot glass-domed room in City Park, flanked by the garden's Living Fossils and Tropical Rainforest exhibits, outfitted for small ceremonies and receptions.",
+      "last_verified": "2026-09-07"
     }
   ]
 }
