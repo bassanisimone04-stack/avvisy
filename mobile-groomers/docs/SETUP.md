@@ -38,7 +38,48 @@ listing to whoever asks first would let a competitor take over a rival's page.
 Approve them yourself in the Supabase table editor by setting the listing's
 `owner` to the claimant's user id.
 
-## 2. Stripe — paid plans
+### Why some features need the service-role key
+
+`SUPABASE_SERVICE_ROLE_KEY` is server-only and bypasses RLS. Three things
+genuinely require it, because they act where there is no user session:
+
+- **Lead rate limiting.** `leads` has no public SELECT policy by design, so an
+  anonymous count query returns zero and the limit would never fire. Without
+  this key leads are still stored — they are just not throttled.
+- **Lead forwarding.** The groomer's email is revoked from the anon role (see
+  below), so only the server can read it.
+- **The Stripe webhook.** A webhook request carries no session.
+
+### Why groomer emails are column-revoked
+
+RLS decides which *rows* are visible, not which *columns*. Published listings
+are world-readable, so a `select *` with the anon key would hand out every
+groomer's contact email — a ready-made spam list for anyone who views source.
+`schema.sql` therefore revokes `select (email)` and the Stripe identifiers
+from the `anon` and `authenticated` roles, and public queries select an
+explicit column list (`PUBLIC_COLUMNS` in `src/lib/groomers.ts`).
+
+If you add a column that must stay private, add it to both places.
+
+## 2. Resend — forwarding leads to the groomer
+
+Storing a lead is not the promise the outreach templates make; delivering it
+is. Without this step leads sit in the database and the business never hears
+about them.
+
+1. Sign up at **https://resend.com** and verify your sending domain.
+2. **API Keys → Create** → copy the key (`re_...`).
+3. Set `RESEND_API_KEY` and `LEAD_FROM_EMAIL` (an address on the verified
+   domain) in `.env.local`.
+
+The notification email sets **reply-to** to the customer's address when they
+left one, so the groomer answers straight from their inbox.
+
+Forwarding is best-effort by design: the lead row is committed *before* any
+mail is attempted, so an outage at the mail provider can never cost the
+business the lead. A failed send just leaves the row's status at `new`.
+
+## 3. Stripe — paid plans
 
 1. Create an account at **https://dashboard.stripe.com** (stays in test mode).
 2. Create a **Product** with two recurring prices: Pro Van ($39/mo) and
@@ -64,7 +105,7 @@ to the endpoint and grant themselves a paid plan.
 The amount is never taken from the client: the browser names a *tier*, and the
 server resolves it to a price ID.
 
-## 3. Going live
+## 4. Going live
 
 - Swap the Stripe test keys for live keys (requires completing Stripe's
   account activation: company details, VAT number, bank account, ID).
@@ -78,11 +119,13 @@ server resolves it to a price ID.
 
 ## What runs where
 
-| Feature | Without keys | With Supabase | With Supabase + Stripe |
-| --- | --- | --- | --- |
-| Public directory, SEO, FAQ | ✅ from JSON | ✅ from database | ✅ |
-| Zip code search | ✅ over seed data | ✅ over database | ✅ |
-| Quote request form | accepts, discards | ✅ stored as lead | ✅ |
-| Sign in / dashboard | disabled | ✅ magic link | ✅ |
-| Edit zip coverage | — | ✅ | ✅ |
-| Paid plans, ranking boost | — | manual tier edit | ✅ self-service |
+| Feature | No keys | + Supabase anon | + service role | + Resend | + Stripe |
+| --- | --- | --- | --- | --- | --- |
+| Public directory, SEO, FAQ | ✅ from JSON | ✅ from DB | ✅ | ✅ | ✅ |
+| Zip code search | ✅ seed data | ✅ from DB | ✅ | ✅ | ✅ |
+| Quote form stores a lead | accepts, discards | ✅ | ✅ | ✅ | ✅ |
+| Lead rate limiting | — | — | ✅ | ✅ | ✅ |
+| Lead emailed to groomer | — | — | — | ✅ | ✅ |
+| Sign in / dashboard | — | ✅ magic link | ✅ | ✅ | ✅ |
+| Edit zip coverage | — | ✅ | ✅ | ✅ | ✅ |
+| Paid plans, ranking boost | — | manual tier edit | manual | manual | ✅ self-service |

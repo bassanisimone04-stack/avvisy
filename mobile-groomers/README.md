@@ -54,10 +54,10 @@ still works. Adding keys turns features on progressively — see
 | Area | Files |
 | --- | --- |
 | Schema + RLS | `supabase/schema.sql`, `supabase/seed.sql` |
-| Clients | `src/lib/supabase/{config,client,server,public}.ts` |
+| Clients | `src/lib/supabase/{config,client,server,public,admin}.ts` |
 | Data access | `src/lib/groomers.ts`, `src/lib/leads.ts` |
 | Auth | `src/lib/supabase/auth-actions.ts`, `src/app/login`, `src/app/auth/callback`, `src/middleware.ts` |
-| Lead capture | `src/app/api/leads/route.ts` |
+| Lead capture + forwarding | `src/app/api/leads/route.ts`, `src/lib/email.ts` |
 | Billing | `src/lib/stripe.ts`, `src/app/api/stripe/{checkout,webhook}/route.ts` |
 | Dashboard | `src/app/dashboard`, `src/components/{ZipCodeEditor,UpgradeButton}.tsx` |
 
@@ -80,7 +80,13 @@ Three tiers defined in `src/lib/site-config.ts` (`PRICING_TIERS`) and rendered b
 Each listing page carries a claim banner and a lead sidebar (call, text, and a
 free-quote form). The quote form posts to `/api/leads`, which validates the
 input, applies a per-IP rate limit (hashed, never the raw address), screens a
-honeypot field, and stores the lead for the owning groomer only.
+honeypot field, stores the lead for the owning groomer only, and emails it to
+them with reply-to set to the customer. The row is committed before any mail
+is attempted, so a mail outage can never cost the business the lead.
+
+Groomer emails and Stripe identifiers are revoked from the `anon` role at the
+column level, because RLS filters rows and not columns — a `select *` on
+world-readable listings would otherwise expose every groomer's contact email.
 
 Upgrades run through Stripe Checkout. The client names a *tier*; the server
 resolves it to a price ID and verifies listing ownership before charging. The

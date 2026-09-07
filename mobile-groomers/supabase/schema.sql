@@ -166,3 +166,21 @@ create policy claims_own_insert on claims
 drop policy if exists claims_own_read on claims;
 create policy claims_own_read on claims
   for select using (claimant = auth.uid());
+
+-- ---------------------------------------------------------------------------
+-- Column-level privacy
+-- ---------------------------------------------------------------------------
+-- RLS decides which ROWS are visible, not which columns. Published listings
+-- are world-readable, so without this a `select *` with the anon key would
+-- hand out every groomer's contact email — a ready-made spam list. The email
+-- is only ever needed server-side (lead forwarding), which uses the
+-- service-role key and is unaffected by these grants.
+--
+-- Public reads therefore select an explicit column list; see
+-- PUBLIC_COLUMNS in src/lib/groomers.ts.
+revoke select (email) on groomers from anon;
+revoke select (email) on groomers from authenticated;
+
+-- Billing identifiers are server-only for the same reason.
+revoke select (stripe_customer_id, stripe_subscription_id) on groomers from anon;
+revoke select (stripe_customer_id, stripe_subscription_id) on groomers from authenticated;

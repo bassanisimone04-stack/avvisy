@@ -23,6 +23,17 @@ export type Groomer = {
   responseTime: string;
 };
 
+/**
+ * Columns safe to expose to the browser. `email` and the Stripe identifiers
+ * are deliberately excluded and revoked from the anon role in schema.sql —
+ * a `select *` would otherwise hand out every groomer's contact email.
+ */
+// Cast note: supabase-js infers row types only from a literal select string.
+// PUBLIC_COLUMNS is shared across queries, so results are cast explicitly.
+const PUBLIC_COLUMNS =
+  "id, slug, name, city, state, city_slug, phone, website, tagline, about, " +
+  "tags, zip_codes, price_range, response_time, rating, review_count, tier, verified";
+
 /** Seed listings used in demo mode (no Supabase keys configured). */
 const DEMO_GROOMERS = groomersData as Groomer[];
 
@@ -90,11 +101,11 @@ export async function getAllGroomers(): Promise<Groomer[]> {
 
   const { data, error } = await supabase
     .from("groomers")
-    .select("*")
+    .select(PUBLIC_COLUMNS)
     .eq("published", true);
 
   if (error || !data) return sortForDirectory(DEMO_GROOMERS);
-  return sortForDirectory((data as GroomerRow[]).map(mapRow));
+  return sortForDirectory((data as unknown as GroomerRow[]).map(mapRow));
 }
 
 export async function getGroomerBySlug(
@@ -108,7 +119,7 @@ export async function getGroomerBySlug(
 
   const { data, error } = await supabase
     .from("groomers")
-    .select("*")
+    .select(PUBLIC_COLUMNS)
     .eq("city_slug", citySlug)
     .eq("slug", slug)
     .maybeSingle();
@@ -116,7 +127,7 @@ export async function getGroomerBySlug(
   if (error || !data) {
     return DEMO_GROOMERS.find((g) => g.citySlug === citySlug && g.slug === slug);
   }
-  return mapRow(data as GroomerRow);
+  return mapRow(data as unknown as GroomerRow);
 }
 
 export async function getGroomersByCitySlug(citySlug: string): Promise<Groomer[]> {
@@ -127,14 +138,14 @@ export async function getGroomersByCitySlug(citySlug: string): Promise<Groomer[]
 
   const { data, error } = await supabase
     .from("groomers")
-    .select("*")
+    .select(PUBLIC_COLUMNS)
     .eq("city_slug", citySlug)
     .eq("published", true);
 
   if (error || !data) {
     return sortForDirectory(DEMO_GROOMERS.filter((g) => g.citySlug === citySlug));
   }
-  return sortForDirectory((data as GroomerRow[]).map(mapRow));
+  return sortForDirectory((data as unknown as GroomerRow[]).map(mapRow));
 }
 
 /** Listings whose van covers a given zip code. Powers the homepage search. */
@@ -146,14 +157,14 @@ export async function getGroomersByZip(zip: string): Promise<Groomer[]> {
 
   const { data, error } = await supabase
     .from("groomers")
-    .select("*")
+    .select(PUBLIC_COLUMNS)
     .contains("zip_codes", [zip])
     .eq("published", true);
 
   if (error || !data) {
     return sortForDirectory(DEMO_GROOMERS.filter((g) => g.zipCodes.includes(zip)));
   }
-  return sortForDirectory((data as GroomerRow[]).map(mapRow));
+  return sortForDirectory((data as unknown as GroomerRow[]).map(mapRow));
 }
 
 /** Listings owned by the signed-in business, for the dashboard. */
@@ -163,9 +174,9 @@ export async function getGroomersForOwner(ownerId: string): Promise<Groomer[]> {
 
   const { data, error } = await supabase
     .from("groomers")
-    .select("*")
+    .select(PUBLIC_COLUMNS)
     .eq("owner", ownerId);
 
   if (error || !data) return [];
-  return (data as GroomerRow[]).map(mapRow);
+  return (data as unknown as GroomerRow[]).map(mapRow);
 }

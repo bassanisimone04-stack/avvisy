@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
-import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import type Stripe from "stripe";
 import { getStripe, isStripeConfigured } from "@/lib/stripe";
-import { SUPABASE_URL } from "@/lib/supabase/config";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export const runtime = "nodejs";
 
@@ -16,9 +15,9 @@ export const runtime = "nodejs";
  */
 export async function POST(request: Request) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET ?? "";
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY ?? "";
+  const admin = createAdminClient();
 
-  if (!isStripeConfigured || !secret || !serviceKey) {
+  if (!isStripeConfigured || !secret || !admin) {
     return NextResponse.json({ error: "Webhook not configured." }, { status: 503 });
   }
 
@@ -37,18 +36,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid signature." }, { status: 400 });
   }
 
-  const admin = createSupabaseClient(SUPABASE_URL, serviceKey, {
-    auth: { persistSession: false },
-  });
-
-  async function applySubscription(subscription: Stripe.Subscription) {
+  async function applySubscription(
+    db: NonNullable<ReturnType<typeof createAdminClient>>,
+    subscription: Stripe.Subscription,
+  ) {
     const groomerId = subscription.metadata?.groomer_id;
     if (!groomerId) return;
 
     const tier = subscription.metadata?.tier ?? "pro";
     const active = ["active", "trialing"].includes(subscription.status);
 
-    await admin
+    await db
       .from("groomers")
       .update({
         // A lapsed subscription drops the listing back to the free tier
@@ -74,13 +72,13 @@ export async function POST(request: Request) {
             ? session.subscription
             : session.subscription.id,
         );
-        await applySubscription(subscription);
+        await applySubscription(admin, subscription);
       }
       break;
     }
     case "customer.subscription.updated":
     case "customer.subscription.deleted": {
-      await applySubscription(event.data.object);
+      await applySubscription(admin, event.data.object);
       break;
     }
   }
