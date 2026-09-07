@@ -702,7 +702,7 @@ def methodology(all_venues):
     extra = ld(page_ld, "Schema: WebPage — referenced as the Organization's publishingPrinciples") \
         + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
 
-    return head(title, desc, path, og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header("methodology") + f"""
+    return head(title, desc, path, og_image="/assets/img/blog/blog-index.jpg", extra=extra) + header("methodology") + f"""
   <main id="main">
 {breadcrumbs(crumbs)}
     <header class="shell pb-10 pt-8">
@@ -850,7 +850,7 @@ def privacy_policy(all_venues):
     }
     extra = ld(page_ld, "Schema: WebPage") + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
 
-    return head(title, desc, path, og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header() + f"""
+    return head(title, desc, path, og_image="/assets/img/blog/blog-index.jpg", extra=extra) + header() + f"""
   <main id="main">
 {breadcrumbs(crumbs)}
     <header class="shell pb-10 pt-8">
@@ -954,7 +954,7 @@ def terms_of_use(all_venues):
     }
     extra = ld(page_ld, "Schema: WebPage") + ld(_breadcrumb_ld(crumbs), "Schema: BreadcrumbList")
 
-    return head(title, desc, path, og_image="/assets/img/patterns/wide-02.svg", extra=extra) + header() + f"""
+    return head(title, desc, path, og_image="/assets/img/blog/blog-index.jpg", extra=extra) + header() + f"""
   <main id="main">
 {breadcrumbs(crumbs)}
     <header class="shell pb-10 pt-8">
@@ -1035,7 +1035,7 @@ def not_found_page(all_venues):
     title = "Page Not Found | " + NAME
     desc = "This page does not exist. Browse the directory or search by state and venue type."
 
-    return head(title, desc, "/404.html", og_image="/assets/img/patterns/wide-02.svg",
+    return head(title, desc, "/404.html", og_image="/assets/img/blog/blog-index.jpg",
                 robots="noindex,follow") + header() + f"""
   <main id="main">
     <section class="shell flex flex-col items-center py-24 text-center sm:py-32">
