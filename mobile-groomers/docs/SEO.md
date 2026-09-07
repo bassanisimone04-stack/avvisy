@@ -89,6 +89,34 @@ The same array feeds both the rendered `<details>` accordion and the
 `FAQPage` JSON-LD, so the visible text and the markup can never drift apart —
 which is what triggers Google's "content mismatch" penalty on FAQ rich results.
 
+## Blog SEO
+
+The editorial hub is where long-tail intent gets captured and where authority
+is passed to the city pages that convert. Each article carries:
+
+| Element | Why |
+| --- | --- |
+| Anchored `<h2>` ids + a table of contents | Lets Google build "jump to" links in the result snippet, and gives the page internal deep links |
+| Per-article `FAQPage` | Four 40–50 word answers per post, answer-first — the shape extracted for paragraph snippets |
+| `BlogPosting` with `wordCount`, `articleSection`, `keywords`, `inLanguage`, `dateModified` | Fuller entity description than headline-plus-date; `dateModified` is a real review date, not a build timestamp |
+| Contextual internal links in the body | 13 links across the three posts, pointing at `/cities`, specific metros, `/faq`, and each other |
+| Generated OG image per post | Share cards carry the actual headline; a bare or generic card costs click-through |
+| `summary_large_image` Twitter card | Same reason |
+
+The hub itself emits `Blog` with a `blogPost` array plus `BreadcrumbList`, so
+it is understood as a collection rather than a page of loose links.
+
+**Internal linking is the point.** A directory lives or dies on whether its
+city pages rank. Articles attract informational traffic ("how much does mobile
+dog grooming cost"), and the in-body links pass that authority to the
+commercial pages. Links sitting only in a footer CTA do far less of this work
+than links inside the prose, which is why the copy carries them.
+
+**On `dateModified`:** only bump `updated` in `src/data/posts.ts` when the copy
+actually changes. Automatically setting it to the build date is a common trick
+and a transparent one — a page whose modified date moves daily while the text
+never changes gets discounted, not rewarded.
+
 ## Scaling plan
 
 The directory currently ships 12 featured metros and sample listings. To scale:
