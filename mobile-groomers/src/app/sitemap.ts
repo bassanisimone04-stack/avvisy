@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllGroomers } from "@/lib/groomers";
+import { POSTS } from "@/data/posts";
 import { FEATURED_CITIES, SITE_URL } from "@/lib/site-config";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -26,5 +27,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...cityPages, ...groomerPages];
+  const postPages = POSTS.map((p) => ({
+    url: `${SITE_URL}/blog/${p.slug}`,
+    lastModified: new Date(p.published),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...cityPages, ...groomerPages, ...postPages];
 }
