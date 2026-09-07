@@ -325,10 +325,18 @@ content-hashed filenames if you add a CDN in front of this.
    `og:url`, JSON-LD `@id`, and `robots.txt`/`sitemap.xml` — all generated, so
    changing it there and running `npm run build` is the whole job; there is
    nothing left to hand-edit.
-3. **Point the forms somewhere.** `/api/suggest` has no backend in this build.
-4. **Add the pages a real site needs** and link them in the footer: privacy,
-   terms, contact, and an affiliate disclosure if you add affiliate links. They
-   are not stubbed here because they would have to describe a real legal entity.
+3. **Point the form at a real address.** The venue-suggestion form on
+   `/methodology/` is wired up as a [Netlify Form](https://docs.netlify.com/manage/forms/setup/)
+   (`data-netlify="true"`, a honeypot field) — it works automatically if you
+   deploy on Netlify, with entries in that site's Forms dashboard. Deploying
+   elsewhere, add your own handler to the form's `action`. Either way, replace
+   the placeholder `hello@greenhousevenues.com` mailto link next to it (in
+   `build/page_content.py`'s `methodology()`) with a real address you control,
+   and update `privacy_policy()` in the same file if the form's mechanism
+   changes.
+4. **Add a contact page and an affiliate disclosure** if you add affiliate
+   links — privacy and terms are already in place (`/privacy/`, `/terms/`),
+   linked from the footer.
 5. **Replace the decorative patterns** with licensed photography, give it
    descriptive alt text, and remove the "No photo on file" label in
    `build/cards.py`.

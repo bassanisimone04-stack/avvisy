@@ -6,7 +6,7 @@ from shared import faq_ld, faq_section, ad_slot, checklist
 import faqs
 
 AUTHOR = f"{NAME} editorial"
-LAST_UPDATED = "September 6, 2026"
+LAST_UPDATED = "September 7, 2026"
 
 
 def _breadcrumb_ld(crumbs):
@@ -708,7 +708,12 @@ def methodology(all_venues):
           has glazed space, then add it with whatever its site confirms.
         </p>
 
-        <form class="not-prose mt-6 grid gap-4 rounded-card border border-line bg-shell p-6 sm:grid-cols-2" action="/api/suggest" method="post">
+        <form class="not-prose mt-6 grid gap-4 rounded-card border border-line bg-shell p-6 sm:grid-cols-2"
+              name="venue-suggestion" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="venue-suggestion">
+          <p class="hidden" aria-hidden="true">
+            <label>Leave this field blank: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
           <div class="sm:col-span-2">
             <label class="label" for="s-url">Venue&rsquo;s events page URL <span class="text-champagne-700">*</span></label>
             <input class="field" id="s-url" name="url" type="url" required placeholder="https://">
@@ -729,8 +734,14 @@ def methodology(all_venues):
           <div class="sm:col-span-2">
             <button type="submit" class="btn-primary">Send</button>
             <p class="mt-3 text-xs text-ink-500">
-              This form has no backend in this build &mdash; point <code>action</code> at your own
-              handler before going live.
+              Submits as a <a class="underline decoration-champagne-400 underline-offset-4"
+              href="https://docs.netlify.com/manage/forms/setup/" rel="noopener">Netlify Form</a> if this
+              site is deployed on Netlify &mdash; entries land in your site&rsquo;s Forms dashboard, no
+              backend to run yourself. Deploying elsewhere? Point this form at your own handler instead.
+              Prefer email? Write to
+              <a class="underline decoration-champagne-400 underline-offset-4"
+                 href="mailto:hello@greenhousevenues.com?subject=Venue%20suggestion">hello&commat;greenhousevenues.com</a>
+              directly &mdash; a placeholder address until the domain is live.
             </p>
           </div>
         </form>
@@ -800,12 +811,15 @@ def privacy_policy(all_venues):
       <article class="prose-editorial mx-auto max-w-2xl">
         <h2 id="what-we-collect">What this site collects</h2>
         <p>
-          Nothing, on our end. There is no account to create, no visitor database, and no
-          analytics or tracking script loaded on any page &mdash; check the page source if you
-          want to confirm that yourself. The <a href="/methodology/#submit">venue suggestion
-          form</a> is the one place you can type something in; this build has no backend
-          wired up to receive it yet, so nothing is sent or stored until that changes, and
-          this page will be updated first if it does.
+          Almost nothing, and only if you choose to send it. There is no account to create,
+          no visitor database, and no analytics or tracking script loaded on any page &mdash;
+          check the page source if you want to confirm that yourself. The one place you can
+          type something in is the <a href="/methodology/#submit">venue suggestion form</a>: a
+          venue&rsquo;s URL, a name, an optional email and a message. If this site is deployed
+          on Netlify, that form submits as a Netlify Form and its entries live in that
+          dashboard, visible only to whoever runs the site &mdash; we do not use it for
+          marketing, and we do not sell or share it. Emailing us directly instead sends your
+          message the same way any email does: to our inbox, nowhere else.
         </p>
 
         <h2 id="local-storage">What your browser stores for you</h2>
@@ -853,9 +867,9 @@ def privacy_policy(all_venues):
 
         <h2 id="changes">Changes to this policy</h2>
         <p>
-          If what this site collects ever changes &mdash; an analytics tool, an ad network, a
-          working contact form that stores submissions &mdash; this page will be rewritten to
-          say so plainly, with a new date below, before that change ships.
+          If what this site collects ever changes further &mdash; an analytics tool, an ad
+          network &mdash; this page will be rewritten to say so plainly, with a new date below,
+          before that change ships.
         </p>
         <p class="text-sm text-ink-500">Last updated: {LAST_UPDATED}.</p>
       </article>
