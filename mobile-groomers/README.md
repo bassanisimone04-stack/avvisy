@@ -37,9 +37,10 @@ both loaded via `next/font/google`. Tokens and the component layer
 /for-groomers                  B2B landing page
 /claim                         Listing claim / verification funnel
 /faq                           FAQ hub
-/blog                          Editorial hub (posts pending)
+/blog, /blog/[slug]            Editorial hub and guides
 /login                         Passwordless sign-in (magic link)
 /dashboard                     Groomer portal — zip coverage, leads, upgrade
+/unsubscribe                   Outreach opt-out (CAN-SPAM)
 /about  /privacy  /terms       Company and legal
 /sitemap.xml  /robots.txt      Generated from data at build time
 ```
@@ -60,6 +61,7 @@ still works. Adding keys turns features on progressively — see
 | Lead capture + forwarding | `src/app/api/leads/route.ts`, `src/lib/email.ts` |
 | Billing | `src/lib/stripe.ts`, `src/app/api/stripe/{checkout,webhook}/route.ts` |
 | Dashboard | `src/app/dashboard`, `src/components/{ZipCodeEditor,UpgradeButton}.tsx` |
+| Outreach generator | `scripts/outreach.mjs`, `scripts/outreach/` |
 
 Public directory reads go through a **session-less** Supabase client
 (`supabase/public.ts`) rather than the cookie-backed one. Calling `cookies()`
@@ -114,7 +116,9 @@ pages, with `areaServed` carrying the van's zip code coverage.
 
 - [`docs/SEO.md`](docs/SEO.md) — metadata, URL architecture, authority copy,
   schema map, featured-snippet FAQ strategy, scaling plan
-- [`docs/OUTREACH.md`](docs/OUTREACH.md) — cold email, Instagram DM, and SMS
-  templates for B2B groomer acquisition, plus cadence and compliance notes
+- [`docs/OUTREACH.md`](docs/OUTREACH.md) — the outreach campaign: templates,
+  cadence, prospect CSV format, and CAN-SPAM/TCPA compliance. The generator
+  in `scripts/outreach.mjs` renders these against a prospect list and enforces
+  the rules; it never sends, so a bad merge surfaces in a diff.
 - [`docs/SETUP.md`](docs/SETUP.md) — Supabase and Stripe setup, the RLS
   security model, and what works at each configuration stage

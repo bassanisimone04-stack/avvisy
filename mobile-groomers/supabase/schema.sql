@@ -184,3 +184,23 @@ revoke select (email) on groomers from authenticated;
 -- Billing identifiers are server-only for the same reason.
 revoke select (stripe_customer_id, stripe_subscription_id) on groomers from anon;
 revoke select (stripe_customer_id, stripe_subscription_id) on groomers from authenticated;
+
+-- ---------------------------------------------------------------------------
+-- Outreach suppression list
+-- ---------------------------------------------------------------------------
+-- CAN-SPAM requires a working opt-out in commercial email, honored within ten
+-- business days. An address here must never be contacted again, so the
+-- outreach generator checks this list before rendering anything.
+create table if not exists suppressions (
+  email text primary key,
+  reason text not null default 'unsubscribed',
+  created_at timestamptz not null default now()
+);
+
+alter table suppressions enable row level security;
+
+-- Anyone holding an unsubscribe link may opt out; nobody may read the list
+-- back through the anon key, so it cannot be scraped as an address list.
+drop policy if exists suppressions_public_insert on suppressions;
+create policy suppressions_public_insert on suppressions
+  for insert with check (true);

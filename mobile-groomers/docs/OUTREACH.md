@@ -1,4 +1,25 @@
-# B2B Outreach Templates — FindMobileGrooming.com
+# B2B Outreach — FindMobileGrooming.com
+
+> **The copy below is documentation. The executable source is
+> `scripts/outreach/templates.mjs`** — that is what actually renders the
+> messages. Edit both together when copy changes.
+>
+> ```bash
+> node scripts/outreach.mjs --list                     # show the cadence
+> node scripts/outreach.mjs --input prospects.csv --day 0 \
+>      --suppress suppressions.txt --out out/day0.csv
+> ```
+>
+> The generator applies every rule on this page automatically: it drops
+> opt-outs and suppressed addresses, skips businesses that already claimed,
+> enforces the four-touch cap, and skips anyone missing that channel's contact
+> field. It refuses to render an email touch without a physical postal
+> address, and warns loudly if you run an email step without a suppression
+> list.
+>
+> It does **not** send. Generating and sending are separate on purpose: a bad
+> merge shows up in a diff instead of in someone's inbox, and you choose the
+> send window so mail lands in US business hours rather than European ones.
 
 Templates for contacting US mobile groomers asynchronously (no live calls
 required, which matters when operating from a European timezone).
@@ -64,16 +85,24 @@ Unsubscribe: {{UnsubscribeURL}}
 ```
 Hi {{FirstName}} — quick nudge on this one.
 
-Since I emailed, {{N}} people searched for mobile grooming in {{City}} on the
-site. Your listing is still showing our best-guess service area rather than
-your real zip codes.
+Your listing is still showing our best-guess service area rather than your real
+zip codes, which means you may be matched to the wrong neighborhoods.
 
 Two-minute fix: {{ClaimURL}}
 
 If you'd rather not be listed, reply "remove" and it's done today.
 
 {{YourName}}
+FindMobileGrooming.com
+{{PhysicalAddress}}
+Unsubscribe: {{UnsubscribeURL}}
 ```
+
+An earlier draft opened this with "since I emailed, N people searched for
+mobile grooming in {{City}}." That number is only usable if you actually
+measure it per city — quoting an unverified figure to a business owner is the
+fastest way to lose their trust, so the executable template does not include
+it. Add it back only when the analytics behind it are real.
 
 ---
 
@@ -101,7 +130,8 @@ Want me to send the claim link?
 reply rate and avoids Instagram's link-in-first-DM filtering. Send
 `{{ClaimURL}}` in the second message once they reply.
 
-**If they reply "yes":**
+**If they reply "yes"** (sent by hand — the generator produces the opener
+only, since this one depends on their reply):
 
 ```
 Here you go: {{ClaimURL}}
@@ -144,17 +174,37 @@ Reply STOP to opt out.
 
 ---
 
-## Merge fields
+## Prospect CSV
 
-| Field | Source |
+The generator reads these columns — see
+`scripts/outreach/prospects.example.csv`:
+
+| Column | Purpose |
 | --- | --- |
-| `{{FirstName}}` | Owner name, from public profile; fall back to "there" |
-| `{{BusinessName}}` | `groomer.name` |
-| `{{City}}` | `groomer.city` |
-| `{{Zip}}` | First entry in `groomer.zipCodes` |
-| `{{ListingURL}}` | `/groomers/{citySlug}/{slug}` |
-| `{{ClaimURL}}` | `/claim?listing={slug}` |
-| `{{N}}` | Search count for that city over the follow-up window |
+| `business_name` | Required. Used in every template. |
+| `first_name` | Owner name; falls back to "there" when unknown. |
+| `city`, `state`, `zip` | Location merge fields. |
+| `city_slug`, `listing_slug` | Build the listing and claim URLs. |
+| `email`, `instagram`, `phone` | Channel contact. A row without the channel's field is skipped. |
+| `touches` | Touches already sent. At 4, the row is dropped. |
+| `opted_out` | Any of yes/true/1/stop drops the row permanently. |
+| `claimed` | `true` drops the row — they already converted. |
+
+An unresolved `{{placeholder}}` throws rather than sending a message with a
+blank in it.
+
+## Compliance
+
+- **CAN-SPAM** — commercial email needs a real physical postal address and a
+  working opt-out. `/unsubscribe` records the address in the `suppressions`
+  table; export that table and pass it with `--suppress` on every email run.
+  An unsubscribe link that 404s is worse than no link at all.
+- **TCPA** — SMS to a mobile number needs prior consent. Only text numbers a
+  business has published publicly as a business contact line, and honor STOP
+  immediately.
+- **Four touches, then stop.** A prospect who ignores four messages will not
+  convert, and continued contact buys spam complaints that cost you the
+  sending domain — which is far more expensive than the lost prospect.
 
 ## Sequence cadence
 
@@ -166,5 +216,5 @@ Reply STOP to opt out.
 | 7 | SMS | Only for published business lines |
 | 14 | Stop | Mark as unresponsive; keep listing live |
 
-Never exceed 4 touches. A groomer who ignores 4 messages will not convert, and
-continued contact risks spam complaints that damage domain reputation.
+The generator enforces this cap from the `touches` column — see **Compliance**
+above.
