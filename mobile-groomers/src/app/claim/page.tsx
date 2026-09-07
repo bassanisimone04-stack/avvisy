@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ClaimForm from "@/components/ClaimForm";
 
 export const metadata: Metadata = {
   title: "Claim Your Mobile Grooming Listing",
@@ -7,7 +8,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/claim" },
 };
 
-export default function ClaimPage() {
+export default async function ClaimPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ listing?: string }>;
+}) {
+  // Outreach links carry ?listing=<slug> so the claim lands on the right page.
+  const { listing } = await searchParams;
   return (
     <section className="container-page grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr]">
       <div>
@@ -33,37 +40,9 @@ export default function ClaimPage() {
         </ul>
       </div>
 
-      <form className="card h-fit p-7">
-        <h2 className="text-xl">Business Verification</h2>
-        <p className="mt-1 text-sm text-ink-soft">We&apos;ll email you a verification link.</p>
-
-        <div className="mt-6 space-y-4">
-          <div>
-            <label className="field-label" htmlFor="biz-name">Business name</label>
-            <input id="biz-name" name="biz-name" type="text" className="field" placeholder="e.g. PawMobile Grooming Co." required />
-          </div>
-          <div>
-            <label className="field-label" htmlFor="city">City &amp; state</label>
-            <input id="city" name="city" type="text" className="field" placeholder="e.g. Los Angeles, CA" required />
-          </div>
-          <div>
-            <label className="field-label" htmlFor="phone">Business phone</label>
-            <input id="phone" name="phone" type="tel" className="field" placeholder="(555) 555-0123" required />
-          </div>
-          <div>
-            <label className="field-label" htmlFor="email">Work email</label>
-            <input id="email" name="email" type="email" className="field" placeholder="you@yourbusiness.com" required />
-          </div>
-        </div>
-
-        <button type="submit" className="btn btn-primary btn-block mt-6">
-          Send Verification Link
-        </button>
-        <p className="mt-3 text-center text-xs text-ink-soft">
-          By claiming, you agree to our <a href="/terms" className="underline">Terms</a> and{" "}
-          <a href="/privacy" className="underline">Privacy Policy</a>.
-        </p>
-      </form>
+      <div className="card h-fit p-7">
+        <ClaimForm listingSlug={listing} />
+      </div>
     </section>
   );
 }

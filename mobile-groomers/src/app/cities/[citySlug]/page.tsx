@@ -34,7 +34,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
   const city = getCity(citySlug);
   if (!city) notFound();
 
-  const groomers = getGroomersByCitySlug(city.slug);
+  const groomers = await getGroomersByCitySlug(city.slug);
 
   return (
     <section className="container-page py-16 sm:py-20">

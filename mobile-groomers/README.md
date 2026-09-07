@@ -38,9 +38,33 @@ both loaded via `next/font/google`. Tokens and the component layer
 /claim                         Listing claim / verification funnel
 /faq                           FAQ hub
 /blog                          Editorial hub (posts pending)
+/login                         Passwordless sign-in (magic link)
+/dashboard                     Groomer portal — zip coverage, leads, upgrade
 /about  /privacy  /terms       Company and legal
 /sitemap.xml  /robots.txt      Generated from data at build time
 ```
+
+## Backend
+
+The app degrades gracefully: with no environment variables it runs in **demo
+mode** (listings from JSON, no accounts, no billing) and every public page
+still works. Adding keys turns features on progressively — see
+[`docs/SETUP.md`](docs/SETUP.md).
+
+| Area | Files |
+| --- | --- |
+| Schema + RLS | `supabase/schema.sql`, `supabase/seed.sql` |
+| Clients | `src/lib/supabase/{config,client,server,public}.ts` |
+| Data access | `src/lib/groomers.ts`, `src/lib/leads.ts` |
+| Auth | `src/lib/supabase/auth-actions.ts`, `src/app/login`, `src/app/auth/callback`, `src/middleware.ts` |
+| Lead capture | `src/app/api/leads/route.ts` |
+| Billing | `src/lib/stripe.ts`, `src/app/api/stripe/{checkout,webhook}/route.ts` |
+| Dashboard | `src/app/dashboard`, `src/components/{ZipCodeEditor,UpgradeButton}.tsx` |
+
+Public directory reads go through a **session-less** Supabase client
+(`supabase/public.ts`) rather than the cookie-backed one. Calling `cookies()`
+opts a route out of static rendering, and directory pages are identical for
+every visitor — so this keeps city and listing pages statically generated.
 
 ## Monetization
 
@@ -54,20 +78,25 @@ Three tiers defined in `src/lib/site-config.ts` (`PRICING_TIERS`) and rendered b
   featured placement
 
 Each listing page carries a claim banner and a lead sidebar (call, text, and a
-free-quote form). The quote form currently resolves client-side; wiring it to a
-`/api/leads` endpoint that forwards to the groomer and records the lead against
-their tier is the next step — see the `TODO` in
-`src/components/QuoteForm.tsx`.
+free-quote form). The quote form posts to `/api/leads`, which validates the
+input, applies a per-IP rate limit (hashed, never the raw address), screens a
+honeypot field, and stores the lead for the owning groomer only.
+
+Upgrades run through Stripe Checkout. The client names a *tier*; the server
+resolves it to a price ID and verifies listing ownership before charging. The
+signed webhook applies the tier, and a lapsed subscription drops the listing
+back to free rather than deleting it — the business keeps its page and reviews.
 
 ## Data
 
-Listings live in `src/data/groomers.json` (three seed records) and are read
-through `src/lib/groomers.ts`. FAQs live in `src/data/faqs.ts` and feed both the
+Listings live in Supabase when configured, falling back to
+`src/data/groomers.json` (three seed records); both are read through
+`src/lib/groomers.ts`. Paid tiers rank above free ones within a market, then by
+rating — the ordering the Pro Van plan actually sells, kept in one place. FAQs live in `src/data/faqs.ts` and feed both the
 rendered accordion and the `FAQPage` JSON-LD, so visible text and markup cannot
 drift apart. Featured metros are in `src/lib/site-config.ts`.
 
-Move the JSON to Supabase once listing count passes ~500 — see `docs/SEO.md`
-for the scaling plan.
+See `docs/SEO.md` for the plan on scaling past the current 12 featured metros.
 
 ## Structured data
 
@@ -81,3 +110,5 @@ pages, with `areaServed` carrying the van's zip code coverage.
   schema map, featured-snippet FAQ strategy, scaling plan
 - [`docs/OUTREACH.md`](docs/OUTREACH.md) — cold email, Instagram DM, and SMS
   templates for B2B groomer acquisition, plus cadence and compliance notes
+- [`docs/SETUP.md`](docs/SETUP.md) — Supabase and Stripe setup, the RLS
+  security model, and what works at each configuration stage

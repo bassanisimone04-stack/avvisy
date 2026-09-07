@@ -8,13 +8,17 @@ import { JsonLd, breadcrumbJsonLd, localBusinessJsonLd } from "@/lib/schema";
 
 type Params = { citySlug: string; slug: string };
 
-export function generateStaticParams() {
-  return getAllGroomers().map((g) => ({ citySlug: g.citySlug, slug: g.slug }));
+export async function generateStaticParams() {
+  const groomers = await getAllGroomers();
+  return groomers.map((g) => ({ citySlug: g.citySlug, slug: g.slug }));
 }
+
+// Listings added to the database after a build render on first request.
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { citySlug, slug } = await params;
-  const groomer = getGroomerBySlug(citySlug, slug);
+  const groomer = await getGroomerBySlug(citySlug, slug);
   if (!groomer) return {};
 
   return {
@@ -26,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function GroomerPage({ params }: { params: Promise<Params> }) {
   const { citySlug, slug } = await params;
-  const groomer = getGroomerBySlug(citySlug, slug);
+  const groomer = await getGroomerBySlug(citySlug, slug);
   if (!groomer) notFound();
 
   const pageUrl = `${SITE_URL}/groomers/${citySlug}/${slug}`;
@@ -166,7 +170,7 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
 
             <div className="my-6 h-px bg-line" />
 
-            <QuoteForm groomerName={groomer.name} />
+            <QuoteForm groomerName={groomer.name} groomerId={groomer.id} />
           </div>
         </aside>
       </div>

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllGroomers } from "@/lib/groomers";
 import { FEATURED_CITIES, SITE_URL } from "@/lib/site-config";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticPages = ["", "/cities", "/pricing", "/claim", "/faq", "/blog"].map((path) => ({
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const groomerPages = getAllGroomers().map((g) => ({
+  const groomerPages = (await getAllGroomers()).map((g) => ({
     url: `${SITE_URL}/groomers/${g.citySlug}/${g.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
