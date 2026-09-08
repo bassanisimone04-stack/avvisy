@@ -108,18 +108,19 @@ back to free rather than deleting it — the business keeps its page and reviews
 
 Listings live in Supabase when configured, falling back to
 `src/data/groomers.json`; both are read through `src/lib/groomers.ts`. The
-seed file holds 9 **real** unclaimed businesses (name, city, phone, website —
-compiled from public web search results, unverified), one each in Los
-Angeles, Houston, Miami, Phoenix, Chicago, Denver, Seattle, Dallas and Austin.
-No fabricated rating, review count, zip coverage, pricing or service tags are
-included, because none of that was independently confirmed — see "Honesty by
-construction" below. Paid tiers rank above free ones within a market, then by
-rating — the ordering the Pro Van plan actually sells, kept in one place. FAQs
-live in `src/data/faqs.ts` and feed both the rendered accordion and the
-`FAQPage` JSON-LD, so visible text and markup cannot drift apart. Featured
-metros are in `src/lib/site-config.ts`; 3 of the 12 (Atlanta, San Diego,
-Charlotte) have no listing yet and show the existing empty state rather than
-a fabricated one.
+seed file holds 22 **real** unclaimed businesses (name, city, phone, website —
+compiled from public web search results, then cross-checked against a second
+independent source per business: Yelp, BBB or Nextdoor), 2 each across all 12
+featured metros except Denver and Atlanta (1 each — the only other Atlanta
+candidate found turned out to be based 150 miles away in Evans/Martinez, GA,
+and was dropped rather than mislabeled). No fabricated rating, review count,
+zip coverage, pricing or service tags are included, because none of that was
+independently confirmed — see "Honesty by construction" below. Paid tiers
+rank above free ones within a market, then by rating — the ordering the Pro
+Van plan actually sells, kept in one place. FAQs live in `src/data/faqs.ts`
+and feed both the rendered accordion and the `FAQPage` JSON-LD, so visible
+text and markup cannot drift apart. Featured metros are in
+`src/lib/site-config.ts`; all 12 now have at least one listing.
 
 ## Honesty by construction
 
