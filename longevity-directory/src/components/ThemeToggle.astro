@@ -20,10 +20,15 @@
   }
   sync();
   btn?.addEventListener("click", () => {
-    const dark = document.documentElement.classList.toggle("dark");
+    // Transizione morbida dei colori solo durante il cambio tema, non permanente
+    // (evitare transition globali sempre attive, che rallentano hover/scroll).
+    const root = document.documentElement;
+    root.classList.add("theme-transitioning");
+    const dark = root.classList.toggle("dark");
     try {
       localStorage.setItem("tema", dark ? "dark" : "light");
     } catch {}
     sync();
+    window.setTimeout(() => root.classList.remove("theme-transitioning"), 320);
   });
 </script>

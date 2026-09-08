@@ -133,6 +133,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Transizione morbida colori/bordi, attivata solo per ~300ms al cambio tema (vedi ThemeToggle.astro). */
+.theme-transitioning,
+.theme-transitioning * {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
 body {
   background: var(--bg);
   color: var(--ink);
@@ -219,6 +229,52 @@ body {
 /* ---------- numeri che contano ---------- */
 [data-count] {
   font-variant-numeric: tabular-nums;
+}
+
+/*
+ * ---------- rifiniture: FAQ accordion, link nel corpo articolo ----------
+ * Micro-interazioni additive, palette e layout invariati.
+ */
+.article-body details {
+  transition: background-color 0.2s ease;
+}
+.article-body details > summary {
+  position: relative;
+  padding-right: 2.4em;
+  transition: color 0.15s ease;
+}
+.article-body details > summary::-webkit-details-marker {
+  display: none;
+}
+.article-body details > summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.1em;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 1.15em;
+  line-height: 1;
+  color: var(--color-iris);
+  transition: transform 0.25s cubic-bezier(0.22, 0.72, 0.26, 1);
+}
+.article-body details[open] > summary::after {
+  transform: rotate(135deg);
+}
+.article-body details:hover {
+  background: var(--surface-2);
+}
+.article-body details[open] > p {
+  animation: faq-in 0.28s ease both;
+}
+@keyframes faq-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
