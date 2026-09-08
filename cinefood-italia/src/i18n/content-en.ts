@@ -247,6 +247,26 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Are the shops in Atrani real?", risposta: "Partly not: the production replaced the shop signs around the square, turning some into a set bakery, grocery and hardware store. The buildings and the square itself, though, are the real Atrani." },
     ],
   },
+  "the-devil-wears-prada-2": {
+    titolo: "The Devil Wears Prada 2",
+    sinossi:
+      "Twenty years after the first film, Andy Sachs (Anne Hathaway), now a media executive, has to work with her former boss Miranda Priestly (Meryl Streep), whose publishing empire is in crisis. Partly filmed in Milan in summer 2025, released in cinemas on 1 May 2026.",
+    faq: [
+      { domanda: "Was The Devil Wears Prada 2 really filmed in Milan?", risposta: "Yes. The cast and crew stayed for several weeks at the Palazzo Parigi Hotel & Grand Spa, where scenes were shot in the lobby, at Caffè Parigi, and in the hotel's exterior spaces, during Milan Fashion Week." },
+      { domanda: "Did the film have a real tourism impact on Milan?", risposta: "Yes: according to Confcommercio Milano data (Cities Analytics), reported by Variety and Il Sole 24 Ore in August 2026, the film's locations saw an 18% rise in international visitors in summer 2026, peaking at +28% around Palazzo Clerici." },
+      { domanda: "Who stars in The Devil Wears Prada 2?", risposta: "Meryl Streep (Miranda Priestly), Anne Hathaway (Andy Sachs) and Emily Blunt (Emily Charlton), twenty years after the first film, directed by David Frankel." },
+    ],
+  },
+  "from-scratch": {
+    titolo: "From Scratch",
+    sinossi:
+      "An 8-episode Netflix limited series based on Tembi Locke's autobiographical memoir. Amy (Zoe Saldana), an American student in Florence, falls for Sicilian chef Lino: the story follows their life between Tuscany and Sicily.",
+    faq: [
+      { domanda: "Is From Scratch based on a true story?", risposta: "Yes, it's based on Tembi Locke's autobiographical memoir, which recounts her own love story with a Sicilian chef she met in Florence." },
+      { domanda: "Where does Lino work in the show?", risposta: "At Buca dell'Orafo, a historic Florentine trattoria on Via dei Girolami, a real venue in the city where the character works as a chef." },
+      { domanda: "Who created From Scratch?", risposta: "Sisters Attica Locke and Tembi Locke, co-creators, with Zoe Saldana starring as protagonist Amy. Directing credits include Nzingha Stewart." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -359,6 +379,14 @@ export const restaurantsEn: Record<string, RestEn> = {
   "ristorante-savo-atrani": {
     descrizione: "A family restaurant on the little square of Atrani, Italy's smallest municipality. Amalfi Coast seafood cooking, run by the Savo family, now in its third generation.",
     scena: { "the-equalizer-3": "Dressed by the production as the film's \"Aminah's Cafe\": the venue where Denzel Washington's character orders his tea and builds his daily routine in the village." },
+  },
+  "caffe-parigi-milano": {
+    descrizione: "The café-bistrot of the Palazzo Parigi Hotel & Grand Spa, a five-star hotel in the heart of Milan between Brera and the Fashion Quadrilateral. Elegant service, breakfasts and aperitivo in a refined setting.",
+    scena: { "the-devil-wears-prada-2": "For several weeks the hotel hosted the film's cast and crew: scenes were shot in the lobby, at Caffè Parigi, and in the hotel's exterior spaces during Milan Fashion Week." },
+  },
+  "buca-dellorafo-firenze": {
+    descrizione: "A historic Florentine trattoria on Via dei Girolami, a stone's throw from Ponte Vecchio: one of the oldest \"buche\" in Florence, traditional Tuscan cooking in a simple, genuine setting.",
+    scena: { "from-scratch": "The venue where Lino, the Sicilian chef at the centre of the show, works — set between Florence and Sicily." },
   },
 };
 
