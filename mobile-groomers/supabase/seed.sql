@@ -4,10 +4,14 @@
 --
 -- These are unclaimed, unverified listings compiled from public web search
 -- results (business name, city, phone, website), cross-checked against a
--- second independent source (Yelp/BBB/Nextdoor) per business. No rating,
--- review count, zip coverage, pricing or service tags are included, because
--- none of that was independently confirmed. That is the honest state of an
--- unclaimed listing: the business fills the rest in by claiming its page.
+-- second independent source per business (Yelp/BBB/Nextdoor), with one
+-- business (a suspected Atlanta match actually 150 miles away) dropped
+-- rather than mislabeled and one (Cloud Mobile Grooming, since converted
+-- to a fixed salon) removed after the check showed it no longer offers
+-- mobile service. No rating, review count, zip coverage, pricing or
+-- service tags are included, because none of that was independently
+-- confirmed. That is the honest state of an unclaimed listing: the
+-- business fills the rest in by claiming its page.
 -- ===========================================================================
 
 insert into groomers (
@@ -71,11 +75,6 @@ insert into groomers (
 (
   'little-bear-mobile-dog-grooming', 'Little Bear Mobile Dog Grooming', 'Seattle', 'WA', 'seattle-wa',
   '+1 (206) 659-7807', 'https://littlebeargrooming.com/', '',
-  'free', false
-),
-(
-  'cloud-mobile-grooming', 'Cloud Mobile Grooming', 'Seattle', 'WA', 'seattle-wa',
-  '+1 (206) 930-7332', 'https://www.cloudberry.dog/', 'Mobile grooming for dogs under 40 lbs.',
   'free', false
 ),
 (

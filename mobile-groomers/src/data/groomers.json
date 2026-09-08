@@ -138,18 +138,6 @@
     "verified": false
   },
   {
-    "slug": "cloud-mobile-grooming",
-    "name": "Cloud Mobile Grooming",
-    "city": "Seattle",
-    "state": "WA",
-    "citySlug": "seattle-wa",
-    "phone": "+1 (206) 930-7332",
-    "website": "https://www.cloudberry.dog/",
-    "tagline": "Mobile grooming for dogs under 40 lbs.",
-    "tier": "free",
-    "verified": false
-  },
-  {
     "slug": "poochies-mobile-grooming",
     "name": "Poochies Mobile Grooming",
     "city": "Dallas",
