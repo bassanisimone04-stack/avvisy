@@ -5,6 +5,7 @@ import CitiesGrid from "@/components/CitiesGrid";
 import FaqSection from "@/components/FaqSection";
 import { JsonLd, faqPageJsonLd } from "@/lib/schema";
 import { CORE_FAQS } from "@/data/faqs";
+import { getAllGroomers } from "@/lib/groomers";
 
 export const metadata: Metadata = {
   title: "Mobile Dog Grooming Near You | FindMobileGrooming",
@@ -13,7 +14,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  // A real, computed count rather than a fixed marketing number — this is
+  // exactly the kind of claim that has to move when the data does, or it
+  // becomes a lie the moment the dataset changes.
+  const groomerCount = (await getAllGroomers()).length;
+
   return (
     <>
       <JsonLd data={faqPageJsonLd(CORE_FAQS)} />
@@ -34,8 +40,8 @@ export default function HomePage() {
               Find Top-Rated Mobile Dog Groomers Near You
             </h1>
             <p className="mt-5 text-lg text-slate-300">
-              Compare verified, van-based dog &amp; cat groomers by zip code. No cages, no
-              commute — book a stress-free grooming appointment right at your door.
+              Compare van-based dog &amp; cat groomers by zip code. No cages, no commute —
+              book a stress-free grooming appointment right at your door.
             </p>
           </div>
 
@@ -44,7 +50,9 @@ export default function HomePage() {
           </div>
 
           <p className="mt-4 text-center text-sm text-slate-400">
-            Over 1,200 mobile groomers indexed across the US
+            {groomerCount > 0
+              ? `${groomerCount} mobile groomer${groomerCount === 1 ? "" : "s"} indexed so far — growing every week`
+              : "New directory — be the first mobile groomer listed in your city"}
           </p>
         </div>
       </section>

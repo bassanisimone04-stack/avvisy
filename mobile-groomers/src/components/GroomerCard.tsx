@@ -1,7 +1,16 @@
 import Link from "next/link";
 import type { Groomer } from "@/lib/groomers";
 
+/**
+ * Every optional field is rendered only if present — never backfilled with
+ * "0 reviews" or a placeholder price. An unclaimed listing genuinely has
+ * less on it than a claimed one, and the card should look like that rather
+ * than paper over the gap with invented numbers.
+ */
 export default function GroomerCard({ groomer }: { groomer: Groomer }) {
+  const hasTags = groomer.tags && groomer.tags.length > 0;
+  const hasRating = groomer.rating !== undefined && groomer.reviewCount !== undefined;
+
   return (
     <Link
       href={`/groomers/${groomer.citySlug}/${groomer.slug}`}
@@ -17,20 +26,28 @@ export default function GroomerCard({ groomer }: { groomer: Groomer }) {
         )}
       </div>
 
-      <p className="text-sm text-ink-soft">{groomer.tagline}</p>
+      {groomer.tagline && <p className="text-sm text-ink-soft">{groomer.tagline}</p>}
 
-      <div className="flex flex-wrap gap-1.5">
-        {groomer.tags.slice(0, 3).map((tag) => (
-          <span key={tag} className="chip chip-neutral">{tag}</span>
-        ))}
-      </div>
+      {hasTags && (
+        <div className="flex flex-wrap gap-1.5">
+          {groomer.tags!.slice(0, 3).map((tag) => (
+            <span key={tag} className="chip chip-neutral">{tag}</span>
+          ))}
+        </div>
+      )}
 
       <div className="mt-1 flex items-center justify-between border-t border-line pt-3 text-sm">
-        <span className="font-semibold text-navy">
-          ★ {groomer.rating.toFixed(1)}{" "}
-          <span className="font-normal text-ink-soft">({groomer.reviewCount})</span>
-        </span>
-        <span className="font-semibold text-ink-soft">{groomer.priceRange}</span>
+        {hasRating ? (
+          <span className="font-semibold text-navy">
+            ★ {groomer.rating!.toFixed(1)}{" "}
+            <span className="font-normal text-ink-soft">({groomer.reviewCount})</span>
+          </span>
+        ) : (
+          <span className="text-ink-soft">Not yet reviewed</span>
+        )}
+        {groomer.priceRange && (
+          <span className="font-semibold text-ink-soft">{groomer.priceRange}</span>
+        )}
       </div>
     </Link>
   );

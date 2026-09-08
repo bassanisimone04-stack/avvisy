@@ -25,7 +25,7 @@ export default async function CitiesIndexPage({
     <section className="container-page py-16 sm:py-20">
       <h1 className="text-4xl">Mobile Dog Groomers by City</h1>
       <p className="mt-3 max-w-xl text-ink-soft">
-        Choose a metro area to see verified, van-based groomers serving your zip code.
+        Choose a metro area to see van-based groomers serving your zip code.
       </p>
 
       {/^\d{5}$/.test(query) && (

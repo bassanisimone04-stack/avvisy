@@ -107,11 +107,38 @@ back to free rather than deleting it — the business keeps its page and reviews
 ## Data
 
 Listings live in Supabase when configured, falling back to
-`src/data/groomers.json` (three seed records); both are read through
-`src/lib/groomers.ts`. Paid tiers rank above free ones within a market, then by
-rating — the ordering the Pro Van plan actually sells, kept in one place. FAQs live in `src/data/faqs.ts` and feed both the
-rendered accordion and the `FAQPage` JSON-LD, so visible text and markup cannot
-drift apart. Featured metros are in `src/lib/site-config.ts`.
+`src/data/groomers.json`; both are read through `src/lib/groomers.ts`. The
+seed file holds 9 **real** unclaimed businesses (name, city, phone, website —
+compiled from public web search results, unverified), one each in Los
+Angeles, Houston, Miami, Phoenix, Chicago, Denver, Seattle, Dallas and Austin.
+No fabricated rating, review count, zip coverage, pricing or service tags are
+included, because none of that was independently confirmed — see "Honesty by
+construction" below. Paid tiers rank above free ones within a market, then by
+rating — the ordering the Pro Van plan actually sells, kept in one place. FAQs
+live in `src/data/faqs.ts` and feed both the rendered accordion and the
+`FAQPage` JSON-LD, so visible text and markup cannot drift apart. Featured
+metros are in `src/lib/site-config.ts`; 3 of the 12 (Atlanta, San Diego,
+Charlotte) have no listing yet and show the existing empty state rather than
+a fabricated one.
+
+## Honesty by construction
+
+Every field on `Groomer` beyond name, city, state and slug is optional, and
+every component that renders one checks for its presence rather than
+defaulting to a placeholder:
+
+- No rating shown → "Not yet reviewed", not "★ 0.0 (0)"
+- No zip coverage → "hasn't confirmed its exact coverage area yet", not an
+  empty grid
+- No tags, price range, response time, or about text → the section doesn't
+  render, rather than rendering empty
+- `verified` is only ever set by an admin approving a claim or a Stripe
+  payment succeeding — never by seed data or by the listing's own edits (see
+  the column-privilege revokes in `supabase/schema.sql`)
+
+The same discipline applies to marketing copy: the homepage's groomer count
+is computed from `getAllGroomers()` at request time, not a fixed number —
+see `src/app/page.tsx`.
 
 See `docs/SEO.md` for the plan on scaling past the current 12 featured metros.
 

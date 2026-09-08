@@ -8,9 +8,9 @@ export default function ZipCodeEditor({
   zipCodes,
 }: {
   groomerId: string;
-  zipCodes: string[];
+  zipCodes?: string[];
 }) {
-  const [value, setValue] = useState(zipCodes.join(", "));
+  const [value, setValue] = useState((zipCodes ?? []).join(", "));
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);

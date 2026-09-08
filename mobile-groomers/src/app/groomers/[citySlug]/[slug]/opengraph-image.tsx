@@ -36,14 +36,19 @@ export default async function Image({
   // ASCII only. A glyph outside the system font (a star, an emoji) makes
   // Satori attempt a dynamic font download, which fails in the build
   // sandbox and would ship a card with a missing character.
-  if (groomer.reviewCount > 0) badges.push(`${groomer.rating.toFixed(1)} / 5`);
+  if (groomer.reviewCount) badges.push(`${groomer.rating!.toFixed(1)} / 5`);
+
+  const footerParts = [
+    groomer.zipCodes?.length ? `${groomer.zipCodes.length} zip codes served` : null,
+    groomer.priceRange ?? null,
+  ].filter((part): part is string => Boolean(part));
 
   return new ImageResponse(
     (
       <OgCard
         eyebrow={`Mobile Grooming · ${groomer.city}, ${groomer.state}`}
         title={groomer.name}
-        footer={`${groomer.zipCodes.length} zip codes served · ${groomer.priceRange}`}
+        footer={footerParts.length > 0 ? footerParts.join(" · ") : groomer.city}
         badges={badges}
       />
     ),

@@ -52,34 +52,46 @@ export function faqPageJsonLd(faqs: Faq[]) {
  * at the customer's home, so areaServed carries the zip code coverage.
  */
 export function localBusinessJsonLd(groomer: Groomer, pageUrl: string) {
+  const website = safeExternalUrl(groomer.website);
+  const hasZips = groomer.zipCodes && groomer.zipCodes.length > 0;
+
   return {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${pageUrl}#business`,
     name: groomer.name,
-    description: groomer.about,
     url: pageUrl,
-    telephone: groomer.phone,
-    ...(safeExternalUrl(groomer.website) ? { sameAs: [safeExternalUrl(groomer.website)] } : {}),
     address: {
       "@type": "PostalAddress",
       addressLocality: groomer.city,
       addressRegion: groomer.state,
       addressCountry: "US",
     },
-    areaServed: groomer.zipCodes.map((zip) => ({
-      "@type": "PostalCodeRange",
-      postalCode: zip,
-    })),
-    priceRange: groomer.priceRange,
-    aggregateRating: groomer.reviewCount
-      ? {
-          "@type": "AggregateRating",
-          ratingValue: groomer.rating,
-          reviewCount: groomer.reviewCount,
-        }
-      : undefined,
     additionalType: "https://schema.org/PetGroomingService",
+    // Every field below is omitted rather than emitted empty or fabricated —
+    // an unclaimed listing genuinely does not have most of this yet, and a
+    // search engine should see that absence rather than a placeholder.
+    ...(groomer.about ? { description: groomer.about } : {}),
+    ...(groomer.phone ? { telephone: groomer.phone } : {}),
+    ...(website ? { sameAs: [website] } : {}),
+    ...(hasZips
+      ? {
+          areaServed: groomer.zipCodes!.map((zip) => ({
+            "@type": "PostalCodeRange",
+            postalCode: zip,
+          })),
+        }
+      : {}),
+    ...(groomer.priceRange ? { priceRange: groomer.priceRange } : {}),
+    ...(groomer.reviewCount
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: groomer.rating,
+            reviewCount: groomer.reviewCount,
+          },
+        }
+      : {}),
   };
 }
 
