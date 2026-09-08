@@ -16,6 +16,7 @@ clusterSlugs:
   - "sauna-mortalita-cardiovascolare"
   - "doccia-fredda-immersione-cosa-dicono-dati"
   - "red-light-therapy-fotobiomodulazione"
+  - "ihht-ipossia-intermittente"
 ctaDirectory: "/directory/terapie-tecnologie"
 ctaLabel: "Vedi i centri di terapie e tecnologie"
 autore: "Redazione Longevità"
@@ -123,6 +124,7 @@ che confrontare i risultati è spesso impossibile. Approfondisci in
 **IHHT** alterna aria povera di ossigeno e aria normale, imitando il principio dell'allenamento in
 altura. I trial disponibili sono piccoli, spesso su popolazioni specifiche (anziani, cardiopatici
 in riabilitazione), con risultati incoraggianti ma non ancora replicati su larga scala.
+Approfondisci in [IHHT: ipossia intermittente, cosa dice la scienza](/blog/ihht-ipossia-intermittente).
 
 **PEMF** (campi elettromagnetici pulsati) ha un'indicazione ortopedica riconosciuta — la
 stimolazione della consolidazione ossea in fratture con ritardo di guarigione — e un uso "wellness"

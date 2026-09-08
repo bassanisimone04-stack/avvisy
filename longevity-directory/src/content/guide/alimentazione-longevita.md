@@ -17,6 +17,7 @@ clusterSlugs:
   - "alcol-dose-sicura-esiste"
   - "proteine-dopo-i-40-quanto-servono"
   - "ultra-processati-infiammazione"
+  - "indice-glicemico-picchi-glicemici"
 ctaDirectory: "/directory/nutrizione-metabolismo"
 ctaLabel: "Vedi i centri di nutrizione e metabolismo"
 autore: "Redazione Longevità"
@@ -97,8 +98,8 @@ a parità di peso — è in
 
 ## Insulino-resistenza: il meccanismo dietro molte diete che "funzionano"
 
-Buona parte del dibattito su carboidrati, indice glicemico e digiuno ruota, senza dirlo
-esplicitamente, attorno a un solo meccanismo: la sensibilità insulinica. Quando le cellule
+Buona parte del dibattito su carboidrati, [indice glicemico](/blog/indice-glicemico-picchi-glicemici)
+e digiuno ruota, senza dirlo esplicitamente, attorno a un solo meccanismo: la sensibilità insulinica. Quando le cellule
 rispondono meno all'insulina, il corpo ne produce di più per mantenere la glicemia normale — un
 compenso che può durare anni prima che gli esami di routine mostrino qualcosa di alterato, ma che
 nel frattempo favorisce l'accumulo di grasso viscerale e aumenta il rischio cardiometabolico. È il

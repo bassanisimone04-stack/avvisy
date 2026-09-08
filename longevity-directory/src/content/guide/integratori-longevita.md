@@ -17,6 +17,8 @@ clusterSlugs:
   - "creatina-integratore-piu-sottovalutato"
   - "resveratrolo-ascesa-caduta"
   - "rapamicina-metformina-ricerca-uomo"
+  - "magnesio-forme-a-confronto"
+  - "collagene-cosa-promette-cosa-fa"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -98,11 +100,12 @@ aggiungere a un pannello (vedi la guida
 **Magnesio**: utile in caso di apporto alimentare insufficiente, con differenze di
 biodisponibilità tra le forme (citrato, glicinato, ossido — quest'ultimo il meno assorbito e il più
 diffuso nei prodotti economici). Le prove su sonno e crampi sono più deboli di quanto suggerisca il
-marketing.
+marketing. Approfondisci in [Magnesio: le forme a confronto](/blog/magnesio-forme-a-confronto).
 
 **Collagene**: alcune meta-analisi riportano effetti modesti su elasticità e idratazione cutanea e
 su dolore articolare. Il meccanismo pubblicizzato — "ricostruisce il tuo collagene" — è una
-semplificazione: viene digerito in aminoacidi e peptidi come qualsiasi altra proteina.
+semplificazione: viene digerito in aminoacidi e peptidi come qualsiasi altra proteina. Approfondisci
+in [Collagene: cosa promette e cosa fa davvero](/blog/collagene-cosa-promette-cosa-fa).
 
 **Urolitina A**: metabolita prodotto dal microbiota a partire dagli ellagitannini (melograno). Studi
 sull'uomo (Andreux e colleghi, Nature Metabolism, 2019, e successivi) mostrano sicurezza e

@@ -16,6 +16,8 @@ clusterSlugs:
   - "allenamento-zona-2-cose-come-farlo"
   - "massa-muscolare-organo-endocrino"
   - "forza-presa-predice-mortalita"
+  - "quanti-passi-al-giorno-servono"
+  - "sollevare-pesi-dopo-i-50"
 ctaDirectory: "/directory/movimento-performance"
 ctaLabel: "Vedi i centri di movimento e performance"
 autore: "Redazione Longevità"
@@ -91,7 +93,9 @@ pubblicata sul British Journal of Sports Medicine (Momma e colleghi, 2022): l'as
 favorevole con la mortalità si osserva intorno a **30–60 minuti a settimana** di attività di
 rinforzo muscolare. Due sedute brevi. È molto meno di quanto la maggior parte delle persone immagini
 serva per ottenere il beneficio principale — il che non significa che di più non serva per obiettivi
-di forza, estetica o performance, ma sposta radicalmente la soglia d'ingresso.
+di forza, estetica o performance, ma sposta radicalmente la soglia d'ingresso. Per chi inizia da
+zero dopo i 50, la parte pratica di come cominciare in sicurezza è in
+[Sollevare pesi dopo i 50: come iniziare in sicurezza](/blog/sollevare-pesi-dopo-i-50).
 
 ## Il muscolo come organo, non come estetica
 
@@ -123,7 +127,8 @@ famosi 10.000 passi non vengono da uno studio: vengono dal nome commerciale di u
 giapponese degli anni Sessanta.
 
 Il messaggio pratico è più incoraggiante del mito: per chi oggi fa 3.000 passi al giorno, arrivare a
-7.000 produce quasi tutto il beneficio disponibile.
+7.000 produce quasi tutto il beneficio disponibile. Approfondisci in
+[Quanti passi al giorno servono davvero](/blog/quanti-passi-al-giorno-servono).
 
 ## Stabilità ed equilibrio: il capitolo che nessuno allena
 

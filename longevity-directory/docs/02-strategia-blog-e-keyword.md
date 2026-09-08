@@ -62,8 +62,10 @@ DEXA e composizione corporea · VO₂max: come si misura e perché predice la mo
 test dell'età biologica: cosa misurano e quanto sono affidabili · test del microbiota: stato dell'arte ·
 CGM per non diabetici: utile o moda.
 → **Ogni articolo chiude con: "Dove farlo" + link alla categoria directory + città principali.**
-→ Scritto come articolo dedicato: **calcium score coronarico: a chi serve** (`/blog/calcium-score-coronarico-a-chi-serve`)
-e **Lp(a): l'esame che si fa una volta nella vita** (`/blog/lp-a-esame-una-volta-nella-vita`).
+→ Scritti come articoli dedicati: **calcium score coronarico: a chi serve** (`/blog/calcium-score-coronarico-a-chi-serve`),
+**Lp(a): l'esame che si fa una volta nella vita** (`/blog/lp-a-esame-una-volta-nella-vita`),
+**hs-CRP: l'esame dell'infiammazione di basso grado** (`/blog/hs-crp-infiammazione-basso-grado`) e
+**DEXA e composizione corporea: cosa misura davvero** (`/blog/dexa-composizione-corporea`).
 
 ### Pilastro 3 — `Nutrizione per la longevità: cosa sappiamo con ragionevole certezza` ✅ pubblicato
 `/guide/alimentazione-longevita` — collega i 2 cluster già pubblicati (insulino-resistenza,
@@ -77,8 +79,9 @@ alcol: la dose "sicura" esiste? · ultra-processati e infiammazione · timing de
 fibre e microbiota · la questione carne rossa, senza tifoserie.
 → Scritti come articoli dedicati: **dieta mediterranea e longevità** (`/blog/dieta-mediterranea-longevita`),
 **alcol: la dose "sicura" esiste davvero?** (`/blog/alcol-dose-sicura-esiste`),
-**quante proteine servono davvero dopo i 40** (`/blog/proteine-dopo-i-40-quanto-servono`) e
-**ultra-processati e infiammazione** (`/blog/ultra-processati-infiammazione`).
+**quante proteine servono davvero dopo i 40** (`/blog/proteine-dopo-i-40-quanto-servono`),
+**ultra-processati e infiammazione** (`/blog/ultra-processati-infiammazione`) e
+**indice glicemico e picchi glicemici** (`/blog/indice-glicemico-picchi-glicemici`).
 
 ### Pilastro 4 — `Allenarsi per invecchiare bene: forza, VO₂max, stabilità` ✅ pubblicato
 `/guide/allenamento-longevita` — collega il cluster VO₂max; copre in forma più breve zona 2,
@@ -91,8 +94,10 @@ allenamento e sensibilità insulinica · sollevare pesi dopo i 50: come iniziare
 → Scritti come articoli dedicati: **sarcopenia: prevenirla a 40 anni, non a 70**
 (`/blog/sarcopenia-prevenirla-a-40-anni`), **allenamento in zona 2: cos'è e come farlo**
 (`/blog/allenamento-zona-2-cose-come-farlo`), **massa muscolare come organo endocrino**
-(`/blog/massa-muscolare-organo-endocrino`) e **forza di presa: perché predice la mortalità**
-(`/blog/forza-presa-predice-mortalita`).
+(`/blog/massa-muscolare-organo-endocrino`), **forza di presa: perché predice la mortalità**
+(`/blog/forza-presa-predice-mortalita`), **quanti passi al giorno servono davvero**
+(`/blog/quanti-passi-al-giorno-servono`) e **sollevare pesi dopo i 50: come iniziare in sicurezza**
+(`/blog/sollevare-pesi-dopo-i-50`).
 
 ### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio` ✅ pubblicato
 `/guide/sonno-longevita` — primo pilastro scritto **insieme ai suoi cluster** (apnee notturne,
@@ -117,8 +122,10 @@ spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una 
 → Scritti come articoli dedicati: **omega-3: dosi ed EPA/DHA** (`/blog/omega-3-dosi-epa-dha`),
 **vitamina D: chi ne ha bisogno** (`/blog/vitamina-d-chi-ne-ha-bisogno`),
 **creatina: l'integratore più sottovalutato** (`/blog/creatina-integratore-piu-sottovalutato`),
-**resveratrolo: ascesa e caduta di una molecola** (`/blog/resveratrolo-ascesa-caduta`) e
-**rapamicina e metformina: lo stato della ricerca sull'uomo** (`/blog/rapamicina-metformina-ricerca-uomo`).
+**resveratrolo: ascesa e caduta di una molecola** (`/blog/resveratrolo-ascesa-caduta`),
+**rapamicina e metformina: lo stato della ricerca sull'uomo** (`/blog/rapamicina-metformina-ricerca-uomo`),
+**magnesio: le forme a confronto** (`/blog/magnesio-forme-a-confronto`) e
+**collagene: cosa promette e cosa fa davvero** (`/blog/collagene-cosa-promette-cosa-fa`).
 
 ### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
 `/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
@@ -130,8 +137,9 @@ PEMF · neurofeedback · plasmaferesi e "giovani plasma": realtà e marketing.
 → **Cluster BOFU: ogni articolo linka alla categoria directory e alle pagine città.**
 → Scritti come articoli dedicati: **sauna e mortalità cardiovascolare: lo studio finlandese**
 (`/blog/sauna-mortalita-cardiovascolare`), **doccia fredda e immersione: cosa dicono i dati**
-(`/blog/doccia-fredda-immersione-cosa-dicono-dati`) e **red light therapy: cosa dice davvero la scienza**
-(`/blog/red-light-therapy-fotobiomodulazione`).
+(`/blog/doccia-fredda-immersione-cosa-dicono-dati`), **red light therapy: cosa dice davvero la scienza**
+(`/blog/red-light-therapy-fotobiomodulazione`) e **IHHT: ipossia intermittente, cosa dice la scienza**
+(`/blog/ihht-ipossia-intermittente`).
 
 ### Pilastro 8 — `Prevenire le quattro grandi malattie croniche` ✅ pubblicato
 `/guide/prevenzione-malattie-croniche` — collega 3 cluster scritti insieme al pilastro (rischio

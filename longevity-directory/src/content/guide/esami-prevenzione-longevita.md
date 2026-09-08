@@ -16,6 +16,8 @@ clusterSlugs:
   - "apob-esame-valori-perche-conta"
   - "calcium-score-coronarico-a-chi-serve"
   - "lp-a-esame-una-volta-nella-vita"
+  - "hs-crp-infiammazione-basso-grado"
+  - "dexa-composizione-corporea"
 ctaDirectory: "/directory/diagnostica-avanzata"
 ctaLabel: "Vedi i centri di diagnostica avanzata"
 autore: "Redazione Longevità"
@@ -94,7 +96,8 @@ meccanismo coinvolto sia nell'aterosclerosi sia in gran parte delle malattie cro
 all'età. Lo studio JUPITER (Ridker e colleghi, New England Journal of Medicine, 2008) ha mostrato
 che un hs-CRP elevato identifica un sottogruppo di persone a rischio cardiovascolare anche quando
 il colesterolo LDL è nella norma — la stessa logica di discordanza vista per l'ApoB, su un
-meccanismo diverso.
+meccanismo diverso. Approfondisci in
+[hs-CRP: l'esame dell'infiammazione di basso grado](/blog/hs-crp-infiammazione-basso-grado).
 
 ## Composizione corporea e imaging: quando servono, quando no
 
@@ -103,7 +106,8 @@ massa grassa, massa magra e densità ossea, con una precisione che la bilancia i
 farmacia non ha. È particolarmente utile dopo i 50 anni per intercettare la sarcopenia (perdita di
 massa muscolare) prima che diventi visibile, e nelle donne in perimenopausa per monitorare la
 densità ossea. Fuori da queste indicazioni, ripeterla più di una volta l'anno raramente cambia
-qualcosa nelle decisioni pratiche.
+qualcosa nelle decisioni pratiche. Approfondisci in
+[DEXA e composizione corporea: cosa misura davvero](/blog/dexa-composizione-corporea).
 
 **Calcium score coronarico.** Una TAC a basse dosi che misura le calcificazioni nelle arterie
 coronarie — un marcatore diretto, non un proxy, di aterosclerosi già presente. Le linee guida
