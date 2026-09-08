@@ -60,7 +60,8 @@ still works. Adding keys turns features on progressively — see
 | Clients | `src/lib/supabase/{config,client,server,public,admin}.ts` |
 | Data access | `src/lib/groomers.ts`, `src/lib/leads.ts` |
 | Auth | `src/lib/supabase/auth-actions.ts`, `src/app/login`, `src/app/auth/callback`, `src/middleware.ts` |
-| Lead capture + forwarding | `src/app/api/leads/route.ts`, `src/lib/email.ts` |
+| Lead capture + forwarding | `src/app/api/leads/route.ts`, `src/lib/lead-rules.ts`, `src/lib/email.ts` |
+| Share cards | `src/lib/og.tsx` + `opengraph-image.tsx` per route |
 | Billing | `src/lib/stripe.ts`, `src/app/api/stripe/{checkout,webhook}/route.ts` |
 | Dashboard | `src/app/dashboard`, `src/components/{ZipCodeEditor,UpgradeButton}.tsx` |
 | Outreach generator | `scripts/outreach.mjs`, `scripts/outreach/` |

@@ -117,6 +117,26 @@ actually changes. Automatically setting it to the build date is a common trick
 and a transparent one — a page whose modified date moves daily while the text
 never changes gets discounted, not rewarded.
 
+## Share cards
+
+Every significant route generates its own OG image from the shared layout in
+`src/lib/og.tsx`: the homepage, city pages, listing pages and articles.
+
+The listing card carries the **business name**, not the site's — a groomer who
+claims their page shares it on their own social accounts, and that referral
+loop is worth more than another generic brand impression. It also shows zip
+coverage, price range, and the verified badge.
+
+Two constraints the cards are built around, both found by generating one and
+looking at it:
+
+- **No emoji, no non-ASCII glyphs.** Satori attempts a dynamic font download
+  for any character outside the loaded font. In a build sandbox that fails and
+  ships a card with a missing glyph. The paw mark is drawn with plain divs and
+  the rating reads `4.9 / 5` rather than using a star character.
+- **No webfonts.** Loading one would put a network dependency in the build for
+  a decorative gain.
+
 ## Scaling plan
 
 The directory currently ships 12 featured metros and sample listings. To scale:

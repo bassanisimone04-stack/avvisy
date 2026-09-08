@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import GroomerCard from "@/components/GroomerCard";
 import { getGroomersByCitySlug } from "@/lib/groomers";
-import { FEATURED_CITIES, SITE_URL } from "@/lib/site-config";
+import { FEATURED_CITIES, SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -22,10 +22,22 @@ export async function generateMetadata({
   const { citySlug } = await params;
   const city = getCity(citySlug);
   if (!city) return {};
+  const title = `Mobile Dog Groomers in ${city.city}, ${city.state}`;
+  const description = `Compare verified mobile dog groomers serving ${city.city}, ${city.state}. See zip code coverage, pricing, and request a free quote.`;
+
   return {
-    title: `Mobile Dog Groomers in ${city.city}, ${city.state}`,
-    description: `Compare verified mobile dog groomers serving ${city.city}, ${city.state}. See zip code coverage, pricing, and request a free quote.`,
+    title,
+    description,
     alternates: { canonical: `/cities/${city.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/cities/${city.slug}`,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "en_US",
+    },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import QuoteForm from "@/components/QuoteForm";
 import { getAllGroomers, getGroomerBySlug } from "@/lib/groomers";
-import { SITE_URL } from "@/lib/site-config";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { JsonLd, breadcrumbJsonLd, localBusinessJsonLd } from "@/lib/schema";
 
 type Params = { citySlug: string; slug: string };
@@ -21,10 +21,22 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const groomer = await getGroomerBySlug(citySlug, slug);
   if (!groomer) return {};
 
+  const title = `${groomer.name} — Mobile Dog Grooming in ${groomer.city}, ${groomer.state}`;
+  const description = `${groomer.tagline} Serving ${groomer.zipCodes.length} zip codes around ${groomer.city}. See services, pricing, and request a free quote.`;
+
   return {
-    title: `${groomer.name} — Mobile Dog Grooming in ${groomer.city}, ${groomer.state}`,
-    description: `${groomer.tagline} Serving ${groomer.zipCodes.length} zip codes around ${groomer.city}. See services, pricing, and request a free quote.`,
+    title,
+    description,
     alternates: { canonical: `/groomers/${citySlug}/${slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/groomers/${citySlug}/${slug}`,
+      siteName: SITE_NAME,
+      type: "profile",
+      locale: "en_US",
+    },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

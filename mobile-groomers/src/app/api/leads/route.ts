@@ -3,7 +3,8 @@ import { createHash } from "crypto";
 import { createPublicClient } from "@/lib/supabase/public";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
-import { isEmailAddress, sendEmail } from "@/lib/email";
+import { sendEmail } from "@/lib/email";
+import { isEmailAddress, validateLead } from "@/lib/lead-rules";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 /**
@@ -18,14 +19,9 @@ import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 export const runtime = "nodejs";
 
-const MAX_FIELD = 500;
 /** Max leads accepted from one submitter per window, per groomer. */
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 60 * 60 * 1000;
-
-function clean(value: unknown): string {
-  return typeof value === "string" ? value.trim().slice(0, MAX_FIELD) : "";
-}
 
 function hashIp(ip: string): string {
   // Salted with a server-side secret so the hash is not a reversible
@@ -43,42 +39,24 @@ export async function POST(request: Request) {
   }
 
   const body = payload as Record<string, unknown>;
-  const groomerId = clean(body.groomerId);
-  const name = clean(body.name);
-  const contact = clean(body.contact);
-  const zipCode = clean(body.zip);
-  const pet = clean(body.pet);
-  const message = clean(body.message);
-  // Honeypot: a real user never fills a field hidden from the layout.
-  const honeypot = clean(body.company);
 
-  if (honeypot) {
-    // Silently accept so the bot does not learn it was rejected.
-    return NextResponse.json({ ok: true });
+  // Demo mode has no database, so there is no listing to attach a lead to
+  // and no groomer id to require. Rules live in lib/lead-rules.ts, which is
+  // unit tested directly.
+  const configured = isSupabaseConfigured;
+  const verdict = validateLead(body, { requireGroomerId: configured });
+
+  if (verdict.outcome === "silent-drop") return NextResponse.json({ ok: true });
+  if (verdict.outcome === "reject") {
+    return NextResponse.json({ error: verdict.error }, { status: 400 });
   }
 
-  if (!name || !contact) {
-    return NextResponse.json(
-      { error: "Name and a contact detail are required." },
-      { status: 400 },
-    );
-  }
+  const { groomerId, name, contact, zipCode, pet, message } = verdict.lead;
 
-  if (zipCode && !/^\d{5}$/.test(zipCode)) {
-    return NextResponse.json(
-      { error: "Zip code must be five digits." },
-      { status: 400 },
-    );
-  }
-
-  // Demo mode: accept the lead so the UI flow stays testable, but say plainly
-  // that nothing was persisted.
-  if (!isSupabaseConfigured) {
+  // Accept the lead so the UI flow stays testable, but say plainly that
+  // nothing was persisted.
+  if (!configured) {
     return NextResponse.json({ ok: true, stored: false, mode: "demo" });
-  }
-
-  if (!groomerId) {
-    return NextResponse.json({ error: "Unknown groomer." }, { status: 400 });
   }
 
   const forwardedFor = request.headers.get("x-forwarded-for") ?? "";
