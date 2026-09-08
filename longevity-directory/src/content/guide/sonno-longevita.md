@@ -15,6 +15,7 @@ clusterSlugs:
   - "quante-ore-dormire-davvero"
   - "hrv-cosa-misura-come-usarla"
   - "melatonina-dosi-evidenze-errori"
+  - "cbt-i-terapia-insonnia-prima-linea"
 ctaDirectory: "/directory/sonno-mente-stress"
 ctaLabel: "Vedi i centri per sonno, mente e stress"
 autore: "Redazione Longevità"
@@ -74,7 +75,8 @@ La CBT-I è un percorso strutturato di poche settimane che combina restrizione d
 controllo dello stimolo, lavoro sulle credenze disfunzionali riguardo al sonno e igiene del sonno.
 Il motivo per cui viene prima dei farmaci non è ideologico: **la sua efficacia si mantiene dopo la
 fine del trattamento**, mentre quella farmacologica tende a esaurirsi alla sospensione, con
-possibile insonnia di rimbalzo.
+possibile insonnia di rimbalzo. Approfondisci in
+[CBT-I: la terapia di prima linea per l'insonnia](/blog/cbt-i-terapia-insonnia-prima-linea).
 
 Che in Italia sia molto meno prescritta di un ipnotico dipende dalla disponibilità di terapeuti
 formati e dai tempi, non dalla forza delle prove.

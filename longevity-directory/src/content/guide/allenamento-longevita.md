@@ -13,6 +13,8 @@ keyTakeaways:
 clusterSlugs:
   - "come-aumentare-vo2-max"
   - "sarcopenia-prevenirla-a-40-anni"
+  - "allenamento-zona-2-cose-come-farlo"
+  - "massa-muscolare-organo-endocrino"
 ctaDirectory: "/directory/movimento-performance"
 ctaLabel: "Vedi i centri di movimento e performance"
 autore: "Redazione Longevità"
@@ -71,6 +73,7 @@ cosa.
 I due lavori non competono: il primo costruisce il motore, il secondo ne alza il tetto. Una
 distribuzione ragionevole per chi non è atleta agonista è la maggior parte del volume in zona 2 e
 una o due sedute intense a settimana, con la seconda introdotta solo dopo aver costruito una base.
+Approfondisci in [Allenamento in zona 2: cos'è e come farlo](/blog/allenamento-zona-2-cose-come-farlo).
 
 ## La forza: una polizza assicurativa separata
 
@@ -95,6 +98,7 @@ smaltimento del glucosio nel corpo e un tessuto endocrino che rilascia miochine 
 sistemici. Più massa muscolare attiva significa, a parità di tutto il resto, migliore sensibilità
 insulinica — il che collega direttamente questa guida a quella su
 [nutrizione e longevità](/guide/alimentazione-longevita) e al tema dell'insulino-resistenza.
+Approfondisci in [Massa muscolare come organo endocrino](/blog/massa-muscolare-organo-endocrino).
 
 **La sarcopenia** — la perdita progressiva di massa e forza muscolare, definita nei criteri europei
 EWGSOP2 (Cruz-Jentoft e colleghi, Age and Ageing, 2019) — comincia in modo silenzioso già dopo i

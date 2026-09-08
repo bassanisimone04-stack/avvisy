@@ -13,6 +13,8 @@ keyTakeaways:
 clusterSlugs:
   - "digiuno-intermittente-16-8-benefici"
   - "insulino-resistenza-sintomi-cosa-fare"
+  - "dieta-mediterranea-longevita"
+  - "alcol-dose-sicura-esiste"
 ctaDirectory: "/directory/nutrizione-metabolismo"
 ctaLabel: "Vedi i centri di nutrizione e metabolismo"
 autore: "Redazione Longevità"
@@ -72,7 +74,8 @@ insieme.
 
 Cosa caratterizza il pattern: olio d'oliva come grasso principale, pesce e legumi frequenti, carne
 rossa limitata, abbondanza di verdura e frutta, cereali preferibilmente integrali. Non è un elenco
-di alimenti vietati: è una proporzione.
+di alimenti vietati: è una proporzione. Approfondisci in
+[Dieta mediterranea e longevità: cosa dicono gli studi](/blog/dieta-mediterranea-longevita).
 
 ## Digiuno intermittente 16/8: cosa fa davvero e cosa no
 
@@ -139,6 +142,7 @@ aggiornamenti successivi), indicano che il livello di consumo associato al minor
 per la salute si avvicina allo zero. Questo non equivale a dire che un consumo occasionale e
 moderato sia pericoloso in modo drammatico per la maggior parte delle persone: equivale a dire che
 non esiste una soglia realmente protettiva, e che "meno è meglio" è oggi la sintesi più onesta.
+Approfondisci in [Alcol: la dose "sicura" esiste davvero?](/blog/alcol-dose-sicura-esiste).
 
 ## Ultra-processati e infiammazione
 

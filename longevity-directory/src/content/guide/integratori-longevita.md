@@ -14,6 +14,7 @@ clusterSlugs:
   - "nmn-nad-cosa-dice-la-scienza"
   - "vitamina-d-chi-ne-ha-bisogno"
   - "omega-3-dosi-epa-dha"
+  - "creatina-integratore-piu-sottovalutato"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -59,7 +60,8 @@ longevità: massa muscolare e forza sono tra i predittori più solidi di invecch
 La posizione ufficiale dell'International Society of Sports Nutrition (Kreider e colleghi, 2017)
 riassume decenni di letteratura. Dose standard: 3–5 g al giorno, senza necessità di fase di carico.
 Il filone più recente e ancora incerto riguarda gli effetti cognitivi, soprattutto in condizioni di
-privazione di sonno: interessante, non ancora consolidato.
+privazione di sonno: interessante, non ancora consolidato. Approfondisci in
+[Creatina: l'integratore più sottovalutato](/blog/creatina-integratore-piu-sottovalutato).
 
 ## 🟡 Omega-3 (EPA/DHA)
 

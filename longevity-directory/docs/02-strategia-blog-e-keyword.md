@@ -62,7 +62,8 @@ DEXA e composizione corporea · VO₂max: come si misura e perché predice la mo
 test dell'età biologica: cosa misurano e quanto sono affidabili · test del microbiota: stato dell'arte ·
 CGM per non diabetici: utile o moda.
 → **Ogni articolo chiude con: "Dove farlo" + link alla categoria directory + città principali.**
-→ Scritto come articolo dedicato: **calcium score coronarico: a chi serve** (`/blog/calcium-score-coronarico-a-chi-serve`).
+→ Scritto come articolo dedicato: **calcium score coronarico: a chi serve** (`/blog/calcium-score-coronarico-a-chi-serve`)
+e **Lp(a): l'esame che si fa una volta nella vita** (`/blog/lp-a-esame-una-volta-nella-vita`).
 
 ### Pilastro 3 — `Nutrizione per la longevità: cosa sappiamo con ragionevole certezza` ✅ pubblicato
 `/guide/alimentazione-longevita` — collega i 2 cluster già pubblicati (insulino-resistenza,
@@ -74,6 +75,8 @@ dieta mima-digiuno: cosa dicono gli studi · insulino-resistenza: segnali precoc
 indice glicemico e picchi glicemici · dieta mediterranea e longevità · restrizione calorica nell'uomo ·
 alcol: la dose "sicura" esiste? · ultra-processati e infiammazione · timing dei pasti e ritmo circadiano ·
 fibre e microbiota · la questione carne rossa, senza tifoserie.
+→ Scritti come articoli dedicati: **dieta mediterranea e longevità** (`/blog/dieta-mediterranea-longevita`)
+e **alcol: la dose "sicura" esiste davvero?** (`/blog/alcol-dose-sicura-esiste`).
 
 ### Pilastro 4 — `Allenarsi per invecchiare bene: forza, VO₂max, stabilità` ✅ pubblicato
 `/guide/allenamento-longevita` — collega il cluster VO₂max; copre in forma più breve zona 2,
@@ -83,7 +86,10 @@ perché la forza di presa predice la mortalità · massa muscolare come organo e
 sarcopenia: prevenirla a 40 anni, non a 70 · quanto camminare davvero serve ·
 protocollo norvegese 4×4 · stabilità ed equilibrio: il killer silenzioso dopo i 65 ·
 allenamento e sensibilità insulinica · sollevare pesi dopo i 50: come iniziare in sicurezza.
-→ Scritto come articolo dedicato: **sarcopenia: prevenirla a 40 anni, non a 70** (`/blog/sarcopenia-prevenirla-a-40-anni`).
+→ Scritti come articoli dedicati: **sarcopenia: prevenirla a 40 anni, non a 70**
+(`/blog/sarcopenia-prevenirla-a-40-anni`), **allenamento in zona 2: cos'è e come farlo**
+(`/blog/allenamento-zona-2-cose-come-farlo`) e **massa muscolare come organo endocrino**
+(`/blog/massa-muscolare-organo-endocrino`).
 
 ### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio` ✅ pubblicato
 `/guide/sonno-longevita` — primo pilastro scritto **insieme ai suoi cluster** (apnee notturne,
@@ -93,7 +99,8 @@ Cluster: quante ore servono e cosa succede sotto le 6 · apnee notturne: i segna
 CBT-I: la terapia di prima linea per l'insonnia · HRV: cosa misura e come usarla ·
 temperatura, luce e caffeina: le tre leve che funzionano · melatonina: dosi, evidenze, errori ·
 sonno e rischio di Alzheimer (sistema glinfatico) · turni e jet lag sociale.
-→ Scritto come articolo dedicato: **melatonina: dosi, evidenze, errori** (`/blog/melatonina-dosi-evidenze-errori`).
+→ Scritti come articoli dedicati: **melatonina: dosi, evidenze, errori** (`/blog/melatonina-dosi-evidenze-errori`)
+e **CBT-I: la terapia di prima linea per l'insonnia** (`/blog/cbt-i-terapia-insonnia-prima-linea`).
 
 ### Pilastro 6 — `Integratori per la longevità: cosa ha prove, cosa no` ✅ pubblicato
 `/guide/integratori-longevita` — con **sistema di gradazione dell'evidenza**; collega il cluster
@@ -103,8 +110,9 @@ Cluster: NMN e NAD⁺, cosa sappiamo davvero · resveratrolo: ascesa e caduta ·
 sottovalutato · omega-3: dosi ed EPA/DHA · vitamina D: chi ne ha bisogno · magnesio: forme a confronto ·
 rapamicina e metformina: lo stato della ricerca sull'uomo · collagene: cosa promette e cosa fa ·
 spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una bufala.
-→ Scritti come articoli dedicati: **omega-3: dosi ed EPA/DHA** (`/blog/omega-3-dosi-epa-dha`) e
-**vitamina D: chi ne ha bisogno** (`/blog/vitamina-d-chi-ne-ha-bisogno`).
+→ Scritti come articoli dedicati: **omega-3: dosi ed EPA/DHA** (`/blog/omega-3-dosi-epa-dha`),
+**vitamina D: chi ne ha bisogno** (`/blog/vitamina-d-chi-ne-ha-bisogno`) e
+**creatina: l'integratore più sottovalutato** (`/blog/creatina-integratore-piu-sottovalutato`).
 
 ### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
 `/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
@@ -114,8 +122,9 @@ lo studio finlandese · doccia fredda e immersione: cosa dicono i dati · ossige
 usi approvati vs promesse · red light therapy · IV therapy e NAD⁺ in flebo: serve? · IHHT ·
 PEMF · neurofeedback · plasmaferesi e "giovani plasma": realtà e marketing.
 → **Cluster BOFU: ogni articolo linka alla categoria directory e alle pagine città.**
-→ Scritto come articolo dedicato: **sauna e mortalità cardiovascolare: lo studio finlandese**
-(`/blog/sauna-mortalita-cardiovascolare`).
+→ Scritti come articoli dedicati: **sauna e mortalità cardiovascolare: lo studio finlandese**
+(`/blog/sauna-mortalita-cardiovascolare`) e **doccia fredda e immersione: cosa dicono i dati**
+(`/blog/doccia-fredda-immersione-cosa-dicono-dati`).
 
 ### Pilastro 8 — `Prevenire le quattro grandi malattie croniche` ✅ pubblicato
 `/guide/prevenzione-malattie-croniche` — collega 3 cluster scritti insieme al pilastro (rischio

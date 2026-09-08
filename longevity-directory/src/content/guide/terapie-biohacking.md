@@ -14,6 +14,7 @@ clusterSlugs:
   - "crioterapia-whole-body-prezzi-benefici"
   - "camera-iperbarica-prezzo-indicazioni"
   - "sauna-mortalita-cardiovascolare"
+  - "doccia-fredda-immersione-cosa-dicono-dati"
 ctaDirectory: "/directory/terapie-tecnologie"
 ctaLabel: "Vedi i centri di terapie e tecnologie"
 autore: "Redazione Longevità"
@@ -82,6 +83,8 @@ gare a 24 ore di distanza, lavora per te. Stessa terapia, effetto opposto.
 
 I prezzi, i protocolli e le controindicazioni sono nell'approfondimento
 [Crioterapia whole body: prezzi, benefici reali e rischi](/blog/crioterapia-whole-body-prezzi-benefici).
+Sulla doccia fredda e l'immersione in acqua fredda "casalinghe", più economiche ma con dati altrettanto
+sfumati, vedi [Doccia fredda e immersione: cosa dicono davvero i dati](/blog/doccia-fredda-immersione-cosa-dicono-dati).
 
 ## Ossigenoterapia iperbarica: indicazioni serie, promesse anti-aging premature
 

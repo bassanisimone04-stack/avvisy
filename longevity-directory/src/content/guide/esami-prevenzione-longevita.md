@@ -15,6 +15,7 @@ clusterSlugs:
   - "check-up-completo-prevenzione-quanto-costa"
   - "apob-esame-valori-perche-conta"
   - "calcium-score-coronarico-a-chi-serve"
+  - "lp-a-esame-una-volta-nella-vita"
 ctaDirectory: "/directory/diagnostica-avanzata"
 ctaLabel: "Vedi i centri di diagnostica avanzata"
 autore: "Redazione Longevità"
@@ -78,7 +79,8 @@ rappresentare meglio il rischio reale. Ne parliamo in dettaglio, con le soglie d
 **Lp(a)** viaggia insieme all'ApoB ma è determinata quasi interamente dalla genetica: non cambia
 con la dieta né con lo stile di vita, e per questo si misura **una volta sola nella vita**. Un
 valore alto non è solo un dato personale: cambia il quadro di rischio per l'intera famiglia, ed è
-uno degli esami più sottoutilizzati che esistano, nonostante il costo contenuto.
+uno degli esami più sottoutilizzati che esistano, nonostante il costo contenuto. Approfondisci in
+[Lp(a): l'esame del colesterolo che si fa una volta nella vita](/blog/lp-a-esame-una-volta-nella-vita).
 
 **Insulina a digiuno e HOMA-IR** (il rapporto tra glicemia e insulina a digiuno, descritto per la
 prima volta da Matthews e colleghi nel 1985) intercettano la resistenza insulinica anni prima che
