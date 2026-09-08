@@ -17,6 +17,7 @@ clusterSlugs:
   - "menopausa-rischio-cardiovascolare"
   - "testosterone-quando-e-un-problema-clinico"
   - "sindrome-metabolica-terreno-comune"
+  - "salute-orale-infiammazione-sistemica"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -107,9 +108,12 @@ L'infiammazione gengivale cronica (parodontite) è associata, in letteratura, a 
 cardiovascolare aumentato e a un peggior controllo glicemico nei diabetici — probabilmente
 attraverso un meccanismo di infiammazione sistemica di basso grado, lo stesso "inflammaging"
 discusso tra i [12 meccanismi dell'invecchiamento](/blog/dodici-meccanismi-invecchiamento-spiegati).
+Approfondisci in
+[Salute orale e infiammazione sistemica: il collegamento sottovalutato](/blog/salute-orale-infiammazione-sistemica).
 E lo stress cronico ha un correlato biologico reale e misurabile — l'attivazione prolungata
 dell'asse ipotalamo-ipofisi-surrene — associato a peggior profilo cardiometabolico, non "solo nella
-testa" come talvolta viene liquidato.
+testa" come talvolta viene liquidato. Approfondisci in
+[Stress cronico e cortisolo: cosa fa davvero al corpo](/blog/stress-cronico-cortisolo-cosa-fa).
 
 ## Dove farsi seguire
 

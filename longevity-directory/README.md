@@ -5,7 +5,7 @@ biohacking e della medicina preventiva — con blog editoriale e area B2B per le
 Costruito con **Astro 5 + Tailwind v4**, contenuti (schede centri, articoli) via Content
 Collections, backend reale (SQLite + Astro Actions) per moduli, autenticazione e area riservata.
 
-> Le 28 strutture e i 50 articoli sono **dati mock** pensati per popolare il prototipo. Moduli di
+> Le 28 strutture e i 58 articoli sono **dati mock** pensati per popolare il prototipo. Moduli di
 > contatto/lead, registrazione, login e pannello admin sono invece **backend reale e funzionante**
 > (vedi sotto) — non simulazioni. Pagamenti Stripe e pannello admin richiedono le proprie
 > credenziali per essere attivi (vedi `.env.example`).
@@ -75,7 +75,7 @@ e cresce da sola con la directory invece di richiedere una riscrittura a ogni pr
 | 6 — Integratori | `/guide/integratori-longevita` | NMN e NAD⁺ |
 | 7 — Terapie e tecnologie | `/guide/terapie-biohacking` | crioterapia, camera iperbarica |
 
-**Tutti e 50 gli articoli del blog** puntano ora "in su" alla propria guida pilastro (sezione
+**Tutti e 58 gli articoli del blog** puntano ora "in su" alla propria guida pilastro (sezione
 "Approfondimenti correlati"), e ogni guida elenca i suoi cluster e punta alla categoria directory
 corrispondente: il ciclo pilastro → cluster → directory del doc 02 §1 è chiuso in entrambe le
 direzioni, non più solo sulla carta.
@@ -99,7 +99,7 @@ src/
 ├─ content.config.ts     # schema Zod delle collection "centri", "blog" e "guide"
 ├─ content/
 │  ├─ centri/             # 28 schede — un file .md per struttura
-│  ├─ blog/                # 50 articoli cluster, stesso standard editoriale
+│  ├─ blog/                # 58 articoli cluster, stesso standard editoriale
 │  └─ guide/                # 9 guide pilastro — il piano del doc 02 è completo
 ├─ lib/
 │  ├─ taxonomy.ts          # le 9 categorie + sottocategorie, tipi di struttura, MIN_LISTINGS_FOR_CITY_PAGE, getCityPageCombos()
@@ -254,7 +254,7 @@ dominio Vercel reale a `security.allowedDomains` in `astro.config.mjs`.
 ## Stato e prossimi passi
 
 Fase implementata: architettura, tassonomia, 28 schede mock, 10 keyword di lancio, il piano
-editoriale del doc 02 completo (9 guide pilastro, 50 articoli cluster, tutti collegati nelle due
+editoriale del doc 02 completo (9 guide pilastro, 58 articoli cluster, tutti collegati nelle due
 direzioni), tutte le pagine di servizio, filtri funzionanti, SEO tecnica auditata (incluso il fix
 delle FAQ invisibili e il controllo sulle date future), backend reale (SQLite + Astro Actions) per
 contatti, lead, registrazione, autenticazione e area riservata, pannello admin. Il pilastro 9

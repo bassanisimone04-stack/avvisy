@@ -19,6 +19,7 @@ clusterSlugs:
   - "rapamicina-metformina-ricerca-uomo"
   - "magnesio-forme-a-confronto"
   - "collagene-cosa-promette-cosa-fa"
+  - "urolitina-a-studi-uomo"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -110,7 +111,8 @@ in [Collagene: cosa promette e cosa fa davvero](/blog/collagene-cosa-promette-co
 **Urolitina A**: metabolita prodotto dal microbiota a partire dagli ellagitannini (melograno). Studi
 sull'uomo (Andreux e colleghi, Nature Metabolism, 2019, e successivi) mostrano sicurezza e
 modificazioni di marcatori mitocondriali muscolari. È tra le molecole "nuove" con i dati umani
-migliori — che restano comunque marcatori intermedi, non esiti clinici.
+migliori — che restano comunque marcatori intermedi, non esiti clinici. Approfondisci in
+[Urolitina A: cosa dicono i primi studi sull'uomo](/blog/urolitina-a-studi-uomo).
 
 **Spermidina**: dati osservazionali su coorti alimentari e studi animali promettenti; i trial
 sull'uomo sono piccoli e prevalentemente su marcatori cognitivi, con risultati non conclusivi.

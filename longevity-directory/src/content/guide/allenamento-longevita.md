@@ -18,6 +18,8 @@ clusterSlugs:
   - "forza-presa-predice-mortalita"
   - "quanti-passi-al-giorno-servono"
   - "sollevare-pesi-dopo-i-50"
+  - "protocollo-norvegese-4x4"
+  - "stabilita-equilibrio-dopo-65"
 ctaDirectory: "/directory/movimento-performance"
 ctaLabel: "Vedi i centri di movimento e performance"
 autore: "Redazione Longevità"
@@ -68,10 +70,10 @@ protocolli che hanno dati alle spalle, è in
 
 Il lavoro a bassa intensità (la cosiddetta **zona 2**: ritmo conversazionale, sotto la prima
 soglia) costruisce la base aerobica, la densità mitocondriale e la capacità di usare i grassi come
-substrato. Il lavoro **ad alta intensità** — l'esempio più studiato è il protocollo norvegese 4×4,
-quattro intervalli di quattro minuti vicino al massimale con recupero attivo (Helgerud e colleghi,
-Medicine & Science in Sports & Exercise, 2007) — alza il VO₂max più rapidamente di qualsiasi altra
-cosa.
+substrato. Il lavoro **ad alta intensità** — l'esempio più studiato è il
+[protocollo norvegese 4×4](/blog/protocollo-norvegese-4x4), quattro intervalli di quattro minuti
+vicino al massimale con recupero attivo (Helgerud e colleghi, Medicine & Science in Sports &
+Exercise, 2007) — alza il VO₂max più rapidamente di qualsiasi altra cosa.
 
 I due lavori non competono: il primo costruisce il motore, il secondo ne alza il tetto. Una
 distribuzione ragionevole per chi non è atleta agonista è la maggior parte del volume in zona 2 e
@@ -137,6 +139,7 @@ correlata a trauma. L'equilibrio è una capacità allenabile come la forza, e si
 silenziosamente: test semplici come il tempo di appoggio su una gamba sola danno un'idea immediata
 del punto di partenza. Inserire due o tre minuti di lavoro propriocettivo in ogni seduta costa
 pochissimo ed è, in prospettiva ventennale, uno degli investimenti con il ritorno più alto.
+Approfondisci in [Stabilità ed equilibrio: il killer silenzioso dopo i 65](/blog/stabilita-equilibrio-dopo-65).
 
 ## Come mettere insieme la settimana
 

@@ -17,6 +17,8 @@ clusterSlugs:
   - "doccia-fredda-immersione-cosa-dicono-dati"
   - "red-light-therapy-fotobiomodulazione"
   - "ihht-ipossia-intermittente"
+  - "pemf-campi-elettromagnetici-pulsati"
+  - "iv-therapy-nad-flebo-serve"
 ctaDirectory: "/directory/terapie-tecnologie"
 ctaLabel: "Vedi i centri di terapie e tecnologie"
 autore: "Redazione Longevità"
@@ -130,7 +132,8 @@ Approfondisci in [IHHT: ipossia intermittente, cosa dice la scienza](/blog/ihht-
 stimolazione della consolidazione ossea in fratture con ritardo di guarigione — e un uso "wellness"
 generalizzato che quell'indicazione non giustifica. È il caso classico in cui un'applicazione
 clinica ristretta e valida viene usata come garanzia per applicazioni molto più ampie e non
-verificate.
+verificate. Approfondisci in
+[PEMF: campi elettromagnetici pulsati, cosa dice la scienza](/blog/pemf-campi-elettromagnetici-pulsati).
 
 ## Flebo di NAD⁺, IV therapy, plasmaferesi «anti-aging»
 
@@ -146,7 +149,8 @@ Prezzo tipico di una flebo: 200–600 €.
 
 **IV therapy vitaminica** su persone senza carenze documentate: l'assorbimento orale è adeguato
 nella stragrande maggioranza dei casi, e la via endovenosa aggiunge un rischio (accesso venoso,
-infezione, sovraccarico di liquidi) senza un beneficio dimostrato.
+infezione, sovraccarico di liquidi) senza un beneficio dimostrato. Approfondisci in
+[IV therapy e NAD⁺ in flebo: serve davvero?](/blog/iv-therapy-nad-flebo-serve).
 
 **Infusioni di plasma da donatori giovani**: nel 2019 la FDA statunitense ha emesso un avviso
 esplicito contro l'uso di plasma di giovani donatori come trattamento anti-invecchiamento,

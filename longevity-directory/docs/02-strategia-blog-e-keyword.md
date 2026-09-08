@@ -80,8 +80,10 @@ fibre e microbiota · la questione carne rossa, senza tifoserie.
 → Scritti come articoli dedicati: **dieta mediterranea e longevità** (`/blog/dieta-mediterranea-longevita`),
 **alcol: la dose "sicura" esiste davvero?** (`/blog/alcol-dose-sicura-esiste`),
 **quante proteine servono davvero dopo i 40** (`/blog/proteine-dopo-i-40-quanto-servono`),
-**ultra-processati e infiammazione** (`/blog/ultra-processati-infiammazione`) e
-**indice glicemico e picchi glicemici** (`/blog/indice-glicemico-picchi-glicemici`).
+**ultra-processati e infiammazione** (`/blog/ultra-processati-infiammazione`),
+**indice glicemico e picchi glicemici** (`/blog/indice-glicemico-picchi-glicemici`),
+**dieta mima-digiuno: cosa dicono gli studi** (`/blog/dieta-mima-digiuno-studi`) e
+**restrizione calorica nell'uomo: cosa dice davvero la ricerca** (`/blog/restrizione-calorica-uomo`).
 
 ### Pilastro 4 — `Allenarsi per invecchiare bene: forza, VO₂max, stabilità` ✅ pubblicato
 `/guide/allenamento-longevita` — collega il cluster VO₂max; copre in forma più breve zona 2,
@@ -96,8 +98,10 @@ allenamento e sensibilità insulinica · sollevare pesi dopo i 50: come iniziare
 (`/blog/allenamento-zona-2-cose-come-farlo`), **massa muscolare come organo endocrino**
 (`/blog/massa-muscolare-organo-endocrino`), **forza di presa: perché predice la mortalità**
 (`/blog/forza-presa-predice-mortalita`), **quanti passi al giorno servono davvero**
-(`/blog/quanti-passi-al-giorno-servono`) e **sollevare pesi dopo i 50: come iniziare in sicurezza**
-(`/blog/sollevare-pesi-dopo-i-50`).
+(`/blog/quanti-passi-al-giorno-servono`), **sollevare pesi dopo i 50: come iniziare in sicurezza**
+(`/blog/sollevare-pesi-dopo-i-50`), **protocollo norvegese 4×4: il metodo per alzare il VO₂max**
+(`/blog/protocollo-norvegese-4x4`) e **stabilità ed equilibrio: il killer silenzioso dopo i 65**
+(`/blog/stabilita-equilibrio-dopo-65`).
 
 ### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio` ✅ pubblicato
 `/guide/sonno-longevita` — primo pilastro scritto **insieme ai suoi cluster** (apnee notturne,
@@ -124,8 +128,9 @@ spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una 
 **creatina: l'integratore più sottovalutato** (`/blog/creatina-integratore-piu-sottovalutato`),
 **resveratrolo: ascesa e caduta di una molecola** (`/blog/resveratrolo-ascesa-caduta`),
 **rapamicina e metformina: lo stato della ricerca sull'uomo** (`/blog/rapamicina-metformina-ricerca-uomo`),
-**magnesio: le forme a confronto** (`/blog/magnesio-forme-a-confronto`) e
-**collagene: cosa promette e cosa fa davvero** (`/blog/collagene-cosa-promette-cosa-fa`).
+**magnesio: le forme a confronto** (`/blog/magnesio-forme-a-confronto`),
+**collagene: cosa promette e cosa fa davvero** (`/blog/collagene-cosa-promette-cosa-fa`) e
+**urolitina A: cosa dicono i primi studi sull'uomo** (`/blog/urolitina-a-studi-uomo`).
 
 ### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
 `/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
@@ -138,8 +143,10 @@ PEMF · neurofeedback · plasmaferesi e "giovani plasma": realtà e marketing.
 → Scritti come articoli dedicati: **sauna e mortalità cardiovascolare: lo studio finlandese**
 (`/blog/sauna-mortalita-cardiovascolare`), **doccia fredda e immersione: cosa dicono i dati**
 (`/blog/doccia-fredda-immersione-cosa-dicono-dati`), **red light therapy: cosa dice davvero la scienza**
-(`/blog/red-light-therapy-fotobiomodulazione`) e **IHHT: ipossia intermittente, cosa dice la scienza**
-(`/blog/ihht-ipossia-intermittente`).
+(`/blog/red-light-therapy-fotobiomodulazione`), **IHHT: ipossia intermittente, cosa dice la scienza**
+(`/blog/ihht-ipossia-intermittente`), **PEMF: campi elettromagnetici pulsati, cosa dice la scienza**
+(`/blog/pemf-campi-elettromagnetici-pulsati`) e **IV therapy e NAD⁺ in flebo: serve davvero?**
+(`/blog/iv-therapy-nad-flebo-serve`).
 
 ### Pilastro 8 — `Prevenire le quattro grandi malattie croniche` ✅ pubblicato
 `/guide/prevenzione-malattie-croniche` — collega 3 cluster scritti insieme al pilastro (rischio
@@ -148,8 +155,9 @@ cognitivo — Lancet Commission 2024, 45% dei casi legato a 14 fattori modificab
 forma più breve sindrome metabolica, menopausa, testosterone, salute orale, stress cronico.
 → Scritti come articoli dedicati: **menopausa e rischio cardiovascolare**
 (`/blog/menopausa-rischio-cardiovascolare`), **testosterone: quando è un problema clinico**
-(`/blog/testosterone-quando-e-un-problema-clinico`) e **sindrome metabolica: il terreno comune dietro quattro malattie**
-(`/blog/sindrome-metabolica-terreno-comune`).
+(`/blog/testosterone-quando-e-un-problema-clinico`), **sindrome metabolica: il terreno comune dietro quattro malattie**
+(`/blog/sindrome-metabolica-terreno-comune`) e **salute orale e infiammazione sistemica: il collegamento sottovalutato**
+(`/blog/salute-orale-infiammazione-sistemica`).
 
 ### Pilastro 9 (commerciale) — `Guide città e costi` ✅ pubblicato, ma non come descritto qui
 `/citta/[citta].astro` — **decisione deliberata di implementazione, diversa dal piano originale.**

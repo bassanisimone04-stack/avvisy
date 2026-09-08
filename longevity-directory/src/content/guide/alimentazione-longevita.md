@@ -18,6 +18,8 @@ clusterSlugs:
   - "proteine-dopo-i-40-quanto-servono"
   - "ultra-processati-infiammazione"
   - "indice-glicemico-picchi-glicemici"
+  - "dieta-mima-digiuno-studi"
+  - "restrizione-calorica-uomo"
 ctaDirectory: "/directory/nutrizione-metabolismo"
 ctaLabel: "Vedi i centri di nutrizione e metabolismo"
 autore: "Redazione Longevità"
@@ -95,6 +97,8 @@ più facile rispettare una finestra oraria che contare calorie ogni pasto. Per a
 L'approfondimento completo — protocolli, chi dovrebbe evitarlo, effetti sull'insulino-sensibilità
 a parità di peso — è in
 [Digiuno intermittente 16/8: benefici, limiti e per chi ha senso](/blog/digiuno-intermittente-16-8-benefici).
+Una variante più strutturata, pensata per attivare meccanismi simili al digiuno per soli 5 giorni al
+mese, è discussa in [Dieta mima-digiuno: cosa dicono gli studi](/blog/dieta-mima-digiuno-studi).
 
 ## Insulino-resistenza: il meccanismo dietro molte diete che "funzionano"
 
@@ -133,7 +137,8 @@ Institute on Aging statunitense), ha randomizzato adulti sani a una restrizione 
 in diversi marcatori di rischio cardiometabolico e in un indice composito di invecchiamento
 biologico. È un'evidenza reale, ma resta un'evidenza sui meccanismi e sui marcatori intermedi, non
 una prova diretta che allunghi la vita umana — la distinzione che vale per quasi tutto ciò che
-proviene dalla ricerca sull'invecchiamento va tenuta sempre presente.
+proviene dalla ricerca sull'invecchiamento va tenuta sempre presente. Approfondisci in
+[Restrizione calorica nell'uomo: cosa dice davvero la ricerca](/blog/restrizione-calorica-uomo).
 
 ## Alcol: la dose "sicura" esiste?
 
