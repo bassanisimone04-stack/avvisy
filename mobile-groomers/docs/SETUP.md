@@ -64,6 +64,34 @@ genuinely require it, because they act where there is no user session:
   below), so only the server can read it.
 - **The Stripe webhook.** A webhook request carries no session.
 
+### Why some columns are write-revoked
+
+The same rule bites twice: **RLS decides which rows a role may touch, not
+which columns.** `groomers_owner_update` scopes an owner to their own row and
+stops there. Without column grants, a business that claimed its listing could
+write any field on that row directly through the anon key and its own session
+— the dashboard UI is not the boundary, it is just one client.
+
+That would let an owner:
+
+- set `tier = 'fleet'` — top ranking in every city search plus homepage
+  placement, **without paying**, which defeats the whole pricing model;
+- set `verified = true` — the trust badge pet owners rely on;
+- set `rating` and `review_count` — fabricated stars that also feed
+  `aggregateRating` in the listing's JSON-LD, putting fake review stars in
+  Google results.
+
+`schema.sql` therefore revokes UPDATE on those columns, plus `owner`, the
+slugs and the Stripe fields. What stays editable is what the dashboard
+actually offers: contact details, service description, tags and zip coverage.
+Money, trust and identity are server-controlled.
+
+The `service_role` key bypasses these grants, so the Stripe webhook still sets
+`tier` on payment and the admin page still assigns `owner` on approval.
+
+`tests/schema-privileges.test.mjs` reads this file and fails if a revoke is
+dropped — nothing else in the suite would notice.
+
 ### Why groomer emails are column-revoked
 
 RLS decides which *rows* are visible, not which *columns*. Published listings

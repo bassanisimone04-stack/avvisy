@@ -91,9 +91,13 @@ honeypot field, stores the lead for the owning groomer only, and emails it to
 them with reply-to set to the customer. The row is committed before any mail
 is attempted, so a mail outage can never cost the business the lead.
 
-Groomer emails and Stripe identifiers are revoked from the `anon` role at the
-column level, because RLS filters rows and not columns — a `select *` on
-world-readable listings would otherwise expose every groomer's contact email.
+Column privileges do the work RLS cannot: RLS scopes an owner to their own
+**row**, not to particular **columns**. Groomer emails and Stripe identifiers
+are revoked from `anon` for reads, and `tier`, `verified`, `rating`,
+`review_count`, `owner` and the slugs are revoked from `authenticated` for
+writes — otherwise a business that claimed its listing could grant itself paid
+placement and the verified badge straight through the anon key. See
+`docs/SETUP.md`; `tests/schema-privileges.test.mjs` guards the grant set.
 
 Upgrades run through Stripe Checkout. The client names a *tier*; the server
 resolves it to a price ID and verifies listing ownership before charging. The

@@ -204,3 +204,45 @@ alter table suppressions enable row level security;
 drop policy if exists suppressions_public_insert on suppressions;
 create policy suppressions_public_insert on suppressions
   for insert with check (true);
+
+-- ---------------------------------------------------------------------------
+-- Column-level write privileges
+-- ---------------------------------------------------------------------------
+-- groomers_owner_update is row-scoped: it decides WHICH ROW an owner may
+-- write, not WHICH COLUMNS. Without the revokes below, a business that
+-- claimed its listing could write any field on its own row straight through
+-- the anon key and its own session — the dashboard UI is not the boundary.
+--
+-- Concretely, that meant an owner could:
+--   * set tier = 'fleet'      -> top ranking in every city search and
+--                                homepage placement, without paying
+--   * set verified = true     -> the trust badge shown to pet owners
+--   * set rating / review_count -> fabricated stars, which also feed
+--                                aggregateRating in the listing's JSON-LD
+--                                and so fake review stars in Google results
+--
+-- Editable by the owner: their own contact details and service description.
+-- Everything that represents money, trust or identity is server-controlled.
+--
+-- The service_role key bypasses these grants, so the Stripe webhook can
+-- still set tier/verified, and admins can still assign owner.
+revoke update (
+  tier, verified, published,
+  rating, review_count,
+  owner, slug, city_slug,
+  stripe_customer_id, stripe_subscription_id, subscription_status
+) on groomers from authenticated;
+
+revoke update on groomers from anon;
+revoke update on leads from anon;
+
+-- Leads belong to the receiving groomer: they may work the pipeline status,
+-- but must not rewrite the customer's details after the fact.
+revoke update (
+  groomer_id, name, contact, zip_code, pet, message, source_hash
+) on leads from authenticated;
+
+-- A claim is a request. Only the service_role (the admin review page)
+-- decides its outcome.
+revoke update on claims from authenticated;
+revoke update on claims from anon;
