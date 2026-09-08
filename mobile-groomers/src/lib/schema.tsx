@@ -1,14 +1,21 @@
 import type { Groomer } from "@/lib/groomers";
 import type { Faq } from "@/data/faqs";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { safeExternalUrl, serializeJsonLd } from "@/lib/safe-output";
 
-/** Renders a JSON-LD <script> tag. Safe to call multiple times per page. */
+/**
+ * Renders a JSON-LD <script> tag. Safe to call multiple times per page.
+ *
+ * Serialization goes through serializeJsonLd, which escapes "<" — plain
+ * JSON.stringify would let a listing field containing "</script>" break out
+ * of the block and inject markup.
+ */
 export function JsonLd({ data }: { data: Record<string, unknown> }) {
   return (
     <script
       type="application/ld+json"
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(data) }}
     />
   );
 }
@@ -53,7 +60,7 @@ export function localBusinessJsonLd(groomer: Groomer, pageUrl: string) {
     description: groomer.about,
     url: pageUrl,
     telephone: groomer.phone,
-    ...(groomer.website ? { sameAs: [groomer.website] } : {}),
+    ...(safeExternalUrl(groomer.website) ? { sameAs: [safeExternalUrl(groomer.website)] } : {}),
     address: {
       "@type": "PostalAddress",
       addressLocality: groomer.city,

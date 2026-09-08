@@ -5,6 +5,7 @@ import QuoteForm from "@/components/QuoteForm";
 import { getAllGroomers, getGroomerBySlug } from "@/lib/groomers";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { JsonLd, breadcrumbJsonLd, localBusinessJsonLd } from "@/lib/schema";
+import { safeExternalUrl } from "@/lib/safe-output";
 
 type Params = { citySlug: string; slug: string };
 
@@ -47,6 +48,9 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
 
   const pageUrl = `${SITE_URL}/groomers/${citySlug}/${slug}`;
   const telHref = `tel:${groomer.phone.replace(/[^\d+]/g, "")}`;
+  // Owner-supplied, so anything that is not an absolute http(s) URL is
+  // dropped rather than rendered as an href.
+  const websiteUrl = safeExternalUrl(groomer.website);
 
   return (
     <>
@@ -168,9 +172,9 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
               <a href={`sms:${groomer.phone.replace(/[^\d+]/g, "")}`} className="btn btn-outline btn-block">
                 💬 Text for Booking
               </a>
-              {groomer.website && (
+              {websiteUrl && (
                 <a
-                  href={groomer.website}
+                  href={websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className="btn btn-outline btn-block"
