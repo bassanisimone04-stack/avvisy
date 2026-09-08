@@ -18,6 +18,12 @@ clusterSlugs:
   - "lp-a-esame-una-volta-nella-vita"
   - "hs-crp-infiammazione-basso-grado"
   - "dexa-composizione-corporea"
+  - "rm-total-body-screening"
+  - "test-microbiota-stato-arte"
+  - "cgm-non-diabetici-utile-o-moda"
+  - "insulina-digiuno-homa-ir"
+  - "emoglobina-glicata-curva-glicemica"
+  - "pannello-tiroideo-ormoni"
 ctaDirectory: "/directory/diagnostica-avanzata"
 ctaLabel: "Vedi i centri di diagnostica avanzata"
 autore: "Redazione Longevità"
@@ -89,7 +95,10 @@ prima volta da Matthews e colleghi nel 1985) intercettano la resistenza insulini
 la glicemia esca dai valori normali. È il segnale precoce più utile del rischio metabolico, e
 proprio per questo è l'esame che manca quasi sempre nei pannelli standard, che si fermano alla
 glicemia. L'articolo [Insulino-resistenza: sintomi, esami e cosa fare](/blog/insulino-resistenza-sintomi-cosa-fare)
-spiega come interpretarlo e quando approfondire con la curva da carico.
+spiega come interpretarlo e quando approfondire con la curva da carico. Approfondisci l'esame in sé
+in [Insulina a digiuno e HOMA-IR: l'allarme anni prima del diabete](/blog/insulina-digiuno-homa-ir)
+e, sulla dinamica glicemica oltre la sola media, in
+[Emoglobina glicata e curva glicemica: la media e i picchi](/blog/emoglobina-glicata-curva-glicemica).
 
 **hs-CRP** (proteina C reattiva ad alta sensibilità) misura l'infiammazione di basso grado, un
 meccanismo coinvolto sia nell'aterosclerosi sia in gran parte delle malattie croniche legate
@@ -98,6 +107,12 @@ che un hs-CRP elevato identifica un sottogruppo di persone a rischio cardiovasco
 il colesterolo LDL è nella norma — la stessa logica di discordanza vista per l'ApoB, su un
 meccanismo diverso. Approfondisci in
 [hs-CRP: l'esame dell'infiammazione di basso grado](/blog/hs-crp-infiammazione-basso-grado).
+
+**Funzione tiroidea.** A differenza degli esami precedenti, qui le linee guida internazionali
+raccomandano cautela: la U.S. Preventive Services Task Force non trova evidenza sufficiente per
+raccomandare uno screening tiroideo di routine in adulti asintomatici senza fattori di rischio. Ha
+senso un controllo mirato dopo i 40 anni, con storia familiare di malattia tiroidea, o in gravidanza.
+Approfondisci in [Pannello tiroideo e ormoni: quando ha senso approfondire](/blog/pannello-tiroideo-ormoni).
 
 ## Composizione corporea e imaging: quando servono, quando no
 
@@ -126,7 +141,13 @@ raccomandano come esame di screening generale: il tasso di reperti incidentali c
 irrilevanti che generano ulteriori accertamenti, ansia e costi è alto, mentre la prova che riduca
 la mortalità nella popolazione generale è, ad oggi, assente. Diverso il discorso quando la
 richiede il medico per un motivo specifico, con un protocollo mirato: lì la logica cambia
-completamente.
+completamente. Approfondisci in [RM total body: quando ha senso e quando no](/blog/rm-total-body-screening).
+
+**Test del microbiota e CGM per non diabetici** sono due esami "di nuova generazione" con lo stesso
+problema di fondo: un razionale scientifico plausibile ma non ancora tradotto in raccomandazioni
+cliniche affidabili per la popolazione sana. Ne parliamo in dettaglio in
+[Test del microbiota: stato dell'arte](/blog/test-microbiota-stato-arte) e
+[CGM per non diabetici: utile o moda?](/blog/cgm-non-diabetici-utile-o-moda).
 
 ## VO₂max: il numero sottovalutato che predice la mortalità meglio di quasi tutto il resto
 

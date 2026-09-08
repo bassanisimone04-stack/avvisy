@@ -20,6 +20,7 @@ clusterSlugs:
   - "sollevare-pesi-dopo-i-50"
   - "protocollo-norvegese-4x4"
   - "stabilita-equilibrio-dopo-65"
+  - "allenamento-sensibilita-insulinica"
 ctaDirectory: "/directory/movimento-performance"
 ctaLabel: "Vedi i centri di movimento e performance"
 autore: "Redazione Longevità"
@@ -106,7 +107,9 @@ smaltimento del glucosio nel corpo e un tessuto endocrino che rilascia miochine 
 sistemici. Più massa muscolare attiva significa, a parità di tutto il resto, migliore sensibilità
 insulinica — il che collega direttamente questa guida a quella su
 [nutrizione e longevità](/guide/alimentazione-longevita) e al tema dell'insulino-resistenza.
-Approfondisci in [Massa muscolare come organo endocrino](/blog/massa-muscolare-organo-endocrino).
+Approfondisci in [Massa muscolare come organo endocrino](/blog/massa-muscolare-organo-endocrino) e,
+sull'effetto specifico dell'allenamento sulla sensibilità insulinica,
+[Allenamento e sensibilità insulinica](/blog/allenamento-sensibilita-insulinica).
 
 **La sarcopenia** — la perdita progressiva di massa e forza muscolare, definita nei criteri europei
 EWGSOP2 (Cruz-Jentoft e colleghi, Age and Ageing, 2019) — comincia in modo silenzioso già dopo i

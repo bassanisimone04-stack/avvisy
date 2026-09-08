@@ -19,6 +19,8 @@ clusterSlugs:
   - "ihht-ipossia-intermittente"
   - "pemf-campi-elettromagnetici-pulsati"
   - "iv-therapy-nad-flebo-serve"
+  - "neurofeedback-cosa-dice-ricerca"
+  - "plasmaferesi-giovane-plasma-marketing"
 ctaDirectory: "/directory/terapie-tecnologie"
 ctaLabel: "Vedi i centri di terapie e tecnologie"
 autore: "Redazione Longevità"
@@ -155,7 +157,13 @@ infezione, sovraccarico di liquidi) senza un beneficio dimostrato. Approfondisci
 **Infusioni di plasma da donatori giovani**: nel 2019 la FDA statunitense ha emesso un avviso
 esplicito contro l'uso di plasma di giovani donatori come trattamento anti-invecchiamento,
 segnalando l'assenza di benefici comprovati e la presenza di rischi reali legati alle trasfusioni.
-Non è una zona grigia: è un'area in cui l'autorità regolatoria si è espressa.
+Non è una zona grigia: è un'area in cui l'autorità regolatoria si è espressa. Approfondisci in
+[Plasmaferesi e "giovane plasma": realtà e marketing](/blog/plasmaferesi-giovane-plasma-marketing).
+
+**Neurofeedback**: un training basato sull'elettroencefalogramma che promette di "allenare" le
+proprie onde cerebrali. Le meta-analisi che confrontano valutatori in cieco e non in cieco mostrano
+un effetto specifico molto più debole di quanto la narrazione commerciale suggerisca. Approfondisci
+in [Neurofeedback: cosa dice davvero la ricerca](/blog/neurofeedback-cosa-dice-ricerca).
 
 ## Come leggere l'offerta di un centro
 

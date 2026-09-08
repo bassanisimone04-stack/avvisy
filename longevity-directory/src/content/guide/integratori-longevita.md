@@ -20,6 +20,8 @@ clusterSlugs:
   - "magnesio-forme-a-confronto"
   - "collagene-cosa-promette-cosa-fa"
   - "urolitina-a-studi-uomo"
+  - "spermidina-taurina-longevita"
+  - "come-leggere-etichetta-integratori"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -114,8 +116,9 @@ modificazioni di marcatori mitocondriali muscolari. È tra le molecole "nuove" c
 migliori — che restano comunque marcatori intermedi, non esiti clinici. Approfondisci in
 [Urolitina A: cosa dicono i primi studi sull'uomo](/blog/urolitina-a-studi-uomo).
 
-**Spermidina**: dati osservazionali su coorti alimentari e studi animali promettenti; i trial
-sull'uomo sono piccoli e prevalentemente su marcatori cognitivi, con risultati non conclusivi.
+**Spermidina** e **taurina**: dati osservazionali su coorti alimentari e studi animali promettenti;
+i trial sull'uomo sono piccoli e prevalentemente su marcatori intermedi, con risultati non
+conclusivi. Approfondisci in [Spermidina e taurina: cosa dicono i dati](/blog/spermidina-taurina-longevita).
 
 ## 🟡 NMN e nicotinamide riboside (NAD⁺)
 
@@ -158,6 +161,10 @@ risultati, qualunque affermazione è un'ipotesi. Approfondisci in
 - **Claim salutistici**: in UE sono ammessi solo quelli autorizzati nel registro europeo. Frasi
   come "rallenta l'invecchiamento cellulare" non compaiono in quel registro per un motivo.
 - **Studi citati**: verifica su chi sono stati fatti. Topo, cellula o essere umano cambiano tutto.
+
+L'approfondimento completo, con i dati sulla sicurezza degli integratori e i segnali di marketing
+da riconoscere, è in
+[Come leggere un'etichetta e riconoscere una bufala](/blog/come-leggere-etichetta-integratori).
 
 ## Prima di comprare qualsiasi cosa
 

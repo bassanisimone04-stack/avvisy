@@ -42,6 +42,11 @@ Regola di link interno (da inserire nella checklist di redazione): ogni articolo
 
 ## 3. Macro-temi e cluster (piano dei contenuti)
 
+> **Stato al 75° articolo**: tutti i cluster elencati per i pilastri 2–8 sono ora scritti come
+> articoli dedicati (75 articoli blog totali). Restano solo le due voci del pilastro 1 segnalate
+> come "già coperte da un cluster esistente" qui sotto, e il pilastro 9 (guide città) nella sua
+> forma dati-driven, discussa più avanti. Nessun argomento del piano originale è rimasto scoperto.
+
 ### Pilastro 1 — `Healthspan: come allungare gli anni in salute, non solo la vita` ✅ pubblicato
 `/guide/healthspan-longevita` — collega 3 cluster scritti insieme al pilastro (lifespan vs
 healthspan, i 12 meccanismi dell'invecchiamento, Blue Zones — con la critica demografica 2024 di
@@ -62,10 +67,13 @@ DEXA e composizione corporea · VO₂max: come si misura e perché predice la mo
 test dell'età biologica: cosa misurano e quanto sono affidabili · test del microbiota: stato dell'arte ·
 CGM per non diabetici: utile o moda.
 → **Ogni articolo chiude con: "Dove farlo" + link alla categoria directory + città principali.**
-→ Scritti come articoli dedicati: **calcium score coronarico: a chi serve** (`/blog/calcium-score-coronarico-a-chi-serve`),
-**Lp(a): l'esame che si fa una volta nella vita** (`/blog/lp-a-esame-una-volta-nella-vita`),
-**hs-CRP: l'esame dell'infiammazione di basso grado** (`/blog/hs-crp-infiammazione-basso-grado`) e
-**DEXA e composizione corporea: cosa misura davvero** (`/blog/dexa-composizione-corporea`).
+→ **Tutti i 13 item del cluster sono ora scritti come articoli dedicati** (ultimi arrivati:
+**insulina a digiuno e HOMA-IR** — `/blog/insulina-digiuno-homa-ir`, **emoglobina glicata e curva
+glicemica** — `/blog/emoglobina-glicata-curva-glicemica`, **pannello tiroideo e ormoni** —
+`/blog/pannello-tiroideo-ormoni`, **RM total body** — `/blog/rm-total-body-screening`, **test del
+microbiota** — `/blog/test-microbiota-stato-arte`, **CGM per non diabetici** —
+`/blog/cgm-non-diabetici-utile-o-moda`; gli altri — ApoB, Lp(a), hs-CRP, calcium score, DEXA, VO₂max
+(pilastro 4), età biologica, check-up completo — erano già coperti nelle ondate precedenti).
 
 ### Pilastro 3 — `Nutrizione per la longevità: cosa sappiamo con ragionevole certezza` ✅ pubblicato
 `/guide/alimentazione-longevita` — collega i 2 cluster già pubblicati (insulino-resistenza,
@@ -82,8 +90,12 @@ fibre e microbiota · la questione carne rossa, senza tifoserie.
 **quante proteine servono davvero dopo i 40** (`/blog/proteine-dopo-i-40-quanto-servono`),
 **ultra-processati e infiammazione** (`/blog/ultra-processati-infiammazione`),
 **indice glicemico e picchi glicemici** (`/blog/indice-glicemico-picchi-glicemici`),
-**dieta mima-digiuno: cosa dicono gli studi** (`/blog/dieta-mima-digiuno-studi`) e
-**restrizione calorica nell'uomo: cosa dice davvero la ricerca** (`/blog/restrizione-calorica-uomo`).
+**dieta mima-digiuno: cosa dicono gli studi** (`/blog/dieta-mima-digiuno-studi`),
+**restrizione calorica nell'uomo: cosa dice davvero la ricerca** (`/blog/restrizione-calorica-uomo`),
+**timing dei pasti e ritmo circadiano** (`/blog/timing-pasti-ritmo-circadiano`),
+**fibre e microbiota** (`/blog/fibre-microbiota-salute`) e
+**la questione carne rossa, senza tifoserie** (`/blog/carne-rossa-rischi-reali`).
+→ **Tutti i 12 item del cluster sono ora scritti come articoli dedicati.**
 
 ### Pilastro 4 — `Allenarsi per invecchiare bene: forza, VO₂max, stabilità` ✅ pubblicato
 `/guide/allenamento-longevita` — collega il cluster VO₂max; copre in forma più breve zona 2,
@@ -100,8 +112,10 @@ allenamento e sensibilità insulinica · sollevare pesi dopo i 50: come iniziare
 (`/blog/forza-presa-predice-mortalita`), **quanti passi al giorno servono davvero**
 (`/blog/quanti-passi-al-giorno-servono`), **sollevare pesi dopo i 50: come iniziare in sicurezza**
 (`/blog/sollevare-pesi-dopo-i-50`), **protocollo norvegese 4×4: il metodo per alzare il VO₂max**
-(`/blog/protocollo-norvegese-4x4`) e **stabilità ed equilibrio: il killer silenzioso dopo i 65**
-(`/blog/stabilita-equilibrio-dopo-65`).
+(`/blog/protocollo-norvegese-4x4`), **stabilità ed equilibrio: il killer silenzioso dopo i 65**
+(`/blog/stabilita-equilibrio-dopo-65`) e **allenamento e sensibilità insulinica**
+(`/blog/allenamento-sensibilita-insulinica`).
+→ **Tutti i 10 item del cluster sono ora scritti come articoli dedicati.**
 
 ### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio` ✅ pubblicato
 `/guide/sonno-longevita` — primo pilastro scritto **insieme ai suoi cluster** (apnee notturne,
@@ -112,8 +126,13 @@ CBT-I: la terapia di prima linea per l'insonnia · HRV: cosa misura e come usarl
 temperatura, luce e caffeina: le tre leve che funzionano · melatonina: dosi, evidenze, errori ·
 sonno e rischio di Alzheimer (sistema glinfatico) · turni e jet lag sociale.
 → Scritti come articoli dedicati: **melatonina: dosi, evidenze, errori** (`/blog/melatonina-dosi-evidenze-errori`),
-**CBT-I: la terapia di prima linea per l'insonnia** (`/blog/cbt-i-terapia-insonnia-prima-linea`) e
-**stress cronico e cortisolo: cosa fa davvero al corpo** (`/blog/stress-cronico-cortisolo-cosa-fa`).
+**CBT-I: la terapia di prima linea per l'insonnia** (`/blog/cbt-i-terapia-insonnia-prima-linea`),
+**stress cronico e cortisolo: cosa fa davvero al corpo** (`/blog/stress-cronico-cortisolo-cosa-fa`,
+extra rispetto al piano originale), **temperatura, luce e caffeina: le tre leve che funzionano**
+(`/blog/temperatura-luce-caffeina-sonno`), **sonno e rischio di Alzheimer: il sistema glinfatico**
+(`/blog/sonno-rischio-alzheimer-glinfatico`) e **turni e jet lag sociale**
+(`/blog/turni-jet-lag-sociale`).
+→ **Tutti gli 8 item del cluster originale sono ora scritti come articoli dedicati.**
 
 ### Pilastro 6 — `Integratori per la longevità: cosa ha prove, cosa no` ✅ pubblicato
 `/guide/integratori-longevita` — con **sistema di gradazione dell'evidenza**; collega il cluster
@@ -129,8 +148,11 @@ spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una 
 **resveratrolo: ascesa e caduta di una molecola** (`/blog/resveratrolo-ascesa-caduta`),
 **rapamicina e metformina: lo stato della ricerca sull'uomo** (`/blog/rapamicina-metformina-ricerca-uomo`),
 **magnesio: le forme a confronto** (`/blog/magnesio-forme-a-confronto`),
-**collagene: cosa promette e cosa fa davvero** (`/blog/collagene-cosa-promette-cosa-fa`) e
-**urolitina A: cosa dicono i primi studi sull'uomo** (`/blog/urolitina-a-studi-uomo`).
+**collagene: cosa promette e cosa fa davvero** (`/blog/collagene-cosa-promette-cosa-fa`),
+**urolitina A: cosa dicono i primi studi sull'uomo** (`/blog/urolitina-a-studi-uomo`),
+**spermidina e taurina: cosa dicono i dati** (`/blog/spermidina-taurina-longevita`) e
+**come leggere un'etichetta e riconoscere una bufala** (`/blog/come-leggere-etichetta-integratori`).
+→ **Tutti i 10 item del cluster sono ora scritti come articoli dedicati.**
 
 ### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
 `/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
@@ -145,8 +167,11 @@ PEMF · neurofeedback · plasmaferesi e "giovani plasma": realtà e marketing.
 (`/blog/doccia-fredda-immersione-cosa-dicono-dati`), **red light therapy: cosa dice davvero la scienza**
 (`/blog/red-light-therapy-fotobiomodulazione`), **IHHT: ipossia intermittente, cosa dice la scienza**
 (`/blog/ihht-ipossia-intermittente`), **PEMF: campi elettromagnetici pulsati, cosa dice la scienza**
-(`/blog/pemf-campi-elettromagnetici-pulsati`) e **IV therapy e NAD⁺ in flebo: serve davvero?**
-(`/blog/iv-therapy-nad-flebo-serve`).
+(`/blog/pemf-campi-elettromagnetici-pulsati`), **IV therapy e NAD⁺ in flebo: serve davvero?**
+(`/blog/iv-therapy-nad-flebo-serve`), **neurofeedback: cosa dice davvero la ricerca**
+(`/blog/neurofeedback-cosa-dice-ricerca`) e **plasmaferesi e "giovane plasma": realtà e marketing**
+(`/blog/plasmaferesi-giovane-plasma-marketing`).
+→ **Tutti i 10 item del cluster sono ora scritti come articoli dedicati.**
 
 ### Pilastro 8 — `Prevenire le quattro grandi malattie croniche` ✅ pubblicato
 `/guide/prevenzione-malattie-croniche` — collega 3 cluster scritti insieme al pilastro (rischio

@@ -17,6 +17,9 @@ clusterSlugs:
   - "melatonina-dosi-evidenze-errori"
   - "cbt-i-terapia-insonnia-prima-linea"
   - "stress-cronico-cortisolo-cosa-fa"
+  - "temperatura-luce-caffeina-sonno"
+  - "sonno-rischio-alzheimer-glinfatico"
+  - "turni-jet-lag-sociale"
 ctaDirectory: "/directory/sonno-mente-stress"
 ctaLabel: "Vedi i centri per sonno, mente e stress"
 autore: "Redazione Longevità"
@@ -124,7 +127,8 @@ Prima di qualunque integratore:
 A cui va aggiunto l'**alcol**, che va trattato per quello che è: un sedativo che accorcia
 l'addormentamento ma frammenta la seconda metà della notte e sopprime il REM. È anche il fattore
 che più visibilmente deprime la variabilità cardiaca notturna, come spiegato in
-[HRV: cosa misura davvero](/blog/hrv-cosa-misura-come-usarla).
+[HRV: cosa misura davvero](/blog/hrv-cosa-misura-come-usarla). Approfondisci le tre leve fisiche in
+[Temperatura, luce e caffeina: le tre leve che funzionano](/blog/temperatura-luce-caffeina-sonno).
 
 ## Regolarità e jet lag sociale
 
@@ -137,7 +141,8 @@ ricerca sul cancro classifica il lavoro a turni con disruzione circadiana nel **
 (probabilmente cancerogeno per l'uomo). È una valutazione sulla forza dell'evidenza, non una
 predizione individuale — ma implica che, per chi fa turni, proteggere la regolarità possibile,
 gestire l'esposizione alla luce e difendere il sonno nelle ore libere conti più che per chiunque
-altro.
+altro. Approfondisci in
+[Turni e jet lag sociale: quando l'orologio interno perde la sincronia](/blog/turni-jet-lag-sociale).
 
 ## Sonno e cervello: cosa sappiamo e cosa no
 
@@ -148,7 +153,8 @@ sonno cronicamente insufficiente e rischio di declino cognitivo, coerenti con qu
 
 È una delle ipotesi più interessanti della ricerca sull'invecchiamento cerebrale. Non è, ancora, una
 catena causale dimostrata nell'uomo — e vale la pena dirlo, perché è uno degli argomenti su cui il
-divulgatore medio salta il passaggio.
+divulgatore medio salta il passaggio. Approfondisci in
+[Sonno e rischio di Alzheimer: il sistema glinfatico](/blog/sonno-rischio-alzheimer-glinfatico).
 
 ## Lo stress cronico peggiora il sonno, e viceversa
 

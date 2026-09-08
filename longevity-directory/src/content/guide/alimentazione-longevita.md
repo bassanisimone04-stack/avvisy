@@ -20,6 +20,9 @@ clusterSlugs:
   - "indice-glicemico-picchi-glicemici"
   - "dieta-mima-digiuno-studi"
   - "restrizione-calorica-uomo"
+  - "timing-pasti-ritmo-circadiano"
+  - "fibre-microbiota-salute"
+  - "carne-rossa-rischi-reali"
 ctaDirectory: "/directory/nutrizione-metabolismo"
 ctaLabel: "Vedi i centri di nutrizione e metabolismo"
 autore: "Redazione Longevità"
@@ -174,7 +177,19 @@ regolazione dell'appetito. È uno degli ambiti in cui la direzione dell'evidenza
 anche se la variabilità individuale della risposta — dipendente dalla composizione del microbiota
 di partenza — resta alta e in parte non prevedibile con gli strumenti attuali. L'indicazione pratica
 resta comunque solida: la maggior parte della popolazione nei paesi occidentali assume meno fibre
-del minimo raccomandato, non di più.
+del minimo raccomandato, non di più. Approfondisci in
+[Fibre e microbiota: perché quasi nessuno ne assume abbastanza](/blog/fibre-microbiota-salute).
+
+## La questione carne rossa, senza tifoserie
+
+Pochi temi nutrizionali dividono gli esperti quanto questo. Lo IARC classifica la carne processata
+come cancerogena per l'uomo e la carne rossa non processata come probabile cancerogeno, ma un
+consorzio di ricercatori (NutriRECS, 2019) ha successivamente contestato la certezza di quelle
+prove con un metodo di valutazione molto rigoroso, raccomandando di non cambiare le abitudini
+attuali — generando un'ondata di critiche da altre società di nutrizione. Una lettura equilibrata:
+la carne processata ha il profilo di rischio meno favorevole tra le due categorie, la carne rossa
+non processata occupa una posizione intermedia. Approfondisci in
+[La questione carne rossa, senza tifoserie](/blog/carne-rossa-rischi-reali).
 
 ## Timing dei pasti e ritmo circadiano
 
@@ -184,7 +199,8 @@ peggiore nelle ore serali che al mattino, per motivi legati alla fisiologia ormo
 un'osservazione consistente in studi controllati di piccole dimensioni, non ancora un intervento
 validato su larga scala, ma è coerente con un principio pratico semplice: a parità di composizione,
 concentrare i pasti più abbondanti nella prima parte della giornata tende ad associarsi a un
-controllo glicemico migliore rispetto a concentrarli la sera tardi.
+controllo glicemico migliore rispetto a concentrarli la sera tardi. Approfondisci in
+[Timing dei pasti e ritmo circadiano](/blog/timing-pasti-ritmo-circadiano).
 
 ## Come costruire un piano alimentare basato sui dati, non sulle mode
 
