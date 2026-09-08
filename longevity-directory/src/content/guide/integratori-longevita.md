@@ -15,6 +15,8 @@ clusterSlugs:
   - "vitamina-d-chi-ne-ha-bisogno"
   - "omega-3-dosi-epa-dha"
   - "creatina-integratore-piu-sottovalutato"
+  - "resveratrolo-ascesa-caduta"
+  - "rapamicina-metformina-ricerca-uomo"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -125,7 +127,8 @@ sulle sirtuine e del "paradosso francese", un'acquisizione miliardaria da parte 
 azienda farmaceutica, e poi una serie di studi che ha ridimensionato tutto: nell'uomo, il lavoro di
 Yoshino e colleghi (Cell Metabolism, 2012) non ha trovato benefici metabolici in donne non obese,
 e la biodisponibilità orale si è rivelata un problema serio. Rimane in vendita ovunque, con
-promesse che la letteratura non sostiene più.
+promesse che la letteratura non sostiene più. Approfondisci in
+[Resveratrolo: ascesa e caduta di una molecola](/blog/resveratrolo-ascesa-caduta).
 
 ## 🔴 Rapamicina e metformina fuori indicazione
 
@@ -135,7 +138,8 @@ consistenti sull'estensione della durata di vita nei modelli animali (programma 
 Institute on Aging), ma non esistono trial sull'uomo che lo dimostrino, e il profilo di effetti
 avversi — immunosoppressione in primis — non è trascurabile. Sulla metformina in persone non
 diabetiche, il trial TAME è stato progettato esattamente per rispondere alla domanda: fino ai suoi
-risultati, qualunque affermazione è un'ipotesi.
+risultati, qualunque affermazione è un'ipotesi. Approfondisci in
+[Rapamicina e metformina: lo stato della ricerca sull'uomo](/blog/rapamicina-metformina-ricerca-uomo).
 
 ## Come leggere un'etichetta (e un claim)
 

@@ -75,8 +75,10 @@ dieta mima-digiuno: cosa dicono gli studi · insulino-resistenza: segnali precoc
 indice glicemico e picchi glicemici · dieta mediterranea e longevità · restrizione calorica nell'uomo ·
 alcol: la dose "sicura" esiste? · ultra-processati e infiammazione · timing dei pasti e ritmo circadiano ·
 fibre e microbiota · la questione carne rossa, senza tifoserie.
-→ Scritti come articoli dedicati: **dieta mediterranea e longevità** (`/blog/dieta-mediterranea-longevita`)
-e **alcol: la dose "sicura" esiste davvero?** (`/blog/alcol-dose-sicura-esiste`).
+→ Scritti come articoli dedicati: **dieta mediterranea e longevità** (`/blog/dieta-mediterranea-longevita`),
+**alcol: la dose "sicura" esiste davvero?** (`/blog/alcol-dose-sicura-esiste`),
+**quante proteine servono davvero dopo i 40** (`/blog/proteine-dopo-i-40-quanto-servono`) e
+**ultra-processati e infiammazione** (`/blog/ultra-processati-infiammazione`).
 
 ### Pilastro 4 — `Allenarsi per invecchiare bene: forza, VO₂max, stabilità` ✅ pubblicato
 `/guide/allenamento-longevita` — collega il cluster VO₂max; copre in forma più breve zona 2,
@@ -88,8 +90,9 @@ protocollo norvegese 4×4 · stabilità ed equilibrio: il killer silenzioso dopo
 allenamento e sensibilità insulinica · sollevare pesi dopo i 50: come iniziare in sicurezza.
 → Scritti come articoli dedicati: **sarcopenia: prevenirla a 40 anni, non a 70**
 (`/blog/sarcopenia-prevenirla-a-40-anni`), **allenamento in zona 2: cos'è e come farlo**
-(`/blog/allenamento-zona-2-cose-come-farlo`) e **massa muscolare come organo endocrino**
-(`/blog/massa-muscolare-organo-endocrino`).
+(`/blog/allenamento-zona-2-cose-come-farlo`), **massa muscolare come organo endocrino**
+(`/blog/massa-muscolare-organo-endocrino`) e **forza di presa: perché predice la mortalità**
+(`/blog/forza-presa-predice-mortalita`).
 
 ### Pilastro 5 — `Sonno: la variabile con il miglior rapporto sforzo/beneficio` ✅ pubblicato
 `/guide/sonno-longevita` — primo pilastro scritto **insieme ai suoi cluster** (apnee notturne,
@@ -99,8 +102,9 @@ Cluster: quante ore servono e cosa succede sotto le 6 · apnee notturne: i segna
 CBT-I: la terapia di prima linea per l'insonnia · HRV: cosa misura e come usarla ·
 temperatura, luce e caffeina: le tre leve che funzionano · melatonina: dosi, evidenze, errori ·
 sonno e rischio di Alzheimer (sistema glinfatico) · turni e jet lag sociale.
-→ Scritti come articoli dedicati: **melatonina: dosi, evidenze, errori** (`/blog/melatonina-dosi-evidenze-errori`)
-e **CBT-I: la terapia di prima linea per l'insonnia** (`/blog/cbt-i-terapia-insonnia-prima-linea`).
+→ Scritti come articoli dedicati: **melatonina: dosi, evidenze, errori** (`/blog/melatonina-dosi-evidenze-errori`),
+**CBT-I: la terapia di prima linea per l'insonnia** (`/blog/cbt-i-terapia-insonnia-prima-linea`) e
+**stress cronico e cortisolo: cosa fa davvero al corpo** (`/blog/stress-cronico-cortisolo-cosa-fa`).
 
 ### Pilastro 6 — `Integratori per la longevità: cosa ha prove, cosa no` ✅ pubblicato
 `/guide/integratori-longevita` — con **sistema di gradazione dell'evidenza**; collega il cluster
@@ -111,8 +115,10 @@ sottovalutato · omega-3: dosi ed EPA/DHA · vitamina D: chi ne ha bisogno · ma
 rapamicina e metformina: lo stato della ricerca sull'uomo · collagene: cosa promette e cosa fa ·
 spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una bufala.
 → Scritti come articoli dedicati: **omega-3: dosi ed EPA/DHA** (`/blog/omega-3-dosi-epa-dha`),
-**vitamina D: chi ne ha bisogno** (`/blog/vitamina-d-chi-ne-ha-bisogno`) e
-**creatina: l'integratore più sottovalutato** (`/blog/creatina-integratore-piu-sottovalutato`).
+**vitamina D: chi ne ha bisogno** (`/blog/vitamina-d-chi-ne-ha-bisogno`),
+**creatina: l'integratore più sottovalutato** (`/blog/creatina-integratore-piu-sottovalutato`),
+**resveratrolo: ascesa e caduta di una molecola** (`/blog/resveratrolo-ascesa-caduta`) e
+**rapamicina e metformina: lo stato della ricerca sull'uomo** (`/blog/rapamicina-metformina-ricerca-uomo`).
 
 ### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
 `/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
@@ -123,8 +129,9 @@ usi approvati vs promesse · red light therapy · IV therapy e NAD⁺ in flebo: 
 PEMF · neurofeedback · plasmaferesi e "giovani plasma": realtà e marketing.
 → **Cluster BOFU: ogni articolo linka alla categoria directory e alle pagine città.**
 → Scritti come articoli dedicati: **sauna e mortalità cardiovascolare: lo studio finlandese**
-(`/blog/sauna-mortalita-cardiovascolare`) e **doccia fredda e immersione: cosa dicono i dati**
-(`/blog/doccia-fredda-immersione-cosa-dicono-dati`).
+(`/blog/sauna-mortalita-cardiovascolare`), **doccia fredda e immersione: cosa dicono i dati**
+(`/blog/doccia-fredda-immersione-cosa-dicono-dati`) e **red light therapy: cosa dice davvero la scienza**
+(`/blog/red-light-therapy-fotobiomodulazione`).
 
 ### Pilastro 8 — `Prevenire le quattro grandi malattie croniche` ✅ pubblicato
 `/guide/prevenzione-malattie-croniche` — collega 3 cluster scritti insieme al pilastro (rischio
@@ -132,8 +139,9 @@ cardiovascolare/SCORE2, screening oncologici che funzionano davvero vs PSA contr
 cognitivo — Lancet Commission 2024, 45% dei casi legato a 14 fattori modificabili). Copre in
 forma più breve sindrome metabolica, menopausa, testosterone, salute orale, stress cronico.
 → Scritti come articoli dedicati: **menopausa e rischio cardiovascolare**
-(`/blog/menopausa-rischio-cardiovascolare`) e **testosterone: quando è un problema clinico**
-(`/blog/testosterone-quando-e-un-problema-clinico`).
+(`/blog/menopausa-rischio-cardiovascolare`), **testosterone: quando è un problema clinico**
+(`/blog/testosterone-quando-e-un-problema-clinico`) e **sindrome metabolica: il terreno comune dietro quattro malattie**
+(`/blog/sindrome-metabolica-terreno-comune`).
 
 ### Pilastro 9 (commerciale) — `Guide città e costi` ✅ pubblicato, ma non come descritto qui
 `/citta/[citta].astro` — **decisione deliberata di implementazione, diversa dal piano originale.**

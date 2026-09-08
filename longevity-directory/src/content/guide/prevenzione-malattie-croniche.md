@@ -16,6 +16,7 @@ clusterSlugs:
   - "declino-cognitivo-fattori-di-rischio-modificabili"
   - "menopausa-rischio-cardiovascolare"
   - "testosterone-quando-e-un-problema-clinico"
+  - "sindrome-metabolica-terreno-comune"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -83,7 +84,8 @@ Le prime tre aree non sono compartimenti stagni: condividono un terreno biologic
 alti, HDL basso e glicemia elevata, centrata sull'insulino-resistenza discussa nella
 [guida all'alimentazione](/guide/alimentazione-longevita). È il motivo per cui gli interventi con
 le prove più solide di questo sito — movimento, sonno, alimentazione — hanno un effetto che si
-propaga su più aree contemporaneamente, invece di agire su una sola.
+propaga su più aree contemporaneamente, invece di agire su una sola. Approfondisci in
+[Sindrome metabolica: il terreno comune dietro quattro malattie](/blog/sindrome-metabolica-terreno-comune).
 
 ## Due capitoli specifici per sesso: menopausa e testosterone
 

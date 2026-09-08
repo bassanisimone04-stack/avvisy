@@ -15,6 +15,7 @@ clusterSlugs:
   - "camera-iperbarica-prezzo-indicazioni"
   - "sauna-mortalita-cardiovascolare"
   - "doccia-fredda-immersione-cosa-dicono-dati"
+  - "red-light-therapy-fotobiomodulazione"
 ctaDirectory: "/directory/terapie-tecnologie"
 ctaLabel: "Vedi i centri di terapie e tecnologie"
 autore: "Redazione Longevità"
@@ -112,7 +113,8 @@ delle ferite, alcune condizioni dermatologiche, dolore muscoloscheletrico, e —
 recenti e ancora eterogenei — la ricrescita dei capelli. Su performance sportiva, sonno e
 "energia cellulare" generica siamo nel territorio dei piccoli studi con protocolli non
 standardizzati: dose, lunghezza d'onda e distanza variano così tanto tra un dispositivo e l'altro
-che confrontare i risultati è spesso impossibile.
+che confrontare i risultati è spesso impossibile. Approfondisci in
+[Red light therapy: cosa dice davvero la scienza](/blog/red-light-therapy-fotobiomodulazione).
 
 ## Ipossia intermittente (IHHT) e PEMF
 

@@ -15,6 +15,8 @@ clusterSlugs:
   - "insulino-resistenza-sintomi-cosa-fare"
   - "dieta-mediterranea-longevita"
   - "alcol-dose-sicura-esiste"
+  - "proteine-dopo-i-40-quanto-servono"
+  - "ultra-processati-infiammazione"
 ctaDirectory: "/directory/nutrizione-metabolismo"
 ctaLabel: "Vedi i centri di nutrizione e metabolismo"
 autore: "Redazione Longevità"
@@ -116,7 +118,8 @@ pasti e abbinato ad allenamento di forza, è tra gli interventi con l'effetto pi
 contrastarla. Le indicazioni per adulti attivi e per la popolazione over 40/50 convergono oggi
 intorno a 1,2–1,6 g/kg al giorno, più del doppio del minimo storico in alcuni casi. Non serve
 arrivare a quantità estreme: superata questa fascia, i benefici aggiuntivi documentati sono
-marginali per la maggior parte delle persone che non fanno sport agonistico.
+marginali per la maggior parte delle persone che non fanno sport agonistico. Approfondisci in
+[Quante proteine servono davvero dopo i 40](/blog/proteine-dopo-i-40-quanto-servono).
 
 ## Restrizione calorica: cosa dice davvero la ricerca sull'uomo
 
@@ -154,7 +157,8 @@ a una dieta di alimenti minimamente processati con la stessa composizione dichia
 nutrizionale. Questo non significa che ogni alimento confezionato sia dannoso: pane, yogurt o
 legumi in scatola sono processati ma non ultra-processati nel senso problematico del termine. Conta
 la proporzione della dieta totale occupata da prodotti ad alta densità calorica, poveri di fibre e
-formulati per essere estremamente appetibili.
+formulati per essere estremamente appetibili. Approfondisci in
+[Ultra-processati e infiammazione: cosa dicono gli studi](/blog/ultra-processati-infiammazione).
 
 ## Fibre e microbiota
 

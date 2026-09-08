@@ -15,6 +15,7 @@ clusterSlugs:
   - "sarcopenia-prevenirla-a-40-anni"
   - "allenamento-zona-2-cose-come-farlo"
   - "massa-muscolare-organo-endocrino"
+  - "forza-presa-predice-mortalita"
 ctaDirectory: "/directory/movimento-performance"
 ctaLabel: "Vedi i centri di movimento e performance"
 autore: "Redazione Longevità"
@@ -82,7 +83,8 @@ dell'altra. La forza di presa — un test che costa quanto un dinamometro e tren
 rivelata nello studio internazionale PURE (Leong e colleghi, The Lancet, 2015), su quasi 140.000
 persone in 17 paesi, un predittore di mortalità cardiovascolare e per tutte le cause più forte della
 pressione sistolica. Non perché stringere una maniglia sia magico: perché è un indicatore semplice
-della massa muscolare complessiva e della sua qualità.
+della massa muscolare complessiva e della sua qualità. Approfondisci in
+[Forza di presa: perché predice la mortalità](/blog/forza-presa-predice-mortalita).
 
 Sulla quantità necessaria, il dato più utile per chi parte da zero viene da una meta-analisi
 pubblicata sul British Journal of Sports Medicine (Momma e colleghi, 2022): l'associazione più

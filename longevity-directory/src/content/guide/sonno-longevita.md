@@ -16,6 +16,7 @@ clusterSlugs:
   - "hrv-cosa-misura-come-usarla"
   - "melatonina-dosi-evidenze-errori"
   - "cbt-i-terapia-insonnia-prima-linea"
+  - "stress-cronico-cortisolo-cosa-fa"
 ctaDirectory: "/directory/sonno-mente-stress"
 ctaLabel: "Vedi i centri per sonno, mente e stress"
 autore: "Redazione Longevità"
@@ -148,6 +149,15 @@ sonno cronicamente insufficiente e rischio di declino cognitivo, coerenti con qu
 È una delle ipotesi più interessanti della ricerca sull'invecchiamento cerebrale. Non è, ancora, una
 catena causale dimostrata nell'uomo — e vale la pena dirlo, perché è uno degli argomenti su cui il
 divulgatore medio salta il passaggio.
+
+## Lo stress cronico peggiora il sonno, e viceversa
+
+Sonno e stress non sono due capitoli separati: si alimentano a vicenda. Un sonno insufficiente
+aumenta la reattività dell'asse dello stress il giorno successivo, e uno stato di attivazione
+cronica dello stress — con il suo carico di **cortisolo** disregolato — rende più difficile
+addormentarsi e mantenere un sonno profondo. È un ciclo che vale la pena conoscere per intervenire
+su entrambi i fronti insieme, non uno alla volta. Approfondisci in
+[Stress cronico e cortisolo: cosa fa davvero al corpo](/blog/stress-cronico-cortisolo-cosa-fa).
 
 ## Da dove cominciare, in ordine
 
