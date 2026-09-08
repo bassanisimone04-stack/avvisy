@@ -42,6 +42,7 @@ both loaded via `next/font/google`. Tokens and the component layer
 /login                         Passwordless sign-in (magic link)
 /dashboard                     Groomer portal — zip coverage, leads, upgrade
 /unsubscribe                   Outreach opt-out (CAN-SPAM)
+/admin/claims                  Claim review (allow-listed admins only)
 /about  /privacy  /terms       Company and legal
 /sitemap.xml  /robots.txt      Generated from data at build time
 ```
@@ -63,7 +64,8 @@ still works. Adding keys turns features on progressively — see
 | Billing | `src/lib/stripe.ts`, `src/app/api/stripe/{checkout,webhook}/route.ts` |
 | Dashboard | `src/app/dashboard`, `src/components/{ZipCodeEditor,UpgradeButton}.tsx` |
 | Outreach generator | `scripts/outreach.mjs`, `scripts/outreach/` |
-| Tests | `tests/outreach.test.mjs` (node:test, no dependencies) |
+| Admin | `src/lib/admin.ts`, `src/lib/admin-rules.ts`, `src/lib/actions/claims.ts`, `src/app/admin` |
+| Tests | `tests/` (node:test, no dependencies) |
 
 Public directory reads go through a **session-less** Supabase client
 (`supabase/public.ts`) rather than the cookie-backed one. Calling `cookies()`

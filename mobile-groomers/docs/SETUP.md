@@ -35,8 +35,22 @@ Every table uses Row Level Security:
 
 Claims are recorded as `pending` and are **never auto-approved**. Assigning a
 listing to whoever asks first would let a competitor take over a rival's page.
-Approve them yourself in the Supabase table editor by setting the listing's
-`owner` to the claimant's user id.
+
+Review them at **`/admin/claims`**. Set `ADMIN_EMAILS` in `.env.local` to a
+comma-separated list of the addresses allowed in, then sign in with one of
+them. Approving assigns the listing's `owner` to the claimant, who can then
+edit it and receive its leads.
+
+The page shows each claimant's work email, phone and city so you can check
+them against the business's published contact details before approving. A
+claim is a request, not proof of ownership — verify it. Approval refuses to
+reassign a listing that already has a different owner, so a second claimant
+cannot quietly take over a page that is already held.
+
+The allow-list is an env var rather than a database role: a role column is
+only as safe as every policy that touches it, and an env var cannot be
+escalated into through SQL. An empty or unset value grants **nobody** access
+and the route 404s rather than 403s, so it does not advertise itself.
 
 ### Why some features need the service-role key
 
