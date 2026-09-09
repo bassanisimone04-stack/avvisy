@@ -1263,6 +1263,109 @@ const seeds: Seed[] = [
       { question: "Come si conservano le farine senza glutine?", answer: "In contenitori ermetici al riparo dalla luce; quelle ricche di grassi come mandorle e castagne irrancidiscono prima e in estate è meglio tenerle in frigorifero." },
     ],
   },
+  {
+    title: "Svezzamento e glutine: quando introdurlo e cosa dice la ricerca",
+    category: "Bambini",
+    excerpt: "Anticipare o ritardare il glutine nello svezzamento non cambia il rischio di celiachia: cosa dicono le linee guida ESPGHAN e perché il fattore decisivo resta la genetica.",
+    metaTitle: "Svezzamento e glutine: quando introdurlo | Mappa Senza Glutine",
+    metaDescription: "Quando introdurre il glutine nello svezzamento: le linee guida ESPGHAN, perché il momento non cambia il rischio di celiachia e cosa conta davvero.",
+    coverSeed: 156, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-09-09",
+    tags: ["bambini", "svezzamento", "celiachia", "genitori"],
+    keyTakeaways: [
+      "Secondo le linee guida ESPGHAN il glutine può essere introdotto in qualsiasi momento tra i 4 e i 12 mesi di vita.",
+      "Gli studi hanno smentito l'idea che anticipare o ritardare il glutine riduca il rischio di sviluppare la celiachia.",
+      "Nemmeno la durata dell'allattamento al seno, né il fatto che prosegua durante lo svezzamento, incidono sull'insorgenza della malattia.",
+      "L'unico fattore di rischio certo resta quello genetico, legato alla regione HLA del DNA: per questo lo screening dei familiari di primo grado è raccomandato.",
+    ],
+    sections: [
+      { h2: "Una raccomandazione che è cambiata nel tempo", body: "Per anni ai genitori è stato detto che esisteva una \"finestra ideale\" per introdurre il glutine, e che rispettarla potesse proteggere il bambino dalla celiachia. È una delle indicazioni che la ricerca ha rivisto più profondamente: oggi sappiamo che <strong>il momento in cui il glutine entra nella dieta non modifica la probabilità di sviluppare la malattia</strong>. Capire cosa dicono davvero le linee guida aiuta a vivere lo svezzamento con meno ansia, soprattutto quando in famiglia c'è già un celiaco." },
+      { h2: "Cosa dicono le linee guida oggi", body: "Il riferimento europeo è la Società Europea di Gastroenterologia, Epatologia e Nutrizione Pediatrica (ESPGHAN).", h3: [
+        { title: "La finestra dei 4-12 mesi", body: "Secondo ESPGHAN il glutine può essere introdotto <strong>in qualsiasi momento tra i 4 e i 12 mesi di vita</strong>, senza che una tempistica precisa all'interno di questa finestra risulti preferibile alle altre in termini di prevenzione." },
+        { title: "Perché non serve rincorrere una data", body: "Gli studi condotti su bambini a rischio genetico hanno mostrato che né l'introduzione precoce né quella tardiva cambiano la probabilità di sviluppare celiachia nell'infanzia. Un'introduzione tardiva sembra al più ritardare la comparsa dei sintomi, non prevenire la malattia." },
+      ] },
+      { h2: "E l'allattamento al seno?", body: "Anche su questo la letteratura ha corretto una convinzione diffusa: <strong>la durata dell'allattamento e il fatto che prosegua o meno durante lo svezzamento non incidono sull'insorgenza della celiachia</strong>. Questo non toglie nulla al valore dell'allattamento per tutti gli altri motivi per cui è raccomandato: semplicemente, non va vissuto come uno strumento di prevenzione della celiachia, perché non lo è." },
+      { h2: "Cosa conta davvero: la genetica", body: "L'unico fattore di rischio certo identificato finora è genetico, legato a una specifica regione del DNA nota come HLA. È il motivo per cui la celiachia ricorre nelle famiglie e per cui lo <strong>screening dei parenti di primo grado</strong> è raccomandato anche in assenza di sintomi. Se in famiglia ci sono già casi accertati, parlarne con il pediatra prima dello svezzamento è più utile che rincorrere il mese \"giusto\" per il primo biscotto. Quando poi arriva una diagnosi, la nostra <a href=\"/blog/bambini-celiaci-a-scuola-come-gestire-mensa-e-gite\">guida su mensa e gite scolastiche</a> copre la fase successiva." },
+      { h2: "Domande frequenti su svezzamento e glutine", body: "I dubbi più comuni dei genitori, soprattutto quando c'è familiarità con la celiachia.", h3: [
+        { title: "Devo ritardare il glutine se in famiglia c'è un celiaco?", body: "Le evidenze attuali non supportano il ritardo come strategia protettiva: il glutine può essere introdotto nella finestra 4-12 mesi come per gli altri bambini. Quello che ha senso, in caso di familiarità, è parlarne con il pediatra e sapere quali sintomi monitorare." },
+        { title: "Se mio figlio sviluppa la celiachia è colpa di come l'ho svezzato?", body: "No. L'unico fattore di rischio certo è genetico: né il momento dell'introduzione del glutine né le modalità di allattamento determinano l'insorgenza della malattia." },
+        { title: "Quanto glutine dare all'inizio?", body: "Non esiste una quantità \"protettiva\" dimostrata: l'introduzione segue le normali indicazioni dello svezzamento, gradualmente e insieme agli altri alimenti, secondo le indicazioni del pediatra che segue il bambino." },
+      ] },
+    ],
+    faqs: [
+      { question: "Quando si può introdurre il glutine nello svezzamento?", answer: "Secondo le linee guida ESPGHAN il glutine può essere introdotto in qualsiasi momento tra i 4 e i 12 mesi di vita, senza che una tempistica precisa risulti preferibile alle altre." },
+      { question: "Ritardare il glutine previene la celiachia?", answer: "No: gli studi hanno mostrato che né l'introduzione precoce né quella tardiva cambiano la probabilità di sviluppare la celiachia. Un'introduzione tardiva può al più ritardare la comparsa dei sintomi." },
+      { question: "L'allattamento al seno protegge dalla celiachia?", answer: "No: la durata dell'allattamento e la sua prosecuzione durante lo svezzamento non incidono sull'insorgenza della malattia, il cui unico fattore di rischio certo resta quello genetico legato alla regione HLA." },
+    ],
+  },
+  {
+    title: "Sagre e feste di paese senza glutine: come muoversi in sicurezza",
+    category: "Guide",
+    excerpt: "Stand AIC, food truck dedicati e regole pratiche per godersi una sagra da celiaco senza rischiare la contaminazione crociata tra fritture e impasti condivisi.",
+    metaTitle: "Sagre senza glutine: come muoversi da celiaco | Mappa Senza Glutine",
+    metaDescription: "Sagre e feste di paese da celiaco: dove trovare stand AIC e food truck dedicati, cosa chiedere agli operatori e quali preparazioni evitare sempre.",
+    coverSeed: 157, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-09",
+    tags: ["sagre", "eventi", "AIC", "contaminazione crociata"],
+    keyTakeaways: [
+      "Diverse sezioni regionali AIC organizzano stand e food truck interamente senza glutine nelle sagre, preparati secondo i protocolli dell'associazione.",
+      "Nelle sagre tradizionali il rischio maggiore è la frittura condivisa: lo stesso olio usato per prodotti impanati contamina qualunque alimento gluten free.",
+      "Se non c'è uno stand dedicato, la regola AIC è chiara: chiedere gli ingredienti, spiegare l'esigenza e, nel dubbio, non consumare.",
+      "Verificare in anticipo sui canali della sezione AIC regionale se l'evento prevede una postazione dedicata evita di arrivare e restare a digiuno.",
+    ],
+    sections: [
+      { h2: "Perché una sagra è più delicata di un ristorante", body: "In una sagra di paese convivono in pochi metri friggitrici condivise, impasti stesi all'aperto, farina che si disperde nell'aria e personale spesso volontario, non formato sulle procedure anti-contaminazione. Non significa che un celiaco debba rinunciare: significa che <strong>le regole valide al ristorante qui vanno applicate con ancora più attenzione</strong>, perché il contesto è meno controllato." },
+      { h2: "Stand AIC e food truck dedicati: la novità degli ultimi anni", body: "Diverse sezioni regionali dell'Associazione Italiana Celiachia hanno sviluppato programmi specifici per gli eventi di piazza.", h3: [
+        { title: "Gli stand dell'associazione", body: "In molte regioni AIC è presente con un proprio stand durante sagre e mercati gastronomici: sono occasioni per far conoscere l'associazione, incontrare i soci e proporre assaggi di prodotti senza glutine in un contesto controllato." },
+        { title: "I food truck 100% gluten free", body: "In diverse regioni circolano food truck dedicati esclusivamente al senza glutine, presenti a numerose sagre ed eventi, che preparano dolce e salato secondo gli standard di sicurezza AIC. Sono la soluzione più affidabile quando ci sono, perché non lavorano affatto prodotti con glutine." },
+      ] },
+      { h2: "Cosa evitare quasi sempre in una sagra", body: "Alcune preparazioni tipiche restano ad alto rischio se non esiste una postazione dedicata: <ul><li><strong>Fritture</strong> di ogni tipo: lo stesso olio usato per prodotti impanati contamina anche patatine e verdure di per sé senza glutine.</li><li><strong>Pizze, focacce e piadine</strong> cotte su piastre o forni condivisi, dove la farina resta sulla superficie.</li><li><strong>Griglie condivise</strong> con salsicce o carni infarinate, e piani di lavoro dove si stende la pasta fresca.</li><li><strong>Salse e sughi</strong> preparati in grandi quantità, dove addensanti a base di frumento sono frequenti e l'etichetta non esiste.</li></ul>" },
+      { h2: "Le domande giuste da fare allo stand", body: "Quando non c'è una postazione dedicata, l'indicazione dell'AIC è di informare il personale su quali ingredienti evitare, chiedere sempre gli ingredienti dei piatti e, in caso di dubbio, non consumarli. Tre domande che chiariscono la situazione in trenta secondi: se la frittura avviene in olio dedicato, se il piano di cottura è condiviso con impasti, e se qualcuno può controllare l'etichetta della salsa o del preparato usato. Uno stand attrezzato risponde senza esitazione; un'esitazione è già una risposta." },
+      { h2: "Domande frequenti sulle sagre senza glutine", body: "Le domande più comuni di chi vuole partecipare a una festa di paese da celiaco.", h3: [
+        { title: "Come faccio a sapere se una sagra ha uno stand senza glutine?", body: "I canali della sezione AIC regionale di riferimento pubblicano gli eventi con postazioni dedicate; in alternativa, contattare gli organizzatori qualche giorno prima è il modo più diretto per saperlo ed evitare di arrivare e restare a digiuno." },
+        { title: "Le patatine fritte di una sagra sono sicure?", body: "Quasi mai: nella maggior parte dei casi la frittura avviene nello stesso olio usato per prodotti impanati, e questo contamina anche un alimento naturalmente senza glutine come la patata." },
+        { title: "Posso portare il mio cibo a una sagra?", body: "Sì, ed è una scelta ragionevole quando non è prevista una postazione dedicata: prodotti confezionati in monoporzione sigillata permettono di partecipare alla serata senza rinunciare né rischiare." },
+      ] },
+    ],
+    faqs: [
+      { question: "Esistono sagre con stand senza glutine?", answer: "Sì, diverse sezioni regionali AIC organizzano stand e food truck interamente senza glutine in sagre ed eventi di piazza, con preparazioni che seguono i protocolli di sicurezza dell'associazione." },
+      { question: "Cosa devo evitare a una sagra se sono celiaco?", answer: "Fritture in olio condiviso, pizze e focacce cotte su piastre comuni, griglie usate per carni infarinate e salse preparate in grandi quantità senza etichetta disponibile." },
+      { question: "Cosa consiglia l'AIC se non c'è uno stand dedicato?", answer: "Informare il personale sugli ingredienti da evitare, chiedere sempre la composizione dei piatti e, in caso di dubbio, non consumarli." },
+    ],
+  },
+  {
+    title: "Sushi, cinese e indiano senza glutine: mangiare etnico da celiaco",
+    category: "Guide",
+    excerpt: "La salsa di soia contiene grano, la tempura è impanata: come orientarsi nei ristoranti etnici da celiaco, cosa chiedere e quali locali certificati AIC esistono già in Italia.",
+    metaTitle: "Ristoranti etnici senza glutine: la guida | Mappa Senza Glutine",
+    metaDescription: "Mangiare etnico da celiaco: perché la salsa di soia contiene grano, cosa evitare al giapponese, cinese e indiano e come riconoscere un locale sicuro.",
+    coverSeed: 158, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-09",
+    tags: ["ristoranti", "sushi", "etnico", "salsa di soia"],
+    keyTakeaways: [
+      "La salsa di soia tradizionale è prodotta con frumento: è l'insidia più comune e meno conosciuta della cucina asiatica.",
+      "Il tamari è l'alternativa senza frumento alla salsa di soia, ma va comunque verificato che sia certificato senza glutine.",
+      "Tempura, involtini primavera e anatra laccata sono preparazioni che prevedono farina o impanatura quasi sempre.",
+      "In Italia esistono già ristoranti di sushi certificati AIC: sono la scelta più sicura rispetto a un locale generico che dichiara opzioni gluten free.",
+    ],
+    sections: [
+      { h2: "L'insidia numero uno: la salsa di soia", body: "Chi è celiaco impara presto a diffidare della pasta e del pane, molto meno di una ciotolina di salsa. Eppure <strong>la salsa di soia tradizionale è fermentata con frumento</strong>, in proporzioni che possono arrivare a metà degli ingredienti insieme alla soia: è il motivo per cui un piatto di riso e pesce crudo, teoricamente sicuro, diventa a rischio nel momento in cui viene condito al tavolo o in cucina. L'alternativa esiste e si chiama <strong>tamari</strong>, salsa di soia prodotta senza frumento, ma anche in questo caso va verificato che la versione servita sia certificata senza glutine." },
+      { h2: "Cosa evitare nei tre grandi classici", body: "Ogni cucina ha le sue preparazioni a rischio, quasi sempre legate a impanature e salse.", h3: [
+        { title: "Giapponese", body: "Oltre alla salsa di soia, attenzione a <strong>tempura</strong> (pastella di farina di frumento), gyoza, surimi e alle salse dolci tipo teriyaki o unagi, che contengono salsa di soia come base. Il rischio aggiuntivo è la frittura condivisa e l'uso degli stessi utensili per piatti impanati e non." },
+        { title: "Cinese", body: "Involtini primavera, ravioli al vapore, anatra laccata e la maggior parte dei piatti \"in salsa\" prevedono farina o salsa di soia. Anche gli spaghetti di riso, di per sé sicuri, vengono spesso saltati nello stesso wok usato per noodle di frumento." },
+        { title: "Indiano", body: "Il naan e i pani da forno sono di frumento, così come samosa e pakora (farina di ceci ma spesso miscelata, e frittura condivisa). Riso basmati e curry sono più gestibili, ma vanno verificati addensanti e miscele di spezie pre-preparate." },
+      ] },
+      { h2: "Locali etnici certificati: esistono già in Italia", body: "La differenza tra un locale che \"ha qualcosa senza glutine\" e uno certificato è la stessa che vale per qualunque ristorante. Nella nostra directory trovi già due ristoranti di sushi certificati AIC: <a href=\"/directory/sushi-sound-milano\">Sushi&Sound</a> sui Navigli a Milano, tra i primi in città a proporre un menu quasi interamente senza glutine, e <a href=\"/directory/rame-sushi-naturale-italiano-roma\">Ramè</a> a Roma, con ricette originali garantite senza glutine e servizio di consegna. Sono la dimostrazione che la cucina asiatica senza glutine è possibile quando la cucina è organizzata per farlo." },
+      { h2: "Le domande da fare prima di ordinare", body: "In un locale etnico non certificato, tre domande cambiano il quadro: se usano <strong>tamari certificato</strong> al posto della salsa di soia, se la <strong>frittura avviene in olio dedicato</strong>, e se il wok o la piastra vengono puliti tra una preparazione e l'altra. Se il personale non parla fluentemente italiano, scrivere l'esigenza su un foglio o mostrare una scheda tradotta evita fraintendimenti pericolosi: molte associazioni distribuiscono \"dining cards\" multilingue proprio per questo. Il resto delle regole vale come sempre e lo trovi nella nostra <a href=\"/blog/come-evitare-la-contaminazione-crociata-al-ristorante-la-guida-completa-per-mangiare-senza-glutine-in-sicurezza\">guida alla contaminazione crociata al ristorante</a>." },
+      { h2: "Domande frequenti sul cibo etnico senza glutine", body: "Le domande più comuni di chi non vuole rinunciare al sushi o al curry.", h3: [
+        { title: "Il sushi è senza glutine?", body: "Riso, pesce e alga nori sono naturalmente senza glutine, ma la salsa di soia servita a parte contiene frumento e molte preparazioni (tempura, surimi, salse dolci) no. Il sushi è sicuro solo se il locale gestisce salse e utensili in modo dedicato." },
+        { title: "Cos'è il tamari e posso fidarmi?", body: "È una salsa di soia prodotta senza frumento, quindi l'alternativa più diffusa per i celiaci. Come per qualunque prodotto, va verificato che la bottiglia usata sia certificata senza glutine e non una salsa di soia classica travasata." },
+        { title: "Gli spaghetti di riso al ristorante cinese sono sicuri?", body: "L'ingrediente sì, la preparazione spesso no: vengono comunemente saltati nello stesso wok usato per i noodle di frumento, con salse che contengono soia. Serve un wok o una padella dedicata per considerarli sicuri." },
+      ] },
+    ],
+    faqs: [
+      { question: "La salsa di soia contiene glutine?", answer: "Sì, la salsa di soia tradizionale è fermentata con frumento. L'alternativa senza frumento è il tamari, che va comunque scelto in versione certificata senza glutine." },
+      { question: "Esistono ristoranti di sushi certificati AIC in Italia?", answer: "Sì: nella directory di Mappa Senza Glutine trovi Sushi&Sound a Milano e Ramè a Roma, entrambi certificati AIC con preparazioni garantite senza glutine." },
+      { question: "Cosa devo evitare in un ristorante giapponese se sono celiaco?", answer: "Salsa di soia tradizionale, tempura, gyoza, surimi e salse dolci come teriyaki, oltre a tutto ciò che passa da friggitrici o utensili condivisi con preparazioni impanate." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {

@@ -1211,6 +1211,106 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["flours", "cooking", "baking", "nutrition"],
   },
+  "art-43": {
+    title: "Weaning and Gluten: When to Introduce It and What Research Says",
+    excerpt: "Introducing gluten earlier or later during weaning doesn't change celiac risk: what the ESPGHAN guidelines say and why genetics remains the deciding factor.",
+    authorRole: "Nutritionist & biologist",
+    metaTitle: "Weaning and Gluten: When to Introduce It | Mappa Senza Glutine",
+    metaDescription: "When to introduce gluten during weaning: the ESPGHAN guidelines, why timing doesn't change celiac risk and what actually matters.",
+    keyTakeaways: [
+      "According to ESPGHAN guidelines, gluten can be introduced at any point between 4 and 12 months of age.",
+      "Studies have debunked the idea that introducing gluten earlier or later reduces the risk of developing celiac disease.",
+      "Neither the duration of breastfeeding nor whether it continues through weaning affects the onset of the condition.",
+      "The only established risk factor remains genetic, tied to the HLA region of DNA, which is why screening first-degree relatives is recommended.",
+    ],
+    sections: [
+      { h2: "A recommendation that changed over time", body: "For years parents were told there was an \"ideal window\" for introducing gluten, and that respecting it could protect a child from celiac disease. It's one of the recommendations research has revised most thoroughly: we now know that <strong>the moment gluten enters the diet doesn't change the probability of developing the condition</strong>. Understanding what the guidelines actually say makes weaning less anxious, especially when there's already a celiac in the family." },
+      { h2: "What the guidelines say today", body: "The European reference is the European Society for Paediatric Gastroenterology, Hepatology and Nutrition (ESPGHAN).", h3: [
+        { title: "The 4-12 month window", body: "According to ESPGHAN, gluten can be introduced <strong>at any point between 4 and 12 months of age</strong>, with no specific timing within that window proving preferable to others in terms of prevention." },
+        { title: "Why chasing a date doesn't help", body: "Studies on genetically at-risk children showed that neither early nor late introduction changes the probability of developing celiac disease in childhood. Late introduction seems at most to delay the appearance of symptoms, not prevent the condition." },
+      ] },
+      { h2: "What about breastfeeding?", body: "Here too the literature corrected a widespread belief: <strong>the duration of breastfeeding and whether it continues through weaning don't affect the onset of celiac disease</strong>. This takes nothing away from the value of breastfeeding for all the other reasons it's recommended: it simply shouldn't be treated as a tool for preventing celiac disease, because it isn't one." },
+      { h2: "What actually matters: genetics", body: "The only established risk factor identified so far is genetic, tied to a specific region of DNA known as HLA. It's why celiac disease runs in families and why <strong>screening first-degree relatives</strong> is recommended even without symptoms. If there are confirmed cases in the family, discussing it with your pediatrician before weaning is more useful than chasing the \"right\" month for a first biscuit. When a diagnosis does arrive, our <a href=\"/en/blog/bambini-celiaci-a-scuola-come-gestire-mensa-e-gite\">guide to school meals and trips</a> covers the next stage." },
+      { h2: "Frequently asked questions about weaning and gluten", body: "The most common doubts from parents, especially where celiac disease runs in the family.", h3: [
+        { title: "Should I delay gluten if there's a celiac in the family?", body: "Current evidence doesn't support delay as a protective strategy: gluten can be introduced in the 4-12 month window as for any other child. What does make sense, with a family history, is discussing it with your pediatrician and knowing which symptoms to watch for." },
+        { title: "If my child develops celiac disease, is it because of how I weaned them?", body: "No. The only established risk factor is genetic: neither the timing of gluten introduction nor breastfeeding practices determine the onset of the condition." },
+        { title: "How much gluten should I give at the start?", body: "There's no demonstrated \"protective\" amount: introduction follows normal weaning practice, gradually and alongside other foods, according to the guidance of the pediatrician following the child." },
+      ] },
+    ],
+    faqs: [
+      { question: "When can gluten be introduced during weaning?", answer: "According to ESPGHAN guidelines, gluten can be introduced at any point between 4 and 12 months of age, with no specific timing proving preferable to others." },
+      { question: "Does delaying gluten prevent celiac disease?", answer: "No: studies show that neither early nor late introduction changes the probability of developing celiac disease. Late introduction may at most delay the appearance of symptoms." },
+      { question: "Does breastfeeding protect against celiac disease?", answer: "No: the duration of breastfeeding and its continuation through weaning don't affect the onset of the condition, whose only established risk factor remains the genetic HLA profile." },
+    ],
+    tags: ["kids", "weaning", "celiac disease", "parents"],
+  },
+  "art-44": {
+    title: "Gluten-Free at Village Festivals: How to Navigate Them Safely",
+    excerpt: "AIC stands, dedicated food trucks and practical rules for enjoying an Italian sagra as a celiac without risking cross-contamination among shared fryers and dough.",
+    authorRole: "Food safety content specialist",
+    metaTitle: "Gluten-Free at Italian Village Festivals | Mappa Senza Glutine",
+    metaDescription: "Italian sagre as a celiac: where to find AIC stands and dedicated food trucks, what to ask vendors and which dishes to always avoid.",
+    keyTakeaways: [
+      "Several regional AIC chapters run entirely gluten-free stands and food trucks at village festivals, prepared to the association's protocols.",
+      "At traditional festivals the biggest risk is shared frying: the same oil used for breaded items contaminates any gluten-free food.",
+      "Where there's no dedicated stand, AIC's rule is clear: ask about ingredients, explain your needs, and when in doubt don't eat it.",
+      "Checking your regional AIC chapter's channels ahead of time tells you whether an event has a dedicated station, so you don't arrive and go hungry.",
+    ],
+    sections: [
+      { h2: "Why a festival is trickier than a restaurant", body: "At an Italian sagra, shared fryers, dough rolled out in the open, flour dispersing in the air and often volunteer staff untrained in anti-contamination procedures all coexist within a few metres. It doesn't mean a celiac has to stay home: it means <strong>the rules that apply in a restaurant need even more attention here</strong>, because the setting is less controlled." },
+      { h2: "AIC stands and dedicated food trucks: a recent development", body: "Several regional chapters of the Italian Celiac Association have built specific programmes for public events.", h3: [
+        { title: "The association's stands", body: "In many regions AIC is present with its own stand at festivals and food markets: a chance to introduce the association, meet members and offer tastings of gluten-free products in a controlled setting." },
+        { title: "100% gluten-free food trucks", body: "In several regions, food trucks dedicated exclusively to gluten-free food attend numerous festivals and events, preparing sweet and savory items to AIC safety standards. They're the most reliable option where available, because they handle no gluten-containing products at all." },
+      ] },
+      { h2: "What to avoid at almost any festival", body: "Some typical preparations stay high-risk without a dedicated station: <ul><li><strong>Anything fried</strong>: the same oil used for breaded items contaminates chips and vegetables that are gluten-free in themselves.</li><li><strong>Pizza, focaccia and piadina</strong> cooked on shared surfaces or ovens, where flour lingers.</li><li><strong>Shared grills</strong> used for floured sausages or meat, and work surfaces where fresh pasta is rolled.</li><li><strong>Sauces</strong> made in bulk, where wheat-based thickeners are common and there's no label to check.</li></ul>" },
+      { h2: "The right questions to ask at a stand", body: "Where there's no dedicated station, AIC's guidance is to tell staff which ingredients to avoid, always ask about a dish's ingredients and, when in doubt, not eat it. Three questions settle it in thirty seconds: whether frying happens in dedicated oil, whether the cooking surface is shared with dough, and whether someone can check the label of the sauce or mix being used. A well-equipped stand answers without hesitation; hesitation is itself an answer." },
+      { h2: "Frequently asked questions about gluten-free at festivals", body: "The most common questions from people wanting to join a village festival as a celiac.", h3: [
+        { title: "How do I find out if a festival has a gluten-free stand?", body: "Your regional AIC chapter's channels publish events with dedicated stations; otherwise, contacting the organisers a few days ahead is the most direct way to know and avoid arriving with nothing to eat." },
+        { title: "Are chips at a festival safe?", body: "Almost never: in most cases frying happens in the same oil used for breaded products, which contaminates even a naturally gluten-free food like a potato." },
+        { title: "Can I bring my own food to a festival?", body: "Yes, and it's a sensible choice when no dedicated station is planned: sealed single-portion packaged products let you join the evening without either missing out or taking risks." },
+      ] },
+    ],
+    faqs: [
+      { question: "Are there Italian festivals with gluten-free stands?", answer: "Yes, several regional AIC chapters run entirely gluten-free stands and food trucks at festivals and public events, with preparations following the association's safety protocols." },
+      { question: "What should I avoid at a festival if I'm celiac?", answer: "Anything fried in shared oil, pizza and focaccia cooked on common surfaces, grills used for floured meats, and bulk sauces with no label available." },
+      { question: "What does AIC recommend where there's no dedicated stand?", answer: "Tell staff which ingredients to avoid, always ask about a dish's composition and, when in doubt, don't eat it." },
+    ],
+    tags: ["festivals", "events", "AIC", "cross-contamination"],
+  },
+  "art-45": {
+    title: "Sushi, Chinese and Indian Gluten-Free: Eating Out as a Celiac",
+    excerpt: "Soy sauce contains wheat and tempura is battered: how to navigate Asian and Indian restaurants as a celiac, what to ask, and which AIC-certified venues already exist in Italy.",
+    authorRole: "Food safety content specialist",
+    metaTitle: "Gluten-Free at Asian Restaurants: A Guide | Mappa Senza Glutine",
+    metaDescription: "Eating Asian food as a celiac: why soy sauce contains wheat, what to avoid at Japanese, Chinese and Indian restaurants, and how to spot a safe venue.",
+    keyTakeaways: [
+      "Traditional soy sauce is brewed with wheat: it's the most common and least known pitfall in Asian cuisine.",
+      "Tamari is the wheat-free alternative to soy sauce, but it still needs to be verified as certified gluten-free.",
+      "Tempura, spring rolls and Peking duck almost always involve flour or batter.",
+      "Italy already has AIC-certified sushi restaurants: a safer choice than a generic venue claiming gluten-free options.",
+    ],
+    sections: [
+      { h2: "Pitfall number one: soy sauce", body: "Celiacs quickly learn to be wary of pasta and bread, far less so of a little bowl of sauce. Yet <strong>traditional soy sauce is fermented with wheat</strong>, sometimes in proportions approaching half the ingredients alongside soybeans: which is why a plate of rice and raw fish, theoretically safe, becomes risky the moment it's seasoned at the table or in the kitchen. The alternative exists and is called <strong>tamari</strong>, a soy sauce made without wheat, though even then it's worth checking that the version served is certified gluten-free." },
+      { h2: "What to avoid in the three great classics", body: "Each cuisine has its risky preparations, almost always batter and sauces.", h3: [
+        { title: "Japanese", body: "Beyond soy sauce, watch out for <strong>tempura</strong> (wheat flour batter), gyoza, surimi and sweet sauces like teriyaki or unagi, which use soy sauce as a base. The added risk is shared frying and the same utensils used for battered and non-battered dishes." },
+        { title: "Chinese", body: "Spring rolls, steamed dumplings, Peking duck and most dishes \"in sauce\" involve flour or soy sauce. Even rice noodles, safe in themselves, are often stir-fried in the same wok used for wheat noodles." },
+        { title: "Indian", body: "Naan and oven breads are wheat-based, as are samosa and pakora (chickpea flour, but often blended, and shared frying). Basmati rice and curries are more manageable, but thickeners and pre-made spice blends need checking." },
+      ] },
+      { h2: "Certified Asian venues already exist in Italy", body: "The difference between a venue that \"has something gluten-free\" and a certified one is the same as for any restaurant. Our directory already lists two AIC-certified sushi restaurants: <a href=\"/en/directory/sushi-sound-milano\">Sushi&Sound</a> on the Navigli in Milan, among the first in the city to offer an almost entirely gluten-free menu, and <a href=\"/en/directory/rame-sushi-naturale-italiano-roma\">Ramè</a> in Rome, with original recipes guaranteed gluten-free and delivery service. They prove Asian cuisine gluten-free is possible when the kitchen is set up for it." },
+      { h2: "The questions to ask before ordering", body: "At a non-certified Asian venue, three questions change the picture: whether they use <strong>certified tamari</strong> instead of soy sauce, whether <strong>frying happens in dedicated oil</strong>, and whether the wok or griddle is cleaned between preparations. If staff don't speak your language fluently, writing the requirement down or showing a translated card avoids dangerous misunderstandings: many associations distribute multilingual \"dining cards\" for exactly this. The rest of the rules apply as always and are covered in our <a href=\"/en/blog/come-evitare-la-contaminazione-crociata-al-ristorante-la-guida-completa-per-mangiare-senza-glutine-in-sicurezza\">guide to cross-contamination at restaurants</a>." },
+      { h2: "Frequently asked questions about gluten-free Asian food", body: "The most common questions from people who don't want to give up sushi or curry.", h3: [
+        { title: "Is sushi gluten-free?", body: "Rice, fish and nori seaweed are naturally gluten-free, but the soy sauce served alongside contains wheat and many preparations (tempura, surimi, sweet sauces) don't qualify. Sushi is safe only where the venue handles sauces and utensils in a dedicated way." },
+        { title: "What is tamari and can I trust it?", body: "It's a soy sauce made without wheat, so the most widespread alternative for celiacs. As with any product, check that the bottle in use is certified gluten-free and not classic soy sauce decanted into it." },
+        { title: "Are rice noodles at a Chinese restaurant safe?", body: "The ingredient is, the preparation often isn't: they're commonly stir-fried in the same wok used for wheat noodles, with sauces containing soy. A dedicated wok or pan is needed to consider them safe." },
+      ] },
+    ],
+    faqs: [
+      { question: "Does soy sauce contain gluten?", answer: "Yes, traditional soy sauce is fermented with wheat. The wheat-free alternative is tamari, which should still be chosen in a certified gluten-free version." },
+      { question: "Are there AIC-certified sushi restaurants in Italy?", answer: "Yes: the Mappa Senza Glutine directory lists Sushi&Sound in Milan and Ramè in Rome, both AIC-certified with preparations guaranteed gluten-free." },
+      { question: "What should I avoid at a Japanese restaurant as a celiac?", answer: "Traditional soy sauce, tempura, gyoza, surimi and sweet sauces like teriyaki, plus anything passing through fryers or utensils shared with battered preparations." },
+    ],
+    tags: ["restaurants", "sushi", "asian", "soy sauce"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {
