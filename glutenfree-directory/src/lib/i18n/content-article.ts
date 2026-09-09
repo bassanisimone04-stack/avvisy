@@ -1108,6 +1108,109 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["beer", "drinks", "AIC", "products"],
   },
+  "art-40": {
+    title: "Celiac Disease in Men: Why Diagnosis Comes Later",
+    excerpt: "Celiac disease is diagnosed mostly in women, and in men it arrives roughly a decade later: why that happens, which signs get overlooked, and what to ask your doctor.",
+    authorRole: "Nutritionist & biologist",
+    metaTitle: "Celiac Disease in Men: Later Diagnosis | Mappa Senza Glutine",
+    metaDescription: "Why celiac disease is diagnosed later in men: the data on diagnoses, the average delay, and the signs that often get attributed to something else.",
+    keyTakeaways: [
+      "According to AIC, around 70% of celiac diagnoses in Italy are women: not because men get the condition far less often, but because they reach diagnosis with more difficulty.",
+      "The average age at diagnosis in men falls between the fourth and fifth decade of life, against the third-to-fourth in women: about ten years of difference.",
+      "An average of eight months passes between the first consultation and diagnosis, and nearly 1 in 5 cases gets a wrong diagnosis first, often irritable bowel syndrome.",
+      "Celiac disease is not a 'women's condition': explicitly asking for serology tests when symptoms persist remains the most effective way to shorten the wait.",
+    ],
+    sections: [
+      { h2: "A condition perceived as female", body: "The Italian Celiac Association's data is clear: <strong>around 70% of diagnoses in Italy are women</strong>. That figure often gets read as if celiac disease were a mostly female condition, but a more useful reading is different: a substantial share of celiac men simply never reach a diagnosis, or reach it much later. Understanding why helps avoid postponing testing when symptoms are there." },
+      { h2: "Ten years of difference in age at diagnosis", body: "The best-documented difference isn't in symptoms, but in timing.", h3: [
+        { title: "When the diagnosis arrives", body: "In women, age at diagnosis typically concentrates between the third and fourth decade of life; in men it shifts to between the fourth and fifth. In practice: about ten more years living with an untreated condition, with the risk of avoidable consequences like nutrient deficiencies or early osteoporosis." },
+        { title: "The delay everyone shares", body: "Even once the process starts, timelines stay long for everyone: an average of eight months passes between the first consultation and a definitive diagnosis, and in nearly one case out of five a wrong diagnosis comes first, very often irritable bowel syndrome." },
+      ] },
+      { h2: "The signs attributed to something else", body: "Recurring bloating, chronic fatigue, iron-deficiency anemia that doesn't resolve with supplements, intermittent abdominal pain: these are signs that, if they persist, deserve specific celiac testing regardless of sex. The problem isn't that they show up radically differently in men, but that they're more readily traced back to stress, poor eating habits or generic gastrointestinal issues, without ever reaching the serology test. You'll find the full symptom picture in our <a href=\"/en/blog/celiachia-cos-e-sintomi-e-come-si-diagnostica\">guide to celiac disease</a>." },
+      { h2: "What to do if you suspect celiac disease", body: "The path is the same for everyone and has one rule you must not break: <strong>don't remove gluten before completing the tests</strong>, because it skews the results. <ul><li><strong>Explicitly ask for anti-transglutaminase antibodies</strong> if symptoms have persisted for weeks.</li><li><strong>Mention any family history</strong>: the genetic component makes screening advisable for first-degree relatives.</li><li><strong>Bring a symptom diary</strong>, with duration and frequency: it makes the picture much harder to dismiss as occasional.</li><li><strong>If you get an irritable bowel diagnosis</strong> without celiac disease having been ruled out, ask for it to be ruled out.</li></ul>" },
+      { h2: "Frequently asked questions about celiac disease in men", body: "The questions we get asked most on this topic.", h3: [
+        { title: "Does celiac disease affect men less?", body: "Female diagnoses are around 70% of the total, but this also reflects different access to the diagnostic pathway: a share of celiac men stays undiagnosed, which is why the diagnosis figure shouldn't be read as an exact measure of how common the condition is in each sex." },
+        { title: "Why does diagnosis in men come later?", body: "Both the perception of celiac disease as a female condition and the tendency to attribute recurring gastrointestinal symptoms to other causes before reaching serology testing play a role. The result is an average age at diagnosis about a decade higher." },
+        { title: "Which tests should I ask for?", body: "The first step is a blood test for anti-transglutaminase antibodies, followed by an endoscopy with duodenal biopsy if positive. It's essential to keep eating gluten until all testing is complete." },
+      ] },
+    ],
+    faqs: [
+      { question: "How many celiac diagnoses in Italy involve men?", answer: "According to the Italian Celiac Association's data, around 70% of diagnoses are women, so slightly under a third involve men: a share that also reflects a generally later diagnosis." },
+      { question: "At what age is celiac disease diagnosed in men?", answer: "Age at diagnosis in men typically falls between the fourth and fifth decade of life, against the third-to-fourth in women: about ten years of difference." },
+      { question: "How long does it take to get a celiac diagnosis?", answer: "An average of eight months between the first consultation and definitive diagnosis, with nearly one case in five receiving a wrong diagnosis first, often irritable bowel syndrome." },
+    ],
+    tags: ["celiac disease", "diagnosis", "men", "health"],
+  },
+  "art-41": {
+    title: "Flying Gluten-Free: The GFML Meal and What to Pack",
+    excerpt: "How to request the gluten-free meal on a flight (code GFML), by when to do it, what to expect on board and which supplies to bring so you're never left without food.",
+    authorRole: "Food safety content specialist",
+    metaTitle: "Gluten-Free Meal on a Flight: GFML Guide | Mappa Senza Glutine",
+    metaDescription: "How to request a gluten-free meal on a flight: what the GFML code means, when to book it, what to expect on board and which supplies to bring along.",
+    keyTakeaways: [
+      "The gluten-free in-flight meal is requested using the international code GFML, directly on the airline's website after booking your flight.",
+      "It has to be booked ahead: the window runs roughly from 14 days out until 24-72 hours before departure, depending on the airline.",
+      "The GFML meal arrives sealed with a visible label and is handed out by crew based on your seat: it's worth reconfirming at check-in.",
+      "On short-haul and low-cost flights special meals often don't exist: packing sealed single-portion supplies remains the most reliable solution.",
+    ],
+    sections: [
+      { h2: "What the GFML meal is and why the code matters", body: "Airlines manage special meals with standard international codes, and the gluten-free one is <strong>GFML</strong> (Gluten-Free Meal). Using the right code when you request it avoids misunderstandings: a generic \"wheat-free\" or \"vegetarian\" meal doesn't offer the same guarantees on gluten. Today almost every long-haul scheduled airline offers GFML in its special meal catalogue." },
+      { h2: "When and how to request it", body: "The request happens online, not on board, and has a firm deadline.", h3: [
+        { title: "The booking window", body: "The GFML meal is requested after buying your ticket, from the \"manage booking\" area of the airline's site. The window generally opens around 14 days before departure and closes between 24 and 72 hours before the flight, depending on the carrier: past that point the galley has already been loaded and nothing can be changed." },
+        { title: "Reconfirming at check-in", body: "It's worth asking at the check-in desk whether the GFML request actually shows on your booking. It's the last moment when an error can still be flagged, and it costs thirty seconds." },
+      ] },
+      { h2: "What to expect on board", body: "The gluten-free meal arrives <strong>sealed and with a visible label</strong> stating its type, and crew hand it out based on the seat tied to the request, usually before the standard meal service. If it doesn't arrive, flag it immediately: recovering it once service has started is much harder. One extra precaution: always check the label before opening the tray, because mix-ups between different special meals are the most common error." },
+      { h2: "Short flights, low cost and layovers: bring supplies", body: "On flights of a few hours and on most low-cost carriers, special meal service doesn't exist, and on board you'll only find packaged snacks with no guarantees. In layovers too, the availability of safe options varies enormously from airport to airport. Carrying sealed single-portion packaged products (crackers, crisp slices, bars) remains the simplest solution: you'll find some references among the <a href=\"/en/prodotti\">verified products</a> in the directory. For the rest of the trip, our <a href=\"/en/blog/viaggiare-senza-glutine-7-consigli-per-le-vacanze-sicure\">gluten-free travel guide</a> covers the general advice." },
+      { h2: "Frequently asked questions about gluten-free meals on flights", body: "The most common questions from celiac flyers.", h3: [
+        { title: "Is the GFML meal safe for a celiac?", body: "GFML meals are prepared by galleys following dedicated protocols and arrive sealed, but the level of guarantee varies from airline to airline. Always checking the label before opening the tray is the minimum precaution, and bringing your own supply anyway avoids going hungry if something goes wrong." },
+        { title: "Can I bring gluten-free food in my carry-on?", body: "Packaged solid foods are generally allowed in carry-on baggage; restrictions apply to liquids and spreads over 100 ml. For international flights outside the EU, also check the destination country's customs rules on fresh food and animal-derived products." },
+        { title: "What if the GFML meal doesn't arrive?", body: "Flag it to the crew immediately, before the standard meal service is finished: in some cases they can find a sealed alternative on board. If the request was on file and the meal wasn't there, it's worth reporting it to the airline after the flight too." },
+      ] },
+    ],
+    faqs: [
+      { question: "How do I request a gluten-free meal on a flight?", answer: "You request it online after booking your flight, from the \"manage booking\" area of the airline's website, selecting the special meal with the code GFML (Gluten-Free Meal)." },
+      { question: "By when should I book the GFML meal?", answer: "The window opens roughly 14 days before departure and closes between 24 and 72 hours before the flight, depending on the airline." },
+      { question: "Do low-cost airlines offer gluten-free meals?", answer: "In most cases no: on short-haul and low-cost flights special meal service isn't provided, so it's best to bring sealed single-portion supplies." },
+    ],
+    tags: ["travel", "flying", "GFML", "holidays"],
+  },
+  "art-42": {
+    title: "Gluten-Free Flours: A Guide to Alternatives to Plain Flour",
+    excerpt: "Rice, corn, buckwheat, chestnut, almond: how the main gluten-free flours behave in the kitchen, when to use them, and why blends work better than single flours.",
+    authorRole: "Gluten-free food blogger",
+    metaTitle: "Gluten-Free Flours: A Practical Guide | Mappa Senza Glutine",
+    metaDescription: "A guide to gluten-free flours: rice, corn, buckwheat, chestnut and almond compared, how they behave in the kitchen and why a blend is usually the better choice.",
+    keyTakeaways: [
+      "No gluten-free flour replaces plain flour on its own: what's missing is gluten, which gives dough its structure and elasticity.",
+      "Neutral flours (rice, corn) bring lightness but little flavor; characterful ones (buckwheat, chestnut, almond) bring taste but weigh the dough down.",
+      "Certified ready-made blends combine starches, flours and binders already balanced: the most reliable choice for bread, pizza and leavened bakes.",
+      "Watch out for oats: naturally gluten-free, but safe only when certified and processed in a dedicated supply chain.",
+    ],
+    sections: [
+      { h2: "Why swapping plain flour isn't enough", body: "Gluten isn't just a protein to avoid: in traditional baking it's the structure of the dough itself, what traps the gases of fermentation and makes the network elastic. Removing it means rebuilding that function with other ingredients, which is why <strong>swapping plain flour one-to-one for a gluten-free flour almost never works</strong>: the result is dense, crumbly and dry. Understanding how individual flours behave helps you choose well, or understand what's inside a ready-made blend." },
+      { h2: "The neutral flours: rice and corn", body: "They're the base of most gluten-free preparations.", h3: [
+        { title: "Rice flour", body: "The most versatile and most used as a base: neutral flavor, light color, suited to cakes, béchamel and coating. On its own it tends to give a dry, slightly sandy result, which is why it's almost always paired with starches or other flours." },
+        { title: "Corn flour", body: "Not to be confused with polenta: fine corn flour is excellent for crumbly baked goods like biscuits and shortcrust. It brings golden color and a natural sweetness, but little structure." },
+      ] },
+      { h2: "The characterful flours: buckwheat, chestnut, almond", body: "They bring flavor and nutritional value, but need careful dosing.", h3: [
+        { title: "Buckwheat", body: "Despite the name it has nothing to do with wheat and is naturally gluten-free. Bold, slightly bitter flavor, great for pizzoccheri, savory crepes and rustic bread: it's rarely used above 30-40% of the total, or it dominates the taste." },
+        { title: "Chestnut flour", body: "Sweet and fragrant, traditional in preparations like castagnaccio. Very characterful: in a mixed dough it's generally kept under 25%, both for flavor and because it weighs things down." },
+        { title: "Almond flour", body: "Rich in good fats, it brings softness and structure to unleavened bakes, from cakes to tart bases. It doesn't rise and isn't used for bread, but it's precious in pastry." },
+      ] },
+      { h2: "Why ready-made blends remain the simplest choice", body: "A certified blend already combines starches (which bring lightness), flours (which bring structure and flavor) and binders like psyllium or guar gum, which partly mimic gluten's role. That's why, especially for bread, pizza and leavened bakes, a good blend gives more consistent results than any combination improvised at home: in our <a href=\"/en/prodotti\">verified products</a> section you'll find universal and dessert-specific blends, each with its certification checked one by one. If you want to start from a tested recipe, try the <a href=\"/en/blog/pizza-senza-glutine-fatta-in-casa-l-impasto-con-il-mix-universale\">pizza with the universal blend</a> or the <a href=\"/en/blog/torta-senza-glutine-facile-la-ricetta-base-con-il-mix-per-dolci\">basic cake with the dessert blend</a>." },
+      { h2: "Frequently asked questions about gluten-free flours", body: "The most common doubts of anyone cooking gluten-free at home.", h3: [
+        { title: "Can I swap plain flour for rice flour one-to-one?", body: "No, the result would be dry and structureless: rice flour works as a base but needs to be combined with starches and binders, or replaced with an already balanced blend, especially in leavened bakes." },
+        { title: "Can oats be used in gluten-free recipes?", body: "Only if certified gluten-free: oats don't contain gluten themselves, but they're easily contaminated during farming, transport and processing, so a verified dedicated supply chain is needed." },
+        { title: "Do gluten-free flours keep like regular ones?", body: "Flours rich in fat, like almond or chestnut, go rancid faster: keep them in airtight containers away from light, and in summer even in the fridge." },
+      ] },
+    ],
+    faqs: [
+      { question: "What's the best gluten-free flour for bread?", answer: "No single flour works well alone for bread: you need a blend of starches, flours and binders like psyllium or guar gum, which is why certified ready-made blends give more consistent results." },
+      { question: "Does buckwheat contain gluten?", answer: "No, despite the name buckwheat isn't a cereal in the wheat family and is naturally gluten-free: it should still be bought certified to rule out contamination during processing." },
+      { question: "How should gluten-free flours be stored?", answer: "In airtight containers away from light; fat-rich ones like almond and chestnut go rancid sooner and in summer are better kept in the fridge." },
+    ],
+    tags: ["flours", "cooking", "baking", "nutrition"],
+  },
 };
 
 const COMMENT_EN: Record<string, string> = {

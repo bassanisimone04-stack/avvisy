@@ -1157,6 +1157,112 @@ const seeds: Seed[] = [
       { question: "Che differenza c'è tra birra deglutinata e birra nativamente senza glutine?", answer: "La birra deglutinata parte da malto d'orzo tradizionale sottoposto a un processo enzimatico; quella nativamente senza glutine è prodotta fin dall'origine con cereali come riso o mais, senza bisogno di deglutinazione." },
     ],
   },
+  {
+    title: "Celiachia negli uomini: perché la diagnosi arriva più tardi",
+    category: "Celiachia",
+    excerpt: "La celiachia viene diagnosticata soprattutto alle donne, e negli uomini arriva mediamente un decennio più tardi: perché succede, quali segnali vengono sottovalutati e cosa chiedere al medico.",
+    metaTitle: "Celiachia negli uomini: diagnosi più tardiva | Mappa Senza Glutine",
+    metaDescription: "Perché la celiachia negli uomini viene diagnosticata più tardi: i dati sulle diagnosi, il ritardo medio e i segnali che vengono spesso attribuiti ad altro.",
+    coverSeed: 153, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-09-02",
+    tags: ["celiachia", "diagnosi", "uomini", "salute"],
+    keyTakeaways: [
+      "Secondo l'AIC circa il 70% delle diagnosi di celiachia in Italia riguarda le donne: non perché gli uomini si ammalino molto meno, ma perché arrivano alla diagnosi con più difficoltà.",
+      "L'età media alla diagnosi negli uomini si colloca tra la quarta e la quinta decade di vita, contro la terza-quarta delle donne: circa dieci anni di differenza.",
+      "Tra la prima richiesta di consulto e la diagnosi passano in media otto mesi, e quasi 1 caso su 5 riceve prima una diagnosi errata, spesso di sindrome del colon irritabile.",
+      "La celiachia non è una malattia 'femminile': chiedere esplicitamente gli esami sierologici quando i sintomi persistono resta il modo più efficace per accorciare i tempi.",
+    ],
+    sections: [
+      { h2: "Una malattia percepita come femminile", body: "I dati dell'Associazione Italiana Celiachia parlano chiaro: <strong>circa il 70% delle diagnosi in Italia riguarda le donne</strong>. Il dato viene spesso letto come se la celiachia fosse una condizione prevalentemente femminile, ma la lettura più utile è un'altra: una parte consistente degli uomini celiaci semplicemente non arriva alla diagnosi, o ci arriva molto più tardi. Capire perché aiuta a non rimandare gli accertamenti quando i sintomi ci sono." },
+      { h2: "Dieci anni di differenza sull'età alla diagnosi", body: "La differenza più documentata non riguarda i sintomi, ma i tempi.", h3: [
+        { title: "Quando arriva la diagnosi", body: "Nelle donne l'età alla diagnosi si concentra tipicamente tra la terza e la quarta decade di vita; negli uomini si sposta tra la quarta e la quinta. Tradotto: mediamente una decina d'anni in più convivendo con una condizione non trattata, con il rischio di conseguenze evitabili come carenze nutrizionali o osteoporosi precoce." },
+        { title: "Il ritardo comune a entrambi", body: "Anche una volta iniziato il percorso, i tempi restano lunghi per tutti: in media passano otto mesi tra la prima richiesta di consulto e la diagnosi definitiva, e in quasi un caso su cinque arriva prima una diagnosi errata, molto spesso di sindrome del colon irritabile." },
+      ] },
+      { h2: "I segnali che vengono attribuiti ad altro", body: "Gonfiore ricorrente, stanchezza cronica, anemia da carenza di ferro che non si risolve con l'integrazione, dolori addominali intermittenti: sono segnali che, se persistono, meritano un accertamento specifico per celiachia a prescindere dal sesso. Il problema non è che negli uomini si manifestino in modo radicalmente diverso, ma che vengano più facilmente ricondotti a stress, alimentazione disordinata o disturbi gastrointestinali generici, senza arrivare al test sierologico. Trovi il quadro completo dei sintomi nella nostra <a href=\"/blog/celiachia-cos-e-sintomi-e-come-si-diagnostica\">guida alla celiachia</a>." },
+      { h2: "Cosa fare se sospetti la celiachia", body: "Il percorso è lo stesso per tutti e ha una regola da non violare: <strong>non eliminare il glutine prima di aver completato gli esami</strong>, perché falsa i risultati. <ul><li><strong>Chiedi esplicitamente gli anticorpi anti-transglutaminasi</strong> al tuo medico se i sintomi persistono da settimane.</li><li><strong>Segnala eventuali casi in famiglia</strong>: la componente genetica rende consigliato lo screening dei parenti di primo grado.</li><li><strong>Porta un diario dei sintomi</strong>, con durata e frequenza: rende molto più difficile liquidare il quadro come episodico.</li><li><strong>Se ricevi una diagnosi di colon irritabile</strong> senza che sia stata esclusa la celiachia, chiedi che venga esclusa.</li></ul>" },
+      { h2: "Domande frequenti sulla celiachia negli uomini", body: "Le domande che ci arrivano più spesso su questo tema.", h3: [
+        { title: "La celiachia colpisce meno gli uomini?", body: "Le diagnosi femminili sono circa il 70% del totale, ma questo riflette anche un accesso diverso al percorso diagnostico: una quota di uomini celiaci resta non diagnosticata, motivo per cui il dato sulle diagnosi non va letto come una misura esatta di quanto la condizione sia diffusa nei due sessi." },
+        { title: "Perché la diagnosi negli uomini arriva più tardi?", body: "Pesano sia la percezione della celiachia come condizione femminile, sia la tendenza a ricondurre i sintomi gastrointestinali ricorrenti ad altre cause prima di arrivare al test sierologico. Il risultato è un'età media alla diagnosi più alta di circa un decennio." },
+        { title: "Quali esami devo chiedere?", body: "Il primo passo sono gli esami del sangue per gli anticorpi anti-transglutaminasi, seguiti dalla gastroscopia con biopsia duodenale in caso di positività. È fondamentale continuare a mangiare glutine fino al completamento di tutti gli accertamenti." },
+      ] },
+    ],
+    faqs: [
+      { question: "Quante diagnosi di celiachia riguardano gli uomini in Italia?", answer: "Secondo i dati dell'Associazione Italiana Celiachia circa il 70% delle diagnosi riguarda le donne, quindi poco meno di un terzo interessa gli uomini: una quota che riflette anche una diagnosi mediamente più tardiva." },
+      { question: "A che età viene diagnosticata la celiachia negli uomini?", answer: "L'età alla diagnosi negli uomini si colloca tipicamente tra la quarta e la quinta decade di vita, contro la terza-quarta delle donne: circa dieci anni di differenza." },
+      { question: "Quanto tempo passa prima di ricevere una diagnosi di celiachia?", answer: "In media otto mesi tra la prima richiesta di consulto e la diagnosi definitiva, con quasi un caso su cinque che riceve prima una diagnosi errata, spesso di sindrome del colon irritabile." },
+    ],
+  },
+  {
+    title: "Volare senza glutine: il pasto GFML in aereo e cosa portare",
+    category: "Viaggi",
+    excerpt: "Come richiedere il pasto senza glutine in aereo (sigla GFML), entro quando farlo, cosa aspettarsi a bordo e quali scorte portare per non restare a digiuno.",
+    metaTitle: "Pasto senza glutine in aereo: la guida GFML | Mappa Senza Glutine",
+    metaDescription: "Come richiedere il pasto senza glutine in aereo: cos'è la sigla GFML, entro quando prenotarlo, cosa aspettarsi a bordo e quali scorte portare con sé.",
+    coverSeed: 154, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-05",
+    tags: ["viaggi", "aereo", "GFML", "vacanze"],
+    keyTakeaways: [
+      "Il pasto senza glutine in aereo si richiede con la sigla internazionale GFML, direttamente sul sito della compagnia dopo aver prenotato il volo.",
+      "Va prenotato in anticipo: la finestra utile va indicativamente dai 14 giorni fino a 24-72 ore prima della partenza, a seconda della compagnia.",
+      "Il pasto GFML arriva sigillato e con etichetta visibile, e viene consegnato dall'equipaggio in base al posto assegnato: conviene riconfermarlo al check-in.",
+      "Sui voli brevi e low cost il pasto speciale spesso non esiste: portare scorte confezionate resta la soluzione più affidabile.",
+    ],
+    sections: [
+      { h2: "Cos'è il pasto GFML e perché la sigla conta", body: "Le compagnie aeree gestiscono i pasti speciali con codici internazionali standard, e quello senza glutine è <strong>GFML</strong> (Gluten-Free Meal). Usare la sigla giusta quando lo richiedi evita fraintendimenti: un pasto generico \"senza frumento\" o \"vegetariano\" non offre le stesse garanzie sul glutine. Oggi quasi tutte le compagnie di linea a lungo raggio offrono il GFML nel proprio catalogo di pasti speciali." },
+      { h2: "Quando e come richiederlo", body: "La richiesta si fa online, non a bordo, e ha una scadenza precisa.", h3: [
+        { title: "La finestra di prenotazione", body: "Il pasto GFML si richiede dopo aver acquistato il biglietto, dall'area \"gestisci la prenotazione\" sul sito della compagnia. La finestra utile parte in genere da circa 14 giorni prima della partenza e si chiude tra le 24 e le 72 ore prima del volo, a seconda del vettore: oltre quel limite la cucina di bordo ha già caricato i pasti e non si può più intervenire." },
+        { title: "La riconferma al check-in", body: "Vale la pena chiedere conferma al banco del check-in che la richiesta GFML risulti effettivamente registrata sulla prenotazione. È il momento in cui un eventuale errore può ancora essere segnalato, e costa trenta secondi." },
+      ] },
+      { h2: "Cosa aspettarsi a bordo", body: "Il pasto senza glutine arriva <strong>sigillato e con un'etichetta visibile</strong> che ne indica la tipologia, e l'equipaggio lo consegna in base al posto associato alla richiesta, di solito prima del servizio pasti standard. Se non arriva, segnalalo subito: recuperarlo a servizio iniziato è molto più difficile. Un'accortezza in più: verifica sempre l'etichetta prima di aprire la confezione, perché gli scambi tra pasti speciali diversi sono l'errore più comune." },
+      { h2: "Voli brevi, low cost e scali: meglio le scorte", body: "Sui voli di poche ore e sulla maggior parte delle compagnie low cost il servizio di pasti speciali non esiste, e a bordo si trovano solo snack confezionati non garantiti. Anche negli scali, la disponibilità di opzioni sicure varia moltissimo da aeroporto ad aeroporto. Portare con sé prodotti confezionati in monoporzione sigillata (crackers, fette croccanti, barrette) resta la soluzione più semplice: trovi qualche riferimento tra i <a href=\"/prodotti\">prodotti verificati</a> della directory. Per il resto del viaggio, la nostra <a href=\"/blog/viaggiare-senza-glutine-7-consigli-per-le-vacanze-sicure\">guida ai viaggi senza glutine</a> raccoglie i consigli generali." },
+      { h2: "Domande frequenti sul pasto senza glutine in aereo", body: "Le domande più comuni di chi vola da celiaco.", h3: [
+        { title: "Il pasto GFML è sicuro per un celiaco?", body: "I pasti GFML sono preparati dalle cucine di bordo seguendo protocolli dedicati e arrivano sigillati, ma il livello di garanzia varia da compagnia a compagnia. Verificare sempre l'etichetta prima di aprire il vassoio è la precauzione minima, e portare comunque una scorta propria evita di restare a digiuno in caso di errore." },
+        { title: "Posso portare cibo senza glutine nel bagaglio a mano?", body: "Gli alimenti solidi confezionati sono generalmente ammessi nel bagaglio a mano; le restrizioni riguardano i liquidi e le creme spalmabili oltre i 100 ml. Per i voli internazionali extra-UE, verifica anche le regole doganali del Paese di destinazione su alimenti freschi e derivati animali." },
+        { title: "Cosa faccio se il pasto GFML non arriva?", body: "Segnalalo all'equipaggio subito, prima che il servizio pasti standard sia completato: in alcuni casi riescono a recuperare un'alternativa sigillata a bordo. Se la richiesta risultava registrata e il pasto non c'era, vale la pena segnalarlo anche alla compagnia dopo il volo." },
+      ] },
+    ],
+    faqs: [
+      { question: "Come si richiede il pasto senza glutine in aereo?", answer: "Si richiede online dopo aver prenotato il volo, dall'area \"gestisci la prenotazione\" del sito della compagnia, selezionando il pasto speciale con la sigla GFML (Gluten-Free Meal)." },
+      { question: "Entro quando va prenotato il pasto GFML?", answer: "La finestra utile parte indicativamente da 14 giorni prima della partenza e si chiude tra le 24 e le 72 ore prima del volo, a seconda della compagnia aerea." },
+      { question: "Le compagnie low cost offrono il pasto senza glutine?", answer: "Nella maggior parte dei casi no: sui voli brevi e low cost il servizio di pasti speciali non è previsto, quindi conviene portare scorte confezionate in monoporzione sigillata." },
+    ],
+  },
+  {
+    title: "Farine senza glutine: guida alle alternative alla farina 00",
+    category: "Alimentazione",
+    excerpt: "Riso, mais, grano saraceno, castagne, mandorle: come si comportano le principali farine senza glutine in cucina, quando usarle e perché i mix funzionano meglio delle farine singole.",
+    metaTitle: "Farine senza glutine: guida alle alternative | Mappa Senza Glutine",
+    metaDescription: "Guida alle farine senza glutine: riso, mais, grano saraceno, castagne e mandorle a confronto, come si comportano in cucina e perché conviene usare un mix.",
+    coverSeed: 155, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-09",
+    tags: ["farine", "cucina", "panificazione", "alimentazione"],
+    keyTakeaways: [
+      "Nessuna farina senza glutine sostituisce da sola la farina 00: manca il glutine, che dà struttura ed elasticità agli impasti.",
+      "Le farine neutre (riso, mais) danno leggerezza ma poco sapore; quelle caratterizzate (grano saraceno, castagne, mandorle) danno gusto ma appesantiscono l'impasto.",
+      "I mix pronti certificati combinano amidi, farine e addensanti già bilanciati: sono la scelta più affidabile per pane, pizza e dolci lievitati.",
+      "Attenzione all'avena: naturalmente senza glutine, ma sicura solo se certificata e lavorata in filiera dedicata.",
+    ],
+    sections: [
+      { h2: "Perché non basta sostituire la farina 00", body: "Il glutine non è solo una proteina da evitare: nella panificazione tradizionale è la struttura stessa dell'impasto, quella che trattiene i gas della lievitazione e rende la maglia elastica. Toglierlo significa dover ricostruire quella funzione con altri ingredienti, ed è il motivo per cui <strong>sostituire la farina 00 uno a uno con una farina senza glutine non funziona quasi mai</strong>: il risultato è compatto, friabile e asciutto. Capire come si comportano le singole farine aiuta a scegliere bene, o a capire cosa c'è dentro un mix pronto." },
+      { h2: "Le farine neutre: riso e mais", body: "Sono la base della maggior parte delle preparazioni senza glutine.", h3: [
+        { title: "Farina di riso", body: "La più versatile e la più usata come base: sapore neutro, colore chiaro, adatta a dolci, besciamella e impanature. Da sola tende a dare un risultato asciutto e leggermente sabbioso, per questo si accompagna quasi sempre ad amidi o ad altre farine." },
+        { title: "Farina di mais", body: "Da distinguere dalla polenta: la farina di mais fine (o fioretto) è ottima per prodotti da forno friabili come biscotti e frolle. Dà colore dorato e una nota dolce naturale, ma poca struttura." },
+      ] },
+      { h2: "Le farine caratterizzate: grano saraceno, castagne, mandorle", body: "Portano sapore e valore nutrizionale, ma vanno dosate.", h3: [
+        { title: "Grano saraceno", body: "Nonostante il nome non ha nulla a che vedere con il grano ed è naturalmente senza glutine. Sapore deciso e leggermente amaro, ottimo per pizzoccheri, crepes salate e pane rustico: raramente si usa oltre il 30-40% del totale, altrimenti domina il gusto." },
+        { title: "Farina di castagne", body: "Dolce e profumata, tradizionale in preparazioni come il castagnaccio. Molto caratterizzante: in un impasto misto si tiene in genere sotto il 25%, sia per il sapore sia perché appesantisce." },
+        { title: "Farina di mandorle", body: "Ricca di grassi buoni, dà morbidezza e struttura ai dolci senza lievitazione, dalle torte alle basi per crostate. Non lievita e non si usa per il pane, ma è preziosa in pasticceria." },
+      ] },
+      { h2: "Perché i mix pronti restano la scelta più semplice", body: "Un mix certificato combina già amidi (che danno leggerezza), farine (che danno struttura e sapore) e addensanti come lo psillio o la gomma di guar, che imitano in parte il ruolo del glutine. È il motivo per cui, soprattutto su pane, pizza e lievitati, un buon mix dà risultati più costanti di qualunque combinazione improvvisata in casa: nella nostra sezione <a href=\"/prodotti\">prodotti verificati</a> trovi mix universali e specifici per dolci, con la certificazione controllata uno per uno. Se vuoi partire da una ricetta collaudata, prova la <a href=\"/blog/pizza-senza-glutine-fatta-in-casa-l-impasto-con-il-mix-universale\">pizza con il mix universale</a> o la <a href=\"/blog/torta-senza-glutine-facile-la-ricetta-base-con-il-mix-per-dolci\">torta base con il mix per dolci</a>." },
+      { h2: "Domande frequenti sulle farine senza glutine", body: "I dubbi più comuni di chi cucina senza glutine in casa.", h3: [
+        { title: "Posso sostituire la farina 00 con la farina di riso uno a uno?", body: "No, il risultato sarebbe asciutto e senza struttura: la farina di riso funziona come base ma va combinata con amidi e addensanti, oppure sostituita con un mix già bilanciato, soprattutto nei lievitati." },
+        { title: "L'avena si può usare nelle ricette senza glutine?", body: "Solo se certificata senza glutine: l'avena non contiene glutine di suo, ma viene facilmente contaminata durante coltivazione, trasporto e lavorazione, quindi serve una filiera dedicata verificata." },
+        { title: "Le farine senza glutine si conservano come le altre?", body: "Le farine ricche di grassi, come quella di mandorle o di castagne, irrancidiscono più in fretta: vanno tenute in contenitori ermetici, al riparo dalla luce, e in estate anche in frigorifero." },
+      ] },
+    ],
+    faqs: [
+      { question: "Qual è la migliore farina senza glutine per il pane?", answer: "Nessuna farina singola funziona bene da sola per il pane: servono un mix di amidi, farine e addensanti come psillio o gomma di guar, motivo per cui i mix pronti certificati danno risultati più costanti." },
+      { question: "Il grano saraceno contiene glutine?", answer: "No, nonostante il nome il grano saraceno non è un cereale della famiglia del grano ed è naturalmente privo di glutine: va comunque scelto certificato per escludere contaminazioni in lavorazione." },
+      { question: "Come si conservano le farine senza glutine?", answer: "In contenitori ermetici al riparo dalla luce; quelle ricche di grassi come mandorle e castagne irrancidiscono prima e in estate è meglio tenerle in frigorifero." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
