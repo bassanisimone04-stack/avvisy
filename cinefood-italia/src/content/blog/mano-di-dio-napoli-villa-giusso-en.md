@@ -39,7 +39,8 @@ Gulf of Naples, and the Maradona stadium.
 ## Villa Giusso, the family lunch
 
 One of the film's most intense scenes — the big family lunch — is shot
-at **Villa Giusso**, an agriturismo set in a 17th-century former
+at **[Villa Giusso](/en/locale/villa-giusso-vico-equense)**, an
+agriturismo set in a 17th-century former
 monastery in the hills above **Vico Equense**, on the Sorrentine
 Peninsula, at about 400 metres altitude overlooking the Gulf of Naples.
 It's a genuinely public venue, with a kitchen built around the estate's

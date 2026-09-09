@@ -38,7 +38,8 @@ il golfo di Napoli e lo stadio Maradona.
 ## Villa Giusso, il pranzo di famiglia
 
 Una delle scene più intense del film — il grande pranzo di famiglia —
-è girata a **Villa Giusso**, un agriturismo ricavato in un ex monastero
+è girata a **[Villa Giusso](/locale/villa-giusso-vico-equense)**, un
+agriturismo ricavato in un ex monastero
 del XVII secolo sulle colline sopra **Vico Equense**, sulla penisola
 sorrentina, a circa 400 metri di altitudine con vista sul golfo di
 Napoli. È un indirizzo realmente aperto al pubblico, con cucina che

@@ -50,9 +50,10 @@ raccontata anche nel nostro articolo su
 ## Dopolavoro La Foce, il ristorante reale
 
 A differenza di molte produzioni, qui si può anche mangiare davvero nello
-stesso luogo: **Dopolavoro La Foce**, il ristorante della tenuta, è
-aperto al pubblico in Strada della Vittoria 90, con una cucina che
-valorizza gli ingredienti dell'orto e delle colline circostanti.
+stesso luogo: **[Dopolavoro La Foce](/locale/dopolavoro-la-foce)**, il
+ristorante della tenuta, è aperto al pubblico in Strada della Vittoria
+90, con una cucina che valorizza gli ingredienti dell'orto e delle
+colline circostanti.
 
 ## In sintesi
 
