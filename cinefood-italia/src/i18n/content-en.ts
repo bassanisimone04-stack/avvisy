@@ -267,6 +267,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who created From Scratch?", risposta: "Sisters Attica Locke and Tembi Locke, co-creators, with Zoe Saldana starring as protagonist Amy. Directing credits include Nzingha Stewart." },
     ],
   },
+  "don-matteo": {
+    titolo: "Don Matteo",
+    sinossi:
+      "A Rai 1 series on air since 2000, still in production. Terence Hill plays Don Matteo, a detective priest who helps the local police solve cases alongside Sergeant Cecchini (Nino Frassica). Filmed in Gubbio for the first eight seasons (2000-2011), then in Spoleto.",
+    faq: [
+      { domanda: "Where is Don Matteo filmed?", risposta: "The first eight seasons (2000-2011) were shot in Gubbio, Umbria; from season nine on, production moved to Spoleto, also in Umbria." },
+      { domanda: "Which café appears in Don Matteo in Gubbio?", risposta: "Caffè Ducale, on Piazza Grande: it's the café where Sergeant Cecchini and Don Matteo play their daily chess games. The venue still keeps props from the show." },
+      { domanda: "Who plays Don Matteo?", risposta: "Terence Hill in the title role, with Nino Frassica as Sergeant Cecchini, in a series created by Enrico Oldoini and airing on Rai 1 since 2000." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -387,6 +397,10 @@ export const restaurantsEn: Record<string, RestEn> = {
   "buca-dellorafo-firenze": {
     descrizione: "A historic Florentine trattoria on Via dei Girolami, a stone's throw from Ponte Vecchio: one of the oldest \"buche\" in Florence, traditional Tuscan cooking in a simple, genuine setting.",
     scena: { "from-scratch": "The venue where Lino, the Sicilian chef at the centre of the show, works — set between Florence and Sicily." },
+  },
+  "caffe-ducale-gubbio": {
+    descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For thirteen years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
+    scena: { "don-matteo": "The café where Sergeant Cecchini and Don Matteo play their daily chess games, for thirteen seasons of the series. The venue still keeps props from the show." },
   },
 };
 
