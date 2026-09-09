@@ -73,6 +73,13 @@ La seconda stagione della serie Netflix creata da Aziz Ansari si apre a
 **Modena**, tra un corso di pasta fresca e una cena da Osteria Francescana.
 Leggi **[Modena e Osteria Francescana](/blog/master-of-none-modena-osteria-francescana)**.
 
+## Don Matteo — Gubbio, Umbria
+
+Per tredici stagioni la fiction Rai più longeva del genere ha usato
+**Gubbio** come set fisso: il Caffè Ducale, in Piazza Grande, è ancora il
+bar delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
+Scopri **[Don Matteo a Gubbio](/blog/don-matteo-gubbio-caffe-ducale)**.
+
 ## In sintesi
 
 Dalla Sicilia di *The White Lotus* alla Valle d'Aosta di *Rocco Schiavone*,

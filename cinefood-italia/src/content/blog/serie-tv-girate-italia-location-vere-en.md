@@ -73,6 +73,13 @@ Season 2 of the Netflix series created by Aziz Ansari opens in **Modena**,
 between a fresh pasta lesson and a dinner at Osteria Francescana. Read
 **[Modena and Osteria Francescana](/en/blog/master-of-none-modena-osteria-francescana)**.
 
+## Don Matteo — Gubbio, Umbria
+
+For thirteen seasons, the longest-running Italian crime-comedy series used
+**Gubbio** as its fixed set: Caffè Ducale, on Piazza Grande, is still the
+café where Don Matteo and Sergeant Cecchini play their chess games.
+Discover **[Don Matteo in Gubbio](/en/blog/don-matteo-gubbio-caffe-ducale)**.
+
 ## In short
 
 From the Sicily of *The White Lotus* to the Aosta Valley of *Rocco
