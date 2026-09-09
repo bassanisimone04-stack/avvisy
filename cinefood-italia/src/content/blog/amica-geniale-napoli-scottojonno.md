@@ -45,8 +45,9 @@ al mare sono girate invece a **Ischia** e **Gaeta**.
 
 ## ScottoJonno, il locale reale della Galleria
 
-Nella quarta stagione (2024) compare **ScottoJonno**, un caffè-bistrot
-dentro la Galleria Principe di Napoli, riaperto nel 2023 dall'imprenditore
+Nella quarta stagione (2024) compare
+**[ScottoJonno](/locale/scottojonno-napoli)**, un caffè-bistrot dentro la
+Galleria Principe di Napoli, riaperto nel 2023 dall'imprenditore
 Luca Iannuzzi in un ex caffè-chantant ottocentesco, con la cucina dello
 chef Marco Ambrosino. È un indirizzo realmente aperto al pubblico, non
 un set.

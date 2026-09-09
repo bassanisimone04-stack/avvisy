@@ -46,7 +46,8 @@ Chiaia**. The seaside scenes are shot instead on **Ischia** and **Gaeta**.
 
 ## ScottoJonno, the real venue in the Gallery
 
-Season 4 (2024) features **ScottoJonno**, a café-bistrot inside the
+Season 4 (2024) features **[ScottoJonno](/en/locale/scottojonno-napoli)**,
+a café-bistrot inside the
 Galleria Principe di Napoli, reopened in 2023 by entrepreneur Luca
 Iannuzzi in a 19th-century former café-chantant, with cooking by chef
 Marco Ambrosino. It's a genuinely public venue, not a set.

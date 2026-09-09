@@ -39,8 +39,9 @@ classifica *The World's 50 Best Restaurants* sia nel 2016 sia nel 2018.
 
 ## Hosteria Giusti, dal 1598
 
-Tra le altre location reali della serie c'è **Hosteria Giusti**, in via
-Farini 75: quattro tavoli soltanto, ricavati nel 1989 nell'ex macello
+Tra le altre location reali della serie c'è
+**[Hosteria Giusti](/locale/hosteria-giusti-modena)**, in via Farini 75:
+quattro tavoli soltanto, ricavati nel 1989 nell'ex macello
 dietro la storica salumeria Giusti, attiva fin dal 1598 — tra le più
 antiche botteghe gastronomiche d'Europa. Compare anche il bar
 **Cappuccino da Angiolina**, in Vicolo Forni.
