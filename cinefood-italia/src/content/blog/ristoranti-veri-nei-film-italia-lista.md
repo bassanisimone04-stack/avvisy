@@ -96,6 +96,27 @@ Nessuna lista è completa senza *Vacanze Romane*: scopri
 **[dove Audrey Hepburn mangiava il gelato](/blog/vacanze-romane-gelato-roma)**
 nella Roma degli anni '50.
 
+## Meryl Streep e Anne Hathaway — Caffè Parigi, Milano
+
+Per settimane il **[Caffè Parigi](/locale/caffe-parigi-milano)**, dentro
+il Palazzo Parigi Hotel, è stato la base milanese del cast di
+*[The Devil Wears Prada 2](/blog/devil-wears-prada-2-milano-caffe-parigi)*
+(2026), con scene girate durante la Settimana della Moda.
+
+## Zoe Saldana — Buca dell'Orafo, Firenze
+
+Nella serie Netflix *[From Scratch](/blog/from-scratch-firenze-buca-dellorafo)*,
+tratta da una storia vera, il personaggio di Lino lavora come chef alla
+**[Buca dell'Orafo](/locale/buca-dellorafo-firenze)**, storica trattoria
+fiorentina vicino Ponte Vecchio.
+
+## Terence Hill e Nino Frassica — Caffè Ducale, Gubbio
+
+Per tredici stagioni della fiction Rai
+*[Don Matteo](/blog/don-matteo-gubbio-caffe-ducale)*, il
+**[Caffè Ducale](/locale/caffe-ducale-gubbio)** di Gubbio è stato il bar
+delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
+
 ---
 
 Questa lista si aggiorna ogni volta che verifichiamo un nuovo locale. Esplora

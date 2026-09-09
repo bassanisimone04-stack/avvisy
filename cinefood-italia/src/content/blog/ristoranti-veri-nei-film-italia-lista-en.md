@@ -97,6 +97,27 @@ No list is complete without *Roman Holiday*: discover
 **[where Audrey Hepburn ate gelato](/en/blog/vacanze-romane-gelato-roma)**
 in 1950s Rome.
 
+## Meryl Streep and Anne Hathaway — Caffè Parigi, Milan
+
+For weeks, **[Caffè Parigi](/en/locale/caffe-parigi-milano)**, inside
+Palazzo Parigi Hotel, was the Milan base for the cast of
+*[The Devil Wears Prada 2](/en/blog/devil-wears-prada-2-milano-caffe-parigi)*
+(2026), with scenes shot during Fashion Week.
+
+## Zoe Saldana — Buca dell'Orafo, Florence
+
+In the Netflix series *[From Scratch](/en/blog/from-scratch-firenze-buca-dellorafo)*,
+based on a true story, the character Lino works as a chef at
+**[Buca dell'Orafo](/en/locale/buca-dellorafo-firenze)**, a historic
+Florentine trattoria near Ponte Vecchio.
+
+## Terence Hill and Nino Frassica — Caffè Ducale, Gubbio
+
+For thirteen seasons of the Rai series
+*[Don Matteo](/en/blog/don-matteo-gubbio-caffe-ducale)*,
+**[Caffè Ducale](/en/locale/caffe-ducale-gubbio)** in Gubbio was the café
+where Don Matteo and Sergeant Cecchini played their chess games.
+
 ---
 
 We update this list every time we verify a new venue. Explore every location
