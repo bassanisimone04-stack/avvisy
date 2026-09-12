@@ -118,6 +118,20 @@ In the Rai series *[Commissioner Ricciardi](/en/blog/commissario-ricciardi-napol
 historic café dating to 1860, becomes the period venue the lead
 frequents — with a table permanently reserved after the show's success.
 
+## Claudia Gerini and Carlo Verdone — Paradiso Terrestre, Rome
+
+In the comedy *[Honeymoons](/en/blog/viaggi-di-nozze-roma-paradiso-terrestre)*
+(1995), Ivano and Jessica's wedding reception is filmed at
+**[Ristorante Paradiso Terrestre](/en/locale/ristorante-paradiso-terrestre-roma)**,
+still specialising in weddings today.
+
+## Luca Marinelli — Caffè San Marco, Trieste
+
+In *[Diabolik - Ginko Attacks!](/en/blog/diabolik-ginko-trieste-caffe-san-marco)*
+(2022), Trieste becomes the comic's Clerville: the **[Antico Caffè San
+Marco](/en/locale/caffe-san-marco-trieste)** appears in a counter scene,
+not far from the chase in Piazza della Borsa.
+
 ## Terence Hill and Nino Frassica — Caffè Ducale, Gubbio
 
 For thirteen seasons of the Rai series

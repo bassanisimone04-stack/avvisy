@@ -267,6 +267,25 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who created From Scratch?", risposta: "Sisters Attica Locke and Tembi Locke, co-creators, with Zoe Saldana starring as protagonist Amy. Directing credits include Nzingha Stewart." },
     ],
   },
+  "viaggi-di-nozze": {
+    titolo: "Honeymoons",
+    sinossi:
+      "A three-story comedy about disastrous honeymoons. In the first, Ivano (Carlo Verdone) and Jessica (Claudia Gerini) celebrate an 'off-key' wedding between Rome and Sardinia, before the trip turns into a string of mishaps.",
+    faq: [
+      { domanda: "Where do Ivano and Jessica get married in Honeymoons?", risposta: "At the Church of San Giuseppe Cottolengo, on Viale Valle Aurelia in Rome, with the reception filmed at Ristorante Paradiso Terrestre, on Via delle Capannelle." },
+      { domanda: "Who directed Honeymoons?", risposta: "Carlo Verdone, who also stars as one of the leads (Ivano) alongside Claudia Gerini (Jessica), in a three-story film about honeymoons gone wrong." },
+    ],
+  },
+  "diabolik-ginko-allattacco": {
+    titolo: "Diabolik - Ginko Attacks!",
+    sinossi:
+      "The second chapter of the Italian trilogy about Diabolik, based on the famous comic by the Giussani sisters. Inspector Ginko hunts the masked thief through the fictional city of Clerville, recreated across Bologna, Trieste and Milan.",
+    faq: [
+      { domanda: "Where was Diabolik - Ginko Attacks! filmed?", risposta: "The fictional city of Clerville was recreated across Bologna, Trieste and Milan. In Trieste, filming included a car chase in Piazza della Borsa and a scene at the Antico Caffè San Marco." },
+      { domanda: "Which historic café appears in the film?", risposta: "The Antico Caffè San Marco in Trieste, open since 1914: a scene was shot at the venue's counter, while the nearby Piazza della Borsa hosts the chase between police cars and Diabolik's Jaguar E-Type." },
+      { domanda: "Who directed Diabolik - Ginko Attacks!?", risposta: "The Manetti Bros., for the second chapter of the Italian trilogy based on the Giussani sisters' comic, starring Luca Marinelli as Diabolik and Valerio Mastandrea as Inspector Ginko." },
+    ],
+  },
   "il-commissario-ricciardi": {
     titolo: "Commissioner Ricciardi",
     sinossi:
@@ -390,7 +409,14 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "caffe-san-marco-trieste": {
     descrizione: "A literary café founded in 1914, at the heart of the Trieste of Svevo and Saba. Liberty-style interiors with wooden masks and marble tables, today also a bookshop and restaurant. One of Italy's most celebrated historic cafés.",
-    scena: { "il-re": "Some scenes of the Sky series starring Luca Zingaretti are shot in the café's interiors, among the Trieste locations used by the production alongside Piazza Oberdan, Ponterosso and the Porto Vecchio." },
+    scena: {
+      "il-re": "Some scenes of the Sky series starring Luca Zingaretti are shot in the café's interiors, among the Trieste locations used by the production alongside Piazza Oberdan, Ponterosso and the Porto Vecchio.",
+      "diabolik-ginko-allattacco": "A scene at the café's counter, shot while Trieste recreated the fictional city of Clerville alongside Bologna and Milan; nearby, in Piazza della Borsa, the chase between the police and Diabolik's Jaguar.",
+    },
+  },
+  "ristorante-paradiso-terrestre-roma": {
+    descrizione: "A traditional Roman restaurant specialising in wedding receptions, in the Capannelle area south of the city. Classic Roman cuisine in large rooms built for big events.",
+    scena: { "viaggi-di-nozze": "The wedding reception between Ivano and Jessica, after the ceremony at the Church of San Giuseppe Cottolengo, is filmed at this restaurant in the Capannelle area." },
   },
   "caffe-nazionale-aosta": {
     descrizione: "A 19th-century historic café under the arcades of the town hall, on Piazza Chanoux. Closed for years, it reopened in August 2022 with chef Paolo Griffa: today it combines a Michelin-starred restaurant, patisserie, salon de thé and cocktail bar, with the historic decagonal room known as \"la Chapelle\".",
