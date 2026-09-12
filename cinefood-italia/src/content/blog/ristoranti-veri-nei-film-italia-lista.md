@@ -118,6 +118,20 @@ storico dal 1860, diventa il locale d'epoca frequentato dal
 protagonista — con un tavolo riservato per sempre dopo il successo
 della serie.
 
+## Claudia Gerini e Carlo Verdone — Paradiso Terrestre, Roma
+
+Nella commedia *[Viaggi di nozze](/blog/viaggi-di-nozze-roma-paradiso-terrestre)*
+(1995), il ricevimento di nozze tra Ivano e Jessica è girato al
+**[Ristorante Paradiso Terrestre](/locale/ristorante-paradiso-terrestre-roma)**,
+ancora oggi specializzato in matrimoni.
+
+## Luca Marinelli — Caffè San Marco, Trieste
+
+In *[Diabolik - Ginko all'attacco!](/blog/diabolik-ginko-trieste-caffe-san-marco)*
+(2022), Trieste diventa la Clerville del fumetto: l'**[Antico Caffè San
+Marco](/locale/caffe-san-marco-trieste)** compare in una scena al
+bancone, poco distante dall'inseguimento in Piazza della Borsa.
+
 ## Terence Hill e Nino Frassica — Caffè Ducale, Gubbio
 
 Per tredici stagioni della fiction Rai
