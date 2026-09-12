@@ -111,6 +111,13 @@ based on a true story, the character Lino works as a chef at
 **[Buca dell'Orafo](/en/locale/buca-dellorafo-firenze)**, a historic
 Florentine trattoria near Ponte Vecchio.
 
+## Lino Guanciale — Gran Caffè Gambrinus, Naples
+
+In the Rai series *[Commissioner Ricciardi](/en/blog/commissario-ricciardi-napoli-gambrinus)*,
+**[Gran Caffè Gambrinus](/en/locale/gran-caffe-gambrinus-napoli)**, a
+historic café dating to 1860, becomes the period venue the lead
+frequents — with a table permanently reserved after the show's success.
+
 ## Terence Hill and Nino Frassica — Caffè Ducale, Gubbio
 
 For thirteen seasons of the Rai series

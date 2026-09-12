@@ -73,6 +73,13 @@ La seconda stagione della serie Netflix creata da Aziz Ansari si apre a
 **Modena**, tra un corso di pasta fresca e una cena da Osteria Francescana.
 Leggi **[Modena e Osteria Francescana](/blog/master-of-none-modena-osteria-francescana)**.
 
+## Il Commissario Ricciardi — Napoli
+
+Ambientata nella Napoli anni '30, la serie Rai con Lino Guanciale ha
+girato in luoghi autentici della città, tra cui il **Gran Caffè
+Gambrinus**, trasformato nel caffè d'epoca frequentato dal commissario.
+Leggi **[il vero Gambrinus](/blog/commissario-ricciardi-napoli-gambrinus)**.
+
 ## Don Matteo — Gubbio, Umbria
 
 Per tredici stagioni la fiction Rai più longeva del genere ha usato

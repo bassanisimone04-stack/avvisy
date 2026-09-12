@@ -267,6 +267,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who created From Scratch?", risposta: "Sisters Attica Locke and Tembi Locke, co-creators, with Zoe Saldana starring as protagonist Amy. Directing credits include Nzingha Stewart." },
     ],
   },
+  "il-commissario-ricciardi": {
+    titolo: "Commissioner Ricciardi",
+    sinossi:
+      "A Rai 1 series based on Maurizio De Giovanni's novels. Naples, the 1930s: Commissioner Luigi Alfredo Ricciardi (Lino Guanciale) has a supernatural gift — he perceives the last thoughts of murder victims — which he uses to solve cases amid fascism and Neapolitan high society.",
+    faq: [
+      { domanda: "Was Commissioner Ricciardi really filmed in Naples?", risposta: "Yes. Among the official locations, documented by the Campania Region Film Commission, are the Teatro San Carlo, the Teatro Sannazaro, Capodimonte, Villa Pignatelli, the Royal Palace of Portici and the Gran Caffè Gambrinus." },
+      { domanda: "Which historic café appears in the show?", risposta: "The Gran Caffè Gambrinus, on Piazza Trieste e Trento: for filming it was transformed into the 1930s café frequented by the commissioner, with scenes set at his favourite table overlooking Piazza del Plebiscito." },
+      { domanda: "Who plays Commissioner Ricciardi?", risposta: "Lino Guanciale in the title role, in a Rai 1 series based on Maurizio De Giovanni's novels, airing since 2021 across several seasons." },
+    ],
+  },
   "don-matteo": {
     titolo: "Don Matteo",
     sinossi:
@@ -397,6 +407,10 @@ export const restaurantsEn: Record<string, RestEn> = {
   "buca-dellorafo-firenze": {
     descrizione: "A historic Florentine trattoria on Via dei Girolami, a stone's throw from Ponte Vecchio: one of the oldest \"buche\" in Florence, traditional Tuscan cooking in a simple, genuine setting.",
     scena: { "from-scratch": "The venue where Lino, the Sicilian chef at the centre of the show, works — set between Florence and Sicily." },
+  },
+  "gran-caffe-gambrinus-napoli": {
+    descrizione: "A historic Neapolitan café founded in 1860, among the most celebrated in Italy, facing Piazza del Plebiscito and Piazza Trieste e Trento. A literary salon frequented by intellectuals and artists for over a century.",
+    scena: { "il-commissario-ricciardi": "Transformed into the 1930s café frequented by the commissioner: scenes are set at his favourite table, overlooking Piazza del Plebiscito, in the room now named after Michele Sergio." },
   },
   "caffe-ducale-gubbio": {
     descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For thirteen years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
