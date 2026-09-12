@@ -73,6 +73,13 @@ Season 2 of the Netflix series created by Aziz Ansari opens in **Modena**,
 between a fresh pasta lesson and a dinner at Osteria Francescana. Read
 **[Modena and Osteria Francescana](/en/blog/master-of-none-modena-osteria-francescana)**.
 
+## Blocco 181 – Gangs of Milano — Turin
+
+The Sky series created by Salmo is set in Milan but was filmed almost
+entirely in **Turin**: Ristorante Del Cambio is among the more than a
+hundred Piedmont locations used for season 2. Discover **[Blocco 181 in
+Turin](/en/blog/blocco-181-torino-del-cambio)**.
+
 ## The Red Door — Trieste
 
 The Rai noir starring Lino Guanciale and Gabriella Pession filmed for
