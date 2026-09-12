@@ -267,6 +267,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who created From Scratch?", risposta: "Sisters Attica Locke and Tembi Locke, co-creators, with Zoe Saldana starring as protagonist Amy. Directing credits include Nzingha Stewart." },
     ],
   },
+  "blocco-181-gangs-of-milano": {
+    titolo: "Blocco 181 - Gangs of Milano",
+    sinossi:
+      "A Sky Original crime drama created and musically supervised by Salmo, about youth gangs in Milan's suburbs. The story is set in Milan, but season 2 was filmed almost entirely in Turin, between October 2023 and April 2024.",
+    faq: [
+      { domanda: "Is Blocco 181 really filmed in Milan?", risposta: "The story is set in Milan, but season 2 was filmed almost entirely in Turin, according to the Film Commission Torino Piemonte, which documented over a hundred Piedmont locations used by the production." },
+      { domanda: "Which historic restaurant appears in the show?", risposta: "Ristorante Del Cambio, on Piazza Carignano, among the more than a hundred Turin locations used for filming season 2, alongside Le Roi Music Hall and the Crocetta district." },
+      { domanda: "Who created Blocco 181?", risposta: "Rapper Salmo, creator and music supervisor of the Sky Original series, directed by Ciro Visco." },
+    ],
+  },
   "la-porta-rossa": {
     titolo: "The Red Door",
     sinossi:
@@ -415,7 +425,10 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "del-cambio-torino": {
     descrizione: "A historic restaurant on Piazza Carignano, open since 1757 opposite the Teatro Carignano. Nineteenth-century rooms with mirrors, stucco and red velvet, today holding a Michelin star. Contemporary Piedmontese cuisine.",
-    scena: { "corro-da-te": "Gianni and Chiara's dinner after her performance at the Teatro Regio: the couple sit in the restaurant's historic dining room, she amused by his clumsiness." },
+    scena: {
+      "corro-da-te": "Gianni and Chiara's dinner after her performance at the Teatro Regio: the couple sit in the restaurant's historic dining room, she amused by his clumsiness.",
+      "blocco-181-gangs-of-milano": "One of over a hundred Turin locations used for filming season 2, shot almost entirely in Turin despite the story being set in Milan.",
+    },
   },
   "caffe-san-marco-trieste": {
     descrizione: "A literary café founded in 1914, at the heart of the Trieste of Svevo and Saba. Liberty-style interiors with wooden masks and marble tables, today also a bookshop and restaurant. One of Italy's most celebrated historic cafés.",

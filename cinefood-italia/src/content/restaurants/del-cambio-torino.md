@@ -18,6 +18,8 @@ ultimoAggiornamento: 2026-08-11
 film:
   - film: "corro-da-te"
     descrizioneScena: "La cena di Gianni e Chiara dopo l'esibizione al Teatro Regio: la coppia siede nella sala storica del ristorante, lei divertita dalla goffaggine di lui."
+  - film: "blocco-181-gangs-of-milano"
+    descrizioneScena: "Una delle oltre cento location torinesi usate per le riprese della seconda stagione, girata quasi interamente a Torino nonostante la storia sia ambientata a Milano."
 descrizione: "Ristorante storico di Piazza Carignano, aperto dal 1757 di fronte al Teatro Carignano. Sale ottocentesche con specchi, stucchi e velluti rossi, oggi una stella Michelin. Cucina piemontese contemporanea."
 ---
 
@@ -32,10 +34,20 @@ descrizione: "Ristorante storico di Piazza Carignano, aperto dal 1757 di fronte 
      goffaggine."
      https://www.italyformovies.it/film-serie-tv-games/detail/7143/corro-da-te
      Film Commission Torino Piemonte, scheda location del ristorante:
-     https://www.fctp.it/location_item.php?id=3978 -->
+     https://www.fctp.it/location_item.php?id=3978
+     Secondo collegamento verificato: Film Commission Torino Piemonte
+     (FCTP), news dedicata alle riprese della seconda stagione di "Blocco
+     181 - Gangs of Milano": "Le riprese della seconda stagione includevano
+     anche il ristorante Del Cambio" (tra oltre cento location piemontesi
+     usate). https://www.fctp.it/news_detail.php?id=5271
+     Corroborato senza contraddizioni da Zainet e Quotidiano Piemontese.
+     Domini FCTP non raggiungibili per fetch diretto in questa sessione,
+     confermato solo via snippet di ricerca. -->
 
 Aperto dal 1757 davanti al Teatro Carignano, il Del Cambio è il
 ristorante storico di Torino: sale ottocentesche di specchi, stucchi e
 velluti rossi, oggi con una stella Michelin. Le sue sale hanno ospitato
 le riprese di *Corro da te*, dove Pierfrancesco Favino e Miriam Leone
-cenano dopo il concerto al Teatro Regio.
+cenano dopo il concerto al Teatro Regio, ed è stato anche tra le oltre
+cento location torinesi usate per la seconda stagione di *Blocco 181 -
+Gangs of Milano*, la serie Sky ideata da Salmo.

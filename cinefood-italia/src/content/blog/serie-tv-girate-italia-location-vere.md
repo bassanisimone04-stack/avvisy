@@ -73,6 +73,13 @@ La seconda stagione della serie Netflix creata da Aziz Ansari si apre a
 **Modena**, tra un corso di pasta fresca e una cena da Osteria Francescana.
 Leggi **[Modena e Osteria Francescana](/blog/master-of-none-modena-osteria-francescana)**.
 
+## Blocco 181 – Gangs of Milano — Torino
+
+La serie Sky ideata da Salmo racconta Milano ma è girata quasi
+interamente a **Torino**: il Ristorante Del Cambio è tra le oltre cento
+location piemontesi usate per la seconda stagione. Leggi
+**[Blocco 181 a Torino](/blog/blocco-181-torino-del-cambio)**.
+
 ## La porta rossa — Trieste
 
 Il noir Rai con Lino Guanciale e Gabriella Pession ha girato per tre
