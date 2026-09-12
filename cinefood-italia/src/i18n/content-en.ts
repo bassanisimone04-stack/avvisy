@@ -267,6 +267,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who created From Scratch?", risposta: "Sisters Attica Locke and Tembi Locke, co-creators, with Zoe Saldana starring as protagonist Amy. Directing credits include Nzingha Stewart." },
     ],
   },
+  "la-porta-rossa": {
+    titolo: "The Red Door",
+    sinossi:
+      "A Rai 2 noir series in three seasons (2017-2023), set in Trieste. Inspector Leonardo Cagliostro (Lino Guanciale), left in a suspended state after being murdered, investigates his own killing alongside judge Anna Mayer (Gabriella Pession).",
+    faq: [
+      { domanda: "Where is The Red Door filmed?", risposta: "In Trieste, which forms the backdrop for all three seasons of the series, drawing on the city's Mitteleuropean atmosphere and historic cafés." },
+      { domanda: "Which historic café appears in The Red Door?", risposta: "The Antico Caffè San Marco, where the characters of judge Anna Mayer and magistrate Antonio Piras meet, according to the official film tourism portal of the Friuli Venezia Giulia region." },
+      { domanda: "Who plays the leads in The Red Door?", risposta: "Lino Guanciale as Inspector Leonardo Cagliostro and Gabriella Pession as judge Anna Mayer, in a series created by Carlo Lucarelli and Giampiero Rigosi." },
+    ],
+  },
   "viaggi-di-nozze": {
     titolo: "Honeymoons",
     sinossi:
@@ -412,6 +422,7 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: {
       "il-re": "Some scenes of the Sky series starring Luca Zingaretti are shot in the café's interiors, among the Trieste locations used by the production alongside Piazza Oberdan, Ponterosso and the Porto Vecchio.",
       "diabolik-ginko-allattacco": "A scene at the café's counter, shot while Trieste recreated the fictional city of Clerville alongside Bologna and Milan; nearby, in Piazza della Borsa, the chase between the police and Diabolik's Jaguar.",
+      "la-porta-rossa": "The venue where the characters of judge Anna Mayer and magistrate Antonio Piras meet, in the Rai noir series set in Trieste.",
     },
   },
   "ristorante-paradiso-terrestre-roma": {
