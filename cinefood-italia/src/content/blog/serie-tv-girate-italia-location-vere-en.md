@@ -73,6 +73,13 @@ Season 2 of the Netflix series created by Aziz Ansari opens in **Modena**,
 between a fresh pasta lesson and a dinner at Osteria Francescana. Read
 **[Modena and Osteria Francescana](/en/blog/master-of-none-modena-osteria-francescana)**.
 
+## Commissioner Ricciardi — Naples
+
+Set in 1930s Naples, the Rai series starring Lino Guanciale filmed in
+authentic city locations, including the **Gran Caffè Gambrinus**,
+transformed into the period café the commissioner visits. Discover
+**[the real Gambrinus](/en/blog/commissario-ricciardi-napoli-gambrinus)**.
+
 ## Don Matteo — Gubbio, Umbria
 
 For thirteen seasons, the longest-running Italian crime-comedy series used

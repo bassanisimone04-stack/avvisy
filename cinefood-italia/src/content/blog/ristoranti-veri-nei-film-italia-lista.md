@@ -110,6 +110,14 @@ tratta da una storia vera, il personaggio di Lino lavora come chef alla
 **[Buca dell'Orafo](/locale/buca-dellorafo-firenze)**, storica trattoria
 fiorentina vicino Ponte Vecchio.
 
+## Lino Guanciale — Gran Caffè Gambrinus, Napoli
+
+Nella serie Rai *[Il Commissario Ricciardi](/blog/commissario-ricciardi-napoli-gambrinus)*,
+il **[Gran Caffè Gambrinus](/locale/gran-caffe-gambrinus-napoli)**, caffè
+storico dal 1860, diventa il locale d'epoca frequentato dal
+protagonista — con un tavolo riservato per sempre dopo il successo
+della serie.
+
 ## Terence Hill e Nino Frassica — Caffè Ducale, Gubbio
 
 Per tredici stagioni della fiction Rai
