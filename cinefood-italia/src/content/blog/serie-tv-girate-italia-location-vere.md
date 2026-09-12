@@ -73,6 +73,13 @@ La seconda stagione della serie Netflix creata da Aziz Ansari si apre a
 **Modena**, tra un corso di pasta fresca e una cena da Osteria Francescana.
 Leggi **[Modena e Osteria Francescana](/blog/master-of-none-modena-osteria-francescana)**.
 
+## La porta rossa — Trieste
+
+Il noir Rai con Lino Guanciale e Gabriella Pession ha girato per tre
+stagioni a Trieste, con l'Antico Caffè San Marco tra le location
+ricorrenti. Leggi **[La porta rossa e il Caffè San
+Marco](/blog/la-porta-rossa-trieste-caffe-san-marco)**.
+
 ## Il Commissario Ricciardi — Napoli
 
 Ambientata nella Napoli anni '30, la serie Rai con Lino Guanciale ha

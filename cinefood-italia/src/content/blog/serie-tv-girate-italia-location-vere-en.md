@@ -73,6 +73,13 @@ Season 2 of the Netflix series created by Aziz Ansari opens in **Modena**,
 between a fresh pasta lesson and a dinner at Osteria Francescana. Read
 **[Modena and Osteria Francescana](/en/blog/master-of-none-modena-osteria-francescana)**.
 
+## The Red Door — Trieste
+
+The Rai noir starring Lino Guanciale and Gabriella Pession filmed for
+three seasons in Trieste, with the Antico Caffè San Marco among its
+recurring locations. Discover **[The Red Door and Caffè San
+Marco](/en/blog/la-porta-rossa-trieste-caffe-san-marco)**.
+
 ## Commissioner Ricciardi — Naples
 
 Set in 1930s Naples, the Rai series starring Lino Guanciale filmed in
