@@ -20,8 +20,8 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
   }
 
   return pageMetadata({
-    title: "Directory: ristoranti, negozi e hotel senza glutine in Italia",
-    description: "Cerca e filtra le attività senza glutine verificate dalla community: ristoranti, pizzerie, hotel, farmacie, supermercati e negozi certificati AIC in tutta Italia.",
+    title: "Mappa dei ristoranti AIC e locali senza glutine in Italia",
+    description: "La mappa dei ristoranti certificati AIC e dei locali senza glutine verificati in Italia: filtra per città, categoria e certificazione e trova indirizzo, orari e menu.",
     path: "/directory",
     locale: "it",
   });

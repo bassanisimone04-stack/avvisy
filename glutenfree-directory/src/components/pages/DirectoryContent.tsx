@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SlidersHorizontal, SearchX } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessCard from "@/components/BusinessCard";
+import DirectoryMap from "@/components/DirectoryMap";
 import DirectoryFilters from "@/components/DirectoryFilters";
 import QuickFilters from "@/components/QuickFilters";
 import SortSelect from "@/components/SortSelect";
@@ -54,6 +55,8 @@ export default function DirectoryContent({
         </div>
         <SortSelect />
       </div>
+
+      <DirectoryMap businesses={results.map((b) => getLocalizedBusiness(b, locale))} />
 
       <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
         <DirectoryFilters />

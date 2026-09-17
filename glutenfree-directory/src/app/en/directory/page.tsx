@@ -20,8 +20,8 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
   }
 
   return pageMetadata({
-    title: "Directory: gluten-free restaurants, shops and hotels in Italy",
-    description: "Search and filter gluten-free businesses verified by the community: restaurants, pizzerias, hotels, pharmacies, supermarkets and shops AIC-certified across Italy.",
+    title: "Map of AIC-certified gluten-free venues in Italy",
+    description: "The map of AIC-certified restaurants and verified gluten-free venues across Italy: filter by city, category and certification to find address, hours and menu.",
     path: "/directory",
     locale: "en",
   });

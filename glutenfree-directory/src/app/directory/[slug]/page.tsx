@@ -13,9 +13,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const business = getBusinessBySlug(slug);
   if (!business) return {};
   const cat = getCategoryInfo(business.category);
+  // Il titolo punta su ciò che questa pagina risponde e la scheda Google del
+  // locale no: se è sicuro per un celiaco. Sulle ricerche per nome (es. "il
+  // secchio e l'olivaro porto fluviale") è l'unico motivo per cui qualcuno
+  // dovrebbe cliccare noi invece del sito del locale.
   return pageMetadata({
-    title: `${business.name} — ${cat?.label} a ${business.city} senza glutine`,
-    description: `${business.shortDescription} Indirizzo, orari, telefono, menu senza glutine e recensioni verificate su Mappa Senza Glutine.`,
+    title: business.aicCertified
+      ? `${business.name} a ${business.city}: certificato AIC senza glutine`
+      : `${business.name} a ${business.city}: menu senza glutine verificato`,
+    description: business.aicCertified
+      ? `${business.shortDescription} Certificato AIC: indirizzo, orari, telefono e menu senza glutine verificati su Mappa Senza Glutine.`
+      : `${business.shortDescription} Indirizzo, orari, telefono e menu senza glutine, verificati uno per uno su Mappa Senza Glutine.`,
     path: `/directory/${business.slug}`,
     type: "article",
     locale: "it",

@@ -80,7 +80,7 @@ export const dictionary = {
       faqTitle: "Tutto quello che devi sapere",
     },
     directory: {
-      title: "Directory attività senza glutine",
+      title: "Mappa dei locali senza glutine in Italia",
       titleCategory: "{category}",
       titleCity: "Attività senza glutine a {city}",
       titleCategoryCity: "{category} a {city}",
@@ -264,7 +264,7 @@ export const dictionary = {
       faqTitle: "Everything you need to know",
     },
     directory: {
-      title: "Gluten-free business directory",
+      title: "Map of gluten-free venues in Italy",
       titleCategory: "{category}",
       titleCity: "Gluten-free businesses in {city}",
       titleCategoryCity: "{category} in {city}",
