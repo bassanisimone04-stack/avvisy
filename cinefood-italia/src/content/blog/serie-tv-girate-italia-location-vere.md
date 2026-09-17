@@ -101,6 +101,13 @@ Per tredici stagioni la fiction Rai più longeva del genere ha usato
 bar delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
 Scopri **[Don Matteo a Gubbio](/blog/don-matteo-gubbio-caffe-ducale)**.
 
+## Màkari — Scopello, Sicilia
+
+Nella serie Rai con Claudio Gioè, il ristorante di Marilù è un set
+allestito nell'antica **Tonnara di Scopello**, affacciata sui faraglioni
+tra Castellammare del Golfo e San Vito Lo Capo. Scopri **[la vera
+tonnara](/blog/makari-tonnara-scopello)**.
+
 ## In sintesi
 
 Dalla Sicilia di *The White Lotus* alla Valle d'Aosta di *Rocco Schiavone*,

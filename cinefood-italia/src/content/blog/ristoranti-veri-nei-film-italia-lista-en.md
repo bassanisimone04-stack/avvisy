@@ -139,6 +139,13 @@ For thirteen seasons of the Rai series
 **[Caffè Ducale](/en/locale/caffe-ducale-gubbio)** in Gubbio was the café
 where Don Matteo and Sergeant Cecchini played their chess games.
 
+## Antonella Attili — Tonnara di Scopello, Sicily
+
+In the Rai series *[Màkari](/en/blog/makari-tonnara-scopello)*, Marilù's
+restaurant is a set built inside the old **[Tonnara di
+Scopello](/en/locale/tonnara-di-scopello)**, overlooking the famous sea
+stacks.
+
 ---
 
 We update this list every time we verify a new venue. Explore every location

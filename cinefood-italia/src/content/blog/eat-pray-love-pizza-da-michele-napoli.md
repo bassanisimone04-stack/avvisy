@@ -1,6 +1,6 @@
 ---
 titolo: "La pizza di Eat Pray Love: Da Michele a Napoli"
-descrizione: "Dove Julia Roberts mangia la pizza in Eat Pray Love: L'Antica Pizzeria da Michele a Napoli. Indirizzo e cosa ordinare."
+descrizione: "Un menù di sole due pizze dal 1870, niente prenotazioni e sempre la fila: dove Julia Roberts ha mangiato in Eat Pray Love, a 5 minuti dalla Stazione Centrale."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"

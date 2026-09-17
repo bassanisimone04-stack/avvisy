@@ -14,7 +14,9 @@ faq:
   - domanda: "What should you eat in Sicily following the films?"
     risposta: "Arancini, pasta 'ncasciata, granita, cannoli and fresh fish."
   - domanda: "Which Sicilian areas are linked to more recent films?"
-    risposta: "Besides the classics, western Sicily is back in the spotlight thanks to Nolan's The Odyssey, filmed in Favignana and the Aegadian Islands, and the Sicilian scenes of In the Hand of Dante, filmed in Palermo."
+    risposta: "Besides the classics, western Sicily is back in the spotlight thanks to Nolan's The Odyssey, filmed in Favignana and the Aegadian Islands, the Sicilian scenes of In the Hand of Dante, filmed in Palermo, and the series Màkari, between Scopello and San Vito Lo Capo."
+  - domanda: "Where is Il Postino set?"
+    risposta: "On Salina, in the Aeolian Islands: the film's island set is still home to historic venues today, such as Trattoria Cucinotta in the center of Santa Marina Salina."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"
@@ -50,6 +52,20 @@ In **Palazzo Adriano**, the beautiful Piazza Umberto I is the heart of
 *[Cinema Paradiso](/en/film/nuovo-cinema-paradiso)*, Tornatore's 1990 Oscar
 winner: a village where time seems to have stopped, now home to a museum
 dedicated to the film.
+
+## The flavours of the island in Il Postino
+
+On **Salina**, amid the colors of the Aeolian Islands that formed the
+backdrop of *Il Postino*, Massimo Troisi's last, poetic role, the
+**[Trattoria Cucinotta](/en/locale/trattoria-dell-isola-salina)** serves
+capers, pane cunzato and malvasia wine from the film's island set.
+
+## Màkari, between Scopello and San Vito Lo Capo
+
+In the Rai series starring Claudio Gioè, Marilù's restaurant is a set
+built inside the old **[Tonnara di Scopello](/en/locale/tonnara-di-scopello)**,
+overlooking the famous sea stacks between Castellammare del Golfo and
+San Vito Lo Capo. Discover **[the real tonnara](/en/blog/makari-tonnara-scopello)**.
 
 ## Sicily in more recent cinema
 

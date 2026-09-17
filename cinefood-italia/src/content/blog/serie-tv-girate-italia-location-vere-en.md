@@ -101,6 +101,13 @@ For thirteen seasons, the longest-running Italian crime-comedy series used
 café where Don Matteo and Sergeant Cecchini play their chess games.
 Discover **[Don Matteo in Gubbio](/en/blog/don-matteo-gubbio-caffe-ducale)**.
 
+## Màkari — Scopello, Sicily
+
+In the Rai series starring Claudio Gioè, Marilù's restaurant is a set
+built inside the old **Tonnara di Scopello**, overlooking the sea stacks
+between Castellammare del Golfo and San Vito Lo Capo. Discover
+**[the real tonnara](/en/blog/makari-tonnara-scopello)**.
+
 ## In short
 
 From the Sicily of *The White Lotus* to the Aosta Valley of *Rocco

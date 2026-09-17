@@ -139,6 +139,13 @@ Per tredici stagioni della fiction Rai
 **[Caffè Ducale](/locale/caffe-ducale-gubbio)** di Gubbio è stato il bar
 delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
 
+## Antonella Attili — Tonnara di Scopello, Sicilia
+
+Nella serie Rai *[Màkari](/blog/makari-tonnara-scopello)*, il ristorante
+di Marilù è un set allestito nell'antica **[Tonnara di
+Scopello](/locale/tonnara-di-scopello)**, affacciata sui celebri
+faraglioni.
+
 ---
 
 Questa lista si aggiorna ogni volta che verifichiamo un nuovo locale. Esplora
