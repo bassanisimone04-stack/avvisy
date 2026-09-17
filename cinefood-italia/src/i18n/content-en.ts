@@ -267,6 +267,75 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who created From Scratch?", risposta: "Sisters Attica Locke and Tembi Locke, co-creators, with Zoe Saldana starring as protagonist Amy. Directing credits include Nzingha Stewart." },
     ],
   },
+  "blocco-181-gangs-of-milano": {
+    titolo: "Blocco 181 - Gangs of Milano",
+    sinossi:
+      "A Sky Original crime drama created and musically supervised by Salmo, about youth gangs in Milan's suburbs. The story is set in Milan, but season 2 was filmed almost entirely in Turin, between October 2023 and April 2024.",
+    faq: [
+      { domanda: "Is Blocco 181 really filmed in Milan?", risposta: "The story is set in Milan, but season 2 was filmed almost entirely in Turin, according to the Film Commission Torino Piemonte, which documented over a hundred Piedmont locations used by the production." },
+      { domanda: "Which historic restaurant appears in the show?", risposta: "Ristorante Del Cambio, on Piazza Carignano, among the more than a hundred Turin locations used for filming season 2, alongside Le Roi Music Hall and the Crocetta district." },
+      { domanda: "Who created Blocco 181?", risposta: "Rapper Salmo, creator and music supervisor of the Sky Original series, directed by Ciro Visco." },
+    ],
+  },
+  "la-porta-rossa": {
+    titolo: "The Red Door",
+    sinossi:
+      "A Rai 2 noir series in three seasons (2017-2023), set in Trieste. Inspector Leonardo Cagliostro (Lino Guanciale), left in a suspended state after being murdered, investigates his own killing alongside judge Anna Mayer (Gabriella Pession).",
+    faq: [
+      { domanda: "Where is The Red Door filmed?", risposta: "In Trieste, which forms the backdrop for all three seasons of the series, drawing on the city's Mitteleuropean atmosphere and historic cafés." },
+      { domanda: "Which historic café appears in The Red Door?", risposta: "The Antico Caffè San Marco, where the characters of judge Anna Mayer and magistrate Antonio Piras meet, according to the official film tourism portal of the Friuli Venezia Giulia region." },
+      { domanda: "Who plays the leads in The Red Door?", risposta: "Lino Guanciale as Inspector Leonardo Cagliostro and Gabriella Pession as judge Anna Mayer, in a series created by Carlo Lucarelli and Giampiero Rigosi." },
+    ],
+  },
+  "viaggi-di-nozze": {
+    titolo: "Honeymoons",
+    sinossi:
+      "A three-story comedy about disastrous honeymoons. In the first, Ivano (Carlo Verdone) and Jessica (Claudia Gerini) celebrate an 'off-key' wedding between Rome and Sardinia, before the trip turns into a string of mishaps.",
+    faq: [
+      { domanda: "Where do Ivano and Jessica get married in Honeymoons?", risposta: "At the Church of San Giuseppe Cottolengo, on Viale Valle Aurelia in Rome, with the reception filmed at Ristorante Paradiso Terrestre, on Via delle Capannelle." },
+      { domanda: "Who directed Honeymoons?", risposta: "Carlo Verdone, who also stars as one of the leads (Ivano) alongside Claudia Gerini (Jessica), in a three-story film about honeymoons gone wrong." },
+    ],
+  },
+  "diabolik-ginko-allattacco": {
+    titolo: "Diabolik - Ginko Attacks!",
+    sinossi:
+      "The second chapter of the Italian trilogy about Diabolik, based on the famous comic by the Giussani sisters. Inspector Ginko hunts the masked thief through the fictional city of Clerville, recreated across Bologna, Trieste and Milan.",
+    faq: [
+      { domanda: "Where was Diabolik - Ginko Attacks! filmed?", risposta: "The fictional city of Clerville was recreated across Bologna, Trieste and Milan. In Trieste, filming included a car chase in Piazza della Borsa and a scene at the Antico Caffè San Marco." },
+      { domanda: "Which historic café appears in the film?", risposta: "The Antico Caffè San Marco in Trieste, open since 1914: a scene was shot at the venue's counter, while the nearby Piazza della Borsa hosts the chase between police cars and Diabolik's Jaguar E-Type." },
+      { domanda: "Who directed Diabolik - Ginko Attacks!?", risposta: "The Manetti Bros., for the second chapter of the Italian trilogy based on the Giussani sisters' comic, starring Luca Marinelli as Diabolik and Valerio Mastandrea as Inspector Ginko." },
+    ],
+  },
+  "il-commissario-ricciardi": {
+    titolo: "Commissioner Ricciardi",
+    sinossi:
+      "A Rai 1 series based on Maurizio De Giovanni's novels. Naples, the 1930s: Commissioner Luigi Alfredo Ricciardi (Lino Guanciale) has a supernatural gift — he perceives the last thoughts of murder victims — which he uses to solve cases amid fascism and Neapolitan high society.",
+    faq: [
+      { domanda: "Was Commissioner Ricciardi really filmed in Naples?", risposta: "Yes. Among the official locations, documented by the Campania Region Film Commission, are the Teatro San Carlo, the Teatro Sannazaro, Capodimonte, Villa Pignatelli, the Royal Palace of Portici and the Gran Caffè Gambrinus." },
+      { domanda: "Which historic café appears in the show?", risposta: "The Gran Caffè Gambrinus, on Piazza Trieste e Trento: for filming it was transformed into the 1930s café frequented by the commissioner, with scenes set at his favourite table overlooking Piazza del Plebiscito." },
+      { domanda: "Who plays Commissioner Ricciardi?", risposta: "Lino Guanciale in the title role, in a Rai 1 series based on Maurizio De Giovanni's novels, airing since 2021 across several seasons." },
+    ],
+  },
+  "no-reservations-rome": {
+    titolo: "Anthony Bourdain: No Reservations - Rome",
+    sinossi:
+      "An episode of the Travel Channel culinary travel series hosted by Anthony Bourdain: the chef and writer explores Rome between historic trattorias and the Via Veneto of the 'dolce vita', in search of the Italian art of living well.",
+    faq: [
+      { domanda: "What is Anthony Bourdain: No Reservations?", risposta: "A culinary travel series that aired on Travel Channel from 2005 to 2012, hosted by chef and writer Anthony Bourdain." },
+      { domanda: "Which Rome restaurant did the episode make famous?", risposta: "Ristorante Roma Sparita, in Trastevere, for its cacio e pepe served in an edible parmesan basket — Bourdain initially kept the venue's name secret, calling it 'Restaurant X'." },
+      { domanda: "Does the Rome episode also feature Via Veneto?", risposta: "Yes: Bourdain also stops at Harry's Bar, a historic venue on the Via Veneto of Fellini's 'dolce vita'." },
+    ],
+  },
+  "makari": {
+    titolo: "Màkari",
+    sinossi:
+      "A Rai 1 series based on Gaetano Savatteri's novels. Saverio Lamanna (Claudio Gioè), a writer in crisis, returns to his native Sicily and gets drawn into investigations alongside his friend, private investigator Peppe Piccionello, between the village of Macari and San Vito Lo Capo.",
+    faq: [
+      { domanda: "Is Màkari really filmed in Sicily?", risposta: "Yes, mainly between Macari (a hamlet of San Vito Lo Capo), Castellammare del Golfo and the Zingaro Nature Reserve, in the province of Trapani, according to the official Italy for Movies portal." },
+      { domanda: "Does Marilù's restaurant in the show really exist?", risposta: "The restaurant set was built at the Tonnara di Scopello, according to Italy for Movies. The character of Marilù is inspired by a real person, Marilù Terrasi, who runs the restaurant Il Pocho in Macari — a different location from the one used for filming." },
+      { domanda: "Who plays Saverio Lamanna in Màkari?", risposta: "Claudio Gioè, in the lead role, in a Rai 1 series based on Gaetano Savatteri's novels, airing since 2021 across several seasons." },
+    ],
+  },
   "don-matteo": {
     titolo: "Don Matteo",
     sinossi:
@@ -376,11 +445,22 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "del-cambio-torino": {
     descrizione: "A historic restaurant on Piazza Carignano, open since 1757 opposite the Teatro Carignano. Nineteenth-century rooms with mirrors, stucco and red velvet, today holding a Michelin star. Contemporary Piedmontese cuisine.",
-    scena: { "corro-da-te": "Gianni and Chiara's dinner after her performance at the Teatro Regio: the couple sit in the restaurant's historic dining room, she amused by his clumsiness." },
+    scena: {
+      "corro-da-te": "Gianni and Chiara's dinner after her performance at the Teatro Regio: the couple sit in the restaurant's historic dining room, she amused by his clumsiness.",
+      "blocco-181-gangs-of-milano": "One of over a hundred Turin locations used for filming season 2, shot almost entirely in Turin despite the story being set in Milan.",
+    },
   },
   "caffe-san-marco-trieste": {
     descrizione: "A literary café founded in 1914, at the heart of the Trieste of Svevo and Saba. Liberty-style interiors with wooden masks and marble tables, today also a bookshop and restaurant. One of Italy's most celebrated historic cafés.",
-    scena: { "il-re": "Some scenes of the Sky series starring Luca Zingaretti are shot in the café's interiors, among the Trieste locations used by the production alongside Piazza Oberdan, Ponterosso and the Porto Vecchio." },
+    scena: {
+      "il-re": "Some scenes of the Sky series starring Luca Zingaretti are shot in the café's interiors, among the Trieste locations used by the production alongside Piazza Oberdan, Ponterosso and the Porto Vecchio.",
+      "diabolik-ginko-allattacco": "A scene at the café's counter, shot while Trieste recreated the fictional city of Clerville alongside Bologna and Milan; nearby, in Piazza della Borsa, the chase between the police and Diabolik's Jaguar.",
+      "la-porta-rossa": "The venue where the characters of judge Anna Mayer and magistrate Antonio Piras meet, in the Rai noir series set in Trieste.",
+    },
+  },
+  "ristorante-paradiso-terrestre-roma": {
+    descrizione: "A traditional Roman restaurant specialising in wedding receptions, in the Capannelle area south of the city. Classic Roman cuisine in large rooms built for big events.",
+    scena: { "viaggi-di-nozze": "The wedding reception between Ivano and Jessica, after the ceremony at the Church of San Giuseppe Cottolengo, is filmed at this restaurant in the Capannelle area." },
   },
   "caffe-nazionale-aosta": {
     descrizione: "A 19th-century historic café under the arcades of the town hall, on Piazza Chanoux. Closed for years, it reopened in August 2022 with chef Paolo Griffa: today it combines a Michelin-starred restaurant, patisserie, salon de thé and cocktail bar, with the historic decagonal room known as \"la Chapelle\".",
@@ -398,9 +478,25 @@ export const restaurantsEn: Record<string, RestEn> = {
     descrizione: "A historic Florentine trattoria on Via dei Girolami, a stone's throw from Ponte Vecchio: one of the oldest \"buche\" in Florence, traditional Tuscan cooking in a simple, genuine setting.",
     scena: { "from-scratch": "The venue where Lino, the Sicilian chef at the centre of the show, works — set between Florence and Sicily." },
   },
+  "gran-caffe-gambrinus-napoli": {
+    descrizione: "A historic Neapolitan café founded in 1860, among the most celebrated in Italy, facing Piazza del Plebiscito and Piazza Trieste e Trento. A literary salon frequented by intellectuals and artists for over a century.",
+    scena: { "il-commissario-ricciardi": "Transformed into the 1930s café frequented by the commissioner: scenes are set at his favourite table, overlooking Piazza del Plebiscito, in the room now named after Michele Sergio." },
+  },
   "caffe-ducale-gubbio": {
     descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For thirteen years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
     scena: { "don-matteo": "The café where Sergeant Cecchini and Don Matteo play their daily chess games, for thirteen seasons of the series. The venue still keeps props from the show." },
+  },
+  "harrys-bar-roma": {
+    descrizione: "A historic American Bar on Via Vittorio Veneto, open since 1918. One of the symbols of 1950s-60s Roman 'dolce vita', still in business at the same address today.",
+    scena: { "la-dolce-vita": "Open since 1918 on Via Veneto, it was one of the real high-society hangouts where paparazzi photographed the jet set in the 1950s — the same phenomenon Fellini portrayed in the film." },
+  },
+  "roma-sparita-trastevere": {
+    descrizione: "A family trattoria overlooking Piazza di Santa Cecilia, in the heart of Trastevere, run by the same family for over thirty years. Traditional Roman cuisine, famous for its tagliolini cacio e pepe served in a parmesan basket.",
+    scena: { "no-reservations-rome": "Anthony Bourdain tastes his favourite cacio e pepe in Rome here, served in an edible parmesan basket: in the episode he initially kept its name secret, calling it 'Restaurant X'." },
+  },
+  "tonnara-di-scopello": {
+    descrizione: "An old tuna fishery overlooking Scopello's famous sea stacks, today open to the public as a historic site with a café and beach area. One of Sicily's most photographed views.",
+    scena: { "makari": "The set of Marilù's restaurant, overlooking the Scopello sea stacks, was built inside the old tuna fishery." },
   },
 };
 

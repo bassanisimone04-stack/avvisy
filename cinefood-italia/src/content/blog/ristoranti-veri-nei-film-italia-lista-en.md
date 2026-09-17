@@ -111,12 +111,53 @@ based on a true story, the character Lino works as a chef at
 **[Buca dell'Orafo](/en/locale/buca-dellorafo-firenze)**, a historic
 Florentine trattoria near Ponte Vecchio.
 
+## Lino Guanciale — Gran Caffè Gambrinus, Naples
+
+In the Rai series *[Commissioner Ricciardi](/en/blog/commissario-ricciardi-napoli-gambrinus)*,
+**[Gran Caffè Gambrinus](/en/locale/gran-caffe-gambrinus-napoli)**, a
+historic café dating to 1860, becomes the period venue the lead
+frequents — with a table permanently reserved after the show's success.
+
+## Claudia Gerini and Carlo Verdone — Paradiso Terrestre, Rome
+
+In the comedy *[Honeymoons](/en/blog/viaggi-di-nozze-roma-paradiso-terrestre)*
+(1995), Ivano and Jessica's wedding reception is filmed at
+**[Ristorante Paradiso Terrestre](/en/locale/ristorante-paradiso-terrestre-roma)**,
+still specialising in weddings today.
+
+## Luca Marinelli — Caffè San Marco, Trieste
+
+In *[Diabolik - Ginko Attacks!](/en/blog/diabolik-ginko-trieste-caffe-san-marco)*
+(2022), Trieste becomes the comic's Clerville: the **[Antico Caffè San
+Marco](/en/locale/caffe-san-marco-trieste)** appears in a counter scene,
+not far from the chase in Piazza della Borsa.
+
 ## Terence Hill and Nino Frassica — Caffè Ducale, Gubbio
 
 For thirteen seasons of the Rai series
 *[Don Matteo](/en/blog/don-matteo-gubbio-caffe-ducale)*,
 **[Caffè Ducale](/en/locale/caffe-ducale-gubbio)** in Gubbio was the café
 where Don Matteo and Sergeant Cecchini played their chess games.
+
+## Anthony Bourdain — Roma Sparita, Trastevere
+
+In the Rome episode of *[No Reservations](/en/blog/bourdain-roma-sparita-trastevere)*
+(2010), Anthony Bourdain discovers his favorite cacio e pepe at
+**[Ristorante Roma Sparita](/en/locale/roma-sparita-trastevere)**,
+initially keeping its name secret.
+
+## The 1960s jet set — Harry's Bar, Via Veneto
+
+A surviving symbol of Fellini's "dolce vita", **[Harry's
+Bar](/en/locale/harrys-bar-roma)** is still in business today on the
+same Via Veneto portrayed in *[La Dolce Vita](/en/blog/harrys-bar-roma-dolce-vita)*.
+
+## Antonella Attili — Tonnara di Scopello, Sicily
+
+In the Rai series *[Màkari](/en/blog/makari-tonnara-scopello)*, Marilù's
+restaurant is a set built inside the old **[Tonnara di
+Scopello](/en/locale/tonnara-di-scopello)**, overlooking the famous sea
+stacks.
 
 ---
 

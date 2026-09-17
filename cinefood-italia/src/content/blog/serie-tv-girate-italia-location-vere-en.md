@@ -73,12 +73,47 @@ Season 2 of the Netflix series created by Aziz Ansari opens in **Modena**,
 between a fresh pasta lesson and a dinner at Osteria Francescana. Read
 **[Modena and Osteria Francescana](/en/blog/master-of-none-modena-osteria-francescana)**.
 
+## Blocco 181 – Gangs of Milano — Turin
+
+The Sky series created by Salmo is set in Milan but was filmed almost
+entirely in **Turin**: Ristorante Del Cambio is among the more than a
+hundred Piedmont locations used for season 2. Discover **[Blocco 181 in
+Turin](/en/blog/blocco-181-torino-del-cambio)**.
+
+## The Red Door — Trieste
+
+The Rai noir starring Lino Guanciale and Gabriella Pession filmed for
+three seasons in Trieste, with the Antico Caffè San Marco among its
+recurring locations. Discover **[The Red Door and Caffè San
+Marco](/en/blog/la-porta-rossa-trieste-caffe-san-marco)**.
+
+## Commissioner Ricciardi — Naples
+
+Set in 1930s Naples, the Rai series starring Lino Guanciale filmed in
+authentic city locations, including the **Gran Caffè Gambrinus**,
+transformed into the period café the commissioner visits. Discover
+**[the real Gambrinus](/en/blog/commissario-ricciardi-napoli-gambrinus)**.
+
 ## Don Matteo — Gubbio, Umbria
 
 For thirteen seasons, the longest-running Italian crime-comedy series used
 **Gubbio** as its fixed set: Caffè Ducale, on Piazza Grande, is still the
 café where Don Matteo and Sergeant Cecchini play their chess games.
 Discover **[Don Matteo in Gubbio](/en/blog/don-matteo-gubbio-caffe-ducale)**.
+
+## Anthony Bourdain: No Reservations — Trastevere, Rome
+
+In the Rome episode of the Travel Channel culinary travel series,
+Anthony Bourdain finds his favorite cacio e pepe at Ristorante Roma
+Sparita, initially keeping its name secret. Discover
+**[Trastevere's secret trattoria](/en/blog/bourdain-roma-sparita-trastevere)**.
+
+## Màkari — Scopello, Sicily
+
+In the Rai series starring Claudio Gioè, Marilù's restaurant is a set
+built inside the old **Tonnara di Scopello**, overlooking the sea stacks
+between Castellammare del Golfo and San Vito Lo Capo. Discover
+**[the real tonnara](/en/blog/makari-tonnara-scopello)**.
 
 ## In short
 

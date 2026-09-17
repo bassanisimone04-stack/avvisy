@@ -60,12 +60,13 @@ vita" nacque davvero, prima ancora di diventare set cinematografico.
 
 ## Altri storici caffè di Via Veneto
 
-Il Café de Paris non era solo: sulla stessa via si affacciavano anche
-**Harry's Bar** (tuttora aperto, al civico 150) e il celebre **Doney**,
-altro ritrovo abituale di Fellini stesso con la moglie Giulietta Masina e di
-Luchino Visconti. Chi visita Via Veneto oggi può ancora sedersi da Harry's
-Bar per un aperitivo nello stesso tratto di strada che fu il cuore della
-Roma mondana.
+Il Café de Paris non era solo: sulla stessa via si affacciava anche
+**[Harry's Bar](/locale/harrys-bar-roma)** (tuttora aperto, al civico 150,
+dal 1918) e il celebre **Doney**, altro ritrovo abituale di Fellini stesso
+con la moglie Giulietta Masina e di Luchino Visconti. Chi visita Via
+Veneto oggi può ancora sedersi da **[Harry's Bar](/blog/harrys-bar-roma-dolce-vita)**
+per un aperitivo nello stesso tratto di strada che fu il cuore della Roma
+mondana.
 
 ## Cosa vedere oggi lungo Via Veneto
 

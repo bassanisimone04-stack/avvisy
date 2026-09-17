@@ -14,7 +14,9 @@ faq:
   - domanda: "Cosa mangiare in Sicilia sulle orme del cinema?"
     risposta: "Arancini, pasta 'ncasciata, granita, cannoli e pesce fresco."
   - domanda: "Quali sono le zone siciliane più legate al cinema recente?"
-    risposta: "Oltre ai classici, la Sicilia occidentale è tornata protagonista con The Odyssey di Nolan, girato a Favignana e alle Isole Egadi, e con le riprese siciliane de La mano di Dante a Palermo."
+    risposta: "Oltre ai classici, la Sicilia occidentale è tornata protagonista con The Odyssey di Nolan, girato a Favignana e alle Isole Egadi, con le riprese siciliane de La mano di Dante a Palermo e con la serie Màkari, tra Scopello e San Vito Lo Capo."
+  - domanda: "Dove è ambientato Il postino?"
+    risposta: "A Salina, nelle Isole Eolie: l'isola-set del film ospita ancora oggi locali storici come la Trattoria Cucinotta, nel centro di Santa Marina Salina."
 prenotazioni:
   - nome: "Hotel"
     citta: "Taormina"
@@ -49,6 +51,20 @@ A **Palazzo Adriano**, la splendida Piazza Umberto I è il cuore di
 *[Nuovo Cinema Paradiso](/film/nuovo-cinema-paradiso)*, premio Oscar 1990
 di Tornatore: un borgo dove il tempo sembra essersi fermato, oggi arricchito
 da un museo dedicato al film.
+
+## I sapori dell'isola de Il postino
+
+A **Salina**, tra i colori delle Eolie che fecero da sfondo a
+*Il postino*, l'ultimo, poetico ruolo di Massimo Troisi, la
+**[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)** porta in
+tavola capperi, pane cunzato e malvasia dell'isola-set del film.
+
+## Màkari, tra Scopello e San Vito Lo Capo
+
+Nella serie Rai con Claudio Gioè, il ristorante di Marilù è un set
+allestito nell'antica **[Tonnara di Scopello](/locale/tonnara-di-scopello)**,
+affacciata sui celebri faraglioni tra Castellammare del Golfo e San Vito
+Lo Capo. Scopri **[la vera tonnara](/blog/makari-tonnara-scopello)**.
 
 ## La Sicilia del cinema più recente
 

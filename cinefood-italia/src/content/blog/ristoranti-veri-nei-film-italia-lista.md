@@ -110,12 +110,54 @@ tratta da una storia vera, il personaggio di Lino lavora come chef alla
 **[Buca dell'Orafo](/locale/buca-dellorafo-firenze)**, storica trattoria
 fiorentina vicino Ponte Vecchio.
 
+## Lino Guanciale — Gran Caffè Gambrinus, Napoli
+
+Nella serie Rai *[Il Commissario Ricciardi](/blog/commissario-ricciardi-napoli-gambrinus)*,
+il **[Gran Caffè Gambrinus](/locale/gran-caffe-gambrinus-napoli)**, caffè
+storico dal 1860, diventa il locale d'epoca frequentato dal
+protagonista — con un tavolo riservato per sempre dopo il successo
+della serie.
+
+## Claudia Gerini e Carlo Verdone — Paradiso Terrestre, Roma
+
+Nella commedia *[Viaggi di nozze](/blog/viaggi-di-nozze-roma-paradiso-terrestre)*
+(1995), il ricevimento di nozze tra Ivano e Jessica è girato al
+**[Ristorante Paradiso Terrestre](/locale/ristorante-paradiso-terrestre-roma)**,
+ancora oggi specializzato in matrimoni.
+
+## Luca Marinelli — Caffè San Marco, Trieste
+
+In *[Diabolik - Ginko all'attacco!](/blog/diabolik-ginko-trieste-caffe-san-marco)*
+(2022), Trieste diventa la Clerville del fumetto: l'**[Antico Caffè San
+Marco](/locale/caffe-san-marco-trieste)** compare in una scena al
+bancone, poco distante dall'inseguimento in Piazza della Borsa.
+
 ## Terence Hill e Nino Frassica — Caffè Ducale, Gubbio
 
 Per tredici stagioni della fiction Rai
 *[Don Matteo](/blog/don-matteo-gubbio-caffe-ducale)*, il
 **[Caffè Ducale](/locale/caffe-ducale-gubbio)** di Gubbio è stato il bar
 delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
+
+## Anthony Bourdain — Roma Sparita, Trastevere
+
+Nell'episodio romano di *[No Reservations](/blog/bourdain-roma-sparita-trastevere)*
+(2010), Anthony Bourdain scopre la sua cacio e pepe preferita al
+**[Ristorante Roma Sparita](/locale/roma-sparita-trastevere)**, tenendone
+inizialmente segreto il nome.
+
+## Il jet set anni '60 — Harry's Bar, Via Veneto
+
+Simbolo sopravvissuto della "dolce vita" felliniana, **[Harry's
+Bar](/locale/harrys-bar-roma)** è ancora oggi in attività sulla stessa
+Via Veneto raccontata da *[La dolce vita](/blog/harrys-bar-roma-dolce-vita)*.
+
+## Antonella Attili — Tonnara di Scopello, Sicilia
+
+Nella serie Rai *[Màkari](/blog/makari-tonnara-scopello)*, il ristorante
+di Marilù è un set allestito nell'antica **[Tonnara di
+Scopello](/locale/tonnara-di-scopello)**, affacciata sui celebri
+faraglioni.
 
 ---
 

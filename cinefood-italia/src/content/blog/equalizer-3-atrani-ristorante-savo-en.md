@@ -1,6 +1,6 @@
 ---
 titolo: "The Equalizer 3: Denzel Washington's café"
-descrizione: "Denzel Washington's café in The Equalizer 3 is Ristorante Savò in Atrani, on the Amalfi Coast — the venue tells the story on its own website."
+descrizione: "A family restaurant in its third generation: the real café where Denzel Washington filmed in The Equalizer 3, in Atrani on the Amalfi Coast."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/ristorante-savo-atrani.jpg"

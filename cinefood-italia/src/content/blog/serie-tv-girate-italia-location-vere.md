@@ -73,12 +73,47 @@ La seconda stagione della serie Netflix creata da Aziz Ansari si apre a
 **Modena**, tra un corso di pasta fresca e una cena da Osteria Francescana.
 Leggi **[Modena e Osteria Francescana](/blog/master-of-none-modena-osteria-francescana)**.
 
+## Blocco 181 – Gangs of Milano — Torino
+
+La serie Sky ideata da Salmo racconta Milano ma è girata quasi
+interamente a **Torino**: il Ristorante Del Cambio è tra le oltre cento
+location piemontesi usate per la seconda stagione. Leggi
+**[Blocco 181 a Torino](/blog/blocco-181-torino-del-cambio)**.
+
+## La porta rossa — Trieste
+
+Il noir Rai con Lino Guanciale e Gabriella Pession ha girato per tre
+stagioni a Trieste, con l'Antico Caffè San Marco tra le location
+ricorrenti. Leggi **[La porta rossa e il Caffè San
+Marco](/blog/la-porta-rossa-trieste-caffe-san-marco)**.
+
+## Il Commissario Ricciardi — Napoli
+
+Ambientata nella Napoli anni '30, la serie Rai con Lino Guanciale ha
+girato in luoghi autentici della città, tra cui il **Gran Caffè
+Gambrinus**, trasformato nel caffè d'epoca frequentato dal commissario.
+Leggi **[il vero Gambrinus](/blog/commissario-ricciardi-napoli-gambrinus)**.
+
 ## Don Matteo — Gubbio, Umbria
 
 Per tredici stagioni la fiction Rai più longeva del genere ha usato
 **Gubbio** come set fisso: il Caffè Ducale, in Piazza Grande, è ancora il
 bar delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
 Scopri **[Don Matteo a Gubbio](/blog/don-matteo-gubbio-caffe-ducale)**.
+
+## Anthony Bourdain: No Reservations — Trastevere, Roma
+
+Nell'episodio romano della serie di viaggio culinario del Travel
+Channel, Anthony Bourdain scova la sua cacio e pepe preferita al
+Ristorante Roma Sparita, tenendone inizialmente segreto il nome. Scopri
+**[la trattoria segreta di Trastevere](/blog/bourdain-roma-sparita-trastevere)**.
+
+## Màkari — Scopello, Sicilia
+
+Nella serie Rai con Claudio Gioè, il ristorante di Marilù è un set
+allestito nell'antica **Tonnara di Scopello**, affacciata sui faraglioni
+tra Castellammare del Golfo e San Vito Lo Capo. Scopri **[la vera
+tonnara](/blog/makari-tonnara-scopello)**.
 
 ## In sintesi
 
