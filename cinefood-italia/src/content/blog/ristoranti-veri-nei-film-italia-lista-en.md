@@ -139,6 +139,19 @@ For thirteen seasons of the Rai series
 **[Caffè Ducale](/en/locale/caffe-ducale-gubbio)** in Gubbio was the café
 where Don Matteo and Sergeant Cecchini played their chess games.
 
+## Anthony Bourdain — Roma Sparita, Trastevere
+
+In the Rome episode of *[No Reservations](/en/blog/bourdain-roma-sparita-trastevere)*
+(2010), Anthony Bourdain discovers his favorite cacio e pepe at
+**[Ristorante Roma Sparita](/en/locale/roma-sparita-trastevere)**,
+initially keeping its name secret.
+
+## The 1960s jet set — Harry's Bar, Via Veneto
+
+A surviving symbol of Fellini's "dolce vita", **[Harry's
+Bar](/en/locale/harrys-bar-roma)** is still in business today on the
+same Via Veneto portrayed in *[La Dolce Vita](/en/blog/harrys-bar-roma-dolce-vita)*.
+
 ## Antonella Attili — Tonnara di Scopello, Sicily
 
 In the Rai series *[Màkari](/en/blog/makari-tonnara-scopello)*, Marilù's

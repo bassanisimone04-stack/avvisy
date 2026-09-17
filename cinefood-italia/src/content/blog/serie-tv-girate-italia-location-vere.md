@@ -101,6 +101,13 @@ Per tredici stagioni la fiction Rai più longeva del genere ha usato
 bar delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
 Scopri **[Don Matteo a Gubbio](/blog/don-matteo-gubbio-caffe-ducale)**.
 
+## Anthony Bourdain: No Reservations — Trastevere, Roma
+
+Nell'episodio romano della serie di viaggio culinario del Travel
+Channel, Anthony Bourdain scova la sua cacio e pepe preferita al
+Ristorante Roma Sparita, tenendone inizialmente segreto il nome. Scopri
+**[la trattoria segreta di Trastevere](/blog/bourdain-roma-sparita-trastevere)**.
+
 ## Màkari — Scopello, Sicilia
 
 Nella serie Rai con Claudio Gioè, il ristorante di Marilù è un set
