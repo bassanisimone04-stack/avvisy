@@ -316,6 +316,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who plays Commissioner Ricciardi?", risposta: "Lino Guanciale in the title role, in a Rai 1 series based on Maurizio De Giovanni's novels, airing since 2021 across several seasons." },
     ],
   },
+  "makari": {
+    titolo: "Màkari",
+    sinossi:
+      "A Rai 1 series based on Gaetano Savatteri's novels. Saverio Lamanna (Claudio Gioè), a writer in crisis, returns to his native Sicily and gets drawn into investigations alongside his friend, private investigator Peppe Piccionello, between the village of Macari and San Vito Lo Capo.",
+    faq: [
+      { domanda: "Is Màkari really filmed in Sicily?", risposta: "Yes, mainly between Macari (a hamlet of San Vito Lo Capo), Castellammare del Golfo and the Zingaro Nature Reserve, in the province of Trapani, according to the official Italy for Movies portal." },
+      { domanda: "Does Marilù's restaurant in the show really exist?", risposta: "The restaurant set was built at the Tonnara di Scopello, according to Italy for Movies. The character of Marilù is inspired by a real person, Marilù Terrasi, who runs the restaurant Il Pocho in Macari — a different location from the one used for filming." },
+      { domanda: "Who plays Saverio Lamanna in Màkari?", risposta: "Claudio Gioè, in the lead role, in a Rai 1 series based on Gaetano Savatteri's novels, airing since 2021 across several seasons." },
+    ],
+  },
   "don-matteo": {
     titolo: "Don Matteo",
     sinossi:
@@ -465,6 +475,10 @@ export const restaurantsEn: Record<string, RestEn> = {
   "caffe-ducale-gubbio": {
     descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For thirteen years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
     scena: { "don-matteo": "The café where Sergeant Cecchini and Don Matteo play their daily chess games, for thirteen seasons of the series. The venue still keeps props from the show." },
+  },
+  "tonnara-di-scopello": {
+    descrizione: "An old tuna fishery overlooking Scopello's famous sea stacks, today open to the public as a historic site with a café and beach area. One of Sicily's most photographed views.",
+    scena: { "makari": "The set of Marilù's restaurant, overlooking the Scopello sea stacks, was built inside the old tuna fishery." },
   },
 };
 

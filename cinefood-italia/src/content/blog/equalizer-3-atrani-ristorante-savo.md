@@ -1,6 +1,6 @@
 ---
 titolo: "The Equalizer 3: il bar di Denzel Washington"
-descrizione: "Il bar di Denzel Washington in The Equalizer 3 è il Ristorante Savò di Atrani, Costiera Amalfitana: il locale racconta la scena sul proprio sito."
+descrizione: "Ristorante di famiglia da tre generazioni: è il vero bar di Denzel Washington in The Equalizer 3, ad Atrani, Costiera Amalfitana."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/ristorante-savo-atrani.jpg"
