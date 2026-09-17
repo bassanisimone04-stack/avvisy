@@ -60,12 +60,13 @@ before becoming a film set.
 
 ## Other historic cafés on Via Veneto
 
-The Café de Paris wasn't alone: the same street was also home to **Harry's
-Bar** (still open today, at number 150) and the famous **Doney**, another
-regular haunt of Fellini himself with his wife Giulietta Masina, and of
-Luchino Visconti. Visitors to Via Veneto today can still sit down at
-Harry's Bar for a drink on the very stretch that was the heart of high
-society Rome.
+The Café de Paris wasn't alone: the same street was also home to
+**[Harry's Bar](/en/locale/harrys-bar-roma)** (still open today, at number
+150, since 1918) and the famous **Doney**, another regular haunt of
+Fellini himself with his wife Giulietta Masina, and of Luchino Visconti.
+Visitors to Via Veneto today can still sit down at
+**[Harry's Bar](/en/blog/harrys-bar-roma-dolce-vita)** for a drink on the
+very stretch that was the heart of high society Rome.
 
 ## What to see today along Via Veneto
 

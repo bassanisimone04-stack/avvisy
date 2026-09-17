@@ -316,6 +316,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who plays Commissioner Ricciardi?", risposta: "Lino Guanciale in the title role, in a Rai 1 series based on Maurizio De Giovanni's novels, airing since 2021 across several seasons." },
     ],
   },
+  "no-reservations-rome": {
+    titolo: "Anthony Bourdain: No Reservations - Rome",
+    sinossi:
+      "An episode of the Travel Channel culinary travel series hosted by Anthony Bourdain: the chef and writer explores Rome between historic trattorias and the Via Veneto of the 'dolce vita', in search of the Italian art of living well.",
+    faq: [
+      { domanda: "What is Anthony Bourdain: No Reservations?", risposta: "A culinary travel series that aired on Travel Channel from 2005 to 2012, hosted by chef and writer Anthony Bourdain." },
+      { domanda: "Which Rome restaurant did the episode make famous?", risposta: "Ristorante Roma Sparita, in Trastevere, for its cacio e pepe served in an edible parmesan basket — Bourdain initially kept the venue's name secret, calling it 'Restaurant X'." },
+      { domanda: "Does the Rome episode also feature Via Veneto?", risposta: "Yes: Bourdain also stops at Harry's Bar, a historic venue on the Via Veneto of Fellini's 'dolce vita'." },
+    ],
+  },
   "makari": {
     titolo: "Màkari",
     sinossi:
@@ -475,6 +485,14 @@ export const restaurantsEn: Record<string, RestEn> = {
   "caffe-ducale-gubbio": {
     descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For thirteen years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
     scena: { "don-matteo": "The café where Sergeant Cecchini and Don Matteo play their daily chess games, for thirteen seasons of the series. The venue still keeps props from the show." },
+  },
+  "harrys-bar-roma": {
+    descrizione: "A historic American Bar on Via Vittorio Veneto, open since 1918. One of the symbols of 1950s-60s Roman 'dolce vita', still in business at the same address today.",
+    scena: { "la-dolce-vita": "Open since 1918 on Via Veneto, it was one of the real high-society hangouts where paparazzi photographed the jet set in the 1950s — the same phenomenon Fellini portrayed in the film." },
+  },
+  "roma-sparita-trastevere": {
+    descrizione: "A family trattoria overlooking Piazza di Santa Cecilia, in the heart of Trastevere, run by the same family for over thirty years. Traditional Roman cuisine, famous for its tagliolini cacio e pepe served in a parmesan basket.",
+    scena: { "no-reservations-rome": "Anthony Bourdain tastes his favourite cacio e pepe in Rome here, served in an edible parmesan basket: in the episode he initially kept its name secret, calling it 'Restaurant X'." },
   },
   "tonnara-di-scopello": {
     descrizione: "An old tuna fishery overlooking Scopello's famous sea stacks, today open to the public as a historic site with a café and beach area. One of Sicily's most photographed views.",

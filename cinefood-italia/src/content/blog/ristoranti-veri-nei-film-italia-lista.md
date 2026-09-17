@@ -139,6 +139,19 @@ Per tredici stagioni della fiction Rai
 **[Caffè Ducale](/locale/caffe-ducale-gubbio)** di Gubbio è stato il bar
 delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
 
+## Anthony Bourdain — Roma Sparita, Trastevere
+
+Nell'episodio romano di *[No Reservations](/blog/bourdain-roma-sparita-trastevere)*
+(2010), Anthony Bourdain scopre la sua cacio e pepe preferita al
+**[Ristorante Roma Sparita](/locale/roma-sparita-trastevere)**, tenendone
+inizialmente segreto il nome.
+
+## Il jet set anni '60 — Harry's Bar, Via Veneto
+
+Simbolo sopravvissuto della "dolce vita" felliniana, **[Harry's
+Bar](/locale/harrys-bar-roma)** è ancora oggi in attività sulla stessa
+Via Veneto raccontata da *[La dolce vita](/blog/harrys-bar-roma-dolce-vita)*.
+
 ## Antonella Attili — Tonnara di Scopello, Sicilia
 
 Nella serie Rai *[Màkari](/blog/makari-tonnara-scopello)*, il ristorante

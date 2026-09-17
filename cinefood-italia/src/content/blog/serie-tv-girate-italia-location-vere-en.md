@@ -101,6 +101,13 @@ For thirteen seasons, the longest-running Italian crime-comedy series used
 café where Don Matteo and Sergeant Cecchini play their chess games.
 Discover **[Don Matteo in Gubbio](/en/blog/don-matteo-gubbio-caffe-ducale)**.
 
+## Anthony Bourdain: No Reservations — Trastevere, Rome
+
+In the Rome episode of the Travel Channel culinary travel series,
+Anthony Bourdain finds his favorite cacio e pepe at Ristorante Roma
+Sparita, initially keeping its name secret. Discover
+**[Trastevere's secret trattoria](/en/blog/bourdain-roma-sparita-trastevere)**.
+
 ## Màkari — Scopello, Sicily
 
 In the Rai series starring Claudio Gioè, Marilù's restaurant is a set
