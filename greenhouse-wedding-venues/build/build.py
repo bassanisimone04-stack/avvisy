@@ -180,12 +180,14 @@ def build_all():
         name = state_name(slug)
         vs = [v for v in VENUES if v["state_slug"] == slug]
         n = len(vs)
+        state_title = f"Greenhouse Wedding Venues in {name} | Glasshouses &amp; Conservatories"
+        if len(state_title) > 65:
+            state_title = f"Greenhouse Wedding Venues in {name}"
         write(f"venues/{slug}/index.html", directory_page(
             path=f"/venues/{slug}/",
-            title=f"Greenhouse Wedding Venues in {name} | Glasshouses &amp; Conservatories",
-            desc=(f"Greenhouse, glasshouse and conservatory wedding venues in {name}. "
-                  f"{n} listing{'s' if n != 1 else ''}, each linked to the venue's own events page, "
-                  f"plus what to ask before booking a glass venue."),
+            title=state_title,
+            desc=(f"{n} greenhouse, glasshouse and conservatory wedding venue{'s' if n != 1 else ''} "
+                  f"in {name}, each linked to the venue's own events page."),
             h1=f"Greenhouse wedding venues in {name}",
             kicker=f"{n} listing{'s' if n != 1 else ''} in {name}",
             intro=f"""        <p>The glasshouse, conservatory and botanical garden wedding venues we
@@ -203,9 +205,8 @@ def build_all():
     write("italy-destination-weddings/index.html", directory_page(
         path="/italy-destination-weddings/",
         title="Greenhouse Wedding Venue Italy | Limonaie &amp; Glasshouses",
-        desc=("Greenhouse and limonaia wedding venues in Italy for US couples, with what a "
-              "legally binding civil ceremony actually requires and where to check the current "
-              "paperwork."),
+        desc=("Greenhouse and limonaia wedding venues in Italy for US couples, and what a legally "
+              "binding civil ceremony actually requires."),
         h1="Greenhouse wedding venues in Italy",
         kicker="Destination collection",
         intro="""        <p>Italy has built glasshouses since long before anyone put a wedding in

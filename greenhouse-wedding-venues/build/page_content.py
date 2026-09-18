@@ -317,9 +317,8 @@ def cost_guide(all_venues):
     return _article_shell(
         path="/blog/greenhouse-wedding-cost/",
         title="Greenhouse Wedding Cost: How to Work Out Your Real Number",
-        desc=("What drives the cost of a greenhouse, glasshouse or conservatory wedding venue — the "
-              "catering model, the date, what the hire fee includes, and what a glass building needs "
-              "that a hall does not. With a quote checklist to compare venues honestly."),
+        desc=("What drives the cost of a greenhouse or conservatory wedding venue — catering model, "
+              "date, what the hire fee includes — with a checklist to compare quotes honestly."),
         h1="Greenhouse wedding cost: how to work out your real number",
         dek=("No national average, because the category does not have a useful one. Here is the "
              "structure of the cost instead — and the checklist that makes three quotes comparable."),
@@ -451,9 +450,8 @@ def rainproof_guide(all_venues):
     return _article_shell(
         path="/blog/rain-proof-outdoor-wedding-venues/",
         title="Rain-Proof Outdoor Wedding Venues: The Garden Without the Gamble",
-        desc=("How to find a genuinely rain-proof outdoor wedding venue: what the phrase should mean, "
-              "the gaps rain finds in a guest journey, and how glasshouse and conservatory wedding "
-              "venues compare with a marquee."),
+        desc=("What \"rain-proof\" should actually mean for an outdoor wedding venue, where rain "
+              "finds the gaps in a guest journey, and how glasshouses compare with a marquee."),
         h1="Rain-proof outdoor wedding venues: the garden without the weather decision",
         dek=("Most 'wet weather options' are a decision waiting to be made. Here is what genuinely "
              "rain-proof looks like, and the questions that tell the two apart."),
@@ -571,9 +569,8 @@ def small_venues_guide(all_venues):
     return _article_shell(
         path="/blog/small-greenhouse-wedding-venues/",
         title="Small Greenhouse Wedding Venues: What to Ask and Where to Look",
-        desc=("Finding a small greenhouse wedding venue for under 50 guests: what actually makes a "
-              "glasshouse work at a small size, where micro-wedding rooms hide inside larger gardens, "
-              "and the questions a large-wedding checklist will not cover."),
+        desc=("Finding a small greenhouse wedding venue for under 50 guests: what makes a glasshouse "
+              "work at a small size, and where micro-wedding rooms hide inside larger gardens."),
         h1="Small greenhouse wedding venues: what to ask and where to look",
         dek=("A room built for 200 does not become intimate just because fewer people show up. Here "
              "is what actually makes a small greenhouse wedding work, and how to find one."),
@@ -1520,8 +1517,8 @@ def checklist_guide(all_venues):
     return _article_shell(
         path="/blog/greenhouse-wedding-venue-checklist/",
         title="The Greenhouse Wedding Venue Checklist: 20 Questions",
-        desc=("20 questions to ask any greenhouse, conservatory or botanical garden wedding venue "
-              "before you book — ventilation, catering, logistics and cover, all in one checklist."),
+        desc=("20 questions to ask any greenhouse or conservatory wedding venue before you book — "
+              "ventilation, catering, logistics and cover, all in one checklist."),
         h1="The greenhouse wedding venue checklist: 20 questions to ask before you book",
         dek=("Every question a glasshouse venue raises that a generic wedding checklist does not, "
              "collected in one place — with an interactive version you can save."),
@@ -1544,10 +1541,9 @@ def checklist_guide(all_venues):
 def blog_index(all_venues):
     st = stats(all_venues)
     path = "/blog/"
-    title = "Greenhouse Wedding Planning Guides | Costs, Rain-Proof &amp; Small Venues"
-    desc = ("Planning guides for greenhouse, glasshouse and conservatory weddings: how venue costs "
-            "are actually built, how to find a genuinely rain-proof venue, and where small greenhouse "
-            "wedding venues for under 50 guests actually are.")
+    title = "Greenhouse Wedding Planning Guides | Costs, Venues &amp; Logistics"
+    desc = ("Practical guides to getting married under glass: real costs, rain-proof venues, "
+            "small and micro weddings, ventilation, catering, timing and a booking checklist.")
 
     posts = [
         ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost: how to work out your real number",
@@ -1682,9 +1678,8 @@ def methodology(all_venues):
     st = stats(all_venues)
     path = "/methodology/"
     title = "How We Source and Verify Venue Listings | Editorial Standards"
-    desc = ("The sourcing rules behind this greenhouse and conservatory wedding venue directory: "
-            "where listings come from, what an unconfirmed field means, and how to request a "
-            "correction or removal.")
+    desc = ("The sourcing rules behind this venue directory: where listings come from, what an "
+            "unconfirmed field means, and how to request a correction or removal.")
     crumbs = [("Home", "/"), ("How we source listings", None)]
 
     page_ld = {

@@ -126,9 +126,16 @@ def venue_page(v, similar, all_venues):
     title = f"{plain_name} | Greenhouse Wedding Venue in {v['city']}"
     if len(title) > 70:
         title = f"{plain_name} | Wedding Venue, {v['city']}"
-    desc = (f"{plain_name} in {v['city']}{region} — a {TYPE_LABEL.get(v['type'], v['type']).lower()} "
-            f"wedding venue. Listing details, what to ask before booking, and a direct link to the "
-            f"venue's own events page.")
+    if len(title) > 70:
+        title = plain_name
+    type_label = TYPE_LABEL.get(v["type"], v["type"]).lower()
+    desc = (f"{plain_name} in {v['city']}{region} — a {type_label} wedding venue. Listing details, "
+            f"what to ask before booking, and a direct link to the venue's own events page.")
+    if len(desc) > 165:
+        desc = (f"{plain_name} in {v['city']}{region} — a {type_label} wedding venue: what to ask "
+                f"before booking, with a link to the venue's own events page.")
+    if len(desc) > 165:
+        desc = f"{plain_name}: a {type_label} wedding venue in {v['city']}. What to ask before booking."
 
     crumbs = ([("Home", "/"), ("Venues", "/venues/"), (v["state"], f"/venues/{v['state_slug']}/"), (plain_name, None)]
               if v["country"] == "US" else

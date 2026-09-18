@@ -38,6 +38,7 @@ def head(title, description, canonical, *, og_image, og_type="website", extra=""
   <!-- ============ SOCIAL ============ -->
   <meta property="og:site_name" content="{NAME}">
   <meta property="og:type" content="{og_type}">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
   <meta property="og:url" content="{BASE}{canonical}">
