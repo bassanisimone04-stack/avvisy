@@ -320,20 +320,21 @@ content-hashed filenames if you add a CDN in front of this.
 
 1. **Verify every listing.** Open each `official_url`, confirm the venue still
    hosts weddings, fill in what its site publishes, set `last_verified`, rebuild.
-2. **Change the domain.** `data/site.json`'s `base_url` (currently the
-   placeholder `https://www.greenhousevenues.com`) feeds every canonical,
-   `og:url`, JSON-LD `@id`, and `robots.txt`/`sitemap.xml` — all generated, so
-   changing it there and running `npm run build` is the whole job; there is
-   nothing left to hand-edit.
-3. **Point the form at a real address.** The venue-suggestion form on
-   `/methodology/` is wired up as a [Netlify Form](https://docs.netlify.com/manage/forms/setup/)
+2. **Domain is registered.** `greenhousevenues.com` is registered and already
+   matches `data/site.json`'s `base_url`, so canonical, `og:url`, JSON-LD `@id`
+   and `robots.txt`/`sitemap.xml` are all correct as generated — nothing to
+   change here. What is still open is DNS/hosting: point the domain at
+   wherever the site is actually deployed.
+3. **Set up mail on the domain, then point the form at it.** The
+   venue-suggestion form on `/methodology/` is wired up as a
+   [Netlify Form](https://docs.netlify.com/manage/forms/setup/)
    (`data-netlify="true"`, a honeypot field) — it works automatically if you
    deploy on Netlify, with entries in that site's Forms dashboard. Deploying
-   elsewhere, add your own handler to the form's `action`. Either way, replace
-   the placeholder `hello@greenhousevenues.com` mailto link next to it (in
-   `build/page_content.py`'s `methodology()`) with a real address you control,
-   and update `privacy_policy()` in the same file if the form's mechanism
-   changes.
+   elsewhere, add your own handler to the form's `action`. Either way,
+   `hello@greenhousevenues.com` (in `build/page_content.py`'s `methodology()`)
+   is still a placeholder until an inbox exists at that address — once it
+   does, remove the "mail isn't set up yet" note next to it, and update
+   `privacy_policy()` in the same file if the form's mechanism changes.
 4. **Add a contact page and an affiliate disclosure** if you add affiliate
    links — privacy and terms are already in place (`/privacy/`, `/terms/`),
    linked from the footer.

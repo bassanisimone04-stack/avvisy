@@ -2129,7 +2129,7 @@ def methodology(all_venues):
               Prefer email? Write to
               <a class="underline decoration-champagne-400 underline-offset-4"
                  href="mailto:hello@greenhousevenues.com?subject=Venue%20suggestion">hello&commat;greenhousevenues.com</a>
-              directly &mdash; a placeholder address until the domain is live.
+              directly &mdash; mail isn&rsquo;t set up on this address yet, so treat it as a placeholder for now.
             </p>
           </div>
         </form>
