@@ -13,6 +13,8 @@ faq:
     risposta: "It is the exterior of the palace of Ithaca: it stands on Monte Santa Caterina on Favignana, 314 metres above sea level."
   - domanda: "What should you eat on Favignana?"
     risposta: "Bluefin tuna is the king of the local table, tied to the tradition of the mattanza; also try fish couscous and the wines of the Egadi Islands."
+  - domanda: "Is Favignana Homer's real Ithaca?"
+    risposta: "No: in Homer's poem, Ithaca is a separate island in the Ionian Sea, off western Greece. In Nolan's film, Favignana only plays the palace exterior, via the Castello di Santa Caterina."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"

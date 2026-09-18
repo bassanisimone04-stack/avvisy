@@ -13,6 +13,8 @@ faq:
     risposta: "È l'esterno del palazzo di Itaca: sorge sul Monte Santa Caterina a Favignana, a 314 metri sul livello del mare."
   - domanda: "Cosa mangiare a Favignana?"
     risposta: "Il tonno rosso è il re della tavola locale, legato alla tradizione della mattanza; da provare anche il cous cous di pesce e i vini delle Egadi."
+  - domanda: "Favignana è la vera Itaca di Omero?"
+    risposta: "No: nel poema di Omero, Itaca è un'isola separata nel Mar Ionio, al largo della Grecia occidentale. Nel film di Nolan, Favignana ne interpreta solo l'esterno del palazzo, con il Castello di Santa Caterina."
 prenotazioni:
   - nome: "Hotel"
     citta: "Favignana"

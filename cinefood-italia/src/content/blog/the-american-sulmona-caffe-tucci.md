@@ -1,6 +1,6 @@
 ---
-titolo: "The American: Clooney a Sulmona"
-descrizione: "Quando George Clooney girò The American in Abruzzo: quattro giorni di riprese in Piazza Garibaldi a Sulmona, tra 1.600 comparse e i bar storici."
+titolo: "The American: smontò il bar per fare posto a Clooney"
+descrizione: "A Sulmona, il titolare del Caffè Tucci smontò il proprio gazebo per lasciare campo libero alle riprese di The American con George Clooney."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-tucci-sulmona.jpg"

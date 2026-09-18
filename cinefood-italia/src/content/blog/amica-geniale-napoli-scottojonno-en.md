@@ -1,6 +1,6 @@
 ---
-titolo: "My Brilliant Friend: The Real Naples Behind the Set"
-descrizione: "The neighborhood in My Brilliant Friend is a built set, but the show also films in real Naples locations, including the café ScottoJonno."
+titolo: "My Brilliant Friend: Fake Neighborhood, Real Café"
+descrizione: "Lila and Elena's neighborhood is a set built in Marcianise: the café ScottoJonno, in the Galleria Principe di Napoli, is real, reopened in 2023."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-10
 immagine: "../../assets/placeholder/scottojonno-napoli-vero.jpg"
