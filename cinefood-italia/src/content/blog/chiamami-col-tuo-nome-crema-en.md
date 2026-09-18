@@ -3,7 +3,7 @@ titolo: "Call Me by Your Name: a Crema Itinerary"
 descrizione: "The Call Me by Your Name locations in Crema: Piazza del Duomo and the Torrazzo Arch. Where to stop for tortelli and coffee."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-21
-immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"
+immagine: "../../assets/placeholder/chiamami-col-tuo-nome-crema.jpg"
 immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
 tags: ["Call Me by Your Name", "Crema", "Lombardy", "itineraries", "film tourism"]
 faq:

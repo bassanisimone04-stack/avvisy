@@ -3,7 +3,7 @@ titolo: "House of Gucci: la Milano di Lady Gaga"
 descrizione: "La Milano di Lady Gaga e Adam Driver in House of Gucci, tra la Galleria Vittorio Emanuele e i luoghi della moda. Dove mangiare in città."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-12
-immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"
+immagine: "../../assets/placeholder/house-of-gucci-milano.jpg"
 immagineAlt: "Borgo sul lago del Nord Italia, tra montagne e riflessi sull'acqua"
 tags: ["House of Gucci", "Milano", "moda", "cineturismo"]
 faq:

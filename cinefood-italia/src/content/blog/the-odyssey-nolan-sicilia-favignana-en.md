@@ -3,7 +3,7 @@ titolo: "Nolan's The Odyssey in Sicily: Favignana"
 descrizione: "Christopher Nolan's The Odyssey was filmed in Favignana, Sicily. Film locations and island flavours: tuna and the mattanza."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-07
-immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagine: "../../assets/placeholder/the-odyssey-nolan-sicilia-favignana.jpg"
 immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
 tags: ["The Odyssey", "Nolan", "Sicily", "Favignana", "film tourism"]
 faq:
@@ -13,6 +13,8 @@ faq:
     risposta: "It is the exterior of the palace of Ithaca: it stands on Monte Santa Caterina on Favignana, 314 metres above sea level."
   - domanda: "What should you eat on Favignana?"
     risposta: "Bluefin tuna is the king of the local table, tied to the tradition of the mattanza; also try fish couscous and the wines of the Egadi Islands."
+  - domanda: "Is Favignana Homer's real Ithaca?"
+    risposta: "No: in Homer's poem, Ithaca is a separate island in the Ionian Sea, off western Greece. In Nolan's film, Favignana only plays the palace exterior, via the Castello di Santa Caterina."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"

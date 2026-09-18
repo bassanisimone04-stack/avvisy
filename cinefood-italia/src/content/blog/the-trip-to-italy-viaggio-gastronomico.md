@@ -3,7 +3,7 @@ titolo: "The Trip to Italy: il viaggio gastronomico"
 descrizione: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando nei ristoranti più belli, dalla Liguria alla Costiera Amalfitana."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagine: "../../assets/placeholder/the-trip-to-italy-viaggio-gastronomico.jpg"
 immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["The Trip to Italy", "itinerari", "ristoranti", "Italia", "cineturismo"]
 faq:

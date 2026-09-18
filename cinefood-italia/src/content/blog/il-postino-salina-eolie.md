@@ -3,7 +3,7 @@ titolo: "Il Postino a Salina: i luoghi del film"
 descrizione: "I luoghi de Il Postino a Salina, tra Pollara e il mare delle Eolie. Dove assaggiare pane cunzato, capperi e malvasia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
-immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagine: "../../assets/placeholder/il-postino-salina-eolie.jpg"
 immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
 tags: ["Il Postino", "Salina", "Eolie", "dove mangiare", "cineturismo"]
 faq:
@@ -17,6 +17,8 @@ faq:
     risposta: "Perché Troisi girò il film sapendo di dover affrontare urgentemente un intervento al cuore, ma scelse di completare prima le riprese. Morì nel sonno poche ore dopo la fine delle riprese, l'ultima notte di lavorazione."
   - domanda: "Il Postino è tratto da un libro?"
     risposta: "Sì, liberamente ispirato al romanzo Il postino di Neruda (Ardiente paciencia) dello scrittore cileno Antonio Skármeta, molto amato dallo stesso Troisi."
+  - domanda: "Quali sono tutte le location del film?"
+    risposta: "Le riprese, durate 12 settimane dal 14 marzo 1994, si sono svolte tra Cinecittà (per gli interni), Pollara sull'isola di Salina (le scene principali) e Procida, con alcune riprese anche a Pantelleria."
 esperienze:
   - nome: "Tour in barca delle Isole Eolie"
     query: "Aeolian Islands boat tour Salina"

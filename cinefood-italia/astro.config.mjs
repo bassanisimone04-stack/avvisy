@@ -13,6 +13,12 @@ export default defineConfig({
   site: SITE.url,
   // Output statico (SSG) per la massima velocità e SEO.
   output: "static",
+  // URL SENZA slash finale ovunque (i link interni del sito sono già scritti
+  // così, es. /blog/slug): build.format "file" genera .html piatti invece di
+  // cartelle con index.html, così ogni pagina ha una sola URL reale, senza
+  // bisogno di redirect e senza varianti slash/no-slash indicizzate separatamente.
+  trailingSlash: "never",
+  build: { format: "file" },
   // Sito bilingue: italiano alla radice, inglese sotto /en/.
   i18n: {
     locales: ["it", "en"],

@@ -3,7 +3,7 @@ titolo: "Serie TV girate in Italia: le location vere"
 descrizione: "Da The White Lotus a Il Re, da Ripley a Rocco Schiavone: le serie TV internazionali girate davvero in Italia, con le location verificate."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25
-immagine: "../../assets/placeholder/blog-set-cinema-vero.jpg"
+immagine: "../../assets/placeholder/serie-tv-girate-italia-location-vere.jpg"
 immagineAlt: "Set cinematografico con luci e macchina da presa in una città italiana"
 tags: ["serie TV", "location cinematografiche", "Netflix", "HBO", "Sky"]
 faq:

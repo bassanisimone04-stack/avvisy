@@ -12,12 +12,12 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: true
 immagine: "../../assets/placeholder/ristorante-le-gatte-vero.jpg"
-immagineAlt: "Terrazza sul porto di Castellabate al tramonto"
+immagineAlt: "Terrazza del Ristorante Le Gatte sul porto di Castellabate, location di Benvenuti al Sud"
 ultimoAggiornamento: 2026-07-22
 film:
   - film: "benvenuti-al-sud"
     descrizioneScena: "Al ristorante è ambientata la cena tra colleghi dell'ufficio postale, uno dei momenti più simpatici del film."
-descrizione: "Ristorante di pesce sul porto di Castellabate, nel Cilento. Piatti di mare freschi e vista sull'acqua, tra le location della commedia campione d'incassi."
+descrizione: "Ristorante di pesce sul porto di Castellabate: qui è ambientata la cena tra colleghi di Benvenuti al Sud (2010), tra le commedie italiane con più incassi di sempre."
 ---
 
 <!-- Apparizione documentata: Benvenuti al Sud (2010) — la cena tra

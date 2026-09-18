@@ -3,7 +3,7 @@ titolo: "Cinema in the North: Milan and the Lakes"
 descrizione: "Call Me by Your Name, House of Gucci and 007: films shot between Milan and Northern Italy's lakes, and where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-28
-immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"
+immagine: "../../assets/placeholder/cinema-al-nord-milano-laghi.jpg"
 immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
 tags: ["Milan", "Crema", "cinema", "itineraries"]
 faq:

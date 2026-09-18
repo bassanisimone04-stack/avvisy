@@ -3,7 +3,7 @@ titolo: "The most loved dining scenes of Italian cinema"
 descrizione: "From Alberto Sordi's macaroni to Roman dolce vita: why food has always been a star of the Italian big screen."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-14
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/scene-a-tavola-cinema-italiano.jpg"
 immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["Italian cinema", "food", "trivia"]
 faq:

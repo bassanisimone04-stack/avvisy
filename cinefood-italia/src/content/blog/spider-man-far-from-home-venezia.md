@@ -3,7 +3,7 @@ titolo: "Spider-Man Far From Home: Venezia nel film"
 descrizione: "Spider-Man: Far From Home porta l'Uomo Ragno a Venezia. Guida alla città del film e ai cicchetti veneziani."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagine: "../../assets/placeholder/spider-man-far-from-home-venezia.jpg"
 immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
 tags: ["Spider-Man", "Venezia", "Marvel", "dove mangiare", "cineturismo"]
 faq:

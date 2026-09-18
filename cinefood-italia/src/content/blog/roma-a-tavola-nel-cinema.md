@@ -3,7 +3,7 @@ titolo: "Roma a tavola nel cinema: 3 trattorie da film"
 descrizione: "Da Pancrazio, Trattoria Santa Lucia e La Veranda dell'Hotel Columbus: tre location romane comparse nei film, nel centro storico."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-15
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/roma-a-tavola-nel-cinema.jpg"
 immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["Roma", "trattorie", "cinema", "itinerari"]
 faq:

@@ -380,7 +380,7 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "la-grande-bellezza": "In the refined frescoed restaurant, Jep Gambardella dines with Ramona: one of the Roman scenes of the Oscar-winning film." },
   },
   "ristorante-le-gatte": {
-    descrizione: "A seafood restaurant on the port of Castellabate, in the Cilento. Fresh fish dishes and sea views, among the locations of the blockbuster comedy.",
+    descrizione: "A seafood restaurant on the port of Castellabate: this is where the dinner among colleagues in Benvenuti al Sud (2010) is set, one of the highest-grossing Italian comedies ever.",
     scena: { "benvenuti-al-sud": "The restaurant is where the dinner among post-office colleagues is set, one of the film's funniest moments." },
   },
   "bar-la-piazzetta-castellabate": {

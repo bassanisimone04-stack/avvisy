@@ -3,7 +3,7 @@ titolo: "Rome at the Table on Screen: 3 Film Trattorias"
 descrizione: "Da Pancrazio, Trattoria Santa Lucia and La Veranda dell'Hotel Columbus: three Roman venues seen on screen, in the old centre."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-15
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/roma-a-tavola-nel-cinema.jpg"
 immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["Rome", "trattorias", "cinema", "itineraries"]
 faq:

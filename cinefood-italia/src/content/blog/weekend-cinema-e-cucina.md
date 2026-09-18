@@ -3,7 +3,7 @@ titolo: "Weekend tra cinema e buona tavola in Italia"
 descrizione: "Guida pratica per un weekend di due giorni sulle orme dei film italiani, tra location, ristoranti e specialità locali."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-16
-immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagine: "../../assets/placeholder/weekend-cinema-e-cucina.jpg"
 immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
 tags: ["guida", "itinerari", "weekend", "consigli"]
 faq:

@@ -308,6 +308,21 @@ export function stripLang(pathname: string): string {
   return pathname;
 }
 
+/**
+ * Normalizza `Astro.url.pathname` a un URL "pulito" (senza `.html` né slash
+ * finale): con `build.format: "file"` Astro espone il pathname con
+ * l'estensione del file generato (es. "/blog/aosta.html"), che non combacia
+ * con gli URL puliti usati nei link interni, nella sitemap e nei canonical.
+ * Usarla ovunque si legge `Astro.url.pathname` per confronti o per costruire link.
+ */
+export function cleanPathname(pathname: string): string {
+  let p = pathname;
+  if (p.endsWith("/index.html")) p = p.slice(0, -"index.html".length);
+  else if (p.endsWith(".html")) p = p.slice(0, -".html".length);
+  if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+  return p || "/";
+}
+
 /** Codice locale per la formattazione di date/numeri. */
 export function localeCode(lang: Lang): string {
   return lang === "en" ? "en-GB" : "it-IT";
