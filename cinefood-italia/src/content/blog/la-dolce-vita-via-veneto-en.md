@@ -3,7 +3,7 @@ titolo: "La Dolce Vita in Rome: Via Veneto"
 descrizione: "Where Fellini's La Dolce Vita is set: Via Veneto, its historic cafés and the charm of 1960s Rome."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-05
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/la-dolce-vita-via-veneto.jpg"
 immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["Rome", "Fellini", "cafés", "cinema"]
 faq:

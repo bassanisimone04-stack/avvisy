@@ -3,7 +3,7 @@ titolo: "Pixar's Luca: the Liguria of the Film"
 descrizione: "Pixar's Luca is set in Liguria: colourful villages and sea. What to eat, from trofie al pesto to focaccia."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-27
-immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagine: "../../assets/placeholder/luca-pixar-liguria-pesto.jpg"
 immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
 tags: ["Luca", "Pixar", "Liguria", "where to eat", "film tourism"]
 faq:

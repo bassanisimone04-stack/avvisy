@@ -3,7 +3,7 @@ titolo: "To Rome with Love: Woody Allen's Rome"
 descrizione: "The Rome of To Rome with Love, Woody Allen's comedy: Piazza Navona, Trastevere and where to stop for a bite."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-13
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/to-rome-with-love-roma.jpg"
 immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["To Rome with Love", "Rome", "Woody Allen", "film tourism"]
 faq:

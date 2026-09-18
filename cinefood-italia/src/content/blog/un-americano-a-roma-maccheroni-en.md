@@ -3,7 +3,7 @@ titolo: "Alberto Sordi's Macaroni Scene in Rome"
 descrizione: "The famous macaroni scene in An American in Rome and the working-class Rome of the film: where to find authentic food."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-16
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/un-americano-a-roma-maccheroni.jpg"
 immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["An American in Rome", "Alberto Sordi", "Rome", "where to eat", "film tourism"]
 faq:

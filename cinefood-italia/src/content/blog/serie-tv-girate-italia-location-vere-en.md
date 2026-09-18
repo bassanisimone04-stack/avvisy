@@ -3,7 +3,7 @@ titolo: "TV Shows Filmed in Italy: The Real Locations"
 descrizione: "From The White Lotus to Il Re, from Ripley to Rocco Schiavone: the international TV series genuinely filmed in Italy, with verified locations."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-25
-immagine: "../../assets/placeholder/blog-set-cinema-vero.jpg"
+immagine: "../../assets/placeholder/serie-tv-girate-italia-location-vere.jpg"
 immagineAlt: "A film set with lights and camera in an Italian city"
 tags: ["TV shows", "filming locations", "Netflix", "HBO", "Sky"]
 faq:

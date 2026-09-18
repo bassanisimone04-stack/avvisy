@@ -3,7 +3,7 @@ titolo: "La Dolce Vita a Roma: Via Veneto nel cinema"
 descrizione: "Dove è ambientata La Dolce Vita di Fellini: Via Veneto, i caffè storici e il fascino della Roma anni '60."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-05
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/la-dolce-vita-via-veneto.jpg"
 immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["Roma", "Fellini", "caffè", "cinema"]
 faq:

@@ -3,7 +3,7 @@ titolo: "Ristoranti veri visti nei film: la lista completa"
 descrizione: "Da Al Pacino a Julia Roberts, da Denzel Washington a Lady Gaga: tutti i ristoranti, bar e caffè reali apparsi nei film, verificati uno per uno."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25
-immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagine: "../../assets/placeholder/ristoranti-veri-nei-film-italia-lista.jpg"
 immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["ristoranti dei film", "cineturismo", "lista", "star hollywoodiane"]
 faq:

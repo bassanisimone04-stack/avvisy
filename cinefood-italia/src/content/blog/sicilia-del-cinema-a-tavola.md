@@ -3,7 +3,7 @@ titolo: "La Sicilia del cinema a tavola"
 descrizione: "Da Montalbano a Il Padrino: i luoghi siciliani del cinema e cosa mettere in tavola, tra arancini e granita."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-10
-immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagine: "../../assets/placeholder/sicilia-del-cinema-a-tavola.jpg"
 immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
 tags: ["Sicilia", "Montalbano", "itinerari", "cinema"]
 faq:

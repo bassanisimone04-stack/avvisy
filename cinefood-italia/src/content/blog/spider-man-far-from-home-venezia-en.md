@@ -3,7 +3,7 @@ titolo: "Spider-Man: Far From Home in Venice"
 descrizione: "Spider-Man: Far From Home brings Spider-Man to Venice. A guide to the film's city and its Venetian cicchetti."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagine: "../../assets/placeholder/spider-man-far-from-home-venezia.jpg"
 immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
 tags: ["Spider-Man", "Venice", "Marvel", "where to eat", "film tourism"]
 faq:

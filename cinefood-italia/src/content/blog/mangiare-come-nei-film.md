@@ -3,7 +3,7 @@ titolo: "Mangiare come nei film: 4 tappe verificate"
 descrizione: "Quattro ristoranti veri, location di film italiani, verificati con fonti attendibili. Dove mangiare come al cinema."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-01
-immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagine: "../../assets/placeholder/mangiare-come-nei-film.jpg"
 immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["itinerari", "food", "cinema", "Sicilia", "Cilento"]
 faq:

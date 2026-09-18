@@ -3,7 +3,7 @@ titolo: "Luca della Pixar: la Liguria del film"
 descrizione: "Il film Pixar Luca è ambientato in Liguria: borghi colorati e mare. Cosa mangiare, dalle trofie al pesto alla focaccia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-27
-immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagine: "../../assets/placeholder/luca-pixar-liguria-pesto.jpg"
 immagineAlt: "Vicolo in pietra di un borgo italiano, con vasi di piante sulle scale"
 tags: ["Luca", "Pixar", "Liguria", "dove mangiare", "cineturismo"]
 faq:

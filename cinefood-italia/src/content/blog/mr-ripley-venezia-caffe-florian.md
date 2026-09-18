@@ -3,7 +3,7 @@ titolo: "Mr. Ripley a Venezia: il Caffè Florian"
 descrizione: "Matt Damon e Jude Law nei luoghi de Il talento di Mr. Ripley a Venezia: il Caffè Florian, il più antico caffè d'Italia, in Piazza San Marco."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-14
-immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagine: "../../assets/placeholder/mr-ripley-venezia-caffe-florian.jpg"
 immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["Il talento di Mr. Ripley", "Venezia", "Caffè Florian", "cineturismo"]
 faq:

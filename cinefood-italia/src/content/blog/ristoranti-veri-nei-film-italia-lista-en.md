@@ -3,7 +3,7 @@ titolo: "Real Movie Restaurants in Italy: The Full List"
 descrizione: "From Al Pacino to Julia Roberts, Denzel Washington to Lady Gaga: every real restaurant, bar and café seen in a movie, verified one by one."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-25
-immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagine: "../../assets/placeholder/ristoranti-veri-nei-film-italia-lista.jpg"
 immagineAlt: "A table laid with dishes from the Italian tradition"
 tags: ["movie restaurants", "film tourism", "list", "Hollywood stars"]
 faq:
