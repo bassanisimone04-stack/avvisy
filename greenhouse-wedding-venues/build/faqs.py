@@ -415,3 +415,248 @@ BLOG_INDEX = [
    'They are often the largest glazed rooms available in a city, in exchange for less control over '
    'the day. <a href="/venues/?type=botanical-garden">Browse them here</a>.'),
 ]
+
+
+BLOG_TYPES = [
+  ('What is the difference between a conservatory and a greenhouse?',
+   'A greenhouse is a working growing structure, built for plants first. A conservatory is a glazed '
+   'room attached to a building, historically for overwintering tender plants, and finished to be '
+   'lived in — heating, power and flooring already in place. The words get used loosely, so ask what '
+   'the specific room actually is rather than trusting the name alone.'),
+
+  ('What is an orangery, and is it different from a conservatory?',
+   'An orangery is a conservatory&rsquo;s masonry cousin: solid brick or stone piers between tall '
+   'glazed openings, and a roof that is partly or fully solid rather than all glass. That solid roof '
+   'makes it far easier to heat than a fully glazed room, which is why orangeries are often the venue '
+   'a garden keeps open latest into the year.'),
+
+  ('What counts as a palm house or an atrium?',
+   'A palm house is the tall, domed Victorian type built to hold full-grown palms, found mostly in '
+   'public botanical gardens. An atrium is its modern equivalent: steel and glass, usually part of a '
+   'larger building rather than freestanding. Both tend to be larger and taller than a private-estate '
+   'conservatory, which shows up in how the light and the acoustics feel.'),
+
+  ('Does the type of glasshouse affect the price?',
+   'Indirectly. Working greenhouses are usually the cheapest to hire and the most likely to need '
+   'heating, power or floor protection brought in. Finished conservatories and orangeries cost more to '
+   'hire but include most of that already. See the <a href="/blog/greenhouse-wedding-cost/">cost '
+   'guide</a> for the full breakdown.'),
+]
+
+
+BLOG_BOTANICAL = [
+  ('What rules do botanical garden wedding venues usually have?',
+   'An approved-caterer list or a small set of preferred caterers is the most common one, alongside '
+   'fixed load-in and load-out windows tied to the garden&rsquo;s public opening hours. Some also '
+   'restrict amplified music after a set time, since the grounds often back onto residential streets. '
+   'Ask for the rental packet rather than assuming any of this.'),
+
+  ('Can I bring my own caterer to a botanical garden wedding?',
+   'Sometimes, but it is the exception rather than the rule. Public gardens more often work from an '
+   'approved list because they already vet caterers for the site&rsquo;s kitchen access and insurance '
+   'requirements. A garden that allows a full outside caterer will usually say so plainly on its rental '
+   'page — if it does not mention it, assume the list applies.'),
+
+  ('Are botanical garden weddings cheaper than private estates?',
+   'Often, because a public garden charges a rental fee rather than a market rate, and many allow '
+   'weekday dates at a lower price. What you give up is flexibility: fixed hours, a caterer list, and '
+   'public visitors elsewhere on the grounds until closing. Price the whole package, not just the fee, '
+   'before assuming it is the cheaper option.'),
+
+  ('Do botanical gardens allow exclusive use of the whole garden?',
+   'Rarely for a standard wedding rental — most gardens rent a specific room, pavilion or section '
+   'while the rest stays open to members or the public until closing time. Full-property exclusivity, '
+   'where offered at all, is usually a separate and higher-priced package. Ask specifically what area '
+   'your rental actually covers.'),
+]
+
+
+BLOG_VENTILATION = [
+  ('Why does ventilation matter more than the local climate?',
+   'A glass roof traps solar heat regardless of how warm or cool the air outside is — a glasshouse in '
+   'a mild climate with no roof vents can run hotter on a sunny afternoon than one in a hot climate '
+   'with good airflow. The building, not the weather forecast, is what decides whether the room stays '
+   'comfortable.'),
+
+  ('What should I ask a venue about ventilation?',
+   'Whether the roof has opening vents or louvers, whether they are manual or automated, and what '
+   'temperature the room holds on a hot, still afternoon in the month you are booking. A venue that '
+   'answers with a specific number has tested it; a venue that answers with reassurance has probably '
+   'not.'),
+
+  ('Is heating usually included in the hire fee?',
+   'Not always — it is one of the most commonly billed-separately items on a glasshouse rental. Ask '
+   'whether heating is included, what fuel or system it uses, and what minimum temperature the venue '
+   'guarantees rather than just promises to try for.'),
+
+  ('Can a glasshouse be too cold for a winter wedding?',
+   'Single-glazed Victorian-era glass loses heat fast and can be genuinely hard to warm in winter; '
+   'modern double-glazed rooms and orangeries hold heat far better. Ask what the glazing actually is, '
+   'not just whether the room has heating, since the two questions have different answers.'),
+]
+
+
+BLOG_WINTER = [
+  ('Is a greenhouse wedding a good idea in winter?',
+   'In a well-heated room, yes — and it is often the cheapest season to book, since demand drops '
+   'outside spring and summer. The trade-off is shorter daylight hours and a heating bill that a '
+   'summer wedding does not carry, so confirm both before committing to a winter date.'),
+
+  ('What should I ask about a winter glasshouse wedding specifically?',
+   'What the minimum guaranteed indoor temperature is, whether heating is included in the hire fee, '
+   'and how early the room needs to be heated before guests arrive so it is not still cold at the start '
+   'of the ceremony. Also ask about daylight: many gardens lose useful light by mid-afternoon in '
+   'December and January.'),
+
+  ('Are all glasshouses open for weddings in winter?',
+   'No — some public gardens close their glasshouse to rentals outside a growing or display season, '
+   'or reduce hours. Confirm winter availability directly rather than assuming a venue you saw in '
+   'summer photos is bookable for a December date.'),
+
+  ('Does condensation happen in glasshouses in winter?',
+   'It can, when warm humid air inside meets cold glass — ask the venue how they manage it, since '
+   'visible condensation on the glass or drips from the roof structure are a legitimate thing to plan '
+   'around, not just an aesthetic quirk.'),
+]
+
+
+BLOG_SUMMER = [
+  ('Is a greenhouse wedding too hot in summer?',
+   'It depends entirely on ventilation, not the season. A room with opening roof vents, side louvers, '
+   'shade cloth or mechanical cooling can stay comfortable in high summer; one without can become '
+   'genuinely unusable by mid-afternoon. Ask what the venue holds at 4pm in the hottest month you are '
+   'considering.'),
+
+  ('What time of day works best for a summer glasshouse wedding?',
+   'Morning or early-evening ceremonies avoid the hottest hours, when solar gain through the glass is '
+   'at its peak. A late-afternoon reception that continues into a cooler evening is a common way '
+   'venues handle summer bookings — ask whether the room actually cools down after sunset or holds '
+   'heat into the night.'),
+
+  ('Does shade cloth or tinting help in summer?',
+   'Where a venue has it, yes — shade cloth, external blinds or tinted glazing meaningfully reduce '
+   'solar gain compared with clear glass alone. Ask whether the venue has any of these installed, or '
+   'whether cooling relies entirely on ventilation.'),
+
+  ('Are summer dates more expensive at glasshouse venues?',
+   'Often, simply because summer is peak wedding season generally, not because of anything specific '
+   'to glass buildings. Weekday and shoulder-season dates are usually the lever that actually moves '
+   'the price — see the <a href="/blog/greenhouse-wedding-cost/">cost guide</a>.'),
+]
+
+
+BLOG_CATERING = [
+  ('Do greenhouse wedding venues require in-house catering?',
+   'It varies by ownership more than by building type. Private estate conservatories more often '
+   'require in-house catering with a minimum spend; public botanical gardens and municipal glasshouses '
+   'more often work from an approved-caterer list or allow outside catering entirely.'),
+
+  ('What is an approved-caterer list?',
+   'A set of caterers the venue has already vetted for its kitchen access, insurance and load-in '
+   'requirements — you choose from that list rather than bringing your own. It is common at public '
+   'gardens and is usually published on the venue&rsquo;s rental page.'),
+
+  ('Why does the catering policy matter more than the hire fee?',
+   'Because it is usually the larger line item. A venue with a low hire fee but a high in-house '
+   'catering minimum can end up costing more overall than a venue with a higher fee and open catering '
+   '— price the whole event, not just the room, before comparing two venues.'),
+
+  ('Can I bring my own alcohol to a greenhouse wedding?',
+   'Some venues allow it, especially public gardens without a liquor license of their own; others '
+   'require it through an in-house or preferred caterer for liability reasons. This is specific enough '
+   'to each venue that it is worth asking in writing rather than assuming either way.'),
+]
+
+
+BLOG_TIMING = [
+  ('How far in advance should I book a greenhouse wedding venue?',
+   'Popular glasshouses in spring and autumn &mdash; the seasons that suit glass best &mdash; often '
+   'book 12 to 18 months ahead. Winter and weekday dates, and smaller rooms inside larger gardens, '
+   'tend to have more availability closer in.'),
+
+  ('Is it easier to book a glasshouse last-minute in winter?',
+   'Generally yes, since winter is off-peak for most glasshouse venues, particularly single-glazed '
+   'ones that are harder to heat. If your date is flexible, asking about last-minute winter '
+   'availability is a reasonable way to find a venue with less lead time.'),
+
+  ('Do botanical gardens book differently than private venues?',
+   'Often on a rolling annual calendar tied to their fiscal or growing year, sometimes opening booking '
+   'windows at a fixed date each year rather than accepting inquiries at any time. Ask a public garden '
+   'specifically when its booking window opens rather than assuming it works like a private venue.'),
+
+  ('What happens if I need to change my date after booking?',
+   'Policies vary widely — some venues allow a date change with notice, others treat it as a '
+   'cancellation and rebooking. Ask before you sign, and get the answer in writing as part of the '
+   'contract rather than a verbal assurance.'),
+]
+
+
+BLOG_ELOPEMENT = [
+  ('Are glasshouses a good fit for elopements and micro-weddings?',
+   'Often yes — a room built for 40 rather than 200 can feel generous instead of empty, and many '
+   'gardens release smaller rooms or weekday dates specifically for micro-weddings at a lower rate '
+   'than their full-buyout wedding package.'),
+
+  ('Do venues have a separate elopement package?',
+   'Many do, and it is not always advertised alongside the main wedding page — some gardens keep a '
+   'distinct elopement or micro-ceremony package, priced and staffed differently, for 2 to 20 guests. '
+   'Ask directly rather than assuming the full wedding package is the only option.'),
+
+  ('Can we elope at a botanical garden without a big rental?',
+   'Sometimes — a few gardens allow a small ceremony within general admission hours for a modest fee, '
+   'rather than a full private-event rental. This is worth asking about specifically if your guest '
+   'count is very small, since it can be far cheaper than a standard wedding rental.'),
+
+  ('What should an elopement package include at a glasshouse?',
+   'At minimum: confirmation of exactly which space you get access to and for how long, whether other '
+   'visitors will be present, and whether photography time is included or billed separately. Small '
+   'packages sometimes leave these unstated where a full wedding contract would spell them out.'),
+]
+
+
+BLOG_VENDORS = [
+  ('What should caterers know before working a glasshouse wedding?',
+   'The electrical supply available on site, whether there is a prep kitchen or just a serving space, '
+   'and the load-in route &mdash; glasshouses often have narrow doors or paths through planting that a '
+   'standard catering truck route does not anticipate. Confirm all three with the venue, not just the '
+   'couple.'),
+
+  ('Do florists need to know anything specific about glass venues?',
+   'Whether real flame, loose petals or hanging installations are allowed near the glazing and '
+   'structure, and what the venue&rsquo;s policy is on attaching anything to the glass or ironwork. '
+   'Some historic glasshouses restrict adhesives or clips that could mark original frames.'),
+
+  ('Is load-in harder at a botanical garden than a standard venue?',
+   'Often, because vendors are sharing paths with public visitors until the garden closes, and load-in '
+   'windows are frequently fixed rather than flexible. Share the venue&rsquo;s specific load-in rules '
+   'with every vendor in advance rather than assuming standard venue logistics apply.'),
+
+  ('What about sound and bands at a glasshouse?',
+   'Ask about the venue&rsquo;s amplified-sound policy and any curfew, since glasshouses in public '
+   'gardens are often close to residential areas and enforce an earlier cutoff than a standalone event '
+   'venue would. Glass and hard floors also carry sound differently than a carpeted ballroom — a band '
+   'that has not played the room before may want to hear that from the venue directly.'),
+]
+
+
+BLOG_CHECKLIST = [
+  ('What is the single most important question to ask a glasshouse venue?',
+   'Whether the ceremony, dinner and dancing can all happen under solid cover without moving anything '
+   'on the day &mdash; it is the one question that separates a genuinely rain-proof venue from one '
+   'that only partly is. Every other question on a checklist supports that one.'),
+
+  ('Should I bring a written checklist to a venue tour?',
+   'Yes, and ask for written answers where possible rather than verbal reassurance during the tour. '
+   'Verbal answers are easy to forget or misremember by the time you compare three venues; a written '
+   'answer becomes something you can hold the venue to later.'),
+
+  ('How many venues should I compare before booking?',
+   'Enough to have a real basis for comparison &mdash; three is a common minimum, since a single tour '
+   'gives you no sense of what is normal versus unusual for the category. Use the same checklist at '
+   'each one so the answers are actually comparable.'),
+
+  ('Where can I find a ready-made checklist?',
+   'Our <a href="/blog/greenhouse-wedding-cost/">cost guide</a> has an interactive quote checklist you '
+   'can copy or save in this browser, covering the specific questions glass buildings raise that a '
+   'generic wedding checklist does not.'),
+]

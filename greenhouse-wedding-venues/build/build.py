@@ -273,6 +273,16 @@ def build_all():
     write("blog/greenhouse-wedding-cost/index.html", page_content.cost_guide(VENUES))
     write("blog/rain-proof-outdoor-wedding-venues/index.html", page_content.rainproof_guide(VENUES))
     write("blog/small-greenhouse-wedding-venues/index.html", page_content.small_venues_guide(VENUES))
+    write("blog/conservatory-vs-greenhouse/index.html", page_content.types_guide(VENUES))
+    write("blog/botanical-garden-wedding-rules/index.html", page_content.botanical_garden_guide(VENUES))
+    write("blog/greenhouse-ventilation-heating/index.html", page_content.ventilation_guide(VENUES))
+    write("blog/winter-greenhouse-wedding/index.html", page_content.winter_guide(VENUES))
+    write("blog/summer-greenhouse-wedding/index.html", page_content.summer_guide(VENUES))
+    write("blog/greenhouse-wedding-catering/index.html", page_content.catering_guide(VENUES))
+    write("blog/how-far-in-advance-book-greenhouse-venue/index.html", page_content.timing_guide(VENUES))
+    write("blog/greenhouse-elopement-micro-ceremony/index.html", page_content.elopement_guide(VENUES))
+    write("blog/vendor-logistics-glass-venues/index.html", page_content.vendor_logistics_guide(VENUES))
+    write("blog/greenhouse-wedding-venue-checklist/index.html", page_content.checklist_guide(VENUES))
     write("methodology/index.html", page_content.methodology(VENUES))
     write("privacy/index.html", page_content.privacy_policy(VENUES))
     write("terms/index.html", page_content.terms_of_use(VENUES))
@@ -301,7 +311,14 @@ def build_all():
     # ----------------------------------------------------------- sitemap -----
     urls = ["/", "/venues/", "/italy-destination-weddings/", "/blog/",
             "/blog/greenhouse-wedding-cost/", "/blog/rain-proof-outdoor-wedding-venues/",
-            "/blog/small-greenhouse-wedding-venues/", "/methodology/", "/privacy/", "/terms/"]
+            "/blog/small-greenhouse-wedding-venues/",
+            "/blog/conservatory-vs-greenhouse/", "/blog/botanical-garden-wedding-rules/",
+            "/blog/greenhouse-ventilation-heating/", "/blog/winter-greenhouse-wedding/",
+            "/blog/summer-greenhouse-wedding/", "/blog/greenhouse-wedding-catering/",
+            "/blog/how-far-in-advance-book-greenhouse-venue/",
+            "/blog/greenhouse-elopement-micro-ceremony/", "/blog/vendor-logistics-glass-venues/",
+            "/blog/greenhouse-wedding-venue-checklist/",
+            "/methodology/", "/privacy/", "/terms/"]
     urls += [f"/venues/{s}/" for s in state_slugs]
     urls += [C.venue_url(v) for v in VENUES]
     body = "\n".join(f"""  <url>

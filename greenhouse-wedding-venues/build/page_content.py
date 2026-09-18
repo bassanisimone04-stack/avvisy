@@ -595,6 +595,951 @@ def small_venues_guide(all_venues):
         image_alt="A bride in a veil during an intimate ceremony under string lights in a small glasshouse.")
 
 
+# ==================================================== CONSERVATORY VS TYPES ==
+def types_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>The label tells you about the architecture; what decides your day is whether the room is fully enclosed and how it is ventilated.</li>
+            <li>Greenhouse = built for plants. Conservatory = built to be lived in. Orangery = a conservatory with a solid roof. Palm house / atrium = the tall, grand version.</li>
+            <li>A limonaia is the Italian version: a lemon house, built to overwinter citrus.</li>
+            <li>Ask what the room actually is, not just what the venue calls it &mdash; the words are used loosely.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-it-matters">Why the label is worth untangling</h2>
+        <p>
+          &ldquo;Greenhouse wedding venue&rdquo; is the search term, but it covers at least six
+          genuinely different kinds of building, and couples often tour one expecting the character of
+          another. A working greenhouse and a Victorian orangery are both &ldquo;glass buildings,&rdquo;
+          but they behave, heat and price very differently. Knowing the difference before you tour saves
+          a wasted visit.
+        </p>
+
+        <h2 id="greenhouse">Greenhouse</h2>
+        <p>
+          A growing structure, built for plants rather than people. Usually the cheapest way to marry
+          under glass, and the most likely to need power, heating, restrooms or floor protection brought
+          in for the day, since none of that was the building&rsquo;s original job. Expect a dirt or
+          gravel floor in some cases, and ask specifically what infrastructure exists versus what a
+          rental company needs to supply.
+        </p>
+
+        <h2 id="conservatory">Conservatory</h2>
+        <p>
+          A glazed room attached to a building, historically used to overwinter tender plants and, later,
+          to sit in. Finished conservatories usually already have heating, power, flooring and restrooms
+          nearby, which is why they cost more to hire than a working greenhouse but need less brought in.
+        </p>
+
+        <h2 id="orangery">Orangery</h2>
+        <p>
+          A conservatory&rsquo;s masonry relative: solid brick or stone piers between tall glazed
+          openings, with a roof that is partly or fully solid rather than all glass. That solid roof
+          traps less summer heat and holds winter heat far better, which is why an orangery is often the
+          glasshouse-adjacent room a garden keeps bookable latest into the year.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-02.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>The label describes the architecture &mdash; ask about enclosure and ventilation
+          separately, whatever the room is called.</figcaption>
+        </figure>
+
+        <h2 id="palm-house">Palm house and atrium</h2>
+        <p>
+          A palm house is the tall, domed Victorian type built to hold full-grown palms, usually found
+          in public botanical gardens rather than private estates. An atrium is its modern equivalent
+          &mdash; steel and glass, and more often part of a larger building than freestanding. Both tend
+          to be taller and larger than a private conservatory, which changes how the acoustics and the
+          light behave at an event.
+        </p>
+
+        <h2 id="limonaia">Limonaia (and botanical garden glasshouses)</h2>
+        <p>
+          A limonaia is the Italian tradition: a lemon house, built with tall doors and a long glazed
+          wall to overwinter citrus trees in terracotta pots. See our
+          <a href="/italy-destination-weddings/">Italy destination collection</a> if that is the
+          direction you are considering. Separately, a <strong>botanical garden</strong> venue may be
+          any of the types above, wrapped inside a public collection that usually also offers a ceremony
+          lawn &mdash; see our <a href="/blog/greenhouse-wedding-cost/">cost guide</a> for how that
+          changes pricing.
+        </p>
+
+        <h2 id="ask">What actually matters, whatever it is called</h2>
+        <ol>
+          <li><strong>Is it fully enclosed, or glass on some sides only?</strong> The name does not guarantee full weather coverage.</li>
+          <li><strong>How is it ventilated?</strong> Opening vents, louvers or mechanical cooling — this decides comfort more than the architectural style does.</li>
+          <li><strong>What is already there versus what needs to be brought in?</strong> Power, heat, flooring, restrooms.</li>
+          <li><strong>What is the glazing?</strong> Single-glazed historic glass and modern double glazing hold temperature very differently.</li>
+        </ol>
+"""
+    return _article_shell(
+        path="/blog/conservatory-vs-greenhouse/",
+        title="Conservatory vs. Greenhouse vs. Orangery: A Field Guide",
+        desc=("What actually separates a greenhouse, a conservatory, an orangery, a palm house and a "
+              "limonaia — and which questions to ask regardless of what a venue calls itself."),
+        h1="Conservatory vs. greenhouse vs. orangery: a field guide",
+        dek=("Six words get used for the same kind of venue search. Here is what each one actually "
+             "means, and why the difference is worth knowing before you tour."),
+        section="Types", read=7,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-it-matters", "Why the label matters"),
+             ("greenhouse", "Greenhouse"),
+             ("conservatory", "Conservatory"),
+             ("orangery", "Orangery"),
+             ("palm-house", "Palm house & atrium"),
+             ("limonaia", "Limonaia & botanical gardens"),
+             ("ask", "What actually matters")],
+        body=body, faq_items=faqs.BLOG_TYPES,
+        faq_heading="Glasshouse type FAQs",
+        related=[("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/venues/", "Browse every listing", "Directory"),
+                 ("/italy-destination-weddings/", "Greenhouse wedding venue Italy", "Destination")],
+        keywords=["conservatory wedding venues", "greenhouse wedding venues", "orangery wedding venue",
+                  "palm house wedding venue"],
+        words=900, all_venues=all_venues)
+
+
+# ==================================================== BOTANICAL GARDEN RULES =
+def botanical_garden_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Approved-caterer lists and fixed load-in windows are the two rules that show up almost everywhere.</li>
+            <li>Full-property exclusivity is rare — most rentals cover a specific room or section only.</li>
+            <li>Public gardens price as a rental fee, not a market rate, which is usually where the savings actually come from.</li>
+            <li>Ask what happens to your event if the garden is open to visitors during part of your rental window.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-different">Why botanical gardens play by different rules</h2>
+        <p>
+          A private estate conservatory answers to one couple at a time. A public botanical garden
+          answers to members, daily visitors, a horticultural collection that needs specific care, and a
+          board or city department &mdash; a wedding rental is one more thing layered on top of an
+          organization with other jobs to do. That is the source of almost every rule that surprises
+          couples who have only toured private venues before.
+        </p>
+
+        <h2 id="caterer-lists">Approved-caterer lists</h2>
+        <p>
+          The most common rule of all. Gardens vet a set of caterers for kitchen access, insurance and
+          load-in familiarity, and you choose from that list rather than bringing in your own. Some
+          gardens allow a buy-out fee to bring an outside caterer; most do not. Ask for the list itself,
+          not just confirmation that one exists &mdash; it tells you the price range and style you are
+          actually choosing from.
+        </p>
+
+        <h2 id="load-in">Fixed load-in windows and public hours</h2>
+        <p>
+          Because the garden stays open to the public on its normal schedule, vendors often load in and
+          out within a narrow window tied to closing time, sharing paths with visitors until then. Ask
+          exactly when your vendors can arrive, and whether an early load-in is available for an
+          additional fee &mdash; it is a common paid add-on that is not always mentioned upfront.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-01.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Most botanical garden rentals cover one room or section, not the whole
+          property &mdash; confirm exactly which area your fee includes.</figcaption>
+        </figure>
+
+        <h2 id="exclusivity">What &ldquo;exclusive use&rdquo; actually means</h2>
+        <p>
+          Rarely the entire garden. Most rentals are for a specific conservatory, pavilion or section,
+          with the rest of the grounds open to members or the public until the garden&rsquo;s normal
+          closing time. Full-property buyouts exist at some venues but are usually a separate, higher
+          package &mdash; ask precisely which paths, restrooms and views your guests will and will not
+          share with other visitors.
+        </p>
+
+        <h2 id="pricing">Why they are often cheaper &mdash; and what that trades away</h2>
+        <p>
+          A public garden charges a rental fee rather than a market rate, and weekday or off-season dates
+          are frequently discounted further. See our <a href="/blog/greenhouse-wedding-cost/">cost
+          guide</a> for the full structure. What you trade for the lower price is flexibility: fixed
+          hours, a caterer list, and public visitors nearby until closing.
+        </p>
+
+        <h2 id="ask">Questions worth asking a botanical garden specifically</h2>
+        <ol>
+          <li><strong>Which exact area does the rental cover, and is the rest of the garden open to visitors during my event?</strong></li>
+          <li><strong>What is the approved-caterer list, and can I request a buy-out to bring my own?</strong></li>
+          <li><strong>What are the load-in and load-out windows, and is an early load-in available?</strong></li>
+          <li><strong>Is there a curfew or amplified-sound restriction tied to nearby residential areas?</strong></li>
+        </ol>
+        <p>
+          Browse <a href="/venues/?type=botanical-garden">botanical garden wedding venues</a> in the
+          directory, each linked to its own rental page.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/botanical-garden-wedding-rules/",
+        title="Botanical Garden Weddings: Rules, Catering and What to Ask",
+        desc=("The rules that show up almost everywhere at botanical garden wedding venues — "
+              "approved-caterer lists, fixed load-in windows, and what exclusive use actually covers."),
+        h1="Botanical garden weddings: rules, catering and what to ask",
+        dek=("A public garden answers to more than one couple at a time. Here is what that means for "
+             "your rental, and the questions that get you a straight answer."),
+        section="Planning", read=7,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-different", "Why the rules differ"),
+             ("caterer-lists", "Approved-caterer lists"),
+             ("load-in", "Load-in windows"),
+             ("exclusivity", "What 'exclusive use' means"),
+             ("pricing", "Why they're often cheaper"),
+             ("ask", "Questions to ask")],
+        body=body, faq_items=faqs.BLOG_BOTANICAL,
+        faq_heading="Botanical garden wedding FAQs",
+        related=[("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/venues/?type=botanical-garden", "Browse botanical garden venues", "Directory"),
+                 ("/methodology/", "How we source listings", "About")],
+        keywords=["botanical garden wedding venues", "greenhouse wedding venues",
+                  "conservatory wedding venues"],
+        words=850, all_venues=all_venues)
+
+
+# ======================================================= VENTILATION/HEATING =
+def ventilation_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Ventilation decides comfort more than the local climate does — a glass roof traps heat everywhere.</li>
+            <li>Ask what the room holds at 4pm in the hottest month you are considering, not just whether it has &ldquo;cooling.&rdquo;</li>
+            <li>Heating is frequently billed separately from the hire fee — confirm before you budget.</li>
+            <li>Single glazing and double glazing behave very differently in both directions; ask which the venue has.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why">Why this is the real question, not the weather</h2>
+        <p>
+          Couples researching glasshouse venues often ask about the local climate &mdash; will it be too
+          hot, too cold. The building answers that question more than the climate does. A glass roof
+          traps solar heat regardless of the outdoor temperature, so a well-ventilated room in a warm
+          climate can be more comfortable than a poorly ventilated one somewhere mild. Ask about the
+          building&rsquo;s systems before worrying about the season.
+        </p>
+
+        <h2 id="summer">Ventilation: what actually cools a glasshouse</h2>
+        <ul>
+          <li><strong>Opening roof vents.</strong> The single most effective feature — hot air rises and needs somewhere to go.</li>
+          <li><strong>Side louvers.</strong> Cross-ventilation at guest height, working with roof vents rather than instead of them.</li>
+          <li><strong>Shade cloth or external blinds.</strong> Reduces solar gain before it becomes heat inside the room at all.</li>
+          <li><strong>Mechanical cooling.</strong> Rare in historic glasshouses, more common in modern purpose-built event spaces.</li>
+        </ul>
+        <p>
+          Ask specifically what temperature the room holds at 4pm in the hottest month you are
+          considering. A venue that answers with a number has tested it; a venue that answers with
+          reassurance alone has probably not.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-02.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Opening roof vents do more for comfort than any other single feature —
+          ask whether a venue has them before asking about the season.</figcaption>
+        </figure>
+
+        <h2 id="winter">Heating: what to confirm before you budget</h2>
+        <p>
+          Heating is one of the most commonly billed-separately items on a glasshouse rental. Ask
+          whether it is included in the hire fee, what fuel or system the room uses, and what minimum
+          temperature the venue actually guarantees rather than promises to aim for. A guaranteed number
+          is something you can hold a venue to; a general assurance is not.
+        </p>
+
+        <h2 id="glazing">Single glazing vs. double glazing</h2>
+        <p>
+          Historic single-glazed glass &mdash; the kind found in many Victorian-era conservatories and
+          palm houses &mdash; loses heat quickly in winter and gains it quickly in summer. Modern
+          double-glazed rooms and orangeries with a partly solid roof hold temperature in both
+          directions far better. Ask what the glazing actually is, since two rooms that look similar in
+          photographs can behave very differently.
+        </p>
+
+        <h2 id="checklist">A short checklist for any season</h2>
+        <ol>
+          <li>What ventilation does the room have, and is it manual or automated?</li>
+          <li>What temperature does it hold at the most extreme point of the day, in the month you are booking?</li>
+          <li>Is heating included in the hire fee, and what is the guaranteed minimum temperature?</li>
+          <li>Is the glazing single or double, and how old is the structure?</li>
+        </ol>
+"""
+    return _article_shell(
+        path="/blog/greenhouse-ventilation-heating/",
+        title="Ventilation and Heating: Will Your Glasshouse Actually Work?",
+        desc=("The ventilation and heating questions that decide whether a greenhouse or conservatory "
+              "wedding venue is comfortable — more than the local climate ever will."),
+        h1="Ventilation and heating: the questions that decide if a glasshouse works",
+        dek=("The local climate matters less than you think. Here is what to ask about ventilation and "
+             "heating before you book a glass venue for any season."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why", "Why this is the real question"),
+             ("summer", "What actually cools a glasshouse"),
+             ("winter", "Heating: what to confirm"),
+             ("glazing", "Single vs. double glazing"),
+             ("checklist", "A short checklist")],
+        body=body, faq_items=faqs.BLOG_VENTILATION,
+        faq_heading="Ventilation and heating FAQs",
+        related=[("/blog/rain-proof-outdoor-wedding-venues/", "Rain-proof outdoor wedding venues", "Planning"),
+                 ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["greenhouse wedding venues", "conservatory wedding venues", "glasshouse ventilation"],
+        words=800, all_venues=all_venues)
+
+
+# ================================================================ WINTER =====
+def winter_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Winter is usually the cheapest season to book a glasshouse — demand drops outside spring and summer.</li>
+            <li>Heating and glazing type matter more than the outdoor temperature.</li>
+            <li>Daylight hours shrink fast in December and January; plan your timeline around it.</li>
+            <li>Some gardens reduce glasshouse hours or close to rentals outside their main season — confirm winter availability directly.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-winter">Why a winter glasshouse wedding works</h2>
+        <p>
+          Glass is the one venue category where winter genuinely plays to the building&rsquo;s
+          strengths: the daylight and the planting stay in view exactly when a garden or marquee wedding
+          would be at its least appealing. It is also, for the same reason of lower demand, frequently
+          the cheapest season on a venue&rsquo;s calendar &mdash; see our
+          <a href="/blog/greenhouse-wedding-cost/">cost guide</a> for how season interacts with price.
+        </p>
+
+        <h2 id="heating">Heating is the whole question</h2>
+        <p>
+          A winter glasshouse wedding lives or dies on heating, not on how pretty the frost looks
+          through the glass. Ask whether heating is included in the hire fee, what system the venue
+          uses, and what minimum temperature is actually guaranteed. Ask, too, how early the room needs
+          to be heated before guests arrive &mdash; a cold glass structure can take longer to warm than
+          a conventional room, and a venue that starts heating an hour before doors is a different
+          experience than one that starts the night before.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-01.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Single-glazed historic glass is harder to heat than modern double glazing —
+          ask which one you are booking.</figcaption>
+        </figure>
+
+        <h2 id="daylight">Daylight and your timeline</h2>
+        <p>
+          Many parts of the country lose useful daylight by mid-to-late afternoon in December and
+          January. If natural light through the glass is part of why you chose the venue, build your
+          ceremony and photography timing around actual sunset for your date and location, not a
+          general sense of &ldquo;afternoon.&rdquo; A venue that hosts winter weddings regularly should
+          be able to tell you exactly what the light does at 3pm and at 5pm.
+        </p>
+
+        <h2 id="condensation">Condensation, and why it is not just cosmetic</h2>
+        <p>
+          Warm, humid air inside meeting cold glass can produce visible condensation or dripping from
+          the roof structure &mdash; ask the venue how they manage it, particularly for a room full of
+          dancing guests generating heat and moisture over several hours. It is a legitimate logistics
+          question, not an aesthetic one.
+        </p>
+
+        <h2 id="availability">Confirm winter availability directly</h2>
+        <p>
+          Some public gardens reduce their glasshouse&rsquo;s rental hours, or close it to private
+          events entirely, outside their main growing or display season. Do not assume a venue you saw
+          in summer photographs is bookable for a December date &mdash; ask specifically.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/winter-greenhouse-wedding/",
+        title="Planning a Winter Greenhouse Wedding",
+        desc=("What actually makes a winter greenhouse or conservatory wedding work: heating, glazing, "
+              "shrinking daylight, and the availability question most couples skip."),
+        h1="Planning a winter greenhouse wedding",
+        dek=("Winter is where glass venues play to their strengths — and where heating stops being a "
+             "detail and becomes the whole plan."),
+        section="Planning", read=7,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-winter", "Why winter works"),
+             ("heating", "Heating is the whole question"),
+             ("daylight", "Daylight and your timeline"),
+             ("condensation", "Condensation"),
+             ("availability", "Confirm availability")],
+        body=body, faq_items=faqs.BLOG_WINTER,
+        faq_heading="Winter greenhouse wedding FAQs",
+        related=[("/blog/greenhouse-ventilation-heating/", "Ventilation and heating", "Planning"),
+                 ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["winter wedding venue", "greenhouse wedding venues", "conservatory wedding venues"],
+        words=800, all_venues=all_venues)
+
+
+# ================================================================ SUMMER =====
+def summer_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Ventilation, not the outdoor temperature, decides whether a glasshouse is usable in summer.</li>
+            <li>Morning or early-evening ceremonies avoid the hottest hours of solar gain.</li>
+            <li>Shade cloth, blinds or tinted glazing help — ask whether the venue has any of them.</li>
+            <li>Summer dates cost more mainly because it is peak wedding season generally, not because of the glass.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-ask">Why summer is the season to interrogate, not assume</h2>
+        <p>
+          A glass roof gains solar heat fast, which makes summer the one season where a badly-ventilated
+          glasshouse can become genuinely uncomfortable rather than just warm. The good news is that this
+          is entirely a building question, not a climate one &mdash; a well-ventilated room in a hot
+          state can outperform a poorly ventilated one somewhere mild. See our
+          <a href="/blog/greenhouse-ventilation-heating/">ventilation and heating guide</a> for the full
+          breakdown of what to ask.
+        </p>
+
+        <h2 id="timing">Timing your day around solar gain</h2>
+        <p>
+          Morning ceremonies and early-evening receptions that continue into a cooler night are the most
+          common way venues and planners handle a summer glasshouse booking. Ask the venue two specific
+          things: whether the room actually cools once the sun is off it, and what it holds during the
+          hottest stretch of a typical afternoon in your month.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/square-01.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>A ceremony timed around solar gain rather than convention is a common way
+          venues handle a summer booking.</figcaption>
+        </figure>
+
+        <h2 id="shade">Shade cloth, blinds and tinted glazing</h2>
+        <p>
+          Where a venue has any of these installed, they meaningfully reduce heat gain compared with
+          clear glass alone. Ask whether the venue has shade cloth, external blinds or tinted glazing,
+          or whether comfort relies entirely on ventilation &mdash; the answer tells you how much margin
+          the room has on a genuinely hot day.
+        </p>
+
+        <h2 id="cost">Does summer cost more at a glasshouse specifically?</h2>
+        <p>
+          Mostly for the same reason it costs more everywhere: summer is peak wedding season generally.
+          Weekday and shoulder-season dates are the lever that actually moves price at most venues, glass
+          or otherwise &mdash; see the <a href="/blog/greenhouse-wedding-cost/">cost guide</a> for the
+          full structure.
+        </p>
+
+        <h2 id="ask">What to ask before booking a summer date</h2>
+        <ol>
+          <li>What ventilation does the room have, and what does it hold at the hottest point of the afternoon?</li>
+          <li>Does the room cool down meaningfully after sunset, for an evening reception?</li>
+          <li>Is there shade cloth, blinds, or tinted glazing, or does comfort rely on ventilation alone?</li>
+          <li>Is a weekday or shoulder-month date available at a lower rate?</li>
+        </ol>
+"""
+    return _article_shell(
+        path="/blog/summer-greenhouse-wedding/",
+        title="Planning a Summer Greenhouse Wedding",
+        desc=("Whether a greenhouse or conservatory wedding works in summer heat comes down to "
+              "ventilation, timing and shade — not the local climate. Here is what to ask."),
+        h1="Planning a summer greenhouse wedding",
+        dek=("A glass roof gains heat fast — here is what actually keeps a summer glasshouse wedding "
+             "comfortable, and the questions that tell you in advance."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-ask", "Why summer needs asking about"),
+             ("timing", "Timing around solar gain"),
+             ("shade", "Shade cloth and blinds"),
+             ("cost", "Does summer cost more?"),
+             ("ask", "What to ask")],
+        body=body, faq_items=faqs.BLOG_SUMMER,
+        faq_heading="Summer greenhouse wedding FAQs",
+        related=[("/blog/greenhouse-ventilation-heating/", "Ventilation and heating", "Planning"),
+                 ("/blog/rain-proof-outdoor-wedding-venues/", "Rain-proof outdoor wedding venues", "Planning"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["summer wedding venue", "greenhouse wedding venues", "conservatory wedding venues"],
+        words=800, all_venues=all_venues)
+
+
+# =============================================================== CATERING ====
+def catering_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Private estate conservatories more often require in-house catering; public gardens more often use an approved-caterer list.</li>
+            <li>The catering policy usually moves your total budget more than the venue&rsquo;s hire fee does.</li>
+            <li>An approved-caterer list is not the same as open outside catering — confirm which you are getting.</li>
+            <li>Alcohol policy is worth confirming separately from food catering.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-first">Why catering policy is the first thing to confirm</h2>
+        <p>
+          Of everything that separates two otherwise similar glasshouse venues, the catering policy
+          usually has the biggest effect on your total spend &mdash; more than the hire fee itself. It
+          is worth confirming before you fall in love with a room, not after.
+        </p>
+
+        <h2 id="in-house">In-house catering and minimum spend</h2>
+        <p>
+          Private estate conservatories more often require catering through the venue or a small
+          in-house list, tied to a minimum spend per guest. That minimum is effectively part of the
+          venue&rsquo;s price, even though it is billed separately &mdash; add it to the hire fee before
+          comparing two venues.
+        </p>
+
+        <h2 id="approved-list">Approved-caterer lists</h2>
+        <p>
+          Common at public gardens and municipal glasshouses: a set of caterers the venue has already
+          vetted for kitchen access and insurance, and you choose from that list. This is not the same
+          as open outside catering &mdash; ask for the list itself before assuming it includes a style
+          or price point you want.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-02.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Catering policy usually moves your total budget more than the venue&rsquo;s
+          hire fee does &mdash; confirm it before touring further.</figcaption>
+        </figure>
+
+        <h2 id="outside">Fully open outside catering</h2>
+        <p>
+          Working greenhouses and some municipal venues without their own kitchen infrastructure are the
+          most likely to allow any licensed outside caterer. This usually means more choice and often a
+          lower total cost, but confirm what kitchen or prep space actually exists on site, since fully
+          open catering sometimes means fully absent infrastructure too.
+        </p>
+
+        <h2 id="alcohol">Alcohol, separately from food</h2>
+        <p>
+          Some venues allow you to bring your own alcohol, especially public gardens without a liquor
+          license of their own; others require it through an in-house or preferred caterer for liability
+          reasons. This does not always follow the same policy as food catering, so ask about it
+          specifically rather than assuming.
+        </p>
+
+        <h2 id="ask">Questions to ask about catering, in writing</h2>
+        <ol>
+          <li>Is catering fully in-house, an approved list, or fully open?</li>
+          <li>If there is a minimum spend, what is it, and does it include service and tax?</li>
+          <li>Is there a working kitchen or prep space, or does a caterer need to bring everything?</li>
+          <li>What is the alcohol policy, separately from the food catering policy?</li>
+        </ol>
+"""
+    return _article_shell(
+        path="/blog/greenhouse-wedding-catering/",
+        title="Catering at a Greenhouse Wedding: BYO vs. In-House",
+        desc=("How catering policy works at greenhouse and conservatory wedding venues — in-house "
+              "minimums, approved-caterer lists, and fully open outside catering explained."),
+        h1="Catering at a greenhouse wedding: BYO vs. in-house, explained",
+        dek=("The catering policy usually moves your budget more than the hire fee does. Here is how "
+             "it actually works at glasshouse venues, and what to ask."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-first", "Why this comes first"),
+             ("in-house", "In-house catering & minimums"),
+             ("approved-list", "Approved-caterer lists"),
+             ("outside", "Fully open catering"),
+             ("alcohol", "Alcohol policy"),
+             ("ask", "Questions to ask")],
+        body=body, faq_items=faqs.BLOG_CATERING,
+        faq_heading="Greenhouse wedding catering FAQs",
+        related=[("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/blog/botanical-garden-wedding-rules/", "Botanical garden wedding rules", "Planning"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["greenhouse wedding venues", "conservatory wedding venues", "wedding catering policy"],
+        words=800, all_venues=all_venues)
+
+
+# ================================================================= TIMING ====
+def timing_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Popular glasshouses in spring and autumn often book 12 to 18 months ahead.</li>
+            <li>Winter and weekday dates, and smaller side rooms, tend to have shorter lead times.</li>
+            <li>Public gardens sometimes open their booking calendar on a fixed annual date rather than year-round.</li>
+            <li>Ask about date-change policy before you sign, not after.</li>
+          </ul>
+        </aside>
+
+        <h2 id="lead-time">How far ahead to actually plan</h2>
+        <p>
+          Spring and autumn suit glass buildings best &mdash; enough daylight for the glass to earn its
+          keep, without high summer&rsquo;s solar gain &mdash; which makes those the most contested
+          dates too. A popular glasshouse booked for a weekend in those seasons often fills 12 to 18
+          months out. Winter dates, weekdays, and smaller side rooms inside larger gardens generally
+          have more room to book closer in.
+        </p>
+
+        <h2 id="off-peak">Where the shorter lead times are</h2>
+        <ul>
+          <li><strong>Winter.</strong> Lower demand at most glasshouse venues, particularly single-glazed ones that are harder to heat — see our <a href="/blog/winter-greenhouse-wedding/">winter wedding guide</a>.</li>
+          <li><strong>Weekdays.</strong> Friday, Sunday and weekday dates are discounted almost everywhere and booked later, on average, than Saturdays.</li>
+          <li><strong>Side rooms.</strong> A smaller room inside a larger garden — an orchid room, a fern house — is often overlooked in favor of the main hall, and can have availability the headline space does not.</li>
+        </ul>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-01.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Smaller side rooms inside a larger garden often have shorter lead times than
+          the main hall.</figcaption>
+        </figure>
+
+        <h2 id="calendars">Booking calendars work differently at public gardens</h2>
+        <p>
+          Some botanical gardens run wedding bookings on a rolling annual calendar tied to their fiscal
+          or growing year, opening a booking window on a fixed date each year rather than accepting
+          inquiries at any time. Ask a public garden specifically when its window opens, rather than
+          assuming it behaves like a private venue that will simply hold a date the moment you ask.
+        </p>
+
+        <h2 id="changes">Date changes and cancellation policy</h2>
+        <p>
+          Policies vary widely: some venues allow a date change with enough notice, others treat a
+          change as a cancellation and a fresh booking. Ask before you sign the contract, and get the
+          answer written into it &mdash; a verbal assurance during a tour is not something you can hold
+          a venue to a year later.
+        </p>
+
+        <h2 id="checklist">A short timing checklist</h2>
+        <ol>
+          <li>How far ahead does this specific venue typically book out for my season and day of week?</li>
+          <li>Does the venue have a fixed annual booking-window date, or does it accept inquiries year-round?</li>
+          <li>What is the date-change and cancellation policy, in writing?</li>
+          <li>Is there a smaller room with shorter lead times if my first-choice space is unavailable?</li>
+        </ol>
+"""
+    return _article_shell(
+        path="/blog/how-far-in-advance-book-greenhouse-venue/",
+        title="How Far in Advance to Book a Greenhouse Wedding Venue",
+        desc=("Typical lead times for greenhouse and conservatory wedding venues, where the shorter "
+              "booking windows are, and how public-garden calendars work differently."),
+        h1="How far in advance to book a greenhouse wedding venue",
+        dek=("Popular glasshouses in the best seasons book out fast. Here is where the lead time is "
+             "shorter, and how public-garden calendars actually work."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("lead-time", "How far ahead to plan"),
+             ("off-peak", "Where lead times are shorter"),
+             ("calendars", "How public-garden calendars work"),
+             ("changes", "Date changes & cancellation"),
+             ("checklist", "A short checklist")],
+        body=body, faq_items=faqs.BLOG_TIMING,
+        faq_heading="Booking timeline FAQs",
+        related=[("/blog/winter-greenhouse-wedding/", "Planning a winter greenhouse wedding", "Planning"),
+                 ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["greenhouse wedding venues", "wedding venue booking", "conservatory wedding venues"],
+        words=750, all_venues=all_venues)
+
+
+# ============================================================== ELOPEMENT ====
+def elopement_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>A room built small reads as generous for an elopement; a room built large can feel empty even at a discount.</li>
+            <li>Many gardens keep a separate elopement or micro-ceremony package, not always advertised with the main wedding page.</li>
+            <li>Some public gardens allow a small ceremony within general admission hours for a modest fee — worth asking about directly.</li>
+            <li>Confirm exactly what space, time and privacy a small package actually includes.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-glass">Why glass suits an elopement particularly well</h2>
+        <p>
+          A room designed for 200 can feel like a warehouse with ten people in it. A propagation house,
+          fern room or side conservatory built with a small footprint in mind reads as generous, not
+          empty, at the same guest count &mdash; because it was designed for it. See our
+          <a href="/blog/small-greenhouse-wedding-venues/">small greenhouse wedding venues guide</a> for
+          more on finding rooms built at this scale.
+        </p>
+
+        <h2 id="packages">Ask about a separate elopement package</h2>
+        <p>
+          Many gardens keep a distinct elopement or micro-ceremony package &mdash; priced and staffed
+          differently from the full wedding offering, for roughly 2 to 20 guests &mdash; that is not
+          always advertised alongside the main wedding page. Ask directly rather than assuming the full
+          wedding package, with its higher minimums, is the only option.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/square-02.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>A small elopement package is often priced and run differently from the full
+          wedding offering — and not always on the main page.</figcaption>
+        </figure>
+
+        <h2 id="general-admission">Marrying within general admission hours</h2>
+        <p>
+          A few gardens allow a very small ceremony within their normal public opening hours for a
+          modest fee, rather than a full private-event rental. This is worth asking about specifically
+          if your guest count is very small, since it can be substantially cheaper than a standard
+          wedding rental &mdash; the trade-off is that other visitors will be present.
+        </p>
+
+        <h2 id="what-included">What a small package should actually include</h2>
+        <p>
+          At minimum, confirm exactly which space you get access to and for how long, whether other
+          visitors will be present during your ceremony, and whether photography time is included or
+          billed separately. Small packages sometimes leave these details unstated where a full wedding
+          contract would spell them out &mdash; ask rather than assume.
+        </p>
+
+        <h2 id="ask">Questions to ask before booking a small ceremony</h2>
+        <ol>
+          <li>Is there a dedicated elopement or micro-ceremony package, separate from the full wedding offering?</li>
+          <li>Is a small ceremony available within general admission hours, at a lower fee?</li>
+          <li>Exactly which space and how much time does the package include?</li>
+          <li>Will other visitors be present, and is photography time included?</li>
+        </ol>
+"""
+    return _article_shell(
+        path="/blog/greenhouse-elopement-micro-ceremony/",
+        title="Elopements and Micro-Ceremonies in a Glasshouse",
+        desc=("Planning a small greenhouse or conservatory elopement: separate micro-ceremony "
+              "packages, general-admission options, and what a small package should include."),
+        h1="Elopements and micro-ceremonies in a glasshouse",
+        dek=("A room built small reads as generous for a handful of guests. Here is how to find and "
+             "book one for an elopement or micro-ceremony."),
+        section="Micro-weddings", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-glass", "Why glass suits an elopement"),
+             ("packages", "Ask about a separate package"),
+             ("general-admission", "Marrying within admission hours"),
+             ("what-included", "What a package should include"),
+             ("ask", "Questions to ask")],
+        body=body, faq_items=faqs.BLOG_ELOPEMENT,
+        faq_heading="Elopement & micro-ceremony FAQs",
+        related=[("/blog/small-greenhouse-wedding-venues/", "Small greenhouse wedding venues", "Micro-weddings"),
+                 ("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/venues/?capacity=micro", "Browse under-50 listings", "Directory")],
+        keywords=["greenhouse elopement", "small greenhouse wedding venues", "micro wedding venue"],
+        words=750, all_venues=all_venues)
+
+
+# =============================================================== VENDORS =====
+def vendor_logistics_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Narrow doors and planting-lined paths can make a standard load-in route unworkable — confirm access, not just capacity.</li>
+            <li>Ask about the electrical supply before assuming a standard catering or band setup will work.</li>
+            <li>Some historic glasshouses restrict what can be attached to the glass or ironwork.</li>
+            <li>Glass and hard floors carry sound differently than a carpeted ballroom.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-share">Why glass venues need a different vendor briefing</h2>
+        <p>
+          A glasshouse is rarely built with catering trucks and stage rigs in mind, and it is often
+          shared with public visitors until closing. Share the venue&rsquo;s specific logistics with
+          every vendor in advance, rather than assuming standard venue conventions apply &mdash; it
+          saves a difficult conversation on the day.
+        </p>
+
+        <h2 id="caterers">Caterers: power, kitchen access, load-in route</h2>
+        <p>
+          Confirm the electrical supply available on site, whether there is a working prep kitchen or
+          just a serving space, and the actual load-in route &mdash; glasshouses often have narrow doors
+          or paths through planting that a standard truck route does not anticipate. Ask the venue
+          directly, and pass the answer to your caterer before the day, not on it.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-02.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Narrow doors and planting-lined paths can make a standard load-in route
+          unworkable &mdash; confirm access specifically, not just capacity.</figcaption>
+        </figure>
+
+        <h2 id="florists">Florists: what can and cannot touch the glass</h2>
+        <p>
+          Ask whether real flame, loose petals, or hanging installations are allowed near the glazing
+          and structure, and what the venue&rsquo;s policy is on attaching anything to glass or historic
+          ironwork. Some older glasshouses restrict adhesives or clips that could mark original frames
+          &mdash; a restriction a florist used to standard ballrooms may not expect.
+        </p>
+
+        <h2 id="bands">Music, sound and curfews</h2>
+        <p>
+          Ask about the venue&rsquo;s amplified-sound policy and any curfew: glasshouses inside public
+          gardens are frequently close to residential streets and enforce an earlier cutoff than a
+          standalone event venue would. Glass and hard floors also carry sound differently than a
+          carpeted ballroom &mdash; a band unfamiliar with the room may want to hear that directly from
+          the venue rather than the couple.
+        </p>
+
+        <h2 id="briefing">A short logistics briefing to send every vendor</h2>
+        <ol>
+          <li>Load-in and load-out windows, and the actual route to the room.</li>
+          <li>Electrical supply and any restrictions on generators or extension runs.</li>
+          <li>What can and cannot be attached to glass, ironwork or planting.</li>
+          <li>Amplified-sound policy and curfew.</li>
+        </ol>
+"""
+    return _article_shell(
+        path="/blog/vendor-logistics-glass-venues/",
+        title="Vendor Logistics at Glass Venues: A Briefing for Caterers & Florists",
+        desc=("What caterers, florists and bands need to know before working a greenhouse or "
+              "conservatory wedding — power, load-in routes, glass restrictions and curfews."),
+        h1="Vendor logistics at glass venues: what caterers, florists and bands need to know",
+        dek=("Glasshouses are rarely built with vendor logistics in mind. Here is the briefing worth "
+             "sending every vendor before the day."),
+        section="Logistics", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-share", "Why a different briefing"),
+             ("caterers", "Caterers: power & load-in"),
+             ("florists", "Florists: what can touch the glass"),
+             ("bands", "Music, sound & curfews"),
+             ("briefing", "A short briefing to send")],
+        body=body, faq_items=faqs.BLOG_VENDORS,
+        faq_heading="Vendor logistics FAQs",
+        related=[("/blog/botanical-garden-wedding-rules/", "Botanical garden wedding rules", "Planning"),
+                 ("/blog/greenhouse-ventilation-heating/", "Ventilation and heating", "Planning"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["greenhouse wedding venues", "wedding vendor logistics", "conservatory wedding venues"],
+        words=750, all_venues=all_venues)
+
+
+# ============================================================== CHECKLIST ====
+def checklist_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Whether the whole day can happen under solid cover is the one question every other question supports.</li>
+            <li>Get answers in writing where you can — verbal reassurance is easy to misremember a month later.</li>
+            <li>Use the same checklist at every venue you tour, so the answers are actually comparable.</li>
+            <li>This checklist is interactive below — check items off and it saves your progress in this browser.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-checklist">Why a checklist, not a gut feeling</h2>
+        <p>
+          Glasshouse venues raise questions a generic wedding checklist does not: ventilation, heating,
+          glazing, catering policy, load-in access. A single tour rarely surfaces all of them on its
+          own, and the answers from one venue are easy to conflate with another by the time you have
+          seen three or four. A written checklist, used the same way at every venue, fixes both
+          problems.
+        </p>
+
+        <h2 id="core">The core question everything else supports</h2>
+        <p>
+          Can the ceremony, dinner and dancing all happen under solid cover without moving anything on
+          the day? Every other item below is really a way of pressure-testing that one answer &mdash;
+          see our <a href="/blog/rain-proof-outdoor-wedding-venues/">rain-proof venues guide</a> for the
+          full reasoning.
+        </p>
+
+        <h2 id="checklist-items">The 20 questions</h2>
+        <ol>
+          <li>Can the ceremony, dinner and dancing all happen under solid cover?</li>
+          <li>What ventilation does the room have, and what does it hold on a hot afternoon?</li>
+          <li>Is heating included in the hire fee, and what is the guaranteed minimum temperature?</li>
+          <li>Is the glazing single or double, and how old is the structure?</li>
+          <li>What is the seated capacity with a dance floor, with planting in place?</li>
+          <li>Is catering in-house, an approved list, or fully open?</li>
+          <li>If there is a minimum spend, what does it include?</li>
+          <li>What is the alcohol policy?</li>
+          <li>What is the load-in and load-out window, and the actual route?</li>
+          <li>What is the electrical supply available to caterers and bands?</li>
+          <li>What can and cannot be attached to the glass or ironwork?</li>
+          <li>Is there an amplified-sound curfew?</li>
+          <li>Will other visitors be present during a public-garden rental?</li>
+          <li>What exact area does the rental cover — is it full exclusivity?</li>
+          <li>Is there a minimum guest count as well as a maximum?</li>
+          <li>Is floor protection required for dancing?</li>
+          <li>What is the date-change and cancellation policy, in writing?</li>
+          <li>Is there a rain or weather contingency for any outdoor portion?</li>
+          <li>How far in advance does this venue typically book out for your date?</li>
+          <li>What happens if a wedding runs over its booked time?</li>
+        </ol>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-01.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Use the same 20 questions at every venue you tour — the answers only become
+          useful when they are comparable.</figcaption>
+        </figure>
+
+        <h2 id="use-it">Using the checklist</h2>
+        <p>
+          Check items off as you get answers, or copy the list to send by email ahead of a tour so the
+          venue can prepare written responses. Your progress on this page is saved in this browser, so
+          you can come back to it per venue.
+        </p>
+##CHECKLIST_WIDGET##
+"""
+    body = body.replace(
+        "##CHECKLIST_WIDGET##",
+        checklist(
+            [("Can the ceremony, dinner and dancing all happen under solid cover?",
+              "The question every other item on this list supports — see the rain-proof venues guide."),
+             ("What ventilation does the room have, and what does it hold on a hot afternoon?",
+              "Passive vents behave differently from a full climate system on a warm, still day."),
+             ("Is heating included in the hire fee, and what is the guaranteed minimum temperature?",
+              "A rented patio heater is a different promise than a built-in system covered in the contract."),
+             ("Is the glazing single or double, and how old is the structure?",
+              "Older single glazing loses heat faster and can affect comfort in shoulder seasons."),
+             ("What is the seated capacity with a dance floor, with planting in place?",
+              "Brochure capacity figures rarely subtract the floor space plants and a dance floor actually take."),
+             ("Is catering in-house, an approved list, or fully open?",
+              "This changes your budget conversation more than almost any other line item."),
+             ("If there is a minimum spend, what does it include?",
+              "Minimums can bundle service and rentals very differently between venues."),
+             ("What is the alcohol policy?",
+              "Some venues require licensed in-house bar service; others allow you to supply your own."),
+             ("What is the load-in and load-out window, and the actual route?",
+              "A narrow door or a long carry from parking affects every vendor's timeline and quote."),
+             ("What is the electrical supply available to caterers and bands?",
+              "A band or a warming kitchen can trip a circuit a small venue never expected to carry."),
+             ("What can and cannot be attached to the glass or ironwork?",
+              "Historic structures often restrict tape, pins, and hanging weight on glass and frames."),
+             ("Is there an amplified-sound curfew?",
+              "Public gardens and residential-adjacent venues often cut amplified sound earlier than expected."),
+             ("Will other visitors be present during a public-garden rental?",
+              "Some botanical gardens only close a wing or path to the public, not the whole grounds."),
+             ("What exact area does the rental cover — is it full exclusivity?",
+              "\"The greenhouse\" in a listing can mean one room or an entire glasshouse complex."),
+             ("Is there a minimum guest count as well as a maximum?",
+              "Some venues set a minimum spend or headcount that rules out a very small wedding."),
+             ("Is floor protection required for dancing?",
+              "Historic tile or stone floors sometimes require a rented dance floor or protective covering."),
+             ("What is the date-change and cancellation policy, in writing?",
+              "Verbal reassurance on a tour is easy to misremember by the time you sign a contract."),
+             ("Is there a rain or weather contingency for any outdoor portion?",
+              "Cocktail hours and photos often happen outside the glass structure itself."),
+             ("How far in advance does this venue typically book out for your date?",
+              "Popular glasshouse dates, especially spring and fall Saturdays, can book a year or more out."),
+             ("What happens if a wedding runs over its booked time?",
+              "Overtime fees and hard stop times vary widely and are worth knowing before the day.")],
+            key="venue-checklist"))
+    return _article_shell(
+        path="/blog/greenhouse-wedding-venue-checklist/",
+        title="The Greenhouse Wedding Venue Checklist: 20 Questions",
+        desc=("20 questions to ask any greenhouse, conservatory or botanical garden wedding venue "
+              "before you book — ventilation, catering, logistics and cover, all in one checklist."),
+        h1="The greenhouse wedding venue checklist: 20 questions to ask before you book",
+        dek=("Every question a glasshouse venue raises that a generic wedding checklist does not, "
+             "collected in one place — with an interactive version you can save."),
+        section="Planning", read=8,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-checklist", "Why a checklist"),
+             ("core", "The core question"),
+             ("checklist-items", "The 20 questions"),
+             ("use-it", "Using the checklist")],
+        body=body, faq_items=faqs.BLOG_CHECKLIST,
+        faq_heading="Venue checklist FAQs",
+        related=[("/blog/greenhouse-wedding-cost/", "Greenhouse wedding cost", "Costs"),
+                 ("/blog/rain-proof-outdoor-wedding-venues/", "Rain-proof outdoor wedding venues", "Planning"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["greenhouse wedding venues", "wedding venue checklist", "conservatory wedding venues"],
+        words=900, all_venues=all_venues)
+
+
 # ============================================================= BLOG INDEX ====
 def blog_index(all_venues):
     st = stats(all_venues)
@@ -619,6 +1564,56 @@ def blog_index(all_venues):
          "What actually makes a glasshouse work at a small size, and where micro-wedding rooms hide inside larger gardens.",
          "Micro-weddings", "8 min", "2026-09-06", "small-venues-guide.jpg",
          "A bride in a veil during an intimate ceremony under string lights in a small glasshouse."),
+        ("/blog/conservatory-vs-greenhouse/",
+         "Conservatory vs. greenhouse vs. orangery: a field guide",
+         "The three words get used interchangeably in venue listings. Here is what actually separates them and why it matters for your booking.",
+         "Types", "7 min", "2026-09-18", "/assets/img/patterns/wide-01.svg",
+         "Decorative botanical pattern"),
+        ("/blog/botanical-garden-wedding-rules/",
+         "Botanical garden weddings: rules, catering and what to ask",
+         "A botanical garden is a public institution first and an event venue second. That order shapes almost every rule you will run into.",
+         "Planning", "7 min", "2026-09-18", "/assets/img/patterns/wide-02.svg",
+         "Decorative botanical pattern"),
+        ("/blog/greenhouse-ventilation-heating/",
+         "Ventilation and heating: will your glasshouse actually work?",
+         "Glass concentrates heat and traps humidity. The questions that tell you whether a venue has actually solved this or just hopes for a mild day.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/pattern-01.svg",
+         "Decorative botanical pattern"),
+        ("/blog/winter-greenhouse-wedding/",
+         "Planning a winter greenhouse wedding",
+         "Glass and low winter light are a genuinely good match. What to check before you book a cold-season date.",
+         "Planning", "7 min", "2026-09-18", "/assets/img/patterns/pattern-02.svg",
+         "Decorative botanical pattern"),
+        ("/blog/summer-greenhouse-wedding/",
+         "Planning a summer greenhouse wedding",
+         "The season with the most daylight is also the one where glass heat becomes a real planning problem. How to avoid the July afternoon mistake.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/pattern-03.svg",
+         "Decorative botanical pattern"),
+        ("/blog/greenhouse-wedding-catering/",
+         "Catering at a greenhouse wedding: BYO vs. in-house",
+         "Whether you can bring your own caterer changes the whole budget conversation. What to ask before you fall in love with a venue.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/pattern-04.svg",
+         "Decorative botanical pattern"),
+        ("/blog/how-far-in-advance-book-greenhouse-venue/",
+         "How far in advance to book a greenhouse wedding venue",
+         "Glasshouses are a small category with an outsized following. What that does to the booking calendar.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/pattern-05.svg",
+         "Decorative botanical pattern"),
+        ("/blog/greenhouse-elopement-micro-ceremony/",
+         "Elopements and micro-ceremonies in a glasshouse",
+         "A small glasshouse can be the entire wedding, not a consolation prize. What changes when the guest list is under 20.",
+         "Micro-weddings", "6 min", "2026-09-18", "/assets/img/patterns/pattern-06.svg",
+         "Decorative botanical pattern"),
+        ("/blog/vendor-logistics-glass-venues/",
+         "Vendor logistics at glass venues: a briefing for caterers and florists",
+         "The questions your caterer and florist actually need answered before they quote on a glasshouse booking.",
+         "Logistics", "6 min", "2026-09-18", "/assets/img/patterns/square-01.svg",
+         "Decorative botanical pattern"),
+        ("/blog/greenhouse-wedding-venue-checklist/",
+         "The greenhouse wedding venue checklist: 20 questions",
+         "Every question from every guide on this site, in one interactive checklist you can work through on a tour.",
+         "Planning", "8 min", "2026-09-18", "/assets/img/patterns/square-02.svg",
+         "Decorative botanical pattern"),
     ]
 
     blog_ld = {
@@ -638,7 +1633,7 @@ def blog_index(all_venues):
 
     cards_html = "\n".join(f"""        <article class="card-interactive group relative flex flex-col overflow-hidden">
           <div class="aspect-[16/10] overflow-hidden bg-botanical-900">
-            <img src="/assets/img/blog/{img}" alt="{alt}" width="1600" height="900"
+            <img src="{img if img.startswith('/') else f'/assets/img/blog/{img}'}" alt="{alt}" width="1600" height="900"
                  loading="lazy" decoding="async"
                  class="size-full object-cover transition-transform duration-700 ease-editorial group-hover:scale-105">
           </div>
@@ -664,8 +1659,8 @@ def blog_index(all_venues):
         Greenhouse wedding planning guides
       </h1>
       <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-500">
-        Practical guides to getting married under glass. Three published so far &mdash; we would
-        rather publish three we can stand behind than thirty padded with numbers we cannot source.
+        Practical guides to getting married under glass. Thirteen published so far &mdash; we would
+        rather publish thirteen we can stand behind than a hundred padded with numbers we cannot source.
       </p>
     </header>
 
