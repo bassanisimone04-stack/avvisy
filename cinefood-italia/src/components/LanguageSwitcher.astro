@@ -4,9 +4,9 @@
  * dispositivo (le emoji-bandiera non funzionano su Windows).
  * Rimanda alla stessa pagina nell'altra lingua e ricorda la scelta.
  */
-import { getLang, stripLang, path } from "../i18n/ui";
+import { getLang, stripLang, path, cleanPathname } from "../i18n/ui";
 
-const pathname = Astro.url.pathname;
+const pathname = cleanPathname(Astro.url.pathname);
 const current = getLang(pathname);
 const base = stripLang(pathname);
 

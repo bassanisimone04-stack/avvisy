@@ -3,7 +3,7 @@
  * Componente SEO: meta tag, Open Graph, canonical, hreflang e JSON-LD.
  */
 import { SITE } from "../config/site";
-import { type Lang, stripLang, path } from "../i18n/ui";
+import { type Lang, stripLang, path, cleanPathname } from "../i18n/ui";
 
 interface Props {
   title?: string;
@@ -30,9 +30,10 @@ const defaultDesc =
 const desc = description ?? defaultDesc;
 
 const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).href;
+const normalizedPath = cleanPathname(Astro.url.pathname);
+const canonical = new URL(normalizedPath, Astro.site ?? SITE.url).href;
 // Versioni alternative nelle due lingue (hreflang) per la SEO internazionale.
-const basePath = stripLang(Astro.url.pathname);
+const basePath = stripLang(normalizedPath);
 const itHref = new URL(path(basePath, "it"), Astro.site ?? SITE.url).href;
 const enHref = new URL(path(basePath, "en"), Astro.site ?? SITE.url).href;
 const ogImage = image

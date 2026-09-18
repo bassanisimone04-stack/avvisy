@@ -92,6 +92,31 @@ buona ma non verificata che pubblicare un'informazione falsa.
   la variante inglese), più `prenotazioni[]`/`esperienze[]` opzionali
   per i box di affiliazione.
 
+## SEO tecnica: URL senza slash finale, sempre
+
+Il sito usa `trailingSlash: "never"` + `build: { format: "file" }` in
+`astro.config.mjs`: ogni pagina ha **una sola URL reale, senza slash
+finale** (es. `/blog/slug`, mai `/blog/slug/`), coerente con come sono
+scritti tutti i link interni nel codice. Questo evita redirect inutili
+e le varianti slash/no-slash indicizzate come pagine separate in
+Search Console (causa reale di un problema di "duplicata: canonical
+diversa" già osservato).
+
+**Attenzione**: con `build.format: "file"`, `Astro.url.pathname`
+espone il pathname CON l'estensione `.html` (es. `/blog/slug.html`)
+durante il build statico. Non usarlo mai direttamente per costruire
+canonical, hreflang o confronti di percorso — passalo sempre prima
+per `cleanPathname()` (`src/i18n/ui.ts`), che rimuove `.html` e slash
+finale. È già usato in `SEO.astro`, `LanguageSwitcher.astro` e
+`Header.astro`; usalo in qualsiasi nuovo componente che legge
+`Astro.url`.
+
+Non è presente (e non serve) un redirect automatico basato sulla
+lingua del browser: fu rimosso perché Google sconsiglia esplicitamente
+i redirect basati su `navigator.language`/`Accept-Language`, che
+possono portare Googlebot lontano dalla pagina che sta cercando di
+indicizzare. La scelta della lingua resta manuale (bandiere in header).
+
 ## Checklist SEO per ogni articolo di blog
 
 - `titolo`: lunghezza + 18 caratteri ≤ 70 (spazio per il suffisso del
@@ -126,9 +151,12 @@ invece di pubblicare un articolo a parte.
 2. **Type/content check**: `npx astro check` deve dare 0 errori.
 3. **Build**: `npm run build` deve completare senza errori.
 4. **Link rotti**: esiste uno script di controllo link salvato in
-   `/tmp/check-links.mjs` (rigenera lo script se manca, cercando i
-   link interni nell'output di `dist/`) — due falsi positivi noti e
-   accettabili: `dist/404.html -> /404/` e `/en/404/`.
+   `/tmp/check-links.mjs` (rigenera lo script se manca — deve
+   costruire l'elenco delle route dai file `.html` generati in
+   `dist/`, es. `dist/blog/slug.html` → `/blog/slug`, dato che il
+   sito usa `build.format: "file"`, non cartelle con `index.html`).
+   Un sito pulito deve dare **0 link rotti**: non ci sono più falsi
+   positivi noti da quando esiste anche `src/pages/en/404.astro`.
 5. **Coerenza EN**: ogni film/ristorante deve avere una voce
    corrispondente in `filmsEn`/`restaurantsEn` dentro
    `src/i18n/content-en.ts`. Controllo rapido: confronta gli slug dei
