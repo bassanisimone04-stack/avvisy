@@ -149,6 +149,13 @@ HUB = [
    'Yes — historic <em>limonaie</em> and estate glasshouses host weddings across the country. See the '
    '<a href="/italy-destination-weddings/">Italy destination collection</a> for listings and the '
    'legal requirements for US couples.'),
+
+  ('How many guests actually fit in a glasshouse or conservatory?',
+   'As a rough planning figure, a seated dinner needs about 12&ndash;15 square feet per guest, and a '
+   'dance floor adds roughly 2&ndash;4 square feet per guest on top of that — so a venue&rsquo;s '
+   'published maximum, if it is based on standing room, can overstate what actually fits with a full '
+   'seated reception and dancing. Use it as a starting point, then ask the venue what it holds for a '
+   'seated dinner with a band or DJ.'),
 ]
 
 
@@ -468,6 +475,17 @@ BLOG_BOTANICAL = [
    'while the rest stays open to members or the public until closing time. Full-property exclusivity, '
    'where offered at all, is usually a separate and higher-priced package. Ask specifically what area '
    'your rental actually covers.'),
+
+  ('Do I need a permit to get married at a botanical garden?',
+   'Often, separately from the rental fee itself — many public gardens require a use or event permit '
+   'with its own application and lead time, sometimes several weeks. Ask about this early, since the '
+   'permit process can take longer than the venue&rsquo;s own booking confirmation.'),
+
+  ('Are bees and pollen a real concern at a botanical garden wedding?',
+   'Live, flowering plantings can attract more bees and carry more pollen than a standard reception '
+   'room — worth knowing if a guest has a pollen or bee-sting allergy. It is rarely a reason to rule a '
+   'venue out, but ask what will be in bloom on your date and let allergy-prone guests know what to '
+   'expect.'),
 ]
 
 
@@ -636,6 +654,12 @@ BLOG_VENDORS = [
    'gardens are often close to residential areas and enforce an earlier cutoff than a standalone event '
    'venue would. Glass and hard floors also carry sound differently than a carpeted ballroom — a band '
    'that has not played the room before may want to hear that from the venue directly.'),
+
+  ('Do caterers and other vendors need their own liability insurance at a glass venue?',
+   'Usually yes, and public gardens and estate conservatories tend to enforce it more consistently than '
+   'a standard rented hall — commonly a certificate of insurance naming the venue as additional insured. '
+   'Confirm the required coverage amount and the deadline for providing proof with every vendor, not just '
+   'the caterer, since some venues expect it from florists and band or DJ crews too.'),
 ]
 
 
@@ -659,4 +683,10 @@ BLOG_CHECKLIST = [
    'Our <a href="/blog/greenhouse-wedding-cost/">cost guide</a> has an interactive quote checklist you '
    'can copy or save in this browser, covering the specific questions glass buildings raise that a '
    'generic wedding checklist does not.'),
+
+  ('Do I need to buy my own event insurance as the couple?',
+   'Many public gardens and estate venues require it separately from anything a caterer or vendor '
+   'already carries, usually a one-day policy naming the venue as additional insured. It is worth '
+   'asking early, since it is quick and inexpensive to arrange but easy to forget until a venue asks '
+   'for proof close to the date.'),
 ]
