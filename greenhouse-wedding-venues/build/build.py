@@ -128,6 +128,17 @@ def build_all():
     write("index.html", page_home.build(VENUES))
 
     # ------------------------------------------------------------ /venues/ ---
+    us_state_slugs = sorted(
+        {(v["state"], v["state_slug"]) for v in VENUES if v["country"] == "US"},
+        key=lambda t: t[0])
+    state_counts = {slug: sum(1 for v in VENUES if v["state_slug"] == slug) for _, slug in us_state_slugs}
+    browse_by_state = "\n".join(
+        f'          <li><a class="chip" href="/venues/{slug}/">{name} '
+        f'<span class="text-ink-500">({state_counts[slug]})</span></a></li>'
+        for name, slug in us_state_slugs)
+    browse_by_state += (f'\n          <li><a class="chip" href="/italy-destination-weddings/">Italy '
+                         f'<span class="text-ink-500">({len([v for v in VENUES if v["country"] != "US"])})</span></a></li>')
+
     write("venues/index.html", directory_page(
         path="/venues/", title="Browse Greenhouse &amp; Conservatory Wedding Venues | Directory",
         desc=("Every greenhouse, glasshouse and conservatory wedding venue in the directory, "
@@ -167,6 +178,13 @@ def build_all():
           directories work and why so few of them are worth trusting.
           <a href="/methodology/">Our sourcing rules</a> explain the trade in full.
         </p>"""),
+            ("browse-by-state", "Browse by state",
+             f"""        <p>
+          Every state and region currently in the directory, with how many listings each has.
+        </p>
+        <ul class="not-prose mt-4 flex flex-wrap gap-2">
+{browse_by_state}
+        </ul>"""),
         ],
         faq_items=faqs.HUB, nav_key="venues", related=RELATED_ALL))
 
