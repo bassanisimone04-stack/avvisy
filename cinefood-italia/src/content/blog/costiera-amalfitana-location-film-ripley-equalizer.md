@@ -3,7 +3,7 @@ titolo: "Costiera Amalfitana nei film: Ripley e Equalizer 3"
 descrizione: "Le location cinematografiche vere della Costiera Amalfitana: Atrani in Ripley (Netflix) e in The Equalizer 3, Positano in Hotel Costiera."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25
-immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagine: "../../assets/placeholder/costiera-amalfitana-location-film-ripley-equalizer.jpg"
 immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
 tags: ["Costiera Amalfitana", "Atrani", "Positano", "Ripley", "The Equalizer 3"]
 faq:

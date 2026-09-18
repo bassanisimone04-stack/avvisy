@@ -3,7 +3,7 @@ titolo: "Amalfi Coast Filming Locations: Ripley, Equalizer"
 descrizione: "The real Amalfi Coast filming locations: Atrani in Netflix's Ripley and in The Equalizer 3, Positano in Hotel Costiera."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-25
-immagine: "../../assets/placeholder/blog-costiera-positano-vero.jpg"
+immagine: "../../assets/placeholder/costiera-amalfitana-location-film-ripley-equalizer.jpg"
 immagineAlt: "Positano and the Amalfi Coast lit up at sunset"
 tags: ["Amalfi Coast", "Atrani", "Positano", "Ripley", "The Equalizer 3"]
 faq:

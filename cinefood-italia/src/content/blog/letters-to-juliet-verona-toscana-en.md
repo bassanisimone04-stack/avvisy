@@ -3,7 +3,7 @@ titolo: "Letters to Juliet: Verona and Tuscany"
 descrizione: "The Letters to Juliet locations between Verona, with the House of Juliet, and the wine hills of Tuscany."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagine: "../../assets/placeholder/letters-to-juliet-verona-toscana.jpg"
 immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
 tags: ["Letters to Juliet", "Verona", "Tuscany", "wine", "film tourism"]
 faq:

@@ -3,7 +3,7 @@ titolo: "8 Italian Villages to Discover Thanks to Cinema"
 descrizione: "From Savoca to Castellabate, Italy's most beautiful villages turned into film sets, with their local specialities."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
-immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagine: "../../assets/placeholder/borghi-italiani-del-cinema.jpg"
 immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
 tags: ["villages", "itineraries", "cinema", "Italy"]
 faq:

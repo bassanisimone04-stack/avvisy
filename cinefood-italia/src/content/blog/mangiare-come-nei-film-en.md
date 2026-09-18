@@ -3,7 +3,7 @@ titolo: "Eat Like in the Movies: 4 Verified Stops"
 descrizione: "Four real restaurants, verified Italian film locations, backed by reliable sources. Where to eat like in the movies."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-01
-immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagine: "../../assets/placeholder/mangiare-come-nei-film.jpg"
 immagineAlt: "A table laid with dishes from the Italian tradition"
 tags: ["itineraries", "food", "cinema", "Sicily", "Cilento"]
 faq:

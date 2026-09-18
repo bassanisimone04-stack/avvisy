@@ -3,7 +3,7 @@ titolo: "Letters to Juliet: Verona e la Toscana"
 descrizione: "I luoghi di Letters to Juliet tra Verona, con la Casa di Giulietta, e le colline del vino in Toscana."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
-immagine: "../../assets/placeholder/blog-borgo-vicolo-vero.jpg"
+immagine: "../../assets/placeholder/letters-to-juliet-verona-toscana.jpg"
 immagineAlt: "Vicolo in pietra di un borgo italiano, con vasi di piante sulle scale"
 tags: ["Letters to Juliet", "Verona", "Toscana", "vino", "cineturismo"]
 faq:

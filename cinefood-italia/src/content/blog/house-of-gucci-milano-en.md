@@ -3,7 +3,7 @@ titolo: "House of Gucci: Lady Gaga's Milan"
 descrizione: "The Milan of Lady Gaga and Adam Driver in House of Gucci, from the Galleria Vittorio Emanuele to the places of fashion. Where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12
-immagine: "../../assets/placeholder/blog-lago-nord-vero.jpg"
+immagine: "../../assets/placeholder/house-of-gucci-milano.jpg"
 immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
 tags: ["House of Gucci", "Milan", "fashion", "film tourism"]
 faq:

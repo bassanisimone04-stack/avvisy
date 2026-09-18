@@ -3,7 +3,7 @@ titolo: "Set reale o a tema? Come riconoscerli"
 descrizione: "La differenza tra un vero set cinematografico e un locale a tema: come riconoscere i ristoranti veri dei film."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-12
-immagine: "../../assets/placeholder/blog-set-cinema-vero.jpg"
+immagine: "../../assets/placeholder/set-reale-o-a-tema.jpg"
 immagineAlt: "Troupe cinematografica al lavoro su un set, tra luci e cavalletti"
 tags: ["guida", "consigli", "cinema"]
 faq:

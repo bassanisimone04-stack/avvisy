@@ -3,7 +3,7 @@ titolo: "The Odyssey di Nolan in Sicilia: Favignana"
 descrizione: "The Odyssey di Nolan è girato a Favignana, Sicilia. Location del film e i sapori dell'isola: tonno e mattanza."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-07
-immagine: "../../assets/placeholder/blog-sicilia-costa-vero.jpg"
+immagine: "../../assets/placeholder/the-odyssey-nolan-sicilia-favignana.jpg"
 immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
 tags: ["The Odyssey", "Nolan", "Sicilia", "Favignana", "cineturismo"]
 faq:

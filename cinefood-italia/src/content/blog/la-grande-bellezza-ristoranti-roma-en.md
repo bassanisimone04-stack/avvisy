@@ -3,7 +3,7 @@ titolo: "The Great Beauty: Rome's Film Restaurants"
 descrizione: "Where Jep Gambardella dines in The Great Beauty: La Veranda dell'Hotel Columbus and Sorrentino's dreamlike Rome."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-19
-immagine: "../../assets/placeholder/blog-roma-skyline-vero.jpg"
+immagine: "../../assets/placeholder/la-grande-bellezza-ristoranti-roma.jpg"
 immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["The Great Beauty", "Rome", "restaurants", "film tourism", "Sorrentino"]
 faq:

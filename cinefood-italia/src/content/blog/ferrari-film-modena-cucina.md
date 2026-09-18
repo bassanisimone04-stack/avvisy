@@ -3,7 +3,7 @@ titolo: "Ferrari, il film: Modena tra motori e cucina"
 descrizione: "Il film Ferrari di Michael Mann è ambientato a Modena: motori e capitale del gusto, tra tortellini e aceto balsamico."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26
-immagine: "../../assets/placeholder/blog-ristorante-elegante-vero.jpg"
+immagine: "../../assets/placeholder/ferrari-film-modena-cucina.jpg"
 immagineAlt: "Sala di un ristorante elegante, atmosfera da film"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "dove mangiare", "cineturismo"]
 faq:

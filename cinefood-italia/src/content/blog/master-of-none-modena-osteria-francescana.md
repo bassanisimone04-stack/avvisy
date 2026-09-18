@@ -3,7 +3,7 @@ titolo: "Master of None: Modena e Osteria Francescana"
 descrizione: "Master of None arriva davvero a Modena: Dev scopre Osteria Francescana di Massimo Bottura, tra i migliori ristoranti al mondo, e l'Emilia gastronomica."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/blog-tavola-vero.jpg"
+immagine: "../../assets/placeholder/master-of-none-modena-osteria-francescana.jpg"
 immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["Master of None", "Modena", "Netflix", "Osteria Francescana", "cineturismo"]
 faq:
