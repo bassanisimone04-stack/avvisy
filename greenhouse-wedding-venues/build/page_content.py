@@ -1537,6 +1537,327 @@ def checklist_guide(all_venues):
         words=900, all_venues=all_venues)
 
 
+def insurance_permits_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Most public gardens and estate venues require a one-day liability policy naming the venue as additional insured, separate from any coverage a caterer already carries.</li>
+            <li>$1 million per occurrence / $2 million aggregate is a common baseline, though the specific venue sets its own minimum.</li>
+            <li>A public garden or municipal glasshouse may also require a separate use permit, with its own lead time.</li>
+            <li>Basic coverage is inexpensive and quick to buy — the risk is forgetting to ask until a venue requests proof close to the date.</li>
+          </ul>
+        </aside>
+
+        <h2 id="what-it-is">What "event insurance" actually means here</h2>
+        <p>
+          A one-day special event liability policy is a short-term insurance certificate that covers a
+          single date, protecting the policyholder (usually the couple, sometimes a vendor) against
+          claims like a guest injury or property damage during the event. It is separate from a
+          caterer&rsquo;s or florist&rsquo;s own business liability insurance, which covers their
+          operations generally, not your specific wedding date.
+        </p>
+        <p>
+          Public gardens, museums and historic estates ask for it more consistently than a standard
+          rented hall, largely because the building or grounds they are protecting are harder and more
+          expensive to replace.
+        </p>
+
+        <h2 id="how-much">How much coverage venues typically ask for</h2>
+        <p>
+          $1 million per occurrence and $2 million aggregate is a common figure for outdoor and
+          public-venue weddings in the US, and it is what most one-day policies default to. Some city-
+          or county-run gardens set a higher minimum. The venue&rsquo;s own rental packet is the source
+          that matters here &mdash; a generic figure from a blog post, including this one, is a starting
+          point for the conversation, not a substitute for asking.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/pattern-01.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Insurance and permits rarely show up on a venue&rsquo;s highlight reel, but they belong on the same checklist as ventilation and catering.</figcaption>
+        </figure>
+
+        <h2 id="cost-timing">Cost and timing</h2>
+        <p>
+          Basic one-day liability policies commonly run well under $200, with higher coverage limits or
+          weather-cancellation add-ons costing more. Most insurers let you buy coverage right up until
+          shortly before the event, which makes it easy to postpone &mdash; buy it once your date and
+          headcount are confirmed rather than leaving it for the final week, since some venues want the
+          certificate on file in advance, not on the wedding day itself.
+        </p>
+
+        <h2 id="permits">Permits are a separate question from insurance</h2>
+        <p>
+          At public botanical gardens and municipal glasshouses, a use or event permit is often required
+          on top of the rental fee and the insurance certificate, with its own application and sometimes
+          a longer lead time than either. See our
+          <a href="/blog/botanical-garden-wedding-rules/">botanical garden rules guide</a> for what else
+          differs about renting inside a public institution.
+        </p>
+
+        <h2 id="who-pays">Who is responsible: the couple or the vendors?</h2>
+        <p>
+          It genuinely varies. Some venues only require the couple&rsquo;s own policy; others require
+          every vendor on site &mdash; caterer, florist, band or DJ &mdash; to carry and prove their own
+          coverage as well. Get the specific requirement in writing from the venue rather than assuming
+          one party&rsquo;s insurance covers the whole event; see our
+          <a href="/blog/vendor-logistics-glass-venues/">vendor logistics guide</a> for what caterers and
+          florists specifically need to know.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/wedding-insurance-permits-glass-venues/",
+        title="Wedding Insurance and Permits for Greenhouse and Garden Venues",
+        desc=("What one-day wedding liability insurance actually covers, how much coverage venues "
+              "typically ask for, and when a public garden also requires a separate permit."),
+        h1="Wedding insurance and permits for greenhouse and garden venues",
+        dek=("The paperwork side of booking a glasshouse or botanical garden venue: what coverage "
+             "venues ask for, who is responsible for it, and how permits fit in."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("what-it-is", "What event insurance means"),
+             ("how-much", "How much coverage"),
+             ("cost-timing", "Cost and timing"),
+             ("permits", "Permits"),
+             ("who-pays", "Who is responsible")],
+        body=body, faq_items=faqs.BLOG_INSURANCE,
+        faq_heading="Insurance and permits FAQs",
+        related=[("/blog/greenhouse-wedding-venue-checklist/", "The venue checklist", "Planning"),
+                 ("/blog/botanical-garden-wedding-rules/", "Botanical garden wedding rules", "Planning"),
+                 ("/blog/vendor-logistics-glass-venues/", "Vendor logistics at glass venues", "Logistics")],
+        keywords=["greenhouse wedding venues", "wedding venue checklist", "botanical garden wedding venues"],
+        words=800, all_venues=all_venues)
+
+
+def capacity_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Plan roughly 12&ndash;15 sq ft per guest for a seated dinner, plus 2&ndash;4 sq ft per guest if there is a dance floor.</li>
+            <li>A venue&rsquo;s published "maximum capacity" is often a standing-room or fire-code figure, not a seated-dinner figure.</li>
+            <li>Ceremony and reception capacity are usually two different numbers for the same room.</li>
+            <li>This directory only publishes a capacity figure once it is confirmed on the venue&rsquo;s own page — a dash means unconfirmed, not small.</li>
+          </ul>
+        </aside>
+
+        <h2 id="the-math">The rough math</h2>
+        <p>
+          As a general planning figure &mdash; not specific to any listed venue &mdash; a seated dinner
+          at round tables needs about 12 to 15 square feet per guest, covering the table, chairs and
+          room to move between them. A dance floor adds roughly 2 to 4 square feet per guest on top of
+          that, and a band, DJ booth, bar or photo backdrop each take a bite out of the room before a
+          single guest arrives.
+        </p>
+        <p>
+          None of this is specific to glasshouses, but it matters more in one: a genuinely beautiful
+          100-person room can turn out to seat 70 once a dance floor, bar and planting are accounted for.
+        </p>
+
+        <h2 id="two-numbers">Why ceremony and reception capacity differ</h2>
+        <p>
+          A ceremony layout &mdash; rows of chairs facing one point &mdash; uses floor space far more
+          efficiently than a reception layout with round tables and a dance floor. The same room can
+          genuinely hold close to twice as many people for a ceremony as it can for a seated dinner.
+          Ask a venue for both figures specifically; a single "capacity" number on a listing page is
+          almost always one or the other, not both.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/square-01.svg" alt="" aria-hidden="true" width="800" height="800"
+               loading="lazy" decoding="async" class="aspect-square w-full rounded-card object-cover">
+          <figcaption>Planting, a dance floor and a band each take real floor space that a headline capacity figure does not always subtract.</figcaption>
+        </figure>
+
+        <h2 id="planting">Does planting reduce usable capacity?</h2>
+        <p>
+          Often, yes, and it is easy to miss. A working greenhouse&rsquo;s listed square footage does
+          not always account for permanent benches, raised beds or large potted specimens that stay in
+          place during an event. Ask whether a quoted capacity already assumes the room as it normally
+          looks, or an empty shell.
+        </p>
+
+        <h2 id="how-full">Should you book right at the maximum?</h2>
+        <p>
+          Generally not. A common rule of thumb among planners is to target around 80% of a venue&rsquo;s
+          maximum for a comfortable guest experience, leaving room for walkways, a gift table,
+          accessibility needs and vendor space. A room that is technically large enough on paper can
+          still feel genuinely packed at full capacity &mdash; see our
+          <a href="/blog/greenhouse-wedding-venue-checklist/">venue checklist</a> for the rest of the
+          questions worth asking on a tour.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/wedding-venue-capacity-planning/",
+        title="How Many Guests Actually Fit? Capacity Planning for Glass Venues",
+        desc=("The square-footage math behind wedding venue capacity, why ceremony and reception "
+              "numbers differ, and why a published maximum can overstate what comfortably fits."),
+        h1="How many guests actually fit? Capacity planning for glass venues",
+        dek=("A venue&rsquo;s headline capacity figure is rarely the number that matters for your "
+             "actual layout — here is the math behind it, and the questions to ask instead."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("the-math", "The rough math"),
+             ("two-numbers", "Ceremony vs. reception"),
+             ("planting", "Does planting reduce capacity"),
+             ("how-full", "Booking at the maximum")],
+        body=body, faq_items=faqs.BLOG_CAPACITY,
+        faq_heading="Capacity planning FAQs",
+        related=[("/blog/small-greenhouse-wedding-venues/", "Small greenhouse wedding venues", "Micro-weddings"),
+                 ("/blog/greenhouse-wedding-venue-checklist/", "The venue checklist", "Planning"),
+                 ("/venues/", "Browse every listing", "Directory")],
+        keywords=["greenhouse wedding venues", "small greenhouse wedding venues", "conservatory wedding venues"],
+        words=750, all_venues=all_venues)
+
+
+def spring_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Spring is, alongside autumn, one of the two seasons glasshouse venues book out furthest in advance.</li>
+            <li>Mild temperatures make ventilation easier to manage than summer heat.</li>
+            <li>Spring is also peak bloom and peak pollen in most of the US &mdash; worth a mention to allergy-prone guests.</li>
+            <li>A fully enclosed glasshouse is a common spring choice specifically because spring rain is common too.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-spring">Why spring suits a glasshouse wedding</h2>
+        <p>
+          Spring pairs two things a glass building is genuinely good at: mild outdoor temperatures,
+          which make ventilation and comfort easier to manage than in high summer, and peak seasonal
+          bloom, which fills the room and the grounds around it without any decorating effort. Public
+          gardens in particular tend to look their fullest in spring, since it is when most flowering
+          displays are timed to peak.
+        </p>
+
+        <h2 id="still-need-rain-plan">Spring weather still means a rain plan</h2>
+        <p>
+          Spring is one of the wetter seasons across much of the US, which is part of why a fully
+          enclosed glasshouse is such a common choice for a spring wedding in the first place. See our
+          <a href="/blog/rain-proof-outdoor-wedding-venues/">rain-proof venues guide</a> for what the
+          phrase should actually mean before you assume a venue qualifies.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/wide-02.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Spring plantings fill a glasshouse without any additional decor budget &mdash; the trade-off is a booking calendar that fills just as fast.</figcaption>
+        </figure>
+
+        <h2 id="pollen">Pollen and allergies in spring</h2>
+        <p>
+          Spring is peak pollen season in most of the US, and a greenhouse or botanical garden is, by
+          definition, full of the flowering plants that produce it. It is rarely a reason to rule a
+          venue out, but it is worth mentioning to any guest with known seasonal allergies, and worth
+          asking the venue what will actually be in bloom on your date.
+        </p>
+
+        <h2 id="booking-window">How far ahead to book a spring date</h2>
+        <p>
+          Spring and autumn are, together, the two seasons that book out furthest for popular
+          glasshouses &mdash; commonly 12 to 18 months ahead, per our
+          <a href="/blog/how-far-in-advance-book-greenhouse-venue/">booking timeline guide</a>. A
+          specific weekend at peak bloom tends to be the first thing to go.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/spring-greenhouse-wedding/",
+        title="Planning a Spring Greenhouse Wedding",
+        desc=("Why spring suits a glasshouse wedding, why a rain plan still matters, and what peak "
+              "bloom season means for pollen and booking windows."),
+        h1="Planning a spring greenhouse wedding",
+        dek=("The season glasshouse venues book out fastest for &mdash; what makes spring work, and "
+             "what to plan around before you commit to a date."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-spring", "Why spring works"),
+             ("still-need-rain-plan", "Still need a rain plan"),
+             ("pollen", "Pollen and allergies"),
+             ("booking-window", "How far ahead to book")],
+        body=body, faq_items=faqs.BLOG_SPRING,
+        faq_heading="Spring wedding FAQs",
+        related=[("/blog/how-far-in-advance-book-greenhouse-venue/", "How far in advance to book", "Planning"),
+                 ("/blog/rain-proof-outdoor-wedding-venues/", "Rain-proof outdoor wedding venues", "Planning"),
+                 ("/blog/fall-greenhouse-wedding/", "Planning a fall greenhouse wedding", "Planning")],
+        keywords=["greenhouse wedding venues", "botanical garden wedding venues", "rain-proof outdoor wedding venues"],
+        words=700, all_venues=all_venues)
+
+
+def fall_guide(all_venues):
+    body = """        <aside class="not-prose rounded-card border-l-2 border-champagne-500 bg-champagne-50/60 p-6" data-key-takeaways aria-labelledby="takeaways-heading">
+          <h2 id="takeaways-heading" class="font-sans text-xs font-bold uppercase tracking-[0.16em] text-champagne-700">In short</h2>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed text-ink-700">
+            <li>Autumn is, alongside spring, one of the two seasons glasshouse venues book out furthest in advance.</li>
+            <li>The same day can need both ventilation in the afternoon and heating after sunset — ask about both.</li>
+            <li>Daylight saving time can shift usable daylight by an hour between two dates a few weeks apart.</li>
+            <li>Peak-foliage weekends tend to book first, the same way peak-bloom spring weekends do.</li>
+          </ul>
+        </aside>
+
+        <h2 id="why-fall">Why autumn suits a glasshouse wedding</h2>
+        <p>
+          Mild daytime temperatures make ventilation easier to manage than a summer afternoon, and
+          low, golden late-day light is particularly flattering through glass &mdash; a large part of
+          why photographers often name autumn as a favorite season for glasshouse weddings. Many public
+          gardens are also still in active bloom well into early autumn, depending on climate and
+          region.
+        </p>
+
+        <h2 id="both-ends">A day that can need both ventilation and heat</h2>
+        <p>
+          Autumn is the season most likely to need both ends of a glasshouse&rsquo;s climate system on
+          the same day: an early-autumn afternoon can still run warm enough to need ventilation, while
+          the same evening after sunset can turn cold enough to need heat. Ask about both, the same way
+          you would for a winter date &mdash; see our
+          <a href="/blog/greenhouse-ventilation-heating/">ventilation and heating guide</a> for the
+          specific questions.
+        </p>
+
+        <figure class="my-10">
+          <img src="/assets/img/patterns/pattern-02.svg" alt="" aria-hidden="true" width="1600" height="900"
+               loading="lazy" decoding="async" class="aspect-[16/10] w-full rounded-card object-cover">
+          <figcaption>Low autumn light through glass is a large part of why photographers often name it a favorite wedding season.</figcaption>
+        </figure>
+
+        <h2 id="daylight">Daylight saving time can move your timeline</h2>
+        <p>
+          Clocks changing partway through autumn in the US means a date in early October and a date in
+          early November can have a meaningfully different sunset time, even though they feel like the
+          "same season." Check the actual sunset time for your specific date rather than assuming it
+          matches an earlier autumn wedding you attended, especially if outdoor photos or a cocktail
+          hour are planned around golden hour.
+        </p>
+
+        <h2 id="booking-window">How far ahead to book a fall date</h2>
+        <p>
+          Autumn and spring are, together, the two seasons that book out furthest for popular
+          glasshouses &mdash; commonly 12 to 18 months ahead, per our
+          <a href="/blog/how-far-in-advance-book-greenhouse-venue/">booking timeline guide</a>. Peak
+          foliage weekends in particular tend to be the first dates to go.
+        </p>
+"""
+    return _article_shell(
+        path="/blog/fall-greenhouse-wedding/",
+        title="Planning a Fall Greenhouse Wedding",
+        desc=("Why autumn suits a glasshouse wedding, why the same day can need both ventilation and "
+              "heat, and how daylight saving time can shift your photo and ceremony timeline."),
+        h1="Planning a fall greenhouse wedding",
+        dek=("Golden light and mild afternoons make autumn a favorite glasshouse season &mdash; here is "
+             "what else to plan around before you book a date."),
+        section="Planning", read=6,
+        published="2026-09-18T09:00:00-04:00", modified="2026-09-18T09:00:00-04:00",
+        toc=[("why-fall", "Why autumn works"),
+             ("both-ends", "Ventilation and heat, same day"),
+             ("daylight", "Daylight saving time"),
+             ("booking-window", "How far ahead to book")],
+        body=body, faq_items=faqs.BLOG_FALL,
+        faq_heading="Autumn wedding FAQs",
+        related=[("/blog/spring-greenhouse-wedding/", "Planning a spring greenhouse wedding", "Planning"),
+                 ("/blog/greenhouse-ventilation-heating/", "Ventilation and heating", "Planning"),
+                 ("/blog/how-far-in-advance-book-greenhouse-venue/", "How far in advance to book", "Planning")],
+        keywords=["greenhouse wedding venues", "conservatory wedding venues", "botanical garden wedding venues"],
+        words=700, all_venues=all_venues)
+
+
 # ============================================================= BLOG INDEX ====
 def blog_index(all_venues):
     st = stats(all_venues)
@@ -1610,6 +1931,26 @@ def blog_index(all_venues):
          "Every question from every guide on this site, in one interactive checklist you can work through on a tour.",
          "Planning", "8 min", "2026-09-18", "/assets/img/patterns/square-02.svg",
          "Decorative botanical pattern"),
+        ("/blog/wedding-insurance-permits-glass-venues/",
+         "Wedding insurance and permits for greenhouse and garden venues",
+         "What one-day liability insurance actually covers, how much venues typically ask for, and when a permit is a separate requirement.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/pattern-01.svg",
+         "Decorative botanical pattern"),
+        ("/blog/wedding-venue-capacity-planning/",
+         "How many guests actually fit? Capacity planning for glass venues",
+         "The square-footage math behind venue capacity, and why a published maximum can overstate what comfortably fits.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/square-01.svg",
+         "Decorative botanical pattern"),
+        ("/blog/spring-greenhouse-wedding/",
+         "Planning a spring greenhouse wedding",
+         "Why spring suits a glasshouse wedding, why a rain plan still matters, and what peak bloom means for booking windows.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/wide-02.svg",
+         "Decorative botanical pattern"),
+        ("/blog/fall-greenhouse-wedding/",
+         "Planning a fall greenhouse wedding",
+         "Why autumn suits a glasshouse wedding, why the same day can need both ventilation and heat, and how daylight saving time shifts your timeline.",
+         "Planning", "6 min", "2026-09-18", "/assets/img/patterns/pattern-02.svg",
+         "Decorative botanical pattern"),
     ]
 
     blog_ld = {
@@ -1655,8 +1996,8 @@ def blog_index(all_venues):
         Greenhouse wedding planning guides
       </h1>
       <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-ink-500">
-        Practical guides to getting married under glass. Thirteen published so far &mdash; we would
-        rather publish thirteen we can stand behind than a hundred padded with numbers we cannot source.
+        Practical guides to getting married under glass. Seventeen published so far &mdash; we would
+        rather publish seventeen we can stand behind than a hundred padded with numbers we cannot source.
       </p>
     </header>
 

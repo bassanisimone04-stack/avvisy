@@ -302,6 +302,10 @@ def build_all():
     write("blog/greenhouse-elopement-micro-ceremony/index.html", page_content.elopement_guide(VENUES))
     write("blog/vendor-logistics-glass-venues/index.html", page_content.vendor_logistics_guide(VENUES))
     write("blog/greenhouse-wedding-venue-checklist/index.html", page_content.checklist_guide(VENUES))
+    write("blog/wedding-insurance-permits-glass-venues/index.html", page_content.insurance_permits_guide(VENUES))
+    write("blog/wedding-venue-capacity-planning/index.html", page_content.capacity_guide(VENUES))
+    write("blog/spring-greenhouse-wedding/index.html", page_content.spring_guide(VENUES))
+    write("blog/fall-greenhouse-wedding/index.html", page_content.fall_guide(VENUES))
     write("methodology/index.html", page_content.methodology(VENUES))
     write("privacy/index.html", page_content.privacy_policy(VENUES))
     write("terms/index.html", page_content.terms_of_use(VENUES))
@@ -337,6 +341,8 @@ def build_all():
             "/blog/how-far-in-advance-book-greenhouse-venue/",
             "/blog/greenhouse-elopement-micro-ceremony/", "/blog/vendor-logistics-glass-venues/",
             "/blog/greenhouse-wedding-venue-checklist/",
+            "/blog/wedding-insurance-permits-glass-venues/", "/blog/wedding-venue-capacity-planning/",
+            "/blog/spring-greenhouse-wedding/", "/blog/fall-greenhouse-wedding/",
             "/methodology/", "/privacy/", "/terms/"]
     urls += [f"/venues/{s}/" for s in state_slugs]
     urls += [C.venue_url(v) for v in VENUES]
