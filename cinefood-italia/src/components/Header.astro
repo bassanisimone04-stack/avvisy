@@ -4,7 +4,7 @@ import { SITE } from "../config/site";
 import ThemeToggle from "./ThemeToggle.astro";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
 import Logo from "./Logo.astro";
-import { useT, path, type Lang } from "../i18n/ui";
+import { useT, path, cleanPathname, type Lang } from "../i18n/ui";
 
 interface Props {
   lang?: Lang;
@@ -20,8 +20,8 @@ const nav = [
   { label: t("nav.guida"), href: path("/guida", lang) },
   { label: t("nav.inserzioni"), href: path("/inserzioni", lang) },
 ];
-const p = Astro.url.pathname;
-const isActive = (href: string) => p === href || p === href + "/";
+const p = cleanPathname(Astro.url.pathname);
+const isActive = (href: string) => p === href;
 ---
 
 <header
