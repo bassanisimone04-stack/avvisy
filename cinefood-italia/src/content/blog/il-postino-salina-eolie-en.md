@@ -17,6 +17,8 @@ faq:
     risposta: "Troisi filmed it knowing he urgently needed heart surgery, but chose to finish shooting first. He died in his sleep just hours after filming wrapped, on the last night of production."
   - domanda: "Is Il Postino based on a book?"
     risposta: "Yes, loosely inspired by the novel Il postino di Neruda (Ardiente paciencia) by Chilean writer Antonio Skármeta, a book Troisi himself loved deeply."
+  - domanda: "What are all the film's locations?"
+    risposta: "Filming lasted 12 weeks from March 14, 1994, and took place between Cinecittà (for the interiors), Pollara on the island of Salina (the main scenes) and Procida, with some additional shots on Pantelleria."
 lang: "en"
 esperienze:
   - nome: "Aeolian Islands Boat Tour"

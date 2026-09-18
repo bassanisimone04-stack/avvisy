@@ -17,6 +17,8 @@ faq:
     risposta: "Perché Troisi girò il film sapendo di dover affrontare urgentemente un intervento al cuore, ma scelse di completare prima le riprese. Morì nel sonno poche ore dopo la fine delle riprese, l'ultima notte di lavorazione."
   - domanda: "Il Postino è tratto da un libro?"
     risposta: "Sì, liberamente ispirato al romanzo Il postino di Neruda (Ardiente paciencia) dello scrittore cileno Antonio Skármeta, molto amato dallo stesso Troisi."
+  - domanda: "Quali sono tutte le location del film?"
+    risposta: "Le riprese, durate 12 settimane dal 14 marzo 1994, si sono svolte tra Cinecittà (per gli interni), Pollara sull'isola di Salina (le scene principali) e Procida, con alcune riprese anche a Pantelleria."
 esperienze:
   - nome: "Tour in barca delle Isole Eolie"
     query: "Aeolian Islands boat tour Salina"
