@@ -122,3 +122,5 @@ le serie TV internazionali continuano a scegliere l'Italia come set — e a
 lasciare dietro di sé location reali, aperte al pubblico. Scopri tutte le
 **[serie TV](/film)** nella nostra directory, o l'elenco completo dei
 **[ristoranti visti negli schermi](/blog/ristoranti-veri-nei-film-italia-lista)**.
+Per portarti tutto in viaggio anche offline, dai un'occhiata a
+**[La Guida CineFood Italia](/blog/la-guida-cinefood-italia-pdf)**.

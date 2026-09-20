@@ -163,4 +163,6 @@ stacks.
 
 We update this list every time we verify a new venue. Explore every location
 in our **[directory](/en/locali)** or on the **[interactive map](/en/mappa)**,
-filtering by city or by film.
+filtering by city or by film. Want them with you offline too? Check out
+**[The CineFood Italia Guide](/en/blog/la-guida-cinefood-italia-pdf)**, our
+downloadable PDF with addresses and ready-made itineraries.
