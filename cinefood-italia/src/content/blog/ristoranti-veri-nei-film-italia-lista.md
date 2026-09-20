@@ -163,4 +163,7 @@ faraglioni.
 
 Questa lista si aggiorna ogni volta che verifichiamo un nuovo locale. Esplora
 tutte le location nella nostra **[directory](/locali)** o sulla
-**[mappa interattiva](/mappa)**, filtrando per città o per film.
+**[mappa interattiva](/mappa)**, filtrando per città o per film. Se preferisci
+averli sempre con te anche offline, scopri
+**[La Guida CineFood Italia](/blog/la-guida-cinefood-italia-pdf)**, il PDF
+scaricabile con indirizzi e itinerari pronti.

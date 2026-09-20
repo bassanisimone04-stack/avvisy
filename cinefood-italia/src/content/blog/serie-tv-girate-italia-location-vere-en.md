@@ -122,3 +122,5 @@ Schiavone*, international TV series keep choosing Italy as their set — and
 leaving behind real locations open to the public. Discover every
 **[TV show](/en/film)** in our directory, or the full list of
 **[restaurants seen on screen](/en/blog/ristoranti-veri-nei-film-italia-lista)**.
+To bring it all along offline too, check out
+**[The CineFood Italia Guide](/en/blog/la-guida-cinefood-italia-pdf)**.
