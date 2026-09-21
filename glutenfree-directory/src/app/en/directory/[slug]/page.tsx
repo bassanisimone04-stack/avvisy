@@ -17,12 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const business = getLocalizedBusiness(base, "en");
   const override = businessSeoOverride(base.slug, "en");
   return pageMetadata({
-    title: override?.title ?? (business.aicCertified
-      ? `${business.name} in ${cityName(business.city, "en")}: AIC-certified gluten-free`
-      : `${business.name} in ${cityName(business.city, "en")}: verified gluten-free menu`),
-    description: override?.description ?? (business.aicCertified
-      ? `${business.shortDescription} AIC-certified: address, hours, phone and gluten-free menu verified on Mappa Senza Glutine.`
-      : `${business.shortDescription} Address, hours, phone and gluten-free menu, verified one by one on Mappa Senza Glutine.`),
+    title: override?.title ?? `${business.name} in ${cityName(business.city, "en")}`,
+    description: override?.description ?? `${business.shortDescription} Address, hours and menu on Mappa Senza Glutine.`,
     path: `/directory/${business.slug}`,
     type: "article",
     locale: "en",

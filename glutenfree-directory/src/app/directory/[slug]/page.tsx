@@ -14,20 +14,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const business = getBusinessBySlug(slug);
   if (!business) return {};
   const cat = getCategoryInfo(business.category);
-  // Il titolo punta su ciò che questa pagina risponde e la scheda Google del
-  // locale no: se è sicuro per un celiaco. Sulle ricerche per nome (es. "il
-  // secchio e l'olivaro porto fluviale") è l'unico motivo per cui qualcuno
-  // dovrebbe cliccare noi invece del sito del locale. Per le schede con
-  // impressioni alte e zero clic (vedi audit Search Console) c'è un override
-  // specifico con quartiere/via e un dettaglio di sicurezza reale.
+  // Titolo breve (nome + città) per restare nel limite SEO di ~60 caratteri
+  // anche con i nomi locale più lunghi (vedi audit meta title/description):
+  // il dettaglio "certificato AIC" o "verificato" resta nella description,
+  // che ha più margine di caratteri. Per le schede con impressioni alte e
+  // zero clic (vedi audit Search Console) c'è un override specifico con
+  // quartiere/via e un dettaglio di sicurezza reale.
   const override = businessSeoOverride(business.slug, "it");
   return pageMetadata({
-    title: override?.title ?? (business.aicCertified
-      ? `${business.name} a ${business.city}: certificato AIC senza glutine`
-      : `${business.name} a ${business.city}: menu senza glutine verificato`),
-    description: override?.description ?? (business.aicCertified
-      ? `${business.shortDescription} Certificato AIC: indirizzo, orari, telefono e menu senza glutine verificati su Mappa Senza Glutine.`
-      : `${business.shortDescription} Indirizzo, orari, telefono e menu senza glutine, verificati uno per uno su Mappa Senza Glutine.`),
+    title: override?.title ?? `${business.name} a ${business.city}`,
+    description: override?.description ?? `${business.shortDescription} Indirizzo, orari e menu su Mappa Senza Glutine.`,
     path: `/directory/${business.slug}`,
     type: "article",
     locale: "it",

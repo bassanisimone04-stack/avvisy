@@ -147,6 +147,8 @@ export interface Product {
   brand: string;
   category: ProductCategory;
   description: string;
+  metaTitle?: string;
+  metaDescription?: string;
   imageSeed: number;
   price: number;
   rating: number;

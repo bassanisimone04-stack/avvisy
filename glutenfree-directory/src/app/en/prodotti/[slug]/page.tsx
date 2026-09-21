@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!base) return {};
   const product = getLocalizedProduct(base, "en");
   return pageMetadata({
-    title: `${product.name} ${product.brand} — gluten-free`,
-    description: `${product.description} Indicative price, AIC certification and where to find it on Mappa Senza Glutine.`,
+    title: product.metaTitle ?? `${product.name} ${product.brand}`,
+    description: product.metaDescription ?? `${product.description} Indicative price and where to find it on Mappa Senza Glutine.`,
     path: `/prodotti/${product.slug}`,
     type: "article",
     locale: "en",

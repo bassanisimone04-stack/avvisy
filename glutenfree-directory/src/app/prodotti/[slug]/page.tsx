@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = getProductBySlug(slug);
   if (!product) return {};
   return pageMetadata({
-    title: `${product.name} ${product.brand} — senza glutine`,
-    description: `${product.description} Prezzo indicativo, certificazione AIC e dove trovarlo su Mappa Senza Glutine.`,
+    title: product.metaTitle ?? `${product.name} ${product.brand}`,
+    description: product.metaDescription ?? `${product.description} Prezzo indicativo e dove trovarlo su Mappa Senza Glutine.`,
     path: `/prodotti/${product.slug}`,
     type: "article",
     locale: "it",
