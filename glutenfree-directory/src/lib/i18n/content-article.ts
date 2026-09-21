@@ -34,7 +34,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
         { title: "Extraintestinal symptoms", body: "Chronic fatigue, iron-deficiency anemia, dermatitis herpetiformis, recurring mouth ulcers and early osteoporosis are typical in adults." },
       ] },
       { h2: "How diagnosis works", body: "Diagnosis is based on blood tests for anti-transglutaminase antibodies, followed by an endoscopy with duodenal biopsy to confirm damage to the intestinal villi. It's essential not to remove gluten from the diet before completing all tests." },
-      { h2: "After diagnosis: the gluten-free diet", body: "The only effective treatment available today is a strictly gluten-free diet for life. Over time the intestinal lining regenerates and symptoms subside. Relying on AIC-certified venues and products helps avoid cross-contamination in everyday life." },
+      { h2: "After diagnosis: the gluten-free diet", body: "The only effective treatment available today is a strictly gluten-free diet for life. Over time the intestinal lining regenerates and symptoms subside. Relying on AIC-certified venues and products helps avoid cross-contamination in everyday life. Some life stages call for specific attention: we cover this, for example, in our guide on <a href=\"/en/blog/celiachia-e-gravidanza-cosa-sapere-per-una-gestazione-serena\">celiac disease and pregnancy</a>." },
     ],
     faqs: [
       { question: "Can celiac disease be cured?", answer: "No, there is no definitive cure: management consists of strictly following a gluten-free diet for life." },
@@ -323,7 +323,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     sections: [
       { h2: "Bologna and Emilia-Romagna", body: "Bologna, historically the capital of Italian food tradition, has seen a growing number of restaurants and artisan pasta shops specializing in gluten-free preparations, often with menus dedicated to homemade fresh pasta." },
       { h2: "Milan, between restaurants and street food", body: "Milan offers one of the highest concentrations of certified venues in Italy, from gluten-free pizzerias to gourmet restaurants, plus a growing offer of street food and dedicated bakeries downtown and in nearby neighborhoods." },
-      { h2: "Puglia and southern Italy", body: "Southern Italy too, led by Puglia and Sicily, has expanded its range of certified accommodations and restaurants in recent years, making it easier to plan a seaside vacation without dietary compromises." },
+      { h2: "Puglia and southern Italy", body: "Southern Italy too, led by Puglia and Sicily, has expanded its range of certified accommodations and restaurants in recent years, making it easier to plan a seaside vacation without dietary compromises. In <a href=\"/en/blog/dove-mangiare-senza-glutine-a-napoli-pizza-sfogliatelle-e-baba-senza-rinunce\">Naples</a> in particular, the range of pizzerias and pastry shops with a dedicated oven has grown a lot, making it easier to enjoy real Neapolitan pizza gluten-free." },
       { h2: "Practical tips for planning the trip", body: "Booking ahead at the most popular venues, especially on weekends and during high season, and checking up-to-date directories with verified reviews helps you build a safe, surprise-free food itinerary." },
     ],
     faqs: [

@@ -43,7 +43,7 @@ const seeds: Seed[] = [
         { title: "Sintomi extraintestinali", body: "Stanchezza cronica, anemia da carenza di ferro, dermatite erpetiforme, aftosi ricorrente e osteoporosi precoce sono manifestazioni tipiche negli adulti." },
       ] },
       { h2: "Come avviene la diagnosi", body: "La diagnosi si basa su esami del sangue per gli anticorpi anti-transglutaminasi, seguiti da una gastroscopia con biopsia duodenale per confermare il danno ai villi intestinali. È fondamentale non eliminare il glutine dalla dieta prima di aver completato gli accertamenti." },
-      { h2: "Dopo la diagnosi: la dieta senza glutine", body: "L'unica terapia efficace oggi disponibile è una dieta rigorosamente priva di glutine per tutta la vita. Con il tempo la mucosa intestinale si rigenera e i sintomi regrediscono. Affidarsi a locali e prodotti certificati AIC aiuta a evitare le contaminazioni crociate nella vita quotidiana." },
+      { h2: "Dopo la diagnosi: la dieta senza glutine", body: "L'unica terapia efficace oggi disponibile è una dieta rigorosamente priva di glutine per tutta la vita. Con il tempo la mucosa intestinale si rigenera e i sintomi regrediscono. Affidarsi a locali e prodotti certificati AIC aiuta a evitare le contaminazioni crociate nella vita quotidiana. Alcune fasi della vita richiedono attenzioni specifiche: ne parliamo, ad esempio, nella guida su <a href=\"/blog/celiachia-e-gravidanza-cosa-sapere-per-una-gestazione-serena\">celiachia e gravidanza</a>." },
     ],
     faqs: [
       { question: "La celiachia si può guarire?", answer: "No, non esiste una cura definitiva: la gestione consiste in una dieta senza glutine seguita rigorosamente e per tutta la vita." },
@@ -347,7 +347,7 @@ const seeds: Seed[] = [
     sections: [
       { h2: "Bologna e l'Emilia-Romagna", body: "Bologna, storicamente capitale della tradizione gastronomica italiana, ha visto crescere negli anni un'offerta molto ampia di ristoranti e pastifici artigianali specializzati in preparazioni senza glutine, spesso con menu dedicati alla pasta fresca fatta in casa." },
       { h2: "Milano, tra ristoranti e street food", body: "Milano offre una delle concentrazioni più alte di locali certificati in Italia, dalle pizzerie gluten free ai ristoranti gourmet, passando per un'offerta crescente di street food e panetterie dedicate in centro e nei quartieri limitrofi." },
-      { h2: "Puglia e il sud Italia", body: "Anche il sud Italia, con Puglia e Sicilia in testa, ha ampliato negli ultimi anni l'offerta di strutture ricettive e ristoranti certificati, rendendo più semplice organizzare una vacanza al mare senza rinunce a livello alimentare." },
+      { h2: "Puglia e il sud Italia", body: "Anche il sud Italia, con Puglia e Sicilia in testa, ha ampliato negli ultimi anni l'offerta di strutture ricettive e ristoranti certificati, rendendo più semplice organizzare una vacanza al mare senza rinunce a livello alimentare. A <a href=\"/blog/dove-mangiare-senza-glutine-a-napoli-pizza-sfogliatelle-e-baba-senza-rinunce\">Napoli</a> in particolare l'offerta di pizzerie e pasticcerie con forno dedicato è cresciuta molto, rendendo più semplice gustare la vera pizza napoletana senza glutine." },
       { h2: "Consigli pratici per organizzare il viaggio", body: "Prenotare con anticipo nei locali più richiesti, soprattutto nei weekend e in alta stagione, e consultare directory aggiornate con recensioni verificate aiuta a costruire un itinerario gastronomico sicuro e senza sorprese." },
     ],
     faqs: [
