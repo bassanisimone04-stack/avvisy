@@ -146,6 +146,8 @@ export const dictionary = {
       addPhotos: "Aggiungi foto",
       addPhotosHint: "Mostra piatti, etichette o l'ambiente ad altri celiaci (max 4 foto).",
       removePhoto: "Rimuovi foto",
+      reviewPhotoAlt: "Foto allegata alla recensione di {author}",
+      reviewPhotoPreviewAlt: "Anteprima foto della recensione",
     },
     blog: {
       title: "Blog Mappa Senza Glutine",
@@ -330,6 +332,8 @@ export const dictionary = {
       addPhotos: "Add photos",
       addPhotosHint: "Show dishes, labels or the venue to other celiacs (max 4 photos).",
       removePhoto: "Remove photo",
+      reviewPhotoAlt: "Photo attached to {author}'s review",
+      reviewPhotoPreviewAlt: "Preview of the review photo",
     },
     blog: {
       title: "Mappa Senza Glutine Blog",

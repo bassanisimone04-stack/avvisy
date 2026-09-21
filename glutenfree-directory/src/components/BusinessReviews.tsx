@@ -6,6 +6,7 @@ import type { Review } from "@/lib/types";
 import { formatDate } from "@/lib/format";
 import { useStore } from "@/lib/store";
 import { useDictionary } from "@/lib/i18n/useLocale";
+import { tf } from "@/lib/i18n/dictionary";
 
 const MAX_PHOTOS = 4;
 
@@ -76,7 +77,7 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
               <div className="mt-3 flex flex-wrap gap-2">
                 {r.photos.map((src, i) => (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img key={i} src={src} alt="" className="h-16 w-16 rounded-lg object-cover" />
+                  <img key={i} src={src} alt={tf(t.business.reviewPhotoAlt, { author: r.author })} className="h-16 w-16 rounded-lg object-cover" />
                 ))}
               </div>
             )}
@@ -109,7 +110,7 @@ export default function BusinessReviews({ reviews }: { reviews: Review[] }) {
             {photos.map((src) => (
               <div key={src} className="relative h-16 w-16 overflow-hidden rounded-lg">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={src} alt="" className="h-full w-full object-cover" />
+                <img src={src} alt={t.business.reviewPhotoPreviewAlt} className="h-full w-full object-cover" />
                 <button
                   type="button"
                   onClick={() => removePhoto(src)}
