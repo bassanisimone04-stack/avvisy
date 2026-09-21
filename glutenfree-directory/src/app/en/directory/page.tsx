@@ -13,15 +13,15 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
     const label = categoryLabelPlural(cat, "en").toLowerCase();
     return pageMetadata({
       title: `Gluten-free ${label} in Italy`,
-      description: `Find verified gluten-free ${label} in Italy: ${cat.descriptionEn.toLowerCase()}`,
+      description: cat.descriptionEn,
       path: `/directory?categoria=${cat.slug}`,
       locale: "en",
     });
   }
 
   return pageMetadata({
-    title: "Map of AIC-certified gluten-free venues in Italy",
-    description: "The map of AIC-certified restaurants and verified gluten-free venues across Italy: filter by city, category and certification to find address, hours and menu.",
+    title: "AIC-Certified Restaurants and Venues in Italy",
+    description: "The map of AIC-certified restaurants and verified gluten-free venues in Italy: filter by city and category, find address and hours.",
     path: "/directory",
     locale: "en",
   });

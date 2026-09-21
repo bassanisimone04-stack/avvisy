@@ -2,7 +2,7 @@ import BlogContent from "@/components/pages/BlogContent";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Blog: guide, ricette e news sulla celiachia e il senza glutine",
+  title: "Blog: guide e ricette senza glutine",
   description: "Articoli su celiachia, alimentazione, ricette, viaggi, salute e prodotti senza glutine, scritti da esperti e dalla community italiana dei celiaci.",
   path: "/blog",
   locale: "it",

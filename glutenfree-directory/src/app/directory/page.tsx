@@ -10,18 +10,17 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
   const cat = categoriaParam ? getCategoryInfo(categoriaParam) : undefined;
 
   if (cat) {
-    const label = categoryLabelPlural(cat, "it").toLowerCase();
     return pageMetadata({
       title: `${categoryLabelPlural(cat, "it")} senza glutine in Italia`,
-      description: `Trova ${label} senza glutine verificati in Italia: ${cat.description.toLowerCase()}`,
+      description: cat.description,
       path: `/directory?categoria=${cat.slug}`,
       locale: "it",
     });
   }
 
   return pageMetadata({
-    title: "Mappa dei ristoranti AIC e locali senza glutine in Italia",
-    description: "La mappa dei ristoranti certificati AIC e dei locali senza glutine verificati in Italia: filtra per città, categoria e certificazione e trova indirizzo, orari e menu.",
+    title: "Ristoranti e locali certificati AIC in Italia",
+    description: "La mappa dei ristoranti certificati AIC e dei locali senza glutine verificati in Italia: filtra per città e categoria, trova indirizzo e orari.",
     path: "/directory",
     locale: "it",
   });

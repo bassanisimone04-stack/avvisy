@@ -3,9 +3,9 @@ import { pageMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
-  title: `Vivere Senza Glutine (PDF) — la guida di riferimento | ${SITE_NAME}`,
+  title: `Vivere Senza Glutine: la guida PDF | ${SITE_NAME}`,
   description:
-    "Scarica il PDF con 11 capitoli su diagnosi, sicurezza alimentare, contaminazione crociata, costi e vita quotidiana da celiaco: contenuti verificati, compilati dal blog.",
+    "Scarica il PDF con 11 capitoli su diagnosi, sicurezza alimentare, contaminazione crociata e vita quotidiana da celiaco: contenuti verificati dal blog.",
   path: "/vivere-senza-glutine",
   locale: "it",
 });

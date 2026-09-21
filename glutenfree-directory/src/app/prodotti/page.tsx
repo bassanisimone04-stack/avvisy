@@ -11,7 +11,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
 
   if (cat) {
     return pageMetadata({
-      title: `${cat} senza glutine: prodotti verificati | Mappa Senza Glutine`,
+      title: `${cat} senza glutine | Mappa Senza Glutine`,
       description: `${cat} certificati senza glutine in vendita in Italia: marca, prezzo e certificazione AIC verificati uno per uno.`,
       path: `/prodotti?categoria=${encodeURIComponent(cat)}`,
       locale: "it",
@@ -20,7 +20,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
 
   return pageMetadata({
     title: `Prodotti senza glutine verificati (${PRODUCTS.length}) | Mappa Senza Glutine`,
-    description: "Pasta, pane, farine, snack e condimenti senza glutine reali, in vendita in farmacia, supermercato o online: marca, prezzo e certificazione AIC verificati, nessuna recensione inventata.",
+    description: "Pasta, pane, farine, snack e condimenti senza glutine reali: marca, prezzo e certificazione AIC verificati, nessuna recensione inventata.",
     path: "/prodotti",
     locale: "it",
   });
