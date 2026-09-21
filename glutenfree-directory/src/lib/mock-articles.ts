@@ -40,6 +40,8 @@ const seeds: Seed[] = [
     ],
     sections: [
       { h2: "Che cos'è la celiachia", body: "La celiachia è una condizione autoimmune scatenata dall'ingestione di glutine, la proteina presente in grano, orzo e segale. Nei soggetti predisposti geneticamente, il glutine innesca una risposta immunitaria che danneggia i villi intestinali, compromettendo l'assorbimento dei nutrienti." },
+      { h2: "Quanto è diffusa in Italia", body: "Secondo la Relazione al Parlamento del Ministero della Salute, nel 2024 i celiaci diagnosticati in Italia hanno raggiunto quasi 280.000 (85.238 uomini e 194.274 donne), pari a una prevalenza nazionale dello 0,47% della popolazione, con oltre 14.000 nuove diagnosi nell'anno. AIC stima però che i celiaci reali siano molti di più, circa 600.000 in totale: più della metà non ha ancora ricevuto una diagnosi." },
+      { h2: "La componente genetica: i geni HLA-DQ2 e HLA-DQ8", body: "La predisposizione alla celiachia è legata ai geni HLA-DQ2 e HLA-DQ8: quasi tutti i celiaci ne sono portatori, anche se possederli non significa sviluppare automaticamente la malattia. È proprio questa componente genetica a spiegare perché lo screening sia consigliato ai parenti di primo grado, come indicato più avanti in questa guida." },
       { h2: "I sintomi più comuni", body: "I sintomi variano molto da persona a persona e possono comparire a qualunque età.", h3: [
         { title: "Sintomi gastrointestinali", body: "Gonfiore, dolore addominale, diarrea o stitichezza alternate, nausea sono i segnali più frequenti, soprattutto nei bambini." },
         { title: "Sintomi extraintestinali", body: "Stanchezza cronica, anemia da carenza di ferro, dermatite erpetiforme, aftosi ricorrente e osteoporosi precoce sono manifestazioni tipiche negli adulti." },
@@ -51,6 +53,7 @@ const seeds: Seed[] = [
       { question: "La celiachia si può guarire?", answer: "No, non esiste una cura definitiva: la gestione consiste in una dieta senza glutine seguita rigorosamente e per tutta la vita." },
       { question: "Quanto tempo serve per stare meglio dopo la diagnosi?", answer: "I sintomi migliorano generalmente entro poche settimane dall'eliminazione del glutine, mentre la mucosa intestinale può impiegare mesi o anni per rigenerarsi completamente." },
       { question: "I familiari di un celiaco devono fare gli esami?", answer: "Sì, la celiachia ha una componente genetica: è consigliato lo screening per i parenti di primo grado anche in assenza di sintomi evidenti." },
+      { question: "Quante persone sono celiache in Italia?", answer: "Secondo il Ministero della Salute, nel 2024 i celiaci diagnosticati erano quasi 280.000, ma AIC stima che i celiaci reali siano circa 600.000, oltre la metà dei quali non ancora diagnosticati." },
     ],
     featured: true,
   },
@@ -139,10 +142,14 @@ const seeds: Seed[] = [
       { h2: "Il tesserino di traduzione per celiaci", body: "AIC mette a disposizione un tesserino con la spiegazione della celiachia tradotta in più lingue, utilissimo per comunicare con il personale di sala nei paesi esteri." },
       { h2: "In aereo e in treno", body: "Molte compagnie aeree offrono pasti gluten free su richiesta, da prenotare almeno 48 ore prima. Meglio comunque portare sempre snack sicuri per ogni evenienza. I dettagli sul pasto speciale GFML e su cosa portare a bordo sono nella guida su <a href=\"/blog/volare-senza-glutine-il-pasto-gfml-in-aereo-e-cosa-portare\">volare senza glutine</a>." },
       { h2: "Trovare locali sicuri sul posto", body: "Le directory locali e le community online dedicate ai celiaci sono la risorsa più affidabile per scoprire attività verificate anche fuori dai circuiti turistici principali." },
+      { h2: "Impara le parole chiave nella lingua del posto", body: "Oltre al tesserino AIC, sapere come si dice \"senza glutine\" e \"contaminazione\" nella lingua locale aiuta a farsi capire anche in situazioni informali, come un bar o un mercato, dove il tesserino da solo può non bastare a chiarire la richiesta." },
+      { h2: "Scegli un alloggio con angolo cottura, se possibile", body: "Un appartamento o una stanza con un piccolo angolo cottura permette di preparare in autonomia una parte dei pasti, riducendo la dipendenza dai ristoranti nei giorni più intensi del viaggio: utile soprattutto nelle mete meno turistiche, dove trovare locali verificati può richiedere più tempo." },
+      { h2: "Porta sempre una scorta extra di snack sicuri", body: "Oltre agli snack per il volo, conviene avere una piccola scorta per tutta la durata del viaggio: ritardi, coincidenze o giornate imprevedibili possono lasciarti senza un pasto sicuro nelle vicinanze, soprattutto nelle prime ore in una città nuova." },
     ],
     faqs: [
       { question: "Cos'è il tesserino AIC per celiaci in viaggio?", answer: "È un documento multilingue che spiega la celiachia e le esigenze alimentari legate ad essa, utile da mostrare al personale di ristoranti e hotel all'estero." },
       { question: "Le compagnie aeree garantiscono sempre pasti senza glutine?", answer: "La disponibilità dipende dalla compagnia: è necessario richiederlo in fase di prenotazione o comunque con adeguato anticipo rispetto al volo." },
+      { question: "Conviene scegliere un alloggio con cucina invece di un hotel?", answer: "Può essere un vantaggio, soprattutto per viaggi lunghi o mete poco turistiche: avere un angolo cottura riduce la dipendenza dai ristoranti per ogni pasto, pur restando utile individuare anche locali verificati in zona." },
     ],
   },
   {
@@ -180,18 +187,23 @@ const seeds: Seed[] = [
     coverSeed: 106, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-03-22",
     tags: ["prodotti", "novità", "spesa"],
     keyTakeaways: [
-      "I mix di ultima generazione a base di grano saraceno e teff si avvicinano molto al pane tradizionale.",
-      "Crescono gli snack proteici a base di legumi certificati, pratici per una spuntino sano fuori casa.",
-      "Il pane fresco surgelato gluten free è sempre più diffuso anche nella grande distribuzione.",
-      "I nuovi prodotti si trovano in supermercati con corner dedicato, negozi specializzati e online.",
+      "Mulino Caputo ha presentato al Tuttofood 2026 nuovi formati senza glutine da 500 g e la farina Fior di Avena.",
+      "Rich Products ha lanciato una pinsa di cavolfiore senza glutine, a base di farina di riso, grano saraceno e cavolfiore.",
+      "Matt ha ampliato la gamma snack con SfizioSì Popcorn Bio e SfizioSì Potatoes, non fritti e senza glutine.",
+      "Secondo una stima di mercato (Mordor Intelligence), il comparto senza glutine in Italia continua a crescere, trainato anche da queste novità di prodotto.",
     ],
     sections: [
-      { h2: "Nuove farine e mix per il pane", body: "I mix di ultima generazione a base di farina di grano saraceno e teff offrono un sapore più ricco e una struttura più simile al pane tradizionale rispetto ai mix classici a base di amido." },
-      { h2: "Snack proteici gluten free", body: "Crescono le proposte di snack proteici a base di legumi certificati, pensati per chi cerca alternative sane e pratiche fuori casa." },
+      { h2: "Nuove farine e formati per il pane", body: "Al Tuttofood 2026, la fiera internazionale dell'agroalimentare, <strong>Mulino Caputo</strong> ha presentato nuovi formati senza glutine da 500 grammi, oltre alla farina <strong>Fior di Avena</strong>: un'aggiunta interessante per chi cerca alternative con un profilo di gusto diverso dai classici mix a base di riso e mais." },
+      { h2: "Una pinsa senza glutine a base di cavolfiore", body: "Tra le novità più originali del 2026 c'è la <strong>pinsa di cavolfiore senza glutine</strong> lanciata da Rich Products, formulata con una miscela di farina di riso e grano saraceno insieme al cavolfiore: un modo diverso di reinterpretare gli impasti da forno senza partire dai soliti mix di amidi." },
+      { h2: "Snack proteici e non fritti", body: "Crescono le proposte di snack pensati per una pausa fuori casa più sana: <strong>Matt</strong> ha ampliato la sua gamma con <strong>SfizioSì Popcorn Bio</strong> e <strong>SfizioSì Potatoes</strong>, entrambi non fritti e certificati senza glutine, in linea con la crescita generale degli snack proteici a base di legumi già diffusi sugli scaffali." },
       { h2: "Sostituti del pane fresco", body: "Diverse panetterie artigianali stanno introducendo linee di pane fresco surgelato gluten free distribuite anche nella grande distribuzione, ampliando le opzioni disponibili." },
+      { h2: "Un mercato in crescita", body: "Le nuove uscite di prodotto arrivano in un contesto di crescita del comparto: secondo una stima di Mordor Intelligence, il mercato italiano di alimenti e bevande senza glutine vale circa 428 milioni di dollari nel 2026, con proiezioni di crescita costante negli anni successivi." },
+      { h2: "Come valutare un prodotto nuovo prima di provarlo", body: "Con l'aumento dei lanci, vale la pena tenere a mente qualche criterio semplice: verificare sempre la presenza del marchio Spiga Barrata o della dicitura \"senza glutine\" regolamentata, controllare che il prodotto sia effettivamente reperibile nella propria zona prima di entusiasmarsi, e leggere le recensioni della community per farsi un'idea sul gusto reale, non solo sulla novità del lancio." },
     ],
     faqs: [
       { question: "Dove si trovano questi nuovi prodotti?", answer: "Sono disponibili nei supermercati con corner dedicato, nei negozi specializzati e in molti casi anche online sui siti dei singoli produttori." },
+      { question: "Cos'è la pinsa di cavolfiore senza glutine di Rich Products?", answer: "È un impasto da pinsa formulato con farina di riso, grano saraceno e cavolfiore, lanciato nel 2026 come alternativa ai classici impasti da forno senza glutine a base di soli amidi." },
+      { question: "Cosa ha presentato Mulino Caputo al Tuttofood 2026?", answer: "Nuovi formati senza glutine da 500 grammi e una nuova farina, Fior di Avena, pensata per chi cerca alternative con un profilo di gusto diverso dai mix classici." },
     ],
   },
   {
@@ -209,12 +221,17 @@ const seeds: Seed[] = [
       "Il blog di Mappa Senza Glutine e i canali social delle associazioni locali sono il modo più semplice per restare aggiornati.",
     ],
     sections: [
+      { h2: "La Settimana Nazionale della Celiachia", body: "L'appuntamento più importante del calendario 2026 è la <strong>Settimana Nazionale della Celiachia</strong>, promossa da AIC dal 9 al 17 maggio in tutta Italia: nove giorni di eventi e approfondimenti organizzati in concomitanza con la <strong>Giornata Mondiale della Celiachia</strong>, che cade il 16 maggio. In questo periodo le sedi regionali AIC organizzano banchetti informativi, incontri pubblici e iniziative nelle scuole per diffondere una corretta informazione sulla celiachia. È il momento migliore dell'anno per chi vuole avvicinarsi per la prima volta all'associazione, fare domande dirette a chi vive la stessa condizione ogni giorno, o semplicemente scoprire cosa succede nella propria regione." },
       { h2: "Le fiere nazionali", body: "Ogni anno diverse città italiane ospitano fiere dedicate al food senza glutine, con degustazioni, workshop e incontri con nutrizionisti aperti al pubblico. Anche le sagre di paese, pur con logiche diverse, possono offrire stand dedicati: ne parliamo nella guida su <a href=\"/blog/sagre-e-feste-di-paese-senza-glutine-come-muoversi-in-sicurezza\">sagre e feste di paese senza glutine</a>." },
       { h2: "Giornate informative locali", body: "Le sedi regionali AIC organizzano periodicamente incontri gratuiti su diagnosi, alimentazione e novità normative, un'occasione utile per neo-diagnosticati e famiglie." },
       { h2: "Eventi social e community online", body: "Sempre più community di celiaci organizzano cene sociali e raduni presso locali certificati, un modo semplice per scoprire nuove attività affidabili nella propria zona." },
+      { h2: "Come scegliere quali eventi seguire", body: "Con un calendario così fitto, conviene dare priorità in base ai propri obiettivi: chi è stato diagnosticato da poco trova più valore nelle giornate informative locali, chi vuole scoprire nuovi prodotti si orienta meglio verso le fiere nazionali, mentre chi cerca socialità trova nelle cene di community il contesto più adatto." },
+      { h2: "Partecipare come volontario", body: "Molte sedi regionali AIC cercano volontari, soprattutto in occasione della Settimana Nazionale della Celiachia: è un modo diretto per contribuire alla diffusione di informazioni corrette e, allo stesso tempo, conoscere altre persone celiache e le loro famiglie nella propria zona." },
     ],
     faqs: [
       { question: "Come restare aggiornati sugli eventi in programma?", answer: "Seguendo il blog di Mappa Senza Glutine e i canali social delle associazioni locali si ricevono aggiornamenti periodici sugli eventi in calendario." },
+      { question: "Quando si svolge la Settimana Nazionale della Celiachia nel 2026?", answer: "Dal 9 al 17 maggio 2026, in concomitanza con la Giornata Mondiale della Celiachia del 16 maggio: nove giorni di eventi promossi da AIC in tutta Italia." },
+      { question: "Come posso fare il volontario per AIC durante la Settimana Nazionale?", answer: "Conviene contattare direttamente la sede regionale AIC più vicina: molte cercano volontari proprio in occasione della Settimana Nazionale della Celiachia, per banchetti informativi e iniziative nelle scuole." },
     ],
   },
   {
@@ -233,11 +250,16 @@ const seeds: Seed[] = [
     ],
     sections: [
       { h2: "Carboidrati senza glutine per l'energia", body: "Riso, quinoa, grano saraceno e patate dolci sono fonti eccellenti di carboidrati complessi, perfette per il pre-gara e il recupero post-allenamento." },
+      { h2: "Quando mangiare i carboidrati: prima, durante e dopo", body: "Nelle ore precedenti uno sforzo prolungato, un pasto a base di riso o patate dolci garantisce riserve di energia senza appesantire la digestione. Durante allenamenti o gare di lunga durata, gel e barrette energetiche certificate senza glutine aiutano a mantenere costante l'apporto di zuccheri. Subito dopo lo sforzo, abbinare carboidrati e una fonte proteica (ad esempio riso e legumi, o uno yogurt con frutta) favorisce il recupero muscolare." },
       { h2: "Attenzione a carenze nutrizionali", body: "Una dieta senza glutine mal bilanciata può essere povera di fibre e ferro: è importante variare i cereali integrali senza glutine disponibili e monitorare periodicamente i valori ematici." },
-      { h2: "Integrazione e barrette sicure", body: "Molte barrette energetiche contengono glutine come addensante: scegliere sempre prodotti certificati evita brutte sorprese durante gare e allenamenti intensi." },
+      { h2: "Integrazione e barrette sicure", body: "Molte barrette energetiche contengono glutine come addensante: scegliere sempre prodotti certificati evita brutte sorprese durante gare e allenamenti intensi. Vale la stessa regola d'oro spiegata nella nostra guida su <a href=\"/blog/come-leggere-le-etichette-alimentari-se-sei-celiaco\">come leggere le etichette alimentari</a>: controllare sempre la dicitura \"senza glutine\" anche su prodotti pensati per sportivi, come integratori in polvere e gel energetici, che non sempre riportano il marchio in modo evidente." },
+      { h2: "Trasferte e gare fuori casa: organizzarsi in anticipo", body: "Gare e allenamenti fuori sede aggiungono una variabile in più: non sempre si trova un punto ristoro con opzioni certificate lungo il percorso o vicino al luogo dell'evento. Portare sempre una scorta di carboidrati e snack certificati, verificare in anticipo se l'organizzazione prevede punti ristoro senza glutine, e individuare ristoranti verificati nella zona sono accorgimenti che evitano di trovarsi senza opzioni sicure nelle ore prima o dopo la gara." },
+      { h2: "Comunicare le proprie esigenze a squadra e staff", body: "Se ti alleni o gareggi in gruppo, informare allenatori e compagni della celiachia aiuta a evitare situazioni imbarazzanti, ad esempio quando si condividono snack o pasti post-gara: chi organizza può tenerne conto in anticipo, invece di improvvisare soluzioni dell'ultimo minuto." },
     ],
     faqs: [
       { question: "Gli sportivi celiaci hanno bisogno di integratori specifici?", answer: "Non necessariamente, ma è utile monitorare ferro, vitamina D e vitamine del gruppo B con il proprio medico o nutrizionista di riferimento." },
+      { question: "I gel energetici sono sempre senza glutine?", answer: "No, non è scontato: alcuni usano la maltodestrina di frumento come base. Va sempre verificata la dicitura \"senza glutine\" in etichetta, esattamente come per qualsiasi altro prodotto confezionato." },
+      { question: "Cosa mangiare subito dopo un allenamento intenso?", answer: "Un pasto che unisce carboidrati e proteine, come riso e legumi o uno yogurt con frutta, favorisce il recupero muscolare nella finestra successiva allo sforzo." },
     ],
   },
   {
@@ -257,10 +279,15 @@ const seeds: Seed[] = [
     sections: [
       { h2: "Non solo sostituti industriali", body: "Riso, mais, grano saraceno, quinoa, legumi e verdure sono naturalmente privi di glutine e dovrebbero costituire la base della dieta, più dei prodotti confezionati sostitutivi." },
       { h2: "Fibre e cereali integrali gluten free", body: "Scegliere versioni integrali di riso e mais, insieme a legumi e semi, aiuta a mantenere un adeguato apporto di fibre spesso carente nelle diete a base di prodotti raffinati senza glutine." },
+      { h2: "Proteine e grassi buoni, non solo carboidrati", body: "Una dieta senza glutine equilibrata non riguarda solo i cereali: legumi, uova, pesce e carne restano naturalmente privi di glutine e forniscono le proteine necessarie, mentre olio extravergine d'oliva, frutta secca e semi coprono il fabbisogno di grassi buoni. Costruire ogni pasto attorno a una fonte proteica e a verdure, e non solo attorno al sostituto del pane o della pasta, aiuta a bilanciare meglio il piatto nel suo complesso." },
+      { h2: "Il rischio delle \"calorie vuote\" dei sostituti confezionati", body: "Snack e prodotti da forno gluten free pensati per essere pratici fuori casa hanno spesso un profilo nutrizionale meno interessante rispetto a un pasto preparato con ingredienti naturalmente senza glutine: vanno bene come soluzione occasionale, non come base quotidiana dell'alimentazione." },
+      { h2: "Variare le fonti, non solo i piatti", body: "Alternare le fonti di cereali (riso, mais, grano saraceno, quinoa) durante la settimana, invece di affidarsi sempre allo stesso prodotto, aiuta a coprire un ventaglio più ampio di micronutrienti: ogni cereale senza glutine ha un profilo nutrizionale leggermente diverso, e la varietà resta il modo più semplice per non trascurarne nessuno." },
       { h2: "Un esempio di giornata alimentare", body: "Colazione con fiocchi di grano saraceno e frutta, pranzo con cereali integrali e proteine magre, cena leggera con verdure e legumi: un impianto semplice e replicabile ogni giorno. Chi pratica sport regolarmente troverà consigli più specifici nella guida su <a href=\"/blog/dieta-senza-glutine-e-sport-cosa-sapere-per-le-performance\">dieta senza glutine e sport</a>, mentre chi si chiede se questo tipo di alimentazione faccia dimagrire trova la risposta nella guida <a href=\"/blog/la-dieta-senza-glutine-fa-dimagrire-cosa-dice-davvero-la-scienza\">la dieta senza glutine fa dimagrire?</a>" },
     ],
     faqs: [
       { question: "I prodotti gluten free industriali fanno ingrassare di più?", answer: "Non necessariamente, ma spesso hanno un indice glicemico più alto e meno fibre: è bene alternarli con cereali naturalmente senza glutine." },
+      { question: "Quali sono le migliori fonti di proteine per una dieta senza glutine?", answer: "Legumi, uova, pesce e carne sono naturalmente privi di glutine e restano fonti proteiche affidabili, senza bisogno di prodotti sostitutivi specifici." },
+      { question: "Posso basare la mia alimentazione sui soli sostituti gluten free confezionati?", answer: "Non è l'ideale: questi prodotti sono comodi per un uso occasionale, ma un'alimentazione quotidiana costruita soprattutto su cereali naturalmente senza glutine, legumi e verdure resta più equilibrata." },
     ],
   },
   {
@@ -305,17 +332,20 @@ const seeds: Seed[] = [
       "Aggiungere un cucchiaino di miele nell'impasto favorisce la doratura e la lievitazione.",
     ],
     sections: [
-      { h2: "Il mix di farine giusto", body: "Un impasto per pizza senza glutine riuscito parte da un buon mix di farine: riso, fecola di patate e amido di mais in proporzioni bilanciate garantiscono elasticità e una struttura alveolata, evitando il risultato gommoso o troppo friabile." },
+      { h2: "Il mix di farine giusto", body: "Un impasto per pizza senza glutine riuscito parte da un buon mix di farine: riso, fecola di patate e amido di mais in proporzioni bilanciate garantiscono elasticità e una struttura alveolata, evitando il risultato gommoso o troppo friabile. Un cucchiaino di miele nell'impasto favorisce la doratura in cottura e dà una piccola spinta in più alla lievitazione, grazie agli zuccheri semplici che il lievito trova subito disponibili." },
       { h2: "L'impasto e la lievitazione", body: "Impastare farina, acqua tiepida, lievito, olio e un pizzico di sale fino a un composto liscio e appiccicoso, tipico delle farine senza glutine. Una lievitazione lunga, anche 12-24 ore in frigorifero, migliora sapore, struttura e digeribilità.", h3: [
         { title: "Il riposo a temperatura ambiente", body: "Prima di stendere l'impasto, farlo tornare a temperatura ambiente per almeno un'ora: renderà la lavorazione più semplice e la cottura più uniforme." },
         { title: "La stesura senza rompere l'impasto", body: "Stendere direttamente sulla teglia leggermente unta o su carta forno, aiutandosi con le mani bagnate: l'impasto gluten free si rompe facilmente se steso con il matterello." },
       ] },
       { h2: "La cottura perfetta", body: "Cuocere su pietra refrattaria preriscaldata o su una teglia già calda in forno statico al massimo della temperatura aiuta a ottenere un fondo croccante e una cottura uniforme anche in pochi minuti." },
       { h2: "Consigli per farciture leggere", body: "Evitare di sovraccaricare la pizza con troppi ingredienti umidi, che potrebbero ammorbidire eccessivamente la base: meglio farciture semplici ed equilibrate, aggiungendo eventuali verdure già cotte." },
+      { h2: "Perché l'idratazione dell'impasto conta così tanto", body: "A differenza dell'impasto tradizionale, quello senza glutine tollera meno variazioni nella quantità d'acqua: un impasto troppo asciutto risulta friabile e si spacca in cottura, uno troppo idratato non regge la farcitura. Segui le proporzioni indicate nella ricetta prima di improvvisare aggiunte, soprattutto le prime volte." },
+      { h2: "Come conservare l'impasto avanzato", body: "L'impasto crudo si conserva in frigorifero, ben coperto, per un giorno; oltre questo tempo è preferibile congelarlo già steso nella forma di base, come indicato nelle FAQ. Se preferisci partire da una ricetta con proporzioni diverse, prova anche la nostra <a href=\"/blog/pizza-senza-glutine-fatta-in-casa-l-impasto-con-il-mix-universale\">pizza fatta in casa con il mix universale</a>." },
     ],
     faqs: [
       { question: "Perché l'impasto senza glutine è più appiccicoso?", answer: "Le farine senza glutine assorbono l'acqua in modo diverso e non hanno la maglia glutinica che dà struttura: è normale che il composto risulti più morbido e vada lavorato con le mani bagnate." },
       { question: "Si può congelare l'impasto della pizza senza glutine?", answer: "Sì, si può congelare già steso nella forma di base, pronto per essere farcito e cotto direttamente da congelato aggiungendo qualche minuto di cottura." },
+      { question: "Perché aggiungere miele nell'impasto della pizza?", answer: "Gli zuccheri semplici del miele sono immediatamente disponibili per il lievito e favoriscono sia la lievitazione sia la doratura della base durante la cottura." },
     ],
     featured: true,
   },
@@ -341,10 +371,13 @@ const seeds: Seed[] = [
       ] },
       { h2: "Organizzare la dispensa", body: "Conservare i prodotti senza glutine in contenitori chiusi, ben etichettati e possibilmente su un ripiano separato riduce il rischio di contatto accidentale con farine o pane tradizionali, soprattutto in una cucina condivisa con familiari non celiaci." },
       { h2: "Le buone abitudini quotidiane", body: "Lavare sempre accuratamente mani, piani di lavoro e utensili tra la preparazione di un piatto con glutine e uno senza, e cucinare prima gli alimenti gluten free quando si usano gli stessi fornelli, sono abitudini semplici che riducono drasticamente il rischio." },
+      { h2: "Acqua di cottura e olio di frittura: due rischi spesso sottovalutati", body: "Cuocere pasta senza glutine nella stessa acqua già usata per pasta tradizionale la contamina, anche se sembra pulita: serve sempre acqua nuova. Lo stesso vale per l'olio di frittura: una friggitrice o una padella usata per alimenti impanati con farina di frumento contamina qualsiasi cosa ci venga fritta dopo, patate comprese, anche se l'ingrediente di partenza è naturalmente senza glutine." },
+      { h2: "Spugne e strofinacci: un vettore facile da dimenticare", body: "Spugne per i piatti e strofinacci da cucina trattengono facilmente residui di farina e vanno usati con attenzione: meglio avere una spugna dedicata alle stoviglie usate per il senza glutine, o quantomeno lavarla accuratamente prima di riutilizzarla, ed evitare di asciugare taglieri o utensili dedicati con uno strofinaccio usato anche per il pane tradizionale." },
     ],
     faqs: [
       { question: "Basta lavare bene un utensile per renderlo sicuro?", answer: "Nella maggior parte dei casi un lavaggio accurato con acqua calda e detersivo è sufficiente, ma per oggetti porosi come legno o plastica graffiata è più sicuro avere versioni dedicate." },
       { question: "Il forno può essere condiviso tra pane con e senza glutine?", answer: "Sì, ma è importante pulire bene le griglie e cuocere il pane senza glutine su una teglia propria, evitando il contatto diretto con superfici che hanno cotto prodotti con glutine." },
+      { question: "Posso friggere alimenti senza glutine nello stesso olio usato per prodotti impanati?", answer: "No, l'olio di frittura condiviso con prodotti impanati con farina di frumento contamina qualsiasi altro alimento fritto successivamente, anche se naturalmente senza glutine: serve olio pulito o una friggitrice dedicata." },
     ],
   },
   {
@@ -369,10 +402,13 @@ const seeds: Seed[] = [
       ] },
       { h2: "Celiachia non diagnosticata: i rischi da conoscere", body: "La celiachia non diagnosticata, a differenza di quella correttamente gestita con la dieta, è associata a un rischio maggiore di complicanze come anemia, parto pretermine e basso peso alla nascita: per questo un percorso diagnostico tempestivo è importante anche in ottica di programmazione della gravidanza." },
       { h2: "Il supporto di un nutrizionista", body: "Confrontarsi con un nutrizionista esperto in celiachia permette di costruire un piano alimentare personalizzato per i nove mesi, tenendo conto di eventuali carenze pregresse e delle esigenze specifiche di ogni trimestre." },
+      { h2: "Allattamento e primi mesi del bambino", body: "Anche durante l'allattamento non servono restrizioni particolari oltre a quelle di una dieta senza glutine già equilibrata: l'importante resta garantire un apporto adeguato di tutti i nutrienti, come in gravidanza. Per l'introduzione del glutine nella dieta del bambino non è necessario alcun accorgimento diverso rispetto agli altri neonati: ne parliamo nel dettaglio nella guida su <a href=\"/blog/svezzamento-e-glutine-quando-introdurlo-e-cosa-dice-la-ricerca\">svezzamento e glutine</a>." },
+      { h2: "Il bambino dovrà fare lo screening per la celiachia?", body: "Poiché la celiachia ha una componente genetica, lo screening è generalmente raccomandato per i parenti di primo grado, bambino compreso, anche in assenza di sintomi: è un argomento da affrontare con il pediatra nei primi controlli di crescita, non un'urgenza dei primi giorni di vita." },
     ],
     faqs: [
       { question: "La celiachia può essere scoperta per la prima volta in gravidanza?", answer: "Sì, in alcuni casi i sintomi si manifestano o si aggravano proprio durante la gravidanza, portando a una diagnosi che prima non era emersa." },
       { question: "Serve un'integrazione speciale per le donne celiache in gravidanza?", answer: "Le integrazioni standard raccomandate in gravidanza (acido folico, ferro, vitamina D) restano valide: è importante scegliere formulazioni certificate senza glutine e confrontarsi con il proprio medico." },
+      { question: "Il bambino di una madre celiaca dovrà fare lo screening?", answer: "È generalmente consigliato, dato che la celiachia ha una componente genetica: se ne può parlare con il pediatra durante i normali controlli di crescita, senza che sia un'urgenza immediata." },
     ],
   },
   {
@@ -823,11 +859,15 @@ const seeds: Seed[] = [
         { title: "Cottura e prova stecchino", body: "Versa l'impasto in uno stampo imburrato e infarinato (con lo stesso mix) e cuoci per 35-40 minuti. Verifica la cottura infilando uno stecchino al centro: se esce asciutto, la torta è pronta." },
       ] },
       { h2: "Varianti", body: "Per una versione al cioccolato, sostituisci 30 g di mix con altrettanto cacao amaro; per una torta più rustica, aggiungi mele a cubetti o gocce di cioccolato fondente all'impasto prima di infornare. Se stai organizzando una cena con amici, dai un'occhiata anche alle nostre <a href=\"/blog/crostini-e-tartine-senza-glutine-per-una-cena-tra-amici\">idee per crostini e tartine senza glutine</a>. Per le feste, trovi invece la nostra guida su <a href=\"/blog/panettone-e-colomba-senza-glutine-dove-trovarli-e-quali-scegliere\">panettone e colomba senza glutine</a>." },
+      { h2: "Trasformarla in muffin o mini torte", body: "Lo stesso impasto funziona bene anche versato in stampi da muffin o in una tortiera piccola per porzioni singole: basta ridurre il tempo di cottura a circa 18-22 minuti, controllando sempre con lo stecchino, perché gli stampi più piccoli cuociono più in fretta." },
+      { h2: "Errori comuni da evitare", body: "Due errori rovinano più spesso il risultato: montare le uova con lo zucchero troppo poco, ottenendo una torta meno soffice, e aprire il forno nei primi 20 minuti di cottura, che può far abbassare l'impasto prima che si sia stabilizzato." },
+      { h2: "Come conservarla", body: "Si conserva a temperatura ambiente, ben coperta, per 2-3 giorni, oppure in frigorifero per una settimana se farcita con creme fresche. Anche congelata, a fette singole avvolte nella pellicola, si conserva bene per circa un mese." },
     ],
     faqs: [
       { question: "Posso usare farine sciolte al posto del mix già pronto?", answer: "Sì, ma un mix specifico per dolci ha già le proporzioni tra amidi e farine bilanciate per la lievitazione: per chi inizia è il modo più sicuro per ottenere un risultato soffice." },
       { question: "La torta viene più asciutta di una tradizionale?", answer: "Se rispetti tempi e temperature indicati, il risultato è paragonabile: le farine senza glutine tendono ad asciugare un po' più in fretta, quindi conservala ben coperta." },
       { question: "Il mix per dolci Nutrifree è certificato AIC?", answer: "Sì, come tutti i prodotti Nutrifree porta il marchio Spiga Barrata dell'Associazione Italiana Celiachia." },
+      { question: "Posso fare dei muffin con questa ricetta?", answer: "Sì, lo stesso impasto va bene per muffin o mini torte: basta ridurre il tempo di cottura a circa 18-22 minuti e verificare la cottura con uno stecchino." },
     ],
   },
   {
@@ -1117,16 +1157,22 @@ const seeds: Seed[] = [
     ],
     sections: [
       { h2: "Le basi", body: "Usa le <a href=\"/prodotti/cereal-fette-croccanti-150g\">fette croccanti Céréal</a> così come sono per una base croccante, oppure tosta leggermente le <a href=\"/prodotti/nutrifree-panfette-pane-casereccio-300g\">panfette Nutrifree</a> per una base più morbida al centro e dorata ai bordi." },
-      { h2: "Tre combinazioni veloci", body: "Prova queste combinazioni, pronte in pochi minuti.", h3: [
+      { h2: "Cinque combinazioni veloci", body: "Prova queste combinazioni, pronte in pochi minuti.", h3: [
         { title: "Crostino al pesto e pomodorini", body: "Uno strato di <a href=\"/prodotti/sarchio-pesto-bio-130g\">pesto bio Sarchio</a>, mezzo pomodorino tagliato sopra e un filo d'olio." },
         { title: "Tartina con formaggio spalmabile e noci", body: "Formaggio spalmabile, gherigli di noce spezzettati e un giro di miele per un contrasto dolce-salato." },
         { title: "Crostino con hummus e verdure crude", body: "Uno strato di hummus con julienne di carota o zucchina cruda, per un'opzione più leggera." },
+        { title: "Tartina con pesto alla genovese e scaglie di grana", body: "Uno strato di <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a> con qualche scaglia di grana sopra, per una versione più sostanziosa." },
+        { title: "Crostino con avocado e limone", body: "Avocado schiacciato con succo di limone, sale e un pizzico di pepe: una base fresca che si sposa bene con la parte croccante delle fette." },
       ] },
+      { h2: "Come organizzare il tagliere in sicurezza", body: "Se in tavola ci sono anche prodotti con glutine, tieni le basi senza glutine su un vassoio separato, con un tagliere e un coltello dedicati per affettare eventuali guarnizioni: evita di appoggiare le basi senza glutine sullo stesso piano usato per pane o grissini tradizionali, anche solo per pochi secondi." },
+      { h2: "Un tagliere per tutti i gusti", body: "Per una cena con ospiti dai gusti diversi, alterna sul vassoio almeno una base croccante e una più morbida, una versione vegetariana e una con proteine animali: in questo modo bastano poche varianti per accontentare praticamente chiunque, senza dover preparare troppe ricette diverse." },
+      { h2: "Quanto preparare in anticipo", body: "Gli ingredienti (pesto, hummus, formaggio spalmabile, verdure tagliate) si possono preparare qualche ora prima e conservare in frigorifero in contenitori separati: l'unico passaggio da lasciare davvero all'ultimo momento è l'assemblaggio sulle basi, per i motivi di croccantezza già spiegati." },
     ],
     faqs: [
       { question: "Meglio preparare i crostini in anticipo o all'ultimo momento?", answer: "Meglio assemblarli poco prima di servire: la base a contatto con condimenti umidi tende ad ammorbidirsi e perdere croccantezza nel tempo." },
       { question: "Posso usare anche il pane casereccio al posto delle fette croccanti?", answer: "Sì, tostato leggermente funziona altrettanto bene come base per crostini e tartine." },
       { question: "Queste basi sono adatte anche a un buffet numeroso?", answer: "Sì, essendo già porzionate permettono di preparare rapidamente grandi quantità: calcola 3-4 pezzi a persona per un aperitivo." },
+      { question: "Come evito la contaminazione se in tavola c'è anche pane tradizionale?", answer: "Usa un vassoio, un tagliere e un coltello dedicati esclusivamente alle basi senza glutine, e tienili fisicamente separati dal pane e dai grissini tradizionali durante tutta la preparazione." },
     ],
   },
   {
