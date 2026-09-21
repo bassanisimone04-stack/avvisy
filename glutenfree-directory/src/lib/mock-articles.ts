@@ -28,6 +28,8 @@ const seeds: Seed[] = [
     title: "Celiachia: cos'è, sintomi e come si diagnostica",
     category: "Celiachia",
     excerpt: "Una guida completa alla celiachia: cause, sintomi più comuni nell'adulto e nel bambino, percorso diagnostico e cosa fare dopo la diagnosi.",
+    metaTitle: "Celiachia: sintomi e diagnosi | Mappa Senza Glutine",
+    metaDescription: "Guida alla celiachia: cause, sintomi più comuni in adulti e bambini, percorso diagnostico con esami del sangue e biopsia, e cosa fare dopo la diagnosi.",
     coverSeed: 101, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-06-02",
     tags: ["celiachia", "diagnosi", "salute"],
     keyTakeaways: [
@@ -56,6 +58,8 @@ const seeds: Seed[] = [
     title: "Come leggere le etichette alimentari se sei celiaco",
     category: "Guide",
     excerpt: "La guida pratica per riconoscere in etichetta gli ingredienti a rischio, il marchio della spiga barrata e le diciture da controllare sempre.",
+    metaTitle: "Leggere le etichette da celiaco | Mappa Senza Glutine",
+    metaDescription: "Come leggere le etichette alimentari se sei celiaco: la Spiga Barrata, gli ingredienti a rischio come amido e aromi, e le diciture da controllare sempre.",
     coverSeed: 102, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-05-20",
     tags: ["etichette", "guide", "sicurezza alimentare"],
     keyTakeaways: [
@@ -83,6 +87,8 @@ const seeds: Seed[] = [
     title: "Ricetta: Pasta fresca senza glutine fatta in casa",
     category: "Ricette",
     excerpt: "Il procedimento passo passo per preparare una pasta fresca gluten free elastica e saporita, con il giusto mix di farine.",
+    metaTitle: "Pasta fresca senza glutine in casa | Mappa Senza Glutine",
+    metaDescription: "Ricetta passo passo per una pasta fresca senza glutine elastica e saporita: il mix di farine giusto, come stenderla e i tempi di cottura corretti.",
     coverSeed: 103, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-05-05",
     tags: ["ricette", "pasta", "cucina"],
     keyTakeaways: [
@@ -108,6 +114,8 @@ const seeds: Seed[] = [
     title: "Viaggiare senza glutine: 7 consigli per le vacanze sicure",
     category: "Viaggi",
     excerpt: "Come organizzare un viaggio in Italia e all'estero da celiaco, tra app utili, tesserini di traduzione e prenotazioni sicure.",
+    metaTitle: "Viaggiare senza glutine: 7 consigli | Mappa Senza Glutine",
+    metaDescription: "Come organizzare un viaggio senza glutine in Italia e all'estero: app utili, tesserini di traduzione e come prenotare ristoranti sicuri in vacanza.",
     coverSeed: 104, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-04-18",
     tags: ["viaggi", "vacanze", "consigli"],
     keyTakeaways: [
@@ -131,6 +139,8 @@ const seeds: Seed[] = [
     title: "Bambini celiaci a scuola: come gestire mensa e gite",
     category: "Bambini",
     excerpt: "Consigli pratici per genitori su come organizzare la mensa scolastica, le gite e le feste di compleanno per un bambino celiaco.",
+    metaTitle: "Bambini celiaci a scuola | Mappa Senza Glutine",
+    metaDescription: "Bambini celiaci a scuola: come organizzare la mensa scolastica, le gite e le feste di compleanno in sicurezza, con consigli pratici per i genitori.",
     coverSeed: 105, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-04-02",
     tags: ["bambini", "scuola", "celiachia"],
     keyTakeaways: [
@@ -153,6 +163,8 @@ const seeds: Seed[] = [
     title: "Prodotti senza glutine: le novità più interessanti del 2026",
     category: "Alimentazione",
     excerpt: "Una rassegna dei prodotti gluten free più innovativi arrivati sugli scaffali quest'anno, tra farine, snack e sostituti del pane.",
+    metaTitle: "Novità prodotti senza glutine 2026 | Mappa Senza Glutine",
+    metaDescription: "I prodotti gluten free più interessanti arrivati sugli scaffali nel 2026: nuove farine, snack e sostituti del pane da provare nella dieta senza glutine.",
     coverSeed: 106, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-03-22",
     tags: ["prodotti", "novità", "spesa"],
     keyTakeaways: [
@@ -174,6 +186,8 @@ const seeds: Seed[] = [
     title: "Eventi e fiere dedicate al mondo senza glutine nel 2026",
     category: "Eventi",
     excerpt: "Il calendario delle principali fiere, mercatini e giornate informative dedicate alla celiachia e al senza glutine in Italia.",
+    metaTitle: "Fiere ed eventi senza glutine 2026 | Mappa Senza Glutine",
+    metaDescription: "Il calendario 2026 delle principali fiere, mercatini e giornate informative dedicate alla celiachia e al senza glutine in Italia, città per città.",
     coverSeed: 107, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-03-10",
     tags: ["eventi", "fiere", "community"],
     keyTakeaways: [
@@ -195,6 +209,8 @@ const seeds: Seed[] = [
     title: "Dieta senza glutine e sport: cosa sapere per le performance",
     category: "Salute",
     excerpt: "Come impostare l'alimentazione sportiva quando si segue una dieta senza glutine, tra carboidrati, integrazione e idee pratiche.",
+    metaTitle: "Dieta senza glutine e sport | Mappa Senza Glutine",
+    metaDescription: "Come impostare l'alimentazione sportiva seguendo una dieta senza glutine: carboidrati, integrazione e idee pratiche per non perdere in performance.",
     coverSeed: 108, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-02-27",
     tags: ["sport", "salute", "alimentazione"],
     keyTakeaways: [
@@ -216,6 +232,8 @@ const seeds: Seed[] = [
     title: "Alimentazione senza glutine equilibrata: guida ai macronutrienti",
     category: "Alimentazione",
     excerpt: "Come costruire una dieta senza glutine varia ed equilibrata, evitando gli eccessi di prodotti industriali sostitutivi.",
+    metaTitle: "Dieta senza glutine equilibrata | Mappa Senza Glutine",
+    metaDescription: "Come costruire una dieta senza glutine varia ed equilibrata nei macronutrienti, evitando l'eccesso di prodotti industriali sostitutivi del glutine.",
     coverSeed: 109, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-02-10",
     tags: ["alimentazione", "nutrizione", "salute"],
     keyTakeaways: [
@@ -237,6 +255,8 @@ const seeds: Seed[] = [
     title: "Novità normative 2026: cosa cambia per i celiaci in Italia",
     category: "News",
     excerpt: "Le ultime novità su rimborsi, buoni spesa e normative per le persone celiache in Italia aggiornate al 2026.",
+    metaTitle: "Novità normative 2026 per celiaci | Mappa Senza Glutine",
+    metaDescription: "Le novità normative 2026 per i celiaci in Italia: rimborsi, buoni spesa e regole aggiornate su cosa cambia per chi segue la dieta senza glutine.",
     coverSeed: 110, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-01-15",
     tags: ["news", "normativa", "aic"],
     keyTakeaways: [
@@ -257,6 +277,8 @@ const seeds: Seed[] = [
     title: "Pizza senza glutine perfetta: i segreti per un impasto leggero e croccante",
     category: "Ricette",
     excerpt: "I segreti per un impasto senza glutine leggero, elastico e croccante, con tempi di lievitazione e cottura per una pizza da vera pizzeria.",
+    metaTitle: "Pizza senza glutine perfetta | Mappa Senza Glutine",
+    metaDescription: "I segreti per un impasto di pizza senza glutine leggero, elastico e croccante: tempi di lievitazione e cottura per un risultato da vera pizzeria.",
     coverSeed: 111, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-20",
     tags: ["ricette", "pizza", "cucina"],
     keyTakeaways: [
@@ -284,6 +306,8 @@ const seeds: Seed[] = [
     title: "Contaminazione crociata in cucina: le regole d'oro per una casa sicura",
     category: "Guide",
     excerpt: "Le buone pratiche per evitare la contaminazione da glutine in una cucina condivisa con familiari non celiaci, dalla dispensa ai fornelli.",
+    metaTitle: "Contaminazione crociata in cucina | Mappa Senza Glutine",
+    metaDescription: "Le regole d'oro per evitare la contaminazione da glutine in una cucina condivisa con familiari non celiaci, dalla dispensa ai fornelli e agli utensili.",
     coverSeed: 112, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-07-10",
     tags: ["guide", "sicurezza alimentare", "celiachia"],
     keyTakeaways: [
@@ -310,6 +334,8 @@ const seeds: Seed[] = [
     title: "Celiachia e gravidanza: cosa sapere per una gestazione serena",
     category: "Celiachia",
     excerpt: "Come gestire la dieta senza glutine in gravidanza, tra fabbisogni nutrizionali aumentati, controlli di routine e false credenze da sfatare.",
+    metaTitle: "Celiachia e gravidanza | Mappa Senza Glutine",
+    metaDescription: "Come gestire la dieta senza glutine in gravidanza: fabbisogni nutrizionali aumentati, controlli di routine e le false credenze più comuni da sfatare.",
     coverSeed: 113, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-06-25",
     tags: ["celiachia", "gravidanza", "salute"],
     keyTakeaways: [
@@ -336,6 +362,8 @@ const seeds: Seed[] = [
     title: "Le migliori città italiane per una vacanza senza glutine",
     category: "Viaggi",
     excerpt: "Da Bologna a Milano fino alla Puglia: una panoramica delle mete italiane con la maggiore densità di locali certificati per celiaci.",
+    metaTitle: "Città italiane senza glutine | Mappa Senza Glutine",
+    metaDescription: "Da Bologna a Milano fino alla Puglia: le mete italiane con la maggiore densità di ristoranti e strutture certificate per una vacanza senza glutine.",
     coverSeed: 114, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-06-15",
     tags: ["viaggi", "italia", "ristoranti"],
     keyTakeaways: [
@@ -359,6 +387,8 @@ const seeds: Seed[] = [
     title: "I migliori ristoranti e pizzerie senza glutine a Milano: la guida completa 2026",
     category: "Guide",
     excerpt: "Dove mangiare senza glutine a Milano in sicurezza: la nostra selezione di ristoranti, pizzerie e pasticcerie certificate, tra cucine dedicate e attenzione scrupolosa alla contaminazione crociata.",
+    metaTitle: "Ristoranti senza glutine a Milano | Mappa Senza Glutine",
+    metaDescription: "Dove mangiare senza glutine a Milano: ristoranti, pizzerie e pasticcerie certificate con cucine dedicate e attenzione alla contaminazione crociata.",
     coverSeed: 115, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-29",
     tags: ["milano", "ristoranti", "pizzerie", "guide"],
     keyTakeaways: [
@@ -404,6 +434,8 @@ const seeds: Seed[] = [
     title: "Cosa può mangiare un celiaco: la guida completa agli alimenti sì e no",
     category: "Alimentazione",
     excerpt: "Quali alimenti sono sicuri per chi è celiaco e quali vanno evitati sempre: la guida pratica per fare la spesa e cucinare senza glutine senza dubbi né rischi di contaminazione.",
+    metaTitle: "Cosa può mangiare un celiaco | Mappa Senza Glutine",
+    metaDescription: "Quali alimenti sono sicuri per chi è celiaco e quali evitare sempre: la guida pratica per fare la spesa e cucinare senza glutine senza rischi.",
     coverSeed: 116, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-07-20",
     tags: ["alimentazione", "celiachia", "guide"],
     keyTakeaways: [
@@ -436,6 +468,8 @@ const seeds: Seed[] = [
     title: "Quanto costa la dieta senza glutine: guida a costi, buoni pasto AIC e detrazioni fiscali",
     category: "Guide",
     excerpt: "Quanto spende in più chi segue una dieta senza glutine, come funzionano il tesserino AIC e i buoni pasto in farmacia, e quali detrazioni fiscali spettano ai celiaci in Italia.",
+    metaTitle: "Quanto costa la dieta senza glutine | Mappa Senza Glutine",
+    metaDescription: "Quanto spende in più chi segue una dieta senza glutine, come funzionano tesserino AIC e buoni pasto in farmacia, e le detrazioni fiscali per i celiaci.",
     coverSeed: 117, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-12",
     tags: ["celiachia", "buoni pasto", "guide", "diritti"],
     keyTakeaways: [
@@ -463,6 +497,8 @@ const seeds: Seed[] = [
     title: "Sensibilità al glutine o celiachia? Le differenze che devi conoscere",
     category: "Celiachia",
     excerpt: "Celiachia, sensibilità al glutine non celiaca e allergia al grano non sono la stessa cosa: ecco come si distinguono sintomi, diagnosi e gestione di ciascuna condizione.",
+    metaTitle: "Sensibilità al glutine o celiachia? | Mappa Senza Glutine",
+    metaDescription: "Celiachia, sensibilità al glutine non celiaca e allergia al grano non sono la stessa cosa: come si distinguono sintomi, diagnosi e gestione.",
     coverSeed: 118, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-07-05",
     tags: ["celiachia", "sensibilità al glutine", "salute"],
     keyTakeaways: [
@@ -491,6 +527,8 @@ const seeds: Seed[] = [
     title: "I migliori ristoranti e pizzerie senza glutine a Roma: la guida completa 2026",
     category: "Guide",
     excerpt: "Dove mangiare senza glutine a Roma in sicurezza: trattorie di cucina romana, pizzerie con forno dedicato e pasticcerie certificate, tra cacio e pepe gluten free e la massima attenzione alla contaminazione crociata.",
+    metaTitle: "Ristoranti senza glutine a Roma | Mappa Senza Glutine",
+    metaDescription: "Dove mangiare senza glutine a Roma: trattorie di cucina romana, pizzerie con forno dedicato e pasticcerie certificate, tra cacio e pepe gluten free.",
     coverSeed: 119, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-25",
     tags: ["roma", "ristoranti", "pizzerie", "guide"],
     keyTakeaways: [
@@ -536,6 +574,8 @@ const seeds: Seed[] = [
     title: "Come evitare la contaminazione crociata al ristorante: la guida completa per mangiare senza glutine in sicurezza",
     category: "Guide",
     excerpt: "Come evitare la contaminazione crociata al ristorante: le domande da fare allo staff, i segnali di un locale davvero sicuro e i rischi specifici di pizzerie, ristoranti e bakery.",
+    metaTitle: "Evitare la contaminazione al ristorante | Mappa Senza Glutine",
+    metaDescription: "Come evitare la contaminazione crociata al ristorante: le domande da fare allo staff, i segnali di un locale sicuro e i rischi di pizzerie e bakery.",
     coverSeed: 120, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-30",
     tags: ["contaminazione crociata", "sicurezza alimentare", "AIC", "ristoranti senza glutine"],
     keyTakeaways: [
@@ -582,7 +622,7 @@ const seeds: Seed[] = [
     title: "McDonald's senza glutine in Italia: cosa può mangiare davvero un celiaco",
     category: "Guide",
     excerpt: "McDonald's senza glutine in Italia: cosa garantisce davvero il Gluten Free Burger, perché la catena non è certificata AIC e quali altri prodotti comportano un rischio di contaminazione crociata.",
-    metaTitle: "McDonald's senza glutine: cosa mangiare davvero | Mappa Senza Glutine",
+    metaTitle: "McDonald's senza glutine: cosa mangiare | Mappa Senza Glutine",
     metaDescription: "McDonald's senza glutine in Italia: il Gluten Free Burger, perché la catena non è certificata AIC e cosa rischia davvero un celiaco che mangia lì.",
     coverSeed: 121, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-30",
     tags: ["McDonald's", "fast food", "sicurezza alimentare", "AIC"],
@@ -626,6 +666,8 @@ const seeds: Seed[] = [
     title: "Gelaterie senza glutine: come riconoscere quelle davvero senza contaminazione crociata",
     category: "Guide",
     excerpt: "Gelaterie senza glutine: come capire se palette, vaschette e coni sono davvero sicuri per un celiaco, quali gusti evitare e perché l'estate aumenta il rischio di contaminazione crociata.",
+    metaTitle: "Gelaterie senza glutine sicure | Mappa Senza Glutine",
+    metaDescription: "Gelaterie senza glutine: come capire se palette, vaschette e coni sono davvero sicuri, quali gusti evitare e perché l'estate aumenta il rischio.",
     coverSeed: 122, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-30",
     tags: ["gelaterie", "estate", "contaminazione crociata", "sicurezza alimentare"],
     keyTakeaways: [
@@ -666,6 +708,8 @@ const seeds: Seed[] = [
     title: "Hotel e villaggi turistici certificati AIC per celiaci: come scegliere una vacanza senza pensieri",
     category: "Viaggi",
     excerpt: "Hotel e villaggi turistici certificati AIC: cosa garantisce davvero la certificazione, la differenza tra colazione e pensione completa, e come organizzare una vacanza senza glutine senza sorprese.",
+    metaTitle: "Hotel certificati AIC per celiaci | Mappa Senza Glutine",
+    metaDescription: "Hotel e villaggi certificati AIC: cosa garantisce la certificazione, la differenza tra colazione e pensione completa, come scegliere senza sorprese.",
     coverSeed: 123, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-07-30",
     tags: ["hotel", "viaggi", "AIC", "vacanze"],
     keyTakeaways: [
@@ -705,6 +749,8 @@ const seeds: Seed[] = [
     title: "Dove fare colazione senza glutine: cornetti, brioches e pasticcerie dedicate",
     category: "Guide",
     excerpt: "Dove fare colazione senza glutine senza rischi: la differenza tra un cornetto industriale e una pasticceria dedicata, cosa chiedere al bar e come organizzarsi quando si è fuori casa o in viaggio.",
+    metaTitle: "Colazione senza glutine: dove andare | Mappa Senza Glutine",
+    metaDescription: "Dove fare colazione senza glutine: la differenza tra un cornetto industriale e una pasticceria dedicata, cosa chiedere al bar e come organizzarsi.",
     coverSeed: 124, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-30",
     tags: ["colazione", "pasticcerie", "contaminazione crociata", "bar"],
     keyTakeaways: [
@@ -741,6 +787,8 @@ const seeds: Seed[] = [
     title: "Torta senza glutine facile: la ricetta base con il mix per dolci",
     category: "Ricette",
     excerpt: "La torta \"salva-cena\" per chi ha poco tempo: pochi ingredienti, il mix di farine già pronto e un risultato soffice e sicuro.",
+    metaTitle: "Torta senza glutine facile | Mappa Senza Glutine",
+    metaDescription: "La ricetta della torta senza glutine salva-cena: pochi ingredienti, il mix di farine già pronto e un risultato soffice e sicuro in poco tempo.",
     coverSeed: 132, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
     tags: ["ricette", "dolci", "torte", "farine"],
     keyTakeaways: [
@@ -767,6 +815,8 @@ const seeds: Seed[] = [
     title: "Pizza senza glutine fatta in casa: l'impasto con il mix universale",
     category: "Ricette",
     excerpt: "La ricetta base per un impasto di pizza senza glutine con il mix universale: pochi ingredienti e un risultato più simile alla pizza tradizionale.",
+    metaTitle: "Pizza senza glutine fatta in casa | Mappa Senza Glutine",
+    metaDescription: "La ricetta base per un impasto di pizza senza glutine con il mix universale: pochi ingredienti per un risultato vicino alla pizza tradizionale.",
     coverSeed: 135, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
     tags: ["ricette", "pizza", "impasti"],
     keyTakeaways: [
@@ -793,6 +843,8 @@ const seeds: Seed[] = [
     title: "Merenda scuola senza glutine: 5 idee pratiche per la schiscetta",
     category: "Ricette",
     excerpt: "Cosa mettere nello zaino per la merenda senza rischi: prodotti confezionati singolarmente, facili da controllare e da far portare a scuola.",
+    metaTitle: "Merenda scuola senza glutine | Mappa Senza Glutine",
+    metaDescription: "5 idee pratiche per la merenda senza glutine da mettere nello zaino: prodotti confezionati singolarmente, facili da controllare e portare a scuola.",
     coverSeed: 137, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
     tags: ["bambini", "merenda", "scuola"],
     keyTakeaways: [
@@ -818,6 +870,8 @@ const seeds: Seed[] = [
     title: "Dove mangiare senza glutine a Napoli: pizza, sfogliatelle e babà senza rinunce",
     category: "Guide",
     excerpt: "La guida per mangiare senza glutine a Napoli: dalla pizza napoletana cotta in forno dedicato alla sfogliatella e al babà senza glutine, tra indirizzi storici e nuove aperture certificate.",
+    metaTitle: "Dove mangiare senza glutine a Napoli | Mappa Senza Glutine",
+    metaDescription: "Guida per mangiare senza glutine a Napoli: pizza napoletana cotta in forno dedicato, sfogliatella e babà senza glutine, tra indirizzi storici e nuovi.",
     coverSeed: 143, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-14",
     tags: ["napoli", "pizza", "pasticceria", "guide"],
     keyTakeaways: [
@@ -849,6 +903,8 @@ const seeds: Seed[] = [
     title: "Venezia senza glutine: dove mangiare tra cicchetti, pizza e colazione in hotel",
     category: "Guide",
     excerpt: "Guida a Venezia senza glutine: gelaterie con coni dedicati, pizzerie con cucine separate e uno dei pochi hotel certificati AIC in città per una colazione senza pensieri.",
+    metaTitle: "Venezia senza glutine: dove mangiare | Mappa Senza Glutine",
+    metaDescription: "Guida a Venezia senza glutine: gelaterie con coni dedicati, pizzerie con cucine separate e un hotel certificato AIC in città per la colazione.",
     coverSeed: 144, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-16",
     tags: ["venezia", "hotel", "pizzerie", "guide"],
     keyTakeaways: [
@@ -880,6 +936,8 @@ const seeds: Seed[] = [
     title: "Bari senza glutine: focaccia, panzerotti e pizza in teglia senza rinunce",
     category: "Guide",
     excerpt: "Dove mangiare senza glutine a Bari: la focaccia barese e i panzerotti in versione gluten free, un laboratorio dedicato dal 2013 e dove comprare la spesa senza glutine in città.",
+    metaTitle: "Bari senza glutine: dove mangiare | Mappa Senza Glutine",
+    metaDescription: "Dove mangiare senza glutine a Bari: focaccia barese e panzerotti gluten free, un laboratorio dedicato dal 2013 e dove fare la spesa senza glutine.",
     coverSeed: 145, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-18",
     tags: ["bari", "focaccia", "panificio", "guide"],
     keyTakeaways: [
@@ -914,6 +972,8 @@ const seeds: Seed[] = [
     title: "Palermo senza glutine: pizzerie, arancini e gelato per una città a misura di celiaco",
     category: "Guide",
     excerpt: "Guida a Palermo senza glutine: pizzerie interamente dedicate certificate AIC, fritti con friggitrice riservata e una gelateria storica dal 1976 con gusti senza sovrapprezzo.",
+    metaTitle: "Palermo senza glutine: dove mangiare | Mappa Senza Glutine",
+    metaDescription: "Guida a Palermo senza glutine: pizzerie certificate AIC, arancini con friggitrice dedicata e una gelateria storica dal 1976 senza sovrapprezzo.",
     coverSeed: 146, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-20",
     tags: ["palermo", "sicilia", "arancini", "guide"],
     keyTakeaways: [
@@ -948,6 +1008,8 @@ const seeds: Seed[] = [
     title: "Genova senza glutine: pizza, focaccia e forno dedicato tra i quartieri della città",
     category: "Guide",
     excerpt: "Dove mangiare senza glutine a Genova: pizzerie certificate AIC a Sampierdarena e Prà, un panificio-pasticceria di recente apertura a Sestri Ponente e impasti alternativi da provare.",
+    metaTitle: "Genova senza glutine: dove mangiare | Mappa Senza Glutine",
+    metaDescription: "Dove mangiare senza glutine a Genova: pizzerie certificate AIC a Sampierdarena e Prà, un panificio a Sestri Ponente e gli impasti alternativi da provare.",
     coverSeed: 147, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-22",
     tags: ["genova", "liguria", "pizzerie", "guide"],
     keyTakeaways: [
@@ -979,6 +1041,8 @@ const seeds: Seed[] = [
     title: "Verona senza glutine: cosa mangiare tra Arena, centro storico e negozi specializzati",
     category: "Guide",
     excerpt: "Guida a Verona senza glutine: un ristorante vegano certificato AIC, la pizzeria di fronte all'Arena, un negozio con oltre 100 prodotti convenzionato ULSS e la gelateria nel circuito AIC dal 2010.",
+    metaTitle: "Verona senza glutine: cosa mangiare | Mappa Senza Glutine",
+    metaDescription: "Guida a Verona senza glutine: ristorante vegano certificato AIC, pizzeria vicino all'Arena, un negozio convenzionato ULSS e gelateria dal 2010.",
     coverSeed: 148, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-24",
     tags: ["verona", "veneto", "negozi", "guide"],
     keyTakeaways: [
@@ -1010,6 +1074,8 @@ const seeds: Seed[] = [
     title: "Crostini e tartine senza glutine per una cena tra amici",
     category: "Ricette",
     excerpt: "Idee veloci per crostini e tartine senza glutine, con basi pronte e pochi ingredienti freschi da assemblare all'ultimo momento.",
+    metaTitle: "Crostini e tartine senza glutine | Mappa Senza Glutine",
+    metaDescription: "Idee veloci per crostini e tartine senza glutine per una cena tra amici: basi pronte e pochi ingredienti freschi da assemblare all'ultimo momento.",
     coverSeed: 139, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
     tags: ["ricette", "aperitivo", "cena"],
     keyTakeaways: [
@@ -1174,7 +1240,7 @@ const seeds: Seed[] = [
     title: "Celiachia negli uomini: perché la diagnosi arriva più tardi",
     category: "Celiachia",
     excerpt: "La celiachia viene diagnosticata soprattutto alle donne, e negli uomini arriva mediamente un decennio più tardi: perché succede, quali segnali vengono sottovalutati e cosa chiedere al medico.",
-    metaTitle: "Celiachia negli uomini: diagnosi più tardiva | Mappa Senza Glutine",
+    metaTitle: "Celiachia uomini: diagnosi tardiva | Mappa Senza Glutine",
     metaDescription: "Perché la celiachia negli uomini viene diagnosticata più tardi: i dati sulle diagnosi, il ritardo medio e i segnali che vengono spesso attribuiti ad altro.",
     coverSeed: 153, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-09-02",
     tags: ["celiachia", "diagnosi", "uomini", "salute"],
@@ -1242,7 +1308,7 @@ const seeds: Seed[] = [
     title: "Farine senza glutine: guida alle alternative alla farina 00",
     category: "Alimentazione",
     excerpt: "Riso, mais, grano saraceno, castagne, mandorle: come si comportano le principali farine senza glutine in cucina, quando usarle e perché i mix funzionano meglio delle farine singole.",
-    metaTitle: "Farine senza glutine: guida alle alternative | Mappa Senza Glutine",
+    metaTitle: "Farine senza glutine: le alternative | Mappa Senza Glutine",
     metaDescription: "Guida alle farine senza glutine: riso, mais, grano saraceno, castagne e mandorle a confronto, come si comportano in cucina e perché conviene usare un mix.",
     coverSeed: 155, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-09",
     tags: ["farine", "cucina", "panificazione", "alimentazione"],
@@ -1314,7 +1380,7 @@ const seeds: Seed[] = [
     title: "Sagre e feste di paese senza glutine: come muoversi in sicurezza",
     category: "Guide",
     excerpt: "Stand AIC, food truck dedicati e regole pratiche per godersi una sagra da celiaco senza rischiare la contaminazione crociata tra fritture e impasti condivisi.",
-    metaTitle: "Sagre senza glutine: come muoversi da celiaco | Mappa Senza Glutine",
+    metaTitle: "Sagre senza glutine: come muoversi | Mappa Senza Glutine",
     metaDescription: "Sagre e feste di paese da celiaco: dove trovare stand AIC e food truck dedicati, cosa chiedere agli operatori e quali preparazioni evitare sempre.",
     coverSeed: 157, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-09",
     tags: ["sagre", "eventi", "AIC", "contaminazione crociata"],
