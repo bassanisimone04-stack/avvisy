@@ -73,7 +73,9 @@ const seeds: Seed[] = [
       { h2: "Ingredienti da tenere sott'occhio", body: "Alcuni ingredienti richiedono attenzione perché possono nascondere glutine anche in prodotti insospettabili.", h3: [
         { title: "Amido e amido modificato", body: "Se non è specificata la fonte (mais, riso), l'amido può derivare da frumento: in Europa la normativa impone comunque di dichiarare il glutine come allergene, ma la verifica resta importante." },
         { title: "Aromi e lieviti", body: "Lieviti ed estratti di malto d'orzo possono contenere glutine: controllare sempre la dicitura 'senza glutine' o il Prontuario AIC in caso di dubbio." },
+        { title: "Salsa di soia e condimenti pronti", body: "La salsa di soia tradizionale è fermentata con frumento ed è una delle fonti di glutine più sottovalutate, insieme a dadi da brodo e salse pronte addensate con farina." },
       ] },
+      { h2: "\"Senza glutine\" e \"a contenuto di glutine molto basso\": due diciture diverse", body: "Il <strong>Regolamento di esecuzione (UE) n. 828/2014</strong> disciplina entrambe le diciture, ed è importante non confonderle. La dicitura <strong>\"senza glutine\"</strong> è ammessa solo se il contenuto non supera i 20 mg/kg (20 ppm) nel prodotto venduto al consumatore finale. Esiste anche la dicitura <strong>\"a contenuto di glutine molto basso\"</strong>, riservata ad alimenti derivati da ingredienti contenenti glutine ma appositamente trattati per ridurlo, con una soglia più alta fino a 100 mg/kg: un prodotto così etichettato non ha lo stesso livello di sicurezza del \"senza glutine\" e va valutato con più attenzione." },
       { h2: "Il Prontuario AIC: come si usa", body: "Il Prontuario degli Alimenti è l'app e il volume annuale che raccoglie migliaia di prodotti verificati da AIC, aggiornato mensilmente. È lo strumento più completo per fare la spesa in sicurezza, anche per i marchi che non riportano il logo in etichetta. Per un quadro completo su cosa mangiare, sicuro e non, vedi la nostra guida su <a href=\"/blog/cosa-puo-mangiare-un-celiaco-la-guida-completa-agli-alimenti-si-e-no\">cosa può mangiare un celiaco</a>." },
       { h2: "Attenzione alla contaminazione crociata in cucina", body: "Anche un prodotto certificato può essere contaminato se manipolato con utensili non dedicati. In cucina è utile avere un tagliere, un tostapane e un set di pentole riservati esclusivamente alla preparazione gluten free." },
     ],
@@ -81,6 +83,7 @@ const seeds: Seed[] = [
       { question: "Cosa significa 'può contenere tracce di glutine'?", answer: "Indica un rischio di contaminazione crociata durante la produzione: per i soggetti celiaci è preferibile evitare questi prodotti, anche se il glutine non è un ingrediente diretto." },
       { question: "I prodotti 'senza glutine' sono automaticamente sicuri per i celiaci?", answer: "In Europa la dicitura 'senza glutine' è regolamentata e indica un contenuto inferiore a 20 ppm, il limite considerato sicuro per la maggior parte dei celiaci." },
       { question: "Dove si trova il Prontuario AIC aggiornato?", answer: "È disponibile come app ufficiale AIC per smartphone, aggiornata mensilmente con i nuovi prodotti verificati." },
+      { question: "Cosa significa \"a contenuto di glutine molto basso\" su un'etichetta?", answer: "È una dicitura diversa da \"senza glutine\", prevista dal Regolamento UE 828/2014 per prodotti derivati da ingredienti contenenti glutine appositamente trattati per ridurlo, con una soglia più alta (fino a 100 mg/kg): non offre lo stesso livello di sicurezza del \"senza glutine\" e va valutata caso per caso." },
     ],
   },
   {
@@ -103,11 +106,18 @@ const seeds: Seed[] = [
         { title: "La stesura", body: "Stendere l'impasto tra due fogli di carta forno per evitare che si attacchi, con matterello o macchina per la pasta, fino allo spessore desiderato." },
         { title: "La cottura", body: "Cuocere in abbondante acqua salata per 3-4 minuti: la pasta senza glutine cuoce più rapidamente di quella tradizionale, va quindi controllata spesso." },
       ] },
-      { h2: "Consigli per non sbagliare", body: "Riposare l'impasto avvolto nella pellicola per almeno 30 minuti prima di stenderlo aiuta a renderlo più lavorabile. Un cucchiaino di gomma di xantano può migliorare ulteriormente l'elasticità." },
+      { h2: "Consigli per non sbagliare", body: "Riposare l'impasto avvolto nella pellicola per almeno 30 minuti prima di stenderlo aiuta a renderlo più lavorabile. Un cucchiaino di gomma di xantano può migliorare ulteriormente l'elasticità. Se vuoi capire meglio come si comportano le diverse farine senza glutine in questo tipo di impasto, vedi anche la nostra <a href=\"/blog/farine-senza-glutine-guida-alle-alternative-alla-farina-00\">guida alle farine senza glutine</a>." },
+      { h2: "I formati più adatti a questo impasto", body: "Non tutti i formati di pasta sono ugualmente semplici da ottenere con un impasto senza glutine, più delicato di quello tradizionale.", h3: [
+        { title: "Tagliatelle e fettuccine", body: "Sono il formato più semplice per iniziare: basta stendere l'impasto sottile e tagliarlo a strisce, anche a mano se non hai la macchina per la pasta." },
+        { title: "Ravioli e tortelli", body: "Richiedono un impasto steso molto sottile e ben riposato, altrimenti si rischia che si spacchi nei punti di chiusura: sigilla bene i bordi inumidendoli leggermente con un dito." },
+        { title: "Gnocchi", body: "Con lo stesso mix di farine, sostituendo parte del liquido con patata lessa e schiacciata, si ottengono gnocchi morbidi: l'impasto va lavorato ancora più delicatamente rispetto alla pasta tirata." },
+      ] },
+      { h2: "Come conservare la pasta fresca prima di cuocerla", body: "Se non la cuoci subito, distribuisci la pasta su un vassoio infarinato con farina di riso (non attacca come quella di grano) e tienila in frigorifero coperta per non più di un giorno. Per conservarla più a lungo, il congelatore resta la scelta più sicura." },
     ],
     faqs: [
       { question: "Quale mix di farine funziona meglio?", answer: "I mix specifici per pane e pasta, a base di farina di riso, fecola di patate e amido di mais, danno generalmente i risultati più simili alla pasta tradizionale." },
       { question: "Si può congelare la pasta fresca senza glutine?", answer: "Sì, va congelata cruda, ben infarinata e distanziata, e cotta direttamente da congelata aggiungendo un minuto di cottura." },
+      { question: "Perché la pasta senza glutine si rompe più facilmente in cottura?", answer: "Manca il glutine, la proteina che nella pasta tradizionale tiene insieme l'impasto durante la bollitura: per questo conviene non stenderla troppo sottile e cuocerla in acqua che sobbolle appena, non in ebollizione violenta." },
     ],
   },
   {
@@ -150,13 +160,15 @@ const seeds: Seed[] = [
       "Coinvolgere il bambino nella scelta di dolci gluten free aiuta a vivere la socialità senza sentirsi diverso.",
     ],
     sections: [
-      { h2: "La mensa scolastica", body: "La legge italiana garantisce il diritto al pasto senza glutine nelle mense scolastiche: è sufficiente presentare il certificato medico alla segreteria e concordare il menu con il servizio di ristorazione. Per chi si sta avvicinando allo svezzamento, la guida su <a href=\"/blog/svezzamento-e-glutine-quando-introdurlo-e-cosa-dice-la-ricerca\">svezzamento e glutine</a> spiega quando e come introdurlo secondo la ricerca più recente." },
+      { h2: "La mensa scolastica: cosa prevede la legge", body: "In Italia il diritto al pasto senza glutine nelle mense scolastiche è garantito dalla <strong>legge 4 luglio 2005, n. 123</strong>, che impone a mense scolastiche, ospedaliere e di altre strutture pubbliche di somministrare, su richiesta, anche pasti senza glutine: è una normativa praticamente unica al mondo. In pratica basta presentare il certificato medico alla segreteria e concordare il menu con il servizio di ristorazione, senza costi aggiuntivi per la famiglia: la legge prevede infatti fondi nazionali distribuiti alle Regioni, destinati sia all'acquisto degli ingredienti senza glutine sia alla formazione del personale di cucina. Secondo l'ultima Relazione al Parlamento del Ministero della Salute, nel 2024 sono state <strong>33.027 le mense pubbliche</strong> ad aver erogato pasti senza glutine, di cui 22.972 scolastiche. Per chi si sta avvicinando allo svezzamento, la guida su <a href=\"/blog/svezzamento-e-glutine-quando-introdurlo-e-cosa-dice-la-ricerca\">svezzamento e glutine</a> spiega quando e come introdurlo secondo la ricerca più recente." },
+      { h2: "L'inclusione a tavola: perché non servono tavoli separati", body: "Le linee guida dell'Associazione Italiana Celiachia sono chiare su un punto: il pasto senza glutine non va trattato come un'eccezione da isolare. Un bambino celiaco ha diritto a un pasto equilibrato e di qualità equivalente a quello dei compagni, consumato allo stesso tavolo, non a una tavolata separata: è un aspetto che riguarda tanto la sicurezza alimentare quanto il vissuto psicologico del bambino a scuola." },
       { h2: "Gite e uscite didattiche", body: "Informare per tempo gli insegnanti e, se necessario, fornire snack sicuri da portare con sé evita situazioni di disagio durante le uscite fuori dal contesto scolastico. Per idee pratiche sulla merenda di tutti i giorni, vedi la nostra guida su <a href=\"/blog/merenda-scuola-senza-glutine-5-idee-pratiche-per-la-schiscetta\">merenda scuola senza glutine</a>." },
       { h2: "Feste di compleanno e socialità", body: "Coinvolgere il bambino nella scelta di dolci e snack gluten free da condividere con i compagni aiuta a vivere la socialità senza sentirsi diversi." },
     ],
     faqs: [
       { question: "La mensa senza glutine è gratuita?", answer: "Sì, la normativa italiana prevede che il pasto senza glutine nelle mense scolastiche non comporti costi aggiuntivi per la famiglia." },
       { question: "Serve un certificato medico per la mensa scolastica?", answer: "Sì, è necessario presentare la certificazione della diagnosi rilasciata dal centro specialistico di riferimento." },
+      { question: "Qual è la legge che garantisce il pasto senza glutine a scuola?", answer: "È la legge 4 luglio 2005, n. 123, che impone alle mense scolastiche, ospedaliere e di altre strutture pubbliche di somministrare pasti senza glutine su richiesta degli interessati." },
     ],
   },
   {
@@ -260,17 +272,22 @@ const seeds: Seed[] = [
     coverSeed: 110, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-01-15",
     tags: ["news", "normativa", "aic"],
     keyTakeaways: [
-      "Il tetto di spesa mensile per prodotti senza glutine erogato dal SSN viene rivisto periodicamente.",
-      "Verifica sempre gli importi aggiornati direttamente presso la tua ASL di riferimento.",
-      "Diverse regioni stanno aggiornando le linee guida HACCP per la certificazione dei locali per celiaci.",
-      "Il buono spesa è utilizzabile in farmacia e nei punti vendita convenzionati dopo la presentazione della diagnosi.",
+      "La Legge di Bilancio 2026 (art. 77) introduce la dematerializzazione del buono per prodotti senza glutine, spendibile su tutto il territorio nazionale.",
+      "Fino ad oggi il buono era utilizzabile solo nella regione di residenza: con la digitalizzazione questo limite viene superato.",
+      "L'importo massimo mensile resta invariato: cambia il supporto (digitale) e dove si può spendere, non il valore economico.",
+      "Per l'attuazione sono stanziati 2 milioni di euro per il 2026 e 1 milione l'anno dal 2027, con convenzioni tra Regioni e punti vendita da definire.",
     ],
     sections: [
-      { h2: "Aggiornamento dei buoni spesa mensili", body: "Il tetto di spesa mensile erogato dal Servizio Sanitario Nazionale per i prodotti senza glutine viene periodicamente rivisto: è consigliato verificare gli importi aggiornati presso la propria ASL di riferimento." },
+      { h2: "La novità principale: il buono diventa digitale e nazionale", body: "L'<strong>articolo 77 della Legge di Bilancio 2026</strong> introduce ufficialmente la dematerializzazione del buono per l'acquisto di prodotti senza glutine a carico del Servizio Sanitario Nazionale: non più un buono cartaceo legato alla propria ASL, ma un sistema digitale, caricato sulla tessera sanitaria o su un codice elettronico personale. La novità più concreta per chi vive o si sposta fuori dalla propria regione è che il buono diventa <strong>spendibile su tutto il territorio nazionale</strong>, superando il limite che finora ne consentiva l'uso solo nella regione di residenza: farmacie, parafarmacie, negozi specializzati e grande distribuzione aderenti potranno accettarlo ovunque ci si trovi." },
+      { h2: "Cosa NON cambia", body: "L'importo massimo mensile erogato resta invariato: la riforma riguarda il supporto (da cartaceo a digitale) e la spendibilità geografica, non il valore economico del buono, che continua a variare in base a fasce di età e sesso come spiegato nella nostra guida su <a href=\"/blog/quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali\">quanto costa la dieta senza glutine</a>." },
+      { h2: "Tempi di attuazione", body: "Per mettere in pratica la dematerializzazione sono stanziati 2 milioni di euro per il 2026 e 1 milione di euro l'anno dal 2027. Le Regioni dovranno stipulare convenzioni con i punti vendita aderenti, e un decreto del Ministero della Salute, di concerto con il Ministero dell'Economia, definirà le modalità operative: i tempi di attivazione concreta possono quindi variare da regione a regione." },
       { h2: "Nuove linee guida per la ristorazione", body: "Diverse regioni stanno aggiornando le linee guida HACCP per la ristorazione, con requisiti più stringenti per i locali che vogliono ottenere la certificazione per celiaci." },
+      { h2: "Cosa fare nel frattempo, in attesa dell'attivazione", body: "Fino a quando la propria Regione non avrà attivato il nuovo sistema digitale, il buono cartaceo tradizionale resta valido secondo le regole attuali, quindi utilizzabile solo nella regione di residenza. Conviene comunque tenere d'occhio le comunicazioni della propria ASL e dell'Associazione Italiana Celiachia, che segue da vicino l'attuazione della riforma e pubblica aggiornamenti man mano che le Regioni definiscono le convenzioni con i punti vendita." },
     ],
     faqs: [
-      { question: "Dove si ritira il buono spesa per prodotti senza glutine?", answer: "Il buono viene erogato dalla ASL di residenza dopo la presentazione della diagnosi ed è utilizzabile in farmacia e nei punti vendita convenzionati." },
+      { question: "Dove si ritira il buono spesa per prodotti senza glutine?", answer: "Il buono viene erogato dalla ASL di residenza dopo la presentazione della diagnosi. Con la dematerializzazione prevista dalla Legge di Bilancio 2026, sarà caricato su tessera sanitaria o codice elettronico personale, invece che su supporto cartaceo." },
+      { question: "Cosa cambia con la Legge di Bilancio 2026 per il buono celiachia?", answer: "Il buono diventa digitale e spendibile in tutta Italia, non più solo nella regione di residenza: l'importo massimo mensile non cambia." },
+      { question: "Da quando è utilizzabile il nuovo buono digitale in tutta Italia?", answer: "I tempi dipendono dalle convenzioni che ogni Regione dovrà stipulare con i punti vendita aderenti e da un decreto attuativo del Ministero della Salute: conviene verificare con la propria ASL quando la novità sarà operativa nella propria zona." },
     ],
   },
   {
@@ -377,7 +394,7 @@ const seeds: Seed[] = [
       { h2: "Milano, tra ristoranti e street food", body: "Milano offre una delle concentrazioni più alte di locali certificati in Italia, dalle pizzerie gluten free ai ristoranti gourmet, passando per un'offerta crescente di street food e panetterie dedicate in centro e nei quartieri limitrofi. La nostra <a href=\"/blog/i-migliori-ristoranti-e-pizzerie-senza-glutine-a-milano-la-guida-completa-2026\">guida completa a Milano</a> raccoglie gli indirizzi verificati città per città." },
       { h2: "Puglia e il sud Italia", body: "Anche il sud Italia, con Puglia e Sicilia in testa, ha ampliato negli ultimi anni l'offerta di strutture ricettive e ristoranti certificati, rendendo più semplice organizzare una vacanza al mare senza rinunce a livello alimentare. A <a href=\"/blog/dove-mangiare-senza-glutine-a-napoli-pizza-sfogliatelle-e-baba-senza-rinunce\">Napoli</a> in particolare l'offerta di pizzerie e pasticcerie con forno dedicato è cresciuta molto, rendendo più semplice gustare la vera pizza napoletana senza glutine. Lo stesso vale per <a href=\"/blog/bari-senza-glutine-focaccia-panzerotti-e-pizza-in-teglia-senza-rinunce\">Bari</a>, con la sua focaccia e i suoi panzerotti in versione gluten free, e per <a href=\"/blog/palermo-senza-glutine-pizzerie-arancini-e-gelato-per-una-citta-a-misura-di-celiaco\">Palermo</a>, dove non mancano pizzerie certificate AIC e arancini preparati in friggitrice dedicata." },
       { h2: "Roma, Veneto e Liguria: altre mete da non perdere", body: "Anche <a href=\"/blog/i-migliori-ristoranti-e-pizzerie-senza-glutine-a-roma-la-guida-completa-2026\">Roma</a> offre una scelta ampia tra trattorie di cucina romana e pizzerie con forno dedicato. A nord, <a href=\"/blog/venezia-senza-glutine-dove-mangiare-tra-cicchetti-pizza-e-colazione-in-hotel\">Venezia</a> e <a href=\"/blog/verona-senza-glutine-cosa-mangiare-tra-arena-centro-storico-e-negozi-specializzati\">Verona</a> hanno entrambe gelaterie e pizzerie con procedure verificate contro la contaminazione crociata, mentre a <a href=\"/blog/genova-senza-glutine-pizza-focaccia-e-forno-dedicato-tra-i-quartieri-della-citta\">Genova</a> l'offerta si concentra tra Sampierdarena, Prà e Sestri Ponente." },
-      { h2: "Consigli pratici per organizzare il viaggio", body: "Prenotare con anticipo nei locali più richiesti, soprattutto nei weekend e in alta stagione, e consultare directory aggiornate con recensioni verificate aiuta a costruire un itinerario gastronomico sicuro e senza sorprese." },
+      { h2: "Consigli pratici per organizzare il viaggio", body: "Prenotare con anticipo nei locali più richiesti, soprattutto nei weekend e in alta stagione, e consultare directory aggiornate con recensioni verificate aiuta a costruire un itinerario gastronomico sicuro e senza sorprese. Prima di partire, vale la pena salvare in una mappa gli indirizzi verificati della città scelta, così da non doverli cercare all'ultimo momento tra un ristorante e l'altro, e segnalare sempre la celiachia al momento della prenotazione, non all'arrivo al tavolo: la cucina ha bisogno di tempo per organizzarsi, soprattutto nei locali più richiesti delle città d'arte." },
     ],
     faqs: [
       { question: "Quali regioni italiane hanno più locali certificati per celiaci?", answer: "Emilia-Romagna, Lombardia e Lazio sono generalmente tra le regioni con la maggiore concentrazione di locali certificati, ma l'offerta sta crescendo rapidamente in tutta Italia." },
@@ -833,12 +850,19 @@ const seeds: Seed[] = [
         { title: "Stesura e lievitazione", body: "Stendi l'impasto direttamente nella teglia unta, aiutandoti con le mani bagnate o un foglio di carta forno: l'impasto senza glutine è più appiccicoso e va steso con questo accorgimento. Lascia lievitare 30-40 minuti in luogo tiepido." },
         { title: "Cottura in due tempi", body: "Cuoci la base in bianco per 8-10 minuti a 220°C, poi aggiungi il condimento e completa la cottura per altri 10-12 minuti, finché i bordi non sono dorati." },
       ] },
-      { h2: "Il condimento", body: "Pomodoro, mozzarella e origano restano la base più sicura, ma puoi usare anche il pesto alla genovese al posto del pomodoro per una variante bianca aromatica." },
+      { h2: "Il condimento", body: "Pomodoro, mozzarella e origano restano la base più sicura, ma puoi usare anche il <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a> al posto del pomodoro per una variante bianca aromatica, oppure il <a href=\"/prodotti/sarchio-pesto-bio-130g\">pesto bio Sarchio</a> se preferisci una versione senza formaggio e senza aglio." },
+      { h2: "Gli errori più comuni da evitare", body: "Alcuni piccoli errori rovinano più spesso il risultato di questo impasto rispetto a uno tradizionale.", h3: [
+        { title: "Acqua troppo calda o troppo fredda", body: "Un'acqua oltre i 40°C rischia di uccidere il lievito, mentre un'acqua fredda rallenta troppo la lievitazione: la temperatura ideale è tiepida, appena percepibile al tatto, non calda." },
+        { title: "Stendere l'impasto troppo sottile", body: "A differenza dell'impasto tradizionale, quello senza glutine ha meno elasticità: stenderlo troppo sottile aumenta il rischio che si spezzi o non tenga il condimento, soprattutto vicino ai bordi." },
+        { title: "Saltare la precottura in bianco", body: "Senza questo passaggio la base rischia di restare cruda al centro una volta aggiunto il condimento, soprattutto con mozzarella e pomodoro che rilasciano molta acqua in cottura." },
+      ] },
+      { h2: "Come conservare gli avanzi", body: "La pizza avanzata si conserva in frigorifero, in un contenitore ermetico, per 1-2 giorni. Per scaldarla senza seccarla, il forno è preferibile al microonde: bastano pochi minuti a 180°C per far tornare croccanti i bordi. L'impasto crudo già steso si può anche congelare, come indicato nelle FAQ qui sotto." },
     ],
     faqs: [
       { question: "Perché l'impasto va steso tra due fogli di carta forno?", answer: "L'impasto senza glutine è più appiccicoso di quello tradizionale e tende ad attaccarsi alle mani: stenderlo con carta forno o mani bagnate rende il lavoro più semplice." },
       { question: "Posso congelare l'impasto già steso?", answer: "Sì, molti impasti senza glutine si congelano bene già stesi nella teglia, prima della lievitazione finale: verifica comunque le indicazioni del produttore del mix." },
       { question: "Perché cuocere la base in bianco prima del condimento?", answer: "Aiuta la base a cuocersi uniformemente al centro senza restare cruda sotto il peso del condimento, soprattutto con impasti senza glutine più delicati." },
+      { question: "Come faccio a rendere i bordi più croccanti?", answer: "Un filo d'olio extravergine sui bordi prima della seconda cottura e qualche minuto in più a fine cottura aiutano a dorarli senza seccare il resto della base." },
     ],
   },
   {
@@ -856,9 +880,13 @@ const seeds: Seed[] = [
       "Un'etichetta con il nome sulla confezione evita scambi accidentali con la merenda di altri compagni.",
     ],
     sections: [
+      { h2: "Perché puntare sulla monoporzione sigillata", body: "A scuola il bambino non ha sempre un adulto vicino che controlla cosa sta mangiando: un prodotto ancora nella confezione originale, con etichetta e marchio ben visibili, è l'opzione che lascia meno margine di errore, sia per lui che per le maestre in caso di dubbio. È anche il motivo per cui, tra le cinque idee di questa guida, le prime puntano tutte su prodotti già porzionati singolarmente." },
       { h2: "Le opzioni pronte in monoporzione", body: "I <a href=\"/prodotti/cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g\">biscotti Buoni Senza Céréal</a> e la barretta <a href=\"/prodotti/schar-chocolix-110g\">Chocolix Schär</a> sono confezionati singolarmente: comodi da mettere nello zaino senza doverli dividere o incartare a casa." },
-      { h2: "L'alternativa salata", body: "Le <a href=\"/prodotti/cereal-fette-croccanti-150g\">fette croccanti Céréal</a> si possono preparare la sera prima con un velo di formaggio spalmabile e conservare in un contenitore ermetico per il giorno dopo." },
+      { h2: "L'alternativa salata con le fette croccanti", body: "Le <a href=\"/prodotti/cereal-fette-croccanti-150g\">fette croccanti Céréal</a> si possono preparare la sera prima con un velo di formaggio spalmabile e conservare in un contenitore ermetico per il giorno dopo." },
+      { h2: "Cracker e un panino diverso ogni tanto", body: "Per chi preferisce variare, i <a href=\"/prodotti/schar-crackers-210g\">cracker Schär</a> restano croccanti anche in un contenitore rigido e si abbinano bene a formaggio o marmellata. Una o due volte a settimana, un mini panino con il <a href=\"/prodotti/schar-pane-casereccio-240g\">pane casereccio Schär</a> o le <a href=\"/prodotti/nutrifree-panfette-pane-casereccio-300g\">panfette Nutrifree</a> spezza la routine dei prodotti confezionati, purché preparato con un tagliere e un coltello dedicati." },
+      { h2: "Frutta fresca: la quinta idea, semplice e senza etichette da controllare", body: "Una mela, una banana o dell'uva lavata a casa non richiedono nessuna verifica particolare: sono naturalmente senza glutine e restano l'opzione più semplice nei giorni in cui non c'è tempo per preparare altro. L'unica accortezza è lavarli e tagliarli, se necessario, su una superficie pulita." },
       { h2: "Consigli pratici per la schiscetta", body: "Scegli sempre prodotti nella confezione originale sigillata quando possibile, per evitare che il bambino li scambi con quelli di un compagno. Se prepari qualcosa in casa, usa un contenitore dedicato, lavato separatamente da quelli usati per alimenti con glutine.", h3: [
+        { title: "Alternare dolce e salato durante la settimana", body: "Ruotare le cinque idee di questa guida durante la settimana evita che il bambino si stanchi sempre della stessa merenda, e rende più facile accettare le monoporzioni come normalità e non come limitazione." },
         { title: "Parlarne con la scuola", body: "Anche se la merenda arriva da casa, è utile informare le maestre della celiachia, per gestire eventuali scambi spontanei di cibo tra compagni durante l'intervallo." },
       ] },
     ],
@@ -866,6 +894,7 @@ const seeds: Seed[] = [
       { question: "È meglio dare merenda confezionata o preparata in casa?", answer: "Entrambe vanno bene: la confezione sigillata originale riduce al minimo il rischio di contaminazione fuori casa, mentre la merenda fatta in casa richiede un contenitore dedicato lavato separatamente." },
       { question: "Devo avvisare la scuola anche se porto la merenda da casa?", answer: "Sì, è comunque utile informare le maestre della celiachia, per gestire situazioni come lo scambio spontaneo di cibo tra bambini durante la ricreazione." },
       { question: "Come evito che il bambino scambi la merenda con i compagni?", answer: "Un'etichetta con il nome sulla confezione e una breve spiegazione al bambino stesso, adatta alla sua età, aiutano a prevenire scambi accidentali." },
+      { question: "La frutta fresca va bene come merenda per un bambino celiaco?", answer: "Sì, frutta come mele, banane o uva è naturalmente senza glutine e non richiede controlli particolari: basta lavarla e, se necessario, tagliarla su una superficie pulita." },
     ],
   },
   {
