@@ -13,7 +13,8 @@ HOME = [
   ('What are greenhouse wedding venues?',
    'Any venue where the ceremony or reception happens under glass: working greenhouses, '
    'conservatories, palm houses, orangeries, glass atriums and the glasshouses inside public '
-   'botanical gardens. What they share is overhead glazing, which gives you daylight and planting '
+   'botanical gardens. Couples often search for this same idea as a &ldquo;garden wedding '
+   'venue.&rdquo; What they share is overhead glazing, which gives you daylight and planting '
    'without depending on the weather. '
    '<a href="/venues/">Browse every listing</a>.'),
 
