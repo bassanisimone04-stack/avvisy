@@ -156,6 +156,13 @@ HUB = [
    'published maximum, if it is based on standing room, can overstate what actually fits with a full '
    'seated reception and dancing. Use it as a starting point, then ask the venue what it holds for a '
    'seated dinner with a band or DJ.'),
+
+  ('Are greenhouse and botanical garden wedding venues wheelchair accessible?',
+   'It varies, and historic structures are the ones most likely to have gaps — some carry formal '
+   'exemptions from modern accessibility codes precisely because they are historic. Ask specifically '
+   'about entrances, ground surface and restrooms rather than a general &ldquo;is it accessible&rdquo; '
+   'question. See our <a href="/blog/greenhouse-wedding-venue-checklist/">venue checklist</a> for the '
+   'specific questions worth asking.'),
 ]
 
 
@@ -753,6 +760,18 @@ BLOG_CAPACITY = [
   ('Why does this directory leave capacity blank for some listings?',
    'Because we only publish a capacity figure once we can confirm it on the venue&rsquo;s own page '
    '&mdash; see <a href="/methodology/">how we source listings</a>. A dash means unconfirmed, not small.'),
+
+  ('Can a glasshouse wedding work for 200 or more guests?',
+   'Yes &mdash; while much of this directory&rsquo;s content leans toward small and micro weddings, '
+   'larger conservatories and purpose-built glass event spaces do exist that seat 200 to 300 or more. '
+   'They are less common than smaller rooms, so expect fewer options and a longer search, not a '
+   'smaller venue category.'),
+
+  ('Does a large glasshouse wedding need anything a small one does not?',
+   'Usually more of everything a smaller wedding already has to think about: ventilation capacity, '
+   'electrical supply for more vendors, a wider load-in route, and often a stricter minimum-spend or '
+   'exclusivity requirement. See our <a href="/blog/greenhouse-wedding-venue-checklist/">venue checklist</a> '
+   'for the full list of questions, which apply at any size.'),
 ]
 
 
@@ -803,4 +822,50 @@ BLOG_FALL = [
    'Autumn is one of the two seasons that books out furthest &mdash; commonly 12 to 18 months for a '
    'popular glasshouse, per our <a href="/blog/how-far-in-advance-book-greenhouse-venue/">booking timeline guide</a>. '
    'Peak-foliage weekends in particular tend to go first.'),
+]
+
+
+BLOG_ACCESSIBILITY = [
+  ('Are greenhouse and botanical garden wedding venues wheelchair accessible?',
+   'It varies a lot, and older or historic structures are the ones most likely to have gaps &mdash; '
+   'some have formal exemptions from modern accessibility codes precisely because they are historic. '
+   'Never assume; ask the venue directly and ask specifically, not just &ldquo;is it accessible.&rdquo;'),
+
+  ('What specific accessibility questions should I ask a venue?',
+   'Whether the main entrance is step-free or has a ramp, what the ground surface is between parking, '
+   'the ceremony spot and the reception space (grass, gravel and cobblestone are all hard on wheelchairs, '
+   'walkers and heels), whether a wheelchair can reach the restroom and dance floor without a long detour, '
+   'and whether there is at least one genuinely ADA-compliant restroom on site.'),
+
+  ('Do historic glasshouses have to meet the same accessibility standards as new buildings?',
+   'Not always &mdash; older structures can carry exemptions that a newly built venue would not qualify '
+   'for. This is exactly why a historic conservatory needs more specific, probing questions than a modern '
+   'event space, not fewer.'),
+
+  ('Should I ask about accessibility even if no guests currently use a wheelchair?',
+   'It is worth asking regardless, since guest lists change and mobility needs are not always visible or '
+   'known in advance. A venue that has already thought this through tends to be able to answer specifically '
+   'rather than vaguely.'),
+]
+
+
+BLOG_LOGISTICS_GUESTS = [
+  ('Is parking included at a botanical garden or greenhouse wedding venue?',
+   'Often, but not always free or unlimited &mdash; some public gardens include guest parking, while '
+   'others require valet above a certain guest count or charge separately. Ask for the exact arrangement '
+   'rather than assuming it matches the venue&rsquo;s day-to-day visitor parking.'),
+
+  ('Are restrooms near the ceremony and reception space, or a walk away?',
+   'This varies more than couples expect at public gardens, where the nearest restroom for daytime '
+   'visitors is not always the one available during a private event. Ask specifically whether restrooms '
+   'are adjacent to your rented space or require a walk across the grounds.'),
+
+  ('Does the venue provide tables, chairs and basic rentals, or is that separate?',
+   'Both models are common. Some hire fees include a base set of tables and chairs; others rent an empty '
+   'room and expect you to bring in everything through a rental company. Confirm this before comparing '
+   'two venues&rsquo; hire fees, since it changes what you are actually paying for.'),
+
+  ('Is there a golf cart or shuttle for guests with mobility needs across a large garden?',
+   'Some larger public gardens offer this for private events; many do not by default and it has to be '
+   'requested. Worth asking early if your ceremony and reception sites are far apart on the grounds.'),
 ]
