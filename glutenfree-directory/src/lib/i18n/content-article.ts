@@ -773,7 +773,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
         { title: "Adding the dry ingredients", body: "Sift the flour mix with the baking powder and fold it into the egg mixture, alternating with the milk a little at a time to avoid lumps. Finally add the lemon zest." },
         { title: "Baking and the toothpick test", body: "Pour the batter into a buttered and floured pan (using the same mix) and bake for 35-40 minutes. Check doneness by inserting a toothpick in the center: if it comes out dry, the cake is ready." },
       ] },
-      { h2: "Variations", body: "For a chocolate version, replace 30 g of the mix with the same amount of unsweetened cocoa; for a more rustic cake, add diced apples or dark chocolate chips to the batter before baking. If you're planning a dinner with friends, also check out our <a href=\"/en/blog/crostini-e-tartine-senza-glutine-per-una-cena-tra-amici\">gluten-free crostini and canapés ideas</a>. For the holidays, see our guide on <a href=\"/en/blog/panettone-e-colomba-senza-glutine-dove-trovarli-e-quali-scegliere\">gluten-free panettone and colomba</a>." },
+      { h2: "Variations", body: "For a chocolate version, replace 30 g of the mix with the same amount of unsweetened cocoa. If you're planning a dinner with friends, also check out our <a href=\"/en/blog/crostini-e-tartine-senza-glutine-per-una-cena-tra-amici\">gluten-free crostini and canapés ideas</a>. For the holidays, see our guide on <a href=\"/en/blog/panettone-e-colomba-senza-glutine-dove-trovarli-e-quali-scegliere\">gluten-free panettone and colomba</a>." },
+      { h2: "The apple version", body: "For a gluten-free apple cake, slice 2 apples thinly (not diced: they cook more evenly and stay more visible once the cake is unmolded), arrange them in a fan pattern over the batter in the pan before baking, so they sink in slightly instead of staying only on the surface. A teaspoon of cinnamon in the batter pairs well with the apple; the baking time stays the same as in the base recipe, just check with a toothpick in a spot without apple." },
       { h2: "Turning it into muffins or mini cakes", body: "The same batter also works well poured into muffin tins or a small pan for single portions: just cut the baking time to about 18-22 minutes, always checking with a toothpick, since smaller molds bake faster." },
       { h2: "Common mistakes to avoid", body: "Two mistakes most often spoil the result: not beating the eggs and sugar long enough, giving a less fluffy cake, and opening the oven in the first 20 minutes of baking, which can cause the batter to sink before it's set." },
       { h2: "How to store it", body: "It keeps at room temperature, well covered, for 2-3 days, or in the fridge for a week if filled with fresh cream. Frozen in individually wrapped slices, it also keeps well for about a month." },
@@ -847,7 +848,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["kids", "snacks", "school"],
   },
-  "art-28": {
+  "art-34": {
     title: "Gluten-Free Crostini and Canapés for a Dinner with Friends",
     excerpt: "Quick ideas for gluten-free crostini and canapés, with ready-made bases and a handful of fresh ingredients to assemble at the last minute.",
     authorRole: "Gluten-free food blogger",
@@ -878,7 +879,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["recipes", "aperitivo", "dinner"],
   },
-  "art-30": {
+  "art-28": {
     title: "Where to Eat Gluten-Free in Naples: Pizza, Sfogliatelle and Babà Without Compromise",
     excerpt: "The guide to eating gluten-free in Naples: from Neapolitan pizza baked in a dedicated oven to gluten-free sfogliatella and babà, between historic addresses and new certified openings.",
     authorRole: "Gluten-free food blogger",
@@ -908,7 +909,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["naples", "pizza", "pastry", "guides"],
   },
-  "art-31": {
+  "art-29": {
     title: "Gluten-Free Venice: Where to Eat Between Cicchetti, Pizza and Hotel Breakfast",
     excerpt: "A guide to gluten-free Venice: gelaterie with dedicated cones, pizzerias with separate kitchens, and one of the few AIC-certified hotels in the city for a worry-free breakfast.",
     authorRole: "Food safety content specialist",
@@ -938,7 +939,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["venice", "hotel", "pizzerias", "guides"],
   },
-  "art-32": {
+  "art-30": {
     title: "Gluten-Free Bari: Focaccia, Panzerotti and Tray Pizza Without Compromise",
     excerpt: "Where to eat gluten-free in Bari: Bari-style focaccia and panzerotti gluten-free, a dedicated lab since 2013, and where to shop for gluten-free groceries in the city.",
     authorRole: "Gluten-free food blogger",
@@ -971,7 +972,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["bari", "focaccia", "bakery", "guides"],
   },
-  "art-33": {
+  "art-31": {
     title: "Gluten-Free Palermo: Pizzerias, Arancini and Gelato in a City Built for Celiacs",
     excerpt: "A guide to gluten-free Palermo: pizzerias entirely dedicated to gluten-free and AIC-certified, fried food with a dedicated fryer, and a historic gelateria since 1976 with no surcharge on gluten-free flavors.",
     authorRole: "Food safety content specialist",
@@ -1004,7 +1005,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["palermo", "sicily", "arancini", "guides"],
   },
-  "art-34": {
+  "art-32": {
     title: "Gluten-Free Genoa: Pizza, Focaccia and a Dedicated Bakery Across the City's Districts",
     excerpt: "Where to eat gluten-free in Genoa: AIC-certified pizzerias in Sampierdarena and Prà, a bakery-pastry shop that recently opened in Sestri Ponente, and alternative doughs worth trying.",
     authorRole: "Gluten-free food blogger",
@@ -1034,7 +1035,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["genoa", "pizzerias", "guides"],
   },
-  "art-35": {
+  "art-33": {
     title: "Gluten-Free Verona: What to Eat Between the Arena, the Old Town and Specialty Shops",
     excerpt: "A guide to gluten-free Verona: an AIC-certified vegan restaurant, the pizzeria right across from the Arena, a shop with over 100 products partnered with the local health authority, and a gelateria in the AIC network since 2010.",
     authorRole: "Food safety content specialist",
@@ -1064,7 +1065,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["verona", "shops", "guides"],
   },
-  "art-36": {
+  "art-35": {
     title: "Does a Gluten-Free Diet Help You Lose Weight? What Science Really Says",
     excerpt: "Does a gluten-free diet help you lose weight? The honest answer: early weight loss usually comes from what you remove and add to your plate, not from gluten itself.",
     authorRole: "Nutritionist & biologist",
@@ -1096,7 +1097,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["weight loss", "gluten-free diet", "nutrition", "myths"],
   },
-  "art-37": {
+  "art-36": {
     title: "Gluten-Free Shopping at Discount Stores: Aldi, Lidl and Eurospin Compared",
     excerpt: "Is gluten-free grocery shopping cheaper at discount stores? Aldi, Lidl and Eurospin's dedicated lines compared, and how to save without giving up on safety.",
     authorRole: "Food safety content specialist",
@@ -1129,7 +1130,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["shopping", "discount", "savings", "supermarkets"],
   },
-  "art-38": {
+  "art-37": {
     title: "Gluten-Free Panettone and Colomba: Where to Find Them and What to Choose",
     excerpt: "Gluten-free panettone and colomba for the holidays: Nutrifree and Schär's offerings, where to buy them and what to check on the label before choosing.",
     authorRole: "Gluten-free food blogger",
@@ -1161,7 +1162,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["panettone", "colomba", "christmas", "easter", "holiday sweets"],
   },
-  "art-39": {
+  "art-38": {
     title: "Gluten-Free Beer: The Brands to Know and What to Know Before Drinking It",
     excerpt: "Gluten-free beer: which brands are AIC-certified, the difference between de-glutenized beers and naturally gluten-free ones, and how much to drink safely.",
     authorRole: "Food safety content specialist",
@@ -1198,7 +1199,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["beer", "drinks", "AIC", "products"],
   },
-  "art-40": {
+  "art-39": {
     title: "Celiac Disease in Men: Why Diagnosis Comes Later",
     excerpt: "Celiac disease is diagnosed mostly in women, and in men it arrives roughly a decade later: why that happens, which signs get overlooked, and what to ask your doctor.",
     authorRole: "Nutritionist & biologist",
@@ -1231,7 +1232,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["celiac disease", "diagnosis", "men", "health"],
   },
-  "art-41": {
+  "art-40": {
     title: "Flying Gluten-Free: The GFML Meal and What to Pack",
     excerpt: "How to request the gluten-free meal on a flight (code GFML), by when to do it, what to expect on board and which supplies to bring so you're never left without food.",
     authorRole: "Food safety content specialist",
@@ -1264,7 +1265,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["travel", "flying", "GFML", "holidays"],
   },
-  "art-42": {
+  "art-41": {
     title: "Gluten-Free Flours: A Guide to Alternatives to Plain Flour",
     excerpt: "Rice, corn, buckwheat, chestnut, almond: how the main gluten-free flours behave in the kitchen, when to use them, and why blends work better than single flours.",
     authorRole: "Gluten-free food blogger",
@@ -1279,13 +1280,13 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     sections: [
       { h2: "Why swapping plain flour isn't enough", body: "Gluten isn't just a protein to avoid: in traditional baking it's the structure of the dough itself, what traps the gases of fermentation and makes the network elastic. Removing it means rebuilding that function with other ingredients, which is why <strong>swapping plain flour one-to-one for a gluten-free flour almost never works</strong>: the result is dense, crumbly and dry. Understanding how individual flours behave helps you choose well, or understand what's inside a ready-made blend." },
       { h2: "The neutral flours: rice and corn", body: "They're the base of most gluten-free preparations.", h3: [
-        { title: "Rice flour", body: "The most versatile and most used as a base: neutral flavor, light color, suited to cakes, béchamel and coating. On its own it tends to give a dry, slightly sandy result, which is why it's almost always paired with starches or other flours." },
-        { title: "Corn flour", body: "Not to be confused with polenta: fine corn flour is excellent for crumbly baked goods like biscuits and shortcrust. It brings golden color and a natural sweetness, but little structure." },
+        { title: "Rice flour", body: "The most versatile and most used as a base: neutral flavor, light color, suited to cakes, <a href=\"/en/blog/besciamella-senza-glutine-la-ricetta-base-senza-grumi\">béchamel</a> and coating. On its own it tends to give a dry, slightly sandy result, which is why it's almost always paired with starches or other flours." },
+        { title: "Corn flour", body: "Not to be confused with polenta: fine corn flour is excellent for crumbly baked goods like <a href=\"/en/blog/biscotti-senza-glutine-la-ricetta-base-da-frollini\">biscuits</a> and shortcrust. It brings golden color and a natural sweetness, but little structure." },
       ] },
       { h2: "The characterful flours: buckwheat, chestnut, almond", body: "They bring flavor and nutritional value, but need careful dosing.", h3: [
-        { title: "Buckwheat", body: "Despite the name it has nothing to do with wheat and is naturally gluten-free. Bold, slightly bitter flavor, great for pizzoccheri, savory crepes and rustic bread: it's rarely used above 30-40% of the total, or it dominates the taste." },
+        { title: "Buckwheat", body: "Despite the name it has nothing to do with wheat and is naturally gluten-free. Bold, slightly bitter flavor, great for pizzoccheri, savory <a href=\"/en/blog/crepes-senza-glutine-la-pastella-base-dolce-e-salata\">crepes</a> and rustic <a href=\"/en/blog/pane-senza-glutine-fatto-in-casa-la-ricetta-base-con-lievito-di-birra\">bread</a>: it's rarely used above 30-40% of the total, or it dominates the taste." },
         { title: "Chestnut flour", body: "Sweet and fragrant, traditional in preparations like castagnaccio. Very characterful: in a mixed dough it's generally kept under 25%, both for flavor and because it weighs things down." },
-        { title: "Almond flour", body: "Rich in good fats, it brings softness and structure to unleavened bakes, from cakes to tart bases. It doesn't rise and isn't used for bread, but it's precious in pastry." },
+        { title: "Almond flour", body: "Rich in good fats, it brings softness and structure to unleavened bakes, from cakes to <a href=\"/en/blog/crostata-senza-glutine-la-pasta-frolla-perfetta-da-farcire\">tart bases</a>. It doesn't rise and isn't used for bread, but it's precious in pastry." },
       ] },
       { h2: "Why ready-made blends remain the simplest choice", body: "A certified blend already combines starches (which bring lightness), flours (which bring structure and flavor) and binders like psyllium or guar gum, which partly mimic gluten's role. That's why, especially for bread, pizza and leavened bakes, a good blend gives more consistent results than any combination improvised at home: in our <a href=\"/en/prodotti\">verified products</a> section you'll find universal and dessert-specific blends, each with its certification checked one by one. If you want to start from a tested recipe, try the <a href=\"/en/blog/pizza-senza-glutine-fatta-in-casa-l-impasto-con-il-mix-universale\">pizza with the universal blend</a>, our <a href=\"/en/blog/pizza-senza-glutine-perfetta-i-segreti-per-un-impasto-leggero-e-croccante\">tips for a light and crispy dough</a>, the <a href=\"/en/blog/torta-senza-glutine-facile-la-ricetta-base-con-il-mix-per-dolci\">basic cake with the dessert blend</a>, or <a href=\"/en/blog/ricetta-pasta-fresca-senza-glutine-fatta-in-casa\">homemade fresh pasta</a>." },
       { h2: "Frequently asked questions about gluten-free flours", body: "The most common doubts of anyone cooking gluten-free at home.", h3: [
@@ -1301,7 +1302,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["flours", "cooking", "baking", "nutrition"],
   },
-  "art-43": {
+  "art-42": {
     title: "Weaning and Gluten: When to Introduce It and What Research Says",
     excerpt: "Introducing gluten earlier or later during weaning doesn't change celiac risk: what the ESPGHAN guidelines say and why genetics remains the deciding factor.",
     authorRole: "Nutritionist & biologist",
@@ -1334,7 +1335,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["kids", "weaning", "celiac disease", "parents"],
   },
-  "art-44": {
+  "art-43": {
     title: "Gluten-Free at Village Festivals: How to Navigate Them Safely",
     excerpt: "AIC stands, dedicated food trucks and practical rules for enjoying an Italian sagra as a celiac without risking cross-contamination among shared fryers and dough.",
     authorRole: "Food safety content specialist",
@@ -1367,7 +1368,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["festivals", "events", "AIC", "cross-contamination"],
   },
-  "art-45": {
+  "art-44": {
     title: "Sushi, Chinese and Indian Gluten-Free: Eating Out as a Celiac",
     excerpt: "Soy sauce contains wheat and tempura is battered: how to navigate Asian and Indian restaurants as a celiac, what to ask, and which AIC-certified venues already exist in Italy.",
     authorRole: "Food safety content specialist",
@@ -1401,7 +1402,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["restaurants", "sushi", "asian", "soy sauce"],
   },
-  "art-46": {
+  "art-45": {
     title: "AIC Certification: What It Really Means and How to Spot a Truly Certified Venue",
     excerpt: "What \"AIC certification\" really means: how the Alimentazione Fuori Casa programme works, what checks it involves, and why it's technically not a certification in the strict sense.",
     authorRole: "Food safety content specialist",
@@ -1434,6 +1435,180 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "Is a venue without AIC certification safe for a celiac?", answer: "It can be, but without the periodic external checks the programme provides, the assurance relies only on direct experience: checking for a dedicated kitchen and staff training remains good practice regardless." },
     ],
     tags: ["AIC", "certification", "AFC", "guide"],
+  },
+  "art-46": {
+    title: "Gluten-Free Béchamel: The Lump-Free Base Recipe",
+    excerpt: "How to make gluten-free béchamel that's smooth and lump-free, with rice flour or an all-purpose mix, ready for lasagna, baked pasta and gratin vegetables.",
+    metaTitle: "Gluten-Free Béchamel Recipe | Mappa Senza Glutine",
+    metaDescription: "Gluten-free béchamel recipe, lump-free: quantities, step-by-step method and the tricks for a smooth texture with rice flour or an all-purpose mix.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "Rice flour or a gluten-free all-purpose mix replaces plain flour in the roux, the fat-and-flour base of béchamel.",
+      "Pouring cold milk, not hot, onto the roux a little at a time is the main trick for avoiding lumps.",
+      "Gluten-free béchamel tends to thicken faster than the traditional version: take it off the heat as soon as it reaches the right consistency.",
+      "It keeps in the fridge for 2 days, with a layer of butter or plastic wrap pressed onto the surface to stop a skin forming.",
+    ],
+    sections: [
+      { h2: "Ingredients for 500 ml of béchamel", body: "40 g butter, 40 g rice flour or <a href=\"/en/prodotti/schar-mix-it-universale-1kg\">Schär Mix It! all-purpose mix</a>, 500 ml milk, a pinch of salt, nutmeg to taste." },
+      { h2: "Method", body: "Melt the butter in a saucepan over low heat, add all the flour at once and whisk for 1-2 minutes without letting it color: that's the roux, the base of the béchamel.", h3: [
+        { title: "The trick for avoiding lumps", body: "Pour in cold milk straight from the fridge, not hot, one ladle at a time, whisking continuously before adding the next. Cold milk onto the hot roux is the step that prevents lumps better than anything else." },
+        { title: "Cooking and consistency", body: "Cook over low heat, stirring often, for 8-10 minutes: gluten-free béchamel tends to thicken faster than the traditional version, so take it off the heat as soon as it coats the back of a spoon, even if it still looks slightly runny, since it will thicken further as it cools." },
+      ] },
+      { h2: "Uses in the kitchen", body: "It's the base for lasagna, baked pasta, gratin vegetables and croquettes: useful too for anyone wanting to put together a full baked dish starting from our <a href=\"/en/blog/ricetta-pasta-fresca-senza-glutine-fatta-in-casa\">fresh pasta recipe</a>." },
+      { h2: "Variations", body: "For a cheesy béchamel, stir in 50 g of grated parmesan off the heat once it's cooked, mixing until melted. For a lighter version, replace part of the milk with vegetable stock; for a vegan béchamel, use an unsweetened plant-based drink and margarine instead of butter, following the same method to avoid lumps." },
+      { h2: "How to store it", body: "It keeps in the fridge for about 2 days, in a container with a layer of melted butter or plastic wrap pressed onto the surface, to stop a skin from forming." },
+    ],
+    faqs: [
+      { question: "Why does my gluten-free béchamel always turn out lumpy?", answer: "Almost always because the milk is poured in all at once or still hot: it should be added cold, a little at a time, whisking continuously." },
+      { question: "Can I use an all-purpose mix instead of rice flour?", answer: "Yes, an all-purpose mix already balanced with starches and thickeners often gives a more stable result than rice flour alone, especially for beginners." },
+      { question: "Can gluten-free béchamel be frozen?", answer: "Yes, but the texture changes slightly on thawing: stir it well over low heat, adding a spoonful of milk if needed, to bring it back to smooth." },
+    ],
+    tags: ["recipes", "béchamel", "sauces"],
+  },
+  "art-47": {
+    title: "Homemade Gluten-Free Bread: The Base Recipe with Yeast",
+    excerpt: "How to make gluten-free bread at home: kneading, rising and baking for a loaf with a crispy crust and a soft, non-gummy crumb.",
+    metaTitle: "Homemade Gluten-Free Bread | Mappa Senza Glutine",
+    metaDescription: "Homemade gluten-free bread recipe: quantities, rising times and the tricks for a crispy crust and a soft, non-gummy crumb every time.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "A dedicated bread mix, with starches and thickeners like psyllium or xanthan gum, replaces the gluten network and gives the dough structure.",
+      "Gluten-free bread dough is more like a thick batter than traditional dough: it isn't kneaded by hand on a work surface.",
+      "A single rise, directly in the pan, gives more reliable results than two separate rises.",
+      "A container of water in the oven during baking helps you get a crispier crust.",
+    ],
+    sections: [
+      { h2: "Ingredients for a 500 g loaf", body: "400 g of <a href=\"/en/prodotti/schar-mix-it-universale-1kg\">Schär Mix It! all-purpose mix</a> (or a dedicated bread mix), 320 ml lukewarm water, 10 g dry active yeast, 1 tablespoon extra virgin olive oil, a teaspoon of salt, a teaspoon of sugar." },
+      { h2: "Method", body: "Dissolve the yeast and sugar in the lukewarm water, let rest 10 minutes until foam forms on top. Add the mix, salt and oil, mixing with a wooden spoon or dough whisks: the result is a thick batter, not a dough to knead by hand.", h3: [
+        { title: "Rising in the pan", body: "Pour the mixture directly into a loaf pan lined with parchment paper, smooth the surface with a wet spatula and let it rise 40-50 minutes somewhere warm, until doubled." },
+        { title: "Baking with steam for the crust", body: "Bake at 200°C for 40-45 minutes, placing a tray with a little water on the oven floor for the first 15 minutes: the steam helps the crust turn crispy instead of hard." },
+      ] },
+      { h2: "Common mistakes", body: "Kneading by hand on a work surface, as with traditional bread, is the most frequent mistake: gluten-free dough, being more liquid, should instead be poured directly into the pan. Opening the oven in the first 20 minutes of baking can cause the loaf to sink before it has set." },
+      { h2: "Variations", body: "For a seeded loaf, stir 2 tablespoons of mixed seeds (sunflower, pumpkin, flax) directly into the batter before pouring it into the pan. For a sweeter breakfast version, add a tablespoon of honey and a handful of soaked raisins, reducing the sugar in the recipe slightly." },
+      { h2: "How to store it", body: "It keeps 2-3 days at room temperature in a bread bag, or sliced and frozen: the slices thaw quickly in the toaster, with no need to thaw the whole loaf." },
+    ],
+    faqs: [
+      { question: "Why does my gluten-free bread come out too dense?", answer: "Often because of too short a rise, or a flour without thickeners like psyllium or xanthan gum, which partly replace the structure gluten normally provides: a dedicated bread mix helps give a lighter crumb." },
+      { question: "Can I knead gluten-free bread by hand like traditional bread?", answer: "No, the mixture is more like a thick batter than an elastic dough: it should be mixed with a spoon or whisks and poured directly into the pan, not worked on a surface." },
+      { question: "How do I get a crispier crust?", answer: "Place a container with a little water on the oven floor for the first 15 minutes of baking: the steam that forms helps the crust turn crispy instead of hard." },
+    ],
+    tags: ["recipes", "bread", "dough"],
+  },
+  "art-48": {
+    title: "Gluten-Free Tart: The Perfect Shortcrust to Fill",
+    excerpt: "How to make gluten-free shortcrust pastry for tarts, with jam or cream: ratios, fridge resting time and baking for a crumbly, not tough, shell.",
+    metaTitle: "Gluten-Free Tart Shortcrust Recipe | Mappa Senza Glutine",
+    metaDescription: "Gluten-free tart recipe: crumbly shortcrust with a cake flour mix, resting times and baking for the perfect shell to fill with jam or cream.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "A dedicated cake flour mix gives a more crumbly shortcrust than a generic mix, thanks to the balance between starches and flours.",
+      "Resting in the fridge for at least 30 minutes matters even more than with traditional shortcrust, since gluten-free dough is more delicate to roll out.",
+      "Blind baking the shell, with dried beans or baking weights, stops it puffing up or losing shape while baking.",
+      "Gluten-free shortcrust browns faster at the edges: cover with foil in the last few minutes if needed.",
+    ],
+    sections: [
+      { h2: "Ingredients for a 24 cm tart", body: "300 g of <a href=\"/en/prodotti/nutrifree-mix-per-dolci-1kg\">Nutrifree cake flour mix</a>, 150 g cold butter, cubed, 100 g sugar, 2 egg yolks, a pinch of salt, the zest of one lemon." },
+      { h2: "Method", body: "Quickly work the mix with the cold butter, rubbing between your fingers until sandy. Add sugar, yolks, salt and lemon zest, mixing only as long as needed to form a compact dough: overworking it makes it tough once baked.", h3: [
+        { title: "Resting in the fridge", body: "Wrap the dough in plastic wrap and let it rest at least 30 minutes in the fridge: gluten-free shortcrust is more delicate to roll out if it isn't well chilled, and risks crumbling." },
+        { title: "Rolling out and blind baking", body: "Roll the dough between two sheets of parchment paper to about half a centimeter, line a buttered pan and prick the base with a fork. If filling after baking, blind bake at 180°C for 20 minutes, covering the base with parchment and dried beans to stop it puffing up." },
+      ] },
+      { h2: "Fillings", body: "Jam, pastry cream or hazelnut cream are the classic fillings: with jam you can bake it already filled, with more delicate creams it's better to fill after blind baking and full cooling." },
+      { h2: "Common mistakes", body: "Overworking the dough, instead of stopping as soon as it comes together, is the most frequent cause of a tough shell after baking. Rolling out the dough while still warm, skipping the fridge rest, makes it hard to handle and more prone to tearing in the pan." },
+      { h2: "How to store it", body: "It keeps 3-4 days at room temperature under a glass dome, or in the fridge if filled with fresh cream; the raw dough freezes well for up to a month." },
+    ],
+    faqs: [
+      { question: "Why does my gluten-free shortcrust crumble when I roll it out?", answer: "Usually because it hasn't rested long enough in the fridge, or the butter wasn't cold: gluten-free shortcrust is more delicate than traditional dough and should be rolled out cold, ideally between two sheets of parchment paper." },
+      { question: "Do I always need to blind bake the shell?", answer: "Only if the filling doesn't need baking, like creams or fresh fruit; with jam you can bake it already filled, saving a step." },
+      { question: "Can I freeze gluten-free shortcrust pastry?", answer: "Yes, the raw dough wrapped in plastic wrap freezes well for up to a month: thaw it in the fridge a few hours before rolling it out." },
+    ],
+    tags: ["recipes", "tart", "desserts"],
+  },
+  "art-49": {
+    title: "Gluten-Free Crêpes: The Sweet and Savory Base Batter",
+    excerpt: "How to make gluten-free crêpes: batter ratios, resting time and cooking for a thin, elastic result, to fill sweet or savory.",
+    metaTitle: "Gluten-Free Crêpes Recipe | Mappa Senza Glutine",
+    metaDescription: "Gluten-free crêpes recipe: batter ratios, resting time and cooking for a thin, non-gummy result, to fill sweet or savory.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "A gluten-free all-purpose mix, lighter than rice flour alone, gives crêpes that are more elastic and less likely to tear.",
+      "Resting the batter for at least 30 minutes in the fridge matters even more than with traditional flour.",
+      "A well-heated non-stick pan, with very little fat, is the factor that most affects success.",
+      "Gluten-free crêpes tear more easily while hot: let them cool a few seconds before flipping or folding.",
+    ],
+    sections: [
+      { h2: "Ingredients for about 8 crêpes", body: "150 g of <a href=\"/en/prodotti/schar-mix-it-universale-1kg\">Schär Mix It! all-purpose mix</a>, 2 eggs, 300 ml milk (or plant-based drink), a pinch of salt, a tablespoon of seed oil or melted butter." },
+      { h2: "Method", body: "Beat the eggs with the salt, add the mix a little at a time alternating with the milk, whisking to avoid lumps. Finally add the oil or melted butter: the batter should be liquid, similar to fresh cream.", h3: [
+        { title: "Resting in the fridge", body: "Let the batter rest at least 30 minutes covered in the fridge: resting lets the flour fully hydrate, giving crêpes that are more elastic and less likely to tear while cooking." },
+        { title: "Getting the cooking right", body: "Heat a 20-24 cm non-stick pan well, grease it lightly with butter or oil, pour in a ladle of batter and swirl the pan right away to spread it thin. Cook 1-2 minutes per side, until the edges lift on their own." },
+      ] },
+      { h2: "Sweet and savory fillings", body: "For the sweet version, Nutella, jam or sugar and lemon remain the classics; for savory, ham and cheese or sautéed vegetables. For breakfast, also try our <a href=\"/en/blog/pancake-senza-glutine-la-ricetta-base-soffice\">gluten-free pancakes</a>, or pair them with a platter of <a href=\"/en/blog/crostini-e-tartine-senza-glutine-per-una-cena-tra-amici\">gluten-free crostini and canapés</a> for a full aperitivo." },
+      { h2: "Common mistakes", body: "A batter that's too thick is the most frequent cause of thick, gummy crêpes: if it's hard to spread in the pan, thin it out with an extra tablespoon of milk. A pan that isn't hot enough for the first one makes it stick: the following ones almost always turn out better, once the pan has reached the right temperature." },
+      { h2: "How to store them", body: "Cooked crêpes keep 2 days in the fridge, stacked with a sheet of parchment paper between each, or freeze the same way for up to a month." },
+    ],
+    faqs: [
+      { question: "Why do my gluten-free crêpes tear?", answer: "Often because they're flipped while too hot, or the batter hasn't rested enough: let it rest at least 30 minutes and let the crêpes cool a few seconds before flipping." },
+      { question: "Can I make gluten-free crêpes without eggs?", answer: "Yes, replacing the eggs with a mix of water and corn starch or a dedicated plant-based substitute: the texture will be slightly different but still good." },
+      { question: "Can cooked crêpes be frozen?", answer: "Yes, stacked with a sheet of parchment paper between each so they don't stick, they keep in the freezer for up to a month." },
+    ],
+    tags: ["recipes", "crepes", "breakfast"],
+  },
+  "art-50": {
+    title: "Gluten-Free Pancakes: The Fluffy Base Recipe",
+    excerpt: "How to make gluten-free pancakes that are fluffy and tall: ratios, the trick for a good rise and pan cooking times.",
+    metaTitle: "Gluten-Free Pancakes Recipe | Mappa Senza Glutine",
+    metaDescription: "Gluten-free pancakes recipe, fluffy and tall: ratios, the trick for a good rise and pan cooking times for breakfast.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "An already-balanced cake mix gives fluffier pancakes than a generic mix or rice flour alone.",
+      "Don't overmix the batter: a few remaining lumps are normal and help keep pancakes tall and fluffy.",
+      "Baking powder should always be certified gluten-free, even though it seems like a neutral ingredient.",
+      "Cooking over medium-low heat, without rushing, keeps them from staying raw in the center.",
+    ],
+    sections: [
+      { h2: "Ingredients for about 8 pancakes", body: "200 g of <a href=\"/en/prodotti/nutrifree-mix-per-dolci-1kg\">Nutrifree cake flour mix</a>, 1 egg, 200 ml milk (or plant-based drink), 1 tablespoon sugar, half a sachet of gluten-free baking powder, a pinch of salt." },
+      { h2: "Method", body: "Mix the dry ingredients on one side and the liquid ones on the other, then add the liquids to the dry ones, whisking quickly without overworking the batter: a few remaining lumps are fine, and actually help keep the pancakes fluffy.", h3: [
+        { title: "The 5-minute rest", body: "Let the batter rest 5 minutes before cooking: the baking powder starts working already, and the pancakes come out taller." },
+        { title: "Cooking in the pan", body: "Heat a non-stick pan over medium-low heat, pour a small ladle of batter for each pancake and cook until bubbles form on the surface, then flip and cook another 1-2 minutes." },
+      ] },
+      { h2: "Fillings and pairings", body: "Maple syrup, fresh fruit, yogurt or melted chocolate are the classic pairings. For a change of breakfast, check out our guide on <a href=\"/en/blog/dove-fare-colazione-senza-glutine-cornetti-brioches-e-pasticcerie-dedicate\">where to get gluten-free breakfast</a> when out." },
+      { h2: "Common mistakes", body: "Baking powder that's no longer active, or left open for too long, is the most frequent cause of flat pancakes: check the date and keep it in a well-sealed container. Too high a heat cooks the outside before the center is ready: medium-low heat and a couple of extra minutes work better." },
+      { h2: "How to store them", body: "They keep 1-2 days in the fridge in an airtight container, or freeze already cooked: a few minutes in the toaster reheats them without drying out." },
+    ],
+    faqs: [
+      { question: "Why do my gluten-free pancakes come out flat?", answer: "Often because the baking powder is no longer active, or the batter was overmixed: whisk quickly and let it rest 5 minutes before cooking." },
+      { question: "Can I use rice flour alone instead of a cake mix?", answer: "Yes, but the result will be less fluffy: an already-balanced mix with starches and raising agents gives more consistent results, especially for beginners." },
+      { question: "Can cooked pancakes be frozen?", answer: "Yes, they keep in the freezer in a bag for a month: they reheat well in the toaster with no need to thaw first." },
+    ],
+    tags: ["recipes", "pancakes", "breakfast"],
+  },
+  "art-51": {
+    title: "Gluten-Free Cookies: The Base Shortbread Recipe",
+    excerpt: "How to make crumbly gluten-free cookies, shortbread-style: ratios, method and the tricks for a crisp, not hard, texture.",
+    metaTitle: "Gluten-Free Cookies Recipe | Mappa Senza Glutine",
+    metaDescription: "Gluten-free cookies recipe, shortbread-style and crumbly: ratios, method and the tricks for a crisp, not hard, texture every time.",
+    authorRole: "Gluten-free food blogger",
+    keyTakeaways: [
+      "A gluten-free cake mix gives crumblier cookies than a dough made with rice flour alone.",
+      "The dough should be worked as little as possible and rested in the fridge before rolling out or shaping.",
+      "Gluten-free cookies brown faster at the edges: check them a few minutes before the time given in a traditional recipe.",
+      "They keep better in a tin than in a plastic bag, to stay crisp.",
+    ],
+    sections: [
+      { h2: "Ingredients for about 25 cookies", body: "250 g of <a href=\"/en/prodotti/nutrifree-mix-per-dolci-1kg\">Nutrifree cake flour mix</a>, 100 g soft butter, 80 g sugar, 1 egg, a pinch of salt, the zest of one lemon or half a teaspoon of vanilla." },
+      { h2: "Method", body: "Cream the soft butter with the sugar, add the egg, then the mix, salt and chosen flavoring, mixing only until you get an even dough, without overworking it.", h3: [
+        { title: "Resting before shaping", body: "Wrap the dough in plastic wrap and let it rest 30 minutes in the fridge: it becomes easier to roll out or shape into balls without sticking to your hands." },
+        { title: "Baking and watching the color", body: "Bake at 170°C for 10-12 minutes, checking a couple of minutes before the stated time: gluten-free cookies tend to brown faster at the edges than traditional ones. They're ready when the edges are golden, even if the center still looks soft: they firm up as they cool." },
+      ] },
+      { h2: "Variations", body: "For a chocolate version, replace 20 g of the mix with the same amount of unsweetened cocoa; for cookies meant for dunking, reduce the sugar slightly and extend baking by 2-3 minutes to make them drier." },
+      { h2: "Common mistakes", body: "Overworking the dough after adding the mix is the most frequent cause of hard instead of crumbly cookies: just enough mixing to bring the ingredients together is all it takes. Skipping the fridge rest makes the dough sticky and hard to shape, and cookies more likely to lose their shape while baking." },
+      { h2: "How to store them", body: "They keep up to a week in an airtight tin, which preserves crispness better than a plastic bag; the raw dough freezes well for up to a month." },
+    ],
+    faqs: [
+      { question: "Why do my gluten-free cookies come out hard?", answer: "Often from baking too long: gluten-free cookies firm up a lot as they cool, so take them out of the oven when the center still looks soft and the edges are just golden." },
+      { question: "How do I store them to keep them crisp?", answer: "In an airtight tin, not a plastic bag: it preserves crispness better and protects them from moisture." },
+      { question: "Can I freeze the raw dough?", answer: "Yes, wrapped in plastic wrap it keeps in the freezer for up to a month: thaw it in the fridge before rolling out or shaping it." },
+    ],
+    tags: ["recipes", "cookies", "desserts"],
   },
 };
 
