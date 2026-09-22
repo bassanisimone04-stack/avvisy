@@ -285,7 +285,7 @@ Two rules the build enforces:
 2. **Structured data asserts only confirmed fields.** `maximumAttendeeCapacity`
    and `priceRange` are emitted only when the data holds them.
 
-525 FAQs across the site, all keyword-targeted — coverage is printed by
+526 FAQs across the site, all keyword-targeted — coverage is printed by
 `npm run check:faq`.
 
 ---

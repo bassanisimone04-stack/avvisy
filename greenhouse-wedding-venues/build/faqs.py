@@ -122,6 +122,11 @@ HUB = [
    'budget, so confirm it before you fall for a room. '
    '<a href="/venues/?type=botanical-garden">Browse botanical garden venues</a>.'),
 
+  ('How do I find a botanical garden wedding venue near me?',
+   'Set the type filter to &ldquo;Botanical garden&rdquo; on the directory, then filter by state or '
+   'search your nearest city. '
+   '<a href="/venues/?type=botanical-garden">Browse botanical garden venues</a>.'),
+
   ('Where can I find small greenhouse wedding venues under 50 guests?',
    'Set the capacity filter to “Under 50 — micro-wedding”. It only matches listings whose capacity '
    'we have confirmed against the venue&rsquo;s own page, so it will be empty until those are filled '
