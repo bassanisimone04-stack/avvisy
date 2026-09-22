@@ -104,16 +104,17 @@ HOME = [
 
 
 HUB = [
-  ('How do I find glasshouse wedding venues near me?',
+  ('How do I find a greenhouse wedding venue near me?',
    'Filter by state and venue type, then follow the link on each listing through to the venue&rsquo;s '
    'own events page for current availability and pricing. Search also matches city names, so typing '
    'your nearest large city is often the fastest route.'),
 
   ('What counts as conservatory wedding venues?',
    'Strictly, a conservatory is a glazed room attached to a building. In practice couples use the '
-   'word for any grand glazed reception room, so this directory covers conservatories, palm houses, '
-   'orangeries, atriums, working greenhouses and the glasshouses inside botanical gardens. Filter by '
-   'type if the distinction matters to you.'),
+   'word &mdash; and terms like &ldquo;glass greenhouse wedding venue&rdquo; &mdash; for any grand '
+   'glazed reception room, so this directory covers conservatories, palm houses, orangeries, atriums, '
+   'working greenhouses and the glasshouses inside botanical gardens. Filter by type if the '
+   'distinction matters to you.'),
 
   ('Which botanical garden wedding venues allow outside catering?',
    'Public gardens commonly work from an approved-caterer list rather than a fully open one, and the '
@@ -166,9 +167,28 @@ HUB = [
 ]
 
 
+# Cities with real, confirmed search demand for "greenhouse wedding venue in <city>"
+# but no listing in this directory yet — see build/faqs.py's `state()` docstring.
+# Answered honestly (no venue claimed) rather than left to 404 silently on a real query.
+GAP_CITIES = {
+    "texas": ["Houston", "Austin"],
+    "california": ["Los Angeles"],
+    "north-carolina": ["Charlotte"],
+}
+
+
 def state(name, slug):
     """Per-state FAQs. The state name sits inside the question — that is the keyword —
     while the answers stay within what is true of the category anywhere."""
+    gap_cities = GAP_CITIES.get(slug, [])
+    gap_faqs = [
+        (f'Is there a greenhouse wedding venue in {city}?',
+         f'Not in our directory yet &mdash; our confirmed {name} listings are currently in other '
+         f'cities, linked above. If you are set on {city} specifically, it is worth checking directly '
+         f'with local botanical gardens and conservatories, since we only add a listing once we can '
+         f'confirm its own events page. <a href="/methodology/#submit">Know one we are missing?</a>')
+        for city in gap_cities
+    ]
     return [
       (f'How much does a greenhouse wedding venue in {name} cost?',
        f'Rates in {name} vary by an order of magnitude between a municipal or university glasshouse '
@@ -205,7 +225,7 @@ def state(name, slug):
        f'earn its keep, without the solar gain of high summer. Winter works well in a heated room '
        f'and is usually the cheapest date in the calendar. Ask about heating and ventilation for the '
        f'specific month you are considering rather than the season in general.'),
-    ]
+    ] + gap_faqs
 
 
 ITALY = [
