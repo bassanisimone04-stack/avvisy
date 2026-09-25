@@ -20,7 +20,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-1": {
     title: "Celiac Disease: What It Is, Symptoms and How It's Diagnosed",
     excerpt: "A complete guide to celiac disease: causes, the most common symptoms in adults and children, the diagnostic path, and what to do after diagnosis.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Celiac disease is an autoimmune condition triggered by gluten, not a food allergy or intolerance.",
       "Diagnosis requires blood tests and a duodenal biopsy: don't remove gluten from your diet before completing them.",
@@ -49,7 +49,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-2": {
     title: "How to Read Food Labels If You Have Celiac Disease",
     excerpt: "A practical guide to spotting risky ingredients on labels, the Crossed Grain symbol, and the wording you should always check.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "The Crossed Grain symbol is the fastest way to spot an AIC-verified product on the shelf.",
       "Starch, flavorings and yeast can hide gluten: check the AIC Food Guide whenever you're unsure.",
@@ -78,7 +78,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-3": {
     title: "Recipe: Homemade Gluten-Free Fresh Pasta",
     excerpt: "The step-by-step method for making elastic, tasty gluten-free fresh pasta, with the right flour blend.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A good bread-and-pasta flour blend based on rice, potato and corn starch gets closest to traditional pasta.",
       "Gluten-free dough is more delicate: work it gently and roll it between two sheets of baking paper.",
@@ -109,7 +109,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-4": {
     title: "Traveling Gluten-Free: 7 Tips for a Safe Holiday",
     excerpt: "How to plan a trip in Italy and abroad as a celiac, from useful apps to translation cards and safe bookings.",
-    authorRole: "Travel writer",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Look up certified restaurants and hotels at your destination before you leave and save them to a shared map.",
       "The multilingual AIC card helps you explain celiac disease to restaurant staff abroad.",
@@ -135,7 +135,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-5": {
     title: "Celiac Kids at School: Managing Cafeterias and Field Trips",
     excerpt: "Practical advice for parents on organizing the school cafeteria, field trips and birthday parties for a celiac child.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A gluten-free school meal is a legal right in Italy, at no extra cost for the family.",
       "A medical certificate submitted to the school office is enough to agree on the menu with catering.",
@@ -158,7 +158,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-6": {
     title: "Gluten-Free Products: The Most Interesting Novelties of 2026",
     excerpt: "A roundup of the most innovative gluten-free products that hit the shelves this year, from flours to snacks and bread substitutes.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Mulino Caputo unveiled new 500g gluten-free formats and a Fior di Avena (oat) flour at Tuttofood 2026.",
       "Rich Products launched a gluten-free cauliflower pinsa base, made with rice flour, buckwheat and cauliflower.",
@@ -183,7 +183,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-7": {
     title: "Gluten-Free Events and Trade Fairs in 2026",
     excerpt: "The calendar of major trade fairs, markets and information days dedicated to celiac disease and gluten-free living in Italy.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Several Italian cities host gluten-free food fairs every year, with tastings and workshops open to the public.",
       "AIC's regional offices run free meetings on diagnosis and regulatory news for the newly diagnosed.",
@@ -208,7 +208,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-8": {
     title: "Gluten-Free Diet and Sports: What to Know for Performance",
     excerpt: "How to plan sports nutrition when following a gluten-free diet, covering carbohydrates, supplementation and practical ideas.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Rice, quinoa, buckwheat and sweet potatoes are ideal complex carbs for pre-race fueling and recovery.",
       "An unbalanced gluten-free diet can be low in fiber and iron: vary the whole grains you eat.",
@@ -233,7 +233,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-9": {
     title: "A Balanced Gluten-Free Diet: A Guide to Macronutrients",
     excerpt: "How to build a varied, balanced gluten-free diet, avoiding an excess of industrial substitute products.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Rice, corn, buckwheat, quinoa, legumes and vegetables are naturally gluten-free and should be the base of your diet.",
       "Whole rice and corn versions help cover the fiber intake often lacking in refined gluten-free products.",
@@ -258,7 +258,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-10": {
     title: "2026 Regulatory Updates: What Changes for Celiacs in Italy",
     excerpt: "The latest news on reimbursements, food vouchers and regulations for people with celiac disease in Italy, updated for 2026.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Italy's 2026 Budget Law (art. 77) digitalizes the gluten-free product voucher, making it usable anywhere in the country.",
       "Until now the voucher could only be used in your region of residence: digitalization removes that limit.",
@@ -282,7 +282,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-11": {
     title: "Perfect Gluten-Free Pizza: Secrets for a Light, Crispy Crust",
     excerpt: "The secrets to a light, elastic, crispy gluten-free pizza dough, with proofing and baking times for a true pizzeria result.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A blend of rice flour, potato starch and corn starch gives an elastic, well-rising base.",
       "A long cold proof (12-24h) improves the flavor and digestibility of gluten-free dough.",
@@ -310,7 +310,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-12": {
     title: "Cross-Contamination in the Kitchen: Golden Rules for a Safe Home",
     excerpt: "Best practices for avoiding gluten cross-contamination in a kitchen shared with non-celiac family members, from the pantry to the stove.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Even a few milligrams of gluten can trigger a reaction in celiacs: crumbs or shared utensils are enough.",
       "Cutting boards, toasters and colanders should always be dedicated, or washed thoroughly before use.",
@@ -338,7 +338,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-13": {
     title: "Celiac Disease and Pregnancy: What to Know for a Smooth Journey",
     excerpt: "How to manage a gluten-free diet during pregnancy, covering increased nutritional needs, routine checks and myths worth debunking.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A well-balanced gluten-free diet carries no extra risk in pregnancy compared to a diet with gluten.",
       "Pregnancy increases the need for iron, folic acid and calcium: choose adequate gluten-free sources.",
@@ -366,7 +366,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-14": {
     title: "The Best Italian Cities for a Gluten-Free Vacation",
     excerpt: "From Bologna to Milan to Puglia: an overview of the Italian destinations with the highest density of certified venues for celiacs.",
-    authorRole: "Travel writer",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Emilia-Romagna and Lombardy are among the regions with the most AIC-certified venues per capita.",
       "Many art cities now offer gluten-free food trails designed specifically for celiac tourists.",
@@ -389,7 +389,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-15": {
     title: "The Best Gluten-Free Restaurants and Pizzerias in Milan: The Complete 2026 Guide",
     excerpt: "Where to eat gluten-free in Milan with confidence: our selection of certified restaurants, pizzerias and bakeries, from dedicated kitchens to scrupulous attention to cross-contamination.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Milan now offers dozens of AIC-certified venues, from restaurants with 100% gluten-free kitchens to pizzerias with dedicated ovens.",
       "Always mention celiac disease when booking, not just at the table, to reduce the risk of mistakes in the kitchen.",
@@ -433,7 +433,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-16": {
     title: "What Can a Celiac Eat? The Complete Guide to Safe and Unsafe Foods",
     excerpt: "Which foods are safe for celiacs and which should always be avoided: a practical guide to grocery shopping and cooking gluten-free without doubts or contamination risks.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Grains like wheat, barley, rye and their derivatives should always be avoided: they're the main sources of gluten in the Italian diet.",
       "Rice, corn, buckwheat, quinoa and legumes are naturally gluten-free and can be eaten freely.",
@@ -464,7 +464,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-17": {
     title: "How Much Does a Gluten-Free Diet Cost? Costs, AIC Vouchers and Tax Deductions",
     excerpt: "How much more people on a gluten-free diet spend, how the AIC card and pharmacy vouchers work, and which tax deductions celiacs are entitled to in Italy.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Gluten-free products cost on average 2 to 4 times more than their gluten-containing equivalents, especially bread and pasta.",
       "Italy's National Health Service provides a monthly voucher usable at pharmacies and partner stores to buy certified substitute products.",
@@ -490,7 +490,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-18": {
     title: "Gluten Sensitivity or Celiac Disease? The Differences You Need to Know",
     excerpt: "Celiac disease, non-celiac gluten sensitivity and wheat allergy aren't the same thing: here's how the symptoms, diagnosis and management of each condition differ.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Celiac disease is an autoimmune condition with documentable intestinal damage; gluten sensitivity is not.",
       "Non-celiac gluten sensitivity causes similar symptoms but without the antibodies or villous damage typical of celiac disease.",
@@ -517,7 +517,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-19": {
     title: "The Best Gluten-Free Restaurants and Pizzerias in Rome: The Complete 2026 Guide",
     excerpt: "Where to eat gluten-free in Rome with confidence: traditional trattorias, pizzerias with dedicated ovens and certified bakeries, from gluten-free cacio e pepe to scrupulous attention to cross-contamination.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Rome now has AIC-certified trattorias and pizzerias able to reinvent classics like cacio e pepe and crispy Roman-style pizza gluten-free.",
       "Mentioning celiac disease when booking, not just at the table, helps staff prepare in advance.",
@@ -561,7 +561,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-20": {
     title: "How to Avoid Cross-Contamination at a Restaurant: The Complete Guide to Eating Gluten-Free Safely",
     excerpt: "How to avoid cross-contamination at a restaurant: the questions to ask staff, the signs of a truly safe venue, and the specific risks at pizzerias, restaurants and bakeries.",
-    authorRole: "Content specialist food safety",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Cross-contamination happens when even minimal traces of gluten come into contact with a gluten-free dish through shared utensils, surfaces or frying oil.",
       "AIC-certified venues have passed checks on procedures, suppliers and staff training, but the absence of certification doesn't automatically mean a venue is unsafe.",
@@ -607,7 +607,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-21": {
     title: "Gluten-Free McDonald's in Italy: What a Celiac Can Really Eat",
     excerpt: "Gluten-free McDonald's in Italy: what the Gluten Free Burger actually guarantees, why the chain isn't AIC certified, and which other products carry a cross-contamination risk.",
-    authorRole: "Content specialist food safety",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "The Gluten Free Burger, developed with Dr. Schär, is the only item on the McDonald's Italy menu explicitly guaranteed gluten-free.",
       "McDonald's Italy doesn't take part in AIC's Out-of-Home Eating program, so the association doesn't verify its preparation procedures.",
@@ -648,7 +648,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-22": {
     title: "Gluten-Free Gelaterias: How to Spot the Ones That Are Truly Free of Cross-Contamination",
     excerpt: "Gluten-free gelaterias: how to tell if scoops, tubs and cones are really safe for a celiac, which flavors to avoid, and why summer raises the risk of cross-contamination.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "The main risk at uncertified gelaterias is contamination through scoops and tubs shared between gluten-containing and gluten-free flavors.",
       "Truly safe gelaterias use dedicated scoops for each flavor, or clean them thoroughly between flavors.",
@@ -687,7 +687,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-23": {
     title: "AIC-Certified Hotels and Resorts for Celiacs: How to Choose a Worry-Free Vacation",
     excerpt: "AIC-certified hotels and resorts: what the certification really guarantees, the difference between breakfast and full board, and how to plan a gluten-free vacation with no surprises.",
-    authorRole: "Travel writer",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "An AIC-certified hotel guarantees safe gluten-free breakfast and staff trained on celiac disease, not just generic \"gluten-free-friendly\" claims.",
       "At full-board resorts, certification covers the entire kitchen and meal management, not just breakfast.",
@@ -725,7 +725,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-24": {
     title: "Where to Get Gluten-Free Breakfast: Croissants, Brioches and Dedicated Bakeries",
     excerpt: "Where to get gluten-free breakfast without the risk: the difference between an industrial croissant and a dedicated bakery, what to ask at the counter, and how to plan ahead when out or traveling.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Many traditional cafés only offer a prepackaged industrial croissant: that's not the same as a bakery with a dedicated lab.",
       "100% gluten-free bakeries offer the strongest guarantees against cross-contamination, but they're still mostly concentrated in bigger cities.",
@@ -760,7 +760,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-25": {
     title: "Easy Gluten-Free Cake: The Base Recipe with Ready-Made Cake Mix",
     excerpt: "The go-to cake for when you're short on time: few ingredients, a ready-made flour mix, and a soft, reliable result.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A flour mix made specifically for cakes gives more reliable results than a homemade mix for those new to gluten-free baking.",
       "The base ratios (mix, eggs, sugar, oil, baking powder) stay the same as a traditional cake: only the flour changes.",
@@ -790,7 +790,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-26": {
     title: "Homemade Gluten-Free Pizza: The Dough with All-Purpose Mix",
     excerpt: "The base recipe for a gluten-free pizza dough with the all-purpose mix: few ingredients and a result closer to traditional pizza.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A flour mix designed for pizza and focaccia too gives a more elastic dough than a generic cake mix.",
       "Gluten-free dough should be rolled out between two sheets of parchment paper, since it's stickier than traditional dough.",
@@ -822,7 +822,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-27": {
     title: "Gluten-Free School Snacks: 5 Practical Ideas for the Lunchbox",
     excerpt: "What to pack for a safe snack: individually wrapped products, easy to check, easy to send to school.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Individually sealed, single-serve products are the safest choice for a school snack: no handling outside the home.",
       "Always tell the school and teachers about a child's celiac disease, even when the snack comes from home.",
@@ -851,7 +851,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-34": {
     title: "Gluten-Free Crostini and Canapés for a Dinner with Friends",
     excerpt: "Quick ideas for gluten-free crostini and canapés, with ready-made bases and a handful of fresh ingredients to assemble at the last minute.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Crisp slices and toasted Panfette are ready-made bases for crostini, no need to bake bread at home.",
       "Pesto works as a canapé base just as well as classic spreadable creams.",
@@ -882,7 +882,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-28": {
     title: "Where to Eat Gluten-Free in Naples: Pizza, Sfogliatelle and Babà Without Compromise",
     excerpt: "The guide to eating gluten-free in Naples: from Neapolitan pizza baked in a dedicated oven to gluten-free sfogliatella and babà, between historic addresses and new certified openings.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Naples now has historic pizzerias and new openings with an oven entirely dedicated to gluten-free, so you can enjoy real Neapolitan pizza safely.",
       "Even the great classics of Neapolitan pastry, like babà and sfogliatella, now exist in gluten-free versions thanks to dedicated labs.",
@@ -912,7 +912,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-29": {
     title: "Gluten-Free Venice: Where to Eat Between Cicchetti, Pizza and Hotel Breakfast",
     excerpt: "A guide to gluten-free Venice: gelaterie with dedicated cones, pizzerias with separate kitchens, and one of the few AIC-certified hotels in the city for a worry-free breakfast.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Venice has pizzerias with physically separate kitchens for gluten-free, as well as gelaterie with dedicated cones to reduce cross-contamination.",
       "Finding an AIC-certified hotel for gluten-free breakfast makes a stay in the city much easier.",
@@ -942,7 +942,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-30": {
     title: "Gluten-Free Bari: Focaccia, Panzerotti and Tray Pizza Without Compromise",
     excerpt: "Where to eat gluten-free in Bari: Bari-style focaccia and panzerotti gluten-free, a dedicated lab since 2013, and where to shop for gluten-free groceries in the city.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Bari has a lab entirely dedicated to gluten-free active since 2013, the first of its kind in the city, with products available via a regional health voucher.",
       "Bari-style focaccia and panzerotti, symbols of local cuisine, now also exist in a certified gluten-free version.",
@@ -975,7 +975,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-31": {
     title: "Gluten-Free Palermo: Pizzerias, Arancini and Gelato in a City Built for Celiacs",
     excerpt: "A guide to gluten-free Palermo: pizzerias entirely dedicated to gluten-free and AIC-certified, fried food with a dedicated fryer, and a historic gelateria since 1976 with no surcharge on gluten-free flavors.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Palermo has pizzerias that were born entirely dedicated to gluten-free, not just venues that also offer gluten-free options.",
       "Arancini and street-food fried items are gluten-free only where a dedicated fryer exists: always check before ordering.",
@@ -1008,7 +1008,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-32": {
     title: "Gluten-Free Genoa: Pizza, Focaccia and a Dedicated Bakery Across the City's Districts",
     excerpt: "Where to eat gluten-free in Genoa: AIC-certified pizzerias in Sampierdarena and Prà, a bakery-pastry shop that recently opened in Sestri Ponente, and alternative doughs worth trying.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Genoa has several AIC-certified pizzerias with a dedicated oven, spread across different districts of the city.",
       "A bakery-pastry shop that opened recently in Sestri Ponente joined the AIC Liguria network with a lab exclusively for gluten-free.",
@@ -1038,7 +1038,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-33": {
     title: "Gluten-Free Verona: What to Eat Between the Arena, the Old Town and Specialty Shops",
     excerpt: "A guide to gluten-free Verona: an AIC-certified vegan restaurant, the pizzeria right across from the Arena, a shop with over 100 products partnered with the local health authority, and a gelateria in the AIC network since 2010.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Verona offers an AIC-certified restaurant with an entirely vegan and gluten-free menu, plus a pizzeria right across from the Arena.",
       "A specialty shop in the city carries over 100 gluten-free products and is partnered with the local health authority for celiac vouchers.",
@@ -1068,7 +1068,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-35": {
     title: "Does a Gluten-Free Diet Help You Lose Weight? What Science Really Says",
     excerpt: "Does a gluten-free diet help you lose weight? The honest answer: early weight loss usually comes from what you remove and add to your plate, not from gluten itself.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Does Gluten-Free Help You Lose Weight? | Mappa Senza Glutine",
     metaDescription: "Does a gluten-free diet help you lose weight? What science really says: why early weight loss usually comes from what you remove, not gluten itself.",
     keyTakeaways: [
@@ -1100,7 +1100,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-36": {
     title: "Gluten-Free Shopping at Discount Stores: Aldi, Lidl and Eurospin Compared",
     excerpt: "Is gluten-free grocery shopping cheaper at discount stores? Aldi, Lidl and Eurospin's dedicated lines compared, and how to save without giving up on safety.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Gluten-Free Shopping at Discount Stores | Mappa Senza Glutine",
     metaDescription: "Gluten-free shopping at discount stores: Aldi, Lidl and Eurospin's dedicated lines compared, and how to save without giving up on AIC certification.",
     keyTakeaways: [
@@ -1133,7 +1133,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-37": {
     title: "Gluten-Free Panettone and Colomba: Where to Find Them and What to Choose",
     excerpt: "Gluten-free panettone and colomba for the holidays: Nutrifree and Schär's offerings, where to buy them and what to check on the label before choosing.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Gluten-Free Panettone and Colomba | Mappa Senza Glutine",
     metaDescription: "Gluten-free panettone and colomba: Nutrifree and Schär's holiday offerings, where to find them and what to check on the label before you buy.",
     keyTakeaways: [
@@ -1165,7 +1165,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-38": {
     title: "Gluten-Free Beer: The Brands to Know and What to Know Before Drinking It",
     excerpt: "Gluten-free beer: which brands are AIC-certified, the difference between de-glutenized beers and naturally gluten-free ones, and how much to drink safely.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Gluten-Free Beer: Brands to Know | Mappa Senza Glutine",
     metaDescription: "Gluten-free beer: which brands are AIC-certified, how the de-glutenization process works, and how much to drink safely according to AIC.",
     keyTakeaways: [
@@ -1202,7 +1202,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-39": {
     title: "Celiac Disease in Men: Why Diagnosis Comes Later",
     excerpt: "Celiac disease is diagnosed mostly in women, and in men it arrives roughly a decade later: why that happens, which signs get overlooked, and what to ask your doctor.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Celiac Disease in Men: Later Diagnosis | Mappa Senza Glutine",
     metaDescription: "Why celiac disease is diagnosed later in men: the data on diagnoses, the average delay, and the signs that often get attributed to something else.",
     keyTakeaways: [
@@ -1235,7 +1235,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-40": {
     title: "Flying Gluten-Free: The GFML Meal and What to Pack",
     excerpt: "How to request the gluten-free meal on a flight (code GFML), by when to do it, what to expect on board and which supplies to bring so you're never left without food.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Gluten-Free Meal on a Flight: GFML Guide | Mappa Senza Glutine",
     metaDescription: "How to request a gluten-free meal on a flight: what the GFML code means, when to book it, what to expect on board and which supplies to bring along.",
     keyTakeaways: [
@@ -1268,7 +1268,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-41": {
     title: "Gluten-Free Flours: A Guide to Alternatives to Plain Flour",
     excerpt: "Rice, corn, buckwheat, chestnut, almond: how the main gluten-free flours behave in the kitchen, when to use them, and why blends work better than single flours.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Gluten-Free Flours: A Practical Guide | Mappa Senza Glutine",
     metaDescription: "A guide to gluten-free flours: rice, corn, buckwheat, chestnut and almond compared, how they behave in the kitchen and why a blend is usually the better choice.",
     keyTakeaways: [
@@ -1305,7 +1305,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-42": {
     title: "Weaning and Gluten: When to Introduce It and What Research Says",
     excerpt: "Introducing gluten earlier or later during weaning doesn't change celiac risk: what the ESPGHAN guidelines say and why genetics remains the deciding factor.",
-    authorRole: "Nutritionist & biologist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Weaning and Gluten: When to Introduce It | Mappa Senza Glutine",
     metaDescription: "When to introduce gluten during weaning: the ESPGHAN guidelines, why timing doesn't change celiac risk and what actually matters.",
     keyTakeaways: [
@@ -1338,7 +1338,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-43": {
     title: "Gluten-Free at Village Festivals: How to Navigate Them Safely",
     excerpt: "AIC stands, dedicated food trucks and practical rules for enjoying an Italian sagra as a celiac without risking cross-contamination among shared fryers and dough.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Gluten-Free at Italian Village Festivals | Mappa Senza Glutine",
     metaDescription: "Italian sagre as a celiac: where to find AIC stands and dedicated food trucks, what to ask vendors and which dishes to always avoid.",
     keyTakeaways: [
@@ -1371,7 +1371,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-44": {
     title: "Sushi, Chinese and Indian Gluten-Free: Eating Out as a Celiac",
     excerpt: "Soy sauce contains wheat and tempura is battered: how to navigate Asian and Indian restaurants as a celiac, what to ask, and which AIC-certified venues already exist in Italy.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "Gluten-Free at Asian Restaurants: A Guide | Mappa Senza Glutine",
     metaDescription: "Eating Asian food as a celiac: why soy sauce contains wheat, what to avoid at Japanese, Chinese and Indian restaurants, and how to spot a safe venue.",
     keyTakeaways: [
@@ -1405,7 +1405,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-45": {
     title: "AIC Certification: What It Really Means and How to Spot a Truly Certified Venue",
     excerpt: "What \"AIC certification\" really means: how the Alimentazione Fuori Casa programme works, what checks it involves, and why it's technically not a certification in the strict sense.",
-    authorRole: "Food safety content specialist",
+    authorRole: "Content verified by the editorial team",
     metaTitle: "AIC Certification: What It Really Means | Mappa Senza Glutine",
     metaDescription: "AIC certification: how the Alimentazione Fuori Casa programme works, what checks it involves for venues, and how to spot who really follows it.",
     keyTakeaways: [
@@ -1441,7 +1441,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     excerpt: "How to make gluten-free béchamel that's smooth and lump-free, with rice flour or an all-purpose mix, ready for lasagna, baked pasta and gratin vegetables.",
     metaTitle: "Gluten-Free Béchamel Recipe | Mappa Senza Glutine",
     metaDescription: "Gluten-free béchamel recipe, lump-free: quantities, step-by-step method and the tricks for a smooth texture with rice flour or an all-purpose mix.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Rice flour or a gluten-free all-purpose mix replaces plain flour in the roux, the fat-and-flour base of béchamel.",
       "Pouring cold milk, not hot, onto the roux a little at a time is the main trick for avoiding lumps.",
@@ -1470,7 +1470,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     excerpt: "How to make gluten-free bread at home: kneading, rising and baking for a loaf with a crispy crust and a soft, non-gummy crumb.",
     metaTitle: "Homemade Gluten-Free Bread | Mappa Senza Glutine",
     metaDescription: "Homemade gluten-free bread recipe: quantities, rising times and the tricks for a crispy crust and a soft, non-gummy crumb every time.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A dedicated bread mix, with starches and thickeners like psyllium or xanthan gum, replaces the gluten network and gives the dough structure.",
       "Gluten-free bread dough is more like a thick batter than traditional dough: it isn't kneaded by hand on a work surface.",
@@ -1499,7 +1499,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     excerpt: "How to make gluten-free shortcrust pastry for tarts, with jam or cream: ratios, fridge resting time and baking for a crumbly, not tough, shell.",
     metaTitle: "Gluten-Free Tart Shortcrust Recipe | Mappa Senza Glutine",
     metaDescription: "Gluten-free tart recipe: crumbly shortcrust with a cake flour mix, resting times and baking for the perfect shell to fill with jam or cream.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A dedicated cake flour mix gives a more crumbly shortcrust than a generic mix, thanks to the balance between starches and flours.",
       "Resting in the fridge for at least 30 minutes matters even more than with traditional shortcrust, since gluten-free dough is more delicate to roll out.",
@@ -1528,7 +1528,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     excerpt: "How to make gluten-free crêpes: batter ratios, resting time and cooking for a thin, elastic result, to fill sweet or savory.",
     metaTitle: "Gluten-Free Crêpes Recipe | Mappa Senza Glutine",
     metaDescription: "Gluten-free crêpes recipe: batter ratios, resting time and cooking for a thin, non-gummy result, to fill sweet or savory.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A gluten-free all-purpose mix, lighter than rice flour alone, gives crêpes that are more elastic and less likely to tear.",
       "Resting the batter for at least 30 minutes in the fridge matters even more than with traditional flour.",
@@ -1557,7 +1557,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     excerpt: "How to make gluten-free pancakes that are fluffy and tall: ratios, the trick for a good rise and pan cooking times.",
     metaTitle: "Gluten-Free Pancakes Recipe | Mappa Senza Glutine",
     metaDescription: "Gluten-free pancakes recipe, fluffy and tall: ratios, the trick for a good rise and pan cooking times for breakfast.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "An already-balanced cake mix gives fluffier pancakes than a generic mix or rice flour alone.",
       "Don't overmix the batter: a few remaining lumps are normal and help keep pancakes tall and fluffy.",
@@ -1586,7 +1586,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     excerpt: "How to make crumbly gluten-free cookies, shortbread-style: ratios, method and the tricks for a crisp, not hard, texture.",
     metaTitle: "Gluten-Free Cookies Recipe | Mappa Senza Glutine",
     metaDescription: "Gluten-free cookies recipe, shortbread-style and crumbly: ratios, method and the tricks for a crisp, not hard, texture every time.",
-    authorRole: "Gluten-free food blogger",
+    authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A gluten-free cake mix gives crumblier cookies than a dough made with rice flour alone.",
       "The dough should be worked as little as possible and rested in the fridge before rolling out or shaping.",
@@ -1612,11 +1612,6 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   },
 };
 
-const COMMENT_EN: Record<string, string> = {
-  "Sara V.": "Very clear article, it helped me a lot right after my diagnosis. Thank you!",
-  "Paolo N.": "Extremely useful, sharing it in the support group I follow.",
-  "Ilaria C.": "Finally an explanation without too much jargon, well done.",
-};
 
 export function getLocalizedArticle(article: Article, locale: Locale): Article {
   if (locale === "it") return article;
@@ -1634,6 +1629,5 @@ export function getLocalizedArticle(article: Article, locale: Locale): Article {
     keyTakeaways: tr.keyTakeaways,
     faqs: tr.faqs,
     tags: tr.tags,
-    comments: article.comments.map((c) => ({ ...c, body: COMMENT_EN[c.author] ?? c.body })),
   };
 }

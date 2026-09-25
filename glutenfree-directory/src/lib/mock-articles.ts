@@ -30,7 +30,7 @@ const seeds: Seed[] = [
     excerpt: "Una guida completa alla celiachia: cause, sintomi più comuni nell'adulto e nel bambino, percorso diagnostico e cosa fare dopo la diagnosi.",
     metaTitle: "Celiachia: sintomi e diagnosi | Mappa Senza Glutine",
     metaDescription: "Guida alla celiachia: cause, sintomi più comuni in adulti e bambini, percorso diagnostico con esami del sangue e biopsia, e cosa fare dopo la diagnosi.",
-    coverSeed: 101, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-06-02",
+    coverSeed: 101, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-06-02",
     tags: ["celiachia", "diagnosi", "salute"],
     keyTakeaways: [
       "La celiachia è una malattia autoimmune scatenata dal glutine, non un'allergia o un'intolleranza alimentare.",
@@ -63,7 +63,7 @@ const seeds: Seed[] = [
     excerpt: "La guida pratica per riconoscere in etichetta gli ingredienti a rischio, il marchio della spiga barrata e le diciture da controllare sempre.",
     metaTitle: "Leggere le etichette da celiaco | Mappa Senza Glutine",
     metaDescription: "Come leggere le etichette alimentari se sei celiaco: la Spiga Barrata, gli ingredienti a rischio come amido e aromi, e le diciture da controllare sempre.",
-    coverSeed: 102, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-05-20",
+    coverSeed: 102, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-05-20",
     tags: ["etichette", "guide", "sicurezza alimentare"],
     keyTakeaways: [
       "La Spiga Barrata è il modo più rapido per riconoscere un prodotto verificato da AIC sullo scaffale.",
@@ -95,7 +95,7 @@ const seeds: Seed[] = [
     excerpt: "Il procedimento passo passo per preparare una pasta fresca gluten free elastica e saporita, con il giusto mix di farine.",
     metaTitle: "Pasta fresca senza glutine in casa | Mappa Senza Glutine",
     metaDescription: "Ricetta passo passo per una pasta fresca senza glutine elastica e saporita: il mix di farine giusto, come stenderla e i tempi di cottura corretti.",
-    coverSeed: 103, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-05-05",
+    coverSeed: 103, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-05-05",
     tags: ["ricette", "pasta", "cucina"],
     keyTakeaways: [
       "Un buon mix per pane e pasta a base di riso, patate e mais dà i risultati più simili alla pasta tradizionale.",
@@ -129,7 +129,7 @@ const seeds: Seed[] = [
     excerpt: "Come organizzare un viaggio in Italia e all'estero da celiaco, tra app utili, tesserini di traduzione e prenotazioni sicure.",
     metaTitle: "Viaggiare senza glutine: 7 consigli | Mappa Senza Glutine",
     metaDescription: "Come organizzare un viaggio senza glutine in Italia e all'estero: app utili, tesserini di traduzione e come prenotare ristoranti sicuri in vacanza.",
-    coverSeed: 104, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-04-18",
+    coverSeed: 104, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-04-18",
     tags: ["viaggi", "vacanze", "consigli"],
     keyTakeaways: [
       "Cerca ristoranti e hotel certificati a destinazione prima di partire e salvali in una mappa condivisa.",
@@ -158,7 +158,7 @@ const seeds: Seed[] = [
     excerpt: "Consigli pratici per genitori su come organizzare la mensa scolastica, le gite e le feste di compleanno per un bambino celiaco.",
     metaTitle: "Bambini celiaci a scuola | Mappa Senza Glutine",
     metaDescription: "Bambini celiaci a scuola: come organizzare la mensa scolastica, le gite e le feste di compleanno in sicurezza, con consigli pratici per i genitori.",
-    coverSeed: 105, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-04-02",
+    coverSeed: 105, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-04-02",
     tags: ["bambini", "scuola", "celiachia"],
     keyTakeaways: [
       "Il pasto senza glutine nelle mense scolastiche è un diritto garantito per legge, senza costi extra per la famiglia.",
@@ -184,7 +184,7 @@ const seeds: Seed[] = [
     excerpt: "Una rassegna dei prodotti gluten free più innovativi arrivati sugli scaffali quest'anno, tra farine, snack e sostituti del pane.",
     metaTitle: "Novità prodotti senza glutine 2026 | Mappa Senza Glutine",
     metaDescription: "I prodotti gluten free più interessanti arrivati sugli scaffali nel 2026: nuove farine, snack e sostituti del pane da provare nella dieta senza glutine.",
-    coverSeed: 106, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-03-22",
+    coverSeed: 106, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-03-22",
     tags: ["prodotti", "novità", "spesa"],
     keyTakeaways: [
       "Mulino Caputo ha presentato al Tuttofood 2026 nuovi formati senza glutine da 500 g e la farina Fior di Avena.",
@@ -212,7 +212,7 @@ const seeds: Seed[] = [
     excerpt: "Il calendario delle principali fiere, mercatini e giornate informative dedicate alla celiachia e al senza glutine in Italia.",
     metaTitle: "Fiere ed eventi senza glutine 2026 | Mappa Senza Glutine",
     metaDescription: "Il calendario 2026 delle principali fiere, mercatini e giornate informative dedicate alla celiachia e al senza glutine in Italia, città per città.",
-    coverSeed: 107, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-03-10",
+    coverSeed: 107, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-03-10",
     tags: ["eventi", "fiere", "community"],
     keyTakeaways: [
       "Ogni anno diverse città italiane ospitano fiere food senza glutine con degustazioni e workshop aperti al pubblico.",
@@ -240,7 +240,7 @@ const seeds: Seed[] = [
     excerpt: "Come impostare l'alimentazione sportiva quando si segue una dieta senza glutine, tra carboidrati, integrazione e idee pratiche.",
     metaTitle: "Dieta senza glutine e sport | Mappa Senza Glutine",
     metaDescription: "Come impostare l'alimentazione sportiva seguendo una dieta senza glutine: carboidrati, integrazione e idee pratiche per non perdere in performance.",
-    coverSeed: 108, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-02-27",
+    coverSeed: 108, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-02-27",
     tags: ["sport", "salute", "alimentazione"],
     keyTakeaways: [
       "Riso, quinoa, grano saraceno e patate dolci sono carboidrati complessi ideali per pre-gara e recupero.",
@@ -268,7 +268,7 @@ const seeds: Seed[] = [
     excerpt: "Come costruire una dieta senza glutine varia ed equilibrata, evitando gli eccessi di prodotti industriali sostitutivi.",
     metaTitle: "Dieta senza glutine equilibrata | Mappa Senza Glutine",
     metaDescription: "Come costruire una dieta senza glutine varia ed equilibrata nei macronutrienti, evitando l'eccesso di prodotti industriali sostitutivi del glutine.",
-    coverSeed: 109, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-02-10",
+    coverSeed: 109, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-02-10",
     tags: ["alimentazione", "nutrizione", "salute"],
     keyTakeaways: [
       "Riso, mais, grano saraceno, quinoa, legumi e verdure sono naturalmente senza glutine e dovrebbero essere la base della dieta.",
@@ -296,7 +296,7 @@ const seeds: Seed[] = [
     excerpt: "Le ultime novità su rimborsi, buoni spesa e normative per le persone celiache in Italia aggiornate al 2026.",
     metaTitle: "Novità normative 2026 per celiaci | Mappa Senza Glutine",
     metaDescription: "Le novità normative 2026 per i celiaci in Italia: rimborsi, buoni spesa e regole aggiornate su cosa cambia per chi segue la dieta senza glutine.",
-    coverSeed: 110, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-01-15",
+    coverSeed: 110, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-01-15",
     tags: ["news", "normativa", "aic"],
     keyTakeaways: [
       "La Legge di Bilancio 2026 (art. 77) introduce la dematerializzazione del buono per prodotti senza glutine, spendibile su tutto il territorio nazionale.",
@@ -323,7 +323,7 @@ const seeds: Seed[] = [
     excerpt: "I segreti per un impasto senza glutine leggero, elastico e croccante, con tempi di lievitazione e cottura per una pizza da vera pizzeria.",
     metaTitle: "Pizza senza glutine perfetta | Mappa Senza Glutine",
     metaDescription: "I segreti per un impasto di pizza senza glutine leggero, elastico e croccante: tempi di lievitazione e cottura per un risultato da vera pizzeria.",
-    coverSeed: 111, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-20",
+    coverSeed: 111, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-20",
     tags: ["ricette", "pizza", "cucina"],
     keyTakeaways: [
       "Un mix con farina di riso, fecola e amido di mais dà una base elastica e ben lievitabile.",
@@ -355,7 +355,7 @@ const seeds: Seed[] = [
     excerpt: "Le buone pratiche per evitare la contaminazione da glutine in una cucina condivisa con familiari non celiaci, dalla dispensa ai fornelli.",
     metaTitle: "Contaminazione crociata in cucina | Mappa Senza Glutine",
     metaDescription: "Le regole d'oro per evitare la contaminazione da glutine in una cucina condivisa con familiari non celiaci, dalla dispensa ai fornelli e agli utensili.",
-    coverSeed: 112, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-07-10",
+    coverSeed: 112, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-10",
     tags: ["guide", "sicurezza alimentare", "celiachia"],
     keyTakeaways: [
       "Anche pochi milligrammi di glutine possono scatenare una reazione nei celiaci: bastano briciole o utensili condivisi.",
@@ -386,7 +386,7 @@ const seeds: Seed[] = [
     excerpt: "Come gestire la dieta senza glutine in gravidanza, tra fabbisogni nutrizionali aumentati, controlli di routine e false credenze da sfatare.",
     metaTitle: "Celiachia e gravidanza | Mappa Senza Glutine",
     metaDescription: "Come gestire la dieta senza glutine in gravidanza: fabbisogni nutrizionali aumentati, controlli di routine e le false credenze più comuni da sfatare.",
-    coverSeed: 113, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-06-25",
+    coverSeed: 113, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-06-25",
     tags: ["celiachia", "gravidanza", "salute"],
     keyTakeaways: [
       "Una dieta senza glutine ben bilanciata non comporta rischi aggiuntivi per la gravidanza rispetto a una dieta con glutine.",
@@ -417,7 +417,7 @@ const seeds: Seed[] = [
     excerpt: "Da Bologna a Milano fino alla Puglia: una panoramica delle mete italiane con la maggiore densità di locali certificati per celiaci.",
     metaTitle: "Città italiane senza glutine | Mappa Senza Glutine",
     metaDescription: "Da Bologna a Milano fino alla Puglia: le mete italiane con la maggiore densità di ristoranti e strutture certificate per una vacanza senza glutine.",
-    coverSeed: 114, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-06-15",
+    coverSeed: 114, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-06-15",
     tags: ["viaggi", "italia", "ristoranti"],
     keyTakeaways: [
       "Emilia-Romagna e Lombardia sono tra le regioni con più locali certificati AIC per densità di popolazione.",
@@ -443,7 +443,7 @@ const seeds: Seed[] = [
     excerpt: "Dove mangiare senza glutine a Milano in sicurezza: la nostra selezione di ristoranti, pizzerie e pasticcerie certificate, tra cucine dedicate e attenzione scrupolosa alla contaminazione crociata.",
     metaTitle: "Ristoranti senza glutine a Milano | Mappa Senza Glutine",
     metaDescription: "Dove mangiare senza glutine a Milano: ristoranti, pizzerie e pasticcerie certificate con cucine dedicate e attenzione alla contaminazione crociata.",
-    coverSeed: 115, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-29",
+    coverSeed: 115, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-29",
     tags: ["milano", "ristoranti", "pizzerie", "guide"],
     keyTakeaways: [
       "Milano offre ormai decine di locali certificati AIC, dai ristoranti con cucina 100% gluten free alle pizzerie con forno dedicato.",
@@ -490,7 +490,7 @@ const seeds: Seed[] = [
     excerpt: "Quali alimenti sono sicuri per chi è celiaco e quali vanno evitati sempre: la guida pratica per fare la spesa e cucinare senza glutine senza dubbi né rischi di contaminazione.",
     metaTitle: "Cosa può mangiare un celiaco | Mappa Senza Glutine",
     metaDescription: "Quali alimenti sono sicuri per chi è celiaco e quali evitare sempre: la guida pratica per fare la spesa e cucinare senza glutine senza rischi.",
-    coverSeed: 116, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-07-20",
+    coverSeed: 116, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-20",
     tags: ["alimentazione", "celiachia", "guide"],
     keyTakeaways: [
       "Cereali come grano, orzo, segale e i loro derivati vanno sempre evitati: sono le principali fonti di glutine nella dieta italiana.",
@@ -524,7 +524,7 @@ const seeds: Seed[] = [
     excerpt: "Quanto spende in più chi segue una dieta senza glutine, come funzionano il tesserino AIC e i buoni pasto in farmacia, e quali detrazioni fiscali spettano ai celiaci in Italia.",
     metaTitle: "Quanto costa la dieta senza glutine | Mappa Senza Glutine",
     metaDescription: "Quanto spende in più chi segue una dieta senza glutine, come funzionano tesserino AIC e buoni pasto in farmacia, e le detrazioni fiscali per i celiaci.",
-    coverSeed: 117, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-12",
+    coverSeed: 117, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-12",
     tags: ["celiachia", "buoni pasto", "guide", "diritti"],
     keyTakeaways: [
       "I prodotti senza glutine costano in media dal 2 al 4 volte di più rispetto agli equivalenti con glutine, soprattutto pane e pasta.",
@@ -553,7 +553,7 @@ const seeds: Seed[] = [
     excerpt: "Celiachia, sensibilità al glutine non celiaca e allergia al grano non sono la stessa cosa: ecco come si distinguono sintomi, diagnosi e gestione di ciascuna condizione.",
     metaTitle: "Sensibilità al glutine o celiachia? | Mappa Senza Glutine",
     metaDescription: "Celiachia, sensibilità al glutine non celiaca e allergia al grano non sono la stessa cosa: come si distinguono sintomi, diagnosi e gestione.",
-    coverSeed: 118, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-07-05",
+    coverSeed: 118, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-05",
     tags: ["celiachia", "sensibilità al glutine", "salute"],
     keyTakeaways: [
       "La celiachia è una malattia autoimmune con danno intestinale documentabile, la sensibilità al glutine no.",
@@ -583,7 +583,7 @@ const seeds: Seed[] = [
     excerpt: "Dove mangiare senza glutine a Roma in sicurezza: trattorie di cucina romana, pizzerie con forno dedicato e pasticcerie certificate, tra cacio e pepe gluten free e la massima attenzione alla contaminazione crociata.",
     metaTitle: "Ristoranti senza glutine a Roma | Mappa Senza Glutine",
     metaDescription: "Dove mangiare senza glutine a Roma: trattorie di cucina romana, pizzerie con forno dedicato e pasticcerie certificate, tra cacio e pepe gluten free.",
-    coverSeed: 119, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-25",
+    coverSeed: 119, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-25",
     tags: ["roma", "ristoranti", "pizzerie", "guide"],
     keyTakeaways: [
       "Roma offre oggi trattorie e pizzerie certificate AIC capaci di reinterpretare senza glutine anche i grandi classici, dalla cacio e pepe alla pizza romana scrocchiarella.",
@@ -630,7 +630,7 @@ const seeds: Seed[] = [
     excerpt: "Come evitare la contaminazione crociata al ristorante: le domande da fare allo staff, i segnali di un locale davvero sicuro e i rischi specifici di pizzerie, ristoranti e bakery.",
     metaTitle: "Evitare la contaminazione al ristorante | Mappa Senza Glutine",
     metaDescription: "Come evitare la contaminazione crociata al ristorante: le domande da fare allo staff, i segnali di un locale sicuro e i rischi di pizzerie e bakery.",
-    coverSeed: 120, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-30",
+    coverSeed: 120, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["contaminazione crociata", "sicurezza alimentare", "AIC", "ristoranti senza glutine"],
     keyTakeaways: [
       "La contaminazione crociata avviene quando anche tracce minime di glutine entrano in contatto con un piatto senza glutine tramite utensili, superfici o oli di frittura condivisi.",
@@ -679,7 +679,7 @@ const seeds: Seed[] = [
     excerpt: "McDonald's senza glutine in Italia: cosa garantisce davvero il Gluten Free Burger, perché la catena non è certificata AIC e quali altri prodotti comportano un rischio di contaminazione crociata.",
     metaTitle: "McDonald's senza glutine: cosa mangiare | Mappa Senza Glutine",
     metaDescription: "McDonald's senza glutine in Italia: il Gluten Free Burger, perché la catena non è certificata AIC e cosa rischia davvero un celiaco che mangia lì.",
-    coverSeed: 121, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-07-30",
+    coverSeed: 121, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["McDonald's", "fast food", "sicurezza alimentare", "AIC"],
     keyTakeaways: [
       "Il Gluten Free Burger, sviluppato con Dr. Schär, è l'unico prodotto del menu McDonald's Italia esplicitamente garantito senza glutine.",
@@ -723,7 +723,7 @@ const seeds: Seed[] = [
     excerpt: "Gelaterie senza glutine: come capire se palette, vaschette e coni sono davvero sicuri per un celiaco, quali gusti evitare e perché l'estate aumenta il rischio di contaminazione crociata.",
     metaTitle: "Gelaterie senza glutine sicure | Mappa Senza Glutine",
     metaDescription: "Gelaterie senza glutine: come capire se palette, vaschette e coni sono davvero sicuri, quali gusti evitare e perché l'estate aumenta il rischio.",
-    coverSeed: 122, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-30",
+    coverSeed: 122, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["gelaterie", "estate", "contaminazione crociata", "sicurezza alimentare"],
     keyTakeaways: [
       "Il rischio principale nelle gelaterie non certificate è la contaminazione tramite palette e vaschette condivise tra gusti con glutine e gusti senza glutine.",
@@ -765,7 +765,7 @@ const seeds: Seed[] = [
     excerpt: "Hotel e villaggi turistici certificati AIC: cosa garantisce davvero la certificazione, la differenza tra colazione e pensione completa, e come organizzare una vacanza senza glutine senza sorprese.",
     metaTitle: "Hotel certificati AIC per celiaci | Mappa Senza Glutine",
     metaDescription: "Hotel e villaggi certificati AIC: cosa garantisce la certificazione, la differenza tra colazione e pensione completa, come scegliere senza sorprese.",
-    coverSeed: 123, author: "Marco Bianchi", authorRole: "Travel writer", publishedAt: "2026-07-30",
+    coverSeed: 123, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["hotel", "viaggi", "AIC", "vacanze"],
     keyTakeaways: [
       "Un hotel certificato AIC garantisce una colazione senza glutine sicura e staff formato sulla celiachia, non solo generiche \"opzioni gluten free\".",
@@ -806,7 +806,7 @@ const seeds: Seed[] = [
     excerpt: "Dove fare colazione senza glutine senza rischi: la differenza tra un cornetto industriale e una pasticceria dedicata, cosa chiedere al bar e come organizzarsi quando si è fuori casa o in viaggio.",
     metaTitle: "Colazione senza glutine: dove andare | Mappa Senza Glutine",
     metaDescription: "Dove fare colazione senza glutine: la differenza tra un cornetto industriale e una pasticceria dedicata, cosa chiedere al bar e come organizzarsi.",
-    coverSeed: 124, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-07-30",
+    coverSeed: 124, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["colazione", "pasticcerie", "contaminazione crociata", "bar"],
     keyTakeaways: [
       "Molti bar tradizionali offrono solo un cornetto industriale preconfezionato: non è la stessa cosa di una pasticceria con laboratorio dedicato.",
@@ -844,7 +844,7 @@ const seeds: Seed[] = [
     excerpt: "La torta \"salva-cena\" per chi ha poco tempo: pochi ingredienti, il mix di farine già pronto e un risultato soffice e sicuro.",
     metaTitle: "Torta senza glutine facile | Mappa Senza Glutine",
     metaDescription: "La ricetta della torta senza glutine salva-cena: pochi ingredienti, il mix di farine già pronto e un risultato soffice e sicuro in poco tempo.",
-    coverSeed: 132, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
+    coverSeed: 132, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-10",
     tags: ["ricette", "dolci", "torte", "farine"],
     keyTakeaways: [
       "Un mix di farine specifico per dolci dà risultati più affidabili di un mix fai-da-te per chi inizia a cucinare senza glutine.",
@@ -877,7 +877,7 @@ const seeds: Seed[] = [
     excerpt: "La ricetta base per un impasto di pizza senza glutine con il mix universale: pochi ingredienti e un risultato più simile alla pizza tradizionale.",
     metaTitle: "Pizza senza glutine fatta in casa | Mappa Senza Glutine",
     metaDescription: "La ricetta base per un impasto di pizza senza glutine con il mix universale: pochi ingredienti per un risultato vicino alla pizza tradizionale.",
-    coverSeed: 135, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
+    coverSeed: 135, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-10",
     tags: ["ricette", "pizza", "impasti"],
     keyTakeaways: [
       "Un mix di farine pensato anche per pizza e focacce dà un impasto più elastico di un mix generico per dolci.",
@@ -912,7 +912,7 @@ const seeds: Seed[] = [
     excerpt: "Cosa mettere nello zaino per la merenda senza rischi: prodotti confezionati singolarmente, facili da controllare e da far portare a scuola.",
     metaTitle: "Merenda scuola senza glutine | Mappa Senza Glutine",
     metaDescription: "5 idee pratiche per la merenda senza glutine da mettere nello zaino: prodotti confezionati singolarmente, facili da controllare e portare a scuola.",
-    coverSeed: 137, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
+    coverSeed: 137, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-10",
     tags: ["bambini", "merenda", "scuola"],
     keyTakeaways: [
       "I prodotti in monoporzione sigillata sono la scelta più sicura per la merenda a scuola: nessuna manipolazione fuori casa.",
@@ -944,7 +944,7 @@ const seeds: Seed[] = [
     excerpt: "La guida per mangiare senza glutine a Napoli: dalla pizza napoletana cotta in forno dedicato alla sfogliatella e al babà senza glutine, tra indirizzi storici e nuove aperture certificate.",
     metaTitle: "Dove mangiare senza glutine a Napoli | Mappa Senza Glutine",
     metaDescription: "Guida per mangiare senza glutine a Napoli: pizza napoletana cotta in forno dedicato, sfogliatella e babà senza glutine, tra indirizzi storici e nuovi.",
-    coverSeed: 143, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-14",
+    coverSeed: 143, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-14",
     tags: ["napoli", "pizza", "pasticceria", "guide"],
     keyTakeaways: [
       "Napoli offre oggi pizzerie storiche e nuove aperture con forno interamente dedicato al senza glutine, per gustare la vera pizza napoletana in sicurezza.",
@@ -977,7 +977,7 @@ const seeds: Seed[] = [
     excerpt: "Guida a Venezia senza glutine: gelaterie con coni dedicati, pizzerie con cucine separate e uno dei pochi hotel certificati AIC in città per una colazione senza pensieri.",
     metaTitle: "Venezia senza glutine: dove mangiare | Mappa Senza Glutine",
     metaDescription: "Guida a Venezia senza glutine: gelaterie con coni dedicati, pizzerie con cucine separate e un hotel certificato AIC in città per la colazione.",
-    coverSeed: 144, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-16",
+    coverSeed: 144, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-16",
     tags: ["venezia", "hotel", "pizzerie", "guide"],
     keyTakeaways: [
       "Venezia offre pizzerie con cucine fisicamente separate per il senza glutine, oltre a gelaterie con coni dedicati per ridurre la contaminazione crociata.",
@@ -1010,7 +1010,7 @@ const seeds: Seed[] = [
     excerpt: "Dove mangiare senza glutine a Bari: la focaccia barese e i panzerotti in versione gluten free, un laboratorio dedicato dal 2013 e dove comprare la spesa senza glutine in città.",
     metaTitle: "Bari senza glutine: dove mangiare | Mappa Senza Glutine",
     metaDescription: "Dove mangiare senza glutine a Bari: focaccia barese e panzerotti gluten free, un laboratorio dedicato dal 2013 e dove fare la spesa senza glutine.",
-    coverSeed: 145, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-18",
+    coverSeed: 145, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-18",
     tags: ["bari", "focaccia", "panificio", "guide"],
     keyTakeaways: [
       "Bari ha un laboratorio interamente dedicato al senza glutine attivo dal 2013, il primo del suo genere in città, con prodotti erogabili tramite buono ASL.",
@@ -1046,7 +1046,7 @@ const seeds: Seed[] = [
     excerpt: "Guida a Palermo senza glutine: pizzerie interamente dedicate certificate AIC, fritti con friggitrice riservata e una gelateria storica dal 1976 con gusti senza sovrapprezzo.",
     metaTitle: "Palermo senza glutine: dove mangiare | Mappa Senza Glutine",
     metaDescription: "Guida a Palermo senza glutine: pizzerie certificate AIC, arancini con friggitrice dedicata e una gelateria storica dal 1976 senza sovrapprezzo.",
-    coverSeed: 146, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-20",
+    coverSeed: 146, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-20",
     tags: ["palermo", "sicilia", "arancini", "guide"],
     keyTakeaways: [
       "Palermo ha pizzerie nate interamente dedicate al senza glutine, non semplicemente locali che offrono anche opzioni gluten free.",
@@ -1082,7 +1082,7 @@ const seeds: Seed[] = [
     excerpt: "Dove mangiare senza glutine a Genova: pizzerie certificate AIC a Sampierdarena e Prà, un panificio-pasticceria di recente apertura a Sestri Ponente e impasti alternativi da provare.",
     metaTitle: "Genova senza glutine: dove mangiare | Mappa Senza Glutine",
     metaDescription: "Dove mangiare senza glutine a Genova: pizzerie certificate AIC a Sampierdarena e Prà, un panificio a Sestri Ponente e gli impasti alternativi da provare.",
-    coverSeed: 147, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-22",
+    coverSeed: 147, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-22",
     tags: ["genova", "liguria", "pizzerie", "guide"],
     keyTakeaways: [
       "Genova conta più pizzerie certificate AIC con forno dedicato, distribuite in diversi quartieri della città.",
@@ -1115,7 +1115,7 @@ const seeds: Seed[] = [
     excerpt: "Guida a Verona senza glutine: un ristorante vegano certificato AIC, la pizzeria di fronte all'Arena, un negozio con oltre 100 prodotti convenzionato ULSS e la gelateria nel circuito AIC dal 2010.",
     metaTitle: "Verona senza glutine: cosa mangiare | Mappa Senza Glutine",
     metaDescription: "Guida a Verona senza glutine: ristorante vegano certificato AIC, pizzeria vicino all'Arena, un negozio convenzionato ULSS e gelateria dal 2010.",
-    coverSeed: 148, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-24",
+    coverSeed: 148, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-24",
     tags: ["verona", "veneto", "negozi", "guide"],
     keyTakeaways: [
       "Verona offre un ristorante certificato AIC con menu interamente vegano e senza glutine, oltre a una pizzeria proprio di fronte all'Arena.",
@@ -1148,7 +1148,7 @@ const seeds: Seed[] = [
     excerpt: "Idee veloci per crostini e tartine senza glutine, con basi pronte e pochi ingredienti freschi da assemblare all'ultimo momento.",
     metaTitle: "Crostini e tartine senza glutine | Mappa Senza Glutine",
     metaDescription: "Idee veloci per crostini e tartine senza glutine per una cena tra amici: basi pronte e pochi ingredienti freschi da assemblare all'ultimo momento.",
-    coverSeed: 139, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-10",
+    coverSeed: 139, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-10",
     tags: ["ricette", "aperitivo", "cena"],
     keyTakeaways: [
       "Fette croccanti e panfette tostate sono basi pronte per crostini, senza bisogno di preparare il pane in casa.",
@@ -1182,7 +1182,7 @@ const seeds: Seed[] = [
     excerpt: "La dieta senza glutine fa dimagrire? La risposta onesta: il calo di peso iniziale spesso dipende da cosa si toglie e cosa si aggiunge in tavola, non dal glutine in sé.",
     metaTitle: "La dieta senza glutine fa dimagrire? | Mappa Senza Glutine",
     metaDescription: "La dieta senza glutine fa dimagrire? Cosa dice davvero la scienza: perché il calo di peso spesso dipende da cosa si elimina, non dal glutine in sé.",
-    coverSeed: 149, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-08-26",
+    coverSeed: 149, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-26",
     tags: ["dimagrire", "dieta senza glutine", "nutrizione", "miti"],
     keyTakeaways: [
       "Non esistono prove scientifiche che il glutine, di per sé, faccia ingrassare o dimagrire in una persona senza celiachia o sensibilità al glutine.",
@@ -1215,7 +1215,7 @@ const seeds: Seed[] = [
     excerpt: "Fare la spesa senza glutine costa meno al discount? Le linee dedicate di Aldi, Lidl ed Eurospin a confronto, e come risparmiare senza rinunciare alla sicurezza.",
     metaTitle: "Spesa senza glutine al discount: la guida | Mappa Senza Glutine",
     metaDescription: "Spesa senza glutine al discount: le linee dedicate di Aldi, Lidl ed Eurospin a confronto, e come risparmiare senza rinunciare alla certificazione AIC.",
-    coverSeed: 150, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-27",
+    coverSeed: 150, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-27",
     tags: ["spesa", "discount", "risparmio", "supermercati"],
     keyTakeaways: [
       "Eurospin ha una linea propria dedicata, 'Amo Essere Senza Glutine', con prodotti verificati AIC e Spiga Barrata in etichetta.",
@@ -1249,7 +1249,7 @@ const seeds: Seed[] = [
     excerpt: "Panettone e colomba senza glutine per le feste: le proposte di Nutrifree e Schär, dove acquistarli e cosa verificare in etichetta prima di scegliere.",
     metaTitle: "Panettone e colomba senza glutine | Mappa Senza Glutine",
     metaDescription: "Panettone e colomba senza glutine: le proposte di Nutrifree e Schär per le feste, dove trovarli e cosa controllare in etichetta prima di acquistarli.",
-    coverSeed: 151, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-08-28",
+    coverSeed: 151, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-28",
     tags: ["panettone", "colomba", "natale", "pasqua", "dolci delle feste"],
     keyTakeaways: [
       "Nutrifree propone un panettone classico con uvetta e canditi, nato dalla collaborazione con il laboratorio siciliano Punto Caldo, oltre a una versione al cioccolato e una gastronomica salata.",
@@ -1282,7 +1282,7 @@ const seeds: Seed[] = [
     excerpt: "Birra senza glutine: quali marche sono certificate AIC, la differenza tra birre deglutinate e birre nativamente senza glutine, e quanto berne in sicurezza.",
     metaTitle: "Birra senza glutine: le marche da conoscere | Mappa Senza Glutine",
     metaDescription: "Birra senza glutine: quali marche sono certificate AIC, come funziona il processo di deglutinazione e quanto consumarne in sicurezza secondo l'AIC.",
-    coverSeed: 152, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-08-29",
+    coverSeed: 152, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-29",
     tags: ["birra", "bevande", "AIC", "prodotti"],
     keyTakeaways: [
       "Peroni Senza Glutine è tra le birre gluten-free più diffuse in Italia, certificata AIC con un contenuto di glutine inferiore a 10 ppm.",
@@ -1320,7 +1320,7 @@ const seeds: Seed[] = [
     excerpt: "La celiachia viene diagnosticata soprattutto alle donne, e negli uomini arriva mediamente un decennio più tardi: perché succede, quali segnali vengono sottovalutati e cosa chiedere al medico.",
     metaTitle: "Celiachia uomini: diagnosi tardiva | Mappa Senza Glutine",
     metaDescription: "Perché la celiachia negli uomini viene diagnosticata più tardi: i dati sulle diagnosi, il ritardo medio e i segnali che vengono spesso attribuiti ad altro.",
-    coverSeed: 153, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-09-02",
+    coverSeed: 153, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-02",
     tags: ["celiachia", "diagnosi", "uomini", "salute"],
     keyTakeaways: [
       "Secondo l'AIC circa il 70% delle diagnosi di celiachia in Italia riguarda le donne: non perché gli uomini si ammalino molto meno, ma perché arrivano alla diagnosi con più difficoltà.",
@@ -1354,7 +1354,7 @@ const seeds: Seed[] = [
     excerpt: "Come richiedere il pasto senza glutine in aereo (sigla GFML), entro quando farlo, cosa aspettarsi a bordo e quali scorte portare per non restare a digiuno.",
     metaTitle: "Pasto senza glutine in aereo: la guida GFML | Mappa Senza Glutine",
     metaDescription: "Come richiedere il pasto senza glutine in aereo: cos'è la sigla GFML, entro quando prenotarlo, cosa aspettarsi a bordo e quali scorte portare con sé.",
-    coverSeed: 154, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-05",
+    coverSeed: 154, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-05",
     tags: ["viaggi", "aereo", "GFML", "vacanze"],
     keyTakeaways: [
       "Il pasto senza glutine in aereo si richiede con la sigla internazionale GFML, direttamente sul sito della compagnia dopo aver prenotato il volo.",
@@ -1388,7 +1388,7 @@ const seeds: Seed[] = [
     excerpt: "Riso, mais, grano saraceno, castagne, mandorle: come si comportano le principali farine senza glutine in cucina, quando usarle e perché i mix funzionano meglio delle farine singole.",
     metaTitle: "Farine senza glutine: le alternative | Mappa Senza Glutine",
     metaDescription: "Guida alle farine senza glutine: riso, mais, grano saraceno, castagne e mandorle a confronto, come si comportano in cucina e perché conviene usare un mix.",
-    coverSeed: 155, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-09",
+    coverSeed: 155, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-09",
     tags: ["farine", "cucina", "panificazione", "alimentazione"],
     keyTakeaways: [
       "Nessuna farina senza glutine sostituisce da sola la farina 00: manca il glutine, che dà struttura ed elasticità agli impasti.",
@@ -1426,7 +1426,7 @@ const seeds: Seed[] = [
     excerpt: "Anticipare o ritardare il glutine nello svezzamento non cambia il rischio di celiachia: cosa dicono le linee guida ESPGHAN e perché il fattore decisivo resta la genetica.",
     metaTitle: "Svezzamento e glutine: quando introdurlo | Mappa Senza Glutine",
     metaDescription: "Quando introdurre il glutine nello svezzamento: le linee guida ESPGHAN, perché il momento non cambia il rischio di celiachia e cosa conta davvero.",
-    coverSeed: 156, author: "Dott.ssa Elena Rossi", authorRole: "Biologa nutrizionista", publishedAt: "2026-09-09",
+    coverSeed: 156, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-09",
     tags: ["bambini", "svezzamento", "celiachia", "genitori"],
     keyTakeaways: [
       "Secondo le linee guida ESPGHAN il glutine può essere introdotto in qualsiasi momento tra i 4 e i 12 mesi di vita.",
@@ -1460,7 +1460,7 @@ const seeds: Seed[] = [
     excerpt: "Stand AIC, food truck dedicati e regole pratiche per godersi una sagra da celiaco senza rischiare la contaminazione crociata tra fritture e impasti condivisi.",
     metaTitle: "Sagre senza glutine: come muoversi | Mappa Senza Glutine",
     metaDescription: "Sagre e feste di paese da celiaco: dove trovare stand AIC e food truck dedicati, cosa chiedere agli operatori e quali preparazioni evitare sempre.",
-    coverSeed: 157, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-09",
+    coverSeed: 157, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-09",
     tags: ["sagre", "eventi", "AIC", "contaminazione crociata"],
     keyTakeaways: [
       "Diverse sezioni regionali AIC organizzano stand e food truck interamente senza glutine nelle sagre, preparati secondo i protocolli dell'associazione.",
@@ -1494,7 +1494,7 @@ const seeds: Seed[] = [
     excerpt: "La salsa di soia contiene grano, la tempura è impanata: come orientarsi nei ristoranti etnici da celiaco, cosa chiedere e quali locali certificati AIC esistono già in Italia.",
     metaTitle: "Ristoranti etnici senza glutine: la guida | Mappa Senza Glutine",
     metaDescription: "Mangiare etnico da celiaco: perché la salsa di soia contiene grano, cosa evitare al giapponese, cinese e indiano e come riconoscere un locale sicuro.",
-    coverSeed: 158, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-09",
+    coverSeed: 158, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-09",
     tags: ["ristoranti", "sushi", "etnico", "salsa di soia"],
     keyTakeaways: [
       "La salsa di soia tradizionale è prodotta con frumento: è l'insidia più comune e meno conosciuta della cucina asiatica.",
@@ -1529,7 +1529,7 @@ const seeds: Seed[] = [
     excerpt: "Cosa significa davvero 'certificazione AIC': come funziona il programma Alimentazione Fuori Casa, quali controlli prevede e perché tecnicamente non è una certificazione in senso stretto.",
     metaTitle: "Certificazione AIC: cosa significa davvero | Mappa Senza Glutine",
     metaDescription: "Certificazione AIC: come funziona il programma Alimentazione Fuori Casa, quali controlli prevede sui locali e come riconoscere chi lo rispetta davvero.",
-    coverSeed: 159, author: "Marco Bianchi", authorRole: "Content specialist food safety", publishedAt: "2026-09-19",
+    coverSeed: 159, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-19",
     tags: ["AIC", "certificazione", "AFC", "guide"],
     keyTakeaways: [
       "L'AIC (Associazione Italiana Celiachia) è un'associazione senza scopo di lucro, non un ente certificatore in senso tecnico: il programma a cui i locali aderiscono si chiama Alimentazione Fuori Casa (AFC).",
@@ -1564,7 +1564,7 @@ const seeds: Seed[] = [
     excerpt: "Come preparare una besciamella senza glutine liscia e senza grumi, con farina di riso o un mix universale, pronta per lasagne, pasta al forno e verdure gratinate.",
     metaTitle: "Besciamella senza glutine | Mappa Senza Glutine",
     metaDescription: "Ricetta della besciamella senza glutine, senza grumi: dosi, procedimento passo passo e i trucchi per una consistenza liscia con farina di riso o mix universale.",
-    coverSeed: 160, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-20",
+    coverSeed: 160, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-20",
     tags: ["ricette", "besciamella", "salse"],
     keyTakeaways: [
       "La farina di riso o un mix universale senza glutine sostituiscono la farina 00 nel roux, la base grassa e farina della besciamella.",
@@ -1594,7 +1594,7 @@ const seeds: Seed[] = [
     excerpt: "Come fare il pane senza glutine in casa: impasto, lievitazione e cottura per una pagnotta con crosta croccante e mollica non gommosa.",
     metaTitle: "Pane senza glutine fatto in casa | Mappa Senza Glutine",
     metaDescription: "Ricetta del pane senza glutine fatto in casa: dosi, tempi di lievitazione e i trucchi per una crosta croccante e una mollica morbida, non gommosa.",
-    coverSeed: 161, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-20",
+    coverSeed: 161, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-20",
     tags: ["ricette", "pane", "impasti"],
     keyTakeaways: [
       "Un mix per pane specifico, con amidi e addensanti come psillio o xantano, sostituisce la maglia glutinica e dà struttura all'impasto.",
@@ -1624,7 +1624,7 @@ const seeds: Seed[] = [
     excerpt: "Come preparare la pasta frolla senza glutine per crostate, con marmellata o crema: dosi, riposo in frigo e cottura per un guscio friabile, non duro.",
     metaTitle: "Crostata senza glutine: pasta frolla | Mappa Senza Glutine",
     metaDescription: "Ricetta della crostata senza glutine: pasta frolla friabile con mix per dolci, tempi di riposo e cottura per un guscio perfetto da farcire con marmellata o crema.",
-    coverSeed: 162, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-20",
+    coverSeed: 162, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-20",
     tags: ["ricette", "crostata", "dolci"],
     keyTakeaways: [
       "Un mix specifico per dolci dà una frolla più friabile di un mix generico, grazie al bilanciamento tra amidi e farine.",
@@ -1654,7 +1654,7 @@ const seeds: Seed[] = [
     excerpt: "Come preparare le crêpes senza glutine: dosi della pastella, tempo di riposo e cottura per un risultato sottile ed elastico, da farcire dolce o salato.",
     metaTitle: "Crêpes senza glutine | Mappa Senza Glutine",
     metaDescription: "Ricetta delle crêpes senza glutine: dosi della pastella, riposo e cottura per un risultato sottile e non gommoso, da farcire dolce o salato.",
-    coverSeed: 163, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-20",
+    coverSeed: 163, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-20",
     tags: ["ricette", "crepes", "colazione"],
     keyTakeaways: [
       "Un mix universale senza glutine, più leggero della sola farina di riso, dà crêpes più elastiche e meno soggette a rompersi.",
@@ -1684,7 +1684,7 @@ const seeds: Seed[] = [
     excerpt: "Come preparare pancake senza glutine soffici e alti: dosi, il trucco per farli lievitare bene e i tempi di cottura in padella.",
     metaTitle: "Pancake senza glutine | Mappa Senza Glutine",
     metaDescription: "Ricetta dei pancake senza glutine soffici e alti: dosi, il trucco per una buona lievitazione e i tempi di cottura in padella per la colazione.",
-    coverSeed: 164, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-20",
+    coverSeed: 164, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-20",
     tags: ["ricette", "pancake", "colazione"],
     keyTakeaways: [
       "Un mix per dolci già bilanciato dà pancake più soffici di un mix generico o della sola farina di riso.",
@@ -1714,7 +1714,7 @@ const seeds: Seed[] = [
     excerpt: "Come preparare biscotti senza glutine friabili, tipo frollini: dosi, procedimento e i trucchi per una consistenza croccante e non dura.",
     metaTitle: "Biscotti senza glutine | Mappa Senza Glutine",
     metaDescription: "Ricetta dei biscotti senza glutine friabili: dosi, procedimento e i trucchi per ottenere frollini croccanti fuori e morbidi dentro, senza indurirsi.",
-    coverSeed: 165, author: "Giulia Ferri", authorRole: "Food blogger gluten free", publishedAt: "2026-09-20",
+    coverSeed: 165, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-20",
     tags: ["ricette", "biscotti", "dolci"],
     keyTakeaways: [
       "Un mix per dolci senza glutine dà biscotti più friabili di un impasto con sola farina di riso.",
@@ -1765,12 +1765,6 @@ function wordCount(sections: Seed["sections"]): number {
   return sections.reduce((sum, s) => sum + s.body.split(" ").length + (s.h3?.reduce((a, x) => a + x.body.split(" ").length, 0) ?? 0), 0);
 }
 
-const commentPool = [
-  { author: "Sara V.", avatarSeed: 201, body: "Articolo molto chiaro, mi ha aiutato tantissimo appena diagnosticata. Grazie!" },
-  { author: "Paolo N.", avatarSeed: 202, body: "Utilissimo, lo condivido nel gruppo di supporto che seguo." },
-  { author: "Ilaria C.", avatarSeed: 203, body: "Finalmente una spiegazione senza tecnicismi eccessivi, complimenti." },
-];
-
 export const ARTICLES: Article[] = seeds.map((s, idx) => {
   const words = wordCount(s.sections);
   return {
@@ -1793,11 +1787,7 @@ export const ARTICLES: Article[] = seeds.map((s, idx) => {
     keyTakeaways: s.keyTakeaways,
     faqs: s.faqs,
     tags: s.tags,
-    comments: [commentPool[idx % commentPool.length], commentPool[(idx + 1) % commentPool.length]].map((c, i) => ({
-      ...c,
-      id: `c-${idx}-${i}`,
-      date: s.publishedAt,
-    })),
+    comments: [],
     featured: s.featured,
   };
 });
