@@ -18,6 +18,8 @@ ultimoAggiornamento: 2026-09-29
 film:
   - film: "corro-da-te"
     descrizioneScena: "La cena di Gianni e Chiara dopo l'esibizione al Teatro Regio: la coppia siede nella sala storica del ristorante, lei divertita dalla goffaggine di lui."
+  - film: "stanley-tucci-searching-for-italy"
+    descrizioneScena: "Tra i ristoranti indicati dalla CNN per la puntata sul Piemonte della seconda stagione di Searching for Italy."
   - film: "blocco-181-gangs-of-milano"
     descrizioneScena: "Una delle oltre cento location torinesi usate per le riprese della seconda stagione, girata quasi interamente a Torino nonostante la storia sia ambientata a Milano."
 descrizione: "Ristorante storico di Piazza Carignano, aperto dal 1757 di fronte al Teatro Carignano. Sale ottocentesche con specchi, stucchi e velluti rossi, oggi una stella Michelin. Cucina piemontese contemporanea."

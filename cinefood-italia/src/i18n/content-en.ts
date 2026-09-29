@@ -321,7 +321,7 @@ export const filmsEn: Record<string, FilmEn> = {
     sinossi:
       "A CNN food-travel series: actor Stanley Tucci explores Italian cuisine region by region, from Naples to Rome, Emilia-Romagna to Sicily, through trattorias, pizzerias and great restaurants. Winner of multiple Emmys for outstanding hosted non-fiction series.",
     faq: [
-      { domanda: "Where did Stanley Tucci eat in Searching for Italy?", risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto (carciofi alla giudia), Enzo Coccia's pizzeria La Notizia in Naples, I Pupi in Bagheria and Mè Cumpari Turiddu in Catania (Sicily), Osteria del Cinghiale Bianco in Florence, Ratanà and Osteria del Treno in Milan, Lo Scoglio in Marina del Cantone (spaghetti alla Nerano) and Casa Artusi in Forlimpopoli." },
+      { domanda: "Where did Stanley Tucci eat in Searching for Italy?", risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto (carciofi alla giudia), Enzo Coccia's pizzeria La Notizia in Naples, I Pupi in Bagheria and Mè Cumpari Turiddu in Catania (Sicily), Osteria del Cinghiale Bianco in Florence, Ratanà and Osteria del Treno in Milan, All'Arco, Villa 600, Venissa and Orient Experience in Venice, Christian e Manuel in Vercelli, Lo Scoglio in Marina del Cantone (spaghetti alla Nerano) and Casa Artusi in Forlimpopoli." },
       { domanda: "Who produces Searching for Italy?", risposta: "It's a CNN Original Series, airing since February 14, 2021 across two seasons, hosted by actor Stanley Tucci, whose family comes from Calabria." },
       { domanda: "Are the places Tucci visited still open?", risposta: "The ones listed on CineFood Italia are: we've verified each one. Hours and availability can still change, so check before you go." },
     ],
@@ -391,6 +391,24 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Where was La moglie del prete filmed?", risposta: "In Vicenza and its surroundings. Italy for Movies lists the restaurant Al Zocco in Grisignano di Zocco among the locations." },
       { domanda: "Who directed La moglie del prete?", risposta: "Dino Risi, in 1970, with Sophia Loren and Marcello Mastroianni." },
       { domanda: "Can you eat at the film's restaurant?", risposta: "Yes: Al Zocco, at Largo Galileo Galilei 2 in Grisignano di Zocco, is still in business." },
+    ],
+  },
+  "io-sono-li": {
+    titolo: "Shun Li and the Poet (Io sono Li)",
+    sinossi: "A 2011 film by Andrea Segre set in Chioggia, where the protagonist Shun Li works in an osteria frequented by fishermen.",
+    faq: [
+      { domanda: "Where was Io sono Li filmed?", risposta: "In Chioggia, in the Venetian lagoon. Italy for Movies lists an osteria in Chioggia among the locations; secondary sources identify it as Osteria Paradiso." },
+      { domanda: "Who directed Io sono Li?", risposta: "Andrea Segre, in 2011." },
+      { domanda: "Can you visit the film's osteria?", risposta: "Yes: Osteria Paradiso, on Fondamenta Canal Lombardo in Chioggia, is still open and displays photos and posters of the film." },
+    ],
+  },
+  "la-corrispondenza": {
+    titolo: "The Correspondence (La corrispondenza)",
+    sinossi: "A 2016 film by Giuseppe Tornatore with Jeremy Irons and Olga Kurylenko, shot in several places including Lake Orta.",
+    faq: [
+      { domanda: "Where was La corrispondenza filmed?", risposta: "In several places, including Lake Orta. Italy for Movies lists the Ristorante San Giulio on the island of San Giulio among the locations." },
+      { domanda: "Who directed La corrispondenza?", risposta: "Giuseppe Tornatore, in 2016." },
+      { domanda: "Can you eat at the film's restaurant?", risposta: "Yes: Ristorante San Giulio, on Via Basilica in Orta San Giulio, is reachable by boat from Piazza Motta." },
     ],
   },
 };
@@ -488,7 +506,7 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "del-cambio-torino": {
     descrizione: "A historic restaurant on Piazza Carignano, open since 1757 opposite the Teatro Carignano. Nineteenth-century rooms with mirrors, stucco and red velvet, today holding a Michelin star. Contemporary Piedmontese cuisine.",
-    scena: {
+    scena: { "stanley-tucci-searching-for-italy": "Among the restaurants listed by CNN for the Piedmont episode of Searching for Italy's second season.",
       "corro-da-te": "Gianni and Chiara's dinner after her performance at the Teatro Regio: the couple sit in the restaurant's historic dining room, she amused by his clumsiness.",
       "blocco-181-gangs-of-milano": "One of over a hundred Turin locations used for filming season 2, shot almost entirely in Turin despite the story being set in Milan.",
     },
@@ -612,6 +630,34 @@ export const restaurantsEn: Record<string, RestEn> = {
   "al-zocco-grisignano": {
     descrizione: "A historic restaurant-bar in Grisignano di Zocco, in the province of Vicenza, where a scene of La moglie del prete (1970) with Sophia Loren and Marcello Mastroianni was shot.",
     scena: { "la-moglie-del-prete": "The restaurant is where the two lovers, played by Marcello Mastroianni and Sophia Loren, have lunch." },
+  },
+  "all-arco-venezia": {
+    descrizione: "A historic bacaro in San Polo, near the Rialto market, open since 1980 and run by the Zorzetto family: cicchetti with baccalà mantecato, anchovies and porchetta.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Veneto episode, Stanley Tucci stops at this family-run neighbourhood bacaro specialising in cicchetti." },
+  },
+  "villa-600-torcello": {
+    descrizione: "A restaurant on the island of Torcello, in the Venetian lagoon, serving Venetian cooking with local produce, away from the crowds of the centre.",
+    scena: { "stanley-tucci-searching-for-italy": "On the island of Torcello, Stanley Tucci tastes the classic duck ragù, to learn how Venetians cook duck." },
+  },
+  "venissa-mazzorbo": {
+    descrizione: "A one-Michelin-star restaurant on the island of Mazzorbo, in the Venetian lagoon, tied to a winery and a small guesthouse; the tasting menus are by chefs Chiara Pavan and Francesco Brutto.",
+    scena: { "stanley-tucci-searching-for-italy": "On the island of Mazzorbo, Stanley Tucci visits the restaurant tied to a winery, in the Veneto episode." },
+  },
+  "orient-experience-venezia": {
+    descrizione: "A restaurant in Cannaregio that began as an inclusion project: Afghan and Middle Eastern cooking with refugee staff, founded by Afghan-Venetian Hamad Ahmadi.",
+    scena: { "stanley-tucci-searching-for-italy": "In Cannaregio, Stanley Tucci visits the restaurant staffed by former refugees, with dishes from Afghanistan, Morocco, Iran and Pakistan/India." },
+  },
+  "christian-e-manuel-vercelli": {
+    descrizione: "A one-Michelin-star restaurant run by two brothers at the back of Hotel Cinzia in Vercelli: a risotteria with over twenty risottos.",
+    scena: { "stanley-tucci-searching-for-italy": "In Vercelli, Italy's rice capital, Stanley Tucci tastes risotto at brothers Christian and Manuel's restaurant." },
+  },
+  "osteria-paradiso-chioggia": {
+    descrizione: "An osteria and bar on Fondamenta Canal Lombardo in Chioggia, frequented by fishermen, displaying photos and posters of the film Io sono Li.",
+    scena: { "io-sono-li": "It is the osteria where protagonist Shun Li works, frequented by Chioggia's fishermen." },
+  },
+  "ristorante-san-giulio-orta": {
+    descrizione: "A restaurant in an 18th-century villa on the island of San Giulio, on Lake Orta, reachable by boat from Piazza Motta: Piedmontese and lake cooking.",
+    scena: { "la-corrispondenza": "The restaurant was temporarily dressed in Portuguese style for a scene of the film, according to Italy for Movies." },
   },
 };
 

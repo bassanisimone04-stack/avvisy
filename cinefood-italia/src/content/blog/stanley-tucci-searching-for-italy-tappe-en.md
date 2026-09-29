@@ -74,7 +74,7 @@ plus more venues seen on TV in our **[directory](/en/locali)**.
 
 ## The other episodes, venue by venue
 
-We have dedicated an article to three episodes: [Sicily](/en/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Florence](/en/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) and [Milan](/en/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno).
+We have dedicated an article to three episodes: [Sicily](/en/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Florence](/en/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) and [Milan](/en/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno), [Venice](/en/blog/stanley-tucci-venezia-all-arco-villa-600) (All'Arco, Villa 600, Venissa, Orient Experience), [Piedmont](/en/blog/stanley-tucci-piemonte-del-cambio-vercelli) (Del Cambio, Christian e Manuel) and [Emilia-Romagna](/en/blog/stanley-tucci-emilia-romagna-rimini-bologna) (Osteria io e Simone).
 
 ## In short
 

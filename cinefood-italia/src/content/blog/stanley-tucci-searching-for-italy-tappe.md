@@ -74,7 +74,7 @@ locali visti in TV nella nostra **[directory](/locali)**.
 
 ## Le altre puntate, locale per locale
 
-Abbiamo dedicato un articolo a tre puntate: [Sicilia](/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Firenze](/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) e [Milano](/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno).
+Abbiamo dedicato un articolo a tre puntate: [Sicilia](/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Firenze](/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) e [Milano](/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno), [Venezia](/blog/stanley-tucci-venezia-all-arco-villa-600) (All'Arco, Villa 600, Venissa, Orient Experience), [Piemonte](/blog/stanley-tucci-piemonte-del-cambio-vercelli) (Del Cambio, Christian e Manuel) ed [Emilia-Romagna](/blog/stanley-tucci-emilia-romagna-rimini-bologna) (Osteria io e Simone).
 
 ## In sintesi
 
