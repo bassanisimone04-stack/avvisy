@@ -1,5 +1,5 @@
 ---
-titolo: "Emily in Paris: The Real Restaurants in Rome"
+titolo: "Emily in Paris Rome Locations: Real Restaurants"
 descrizione: "Emily in Paris season 5: the real Rome and Venice restaurants from the Netflix show, from Zuma to Hotel Eden. Where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09

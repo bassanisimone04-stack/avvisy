@@ -1,5 +1,5 @@
 ---
-titolo: "Hannibal a Firenze: il Caffè Rivoire"
+titolo: "Hannibal a Firenze: location e Caffè Rivoire"
 descrizione: "Le location fiorentine di Hannibal di Ridley Scott, dal Caffè Rivoire in Piazza della Signoria a Palazzo Vecchio e Santa Croce."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11

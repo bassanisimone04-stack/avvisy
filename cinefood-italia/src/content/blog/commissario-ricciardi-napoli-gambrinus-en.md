@@ -1,5 +1,5 @@
 ---
-titolo: "Commissioner Ricciardi: the Real Gambrinus"
+titolo: "Commissioner Ricciardi Locations: Gambrinus"
 descrizione: "Commissioner Ricciardi's table really exists: at Naples' Gran Caffè Gambrinus, reserved after the Rai series became a hit."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12

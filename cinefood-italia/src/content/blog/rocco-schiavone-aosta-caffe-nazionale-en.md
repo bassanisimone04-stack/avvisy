@@ -1,5 +1,5 @@
 ---
-titolo: "Rocco Schiavone: the café in Aosta"
+titolo: "Rocco Schiavone Filming Locations in Aosta"
 descrizione: "The Caffè Nazionale on Piazza Chanoux was reopened just to film Rocco Schiavone. Today it's genuinely open again, with chef Paolo Griffa."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11

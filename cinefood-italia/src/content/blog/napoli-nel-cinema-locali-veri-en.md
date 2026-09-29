@@ -1,5 +1,5 @@
 ---
-titolo: "Naples on Screen: the City's Real Restaurants"
+titolo: "Naples on Screen: Film Locations & Restaurants"
 descrizione: "From Eat Pray Love to My Brilliant Friend, from Commissioner Ricciardi to Gambrinus: a guide to Naples venues that really appeared in films and TV shows."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-17

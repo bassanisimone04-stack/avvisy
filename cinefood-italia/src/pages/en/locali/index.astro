@@ -37,7 +37,7 @@ function datiFiltro(locale: (typeof locali)[number]) {
 const jsonLd = itemListJsonLd(t("locali.titolo"), locali.map((l) => new URL(path(`/locale/${l.id}`, lang), SITE.url).href));
 ---
 
-<BaseLayout lang={lang} title={t("locali.titolo")} description={t("locali.sub")} jsonLd={jsonLd}>
+<BaseLayout lang={lang} title="Movie Restaurants & Cafés in Italy: List and Map" description={t("locali.sub")} jsonLd={jsonLd}>
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="font-display text-4xl font-extrabold">{t("locali.titolo")}</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">{t("locali.sub")}</p>

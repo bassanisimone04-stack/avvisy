@@ -1,5 +1,5 @@
 ---
-titolo: "Letters to Juliet: Verona e la Toscana"
+titolo: "Letters to Juliet: location a Verona e in Toscana"
 descrizione: "I luoghi di Letters to Juliet tra Verona, con la Casa di Giulietta, e le colline del vino in Toscana."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25

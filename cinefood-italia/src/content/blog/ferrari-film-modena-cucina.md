@@ -1,5 +1,5 @@
 ---
-titolo: "Ferrari, il film: Modena tra motori e cucina"
+titolo: "Ferrari, il film: location a Modena e cucina"
 descrizione: "Il film Ferrari di Michael Mann è ambientato a Modena: motori e capitale del gusto, tra tortellini e aceto balsamico."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26

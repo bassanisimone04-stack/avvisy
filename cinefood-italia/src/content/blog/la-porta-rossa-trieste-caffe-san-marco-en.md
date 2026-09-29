@@ -1,5 +1,5 @@
 ---
-titolo: "The Red Door: Trieste's Caffè San Marco"
+titolo: "La porta rossa (The Red Door): Trieste Locations"
 descrizione: "The historic Trieste café that appears in The Red Door: Antico Caffè San Marco, a recurring set of the Rai noir with Lino Guanciale."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12

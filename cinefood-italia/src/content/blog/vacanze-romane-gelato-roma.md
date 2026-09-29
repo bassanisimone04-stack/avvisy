@@ -1,5 +1,5 @@
 ---
-titolo: "Vacanze Romane: il gelato di Audrey Hepburn"
+titolo: "Vacanze Romane: location a Roma e il gelato"
 descrizione: "Il gelato di Piazza di Spagna in Vacanze Romane con Audrey Hepburn e la Roma senza tempo del film. Dove assaggiarlo."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26

@@ -1,5 +1,5 @@
 ---
-titolo: "8 borghi italiani da scoprire grazie al cinema"
+titolo: "8 borghi italiani del cinema: le location"
 descrizione: "Da Savoca a Castellabate, i borghi più belli d'Italia diventati set cinematografici, con le loro specialità a tavola."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18

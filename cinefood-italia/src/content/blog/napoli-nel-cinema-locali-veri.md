@@ -1,5 +1,5 @@
 ---
-titolo: "Napoli nel cinema: i locali veri della città"
+titolo: "Napoli nel cinema: location e locali dei film"
 descrizione: "Da Eat Pray Love a L'amica geniale, dal Commissario Ricciardi al Gambrinus: una guida ai locali napoletani realmente apparsi in film e serie TV."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-17

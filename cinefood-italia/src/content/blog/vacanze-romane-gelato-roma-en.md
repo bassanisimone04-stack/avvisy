@@ -1,5 +1,5 @@
 ---
-titolo: "Roman Holiday: Audrey Hepburn's Gelato"
+titolo: "Roman Holiday Locations in Rome and the Gelato"
 descrizione: "The gelato on the Spanish Steps in Roman Holiday with Audrey Hepburn and the timeless Rome of the film. Where to try it."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26

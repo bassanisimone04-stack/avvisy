@@ -1,5 +1,5 @@
 ---
-titolo: "The Devil Wears Prada 2: the Real Milan of the Film"
+titolo: "The Devil Wears Prada 2 Filming Locations: Milan"
 descrizione: "Where The Devil Wears Prada 2 was filmed in Milan: Palazzo Parigi Hotel and Caffè Parigi, the cast's base during the 2025 shoot."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-08

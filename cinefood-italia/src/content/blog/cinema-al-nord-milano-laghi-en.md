@@ -1,5 +1,5 @@
 ---
-titolo: "Cinema in the North: Milan and the Lakes"
+titolo: "Northern Italy Film Locations: Milan and the Lakes"
 descrizione: "Call Me by Your Name, House of Gucci and 007: films shot between Milan and Northern Italy's lakes, and where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-28

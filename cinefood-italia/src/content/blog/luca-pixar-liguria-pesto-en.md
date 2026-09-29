@@ -1,5 +1,5 @@
 ---
-titolo: "Pixar's Luca: the Liguria of the Film"
+titolo: "Luca Pixar Setting: the Liguria of the Film"
 descrizione: "Pixar's Luca is set in Liguria: colourful villages and sea. What to eat, from trofie al pesto to focaccia."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-27

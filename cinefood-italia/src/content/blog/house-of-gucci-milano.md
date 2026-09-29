@@ -1,5 +1,5 @@
 ---
-titolo: "House of Gucci: la Milano di Lady Gaga"
+titolo: "House of Gucci: location a Milano e sul Lago di Como"
 descrizione: "La Milano di Lady Gaga e Adam Driver in House of Gucci, tra la Galleria Vittorio Emanuele e i luoghi della moda. Dove mangiare in città."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-12

@@ -1,5 +1,5 @@
 ---
-titolo: "Il Re a Trieste: il Caffè San Marco"
+titolo: "Il Re a Trieste: location e Caffè San Marco"
 descrizione: "La serie Sky con Luca Zingaretti ha girato a Trieste tra Piazza Oberdan, Porto Vecchio e gli interni dell'Antico Caffè San Marco."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11

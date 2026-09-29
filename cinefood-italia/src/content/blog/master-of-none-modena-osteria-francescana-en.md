@@ -1,5 +1,5 @@
 ---
-titolo: "Master of None: Modena and Osteria Francescana"
+titolo: "Master of None Modena Locations: Where Dev Ate"
 descrizione: "Master of None really visits Modena: Dev discovers Osteria Francescana, one of the world's best restaurants, and Emilia's food capital."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09

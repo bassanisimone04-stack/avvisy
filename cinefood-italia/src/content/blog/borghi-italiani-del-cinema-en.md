@@ -1,5 +1,5 @@
 ---
-titolo: "8 Italian Villages to Discover Thanks to Cinema"
+titolo: "8 Italian Villages Used as Film Locations"
 descrizione: "From Savoca to Castellabate, Italy's most beautiful villages turned into film sets, with their local specialities."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18

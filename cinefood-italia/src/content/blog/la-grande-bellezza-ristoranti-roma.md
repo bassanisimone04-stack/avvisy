@@ -1,5 +1,5 @@
 ---
-titolo: "La Grande Bellezza: i ristoranti di Roma"
+titolo: "La grande bellezza: location a Roma e ristoranti"
 descrizione: "Dove cena Jep Gambardella ne La Grande Bellezza: la Veranda dell'Hotel Columbus, oggi chiusa, e la Roma da sogno di Sorrentino."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-19

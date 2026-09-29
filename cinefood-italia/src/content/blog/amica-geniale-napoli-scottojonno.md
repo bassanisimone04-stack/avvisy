@@ -1,5 +1,5 @@
 ---
-titolo: "L'amica geniale: rione finto, caffè vero a Napoli"
+titolo: "L'amica geniale: dove è girata, location a Napoli"
 descrizione: "Il rione di Lila ed Elena è un set a Marcianise: il caffè ScottoJonno, nella Galleria Principe di Napoli, è invece vero, riaperto nel 2023."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-10

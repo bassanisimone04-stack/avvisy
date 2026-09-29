@@ -1,5 +1,5 @@
 ---
-titolo: "Don Matteo a Gubbio: il vero Caffè Ducale"
+titolo: "Don Matteo a Gubbio: location e Caffè Ducale"
 descrizione: "Dove giocavano a scacchi Don Matteo e il Maresciallo Cecchini: il Caffè Ducale di Gubbio, set reale per molte stagioni della fiction Rai."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-09

@@ -1,5 +1,5 @@
 ---
-titolo: "From Scratch: la trattoria vera di Firenze"
+titolo: "From Scratch: location a Firenze, Buca dell'Orafo"
 descrizione: "Dove lavora Lino in From Scratch: la Buca dell'Orafo, storica trattoria fiorentina vicino Ponte Vecchio, location vera della serie Netflix."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-08

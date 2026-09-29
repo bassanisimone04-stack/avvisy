@@ -1,5 +1,5 @@
 ---
-titolo: "House of Gucci: Lady Gaga's Milan"
+titolo: "House of Gucci Filming Locations: Milan and Como"
 descrizione: "The Milan of Lady Gaga and Adam Driver in House of Gucci, from the Galleria Vittorio Emanuele to the places of fashion. Where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12

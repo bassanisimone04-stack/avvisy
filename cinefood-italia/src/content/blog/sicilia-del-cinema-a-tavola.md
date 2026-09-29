@@ -1,5 +1,5 @@
 ---
-titolo: "La Sicilia del cinema a tavola"
+titolo: "La Sicilia del cinema: location e cosa mangiare"
 descrizione: "Da Montalbano a Il Padrino: i luoghi siciliani del cinema e cosa mettere in tavola, tra arancini e granita."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-10

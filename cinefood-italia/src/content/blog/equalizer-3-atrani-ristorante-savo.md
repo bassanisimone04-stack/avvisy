@@ -1,5 +1,5 @@
 ---
-titolo: "The Equalizer 3: il bar di Denzel Washington"
+titolo: "The Equalizer 3: location ad Atrani, bar di Denzel"
 descrizione: "Ristorante di famiglia da tre generazioni: è il vero bar di Denzel Washington in The Equalizer 3, ad Atrani, Costiera Amalfitana."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11

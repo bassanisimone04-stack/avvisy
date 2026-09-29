@@ -1,5 +1,5 @@
 ---
-titolo: "Under the Tuscan Sun: the Tuscany of Cortona"
+titolo: "Under the Tuscan Sun Filming Locations: Cortona"
 descrizione: "The film Under the Tuscan Sun is set in Cortona: hills, wine and Tuscan cuisine, from steak to bold red wines."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26

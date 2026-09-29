@@ -1,5 +1,5 @@
 ---
-titolo: "The Hand of God: Sorrentino's Real Naples"
+titolo: "The Hand of God Filming Locations in Naples"
 descrizione: "Paolo Sorrentino's Netflix film is shot between real Naples streets and Villa Giusso, an agriturismo on the Sorrentine Peninsula."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-10

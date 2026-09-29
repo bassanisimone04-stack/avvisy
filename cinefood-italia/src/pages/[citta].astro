@@ -37,7 +37,8 @@ const filmEntries = await getEntries(
   filmIds.map((id) => ({ collection: "films" as const, id }))
 );
 
-const title = `Ristoranti di ${citta} visti al cinema`;
+// SEO: "[città] location film" + "ristoranti dei film".
+const title = `${citta} nel cinema: location e ristoranti dei film`;
 const description = `Ristoranti, trattorie, bar e caffè di ${citta} apparsi in film e serie TV. ${locali.length} locali del cinema da scoprire${regione ? ` in ${regione}` : ""}.`;
 
 const crumbs = [

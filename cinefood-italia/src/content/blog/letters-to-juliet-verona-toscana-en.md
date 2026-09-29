@@ -1,5 +1,5 @@
 ---
-titolo: "Letters to Juliet: Verona and Tuscany"
+titolo: "Letters to Juliet Filming Locations: Verona"
 descrizione: "The Letters to Juliet locations between Verona, with the House of Juliet, and the wine hills of Tuscany."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25

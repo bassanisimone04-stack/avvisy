@@ -1,5 +1,5 @@
 ---
-titolo: "Il Lago di Como nel cinema: dove mangiare"
+titolo: "Lago di Como nel cinema: location e dove mangiare"
 descrizione: "Star Wars, 007 e House of Gucci: il Lago di Como è una star del cinema. Ville, location e dove mangiare sul lago."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25

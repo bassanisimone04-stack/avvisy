@@ -1,5 +1,5 @@
 ---
-titolo: "Il Commissario Ricciardi: il vero Gambrinus"
+titolo: "Il Commissario Ricciardi: location e Gambrinus"
 descrizione: "Il tavolo del Commissario Ricciardi esiste davvero: al Gran Caffè Gambrinus di Napoli, riservato dopo il successo della serie Rai."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12

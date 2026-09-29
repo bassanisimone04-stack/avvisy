@@ -1,5 +1,5 @@
 ---
-titolo: "È stata la mano di Dio: la Napoli di Sorrentino"
+titolo: "È stata la mano di Dio: location a Napoli"
 descrizione: "Il film Netflix di Paolo Sorrentino è girato tra vere strade di Napoli e Villa Giusso, l'agriturismo della penisola sorrentina."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-10

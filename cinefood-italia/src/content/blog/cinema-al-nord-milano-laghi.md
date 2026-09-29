@@ -1,5 +1,5 @@
 ---
-titolo: "Il cinema al Nord: Milano e i laghi da film"
+titolo: "Cinema al Nord: location a Milano e sui laghi"
 descrizione: "Chiamami col tuo nome, House of Gucci e 007: i film girati tra Milano e i laghi del Nord Italia, e dove mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-28

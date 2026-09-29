@@ -1,5 +1,5 @@
 ---
-titolo: "The Great Beauty: Rome's Film Restaurants"
+titolo: "The Great Beauty Filming Locations in Rome"
 descrizione: "Where Jep Gambardella dines in The Great Beauty: La Veranda dell'Hotel Columbus, now closed, and Sorrentino's dreamlike Rome."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-19

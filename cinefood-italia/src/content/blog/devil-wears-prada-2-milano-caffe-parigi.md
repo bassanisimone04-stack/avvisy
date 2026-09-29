@@ -1,5 +1,5 @@
 ---
-titolo: "The Devil Wears Prada 2: la Milano vera del film"
+titolo: "Il diavolo veste Prada 2: location a Milano"
 descrizione: "Dove è stato girato The Devil Wears Prada 2 a Milano: il Palazzo Parigi Hotel e il Caffè Parigi, base del cast durante le riprese 2025."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-08

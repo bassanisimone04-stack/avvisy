@@ -1,5 +1,5 @@
 ---
-titolo: "From Scratch: the Real Trattoria in Florence"
+titolo: "From Scratch Filming Locations in Florence"
 descrizione: "Where Lino works in From Scratch: Buca dell'Orafo, a historic Florentine trattoria near Ponte Vecchio, the Netflix series' real location."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-08

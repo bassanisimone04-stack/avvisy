@@ -1,5 +1,5 @@
 ---
-titolo: "James Bond in Italia: dove mangiare"
+titolo: "James Bond in Italia: location e dove mangiare"
 descrizione: "Le location italiane di 007: Matera, Venezia e il Lago di Como. Dove mangiare da veri agenti segreti tra un film e l'altro."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-27

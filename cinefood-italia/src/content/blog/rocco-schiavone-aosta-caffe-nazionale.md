@@ -1,5 +1,5 @@
 ---
-titolo: "Rocco Schiavone: il caffè di Aosta"
+titolo: "Rocco Schiavone: location ad Aosta, Caffè Nazionale"
 descrizione: "Il Caffè Nazionale di piazza Chanoux fu riaperto apposta per girare Rocco Schiavone. Oggi è di nuovo aperto, con lo chef Paolo Griffa."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11

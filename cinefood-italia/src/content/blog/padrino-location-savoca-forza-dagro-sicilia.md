@@ -1,5 +1,5 @@
 ---
-titolo: "Il Padrino: tutte le location in Sicilia"
+titolo: "Il Padrino: dove è stato girato in Sicilia"
 descrizione: "Dove è stato girato Il Padrino in Sicilia: Savoca, Forza d'Agrò e il Bar Vitelli di Al Pacino. Guida completa alle location vere del film."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25

@@ -1,5 +1,5 @@
 ---
-titolo: "Diabolik a Trieste: il vero Caffè San Marco"
+titolo: "Diabolik Ginko all'attacco: location a Trieste"
 descrizione: "Come Trieste è diventata Clerville in Diabolik - Ginko all'attacco!: l'inseguimento in Piazza della Borsa e la scena al Caffè San Marco."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12

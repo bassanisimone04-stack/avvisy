@@ -1,5 +1,5 @@
 ---
-titolo: "Hannibal in Florence: Caffè Rivoire"
+titolo: "Hannibal Filming Locations in Florence: Rivoire"
 descrizione: "The Florence locations of Ridley Scott's Hannibal, from Caffè Rivoire on Piazza della Signoria to Palazzo Vecchio and Santa Croce."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11

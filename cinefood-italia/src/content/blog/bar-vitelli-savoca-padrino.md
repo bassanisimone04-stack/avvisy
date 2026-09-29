@@ -1,5 +1,5 @@
 ---
-titolo: "Bar Vitelli, Savoca: il vero bar de Il Padrino"
+titolo: "Bar Vitelli a Savoca: il bar de Il Padrino"
 descrizione: "Bar Vitelli a Savoca, Sicilia: qui Al Pacino, nei panni di Michael Corleone, chiede la mano di Apollonia ne Il Padrino. Cosa ordinare, dalla granita al vino."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-23

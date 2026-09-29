@@ -1,5 +1,5 @@
 ---
-titolo: "La porta rossa: il Caffè San Marco di Trieste"
+titolo: "La porta rossa: location a Trieste, Caffè San Marco"
 descrizione: "Il caffè storico di Trieste che appare ne La porta rossa: l'Antico Caffè San Marco, set ricorrente del noir Rai con Lino Guanciale."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12

@@ -1,5 +1,5 @@
 ---
-titolo: "Hotel Costiera: la vera Positano di Villa Treville"
+titolo: "Hotel Costiera: location a Positano, Villa Treville"
 descrizione: "Hotel Costiera, la serie Prime Video con Jesse Williams, è girata a Villa Treville, Positano: il vero hotel e il ristorante Maestro's."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09

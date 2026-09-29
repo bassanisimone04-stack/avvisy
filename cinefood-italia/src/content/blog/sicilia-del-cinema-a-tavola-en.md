@@ -1,5 +1,5 @@
 ---
-titolo: "Sicily on Screen, at the Table"
+titolo: "Sicily Film Locations and What to Eat"
 descrizione: "From Montalbano to The Godfather: Sicily's film locations and what to put on the table, from arancini to granita."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-10

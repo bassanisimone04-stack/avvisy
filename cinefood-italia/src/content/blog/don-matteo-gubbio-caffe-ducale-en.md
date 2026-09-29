@@ -1,5 +1,5 @@
 ---
-titolo: "Don Matteo in Gubbio: the Real Caffè Ducale"
+titolo: "Don Matteo Filming Locations in Gubbio: Caffè Ducale"
 descrizione: "Where Don Matteo and Sergeant Cecchini played chess: Caffè Ducale in Gubbio, a real set for many seasons of the Rai series."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-09

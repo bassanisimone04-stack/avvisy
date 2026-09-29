@@ -1,5 +1,5 @@
 ---
-titolo: "To Rome with Love: Woody Allen's Rome"
+titolo: "To Rome with Love Filming Locations in Rome"
 descrizione: "The Rome of To Rome with Love, Woody Allen's comedy: the Roman places in the film and where to stop for a bite near Piazza Navona."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-13

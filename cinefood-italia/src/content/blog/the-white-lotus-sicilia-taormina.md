@@ -1,5 +1,5 @@
 ---
-titolo: "The White Lotus: la vera Sicilia di Taormina"
+titolo: "The White Lotus 2: location a Taormina, Sicilia"
 descrizione: "The White Lotus 2 è girato davvero in Sicilia: San Domenico Palace, Cefalù, Noto. Le location vere della serie HBO e cosa mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09

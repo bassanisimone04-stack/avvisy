@@ -250,7 +250,7 @@ export const ui = {
     "loc.dove": "Where to find it",
     "loc.aggiornato": "Last updated",
     "loc.nota": "Data is indicative: always check opening hours and availability with the venue.",
-    "citta.titoloSeo": "Restaurants in {c} seen on screen",
+    "citta.titoloSeo": "{c} Film Locations & Movie Restaurants",
     "citta.localiDi": "Venues in",
     "citta.filmDi": "Films set in",
     "citta.conteggio": "film venues",

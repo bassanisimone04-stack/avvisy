@@ -1,5 +1,5 @@
 ---
-titolo: "Màkari: la vera tonnara del ristorante di Marilù"
+titolo: "Màkari: dove è girata, la Tonnara di Scopello"
 descrizione: "Il ristorante di Marilù in Màkari è un set allestito alla Tonnara di Scopello: la vera storia dietro la serie Rai con Claudio Gioè, in Sicilia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-17

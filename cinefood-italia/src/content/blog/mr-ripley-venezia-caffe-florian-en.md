@@ -1,5 +1,5 @@
 ---
-titolo: "Matt Damon in Venice: The Talented Mr. Ripley"
+titolo: "Talented Mr. Ripley Venice Locations: Florian"
 descrizione: "Matt Damon's Venice locations from The Talented Mr. Ripley: Caffè Florian, the oldest café in Italy, in St Mark's Square."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-14

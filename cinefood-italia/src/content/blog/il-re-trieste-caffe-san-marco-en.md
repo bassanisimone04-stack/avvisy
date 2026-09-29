@@ -1,5 +1,5 @@
 ---
-titolo: "The King in Trieste: Caffè San Marco"
+titolo: "Il Re (The King) in Trieste: Filming Locations"
 descrizione: "The Sky series with Luca Zingaretti filmed in Trieste across Piazza Oberdan, the Porto Vecchio and inside the Antico Caffè San Marco."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11

@@ -1,5 +1,5 @@
 ---
-titolo: "James Bond in Italy: Where to Eat"
+titolo: "James Bond Italy Filming Locations: Where to Eat"
 descrizione: "The Italian 007 locations: Matera, Venice and Lake Como. Where to eat like a real secret agent along the way."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-27

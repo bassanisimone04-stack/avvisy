@@ -1,5 +1,5 @@
 ---
-titolo: "Màkari: the Real Tonnara Behind Marilù's Restaurant"
+titolo: "Where Is Màkari Filmed? Tonnara di Scopello"
 descrizione: "Marilù's restaurant in Màkari is a set built inside the Tonnara di Scopello: the real story behind the Rai series with Claudio Gioè, in Sicily."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-17

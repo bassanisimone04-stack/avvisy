@@ -1,5 +1,5 @@
 ---
-titolo: "To Rome with Love: la Roma di Woody Allen"
+titolo: "To Rome with Love: le location a Roma"
 descrizione: "La Roma di To Rome with Love, la commedia di Woody Allen: i luoghi romani citati dal film e dove fermarsi a mangiare vicino a Piazza Navona."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-13

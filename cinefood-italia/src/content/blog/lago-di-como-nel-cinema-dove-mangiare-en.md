@@ -1,5 +1,5 @@
 ---
-titolo: "Lake Como on Screen: Where to Eat"
+titolo: "Lake Como Filming Locations: Where to Eat"
 descrizione: "Star Wars, 007 and House of Gucci: Lake Como is a movie star. Villas, locations and where to eat by the water."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25

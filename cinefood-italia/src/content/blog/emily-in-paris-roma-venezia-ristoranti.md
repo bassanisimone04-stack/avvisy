@@ -1,5 +1,5 @@
 ---
-titolo: "Emily in Paris: i ristoranti veri di Roma"
+titolo: "Emily in Paris a Roma: location e ristoranti veri"
 descrizione: "Emily in Paris stagione 5: i veri ristoranti di Roma e Venezia della serie Netflix, da Zuma all'Hotel Eden. Dove mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09

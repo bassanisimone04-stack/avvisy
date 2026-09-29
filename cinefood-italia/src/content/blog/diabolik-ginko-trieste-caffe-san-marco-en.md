@@ -1,5 +1,5 @@
 ---
-titolo: "Diabolik in Trieste: the Real Caffè San Marco"
+titolo: "Diabolik Ginko Attacks: Filming Locations, Trieste"
 descrizione: "How Trieste became Clerville in Diabolik - Ginko Attacks!: the car chase in Piazza della Borsa and the scene at Caffè San Marco."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12

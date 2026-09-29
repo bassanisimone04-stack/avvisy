@@ -1,5 +1,5 @@
 ---
-titolo: "Master of None: Modena e Osteria Francescana"
+titolo: "Master of None a Modena: location e ristoranti"
 descrizione: "Master of None arriva davvero a Modena: Dev scopre Osteria Francescana di Massimo Bottura, tra i migliori ristoranti al mondo, e l'Emilia gastronomica."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
