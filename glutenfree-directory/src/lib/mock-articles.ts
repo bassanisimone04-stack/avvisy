@@ -4,6 +4,7 @@ import type { Locale } from "./i18n/locale";
 
 interface Seed {
   title: string;
+  slug?: string;
   category: Article["category"];
   excerpt: string;
   coverSeed: number;
@@ -519,27 +520,28 @@ const seeds: Seed[] = [
     ],
   },
   {
-    title: "Quanto costa la dieta senza glutine: guida a costi, buoni pasto AIC e detrazioni fiscali",
+    title: "Quanto costa la dieta senza glutine: guida a costi, buoni per celiaci e detrazioni fiscali",
+    slug: "quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali",
     category: "Guide",
-    excerpt: "Quanto spende in più chi segue una dieta senza glutine, come funzionano il tesserino AIC e i buoni pasto in farmacia, e quali detrazioni fiscali spettano ai celiaci in Italia.",
+    excerpt: "Quanto spende in più chi segue una dieta senza glutine, come funziona il buono mensile del Servizio Sanitario Nazionale e quali detrazioni fiscali spettano ai celiaci in Italia.",
     metaTitle: "Quanto costa la dieta senza glutine | Mappa Senza Glutine",
-    metaDescription: "Quanto spende in più chi segue una dieta senza glutine, come funzionano tesserino AIC e buoni pasto in farmacia, e le detrazioni fiscali per i celiaci.",
+    metaDescription: "Quanto spende in più chi segue una dieta senza glutine, come funziona il buono mensile del Servizio Sanitario e le detrazioni fiscali per i celiaci.",
     coverSeed: 117, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-12",
     tags: ["celiachia", "buoni pasto", "guide", "diritti"],
     keyTakeaways: [
-      "I prodotti senza glutine costano in media dal 2 al 4 volte di più rispetto agli equivalenti con glutine, soprattutto pane e pasta.",
+      "Secondo un'indagine del Centro di formazione e ricerca sui consumi con Assoutenti, i prodotti senza glutine costano da circa un terzo in più fino a oltre il triplo degli equivalenti con glutine: +110% la pasta, +257% le fette biscottate.",
       "Il Servizio Sanitario Nazionale eroga un buono mensile spendibile in farmacia e nei negozi convenzionati per l'acquisto di prodotti sostitutivi certificati.",
       "L'importo del buono varia in base a età e sesso ed è aggiornato periodicamente dal Ministero della Salute.",
       "Alcune spese sanitarie collegate alla celiachia sono inoltre detraibili nella dichiarazione dei redditi.",
     ],
     sections: [
       { h2: "Perché la dieta senza glutine costa di più", body: "Chi riceve una diagnosi di celiachia si scontra presto con una realtà pratica: i prodotti senza glutine, in particolare pane, pasta e prodotti da forno, hanno un prezzo mediamente più alto rispetto agli equivalenti tradizionali, a causa di filiere produttive dedicate, controlli più severi e volumi di produzione inferiori. Conoscere gli strumenti di supporto economico previsti dal Servizio Sanitario Nazionale aiuta a gestire questa spesa senza rinunciare alla qualità o alla sicurezza alimentare. Per le ultime novità su buoni e normativa, vedi il nostro riepilogo <a href=\"/blog/novita-normative-2026-cosa-cambia-per-i-celiaci-in-italia\">novità normative 2026 per i celiaci</a>." },
-      { h2: "Il tesserino AIC e il buono mensile per prodotti senza glutine", body: "Ecco come funziona nella pratica il principale strumento di sostegno economico per i celiaci in Italia.", h3: [
-        { title: "Come si ottiene il buono mensile", body: "Dopo la diagnosi di celiachia, il medico specialista rilascia una certificazione che permette di richiedere presso la propria ASL di riferimento un buono mensile, utilizzabile in farmacia e nei negozi convenzionati per l'acquisto di prodotti sostitutivi senza glutine inseriti nel Prontuario AIC." },
-        { title: "Quanto vale il buono e come si usa", body: "L'importo varia in base a fasce di età e sesso, definite e aggiornate dal Ministero della Salute, ed è generalmente più alto per gli adolescenti in fase di crescita. Il buono viene caricato su tessera sanitaria o tramite elenco cartaceo, a seconda della regione di residenza, ed è utilizzabile solo per prodotti effettivamente inseriti nel Prontuario." },
+      { h2: "Il buono mensile per prodotti senza glutine", body: "Ecco come funziona nella pratica il principale strumento di sostegno economico per i celiaci in Italia.", h3: [
+        { title: "Come si ottiene il buono mensile", body: "Dopo la diagnosi di celiachia, il medico specialista rilascia una certificazione che permette di richiedere presso la propria ASL di riferimento un buono mensile a carico del Servizio Sanitario Nazionale, utilizzabile, a seconda della regione, in farmacie, negozi specializzati e supermercati convenzionati per l'acquisto dei prodotti senza glutine iscritti nel Registro nazionale degli alimenti senza glutine del Ministero della Salute. Anche se spesso viene chiamato \"buono AIC\", non lo eroga AIC, che è un'associazione di pazienti: lo eroga il Servizio Sanitario tramite la ASL." },
+        { title: "Quanto vale il buono e come si usa", body: "L'importo varia in base a fasce di età e sesso, definite e aggiornate dal Ministero della Salute, ed è generalmente più alto per gli adolescenti in fase di crescita. Il buono viene caricato sulla tessera sanitaria o, dove il sistema digitale non è ancora attivo, erogato in forma cartacea, a seconda della regione di residenza, ed è utilizzabile solo per i prodotti iscritti nel Registro nazionale." },
       ] },
       { h2: "Le detrazioni fiscali collegate alla celiachia", body: "Oltre al buono mensile, alcune spese sanitarie strettamente collegate alla gestione della celiachia, come visite specialistiche o esami diagnostici non coperti dal SSN, possono rientrare tra le spese detraibili nella dichiarazione dei redditi: è sempre consigliato conservare le ricevute e verificare con un commercialista o CAF le voci effettivamente detraibili nell'anno fiscale di riferimento." },
-      { h2: "Come risparmiare senza rinunciare alla sicurezza", body: "Qualche accorgimento aiuta a contenere la spesa senza mai scendere a compromessi sulla sicurezza alimentare: <ul><li><strong>Usa sempre il buono mensile</strong> per i prodotti di base come pane, pasta e farine, dove il risparmio è maggiore.</li><li><strong>Punta su alimenti naturalmente senza glutine</strong> come riso, mais, legumi e verdure, spesso più economici dei prodotti sostitutivi confezionati.</li><li><strong>Confronta i prezzi tra farmacia, supermercato e negozi specializzati</strong>, che possono variare sensibilmente sullo stesso prodotto: la nostra <a href=\"/blog/spesa-senza-glutine-al-discount-aldi-lidl-ed-eurospin-a-confronto\">spesa senza glutine al discount</a> confronta Aldi, Lidl ed Eurospin.</li><li><strong>Cucina in casa quando possibile</strong>, ad esempio la pasta fresca, per ridurre il costo dei prodotti pronti.</li></ul>" },
+      { h2: "Come risparmiare senza rinunciare alla sicurezza", body: "Qualche accorgimento aiuta a contenere la spesa senza mai scendere a compromessi sulla sicurezza alimentare: <ul><li><strong>Usa sempre il buono mensile</strong> per i prodotti di base come pane, pasta e farine, dove il risparmio è maggiore.</li><li><strong>Punta su alimenti naturalmente senza glutine</strong> come riso, mais, legumi e verdure, spesso più economici dei prodotti sostitutivi confezionati.</li><li><strong>Confronta i prezzi tra farmacia, supermercato e negozi specializzati</strong>, che possono variare sensibilmente sullo stesso prodotto: la nostra <a href=\"/blog/spesa-senza-glutine-al-discount-aldi-lidl-ed-eurospin-a-confronto\">spesa senza glutine al discount</a> confronta Aldi, Lidl ed Eurospin, e la guida su <a href=\"/blog/dove-comprare-prodotti-senza-glutine-supermercati-farmacie-e-negozi-specializzati\">dove comprare prodotti senza glutine</a> spiega pro e contro di ogni canale.</li><li><strong>Cucina in casa quando possibile</strong>, ad esempio la pasta fresca, per ridurre il costo dei prodotti pronti.</li></ul>" },
     ],
     faqs: [
       { question: "A chi spetta il buono mensile per prodotti senza glutine?", answer: "Il buono spetta a tutte le persone con diagnosi di celiachia o dermatite erpetiforme certificata da uno specialista, richiedibile presso la ASL di residenza indipendentemente dall'età." },
@@ -816,7 +818,7 @@ const seeds: Seed[] = [
     ],
     sections: [
       { h2: "Colazione senza glutine: perché il bar sotto casa spesso non basta", body: "Per chi è celiaco, la colazione al bar è spesso una delle rinunce più sentite: il cornetto caldo appena sfornato, il profumo del bancone, il rito della colazione fuori casa. Trovare dove fare colazione senza glutine in sicurezza significa però andare oltre il semplice \"hanno il prodotto senza glutine\": un cornetto confezionato tenuto nello stesso espositore di quelli tradizionali, tagliato con lo stesso coltello o tostato nello stesso tostapane, può contaminarsi facilmente. In questa guida vediamo dove cercare e cosa chiedere per una colazione davvero sicura." },
-      { h2: "Dove fare colazione senza glutine in sicurezza", body: "Non tutti i locali offrono lo stesso livello di garanzia: ecco le opzioni più affidabili, in ordine di sicurezza.", h3: [
+      { h2: "Dove fare colazione senza glutine in sicurezza", body: "Non tutti i locali offrono lo stesso livello di garanzia: ecco le opzioni più affidabili, in ordine di sicurezza. Per le pasticcerie in particolare, vedi anche la guida alle <a href=\"/blog/pasticcerie-senza-glutine-come-riconoscere-quelle-sicure-e-dove-trovarle\">pasticcerie senza glutine</a>.", h3: [
         { title: "Pasticcerie 100% dedicate al senza glutine", body: "Sono l'opzione più sicura in assoluto: laboratorio, forno e utensili usati esclusivamente per prodotti senza glutine, senza alcun rischio di contaminazione da farine tradizionali. Sono ancora poche, ma in crescita nelle grandi città." },
         { title: "Bar con angolo senza glutine certificato", body: "Molti bar tradizionali propongono un piccolo assortimento di prodotti senza glutine, spesso confezionati da fornitori esterni: verifica che siano conservati in un espositore separato e non tagliati o riscaldati con gli stessi strumenti usati per i prodotti tradizionali." },
         { title: "Supermercati e prodotti da forno confezionati", body: "Cornetti e brioches confezionati con marchio senza glutine, reperibili al supermercato o in farmacia, sono un'alternativa sicura per la colazione a casa o da portare con sé, anche se meno \"esperienziale\" di una pasticceria." },
@@ -1903,6 +1905,72 @@ const seeds: Seed[] = [
       { question: "Come si conservano i dolci senza glutine?", answer: "Tendono a seccarsi più in fretta di quelli tradizionali: conservali ben chiusi in un contenitore ermetico o in una scatola di latta, oppure congelali a porzioni e scongelali al momento." },
     ],
   },
+  {
+    title: "Pasticcerie senza glutine: come riconoscere quelle sicure e dove trovarle",
+    category: "Guide",
+    excerpt: "Come capire se una pasticceria senza glutine è davvero sicura per un celiaco, la differenza tra laboratorio dedicato e produzione mista, e gli indirizzi verificati città per città.",
+    metaTitle: "Pasticcerie senza glutine: dove trovarle | Mappa Senza Glutine",
+    metaDescription: "Come riconoscere una pasticceria senza glutine sicura e gli indirizzi verificati a Milano, Roma, Napoli, Bari, Palermo e Genova con laboratorio dedicato.",
+    coverSeed: 171, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-29",
+    tags: ["pasticcerie", "dolci", "guide"],
+    keyTakeaways: [
+      "Una pasticceria con laboratorio interamente dedicato al senza glutine offre le maggiori garanzie, perché la farina di grano non entra mai nella produzione.",
+      "Nei laboratori misti la farina resta sospesa nell'aria e si deposita su superfici e attrezzature: servono separazioni reali di spazi, tempi e strumenti.",
+      "L'adesione al programma Alimentazione Fuori Casa di AIC è un'ulteriore garanzia, ma non l'unica: contano anche vetrina separata, pinze dedicate e personale formato.",
+      "Nella nostra directory trovi pasticcerie e forni senza glutine verificati a Milano, Roma, Napoli, Bari, Palermo e Genova.",
+    ],
+    sections: [
+      { h2: "Laboratorio dedicato o produzione mista: la differenza che conta", body: "In pasticceria il rischio di contaminazione è più alto che in molti altri locali, perché si lavora molta farina. In un laboratorio dove si usa anche farina di grano, la polvere resta sospesa nell'aria e si deposita su piani di lavoro, teglie e attrezzature: per questo un dolce preparato con ingredienti senza glutine non è automaticamente sicuro. Le pasticcerie si dividono in due grandi gruppi: <ul><li><strong>Laboratorio 100% senza glutine</strong>: la farina di grano non entra mai. È la soluzione con le maggiori garanzie per un celiaco.</li><li><strong>Produzione mista</strong>: si preparano dolci con e senza glutine. Può essere sicura solo se le lavorazioni sono separate davvero, negli spazi, nei tempi e negli strumenti.</li></ul>" },
+      { h2: "Come riconoscere una pasticceria sicura", body: "Qualche segnale concreto aiuta a capire se ci si può fidare: <ul><li><strong>Chiedi se il laboratorio è dedicato</strong> o, se è misto, come vengono separate le lavorazioni.</li><li><strong>Verifica l'adesione ad AIC</strong>: i locali del programma Alimentazione Fuori Casa seguono una formazione specifica e controlli periodici. Ne parliamo nella guida alla <a href=\"/blog/certificazione-aic-cosa-significa-e-come-riconoscere-un-locale-davvero-certificato\">certificazione AIC</a>.</li><li><strong>Guarda la vetrina</strong>: i dolci senza glutine dovrebbero essere separati o confezionati, e serviti con pinze e vassoi dedicati.</li><li><strong>Ascolta il personale</strong>: chi è formato sa spiegare senza esitazioni come evita la contaminazione.</li></ul> Nel dubbio, in una pasticceria a produzione mista è più prudente scegliere dolci confezionati e sigillati in laboratorio." },
+      { h2: "Pasticcerie e forni senza glutine verificati", body: "Questi indirizzi sono presenti nella nostra directory: per ciascuno abbiamo verificato esistenza, indirizzo e informazioni su fonti pubbliche. Trovi l'elenco completo, aggiornato, nella sezione <a href=\"/directory?categoria=bar-pasticceria\">bar e pasticcerie</a>.", h3: [
+        { title: "Milano", body: "<a href=\"/directory/glufree-bakery-milano\">GluFree Bakery</a>, in via Curtatone, è un panificio e pasticceria con laboratorio interamente dedicato al senza glutine, nel circuito AIC: pane, croissant, dolci, pizze e arancini. <a href=\"/directory/pansy-milano\">Pansy</a>, in via Santa Sofia, ha una produzione interamente senza glutine e senza lattosio, con torte, mignon e diverse opzioni vegan, anche con consegna a domicilio in città." },
+        { title: "Roma", body: "<a href=\"/directory/sans-de-ble-roma\">Sans de Blé</a>, verso la Garbatella, ha un laboratorio dedicato al senza glutine e senza lattosio ed è certificata AIC: pane, cannoli siciliani e dolci stagionali. Nel quartiere San Lorenzo c'è <a href=\"/directory/senza-pensieri-healthy-bakery-roma\">Senza Pensieri Healthy Bakery</a>, con dolce e salato senza glutine, molte proposte anche senza lattosio e vegan. All'EUR, <a href=\"/directory/celiachiamo-roma\">Celiachiamo</a> è forno e pasticceria interamente senza glutine con laboratorio interno, che accetta anche le ricette ASL." },
+        { title: "Napoli", body: "Davanti al Museo Archeologico Nazionale, <a href=\"/directory/leopoldo-cafebar-napoli\">Leopoldo Cafebar</a> ha un laboratorio dedicato esclusivamente alla produzione senza glutine e propone la tradizione dolciaria napoletana in versione gluten free." },
+        { title: "Bari", body: "<a href=\"/directory/la-gouterie-bari\">La Gouterie</a> è la prima pasticceria e gastronomia di Bari interamente dedicata al senza glutine, aperta dal 2013. Il <a href=\"/directory/panificio-magda-bari\">Panificio Magda</a> ha invece un laboratorio autorizzato dal Ministero della Salute per la produzione senza glutine di focaccia barese, panzerotti e pane." },
+        { title: "Palermo", body: "<a href=\"/directory/no-gluten-bakery-palermo\">No Gluten Bakery</a> è forno, pasticceria e gastronomia con laboratorio interamente senza glutine: produce brioche, pane, pizza e panelle." },
+        { title: "Genova", body: "A Sestri Ponente, <a href=\"/directory/randazzo-gluten-free-genova\">Randazzo Gluten Free</a> è un panificio e pasticceria artigianale dedicato esclusivamente al senza glutine, aperto alla fine del 2024 ed entrato nel circuito AIC Liguria." },
+      ] },
+      { h2: "Pasticcerie tradizionali con opzioni senza glutine", body: "Sempre più pasticcerie tradizionali propongono qualche dolce senza glutine accanto alla produzione classica. Può essere una buona notizia, ma vale la regola della produzione mista: chiedi come vengono preparati e conservati i dolci senza glutine e, se le risposte non ti convincono, orientati sui prodotti confezionati in laboratori dedicati. Per la colazione fuori casa trovi altri consigli nella guida su <a href=\"/blog/dove-fare-colazione-senza-glutine-cornetti-brioches-e-pasticcerie-dedicate\">dove fare colazione senza glutine</a>." },
+      { h2: "Se non c'è una pasticceria senza glutine vicino a te", body: "Non in tutte le città esiste un laboratorio dedicato. In quel caso puoi puntare sui dolci confezionati con la dicitura \"senza glutine\", che trovi in supermercati, farmacie e negozi specializzati (ne parliamo nella guida su <a href=\"/blog/dove-comprare-prodotti-senza-glutine-supermercati-farmacie-e-negozi-specializzati\">dove comprare prodotti senza glutine</a>), oppure preparare i dolci in casa con le nostre <a href=\"/blog/dolci-senza-glutine-le-ricette-base-da-fare-in-casa\">ricette base di dolci senza glutine</a>." },
+    ],
+    faqs: [
+      { question: "Una pasticceria con laboratorio misto è sicura per un celiaco?", answer: "Può esserlo, ma solo se separa davvero le lavorazioni senza glutine da quelle con glutine, negli spazi, nei tempi e negli strumenti. Il rischio principale è la farina di grano sospesa nell'aria. Nel dubbio, è più prudente scegliere dolci confezionati e sigillati." },
+      { question: "Cosa significa laboratorio 100% senza glutine?", answer: "Significa che nel laboratorio non entra mai farina o ingrediente con glutine: tutta la produzione è senza glutine, e il rischio di contaminazione crociata durante la preparazione viene eliminato alla radice." },
+      { question: "Come trovo una pasticceria senza glutine vicino a me?", answer: "Nella directory di Mappa Senza Glutine puoi filtrare per città e per categoria bar e pasticcerie. Anche la sezione regionale di AIC della tua zona pubblica l'elenco dei locali aderenti al programma Alimentazione Fuori Casa." },
+    ],
+  },
+  {
+    title: "Dove comprare prodotti senza glutine: supermercati, farmacie e negozi specializzati",
+    category: "Guide",
+    excerpt: "Supermercati, farmacie, negozi specializzati e online: dove conviene comprare i prodotti senza glutine e dove si può spendere il buono mensile per celiaci.",
+    metaTitle: "Dove comprare prodotti senza glutine | Mappa Senza Glutine",
+    metaDescription: "Dove comprare prodotti senza glutine: pro e contro di supermercati, farmacie, negozi specializzati e online, e dove si può spendere il buono per celiaci.",
+    coverSeed: 172, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-09-29",
+    tags: ["spesa", "buoni", "guide"],
+    keyTakeaways: [
+      "I prodotti senza glutine si trovano in quattro canali principali: supermercati, farmacie, negozi specializzati e online.",
+      "Il buono mensile del Servizio Sanitario Nazionale si spende, a seconda della regione, in farmacie, parafarmacie, negozi specializzati e supermercati convenzionati.",
+      "Con il buono si acquistano solo i prodotti iscritti nel Registro nazionale degli alimenti senza glutine del Ministero della Salute.",
+      "Con la Legge di Bilancio 2026 il buono diventa digitale e spendibile in tutta Italia, man mano che le regioni attivano il nuovo sistema.",
+    ],
+    sections: [
+      { h2: "I quattro canali per fare la spesa senza glutine", body: "Chi segue una dieta senza glutine ha oggi molte più possibilità di un tempo. Ogni canale ha però vantaggi e limiti diversi, soprattutto per chi usa il buono mensile per celiaci: conviene conoscerli per decidere dove comprare cosa." },
+      { h2: "Supermercati", body: "Quasi tutte le catene hanno un reparto o un corner dedicato ai prodotti senza glutine, spesso con linee a marchio proprio, anche nei discount: Eurospin con \"Amo Essere Senza Glutine\" e Aldi con \"Enjoy Free\", di cui parliamo nella guida alla <a href=\"/blog/spesa-senza-glutine-al-discount-aldi-lidl-ed-eurospin-a-confronto\">spesa senza glutine al discount</a>. Il supermercato è il posto più comodo per gli alimenti naturalmente senza glutine, come riso, legumi, verdure e carne, e per molti prodotti confezionati. Il limite: l'assortimento di prodotti sostitutivi, soprattutto freschi, è spesso più ridotto, e il buono si può usare solo nei punti vendita convenzionati con la propria regione." },
+      { h2: "Farmacie", body: "Le farmacie sono il canale storico per i prodotti senza glutine e quello in cui il buono è accettato più diffusamente. Alcune dedicano un intero reparto agli alimenti per celiaci, come la <a href=\"/directory/farmacia-santa-rita-roma\">Farmacia Santa Rita</a> alla Garbatella, a Roma. Lo svantaggio più frequente sono i prezzi, spesso più alti rispetto alla grande distribuzione per lo stesso prodotto. Trovi le farmacie presenti nella directory nella sezione <a href=\"/directory?categoria=farmacia\">farmacie</a>." },
+      { h2: "Negozi specializzati", body: "I negozi dedicati al senza glutine offrono l'assortimento più ampio, spesso con prodotti freschi da laboratorio interno, e in molti casi sono convenzionati per il buono. Qualche esempio dalla nostra directory: <ul><li><a href=\"/directory/milano-senza-glutine-milano\">Milano Senza Glutine</a>, negozio dedicato con laboratorio per pane e pasta fresca, parte di una catena con più punti vendita in Lombardia;</li><li><a href=\"/directory/gusto-libero-verona\">Gusto Libero</a> a Verona, con oltre 100 prodotti senza glutine e senza lattosio, convenzionato con l'ULSS per i buoni;</li><li><a href=\"/directory/celiachiamo-roma\">Celiachiamo</a> a Roma, forno e pasticceria senza glutine che accetta le ricette ASL;</li><li><a href=\"/directory/la-gouterie-bari\">La Gouterie</a> a Bari, con prodotti confezionati erogabili con il buono ASL.</li></ul> L'elenco completo è nella sezione <a href=\"/directory?categoria=negozio\">negozi specializzati</a>." },
+      { h2: "Online", body: "Siti dei produttori ed e-commerce specializzati offrono la scelta più ampia e la consegna a casa, utile per chi vive lontano da un negozio dedicato. Prima di acquistare online con il buono, però, verifica con la tua ASL se è possibile: dipende dalle convenzioni attivate dalla tua regione." },
+      { h2: "Dove si può spendere il buono per celiaci", body: "Il buono mensile è a carico del Servizio Sanitario Nazionale e si richiede alla propria ASL dopo la diagnosi. Dove si può spendere dipende dalla regione: in Emilia-Romagna, Sicilia, Piemonte e Abruzzo, per esempio, è utilizzabile in farmacie, negozi specializzati e supermercati convenzionati, e in diverse regioni anche nelle parafarmacie.", h3: [
+        { title: "Quali prodotti si possono comprare", body: "Solo quelli iscritti nel Registro nazionale degli alimenti senza glutine del Ministero della Salute, nelle categorie previste: pane e prodotti da forno salati, pasta e pizza, preparati per dolci, pane e pizza, prodotti da forno dolci e cereali per la colazione. Il Prontuario AIC è un'altra cosa: è un elenco volontario di prodotti adatti ai celiaci, non l'elenco di quelli acquistabili con il buono." },
+        { title: "La novità del 2026", body: "L'articolo 77 della Legge di Bilancio 2026 rende il buono digitale e spendibile in tutta Italia, non più solo nella regione di residenza, man mano che le regioni attivano il nuovo sistema. I dettagli sono nel nostro articolo sulle <a href=\"/blog/novita-normative-2026-cosa-cambia-per-i-celiaci-in-italia\">novità normative 2026</a>, mentre importi e detrazioni sono nella guida su <a href=\"/blog/quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali\">quanto costa la dieta senza glutine</a>." },
+      ] },
+      { h2: "Come organizzare la spesa", body: "<ul><li><strong>Usa il buono per i prodotti sostitutivi</strong> come pane, pasta, farine e prodotti da forno, che sono i più costosi.</li><li><strong>Compra al supermercato gli alimenti naturalmente senza glutine</strong>, come riso, mais, legumi, verdure, carne e pesce.</li><li><strong>Confronta i prezzi</strong> dello stesso prodotto tra farmacia, supermercato e negozio specializzato.</li><li><strong>Controlla sempre la dicitura \"senza glutine\"</strong> in etichetta, qualunque sia il canale: vedi la guida su <a href=\"/blog/come-leggere-le-etichette-alimentari-se-sei-celiaco\">come leggere le etichette</a>.</li></ul>" },
+    ],
+    faqs: [
+      { question: "Posso usare il buono per celiaci al supermercato?", answer: "Sì, se il supermercato è convenzionato con la tua regione. In molte regioni il buono si può spendere anche nella grande distribuzione, oltre che in farmacie e negozi specializzati: l'elenco dei punti vendita convenzionati è disponibile presso la tua ASL." },
+      { question: "Il buono si può spendere fuori dalla propria regione?", answer: "Con la Legge di Bilancio 2026 il buono diventa digitale e spendibile in tutta Italia, man mano che le regioni attivano il nuovo sistema. Fino ad allora vale solo nella regione di residenza." },
+      { question: "Quali prodotti si possono comprare con il buono?", answer: "Solo i prodotti iscritti nel Registro nazionale degli alimenti senza glutine del Ministero della Salute, come pane, pasta, pizza, preparati per dolci, prodotti da forno dolci e cereali per la colazione." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {
@@ -1934,7 +2002,7 @@ export const ARTICLES: Article[] = seeds.map((s, idx) => {
   const words = wordCount(s.sections);
   return {
     id: `art-${idx + 1}`,
-    slug: slugify(s.title),
+    slug: s.slug ?? slugify(s.title),
     title: s.title,
     metaTitle: s.metaTitle ?? `${s.title} | Mappa Senza Glutine`,
     metaDescription: s.metaDescription ?? s.excerpt,
