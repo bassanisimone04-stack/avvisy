@@ -1,6 +1,6 @@
 ---
-titolo: "Welcome to the South: Castellabate Locations"
-descrizione: "The Welcome to the South film locations in Castellabate: the little square, Le Gatte restaurant and Cilento flavours."
+titolo: "Welcome to the South Filming Locations: Castellabate"
+descrizione: "Where was Welcome to the South filmed? Castellabate's little square, Le Gatte restaurant and the flavours of the Cilento."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-20
 immagine: "../../assets/placeholder/benvenuti-al-sud-castellabate.jpg"

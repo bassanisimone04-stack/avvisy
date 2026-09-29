@@ -1,6 +1,6 @@
 ---
 titolo: "La pizza di Eat Pray Love: Da Michele a Napoli"
-descrizione: "Menù cortissimo, niente prenotazioni e sempre la fila: dove Julia Roberts ha mangiato la pizza in Eat Pray Love, vicino alla Stazione Centrale."
+descrizione: "Dove ha mangiato la pizza Julia Roberts in Eat Pray Love? È L'Antica Pizzeria da Michele a Napoli: menù, fila, indirizzo e come arrivare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
@@ -16,7 +16,7 @@ faq:
   - domanda: "Da quando esiste la pizzeria da Michele?"
     risposta: "La storia comincia nel 1870 con Salvatore Condurro. Il figlio Michele apre un locale proprio nel 1906 e nel 1930 la pizzeria si trasferisce nella sede attuale di via Cesare Sersale, gestita ancora oggi dalla stessa famiglia."
   - domanda: "Come si arriva da Michele da Napoli Centrale?"
-    risposta: "A piedi in circa 5 minuti dalla Stazione Napoli Centrale, uscita Piazza Garibaldi: è una delle pizzerie storiche più comode da raggiungere in città."
+    risposta: "A piedi in meno di 10 minuti dalla Stazione Napoli Centrale, uscita Piazza Garibaldi: è una delle pizzerie storiche più comode da raggiungere in città."
 prenotazioni:
   - nome: "Hotel"
     citta: "Napoli"
@@ -66,7 +66,7 @@ tavola in pochi minuti.
 
 ## Come arrivare
 
-Da Michele è a circa 5 minuti a piedi dalla **Stazione Napoli Centrale**
+Da Michele è a meno di 10 minuti a piedi dalla **Stazione Napoli Centrale**
 (uscita Piazza Garibaldi), il che la rende una tappa comoda anche solo di
 passaggio, prima o dopo un treno. Chi arriva in auto può lasciarla in uno dei
 parcheggi custoditi della zona: il centro storico ha ZTL attiva in diverse

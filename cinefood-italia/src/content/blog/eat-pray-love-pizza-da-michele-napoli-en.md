@@ -1,6 +1,6 @@
 ---
-titolo: "Eat Pray Love Pizza: Julia Roberts' Naples Pizzeria"
-descrizione: "A very short menu, no reservations, always a queue: where Julia Roberts ate pizza in Eat Pray Love, near Napoli Centrale station."
+titolo: "Eat Pray Love Pizza Place: Da Michele, Naples"
+descrizione: "Where did Julia Roberts eat pizza in Eat Pray Love? The pizza place is L'Antica Pizzeria da Michele in Naples: menu, queue, address, how to get there."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
@@ -9,6 +9,10 @@ tags: ["Eat Pray Love", "Naples", "pizza", "where to eat", "film tourism"]
 faq:
   - domanda: "Where did Julia Roberts eat pizza in Eat Pray Love?"
     risposta: "At L'Antica Pizzeria da Michele, on Via Cesare Sersale in the Forcella district of Naples."
+  - domanda: "Which pizza place is in Eat Pray Love?"
+    risposta: "L'Antica Pizzeria da Michele in Naples, the pizzeria of Liz's pizza scene, according to Italy for Movies, the Italian Ministry of Culture's film-location portal. It's the historic Naples pizza place on Via Cesare Sersale."
+  - domanda: "Is the Eat Pray Love pizza scene filmed in Naples?"
+    risposta: "Yes: the pizza scene belongs to the Naples part of the film and is set at Da Michele, while the Rome food scenes are set in other trattorias."
   - domanda: "What pizza do they serve at Da Michele?"
     risposta: "The menu is very short: the two historic pizzas are marinara and margherita, baked in a wood-fired oven; two variations (cosacca and marita, half margherita and half marinara) are also on the menu."
   - domanda: "Do you need to book at Da Michele?"
@@ -16,7 +20,7 @@ faq:
   - domanda: "How old is Da Michele pizzeria?"
     risposta: "Its story starts in 1870 with Salvatore Condurro. His son Michele opened his own place in 1906, and in 1930 the pizzeria moved to its current home on Via Cesare Sersale, still run by the same family today."
   - domanda: "How do you get to Da Michele from Naples Central Station?"
-    risposta: "It's about a 5-minute walk from Napoli Centrale station, Piazza Garibaldi exit — one of the easiest historic pizzerias to reach in the city."
+    risposta: "It's less than a 10-minute walk from Napoli Centrale station, Piazza Garibaldi exit — one of the easiest historic pizzerias to reach in the city."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"
@@ -64,7 +68,7 @@ gets the pizza to your table in minutes.
 
 ## How to get there
 
-Da Michele is about a 5-minute walk from **Naples Central Station**
+Da Michele is less than a 10-minute walk from **Naples Central Station**
 (Piazza Garibaldi exit), which makes it an easy stop even just passing
 through, before or after a train. If you're driving, use one of the guarded
 car parks nearby — the historic center has restricted traffic zones (ZTL)

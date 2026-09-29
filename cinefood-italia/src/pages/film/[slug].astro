@@ -26,9 +26,9 @@ const d = film.data;
 const cittaFilm = d.citta[0];
 const itinerario = ITINERARIO_PER_FILM[film.id];
 
-// SEO: pattern keyword "dove mangiano ne [film]".
-const title = `Dove mangiano ne "${d.titolo}"`;
-const description = `I ristoranti, bar e caffè legati a ${d.titolo} (${d.anno}) di ${d.regista}${cittaFilm ? ` a ${cittaFilm}` : ""}. Scopri le location reali e dove mangiare come nel film.`;
+// SEO (Search Console): "dove è stato girato X" / "X location" + "dove mangiano ne [film]".
+const title = `${d.titolo}: location e dove mangiare`;
+const description = `Dove è stato girato ${d.titolo} (${d.anno}) di ${d.regista}? Le location reali e i ristoranti, bar e caffè legati al film${cittaFilm ? ` a ${cittaFilm}` : ""}.`;
 
 const crumbs = [
   { name: "Home", href: "/" },

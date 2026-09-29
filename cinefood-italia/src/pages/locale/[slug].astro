@@ -28,6 +28,15 @@ const { Content } = await render(locale);
 const filmEntries = await getEntries(d.film.map((f) => f.film));
 
 const canonical = new URL(`/locale/${locale.id}`, Astro.site ?? SITE.url).href;
+
+// SEO (Search Console): la gente cerca "nome locale + città" e "film + location".
+// Set reale -> "location di [film]"; legato al film -> "legato a [film]" (mai presentarlo come set).
+const primoFilm = filmEntries[0]?.data.titolo;
+const seoTitle = !primoFilm
+  ? `${d.nome} — ${d.citta}`
+  : d.categoria === "set-reale"
+    ? `${d.nome}, ${d.citta}: location di ${primoFilm}`
+    : `${d.nome}, ${d.citta}: legato a ${primoFilm}`;
 const immagineUrl = new URL(d.immagine.src, Astro.site ?? SITE.url).href;
 
 const crumbs = [
@@ -48,7 +57,7 @@ const jsonLd = [
 ---
 
 <BaseLayout
-  title={`${d.nome} — ${d.citta}`}
+  title={seoTitle}
   description={`${d.nome} a ${d.citta}: ${d.descrizione}`}
   image={d.immagine.src}
   type="article"

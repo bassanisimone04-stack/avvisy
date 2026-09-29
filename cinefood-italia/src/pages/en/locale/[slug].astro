@@ -31,6 +31,15 @@ const canonical = new URL(path(`/locale/${locale.id}`, lang), Astro.site ?? SITE
 const immagineUrl = new URL(d.immagine.src, Astro.site ?? SITE.url).href;
 
 const cittaEn = tCitta(d.citta, lang);
+
+// SEO (Search Console): people search "venue name + city" and "film + filming location".
+// Real set -> "X filming location"; film-related -> "linked to X" (never presented as a set).
+const primoFilm = filmEntries[0] ? tFilmTitolo(filmEntries[0], lang) : undefined;
+const seoTitle = !primoFilm
+  ? `${d.nome} — ${cittaEn}`
+  : d.categoria === "set-reale"
+    ? `${d.nome}, ${cittaEn}: ${primoFilm} filming location`
+    : `${d.nome}, ${cittaEn}: linked to ${primoFilm}`;
 const crumbs = [
   { name: t("loc.home"), href: path("/", lang) },
   { name: t("loc.locali"), href: path("/locali", lang) },
@@ -44,7 +53,7 @@ const jsonLd = [
 const desc = tLocaleDesc(locale, lang);
 ---
 
-<BaseLayout lang={lang} title={`${d.nome} — ${cittaEn}`} description={`${d.nome} in ${cittaEn}: ${desc}`} image={d.immagine.src} type="article" jsonLd={jsonLd}>
+<BaseLayout lang={lang} title={seoTitle} description={`${d.nome} in ${cittaEn}: ${desc}`} image={d.immagine.src} type="article" jsonLd={jsonLd}>
   <article class="mx-auto max-w-4xl px-4 py-8">
     <Breadcrumb items={crumbs} />
 

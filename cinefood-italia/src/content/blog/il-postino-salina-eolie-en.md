@@ -1,6 +1,6 @@
 ---
-titolo: "Il Postino in Salina: the Film's Locations"
-descrizione: "The Il Postino locations in Salina, between Pollara and the Aeolian sea. Where to taste pane cunzato, capers and malvasia."
+titolo: "Il Postino Filming Locations: Salina, Sicily"
+descrizione: "Where was Il Postino filmed? Salina's Pollara and the Aeolian Islands, plus Procida. Where to taste pane cunzato, capers and malvasia."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/il-postino-salina-eolie.jpg"

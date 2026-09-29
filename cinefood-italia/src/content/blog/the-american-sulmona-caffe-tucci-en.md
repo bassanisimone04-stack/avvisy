@@ -1,6 +1,6 @@
 ---
-titolo: "The American: He Took Down His Bar for Clooney"
-descrizione: "In Sulmona, Caffè Tucci's owner took down his own outdoor gazebo to clear the way for filming The American with George Clooney."
+titolo: "Where Was The American Filmed? Sulmona, Abruzzo"
+descrizione: "Where was The American with George Clooney filmed? Sulmona's Piazza Garibaldi, Castel del Monte, Calascio and more. Caffè Tucci took down its gazebo."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-tucci-sulmona.jpg"

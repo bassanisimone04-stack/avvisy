@@ -1,5 +1,5 @@
 ---
-titolo: "Where Montalbano Ate: His Sicily Locations"
+titolo: "Enzo a Mare: Montalbano's Restaurant in Sicily"
 descrizione: "From the house in Punta Secca to Enzo a Mare restaurant: where Inspector Montalbano ate in Sicily, from arancini to fresh fish."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-24
