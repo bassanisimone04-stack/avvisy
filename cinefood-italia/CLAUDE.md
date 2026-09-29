@@ -120,8 +120,7 @@ indicizzare. La scelta della lingua resta manuale (bandiere in header).
 
 ## Checklist SEO per ogni articolo di blog
 
-- `titolo`: lunghezza + 18 caratteri ≤ 70 (spazio per il suffisso del
-  sito nel tag `<title>`).
+- `titolo`: lunghezza ≤ 52 caratteri (il suffisso "· CineFood" è breve, ma Google mostra ~60 caratteri).
 - `descrizione` (meta description): tra 70 e 160 caratteri.
 - Almeno 3 domande in `faq[]`.
 - Corpo dell'articolo: almeno 200 parole.

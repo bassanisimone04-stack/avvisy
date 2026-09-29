@@ -1,6 +1,6 @@
 ---
-titolo: "Spider-Man Far From Home: Venezia nel film"
-descrizione: "Spider-Man: Far From Home porta l'Uomo Ragno a Venezia. Guida alla città del film e ai cicchetti veneziani."
+titolo: "Spider-Man Far From Home: location a Venezia"
+descrizione: "Dove è stato girato Spider-Man: Far From Home a Venezia? Le location vere, il set ricostruito e dove mangiare i cicchetti."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/spider-man-far-from-home-venezia.jpg"

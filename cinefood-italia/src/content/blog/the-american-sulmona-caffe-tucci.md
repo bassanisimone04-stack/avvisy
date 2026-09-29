@@ -1,6 +1,6 @@
 ---
-titolo: "The American: smontò il bar per fare posto a Clooney"
-descrizione: "A Sulmona, il titolare del Caffè Tucci smontò il proprio gazebo per lasciare campo libero alle riprese di The American con George Clooney."
+titolo: "The American a Sulmona: location e Caffè Tucci"
+descrizione: "Dove è stato girato The American con George Clooney? Sulmona, Piazza Garibaldi e altri borghi d'Abruzzo. Il Caffè Tucci smontò il gazebo per le riprese."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-tucci-sulmona.jpg"

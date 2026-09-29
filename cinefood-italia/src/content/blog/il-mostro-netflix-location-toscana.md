@@ -1,5 +1,5 @@
 ---
-titolo: "Il Mostro (Netflix): le location vere in Toscana"
+titolo: "Il Mostro Netflix: location in Toscana"
 descrizione: "Dove è stata girata la serie Netflix Il Mostro di Stefano Sollima: Firenze, Montalcino, Siena e la Toscana vera dietro la storia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-07

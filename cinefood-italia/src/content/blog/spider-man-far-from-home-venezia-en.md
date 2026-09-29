@@ -1,6 +1,6 @@
 ---
-titolo: "Spider-Man: Far From Home in Venice"
-descrizione: "Spider-Man: Far From Home brings Spider-Man to Venice. A guide to the film's city and its Venetian cicchetti."
+titolo: "Spider-Man Far From Home: Venice Filming Locations"
+descrizione: "Where was Spider-Man: Far From Home filmed in Venice? Real locations, the rebuilt set and where to eat Venetian cicchetti."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/spider-man-far-from-home-venezia.jpg"

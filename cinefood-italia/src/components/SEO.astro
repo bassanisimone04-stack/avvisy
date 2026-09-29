@@ -29,7 +29,8 @@ const defaultDesc =
     : SITE.description;
 const desc = description ?? defaultDesc;
 
-const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
+// Suffisso breve: Google mostra ~60 caratteri, cosi' il titolo utile non viene tagliato.
+const fullTitle = title ? `${title} · CineFood` : `${SITE.name} — ${SITE.tagline}`;
 const normalizedPath = cleanPathname(Astro.url.pathname);
 const canonical = new URL(normalizedPath, Astro.site ?? SITE.url).href;
 // Versioni alternative nelle due lingue (hreflang) per la SEO internazionale.

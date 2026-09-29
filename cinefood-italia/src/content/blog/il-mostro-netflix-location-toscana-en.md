@@ -1,6 +1,6 @@
 ---
-titolo: "The Monster of Florence: Real Tuscany Locations"
-descrizione: "Where Netflix's The Monster of Florence was filmed: real locations in Florence, Montalcino, Siena and the Tuscany behind the true story."
+titolo: "Il Mostro Netflix: Filming Locations in Tuscany"
+descrizione: "Where was Netflix's The Monster of Florence (Il Mostro) filmed? Real locations in Florence, Montalcino, Siena and the Tuscany behind the true story."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-07
 immagine: "../../assets/placeholder/il-mostro-firenze-vero.jpg"

@@ -38,7 +38,7 @@ const primoFilm = filmEntries[0] ? tFilmTitolo(filmEntries[0], lang) : undefined
 const seoTitle = !primoFilm
   ? `${d.nome} — ${cittaEn}`
   : d.categoria === "set-reale"
-    ? `${d.nome}, ${cittaEn}: ${primoFilm} filming location`
+    ? `${d.nome}, ${cittaEn}: ${primoFilm} location`
     : `${d.nome}, ${cittaEn}: linked to ${primoFilm}`;
 const crumbs = [
   { name: t("loc.home"), href: path("/", lang) },
