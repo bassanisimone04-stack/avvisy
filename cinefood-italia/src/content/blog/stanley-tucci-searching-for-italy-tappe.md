@@ -72,6 +72,10 @@ Trovi tutto anche nella scheda della serie
 **[Searching for Italy](/film/stanley-tucci-searching-for-italy)**, e altri
 locali visti in TV nella nostra **[directory](/locali)**.
 
+## Le altre puntate, locale per locale
+
+Abbiamo dedicato un articolo a tre puntate: [Sicilia](/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Firenze](/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) e [Milano](/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno).
+
 ## In sintesi
 
 *Searching for Italy* è un inno alla cucina italiana e ai suoi territori. Una

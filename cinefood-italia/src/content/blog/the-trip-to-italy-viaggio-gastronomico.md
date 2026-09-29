@@ -37,11 +37,11 @@ fonti: la Trattoria della Posta a **Monforte d'Alba** (Piemonte), La Cantina a
 Oliver Glowig a **Roma**, Relais Blu sulla costa di **Sorrento** e Il Riccio a
 **Capri**:
 
-- Il **Piemonte**, con i tartufi e le Langhe;
+- Il **Piemonte**, con i tartufi e le Langhe (qui la **[Trattoria della Posta](/locale/trattoria-della-posta-monforte-dalba)**);
 - La **Liguria**, con il pesto e il mare;
 - La **Toscana**, tra colline e vino;
 - **Roma**, con la sua cucina verace;
-- La **costa di Sorrento** e **Capri**, tra limoni e pesce.
+- La **costa di Sorrento** e **Capri**, tra limoni e pesce (qui **[Il Riccio](/locale/il-riccio-anacapri)**, ad Anacapri).
 
 ## Cosa assaggiare lungo il percorso
 

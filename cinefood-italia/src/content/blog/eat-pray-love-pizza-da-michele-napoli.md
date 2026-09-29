@@ -9,6 +9,10 @@ tags: ["Eat Pray Love", "Napoli", "pizza", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove ha mangiato la pizza Julia Roberts in Eat Pray Love?"
     risposta: "All'Antica Pizzeria da Michele, in Via Cesare Sersale nel quartiere Forcella a Napoli."
+  - domanda: "Qual è la pizzeria di Mangia prega ama?"
+    risposta: "L'Antica Pizzeria da Michele a Napoli, in Via Cesare Sersale, dove Liz mangia la sua margherita: l'abbinamento è riportato dal portale Italy for Movies del Ministero della Cultura."
+  - domanda: "La scena della pizza di Eat Pray Love è girata a Napoli?"
+    risposta: "Sì: la scena della pizza appartiene alla parte napoletana del film ed è ambientata da Da Michele, mentre le scene a tavola a Roma sono in altre trattorie."
   - domanda: "Che pizza si mangia da Michele?"
     risposta: "Il menù è cortissimo: le due pizze storiche sono marinara e margherita, cotte nel forno a legna; in menù ci sono anche due varianti (cosacca e marita, metà margherita e metà marinara)."
   - domanda: "Serve prenotare da Michele?"

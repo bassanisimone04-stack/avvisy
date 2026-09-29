@@ -1,6 +1,6 @@
 ---
 titolo: "Presentiamo La Guida CineFood Italia (PDF)"
-descrizione: "Abbiamo raccolto i 39 locali reali di CineFood Italia in una guida PDF scaricabile, con 4 itinerari pronti e un indice per film."
+descrizione: "Abbiamo raccolto i 47 locali reali di CineFood Italia in una guida PDF scaricabile, con 4 itinerari pronti e un indice per film."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
 immagine: "../../assets/placeholder/guida-cover-preview.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Copertina de La Guida CineFood Italia"
 tags: ["Guida PDF", "itinerari", "novità"]
 faq:
   - domanda: "Cosa contiene La Guida CineFood Italia?"
-    risposta: "I 39 locali reali della directory (indirizzo, prezzo, film e scena collegata), organizzati per regione, più 4 itinerari pronti e un indice per film."
+    risposta: "I 47 locali reali della directory (indirizzo, prezzo, film e scena collegata), organizzati per regione, più 4 itinerari pronti e un indice per film."
   - domanda: "È diversa dal sito?"
     risposta: "Il sito resta gratuito e sempre aggiornato. La guida è una versione PDF scaricabile e organizzata per un viaggio: comoda da consultare offline, in aereo o senza connessione."
   - domanda: "È disponibile anche in inglese?"
@@ -23,7 +23,7 @@ la directory in viaggio.
 
 ## Cosa contiene
 
-I **39 locali reali** della directory — stesso identico livello di verifica
+I **47 locali reali** della directory — stesso identico livello di verifica
 che trovi sul sito, nessun esempio inventato — organizzati per **12
 regioni**, con indirizzo, fascia di prezzo, film o serie collegati e la
 scena esatta girata o ambientata lì. In più, **4 itinerari pronti**: una

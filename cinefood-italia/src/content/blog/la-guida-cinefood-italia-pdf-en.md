@@ -1,6 +1,6 @@
 ---
 titolo: "Introducing The CineFood Italia Guide (PDF)"
-descrizione: "We've packed the 39 real CineFood Italia venues into a downloadable PDF guide, with 4 ready-made itineraries and an index by film."
+descrizione: "We've packed the 47 real CineFood Italia venues into a downloadable PDF guide, with 4 ready-made itineraries and an index by film."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
 immagine: "../../assets/placeholder/guida-cover-preview-en.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Cover of The CineFood Italia Guide"
 tags: ["PDF Guide", "itineraries", "news"]
 faq:
   - domanda: "What's inside The CineFood Italia Guide?"
-    risposta: "The 39 real venues from the directory (address, price, film and connected scene), organised by region, plus 4 ready-made itineraries and an index by film."
+    risposta: "The 47 real venues from the directory (address, price, film and connected scene), organised by region, plus 4 ready-made itineraries and an index by film."
   - domanda: "Is it different from the website?"
     risposta: "The site stays free and always up to date. The guide is a downloadable, trip-organised PDF version: handy to check offline, on a plane, or without a connection."
   - domanda: "Is it available in Italian too?"
@@ -24,7 +24,7 @@ wants to take the directory along on a trip.
 
 ## What's inside
 
-The **39 real venues** from the directory — the exact same level of
+The **47 real venues** from the directory — the exact same level of
 verification you'll find on the site, no invented examples — organised
 by **12 regions**, with address, price range, the film or show it's
 linked to, and the exact scene shot or set there. Plus **4 ready-made

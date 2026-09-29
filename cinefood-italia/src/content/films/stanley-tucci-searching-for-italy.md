@@ -6,10 +6,10 @@ serieTv: true
 sinossi: "Serie di viaggio gastronomico prodotta dalla CNN: l'attore Stanley Tucci esplora la cucina italiana regione per regione, da Napoli a Roma, dall'Emilia-Romagna alla Sicilia, tra trattorie, pizzerie e grandi ristoranti. Vincitrice di più Emmy come miglior serie non-fiction condotta."
 locandina: "../../assets/films/stanley-tucci-searching-for-italy.jpg"
 locandinaAlt: "Locandina in stile manifesto — Stanley Tucci: Searching for Italy"
-citta: ["Roma", "Napoli", "Massa Lubrense", "Forlimpopoli"]
+citta: ["Roma", "Napoli", "Massa Lubrense", "Forlimpopoli", "Bagheria", "Catania", "Firenze", "Milano"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Searching for Italy?"
-    risposta: "Tra i locali indicati dalla CNN: La Reginella nel Ghetto di Roma (carciofi alla giudia), la pizzeria La Notizia di Enzo Coccia a Napoli, Lo Scoglio a Marina del Cantone (spaghetti alla Nerano) e Casa Artusi a Forlimpopoli."
+    risposta: "Tra i locali indicati dalla CNN: La Reginella nel Ghetto di Roma (carciofi alla giudia), la pizzeria La Notizia di Enzo Coccia a Napoli, I Pupi a Bagheria e Mè Cumpari Turiddu a Catania (Sicilia), l'Osteria del Cinghiale Bianco a Firenze, Ratanà e Osteria del Treno a Milano, Lo Scoglio a Marina del Cantone (spaghetti alla Nerano) e Casa Artusi a Forlimpopoli."
   - domanda: "Chi produce Searching for Italy?"
     risposta: "È una serie originale CNN, in onda dal 14 febbraio 2021 per due stagioni, condotta dall'attore Stanley Tucci, di origini calabresi."
   - domanda: "I locali visitati da Tucci sono ancora aperti?"

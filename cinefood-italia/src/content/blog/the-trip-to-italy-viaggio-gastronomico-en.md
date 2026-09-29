@@ -38,11 +38,11 @@ La Cantina in **San Fruttuoso** (Liguria), Trattoria Albana in **Mazzolla**
 (Tuscany), Oliver Glowig in **Rome**, Relais Blu on the **Sorrento** coast and
 Il Riccio on **Capri**:
 
-- **Piedmont**, with truffles and the Langhe;
+- **Piedmont**, with truffles and the Langhe (here **[Trattoria della Posta](/en/locale/trattoria-della-posta-monforte-dalba)**);
 - **Liguria**, with pesto and the sea;
 - **Tuscany**, among hills and wine;
 - **Rome**, with its authentic cuisine;
-- The **Sorrento coast** and **Capri**, among lemons and fish.
+- The **Sorrento coast** and **Capri**, among lemons and fish (here **[Il Riccio](/en/locale/il-riccio-anacapri)**, in Anacapri).
 
 ## What to taste along the way
 

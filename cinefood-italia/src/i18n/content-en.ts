@@ -321,7 +321,7 @@ export const filmsEn: Record<string, FilmEn> = {
     sinossi:
       "A CNN food-travel series: actor Stanley Tucci explores Italian cuisine region by region, from Naples to Rome, Emilia-Romagna to Sicily, through trattorias, pizzerias and great restaurants. Winner of multiple Emmys for outstanding hosted non-fiction series.",
     faq: [
-      { domanda: "Where did Stanley Tucci eat in Searching for Italy?", risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto (carciofi alla giudia), Enzo Coccia's pizzeria La Notizia in Naples, Lo Scoglio in Marina del Cantone (spaghetti alla Nerano) and Casa Artusi in Forlimpopoli." },
+      { domanda: "Where did Stanley Tucci eat in Searching for Italy?", risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto (carciofi alla giudia), Enzo Coccia's pizzeria La Notizia in Naples, I Pupi in Bagheria and Mè Cumpari Turiddu in Catania (Sicily), Osteria del Cinghiale Bianco in Florence, Ratanà and Osteria del Treno in Milan, Lo Scoglio in Marina del Cantone (spaghetti alla Nerano) and Casa Artusi in Forlimpopoli." },
       { domanda: "Who produces Searching for Italy?", risposta: "It's a CNN Original Series, airing since February 14, 2021 across two seasons, hosted by actor Stanley Tucci, whose family comes from Calabria." },
       { domanda: "Are the places Tucci visited still open?", risposta: "The ones listed on CineFood Italia are: we've verified each one. Hours and availability can still change, so check before you go." },
     ],
@@ -364,6 +364,24 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Where is Don Matteo filmed?", risposta: "The first eight seasons (2000-2011) were shot in Gubbio, Umbria; from season nine on, production moved to Spoleto, also in Umbria." },
       { domanda: "Which café appears in Don Matteo in Gubbio?", risposta: "Caffè Ducale, on Piazza Grande: it's the café where Sergeant Cecchini and Don Matteo play their daily chess games. The venue still keeps props from the show." },
       { domanda: "Who plays Don Matteo?", risposta: "Terence Hill in the title role, with Nino Frassica as Sergeant Cecchini, in a series created by Enrico Oldoini and airing on Rai 1 since 2000." },
+    ],
+  },
+  "i-laureati": {
+    titolo: "I laureati",
+    sinossi: "A 1995 comedy directed by and starring Leonardo Pieraccioni, one of the Tuscan director's first hits, set in Florence.",
+    faq: [
+      { domanda: "Where was I laureati filmed?", risposta: "In Florence. Among the locations listed by the Italy for Movies portal is Trattoria Coco Lezzone, on Via del Parioncino 26/r, where a scene is shot inside the venue." },
+      { domanda: "Who directed I laureati?", risposta: "Leonardo Pieraccioni, who also stars in it. The film dates from 1995." },
+      { domanda: "Can you eat at the film's trattoria?", risposta: "Yes: Trattoria Coco Lezzone is a historic Florentine venue still in business, serving traditional Tuscan cooking." },
+    ],
+  },
+  "the-trip-to-italy": {
+    titolo: "The Trip to Italy",
+    sinossi: "Steve Coogan and Rob Brydon cross Italy eating at real restaurants, from Piedmont to Capri. It began as a BBC TV series directed by Michael Winterbottom and was also cut as a feature film.",
+    faq: [
+      { domanda: "Which real restaurants appear in The Trip to Italy?", risposta: "Among those named by sources: Trattoria della Posta in Monforte d'Alba, Piedmont, and Il Riccio in Anacapri, on Capri." },
+      { domanda: "Is The Trip to Italy a film or a series?", risposta: "It began as a BBC TV series directed by Michael Winterbottom and was then also cut as a film." },
+      { domanda: "Can you book the film's restaurants?", risposta: "Yes, they are real venues open to the public; for Il Riccio and Trattoria della Posta booking is advisable, and hours and availability should be checked." },
     ],
   },
 };
@@ -537,6 +555,38 @@ export const restaurantsEn: Record<string, RestEn> = {
   "tonnara-di-scopello": {
     descrizione: "An old tuna fishery overlooking Scopello's famous sea stacks, today open to the public as a historic site with a café and beach area. One of Sicily's most photographed views.",
     scena: { "makari": "The set of Marilù's restaurant, overlooking the Scopello sea stacks, was built inside the old tuna fishery." },
+  },
+  "coco-lezzone-firenze": {
+    descrizione: "A historic Florentine trattoria on Via del Parioncino, near Ponte Santa Trinita: traditional Tuscan cooking, from pappa al pomodoro and ribollita to bistecca.",
+    scena: { "i-laureati": "A scene of the film is shot inside the venue, according to the film's listing on the Italy for Movies portal." },
+  },
+  "i-pupi-bagheria": {
+    descrizione: "A one-Michelin-star restaurant by chef Tony Lo Coco in Bagheria, opened in 2009 and since 2025 in the lower buildings of Villa Palagonia, the villa of monsters.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Sicily episode, Stanley Tucci meets chef Tony Lo Coco and tastes spaghetti with bottarga and a fish antipasto." },
+  },
+  "me-cumpari-turiddu-catania": {
+    descrizione: "A traditional Sicilian restaurant in Catania holding the Michelin Guide's Bib Gourmand, run by the Capizzi family.",
+    scena: { "stanley-tucci-searching-for-italy": "In Catania Stanley Tucci dines with owner Roberta Capizzi: donkey carpaccio and pasta alla Norma." },
+  },
+  "osteria-cinghiale-bianco-firenze": {
+    descrizione: "A Tuscan osteria in a 14th-century tower on Borgo San Jacopo, in the Oltrarno: ribollita, pappa al pomodoro and panzanella. Run by the Masselli family since 1984.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Tuscany episode, Stanley Tucci eats ribollita, pappa al pomodoro and panzanella." },
+  },
+  "ratana-milano": {
+    descrizione: "Chef Cesare Battisti's restaurant on Via de Castillia, in the Isola district: contemporary takes on traditional Milanese and Lombard dishes.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Milan episode, chef Cesare Battisti prepares cotoletta alla milanese for Stanley Tucci and shows him how to make risotto alla milanese." },
+  },
+  "osteria-del-treno-milano": {
+    descrizione: "A historic Milanese osteria on Via San Gregorio serving Italian and Lombard cooking in an informal setting. Booking is recommended.",
+    scena: { "stanley-tucci-searching-for-italy": "After a visit to Lake Como, Stanley Tucci and his wife Felicity Blunt return to Milan to dine here; Tucci describes it as embodying the history and spirit of Milan." },
+  },
+  "trattoria-della-posta-monforte-dalba": {
+    descrizione: "A historic trattoria in the Langhe, founded in 1875 as a resting point for travellers: Piedmontese cooking among the vineyards of Monforte d'Alba, listed in the Michelin Guide.",
+    scena: { "the-trip-to-italy": "It is one of the Piedmont stops of Steve Coogan and Rob Brydon's food journey." },
+  },
+  "il-riccio-anacapri": {
+    descrizione: "A Michelin-starred restaurant and beach club in Anacapri, run by the Capri Palace but open to all, with a sea-view terrace and seafood cooking.",
+    scena: { "the-trip-to-italy": "It is one of the Capri stops of Steve Coogan and Rob Brydon's food journey." },
   },
 };
 

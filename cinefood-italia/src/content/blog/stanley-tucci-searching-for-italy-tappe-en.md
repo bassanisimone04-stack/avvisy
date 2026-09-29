@@ -72,6 +72,10 @@ You'll find it all on the
 **[Searching for Italy](/en/film/stanley-tucci-searching-for-italy)** page too,
 plus more venues seen on TV in our **[directory](/en/locali)**.
 
+## The other episodes, venue by venue
+
+We have dedicated an article to three episodes: [Sicily](/en/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Florence](/en/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) and [Milan](/en/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno).
+
 ## In short
 
 *Searching for Italy* is a hymn to Italian cuisine and its territories. A series
