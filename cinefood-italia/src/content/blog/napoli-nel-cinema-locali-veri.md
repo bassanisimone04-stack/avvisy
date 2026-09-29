@@ -24,7 +24,7 @@ bozza: false
 Napoli è una delle città più amate dal cinema e dalla televisione
 internazionale: i suoi vicoli, le sue piazze e i suoi locali storici
 sono comparsi in produzioni molto diverse tra loro, da Hollywood alla
-fiction Rai. Ecco tre indirizzi reali dove il grande e il piccolo
+fiction Rai. Ecco quattro indirizzi reali dove il grande e il piccolo
 schermo hanno incontrato la tavola napoletana.
 
 ## L'Antica Pizzeria da Michele — Eat Pray Love
@@ -53,10 +53,19 @@ un caffè-bistrot nato come caffè-chantant ottocentesco e riaperto nel
 2023, comparso nella quarta stagione de
 *[L'amica geniale](/blog/amica-geniale-napoli-scottojonno)*.
 
+## La Notizia 53 — Stanley Tucci: Searching for Italy
+
+Lontano dal centro storico, in via Caravaggio,
+**[La Notizia 53](/locale/la-notizia-napoli)** è la pizzeria di Enzo Coccia,
+il primo pizzaiolo segnalato dalla Guida Michelin. Nella serie CNN
+*[Searching for Italy](/blog/stanley-tucci-searching-for-italy-tappe)* prepara
+per Stanley Tucci una pizza classica — e oggi in menù ce n'è una che porta
+il suo nome.
+
 ## In sintesi
 
-Tre epoche diverse — il 1870 di Da Michele, il 1860 del Gambrinus, il
-2023 di ScottoJonno — raccontano la stessa Napoli che continua ad
+Quattro epoche diverse — il 1860 del Gambrinus, il 1870 di Da Michele,
+il 1994 di La Notizia, il 2023 di ScottoJonno — raccontano la stessa Napoli che continua ad
 affascinare registi e sceneggiatori. Scopri tutti i locali nella nostra
 **[directory](/locali)** o l'elenco completo dei
 **[ristoranti visti nei film](/blog/ristoranti-veri-nei-film-italia-lista)**.

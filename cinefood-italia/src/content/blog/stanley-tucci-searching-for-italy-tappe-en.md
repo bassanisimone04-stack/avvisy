@@ -1,12 +1,14 @@
 ---
-titolo: "Stanley Tucci: Searching for Italy's Stops"
-descrizione: "The actor explores Italian cuisine region by region: Naples, Rome, Tuscany, Sicily and more stops to try."
+titolo: "Stanley Tucci in Italy: Where He Really Ate"
+descrizione: "Where Stanley Tucci ate in Searching for Italy: from Enzo Coccia's pizza in Naples to spaghetti alla Nerano at Lo Scoglio. Verified addresses."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/stanley-tucci-searching-for-italy-tappe.jpg"
 immagineAlt: "An elegant restaurant dining room, a cinematic atmosphere"
 tags: ["Stanley Tucci", "Italian cuisine", "itineraries", "Italy", "film tourism"]
 faq:
+  - domanda: "Where did Stanley Tucci eat in Italy?"
+    risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto, Enzo Coccia's pizzeria La Notizia in Naples, Lo Scoglio in Marina del Cantone (Nerano) and Casa Artusi in Forlimpopoli."
   - domanda: "What is Stanley Tucci: Searching for Italy about?"
     risposta: "The actor explores Italian cuisine region by region, among markets, trattorias and fine restaurants."
   - domanda: "Which regions does Stanley Tucci visit?"
@@ -50,12 +52,25 @@ Each episode is essentially a mini-itinerary: it shows where to eat, what to ord
 and why those dishes tell the story of a territory. It is the ideal way to plan a
 food trip in Italy.
 
-## Our connected stops
+## The show's venues, verified
 
-Many of the cities explored by Tucci are also on our site: from **[Rome](/en/roma)**
-to **[Naples](/en/napoli)**, from **[Milan](/en/milano)** to the Sicilian
-destinations. Browse the **[venues](/en/locali)** and the **[films](/en/film)** to
-combine cinema and good food.
+We checked the venues listed by CNN in the series' official articles one
+by one, keeping only those still open:
+
+- **[La Reginella](/en/locale/la-reginella-roma)**, Rome — in the Jewish
+  Ghetto, Tucci tastes carciofi alla giudia at the height of artichoke season.
+- **[La Notizia 53](/en/locale/la-notizia-napoli)**, Naples — Enzo Coccia,
+  the first pizza maker listed by Michelin, makes him a classic pizza. Today
+  the menu features one named after Tucci.
+- **[Lo Scoglio](/en/locale/lo-scoglio-nerano)**, Nerano — on the beach at
+  Marina del Cantone, the spaghetti alla Nerano Tucci calls his favourite dish.
+- **[Casa Artusi](/en/locale/casa-artusi-forlimpopoli)**, Forlimpopoli —
+  the cooking school dedicated to Pellegrino Artusi, with a hand-rolled pasta
+  workshop.
+
+You'll find it all on the
+**[Searching for Italy](/en/film/stanley-tucci-searching-for-italy)** page too,
+plus more venues seen on TV in our **[directory](/en/locali)**.
 
 ## In short
 

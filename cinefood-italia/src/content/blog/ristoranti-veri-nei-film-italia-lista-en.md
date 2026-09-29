@@ -152,6 +152,23 @@ A surviving symbol of Fellini's "dolce vita", **[Harry's
 Bar](/en/locale/harrys-bar-roma)** is still in business today on the
 same Via Veneto portrayed in *[La Dolce Vita](/en/blog/harrys-bar-roma-dolce-vita)*.
 
+## Stanley Tucci — from Rome to Nerano
+
+In the CNN series *[Searching for Italy](/en/blog/stanley-tucci-searching-for-italy-tappe)*,
+Stanley Tucci stops for carciofi alla giudia at
+**[La Reginella](/en/locale/la-reginella-roma)**, Enzo Coccia's pizza at
+**[La Notizia 53](/en/locale/la-notizia-napoli)**, spaghetti alla Nerano at
+**[Lo Scoglio](/en/locale/lo-scoglio-nerano)** and the cooking school at
+**[Casa Artusi](/en/locale/casa-artusi-forlimpopoli)**.
+
+## Phil Rosenthal — Venice
+
+In the Venice episode of
+*[Somebody Feed Phil](/en/blog/somebody-feed-phil-venezia-ristoranti)*, Phil
+Rosenthal wonders whether **[Al Covo](/en/locale/al-covo-venezia)** might be
+the city's best restaurant, and tastes the pork chop with vinegar at
+**[Vini da Arturo](/en/locale/vini-da-arturo-venezia)**.
+
 ## Antonella Attili — Tonnara di Scopello, Sicily
 
 In the Rai series *[Màkari](/en/blog/makari-tonnara-scopello)*, Marilù's

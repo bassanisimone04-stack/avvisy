@@ -152,6 +152,23 @@ Simbolo sopravvissuto della "dolce vita" felliniana, **[Harry's
 Bar](/locale/harrys-bar-roma)** è ancora oggi in attività sulla stessa
 Via Veneto raccontata da *[La dolce vita](/blog/harrys-bar-roma-dolce-vita)*.
 
+## Stanley Tucci — da Roma a Nerano
+
+Nella serie CNN *[Searching for Italy](/blog/stanley-tucci-searching-for-italy-tappe)*,
+Stanley Tucci passa per i carciofi alla giudia de
+**[La Reginella](/locale/la-reginella-roma)**, la pizza di Enzo Coccia a
+**[La Notizia 53](/locale/la-notizia-napoli)**, gli spaghetti alla Nerano di
+**[Lo Scoglio](/locale/lo-scoglio-nerano)** e la scuola di cucina di
+**[Casa Artusi](/locale/casa-artusi-forlimpopoli)**.
+
+## Phil Rosenthal — Venezia
+
+Nella puntata veneziana di
+*[Somebody Feed Phil](/blog/somebody-feed-phil-venezia-ristoranti)*, Phil
+Rosenthal si chiede se **[Al Covo](/locale/al-covo-venezia)** non sia il
+miglior ristorante della città, e assaggia la braciola all'aceto di
+**[Vini da Arturo](/locale/vini-da-arturo-venezia)**.
+
 ## Antonella Attili — Tonnara di Scopello, Sicilia
 
 Nella serie Rai *[Màkari](/blog/makari-tonnara-scopello)*, il ristorante

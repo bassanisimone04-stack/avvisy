@@ -24,7 +24,7 @@ bozza: false
 
 Naples is one of international cinema and television's most loved
 cities: its alleys, squares and historic venues have appeared in very
-different productions, from Hollywood to Rai fiction. Here are three
+different productions, from Hollywood to Rai fiction. Here are four
 real addresses where the big and small screen met Neapolitan food
 culture.
 
@@ -53,10 +53,19 @@ is a café-bistro born as a 19th-century café-chantant and reopened in
 2023, featured in the fourth season of
 *[My Brilliant Friend](/en/blog/amica-geniale-napoli-scottojonno)*.
 
+## La Notizia 53 — Stanley Tucci: Searching for Italy
+
+Away from the historic centre, on Via Caravaggio,
+**[La Notizia 53](/en/locale/la-notizia-napoli)** is the pizzeria of Enzo
+Coccia, the first pizza maker listed by the Michelin Guide. In the CNN series
+*[Searching for Italy](/en/blog/stanley-tucci-searching-for-italy-tappe)* he
+makes Stanley Tucci a classic pizza — and today the menu features one named
+after him.
+
 ## In short
 
-Three different eras — 1870 at Da Michele, 1860 at Gambrinus, 2023 at
-ScottoJonno — tell the story of the same Naples that keeps fascinating
+Four different eras — 1860 at Gambrinus, 1870 at Da Michele, 1994 at
+La Notizia, 2023 at ScottoJonno — tell the story of the same Naples that keeps fascinating
 directors and screenwriters. Discover every venue in our
 **[directory](/en/locali)** or the full list of
 **[movie restaurants](/en/blog/ristoranti-veri-nei-film-italia-lista)**.

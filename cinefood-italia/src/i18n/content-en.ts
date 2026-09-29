@@ -316,6 +316,26 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Who plays Commissioner Ricciardi?", risposta: "Lino Guanciale in the title role, in a Rai 1 series based on Maurizio De Giovanni's novels, airing since 2021 across several seasons." },
     ],
   },
+  "stanley-tucci-searching-for-italy": {
+    titolo: "Stanley Tucci: Searching for Italy",
+    sinossi:
+      "A CNN food-travel series: actor Stanley Tucci explores Italian cuisine region by region, from Naples to Rome, Emilia-Romagna to Sicily, through trattorias, pizzerias and great restaurants. Winner of multiple Emmys for outstanding hosted non-fiction series.",
+    faq: [
+      { domanda: "Where did Stanley Tucci eat in Searching for Italy?", risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto (carciofi alla giudia), Enzo Coccia's pizzeria La Notizia in Naples, Lo Scoglio in Marina del Cantone (spaghetti alla Nerano) and Casa Artusi in Forlimpopoli." },
+      { domanda: "Who produces Searching for Italy?", risposta: "It's a CNN Original Series, airing since February 14, 2021 across two seasons, hosted by actor Stanley Tucci, whose family comes from Calabria." },
+      { domanda: "Are the places Tucci visited still open?", risposta: "The ones listed on CineFood Italia are: we've verified each one. Hours and availability can still change, so check before you go." },
+    ],
+  },
+  "somebody-feed-phil-venezia": {
+    titolo: "Somebody Feed Phil - Venice",
+    sinossi:
+      "The Venice episode of the Netflix food-travel series hosted by Phil Rosenthal, creator of Everybody Loves Raymond: bacari, cicchetti and historic trattorias, in search of the Venice that Venetians actually eat in.",
+    faq: [
+      { domanda: "What is Somebody Feed Phil?", risposta: "A Netflix food-travel series hosted by Phil Rosenthal, creator of the sitcom Everybody Loves Raymond. The Venice episode opens season two (2018)." },
+      { domanda: "Where did Phil Rosenthal eat in Venice?", risposta: "Among the episode's venues, listed on Phil Rosenthal's official website: Al Covo, which Phil calls perhaps the best restaurant in Venice, and Vini da Arturo, famous for its pork chop with vinegar." },
+      { domanda: "Do you need to book?", risposta: "For Al Covo and Vini da Arturo it's recommended: they're small, busy places, even more so since the episode aired." },
+    ],
+  },
   "no-reservations-rome": {
     titolo: "Anthony Bourdain: No Reservations - Rome",
     sinossi:
@@ -485,6 +505,30 @@ export const restaurantsEn: Record<string, RestEn> = {
   "caffe-ducale-gubbio": {
     descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For thirteen years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
     scena: { "don-matteo": "The café where Sergeant Cecchini and Don Matteo play their daily chess games, for thirteen seasons of the series. The venue still keeps props from the show." },
+  },
+  "lo-scoglio-nerano": {
+    descrizione: "A family restaurant on the beach at Marina del Cantone, in Nerano, between Sorrento and the Amalfi Coast. Famous for spaghetti alla Nerano and seafood, with many guests arriving straight by boat.",
+    scena: { "stanley-tucci-searching-for-italy": "Stanley Tucci tastes spaghetti alla Nerano — fried zucchini, provolone del Monaco and basil — which he calls his favourite dish, with a view over the coast." },
+  },
+  "la-notizia-napoli": {
+    descrizione: "A historic pizzeria opened by Enzo Coccia in 1994 on Via Caravaggio, far from the tourist circuits. Coccia was the first pizza maker listed by the Michelin Guide; the menu even features a pizza named after Stanley Tucci.",
+    scena: { "stanley-tucci-searching-for-italy": "Master pizzaiolo Enzo Coccia makes Stanley Tucci a classic Neapolitan pizza, then takes him to meet the producers of San Marzano tomatoes and buffalo mozzarella." },
+  },
+  "la-reginella-roma": {
+    descrizione: "A Roman-Jewish restaurant on Via del Portico d'Ottavia, in the heart of Rome's Jewish Ghetto. Famous for carciofi alla giudia, whole artichokes fried in olive oil.",
+    scena: { "stanley-tucci-searching-for-italy": "In the middle of artichoke season, Stanley Tucci tastes carciofi alla giudia, fried until crisp, the signature dish of Roman-Jewish cuisine." },
+  },
+  "casa-artusi-forlimpopoli": {
+    descrizione: "A centre of food culture dedicated to Pellegrino Artusi, author of Italy's most famous cookbook, in his hometown. It brings together a museum, library, cooking school and a restaurant serving traditional Romagna cuisine.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Emilia-Romagna episode, CNN's cameras enter Casa Artusi's library and cooking school during a hand-rolled pasta workshop with the 'Mariette'." },
+  },
+  "al-covo-venezia": {
+    descrizione: "A seafood restaurant in the Castello district, a few minutes from St Mark's Square, run by Cesare and his wife Diane. Lagoon cooking with the catch of the day.",
+    scena: { "somebody-feed-phil-venezia": "Phil Rosenthal tastes boiled mantis shrimp and spider crab, and wonders whether this might be the best restaurant in Venice." },
+  },
+  "vini-da-arturo-venezia": {
+    descrizione: "A small historic restaurant on Calle degli Assassini, in the San Marco district, open for over fifty years. Just a few tables, meat-focused cooking — rare in Venice — and cash only.",
+    scena: { "somebody-feed-phil-venezia": "Phil Rosenthal tastes the house signature, the pork chop with vinegar, alongside marinated eggplant." },
   },
   "harrys-bar-roma": {
     descrizione: "A historic American Bar on Via Vittorio Veneto, open since 1918. One of the symbols of 1950s-60s Roman 'dolce vita', still in business at the same address today.",

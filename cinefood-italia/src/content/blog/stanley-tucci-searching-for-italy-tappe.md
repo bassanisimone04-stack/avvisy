@@ -1,12 +1,14 @@
 ---
-titolo: "Stanley Tucci: Searching for Italy, le tappe"
-descrizione: "L'attore esplora la cucina italiana regione per regione: Napoli, Roma, Toscana, Sicilia e altre tappe da provare."
+titolo: "Stanley Tucci in Italia: dove ha mangiato davvero"
+descrizione: "Dove ha mangiato Stanley Tucci in Searching for Italy: dalla pizza di Enzo Coccia a Napoli agli spaghetti alla Nerano di Lo Scoglio. Indirizzi verificati."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/stanley-tucci-searching-for-italy-tappe.jpg"
 immagineAlt: "Sala di un ristorante elegante, atmosfera da film"
 tags: ["Stanley Tucci", "cucina italiana", "itinerari", "Italia", "cineturismo"]
 faq:
+  - domanda: "Dove ha mangiato Stanley Tucci in Italia?"
+    risposta: "Tra i locali indicati dalla CNN: La Reginella nel Ghetto di Roma, la pizzeria La Notizia di Enzo Coccia a Napoli, Lo Scoglio a Marina del Cantone (Nerano) e Casa Artusi a Forlimpopoli."
   - domanda: "Di cosa parla Stanley Tucci: Searching for Italy?"
     risposta: "L'attore esplora la cucina italiana regione per regione, tra mercati, trattorie e grandi ristoranti."
   - domanda: "Quali regioni visita Stanley Tucci?"
@@ -49,12 +51,26 @@ Ogni puntata è di fatto un mini-itinerario: mostra dove mangiare, cosa ordinare
 perché quei piatti raccontano un territorio. È il modo ideale per pianificare un
 viaggio del gusto in Italia.
 
-## Le nostre tappe collegate
+## I locali della serie, verificati
 
-Molte delle città esplorate da Tucci sono anche sul nostro sito: da
-**[Roma](/roma)** a **[Napoli](/napoli)**, da **[Milano](/milano)** alle mete
-siciliane. Sfoglia i **[locali](/locali)** e i **[film](/film)** per unire cinema
-e buona tavola.
+Abbiamo controllato uno per uno i locali indicati dalla CNN negli articoli
+ufficiali della serie, tenendo solo quelli ancora aperti:
+
+- **[La Reginella](/locale/la-reginella-roma)**, Roma — nel Ghetto ebraico,
+  Tucci assaggia i carciofi alla giudia in piena stagione.
+- **[La Notizia 53](/locale/la-notizia-napoli)**, Napoli — Enzo Coccia, il
+  primo pizzaiolo segnalato dalla Michelin, gli prepara una pizza classica.
+  Oggi in menù ce n'è una che porta il nome di Tucci.
+- **[Lo Scoglio](/locale/lo-scoglio-nerano)**, Nerano — sulla spiaggia di
+  Marina del Cantone, gli spaghetti alla Nerano che Tucci chiama il suo
+  piatto preferito.
+- **[Casa Artusi](/locale/casa-artusi-forlimpopoli)**, Forlimpopoli — la
+  scuola di cucina dedicata a Pellegrino Artusi, con un laboratorio di
+  pasta tirata al mattarello.
+
+Trovi tutto anche nella scheda della serie
+**[Searching for Italy](/film/stanley-tucci-searching-for-italy)**, e altri
+locali visti in TV nella nostra **[directory](/locali)**.
 
 ## In sintesi
 
