@@ -1,6 +1,6 @@
 ---
 titolo: "Don Matteo a Gubbio: il vero Caffè Ducale"
-descrizione: "Dove giocavano a scacchi Don Matteo e il Maresciallo Cecchini: il Caffè Ducale di Gubbio, set reale per tredici stagioni della fiction Rai."
+descrizione: "Dove giocavano a scacchi Don Matteo e il Maresciallo Cecchini: il Caffè Ducale di Gubbio, set reale per molte stagioni della fiction Rai."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-09
 immagine: "../../assets/placeholder/caffe-ducale-gubbio.jpg"
@@ -24,7 +24,7 @@ esperienze:
 bozza: false
 ---
 
-Per tredici stagioni, *Don Matteo* ha fatto di **Gubbio** la sua Umbria
+Per molte stagioni, *Don Matteo* ha fatto di **Gubbio** la sua Umbria
 immaginaria: la fiction Rai più longeva del genere crime-comedy ha usato
 la città umbra come set fisso dal 2000 al 2011, prima di trasferirsi a
 Spoleto. E c'è un bar che, più di ogni altro luogo, è rimasto legato a

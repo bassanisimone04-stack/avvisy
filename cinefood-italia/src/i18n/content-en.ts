@@ -303,7 +303,7 @@ export const filmsEn: Record<string, FilmEn> = {
     faq: [
       { domanda: "Where was Diabolik - Ginko Attacks! filmed?", risposta: "The fictional city of Clerville was recreated across Bologna, Trieste and Milan. In Trieste, filming included a car chase in Piazza della Borsa and a scene at the Antico Caffè San Marco." },
       { domanda: "Which historic café appears in the film?", risposta: "The Antico Caffè San Marco in Trieste, open since 1914: a scene was shot at the venue's counter, while the nearby Piazza della Borsa hosts the chase between police cars and Diabolik's Jaguar E-Type." },
-      { domanda: "Who directed Diabolik - Ginko Attacks!?", risposta: "The Manetti Bros., for the second chapter of the Italian trilogy based on the Giussani sisters' comic, starring Luca Marinelli as Diabolik and Valerio Mastandrea as Inspector Ginko." },
+      { domanda: "Who directed Diabolik - Ginko Attacks!?", risposta: "The Manetti Bros., for the second chapter of the Italian trilogy based on the Giussani sisters' comic, starring Giacomo Gianniotti as Diabolik and Valerio Mastandrea as Inspector Ginko." },
     ],
   },
   "il-commissario-ricciardi": {
@@ -499,8 +499,8 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "il-commissario-ricciardi": "Transformed into the 1930s café frequented by the commissioner: scenes are set at his favourite table, overlooking Piazza del Plebiscito, in the room now named after Michele Sergio." },
   },
   "caffe-ducale-gubbio": {
-    descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For thirteen years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
-    scena: { "don-matteo": "The café where Sergeant Cecchini and Don Matteo play their daily chess games, for thirteen seasons of the series. The venue still keeps props from the show." },
+    descrizione: "A historic café on Piazza Grande, Gubbio's main square overlooking the Umbrian valley. For many years the fixed set of the Rai series Don Matteo, it still keeps props from the show today.",
+    scena: { "don-matteo": "The café where Sergeant Cecchini and Don Matteo play their daily chess games, for many seasons of the series. The venue still keeps props from the show." },
   },
   "lo-scoglio-nerano": {
     descrizione: "A family restaurant on the beach at Marina del Cantone, in Nerano, between Sorrento and the Amalfi Coast. Famous for spaghetti alla Nerano and seafood, with many guests arriving straight by boat.",

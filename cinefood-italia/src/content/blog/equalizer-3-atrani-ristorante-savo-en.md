@@ -28,8 +28,8 @@ bozza: false
 In 2023 Antoine Fuqua closed out the *Equalizer* trilogy by taking
 **Denzel Washington** to the Amalfi Coast. The village where Robert
 McCall recovers after an ambush is called "Altamonte" and doesn't exist:
-it's **Atrani**, Italy's smallest municipality by area, barely twenty
-hectares wedged between the mountain and the sea.
+it's **Atrani**, Italy's smallest municipality by area, barely 0.12 km²
+(about 12 hectares) wedged between the mountain and the sea.
 
 ## Atrani dressed as Altamonte
 

@@ -28,7 +28,7 @@ bozza: false
 ---
 
 When Francis Ford Coppola looked for a town for the Sicilian scenes of *The
-Godfather* (1971), the real Corleone had become too modern to pass for an
+Godfather* (1972), the real Corleone had become too modern to pass for an
 early-20th-century village. So he chose **Savoca**, a village of just over
 1,700 people perched on the mountains above Taormina. And in a small square
 of this town stands one of the most visited film locations in Italy: the

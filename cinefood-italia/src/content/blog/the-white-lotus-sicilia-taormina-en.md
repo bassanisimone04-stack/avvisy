@@ -10,7 +10,7 @@ faq:
   - domanda: "Where was The White Lotus season 2 filmed?"
     risposta: "Mainly in Taormina, at the San Domenico Palace hotel, with other scenes in Cefalù, Noto and Palermo, Sicily."
   - domanda: "Does the White Lotus hotel really exist?"
-    risposta: "Yes: it's the San Domenico Palace, a Four Seasons hotel in Taormina, a 14th-century former convent turned into a hotel in 1897."
+    risposta: "Yes: it's the San Domenico Palace, a Four Seasons hotel in Taormina, a 14th-century former convent turned into a hotel in 1896."
   - domanda: "Can you stay at the hotel from the show?"
     risposta: "Yes, the San Domenico Palace is a real, still-operating luxury hotel you can book in Taormina."
 lang: "en"
@@ -30,7 +30,7 @@ built set: it's a real hotel, still open to the public today.
 The fictional "White Lotus" resort is actually the **San Domenico
 Palace**, a Four Seasons hotel in the heart of **Taormina**. The building
 has a surprising history: it began as a Dominican convent in the **14th
-century**, was converted into a luxury hotel in **1897**, and after being
+century**, was converted into a luxury hotel in **1896**, and after being
 damaged by World War II bombing, was restored into one of Italy's most
 exclusive hotels.
 
@@ -47,7 +47,7 @@ Baroque.
 
 Eastern Sicily, between Taormina and Cefalù, is home to rich
 Mediterranean cuisine: **pasta alla Norma**, **cannoli**, **granita** with
-brioche, and of course fresh Tyrrhenian fish. A food itinerary that pairs
+brioche, and of course fresh fish. A food itinerary that pairs
 perfectly with the decadent luxury the show portrays.
 
 ## In short

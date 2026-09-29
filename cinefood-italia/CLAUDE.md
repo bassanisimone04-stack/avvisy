@@ -128,8 +128,8 @@ indicizzare. La scelta della lingua resta manuale (bandiere in header).
 - Almeno 2-3 link interni reali ad altri contenuti del sito (mai
   inventati: verifica che lo slug collegato esista davvero).
 - Title/description più efficaci quando includono un numero, un
-  dettaglio concreto o un elemento di curiosità ("solo 2 pizze dal
-  1870", "4 città vere") invece di formule generiche — utile in
+  dettaglio concreto o un elemento di curiosità ("4 città vere",
+  "0 prenotazioni") invece di formule generiche — utile in
   particolare per le pagine con più impressioni ma CTR basso in
   Search Console.
 

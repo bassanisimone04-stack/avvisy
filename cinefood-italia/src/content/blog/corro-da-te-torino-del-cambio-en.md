@@ -12,7 +12,7 @@ faq:
   - domanda: "Which restaurant appears in Corro da te?"
     risposta: "Ristorante Del Cambio, at Piazza Carignano 2 in Turin. After Chiara's performance at the Teatro Regio, Gianni takes her to dinner there and the couple are amused by his clumsiness."
   - domanda: "Can you visit Del Cambio?"
-    risposta: "Yes: it's a restaurant open to the public, today holding a Michelin star. The 19th-century rooms with mirrors, stucco and red velvet are the ones seen in the film."
+    risposta: "Yes: it's a restaurant open to the public, today holding a Michelin star. The 19th-century rooms with mirrors, stucco and red velvet are among its best-known interiors."
   - domanda: "How old is Del Cambio?"
     risposta: "It has been open since 1757, opposite the Teatro Carignano: one of the oldest historic restaurants in Italy still in business."
 prenotazioni:
@@ -44,8 +44,7 @@ two go for dinner straight afterwards.
 **[Del Cambio](/en/locale/del-cambio-torino)** has been open since
 **1757** on Piazza Carignano, opposite the Teatro Carignano: one of the
 oldest historic restaurants in Italy still in business. Its 19th-century
-rooms — mirrors, gilded stucco, red velvet — are unchanged, and are
-exactly what you see in the film. Today the restaurant holds **a Michelin
+rooms — mirrors, gilded stucco, red velvet — are unchanged. Today the restaurant holds **a Michelin
 star** and serves contemporary Piedmontese cuisine.
 
 In the scene, as the Italian locations portal describes it, Gianni takes

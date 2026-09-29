@@ -12,10 +12,8 @@ faq:
   - domanda: "Quali ristoranti veri di Roma compaiono nella serie?"
     risposta: "Tra gli altri: Zuma a Palazzo Fendi, Settimo sulla terrazza del Sofitel, Il Giardino Ristorante dell'Hotel Eden e il giardino dell'Hotel de Russie."
   - domanda: "Dove alloggia Emily a Venezia?"
-    risposta: "Le scene veneziane toccano luoghi reali come l'Hotel Danieli e il St. Regis Venice, oltre a Piazza San Marco e la chiesa di San Francesco della Vigna."
+    risposta: "Le scene veneziane toccano luoghi reali come il St. Regis Venice, Piazza San Marco e la chiesa di San Francesco della Vigna."
 prenotazioni:
-  - nome: "Hotel Danieli"
-    citta: "Venezia"
   - nome: "The St. Regis Venice"
     citta: "Venezia"
 bozza: false
@@ -40,10 +38,9 @@ razionalista degli anni '40 conosciuto come "Colosseo Quadrato".
 ## Il finale a Venezia
 
 L'ultimo episodio, intitolato *Veni, Vidi, Venezia*, porta i personaggi
-alla Fashion Week veneziana. Le riprese, girate tra il 5 e il 15 agosto
-2025, toccano **Piazza San Marco**, **Campo Santa Maria Nova** e la chiesa
-di **San Francesco della Vigna**, dove si tiene la sfilata immaginaria.
-Per gli alloggi, la serie usa hotel reali come l'**Hotel Danieli** e il
+alla Fashion Week veneziana. Le riprese, girate ad agosto 2025, toccano
+**Piazza San Marco** e la chiesa di **San Francesco della Vigna**, dove è
+prevista la sfilata immaginaria; tra gli hotel reali compare il
 **St. Regis Venice**.
 
 ## Un itinerario di lusso, tra Roma e Venezia

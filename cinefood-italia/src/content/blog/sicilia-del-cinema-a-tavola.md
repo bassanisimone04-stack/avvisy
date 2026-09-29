@@ -36,7 +36,7 @@ Le scene "siciliane" de *[Il Padrino](/film/il-padrino)* furono girate nei
 borghi del messinese. Al **[Bar Vitelli](/locale/bar-vitelli-savoca)** di
 Savoca, dentro il settecentesco Palazzo Trimarchi, Michael Corleone chiede
 la mano di Apollonia: il locale — che prese il nome proprio dal film — è
-ancora oggi quasi identico al 1971.
+ancora oggi quasi identico a com'era nel film.
 
 ## La cucina di Montalbano, nel ragusano
 

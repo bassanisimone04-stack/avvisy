@@ -14,7 +14,7 @@ faq:
   - domanda: "Il bar di Denzel Washington in The Equalizer 3 esiste davvero?"
     risposta: "Sì: è il Ristorante Savò di Atrani, allestito dalla produzione come l'\"Aminah's Cafe\" del film. Il locale lo racconta sul proprio sito ufficiale."
   - domanda: "Qual è la differenza tra Ripley Netflix e Il talento di Mr. Ripley del 1999?"
-    risposta: "Sono due adattamenti diversi dello stesso romanzo di Patricia Highsmith: il film del 1999 con Matt Damon è girato tra Venezia e altre location, mentre la serie Netflix del 2024 con Andrew Scott usa Atrani e la Costiera Amalfitana."
+    risposta: "Sono due adattamenti diversi dello stesso romanzo di Patricia Highsmith: il film del 1999 con Matt Damon è girato tra Ischia, Procida, Roma e Venezia, mentre la serie Netflix del 2024 con Andrew Scott usa Atrani e la Costiera Amalfitana."
 prenotazioni:
   - nome: "Hotel"
     citta: "Amalfi"
@@ -30,15 +30,15 @@ hanno scelto lo stesso piccolo borgo, **Atrani**, per raccontare storie
 molto diverse tra loro — a conferma che questo tratto di costa continua ad
 attrarre Hollywood tanto quanto negli anni della Dolce Vita.
 
-## Ripley (Netflix, 2024): Atrani come Costiera anni '50
+## Ripley (Netflix, 2024): Atrani come Costiera dei primi anni '60
 
 La serie *[Ripley](/blog/ripley-netflix-atrani-costiera-amalfitana)* di
 Netflix, con **Andrew Scott**, vincitrice di due Emmy 2024, ha scelto Atrani
-per ricreare la Costiera Amalfitana degli anni '50 raccontata nel romanzo di
+per ricreare la Costiera Amalfitana dei primi anni '60 (la serie è ambientata nel 1961) tratta dal romanzo di
 Patricia Highsmith. È un adattamento diverso da
 *[Il talento di Mr. Ripley](/blog/mr-ripley-venezia-caffe-florian)* del
-1999 con Matt Damon, girato invece soprattutto a Venezia: stesso libro, due
-Coste diverse.
+1999 con Matt Damon, girato invece tra Ischia, Procida, Roma e Venezia: stesso libro, ambientazioni
+diverse.
 
 ## The Equalizer 3 (2023): Atrani diventa "Altamonte"
 
@@ -52,7 +52,7 @@ dove il protagonista prende il suo tè ogni giorno.
 
 ## Perché proprio Atrani
 
-Con poco più di venti ettari, Atrani è il **comune più piccolo d'Italia**
+Con appena 0,12 km² (circa 12 ettari), Atrani è il **comune più piccolo d'Italia**
 per superficie: una piazzetta, vicoli coperti, scalinate strette tra le
 case. È a pochi minuti a piedi da Amalfi, ma resta molto più tranquilla —
 uno dei motivi per cui due produzioni diverse l'hanno scelta nel giro di un
@@ -74,7 +74,7 @@ storico, interamente pedonale.
 
 ## In sintesi
 
-Dalla Costiera Amalfitana degli anni '50 di *Ripley* al thriller
+Dalla Costiera Amalfitana dei primi anni '60 di *Ripley* al thriller
 contemporaneo di *The Equalizer 3*, lo stesso piccolo borgo ha prestato il
 volto a due storie opposte. Scopri gli altri **[film e serie](/film)**
 girati in Italia, o l'elenco completo dei

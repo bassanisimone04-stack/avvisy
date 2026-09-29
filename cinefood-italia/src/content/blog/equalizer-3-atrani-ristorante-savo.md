@@ -27,8 +27,8 @@ bozza: false
 Nel 2023 Antoine Fuqua ha chiuso la trilogia dell'*Equalizer* portando
 **Denzel Washington** in Costiera Amalfitana. Il borgo dove Robert McCall
 si rimette in sesto dopo un agguato si chiama "Altamonte" e non esiste:
-è **Atrani**, il comune più piccolo d'Italia per superficie, poco più di
-venti ettari incastrati tra la montagna e il mare.
+è **Atrani**, il comune più piccolo d'Italia per superficie, appena 0,12 km²
+(circa 12 ettari) incastrati tra la montagna e il mare.
 
 ## Atrani travestita da Altamonte
 

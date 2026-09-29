@@ -56,8 +56,8 @@ Verona's cuisine is rich and tied to wine:
 The second part moves among the Tuscan hills and wineries, between
 tastings and golden panoramas. Many scenes were filmed in **Siena**, with
 views of the famous **Piazza del Campo**, where the Palio horse race is
-run every year. Count Lorenzo's palace, played by Vanessa Redgrave and
-Franco Nero's characters, is **Villa Arvedi**, a historic estate in the
+run every year. Count Lorenzo's palace, a character played by Franco Nero (alongside
+Vanessa Redgrave, who plays Claire), is **Villa Arvedi**, a historic estate in Grezzana, near Verona, in the
 Veneto. Here the **bistecca alla fiorentina**, **pici** and red wines
 (Chianti, Brunello) reign.
 

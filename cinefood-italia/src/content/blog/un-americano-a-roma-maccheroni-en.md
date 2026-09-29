@@ -10,13 +10,13 @@ faq:
   - domanda: "What is Alberto Sordi's macaroni scene?"
     risposta: "In An American in Rome (1954), Nando Mericoni gives in to macaroni with the famous line 'Maccarone, you provoked me...'."
   - domanda: "Was the macaroni scene filmed in a real restaurant?"
-    risposta: "No: it was filmed in a tavern set built for the film, not an actual existing venue. The film's exterior shots did visit real locations, though, such as Via del Portico d'Ottavia and Vicolo Savini."
+    risposta: "No: the scene does not appear to have been shot in an actual existing venue. The film's exterior shots did visit real locations, though, such as Via del Portico d'Ottavia, in the Ghetto."
   - domanda: "Which Roman dishes should you try?"
     risposta: "Cacio e pepe, amatriciana, carbonara, Roman-style artichokes and oxtail stew."
   - domanda: "Where is Nando Mericoni's character supposed to be from?"
     risposta: "From Trastevere: Nando is a young Roman from the working-class Trastevere district, obsessed with the myth of America, who ends up becoming a comic mirror for Italians of that era."
   - domanda: "Where was An American in Rome filmed?"
-    risposta: "Among the real locations: Via del Portico d'Ottavia and Vicolo Savini, plus some outlying areas of Rome for the motorcycle scenes."
+    risposta: "Among the real locations: Via del Portico d'Ottavia and the Ghetto, the Colosseum and the Imperial Fora."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"
@@ -40,9 +40,8 @@ find that working-class Rome and its cuisine.
 Rome, made of alleys, trattorias and generous dishes — with Nando Mericoni
 presented as a young man from **Trastevere**, the district that embodies
 the capital's working-class soul. Exterior filming took place at several
-real locations, including **Via del Portico d'Ottavia** and **Vicolo
-Savini**. The famous macaroni scene itself, though, was shot in a tavern
-set built specifically for the film, not a real existing venue: there's no
+real locations, including **Via del Portico d'Ottavia**, in the Ghetto. The famous macaroni
+scene itself, though, does not appear to have been shot in a real existing venue: there's no
 single "real Nando Mericoni restaurant" to visit, but the neighbourhood
 and atmosphere it portrays are genuine.
 

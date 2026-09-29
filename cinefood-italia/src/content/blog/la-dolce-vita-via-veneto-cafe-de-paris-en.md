@@ -48,8 +48,7 @@ A surprising detail: the Via Veneto scenes in *La Dolce Vita* **were not
 filmed on the real street**, but on a faithful reconstruction Fellini had
 built on **Studio 5 at Cinecittà**. The director wanted full control over
 lighting, crowds and framing — impossible on the real street, already busy
-even then. Fellini himself said he found his Cinecittà Via Veneto "more
-beautiful and more true" than the real one. This doesn't take anything away
+even then. This doesn't take anything away
 from the real Café de Paris's role: it was there, on the actual street,
 that the paparazzi phenomenon and the "dolce vita" itself were born, well
 before becoming a film set.
@@ -62,8 +61,7 @@ before becoming a film set.
 
 The Café de Paris wasn't alone: the same street was also home to
 **[Harry's Bar](/en/locale/harrys-bar-roma)** (still open today, at number
-150, since 1918) and the famous **Doney**, another regular haunt of
-Fellini himself with his wife Giulietta Masina, and of Luchino Visconti.
+150, since 1918).
 Visitors to Via Veneto today can still sit down at
 **[Harry's Bar](/en/blog/harrys-bar-roma-dolce-vita)** for a drink on the
 very stretch that was the heart of high society Rome.

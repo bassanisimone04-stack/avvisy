@@ -1,6 +1,6 @@
 ---
 titolo: "Eat Pray Love Pizza: Julia Roberts' Naples Pizzeria"
-descrizione: "Just two pizzas on the menu since 1870, no reservations, always a queue: where Julia Roberts ate pizza in Eat Pray Love, 5 minutes from Napoli Centrale."
+descrizione: "A very short menu, no reservations, always a queue: where Julia Roberts ate pizza in Eat Pray Love, near Napoli Centrale station."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
@@ -10,7 +10,7 @@ faq:
   - domanda: "Where did Julia Roberts eat pizza in Eat Pray Love?"
     risposta: "At L'Antica Pizzeria da Michele, on Via Cesare Sersale in the Forcella district of Naples."
   - domanda: "What pizza do they serve at Da Michele?"
-    risposta: "The historic menu has only two pizzas: marinara and margherita, baked in a wood-fired oven."
+    risposta: "The menu is very short: the two historic pizzas are marinara and margherita, baked in a wood-fired oven; two variations (cosacca and marita, half margherita and half marinara) are also on the menu."
   - domanda: "Do you need to book at Da Michele?"
     risposta: "You can't book: you take a number and wait your turn, often with a queue outside."
   - domanda: "How old is Da Michele pizzeria?"
@@ -42,9 +42,9 @@ Naples Central Station and Piazza Garibaldi. Da Michele's story begins in
 of Naples. His son **Michele Condurro** — the name we know today — opened his
 own place in 1906, and in **1930** the pizzeria moved to its current home on
 Via Cesare Sersale, the very one that appears (with a little cinematic
-license) in the film. Five generations of the same family later, the rule
-hasn't changed: only two pizzas, **marinara** and **margherita**, baked in a
-wood-fired oven, no exceptions.
+license) in the film. The pizzeria has stayed in the same family and keeps
+a very short menu: the two historic pizzas, **marinara** and **margherita**, baked in a
+wood-fired oven, plus two variations (**cosacca** and **marita**, half margherita and half marinara).
 
 ## What to expect (and what to order)
 

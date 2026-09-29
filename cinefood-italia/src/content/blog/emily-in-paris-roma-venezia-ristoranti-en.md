@@ -12,11 +12,9 @@ faq:
   - domanda: "Which real Rome restaurants appear in the show?"
     risposta: "Among others: Zuma at Palazzo Fendi, Settimo on the Sofitel's rooftop terrace, Il Giardino Ristorante at Hotel Eden, and the garden of Hotel de Russie."
   - domanda: "Where does Emily stay in Venice?"
-    risposta: "The Venice scenes feature real places like the Hotel Danieli and the St. Regis Venice, plus St Mark's Square and the church of San Francesco della Vigna."
+    risposta: "The Venice scenes feature real places like the St. Regis Venice, St Mark's Square and the church of San Francesco della Vigna."
 lang: "en"
 prenotazioni:
-  - nome: "Hotel Danieli"
-    citta: "Venice"
   - nome: "The St. Regis Venice"
     citta: "Venice"
 bozza: false
@@ -41,10 +39,9 @@ rationalist building known as the "Square Colosseum".
 ## The Venice finale
 
 The last episode, titled *Veni, Vidi, Venezia*, takes the characters to
-Venice Fashion Week. Filmed between August 5–15, 2025, it features **St
-Mark's Square**, **Campo Santa Maria Nova** and the church of **San
-Francesco della Vigna**, where the fictional fashion show is held. For
-lodging, the show uses real hotels like the **Hotel Danieli** and the
+Venice Fashion Week. Filmed in August 2025, it features **St
+Mark's Square** and the church of **San Francesco della Vigna**, where
+the fictional fashion show is planned; among the real hotels is the
 **St. Regis Venice**.
 
 ## A luxury itinerary, between Rome and Venice

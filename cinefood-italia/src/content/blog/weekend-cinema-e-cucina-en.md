@@ -47,10 +47,10 @@ The most famous restaurants fill up fast, especially in high season
 pages and always confirm opening hours and closing days — many historic
 venues close one day a week.
 
-## 4. Tell real sets from themed venues
+## 4. Tell real sets from film-related venues
 
-Not all venues are real sets: some are [cinema-themed](/en/locali). Both
-are fun, but it's nice to know what to expect —
+Not all venues are real sets: some are only [film-related](/en/locali), meaning
+near a set but not filmed there. They are useful stops, but it's nice to know what to expect —
 [here's the difference explained](/en/blog/set-reale-o-a-tema) in detail.
 
 ## 5. Leave room for the unexpected

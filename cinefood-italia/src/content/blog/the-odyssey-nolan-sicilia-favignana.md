@@ -40,8 +40,7 @@ con vista a 360 gradi sul Mediterraneo.
 
 Al largo della costa nord della Sicilia, le vulcaniche **Isole Eolie** —
 Vulcano, Lipari e Basiluzzo — sono diventate la mitica isola di Eolia. I
-**Faraglioni di Lipari**, formazioni rocciose spettacolari, interpretano le
-"Rocce Vaganti" del poema.
+**Faraglioni di Lipari**, formazioni rocciose spettacolari, sono lo sfondo della scena in cui Ulisse è legato all'albero della nave.
 
 ## Cosa mangiare a Favignana e nelle Egadi
 

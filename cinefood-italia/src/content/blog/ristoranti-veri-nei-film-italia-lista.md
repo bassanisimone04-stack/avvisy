@@ -8,7 +8,7 @@ immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["ristoranti dei film", "cineturismo", "lista", "star hollywoodiane"]
 faq:
   - domanda: "Come faccio a sapere se un ristorante è davvero apparso in un film?"
-    risposta: "Su CineFood Italia pubblichiamo solo location con fonte verificabile: sito ufficiale del locale, film commission regionale o stampa nazionale. Ogni scheda riporta la fonte."
+    risposta: "Su CineFood Italia ogni scheda cita le fonti usate: sito ufficiale del locale, film commission regionale, stampa o altre fonti editoriali. Se un locale non è una location di riprese, lo dichiariamo con il badge 'Legato al film'."
   - domanda: "Quali sono i ristoranti più famosi visti nei film in Italia?"
     risposta: "Bar Vitelli a Savoca (Il Padrino), Da Michele a Napoli (Eat Pray Love), Caffè Florian a Venezia (Il talento di Mr. Ripley) e Caffè Rivoire a Firenze (Hannibal) sono tra i più visitati."
   - domanda: "Questi ristoranti sono ancora aperti?"
@@ -25,8 +25,8 @@ bozza: false
 ---
 
 Ci sono ristoranti che il cinema ha reso più famosi delle star che li hanno
-attraversati. Ecco la lista completa dei locali **reali e verificati** che
-sono davvero apparsi in un film o in una serie — niente set a tema, solo
+attraversati. Ecco la lista dei locali **reali** che, secondo le fonti citate nelle
+schede, sono apparsi in un film o in una serie — niente set a tema, solo
 indirizzi che esistono ancora oggi, con il nome dell'attore o dell'attrice
 che li ha resi celebri.
 
@@ -43,7 +43,7 @@ pizzeria dove Liz assapora la sua prima vera margherita ne
 *[Mangia prega ama](/blog/eat-pray-love-pizza-da-michele-napoli)* (2010) —
 una delle scene "food" più citate del cinema recente.
 
-## Matt Damon e Jude Law — Caffè Florian, Venezia
+## Matt Damon — Caffè Florian, Venezia
 
 In Piazza San Marco, il **[Caffè Florian](/locale/caffe-florian)**, il più
 antico d'Italia (dal 1720), è dove Tom Ripley incontra Marge e il padre di
@@ -60,9 +60,9 @@ locale stesso a raccontarlo sul proprio sito.
 
 ## Lady Gaga e Adam Driver — Milano
 
-I luoghi di *[House of Gucci](/blog/house-of-gucci-milano)* (2021)
-attraversano la Galleria Vittorio Emanuele e il centro della moda milanese,
-tra eleganza e ambizione.
+*[House of Gucci](/blog/house-of-gucci-milano)* (2021) è girato, tra l'altro, alla
+Galleria Vittorio Emanuele II e a Villa Necchi Campiglio, ma non conosciamo
+un locale confermato tra le sue location: qui trovi solo i luoghi.
 
 ## Anthony Hopkins — Caffè Rivoire, Firenze
 
@@ -86,7 +86,7 @@ di *[Corro da te](/blog/corro-da-te-torino-del-cambio)* (2022).
 
 ## Marco Giallini — Caffè Nazionale, Aosta
 
-Il caffè storico di piazza Chanoux fu riaperto apposta per girare
+Il caffè storico di piazza Chanoux, chiuso da tempo, fu riaperto per le riprese di
 *[Rocco Schiavone](/blog/rocco-schiavone-aosta-caffe-nazionale)*: oggi è di
 nuovo aperto, con lo chef Paolo Griffa.
 
@@ -125,7 +125,7 @@ Nella commedia *[Viaggi di nozze](/blog/viaggi-di-nozze-roma-paradiso-terrestre)
 **[Ristorante Paradiso Terrestre](/locale/ristorante-paradiso-terrestre-roma)**,
 ancora oggi specializzato in matrimoni.
 
-## Luca Marinelli — Caffè San Marco, Trieste
+## Giacomo Gianniotti e Valerio Mastandrea — Caffè San Marco, Trieste
 
 In *[Diabolik - Ginko all'attacco!](/blog/diabolik-ginko-trieste-caffe-san-marco)*
 (2022), Trieste diventa la Clerville del fumetto: l'**[Antico Caffè San
@@ -134,7 +134,7 @@ bancone, poco distante dall'inseguimento in Piazza della Borsa.
 
 ## Terence Hill e Nino Frassica — Caffè Ducale, Gubbio
 
-Per tredici stagioni della fiction Rai
+Per molte stagioni della fiction Rai
 *[Don Matteo](/blog/don-matteo-gubbio-caffe-ducale)*, il
 **[Caffè Ducale](/locale/caffe-ducale-gubbio)** di Gubbio è stato il bar
 delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
@@ -148,7 +148,8 @@ inizialmente segreto il nome.
 
 ## Il jet set anni '60 — Harry's Bar, Via Veneto
 
-Simbolo sopravvissuto della "dolce vita" felliniana, **[Harry's
+Simbolo sopravvissuto della "dolce vita" felliniana (non è una location
+delle riprese), **[Harry's
 Bar](/locale/harrys-bar-roma)** è ancora oggi in attività sulla stessa
 Via Veneto raccontata da *[La dolce vita](/blog/harrys-bar-roma-dolce-vita)*.
 

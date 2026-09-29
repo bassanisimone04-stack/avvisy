@@ -14,7 +14,7 @@ faq:
   - domanda: "Can you actually visit these TV show locations?"
     risposta: "Many of them, yes: on CineFood Italia we only publish venues (bars, restaurants, cafés) verified as real filming locations, with an address and a source."
   - domanda: "Which show has driven the most tourism to Italy recently?"
-    risposta: "The White Lotus, whose second season was set in Taormina in 2022, produced a measurable rise in Sicilian tourist bookings in the following years."
+    risposta: "The White Lotus, whose second season was set in Taormina in 2022, made Taormina one of the most searched destinations of 2022-2023."
 lang: "en"
 bozza: false
 ---
@@ -33,7 +33,7 @@ destinations of 2022-2023. Discover the real locations in our article on
 ## Ripley — Amalfi Coast
 
 The Netflix miniseries, winner of two Emmys, chose **Atrani** to recreate
-the 1950s Amalfi Coast of Patricia Highsmith's novel. Details in our
+the early-1960s Amalfi Coast (the series is set in 1961), from Patricia Highsmith's novel. Details in our
 **[deep dive on Ripley](/en/blog/ripley-netflix-atrani-costiera-amalfitana)**.
 
 ## Inspector Montalbano — Ragusa and Punta Secca
@@ -96,7 +96,7 @@ transformed into the period café the commissioner visits. Discover
 
 ## Don Matteo — Gubbio, Umbria
 
-For thirteen seasons, the longest-running Italian crime-comedy series used
+For many seasons, the longest-running Italian crime-comedy series used
 **Gubbio** as its fixed set: Caffè Ducale, on Piazza Grande, is still the
 café where Don Matteo and Sergeant Cecchini play their chess games.
 Discover **[Don Matteo in Gubbio](/en/blog/don-matteo-gubbio-caffe-ducale)**.

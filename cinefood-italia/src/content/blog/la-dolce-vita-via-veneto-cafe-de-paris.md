@@ -47,9 +47,7 @@ Una curiosità che sorprende molti: le scene di Via Veneto in *La Dolce Vita*
 **non furono girate sulla strada reale**, ma su una ricostruzione fedelissima
 costruita da Fellini nel **Teatro 5 di Cinecittà**. Il regista preferiva
 avere il controllo totale su luci, folla e inquadrature — cosa impossibile
-sulla strada vera, già allora trafficata. Lo stesso Fellini dichiarò di
-trovare la sua Via Veneto di Cinecittà "più bella e più vera" di quella
-reale. Questo non toglie nulla al legame con il vero Café de Paris: è
+sulla strada vera, già allora trafficata. Questo non toglie nulla al legame con il vero Café de Paris: è
 proprio lì, nella Roma reale, che il fenomeno dei paparazzi e della "dolce
 vita" nacque davvero, prima ancora di diventare set cinematografico.
 
@@ -62,8 +60,7 @@ vita" nacque davvero, prima ancora di diventare set cinematografico.
 
 Il Café de Paris non era solo: sulla stessa via si affacciava anche
 **[Harry's Bar](/locale/harrys-bar-roma)** (tuttora aperto, al civico 150,
-dal 1918) e il celebre **Doney**, altro ritrovo abituale di Fellini stesso
-con la moglie Giulietta Masina e di Luchino Visconti. Chi visita Via
+dal 1918). Chi visita Via
 Veneto oggi può ancora sedersi da **[Harry's Bar](/blog/harrys-bar-roma-dolce-vita)**
 per un aperitivo nello stesso tratto di strada che fu il cuore della Roma
 mondana.

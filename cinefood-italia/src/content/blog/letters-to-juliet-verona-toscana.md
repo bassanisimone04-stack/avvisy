@@ -56,8 +56,8 @@ La cucina veronese è ricca e legata al vino:
 La seconda parte si sposta tra le colline toscane e le cantine, tra
 degustazioni e panorami dorati. Molte scene sono girate a **Siena**, con
 vedute della celebre **Piazza del Campo**, dove ogni anno si corre il Palio.
-Il palazzo del Conte Lorenzo, personaggio interpretato da Vanessa Redgrave e
-Franco Nero, è **Villa Arvedi**, dimora storica veneta. Qui regnano la
+Il palazzo del Conte Lorenzo, personaggio interpretato da Franco Nero (accanto a
+Vanessa Redgrave, che interpreta Claire), è **Villa Arvedi**, dimora storica veneta a Grezzana, vicino a Verona. Qui regnano la
 **bistecca alla fiorentina**, i **pici** e i vini rossi (Chianti, Brunello).
 
 ## In sintesi

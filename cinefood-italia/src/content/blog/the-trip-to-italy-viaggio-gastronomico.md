@@ -1,6 +1,6 @@
 ---
 titolo: "The Trip to Italy: il viaggio gastronomico"
-descrizione: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando nei ristoranti più belli, dalla Liguria alla Costiera Amalfitana."
+descrizione: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando nei ristoranti più belli, dal Piemonte a Capri."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/the-trip-to-italy-viaggio-gastronomico.jpg"
@@ -8,9 +8,9 @@ immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
 tags: ["The Trip to Italy", "itinerari", "ristoranti", "Italia", "cineturismo"]
 faq:
   - domanda: "Di cosa parla The Trip to Italy?"
-    risposta: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando nei ristoranti più belli, dalla Liguria alla Costiera Amalfitana."
+    risposta: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando nei ristoranti più belli, dal Piemonte a Capri."
   - domanda: "Quali regioni tocca The Trip to Italy?"
-    risposta: "Liguria, Toscana, Roma, Costiera Amalfitana e Capri."
+    risposta: "Piemonte, Liguria, Toscana, Roma, la costa di Sorrento e Capri."
   - domanda: "È un film o una serie?"
     risposta: "Nasce come serie TV della BBC diretta da Michael Winterbottom, poi montata anche in versione film per il cinema."
   - domanda: "Il viaggio segue davvero ristoranti reali?"
@@ -31,15 +31,17 @@ gastronomico da rifare tappa per tappa.
 
 ## Le tappe del viaggio
 
-Il film segue lo Stivale da nord a sud, con tappe reali a **Camogli**, sulla
-riviera ligure, **Pievescola** in Toscana, **Roma**, **Ravello** sopra la
-Costiera Amalfitana, fino alla costa di **Sorrento**, con vista su
+Il film segue lo Stivale da nord a sud. Tra i ristoranti reali citati dalle
+fonti: la Trattoria della Posta a **Monforte d'Alba** (Piemonte), La Cantina a
+**San Fruttuoso** (Liguria), la Trattoria Albana a **Mazzolla** (Toscana),
+Oliver Glowig a **Roma**, Relais Blu sulla costa di **Sorrento** e Il Riccio a
 **Capri**:
 
-- La **Liguria** e le Cinque Terre, con il pesto e il mare;
+- Il **Piemonte**, con i tartufi e le Langhe;
+- La **Liguria**, con il pesto e il mare;
 - La **Toscana**, tra colline e vino;
 - **Roma**, con la sua cucina verace;
-- La **Costiera Amalfitana** e **Capri**, tra limoni e pesce.
+- La **costa di Sorrento** e **Capri**, tra limoni e pesce.
 
 ## Cosa assaggiare lungo il percorso
 

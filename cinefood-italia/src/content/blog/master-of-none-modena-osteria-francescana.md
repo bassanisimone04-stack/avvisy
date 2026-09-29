@@ -31,8 +31,8 @@ gastronomica dell'Emilia: **Modena**.
 
 ## Osteria Francescana, il ristorante di Bottura
 
-Nell'episodio *The Thief*, Dev e il suo migliore amico Arnold festeggiano
-un compleanno da **Osteria Francescana**, il ristorante tre stelle
+Nell'episodio *The Thief*, Dev e il suo amico Arnold cenano
+da **Osteria Francescana**, il ristorante tre stelle
 Michelin dello chef **Massimo Bottura**, in via Stella. Non è una
 scenografia: è un locale reale, eletto miglior ristorante del mondo nella
 classifica *The World's 50 Best Restaurants* sia nel 2016 sia nel 2018.

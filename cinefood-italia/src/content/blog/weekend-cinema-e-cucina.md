@@ -47,10 +47,10 @@ I ristoranti più famosi si riempiono in fretta, specie in alta stagione
 schede dei locali e conferma sempre orari e giorni di chiusura — molti
 locali storici chiudono un giorno a settimana.
 
-## 4. Distingui set reali e locali a tema
+## 4. Distingui set reali e locali legati al film
 
-Non tutti i locali sono set reali: alcuni sono [a tema cinema](/locali). Entrambi
-sono divertenti, ma è bello sapere cosa aspettarsi — [qui spieghiamo la
+Non tutti i locali sono set reali: alcuni sono solo [legati al film](/locali), cioè
+vicini al set ma non girati lì. Sono tappe utili, ma è bello sapere cosa aspettarsi — [qui spieghiamo la
 differenza](/blog/set-reale-o-a-tema) in dettaglio.
 
 ## 5. Lascia spazio all'imprevisto

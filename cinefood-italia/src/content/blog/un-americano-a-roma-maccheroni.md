@@ -10,13 +10,13 @@ faq:
   - domanda: "Qual è la scena dei maccheroni di Alberto Sordi?"
     risposta: "In Un Americano a Roma (1954), Nando Mericoni cede ai maccheroni con la celebre battuta 'Maccarone, m'hai provocato...'."
   - domanda: "La scena dei maccheroni è girata in un vero ristorante?"
-    risposta: "No: fu girata in un'osteria ricostruita per il film, non in un locale realmente esistente. Le riprese esterne del film toccarono comunque location reali come via del Portico d'Ottavia e vicolo Savini."
+    risposta: "No: la scena non risulta girata in un locale realmente esistente. Le riprese esterne del film toccarono comunque location reali come via del Portico d'Ottavia, nel Ghetto."
   - domanda: "Quali piatti romani provare?"
     risposta: "Cacio e pepe, amatriciana, carbonara, carciofi alla romana e coda alla vaccinara."
   - domanda: "Dove è ambientato il personaggio di Nando Mericoni?"
     risposta: "A Trastevere: Nando è un giovane romano del popolare quartiere trasteverino, ossessionato dal mito dell'America, che finisce per fare da specchio comico agli italiani di quegli anni."
   - domanda: "Dove è stato girato Un Americano a Roma?"
-    risposta: "Tra le location reali: via del Portico d'Ottavia e vicolo Savini, oltre ad alcune zone periferiche di Roma per le scene in motocicletta."
+    risposta: "Tra le location reali: via del Portico d'Ottavia e il Ghetto, il Colosseo e i Fori Imperiali."
 prenotazioni:
   - nome: "Hotel"
     citta: "Roma"
@@ -39,9 +39,8 @@ quella Roma popolare e la sua cucina.
 dopoguerra, fatta di vicoli, trattorie e piatti generosi — con Nando
 Mericoni presentato come un ragazzo di **Trastevere**, quartiere che
 incarna l'anima popolare della Capitale. Le riprese esterne si sono svolte
-in diverse location reali, tra cui **via del Portico d'Ottavia** e
-**vicolo Savini**. La celebre scena dei maccheroni, invece, fu girata in
-un'osteria ricostruita apposta per il film, non in un locale realmente
+in diverse location reali, tra cui **via del Portico d'Ottavia**, nel Ghetto. La celebre scena dei maccheroni,
+invece, non risulta girata in un locale realmente
 esistente: non esiste quindi "il vero ristorante di Nando Mericoni" da
 visitare, ma il quartiere e l'atmosfera che racconta sono autentici.
 

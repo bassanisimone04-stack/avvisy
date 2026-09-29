@@ -8,7 +8,7 @@ immagineAlt: "A table laid with dishes from the Italian tradition"
 tags: ["movie restaurants", "film tourism", "list", "Hollywood stars"]
 faq:
   - domanda: "How do you know if a restaurant really appeared in a movie?"
-    risposta: "On CineFood Italia we only publish locations with a verifiable source: the venue's own official website, a regional film commission, or national press. Every entry lists its source."
+    risposta: "On CineFood Italia every card cites the sources used: the venue's own website, a regional film commission, press or other editorial sources. If a venue is not a filming location, we say so with the 'Film-related' badge."
   - domanda: "What are the most famous movie restaurants in Italy?"
     risposta: "Bar Vitelli in Savoca (The Godfather), Da Michele in Naples (Eat Pray Love), Caffè Florian in Venice (The Talented Mr. Ripley) and Caffè Rivoire in Florence (Hannibal) are among the most visited."
   - domanda: "Are these restaurants still open?"
@@ -26,8 +26,8 @@ bozza: false
 ---
 
 Some restaurants have been made more famous by cinema than by the stars who
-walked through them. Here is the full list of **real, verified** venues that
-genuinely appeared in a film or TV series — no themed sets, just addresses
+walked through them. Here is the list of **real** venues that, according to the
+sources cited on each card, appeared in a film or TV series — no themed sets, just addresses
 that still exist today, alongside the actor whose scene made them famous.
 
 ## Al Pacino — Bar Vitelli, Savoca (Sicily)
@@ -44,7 +44,7 @@ is the pizzeria where Liz tastes her first real margherita in
 *[Eat Pray Love](/en/blog/eat-pray-love-pizza-da-michele-napoli)* (2010) —
 one of the most quoted food scenes in recent cinema.
 
-## Matt Damon and Jude Law — Caffè Florian, Venice
+## Matt Damon — Caffè Florian, Venice
 
 On St Mark's Square, **[Caffè Florian](/en/locale/caffe-florian)**, Italy's
 oldest café (since 1720), is where Tom Ripley meets Marge and Dickie's
@@ -61,9 +61,9 @@ the venue tells the story itself on its own website.
 
 ## Lady Gaga and Adam Driver — Milan
 
-The locations of *[House of Gucci](/en/blog/house-of-gucci-milano)* (2021)
-run through the Galleria Vittorio Emanuele and the heart of Milan's fashion
-district, between elegance and ambition.
+*[House of Gucci](/en/blog/house-of-gucci-milano)* (2021) was shot, among
+other places, at the Galleria Vittorio Emanuele II and Villa Necchi Campiglio,
+but we know of no venue confirmed among its locations: here you only find the places.
 
 ## Anthony Hopkins — Caffè Rivoire, Florence
 
@@ -87,7 +87,7 @@ leads of *[Corro da te](/en/blog/corro-da-te-torino-del-cambio)* (2022).
 
 ## Marco Giallini — Caffè Nazionale, Aosta
 
-The historic café on Piazza Chanoux was reopened just to film
+The historic café on Piazza Chanoux, closed for some time, was reopened to film
 *[Rocco Schiavone](/en/blog/rocco-schiavone-aosta-caffe-nazionale)*: today
 it's genuinely open again, under chef Paolo Griffa.
 
@@ -125,7 +125,7 @@ In the comedy *[Honeymoons](/en/blog/viaggi-di-nozze-roma-paradiso-terrestre)*
 **[Ristorante Paradiso Terrestre](/en/locale/ristorante-paradiso-terrestre-roma)**,
 still specialising in weddings today.
 
-## Luca Marinelli — Caffè San Marco, Trieste
+## Giacomo Gianniotti and Valerio Mastandrea — Caffè San Marco, Trieste
 
 In *[Diabolik - Ginko Attacks!](/en/blog/diabolik-ginko-trieste-caffe-san-marco)*
 (2022), Trieste becomes the comic's Clerville: the **[Antico Caffè San
@@ -134,7 +134,7 @@ not far from the chase in Piazza della Borsa.
 
 ## Terence Hill and Nino Frassica — Caffè Ducale, Gubbio
 
-For thirteen seasons of the Rai series
+For many seasons of the Rai series
 *[Don Matteo](/en/blog/don-matteo-gubbio-caffe-ducale)*,
 **[Caffè Ducale](/en/locale/caffe-ducale-gubbio)** in Gubbio was the café
 where Don Matteo and Sergeant Cecchini played their chess games.
@@ -148,7 +148,7 @@ initially keeping its name secret.
 
 ## The 1960s jet set — Harry's Bar, Via Veneto
 
-A surviving symbol of Fellini's "dolce vita", **[Harry's
+A surviving symbol of Fellini's "dolce vita" (not a filming location), **[Harry's
 Bar](/en/locale/harrys-bar-roma)** is still in business today on the
 same Via Veneto portrayed in *[La Dolce Vita](/en/blog/harrys-bar-roma-dolce-vita)*.
 

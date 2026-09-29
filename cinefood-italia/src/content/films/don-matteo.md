@@ -17,7 +17,7 @@ faq:
 ---
 
 <!-- Verificato: Regione Umbria (sito istituzionale), comunicato che confermava
-     Gubbio come set della fiction per tredici stagioni; Movieplayer.it
+     Gubbio come set della fiction per molte stagioni; Movieplayer.it
      (testata giornalistica nazionale di cinema/TV), articolo sui luoghi di
      Don Matteo, che nomina esplicitamente il Caffè Ducale come il bar delle
      partite a scacchi tra Cecchini e Don Matteo; Umbriatourism.it, portale
@@ -26,7 +26,7 @@ faq:
      sessione (fetch diretto bloccato) — verificare a mano prima di ulteriori
      modifiche. -->
 
-Per tredici stagioni, Gubbio è stata la Umbria immaginaria di Don
+Per molte stagioni, Gubbio è stata la Umbria immaginaria di Don
 Matteo: la fiction Rai più longeva del genere ha trasformato Piazza
 Grande e le vie del centro storico in un set fisso, con un bar diventato
 tanto familiare al pubblico quanto i suoi protagonisti.

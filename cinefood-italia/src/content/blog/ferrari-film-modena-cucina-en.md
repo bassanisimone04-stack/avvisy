@@ -16,7 +16,7 @@ faq:
   - domanda: "Was the Ferrari film really shot in Modena?"
     risposta: "Yes, almost entirely: between August and October 2022 the production filmed in the city's real locations with very little CGI, including Piazza Grande, the Teatro Comunale and even Enzo Ferrari's real barbershop."
   - domanda: "Which real Modena locations appear in the film?"
-    risposta: "Piazza Roma, Piazza Grande with the Duomo and the Ghirlandina tower, the Teatro Comunale Pavarotti-Freni (the opera scene), the San Cataldo cemetery, and the Da Antonio barbershop, the one Enzo Ferrari really used."
+    risposta: "Piazza Roma, Piazza Grande with the Duomo and the Ghirlandina tower, the Teatro Comunale Pavarotti-Freni (interiors of the opera scene), the San Cataldo cemetery, and the Da Antonio barbershop, the one Enzo Ferrari really used."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"
@@ -40,7 +40,7 @@ August and October 2022, the crew filmed **almost entirely in the city's
 real locations**, with very little CGI. Recognisable spots include
 **Piazza Roma**, with Palazzo Ducale in the background, **Piazza Grande**
 with the Duomo and the Ghirlandina bell tower, the **Teatro Comunale
-Pavarotti-Freni** (setting for the opera scene), the **San Cataldo
+Pavarotti-Freni** (interiors of the opera scene, with exteriors at Teatro Storchi), the **San Cataldo
 Monumental Cemetery**, and even the **"Da Antonio"** barbershop near the
 Duomo — the very one Enzo Ferrari really used. The elegant, hard-working
 Emilian city is the perfect backdrop for the story of "the Drake".

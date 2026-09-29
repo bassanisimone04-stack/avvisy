@@ -2,7 +2,7 @@
 nome: "Ristorante Le Gatte"
 citta: "Castellabate"
 regione: "Campania"
-indirizzo: "Località San Marco, Porto di Castellabate, 84048 Castellabate SA"
+indirizzo: "Via Gennaro Naso 22, 84048 Santa Maria di Castellabate SA"
 coordinate:
   lat: 40.2699
   lng: 14.9440
@@ -22,7 +22,7 @@ descrizione: "Ristorante di pesce sul porto di Castellabate: qui è ambientata l
 
 <!-- Apparizione documentata: Benvenuti al Sud (2010) — la cena tra
      colleghi è girata al ristorante "Le Gatte", che esiste davvero con questo
-     nome. Verifica indirizzo esatto, coordinate e orari. -->
+     nome. Indirizzo verificato 2026-09-29 (via ricerca): Via Gennaro Naso 22, Santa Maria di Castellabate, al Porto delle Gatte; legame col film confermato da più fonti (Sky TG24, Italy for Movies, recensioni). Coordinate approssimate. -->
 
 Sul porticciolo di San Marco di Castellabate, Le Gatte propone cucina di mare
 del Cilento. Qui è ambientata la spassosa cena dei colleghi in *Benvenuti al

@@ -5,14 +5,14 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
 immagineAlt: "The Liberty-style interior of the Antico Caffè San Marco in Trieste"
-tags: ["Diabolik", "Trieste", "Manetti Bros", "Luca Marinelli", "film tourism"]
+tags: ["Diabolik", "Trieste", "Manetti Bros", "Giacomo Gianniotti", "film tourism"]
 faq:
   - domanda: "Where was Diabolik - Ginko Attacks! filmed?"
     risposta: "The fictional city of Clerville was recreated across Bologna, Trieste and Milan. In Trieste, filming included a car chase in Piazza della Borsa and a scene at the Antico Caffè San Marco."
   - domanda: "Which historic café appears in the film?"
     risposta: "The Antico Caffè San Marco, open since 1914: one scene is shot at the venue's counter, while nearby Piazza della Borsa hosts the chase between police cars and Diabolik's Jaguar E-Type."
   - domanda: "Who stars in Diabolik - Ginko Attacks!?"
-    risposta: "Luca Marinelli as Diabolik and Valerio Mastandrea as Inspector Ginko, directed by the Manetti Bros., the second chapter of the trilogy based on the Giussani sisters' comic."
+    risposta: "Giacomo Gianniotti as Diabolik and Valerio Mastandrea as Inspector Ginko, directed by the Manetti Bros., the second chapter of the trilogy based on the Giussani sisters' comic."
   - domanda: "Does Caffè San Marco appear in other films or shows?"
     risposta: "Yes: the same venue was also used for some interior scenes of the Sky series Il Re, starring Luca Zingaretti."
 prenotazioni:
@@ -33,8 +33,8 @@ film one of its most spectacular moments.
 ## The chase in Piazza della Borsa
 
 In one of the film's most talked-about scenes, Inspector Ginko's
-(**Valerio Mastandrea**) police cars chase **Diabolik**'s (**Luca
-Marinelli**) legendary Jaguar E-Type right through **Piazza della
+(**Valerio Mastandrea**) police cars chase **Diabolik**'s (**Giacomo
+Gianniotti**) legendary Jaguar E-Type right through **Piazza della
 Borsa**, one of Trieste's most scenic squares — with vintage cars and
 period-costumed extras recreating the comic's retro-futuristic mood.
 

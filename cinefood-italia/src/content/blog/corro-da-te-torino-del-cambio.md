@@ -12,7 +12,7 @@ faq:
   - domanda: "Qual è il ristorante che si vede in Corro da te?"
     risposta: "Il Ristorante Del Cambio, in Piazza Carignano 2 a Torino. Dopo l'esibizione di Chiara al Teatro Regio, Gianni la porta lì a cena e la coppia si diverte per la sua goffaggine."
   - domanda: "Il Del Cambio si può visitare?"
-    risposta: "Sì: è un ristorante aperto al pubblico, oggi una stella Michelin. Le sale ottocentesche con specchi, stucchi e velluti rossi sono quelle che si vedono nel film."
+    risposta: "Sì: è un ristorante aperto al pubblico, oggi una stella Michelin. Le sale ottocentesche con specchi, stucchi e velluti rossi sono tra i suoi ambienti più noti."
   - domanda: "Da quando esiste il Del Cambio?"
     risposta: "Dal 1757, di fronte al Teatro Carignano: è uno dei ristoranti storici più antichi d'Italia ancora in attività."
 prenotazioni:
@@ -44,7 +44,7 @@ Il **[Del Cambio](/locale/del-cambio-torino)** è aperto dal **1757** in
 Piazza Carignano, di fronte al Teatro Carignano: uno dei ristoranti
 storici più antichi d'Italia ancora in attività. Le sue sale
 ottocentesche — specchi, stucchi dorati, velluti rossi — sono rimaste
-quelle di sempre, e sono esattamente ciò che si vede nel film. Oggi il
+quelle di sempre. Oggi il
 ristorante ha **una stella Michelin** e propone una cucina piemontese
 contemporanea.
 

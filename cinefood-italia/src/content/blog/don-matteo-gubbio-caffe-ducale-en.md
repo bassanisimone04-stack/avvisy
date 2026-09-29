@@ -1,6 +1,6 @@
 ---
 titolo: "Don Matteo in Gubbio: the Real Caffè Ducale"
-descrizione: "Where Don Matteo and Sergeant Cecchini played chess: Caffè Ducale in Gubbio, a real set for thirteen seasons of the Rai series."
+descrizione: "Where Don Matteo and Sergeant Cecchini played chess: Caffè Ducale in Gubbio, a real set for many seasons of the Rai series."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-09
 immagine: "../../assets/placeholder/caffe-ducale-gubbio.jpg"
@@ -25,7 +25,7 @@ lang: "en"
 bozza: false
 ---
 
-For thirteen seasons, *Don Matteo* made **Gubbio** its fictional Umbria:
+For many seasons, *Don Matteo* made **Gubbio** its fictional Umbria:
 the longest-running Italian crime-comedy series used the Umbrian town as
 its fixed set from 2000 to 2011, before moving to Spoleto. And one café,
 more than any other place, has stayed tied to those years.

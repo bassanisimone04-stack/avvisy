@@ -37,7 +37,7 @@ The "Sicilian" scenes of *[The Godfather](/en/film/il-padrino)* were shot in
 the villages of the Messina area. At **[Bar Vitelli](/en/locale/bar-vitelli-savoca)**
 in Savoca, inside the 18th-century Palazzo Trimarchi, Michael Corleone asks
 for Apollonia's hand: the venue — which took its name from the film itself —
-is still almost identical to 1971.
+is still almost identical to how it looks in the film.
 
 ## Montalbano's cuisine, in the Ragusa area
 

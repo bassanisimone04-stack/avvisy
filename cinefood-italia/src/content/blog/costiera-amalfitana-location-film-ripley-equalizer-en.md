@@ -14,7 +14,7 @@ faq:
   - domanda: "Does Denzel Washington's café in The Equalizer 3 really exist?"
     risposta: "Yes: it's Ristorante Savò in Atrani, dressed by the production as the film's \"Aminah's Cafe\". The venue tells the story on its own official website."
   - domanda: "What's the difference between Netflix's Ripley and The Talented Mr. Ripley (1999)?"
-    risposta: "They're two different adaptations of the same Patricia Highsmith novel: the 1999 film with Matt Damon is shot mainly around Venice, while the 2024 Netflix series with Andrew Scott uses Atrani and the Amalfi Coast."
+    risposta: "They're two different adaptations of the same Patricia Highsmith novel: the 1999 film with Matt Damon is shot on Ischia, Procida, in Rome and Venice, while the 2024 Netflix series with Andrew Scott uses Atrani and the Amalfi Coast."
 prenotazioni:
   - nome: "Hotel"
     citta: "Amalfi"
@@ -31,15 +31,15 @@ small village, **Atrani**, to tell very different stories — proof that this
 stretch of coast still draws Hollywood as much as it did in the Dolce Vita
 years.
 
-## Ripley (Netflix, 2024): Atrani as 1950s Amalfi Coast
+## Ripley (Netflix, 2024): Atrani as the early-1960s Amalfi Coast
 
 Netflix's *[Ripley](/en/blog/ripley-netflix-atrani-costiera-amalfitana)*,
 starring **Andrew Scott** and winner of two 2024 Emmys, chose Atrani to
-recreate the 1950s Amalfi Coast of Patricia Highsmith's novel. It's a
+recreate the early-1960s Amalfi Coast (the series is set in 1961) from Patricia Highsmith's novel. It's a
 different adaptation from
 *[The Talented Mr. Ripley](/en/blog/mr-ripley-venezia-caffe-florian)*
-(1999) with Matt Damon, shot mainly around Venice instead: same book, two
-different coasts.
+(1999) with Matt Damon, shot instead on Ischia, Procida, in Rome and Venice: same book, different
+settings.
 
 ## The Equalizer 3 (2023): Atrani becomes "Altamonte"
 
@@ -53,7 +53,7 @@ Cafe" where the lead orders his tea every day.
 
 ## Why Atrani specifically
 
-At barely twenty hectares, Atrani is **Italy's smallest municipality** by
+At barely 0.12 km² (about 12 hectares), Atrani is **Italy's smallest municipality** by
 area: one little square, covered alleys, narrow staircases between the
 houses. It's a few minutes' walk from Amalfi, but far quieter — one of the
 reasons two different productions chose it within the space of a single
@@ -75,7 +75,7 @@ entirely pedestrian.
 
 ## In short
 
-From the 1950s Amalfi Coast of *Ripley* to the contemporary thriller of
+From the early-1960s Amalfi Coast of *Ripley* to the contemporary thriller of
 *The Equalizer 3*, the same small village has lent its face to two opposite
 stories. Discover more **[films and shows](/en/film)** shot in Italy, or the
 full list of **[movie restaurants](/en/blog/ristoranti-veri-nei-film-italia-lista)**.

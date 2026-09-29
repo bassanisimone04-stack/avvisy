@@ -13,7 +13,7 @@ faq:
   - domanda: "Quale caffè storico appare nel film?"
     risposta: "L'Antico Caffè San Marco di Trieste, dal 1914: qui è stata girata una scena al bancone del locale, mentre nella vicina Piazza della Borsa si svolge l'inseguimento tra le auto della polizia e la Jaguar E-Type di Diabolik."
   - domanda: "Chi ha diretto Diabolik - Ginko all'attacco!?"
-    risposta: "I Manetti Bros., per il secondo capitolo della trilogia italiana tratta dal fumetto delle sorelle Giussani, con Luca Marinelli nel ruolo di Diabolik e Valerio Mastandrea in quello dell'ispettore Ginko."
+    risposta: "I Manetti Bros., per il secondo capitolo della trilogia italiana tratta dal fumetto delle sorelle Giussani, con Giacomo Gianniotti nel ruolo di Diabolik e Valerio Mastandrea in quello dell'ispettore Ginko."
 ---
 
 <!-- Verificato: Il Piccolo (quotidiano storico di Trieste, gruppo GEDI),

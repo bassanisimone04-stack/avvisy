@@ -14,7 +14,7 @@ faq:
   - domanda: "Le location delle serie TV sono visitabili davvero?"
     risposta: "Molte sì: su CineFood Italia pubblichiamo solo i locali (bar, ristoranti, caffè) verificati come location reali, con indirizzo e fonte."
   - domanda: "Qual è la serie che ha portato più turismo in Italia di recente?"
-    risposta: "The White Lotus, con la seconda stagione ambientata a Taormina nel 2022, ha generato un aumento misurabile delle prenotazioni turistiche in Sicilia negli anni successivi."
+    risposta: "The White Lotus, con la seconda stagione ambientata a Taormina nel 2022, ha reso Taormina una delle mete più cercate del 2022-2023."
 bozza: false
 ---
 
@@ -32,7 +32,7 @@ articolo su **[The White Lotus e la vera Sicilia](/blog/the-white-lotus-sicilia-
 ## Ripley — Costiera Amalfitana
 
 La miniserie Netflix, vincitrice di due Emmy, ha scelto **Atrani** per
-ricreare la Costiera Amalfitana degli anni '50 del romanzo di Patricia
+ricreare la Costiera Amalfitana dei primi anni '60 (la serie è ambientata nel 1961), dal romanzo di Patricia
 Highsmith. Dettagli nel nostro
 **[approfondimento su Ripley](/blog/ripley-netflix-atrani-costiera-amalfitana)**.
 
@@ -96,7 +96,7 @@ Leggi **[il vero Gambrinus](/blog/commissario-ricciardi-napoli-gambrinus)**.
 
 ## Don Matteo — Gubbio, Umbria
 
-Per tredici stagioni la fiction Rai più longeva del genere ha usato
+Per molte stagioni la fiction Rai più longeva del genere ha usato
 **Gubbio** come set fisso: il Caffè Ducale, in Piazza Grande, è ancora il
 bar delle partite a scacchi tra Don Matteo e il Maresciallo Cecchini.
 Scopri **[Don Matteo a Gubbio](/blog/don-matteo-gubbio-caffe-ducale)**.

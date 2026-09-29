@@ -14,7 +14,7 @@ faq:
   - domanda: "Does Bar Vitelli really exist?"
     risposta: "Yes, it's a real bar on Piazza Fossia in Savoca, inside the 18th-century Palazzo Trimarchi: it's where Michael Corleone (Al Pacino) asks for Apollonia's hand, and it's still open today."
   - domanda: "What's worth seeing in Forza d'Agrò related to the film?"
-    risposta: "The church and its forecourt, used for Michael and Apollonia's wedding scene, along with the village's medieval old town, perched above the Ionian coast."
+    risposta: "The Annunziata church, used for the procession and church-exit scenes after Michael and Apollonia's wedding (the ceremony itself is shot in Savoca, at the Church of San Nicolò), along with the village's medieval old town, perched above the Ionian coast."
 prenotazioni:
   - nome: "Hotel"
     citta: "Taormina"
@@ -46,13 +46,15 @@ attempt on his father's life, falls in love with Apollonia. The most
 visited location is **[Bar Vitelli](/en/locale/bar-vitelli-savoca)**, on
 Piazza Fossia: the bar where Michael formally asks Apollonia's father for
 her hand, inside the 18th-century Palazzo Trimarchi. The venue didn't even
-have an official name before the film — today it looks almost identical to
-1971, with the same panoramic terrace over the valley.
+have an official name before the film — today it looks almost identical to how it looks in the film,
+with the same panoramic terrace over the valley.
 
-## Forza d'Agrò: the wedding
+## Forza d'Agrò: the wedding procession
 
 A few minutes from Savoca, **Forza d'Agrò** provided the backdrop for
-Michael and Apollonia's wedding scene, shot on the church forecourt. It's a
+the procession and church-exit scenes after Michael and Apollonia's wedding,
+shot at the Annunziata church (the ceremony itself is in Savoca, at the
+Church of San Nicolò). It's a
 medieval hilltop village with narrow lanes and, on clear days, views
 stretching from the Ionian coast to Mount Etna.
 
@@ -64,8 +66,8 @@ further south. In Savoca, besides Bar Vitelli, the Chiesa Madre and the
 belvedere over the Agrò valley are worth a stop; in Forza d'Agrò, the old
 town and the remains of the Norman castle.
 
-> Practical tip: Bar Vitelli is open year-round, but in the summer months
-> it can get very busy with fans retracing the film. Always check current
+> Practical tip: Bar Vitelli, in the summer months,
+> can get very busy with fans retracing the film. Always check current
 > opening hours before setting off.
 
 ## In short

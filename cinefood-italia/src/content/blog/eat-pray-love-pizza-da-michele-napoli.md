@@ -1,6 +1,6 @@
 ---
 titolo: "La pizza di Eat Pray Love: Da Michele a Napoli"
-descrizione: "Un menù di sole due pizze dal 1870, niente prenotazioni e sempre la fila: dove Julia Roberts ha mangiato in Eat Pray Love, a 5 minuti dalla Stazione Centrale."
+descrizione: "Menù cortissimo, niente prenotazioni e sempre la fila: dove Julia Roberts ha mangiato la pizza in Eat Pray Love, vicino alla Stazione Centrale."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
@@ -10,7 +10,7 @@ faq:
   - domanda: "Dove ha mangiato la pizza Julia Roberts in Eat Pray Love?"
     risposta: "All'Antica Pizzeria da Michele, in Via Cesare Sersale nel quartiere Forcella a Napoli."
   - domanda: "Che pizza si mangia da Michele?"
-    risposta: "Il menù storico ha solo due pizze: marinara e margherita, cotte nel forno a legna."
+    risposta: "Il menù è cortissimo: le due pizze storiche sono marinara e margherita, cotte nel forno a legna; in menù ci sono anche due varianti (cosacca e marita, metà margherita e metà marinara)."
   - domanda: "Serve prenotare da Michele?"
     risposta: "Non si prenota: si ritira un numero e si aspetta il proprio turno, spesso con la fila fuori."
   - domanda: "Da quando esiste la pizzeria da Michele?"
@@ -42,9 +42,10 @@ nel **1870**, quando **Salvatore Condurro** apre la sua prima pizzeria nel
 cuore di Napoli. Il figlio **Michele Condurro** — da cui il nome che conosciamo
 oggi — apre nel 1906 un locale proprio, e nel **1930** la pizzeria si trasferisce
 nella sede attuale di via Cesare Sersale, quella che compare (con qualche
-licenza cinematografica) nel film. Da allora sono passate **cinque generazioni**
-della stessa famiglia, sempre fedeli alla stessa regola: solo due pizze,
-**marinara** e **margherita**, cotte nel forno a legna, senza eccezioni.
+licenza cinematografica) nel film. Da allora la pizzeria è rimasta nelle mani
+della stessa famiglia, fedele a un menù cortissimo: le due pizze storiche,
+**marinara** e **margherita**, cotte nel forno a legna, più due varianti
+(la **cosacca** e la **marita**, metà margherita e metà marinara).
 
 ## Cosa aspettarsi (e cosa ordinare)
 

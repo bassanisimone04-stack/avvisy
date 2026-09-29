@@ -16,7 +16,7 @@ faq:
   - domanda: "Il film Ferrari è girato davvero a Modena?"
     risposta: "Sì, quasi interamente: tra agosto e ottobre 2022 la produzione ha girato nelle location originali della città, con pochissimo ricorso alla computer grafica, incluse Piazza Grande, il Teatro Comunale e persino il vero barbiere di Enzo Ferrari."
   - domanda: "Quali luoghi reali di Modena appaiono nel film?"
-    risposta: "Piazza Roma, Piazza Grande col Duomo e la Ghirlandina, il Teatro Comunale Pavarotti-Freni (scena dell'opera), il Cimitero di San Cataldo e il barbiere Da Antonio, quello realmente frequentato da Enzo Ferrari."
+    risposta: "Piazza Roma, Piazza Grande col Duomo e la Ghirlandina, il Teatro Comunale Pavarotti-Freni (interni della scena dell'opera), il Cimitero di San Cataldo e il barbiere Da Antonio, quello realmente frequentato da Enzo Ferrari."
 prenotazioni:
   - nome: "Hotel"
     citta: "Modena"
@@ -39,7 +39,7 @@ tra agosto e ottobre 2022 la troupe ha girato **quasi interamente nelle
 location reali** della città, con pochissima computer grafica. Tra i luoghi
 riconoscibili: **Piazza Roma**, con Palazzo Ducale sullo sfondo, **Piazza
 Grande** col Duomo e la torre della Ghirlandina, il **Teatro Comunale
-Pavarotti-Freni** (dove è ambientata la scena all'opera), il **Cimitero
+Pavarotti-Freni** (interni della scena all'opera, con gli esterni al Teatro Storchi), il **Cimitero
 monumentale di San Cataldo** e persino il barbiere **"Da Antonio"**, vicino
 al Duomo — lo stesso realmente frequentato da Enzo Ferrari. La città
 emiliana, elegante e operosa, è lo sfondo perfetto per la storia del

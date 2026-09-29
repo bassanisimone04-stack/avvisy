@@ -41,8 +41,7 @@ same name, with a 360-degree view over the Mediterranean.
 
 Off Sicily's northern coast, the volcanic **Aeolian Islands** — Vulcano, Lipari
 and Basiluzzo — became the mythical island of Aeolia. The
-**Faraglioni di Lipari**, spectacular rock formations, play the poem's
-"Wandering Rocks".
+**Faraglioni di Lipari**, spectacular rock formations, are the backdrop for the scene where Odysseus is tied to the ship's mast.
 
 ## What to eat on Favignana and in the Egadi Islands
 

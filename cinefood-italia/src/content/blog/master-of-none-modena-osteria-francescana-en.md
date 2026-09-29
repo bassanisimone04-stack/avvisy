@@ -31,8 +31,8 @@ Italy — and not just any city, but Emilia's food capital: **Modena**.
 
 ## Osteria Francescana, Bottura's restaurant
 
-In the episode *The Thief*, Dev and his best friend Arnold celebrate a
-birthday at **Osteria Francescana**, chef **Massimo Bottura**'s
+In the episode *The Thief*, Dev and his friend Arnold dine
+at **Osteria Francescana**, chef **Massimo Bottura**'s
 three-Michelin-star restaurant on Via Stella. It's not a set: it's a real
 restaurant, voted the world's best in *The World's 50 Best Restaurants*
 ranking in both 2016 and 2018.

@@ -1,6 +1,6 @@
 ---
 titolo: "The Trip to Italy: a Cinematic Food Journey"
-descrizione: "Steve Coogan and Rob Brydon cross Italy eating in the finest restaurants, from Liguria to the Amalfi Coast."
+descrizione: "Steve Coogan and Rob Brydon cross Italy eating in the finest restaurants, from Piedmont to Capri."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/the-trip-to-italy-viaggio-gastronomico.jpg"
@@ -8,9 +8,9 @@ immagineAlt: "A table laid with dishes from the Italian tradition"
 tags: ["The Trip to Italy", "itineraries", "restaurants", "Italy", "film tourism"]
 faq:
   - domanda: "What is The Trip to Italy about?"
-    risposta: "Steve Coogan and Rob Brydon cross Italy eating in the finest restaurants, from Liguria to the Amalfi Coast."
+    risposta: "Steve Coogan and Rob Brydon cross Italy eating in the finest restaurants, from Piedmont to Capri."
   - domanda: "Which regions does The Trip to Italy cover?"
-    risposta: "Liguria, Tuscany, Rome, the Amalfi Coast and Capri."
+    risposta: "Piedmont, Liguria, Tuscany, Rome, the Sorrento coast and Capri."
   - domanda: "Is it a film or a series?"
     risposta: "It began as a BBC TV series directed by Michael Winterbottom, later edited into a film version too."
   - domanda: "Does the journey really follow real restaurants?"
@@ -32,15 +32,17 @@ Magazine — a real food itinerary to retrace stop by stop.
 
 ## The journey's stops
 
-The film follows the boot from north to south, with real stops in
-**Camogli** on the Ligurian Riviera, **Pievescola** in Tuscany, **Rome**,
-**Ravello** above the Amalfi Coast, and finally the **Sorrento** coast,
-overlooking **Capri**:
+The film follows the boot from north to south. Among the real restaurants
+named by the sources: Trattoria della Posta in **Monforte d'Alba** (Piedmont),
+La Cantina in **San Fruttuoso** (Liguria), Trattoria Albana in **Mazzolla**
+(Tuscany), Oliver Glowig in **Rome**, Relais Blu on the **Sorrento** coast and
+Il Riccio on **Capri**:
 
-- **Liguria** and the Cinque Terre, with pesto and the sea;
+- **Piedmont**, with truffles and the Langhe;
+- **Liguria**, with pesto and the sea;
 - **Tuscany**, among hills and wine;
 - **Rome**, with its authentic cuisine;
-- The **Amalfi Coast** and **Capri**, among lemons and fish.
+- The **Sorrento coast** and **Capri**, among lemons and fish.
 
 ## What to taste along the way
 

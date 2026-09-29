@@ -14,7 +14,7 @@ faq:
   - domanda: "Il Bar Vitelli esiste davvero?"
     risposta: "Sì, è un bar reale in Piazza Fossia a Savoca, dentro il settecentesco Palazzo Trimarchi: è il luogo dove Michael Corleone (Al Pacino) chiede la mano di Apollonia, ed è ancora aperto oggi."
   - domanda: "Cosa vedere a Forza d'Agrò legato al film?"
-    risposta: "La chiesa e il sagrato usati per la scena del matrimonio di Michael e Apollonia, oltre al centro storico medievale del borgo, arroccato sopra la costa ionica."
+    risposta: "La Chiesa dell'Annunziata, usata per le scene del corteo e dell'uscita dalla chiesa dopo il matrimonio di Michael e Apollonia (la cerimonia in chiesa è girata a Savoca, nella Chiesa di San Nicolò), oltre al centro storico medievale del borgo, arroccato sopra la costa ionica."
 prenotazioni:
   - nome: "Hotel"
     citta: "Taormina"
@@ -45,14 +45,15 @@ l'attentato al padre, si innamora di Apollonia. La location più visitata è
 il **[Bar Vitelli](/locale/bar-vitelli-savoca)**, in Piazza Fossia: il bar
 dove Michael chiede formalmente al padre di Apollonia la mano della figlia,
 dentro il settecentesco Palazzo Trimarchi. Il locale non aveva nemmeno un
-nome ufficiale prima del film — oggi è praticamente identico al 1971, con
+nome ufficiale prima del film — oggi è praticamente identico a quello del film, con
 la stessa terrazza panoramica sulla vallata.
 
-## Forza d'Agrò: il matrimonio
+## Forza d'Agrò: il corteo nuziale
 
-A pochi minuti da Savoca, **Forza d'Agrò** ha fatto da sfondo alla scena del
-matrimonio tra Michael e Apollonia, girata sul sagrato della chiesa del
-borgo. È un centro medievale arroccato, con vicoli stretti e una vista che
+A pochi minuti da Savoca, **Forza d'Agrò** ha fatto da sfondo alle scene del
+corteo e dell'uscita dalla chiesa dopo il matrimonio tra Michael e Apollonia,
+girate alla Chiesa dell'Annunziata (la cerimonia in chiesa è a Savoca, nella
+Chiesa di San Nicolò). È un centro medievale arroccato, con vicoli stretti e una vista che
 spazia dalla costa ionica all'Etna nei giorni più limpidi.
 
 ## Un itinerario tra i due borghi
@@ -63,8 +64,8 @@ sud. A Savoca, oltre al Bar Vitelli, vale la sosta la Chiesa Madre e il
 belvedere sulla vallata dell'Agrò; a Forza d'Agrò, il centro storico e i
 resti del castello normanno.
 
-> Consiglio pratico: il Bar Vitelli è aperto tutto l'anno, ma nei mesi
-> estivi può essere molto affollato di turisti sulle tracce del film.
+> Consiglio pratico: il Bar Vitelli, nei mesi
+> estivi, può essere molto affollato di turisti sulle tracce del film.
 > Verifica sempre orari aggiornati prima di partire.
 
 ## In sintesi

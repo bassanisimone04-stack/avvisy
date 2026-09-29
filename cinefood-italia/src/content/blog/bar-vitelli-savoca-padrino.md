@@ -27,7 +27,7 @@ bozza: false
 ---
 
 Quando Francis Ford Coppola cercò un paese per le scene siciliane de *Il
-Padrino* (1971), la vera Corleone era ormai troppo moderna per sembrare
+Padrino* (1972), la vera Corleone era ormai troppo moderna per sembrare
 un borgo di inizio Novecento. Scelse così **Savoca**, borgo arroccato sui
 monti sopra Taormina, poco più di 1.700 abitanti. E in una piazzetta di
 questo paese si trova una delle location cinematografiche più visitate
