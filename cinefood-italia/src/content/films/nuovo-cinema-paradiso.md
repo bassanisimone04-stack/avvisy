@@ -11,7 +11,7 @@ faq:
   - domanda: "Dove è stato girato Nuovo Cinema Paradiso?"
     risposta: "Principalmente a Palazzo Adriano, in provincia di Palermo, la cui piazza con la fontana ottagonale è diventata il set del paese di Giancaldo."
   - domanda: "Cosa vedere a Palazzo Adriano sulle orme del film?"
-    risposta: "La splendida Piazza Umberto I e i bar affacciati sulla piazza, dove sostare durante la visita al borgo."
+    risposta: "La splendida Piazza Umberto I, con la fontana ottagonale, che nel film diventa la piazza di Giancaldo."
 ---
 
-<!-- DA VERIFICARE: la piazza è la location nota; i locali vanno confermati. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

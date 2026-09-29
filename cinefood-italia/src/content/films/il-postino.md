@@ -14,4 +14,4 @@ faq:
     risposta: "I sapori eoliani: pane cunzato, capperi di Salina, malvasia e piatti di pesce nelle trattorie affacciate sul mare."
 ---
 
-<!-- DA VERIFICARE: location e locali. Salina/Procida sono le isole del film. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

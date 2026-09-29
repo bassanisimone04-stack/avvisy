@@ -44,7 +44,7 @@ inquadrature del film.
 
 Per un caffè o un aperitivo con vista sul Duomo, la tappa naturale è il
 **[Duomocafè](/locale/caffe-del-duomo-crema)**, affacciato proprio sulla
-piazza-simbolo del film.
+piazza-simbolo del film (il locale in sé non è tra le location delle riprese).
 
 ## Cosa assaggiare a Crema
 

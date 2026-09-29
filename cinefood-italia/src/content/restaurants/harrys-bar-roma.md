@@ -7,14 +7,14 @@ coordinate:
   lat: 41.9075
   lng: 12.4885
 tipo: "bar"
-categoria: "set-reale"
+categoria: "legato-al-film"
 prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/harrys-bar-roma.jpg"
 immagineAlt: "L'ingresso storico di Harry's Bar su Via Vittorio Veneto a Roma"
 sitoWeb: "https://www.harrysbar.it"
-ultimoAggiornamento: 2026-09-17
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "la-dolce-vita"
     descrizioneScena: "Aperto dal 1918 su Via Veneto, fu uno dei ritrovi mondani reali del jet set fotografato dai paparazzi negli anni '50, lo stesso fenomeno raccontato da Fellini nel film."

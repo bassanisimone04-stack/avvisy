@@ -1,6 +1,6 @@
 ---
 titolo: "To Rome with Love: Woody Allen's Rome"
-descrizione: "The Rome of To Rome with Love, Woody Allen's comedy: Piazza Navona, Trastevere and where to stop for a bite."
+descrizione: "The Rome of To Rome with Love, Woody Allen's comedy: the Roman places in the film and where to stop for a bite near Piazza Navona."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/to-rome-with-love-roma.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["To Rome with Love", "Rome", "Woody Allen", "film tourism"]
 faq:
   - domanda: "Where is To Rome with Love set?"
-    risposta: "Entirely in Rome: Piazza Navona, the historic centre, Trastevere and the city's terraces."
+    risposta: "Entirely in Rome, at places in the historic centre such as Piazza del Campidoglio and the Trevi Fountain."
   - domanda: "Who directed To Rome with Love?"
     risposta: "Woody Allen (2012), after his films set in Paris and Barcelona."
   - domanda: "What should you eat in the Rome of the film?"
@@ -35,16 +35,16 @@ marked Benigni's return to a major American film after *Pinocchio*
 
 ## The Rome of the film
 
-*To Rome with Love* stages a postcard Rome: **Piazza Navona**, the streets of the
-historic centre, Trastevere and terraces with a view. It is not a single-location
+*To Rome with Love* stages a postcard Rome, with places in the historic centre such as **Piazza del Campidoglio**
+and the **Trevi Fountain**. It is not a single-location
 film but a mosaic of the city — perfect for a stroll through the capital's most
 beautiful spots.
 
 ## Where to eat in the Rome of the film
 
-The beating heart of Woody Allen's Rome is the **Piazza Navona** area. For a break
-in the heart of the scene, a coffee or an aperitivo at the
-**[Bar Navona](/en/locale/caffe-di-piazza-navona)** is the ideal stop,
+None of the venues on our list is among the film's locations. For a break near
+**Piazza Navona**, a coffee or an aperitivo at the
+**[Bar Navona](/en/locale/caffe-di-piazza-navona)** is a possible stop (it is not among the filming locations),
 between Bernini's fountains and the atmosphere of the historic centre.
 
 Rome is the city with the most food locations on our site: from historic
@@ -63,5 +63,5 @@ You will find the connected stops on the
 ## In short
 
 *To Rome with Love* is an invitation to lose yourself among the capital's squares.
-Start from **[Piazza Navona](/en/locale/caffe-di-piazza-navona)** and let Woody
+Start from **[Bar Navona](/en/locale/caffe-di-piazza-navona)** (not a film location) and let Woody
 Allen's sunny, ironic Rome guide you.

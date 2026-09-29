@@ -14,4 +14,4 @@ faq:
     risposta: "Sì: aperto nel 1720, è considerato il caffè più antico d'Italia ancora in attività, sotto le Procuratie Nuove in Piazza San Marco."
 ---
 
-<!-- DA VERIFICARE: location. Fonti: Davinotti, movie-locations.com. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

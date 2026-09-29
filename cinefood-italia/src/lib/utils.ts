@@ -26,7 +26,9 @@ export function statoLabel(stato: string, lang: Lang = "it"): string {
 /** Etichetta leggibile per la categoria. */
 export function categoriaLabel(categoria: string, lang: Lang = "it"): string {
   const t = useT(lang);
-  return categoria === "a-tema-cinema" ? t("badge.aTema") : t("badge.setReale");
+  if (categoria === "a-tema-cinema") return t("badge.aTema");
+  if (categoria === "legato-al-film") return t("badge.legato");
+  return t("badge.setReale");
 }
 
 /** Etichetta del tipo di locale nella lingua richiesta. */

@@ -7,16 +7,16 @@ coordinate:
   lat: 45.3626
   lng: 9.6866
 tipo: "caffè"
-categoria: "set-reale"
+categoria: "legato-al-film"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: true
 immagine: "../../assets/placeholder/duomocafe-crema-vero.jpg"
 immagineAlt: "Facciata e dehors di Duomocafè sotto i portici di Crema"
-ultimoAggiornamento: 2026-07-23
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "chiamami-col-tuo-nome"
-    descrizioneScena: "Piazza Duomo, cuore scenografico di Crema, la vera location del film: qui il Duomocafè è un punto di sosta reale tra le piazze e i portici sullo sfondo delle giornate estive dei protagonisti."
+    descrizioneScena: "Non risulta tra le location delle riprese: è un caffè su Piazza Duomo, la piazza di Crema dove è stata girata una scena del film, segnalato come tappa lungo l'itinerario."
 descrizione: "Caffè affacciato sulla scenografica Piazza del Duomo di Crema, tappa ideale per una pausa lungo l'itinerario tra le location del film di Guadagnino."
 ---
 

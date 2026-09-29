@@ -64,7 +64,7 @@ imperdibile per chi arriva fin qui sulle orme di Totò.
 Nel borgo, a pochi minuti dalla piazza-set, si trova lo storico
 **[Albergo Ristorante Pizzeria del Viale](/locale/bar-paradiso-palazzo-adriano)**,
 tappa reale per una sosta tra una passeggiata e l'altra nello stesso paese
-raccontato dal film.
+raccontato dal film (non è tra le location delle riprese).
 
 ## I sapori dei Monti Sicani
 

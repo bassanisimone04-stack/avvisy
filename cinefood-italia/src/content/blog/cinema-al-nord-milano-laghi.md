@@ -29,7 +29,7 @@ cinematografici internazionali, tra eleganza metropolitana, laghi e campagne.
 
 ## Milano, tra moda e cinema
 
-La Milano chic del quartiere Brera e dei suoi palazzi fa da sfondo a
+A Milano, la Galleria Vittorio Emanuele II e Villa Necchi Campiglio fanno da sfondo a
 *[House of Gucci](/film/house-of-gucci)* di Ridley Scott (2021), con la
 dinastia della moda al centro della scena — mentre le scene nella villa di
 famiglia sul lago sono girate a Villa Balbiano, sul Lago di Como. La città

@@ -81,8 +81,9 @@ buona ma non verificata che pubblicare un'informazione falsa.
 - `src/content/restaurants/*.md` — un file per locale. Campi chiave:
   `nome`, `citta`, `regione`, `indirizzo`, `coordinate`, `tipo`
   (ristorante/trattoria/bar/caffè/pasticceria/pizzeria), `categoria`
-  (`set-reale` = location reale collegata a un film, `a-tema-cinema` =
-  locale a tema cinema senza essere una vera location), `prezzo`,
+  (`set-reale` = location reale in cui si è girato davvero, `legato-al-film` = locale reale NON girato nel film (vicino al set o legato al
+  fenomeno raccontato): va dichiarato tale nella scheda e negli articoli;
+  `a-tema-cinema` = locale a tema cinema senza essere una vera location), `prezzo`,
   `stato` (aperto/chiuso/temporaneamente-chiuso), `film[]` (array,
   può avere più voci se lo stesso locale appare in più film — vedi
   Del Cambio o Caffè San Marco), `descrizione`.

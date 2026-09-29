@@ -14,7 +14,7 @@ faq:
   - domanda: "Qual è il caffè de La Dolce Vita?"
     risposta: "Il Café de Paris su Via Veneto, oggi chiuso ma simbolo della Roma di Fellini che ispirò il film — le scene di Via Veneto furono in realtà ricostruite a Cinecittà."
   - domanda: "Qual è il locale più antico tra questi cinque?"
-    risposta: "Il Café de Paris (1948) e Da Pancrazio, costruito sui resti del Teatro di Pompeo del I secolo a.C., dove secondo la tradizione fu ucciso Giulio Cesare."
+    risposta: "Tra quelli con una data di apertura verificata, Da Pancrazio (ristorante dal 1922), costruito sui resti del Teatro di Pompeo del I secolo a.C., dove secondo la tradizione fu ucciso Giulio Cesare."
 prenotazioni:
   - nome: "Hotel"
     citta: "Roma"
@@ -49,7 +49,7 @@ un'esperienza letteralmente dentro la storia antica.
 
 ## 4. Bar Navona
 Tra le fontane del Bernini, il caffè perfetto per una pausa nel salotto barocco
-della Capitale, spesso sfondo del cinema girato a Roma.
+della Capitale. Non è tra le location delle riprese di un film: lo segnaliamo solo come sosta a Piazza Navona.
 → **[Bar Navona](/locale/caffe-di-piazza-navona)**
 
 ## 5. Café de Paris — *La Dolce Vita*

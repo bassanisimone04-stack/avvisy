@@ -11,7 +11,7 @@ faq:
   - domanda: "Dove è stato girato House of Gucci in Italia?"
     risposta: "Tra Milano (con la sua moda e i suoi palazzi), il Lago di Como e Roma, oltre ad alcune località alpine."
   - domanda: "Dove vivere l'atmosfera del film a Milano?"
-    risposta: "Nei ristoranti eleganti del quartiere Brera e del centro, cuore chic della Milano raccontata nel film."
+    risposta: "Non risultano locali confermati tra le location delle riprese; nella scheda segnaliamo un ristorante del quartiere Brera, indicato come non girato nel film."
 ---
 
-<!-- DA VERIFICARE: location e locali specifici. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

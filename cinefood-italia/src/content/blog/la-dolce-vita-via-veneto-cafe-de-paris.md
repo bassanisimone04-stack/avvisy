@@ -8,7 +8,7 @@ immagineAlt: "Il dehors storico del Café de Paris su Via Veneto a Roma"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Roma", "cineturismo"]
 faq:
   - domanda: "Dove si trova il Café de Paris de La Dolce Vita?"
-    risposta: "Su Via Vittorio Veneto a Roma; aperto nel 1948, è però chiuso dal 2008."
+    risposta: "Su Via Vittorio Veneto a Roma; secondo la data più citata aperto nel 1948, è oggi chiuso."
   - domanda: "Perché Via Veneto è famosa?"
     risposta: "Fu il cuore mondano della 'dolce vita' romana degli anni '60, immortalata da Fellini tra star e paparazzi."
   - domanda: "Cosa vedere oggi in Via Veneto?"
@@ -33,7 +33,7 @@ Paris](/locale/cafe-de-paris-roma)**.
 
 ## Il Café de Paris, il vero salotto che ispirò il film
 
-Aperto nel 1948, il Café de Paris divenne l'emblema della *dolce vita* reale
+Aperto, secondo la data più citata, nel 1948, il Café de Paris divenne l'emblema della *dolce vita* reale
 di fine anni '50: tavolini all'aperto, star italiane e internazionali,
 fotografi in agguato pronti a immortalarle. È in questo clima che nacque
 anche una parola entrata nel vocabolario di tutto il mondo: **"paparazzo"**,
@@ -53,7 +53,7 @@ reale. Questo non toglie nulla al legame con il vero Café de Paris: è
 proprio lì, nella Roma reale, che il fenomeno dei paparazzi e della "dolce
 vita" nacque davvero, prima ancora di diventare set cinematografico.
 
-> Nota: il Café de Paris ha **chiuso nel 2008**, dopo un sequestro
+> Nota: il Café de Paris è oggi **chiuso**, dopo indagini e un sequestro
 > giudiziario. Da anni si parla di un progetto di riqualificazione (il
 > Comune di Roma ha annunciato investimenti sulla via), ma per ora resta
 > chiuso.

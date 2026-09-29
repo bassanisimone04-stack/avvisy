@@ -8,7 +8,7 @@ immagineAlt: "The historic entrance of Harry's Bar on Via Vittorio Veneto in Rom
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Rome", "film tourism"]
 faq:
   - domanda: "Is Harry's Bar in Rome still open?"
-    risposta: "Yes, it's still in business at the same address, Via Vittorio Veneto 150, since 1918 — unlike the nearby Café de Paris, closed since 2008."
+    risposta: "Yes, it's still in business at the same address, Via Vittorio Veneto 150, since 1918 — unlike the nearby Café de Paris, now closed."
   - domanda: "What is Harry's Bar's connection to Fellini's La Dolce Vita?"
     risposta: "In the 1950s and '60s it was one of the real high-society hangouts on Via Veneto where paparazzi photographed the international jet set — the same phenomenon Fellini portrayed in his 1960 film."
   - domanda: "Is Harry's Bar in Rome connected to the one in Venice?"
@@ -22,7 +22,7 @@ lang: "en"
 bozza: false
 ---
 
-While the Café de Paris shut its doors in 2008, a little further along
+While the Café de Paris is now shut, a little further along
 the same Via Veneto, another historic hangout of Rome's "dolce vita" is
 still open: **Harry's Bar**, at the same address since 1918.
 

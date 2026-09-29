@@ -53,7 +53,7 @@ whole archipelago.
 
 ## Where to eat in Salina
 
-For a stop at the table, the
+For a stop at the table (the venue is not among the film's locations), the
 **[Trattoria Cucinotta](/en/locale/trattoria-dell-isola-salina)** serves
 authentic Aeolian cuisine: fresh fish, Salina capers (among the finest in Italy),
 **pane cunzato** and the sweet **Malvasia delle Lipari**. Simple, intense flavours,

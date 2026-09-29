@@ -7,16 +7,16 @@ coordinate:
   lat: 41.8989
   lng: 12.4730
 tipo: "caffè"
-categoria: "set-reale"
+categoria: "legato-al-film"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/bar-navona-vero.jpg"
 immagineAlt: "Tavolini all'aperto su Piazza Navona a Roma, di sera"
-ultimoAggiornamento: 2026-07-23
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "to-rome-with-love"
-    descrizioneScena: "Tra i tavolini di Piazza Navona, una delle piazze protagoniste delle passeggiate romane della commedia di Woody Allen: qui il Bar Navona è un indirizzo reale per una sosta."
+    descrizioneScena: "Non risulta tra le location delle riprese: è un caffè su Piazza Navona, a Roma, segnalato come sosta durante un itinerario di cineturismo nella capitale."
 descrizione: "Caffè affacciato sulla scenografica Piazza Navona, tra le fontane del Bernini. Uno dei salotti all'aperto più belli di Roma, caro al cinema."
 ---
 

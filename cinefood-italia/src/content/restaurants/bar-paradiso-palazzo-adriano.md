@@ -7,16 +7,16 @@ coordinate:
   lat: 37.6885
   lng: 13.3903
 tipo: "ristorante"
-categoria: "set-reale"
+categoria: "legato-al-film"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/palazzo-adriano-piazza.jpg"
 immagineAlt: "Piazza Umberto I a Palazzo Adriano, con la fontana e la chiesa madre"
-ultimoAggiornamento: 2026-07-23
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "nuovo-cinema-paradiso"
-    descrizioneScena: "Nel borgo di Palazzo Adriano, dove la scenografica Piazza Umberto I fu trasformata nel paese di Giancaldo, cuore del set di Nuovo Cinema Paradiso: questo storico albergo-ristorante è una tappa reale per mangiare nello stesso paese del film."
+    descrizioneScena: "Non risulta tra le location delle riprese: è un albergo-ristorante di Palazzo Adriano, il paese in cui è stato girato il film, segnalato come tappa per mangiare in zona."
 descrizione: "Albergo ristorante pizzeria a Palazzo Adriano, il borgo-set del premio Oscar di Tornatore, a pochi passi dalla scenografica Piazza Umberto I. Ideale per una sosta tra storia e cinema."
 ---
 

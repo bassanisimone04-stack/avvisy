@@ -14,7 +14,7 @@ faq:
   - domanda: "What is the café from La Dolce Vita?"
     risposta: "The Café de Paris on Via Veneto, now closed but a symbol of the real Rome that inspired the film — the Via Veneto scenes were actually rebuilt at Cinecittà."
   - domanda: "Which is the oldest venue on this list?"
-    risposta: "The Café de Paris (1948) and Da Pancrazio, built over the remains of the 1st-century BC Theatre of Pompey, where tradition holds that Julius Caesar was killed."
+    risposta: "Among those with a verified opening date, Da Pancrazio (a restaurant since 1922), built over the remains of the 1st-century BC Theatre of Pompey, where tradition holds that Julius Caesar was killed."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"
@@ -51,7 +51,7 @@ and columns, are an experience literally inside ancient history.
 
 ## 4. Bar Navona
 Among Bernini's fountains, the perfect café for a break in the capital's Baroque
-living room, often a backdrop of cinema filmed in Rome.
+living room. It is not a filming location of any film: we list it only as a stop on Piazza Navona.
 → **[Bar Navona](/en/locale/caffe-di-piazza-navona)**
 
 ## 5. Café de Paris — *La Dolce Vita*

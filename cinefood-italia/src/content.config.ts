@@ -32,8 +32,8 @@ export const FASCE_PREZZO = ["€", "€€", "€€€", "€€€€"] as co
 /** Stati di apertura ammessi. */
 export const STATI = ["aperto", "chiuso", "temporaneamente-chiuso"] as const;
 
-/** Categoria: location reale di un film oppure locale a tema cinema. */
-export const CATEGORIE = ["set-reale", "a-tema-cinema"] as const;
+/** Categoria: location reale di un film, locale solo legato al film (nei dintorni del set o al fenomeno raccontato, senza riprese al suo interno) oppure locale a tema cinema. */
+export const CATEGORIE = ["set-reale", "legato-al-film", "a-tema-cinema"] as const;
 
 /**
  * COLLECTION "films" — le opere (film o serie TV).
@@ -86,7 +86,7 @@ const restaurants = defineCollection({
         lng: z.number().min(-180).max(180),
       }),
       tipo: z.enum(TIPI_LOCALE),
-      /** "set-reale" (girato davvero qui) o "a-tema-cinema" (locale a tema). */
+      /** "set-reale" (girato davvero qui), "legato-al-film" (non girato qui: nei dintorni del set o legato al fenomeno raccontato) o "a-tema-cinema" (locale a tema). */
       categoria: z.enum(CATEGORIE).default("set-reale"),
       prezzo: z.enum(FASCE_PREZZO),
       stato: z.enum(STATI).default("aperto"),

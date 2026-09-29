@@ -8,7 +8,7 @@ immagineAlt: "The historic terrace of Café de Paris on Via Veneto in Rome"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Rome", "film tourism"]
 faq:
   - domanda: "Where is the Café de Paris from La Dolce Vita?"
-    risposta: "On Via Vittorio Veneto in Rome; opened in 1948, it has however been closed since 2008."
+    risposta: "On Via Vittorio Veneto in Rome; by the most commonly cited date opened in 1948, it is however closed today."
   - domanda: "Why is Via Veneto famous?"
     risposta: "It was the worldly heart of 1960s Rome's 'dolce vita', immortalised by Fellini among stars and paparazzi."
   - domanda: "What can you see today on Via Veneto?"
@@ -34,7 +34,7 @@ No film has portrayed high-society Rome like Federico Fellini's *La Dolce Vita*
 
 ## The Café de Paris, the real hangout that inspired the film
 
-Opened in 1948, the Café de Paris became the emblem of the real *dolce vita*
+Opened, by the most commonly cited date, in 1948, the Café de Paris became the emblem of the real *dolce vita*
 of the late 1950s: outdoor tables, Italian and international stars, and
 photographers lying in wait to catch them. It's in this atmosphere that a
 word entered the vocabulary of the entire world: **"paparazzo"**, the name
@@ -54,7 +54,7 @@ from the real Café de Paris's role: it was there, on the actual street,
 that the paparazzi phenomenon and the "dolce vita" itself were born, well
 before becoming a film set.
 
-> Note: the Café de Paris **closed in 2008**, after a judicial seizure.
+> Note: the Café de Paris is now **closed**, after investigations and a judicial seizure.
 > There has long been talk of a redevelopment project (Rome's city council
 > has announced investment in the street), but for now it remains shut.
 

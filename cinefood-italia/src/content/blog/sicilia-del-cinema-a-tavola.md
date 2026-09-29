@@ -57,7 +57,7 @@ da un museo dedicato al film.
 A **Salina**, tra i colori delle Eolie che fecero da sfondo a
 *Il postino*, l'ultimo, poetico ruolo di Massimo Troisi, la
 **[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)** porta in
-tavola capperi, pane cunzato e malvasia dell'isola-set del film.
+tavola capperi, pane cunzato e malvasia dell'isola-set del film (il locale non è tra le location delle riprese).
 
 ## Màkari, tra Scopello e San Vito Lo Capo
 

@@ -14,4 +14,4 @@ faq:
     risposta: "Nelle trattorie di mare della costa ragusana, che servono i piatti siciliani amati dal commissario: pasta 'ncasciata, arancini e pesce fresco."
 ---
 
-<!-- DA VERIFICARE: location e trattorie. Fonti da confrontare prima di pubblicare. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

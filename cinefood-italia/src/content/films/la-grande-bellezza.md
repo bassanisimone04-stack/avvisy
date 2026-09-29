@@ -14,4 +14,4 @@ faq:
     risposta: "La Veranda dell'Hotel Columbus, dove è girata la cena di Jep, non risulta più attiva. Puoi però ritrovare la Roma del film nei luoghi descritti negli articoli collegati, come Palazzo Sacchetti su Via Giulia."
 ---
 
-<!-- DA VERIFICARE: location. Fonti: K-NOW Magazine, Turismo Roma. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

@@ -58,7 +58,7 @@ dedicated to the film.
 On **Salina**, amid the colors of the Aeolian Islands that formed the
 backdrop of *Il Postino*, Massimo Troisi's last, poetic role, the
 **[Trattoria Cucinotta](/en/locale/trattoria-dell-isola-salina)** serves
-capers, pane cunzato and malvasia wine from the film's island set.
+capers, pane cunzato and malvasia wine from the film's island set (the venue is not among the filming locations).
 
 ## Màkari, between Scopello and San Vito Lo Capo
 

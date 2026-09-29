@@ -1,6 +1,6 @@
 ---
 titolo: "To Rome with Love: la Roma di Woody Allen"
-descrizione: "La Roma di To Rome with Love, la commedia di Woody Allen: Piazza Navona, Trastevere e dove fermarsi a mangiare."
+descrizione: "La Roma di To Rome with Love, la commedia di Woody Allen: i luoghi romani citati dal film e dove fermarsi a mangiare vicino a Piazza Navona."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/to-rome-with-love-roma.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["To Rome with Love", "Roma", "Woody Allen", "cineturismo"]
 faq:
   - domanda: "Dove è ambientato To Rome with Love?"
-    risposta: "Interamente a Roma: Piazza Navona, il centro storico, Trastevere e le terrazze della città."
+    risposta: "Interamente a Roma, in luoghi del centro storico come Piazza del Campidoglio e la Fontana di Trevi."
   - domanda: "Chi ha diretto To Rome with Love?"
     risposta: "Woody Allen (2012), dopo i film ambientati a Parigi e Barcellona."
   - domanda: "Cosa mangiare nella Roma del film?"
@@ -34,16 +34,16 @@ Fu anche il ritorno di Benigni in un grande film americano dopo *Pinocchio*
 
 ## La Roma del film
 
-*To Rome with Love* mette in scena una Roma da cartolina: **Piazza Navona**, le
-strade del centro storico, Trastevere e le terrazze con vista. Non è un film di
+*To Rome with Love* mette in scena una Roma da cartolina, con luoghi del centro storico come **Piazza del Campidoglio**
+e la **Fontana di Trevi**. Non è un film di
 una sola location, ma un mosaico della città — perfetto per una passeggiata tra
 i luoghi più belli della Capitale.
 
 ## Dove mangiare nella Roma del film
 
-Il cuore pulsante della Roma di Woody Allen è la zona di **Piazza Navona**. Per
-una pausa nel cuore della scena, un caffè o un aperitivo al
-**[Bar Navona](/locale/caffe-di-piazza-navona)** è la sosta ideale,
+Nessun locale del nostro elenco risulta tra le location del film. Per una pausa
+vicino a **Piazza Navona**, un caffè o un aperitivo al
+**[Bar Navona](/locale/caffe-di-piazza-navona)** è una sosta possibile (non è tra le location delle riprese),
 tra le fontane del Bernini e l'atmosfera del centro storico.
 
 Roma è la città con più location gastronomiche del nostro sito: dalle trattorie
@@ -60,6 +60,6 @@ Trovi le tappe collegate alla scheda **[To Rome with Love](/film/to-rome-with-lo
 
 ## In sintesi
 
-*To Rome with Love* è un invito a perdersi tra le piazze della Capitale. Parti da
-**[Piazza Navona](/locale/caffe-di-piazza-navona)** e lasciati guidare dalla Roma
+*To Rome with Love* è un invito a perdersi tra le piazze della Capitale. Parti dal
+**[Bar Navona](/locale/caffe-di-piazza-navona)** (non è una location del film) e lasciati guidare dalla Roma
 solare e ironica di Woody Allen.

@@ -31,7 +31,7 @@ countryside.
 
 ## Milan, between fashion and cinema
 
-The chic Milan of the Brera district and its palaces is the backdrop of
+In Milan, the Galleria Vittorio Emanuele II and Villa Necchi Campiglio are the backdrop of
 *House of Gucci* by Ridley Scott (2021), with the fashion dynasty at the
 centre of the scene — while the scenes in the family's lake villa were
 filmed at Villa Balbiano, on Lake Como. The city combines design,

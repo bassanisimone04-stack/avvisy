@@ -53,7 +53,7 @@ vista su tutto l'arcipelago.
 
 ## Dove mangiare a Salina
 
-Per la sosta a tavola, la
+Per la sosta a tavola (il locale non è tra le location del film), la
 **[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)** propone la cucina
 eoliana verace: pesce fresco, capperi di Salina (tra i più pregiati d'Italia),
 **pane cunzato** e la dolce **malvasia delle Lipari**. Sapori semplici e intensi,

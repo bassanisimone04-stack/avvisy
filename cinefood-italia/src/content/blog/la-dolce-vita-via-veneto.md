@@ -10,7 +10,7 @@ faq:
   - domanda: "Dov'è ambientata La Dolce Vita?"
     risposta: "A Roma, con Via Vittorio Veneto come cuore mondano del film di Fellini."
   - domanda: "I caffè de La Dolce Vita esistono ancora?"
-    risposta: "Il Café de Paris, simbolo di Via Veneto, ha chiuso nel 2008, ma la via conserva il suo fascino."
+    risposta: "Il Café de Paris, simbolo di Via Veneto, è oggi chiuso, ma la via conserva il suo fascino."
   - domanda: "Chi ha diretto La Dolce Vita?"
     risposta: "Federico Fellini (1960), con Marcello Mastroianni e Anita Ekberg."
   - domanda: "La scena della Fontana di Trevi è girata a Via Veneto?"

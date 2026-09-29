@@ -104,7 +104,7 @@ export const filmsEn: Record<string, FilmEn> = {
       "Fellini's masterpiece with Marcello Mastroianni: the worldly, night-time Rome of Via Veneto, its cafés and the Trevi Fountain, between glamour and melancholy.",
     faq: [
       { domanda: "Where is La Dolce Vita set in Rome?", risposta: "Mostly on Via Veneto, with its elegant cafés and hotels, and at the Trevi Fountain (Anita Ekberg's famous bathe)." },
-      { domanda: "Where to soak up the film's atmosphere today?", risposta: "At the historic cafés of Via Veneto, the heart of Rome's 'dolce vita' in the 1960s." },
+      { domanda: "Where to soak up the film's atmosphere today?", risposta: "On Via Veneto: Harry's Bar is still open, while the Café de Paris is closed. Note that the film's Via Veneto scenes were rebuilt at Cinecittà." },
     ],
   },
   "il-commissario-montalbano": {
@@ -139,8 +139,8 @@ export const filmsEn: Record<string, FilmEn> = {
     sinossi:
       "Woody Allen's ensemble comedy set in Rome, among squares, alleys and restaurants of the Eternal City, in an ironic tribute to the capital.",
     faq: [
-      { domanda: "Where was To Rome with Love filmed?", risposta: "In several Roman landmarks: Piazza Navona, the Capitoline Hill, Via Margutta and the streets of the historic centre." },
-      { domanda: "Where to eat like in the film in Rome?", risposta: "In the cafés and trattorias of the historic centre, between Piazza Navona and the Pantheon, the heart of the film's Roman strolls." },
+      { domanda: "Where was To Rome with Love filmed?", risposta: "In Rome, at places in the historic centre such as Piazza del Campidoglio and the Trevi Fountain." },
+      { domanda: "Where to eat like in the film in Rome?", risposta: "Our list does not yet include a venue confirmed among the film's filming locations: see the listing for the Rome stops we suggest, which are marked as not filmed in the movie." },
     ],
   },
   "house-of-gucci": {
@@ -149,7 +149,7 @@ export const filmsEn: Record<string, FilmEn> = {
       "Ridley Scott's drama about the Gucci dynasty with Lady Gaga and Adam Driver, filmed between Milan, Lake Como and Rome, amid elegance and ambition.",
     faq: [
       { domanda: "Where was House of Gucci filmed in Italy?", risposta: "Between Milan (with its fashion and palaces), Lake Como and Rome, plus some Alpine locations." },
-      { domanda: "Where to feel the film's atmosphere in Milan?", risposta: "In the elegant restaurants of the Brera district and the centre, the chic heart of the Milan portrayed in the film." },
+      { domanda: "Where to feel the film's atmosphere in Milan?", risposta: "No venue is confirmed among the filming locations; the listing suggests a restaurant in Brera, marked as not filmed in the movie." },
     ],
   },
   "master-of-none": {
@@ -409,10 +409,10 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "caffe-del-duomo-crema": {
     descrizione: "A café overlooking Crema's scenic Piazza del Duomo, an ideal stop along the tour of Guadagnino's film locations.",
-    scena: { "chiamami-col-tuo-nome": "Piazza Duomo, the scenic heart of Crema, the film's real location: here Duomocafè is a real stop among the squares and arcades that form the backdrop to the characters' summer days." },
+    scena: { "chiamami-col-tuo-nome": "It does not appear among the filming locations: it is a café on Piazza Duomo, the Crema square where a scene of the film was shot, suggested as a stop along the itinerary." },
   },
   "cafe-de-paris-roma": {
-    descrizione: "A historic café on Via Vittorio Veneto, opened in 1948, the real heart of the Roman 'dolce vita' that inspired Fellini's film. A symbol of glamorous 1960s Rome, it closed in 2008.",
+    descrizione: "A historic café on Via Vittorio Veneto, founded, by the most commonly cited date, in 1948, the real heart of the Roman 'dolce vita' that inspired Fellini's film. A symbol of glamorous 1960s Rome, it is now closed after judicial investigations and a seizure.",
     scena: { "la-dolce-vita": "The real worldly hangout on Via Veneto that inspired Fellini: here, in real late-1950s Rome, paparazzi photographed stars and the jet set — the very scene the director later recreated on a soundstage at Cinecittà for the film." },
   },
   "enzo-a-mare-punta-secca": {
@@ -421,19 +421,19 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "bar-paradiso-palazzo-adriano": {
     descrizione: "A restaurant and pizzeria in Palazzo Adriano, the village-set of Tornatore's Oscar winner, a short walk from the scenic Piazza Umberto I. Ideal for a break between history and cinema.",
-    scena: { "nuovo-cinema-paradiso": "In the village of Palazzo Adriano, where the scenic Piazza Umberto I was turned into the town of Giancaldo, heart of the Cinema Paradiso set: this historic hotel-restaurant is a real stop to eat in the same village as the film." },
+    scena: { "nuovo-cinema-paradiso": "It does not appear among the filming locations: it is a hotel-restaurant in Palazzo Adriano, the village where the film was shot, suggested as a place to eat nearby." },
   },
   "trattoria-dell-isola-salina": {
     descrizione: "A historic trattoria in the centre of Santa Marina Salina, the island of Il Postino: pane cunzato, capers, malvasia wine and fresh fish with a view over the Aeolian sea.",
-    scena: { "il-postino": "In the historic centre of Santa Marina Salina, the island-set of Il Postino where Massimo Troisi gave life to the last, poetic role of his career: a real trattoria to taste the island's flavours." },
+    scena: { "il-postino": "It does not appear among the filming locations: it is a trattoria in Santa Marina Salina, on the island where the film was shot, suggested as a place to taste local flavours." },
   },
   "caffe-di-piazza-navona": {
     descrizione: "A café overlooking the scenic Piazza Navona, among Bernini's fountains. One of Rome's finest open-air salons, dear to cinema.",
-    scena: { "to-rome-with-love": "Among the tables of Piazza Navona, one of the squares featured in the Roman strolls of Woody Allen's comedy: Bar Navona is a real address for a stop here." },
+    scena: { "to-rome-with-love": "It does not appear among the filming locations: it is a café on Piazza Navona in Rome, suggested as a stop during a film-tourism itinerary in the capital." },
   },
   "ristorante-brera-milano": {
-    descrizione: "A historic restaurant since 1970 in the heart of Brera, Milan's bohemian-chic district. Signature Italian cuisine in an elegant setting, between art and fashion.",
-    scena: { "house-of-gucci": "In the elegant, ambitious Milan portrayed by Ridley Scott, between the Brera district and the fashion salons of the Gucci dynasty: Nabucco, open since 1970, is a real address in the same district." },
+    descrizione: "A historic restaurant founded in 1970 (under a different name) in the heart of Brera, Milan's bohemian-chic district. Signature Italian cuisine in an elegant setting, between art and fashion.",
+    scena: { "house-of-gucci": "It does not appear among the filming locations: it is a historic restaurant in Milan's Brera district, suggested only as a place to eat in the city." },
   },
   "hosteria-giusti-modena": {
     descrizione: "A four-table osteria in the heart of Modena, carved out in 1989 from the former slaughterhouse behind the historic Giusti delicatessen, running since 1598: one of Europe's oldest food shops.",

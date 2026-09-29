@@ -63,7 +63,7 @@ must-see stop for anyone visiting in Totò's footsteps.
 
 In the village, a short walk from the square-set, is the historic
 **[Albergo Ristorante Pizzeria del Viale](/en/locale/bar-paradiso-palazzo-adriano)**,
-a real stop between strolls in the very village the film portrays.
+a real stop between strolls in the very village the film portrays (it is not among the filming locations).
 
 ## The flavours of the Sicani Mountains
 

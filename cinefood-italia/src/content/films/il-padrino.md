@@ -14,4 +14,4 @@ faq:
     risposta: "Al Bar Vitelli, in Piazza Fossia, il bar dove Michael Corleone chiede al proprietario la mano della figlia Apollonia: è ancora aperto e quasi identico al 1972."
 ---
 
-<!-- DA VERIFICARE: dettagli su borghi e scene. Fonti: CNN Travel, Bar Vitelli. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

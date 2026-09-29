@@ -7,16 +7,16 @@ coordinate:
   lat: 38.5590
   lng: 14.8720
 tipo: "trattoria"
-categoria: "set-reale"
+categoria: "legato-al-film"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/trattoria-cucinotta-salina-vero.jpg"
 immagineAlt: "Terrazza colorata della Trattoria Cucinotta a Salina"
-ultimoAggiornamento: 2026-07-23
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "il-postino"
-    descrizioneScena: "Nel centro storico di Santa Marina Salina, isola-set de Il postino dove Massimo Troisi diede vita all'ultimo, poetico ruolo della sua carriera: una trattoria reale per assaggiare i sapori dell'isola."
+    descrizioneScena: "Non risulta tra le location delle riprese: è una trattoria di Santa Marina Salina, sull'isola in cui è stato girato il film, segnalata come tappa per assaggiare i sapori locali."
 descrizione: "Trattoria storica nel centro di Santa Marina Salina, l'isola de Il postino: pane cunzato, capperi, malvasia e pesce fresco con vista sul mare delle Eolie."
 ---
 

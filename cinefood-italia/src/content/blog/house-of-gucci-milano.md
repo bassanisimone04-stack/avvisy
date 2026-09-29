@@ -52,7 +52,7 @@ state girate a Roma, Firenze e persino sulle Alpi, a Gressoney.
 
 Per una cena elegante nel cuore della città, il
 **[Nabucco](/locale/ristorante-brera-milano)**, nel quartiere degli artisti
-di Brera, unisce atmosfera e cucina curata dal 1970. Scopri tutti i locali di
+di Brera, unisce atmosfera e cucina curata dal 1970 (non è tra le location del film: è solo un indirizzo del quartiere). Scopri tutti i locali di
 **[Milano](/milano)** sul nostro sito.
 
 ## Cosa assaggiare

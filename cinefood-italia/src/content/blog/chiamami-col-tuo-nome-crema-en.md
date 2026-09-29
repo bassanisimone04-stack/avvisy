@@ -45,7 +45,7 @@ film's frames.
 
 For a coffee or an aperitivo with a view of the Duomo, the natural stop is the
 **[Duomocafè](/en/locale/caffe-del-duomo-crema)**, overlooking the very
-square that symbolises the film.
+square that symbolises the film (the café itself is not among the filming locations).
 
 ## What to taste in Crema
 

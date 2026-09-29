@@ -45,12 +45,16 @@ const base =
           ? onImage
             ? "bg-noir-950/85 text-gold-300 shadow-sm backdrop-blur-sm"
             : "bg-gold-500/15 text-gold-700 dark:text-gold-300"
+          : categoria === "legato-al-film"
+            ? onImage
+              ? "bg-noir-950/85 text-cream-200 shadow-sm backdrop-blur-sm"
+              : "bg-ink-500/15 text-ink-700 dark:text-ink-300"
           : onImage
             ? "bg-noir-950/85 text-purple-200 shadow-sm backdrop-blur-sm"
             : "bg-purple-500/15 text-purple-700 dark:text-purple-300",
       ]}
     >
-      {categoria === "set-reale" ? <Icon name="film" class="h-3.5 w-3.5" /> : <Icon name="sparkle" class="h-3.5 w-3.5" />} {categoriaLabel(categoria, lang)}
+      {categoria === "set-reale" ? <Icon name="film" class="h-3.5 w-3.5" /> : categoria === "legato-al-film" ? <Icon name="pin" class="h-3.5 w-3.5" /> : <Icon name="sparkle" class="h-3.5 w-3.5" />} {categoriaLabel(categoria, lang)}
     </span>
   )
 }

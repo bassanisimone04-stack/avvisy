@@ -9,9 +9,9 @@ locandinaAlt: "Locandina in stile manifesto — To Rome with Love (2012)"
 citta: ["Roma"]
 faq:
   - domanda: "Dove è stato girato To Rome with Love?"
-    risposta: "In diversi luoghi simbolo di Roma: Piazza Navona, il Campidoglio, Via Margutta e le vie del centro storico."
+    risposta: "A Roma, in luoghi del centro storico come Piazza del Campidoglio e la Fontana di Trevi."
   - domanda: "Dove mangiare come nel film a Roma?"
-    risposta: "Nei caffè e nelle trattorie del centro storico, tra Piazza Navona e il Pantheon, cuore delle passeggiate romane del film."
+    risposta: "Il nostro elenco non contiene ancora un locale confermato tra le location delle riprese: consulta la scheda per le tappe che segnaliamo a Roma, indicate come non girate nel film."
 ---
 
-<!-- DA VERIFICARE: location e locali specifici. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

@@ -24,10 +24,12 @@ descrizione: "Storico ristorante ricavato sopra i resti dell'antico Teatro di Po
 <!-- Apparizione documentata tra le location romane di Mangia prega ama
      (2010). Verificato il 2026-09-29 (solo via ricerca): indirizzo Piazza del
      Biscione 92, sito ristorantepancrazio.it, ristorante dal 1922 sui resti
-     del Teatro di Pompeo (Turismo Roma). ATTENZIONE: il collegamento al film
-     risulta solo da fonti di secondo livello (Metropolitan Magazine,
-     Davinotti); nessuna fonte primaria (Italy for Movies, film commission)
-     l'ha confermato in questa verifica. Da confermare a mano. -->
+     del Teatro di Pompeo (Turismo Roma). Collegamento al film: confermato da
+     più fonti editoriali indipendenti (Scatti di Gusto, "Il food porn di
+     Julia Roberts è a Roma", 2010; Metropolitan Magazine; Wikipedia IT),
+     che elencano Da Pancrazio, Santa Lucia e Vecchio Orso tra i ristoranti
+     romani del film. NON confermato da una fonte istituzionale (Italy for
+     Movies non raggiungibile in sessione): verificare a mano. -->
 
 Cenare Da Pancrazio significa mangiare letteralmente dentro la storia di Roma:
 le sale inferiori sorgono sui resti del Teatro di Pompeo, del I secolo a.C.

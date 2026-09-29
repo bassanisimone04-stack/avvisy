@@ -14,4 +14,4 @@ faq:
     risposta: "Al ristorante Le Gatte, sul porto, dove è ambientata la cena tra colleghi, e nei bar della piazzetta affacciata sul mare."
 ---
 
-<!-- DA VERIFICARE: location. Fonti: Sky TG24, Fanpage. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

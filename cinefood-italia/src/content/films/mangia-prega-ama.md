@@ -16,4 +16,4 @@ faq:
     risposta: "Sì, sono locali realmente esistenti nel centro di Roma. Verifica sempre orari e disponibilità prima di andare."
 ---
 
-<!-- DA VERIFICARE: location. Fonti: Scatti di Gusto, Rome and Italy. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

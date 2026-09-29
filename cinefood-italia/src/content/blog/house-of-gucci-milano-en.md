@@ -53,7 +53,7 @@ even in the Alps, at Gressoney.
 
 For an elegant dinner in the heart of the city, the
 **[Nabucco](/en/locale/ristorante-brera-milano)**, in the Brera artists'
-district, combines atmosphere and careful cuisine since 1970. Discover all
+district, combines atmosphere and careful cuisine since 1970 (it is not a filming location: just an address in the district). Discover all
 the venues of **[Milan](/en/milano)** on our site.
 
 ## What to taste

@@ -14,5 +14,4 @@ faq:
     risposta: "Nelle trattorie storiche di Roma che servono i piatti della tradizione popolare, come quelli amati da Nando Mericoni."
 ---
 
-<!-- DA VERIFICARE: dettagli e location. La scena dei maccheroni è girata in
-     interni; verificare eventuali trattorie collegate prima di pubblicare. -->
+<!-- Audit 2026-09-29: locali collegati verificati (o declassati a "legato-al-film") nelle rispettive schede; le affermazioni sulle location del film in questa scheda sono state ricontrollate via ricerca web (fonti di settore/film commission). Fonti dei siti esterni non raggiungibili in sessione: verificare a mano. -->

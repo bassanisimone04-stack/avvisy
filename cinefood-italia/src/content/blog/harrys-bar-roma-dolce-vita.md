@@ -8,7 +8,7 @@ immagineAlt: "L'ingresso storico di Harry's Bar su Via Vittorio Veneto a Roma"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Roma", "cineturismo"]
 faq:
   - domanda: "Harry's Bar a Roma esiste ancora?"
-    risposta: "Sì, è ancora in attività allo stesso indirizzo, Via Vittorio Veneto 150, dal 1918 — a differenza del vicino Café de Paris, chiuso dal 2008."
+    risposta: "Sì, è ancora in attività allo stesso indirizzo, Via Vittorio Veneto 150, dal 1918 — a differenza del vicino Café de Paris, oggi chiuso."
   - domanda: "Che legame ha Harry's Bar con La Dolce Vita di Fellini?"
     risposta: "Negli anni '50 e '60 era uno dei ritrovi mondani reali di Via Veneto dove i paparazzi fotografavano il jet set internazionale, lo stesso fenomeno raccontato da Fellini nel film del 1960."
   - domanda: "Harry's Bar di Roma è collegato a quello di Venezia?"
@@ -21,7 +21,7 @@ esperienze:
 bozza: false
 ---
 
-Mentre il Café de Paris ha chiuso i battenti nel 2008, poco più avanti
+Mentre il Café de Paris è oggi chiuso, poco più avanti
 sulla stessa Via Veneto un altro storico ritrovo della "dolce vita"
 romana è ancora aperto: **Harry's Bar**, dal 1918 allo stesso indirizzo.
 
