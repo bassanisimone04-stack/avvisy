@@ -84,6 +84,8 @@ find the address and map on the **[Pizzeria da
 Michele](/en/locale/pizzeria-da-michele-napoli)** page and the film's other
 locations on **[Eat Pray Love](/en/film/mangia-prega-ama)**.
 
+Want the film's other locations, from Piazza Navona to Villa Borghese? See **[Eat Pray Love Filming Locations: Rome and Naples](/en/blog/eat-pray-love-location-roma-napoli)**.
+
 ## A fame that crossed borders
 
 Da Michele's success — partly thanks to the film — is such that affiliated

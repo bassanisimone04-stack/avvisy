@@ -1,5 +1,5 @@
 ---
-titolo: "The Godfather Filming Locations in Sicily"
+titolo: "The Godfather in Forza d'Agrò and Savoca: Locations"
 descrizione: "Where The Godfather was filmed in Sicily: Savoca, Forza d'Agrò and Al Pacino's Bar Vitelli. A complete guide to the film's real locations."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-25
@@ -14,7 +14,7 @@ faq:
   - domanda: "Does Bar Vitelli really exist?"
     risposta: "Yes, it's a real bar on Piazza Fossia in Savoca, inside the 18th-century Palazzo Trimarchi: it's where Michael Corleone (Al Pacino) asks for Apollonia's hand, and it's still open today."
   - domanda: "What's worth seeing in Forza d'Agrò related to the film?"
-    risposta: "The Annunziata church, used for the procession and church-exit scenes after Michael and Apollonia's wedding (the ceremony itself is shot in Savoca, at the Church of San Nicolò), along with the village's medieval old town, perched above the Ionian coast."
+    risposta: "The church of Santissima Annunziata, which appears in the trilogy's Sicilian scenes (Michael and Apollonia's ceremony itself is shot in Savoca, at the Church of San Nicolò), along with the village's medieval old town, perched above the Ionian coast."
 prenotazioni:
   - nome: "Hotel"
     citta: "Taormina"
@@ -49,12 +49,12 @@ her hand, inside the 18th-century Palazzo Trimarchi. The venue didn't even
 have an official name before the film — today it looks almost identical to how it looks in the film,
 with the same panoramic terrace over the valley.
 
-## Forza d'Agrò: the wedding procession
+## Forza d'Agrò: the Annunziata church
 
-A few minutes from Savoca, **Forza d'Agrò** provided the backdrop for
-the procession and church-exit scenes after Michael and Apollonia's wedding,
-shot at the Annunziata church (the ceremony itself is in Savoca, at the
-Church of San Nicolò). It's a
+A few minutes from Savoca, **Forza d'Agrò** appears in the Godfather trilogy:
+the **church of Santissima Annunziata** is among the places used for the
+Sicilian scenes. Michael and Apollonia's ceremony itself is shot in Savoca, at the
+Church of San Nicolò. It's a
 medieval hilltop village with narrow lanes and, on clear days, views
 stretching from the Ionian coast to Mount Etna.
 

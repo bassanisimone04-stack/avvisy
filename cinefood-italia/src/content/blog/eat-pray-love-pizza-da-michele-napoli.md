@@ -82,6 +82,8 @@ Vesuvio. Trovi indirizzo e mappa alla scheda **[Pizzeria da
 Michele](/locale/pizzeria-da-michele-napoli)** e gli altri luoghi del film su
 **[Mangia prega ama](/film/mangia-prega-ama)**.
 
+Vuoi vedere anche le altre location del film, da Piazza Navona a Villa Borghese? Le trovi in **[Mangia prega ama: location a Roma e Napoli](/blog/eat-pray-love-location-roma-napoli)**.
+
 ## Un successo che ha varcato i confini
 
 Il successo (anche cinematografico) di Da Michele è tale che oggi esistono

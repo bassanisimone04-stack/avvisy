@@ -1,5 +1,5 @@
 ---
-titolo: "Il Padrino: dove è stato girato in Sicilia"
+titolo: "Il Padrino a Forza d'Agrò e Savoca: le location"
 descrizione: "Dove è stato girato Il Padrino in Sicilia: Savoca, Forza d'Agrò e il Bar Vitelli di Al Pacino. Guida completa alle location vere del film."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25
@@ -14,7 +14,7 @@ faq:
   - domanda: "Il Bar Vitelli esiste davvero?"
     risposta: "Sì, è un bar reale in Piazza Fossia a Savoca, dentro il settecentesco Palazzo Trimarchi: è il luogo dove Michael Corleone (Al Pacino) chiede la mano di Apollonia, ed è ancora aperto oggi."
   - domanda: "Cosa vedere a Forza d'Agrò legato al film?"
-    risposta: "La Chiesa dell'Annunziata, usata per le scene del corteo e dell'uscita dalla chiesa dopo il matrimonio di Michael e Apollonia (la cerimonia in chiesa è girata a Savoca, nella Chiesa di San Nicolò), oltre al centro storico medievale del borgo, arroccato sopra la costa ionica."
+    risposta: "La Chiesa della Santissima Annunziata, che compare nelle scene siciliane della trilogia (la cerimonia di Michael e Apollonia è invece girata a Savoca, nella Chiesa di San Nicolò), oltre al centro storico medievale del borgo, arroccato sopra la costa ionica."
 prenotazioni:
   - nome: "Hotel"
     citta: "Taormina"
@@ -48,12 +48,12 @@ dentro il settecentesco Palazzo Trimarchi. Il locale non aveva nemmeno un
 nome ufficiale prima del film — oggi è praticamente identico a quello del film, con
 la stessa terrazza panoramica sulla vallata.
 
-## Forza d'Agrò: il corteo nuziale
+## Forza d'Agrò: la chiesa dell'Annunziata
 
-A pochi minuti da Savoca, **Forza d'Agrò** ha fatto da sfondo alle scene del
-corteo e dell'uscita dalla chiesa dopo il matrimonio tra Michael e Apollonia,
-girate alla Chiesa dell'Annunziata (la cerimonia in chiesa è a Savoca, nella
-Chiesa di San Nicolò). È un centro medievale arroccato, con vicoli stretti e una vista che
+A pochi minuti da Savoca, **Forza d'Agrò** compare nella trilogia del Padrino:
+la **Chiesa della Santissima Annunziata** è tra i luoghi usati per le scene
+siciliane. La cerimonia di Michael e Apollonia è invece girata a Savoca, nella
+Chiesa di San Nicolò. È un centro medievale arroccato, con vicoli stretti e una vista che
 spazia dalla costa ionica all'Etna nei giorni più limpidi.
 
 ## Un itinerario tra i due borghi
