@@ -35,8 +35,8 @@ si rimette in sesto dopo un agguato si chiama "Altamonte" e non esiste:
 Le riprese hanno interessato Atrani e, in Costiera, anche **Maiori** e
 **Minori**. Per trasformare la piazzetta nel paese immaginario del film,
 la produzione ha **sostituito le insegne** di quasi tutte le botteghe
-affacciate sulla piazza, allestendo una panetteria, un alimentari, una
-ferramenta e un barbiere di scena. Gli edifici, i vicoli e le scalinate,
+affacciate sulla piazza, allestendo una panetteria, un alimentari e una
+ferramenta di scena. Gli edifici, i vicoli e le scalinate,
 invece, sono esattamente quelli veri.
 
 ## Il Ristorante Savò, l'"Aminah's Cafe" del film

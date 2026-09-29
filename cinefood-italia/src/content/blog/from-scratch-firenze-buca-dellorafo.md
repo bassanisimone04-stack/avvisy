@@ -44,7 +44,7 @@ Nella serie, Lino lavora come chef alla
 fiorentina in via dei Girolami, a due passi da **Ponte Vecchio**. Il nome
 richiama la tradizione delle "buche" fiorentine — locali storici ricavati
 a livello strada o seminterrato nel cuore della città vecchia — e la Buca
-dell'Orafo è tra le più antiche e conosciute, con una cucina toscana
+dell'Orafo è una delle trattorie storiche del centro, con una cucina toscana
 schietta e senza fronzoli.
 
 ## Un itinerario tra le location della serie

@@ -28,8 +28,8 @@ still open: **Harry's Bar**, at the same address since 1918.
 
 ## A century of history on Via Veneto
 
-Born as "Golden Gate" in 1918, the venue took its current name in the
-1960s, becoming the American Bar and restaurant it still is today. On
+Born as "Golden Gate" in 1918, the venue later took its current name,
+1950, becoming the American Bar and restaurant it still is today. On
 its own official website, Harry's Bar dedicates a page to its history
 tied precisely to the years of Fellini's "dolce vita": in the 1950s and
 '60s it was one of the hangouts where paparazzi photographed
@@ -40,7 +40,7 @@ soundstage at Cinecittà).
 ## Still open today
 
 Unlike many historic venues on the street, **[Harry's
-Bar](/en/locale/harrys-bar-roma)** never closed: it's open every day,
+Bar](/en/locale/harrys-bar-roma)** is open every day,
 with a long menu of classic cocktails and Italian cuisine, on the very
 stretch of sidewalk that was the beating heart of high-society Rome in
 the 1960s.

@@ -45,7 +45,7 @@ In the series, Lino works as a chef at
 Florentine trattoria on Via dei Girolami, a short walk from **Ponte
 Vecchio**. The name recalls the Florentine tradition of "buche" —
 historic venues set at street level or below ground in the old city
-centre — and Buca dell'Orafo is among the oldest and best known, serving
+centre — and Buca dell'Orafo is one of the centre's historic trattorias, serving
 straightforward, no-frills Tuscan cooking.
 
 ## An itinerary along the show's locations

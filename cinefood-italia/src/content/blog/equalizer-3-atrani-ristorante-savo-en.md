@@ -36,7 +36,7 @@ it's **Atrani**, Italy's smallest municipality by area, barely 0.12 km²
 Filming covered Atrani and, elsewhere on the coast, **Maiori** and
 **Minori**. To turn the little square into the film's fictional village,
 the production **replaced the signs** on almost every shop facing it,
-dressing a bakery, a grocery, a hardware store and a barber's for the
+dressing a bakery, a grocery and a hardware store for the
 camera. The buildings, alleys and stairways, though, are exactly the real
 ones.
 

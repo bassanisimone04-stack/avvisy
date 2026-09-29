@@ -53,8 +53,7 @@ Royale* sia il primo bacio tra Anakin e Padmé in *Star Wars - Episodio II*.
 
 La cucina del Nord è sostanziosa e raffinata: a Milano il **risotto allo
 zafferano** e la **cotoletta**, sul Lago di Como il **risotto con pesce
-persico** e i **missoltini**, sul Lago di Garda i **pizzoccheri** della
-vicina Valtellina. Un itinerario che unisce metropoli e natura, senza mai
+persico** e i **missoltini**, e dalla vicina Valtellina i **pizzoccheri**. Un itinerario che unisce metropoli e natura, senza mai
 rinunciare alla buona tavola.
 
 ---

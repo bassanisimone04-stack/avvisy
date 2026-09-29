@@ -27,8 +27,8 @@ romana è ancora aperto: **Harry's Bar**, dal 1918 allo stesso indirizzo.
 
 ## Un secolo di storia su Via Veneto
 
-Nato come "Golden Gate" nel 1918, il locale prese il nome attuale negli
-anni '60, diventando l'American Bar e ristorante che è ancora oggi. Sul
+Nato come "Golden Gate" nel 1918, il locale prese poi il nome attuale,
+diventando l'American Bar e ristorante che è ancora oggi. Sul
 proprio sito ufficiale, Harry's Bar dedica una pagina alla propria
 storia legata proprio agli anni della "dolce vita" felliniana: negli
 anni '50 e '60 era uno dei ritrovi dove i paparazzi fotografavano dive e
@@ -38,7 +38,7 @@ film del 1960 (ricreando però Via Veneto in studio, a Cinecittà).
 ## Ancora oggi in attività
 
 A differenza di molti locali storici della via, **[Harry's
-Bar](/locale/harrys-bar-roma)** non ha mai chiuso: è aperto tutti i
+Bar](/locale/harrys-bar-roma)** è aperto tutti i
 giorni, con una lunga carta di cocktail classici e cucina italiana,
 nello stesso tratto di marciapiede che negli anni '60 era il cuore
 pulsante della Roma mondana.
