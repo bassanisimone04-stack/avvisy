@@ -14,7 +14,7 @@ inEvidenza: true
 immagine: "../../assets/placeholder/caffe-florian-vero.jpg"
 immagineAlt: "Interno dorato e specchiato del Caffè Florian, Venezia"
 sitoWeb: "https://www.caffeflorian.com"
-ultimoAggiornamento: 2026-07-22
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "il-talento-di-mr-ripley"
     descrizioneScena: "Ai tavoli del Florian, Tom Ripley incontra Marge e il padre di Dickie: una delle scene veneziane più note del film."
@@ -23,7 +23,9 @@ descrizione: "Aperto nel 1720 sotto le Procuratie Nuove, è considerato il caff�
 
 <!-- Apparizione documentata (Il talento di Mr. Ripley, Anthony Minghella,
      1999): il Florian è più volte citato tra le sue location veneziane.
-     Verifica comunque indirizzo, orari e prezzi prima di pubblicare. -->
+     Verificato il 2026-09-29 (via ricerca): Piazza San Marco 57, aperto dal 1720;
+     la scena sotto le Procuratie con Marge e Mr Greenleaf è riportata da
+     IMDb/sceen-it/movie-locations (fonti di settore, non primarie). -->
 
 Il Florian è un pezzo di storia veneziana dal 1720. Le sue salette, ognuna con
 un nome e uno stile diverso, e l'orchestrina in piazza ne fanno una tappa

@@ -13,8 +13,8 @@ stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/da-pancrazio-vero.jpg"
 immagineAlt: "Sala sotterranea di Da Pancrazio tra gli archi del Teatro di Pompeo"
-sitoWeb: "https://www.dapancrazio.it"
-ultimoAggiornamento: 2026-07-22
+sitoWeb: "https://www.ristorantepancrazio.it"
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "mangia-prega-ama"
     descrizioneScena: "Tra le trattorie romane che fanno da sfondo alla parte italiana del film, con la protagonista alla scoperta della cucina locale."
@@ -22,7 +22,12 @@ descrizione: "Storico ristorante ricavato sopra i resti dell'antico Teatro di Po
 ---
 
 <!-- Apparizione documentata tra le location romane di Mangia prega ama
-     (2010). Verifica indirizzo, orari e sito web prima di pubblicare. -->
+     (2010). Verificato il 2026-09-29 (solo via ricerca): indirizzo Piazza del
+     Biscione 92, sito ristorantepancrazio.it, ristorante dal 1922 sui resti
+     del Teatro di Pompeo (Turismo Roma). ATTENZIONE: il collegamento al film
+     risulta solo da fonti di secondo livello (Metropolitan Magazine,
+     Davinotti); nessuna fonte primaria (Italy for Movies, film commission)
+     l'ha confermato in questa verifica. Da confermare a mano. -->
 
 Cenare Da Pancrazio significa mangiare letteralmente dentro la storia di Roma:
 le sale inferiori sorgono sui resti del Teatro di Pompeo, del I secolo a.C.

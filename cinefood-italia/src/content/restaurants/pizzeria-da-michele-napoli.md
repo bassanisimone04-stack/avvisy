@@ -2,7 +2,7 @@
 nome: "L'Antica Pizzeria da Michele"
 citta: "Napoli"
 regione: "Campania"
-indirizzo: "Via Cesare Sersale 1/3, 80139 Napoli NA"
+indirizzo: "Via Cesare Sersale 1, 80139 Napoli NA"
 coordinate:
   lat: 40.8497
   lng: 14.2637
@@ -12,8 +12,9 @@ prezzo: "€"
 stato: "aperto"
 inEvidenza: true
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
+sitoWeb: "https://www.damichele.net"
 immagineAlt: "Ingresso storico dell'Antica Pizzeria da Michele in Via Cesare Sersale a Napoli, con una pizza margherita in primo piano"
-ultimoAggiornamento: 2026-07-24
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "mangia-prega-ama"
     descrizioneScena: "È la pizzeria dove Liz (Julia Roberts) assapora la celebre pizza margherita napoletana, in una delle scene 'food' più iconiche del film."
@@ -22,8 +23,10 @@ descrizione: "Fondata nel 1870 nel quartiere Forcella, è una delle pizzerie pi�
 
 <!-- Apparizione documentata: Mangia prega ama (Eat Pray Love, 2010) —
      la scena della pizza napoletana con Julia Roberts è girata proprio
-     a L'Antica Pizzeria da Michele, in Via Cesare Sersale. Verifica
-     orari e disponibilità prima di andare: spesso c'è da attendere. -->
+     a L'Antica Pizzeria da Michele, in Via Cesare Sersale. Verificato
+     il 2026-09-29 (via ricerca): Via Cesare Sersale 1, sito damichele.net;
+     Italy for Movies riporta Da Michele tra le location di Mangia prega
+     ama a Napoli. Verifica orari prima di andare: spesso c'è da attendere. -->
 
 Nel cuore di Forcella, **L'Antica Pizzeria da Michele** è un tempio della pizza
 napoletana dal 1870. Qui è ambientata la scena in cui Julia Roberts, in

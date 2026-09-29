@@ -13,8 +13,8 @@ stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/del-cambio-torino.jpg"
 immagineAlt: "La sala storica del Ristorante Del Cambio in Piazza Carignano a Torino"
-sitoWeb: "https://delcambio.it"
-ultimoAggiornamento: 2026-08-11
+sitoWeb: "https://ristorantedelcambio.it"
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "corro-da-te"
     descrizioneScena: "La cena di Gianni e Chiara dopo l'esibizione al Teatro Regio: la coppia siede nella sala storica del ristorante, lei divertita dalla goffaggine di lui."
@@ -25,7 +25,7 @@ descrizione: "Ristorante storico di Piazza Carignano, aperto dal 1757 di fronte 
 
 <!-- Locale reale verificato: Ristorante Del Cambio, Piazza Carignano 2,
      Torino — una stella Michelin nella Guida Michelin Italia, chiuso il
-     lunedì (fonti: delcambio.it, Guida Michelin).
+     lunedì (fonti: ristorantedelcambio.it, Guida Michelin; verificato 2026-09-29 via ricerca: Piazza Carignano 2, chiuso il lunedì).
      Collegamento al film verificato: Italy for Movies, portale della
      Direzione Generale Cinema e Audiovisivo del Ministero della Cultura
      con la rete delle Italian Film Commissions, scheda di "Corro da te":
