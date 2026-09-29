@@ -9,9 +9,9 @@ locandinaAlt: "Locandina in stile manifesto — La grande bellezza (2013)"
 citta: ["Roma"]
 faq:
   - domanda: "Dove è stata girata La grande bellezza a Roma?"
-    risposta: "In numerosi luoghi simbolo della città. Tra i ristoranti, la cena di Jep con Ramona è ambientata alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito, vicino al Vaticano."
+    risposta: "In numerosi luoghi simbolo della città. Tra i ristoranti, la cena di Jep con Ramona è ambientata alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito, vicino al Vaticano; l'hotel è oggi chiuso e il ristorante non risulta più attivo."
   - domanda: "Dove mangiare come ne La grande bellezza?"
-    risposta: "Alla Veranda dell'Hotel Columbus, sotto affreschi rinascimentali, per rivivere l'eleganza delle scene romane del film."
+    risposta: "La Veranda dell'Hotel Columbus, dove è girata la cena di Jep, non risulta più attiva. Puoi però ritrovare la Roma del film nei luoghi descritti negli articoli collegati, come Palazzo Sacchetti su Via Giulia."
 ---
 
 <!-- DA VERIFICARE: location. Fonti: K-NOW Magazine, Turismo Roma. -->

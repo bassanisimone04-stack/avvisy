@@ -13,9 +13,8 @@ stato: "aperto"
 inEvidenza: true
 immagine: "../../assets/placeholder/bar-vitelli-savoca.webp"
 immagineAlt: "Terrazza del Bar Vitelli a Savoca, con l'insegna storica sull'ingresso ad arco"
-sitoWeb: "https://www.barvitelli.com"
-ultimoAggiornamento: 2026-07-22
-orari: "Tutti i giorni 9:00–20:00 (da verificare)"
+sitoWeb: "https://barvitelli.it"
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "il-padrino"
     descrizioneScena: "Nel borgo di Savoca, Michael Corleone chiede al proprietario del bar la mano della figlia Apollonia."

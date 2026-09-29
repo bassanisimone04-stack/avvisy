@@ -2,7 +2,7 @@
 nome: "Albergo Ristorante Pizzeria del Viale"
 citta: "Palazzo Adriano"
 regione: "Sicilia"
-indirizzo: "Viale Vittorio Veneto 2, 90030 Palazzo Adriano PA"
+indirizzo: "Via XX Settembre 2, 90030 Palazzo Adriano PA"
 coordinate:
   lat: 37.6885
   lng: 13.3903
@@ -20,8 +20,8 @@ film:
 descrizione: "Albergo ristorante pizzeria a Palazzo Adriano, il borgo-set del premio Oscar di Tornatore, a pochi passi dalla scenografica Piazza Umberto I. Ideale per una sosta tra storia e cinema."
 ---
 
-<!-- Locale reale verificato: Albergo Ristorante Pizzeria del Viale, Viale
-     Vittorio Veneto 2, Palazzo Adriano (tel. 091 8348164, recensioni
+<!-- Locale reale verificato: Albergo Ristorante Pizzeria del Viale, Via XX
+     Settembre 2, Palazzo Adriano (indirizzo confermato da Booking.com e
      Tripadvisor). La piazza del film (Umberto I) è la vera location
      verificata; questo locale è nello stesso borgo, non sulla piazza. -->
 

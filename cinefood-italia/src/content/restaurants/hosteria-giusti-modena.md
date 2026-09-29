@@ -2,7 +2,7 @@
 nome: "Hosteria Giusti"
 citta: "Modena"
 regione: "Emilia-Romagna"
-indirizzo: "Via Luigi Carlo Farini 75, 41121 Modena MO"
+indirizzo: "Vicolo Squallore 46, 41121 Modena MO"
 coordinate:
   lat: 44.6449
   lng: 10.9271
@@ -13,6 +13,7 @@ stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/hosteria-giusti-modena-vero.jpg"
 immagineAlt: "Vetrina storica della Salumeria Giuseppe Giusti, dal 1605, accanto a Hosteria Giusti a Modena"
+sitoWeb: "https://hosteriagiusti.it"
 ultimoAggiornamento: 2026-08-09
 film:
   - film: "master-of-none"
@@ -20,8 +21,9 @@ film:
 descrizione: "Osteria di sole quattro tavoli nel cuore di Modena, ricavata nel 1989 nell'ex macello dietro la storica salumeria Giusti, attiva dal 1598: una delle botteghe gastronomiche più antiche d'Europa."
 ---
 
-<!-- Locale reale verificato: Hosteria Giusti, Via Luigi Carlo Farini 75,
-     Modena (fonti: VisitModena, Michelin Guide, Yelp, Taste Bologna).
+<!-- Locale reale verificato: Hosteria Giusti, Vicolo Squallore 46, Modena
+     (ingresso indipendente dal vicolo, che si apre su Via Farini; la
+     salumeria Giusti è al civico 75 di Via Farini). Fonti: VisitModena, Michelin Guide, Yelp, Taste Bologna, Sala e Cucina, sito ufficiale hosteriagiusti.it).
      Compare tra le location reali di Master of None stagione 2 (2017).
      Coordinate approssimate sul centro storico di Modena, via Farini. -->
 

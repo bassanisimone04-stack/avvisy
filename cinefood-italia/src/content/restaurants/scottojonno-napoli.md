@@ -13,6 +13,7 @@ stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/scottojonno-napoli-vero.jpg"
 immagineAlt: "Il bancone in stile art déco di ScottoJonno, Napoli"
+sitoWeb: "https://scottojonno.com"
 ultimoAggiornamento: 2026-08-10
 film:
   - film: "l-amica-geniale"

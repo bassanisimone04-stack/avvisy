@@ -12,7 +12,7 @@ faq:
   - domanda: "Osteria Francescana esiste davvero?"
     risposta: "Sì: è il ristorante tre stelle Michelin dello chef Massimo Bottura, in via Stella a Modena, eletto miglior ristorante del mondo nel 2016 e nel 2018 dalla classifica The World's 50 Best Restaurants."
   - domanda: "Quali altri locali reali di Modena appaiono nella serie?"
-    risposta: "Tra gli altri, la storica Hosteria Giusti (via Farini 75), aperta dal 1989 accanto alla salumeria Giusti attiva dal 1598, e il bar Cappuccino da Angiolina in Vicolo Forni."
+    risposta: "Tra gli altri, la storica Hosteria Giusti (Vicolo Squallore 46), aperta dal 1989 dietro la salumeria Giusti di via Farini 75, attiva dal 1598, e il bar Cappuccino da Angiolina in Vicolo Forni."
   - domanda: "Aziz Ansari ha davvero imparato a fare la pasta per il ruolo?"
     risposta: "Sì: l'attore e co-creatore della serie si è trasferito realmente a Modena per settimane, studiando italiano e l'arte della sfoglia prima delle riprese."
 prenotazioni:
@@ -40,8 +40,8 @@ classifica *The World's 50 Best Restaurants* sia nel 2016 sia nel 2018.
 ## Hosteria Giusti, dal 1598
 
 Tra le altre location reali della serie c'è
-**[Hosteria Giusti](/locale/hosteria-giusti-modena)**, in via Farini 75:
-quattro tavoli soltanto, ricavati nel 1989 nell'ex macello
+**[Hosteria Giusti](/locale/hosteria-giusti-modena)**, in Vicolo Squallore 46
+(la salumeria è in via Farini 75): quattro tavoli soltanto, ricavati nel 1989 nell'ex macello
 dietro la storica salumeria Giusti, attiva fin dal 1598 — tra le più
 antiche botteghe gastronomiche d'Europa. Compare anche il bar
 **Cappuccino da Angiolina**, in Vicolo Forni.

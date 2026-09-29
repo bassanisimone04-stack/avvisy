@@ -1,6 +1,6 @@
 ---
-titolo: "Roma a tavola nel cinema: 3 trattorie da film"
-descrizione: "Da Pancrazio, Trattoria Santa Lucia e La Veranda dell'Hotel Columbus: tre location romane comparse nei film, nel centro storico."
+titolo: "Roma a tavola nel cinema: 2 trattorie da film"
+descrizione: "Da Pancrazio e Trattoria Santa Lucia: due trattorie romane comparse nei film, nel centro storico. Più una nota sulla Veranda de La grande bellezza."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/roma-a-tavola-nel-cinema.jpg"
@@ -8,13 +8,13 @@ immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["Roma", "trattorie", "cinema", "itinerari"]
 faq:
   - domanda: "Quali trattorie romane sono comparse nei film?"
-    risposta: "Da Pancrazio, Trattoria Santa Lucia e La Veranda dell'Hotel Columbus, nel centro storico di Roma."
+    risposta: "Da Pancrazio e Trattoria Santa Lucia, nel centro storico di Roma."
   - domanda: "Dove mangiare nel centro storico di Roma?"
     risposta: "Tra Campo de' Fiori, Piazza Navona e il Ghetto, regno delle trattorie romane."
   - domanda: "Quali piatti romani provare?"
     risposta: "Cacio e pepe, carbonara, amatriciana, carciofi e coda alla vaccinara."
-  - domanda: "Cosa hanno in comune queste tre trattorie?"
-    risposta: "Tutte e tre sono location reali confermate (non locali a tema), nel cuore del centro storico di Roma, raggiungibili a piedi l'una dall'altra in circa 15-20 minuti."
+  - domanda: "Cosa hanno in comune queste due trattorie?"
+    risposta: "Entrambe sono location reali confermate (non locali a tema), nel cuore del centro storico di Roma, raggiungibili a piedi l'una dall'altra in circa 15-20 minuti."
 prenotazioni:
   - nome: "Hotel"
     citta: "Roma"
@@ -25,7 +25,7 @@ bozza: false
 ---
 
 Roma è da sempre una città-cinema, e le sue **trattorie** hanno fatto da
-sfondo a scene entrate nell'immaginario collettivo. Ecco tre indirizzi del
+sfondo a scene entrate nell'immaginario collettivo. Ecco due indirizzi del
 centro storico dove il grande schermo incontra la buona tavola, tutte
 raggiungibili a piedi l'una dall'altra.
 
@@ -46,11 +46,13 @@ resti del **Teatro di Pompeo**, del I secolo a.C. — lo stesso teatro dove,
 secondo la tradizione storica, fu ucciso Giulio Cesare: si cena
 letteralmente dentro la storia di Roma.
 
-## La Veranda dell'Hotel Columbus — *La grande bellezza* (2013)
+## Una nota sulla Veranda dell'Hotel Columbus — *La grande bellezza* (2013)
 
-Sotto gli affreschi rinascimentali del Palazzo della Rovere, vicino al
-Vaticano, **Paolo Sorrentino** ha ambientato una delle cene più eleganti del
-suo film premio Oscar 2014, con Jep Gambardella (Toni Servillo) e Ramona.
+Nel Palazzo della Rovere, vicino al Vaticano, **Paolo Sorrentino** ha
+ambientato la cena di Jep Gambardella (Toni Servillo) con Ramona. Non è però un
+indirizzo dove prenotare: l'Hotel Columbus è stato chiuso dopo uno sfratto e il
+ristorante non risulta più attivo. Trovi la scheda, segnata come chiusa, in
+[La Veranda dell'Hotel Columbus](/locale/la-veranda-hotel-columbus).
 
 > Suggerimento: costruisci il tuo itinerario partendo da Piazza Navona e
 > muovendoti verso Campo de' Fiori. Ricorda di verificare sempre orari e

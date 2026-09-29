@@ -13,7 +13,6 @@ stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
 immagineAlt: "Gli interni liberty dell'Antico Caffè San Marco a Trieste"
-orari: "Tutti i giorni 8:30–23:30 (domenica 9:00–21:00)"
 sitoWeb: "https://www.caffesanmarco.com"
 ultimoAggiornamento: 2026-08-11
 film:

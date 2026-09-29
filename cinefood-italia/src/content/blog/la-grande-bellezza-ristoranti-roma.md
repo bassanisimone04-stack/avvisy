@@ -1,6 +1,6 @@
 ---
 titolo: "La Grande Bellezza: i ristoranti di Roma"
-descrizione: "Dove cena Jep Gambardella ne La Grande Bellezza: La Veranda dell'Hotel Columbus e la Roma da sogno di Sorrentino."
+descrizione: "Dove cena Jep Gambardella ne La Grande Bellezza: la Veranda dell'Hotel Columbus, oggi chiusa, e la Roma da sogno di Sorrentino."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-19
 immagine: "../../assets/placeholder/la-grande-bellezza-ristoranti-roma.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["La Grande Bellezza", "Roma", "ristoranti", "cineturismo", "Sorrentino"]
 faq:
   - domanda: "Dove cena Jep Gambardella ne La Grande Bellezza?"
-    risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito a Roma, in una sala affrescata del Palazzo della Rovere."
+    risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito a Roma, nel Palazzo della Rovere. L'hotel è stato chiuso dopo uno sfratto e il ristorante non risulta più attivo."
   - domanda: "Quali luoghi di Roma compaiono nel film?"
     risposta: "Il Fontanone del Gianicolo, i Musei Capitolini, Palazzo Spada, Villa Medici e i giardini dell'Aventino."
   - domanda: "Cosa mangiare a Roma come nel film?"
@@ -18,7 +18,7 @@ faq:
   - domanda: "Chi interpreta Jep Gambardella e quando ha vinto l'Oscar il film?"
     risposta: "Toni Servillo interpreta Jep Gambardella. Il film ha vinto l'Oscar come miglior film straniero nel 2014, per la regia di Paolo Sorrentino."
 prenotazioni:
-  - nome: "Hotel Columbus"
+  - nome: "Hotel"
     citta: "Roma"
 bozza: false
 ---
@@ -34,10 +34,12 @@ indimenticabili. Ecco dove ritrovare la Roma di Jep, forchetta alla mano.
 
 Una delle cene più eleganti del film è ambientata alla
 **[Veranda dell'Hotel Columbus](/locale/la-veranda-hotel-columbus)**, in Borgo
-Santo Spirito, a due passi da San Pietro. Il ristorante si trova dentro il
-Palazzo della Rovere, in una sala del Quattrocento affrescata: una cornice
-perfetta per l'eleganza malinconica del film. È qui che Jep cena con Ramona, in
-una delle sequenze romane più raffinate.
+Santo Spirito, a due passi da San Pietro, dentro il Palazzo della Rovere. È qui
+che Jep cena con Ramona, in una delle sequenze romane più raffinate.
+
+**Attenzione:** l'Hotel Columbus è stato chiuso dopo uno sfratto e il
+ristorante non risulta più attivo, quindi non è possibile cenarci. Lo teniamo
+nella directory come testimonianza del set.
 
 ## Palazzo Sacchetti, la casa di Viola
 
@@ -66,7 +68,7 @@ Trovi le tappe collegate alla scheda del film
 
 ## In sintesi
 
-Vivere *La Grande Bellezza* significa cenare come Jep, in una sala affrescata,
-per poi perdersi tra le terrazze e le fontane di Roma. Parti dalla
-**[Veranda dell'Hotel Columbus](/locale/la-veranda-hotel-columbus)** e lasciati
-sedurre dalla Capitale.
+Ritrovare *La Grande Bellezza* oggi significa seguire Jep tra le terrazze, le
+fontane e i palazzi di Roma. La cena alla
+**[Veranda dell'Hotel Columbus](/locale/la-veranda-hotel-columbus)** resta nel
+film, ma il locale non è più attivo: parti da Palazzo Sacchetti e dal Gianicolo.

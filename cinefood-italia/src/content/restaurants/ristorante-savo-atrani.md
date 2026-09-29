@@ -2,7 +2,7 @@
 nome: "Ristorante Savò"
 citta: "Atrani"
 regione: "Campania"
-indirizzo: "Piazza Umberto I, 84010 Atrani SA"
+indirizzo: "Piazza Umberto I 6, 84010 Atrani SA"
 coordinate:
   lat: 40.6363
   lng: 14.6068

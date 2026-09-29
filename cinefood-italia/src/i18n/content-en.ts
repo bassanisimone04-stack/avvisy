@@ -76,8 +76,8 @@ export const filmsEn: Record<string, FilmEn> = {
     sinossi:
       "Winner of the Oscar for Best Foreign Film. A baroque, melancholic portrait of Rome, among terraces, palaces and atmospheric restaurants.",
     faq: [
-      { domanda: "Where was The Great Beauty filmed in Rome?", risposta: "In many of the city's landmarks. Among the restaurants, Jep's dinner with Ramona is set at La Veranda of Hotel Columbus, in Borgo Santo Spirito, near the Vatican." },
-      { domanda: "Where can you eat like in The Great Beauty?", risposta: "At La Veranda of Hotel Columbus, beneath Renaissance frescoes, to relive the elegance of the film's Roman scenes." },
+      { domanda: "Where was The Great Beauty filmed in Rome?", risposta: "In many of the city's landmarks. Among the restaurants, Jep's dinner with Ramona is set at La Veranda of Hotel Columbus, in Borgo Santo Spirito, near the Vatican; the hotel is now closed and the restaurant no longer appears to be operating." },
+      { domanda: "Where can you eat like in The Great Beauty?", risposta: "La Veranda of Hotel Columbus, where Jep's dinner was shot, no longer appears to be operating. You can still find the film's Rome in the places described in the linked articles, such as Palazzo Sacchetti on Via Giulia." },
     ],
   },
   "un-americano-a-roma": {
@@ -396,8 +396,8 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "mangia-prega-ama": "Among the Roman trattorias that form the backdrop of the film's Italian part, with the lead discovering local cuisine." },
   },
   "la-veranda-hotel-columbus": {
-    descrizione: "A restaurant with Renaissance frescoes a short walk from the Vatican, inside Hotel Columbus in Borgo Santo Spirito. Elegant atmosphere and refined cuisine.",
-    scena: { "la-grande-bellezza": "In the refined frescoed restaurant, Jep Gambardella dines with Ramona: one of the Roman scenes of the Oscar-winning film." },
+    descrizione: "Former restaurant of Hotel Columbus, in Palazzo della Rovere in Borgo Santo Spirito, where Sorrentino shot Jep and Ramona's dinner. It no longer appears to be operating.",
+    scena: { "la-grande-bellezza": "Jep Gambardella dines with Ramona here: one of the Roman scenes of the Oscar-winning film." },
   },
   "ristorante-le-gatte": {
     descrizione: "A seafood restaurant on the port of Castellabate: this is where the dinner among colleagues in Benvenuti al Sud (2010) is set, one of the highest-grossing Italian comedies ever.",
@@ -410,10 +410,6 @@ export const restaurantsEn: Record<string, RestEn> = {
   "caffe-del-duomo-crema": {
     descrizione: "A café overlooking Crema's scenic Piazza del Duomo, an ideal stop along the tour of Guadagnino's film locations.",
     scena: { "chiamami-col-tuo-nome": "Piazza Duomo, the scenic heart of Crema, the film's real location: here Duomocafè is a real stop among the squares and arcades that form the backdrop to the characters' summer days." },
-  },
-  "cinema-bistrot-milano": {
-    descrizione: "A Milanese cinema-themed bistro: vintage posters, soft lighting and a menu that plays with the great Italian films. An example of a 'themed' venue, not a real location.",
-    scena: { "la-grande-bellezza": "THEMED venue (not a real location): the room pays homage to the baroque elegance and atmosphere of The Great Beauty." },
   },
   "cafe-de-paris-roma": {
     descrizione: "A historic café on Via Vittorio Veneto, opened in 1948, the real heart of the Roman 'dolce vita' that inspired Fellini's film. A symbol of glamorous 1960s Rome, it closed in 2008.",

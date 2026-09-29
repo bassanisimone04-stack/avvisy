@@ -8,9 +8,9 @@ immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["Rome", "restaurants", "cinema", "itineraries", "film tourism"]
 faq:
   - domanda: "Which Rome restaurants have appeared in films?"
-    risposta: "Among others: La Veranda dell'Hotel Columbus (The Great Beauty), Da Pancrazio and Trattoria Santa Lucia (Eat Pray Love)."
+    risposta: "Among others: La Veranda dell'Hotel Columbus (The Great Beauty, now closed), Da Pancrazio and Trattoria Santa Lucia (Eat Pray Love)."
   - domanda: "Where does Jep dine in The Great Beauty?"
-    risposta: "At La Veranda dell'Hotel Columbus, in Borgo Santo Spirito."
+    risposta: "At La Veranda dell'Hotel Columbus, in Borgo Santo Spirito, which appears to be closed since the hotel's eviction."
   - domanda: "What is the café from La Dolce Vita?"
     risposta: "The Café de Paris on Via Veneto, now closed but a symbol of the real Rome that inspired the film — the Via Veneto scenes were actually rebuilt at Cinecittà."
   - domanda: "Which is the oldest venue on this list?"
@@ -30,9 +30,11 @@ elegant cafés and dreamlike terraces, the capital is an open-air set. Here are
 **five Roman venues** linked to cinema, with the film that made them famous and what
 to order.
 
-## 1. La Veranda dell'Hotel Columbus — *The Great Beauty*
-In the frescoed hall of Palazzo della Rovere, Jep Gambardella dines in
-Sorrentino's Oscar-winning film. Pure elegance, a stone's throw from St Peter's.
+## 1. La Veranda dell'Hotel Columbus — *The Great Beauty* (closed)
+Inside Palazzo della Rovere, Jep Gambardella dines in Sorrentino's
+Oscar-winning film. The hotel was closed after an eviction and the restaurant
+no longer appears to be operating: it remains a film location, not an address
+to book.
 → **[La Veranda dell'Hotel Columbus](/en/locale/la-veranda-hotel-columbus)**
 
 ## 2. Trattoria Santa Lucia — *Eat Pray Love*

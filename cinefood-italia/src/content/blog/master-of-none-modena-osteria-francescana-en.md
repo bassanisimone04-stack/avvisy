@@ -12,7 +12,7 @@ faq:
   - domanda: "Is Osteria Francescana a real restaurant?"
     risposta: "Yes: it's chef Massimo Bottura's three-Michelin-star restaurant on Via Stella in Modena, voted the world's best restaurant in both 2016 and 2018 by The World's 50 Best Restaurants."
   - domanda: "What other real Modena spots appear in the show?"
-    risposta: "Among others, the historic Hosteria Giusti (Via Farini 75), opened in 1989 next to the Giusti delicatessen running since 1598, and the Cappuccino da Angiolina bar on Vicolo Forni."
+    risposta: "Among others, the historic Hosteria Giusti (Vicolo Squallore 46), opened in 1989 behind the Giusti delicatessen running since 1598, and the Cappuccino da Angiolina bar on Vicolo Forni."
   - domanda: "Did Aziz Ansari really learn to make pasta for the role?"
     risposta: "Yes: the actor and co-creator actually moved to Modena for weeks, studying Italian and the art of hand-rolled pasta sheets before filming."
 lang: "en"
@@ -39,8 +39,8 @@ ranking in both 2016 and 2018.
 
 ## Hosteria Giusti, since 1598
 
-Among the show's other real locations is **Hosteria Giusti**, at Via
-Farini 75: just four tables, carved out in 1989 from the former
+Among the show's other real locations is **Hosteria Giusti**, at Vicolo
+Squallore 46 (the delicatessen is at Via Farini 75): just four tables, carved out in 1989 from the former
 slaughterhouse behind the historic Giusti delicatessen, running since
 1598 — one of Europe's oldest food shops. Also featured is the
 **Cappuccino da Angiolina** bar on Vicolo Forni.

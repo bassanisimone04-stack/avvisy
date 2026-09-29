@@ -2,7 +2,7 @@
 nome: "Buca dell'Orafo"
 citta: "Firenze"
 regione: "Toscana"
-indirizzo: "Volta dei Girolami 28r, 50122 Firenze FI"
+indirizzo: "Via dei Girolami 28/R, 50122 Firenze FI"
 coordinate:
   lat: 43.7685
   lng: 11.253
@@ -21,9 +21,9 @@ descrizione: "Storica trattoria fiorentina in via dei Girolami, a due passi da P
 ---
 
 <!-- Locale reale verificato: Buca dell'Orafo, storica trattoria fiorentina
-     in Volta dei Girolami, vicino Ponte Vecchio. DA VERIFICARE: indirizzo
-     esatto e civico (dati approssimativi da riconfermare con fonte diretta,
-     locale storico esistente da decenni).
+     in Via dei Girolami 28/R, vicino Ponte Vecchio (indirizzo confermato da
+     più elenchi, tra cui la scheda 'attività storiche' di Destination
+     Florence).
      Collegamento alla serie verificato: Italy for Movies, portale ufficiale
      location del Ministero della Cultura, scheda di From Scratch, che cita
      esplicitamente "Buca dell'orafo, in via dei Girolami, dove Lino lavora

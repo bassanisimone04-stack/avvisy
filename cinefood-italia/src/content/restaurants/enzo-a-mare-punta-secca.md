@@ -2,7 +2,7 @@
 nome: "Ristorante Enzo a Mare"
 citta: "Punta Secca"
 regione: "Sicilia"
-indirizzo: "Lungomare Amerigo Vespucci 2, 97017 Punta Secca RG"
+indirizzo: "Lungomare Amerigo Vespucci, 97017 Punta Secca, Santa Croce Camerina RG"
 coordinate:
   lat: 36.7906
   lng: 14.4890
@@ -13,6 +13,7 @@ stato: "aperto"
 inEvidenza: true
 immagine: "../../assets/placeholder/enzo-a-mare-vero.jpg"
 immagineAlt: "Veranda blu e bianca di Enzo a Mare sulla spiaggia di Punta Secca"
+sitoWeb: "https://enzoamare.it"
 ultimoAggiornamento: 2026-07-23
 film:
   - film: "il-commissario-montalbano"

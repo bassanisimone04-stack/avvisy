@@ -8,9 +8,9 @@ immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
 tags: ["Roma", "ristoranti", "cinema", "itinerari", "cineturismo"]
 faq:
   - domanda: "Quali ristoranti di Roma sono comparsi nei film?"
-    risposta: "Tra gli altri: La Veranda dell'Hotel Columbus (La Grande Bellezza), Da Pancrazio e Trattoria Santa Lucia (Mangia prega ama)."
+    risposta: "Tra gli altri: La Veranda dell'Hotel Columbus (La Grande Bellezza, oggi chiusa), Da Pancrazio e Trattoria Santa Lucia (Mangia prega ama)."
   - domanda: "Dove cena Jep ne La Grande Bellezza?"
-    risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito."
+    risposta: "Alla Veranda dell'Hotel Columbus, in Borgo Santo Spirito, che però risulta chiusa dopo lo sfratto dell'hotel."
   - domanda: "Qual è il caffè de La Dolce Vita?"
     risposta: "Il Café de Paris su Via Veneto, oggi chiuso ma simbolo della Roma di Fellini che ispirò il film — le scene di Via Veneto furono in realtà ricostruite a Cinecittà."
   - domanda: "Qual è il locale più antico tra questi cinque?"
@@ -29,9 +29,10 @@ caffè eleganti e terrazze da sogno, la Capitale è un set a cielo aperto. Ecco
 **cinque locali romani** legati al cinema, con il film che li ha resi celebri e
 cosa ordinare.
 
-## 1. La Veranda dell'Hotel Columbus — *La Grande Bellezza*
-Nella sala affrescata del Palazzo della Rovere, Jep Gambardella cena nel film
-premio Oscar di Sorrentino. Eleganza pura, a due passi da San Pietro.
+## 1. La Veranda dell'Hotel Columbus — *La Grande Bellezza* (chiusa)
+Nel Palazzo della Rovere, Jep Gambardella cena nel film premio Oscar di
+Sorrentino. L'hotel è stato chiuso dopo uno sfratto e il ristorante non risulta
+più attivo: resta come luogo del set, non come indirizzo dove prenotare.
 → **[La Veranda dell'Hotel Columbus](/locale/la-veranda-hotel-columbus)**
 
 ## 2. Trattoria Santa Lucia — *Mangia prega ama*

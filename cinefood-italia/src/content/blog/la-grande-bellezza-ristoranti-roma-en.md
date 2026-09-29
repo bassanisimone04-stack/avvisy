@@ -1,6 +1,6 @@
 ---
 titolo: "The Great Beauty: Rome's Film Restaurants"
-descrizione: "Where Jep Gambardella dines in The Great Beauty: La Veranda dell'Hotel Columbus and Sorrentino's dreamlike Rome."
+descrizione: "Where Jep Gambardella dines in The Great Beauty: La Veranda dell'Hotel Columbus, now closed, and Sorrentino's dreamlike Rome."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-19
 immagine: "../../assets/placeholder/la-grande-bellezza-ristoranti-roma.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
 tags: ["The Great Beauty", "Rome", "restaurants", "film tourism", "Sorrentino"]
 faq:
   - domanda: "Where does Jep Gambardella dine in The Great Beauty?"
-    risposta: "At La Veranda dell'Hotel Columbus, in Borgo Santo Spirito in Rome, in a frescoed hall of Palazzo della Rovere."
+    risposta: "At La Veranda dell'Hotel Columbus, in Borgo Santo Spirito in Rome, inside Palazzo della Rovere. The hotel was closed after an eviction and the restaurant no longer appears to be operating."
   - domanda: "Which places in Rome appear in the film?"
     risposta: "The Fontanone del Gianicolo, the Capitoline Museums, Palazzo Spada, Villa Medici and the Aventine gardens."
   - domanda: "What should you eat in Rome like in the film?"
@@ -19,7 +19,7 @@ faq:
     risposta: "Toni Servillo plays Jep Gambardella. The film won the Academy Award for Best Foreign Language Film in 2014, directed by Paolo Sorrentino."
 lang: "en"
 prenotazioni:
-  - nome: "Hotel Columbus"
+  - nome: "Hotel"
     citta: "Rome"
 bozza: false
 ---
@@ -35,10 +35,12 @@ scenes at the table. Here is where to find Jep's Rome, fork in hand.
 
 One of the film's most elegant dinners is set at the
 **[Veranda dell'Hotel Columbus](/en/locale/la-veranda-hotel-columbus)**, in Borgo
-Santo Spirito, a stone's throw from St Peter's. The restaurant is inside the
-Palazzo della Rovere, in a frescoed 15th-century hall: the perfect frame for the
-film's melancholy elegance. This is where Jep dines with Ramona, in one of the
-most refined Roman sequences.
+Santo Spirito, a stone's throw from St Peter's, inside Palazzo della Rovere.
+This is where Jep dines with Ramona, in one of the most refined Roman sequences.
+
+**Please note:** Hotel Columbus was closed after an eviction and the restaurant
+no longer appears to be operating, so you can't dine there. We keep it in the
+directory as a record of the set.
 
 ## Palazzo Sacchetti, Viola's home
 
@@ -68,7 +70,8 @@ You will find the connected stops on the
 
 ## In short
 
-Experiencing *The Great Beauty* means dining like Jep, in a frescoed hall, then
-losing yourself among the terraces and fountains of Rome. Start from the
-**[Veranda dell'Hotel Columbus](/en/locale/la-veranda-hotel-columbus)** and let
-the capital seduce you.
+Retracing *The Great Beauty* today means following Jep among the terraces,
+fountains and palaces of Rome. The dinner at the
+**[Veranda dell'Hotel Columbus](/en/locale/la-veranda-hotel-columbus)** remains
+in the film, but the venue is no longer open: start from Palazzo Sacchetti and
+the Janiculum.
