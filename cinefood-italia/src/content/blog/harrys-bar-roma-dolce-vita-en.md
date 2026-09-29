@@ -29,7 +29,7 @@ still open: **Harry's Bar**, at the same address since 1918.
 ## A century of history on Via Veneto
 
 Born as "Golden Gate" in 1918, the venue later took its current name,
-1950, becoming the American Bar and restaurant it still is today. On
+becoming the American Bar and restaurant it still is today. On
 its own official website, Harry's Bar dedicates a page to its history
 tied precisely to the years of Fellini's "dolce vita": in the 1950s and
 '60s it was one of the hangouts where paparazzi photographed
