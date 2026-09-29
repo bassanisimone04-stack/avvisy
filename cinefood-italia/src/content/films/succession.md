@@ -11,7 +11,7 @@ faq:
   - domanda: "Dove è stata girata Succession in Toscana?"
     risposta: "Nel Val d'Orcia: la famiglia Roy soggiorna a Villa La Foce, mentre il matrimonio del finale di terza stagione è girato a Villa Cetinale, vicino Siena."
   - domanda: "Si può mangiare in uno dei luoghi reali di Succession?"
-    risposta: "Sì: Dopolavoro La Foce, il ristorante della tenuta di Villa La Foce, è aperto al pubblico vicino Pienza."
+    risposta: "Nella tenuta di Villa La Foce c'è il ristorante Dopolavoro La Foce, aperto al pubblico vicino Pienza; non risulta però tra le location delle riprese, che riguardano la villa."
 ---
 
 <!-- Verificato: Newsweek, Distractify, The Luxe Review, Habitually Chic,

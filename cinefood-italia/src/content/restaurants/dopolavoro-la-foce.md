@@ -7,17 +7,17 @@ coordinate:
   lat: 43.0244
   lng: 11.7795
 tipo: "ristorante"
-categoria: "set-reale"
+categoria: "legato-al-film"
 prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/dopolavoro-la-foce-vero.jpg"
 immagineAlt: "Facciata rustica di Dopolavoro La Foce, nella tenuta di Villa La Foce"
 sitoWeb: "https://www.dopolavorolafoce.it"
-ultimoAggiornamento: 2026-08-09
+ultimoAggiornamento: 2026-09-29
 film:
   - film: "succession"
-    descrizioneScena: "Il ristorante della tenuta di Villa La Foce, dove la famiglia Roy soggiorna nella terza stagione di Succession, girata nel Val d'Orcia."
+    descrizioneScena: "Non risulta tra le location delle riprese: è il ristorante della tenuta di Villa La Foce, la villa dove soggiorna la famiglia Roy nella terza stagione di Succession, girata nel Val d'Orcia."
 descrizione: "Ristorante nella storica tenuta di Villa La Foce, nel Val d'Orcia: nato nel 1939 come circolo ricreativo per i lavoratori della tenuta, oggi propone cucina toscana con ortaggi dell'orto della villa, a pochi chilometri da Pienza e Montepulciano."
 ---
 
@@ -26,6 +26,8 @@ descrizione: "Ristorante nella storica tenuta di Villa La Foce, nel Val d'Orcia:
      sito ufficiale dopolavorolafoce.it, tel. 0578 754025). Villa La Foce è
      la vera tenuta usata come casa dei Roy nella terza stagione di
      Succession (fonti: Newsweek, The Luxe Review, Habitually Chic).
+     Il ristorante in sé NON risulta tra le location delle riprese (verifica
+     2026-09-29: le fonti lo citano solo come ristorante della tenuta).
      Coordinate approssimate sulla zona di Strada della Vittoria/La Foce. -->
 
 Costruito nel 1939 come circolo ricreativo per i lavoratori della tenuta

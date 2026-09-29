@@ -1,6 +1,6 @@
 ---
 titolo: "Succession: The Real Tuscany of Villa La Foce"
-descrizione: "Where Succession was filmed in Tuscany: Villa La Foce, Villa Cetinale and the Val d'Orcia, with Dopolavoro La Foce, the estate's real restaurant."
+descrizione: "Where Succession was filmed in Tuscany: Villa La Foce, Villa Cetinale and the Val d'Orcia, plus the estate's restaurant, Dopolavoro La Foce (not a set)."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
 immagine: "../../assets/placeholder/succession-toscana-villa-la-foce.jpg"
@@ -10,7 +10,7 @@ faq:
   - domanda: "Where was Succession filmed in Tuscany?"
     risposta: "In the Val d'Orcia, between Villa La Foce, where the Roy family stays, and Villa Cetinale near Siena, the wedding location in the season 3 finale."
   - domanda: "Does Villa La Foce have a real restaurant?"
-    risposta: "Yes, it's called Dopolavoro La Foce, open to guests on the estate itself, at Strada della Vittoria 90, in the La Foce hamlet."
+    risposta: "The estate has a restaurant, Dopolavoro La Foce, open to the public at Strada della Vittoria 90, in the La Foce hamlet; it is not listed among the filming locations, though."
   - domanda: "Can you visit Villa La Foce?"
     risposta: "Yes: the 15th-century estate, with its famous gardens redesigned in the 1920s for Iris Origo by landscape architect Cecil Pinsent, offers guided tours in season."
   - domanda: "What other Italian locations appear in Succession?"
@@ -47,10 +47,10 @@ the same territory of **pici pasta**, **Vino Nobile** and **pecorino
 cheese** told in our article on
 **[Under the Tuscan Sun in Cortona](/en/blog/under-the-tuscan-sun-toscana-cortona)**.
 
-## Dopolavoro La Foce, the real restaurant
+## Dopolavoro La Foce, the estate's restaurant
 
-Unlike many productions, here you can actually eat in the same place:
-**Dopolavoro La Foce**, the estate's restaurant, is open to the public at
+On the same estate you can also eat (the restaurant is not listed among the
+filming locations): **Dopolavoro La Foce**, the estate's restaurant, is open to the public at
 Strada della Vittoria 90, with a kitchen built around ingredients from
 the surrounding gardens and hills.
 

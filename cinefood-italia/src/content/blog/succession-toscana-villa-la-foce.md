@@ -1,6 +1,6 @@
 ---
 titolo: "Succession: la Toscana vera di Villa La Foce"
-descrizione: "Dove è stata girata Succession in Toscana: Villa La Foce, Villa Cetinale e il Val d'Orcia, con Dopolavoro La Foce, il ristorante reale della tenuta."
+descrizione: "Dove è stata girata Succession in Toscana: Villa La Foce, Villa Cetinale e il Val d'Orcia, più il ristorante della tenuta, Dopolavoro La Foce (non è un set)."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
 immagine: "../../assets/placeholder/succession-toscana-villa-la-foce.jpg"
@@ -10,7 +10,7 @@ faq:
   - domanda: "Dove è stata girata Succession in Toscana?"
     risposta: "Nel Val d'Orcia, tra Villa La Foce, dove alloggia la famiglia Roy, e Villa Cetinale vicino Siena, location del matrimonio nel finale della terza stagione."
   - domanda: "Villa La Foce ha un ristorante vero?"
-    risposta: "Sì, si chiama Dopolavoro La Foce, aperto agli ospiti nella tenuta stessa, in Strada della Vittoria 90, in località La Foce."
+    risposta: "Nella tenuta c'è un ristorante, Dopolavoro La Foce, aperto al pubblico in Strada della Vittoria 90, in località La Foce; non risulta però tra le location delle riprese."
   - domanda: "Si può visitare Villa La Foce?"
     risposta: "Sì: la tenuta cinquecentesca, con i celebri giardini disegnati negli anni '20 per Iris Origo dall'architetto Cecil Pinsent, organizza visite guidate in stagione."
   - domanda: "Quali altri luoghi italiani appaiono in Succession?"
@@ -47,10 +47,10 @@ della serie — la stessa zona di **pici**, **Vino Nobile** e **pecorino**
 raccontata anche nel nostro articolo su
 **[Under the Tuscan Sun a Cortona](/blog/under-the-tuscan-sun-toscana-cortona)**.
 
-## Dopolavoro La Foce, il ristorante reale
+## Dopolavoro La Foce, il ristorante della tenuta
 
-A differenza di molte produzioni, qui si può anche mangiare davvero nello
-stesso luogo: **[Dopolavoro La Foce](/locale/dopolavoro-la-foce)**, il
+Nella stessa tenuta si può anche mangiare (il ristorante non risulta tra le
+location delle riprese): **[Dopolavoro La Foce](/locale/dopolavoro-la-foce)**, il
 ristorante della tenuta, è aperto al pubblico in Strada della Vittoria
 90, con una cucina che valorizza gli ingredienti dell'orto e delle
 colline circostanti.

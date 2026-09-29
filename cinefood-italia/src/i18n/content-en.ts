@@ -166,7 +166,7 @@ export const filmsEn: Record<string, FilmEn> = {
       "The Emmy-winning HBO series about the Roy family. The wedding in the season 3 finale is filmed in Tuscany, between Villa La Foce and Villa Cetinale, in the Val d'Orcia.",
     faq: [
       { domanda: "Where was Succession filmed in Tuscany?", risposta: "In the Val d'Orcia: the Roy family stays at Villa La Foce, while the season 3 finale wedding is filmed at Villa Cetinale, near Siena." },
-      { domanda: "Can you eat at one of Succession's real locations?", risposta: "Yes: Dopolavoro La Foce, the restaurant on the Villa La Foce estate, is open to the public near Pienza." },
+      { domanda: "Can you eat at one of Succession's real locations?", risposta: "The Villa La Foce estate has a restaurant, Dopolavoro La Foce, open to the public near Pienza; it is not listed among the filming locations, which concern the villa." },
     ],
   },
   "l-amica-geniale": {
@@ -441,7 +441,7 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "dopolavoro-la-foce": {
     descrizione: "A restaurant on the historic Villa La Foce estate, in the Val d'Orcia: built in 1939 as a recreational club for the estate's workers, it now serves Tuscan cuisine grown in the villa's own gardens, minutes from Pienza and Montepulciano.",
-    scena: { "succession": "The restaurant on the Villa La Foce estate, where the Roy family stays in season 3 of Succession, filmed in the Val d'Orcia." },
+    scena: { "succession": "It does not appear among the filming locations: it is the restaurant on the Villa La Foce estate, the villa where the Roy family stays in season 3 of Succession, filmed in the Val d'Orcia." },
   },
   "scottojonno-napoli": {
     descrizione: "A café-bistrot inside the elegant Galleria Principe di Napoli, opposite the National Archaeological Museum. Born as a 19th-century café-chantant, reopened in 2023 by entrepreneur Luca Iannuzzi with cooking by chef Marco Ambrosino.",
