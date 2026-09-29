@@ -39,7 +39,7 @@ La Cantina in **San Fruttuoso** (Liguria), Trattoria Albana in **Mazzolla**
 Il Riccio on **Capri**:
 
 - **Piedmont**, with truffles and the Langhe (here **[Trattoria della Posta](/en/locale/trattoria-della-posta-monforte-dalba)**);
-- **Liguria**, with pesto and the sea;
+- **Liguria**, with pesto and the sea (Italy for Movies lists a beach meal at San Fruttuoso with fried seafood);
 - **Tuscany**, among hills and wine;
 - **Rome**, with its authentic cuisine;
 - The **Sorrento coast** and **Capri**, among lemons and fish (here **[Il Riccio](/en/locale/il-riccio-anacapri)**, in Anacapri).

@@ -38,7 +38,7 @@ Oliver Glowig a **Roma**, Relais Blu sulla costa di **Sorrento** e Il Riccio a
 **Capri**:
 
 - Il **Piemonte**, con i tartufi e le Langhe (qui la **[Trattoria della Posta](/locale/trattoria-della-posta-monforte-dalba)**);
-- La **Liguria**, con il pesto e il mare;
+- La **Liguria**, con il pesto e il mare (Italy for Movies indica un pasto sulla spiaggia di San Fruttuoso con frittura di pesce);
 - La **Toscana**, tra colline e vino;
 - **Roma**, con la sua cucina verace;
 - La **costa di Sorrento** e **Capri**, tra limoni e pesce (qui **[Il Riccio](/locale/il-riccio-anacapri)**, ad Anacapri).

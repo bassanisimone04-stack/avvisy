@@ -1,12 +1,12 @@
 ---
-titolo: "Somebody Feed Phil - Venezia"
+titolo: "Somebody Feed Phil - Venezia e Modena"
 anno: 2018
 regista: "Phil Rosenthal"
 serieTv: true
-sinossi: "Puntata veneziana della serie Netflix di viaggio gastronomico condotta da Phil Rosenthal, creatore di Tutti amano Raymond: tra bacari, cicchetti e trattorie storiche, alla scoperta della Venezia che mangiano i veneziani."
+sinossi: "Puntata veneziana (con una parte a Modena) della serie Netflix di viaggio gastronomico condotta da Phil Rosenthal, creatore di Tutti amano Raymond: tra bacari, cicchetti e trattorie storiche, alla scoperta della Venezia che mangiano i veneziani."
 locandina: "../../assets/films/somebody-feed-phil-venezia.jpg"
 locandinaAlt: "Locandina in stile manifesto — Somebody Feed Phil, Venezia"
-citta: ["Venezia"]
+citta: ["Venezia", "Modena"]
 faq:
   - domanda: "Cos'è Somebody Feed Phil?"
     risposta: "Una serie Netflix di viaggio gastronomico condotta da Phil Rosenthal, il creatore della sitcom Tutti amano Raymond. La puntata su Venezia apre la seconda stagione (2018)."

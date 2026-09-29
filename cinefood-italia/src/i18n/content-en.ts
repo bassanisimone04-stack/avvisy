@@ -327,7 +327,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "somebody-feed-phil-venezia": {
-    titolo: "Somebody Feed Phil - Venice",
+    titolo: "Somebody Feed Phil - Venice and Modena",
     sinossi:
       "The Venice episode of the Netflix food-travel series hosted by Phil Rosenthal, creator of Everybody Loves Raymond: bacari, cicchetti and historic trattorias, in search of the Venice that Venetians actually eat in.",
     faq: [
@@ -382,6 +382,15 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Which real restaurants appear in The Trip to Italy?", risposta: "Among those named by sources: Trattoria della Posta in Monforte d'Alba, Piedmont, and Il Riccio in Anacapri, on Capri." },
       { domanda: "Is The Trip to Italy a film or a series?", risposta: "It began as a BBC TV series directed by Michael Winterbottom and was then also cut as a film." },
       { domanda: "Can you book the film's restaurants?", risposta: "Yes, they are real venues open to the public; for Il Riccio and Trattoria della Posta booking is advisable, and hours and availability should be checked." },
+    ],
+  },
+  "la-moglie-del-prete": {
+    titolo: "The Priest's Wife (La moglie del prete)",
+    sinossi: "A 1970 film by Dino Risi with Sophia Loren and Marcello Mastroianni, shot in Vicenza and its surroundings.",
+    faq: [
+      { domanda: "Where was La moglie del prete filmed?", risposta: "In Vicenza and its surroundings. Italy for Movies lists the restaurant Al Zocco in Grisignano di Zocco among the locations." },
+      { domanda: "Who directed La moglie del prete?", risposta: "Dino Risi, in 1970, with Sophia Loren and Marcello Mastroianni." },
+      { domanda: "Can you eat at the film's restaurant?", risposta: "Yes: Al Zocco, at Largo Galileo Galilei 2 in Grisignano di Zocco, is still in business." },
     ],
   },
 };
@@ -587,6 +596,22 @@ export const restaurantsEn: Record<string, RestEn> = {
   "il-riccio-anacapri": {
     descrizione: "A Michelin-starred restaurant and beach club in Anacapri, run by the Capri Palace but open to all, with a sea-view terrace and seafood cooking.",
     scena: { "the-trip-to-italy": "It is one of the Capri stops of Steve Coogan and Rob Brydon's food journey." },
+  },
+  "osteria-io-e-simone-rimini": {
+    descrizione: "A small family-run osteria in central Rimini, with handmade pasta, Slow Food cheeses and over 150 wine labels.",
+    scena: { "stanley-tucci-searching-for-italy": "In Rimini, with Federico Fellini's niece Francesca, Stanley Tucci tastes handmade cappelletti and strozzapreti, closing the Emilia-Romagna episode." },
+  },
+  "osteria-francescana-modena": {
+    descrizione: "Chef Massimo Bottura's three-Michelin-star restaurant on Via Stella in Modena: one of the world's most famous, with a tasting menu.",
+    scena: { "master-of-none": "Dev and his friend Arnold dine at Osteria Francescana in season 2's episode The Thief.", "somebody-feed-phil-venezia": "Phil Rosenthal dines in the kitchen on a tasting menu that includes five ages of Parmigiano, in the Modena part of the episode." },
+  },
+  "bar-tiffany-modena": {
+    descrizione: "A bar on Via Canalino in Modena, known for its Italian breakfast and gnocco fritto, the Modenese specialty fried in lard.",
+    scena: { "somebody-feed-phil-venezia": "Phil Rosenthal and Caterina Schenetti taste gnocco fritto, the Modenese specialty fried in lard." },
+  },
+  "al-zocco-grisignano": {
+    descrizione: "A historic restaurant-bar in Grisignano di Zocco, in the province of Vicenza, where a scene of La moglie del prete (1970) with Sophia Loren and Marcello Mastroianni was shot.",
+    scena: { "la-moglie-del-prete": "The restaurant is where the two lovers, played by Marcello Mastroianni and Sophia Loren, have lunch." },
   },
 };
 
