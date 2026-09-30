@@ -1,6 +1,6 @@
 ---
-titolo: "Eat Pray Love Pizza Place: Julia Roberts in Naples"
-descrizione: "The pizza place from Eat Pray Love is L'Antica Pizzeria da Michele in Naples. Julia Roberts' pizza scene, what to order, no bookings, address and directions."
+titolo: "Eat Pray Love Pizza: Julia Roberts at Da Michele"
+descrizione: "The Eat Pray Love pizza place is L'Antica Pizzeria da Michele, Naples: the scene, what to order, no bookings, address and how to get there."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-22
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
