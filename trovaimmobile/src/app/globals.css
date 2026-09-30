@@ -806,3 +806,10 @@ legend {
     display: none !important;
   }
 }
+/* Con una sola foto (o nessuna) la galleria occupa tutta la larghezza */
+.gallery:has(> :only-child) {
+  grid-auto-columns: 100%;
+}
+.gallery > :only-child {
+  aspect-ratio: 16 / 9;
+}
