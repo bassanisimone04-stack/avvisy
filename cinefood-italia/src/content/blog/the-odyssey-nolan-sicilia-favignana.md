@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato The Odyssey di Nolan? Il Castello di Santa Ca
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-07
 immagine: "../../assets/placeholder/the-odyssey-nolan-sicilia-favignana.jpg"
-immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
+immagineAlt: "Il porto di Favignana, nelle Egadi, con le barche da pesca e un palazzo affacciato sul mare"
 tags: ["The Odyssey", "Nolan", "Sicilia", "Favignana", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato The Odyssey di Christopher Nolan?"
