@@ -1,28 +1,42 @@
 ---
-/** Pagina mappa con tutti i locali su OpenStreetMap (Leaflet). */
+/** Pagina mappa con tutti i locali su OpenStreetMap (Leaflet), filtri, elenco per regione e FAQ. */
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Map from "../components/Map.astro";
+import MapView from "../components/Map.astro";
+import MappaFiltri from "../components/MappaFiltri.astro";
+import MappaInfo from "../components/MappaInfo.astro";
 import type { MapMarker } from "../components/Map.astro";
+import { ordinaLocali } from "../lib/utils";
+import { faqPageJsonLd } from "../lib/schema-org";
+import { faqMappa, statistiche } from "../lib/mappa-content";
+import { tFilmTitolo } from "../i18n/content-en";
 
-const locali = await getCollection("restaurants");
+const locali = ordinaLocali(await getCollection("restaurants"));
+const films = new Map((await getCollection("films")).map((f) => [f.id, f]));
 const markers: MapMarker[] = locali.map((l) => ({
   lat: l.data.coordinate.lat, lng: l.data.coordinate.lng,
   nome: l.data.nome, citta: l.data.citta, tipo: l.data.tipo, url: `/locale/${l.id}`,
+  categoria: l.data.categoria, regione: l.data.regione, chiuso: l.data.stato !== "aperto",
+  film: l.data.film.map((f) => films.get(f.film.id)).filter(Boolean).map((f) => tFilmTitolo(f!, "it")),
 }));
+const regioni = [...new Set(locali.map((l) => l.data.regione))].sort((a, b) => a.localeCompare(b, "it"));
+const jsonLd = faqPageJsonLd(faqMappa("it", statistiche(locali)));
 ---
 
 <BaseLayout
-  title="Mappa dei locali"
-  description="Esplora sulla mappa tutti i ristoranti, bar e caffè italiani apparsi al cinema e in TV."
+  title="Mappa dei locali del cinema in Italia"
+  description="Mappa interattiva dei ristoranti, bar e caffè italiani apparsi in film e serie TV: filtra per regione e categoria, scopri i film collegati."
+  jsonLd={jsonLd}
 >
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="font-display text-4xl font-extrabold">Mappa dei locali</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">
-      Clicca su un segnaposto per i dettagli del locale. Mappa basata su OpenStreetMap.
+      Clicca su un segnaposto per i dettagli del locale e i film collegati. Mappa basata su OpenStreetMap.
     </p>
-    <div class="mt-6">
-      <Map markers={markers} height="72vh" zoom={6} />
+    <div class="mt-6"><MappaFiltri regioni={regioni} totale={locali.length} /></div>
+    <div class="mt-4">
+      <MapView markers={markers} height="72vh" zoom={6} />
     </div>
+    <MappaInfo locali={locali} />
   </section>
 </BaseLayout>

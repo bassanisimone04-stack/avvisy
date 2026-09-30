@@ -13,6 +13,11 @@ export interface MapMarker {
   citta?: string;
   tipo?: string;
   url?: string;
+  /** Opzionali: usati dai filtri della pagina mappa. */
+  categoria?: string;
+  regione?: string;
+  film?: string[];
+  chiuso?: boolean;
 }
 
 import { useT, type Lang } from "../i18n/ui";
@@ -73,6 +78,10 @@ const t = useT(lang);
       citta?: string;
       tipo?: string;
       url?: string;
+      categoria?: string;
+      regione?: string;
+      film?: string[];
+      chiuso?: boolean;
     };
     const markers: Marker[] = JSON.parse(datiEl.textContent || "[]");
     const zoom = Number(el.dataset.zoom) || 6;
@@ -88,22 +97,62 @@ const t = useT(lang);
     }).addTo(map);
 
     const gruppo = L.featureGroup();
-    for (const m of markers) {
+    const esc = (v: string) =>
+      v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const layers = markers.map((m) => {
       const popup = `
-        <strong>${m.nome}</strong>
-        ${m.citta ? `<br/><span>${m.citta}</span>` : ""}
-        ${m.tipo ? `<br/><span style="text-transform:capitalize">${m.tipo}</span>` : ""}
+        <strong>${esc(m.nome)}</strong>
+        ${m.citta ? `<br/><span>${esc(m.citta)}</span>` : ""}
+        ${m.tipo ? `<br/><span style="text-transform:capitalize">${esc(m.tipo)}</span>` : ""}
+        ${m.film && m.film.length ? `<br/><em>${m.film.map(esc).join(", ")}</em>` : ""}
         ${m.url ? `<br/><a href="${m.url}">${scopri}</a>` : ""}
       `;
-      L.marker([m.lat, m.lng]).bindPopup(popup).addTo(gruppo);
-    }
+      return L.marker([m.lat, m.lng]).bindPopup(popup);
+    });
+    layers.forEach((l) => l.addTo(gruppo));
     gruppo.addTo(map);
 
     // Inquadra automaticamente tutti i segnaposto (se ce n'è più di uno).
-    if (markers.length > 1) {
-      map.fitBounds(gruppo.getBounds().pad(0.2));
-    } else if (markers.length === 1) {
-      map.setView([markers[0].lat, markers[0].lng], Math.max(zoom, 14));
-    }
+    const inquadra = () => {
+      const n = gruppo.getLayers().length;
+      if (n > 1) map.fitBounds(gruppo.getBounds().pad(0.2));
+      else if (n === 1) {
+        const ll = (gruppo.getLayers()[0] as L.Marker).getLatLng();
+        map.setView(ll, Math.max(zoom, 14));
+      }
+    };
+    inquadra();
+
+    // Filtri opzionali (presenti solo nella pagina mappa).
+    const selCat = document.getElementById("mf-cat") as HTMLSelectElement | null;
+    const selReg = document.getElementById("mf-reg") as HTMLSelectElement | null;
+    const chkAperti = document.getElementById("mf-aperti") as HTMLInputElement | null;
+    const conteggio = document.getElementById("mf-count");
+    const reset = document.getElementById("mf-reset");
+    const vuoto = document.getElementById("mf-vuoto");
+    const applica = () => {
+      const cat = selCat?.value || "";
+      const reg = selReg?.value || "";
+      const soloAperti = !!chkAperti?.checked;
+      let visibili = 0;
+      markers.forEach((m, i) => {
+        const ok =
+          (!cat || m.categoria === cat) &&
+          (!reg || m.regione === reg) &&
+          (!soloAperti || !m.chiuso);
+        if (ok) { gruppo.addLayer(layers[i]); visibili++; }
+        else gruppo.removeLayer(layers[i]);
+      });
+      if (conteggio) conteggio.textContent = String(visibili);
+      if (vuoto) vuoto.hidden = visibili > 0;
+      if (visibili > 0) inquadra();
+    };
+    [selCat, selReg, chkAperti].forEach((e) => e?.addEventListener("change", applica));
+    reset?.addEventListener("click", () => {
+      if (selCat) selCat.value = "";
+      if (selReg) selReg.value = "";
+      if (chkAperti) chkAperti.checked = false;
+      applica();
+    });
   }
 </script>

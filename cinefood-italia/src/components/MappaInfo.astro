@@ -1,0 +1,147 @@
+---
+/** Contenuti sotto la mappa: statistiche, come leggerla, locali per regione, link utili, FAQ. */
+import type { Lang } from "../i18n/ui";
+import { path } from "../i18n/ui";
+import type { Restaurant } from "../lib/utils";
+import { statistiche, faqMappa, tRegione } from "../lib/mappa-content";
+
+interface Props { lang?: Lang; locali: Restaurant[] }
+const { lang = "it", locali } = Astro.props;
+const en = lang === "en";
+const s = statistiche(locali);
+const faq = faqMappa(lang, s);
+
+const perRegione = new Map<string, Restaurant[]>();
+for (const l of locali) {
+  const r = l.data.regione;
+  perRegione.set(r, [...(perRegione.get(r) ?? []), l]);
+}
+const regioni = [...perRegione.entries()].sort((a, b) => a[0].localeCompare(b[0], "it"));
+
+const T = en
+  ? {
+      stat: [["venues", s.locali], ["cities", s.citta], ["regions", s.regioni], ["films & shows", s.film]] as [string, number][],
+      leggi: "How to read the map",
+      leggiItems: [
+        ["Real filming location", "The scene was actually shot at this venue."],
+        ["Film-related", "A real venue that was not filmed in the movie: it is near the set or tied to the phenomenon the film portrays."],
+        ["Closed", "Historic venues that have closed stay listed for their film history; use the filter to hide them."],
+      ],
+      regioniTit: "Venues by region",
+      regioniSub: "Every venue on the map, grouped by region.",
+      utili: "Useful next steps",
+      cta: [
+        ["/locali", "Browse the full list", "Search and filter every venue by city, film, type and price."],
+        ["/guida", "PDF guide", "All venues by region plus four ready-made itineraries, for offline use."],
+        ["/blog", "Blog itineraries", "Film-by-film articles on where to eat like on screen."],
+        ["/aggiungi-locale", "Add a venue", "Know a real venue seen in a film or show? Tell us."],
+      ] as [string, string, string][],
+      faqTit: "Frequently asked questions",
+      prima: "Before you go",
+      primaTxt: "Marker positions are indicative for some venues: always check the written address on the venue page. Opening hours and availability can change, and small or starred venues usually need a booking.",
+    }
+  : {
+      stat: [["locali", s.locali], ["città", s.citta], ["regioni", s.regioni], ["film e serie", s.film]] as [string, number][],
+      leggi: "Come leggere la mappa",
+      leggiItems: [
+        ["Location reale", "La scena è stata girata davvero in questo locale."],
+        ["Legato al film", "Locale reale che non è stato girato nel film: è vicino al set o legato al fenomeno raccontato."],
+        ["Chiuso", "I locali storici ormai chiusi restano pubblicati per il loro valore cinematografico; usa il filtro per nasconderli."],
+      ],
+      regioniTit: "I locali per regione",
+      regioniSub: "Tutti i locali della mappa, raggruppati per regione.",
+      utili: "Cosa fare dopo",
+      cta: [
+        ["/locali", "Sfoglia l'elenco completo", "Cerca e filtra ogni locale per città, film, tipo e prezzo."],
+        ["/guida", "Guida PDF", "Tutti i locali per regione più quattro itinerari pronti, da usare offline."],
+        ["/blog", "Itinerari del blog", "Articoli film per film su dove mangiare come sullo schermo."],
+        ["/aggiungi-locale", "Aggiungi un locale", "Conosci un locale reale visto in un film o in una serie? Segnalacelo."],
+      ] as [string, string, string][],
+      faqTit: "Domande frequenti",
+      prima: "Prima di partire",
+      primaTxt: "Per alcuni locali la posizione del segnaposto è indicativa: controlla sempre l'indirizzo scritto nella scheda. Orari e disponibilità possono cambiare, e per i locali piccoli o stellati di solito serve prenotare.",
+    };
+---
+
+<div class="mx-auto mt-10 max-w-6xl space-y-12">
+  <!-- Statistiche -->
+  <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+    {T.stat.map(([label, n]) => (
+      <div class="rounded-2xl border border-ink-500/10 bg-white p-5 text-center dark:border-noir-700 dark:bg-noir-900">
+        <p class="font-display text-3xl font-extrabold text-gold-600 dark:text-gold-400">{n}</p>
+        <p class="mt-1 text-sm text-ink-600 dark:text-ink-400">{label}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Come leggere la mappa -->
+  <section>
+    <h2 class="font-display text-2xl font-bold">{T.leggi}</h2>
+    <ul class="mt-4 grid gap-4 md:grid-cols-3">
+      {T.leggiItems.map(([t, d]) => (
+        <li class="rounded-2xl border border-ink-500/10 bg-white p-5 dark:border-noir-700 dark:bg-noir-900">
+          <p class="font-semibold">{t}</p>
+          <p class="mt-1 text-sm text-ink-600 dark:text-ink-400">{d}</p>
+        </li>
+      ))}
+    </ul>
+    <p class="mt-4 rounded-2xl bg-gold-500/10 p-4 text-sm"><strong>{T.prima}.</strong> {T.primaTxt}</p>
+  </section>
+
+  <!-- Locali per regione -->
+  <section>
+    <h2 class="font-display text-2xl font-bold">{T.regioniTit}</h2>
+    <p class="mt-1 text-ink-600 dark:text-ink-400">{T.regioniSub}</p>
+    <div class="mt-4 grid gap-3 md:grid-cols-2">
+      {regioni.map(([regione, lista]) => (
+        <details class="group rounded-2xl border border-ink-500/10 bg-white p-4 dark:border-noir-700 dark:bg-noir-900">
+          <summary class="cursor-pointer list-none font-semibold marker:hidden">
+            <span class="flex items-center justify-between gap-3">
+              <span>{tRegione(regione, lang)} <span class="text-sm font-normal text-ink-500 dark:text-ink-400">({lista.length})</span></span>
+              <span class="text-gold-500 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </span>
+          </summary>
+          <ul class="mt-3 space-y-1 text-sm">
+            {[...lista].sort((a, b) => a.data.citta.localeCompare(b.data.citta, "it") || a.data.nome.localeCompare(b.data.nome, "it")).map((l) => (
+              <li>
+                <a href={path(`/locale/${l.id}`, lang)} class="hover:text-gold-600 dark:hover:text-gold-400">{l.data.nome}</a>
+                <span class="text-ink-500 dark:text-ink-400"> — {l.data.citta}</span>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- Link utili -->
+  <section>
+    <h2 class="font-display text-2xl font-bold">{T.utili}</h2>
+    <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {T.cta.map(([href, titolo, desc]) => (
+        <a href={path(href, lang)} class="rounded-2xl border border-ink-500/10 bg-white p-5 transition hover:border-gold-500 dark:border-noir-700 dark:bg-noir-900">
+          <p class="font-semibold">{titolo} →</p>
+          <p class="mt-1 text-sm text-ink-600 dark:text-ink-400">{desc}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mx-auto max-w-3xl">
+    <h2 class="font-display text-2xl font-bold">{T.faqTit}</h2>
+    <div class="mt-6 space-y-3">
+      {faq.map((f) => (
+        <details class="group rounded-2xl border border-ink-500/10 bg-white p-5 dark:border-noir-700 dark:bg-noir-900">
+          <summary class="cursor-pointer list-none font-semibold marker:hidden">
+            <span class="flex items-center justify-between gap-3">
+              {f.domanda}
+              <span class="text-gold-500 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </span>
+          </summary>
+          <p class="mt-3 text-ink-700 dark:text-cream-200">{f.risposta}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</div>
