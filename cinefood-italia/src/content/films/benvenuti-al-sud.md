@@ -5,7 +5,8 @@ regista: "Luca Miniero"
 serieTv: false
 sinossi: "Commedia campione d'incassi con Claudio Bisio e Alessandro Siani, girata in gran parte a Castellabate, nel Cilento."
 locandina: "../../assets/films/benvenuti-al-sud.jpg"
-locandinaAlt: "Locandina in stile manifesto — Benvenuti al Sud (2010)"
+locandinaAlt: "La terrazza sul mare del Ristorante Le Gatte a Castellabate"
+locandinaTipo: "luogo"
 citta: ["Castellabate"]
 faq:
   - domanda: "Dove è stato girato Benvenuti al Sud?"

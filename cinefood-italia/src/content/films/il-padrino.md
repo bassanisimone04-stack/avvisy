@@ -5,7 +5,8 @@ regista: "Francis Ford Coppola"
 serieTv: false
 sinossi: "Il capolavoro di Coppola sulla famiglia Corleone. Le scene 'siciliane' furono girate nei borghi di Savoca e Forza d'Agrò, in provincia di Messina."
 locandina: "../../assets/films/il-padrino.jpg"
-locandinaAlt: "Locandina in stile manifesto — Il Padrino (1972)"
+locandinaAlt: "L'ingresso del Bar Vitelli a Savoca"
+locandinaTipo: "luogo"
 citta: ["Savoca"]
 faq:
   - domanda: "Dove è stata girata la parte siciliana de Il Padrino?"

@@ -5,7 +5,8 @@ regista: "Ridley Scott"
 serieTv: false
 sinossi: "Il sequel de Il silenzio degli innocenti porta Hannibal Lecter a Firenze, dove vive sotto falso nome come curatore della biblioteca di Palazzo Capponi. Girato in città nel 2000, il film attraversa Piazza della Signoria, Palazzo Vecchio, Santa Croce e lo Spedale degli Innocenti."
 locandina: "../../assets/films/hannibal.jpg"
-locandinaAlt: "Locandina in stile manifesto — Hannibal (2001)"
+locandinaAlt: "Palazzo Vecchio in Piazza della Signoria a Firenze"
+locandinaTipo: "luogo"
 citta: ["Firenze"]
 faq:
   - domanda: "Hannibal è girato davvero a Firenze?"

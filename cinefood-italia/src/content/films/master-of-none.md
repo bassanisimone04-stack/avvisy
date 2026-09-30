@@ -5,7 +5,8 @@ regista: "Aziz Ansari, Alan Yang"
 serieTv: true
 sinossi: "La serie Netflix creata da Aziz Ansari e Alan Yang. La stagione 2 (2017) si apre a Modena, dove Dev impara l'arte della pasta e cena da Osteria Francescana, il tre stelle Michelin di Massimo Bottura."
 locandina: "../../assets/films/master-of-none.jpg"
-locandinaAlt: "Locandina in stile manifesto — Master of None (2015)"
+locandinaAlt: "La vetrina della salumeria Giusti a Modena"
+locandinaTipo: "luogo"
 citta: ["Modena"]
 faq:
   - domanda: "Master of None è stato girato davvero a Modena?"

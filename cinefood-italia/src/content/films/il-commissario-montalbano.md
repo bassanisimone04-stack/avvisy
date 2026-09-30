@@ -5,7 +5,8 @@ regista: "Alberto Sironi (dai romanzi di Andrea Camilleri)"
 serieTv: true
 sinossi: "La serie TV cult tratta dai romanzi di Camilleri, girata nella Sicilia sud-orientale (Ragusa, Scicli, Punta Secca). Il commissario è celebre anche per la sua passione per la cucina siciliana."
 locandina: "../../assets/films/il-commissario-montalbano.jpg"
-locandinaAlt: "Locandina in stile manifesto — Il commissario Montalbano (1999)"
+locandinaAlt: "La veranda sul mare di Enzo a Mare a Punta Secca"
+locandinaTipo: "luogo"
 citta: ["Punta Secca"]
 faq:
   - domanda: "Dove è stata girata la serie di Montalbano?"

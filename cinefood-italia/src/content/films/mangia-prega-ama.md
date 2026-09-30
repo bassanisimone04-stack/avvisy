@@ -5,7 +5,8 @@ regista: "Ryan Murphy"
 serieTv: false
 sinossi: "Tratto dal memoir di Elizabeth Gilbert, con Julia Roberts. La prima parte, ambientata a Roma, è un inno alla cucina e alla dolce vita italiana."
 locandina: "../../assets/films/mangia-prega-ama.jpg"
-locandinaAlt: "Locandina in stile manifesto — Mangia prega ama (2010)"
+locandinaAlt: "L'ingresso dell'Antica Pizzeria da Michele a Napoli"
+locandinaTipo: "luogo"
 citta: ["Roma"]
 faq:
   - domanda: "Dove mangia Julia Roberts in Mangia prega ama a Roma?"

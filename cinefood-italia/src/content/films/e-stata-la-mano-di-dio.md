@@ -5,7 +5,8 @@ regista: "Paolo Sorrentino"
 serieTv: false
 sinossi: "Il film Netflix di Paolo Sorrentino, Leone d'Argento a Venezia e candidato all'Oscar, racconta la sua Napoli d'origine. Girato in vere location della città, tra cui il quartiere Vomero e Villa Giusso, sulla penisola sorrentina."
 locandina: "../../assets/films/e-stata-la-mano-di-dio.jpg"
-locandinaAlt: "Locandina in stile manifesto — È stata la mano di Dio (2021)"
+locandinaAlt: "Villa Giusso a Vico Equense, con il pozzo nel giardino"
+locandinaTipo: "luogo"
 citta: ["Vico Equense"]
 faq:
   - domanda: "È stata la mano di Dio è girato davvero a Napoli?"

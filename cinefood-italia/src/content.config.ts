@@ -57,6 +57,8 @@ const films = defineCollection({
       locandina: image(),
       /** Testo alternativo della locandina. */
       locandinaAlt: z.string().default(""),
+      /** "luogo" = foto reale di un luogo delle riprese (non una locandina); "astratta" = sfondo generato. */
+      locandinaTipo: z.enum(["astratta", "luogo"]).default("astratta"),
       /** Città principali legate al film (per l'internal linking). */
       citta: z.array(z.string()).default([]),
       /** Domande frequenti (generano i dati strutturati FAQPage). */

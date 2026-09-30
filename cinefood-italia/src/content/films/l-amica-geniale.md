@@ -5,7 +5,8 @@ regista: "Saverio Costanzo (dai romanzi di Elena Ferrante)"
 serieTv: true
 sinossi: "La serie HBO/Rai tratta dai romanzi di Elena Ferrante, ambientata nella Napoli degli anni '50. Il rione è ricostruito su un set, ma molte scene sono girate in location reali della città, tra cui la storica Galleria Principe di Napoli."
 locandina: "../../assets/films/l-amica-geniale.jpg"
-locandinaAlt: "Locandina in stile manifesto — L'amica geniale (2018)"
+locandinaAlt: "Il bancone del caffè ScottoJonno a Napoli"
+locandinaTipo: "luogo"
 citta: ["Napoli"]
 faq:
   - domanda: "L'amica geniale è girata davvero a Napoli?"

@@ -11,6 +11,7 @@ import type { Lang } from "./ui";
 
 interface FilmEn {
   titolo?: string;
+  locandinaAlt?: string;
   sinossi?: string;
   faq?: { domanda: string; risposta: string }[];
 }
@@ -35,6 +36,7 @@ export function tCitta(cittaIt: string, lang: Lang): string {
 
 export const filmsEn: Record<string, FilmEn> = {
   "il-padrino": {
+    locandinaAlt: "The entrance of Bar Vitelli in Savoca",
     titolo: "The Godfather",
     sinossi:
       "Coppola's masterpiece about the Corleone family. The 'Sicilian' scenes were shot in the villages of Savoca and Forza d'Agrò, near Messina.",
@@ -44,6 +46,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-talento-di-mr-ripley": {
+    locandinaAlt: "A room of Caffè Florian in Piazza San Marco, Venice",
     titolo: "The Talented Mr. Ripley",
     sinossi:
       "A psychological thriller with Matt Damon and Jude Law, set in 1950s Italy between the coast, Rome and Venice.",
@@ -53,6 +56,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "mangia-prega-ama": {
+    locandinaAlt: "The entrance of L'Antica Pizzeria da Michele in Naples",
     titolo: "Eat Pray Love",
     sinossi:
       "Based on Elizabeth Gilbert's memoir, starring Julia Roberts. The first part, set in Rome, is a hymn to Italian food and la dolce vita.",
@@ -63,6 +67,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "benvenuti-al-sud": {
+    locandinaAlt: "The seaside terrace of Ristorante Le Gatte in Castellabate",
     titolo: "Welcome to the South",
     sinossi:
       "A blockbuster comedy with Claudio Bisio and Alessandro Siani, largely shot in Castellabate, in the Cilento area.",
@@ -72,6 +77,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "la-grande-bellezza": {
+    locandinaAlt: "The frescoed room of La Veranda at Hotel Columbus in Rome (now closed)",
     titolo: "The Great Beauty",
     sinossi:
       "Winner of the Oscar for Best Foreign Film. A baroque, melancholic portrait of Rome, among terraces, palaces and atmospheric restaurants.",
@@ -108,6 +114,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-commissario-montalbano": {
+    locandinaAlt: "The seaside veranda of Enzo a Mare in Punta Secca",
     titolo: "Inspector Montalbano",
     sinossi:
       "The cult TV series based on Camilleri's novels, filmed in south-eastern Sicily (Ragusa, Scicli, Punta Secca). The inspector is also famous for his love of Sicilian food.",
@@ -117,6 +124,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "nuovo-cinema-paradiso": {
+    locandinaAlt: "Piazza Umberto I in Palazzo Adriano, with the fountain and the bell tower",
     titolo: "Cinema Paradiso",
     sinossi:
       "Winner of the Oscar for Best Foreign Film. A Sicilian boy's love story with cinema, with the famous square of Palazzo Adriano at the heart of the tale.",
@@ -153,6 +161,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "master-of-none": {
+    locandinaAlt: "The shop window of the Giusti delicatessen in Modena",
     sinossi:
       "The Netflix series created by Aziz Ansari and Alan Yang. Season 2 (2017) opens in Modena, where Dev learns the art of pasta and dines at Osteria Francescana, Massimo Bottura's three-Michelin-star restaurant.",
     faq: [
@@ -170,6 +179,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "l-amica-geniale": {
+    locandinaAlt: "The bar counter of café ScottoJonno in Naples",
     titolo: "My Brilliant Friend",
     sinossi:
       "The HBO/Rai series based on Elena Ferrante's novels, set in 1950s Naples. The neighbourhood is a built set, but many scenes are filmed in real locations across the city, including the historic Galleria Principe di Napoli.",
@@ -179,6 +189,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "e-stata-la-mano-di-dio": {
+    locandinaAlt: "Villa Giusso in Vico Equense, with the well in the garden",
     titolo: "The Hand of God",
     sinossi:
       "Paolo Sorrentino's Netflix film, Silver Lion winner in Venice and Oscar nominee, tells the story of his native Naples. Filmed in real city locations, including the Vomero district and Villa Giusso, on the Sorrentine Peninsula.",
@@ -188,6 +199,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   hannibal: {
+    locandinaAlt: "Palazzo Vecchio in Piazza della Signoria, Florence",
     titolo: "Hannibal",
     sinossi:
       "The sequel to The Silence of the Lambs takes Hannibal Lecter to Florence, where he lives under a false name as curator of the Palazzo Capponi library. Shot in the city in 2000, the film moves through Piazza della Signoria, Palazzo Vecchio, Santa Croce and the Spedale degli Innocenti.",
@@ -725,6 +737,9 @@ export const restaurantsEn: Record<string, RestEn> = {
 /* -------- Helper: restituiscono la versione nella lingua richiesta -------- */
 export function tFilmTitolo(film: Film, lang: Lang): string {
   return lang === "en" ? filmsEn[film.id]?.titolo ?? film.data.titolo : film.data.titolo;
+}
+export function tFilmAlt(film: Film, lang: Lang): string {
+  return lang === "en" ? filmsEn[film.id]?.locandinaAlt ?? film.data.locandinaAlt : film.data.locandinaAlt;
 }
 export function tFilmSinossi(film: Film, lang: Lang): string {
   return lang === "en" ? filmsEn[film.id]?.sinossi ?? film.data.sinossi : film.data.sinossi;

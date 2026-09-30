@@ -5,7 +5,8 @@ regista: "Giuseppe Tornatore"
 serieTv: false
 sinossi: "Premio Oscar come miglior film straniero. La storia d'amore per il cinema di un bambino siciliano, con la celebre piazza di Palazzo Adriano come cuore del racconto."
 locandina: "../../assets/films/nuovo-cinema-paradiso.jpg"
-locandinaAlt: "Locandina in stile manifesto — Nuovo Cinema Paradiso (1988)"
+locandinaAlt: "Piazza Umberto I a Palazzo Adriano, con la fontana e il campanile"
+locandinaTipo: "luogo"
 citta: ["Palazzo Adriano"]
 faq:
   - domanda: "Dove è stato girato Nuovo Cinema Paradiso?"
