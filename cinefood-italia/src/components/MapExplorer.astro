@@ -1,0 +1,380 @@
+---
+/**
+ * Esploratore interattivo dei locali: mappa Leaflet + OpenStreetMap con segnaposto
+ * colorati per categoria, cluster, ricerca, elenco sincronizzato, "vicino a me",
+ * schermo intero e link diretto al locale (#slug).
+ * I filtri categoria/regione/aperti sono in MappaFiltri.astro (id mf-*).
+ */
+import type { Lang } from "../i18n/ui";
+
+export interface ExplorerMarker {
+  id: string;
+  lat: number;
+  lng: number;
+  nome: string;
+  citta: string;
+  regione: string;
+  regioneLabel: string;
+  tipo: string;
+  categoria: string;
+  chiuso: boolean;
+  film: string[];
+  desc: string;
+  url: string;
+}
+
+interface Props { markers: ExplorerMarker[]; lang?: Lang }
+const { markers, lang = "it" } = Astro.props;
+const L10 = lang === "en"
+  ? {
+      cerca: "Search venue, city or film…", nessuno: "No venue found.", vicino: "Near me", vicinoTit: "Show the venues closest to me",
+      schermo: "Full screen", esci: "Exit full screen", italia: "Whole Italy", solo: "Only venues in the map view",
+      scopri: "Discover more", reale: "Real location", legato: "Film-related", chiuso: "Closed",
+      geoErr: "We couldn't get your position. Check your browser permissions.", km: "km", elenco: "Venues", aperto: "Open map in full screen",
+      legenda: "Legend",
+    }
+  : {
+      cerca: "Cerca locale, città o film…", nessuno: "Nessun locale trovato.", vicino: "Vicino a me", vicinoTit: "Mostra i locali più vicini a me",
+      schermo: "Schermo intero", esci: "Esci dallo schermo intero", italia: "Tutta Italia", solo: "Solo i locali nella vista della mappa",
+      scopri: "Scopri di più", reale: "Location reale", legato: "Legato al film", chiuso: "Chiuso",
+      geoErr: "Non siamo riusciti a ottenere la tua posizione. Controlla i permessi del browser.", km: "km", elenco: "Locali", aperto: "Apri la mappa a schermo intero",
+      legenda: "Legenda",
+    };
+---
+
+<div id="cfx" class="cfx mt-4" data-labels={JSON.stringify(L10)}>
+  <div class="cfx-grid grid gap-4 lg:grid-cols-[1fr_340px]">
+    <div class="cfx-mapwrap relative">
+      <div id="mappa" class="cfx-map z-0 w-full overflow-hidden rounded-2xl border border-ink-100"></div>
+
+      <!-- Comandi sopra la mappa -->
+      <div class="cfx-tools">
+        <button type="button" id="cfx-geo" class="cfx-btn" title={L10.vicinoTit}>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+          <span>{L10.vicino}</span>
+        </button>
+        <button type="button" id="cfx-italia" class="cfx-btn" title={L10.italia}>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+          <span>{L10.italia}</span>
+        </button>
+        <button type="button" id="cfx-full" class="cfx-btn" title={L10.schermo} aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+          <span id="cfx-full-label">{L10.schermo}</span>
+        </button>
+      </div>
+
+      <!-- Legenda -->
+      <div class="cfx-legend" aria-label={L10.legenda}>
+        <span><i class="dot dot-set"></i>{L10.reale}</span>
+        <span><i class="dot dot-legato"></i>{L10.legato}</span>
+        <span><i class="dot dot-chiuso"></i>{L10.chiuso}</span>
+      </div>
+    </div>
+
+    <!-- Elenco laterale -->
+    <aside class="cfx-side flex flex-col rounded-2xl border border-ink-500/10 bg-white dark:border-noir-700 dark:bg-noir-900">
+      <div class="border-b border-ink-500/10 p-3 dark:border-noir-700">
+        <label class="sr-only" for="cfx-q">{L10.cerca}</label>
+        <input id="cfx-q" type="search" placeholder={L10.cerca} autocomplete="off"
+          class="w-full rounded-xl border border-ink-500/20 bg-white px-3 py-2 text-sm dark:border-noir-700 dark:bg-noir-800" />
+        <label class="mt-2 flex items-center gap-2 text-xs text-ink-600 dark:text-ink-400">
+          <input id="cfx-inview" type="checkbox" checked class="h-3.5 w-3.5 accent-gold-500" /> {L10.solo}
+        </label>
+      </div>
+      <ul id="cfx-list" class="cfx-list flex-1 overflow-y-auto p-2"></ul>
+      <p id="cfx-empty" hidden class="p-4 text-sm text-ink-500 dark:text-ink-400">{L10.nessuno}</p>
+    </aside>
+  </div>
+</div>
+
+<script is:inline type="application/json" id="mappa-dati" set:html={JSON.stringify(markers)} />
+
+<style is:global>
+  .cfx-map { height: 72vh; min-height: 420px; }
+  .cfx-side { height: 72vh; min-height: 420px; }
+  @media (max-width: 1023px) {
+    .cfx-map { height: 60vh; }
+    .cfx-side { height: auto; max-height: 420px; min-height: 0; }
+  }
+  .cfx-tools { position: absolute; top: 12px; right: 12px; z-index: 500; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  .cfx-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #fff; color: #1c1b22; border: 1px solid rgba(0,0,0,.12); font-size: 13px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.18); cursor: pointer; transition: transform .15s, box-shadow .15s; }
+  .cfx-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+  .cfx-btn:focus-visible { outline: 2px solid #e0a526; outline-offset: 2px; }
+  @media (max-width: 520px) { .cfx-btn span { display: none; } .cfx-btn { padding: 9px; } }
+  .cfx-legend { position: absolute; left: 12px; bottom: 26px; z-index: 500; display: flex; gap: 12px; flex-wrap: wrap; padding: 7px 12px; border-radius: 12px; background: rgba(255,255,255,.92); color: #1c1b22; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  .cfx-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .dot-set { background: #e0a526; } .dot-legato { background: #2fa39a; } .dot-chiuso { background: #8a8f98; }
+
+  /* Segnaposto a goccia */
+  .cf-pin { background: none; border: 0; }
+  .cf-pin .pin { width: 30px; height: 30px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid #fff; box-shadow: 0 3px 8px rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; transition: transform .15s; }
+  .cf-pin .pin::after { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #fff; }
+  .cf-pin:hover .pin, .cf-pin.is-active .pin { transform: rotate(-45deg) scale(1.25); }
+  .pin-set { background: #e0a526; } .pin-legato { background: #2fa39a; } .pin-chiuso { background: #8a8f98; }
+
+  /* Cluster */
+  .cf-cluster { background: none; }
+  .cf-cluster div { width: 40px; height: 40px; margin: 0; border-radius: 50%; background: #e0a526; color: #1c1b22; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 3px solid rgba(255,255,255,.9); box-shadow: 0 3px 10px rgba(0,0,0,.35); }
+  .cf-cluster.md div { width: 46px; height: 46px; } .cf-cluster.lg div { width: 52px; height: 52px; font-size: 16px; }
+
+  /* Popup */
+  .cf-popup .leaflet-popup-content-wrapper { border-radius: 16px; padding: 0; overflow: hidden; }
+  .cf-popup .leaflet-popup-content { margin: 0; width: 250px !important; color: #1c1b22; font-family: inherit; }
+  .cf-card { padding: 14px 16px 16px; }
+  .cf-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; color: #1c1b22; margin-bottom: 6px; }
+  .cf-badge.set { background: #f6d98a; } .cf-badge.legato { background: #a9e0da; } .cf-badge.chiuso { background: #d7d9dd; }
+  .cf-card h3 { font-size: 16px; font-weight: 800; line-height: 1.25; margin: 0; }
+  .cf-card .meta { font-size: 12.5px; color: #55566a; margin-top: 2px; text-transform: capitalize; }
+  .cf-card .films { font-size: 12.5px; font-style: italic; margin-top: 8px; color: #33344a; }
+  .cf-card .desc { font-size: 12.5px; line-height: 1.4; margin-top: 8px; color: #33344a; }
+  .cf-card a.go { display: inline-block; margin-top: 12px; background: #e0a526; color: #1c1b22 !important; font-weight: 700; font-size: 13px; padding: 7px 14px; border-radius: 999px; text-decoration: none; }
+  .cf-card a.go:hover { background: #f0b73a; }
+
+  /* Elenco */
+  .cfx-item { width: 100%; text-align: left; display: flex; gap: 10px; align-items: flex-start; padding: 9px 10px; border-radius: 12px; cursor: pointer; background: transparent; border: 0; color: inherit; transition: background .12s; }
+  .cfx-item:hover, .cfx-item:focus-visible, .cfx-item.is-active { background: rgba(224,165,38,.14); outline: none; }
+  .cfx-item .dot { margin-top: 5px; flex: none; }
+  .cfx-item .n { font-weight: 600; font-size: 14px; line-height: 1.25; }
+  .cfx-item .s { font-size: 12px; opacity: .7; text-transform: capitalize; }
+  .cfx-item .d { margin-left: auto; font-size: 12px; font-weight: 700; white-space: nowrap; color: #b57f0c; }
+
+  /* Schermo intero */
+  .cfx.cfx-full { position: fixed; inset: 0; z-index: 9000; margin: 0; padding: 12px; background: var(--fs-bg, #16151c); overflow: auto; }
+  .cfx.cfx-full .cfx-map { height: calc(100vh - 24px); }
+  .cfx.cfx-full .cfx-side { height: calc(100vh - 24px); }
+  @media (max-width: 1023px) { .cfx.cfx-full .cfx-map { height: 62vh; } .cfx.cfx-full .cfx-side { height: auto; max-height: 30vh; } }
+  html.cfx-lock { overflow: hidden; }
+</style>
+
+<script>
+  import "leaflet/dist/leaflet.css";
+  import "leaflet.markercluster/dist/MarkerCluster.css";
+
+  type M = {
+    id: string; lat: number; lng: number; nome: string; citta: string; regione: string; regioneLabel: string;
+    tipo: string; categoria: string; chiuso: boolean; film: string[]; desc: string; url: string;
+  };
+
+  const root = document.getElementById("cfx");
+  const mapEl = document.getElementById("mappa");
+  const datiEl = document.getElementById("mappa-dati");
+
+  async function init() {
+    if (!root || !mapEl || !datiEl) return;
+    const Lmod = await import("leaflet");
+    const L = ((Lmod as any).default ?? Lmod) as typeof import("leaflet");
+    (window as any).L = L;
+    await import("leaflet.markercluster");
+
+    const S = JSON.parse(root.dataset.labels || "{}");
+    const data: M[] = JSON.parse(datiEl.textContent || "[]");
+    const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T | null;
+    const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const esc = (v: string) => v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    const clsOf = (m: M) => (m.chiuso ? "chiuso" : m.categoria === "legato-al-film" ? "legato" : "set");
+    const badgeOf = (m: M) => (m.chiuso ? S.chiuso : m.categoria === "legato-al-film" ? S.legato : S.reale);
+
+    const map = L.map(mapEl, { zoomControl: true, scrollWheelZoom: true }).setView([41.9, 12.5], 6);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19,
+    }).addTo(map);
+
+    const cluster = (L as any).markerClusterGroup({
+      showCoverageOnHover: false,
+      maxClusterRadius: 45,
+      spiderfyOnMaxZoom: true,
+      iconCreateFunction: (c: any) => {
+        const n = c.getChildCount();
+        return L.divIcon({
+          html: `<div>${n}</div>`,
+          className: "cf-cluster " + (n > 20 ? "lg" : n > 8 ? "md" : "sm"),
+          iconSize: [40, 40],
+        });
+      },
+    });
+    map.addLayer(cluster);
+
+    const layers = new Map<string, L.Marker>();
+    data.forEach((m) => {
+      const icon = L.divIcon({
+        className: "cf-pin", html: `<div class="pin pin-${clsOf(m)}"></div>`,
+        iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28], tooltipAnchor: [0, -28],
+      });
+      const films = m.film.length ? `<div class="films">${m.film.map(esc).join(" · ")}</div>` : "";
+      const html = `<div class="cf-card">
+        <span class="cf-badge ${clsOf(m)}">${esc(badgeOf(m))}</span>
+        <h3>${esc(m.nome)}</h3>
+        <div class="meta">${esc(m.citta)} · ${esc(m.tipo)}</div>
+        ${films}
+        ${m.desc ? `<div class="desc">${esc(m.desc)}</div>` : ""}
+        <a class="go" href="${m.url}">${esc(S.scopri)} →</a></div>`;
+      const mk = L.marker([m.lat, m.lng], { icon, title: m.nome, alt: m.nome })
+        .bindPopup(html, { className: "cf-popup", maxWidth: 260, autoPanPadding: [30, 60] })
+        .bindTooltip(esc(m.nome), { direction: "top", offset: [0, -4] });
+      mk.on("popupopen", () => { history.replaceState(null, "", "#" + m.id); setActive(m.id); });
+      mk.on("popupclose", () => setActive(null));
+      layers.set(m.id, mk);
+    });
+
+    // --- Stato dei filtri ---
+    const selCat = $<HTMLSelectElement>("mf-cat");
+    const selReg = $<HTMLSelectElement>("mf-reg");
+    const chkAperti = $<HTMLInputElement>("mf-aperti");
+    const conteggio = $("mf-count");
+    const vuoto = $("mf-vuoto");
+    const inputQ = $<HTMLInputElement>("cfx-q");
+    const chkView = $<HTMLInputElement>("cfx-inview");
+    const list = $("cfx-list");
+    const empty = $("cfx-empty");
+    let user: L.LatLng | null = null;
+    let userMarker: L.Layer | null = null;
+    let activeId: string | null = null;
+    let visibleIds = new Set<string>();
+
+    const passa = (m: M) => {
+      const cat = selCat?.value || "", reg = selReg?.value || "";
+      const q = norm(inputQ?.value.trim() || "");
+      if (cat && m.categoria !== cat) return false;
+      if (reg && m.regione !== reg) return false;
+      if (chkAperti?.checked && m.chiuso) return false;
+      if (q && !norm([m.nome, m.citta, m.regioneLabel, m.regione, m.film.join(" ")].join(" ")).includes(q)) return false;
+      return true;
+    };
+
+    const km = (m: M) => (user ? user.distanceTo([m.lat, m.lng]) / 1000 : null);
+
+    function setActive(id: string | null) {
+      activeId = id;
+      list?.querySelectorAll(".cfx-item").forEach((el) => el.classList.toggle("is-active", (el as HTMLElement).dataset.id === id));
+      layers.forEach((mk, k) => { const el = mk.getElement(); if (el) el.classList.toggle("is-active", k === id); });
+    }
+
+    function renderList() {
+      if (!list) return;
+      const bounds = map.getBounds();
+      let items = data.filter((m) => visibleIds.has(m.id));
+      if (chkView?.checked) items = items.filter((m) => bounds.contains([m.lat, m.lng]));
+      items = [...items].sort((a, b) => {
+        const da = km(a), db = km(b);
+        if (da !== null && db !== null) return da - db;
+        return a.nome.localeCompare(b.nome, "it");
+      });
+      list.innerHTML = items.map((m) => {
+        const d = km(m);
+        return `<li><button type="button" class="cfx-item" data-id="${m.id}">
+          <i class="dot dot-${clsOf(m) === "set" ? "set" : clsOf(m)}"></i>
+          <span><span class="n">${esc(m.nome)}</span><br/><span class="s">${esc(m.citta)} · ${esc(m.tipo)}</span></span>
+          ${d !== null ? `<span class="d">${d < 10 ? d.toFixed(1) : Math.round(d)} ${esc(S.km)}</span>` : ""}
+        </button></li>`;
+      }).join("");
+      if (empty) empty.hidden = items.length > 0;
+      if (activeId) setActive(activeId);
+    }
+
+    function fitVisible(animate = true) {
+      const pts = data.filter((m) => visibleIds.has(m.id)).map((m) => [m.lat, m.lng] as [number, number]);
+      if (!pts.length) return;
+      if (pts.length === 1) { map.flyTo(pts[0], 13, { duration: animate ? 1 : 0 }); return; }
+      map.flyToBounds(L.latLngBounds(pts).pad(0.2), { duration: animate ? 1 : 0, maxZoom: 12 });
+    }
+
+    function applica(fit = true) {
+      const vis = data.filter(passa);
+      visibleIds = new Set(vis.map((m) => m.id));
+      cluster.clearLayers();
+      cluster.addLayers(vis.map((m) => layers.get(m.id)!));
+      if (conteggio) conteggio.textContent = String(vis.length);
+      if (vuoto) vuoto.hidden = vis.length > 0;
+      if (fit) fitVisible();
+      renderList();
+    }
+
+    function vai(id: string) {
+      const mk = layers.get(id), m = data.find((x) => x.id === id);
+      if (!mk || !m) return;
+      if (!visibleIds.has(id)) { // se il filtro lo nasconde, azzera i filtri
+        if (selCat) selCat.value = ""; if (selReg) selReg.value = "";
+        if (chkAperti) chkAperti.checked = false; if (inputQ) inputQ.value = "";
+        applica(false);
+      }
+      map.once("moveend", () => { cluster.zoomToShowLayer(mk, () => mk.openPopup()); });
+      map.flyTo([m.lat, m.lng], Math.max(map.getZoom(), 13), { duration: 0.9 });
+    }
+
+    // --- Eventi ---
+    [selCat, selReg, chkAperti].forEach((e) => e?.addEventListener("change", () => applica(true)));
+    $("mf-reset")?.addEventListener("click", () => {
+      if (selCat) selCat.value = ""; if (selReg) selReg.value = "";
+      if (chkAperti) chkAperti.checked = false; if (inputQ) inputQ.value = "";
+      applica(true);
+    });
+    let t: number | undefined;
+    inputQ?.addEventListener("input", () => { clearTimeout(t); t = window.setTimeout(() => applica(true), 200); });
+    inputQ?.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") { e.preventDefault(); const first = list?.querySelector<HTMLElement>(".cfx-item"); if (first?.dataset.id) vai(first.dataset.id); }
+    });
+    chkView?.addEventListener("change", renderList);
+    map.on("moveend", () => { if (chkView?.checked) renderList(); });
+
+    list?.addEventListener("click", (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLElement>(".cfx-item");
+      if (b?.dataset.id) vai(b.dataset.id);
+    });
+    list?.addEventListener("mouseover", (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLElement>(".cfx-item");
+      const mk = b?.dataset.id ? layers.get(b.dataset.id) : null;
+      mk?.getElement()?.classList.add("is-active");
+    });
+    list?.addEventListener("mouseout", (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLElement>(".cfx-item");
+      const id = b?.dataset.id;
+      if (id && id !== activeId) layers.get(id)?.getElement()?.classList.remove("is-active");
+    });
+
+    $("cfx-italia")?.addEventListener("click", () => {
+      if (selCat) selCat.value = ""; if (selReg) selReg.value = "";
+      if (chkAperti) chkAperti.checked = false; if (inputQ) inputQ.value = "";
+      applica(true);
+    });
+
+    // Vicino a me
+    $("cfx-geo")?.addEventListener("click", () => {
+      if (!navigator.geolocation) { alert(S.geoErr); return; }
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          user = L.latLng(pos.coords.latitude, pos.coords.longitude);
+          if (userMarker) map.removeLayer(userMarker);
+          userMarker = L.circleMarker(user, { radius: 8, color: "#fff", weight: 3, fillColor: "#2b6ef2", fillOpacity: 1 }).addTo(map);
+          const nearest = [...data].filter((m) => visibleIds.has(m.id)).sort((a, b) => km(a)! - km(b)!).slice(0, 4);
+          const pts = [user, ...nearest.map((m) => L.latLng(m.lat, m.lng))];
+          map.flyToBounds(L.latLngBounds(pts).pad(0.25), { duration: 1.2, maxZoom: 14 });
+          if (chkView) chkView.checked = false;
+          renderList();
+        },
+        () => alert(S.geoErr),
+        { enableHighAccuracy: false, timeout: 10000 }
+      );
+    });
+
+    // Schermo intero
+    const fullBtn = $("cfx-full"), fullLbl = $("cfx-full-label");
+    function setFull(on: boolean) {
+      root!.classList.toggle("cfx-full", on);
+      document.documentElement.classList.toggle("cfx-lock", on);
+      fullBtn?.setAttribute("aria-pressed", String(on));
+      if (fullLbl) fullLbl.textContent = on ? S.esci : S.schermo;
+      setTimeout(() => map.invalidateSize(), 60);
+    }
+    fullBtn?.addEventListener("click", () => setFull(!root!.classList.contains("cfx-full")));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && root!.classList.contains("cfx-full")) setFull(false); });
+
+    // Avvio
+    applica(false);
+    const hash = decodeURIComponent(location.hash.replace("#", ""));
+    if (hash && layers.has(hash)) { vai(hash); }
+    else fitVisible(false);
+  }
+  init();
+</script>

@@ -1,26 +1,29 @@
 ---
-/** English map page with filters, venues by region and FAQ. */
+/** English map page: esploratore interattivo, filtri, elenco per regione e FAQ. */
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import MapView from "../../components/Map.astro";
+import MapExplorer from "../../components/MapExplorer.astro";
+import type { ExplorerMarker } from "../../components/MapExplorer.astro";
 import MappaFiltri from "../../components/MappaFiltri.astro";
 import MappaInfo from "../../components/MappaInfo.astro";
-import type { MapMarker } from "../../components/Map.astro";
-import { ordinaLocali } from "../../lib/utils";
+import { ordinaLocali, tipoLabel } from "../../lib/utils";
 import { faqPageJsonLd } from "../../lib/schema-org";
-import { faqMappa, statistiche } from "../../lib/mappa-content";
+import { faqMappa, statistiche, tRegione } from "../../lib/mappa-content";
+import { tFilmTitolo, tLocaleDesc } from "../../i18n/content-en";
 import { useT, path } from "../../i18n/ui";
-import { tFilmTitolo } from "../../i18n/content-en";
 
 const lang = "en" as const;
 const t = useT(lang);
 const locali = ordinaLocali(await getCollection("restaurants"));
 const films = new Map((await getCollection("films")).map((f) => [f.id, f]));
-const markers: MapMarker[] = locali.map((l) => ({
-  lat: l.data.coordinate.lat, lng: l.data.coordinate.lng,
-  nome: l.data.nome, citta: l.data.citta, tipo: l.data.tipo, url: path(`/locale/${l.id}`, lang),
-  categoria: l.data.categoria, regione: l.data.regione, chiuso: l.data.stato !== "aperto",
+const breve = (s: string) => (s.length > 140 ? s.slice(0, 137).replace(/\s+\S*$/, "") + "…" : s);
+const markers: ExplorerMarker[] = locali.map((l) => ({
+  id: l.id, lat: l.data.coordinate.lat, lng: l.data.coordinate.lng,
+  nome: l.data.nome, citta: l.data.citta, regione: l.data.regione, regioneLabel: tRegione(l.data.regione, lang),
+  tipo: tipoLabel(l.data.tipo, lang), categoria: l.data.categoria, chiuso: l.data.stato !== "aperto",
   film: l.data.film.map((f) => films.get(f.film.id)).filter(Boolean).map((f) => tFilmTitolo(f!, lang)),
+  desc: breve(tLocaleDesc(l, lang)),
+  url: path(`/locale/${l.id}`, lang),
 }));
 const regioni = [...new Set(locali.map((l) => l.data.regione))].sort((a, b) => a.localeCompare(b, "it"));
 const jsonLd = faqPageJsonLd(faqMappa(lang, statistiche(locali)));
@@ -34,9 +37,9 @@ const jsonLd = faqPageJsonLd(faqMappa(lang, statistiche(locali)));
 >
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="font-display text-4xl font-extrabold">{t("mappa.titolo")}</h1>
-    <p class="mt-2 text-ink-600 dark:text-ink-400">Click a marker for the venue details and linked films. Map based on OpenStreetMap.</p>
+    <p class="mt-2 text-ink-600 dark:text-ink-400">Click a marker or pick a venue from the list: the map flies there. Search by venue, city or film, or find the ones near you. Map based on OpenStreetMap.</p>
     <div class="mt-6"><MappaFiltri lang={lang} regioni={regioni} totale={locali.length} /></div>
-    <div class="mt-4"><MapView markers={markers} height="72vh" zoom={6} lang={lang} /></div>
+    <MapExplorer markers={markers} lang={lang} />
     <MappaInfo lang={lang} locali={locali} />
   </section>
 </BaseLayout>
