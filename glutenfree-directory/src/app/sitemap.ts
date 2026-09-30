@@ -46,6 +46,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((c) => populatedDirectoryCategories.has(c.slug))
     .map((c) => entry(`/directory?categoria=${c.slug}`, { changeFrequency: "weekly", priority: 0.6 }));
 
+  // Pagine città con almeno 2 locali verificati: hanno titolo, descrizione e
+  // canonical propri (vedi lib/directory-seo.ts). Le città con un solo locale
+  // restano raggiungibili dai link interni ma non vengono spinte in sitemap.
+  const cityCounts = new Map<string, number>();
+  for (const b of BUSINESSES) cityCounts.set(b.city, (cityCounts.get(b.city) ?? 0) + 1);
+  const cityPages: MetadataRoute.Sitemap = [...cityCounts]
+    .filter(([, n]) => n >= 2)
+    .map(([city]) => entry(`/directory?comune=${encodeURIComponent(city)}`, { changeFrequency: "weekly", priority: 0.6 }));
+
   const productCategoryPages: MetadataRoute.Sitemap = PRODUCT_CATEGORIES.map((c) =>
     entry(`/prodotti?categoria=${encodeURIComponent(c)}`, { changeFrequency: "weekly", priority: 0.5 }),
   );
@@ -62,5 +71,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry(`/blog/${a.slug}`, { changeFrequency: "monthly", priority: 0.6, lastModified: a.updatedAt }),
   );
 
-  return [...staticPages, ...categoryPages, ...productCategoryPages, ...productPages, ...businessPages, ...articlePages];
+  return [...staticPages, ...categoryPages, ...cityPages, ...productCategoryPages, ...productPages, ...businessPages, ...articlePages];
 }

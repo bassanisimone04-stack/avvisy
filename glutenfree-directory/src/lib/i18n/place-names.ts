@@ -8,6 +8,7 @@ const CITY_EN: Record<string, string> = {
   Torino: "Turin",
   Venezia: "Venice",
   Padova: "Padua",
+  Genova: "Genoa",
 };
 
 const REGION_EN: Record<string, string> = {

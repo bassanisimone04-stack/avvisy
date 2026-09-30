@@ -68,6 +68,14 @@ export default function DirectoryContent({
               <SearchX size={32} className="text-muted" />
               <p className="font-semibold text-ink">{t.directory.emptyTitle}</p>
               <p className="max-w-sm text-sm text-ink-soft">{t.directory.emptyBody}</p>
+              {filters.categoria === "supermercato" && (
+                <p className="max-w-sm text-sm text-ink-soft">
+                  {locale === "en" ? "We don't list supermarkets yet, but our guide explains where to buy gluten-free products and where the celiac voucher can be spent: " : "Non abbiamo ancora supermercati in elenco, ma nella nostra guida trovi dove comprare i prodotti senza glutine e dove spendere il buono per celiaci: "}
+                  <Link href={localeHref(locale, "/blog/dove-comprare-prodotti-senza-glutine-supermercati-farmacie-e-negozi-specializzati")} className="font-semibold text-brand-dark underline">
+                    {locale === "en" ? "where to buy gluten-free products" : "dove comprare prodotti senza glutine"}
+                  </Link>.
+                </p>
+              )}
               <Link href={dirHref} className="btn btn-outline mt-2"><SlidersHorizontal size={15} /> {t.directory.resetFilters}</Link>
             </div>
           ) : (
