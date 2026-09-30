@@ -4,7 +4,7 @@ descrizione: "Where was Il Postino filmed? Salina's Pollara and the Aeolian Isla
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/il-postino-salina-eolie.jpg"
-immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
+immagineAlt: "A beach on Salina, in the Aeolian Islands, with the sea and a sea stack in the distance"
 tags: ["Il Postino", "Salina", "Aeolian Islands", "where to eat", "film tourism"]
 faq:
   - domanda: "Where was Il Postino filmed?"

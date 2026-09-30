@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato Il Postino? Pollara e Salina, nelle Eolie, pi
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/il-postino-salina-eolie.jpg"
-immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
+immagineAlt: "Una spiaggia di Salina, nelle Isole Eolie, con il mare e uno scoglio sullo sfondo"
 tags: ["Il Postino", "Salina", "Eolie", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Il Postino?"
