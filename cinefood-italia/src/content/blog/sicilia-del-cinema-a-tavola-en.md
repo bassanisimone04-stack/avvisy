@@ -4,7 +4,7 @@ descrizione: "From Montalbano to The Godfather: Sicily's film locations and what
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-10
 immagine: "../../assets/placeholder/sicilia-del-cinema-a-tavola.jpg"
-immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
+immagineAlt: "The Politeama Garibaldi theatre in Palermo"
 tags: ["Sicily", "Montalbano", "itineraries", "cinema"]
 faq:
   - domanda: "Which films were shot in Sicily?"
