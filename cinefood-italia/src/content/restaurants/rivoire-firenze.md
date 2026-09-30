@@ -12,7 +12,7 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/rivoire-firenze.jpg"
-immagineAlt: "Il caffè storico Rivoire in Piazza della Signoria a Firenze"
+immagineAlt: "Palazzo Vecchio in Piazza della Signoria a Firenze, la piazza dove si trova il Caffè Rivoire"
 sitoWeb: "https://www.rivoire.it"
 ultimoAggiornamento: 2026-08-11
 film:

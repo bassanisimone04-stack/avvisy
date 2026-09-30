@@ -4,7 +4,7 @@ descrizione: "Le location fiorentine di Hannibal di Ridley Scott, dal Caffè Riv
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/rivoire-firenze.jpg"
-immagineAlt: "Il caffè storico Rivoire in Piazza della Signoria a Firenze"
+immagineAlt: "Palazzo Vecchio in Piazza della Signoria a Firenze, la piazza dove si trova il Caffè Rivoire"
 tags: ["Hannibal", "Firenze", "Ridley Scott", "caffè storici", "cineturismo"]
 faq:
   - domanda: "Hannibal è girato davvero a Firenze?"

@@ -4,7 +4,7 @@ descrizione: "The Florence locations of Ridley Scott's Hannibal, from Caffè Riv
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/rivoire-firenze.jpg"
-immagineAlt: "The historic Caffè Rivoire on Piazza della Signoria in Florence"
+immagineAlt: "Palazzo Vecchio in Piazza della Signoria, Florence, the square where Caffè Rivoire stands"
 tags: ["Hannibal", "Florence", "Ridley Scott", "historic cafés", "film tourism"]
 faq:
   - domanda: "Was Hannibal really filmed in Florence?"
