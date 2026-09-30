@@ -723,8 +723,8 @@ const seeds: Seed[] = [
     title: "Gelaterie senza glutine: come riconoscere quelle davvero senza contaminazione crociata",
     category: "Guide",
     excerpt: "Gelaterie senza glutine: come capire se palette, vaschette e coni sono davvero sicuri per un celiaco, quali gusti evitare e perché l'estate aumenta il rischio di contaminazione crociata.",
-    metaTitle: "Gelaterie senza glutine sicure | Mappa Senza Glutine",
-    metaDescription: "Gelaterie senza glutine: come capire se palette, vaschette e coni sono davvero sicuri, quali gusti evitare e perché l'estate aumenta il rischio.",
+    metaTitle: "Gelato senza glutine per celiaci: guida | Mappa Senza Glutine",
+    metaDescription: "Il gelato è senza glutine? Cosa controllare su gelato artigianale e confezionato, coni e topping, e come riconoscere le gelaterie sicure per un celiaco.",
     coverSeed: 122, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["gelaterie", "estate", "contaminazione crociata", "sicurezza alimentare"],
     keyTakeaways: [
@@ -747,6 +747,10 @@ const seeds: Seed[] = [
       ] },
       { h2: "Attenzione ai gusti più a rischio", body: "Alcuni gusti richiedono più attenzione di altri: quelli con biscotto sbriciolato, wafer, cialde o croccante alle nocciole comportano un rischio maggiore, perché gli ingredienti solidi possono lasciare residui nella paletta o nella vaschetta usata poi per altri gusti. Anche il malto e alcuni topping pronti possono contenere glutine: in caso di dubbio, meglio orientarsi su gusti alla frutta o creme semplici, verificati direttamente con lo staff." },
       { h2: "Perché l'estate aumenta il rischio di contaminazione", body: "Nei mesi estivi le gelaterie gestiscono un afflusso molto più alto rispetto al resto dell'anno, spesso con personale stagionale meno formato sulla gestione della celiachia. La fretta del servizio nelle ore di punta aumenta il rischio di errori nell'uso di palette e vaschette: è il momento in cui vale ancora di più scegliere locali verificati, come quelli segnalati nella <a href=\"/directory?categoria=gelateria\">directory di Mappa Senza Glutine</a>, invece di affidarsi a una gelateria scelta a caso." },
+      { h2: "Il gelato è senza glutine? Artigianale e confezionato", body: "Il gelato non è automaticamente senza glutine. Gli ingredienti di base, come latte, panna, zucchero, frutta e cioccolato, sono naturalmente privi di glutine, ma possono contenerlo basi e paste aromatizzanti, addensanti, variegati, biscotti, cialde, granelle e topping: per questo conta la ricetta di ogni gusto, non solo il gusto di partenza.", h3: [
+        { title: "Gelato artigianale", body: "Nelle gelaterie del programma Alimentazione Fuori Casa di AIC, la vetrofania indica che l'associazione ha verificato materie prime, ricette e processi produttivi. Il gelato senza glutine va servito con utensili dedicati, in coppette o in coni dichiarati senza glutine, tenendo le vaschette separate. Nella nostra directory trovi le <a href=\"/directory?categoria=gelateria\">gelaterie senza glutine verificate</a>, tra cui <a href=\"/directory/zero-gelato-milano\">Zero Gelato</a> a Milano, con gusti interamente senza glutine, e <a href=\"/directory/grom-venezia\">Grom</a> a Venezia, catena che partecipa al programma AIC." },
+        { title: "Gelato confezionato", body: "Per i gelati confezionati cerca la dicitura \"senza glutine\" in etichetta o il marchio Spiga Barrata, e consulta il Prontuario AIC, che ne include molti. Alcune aziende, come Sammontana, dichiarano sul proprio sito che molti dei loro gelati senza glutine sono nel Prontuario e riportano la Spiga Barrata. Anche qui non dare per scontato che un gusto sia senza glutine solo perché non contiene biscotti: le ricette cambiano, quindi leggi la confezione ogni volta. Altri consigli nella guida su <a href=\"/blog/come-leggere-le-etichette-alimentari-se-sei-celiaco\">come leggere le etichette</a>." },
+      ] },
       { h2: "Domande frequenti sulle gelaterie senza glutine", body: "Le domande più comuni di chi è celiaco e cerca un gelato sicuro.", h3: [
         { title: "Il gelato alla frutta è sempre senza glutine?", body: "Nella maggior parte dei casi sì, ma non è garantito automaticamente: il rischio principale resta la contaminazione tramite palette o vaschette condivise con gusti a base di biscotto o cialde, indipendentemente dall'ingrediente di partenza." },
         { title: "Come faccio a sapere se una gelateria è sicura per celiaci?", body: "Verifica se è certificata AIC, chiedi allo staff se le palette sono dedicate o pulite tra un gusto e l'altro, e osserva se le vaschette senza glutine sono separate fisicamente dalle altre." },
@@ -759,14 +763,16 @@ const seeds: Seed[] = [
       { question: "Come faccio a sapere se una gelateria è sicura per celiaci?", answer: "Verifica se è certificata AIC, chiedi se le palette sono dedicate o pulite tra un gusto e l'altro, e controlla che le vaschette senza glutine siano separate dalle altre." },
       { question: "Il cono tradizionale contiene glutine?", answer: "Sì, il cono classico contiene farina di frumento: se non c'è un'alternativa certificata, la coppetta è la scelta più sicura." },
       { question: "Perché d'estate è più rischioso mangiare un gelato senza glutine?", answer: "Perché l'afflusso aumenta e spesso lavora personale stagionale meno formato, con più rischio di contaminazione accidentale nelle ore di punta." },
+      { question: "Il gelato è senza glutine?", answer: "Non automaticamente. Gli ingredienti di base sono naturalmente senza glutine, ma basi, variegati, biscotti, coni e topping possono contenerlo: vanno controllati ogni gusto e il modo in cui viene servito." },
+      { question: "Quali gelati confezionati sono senza glutine?", answer: "Quelli con la dicitura \"senza glutine\" in etichetta o il marchio Spiga Barrata; molti sono elencati nel Prontuario AIC. Controlla sempre la confezione, perché la ricetta può cambiare." },
     ],
   },
   {
     title: "Hotel e villaggi turistici certificati AIC per celiaci: come scegliere una vacanza senza pensieri",
     category: "Viaggi",
     excerpt: "Hotel e villaggi turistici certificati AIC: cosa garantisce davvero la certificazione, la differenza tra colazione e pensione completa, e come organizzare una vacanza senza glutine senza sorprese.",
-    metaTitle: "Hotel certificati AIC per celiaci | Mappa Senza Glutine",
-    metaDescription: "Hotel e villaggi certificati AIC: cosa garantisce la certificazione, la differenza tra colazione e pensione completa, come scegliere senza sorprese.",
+    metaTitle: "Vacanze per celiaci: hotel e villaggi AIC | Mappa Senza Glutine",
+    metaDescription: "Vacanze per celiaci: come trovare hotel, villaggi, B&B e agriturismi della rete AIC, cosa garantisce la colazione senza glutine e cosa chiedere prima di prenotare.",
     coverSeed: 123, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["hotel", "viaggi", "AIC", "vacanze"],
     keyTakeaways: [
@@ -786,7 +792,8 @@ const seeds: Seed[] = [
         { title: "Il rischio dei buffet condivisi", body: "I buffet self-service, tipici dei villaggi turistici, aumentano il rischio di contaminazione: posate condivise tra vassoi diversi, briciole che passano da un piatto all'altro. Un villaggio certificato AIC prevede postazioni dedicate o personale che serve direttamente i piatti senza glutine." },
         { title: "Ristoranti a tema e show cooking", body: "Le serate a tema e gli show cooking, molto diffusi nei villaggi, richiedono attenzione extra: verifica sempre con lo staff se sono previste alternative senza glutine per quella specifica serata, idealmente comunicandolo al check-in." },
       ] },
-      { h2: "Come trovare hotel e villaggi certificati AIC per la tua vacanza", body: "Il modo più affidabile è verificare la certificazione direttamente sul sito della struttura o chiedendo conferma prima di prenotare, evitando di fidarsi solo di autodichiarazioni generiche come \"gluten free friendly\" trovate su portali di prenotazione. Nella <a href=\"/directory?categoria=hotel\">directory di Mappa Senza Glutine</a> trovi le strutture verificate, con indicazione chiara se la certificazione è confermata o meno." },
+      { h2: "Come trovare hotel e villaggi certificati AIC per la tua vacanza", body: "Il modo più affidabile è verificare la certificazione direttamente sul sito della struttura o chiedendo conferma prima di prenotare, evitando di fidarsi solo di autodichiarazioni generiche come \"gluten free friendly\" trovate su portali di prenotazione. L'elenco delle strutture aderenti al programma Alimentazione Fuori Casa di AIC è pubblicato nella guida cartacea, sul sito di AIC, dove è aggiornato in tempo reale, e nell'app gratuita per i soci, con la mappa dei locali. Nella <a href=\"/directory?categoria=hotel\">directory di Mappa Senza Glutine</a> trovi le strutture verificate, con indicazione chiara se la certificazione è confermata o meno." },
+      { h2: "Non solo hotel: B&B, agriturismi e case vacanze", body: "Il programma di AIC non riguarda solo gli alberghi: tra le strutture aderenti ci sono affittacamere, agriturismi, B&B, case vacanze e villaggi turistici. Le strutture della rete sono monitorate periodicamente da professionisti che supportano il personale e verificano il mantenimento dei requisiti. Un esempio nella nostra directory è l'<a href=\"/directory/hotel-al-piave-venezia\">Hotel Al Piave</a> a Venezia, nel sestiere di Castello, vicino a Piazza San Marco: è indicato come uno dei pochi alberghi della città con certificazione AIC e offre una colazione interamente senza glutine. Se stai pianificando una vacanza in città, vedi anche la guida <a href=\"/blog/venezia-senza-glutine-dove-mangiare-tra-cicchetti-pizza-e-colazione-in-hotel\">Venezia senza glutine</a> e le <a href=\"/blog/le-migliori-citta-italiane-per-una-vacanza-senza-glutine\">migliori città italiane per una vacanza senza glutine</a>." },
       { h2: "Cosa fare se l'hotel non è certificato AIC", body: "Anche senza certificazione, una vacanza senza glutine è possibile con qualche accorgimento in più: verifica se la camera ha un angolo cottura o un piccolo frigo per conservare snack e prodotti sicuri portati da casa, cerca ristoranti certificati AIC o segnalati dalla community nella zona per pranzo e cena, e porta sempre con te una scorta di prodotti senza glutine per le emergenze, soprattutto in mete poco turistiche dove trovarli sul posto può essere difficile." },
       { h2: "Domande frequenti su hotel e villaggi senza glutine", body: "Le domande più comuni di chi organizza una vacanza da celiaco.", h3: [
         { title: "Cosa significa che un hotel è certificato AIC?", body: "Significa che la struttura ha superato controlli specifici dell'Associazione Italiana Celiachia su colazione, eventuale ristorazione interna e formazione del personale, con verifiche periodiche nel tempo." },
@@ -800,6 +807,7 @@ const seeds: Seed[] = [
       { question: "I villaggi con pensione completa sono sicuri per celiaci?", answer: "Possono esserlo se certificati AIC o con procedure dedicate per i buffet, altrimenti il rischio di contaminazione crociata nelle formule self-service è più alto." },
       { question: "Devo avvisare l'hotel della celiachia prima di arrivare?", answer: "Sì, è fortemente consigliato segnalarlo in fase di prenotazione, non al check-in, così la cucina può organizzarsi in anticipo." },
       { question: "Cosa porto con me in vacanza se l'hotel non è certificato?", answer: "Una scorta di prodotti senza glutine di base per le emergenze, soprattutto in mete poco turistiche dove trovarli sul posto può essere difficile." },
+      { question: "Come trovo un hotel per celiaci?", answer: "L'elenco delle strutture aderenti al programma Alimentazione Fuori Casa di AIC è pubblicato sul sito di AIC, nella guida cartacea e nell'app per i soci. Puoi cercare anche nella directory di Mappa Senza Glutine, e conviene sempre confermare con la struttura prima di prenotare." },
     ],
   },
   {
@@ -878,7 +886,7 @@ const seeds: Seed[] = [
     category: "Ricette",
     excerpt: "La ricetta base per un impasto di pizza senza glutine con il mix universale: pochi ingredienti e un risultato più simile alla pizza tradizionale.",
     metaTitle: "Pizza senza glutine fatta in casa | Mappa Senza Glutine",
-    metaDescription: "La ricetta base per un impasto di pizza senza glutine con il mix universale: pochi ingredienti per un risultato vicino alla pizza tradizionale.",
+    metaDescription: "La ricetta base per un impasto di pizza senza glutine con il mix universale, anche con l'impastatrice: pochi ingredienti, risultato vicino alla pizza tradizionale.",
     coverSeed: 135, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-10",
     tags: ["ricette", "pizza", "impasti"],
     keyTakeaways: [
@@ -894,6 +902,7 @@ const seeds: Seed[] = [
         { title: "Cottura in due tempi", body: "Cuoci la base in bianco per 8-10 minuti a 220°C, poi aggiungi il condimento e completa la cottura per altri 10-12 minuti, finché i bordi non sono dorati." },
       ] },
       { h2: "Il condimento", body: "Pomodoro, mozzarella e origano restano la base più sicura, ma puoi usare anche il <a href=\"/prodotti/barilla-pesto-alla-genovese-190g\">pesto alla genovese Barilla</a> al posto del pomodoro per una variante bianca aromatica, oppure il <a href=\"/prodotti/sarchio-pesto-bio-130g\">pesto bio Sarchio</a> se preferisci una versione senza formaggio e senza aglio." },
+      { h2: "Si può usare l'impastatrice?", body: "Sì, ma senza aspettarsi lo stesso risultato dell'impasto tradizionale. L'impasto senza glutine è più simile a una crema densa che a un panetto elastico, perché manca la rete di glutine da sviluppare: per questo non serve una lunga impastatura e il gancio a spirale serve a poco. Con un'impastatrice planetaria usa la foglia a bassa velocità, solo il tempo necessario a incorporare bene acqua, mix e lievito, poi ferma la macchina. Senza impastatrice bastano una spatola o un cucchiaio di legno." },
       { h2: "Gli errori più comuni da evitare", body: "Alcuni piccoli errori rovinano più spesso il risultato di questo impasto rispetto a uno tradizionale.", h3: [
         { title: "Acqua troppo calda o troppo fredda", body: "Un'acqua oltre i 40°C rischia di uccidere il lievito, mentre un'acqua fredda rallenta troppo la lievitazione: la temperatura ideale è tiepida, appena percepibile al tatto, non calda." },
         { title: "Stendere l'impasto troppo sottile", body: "A differenza dell'impasto tradizionale, quello senza glutine ha meno elasticità: stenderlo troppo sottile aumenta il rischio che si spezzi o non tenga il condimento, soprattutto vicino ai bordi." },
@@ -906,14 +915,15 @@ const seeds: Seed[] = [
       { question: "Posso congelare l'impasto già steso?", answer: "Sì, molti impasti senza glutine si congelano bene già stesi nella teglia, prima della lievitazione finale: verifica comunque le indicazioni del produttore del mix." },
       { question: "Perché cuocere la base in bianco prima del condimento?", answer: "Aiuta la base a cuocersi uniformemente al centro senza restare cruda sotto il peso del condimento, soprattutto con impasti senza glutine più delicati." },
       { question: "Come faccio a rendere i bordi più croccanti?", answer: "Un filo d'olio extravergine sui bordi prima della seconda cottura e qualche minuto in più a fine cottura aiutano a dorarli senza seccare il resto della base." },
+      { question: "Posso usare l'impastatrice per la pizza senza glutine?", answer: "Sì, meglio con la foglia a bassa velocità e per pochi minuti: l'impasto senza glutine non va lavorato a lungo come quello tradizionale." },
     ],
   },
   {
     title: "Merenda scuola senza glutine: 5 idee pratiche per la schiscetta",
     category: "Ricette",
     excerpt: "Cosa mettere nello zaino per la merenda senza rischi: prodotti confezionati singolarmente, facili da controllare e da far portare a scuola.",
-    metaTitle: "Merenda scuola senza glutine | Mappa Senza Glutine",
-    metaDescription: "5 idee pratiche per la merenda senza glutine da mettere nello zaino: prodotti confezionati singolarmente, facili da controllare e portare a scuola.",
+    metaTitle: "Merenda senza glutine: 5 idee pratiche | Mappa Senza Glutine",
+    metaDescription: "Merenda senza glutine per scuola, lavoro e casa: 5 idee pratiche con prodotti in monoporzione, facili da controllare in etichetta e da portare nello zaino.",
     coverSeed: 137, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-10",
     tags: ["bambini", "merenda", "scuola"],
     keyTakeaways: [
@@ -928,6 +938,7 @@ const seeds: Seed[] = [
       { h2: "L'alternativa salata con le fette croccanti", body: "Le <a href=\"/prodotti/cereal-fette-croccanti-125g\">fette croccanti Céréal</a> si possono preparare la sera prima con un velo di formaggio spalmabile e conservare in un contenitore ermetico per il giorno dopo." },
       { h2: "Cracker e un panino diverso ogni tanto", body: "Per chi preferisce variare, i <a href=\"/prodotti/schar-crackers-210g\">cracker Schär</a> restano croccanti anche in un contenitore rigido e si abbinano bene a formaggio o marmellata. Una o due volte a settimana, un mini panino con il <a href=\"/prodotti/schar-pane-casereccio-240g\">pane casereccio Schär</a> o le <a href=\"/prodotti/nutrifree-panfette-pane-casereccio-300g\">panfette Nutrifree</a> spezza la routine dei prodotti confezionati, purché preparato con un tagliere e un coltello dedicati." },
       { h2: "Frutta fresca: la quinta idea, semplice e senza etichette da controllare", body: "Una mela, una banana o dell'uva lavata a casa non richiedono nessuna verifica particolare: sono naturalmente senza glutine e restano l'opzione più semplice nei giorni in cui non c'è tempo per preparare altro. L'unica accortezza è lavarli e tagliarli, se necessario, su una superficie pulita." },
+      { h2: "Merende senza glutine per tutti, non solo per la scuola", body: "La merenda senza glutine non serve solo a scuola: le stesse idee funzionano in ufficio, dopo lo sport o per una pausa a casa. Tra i prodotti confezionati del nostro catalogo ci sono la barretta <a href=\"/prodotti/schar-chocolix-110g\">Chocolix di Schär</a>, i <a href=\"/prodotti/cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g\">biscotti Buoni Senza di Céréal</a> e i <a href=\"/prodotti/schar-crackers-210g\">crackers Schär</a>, tutti in monoporzione. Se preferisci preparare la merenda in casa, puoi fare i <a href=\"/blog/biscotti-senza-glutine-la-ricetta-base-da-frollini\">biscotti</a>, i <a href=\"/blog/pancake-senza-glutine-la-ricetta-base-soffice\">pancake</a> o una <a href=\"/blog/torta-senza-glutine-facile-la-ricetta-base-con-il-mix-per-dolci\">torta</a> da tagliare a porzioni, e trovi altre ricette nella guida ai <a href=\"/blog/dolci-senza-glutine-le-ricette-base-da-fare-in-casa\">dolci senza glutine</a>." },
       { h2: "Consigli pratici per la schiscetta", body: "Scegli sempre prodotti nella confezione originale sigillata quando possibile, per evitare che il bambino li scambi con quelli di un compagno. Se prepari qualcosa in casa, usa un contenitore dedicato, lavato separatamente da quelli usati per alimenti con glutine.", h3: [
         { title: "Alternare dolce e salato durante la settimana", body: "Ruotare le cinque idee di questa guida durante la settimana evita che il bambino si stanchi sempre della stessa merenda, e rende più facile accettare le monoporzioni come normalità e non come limitazione." },
         { title: "Parlarne con la scuola", body: "Anche se la merenda arriva da casa, è utile informare le maestre della celiachia, per gestire eventuali scambi spontanei di cibo tra compagni durante l'intervallo." },
@@ -1010,8 +1021,8 @@ const seeds: Seed[] = [
     title: "Bari senza glutine: focaccia, panzerotti e pizza in teglia senza rinunce",
     category: "Guide",
     excerpt: "Dove mangiare senza glutine a Bari: la focaccia barese e i panzerotti in versione gluten free, un laboratorio dedicato dal 2013 e dove comprare la spesa senza glutine in città.",
-    metaTitle: "Bari senza glutine: dove mangiare | Mappa Senza Glutine",
-    metaDescription: "Dove mangiare senza glutine a Bari: focaccia barese e panzerotti gluten free, un laboratorio dedicato dal 2013 e dove fare la spesa senza glutine.",
+    metaTitle: "Panzerotti senza glutine a Bari: guida | Mappa Senza Glutine",
+    metaDescription: "Panzerotti e focaccia barese senza glutine: dove trovarli a Bari, con un laboratorio dedicato dal 2013 e un panificio autorizzato dal Ministero della Salute.",
     coverSeed: 145, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-08-18",
     tags: ["bari", "focaccia", "panificio", "guide"],
     keyTakeaways: [

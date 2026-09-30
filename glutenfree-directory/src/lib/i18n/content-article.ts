@@ -20,6 +20,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-1": {
     title: "Celiac Disease: What It Is, Symptoms and How It's Diagnosed",
     excerpt: "A complete guide to celiac disease: causes, the most common symptoms in adults and children, the diagnostic path, and what to do after diagnosis.",
+    metaTitle: "Celiac Disease: Symptoms and Diagnosis | Mappa Senza Glutine",
+    metaDescription: "Celiac disease explained: causes, the most common symptoms in adults and children, how it's diagnosed, and what to do after diagnosis.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Celiac disease is an autoimmune condition triggered by gluten, not a food allergy or intolerance.",
@@ -49,6 +51,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-2": {
     title: "How to Read Food Labels If You Have Celiac Disease",
     excerpt: "A practical guide to spotting risky ingredients on labels, the Crossed Grain symbol, and the wording you should always check.",
+    metaTitle: "Food Labels for Celiacs: A Guide | Mappa Senza Glutine",
+    metaDescription: "How to read food labels if you have celiac disease: risky ingredients, the Crossed Grain symbol and the wording you should always check.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "The Crossed Grain symbol is the fastest way to spot an AIC-verified product on the shelf.",
@@ -78,6 +82,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-3": {
     title: "Recipe: Homemade Gluten-Free Fresh Pasta",
     excerpt: "The step-by-step method for making elastic, tasty gluten-free fresh pasta, with the right flour blend.",
+    metaTitle: "Gluten-Free Fresh Pasta Recipe | Mappa Senza Glutine",
+    metaDescription: "Homemade gluten-free fresh pasta: the step-by-step method, the right flour blend and how to keep the dough elastic and tasty.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A good bread-and-pasta flour blend based on rice, potato and corn starch gets closest to traditional pasta.",
@@ -109,6 +115,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-4": {
     title: "Traveling Gluten-Free: 7 Tips for a Safe Holiday",
     excerpt: "How to plan a trip in Italy and abroad as a celiac, from useful apps to translation cards and safe bookings.",
+    metaTitle: "Traveling Gluten-Free: 7 Tips | Mappa Senza Glutine",
+    metaDescription: "Plan a gluten-free trip in Italy and abroad: 7 tips on useful apps, translation cards and safe bookings for celiacs on holiday.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Look up certified restaurants and hotels at your destination before you leave and save them to a shared map.",
@@ -135,6 +143,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-5": {
     title: "Celiac Kids at School: Managing Cafeterias and Field Trips",
     excerpt: "Practical advice for parents on organizing the school cafeteria, field trips and birthday parties for a celiac child.",
+    metaTitle: "Celiac Kids at School: Cafeteria and Trips | Mappa Senza Glutine",
+    metaDescription: "Practical advice for parents of a celiac child: how to organize the school cafeteria, field trips and birthday parties safely.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A gluten-free school meal is a legal right in Italy, at no extra cost for the family.",
@@ -158,6 +168,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-6": {
     title: "Gluten-Free Products: The Most Interesting Novelties of 2026",
     excerpt: "A roundup of the most innovative gluten-free products that hit the shelves this year, from flours to snacks and bread substitutes.",
+    metaTitle: "Gluten-Free Product Novelties of 2026 | Mappa Senza Glutine",
+    metaDescription: "The most interesting gluten-free products of 2026: new flours, snacks and bread substitutes that arrived on the shelves this year.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Mulino Caputo unveiled new 500g gluten-free formats and a Fior di Avena (oat) flour at Tuttofood 2026.",
@@ -208,6 +220,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-8": {
     title: "Gluten-Free Diet and Sports: What to Know for Performance",
     excerpt: "How to plan sports nutrition when following a gluten-free diet, covering carbohydrates, supplementation and practical ideas.",
+    metaTitle: "Gluten-Free Diet and Sports: A Guide | Mappa Senza Glutine",
+    metaDescription: "Sports nutrition on a gluten-free diet: how to plan carbohydrates, what to know about supplements and practical ideas to support performance.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Rice, quinoa, buckwheat and sweet potatoes are ideal complex carbs for pre-race fueling and recovery.",
@@ -233,6 +247,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-9": {
     title: "A Balanced Gluten-Free Diet: A Guide to Macronutrients",
     excerpt: "How to build a varied, balanced gluten-free diet, avoiding an excess of industrial substitute products.",
+    metaTitle: "A Balanced Gluten-Free Diet: Macros | Mappa Senza Glutine",
+    metaDescription: "How to build a varied, balanced gluten-free diet: a guide to macronutrients that avoids relying too much on industrial substitute products.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Rice, corn, buckwheat, quinoa, legumes and vegetables are naturally gluten-free and should be the base of your diet.",
@@ -258,6 +274,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-10": {
     title: "2026 Regulatory Updates: What Changes for Celiacs in Italy",
     excerpt: "The latest news on reimbursements, food vouchers and regulations for people with celiac disease in Italy, updated for 2026.",
+    metaTitle: "2026 Rules for Celiacs in Italy | Mappa Senza Glutine",
+    metaDescription: "What changes for celiacs in Italy in 2026: the latest on reimbursements, food vouchers and regulations, updated with the 2026 Budget Law.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Italy's 2026 Budget Law (art. 77) digitalizes the gluten-free product voucher, making it usable anywhere in the country.",
@@ -282,6 +300,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-11": {
     title: "Perfect Gluten-Free Pizza: Secrets for a Light, Crispy Crust",
     excerpt: "The secrets to a light, elastic, crispy gluten-free pizza dough, with proofing and baking times for a true pizzeria result.",
+    metaTitle: "Perfect Gluten-Free Pizza: The Secrets | Mappa Senza Glutine",
+    metaDescription: "The secrets to a light, elastic, crispy gluten-free pizza dough at home, with proofing and baking times for a pizzeria-style result.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A blend of rice flour, potato starch and corn starch gives an elastic, well-rising base.",
@@ -310,6 +330,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-12": {
     title: "Cross-Contamination in the Kitchen: Golden Rules for a Safe Home",
     excerpt: "Best practices for avoiding gluten cross-contamination in a kitchen shared with non-celiac family members, from the pantry to the stove.",
+    metaTitle: "Cross-Contamination in the Kitchen | Mappa Senza Glutine",
+    metaDescription: "How to avoid gluten cross-contamination in a kitchen shared with non-celiac family members: golden rules from the pantry to the stove.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Even a few milligrams of gluten can trigger a reaction in celiacs: crumbs or shared utensils are enough.",
@@ -338,6 +360,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-13": {
     title: "Celiac Disease and Pregnancy: What to Know for a Smooth Journey",
     excerpt: "How to manage a gluten-free diet during pregnancy, covering increased nutritional needs, routine checks and myths worth debunking.",
+    metaTitle: "Celiac Disease and Pregnancy: A Guide | Mappa Senza Glutine",
+    metaDescription: "Celiac disease and pregnancy: how to manage a gluten-free diet, increased nutritional needs, routine checks and myths worth debunking.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A well-balanced gluten-free diet carries no extra risk in pregnancy compared to a diet with gluten.",
@@ -366,6 +390,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-14": {
     title: "The Best Italian Cities for a Gluten-Free Vacation",
     excerpt: "From Bologna to Milan to Puglia: an overview of the Italian destinations with the highest density of certified venues for celiacs.",
+    metaTitle: "Best Italian Cities for Gluten-Free Travel | Mappa Senza Glutine",
+    metaDescription: "From Bologna to Milan to Puglia: the Italian destinations with the highest density of certified venues for celiacs, for a gluten-free holiday.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Emilia-Romagna and Lombardy are among the regions with the most AIC-certified venues per capita.",
@@ -389,6 +415,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-15": {
     title: "The Best Gluten-Free Restaurants and Pizzerias in Milan: The Complete 2026 Guide",
     excerpt: "Where to eat gluten-free in Milan with confidence: our selection of certified restaurants, pizzerias and bakeries, from dedicated kitchens to scrupulous attention to cross-contamination.",
+    metaTitle: "Gluten-Free Milan: Restaurants, Pizzerias | Mappa Senza Glutine",
+    metaDescription: "Where to eat gluten-free in Milan: certified restaurants, pizzerias and bakeries, from dedicated kitchens to careful cross-contamination control.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Milan now offers dozens of AIC-certified venues, from restaurants with 100% gluten-free kitchens to pizzerias with dedicated ovens.",
@@ -433,6 +461,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-16": {
     title: "What Can a Celiac Eat? The Complete Guide to Safe and Unsafe Foods",
     excerpt: "Which foods are safe for celiacs and which should always be avoided: a practical guide to grocery shopping and cooking gluten-free without doubts or contamination risks.",
+    metaTitle: "What Can a Celiac Eat? Safe Foods Guide | Mappa Senza Glutine",
+    metaDescription: "Which foods are safe for celiacs and which to avoid: a practical guide to shopping and cooking gluten-free without contamination risks.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Grains like wheat, barley, rye and their derivatives should always be avoided: they're the main sources of gluten in the Italian diet.",
@@ -492,6 +522,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-18": {
     title: "Gluten Sensitivity or Celiac Disease? The Differences You Need to Know",
     excerpt: "Celiac disease, non-celiac gluten sensitivity and wheat allergy aren't the same thing: here's how the symptoms, diagnosis and management of each condition differ.",
+    metaTitle: "Gluten Sensitivity vs Celiac Disease | Mappa Senza Glutine",
+    metaDescription: "Celiac disease, non-celiac gluten sensitivity and wheat allergy are different: how their symptoms, diagnosis and management compare.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Celiac disease is an autoimmune condition with documentable intestinal damage; gluten sensitivity is not.",
@@ -519,6 +551,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-19": {
     title: "The Best Gluten-Free Restaurants and Pizzerias in Rome: The Complete 2026 Guide",
     excerpt: "Where to eat gluten-free in Rome with confidence: traditional trattorias, pizzerias with dedicated ovens and certified bakeries, from gluten-free cacio e pepe to scrupulous attention to cross-contamination.",
+    metaTitle: "Gluten-Free Rome: Restaurants, Pizzerias | Mappa Senza Glutine",
+    metaDescription: "Where to eat gluten-free in Rome: traditional trattorias, pizzerias with dedicated ovens and certified bakeries, with attention to cross-contamination.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Rome now has AIC-certified trattorias and pizzerias able to reinvent classics like cacio e pepe and crispy Roman-style pizza gluten-free.",
@@ -563,6 +597,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-20": {
     title: "How to Avoid Cross-Contamination at a Restaurant: The Complete Guide to Eating Gluten-Free Safely",
     excerpt: "How to avoid cross-contamination at a restaurant: the questions to ask staff, the signs of a truly safe venue, and the specific risks at pizzerias, restaurants and bakeries.",
+    metaTitle: "Restaurant Cross-Contamination: A Guide | Mappa Senza Glutine",
+    metaDescription: "How to avoid cross-contamination at a restaurant: the questions to ask, the signs of a safe venue and the specific risks at pizzerias and bakeries.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Cross-contamination happens when even minimal traces of gluten come into contact with a gluten-free dish through shared utensils, surfaces or frying oil.",
@@ -581,7 +617,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { h2: "The signs that a restaurant is truly safe for celiacs", body: "Beyond direct questions, a few objective elements help assess a venue's reliability even before sitting down.", h3: [
         { title: "AIC certification: what it really guarantees", body: "Venues certified by the Italian Celiac Association have passed periodic checks on suppliers, kitchen procedures and staff training, checks that repeat over time. It isn't a legal requirement, so its absence doesn't automatically mean a venue is unsafe, but the mark significantly reduces the margin of error compared to a venue that simply calls itself \"gluten-free\" with no external checks." },
         { title: "A clear gluten-free menu, not a generic one", body: "A good gluten-free menu specifies which dishes are prepared in a dedicated area and which only share the base ingredient with traditional versions: the difference isn't cosmetic, because in the second case the risk of contamination during cooking remains real even if the starting ingredient is gluten-free." },
-        { title: "Reviews and reports from other celiacs", body: "The direct experiences of other people with celiac disease often tell you more than any label: venues repeatedly flagged as safe by the community, gathered in verified directories like <a href=\"/directory\">Mappa Senza Glutine</a>, are a more reliable starting point than a generic Google Maps search." },
+        { title: "Reviews and reports from other celiacs", body: "The direct experiences of other people with celiac disease often tell you more than any label: venues repeatedly flagged as safe by the community, gathered in verified directories like <a href=\"/en/directory\">Mappa Senza Glutine</a>, are a more reliable starting point than a generic Google Maps search." },
       ] },
       { h2: "Pizzerias, à la carte restaurants and bakeries: the risks change by venue type", body: "Not every venue handles cross-contamination the same way: the type of kitchen strongly affects the level of attention required.", h3: [
         { title: "Pizzerias: the shared oven is the main risk", body: "Even with a perfectly gluten-free dough, baking pizza in the same wood-fired oven used for traditional dough exposes it to the risk of residual flour on the refractory base: the most attentive pizzerias have a separate baking area or an electric oven dedicated only to gluten-free pizzas." },
@@ -652,6 +688,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-22": {
     title: "Gluten-Free Gelaterias: How to Spot the Ones That Are Truly Free of Cross-Contamination",
     excerpt: "Gluten-free gelaterias: how to tell if scoops, tubs and cones are really safe for a celiac, which flavors to avoid, and why summer raises the risk of cross-contamination.",
+    metaTitle: "Gluten-Free Gelato for Celiacs: A Guide | Mappa Senza Glutine",
+    metaDescription: "Is gelato gluten-free? What to check for artisanal and packaged gelato, cones and toppings, and how to spot gelaterias that are safe for celiacs.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "The main risk at uncertified gelaterias is contamination through scoops and tubs shared between gluten-containing and gluten-free flavors.",
@@ -672,7 +710,11 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
         { title: "Staff who answer without hesitation", body: "A trained staff member answers confidently about scoops, tubs and cones. If the question causes hesitation or gets a vague answer, that's a sign worth noting." },
       ] },
       { h2: "Watch out for the riskiest flavors", body: "Some flavors require more caution than others: those with crushed cookies, wafers, waffle cone pieces or hazelnut crunch carry a higher risk, because solid ingredients can leave residue on the scoop or in the tub later used for other flavors. Malt and some ready-made toppings can also contain gluten: when in doubt, simple fruit or cream flavors, confirmed directly with staff, are the safer bet." },
-      { h2: "Why summer raises the risk of contamination", body: "In summer months, gelaterias handle far higher foot traffic than the rest of the year, often with seasonal staff less trained in handling celiac disease. The rush of service during peak hours increases the risk of mistakes with scoops and tubs: this is exactly when it matters most to choose verified venues, like the ones flagged in the <a href=\"/directory?categoria=gelateria\">Mappa Senza Glutine directory</a>, rather than picking a gelateria at random." },
+      { h2: "Why summer raises the risk of contamination", body: "In summer months, gelaterias handle far higher foot traffic than the rest of the year, often with seasonal staff less trained in handling celiac disease. The rush of service during peak hours increases the risk of mistakes with scoops and tubs: this is exactly when it matters most to choose verified venues, like the ones flagged in the <a href=\"/en/directory?categoria=gelateria\">Mappa Senza Glutine directory</a>, rather than picking a gelateria at random." },
+      { h2: "Is gelato gluten-free? Artisanal and packaged", body: "Gelato isn't automatically gluten-free. The base ingredients, such as milk, cream, sugar, fruit and chocolate, are naturally free of gluten, but bases, flavoring pastes, thickeners, ripple sauces, cookies, wafers, sprinkles and toppings can contain it: what matters is the recipe of each flavor, not just where it starts from.", h3: [
+        { title: "Artisanal gelato", body: "In the gelaterias of AIC's Alimentazione Fuori Casa program, the window sticker shows that the association has checked raw materials, recipes and production processes. Gluten-free gelato should be served with dedicated utensils, in cups or in cones that are declared gluten-free, and the tubs should be kept separate. In our directory you'll find the <a href=\"/en/directory?categoria=gelateria\">verified gluten-free gelaterias</a>, including <a href=\"/en/directory/zero-gelato-milano\">Zero Gelato</a> in Milan, with entirely gluten-free flavors, and <a href=\"/en/directory/grom-venezia\">Grom</a> in Venice, a chain that takes part in the AIC program." },
+        { title: "Packaged gelato", body: "For packaged gelato, look for the \"gluten-free\" claim on the label or the Crossed Grain mark, and check AIC's Prontuario, which lists many ice creams. Some manufacturers, such as Sammontana, state on their website that many of their gluten-free ice creams are in the Prontuario and carry the Crossed Grain mark. Here too, don't assume a flavor is gluten-free just because it has no cookies in it: recipes change, so read the pack every time. More tips in our guide to <a href=\"/en/blog/come-leggere-le-etichette-alimentari-se-sei-celiaco\">reading food labels</a>." },
+      ] },
       { h2: "Frequently asked questions about gluten-free gelaterias", body: "The most common questions from celiacs looking for a safe gelato.", h3: [
         { title: "Is fruit gelato always gluten-free?", body: "In most cases yes, but it isn't automatically guaranteed: the main risk remains contamination through scoops or tubs shared with cookie- or wafer-based flavors, regardless of the starting ingredient." },
         { title: "How can I tell if a gelateria is safe for celiacs?", body: "Check whether it's AIC certified, ask staff if scoops are dedicated or cleaned between flavors, and see if gluten-free tubs are physically separated from the others." },
@@ -685,12 +727,16 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "How can I tell if a gelateria is safe for celiacs?", answer: "Check whether it's AIC certified, ask if scoops are dedicated or cleaned between flavors, and check that gluten-free tubs are separated from the others." },
       { question: "Does the traditional cone contain gluten?", answer: "Yes, the classic cone contains wheat flour: if there's no certified alternative, a cup is the safer choice." },
       { question: "Why is it riskier to eat gluten-free gelato in summer?", answer: "Because foot traffic increases and seasonal staff are often less trained, raising the risk of accidental contamination during peak hours." },
+      { question: "Is gelato gluten-free?", answer: "Not automatically. The base ingredients are naturally gluten-free, but bases, ripple sauces, cookies, cones and toppings can contain gluten, so each flavor and the way it's served must be checked." },
+      { question: "Which packaged gelato is gluten-free?", answer: "Those with the \"gluten-free\" claim on the label or the Crossed Grain mark; many are listed in AIC's Prontuario. Always check the pack, because recipes can change." },
     ],
     tags: ["gelaterias", "summer", "cross-contamination", "food safety"],
   },
   "art-23": {
     title: "AIC-Certified Hotels and Resorts for Celiacs: How to Choose a Worry-Free Vacation",
     excerpt: "AIC-certified hotels and resorts: what the certification really guarantees, the difference between breakfast and full board, and how to plan a gluten-free vacation with no surprises.",
+    metaTitle: "Gluten-Free Hotels in Italy: AIC-Certified | Mappa Senza Glutine",
+    metaDescription: "Gluten-free certification for hotels and holiday resorts: what AIC's program guarantees, how to find hotels, B&Bs and resorts, and what to ask.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "An AIC-certified hotel guarantees safe gluten-free breakfast and staff trained on celiac disease, not just generic \"gluten-free-friendly\" claims.",
@@ -709,7 +755,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
         { title: "The risk of shared buffets", body: "Self-service buffets, typical of resorts, raise the risk of contamination: utensils shared between different trays, crumbs moving from one dish to another. An AIC-certified resort has dedicated stations or staff who serve gluten-free dishes directly." },
         { title: "Themed dinners and show cooking", body: "Themed evenings and show cooking, common at resorts, need extra attention: always check with staff whether gluten-free alternatives are planned for that specific evening, ideally mentioning it at check-in." },
       ] },
-      { h2: "How to find AIC-certified hotels and resorts for your vacation", body: "The most reliable way is to check the certification directly on the property's website or ask for confirmation before booking, rather than trusting generic self-declared labels like \"gluten-free friendly\" found on booking platforms. In the <a href=\"/directory?categoria=hotel\">Mappa Senza Glutine directory</a> you'll find verified properties, with a clear indication of whether the certification is confirmed or not." },
+      { h2: "How to find AIC-certified hotels and resorts for your vacation", body: "The most reliable way is to check the certification directly on the property's website or ask for confirmation before booking, rather than trusting generic self-declared labels like \"gluten-free friendly\" found on booking platforms. The list of properties in AIC's Alimentazione Fuori Casa program is published in the printed guide, on AIC's website (where it's updated in real time) and in the free app for members, with a map of participating venues. In the <a href=\"/en/directory?categoria=hotel\">Mappa Senza Glutine directory</a> you'll find verified properties, with a clear indication of whether the certification is confirmed or not." },
+      { h2: "Not just hotels: B&Bs, farm stays and holiday homes", body: "AIC's program isn't limited to hotels: participating properties include rented rooms, farm stays, B&Bs, holiday homes and holiday villages. Venues in the network are periodically monitored by professionals who support the staff and check that requirements are still met. An example in our directory is <a href=\"/en/directory/hotel-al-piave-venezia\">Hotel Al Piave</a> in Venice, in the Castello district near St Mark's Square: it's listed as one of the few hotels in the city with AIC certification and offers an entirely gluten-free breakfast. Planning a city break? See also our guides to <a href=\"/en/blog/venezia-senza-glutine-dove-mangiare-tra-cicchetti-pizza-e-colazione-in-hotel\">gluten-free Venice</a> and the <a href=\"/en/blog/le-migliori-citta-italiane-per-una-vacanza-senza-glutine\">best Italian cities for a gluten-free vacation</a>." },
       { h2: "What to do if the hotel isn't AIC certified", body: "Even without certification, a gluten-free vacation is possible with a bit more care: check if the room has a kitchenette or a small fridge to store safe snacks and products brought from home, look for AIC-certified restaurants or ones flagged by the community nearby for lunch and dinner, and always bring a stock of gluten-free products for emergencies, especially in less touristy destinations where finding them locally can be difficult." },
       { h2: "Frequently asked questions about gluten-free hotels and resorts", body: "The most common questions from celiacs planning a vacation.", h3: [
         { title: "What does it mean that a hotel is AIC certified?", body: "It means the property has passed specific checks from the Italian Celiac Association on breakfast, any in-house dining and staff training, with periodic reviews over time." },
@@ -723,12 +770,15 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "Are full-board resorts safe for celiacs?", answer: "They can be if AIC certified or with dedicated buffet procedures, otherwise the risk of cross-contamination in self-service formats is higher." },
       { question: "Do I need to tell the hotel about celiac disease before arriving?", answer: "Yes, it's strongly recommended to mention it when booking, not at check-in, so the kitchen can prepare in advance." },
       { question: "What should I bring on vacation if the hotel isn't certified?", answer: "A stock of basic gluten-free products for emergencies, especially in less touristy destinations where finding them locally can be difficult." },
+      { question: "How do I find a hotel for celiacs?", answer: "The list of properties in AIC's Alimentazione Fuori Casa program is published on AIC's website, in the printed guide and in the app for members. You can also search the Mappa Senza Glutine directory, and it's always worth confirming with the property before booking." },
     ],
     tags: ["hotels", "travel", "AIC", "vacation"],
   },
   "art-24": {
     title: "Where to Get Gluten-Free Breakfast: Croissants, Brioches and Dedicated Bakeries",
     excerpt: "Where to get gluten-free breakfast without the risk: the difference between an industrial croissant and a dedicated bakery, what to ask at the counter, and how to plan ahead when out or traveling.",
+    metaTitle: "Where to Get Gluten-Free Breakfast | Mappa Senza Glutine",
+    metaDescription: "Where to get gluten-free breakfast safely: industrial croissant vs dedicated bakery, what to ask at the counter and how to plan ahead when traveling.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Many traditional cafés only offer a prepackaged industrial croissant: that's not the same as a bakery with a dedicated lab.",
@@ -745,7 +795,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       ] },
       { h2: "What to ask before ordering a croissant or brioche", body: "Before ordering, a few questions help gauge the venue's level of care: is the product individually packaged or loose? Is it stored separately from other baked goods? Is it heated in a dedicated toaster or oven, or the same one used for traditional croissants? If staff can't answer confidently, an unopened packaged product is the safer bet." },
       { h2: "The hidden risks of breakfast at a café", body: "Even when the starting product is certified gluten-free, a few steps at the counter can compromise it: a shared toaster leaves crumb residue that lands on the next product, a shared display case allows accidental contact between traditional and gluten-free croissants, and staff hands or gloves moving from one product to another without changing are an often underestimated source of contamination." },
-      { h2: "Breakfast while traveling: how to plan ahead", body: "Outside your usual city or area, finding a safe breakfast takes a bit more planning: look up verified bakeries and cafés in the <a href=\"/directory?categoria=bar-pasticceria\">Mappa Senza Glutine directory</a> before you leave, and always carry a packaged baked good as a backup for mornings when you can't find a safe option nearby." },
+      { h2: "Breakfast while traveling: how to plan ahead", body: "Outside your usual city or area, finding a safe breakfast takes a bit more planning: look up verified bakeries and cafés in the <a href=\"/en/directory?categoria=bar-pasticceria\">Mappa Senza Glutine directory</a> before you leave, and always carry a packaged baked good as a backup for mornings when you can't find a safe option nearby." },
       { h2: "Frequently asked questions about gluten-free breakfast", body: "The most common questions from people looking for a safe café or bakery for breakfast.", h3: [
         { title: "Are packaged gluten-free croissants always safe?", body: "Yes, as long as they stay sealed in the original packaging until eaten: the risk only rises if they're opened, cut or heated in contact with surfaces or utensils used for traditional products." },
         { title: "How do I recognize a bakery that's truly dedicated to gluten-free?", body: "Check whether the lab is entirely dedicated to gluten-free or also makes traditional products: in the first case the contamination risk is nearly zero, in the second it depends on the separation procedures in place." },
@@ -764,6 +814,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-25": {
     title: "Easy Gluten-Free Cake: The Base Recipe with Ready-Made Cake Mix",
     excerpt: "The go-to cake for when you're short on time: few ingredients, a ready-made flour mix, and a soft, reliable result.",
+    metaTitle: "Easy Gluten-Free Cake Recipe | Mappa Senza Glutine",
+    metaDescription: "An easy gluten-free cake with a ready-made cake mix: few ingredients, a soft and reliable result, plus an apple version and a muffin variation.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A flour mix made specifically for cakes gives more reliable results than a homemade mix for those new to gluten-free baking.",
@@ -794,6 +846,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-26": {
     title: "Homemade Gluten-Free Pizza: The Dough with All-Purpose Mix",
     excerpt: "The base recipe for a gluten-free pizza dough with the all-purpose mix: few ingredients and a result closer to traditional pizza.",
+    metaTitle: "Homemade Gluten-Free Pizza Dough | Mappa Senza Glutine",
+    metaDescription: "Homemade gluten-free pizza dough with an all-purpose mix, also with a stand mixer: few ingredients and a result close to traditional pizza.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A flour mix designed for pizza and focaccia too gives a more elastic dough than a generic cake mix.",
@@ -808,6 +862,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
         { title: "Baking in two stages", body: "Blind bake the base for 8-10 minutes at 220°C, then add the toppings and finish baking for another 10-12 minutes, until the edges are golden." },
       ] },
       { h2: "Toppings", body: "Tomato, mozzarella and oregano remain the safest base, but you can also use <a href=\"/en/prodotti/barilla-pesto-alla-genovese-190g\">Barilla basil pesto</a> instead of tomato for an aromatic white variation, or <a href=\"/en/prodotti/sarchio-pesto-bio-130g\">Sarchio organic pesto</a> if you prefer a version without cheese or garlic." },
+      { h2: "Can you use a stand mixer?", body: "Yes, but don't expect the same result as with traditional dough. Gluten-free dough is closer to a thick cream than an elastic ball, because there's no gluten network to develop: that's why long kneading isn't needed and a dough hook does very little. With a planetary mixer use the flat beater at low speed, only long enough to mix water, flour blend and yeast well, then stop the machine. Without one, a spatula or a wooden spoon is enough." },
       { h2: "The most common mistakes to avoid", body: "A few small mistakes tend to spoil this dough more often than a traditional one.", h3: [
         { title: "Water too hot or too cold", body: "Water above 40°C risks killing the yeast, while cold water slows the rise too much: the ideal temperature is lukewarm, barely noticeable to the touch, not hot." },
         { title: "Rolling the dough too thin", body: "Unlike traditional dough, gluten-free dough has less elasticity: rolling it too thin increases the risk it will tear or won't hold the toppings, especially near the edges." },
@@ -820,12 +875,15 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "Can I freeze the dough already shaped?", answer: "Yes, many gluten-free doughs freeze well already spread in the pan, before the final rise: check the mix manufacturer's instructions anyway." },
       { question: "Why blind bake the base before adding toppings?", answer: "It helps the base cook evenly in the center without staying raw under the weight of the toppings, especially with more delicate gluten-free doughs." },
       { question: "How do I get the edges crispier?", answer: "A drizzle of extra virgin olive oil on the edges before the second bake, plus a couple extra minutes at the end of cooking, helps them brown without drying out the rest of the base." },
+      { question: "Can I use a stand mixer for gluten-free pizza dough?", answer: "Yes, ideally with the flat beater at low speed and for just a few minutes: gluten-free dough shouldn't be worked for long like traditional dough." },
     ],
     tags: ["recipes", "pizza", "dough"],
   },
   "art-27": {
     title: "Gluten-Free School Snacks: 5 Practical Ideas for the Lunchbox",
     excerpt: "What to pack for a safe snack: individually wrapped products, easy to check, easy to send to school.",
+    metaTitle: "Gluten-Free Snacks for School: 5 Ideas | Mappa Senza Glutine",
+    metaDescription: "Gluten-free snack ideas for school and beyond: individually wrapped products that are easy to check and easy to pack in the lunchbox.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Individually sealed, single-serve products are the safest choice for a school snack: no handling outside the home.",
@@ -839,6 +897,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { h2: "The savory alternative with crisp slices", body: "<a href=\"/en/prodotti/cereal-fette-croccanti-125g\">Céréal crisp slices</a> can be prepped the night before with a thin layer of cream cheese and kept in an airtight container for the next day." },
       { h2: "Crackers, and a sandwich once in a while", body: "For some variety, <a href=\"/en/prodotti/schar-crackers-210g\">Schär crackers</a> stay crisp even in a rigid container and pair well with cheese or jam. Once or twice a week, a small sandwich made with <a href=\"/en/prodotti/schar-pane-casereccio-240g\">Schär country bread</a> or <a href=\"/en/prodotti/nutrifree-panfette-pane-casereccio-300g\">Nutrifree Panfette</a> breaks up the routine of packaged products, as long as it's made with a dedicated cutting board and knife." },
       { h2: "Fresh fruit: the fifth idea, simple and with no label to check", body: "A washed apple, banana or bunch of grapes needs no special checking: it's naturally gluten-free and remains the simplest option on days when there's no time to prepare anything else. The only care needed is washing it, and cutting it if necessary, on a clean surface." },
+      { h2: "Gluten-free snacks for everyone, not just for school", body: "A gluten-free snack isn't only for school: the same ideas work at the office, after sport or for a break at home. Among the packaged products in our catalog are the <a href=\"/en/prodotti/schar-chocolix-110g\">Schär Chocolix</a> bar, the <a href=\"/en/prodotti/cereal-buoni-senza-biscotti-con-gocce-di-cioccolato-150g\">Céréal Buoni Senza cookies</a> and the <a href=\"/en/prodotti/schar-crackers-210g\">Schär crackers</a>, all single-serve. If you'd rather bake, you can make <a href=\"/en/blog/biscotti-senza-glutine-la-ricetta-base-da-frollini\">gluten-free cookies</a>, <a href=\"/en/blog/pancake-senza-glutine-la-ricetta-base-soffice\">pancakes</a> or a <a href=\"/en/blog/torta-senza-glutine-facile-la-ricetta-base-con-il-mix-per-dolci\">cake</a> to cut into portions, and you'll find more recipes in the guide to <a href=\"/en/blog/dolci-senza-glutine-le-ricette-base-da-fare-in-casa\">gluten-free desserts</a>." },
       { h2: "Practical tips for the lunchbox", body: "Choose products in their original sealed package whenever possible, to avoid a child mixing them up with a classmate's. If you prepare something at home, use a dedicated container, washed separately from anything used for gluten-containing food.", h3: [
         { title: "Alternating sweet and savory through the week", body: "Rotating the five ideas in this guide through the week keeps the child from getting tired of the same snack, and makes it easier for single-serve products to feel normal rather than limiting." },
         { title: "Talking to the school", body: "Even when the snack comes from home, it's useful to inform teachers about the child's celiac disease, to manage any spontaneous food-sharing between classmates during break time." },
@@ -855,6 +914,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-34": {
     title: "Gluten-Free Crostini and Canapés for a Dinner with Friends",
     excerpt: "Quick ideas for gluten-free crostini and canapés, with ready-made bases and a handful of fresh ingredients to assemble at the last minute.",
+    metaTitle: "Gluten-Free Crostini and Canapés Ideas | Mappa Senza Glutine",
+    metaDescription: "Quick gluten-free crostini and canapés for a dinner with friends: ready-made bases and a few fresh ingredients to assemble at the last minute.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Crisp slices and toasted Panfette are ready-made bases for crostini, no need to bake bread at home.",
@@ -886,6 +947,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-28": {
     title: "Where to Eat Gluten-Free in Naples: Pizza, Sfogliatelle and Babà Without Compromise",
     excerpt: "The guide to eating gluten-free in Naples: from Neapolitan pizza baked in a dedicated oven to gluten-free sfogliatella and babà, between historic addresses and new certified openings.",
+    metaTitle: "Gluten-Free Naples: Pizza and Pastries | Mappa Senza Glutine",
+    metaDescription: "Eating gluten-free in Naples: Neapolitan pizza from a dedicated oven, gluten-free sfogliatella and babà, from historic addresses to new certified openings.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Naples now has historic pizzerias and new openings with an oven entirely dedicated to gluten-free, so you can enjoy real Neapolitan pizza safely.",
@@ -916,6 +979,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-29": {
     title: "Gluten-Free Venice: Where to Eat Between Cicchetti, Pizza and Hotel Breakfast",
     excerpt: "A guide to gluten-free Venice: gelaterie with dedicated cones, pizzerias with separate kitchens, and one of the few AIC-certified hotels in the city for a worry-free breakfast.",
+    metaTitle: "Gluten-Free Venice: Where to Eat | Mappa Senza Glutine",
+    metaDescription: "Gluten-free Venice: gelaterie with dedicated cones, pizzerias with separate kitchens and one of the few AIC-certified hotels for a worry-free breakfast.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Venice has pizzerias with physically separate kitchens for gluten-free, as well as gelaterie with dedicated cones to reduce cross-contamination.",
@@ -946,6 +1011,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-30": {
     title: "Gluten-Free Bari: Focaccia, Panzerotti and Tray Pizza Without Compromise",
     excerpt: "Where to eat gluten-free in Bari: Bari-style focaccia and panzerotti gluten-free, a dedicated lab since 2013, and where to shop for gluten-free groceries in the city.",
+    metaTitle: "Gluten-Free Panzerotti in Bari: Guide | Mappa Senza Glutine",
+    metaDescription: "Gluten-free panzerotti and Bari-style focaccia: where to find them in Bari, with a dedicated lab since 2013 and a bakery authorized by the Ministry of Health.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Bari has a lab entirely dedicated to gluten-free active since 2013, the first of its kind in the city, with products available via a regional health voucher.",
@@ -979,6 +1046,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-31": {
     title: "Gluten-Free Palermo: Pizzerias, Arancini and Gelato in a City Built for Celiacs",
     excerpt: "A guide to gluten-free Palermo: pizzerias entirely dedicated to gluten-free and AIC-certified, fried food with a dedicated fryer, and a historic gelateria since 1976 with no surcharge on gluten-free flavors.",
+    metaTitle: "Gluten-Free Palermo: Pizza and Arancini | Mappa Senza Glutine",
+    metaDescription: "Gluten-free Palermo: dedicated and AIC-certified pizzerias, fried food from a dedicated fryer, and a historic gelateria open since 1976.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Palermo has pizzerias that were born entirely dedicated to gluten-free, not just venues that also offer gluten-free options.",
@@ -1012,6 +1081,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-32": {
     title: "Gluten-Free Genoa: Pizza, Focaccia and a Dedicated Bakery Across the City's Districts",
     excerpt: "Where to eat gluten-free in Genoa: AIC-certified pizzerias in Sampierdarena and Prà, a bakery-pastry shop that recently opened in Sestri Ponente, and alternative doughs worth trying.",
+    metaTitle: "Gluten-Free Genoa: Pizza and Focaccia | Mappa Senza Glutine",
+    metaDescription: "Where to eat gluten-free in Genoa: AIC-certified pizzerias in Sampierdarena and Prà, a new bakery in Sestri Ponente and alternative doughs to try.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Genoa has several AIC-certified pizzerias with a dedicated oven, spread across different districts of the city.",
@@ -1042,6 +1113,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-33": {
     title: "Gluten-Free Verona: What to Eat Between the Arena, the Old Town and Specialty Shops",
     excerpt: "A guide to gluten-free Verona: an AIC-certified vegan restaurant, the pizzeria right across from the Arena, a shop with over 100 products partnered with the local health authority, and a gelateria in the AIC network since 2010.",
+    metaTitle: "Gluten-Free Verona: Where to Eat | Mappa Senza Glutine",
+    metaDescription: "Gluten-free Verona: an AIC-certified vegan restaurant, the pizzeria across from the Arena, a shop with over 100 products and an AIC-network gelateria.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Verona offers an AIC-certified restaurant with an entirely vegan and gluten-free menu, plus a pizzeria right across from the Arena.",
@@ -1560,7 +1633,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     title: "Gluten-Free Pancakes: The Fluffy Base Recipe",
     excerpt: "How to make gluten-free pancakes that are fluffy and tall: ratios, the trick for a good rise and pan cooking times.",
     metaTitle: "Gluten-Free Pancakes Recipe | Mappa Senza Glutine",
-    metaDescription: "Gluten-free pancakes recipe, fluffy and tall: ratios, the trick for a good rise and pan cooking times for breakfast.",
+    metaDescription: "Gluten-free pancakes recipe, fluffy and tall: ratios, the trick for a good rise, pan cooking times and how to store them for breakfast.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "An already-balanced cake mix gives fluffier pancakes than a generic mix or rice flour alone.",
