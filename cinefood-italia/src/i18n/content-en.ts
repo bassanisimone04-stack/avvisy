@@ -321,7 +321,7 @@ export const filmsEn: Record<string, FilmEn> = {
     sinossi:
       "A CNN food-travel series: actor Stanley Tucci explores Italian cuisine region by region, from Naples to Rome, Emilia-Romagna to Sicily, through trattorias, pizzerias and great restaurants. Winner of multiple Emmys for outstanding hosted non-fiction series.",
     faq: [
-      { domanda: "Where did Stanley Tucci eat in Searching for Italy?", risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto (carciofi alla giudia), Enzo Coccia's pizzeria La Notizia in Naples, I Pupi in Bagheria and Mè Cumpari Turiddu in Catania (Sicily), Osteria del Cinghiale Bianco in Florence, Ratanà and Osteria del Treno in Milan, All'Arco, Villa 600, Venissa and Orient Experience in Venice, Christian e Manuel in Vercelli, Lo Scoglio in Marina del Cantone (spaghetti alla Nerano) and Casa Artusi in Forlimpopoli." },
+      { domanda: "Where did Stanley Tucci eat in Searching for Italy?", risposta: "Among the venues listed by CNN: La Reginella in Rome's Jewish Ghetto (carciofi alla giudia), Enzo Coccia's pizzeria La Notizia in Naples, I Pupi in Bagheria and Mè Cumpari Turiddu in Catania (Sicily), Osteria del Cinghiale Bianco in Florence, Ratanà and Osteria del Treno in Milan, All'Arco, Villa 600, Venissa and Orient Experience in Venice, Christian e Manuel in Vercelli, Antichi Sapori, Bere Vecchie and Vitantonio Lombardo (Puglia and Matera), Alla Via di Mezzo (Umbria), Mabrouk, Luigi Pomata and Fradis Minoris (Sardinia), Osteria della Cipolla Rossa (Calabria), Cracco Portofino and Il Genovese (Liguria), Lo Scoglio in Marina del Cantone (spaghetti alla Nerano) and Casa Artusi in Forlimpopoli." },
       { domanda: "Who produces Searching for Italy?", risposta: "It's a CNN Original Series, airing since February 14, 2021 across two seasons, hosted by actor Stanley Tucci, whose family comes from Calabria." },
       { domanda: "Are the places Tucci visited still open?", risposta: "The ones listed on CineFood Italia are: we've verified each one. Hours and availability can still change, so check before you go." },
     ],
@@ -658,6 +658,46 @@ export const restaurantsEn: Record<string, RestEn> = {
   "ristorante-san-giulio-orta": {
     descrizione: "A restaurant in an 18th-century villa on the island of San Giulio, on Lake Orta, reachable by boat from Piazza Motta: Piedmontese and lake cooking.",
     scena: { "la-corrispondenza": "The restaurant was temporarily dressed in Portuguese style for a scene of the film, according to Italy for Movies." },
+  },
+  "antichi-sapori-montegrosso": {
+    descrizione: "Pietro Zito's restaurant in Montegrosso, a hamlet of Andria: Puglian cooking built on wild herbs, cheeses, grains and garden vegetables, a Bib Gourmand in the Michelin Guide Italia 2026.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Puglia episode, Stanley Tucci visits Pietro Zito, who turns simple ingredients into world-class dishes such as burnt-grain orecchiette with fava cream and burrata." },
+  },
+  "trattoria-bere-vecchie-cisternino": {
+    descrizione: "A butcher shop and trattoria in the maze of alleyways of Cisternino, in the Itria Valley: the meat is bought and cooked on the spot, spit-roasted.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Puglia episode, Stanley Tucci stops at this butcher-shop trattoria in Cisternino's alleyways, run by young restaurateur Vito Zurlo." },
+  },
+  "vitantonio-lombardo-matera": {
+    descrizione: "A one-Michelin-star restaurant set in a restored cave in the Sassi of Matera: tasting menus of 5, 7 or 10 courses by Lucanian chef Vitantonio Lombardo.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Puglia episode, Tucci reaches Matera, in Basilicata, in an abandoned cave turned into a Michelin-starred restaurant with inventively named dishes." },
+  },
+  "alla-via-di-mezzo-montefalco": {
+    descrizione: "Giorgione's (Giorgio Barchesi) restaurant in a 14th-century oil mill, a short walk from the centre of Montefalco.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Umbria episode, Stanley Tucci's first Umbrian encounter is with Giorgione, the TV chef and cookbook author, at his restaurant in Montefalco." },
+  },
+  "mabrouk-alghero": {
+    descrizione: "A seafood restaurant in Alghero's old town, on Via Santa Barbara, known for lobster alla catalana.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Sardinia episode, Tucci meets Antonietta Salaris in Alghero, who prepares lobster alla catalana." },
+  },
+  "luigi-pomata-cagliari": {
+    descrizione: "A restaurant in Cagliari with three dining rooms and a terrace, on Viale Regina Margherita: Sardinian cooking following the Carloforte tradition, with house tuna as its speciality.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Sardinia episode, Tucci visits chef Luigi Pomata, known as the king of tuna, who prepares bluefin tuna with pesto in a pasta dish." },
+  },
+  "fradis-minoris-pula": {
+    descrizione: "A restaurant on the Nora lagoon, in Pula, by chef Francesco Stara: no-waste seafood cooking, with a Michelin star and the Green Star for sustainability.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Sardinia episode, chef Francesco Stara prepares fregola with seafood for Tucci." },
+  },
+  "osteria-della-cipolla-rossa-tropea": {
+    descrizione: "A tiny osteria near Tropea, run by Romana Schiariti and her husband Michele: a vegetarian menu that changes daily, with Tropea red onion in the starring role. Booking is mandatory.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Calabria episode, Stanley Tucci tastes red onion spaghetti from Tropea, an onion so sweet he bites into it raw like an apple." },
+  },
+  "cracco-portofino": {
+    descrizione: "A one-Michelin-star restaurant on the Portofino quay, opened in 2021 in the historic premises of the former Pitosforo, with 7- or 11-course tasting menus.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Liguria episode, Tucci meets Carlo Cracco, whose head chef Mattia Pecis prepares pansotti preboggion with walnut sauce." },
+  },
+  "il-genovese-genova": {
+    descrizione: "A Ligurian restaurant on Via Galata run by Roberto Panizza with his brother Sergio: the pesto is made in a mortar, and gnocchi with pesto is the signature dish.",
+    scena: { "stanley-tucci-searching-for-italy": "In the Liguria episode, Tucci tastes pesto crushed by hand in an ancient mortar." },
   },
 };
 
