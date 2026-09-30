@@ -1,6 +1,8 @@
 # Foto di copertina degli articoli del blog
 
-Questi 33 articoli oggi mostrano tutti la stessa foto generica. Carica qui una foto per articolo, con il nome file indicato: quando me lo dici, le collego io.
+Foto di copertina degli articoli. **Già collegate (22):** `contaminazione-cucina`, `napoli`, `venezia`, `bari`, `palermo`, `verona`, `dieta-dimagrire`, `spesa-discount`, `panettone-colomba`, `celiachia-uomini`, `volare`, `svezzamento`, `sushi-etnico`, `certificazione-aic`, `besciamella`, `pane`, `biscotti`, `glutine`, `avena`, `dolci`, `dove-comprare`, `catene`.
+
+**Ancora da caricare (11):** `genova`, `birra`, `farine`, `sagre`, `crostata`, `crepes`, `pancake`, `intolleranza`, `pasta`, `pasticcerie`, `old-wild-west`. Fino ad allora quegli articoli usano la foto generica. Carica qui una foto per articolo, con il nome file indicato: quando me lo dici, le collego io. `certificazione-aic.jpg` è una grafica originale (nessun logo AIC), non una foto.
 
 ## Indicazioni per tutte le foto
 
