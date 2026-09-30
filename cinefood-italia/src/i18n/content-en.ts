@@ -379,7 +379,7 @@ export const filmsEn: Record<string, FilmEn> = {
     titolo: "The Trip to Italy",
     sinossi: "Steve Coogan and Rob Brydon cross Italy eating at real restaurants, from Piedmont to Capri. It began as a BBC TV series directed by Michael Winterbottom and was also cut as a feature film.",
     faq: [
-      { domanda: "Which real restaurants appear in The Trip to Italy?", risposta: "Among those named by sources: Trattoria della Posta in Monforte d'Alba, Piedmont, and Il Riccio in Anacapri, on Capri." },
+      { domanda: "Which real restaurants appear in The Trip to Italy?", risposta: "Among those named by sources: Trattoria della Posta in Monforte d'Alba, Piedmont, La Cantina in San Fruttuoso, Liguria, Relais Blu in Massa Lubrense and Il Riccio in Anacapri, on Capri." },
       { domanda: "Is The Trip to Italy a film or a series?", risposta: "It began as a BBC TV series directed by Michael Winterbottom and was then also cut as a film." },
       { domanda: "Can you book the film's restaurants?", risposta: "Yes, they are real venues open to the public; for Il Riccio and Trattoria della Posta booking is advisable, and hours and availability should be checked." },
     ],
@@ -409,6 +409,15 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Where was La corrispondenza filmed?", risposta: "In several places, including Lake Orta. Italy for Movies lists the Ristorante San Giulio on the island of San Giulio among the locations." },
       { domanda: "Who directed La corrispondenza?", risposta: "Giuseppe Tornatore, in 2016." },
       { domanda: "Can you eat at the film's restaurant?", risposta: "Yes: Ristorante San Giulio, on Via Basilica in Orta San Giulio, is reachable by boat from Piazza Motta." },
+    ],
+  },
+  "tucci-in-italy": {
+    titolo: "Tucci in Italy",
+    sinossi: "A National Geographic series in which Stanley Tucci explores Italy's regions through their food, landscape and history. Season one aired in 2025; season two, in 2026, includes an episode on Le Marche.",
+    faq: [
+      { domanda: "Where did Stanley Tucci eat in Le Marche?", risposta: "In the Marche episode, the third of season two, he visits Uliassi, the three-Michelin-star restaurant in Senigallia." },
+      { domanda: "Is Tucci in Italy the same as Searching for Italy?", risposta: "No. Searching for Italy was a CNN series (2021-2022); Tucci in Italy is a National Geographic series that premiered in 2025, with season two in 2026." },
+      { domanda: "Where can you watch Tucci in Italy?", risposta: "On National Geographic; season two episodes were also released for streaming on Disney+ and Hulu." },
     ],
   },
 };
@@ -698,6 +707,18 @@ export const restaurantsEn: Record<string, RestEn> = {
   "il-genovese-genova": {
     descrizione: "A Ligurian restaurant on Via Galata run by Roberto Panizza with his brother Sergio: the pesto is made in a mortar, and gnocchi with pesto is the signature dish.",
     scena: { "stanley-tucci-searching-for-italy": "In the Liguria episode, Tucci tastes pesto crushed by hand in an ancient mortar." },
+  },
+  "la-cantina-san-fruttuoso": {
+    descrizione: "A seafood restaurant on the bay of San Fruttuoso di Camogli, next to the abbey, reachable on foot or by boat.",
+    scena: { "the-trip-to-italy": "It is the second of the six meals of Steve Coogan and Rob Brydon's journey: a seaside restaurant in San Fruttuoso, Liguria." },
+  },
+  "relais-blu-massa-lubrense": {
+    descrizione: "A one-Michelin-star restaurant in Massa Lubrense, on the Sorrento coast, overlooking Capri; the kitchen is now led by a Japanese chef.",
+    scena: { "the-trip-to-italy": "It is the fifth meal of Steve Coogan and Rob Brydon's journey, on the Sorrento coast with a view of Capri." },
+  },
+  "uliassi-senigallia": {
+    descrizione: "A three-Michelin-star restaurant on Senigallia's Banchina di Levante, born in 1990 as a beach kiosk: Mauro Uliassi in the kitchen, his sister Catia front of house.",
+    scena: { "tucci-in-italy": "In the Marche episode, Stanley Tucci visits Mauro and Catia Uliassi's three-Michelin-star restaurant, the only one in the region with three stars." },
   },
 };
 

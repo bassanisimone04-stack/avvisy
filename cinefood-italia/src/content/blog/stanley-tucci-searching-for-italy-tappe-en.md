@@ -76,6 +76,10 @@ plus more venues seen on TV in our **[directory](/en/locali)**.
 
 We have dedicated an article to three episodes: [Sicily](/en/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Florence](/en/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) and [Milan](/en/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno), [Venice](/en/blog/stanley-tucci-venezia-all-arco-villa-600) (All'Arco, Villa 600, Venissa, Orient Experience), [Piedmont](/en/blog/stanley-tucci-piemonte-del-cambio-vercelli) (Del Cambio, Christian e Manuel) [Emilia-Romagna](/en/blog/stanley-tucci-emilia-romagna-rimini-bologna) (Osteria io e Simone), [Puglia](/en/blog/stanley-tucci-puglia-antichi-sapori-matera) (Antichi Sapori, Bere Vecchie, Matera), [Umbria](/en/blog/stanley-tucci-umbria-alla-via-di-mezzo-montefalco) (Alla Via di Mezzo), [Sardinia](/en/blog/stanley-tucci-sardegna-mabrouk-pomata-fradis-minoris) (Mabrouk, Luigi Pomata, Fradis Minoris), [Calabria](/en/blog/stanley-tucci-calabria-cipolla-rossa-tropea) (Osteria della Cipolla Rossa) and [Liguria](/en/blog/stanley-tucci-liguria-cracco-portofino-il-genovese) (Cracco Portofino, Il Genovese).
 
+## And the new series *Tucci in Italy*
+
+Since 2025 Tucci has been back with a different series, *Tucci in Italy*, produced by National Geographic. For now we have listed one venue: read *[Tucci in Le Marche: Uliassi in Senigallia](/en/blog/tucci-in-italy-marche-uliassi-senigallia)*.
+
 ## In short
 
 *Searching for Italy* is a hymn to Italian cuisine and its territories. A series

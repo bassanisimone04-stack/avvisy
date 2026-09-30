@@ -76,6 +76,10 @@ locali visti in TV nella nostra **[directory](/locali)**.
 
 Abbiamo dedicato un articolo a tre puntate: [Sicilia](/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu) (I Pupi, Mè Cumpari Turiddu), [Firenze](/blog/stanley-tucci-firenze-osteria-cinghiale-bianco) (Osteria del Cinghiale Bianco) e [Milano](/blog/stanley-tucci-milano-ratana-osteria-del-treno) (Ratanà, Osteria del Treno), [Venezia](/blog/stanley-tucci-venezia-all-arco-villa-600) (All'Arco, Villa 600, Venissa, Orient Experience), [Piemonte](/blog/stanley-tucci-piemonte-del-cambio-vercelli) (Del Cambio, Christian e Manuel) [Emilia-Romagna](/blog/stanley-tucci-emilia-romagna-rimini-bologna) (Osteria io e Simone), [Puglia](/blog/stanley-tucci-puglia-antichi-sapori-matera) (Antichi Sapori, Bere Vecchie, Matera), [Umbria](/blog/stanley-tucci-umbria-alla-via-di-mezzo-montefalco) (Alla Via di Mezzo), [Sardegna](/blog/stanley-tucci-sardegna-mabrouk-pomata-fradis-minoris) (Mabrouk, Luigi Pomata, Fradis Minoris), [Calabria](/blog/stanley-tucci-calabria-cipolla-rossa-tropea) (Osteria della Cipolla Rossa) e [Liguria](/blog/stanley-tucci-liguria-cracco-portofino-il-genovese) (Cracco Portofino, Il Genovese).
 
+## E la nuova serie *Tucci in Italy*
+
+Dal 2025 Tucci è tornato con una serie diversa, *Tucci in Italy*, prodotta da National Geographic. Per ora abbiamo schedato un locale: leggi *[Tucci nelle Marche: Uliassi a Senigallia](/blog/tucci-in-italy-marche-uliassi-senigallia)*.
+
 ## In sintesi
 
 *Searching for Italy* è un inno alla cucina italiana e ai suoi territori. Una
