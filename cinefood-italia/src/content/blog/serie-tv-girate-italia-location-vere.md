@@ -4,7 +4,7 @@ descrizione: "Da The White Lotus a Il Re, da Ripley a Rocco Schiavone: le serie 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25
 immagine: "../../assets/placeholder/serie-tv-girate-italia-location-vere.jpg"
-immagineAlt: "Set cinematografico con luci e macchina da presa in una città italiana"
+immagineAlt: "Il Castello di Santa Severa sul mare, nel Lazio"
 tags: ["serie TV", "location cinematografiche", "Netflix", "HBO", "Sky"]
 faq:
   - domanda: "Quali serie TV famose sono state girate in Italia?"
