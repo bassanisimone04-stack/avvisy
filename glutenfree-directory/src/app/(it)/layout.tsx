@@ -1,23 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora, Fraunces } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { StoreProvider } from "@/lib/store";
-import ThemeInit from "@/components/ThemeInit";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
-import { JsonLd, organizationJsonLd } from "@/lib/seo";
+import RootShell from "@/components/RootShell";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const sora = Sora({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--font-sora", display: "swap" });
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
+import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -60,21 +44,5 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="it" suppressHydrationWarning>
-      <head>
-        <ThemeInit />
-      </head>
-      <body className={`${inter.variable} ${sora.variable} ${fraunces.variable} font-sans`}>
-        <JsonLd data={organizationJsonLd()} />
-        <StoreProvider>
-          <a href="#main-content" className="skip-link">Vai al contenuto principale</a>
-          <SiteHeader />
-          <main id="main-content">{children}</main>
-          <SiteFooter />
-        </StoreProvider>
-        <Analytics />
-      </body>
-    </html>
-  );
+  return <RootShell lang="it">{children}</RootShell>;
 }

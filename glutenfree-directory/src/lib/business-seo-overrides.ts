@@ -157,7 +157,7 @@ const OVERRIDES_EN: Record<string, Override> = {
     description: "No Gluten Bakery on via Simone Cuccia, Palermo: bakery, pastry shop and deli with a gluten-free kitchen, brioche, bread, pizza and panelle. On Mappa Senza Glutine.",
   },
   "randazzo-gluten-free-genova": {
-    title: "Randazzo Gluten Free, Sestri Ponente: AIC",
+    title: "Randazzo Gluten Free Genoa: AIC bakery",
     description: "Randazzo Gluten Free in Sestri Ponente, Genoa: gluten-free-only bakery and pastry shop, opened late 2024, part of AIC Liguria. On Mappa Senza Glutine.",
   },
   "hotel-al-piave-venezia": {
@@ -169,7 +169,7 @@ const OVERRIDES_EN: Record<string, Override> = {
     description: "Gusto Libero on via Luigi Dorigo 14, Verona: shop with over 100 gluten-free and lactose-free products, with an ULSS agreement for vouchers. On Mappa Senza Glutine.",
   },
   "senza-pensieri-healthy-bakery-roma": {
-    title: "Senza Pensieri Healthy Bakery, San Lorenzo",
+    title: "Senza Pensieri Bakery, San Lorenzo, Rome",
     description: "Senza Pensieri Healthy Bakery in San Lorenzo, Rome: sweet and savory gluten-free food, many vegan and lactose-free options. On Mappa Senza Glutine.",
   },
   "casa-biga-milano": {

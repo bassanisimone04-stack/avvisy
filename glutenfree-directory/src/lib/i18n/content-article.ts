@@ -247,7 +247,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-9": {
     title: "A Balanced Gluten-Free Diet: A Guide to Macronutrients",
     excerpt: "How to build a varied, balanced gluten-free diet, avoiding an excess of industrial substitute products.",
-    metaTitle: "A Balanced Gluten-Free Diet: Macros | Mappa Senza Glutine",
+    metaTitle: "Balanced Gluten-Free Diet Guide | Mappa Senza Glutine",
     metaDescription: "How to build a varied, balanced gluten-free diet: a guide to macronutrients that avoids relying too much on industrial substitute products.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
@@ -814,7 +814,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-25": {
     title: "Easy Gluten-Free Cake: The Base Recipe with Ready-Made Cake Mix",
     excerpt: "The go-to cake for when you're short on time: few ingredients, a ready-made flour mix, and a soft, reliable result.",
-    metaTitle: "Easy Gluten-Free Cake Recipe | Mappa Senza Glutine",
+    metaTitle: "Gluten-Free Cake and Apple Cake Recipe | Mappa Senza Glutine",
     metaDescription: "An easy gluten-free cake with a ready-made cake mix: few ingredients, a soft and reliable result, plus an apple version and a muffin variation.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [

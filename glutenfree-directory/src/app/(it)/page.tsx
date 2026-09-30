@@ -1,9 +1,9 @@
 import HomeContent from "@/components/pages/HomeContent";
 import { pageMetadata } from "@/lib/seo";
-import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/site-config";
+import { SITE_DESCRIPTION } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
-  title: `${SITE_NAME}: ristoranti e locali senza glutine in Italia`,
+  title: "Mappa Senza Glutine: ristoranti e locali in Italia",
   description: SITE_DESCRIPTION,
   path: "/",
   locale: "it",

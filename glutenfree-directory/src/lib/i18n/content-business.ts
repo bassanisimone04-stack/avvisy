@@ -269,6 +269,18 @@ export const BUSINESS_EN: Record<string, BusinessTranslation> = {
     services: ["AIC certified since 2010", "Genuine artisan gelato", "Selection dedicated to gluten-free"],
     glutenFreeMenu: ["Artisan gluten-free gelato"],
   },
+  "biz-44": {
+    shortDescription: "Shop 100% dedicated to gluten-free in Milan, with its own kitchen.",
+    description: "Specialty shop in Milan, the flagship store of the Milano Senza Glutine chain, with an in-house kitchen for bread, baked goods and fresh pasta, plus a wide range of packaged products.",
+    services: ["Shop 100% dedicated to gluten-free", "Kitchen with fresh pasta and baked goods", "Chain with several stores in Lombardy"],
+    glutenFreeMenu: ["Gluten-free bread and baked goods", "Gluten-free fresh pasta", "Packaged desserts and snacks"],
+  },
+  "biz-45": {
+    shortDescription: "Pharmacy in Garbatella, Rome, with a large gluten-free food section for celiacs.",
+    description: "Pharmacy in the Garbatella district of Rome, with a large, well-kept section of food for celiacs, alongside the usual pharmaceutical and dermocosmetic products.",
+    services: ["Wide range of products for celiacs", "Food for diabetics and celiacs", "Garbatella area"],
+    glutenFreeMenu: ["Sweet and savory gluten-free food", "Packaged pasta, bread and snacks"],
+  },
 };
 
 const REVIEW_EN: Record<string, { title: string; body: string }> = {
