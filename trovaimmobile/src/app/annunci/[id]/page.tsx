@@ -56,9 +56,9 @@ export default async function ListingPage({ params, searchParams }: Props) {
           <AdvertiserTypeBadge role={l.advertiser_role} agencyName={l.agency_name} />
         </div>
         <h1 style={{ margin: 0 }}>{l.title}</h1>
-        <div className="row muted small">
-          <IconPin size={15} /> {address}
-          {l.quartiere && <> · {l.quartiere}</>} · {l.regione}
+        <div className="row muted small addr">
+          <IconPin size={15} /> <span>{address}
+          {l.quartiere && <> · {l.quartiere}</>} · {l.regione}</span>
         </div>
         <div className="only-mobile stack" style={{ gap: 8 }}>
           <CostCompact canone={l.canone} spese={l.spese} cauzione={l.cauzione} commissione={l.commissione} />
