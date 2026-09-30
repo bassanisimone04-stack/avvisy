@@ -131,9 +131,12 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
 
         <section className="stack">
           <div>
-            <h1 style={{ fontSize: "1.4rem" }}>Case in affitto: {where}</h1>
+            <div className="eyebrow">{total} {total === 1 ? "annuncio" : "annunci"} verificati</div>
+            <h1 style={{ margin: "6px 0 8px" }}>
+              Case in affitto, <em>{where}</em>
+            </h1>
             <p className="muted small" style={{ margin: 0 }}>
-              {total} {total === 1 ? "annuncio" : "annunci"}. Gli annunci non riconfermati dall&apos;inserzionista negli ultimi 7 giorni compaiono più in basso.
+              Gli annunci non riconfermati dall&apos;inserzionista negli ultimi 7 giorni compaiono più in basso.
             </p>
           </div>
           <FraudWarning compact />

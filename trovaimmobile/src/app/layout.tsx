@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 import { currentUser, isAdvertiser } from "@/lib/session";
 import { ThemeToggle, THEME_INIT_SCRIPT } from "@/components/ThemeToggle";
-import { IconShield } from "@/components/icons";
+import { display, sans } from "./fonts";
 
 export const metadata: Metadata = {
   title: { default: "TrovaImmobile — affitti verificati in tutta Italia", template: "%s · TrovaImmobile" },
@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const user = await currentUser();
   return (
-    <html lang="it" suppressHydrationWarning>
+    <html lang="it" className={`${display.variable} ${sans.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
@@ -33,10 +33,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <header className="site-header">
           <div className="container">
             <Link href="/" className="logo" aria-label="TrovaImmobile, home">
-              <span className="logo-mark">
-                <IconShield size={18} />
-              </span>
-              TrovaImmobile
+              Trova<em>Immobile</em>
             </Link>
             <nav className="nav" aria-label="Principale">
               <Link href="/annunci">Cerca</Link>
@@ -56,7 +53,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <main id="main">{children}</main>
         <footer className="site-footer">
           <div className="container spread">
-            <span>© {new Date().getFullYear()} TrovaImmobile — affitti verificati in tutta Italia.</span>
+            <span className="row" style={{ gap: 14 }}>
+              <span className="logo">
+                Trova<em>Immobile</em>
+              </span>
+              <span>Affitti verificati in tutta Italia · © {new Date().getFullYear()}</span>
+            </span>
             <span className="row">
               <Link href="/sicurezza">Come riconoscere una truffa</Link>
               <span>·</span>

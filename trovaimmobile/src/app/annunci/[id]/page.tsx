@@ -76,7 +76,7 @@ export default async function ListingPage({ params, searchParams }: Props) {
           <div className="gallery">
             {photos.length === 0 ? (
               <div>
-                <Photo storageKey={null} alt="" />
+                <Photo storageKey={null} alt="" variant={l.property_id} />
               </div>
             ) : (
               photos.map((p, i) => (

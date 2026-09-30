@@ -1,0 +1,2 @@
+Metti qui una foto di interni chiamata hero.jpg (orizzontale, almeno 2000px):
+la home la usera al posto dell'illustrazione.

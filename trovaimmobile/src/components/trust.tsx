@@ -69,7 +69,7 @@ export function CostCompact(c: Costs) {
         {c.commissione > 0 ? ` · commissione ${formatEuro(c.commissione)}` : " · no commissione"}
       </span>
       <span />
-      <span className="total">Costo d&apos;ingresso</span>
+      <span className="total-label">Costo d&apos;ingresso</span>
       <span className="total">{formatEuro(entryCost(c))}</span>
     </div>
   );

@@ -1,82 +1,120 @@
+import fs from "node:fs";
+import path from "node:path";
 import Link from "next/link";
-import { REGIONI, TIPOLOGIE } from "@/lib/italy";
+import { TIPOLOGIE } from "@/lib/italy";
 import { searchListings } from "@/lib/listings";
 import { advertiserStats } from "@/lib/trust";
 import { ListingCard } from "@/components/ListingCard";
-import { IconCalendar, IconCheck, IconEuro, IconHistory, IconShield } from "@/components/icons";
+import { RoomIllustration } from "@/components/RoomIllustration";
 
 export const dynamic = "force-dynamic";
 
-const PILLARS = [
-  { icon: <IconHistory />, title: "Una scheda per ogni casa", text: "Ogni immobile ha un'identità unica legata all'indirizzo: niente doppioni, storico prezzi e annunci passati sempre visibili." },
-  { icon: <IconCheck />, title: "Disponibilità confermata", text: "Gli inserzionisti riconfermano ogni settimana con un click. Chi non lo fa scende nei risultati." },
-  { icon: <IconCalendar />, title: "Visite su calendario vero", text: "Vedi solo le fasce davvero libere, sincronizzate con Google Calendar o iCal. Prenoti e ricevi conferma subito." },
-  { icon: <IconEuro />, title: "Costo d'ingresso chiaro", text: "Canone, spese, cauzione e commissione sommati prima di contattare nessuno. Mai in testo libero." },
-  { icon: <IconShield />, title: "Fiducia misurata", text: "Tempi di risposta reali, recensioni solo dopo visite effettive, privati e agenzie sempre distinti." },
+const METHOD = [
+  { title: "Una scheda per ogni casa", text: "Ogni immobile ha un'identità legata al suo indirizzo: niente doppioni, e lo storico di prezzi e annunci resta visibile." },
+  { title: "Disponibilità confermata", text: "Gli inserzionisti riconfermano ogni settimana con un click. Chi non lo fa scende nei risultati." },
+  { title: "Visite su calendario vero", text: "Solo orari davvero liberi, sincronizzati con Google Calendar o iCal. Prenoti e hai subito la conferma." },
+  { title: "Costo d'ingresso chiaro", text: "Canone, spese, cauzione e commissione sommati prima di contattare nessuno. Mai in testo libero." },
+  { title: "Fiducia misurata", text: "Tempi di risposta reali, recensioni solo dopo visite svolte, privati e agenzie sempre distinti." },
 ];
 
+// Una foto vera in public/hero.jpg sostituisce automaticamente l'illustrazione.
+const HERO_PHOTO = fs.existsSync(path.join(process.cwd(), "public", "hero.jpg"));
+
 export default function Home() {
+  const { total } = searchListings({});
   const { rows } = searchListings({ soloConfermati: true, sort: "rilevanza" });
   const stats = advertiserStats(rows.map((r) => r.advertiser_id));
   return (
     <>
       <section className="hero">
+        <div className="hero-media">
+          {HERO_PHOTO ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src="/hero.jpg" alt="" />
+          ) : (
+            <RoomIllustration variant={0} />
+          )}
+        </div>
         <div className="container">
-          <h1>Affitti in tutta Italia, verificati prima del contatto.</h1>
-          <p className="muted" style={{ maxWidth: 640 }}>
-            Disponibilità confermata di recente, costo totale d&apos;ingresso in chiaro, visite prenotabili su un calendario reale. E un avviso sempre visibile: non si paga nulla prima di aver visto la casa.
-          </p>
-          <form action="/annunci" className="hero-search card card-pad">
-            <div className="field">
-              <label htmlFor="h-regione">Regione</label>
-              <select id="h-regione" name="regione" defaultValue="">
-                <option value="">Tutta Italia</option>
-                {REGIONI.map((r) => (
-                  <option key={r}>{r}</option>
-                ))}
-              </select>
-            </div>
-            <div className="field">
-              <label htmlFor="h-comune">Città</label>
-              <input id="h-comune" name="comune" className="input" placeholder="Es. Bologna" autoComplete="address-level2" />
-            </div>
-            <div className="field">
-              <label htmlFor="h-tip">Tipologia</label>
+          <div className="eyebrow">Affitti verificati in tutta Italia</div>
+          <h1>
+            Case vere,
+            <em>prezzi chiari.</em>
+          </h1>
+          <p className="lead">Disponibilità confermata ogni settimana, costo d&apos;ingresso in chiaro, visite su un calendario reale. E nulla da pagare prima di aver visto casa.</p>
+
+          <form action="/annunci">
+            <div className="phrase-search">
+              <span className="word">Cerco</span>
+              <label className="sr-only" htmlFor="h-tip">
+                Tipologia
+              </label>
               <select id="h-tip" name="tipologia" defaultValue="">
-                <option value="">Qualsiasi</option>
+                <option value="">casa</option>
                 {TIPOLOGIE.map((t) => (
-                  <option key={t}>{t}</option>
+                  <option key={t} value={t}>
+                    {t.toLowerCase()}
+                  </option>
                 ))}
               </select>
+              <span className="word">in affitto a</span>
+              <label className="sr-only" htmlFor="h-comune">
+                Città
+              </label>
+              <input id="h-comune" name="comune" placeholder="Roma" autoComplete="address-level2" />
             </div>
-            <button className="btn btn-primary" type="submit">
-              Cerca
-            </button>
+            <div className="hero-actions">
+              <button className="btn btn-primary" type="submit">
+                Vedi {total} annunci <span aria-hidden>→</span>
+              </button>
+              <Link href="/pubblica" className="btn btn-light">
+                Pubblica un annuncio
+              </Link>
+            </div>
           </form>
         </div>
+        <span className="scroll-hint">Scorri</span>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="pillars">
-            {PILLARS.map((p) => (
-              <div key={p.title} className="card pillar">
-                <div className="ico">{p.icon}</div>
-                <h3>{p.title}</h3>
-                <p className="small muted" style={{ margin: 0 }}>
-                  {p.text}
-                </p>
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">Il nostro metodo</div>
+              <h2>
+                Cinque promesse, <em>verificate.</em>
+              </h2>
+            </div>
+            <Link href="/come-funziona" className="btn btn-sm">
+              Come funziona
+            </Link>
+          </div>
+          <div className="method">
+            {METHOD.map((m, i) => (
+              <div key={m.title} className="method-item">
+                <div className="num">{String(i + 1).padStart(2, "0")}</div>
+                <div>
+                  <h3>{m.title}</h3>
+                  <p>{m.text}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section" style={{ paddingTop: 8 }}>
         <div className="container">
-          <div className="spread" style={{ marginBottom: 12 }}>
-            <h2 style={{ margin: 0 }}>Confermati questa settimana</h2>
-            <Link href="/annunci?solo_confermati=1">Vedi tutti →</Link>
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">Disponibili adesso</div>
+              <h2>
+                Confermati <em>questa settimana</em>
+              </h2>
+            </div>
+            <Link href="/annunci?solo_confermati=1" className="btn btn-sm">
+              Vedi tutti
+            </Link>
           </div>
           {rows.length === 0 ? (
             <p className="muted">Nessun annuncio confermato negli ultimi 7 giorni.</p>
@@ -87,6 +125,20 @@ export default function Home() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="band">
+        <div className="container">
+          <div>
+            <h2>
+              Hai una casa da <em>affittare?</em>
+            </h2>
+            <p>Pubblica gratis. Gli inquilini vedono costi chiari e prenotano visite solo quando sei libero.</p>
+          </div>
+          <Link href="/pubblica" className="btn btn-light">
+            Pubblica annuncio gratis
+          </Link>
         </div>
       </section>
     </>
