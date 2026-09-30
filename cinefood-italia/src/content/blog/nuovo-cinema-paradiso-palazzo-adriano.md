@@ -1,5 +1,5 @@
 ---
-titolo: "Nuovo Cinema Paradiso: location a Palazzo Adriano"
+titolo: "Nuovo Cinema Paradiso: Palazzo Adriano e il museo"
 descrizione: "Dove è stato girato Nuovo Cinema Paradiso? Piazza Umberto I a Palazzo Adriano, il museo dedicato al film (aperto ad agosto 2025) e le altre location."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-17

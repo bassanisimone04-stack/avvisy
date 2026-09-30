@@ -1,5 +1,5 @@
 ---
-titolo: "The Odyssey a Favignana: le location del film"
+titolo: "The Odyssey: dove è stato girato a Favignana"
 descrizione: "Dove è stato girato The Odyssey di Nolan? Il Castello di Santa Caterina a Favignana, le Isole Eolie e cosa mangiare sulle isole: tonno, cous cous, malvasia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-07
