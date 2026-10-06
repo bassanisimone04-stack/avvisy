@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     entry("/", { changeFrequency: "daily", priority: 1 }),
     entry("/directory", { changeFrequency: "daily", priority: 0.9 }),
+    entry("/mappa-ristoranti-aic", { changeFrequency: "weekly", priority: 0.8 }),
     entry("/prodotti", { changeFrequency: "weekly", priority: 0.7 }),
     entry("/blog", { changeFrequency: "daily", priority: 0.8 }),
     entry("/faq", { changeFrequency: "monthly", priority: 0.7 }),

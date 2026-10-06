@@ -52,6 +52,11 @@ export default function DirectoryContent({
         <div>
           <h1 className="font-editorial text-3xl font-semibold text-ink">{title}</h1>
           <p className="mt-1 text-ink-soft">{results.length} {results.length === 1 ? t.directory.resultFound : t.directory.resultsFound}</p>
+          <p className="mt-1 text-sm">
+            <Link href={localeHref(locale, "/mappa-ristoranti-aic")} className="link-underline text-brand-dark">
+              {locale === "en" ? "Only AIC restaurants? Open the AIC restaurants map" : "Cerchi solo i ristoranti AIC? Apri la mappa dei ristoranti AIC"}
+            </Link>
+          </p>
         </div>
         <SortSelect />
       </div>
