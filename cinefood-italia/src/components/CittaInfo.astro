@@ -1,0 +1,81 @@
+---
+/** Blocco informativo delle pagine città: intro dai dati, FAQ, città vicine, articoli. */
+import type { Lang } from "../i18n/ui";
+import { path } from "../i18n/ui";
+import type { Restaurant, Film } from "../lib/utils";
+import { introCitta, faqCitta } from "../lib/citta-content";
+import { tCitta } from "../i18n/content-en";
+
+interface Props {
+  lang?: Lang;
+  citta: string;
+  locali: Restaurant[];
+  films: Film[];
+  vicine: { nome: string; slug: string; n: number }[];
+  articoli: { id: string; titolo: string }[];
+}
+const { lang = "it", citta, locali, films, vicine, articoli } = Astro.props;
+const en = lang === "en";
+const city = tCitta(citta, lang);
+const faq = faqCitta(citta, locali, films, lang);
+const intro = introCitta(citta, locali, films, lang);
+const T = en
+  ? { intro: `${city} on screen`, faq: "Frequently asked questions", vicine: "Nearby cities in the same region", art: `Articles about ${city}`, mappa: "Open the map", guida: "PDF guide" }
+  : { intro: `${city} al cinema`, faq: "Domande frequenti", vicine: "Altre città della stessa regione", art: `Articoli su ${city}`, mappa: "Apri la mappa", guida: "Guida PDF" };
+---
+
+<section class="mx-auto max-w-6xl px-4 pt-10">
+  <h2 class="font-display text-2xl font-bold">{T.intro}</h2>
+  <p class="mt-3 max-w-3xl text-ink-700 dark:text-cream-200">{intro}</p>
+  <p class="mt-4 flex flex-wrap gap-3 text-sm">
+    <a href={path("/mappa", lang)} class="font-semibold text-gold-600 underline dark:text-gold-400">{T.mappa} →</a>
+    <a href={path("/guida", lang)} class="font-semibold text-gold-600 underline dark:text-gold-400">{T.guida} →</a>
+  </p>
+</section>
+
+{
+  articoli.length > 0 && (
+    <section class="mx-auto max-w-6xl px-4 pt-10">
+      <h2 class="font-display text-2xl font-bold">{T.art}</h2>
+      <ul class="mt-4 space-y-2">
+        {articoli.map((a) => (
+          <li>
+            <a href={path(`/blog/${a.id}`, lang)} class="font-medium hover:text-gold-600 dark:hover:text-gold-400">{a.titolo}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+{
+  vicine.length > 0 && (
+    <section class="mx-auto max-w-6xl px-4 pt-10">
+      <h2 class="font-display text-2xl font-bold">{T.vicine}</h2>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {vicine.map((c) => (
+          <a href={path(`/${c.slug}`, lang)} class="rounded-full border border-ink-500/15 bg-white px-4 py-2 text-sm font-medium hover:border-gold-500 dark:border-noir-700 dark:bg-noir-900">
+            {tCitta(c.nome, lang)} <span class="text-ink-500 dark:text-ink-400">({c.n})</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+<section class="mx-auto max-w-3xl px-4 py-12">
+  <h2 class="font-display text-2xl font-bold">{T.faq}</h2>
+  <div class="mt-6 space-y-3">
+    {faq.map((f) => (
+      <details class="group rounded-2xl border border-ink-500/10 bg-white p-5 dark:border-noir-700 dark:bg-noir-900">
+        <summary class="cursor-pointer list-none font-semibold marker:hidden">
+          <span class="flex items-center justify-between gap-3">
+            {f.domanda}
+            <span class="text-gold-500 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+          </span>
+        </summary>
+        <p class="mt-3 text-ink-700 dark:text-cream-200">{f.risposta}</p>
+      </details>
+    ))}
+  </div>
+</section>

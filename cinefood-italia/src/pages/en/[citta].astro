@@ -10,7 +10,9 @@ import Breadcrumb from "../../components/Breadcrumb.astro";
 import Reveal from "../../components/Reveal.astro";
 import { SITE } from "../../config/site";
 import { ordinaLocali, cittaUniche, localiPerCitta, slugify, filmIdsDiLocale } from "../../lib/utils";
-import { breadcrumbJsonLd } from "../../lib/schema-org";
+import { breadcrumbJsonLd, faqPageJsonLd } from "../../lib/schema-org";
+import CittaInfo from "../../components/CittaInfo.astro";
+import { faqCitta } from "../../lib/citta-content";
 import { fitTitle, clampDesc } from "../../lib/seo";
 import { useT, path } from "../../i18n/ui";
 import { tFilmTitolo, tCitta } from "../../i18n/content-en";
@@ -36,6 +38,21 @@ const cityImg = imgKey ? cityImages[imgKey].default : undefined;
 const filmIds = [...new Set(locali.flatMap(filmIdsDiLocale))];
 const filmEntries = await getEntries(filmIds.map((id) => ({ collection: "films" as const, id })));
 
+
+// Città vicine: stessa regione, per i link interni fra pagine città.
+const tutti = await getCollection("restaurants");
+const vicine = [...new Set(tutti.filter((l) => l.data.regione === regione && l.data.citta !== citta).map((l) => l.data.citta))]
+  .sort((a, b) => a.localeCompare(b, "it"))
+  .map((nome) => ({ nome, slug: slugify(nome), n: tutti.filter((l) => l.data.citta === nome).length }));
+
+// Articoli del blog che citano uno dei locali di questa città.
+const slugLocali = locali.map((l) => l.id);
+const articoli = (await getCollection("blog"))
+  .filter((a) => !a.data.bozza && a.data.lang === "en" && slugLocali.some((s) => a.body?.includes(`/locale/${s}`)))
+  .sort((a, b) => b.data.dataPubblicazione.getTime() - a.data.dataPubblicazione.getTime())
+  .slice(0, 6)
+  .map((a) => ({ id: a.id.replace(/-en$/, ""), titolo: a.data.titolo }));
+
 const cittaEn = tCitta(citta, lang);
 const title = fitTitle([
   t("citta.titoloSeo").replace("{c}", cittaEn),
@@ -49,7 +66,10 @@ const crumbs = [
   { name: t("loc.locali"), href: path("/locali", lang) },
   { name: cittaEn },
 ];
-const jsonLd = breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: new URL(c.href ?? "/", SITE.url).href })));
+const jsonLd = [
+  breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: new URL(c.href ?? "/", SITE.url).href }))),
+  faqPageJsonLd(faqCitta(citta, locali, filmEntries, lang)),
+];
 ---
 
 <BaseLayout lang={lang} title={title} description={description} image={cityImg?.src} jsonLd={jsonLd}>
@@ -73,6 +93,8 @@ const jsonLd = breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: new URL(
       </section>
     )
   }
+
+  <CittaInfo lang={lang} citta={citta} locali={locali} films={filmEntries} vicine={vicine} articoli={articoli} />
 
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h2 class="font-display text-2xl font-bold">{t("citta.localiDi")} {cittaEn}</h2>
