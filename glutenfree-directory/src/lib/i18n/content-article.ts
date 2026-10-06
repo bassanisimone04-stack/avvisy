@@ -735,7 +735,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-23": {
     title: "AIC-Certified Hotels and Resorts for Celiacs: How to Choose a Worry-Free Vacation",
     excerpt: "AIC-certified hotels and resorts: what the certification really guarantees, the difference between breakfast and full board, and how to plan a gluten-free vacation with no surprises.",
-    metaTitle: "Gluten-Free Hotels in Italy: AIC-Certified | Mappa Senza Glutine",
+    metaTitle: "AIC Hotels in Italy: Gluten-Free Stays",
     metaDescription: "Gluten-free certification for hotels and holiday resorts: what AIC's program guarantees, how to find hotels, B&Bs and resorts, and what to ask.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
@@ -1968,6 +1968,34 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "Can I eat at a fast-food restaurant without a gluten-free menu?", answer: "It's risky. Without dedicated procedures, even products without gluten among their ingredients can be contaminated, for example by fryer oil shared with breaded products." },
     ],
     tags: ["chains", "fast food", "restaurants", "AIC"],
+  },
+  "art-61": {
+    title: "Gluten-Free Near Me: How to Find Safe Places to Eat in Italy",
+    excerpt: "How to find a gluten-free venue near you and tell whether it's actually safe: a geolocated map, the AIC program, the limits of Google Maps and the questions to ask before you go.",
+    metaTitle: "Gluten-Free Near Me: How to Find Safe Venues",
+    metaDescription: "How to find gluten-free venues near you and tell whether they're safe: a map with geolocation, the AIC program, Google Maps limits and what to ask by phone.",
+    authorRole: "Content verified by the editorial team",
+    keyTakeaways: [
+      "\"Gluten-free near me\" is a location search: it needs a map with geolocation, not a nationwide list.",
+      "A venue marked \"gluten-free\" on Google Maps isn't necessarily verified: that label is added by the owner or inferred by Google from reviews.",
+      "Venues in AIC's Alimentazione Fuori Casa program follow procedures agreed with the association and train their staff.",
+      "A phone call clears up almost everything: dedicated kitchen or oven, separate fryer, flours stored apart.",
+    ],
+    sections: [
+      { h2: "What you're really looking for when you search \"gluten-free near me\"", body: "The same search hides two very different needs. People who eat gluten-free by choice want a gluten-free dish on the menu. People with <strong>celiac disease</strong> need a venue that knows how to avoid cross-contamination, the accidental contact with gluten in the kitchen: for them a dish with no gluten in the ingredients but boiled in the same water as regular pasta is not safe. The difference matters, because services that list \"gluten-free\" venues almost never make it. In the <a href=\"/en/directory\">Mappa Senza Glutine directory</a>, instead, every listing states whether the venue has a dedicated kitchen and whether it is AIC certified." },
+      { h2: "Use a map with geolocation", body: "A proximity search needs a map, not a list. In the directory you can turn on your browser's location to see the venues closest to you, then narrow the results with the quick filters: <strong>category</strong> (restaurant, pizzeria, ice cream shop, café and bakery, pharmacy, supermarket), <strong>AIC certification</strong> and <strong>open now</strong>. The certification filter is the most useful one when you're away from home and can't check in person: it leaves only the venues taking part in the AIC program." },
+      { h2: "The AIC Alimentazione Fuori Casa program", body: "The Italian Celiac Association runs the <strong>Alimentazione Fuori Casa</strong> program, which venues join voluntarily: it involves staff training and agreed procedures for preparing and serving gluten-free dishes. Participating venues are listed on AIC's app and website, and regional branches publish the list for their own area. One caveat: technically this is not a certification in the strict sense. What joining actually involves is explained in our guide to <a href=\"/en/blog/certificazione-aic-cosa-significa-e-come-riconoscere-un-locale-davvero-certificato\">AIC certification</a>." },
+      { h2: "Why Google Maps alone isn't enough", body: "On Google Maps the \"gluten-free options\" label is an attribute the owner adds to their own business profile, or that Google infers from reviews. Nobody checks it. So a venue can show up as gluten-free when it only has one gluten-free dish on the menu and no procedure against contamination at all. Enthusiastic reviews deserve the same caution: they often come from people who avoid gluten by choice and don't run the same risks as someone with celiac disease. Google Maps is still handy for opening hours and directions, but safety has to be checked elsewhere." },
+      { h2: "The questions to ask before you go", body: "A one-minute phone call is worth more than ten reviews. Worth asking:<ul><li><strong>Do you have a dedicated kitchen or oven</strong> for gluten-free, or do you cook in the same space?</li><li><strong>Is the fryer separate?</strong> This is the key question for fries and anything fried.</li><li><strong>How are the gluten-free flours stored?</strong> They should be in sealed containers, away from regular flour.</li><li><strong>Do you take part in the AIC program?</strong> If the answer is yes, the staff has had specific training.</li></ul>Always say you have celiac disease, not that you prefer gluten-free dishes: it changes how the kitchen handles the order. What to watch for once you're at the table is in our guide on <a href=\"/en/blog/come-evitare-la-contaminazione-crociata-al-ristorante-la-guida-completa-per-mangiare-senza-glutine-in-sicurezza\">how to avoid cross-contamination at restaurants</a>." },
+      { h2: "If there's nothing near you", body: "Outside the big cities you'll often find nothing within a few kilometers. Two options remain. The first is <a href=\"/en/blog/catene-di-ristoranti-senza-glutine-in-italia-quelle-con-un-menu-per-celiaci\">chains with a gluten-free menu</a>: procedures and menu are the same at every participating location, so you know in advance what to expect, motorway stops included. The second is buying something packaged: supermarkets, pharmacies and specialty shops almost always have a gluten-free aisle, as we explain in our guide on <a href=\"/en/blog/dove-comprare-prodotti-senza-glutine-supermercati-farmacie-e-negozi-specializzati\">where to buy gluten-free products</a>." },
+    ],
+    faqs: [
+      { question: "How do I find a gluten-free restaurant near me?", answer: "Use a map with geolocation and filter by category and AIC certification: you'll immediately see the verified venues closest to your position. A nationwide list with no map is no use for a proximity search." },
+      { question: "Are the \"gluten-free\" venues on Google Maps safe for someone with celiac disease?", answer: "Not necessarily. The \"gluten-free options\" attribute is added by the owner or inferred from reviews, and nobody verifies it: it can flag a venue with a single gluten-free dish and no procedure against cross-contamination." },
+      { question: "How can I tell whether a venue takes part in the AIC program?", answer: "Venues in the Alimentazione Fuori Casa program are listed on the Italian Celiac Association's app and website, and regional branches publish the list for their own area. If in doubt, just ask the venue by phone." },
+      { question: "What can I do if there's no gluten-free venue near me?", answer: "Two alternatives: chains that have a gluten-free menu, with the same procedures at every participating location, or a packaged product bought at a supermarket, pharmacy or specialty shop." },
+    ],
+    tags: ["restaurants", "AIC", "gluten free", "map"],
   },
 };
 

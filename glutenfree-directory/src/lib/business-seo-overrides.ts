@@ -18,8 +18,8 @@ interface Override {
 
 const OVERRIDES_IT: Record<string, Override> = {
   "il-secchio-e-l-olivaro-roma": {
-    title: "Il Secchio e l'Olivaro, Ostiense: pizza dal 1999",
-    description: "Il Secchio e l'Olivaro a Ostiense, via del Porto Fluviale: pizza cotta a legna, laboratorio dedicato al senza glutine dal 1999. Su Mappa Senza Glutine.",
+    title: "Il Secchio e l'Olivaro, Porto Fluviale: senza glutine",
+    description: "Il Secchio e l'Olivaro, via del Porto Fluviale 3 a Roma: pizza cotta a legna e menu senza glutine in laboratorio dedicato dal 1999. Orari, telefono e indirizzo.",
   },
   "celiachiamo-roma": {
     title: "Celiachiamo, Roma EUR: forno 100% senza glutine",
@@ -129,8 +129,8 @@ const OVERRIDES_IT: Record<string, Override> = {
 
 const OVERRIDES_EN: Record<string, Override> = {
   "il-secchio-e-l-olivaro-roma": {
-    title: "Il Secchio e l'Olivaro, Ostiense: pizza since 1999",
-    description: "Il Secchio e l'Olivaro in Ostiense, via del Porto Fluviale: wood-fired pizza with a dedicated gluten-free lab since 1999. On Mappa Senza Glutine.",
+    title: "Il Secchio e l'Olivaro, Porto Fluviale: gluten free",
+    description: "Il Secchio e l'Olivaro, via del Porto Fluviale 3 in Rome: wood-fired pizza and a gluten-free menu from a dedicated lab since 1999. Hours, phone and address.",
   },
   "celiachiamo-roma": {
     title: "Celiachiamo, Rome EUR: 100% gluten-free bakery",

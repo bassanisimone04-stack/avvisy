@@ -2,7 +2,7 @@
 
 Foto di copertina degli articoli. **Già collegate (30):** tutte tranne le tre sotto.
 
-**Ancora da caricare (3):** `intolleranza`, `pasticcerie`, `old-wild-west` (le ultime due vanno scattate davvero in un locale reale). Fino ad allora quegli articoli usano la foto generica.
+**Ancora da caricare (4):** `intolleranza`, `vicino-a-me` (uno smartphone con una mappa aperta, su un tavolo di un locale), `pasticcerie`, `old-wild-west` (le ultime due vanno scattate davvero in un locale reale). Fino ad allora quegli articoli usano la foto generica.
 
 ## Indicazioni per tutte le foto
 

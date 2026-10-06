@@ -119,13 +119,13 @@ export function directoryMetadata(sp: SearchParams, locale: Locale): Metadata {
     meta = pageMetadata(
       en
         ? {
-            title: "AIC-Certified Restaurants in Italy",
+            title: "Map of AIC-certified restaurants in Italy",
             description: `The map of AIC-certified restaurants and verified gluten-free venues in Italy: ${all} venues, ${certified} AIC-certified. Filter by city and category, find address and hours.`,
             path: "/directory",
             locale,
           }
         : {
-            title: "Ristoranti certificati AIC in Italia",
+            title: "Mappa ristoranti AIC certificati in Italia",
             description: `La mappa dei ristoranti certificati AIC e dei locali senza glutine verificati in Italia: ${all} locali, ${certified} certificati AIC. Filtra per città e categoria.`,
             path: "/directory",
             locale,
