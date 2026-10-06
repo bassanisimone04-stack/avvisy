@@ -60,3 +60,4 @@ the real star of the scene.
 of the story as the characters. Discover more
 **[movie restaurants](/en/blog/ristoranti-veri-nei-film-italia-lista)**
 or the full list of **[shows filmed in Italy](/en/blog/serie-tv-girate-italia-location-vere)**.
+On the other side of the island lies the most famous set of them all: **[The Godfather in Savoca and Forza d'Agrò](/en/blog/padrino-location-savoca-forza-dagro-sicilia)**.

@@ -3,6 +3,7 @@ titolo: "The White Lotus 2: location a Taormina, Sicilia"
 descrizione: "The White Lotus 2 è girato davvero in Sicilia: San Domenico Palace, Cefalù, Noto. Le location vere della serie HBO e cosa mangiare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
+dataAggiornamento: 2026-10-06
 immagine: "../../assets/placeholder/white-lotus-taormina-vero.jpg"
 immagineAlt: "Vista aerea del San Domenico Palace a Taormina, location reale di The White Lotus"
 tags: ["The White Lotus", "Sicilia", "Taormina", "HBO", "cineturismo"]
@@ -56,4 +57,5 @@ dalla serie.
 *The White Lotus* ha reso Taormina una delle mete più desiderate al mondo,
 e a differenza di molte produzioni può vantare un vero hotel visitabile
 al centro della storia. Scopri gli altri **[film](/film)** e le loro
-location gastronomiche in Sicilia, come **[The Odyssey a Favignana](/blog/the-odyssey-nolan-sicilia-favignana)**.
+location gastronomiche in Sicilia, come **[The Odyssey a Favignana](/blog/the-odyssey-nolan-sicilia-favignana)**
+e **[Il Padrino a Savoca e Forza d'Agrò](/blog/padrino-location-savoca-forza-dagro-sicilia)**, a meno di un'ora da Taormina.

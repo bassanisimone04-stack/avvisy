@@ -136,6 +136,8 @@ const blog = defineCollection({
       descrizione: z.string(),
       autore: z.string().default("Redazione CineFood Italia"),
       dataPubblicazione: z.coerce.date(),
+      /** Data dell'ultima revisione reale del contenuto (dateModified). */
+      dataAggiornamento: z.coerce.date().optional(),
       immagine: image().optional(),
       immagineAlt: z.string().default(""),
       tags: z.array(z.string()).default([]),

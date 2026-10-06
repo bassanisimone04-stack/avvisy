@@ -75,5 +75,6 @@ Sicilia continua ad affascinare Hollywood quanto negli anni '70.
 
 ---
 
+Il set più famoso dell'isola resta quello de **[Il Padrino a Savoca e Forza d'Agrò](/blog/padrino-location-savoca-forza-dagro-sicilia)**, con il Bar Vitelli ancora aperto.
 Scopri tutti i locali siciliani nella nostra [directory](/locali) o esplora la
 [mappa](/mappa). *Ricorda di verificare sempre orari e disponibilità.*

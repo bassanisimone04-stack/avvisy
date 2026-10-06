@@ -3,6 +3,7 @@ titolo: "Eat Pray Love a Roma: location e ristoranti"
 descrizione: "Dove è stato girato Eat Pray Love a Roma: Piazza Navona, Villa Borghese e Trastevere, più le trattorie del film e la pizzeria di Napoli. Indirizzi veri."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
+dataAggiornamento: 2026-10-06
 immagine: "../../assets/placeholder/eat-pray-love-location-roma-napoli.jpg"
 immagineAlt: "Sfondo a gradiente caldo che richiama la luce di Roma e Napoli"
 tags: ["Mangia prega ama", "Roma", "Napoli", "location", "cineturismo"]

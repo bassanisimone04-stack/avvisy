@@ -66,4 +66,5 @@ i locali collegati sulla **[mappa](/mappa)**.
 Rifare l'itinerario di Montalbano significa mangiare come lui: seduti davanti al
 mare, con un piatto di pesce e la lentezza giusta. Punta Secca ed
 **[Enzo a Mare](/locale/enzo-a-mare-punta-secca)** sono il punto di partenza
-perfetto per un viaggio tra cinema e sapori di Sicilia.
+perfetto per un viaggio tra cinema e sapori di Sicilia. Se risali verso Messina,
+aggiungi all'itinerario **[Il Padrino a Savoca e Forza d'Agrò](/blog/padrino-location-savoca-forza-dagro-sicilia)**.

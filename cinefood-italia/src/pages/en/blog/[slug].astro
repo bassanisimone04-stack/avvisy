@@ -35,7 +35,7 @@ const canonical = new URL(path(`/blog/${slug}`, lang), Astro.site ?? SITE.url).h
 const immagineUrl = d.immagine ? new URL(d.immagine.src, Astro.site ?? SITE.url).href : undefined;
 const crumbs = [{ name: t("loc.home"), href: path("/", lang) }, { name: t("nav.blog"), href: path("/blog", lang) }, { name: d.titolo }];
 const jsonLd = [
-  blogPostingJsonLd(d.titolo, d.descrizione, d.autore, d.dataPubblicazione, canonical, immagineUrl),
+  blogPostingJsonLd(d.titolo, d.descrizione, d.autore, d.dataPubblicazione, canonical, immagineUrl, d.dataAggiornamento),
   breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: new URL(c.href ?? "/", SITE.url).href }))),
 ];
 if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
@@ -44,7 +44,7 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
 <BaseLayout lang={lang} title={d.titolo} description={d.descrizione} image={d.immagine?.src} type="article" jsonLd={jsonLd}>
   <article class="mx-auto max-w-3xl px-4 py-10">
     <Breadcrumb items={crumbs} />
-    <p class="mt-4 text-sm text-ink-500 dark:text-ink-400">{formatData(d.dataPubblicazione, lang)} · {d.autore}</p>
+    <p class="mt-4 text-sm text-ink-500 dark:text-ink-400">{formatData(d.dataPubblicazione, lang)}{d.dataAggiornamento && ` · updated ${formatData(d.dataAggiornamento, lang)}`} · {d.autore}</p>
     <h1 class="mt-2 font-display text-4xl font-extrabold leading-tight sm:text-5xl">{d.titolo}</h1>
     <p class="mt-3 text-lg text-ink-600 dark:text-ink-400">{d.descrizione}</p>
 

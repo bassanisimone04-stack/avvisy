@@ -3,6 +3,7 @@ titolo: "White Lotus Season 2: Sicily Filming Locations"
 descrizione: "The White Lotus season 2 was really filmed in Sicily: San Domenico Palace, Cefalù, Noto. The show's real locations and what to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
+dataAggiornamento: 2026-10-06
 immagine: "../../assets/placeholder/white-lotus-taormina-vero.jpg"
 immagineAlt: "Aerial view of the San Domenico Palace in Taormina, The White Lotus's real filming location"
 tags: ["The White Lotus", "Sicily", "Taormina", "HBO", "film tourism"]
@@ -56,4 +57,5 @@ perfectly with the decadent luxury the show portrays.
 the world, and unlike many productions it can boast a real, bookable
 hotel at the heart of the story. Discover other **[films](/en/film)** and
 their food locations in Sicily, like
-**[Nolan's The Odyssey in Favignana](/en/blog/the-odyssey-nolan-sicilia-favignana)**.
+**[Nolan's The Odyssey in Favignana](/en/blog/the-odyssey-nolan-sicilia-favignana)**
+and **[The Godfather in Savoca and Forza d'Agrò](/en/blog/padrino-location-savoca-forza-dagro-sicilia)**, less than an hour from Taormina.

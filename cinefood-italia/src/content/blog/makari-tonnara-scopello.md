@@ -60,3 +60,4 @@ produzione. È visitabile durante il giorno, con vista sui faraglioni che
 diventare parte della storia quanto i personaggi. Scopri gli altri
 **[ristoranti visti nei film](/blog/ristoranti-veri-nei-film-italia-lista)**
 o l'elenco completo delle **[serie girate in Italia](/blog/serie-tv-girate-italia-location-vere)**.
+Sull'altro versante dell'isola c'è il set più celebre di tutti: **[Il Padrino a Savoca e Forza d'Agrò](/blog/padrino-location-savoca-forza-dagro-sicilia)**.

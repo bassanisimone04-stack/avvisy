@@ -3,6 +3,7 @@ titolo: "Eat Pray Love: la pizzeria di Julia Roberts"
 descrizione: "La pizza di Eat Pray Love è L'Antica Pizzeria da Michele a Napoli: solo 2 pizze in menù, niente prenotazioni, la fila, l'indirizzo e come arrivare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-22
+dataAggiornamento: 2026-10-06
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
 immagineAlt: "Ingresso dell'Antica Pizzeria da Michele a Napoli con una pizza margherita in primo piano"
 tags: ["Eat Pray Love", "Napoli", "pizza", "dove mangiare", "cineturismo"]
@@ -28,6 +29,18 @@ esperienze:
   - nome: "Tour gastronomico di Napoli"
     query: "Naples food tour"
 bozza: false
+---
+
+**In breve.** La pizzeria di *Mangia prega ama* (*Eat Pray Love*) è
+**[L'Antica Pizzeria da Michele](/locale/pizzeria-da-michele-napoli)**, in Via Cesare
+Sersale, nel quartiere **Forcella** di **Napoli**. È lì che il personaggio di Julia
+Roberts mangia la margherita della scena più citata del film.
+
+- **Cosa ordinare:** marinara o margherita, le due pizze storiche, più due varianti
+  (cosacca e marita).
+- **Prenotazioni:** non si prenota. Si prende il numero all'ingresso e si aspetta il turno.
+- **Come arrivare:** meno di 10 minuti a piedi dalla stazione di Napoli Centrale, uscita Piazza Garibaldi.
+
 ---
 
 C'è una scena di *Mangia prega ama* (*Eat Pray Love*) che ha fatto venire fame a

@@ -3,6 +3,7 @@ titolo: "Eat Pray Love Pizza Place: Da Michele, Naples"
 descrizione: "Julia Roberts' pizza scene was filmed at L'Antica Pizzeria da Michele, Naples: only 2 pizzas on the menu, no bookings, the queue, address and how to get there."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-22
+dataAggiornamento: 2026-10-06
 immagine: "../../assets/placeholder/pizzeria-michele.jpg"
 immagineAlt: "Entrance of L'Antica Pizzeria da Michele in Naples with a margherita pizza in the foreground"
 tags: ["Eat Pray Love", "Naples", "pizza", "where to eat", "film tourism"]
@@ -29,6 +30,18 @@ esperienze:
   - nome: "Naples food tour"
     query: "Naples food tour"
 bozza: false
+---
+
+**Short answer.** The pizza place in *Eat Pray Love* is
+**[L'Antica Pizzeria da Michele](/en/locale/pizzeria-da-michele-napoli)**, on Via Cesare
+Sersale in the Forcella district of **Naples**. It is where Julia Roberts' character eats
+the margherita in the film's most quoted food scene.
+
+- **What to order:** marinara or margherita — those are the two historic pizzas, plus two
+  variations (cosacca and marita).
+- **Bookings:** none. You take a number at the door and wait your turn.
+- **Getting there:** under a 10-minute walk from Napoli Centrale station, Piazza Garibaldi exit.
+
 ---
 
 There is a scene in *Eat Pray Love* that made millions of viewers hungry: Liz,

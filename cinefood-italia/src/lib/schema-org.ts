@@ -85,7 +85,8 @@ export function blogPostingJsonLd(
   autore: string,
   data: Date,
   canonicalUrl: string,
-  immagineUrl?: string
+  immagineUrl?: string,
+  dataModifica?: Date
 ): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
@@ -94,6 +95,7 @@ export function blogPostingJsonLd(
     description: descrizione,
     author: { "@type": "Person", name: autore },
     datePublished: data.toISOString(),
+    dateModified: (dataModifica ?? data).toISOString(),
     url: canonicalUrl,
     publisher: { "@type": "Organization", name: SITE.name },
     ...(immagineUrl ? { image: immagineUrl } : {}),

@@ -31,7 +31,7 @@ export default defineConfig({
     sitemap({
       i18n: {
         defaultLocale: "it",
-        locales: { it: "it-IT", en: "en-GB" },
+        locales: { it: "it", en: "en" },
       },
     }),
     // Permette di scrivere articoli/contenuti in .mdx se serve.

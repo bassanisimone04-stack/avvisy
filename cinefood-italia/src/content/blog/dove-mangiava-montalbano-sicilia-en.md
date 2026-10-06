@@ -67,4 +67,5 @@ the connected venues on the **[map](/en/mappa)**.
 Retracing Montalbano's itinerary means eating like he does: sitting by the sea,
 with a plate of fish and the right slowness. Punta Secca and
 **[Enzo a Mare](/en/locale/enzo-a-mare-punta-secca)** are the perfect starting
-point for a journey between cinema and the flavours of Sicily.
+point for a journey between cinema and the flavours of Sicily. Heading north towards
+Messina, add **[The Godfather in Savoca and Forza d'Agrò](/en/blog/padrino-location-savoca-forza-dagro-sicilia)** to the trip.

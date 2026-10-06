@@ -74,5 +74,6 @@ Christopher Nolan, filmed between Favignana and the Aegadian Islands, and
 the Sicilian scenes of **In the Hand of Dante**, filmed in Palermo. Proof
 that Sicily still fascinates Hollywood as much as it did in the 1970s.
 
+The island's most famous set is still **[The Godfather in Savoca and Forza d'Agrò](/en/blog/padrino-location-savoca-forza-dagro-sicilia)**, where Bar Vitelli is still open.
 Discover all the Sicilian venues in our [directory](/en/locali) or explore the
 [map](/en/mappa). *Remember to always check opening hours and availability.*
