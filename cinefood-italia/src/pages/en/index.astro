@@ -46,7 +46,7 @@ const citta = cittaUniche(locali)
 
 const stats = [
   { valore: locali.length, label: t("stats.locali") },
-  { valore: citta.length || cittaUniche(locali).length, label: t("stats.citta") },
+  { valore: cittaUniche(locali).length, label: t("stats.citta") },
   { valore: films.length, label: t("stats.film") },
 ];
 

@@ -65,7 +65,7 @@ const desc = tLocaleDesc(locale, lang);
   <article class="mx-auto max-w-4xl px-4 py-8">
     <Breadcrumb items={crumbs} />
 
-    <Image src={d.immagine} alt={d.immagineAlt || d.nome} width={1200} height={800} loading="eager" class="mt-4 aspect-[3/2] w-full rounded-3xl object-cover shadow-lg" />
+    <Image src={d.immagine} alt={d.immagineAlt || d.nome} width={1200} height={800} widths={[480, 768, 1200]} sizes="(max-width: 768px) 100vw, 768px" loading="eager" fetchpriority="high" class="mt-4 aspect-[3/2] w-full rounded-3xl object-cover shadow-lg" />
 
     <div class="mt-6 flex flex-wrap items-center gap-2">
       <Badges evidenza={d.inEvidenza} lang={lang} />

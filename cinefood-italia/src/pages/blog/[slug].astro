@@ -49,7 +49,7 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
 
     {
       d.immagine && (
-        <Image src={d.immagine} alt={d.immagineAlt || d.titolo} width={1200} height={675} loading="eager" class="mt-6 aspect-video w-full rounded-3xl object-cover" />
+        <Image src={d.immagine} alt={d.immagineAlt || d.titolo} width={1200} height={675} widths={[480, 768, 1200]} sizes="(max-width: 768px) 100vw, 768px" loading="eager" fetchpriority="high" class="mt-6 aspect-video w-full rounded-3xl object-cover" />
       )
     }
 

@@ -58,7 +58,7 @@ if (faq.length > 0) jsonLd.push(faqPageJsonLd(faq));
   <section class="border-b border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
     <div class="mx-auto grid max-w-5xl gap-8 px-4 py-10 md:grid-cols-[240px_1fr]">
       <figure class="mx-auto w-40 md:w-full">
-        <Image src={d.locandina} alt={tFilmAlt(film, lang) || titolo} width={480} height={720} loading="eager" class="w-full rounded-2xl object-cover shadow-lg" />
+        <Image src={d.locandina} alt={tFilmAlt(film, lang) || titolo} width={480} height={720} loading="eager" fetchpriority="high" class="w-full rounded-2xl object-cover shadow-lg" />
         {d.locandinaTipo === "luogo" && (
           <figcaption class="mt-2 text-center text-xs text-ink-500 dark:text-ink-400">Photo of a filming location</figcaption>
         )}
