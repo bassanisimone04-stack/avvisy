@@ -30,7 +30,7 @@ const OVERRIDES_IT: Record<string, Override> = {
     description: "La Rosa dei Venti a Milano: ristorante di pesce certificato AIC dal 2001, segnalato dalla Guida Michelin. Indirizzo e orari su Mappa Senza Glutine.",
   },
   "be-bop-milano": {
-    title: "Be Bop, Navigli: pizza senza glutine dal 1986",
+    title: "Be Bop Milano, Navigli: pizza senza glutine",
     description: "Be Bop a Milano, vicino ai Navigli: pizzeria dal 1986 con pizza e menu tradizionale senza glutine, opzioni vegan. Indirizzo su Mappa Senza Glutine.",
   },
   "fornerie-alessandrino-roma": {
@@ -38,7 +38,7 @@ const OVERRIDES_IT: Record<string, Override> = {
     description: "Fornerie Alessandrino a Roma: pizzeria, braceria e hamburgheria con cucina interamente certificata AIC e separata. Indirizzo su Mappa Senza Glutine.",
   },
   "mama-eat-milano": {
-    title: "Mama Eat, via Procaccini: cucina AIC",
+    title: "Mama Eat Milano, via Procaccini: cucina AIC",
     description: "Mama Eat in via Procaccini, Milano: ristorante-pizzeria certificato AIC con doppia cucina separata, tutto il menu anche senza glutine. Su Mappa Senza Glutine.",
   },
   "no-gluten-bakery-palermo": {
@@ -50,7 +50,7 @@ const OVERRIDES_IT: Record<string, Override> = {
     description: "Randazzo Gluten Free a Sestri Ponente, Genova: panificio-pasticceria solo senza glutine, aperto a fine 2024, nel circuito AIC Liguria. Su Mappa Senza Glutine.",
   },
   "hotel-al-piave-venezia": {
-    title: "Hotel Al Piave: hotel AIC a Venezia",
+    title: "Hotel Al Piave Venezia: hotel certificato AIC",
     description: "Hotel Al Piave a Castello, vicino a San Marco: uno dei pochi hotel di Venezia con certificazione AIC, colazione interamente senza glutine. Su Mappa Senza Glutine.",
   },
   "gusto-libero-verona": {
@@ -141,7 +141,7 @@ const OVERRIDES_EN: Record<string, Override> = {
     description: "La Rosa dei Venti in Milan: AIC-certified seafood restaurant since 2001, featured in the Michelin Guide. Address and hours on Mappa Senza Glutine.",
   },
   "be-bop-milano": {
-    title: "Be Bop, Navigli: gluten-free pizza since 1986",
+    title: "Be Bop Milan, Navigli: gluten-free pizza",
     description: "Be Bop in Milan, near the Navigli: pizzeria since 1986 with pizza and traditional dishes gluten-free, vegan options. Address on Mappa Senza Glutine.",
   },
   "fornerie-alessandrino-roma": {
@@ -149,7 +149,7 @@ const OVERRIDES_EN: Record<string, Override> = {
     description: "Fornerie Alessandrino in Rome: pizzeria, grill and burger joint with an entirely AIC-certified, separate kitchen. Address on Mappa Senza Glutine.",
   },
   "mama-eat-milano": {
-    title: "Mama Eat, via Procaccini: AIC kitchen",
+    title: "Mama Eat Milan, via Procaccini: AIC kitchen",
     description: "Mama Eat on via Procaccini in Milan: AIC-certified restaurant and pizzeria with a fully separate double kitchen, whole menu also gluten-free. On Mappa Senza Glutine.",
   },
   "no-gluten-bakery-palermo": {
@@ -161,7 +161,7 @@ const OVERRIDES_EN: Record<string, Override> = {
     description: "Randazzo Gluten Free in Sestri Ponente, Genoa: gluten-free-only bakery and pastry shop, opened late 2024, part of AIC Liguria. On Mappa Senza Glutine.",
   },
   "hotel-al-piave-venezia": {
-    title: "Hotel Al Piave: AIC hotel in Venice",
+    title: "Hotel Al Piave Venice: AIC-certified hotel",
     description: "Hotel Al Piave in Castello, near St Mark's: one of the few Venice hotels with AIC certification, with an entirely gluten-free breakfast. On Mappa Senza Glutine.",
   },
   "gusto-libero-verona": {

@@ -4,16 +4,15 @@ import { filterBusinesses, parseFilters } from "./filter-businesses";
 import { getCategoryInfo, categoryDescription, categoryLabelPlural } from "./categories";
 import { cityName } from "./i18n/place-names";
 import { getLocalizedBusiness } from "./i18n/content-business";
-import { pageMetadata } from "./seo";
+import { pageMetadata, seoTitle } from "./seo";
 import { SITE_NAME } from "./site-config";
 import type { Locale } from "./i18n/locale";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
-const MAX_TITLE = 65;
+const MAX_TITLE = 60;
 const MAX_DESC = 165;
 const MIN_DESC = 120;
-const SITE_LEN = ` | ${SITE_NAME}`.length;
 
 // Filtri che identificano una pagina "pulita" (solo città e/o categoria).
 // Con qualunque altro parametro (ricerca libera, prezzo, ordinamento...)
@@ -33,7 +32,7 @@ const LIST_LABEL: Record<string, { it: string; en: string }> = {
   gelateria: { it: "gelaterie", en: "ice cream shops" },
 };
 
-const titleFits = (t: string) => t.length + SITE_LEN <= MAX_TITLE;
+const titleFits = (t: string) => seoTitle(t).length <= MAX_TITLE;
 const pickTitle = (candidates: string[]) => candidates.find(titleFits) ?? candidates[candidates.length - 1];
 const pickDescription = (candidates: string[]) => candidates.find((d) => d.length <= MAX_DESC) ?? candidates[candidates.length - 1];
 
@@ -72,7 +71,12 @@ export function directoryMetadata(sp: SearchParams, locale: Locale): Metadata {
     let description: string;
     if (en) {
       title = n >= 3
-        ? pickTitle([`Gluten-free in ${label}: ${n} verified venues`, `Gluten-free in ${label}: ${n} venues`, `Gluten-free in ${label}`])
+        ? pickTitle([
+            ...(nAic > 0 ? [`Gluten-free in ${label}: ${n} venues, ${nAic} AIC-certified`] : []),
+            `Gluten-free in ${label}: ${n} verified venues`,
+            `Gluten-free in ${label}: ${n} venues`,
+            `Gluten-free in ${label}`,
+          ])
         : `Gluten-free in ${label}`;
       const aic = nAic > 0 ? ` (${nAic} AIC-certified)` : "";
       description = n >= 2
@@ -86,7 +90,12 @@ export function directoryMetadata(sp: SearchParams, locale: Locale): Metadata {
           ]);
     } else {
       title = n >= 3
-        ? pickTitle([`Senza glutine a ${label}: ${n} locali verificati`, `Senza glutine a ${label}: ${n} locali`, `Senza glutine a ${label}`])
+        ? pickTitle([
+            ...(nAic > 0 ? [`Senza glutine a ${label}: ${n} locali, ${nAic} ${nAic === 1 ? "certificato" : "certificati"} AIC`] : []),
+            `Senza glutine a ${label}: ${n} locali verificati`,
+            `Senza glutine a ${label}: ${n} locali`,
+            `Senza glutine a ${label}`,
+          ])
         : `Senza glutine a ${label}`;
       const aic = nAic > 0 ? ` (${nAic} ${nAic === 1 ? "certificato" : "certificati"} AIC)` : "";
       description = n >= 2
