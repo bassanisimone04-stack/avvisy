@@ -31,7 +31,7 @@ McCall recovers after an ambush is called "Altamonte" and doesn't exist:
 it's **Atrani**, Italy's smallest municipality by area, barely 0.12 km²
 (about 12 hectares) wedged between the mountain and the sea.
 
-## Atrani dressed as Altamonte
+## Where The Equalizer 3 was filmed: Atrani, the fake Altamonte
 
 Filming covered Atrani and, elsewhere on the coast, **Maiori** and
 **Minori**. To turn the little square into the film's fictional village,

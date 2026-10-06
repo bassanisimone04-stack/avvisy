@@ -29,7 +29,7 @@ famiglia Roy — non è girato in un set costruito: le tenute che ospitano
 il matrimonio di Caroline, nel finale della terza stagione, sono ville
 storiche realmente esistenti nel cuore della **Toscana**.
 
-## Villa La Foce, la vera casa dei Roy
+## Dove è stata girata Succession in Toscana: Villa La Foce
 
 La famiglia Roy soggiorna a **Villa La Foce**, tenuta cinquecentesca nel
 **Val d'Orcia**, tra Firenze e Roma. La proprietà, e i suoi giardini oggi

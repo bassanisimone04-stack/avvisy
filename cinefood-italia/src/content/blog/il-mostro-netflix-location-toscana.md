@@ -28,7 +28,7 @@ storia italiana. Ma al di là della trama, la serie è anche un viaggio nella
 **Toscana vera**: gran parte delle riprese si è svolta tra Firenze e la
 provincia, in luoghi che oggi si possono visitare.
 
-## Firenze, tra centro storico e periferia
+## Dove è stato girato Il Mostro: Firenze, centro e periferia
 
 Molte scene sono state girate nel cuore di Firenze, con vie e piazze
 "vestite" per ricreare gli anni '60 e '70: **Piazza San Firenze**, **via

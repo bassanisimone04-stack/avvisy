@@ -43,7 +43,7 @@ scelse di completare prima le riprese. Morì nel sonno poche ore dopo la
 fine delle lavorazioni, l'ultima notte sul set: *Il Postino* resta così il
 suo film-testamento.
 
-## Le location del film a Salina
+## Dove è stato girato Il postino: le location a Salina
 
 Il cuore delle riprese è **Pollara**, frazione del comune di Malfa, nella parte
 occidentale dell'isola. La spiaggia di Pollara, protetta da alte pareti di roccia

@@ -32,7 +32,7 @@ principale **Palazzo Adriano**, borgo dei Monti Sicani a sud di Palermo. La
 sua piazza è una delle più riconoscibili del cinema italiano. Ecco
 l'itinerario tra le location e la tavola.
 
-## La piazza del film
+## Dove è stato girato Nuovo Cinema Paradiso: la piazza di Palazzo Adriano
 
 Il cuore è **Piazza Umberto I**, dove fu allestita la facciata del "Cinema
 Paradiso" per le scene esterne (poi smontata a fine riprese). La piazza

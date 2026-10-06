@@ -30,7 +30,7 @@ trama, funziona anche come lungo piano-sequenza sulla città: le riprese
 fiorentine si svolsero tra la primavera e l'estate del 2000, in decine di
 luoghi del centro monumentale.
 
-## I luoghi di Firenze nel film
+## Dove è stato girato Hannibal a Firenze
 
 Tra i luoghi riconoscibili ci sono **Piazza della Signoria**, **Palazzo
 Vecchio**, la **Basilica di Santa Croce** e lo **Spedale degli

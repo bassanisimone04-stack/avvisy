@@ -51,7 +51,7 @@ citate del cinema degli ultimi vent'anni. Quel luogo esiste davvero, ed è uno
 dei templi della pizza napoletana: **[L'Antica Pizzeria da
 Michele](/locale/pizzeria-da-michele-napoli)**.
 
-## Dove è girata la scena della pizza
+## Dove è girata la scena della pizza di Eat Pray Love
 
 Siamo nel quartiere **Forcella**, in Via Cesare Sersale, a due passi dalla
 Stazione Centrale e da Piazza Garibaldi. Da Michele ha una storia che comincia

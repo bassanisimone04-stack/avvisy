@@ -30,7 +30,7 @@ Corbijn's *The American* is a slow, near-silent thriller shot almost
 entirely in the province of L'Aquila: the story of a gunsmith and
 assassin who takes refuge in a mountain village after an ambush.
 
-## Abruzzo as the film's landscape
+## Where The American was filmed: Sulmona and Abruzzo
 
 The Abruzzo Region Film Commission documents the locations: besides
 **Sulmona**, the film shot in **Castel del Monte**, **Pacentro**,

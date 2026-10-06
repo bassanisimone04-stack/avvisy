@@ -30,7 +30,7 @@ the films of the year. The epic, based on Homer's poem, chose **Sicily** as the
 setting for the island of Ithaca and the mythical lands of Ulysses' journey.
 Here is where it was filmed and what to put on the table.
 
-## Favignana, the film's Ithaca
+## Where The Odyssey was filmed: Favignana, the film's Ithaca
 
 The main set is **Favignana**, the largest of the Egadi Islands off Sicily's
 western coast. The exterior of the palace of Ithaca is the

@@ -29,7 +29,7 @@ si apre nella sua seconda stagione (2017) con un episodio interamente
 girato in Italia — e non in una città qualunque, ma nella capitale
 gastronomica dell'Emilia: **Modena**.
 
-## Osteria Francescana, il ristorante di Bottura
+## Dove è stata girata Master of None a Modena: Osteria Francescana
 
 Nell'episodio *The Thief*, Dev e il suo amico Arnold cenano
 da **[Osteria Francescana](/locale/osteria-francescana-modena)**, il ristorante tre stelle

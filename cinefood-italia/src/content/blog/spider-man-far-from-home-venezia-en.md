@@ -30,7 +30,7 @@ In *Spider-Man: Far From Home*, Peter Parker begins his European trip right in
 city, star of one of the film's most spectacular sequences, is also a surprising
 food destination. Here is how to experience it.
 
-## The real and the rebuilt Venice
+## Where Spider-Man: Far From Home was filmed in Venice
 
 Between the Grand Canal, the little squares and the palaces on the water,
 Venice offers unique scenery. The crew genuinely filmed in the city in

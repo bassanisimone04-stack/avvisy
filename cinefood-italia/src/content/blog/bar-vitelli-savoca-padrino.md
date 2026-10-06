@@ -33,7 +33,7 @@ monti sopra Taormina, poco più di 1.700 abitanti. E in una piazzetta di
 questo paese si trova una delle location cinematografiche più visitate
 d'Italia: il **[Bar Vitelli](/locale/bar-vitelli-savoca)**.
 
-## La scena che ha reso celebre il Bar Vitelli
+## Dove è stata girata la scena de Il Padrino al Bar Vitelli
 
 È qui che Michael Corleone (Al Pacino), rifugiato in Sicilia dopo la guerra
 tra famiglie a New York, chiede al proprietario del bar il permesso di

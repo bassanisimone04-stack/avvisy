@@ -29,7 +29,7 @@ proprio a **Venezia**, dove affronta il mostro d'acqua tra canali e ponti. La
 città lagunare, protagonista di una delle sequenze più spettacolari del film, è
 anche una meta gastronomica sorprendente. Ecco come viverla.
 
-## La Venezia del film: reale e ricostruita
+## Dove è stato girato Spider-Man: Far From Home a Venezia
 
 Tra il Canal Grande, i campielli e i palazzi affacciati sull'acqua, Venezia
 regala scenografie uniche. La troupe ha girato davvero in città nel 2018,

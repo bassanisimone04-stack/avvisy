@@ -30,7 +30,7 @@ the Roy family — wasn't shot on a built set: the estates hosting
 Caroline's wedding, in the season 3 finale, are real historic villas in
 the heart of **Tuscany**.
 
-## Villa La Foce, the real home of the Roys
+## Where Succession was filmed in Tuscany: Villa La Foce
 
 The Roy family stays at **Villa La Foce**, a 15th-century estate in the
 **Val d'Orcia**, between Florence and Rome. The property, and its now

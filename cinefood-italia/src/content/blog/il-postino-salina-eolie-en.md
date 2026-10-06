@@ -43,7 +43,7 @@ surgery, but chose to finish filming first. He died in his sleep just hours
 after shooting wrapped, on the very last night of production — which is why
 *Il Postino* is still remembered as his testament film.
 
-## The film's locations in Salina
+## Where Il Postino was filmed: the Salina locations
 
 The heart of filming is **Pollara**, a hamlet of the municipality of Malfa, on
 the western side of the island. Pollara beach, sheltered by high rock walls and

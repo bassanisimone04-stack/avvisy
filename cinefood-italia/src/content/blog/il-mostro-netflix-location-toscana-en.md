@@ -29,7 +29,7 @@ most discussed true crime cases in Italian history. Beyond the plot, the
 series is also a journey through the **real Tuscany**: most of it was
 filmed in and around Florence, in places you can actually visit.
 
-## Florence, historic center and outskirts
+## Where Il Mostro was filmed: Florence, centre and outskirts
 
 Many scenes were filmed in the heart of Florence, with streets and squares
 dressed to recreate the 1960s and '70s: **Piazza San Firenze**, **Via

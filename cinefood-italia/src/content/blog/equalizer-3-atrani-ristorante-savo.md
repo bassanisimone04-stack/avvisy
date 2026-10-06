@@ -30,7 +30,7 @@ si rimette in sesto dopo un agguato si chiama "Altamonte" e non esiste:
 è **Atrani**, il comune più piccolo d'Italia per superficie, appena 0,12 km²
 (circa 12 ettari) incastrati tra la montagna e il mare.
 
-## Atrani travestita da Altamonte
+## Dove è stato girato The Equalizer 3: Atrani, la finta Altamonte
 
 Le riprese hanno interessato Atrani e, in Costiera, anche **Maiori** e
 **Minori**. Per trasformare la piazzetta nel paese immaginario del film,

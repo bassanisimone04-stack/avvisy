@@ -68,6 +68,8 @@ const jsonLd = [
   title={seoTitle}
   description={clampDesc(`${d.nome} a ${d.citta}: ${d.descrizione}`)}
   image={d.immagine.src}
+  imageWidth={d.immagine.width}
+  imageHeight={d.immagine.height}
   type="article"
   jsonLd={jsonLd}
 >

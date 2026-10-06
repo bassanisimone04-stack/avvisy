@@ -36,7 +36,7 @@ Caserta, about 45 minutes from Naples. A common production choice for
 period series, letting the team control every detail of 1950s Naples
 without having to "age" modern streets.
 
-## The real Naples locations
+## Where My Brilliant Friend was filmed: the real Naples locations
 
 Many other scenes, though, are shot in the real city: the scenic
 **Galleria Principe di Napoli**, opposite the National Archaeological

@@ -29,7 +29,7 @@ Nel 2009 Sulmona si è svegliata con George Clooney sotto i portici.
 quasi interamente in provincia dell'Aquila: la storia di un armaiolo e
 sicario che si rifugia in un borgo di montagna dopo un agguato.
 
-## L'Abruzzo come paesaggio del film
+## Dove è stato girato The American: Sulmona e l'Abruzzo
 
 La Film Commission della Regione Abruzzo documenta le location: oltre a
 **Sulmona**, il film ha girato a **Castel del Monte**, **Pacentro**,

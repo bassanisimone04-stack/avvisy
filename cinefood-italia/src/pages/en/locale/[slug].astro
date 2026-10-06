@@ -61,7 +61,7 @@ const jsonLd = [
 const desc = tLocaleDesc(locale, lang);
 ---
 
-<BaseLayout lang={lang} title={seoTitle} description={clampDesc(`${d.nome} in ${cittaEn}: ${desc}`)} image={d.immagine.src} type="article" jsonLd={jsonLd}>
+<BaseLayout lang={lang} title={seoTitle} description={clampDesc(`${d.nome} in ${cittaEn}: ${desc}`)} image={d.immagine.src} imageWidth={d.immagine.width} imageHeight={d.immagine.height} type="article" jsonLd={jsonLd}>
   <article class="mx-auto max-w-4xl px-4 py-8">
     <Breadcrumb items={crumbs} />
 

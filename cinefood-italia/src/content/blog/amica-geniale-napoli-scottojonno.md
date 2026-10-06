@@ -35,7 +35,7 @@ circa 45 minuti da Napoli. Una scelta produttiva comune per le serie
 d'epoca, che permette di controllare ogni dettaglio della Napoli anni
 '50 senza dover "invecchiare" strade moderne.
 
-## Le vere location napoletane
+## Dove è girata L'amica geniale: le vere location napoletane
 
 Molte altre scene, però, sono girate nella città reale: la scenografica
 **Galleria Principe di Napoli**, di fronte al Museo Archeologico

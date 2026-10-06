@@ -29,7 +29,7 @@ bozza: false
 Yang, opens its second season (2017) with an episode filmed entirely in
 Italy — and not just any city, but Emilia's food capital: **Modena**.
 
-## Osteria Francescana, Bottura's restaurant
+## Where Master of None was filmed in Modena: Osteria Francescana
 
 In the episode *The Thief*, Dev and his friend Arnold dine
 at **[Osteria Francescana](/en/locale/osteria-francescana-modena)**, chef **Massimo Bottura**'s

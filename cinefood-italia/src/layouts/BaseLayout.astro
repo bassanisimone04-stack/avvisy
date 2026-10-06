@@ -19,12 +19,14 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: "website" | "article";
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   lang?: Lang;
 }
 
-const { title, description, image, type, jsonLd, lang = "it" } = Astro.props;
+const { title, description, image, imageWidth, imageHeight, type, jsonLd, lang = "it" } = Astro.props;
 const t = useT(lang);
 ---
 
@@ -46,7 +48,7 @@ const t = useT(lang);
         }
       })();
     </script>
-    <SEO title={title} description={description} image={image} type={type} jsonLd={jsonLd} lang={lang} />
+    <SEO title={title} description={description} image={image} imageWidth={imageWidth} imageHeight={imageHeight} type={type} jsonLd={jsonLd} lang={lang} />
     <Analytics />
     <VercelAnalytics />
   </head>

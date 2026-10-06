@@ -40,7 +40,7 @@ const jsonLd = [
 if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
 ---
 
-<BaseLayout title={d.titolo} description={d.descrizione} image={d.immagine?.src} type="article" jsonLd={jsonLd}>
+<BaseLayout title={d.titolo} description={d.descrizione} image={d.immagine?.src} imageWidth={d.immagine?.width} imageHeight={d.immagine?.height} type="article" jsonLd={jsonLd}>
   <article class="mx-auto max-w-3xl px-4 py-10">
     <Breadcrumb items={crumbs} />
     <p class="mt-4 text-sm text-ink-500 dark:text-ink-400">{formatData(d.dataPubblicazione)}{d.dataAggiornamento && ` · aggiornato il ${formatData(d.dataAggiornamento)}`} · {d.autore}</p>

@@ -31,7 +31,7 @@ also works as one long tracking shot across the city: the Florentine
 shoot ran through spring and summer 2000, across dozens of locations in
 the monumental centre.
 
-## The Florence locations
+## Where Hannibal was filmed in Florence
 
 Recognisable places include **Piazza della Signoria**, **Palazzo
 Vecchio**, the **Basilica of Santa Croce** and the **Spedale degli

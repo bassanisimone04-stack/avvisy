@@ -50,7 +50,7 @@ const jsonLd: Record<string, unknown>[] = [
 if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
 ---
 
-<BaseLayout title={title} description={description} image={d.locandina.src} type="article" jsonLd={jsonLd}>
+<BaseLayout title={title} description={description} image={d.locandina.src} imageWidth={d.locandina.width} imageHeight={d.locandina.height} type="article" jsonLd={jsonLd}>
   <!-- Intestazione film -->
   <section class="border-b border-ink-500/10 bg-cream-100 dark:border-noir-800 dark:bg-noir-900">
     <div class="mx-auto grid max-w-5xl gap-8 px-4 py-10 md:grid-cols-[240px_1fr]">

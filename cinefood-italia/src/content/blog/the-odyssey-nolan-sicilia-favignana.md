@@ -29,7 +29,7 @@ dell'anno. Il kolossal, tratto dal poema omerico, ha scelto la **Sicilia** come
 scenario per l'isola di Itaca e le terre mitiche del viaggio di Ulisse. Ecco dove
 è stato girato e cosa portare in tavola.
 
-## Favignana, l'Itaca del film
+## Dove è stato girato The Odyssey: Favignana, l'Itaca del film
 
 Il set principale è **Favignana**, la più grande delle Isole Egadi al largo della
 costa occidentale siciliana. L'esterno del palazzo di Itaca è il

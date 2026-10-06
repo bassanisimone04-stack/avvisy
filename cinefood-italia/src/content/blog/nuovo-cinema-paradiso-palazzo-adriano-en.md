@@ -33,7 +33,7 @@ Bagheria-born director **Giuseppe Tornatore**'s *Cinema Paradiso* chose
 south of Palermo. Its square is one of the most recognisable in Italian
 cinema. Here is the itinerary through the locations and the table.
 
-## The film's square
+## Where Cinema Paradiso was filmed: the Palazzo Adriano square
 
 The heart is **Piazza Umberto I**, where the "Cinema Paradiso" facade was built
 for the exterior scenes (and dismantled after filming). The square still has its
