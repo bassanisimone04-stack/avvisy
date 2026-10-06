@@ -1,5 +1,6 @@
 ---
 nome: "Bar Vitelli"
+titoloSeo: "Bar Vitelli, Savoca: il bar de Il Padrino"
 citta: "Savoca"
 regione: "Sicilia"
 indirizzo: "Piazza Fossia 7, 98038 Savoca ME"

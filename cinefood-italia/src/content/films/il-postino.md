@@ -1,5 +1,6 @@
 ---
 titolo: "Il postino"
+titoloSeo: "Il postino: dove è girato (Salina e Procida)"
 anno: 1994
 regista: "Michael Radford"
 serieTv: false

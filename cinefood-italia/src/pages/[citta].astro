@@ -11,6 +11,7 @@ import Reveal from "../components/Reveal.astro";
 import { SITE } from "../config/site";
 import { ordinaLocali, cittaUniche, localiPerCitta, slugify, filmIdsDiLocale } from "../lib/utils";
 import { breadcrumbJsonLd } from "../lib/schema-org";
+import { fitTitle, clampDesc } from "../lib/seo";
 
 export async function getStaticPaths() {
   const locali = await getCollection("restaurants");
@@ -38,8 +39,13 @@ const filmEntries = await getEntries(
 );
 
 // SEO: "[città] location film" + "ristoranti dei film".
-const title = `${citta} nel cinema: location e ristoranti dei film`;
-const description = `Ristoranti, trattorie, bar e caffè di ${citta} apparsi in film e serie TV. ${locali.length} locali del cinema da scoprire${regione ? ` in ${regione}` : ""}.`;
+const title = fitTitle([
+  `${citta} nel cinema: location e ristoranti dei film`,
+  `${citta}: ristoranti e location dei film`,
+  `${citta} nel cinema: i locali dei film`,
+  `${citta} nel cinema`,
+]);
+const description = clampDesc(`Ristoranti, trattorie, bar e caffè di ${citta} apparsi in film e serie TV. ${locali.length} locali del cinema da scoprire${regione ? ` in ${regione}` : ""}.`);
 
 const crumbs = [
   { name: "Home", href: "/" },

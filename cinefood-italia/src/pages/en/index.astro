@@ -13,7 +13,9 @@ import StepCard from "../../components/StepCard.astro";
 import Reveal from "../../components/Reveal.astro";
 import Icon from "../../components/Icon.astro";
 import { ordinaLocali, cittaUniche, localiPerCitta, contaLocaliPerFilm, formatData, slugify } from "../../lib/utils";
-import { websiteJsonLd } from "../../lib/schema-org";
+import { websiteJsonLd, faqPageJsonLd } from "../../lib/schema-org";
+import HomeFaq from "../../components/HomeFaq.astro";
+import { faqHome } from "../../lib/home-faq";
 import { useT, path } from "../../i18n/ui";
 import { tFilmTitolo, tCitta } from "../../i18n/content-en";
 
@@ -48,6 +50,7 @@ const stats = [
   { valore: films.length, label: t("stats.film") },
 ];
 
+const statFaq = { locali: locali.length, film: films.length, citta: cittaUniche(locali).length };
 const suggestItems = [
   ...locali.map((l) => ({ label: l.data.nome, sub: `${tCitta(l.data.citta, lang)} · ${l.data.tipo}`, url: path(`/locale/${l.id}`, lang) })),
   ...films.map((f) => ({ label: tFilmTitolo(f, lang), sub: t("film.film"), url: path(`/film/${f.id}`, lang) })),
@@ -55,7 +58,12 @@ const suggestItems = [
 ];
 ---
 
-<BaseLayout lang={lang} jsonLd={websiteJsonLd()}>
+<BaseLayout
+  lang={lang}
+  title="Italian Film Restaurants: Real Movie Locations"
+  description={`The real Italian restaurants, bars and cafés seen in films and TV shows: ${locali.length} verified venues with address, scene and map. From Eat Pray Love to The Godfather.`}
+  jsonLd={[websiteJsonLd(), faqPageJsonLd(faqHome("en", statFaq).map((f) => ({ domanda: f.domanda, risposta: f.risposta.replace(/<[^>]+>/g, "") })))]}
+>
   <Hero titolo={t("hero.titolo")} sottotitolo={t("hero.sottotitolo")} stats={stats} lang={lang} suggestItems={suggestItems} />
 
   <section class="mx-auto max-w-6xl px-4 py-14">
@@ -162,6 +170,8 @@ const suggestItems = [
       </section>
     )
   }
+
+  <HomeFaq lang={lang} stat={statFaq} />
 
   <section class="mx-auto max-w-6xl px-4 py-16">
     <div class="relative overflow-hidden rounded-[2rem] bg-noir-900 px-6 py-14 text-center">

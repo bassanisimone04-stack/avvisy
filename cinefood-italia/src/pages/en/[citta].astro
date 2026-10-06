@@ -11,6 +11,7 @@ import Reveal from "../../components/Reveal.astro";
 import { SITE } from "../../config/site";
 import { ordinaLocali, cittaUniche, localiPerCitta, slugify, filmIdsDiLocale } from "../../lib/utils";
 import { breadcrumbJsonLd } from "../../lib/schema-org";
+import { fitTitle, clampDesc } from "../../lib/seo";
 import { useT, path } from "../../i18n/ui";
 import { tFilmTitolo, tCitta } from "../../i18n/content-en";
 
@@ -36,8 +37,12 @@ const filmIds = [...new Set(locali.flatMap(filmIdsDiLocale))];
 const filmEntries = await getEntries(filmIds.map((id) => ({ collection: "films" as const, id })));
 
 const cittaEn = tCitta(citta, lang);
-const title = t("citta.titoloSeo").replace("{c}", cittaEn);
-const description = `Restaurants, trattorias, bars and cafés in ${cittaEn} seen in films and TV series. ${locali.length} film venues to discover${regione ? ` in ${regione}` : ""}.`;
+const title = fitTitle([
+  t("citta.titoloSeo").replace("{c}", cittaEn),
+  `${cittaEn} Film Locations & Restaurants`,
+  `${cittaEn} Film Locations`,
+]);
+const description = clampDesc(`Restaurants, trattorias, bars and cafés in ${cittaEn} seen in films and TV series. ${locali.length} film venues to discover${regione ? ` in ${regione}` : ""}.`);
 
 const crumbs = [
   { name: t("loc.home"), href: path("/", lang) },

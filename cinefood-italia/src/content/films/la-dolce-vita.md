@@ -1,5 +1,6 @@
 ---
 titolo: "La dolce vita"
+titoloSeo: "La dolce vita: le location vere a Roma"
 anno: 1960
 regista: "Federico Fellini"
 serieTv: false

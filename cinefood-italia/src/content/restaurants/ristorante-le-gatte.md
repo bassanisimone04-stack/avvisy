@@ -1,5 +1,6 @@
 ---
 nome: "Ristorante Le Gatte"
+titoloSeo: "Le Gatte, Castellabate: il ristorante del film"
 citta: "Castellabate"
 regione: "Campania"
 indirizzo: "Via Gennaro Naso 22, 84048 Santa Maria di Castellabate SA"

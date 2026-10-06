@@ -1,5 +1,6 @@
 ---
 titolo: "The Equalizer 3 - Senza tregua"
+titoloSeo: "The Equalizer 3: dove è stato girato (Atrani)"
 anno: 2023
 regista: "Antoine Fuqua"
 serieTv: false

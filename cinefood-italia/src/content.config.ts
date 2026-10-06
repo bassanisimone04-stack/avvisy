@@ -56,6 +56,8 @@ const films = defineCollection({
       /** Locandina/immagine del film. */
       locandina: image(),
       /** Testo alternativo della locandina. */
+      /** Titolo SEO alternativo (<=52 car.): sovrascrive il template della pagina. */
+      titoloSeo: z.string().optional(),
       locandinaAlt: z.string().default(""),
       /** "luogo" = foto reale di un luogo delle riprese (non una locandina); "astratta" = sfondo generato. */
       locandinaTipo: z.enum(["astratta", "luogo"]).default("astratta"),
@@ -80,6 +82,8 @@ const restaurants = defineCollection({
   schema: ({ image }) =>
     z.object({
       nome: z.string(),
+      /** Titolo SEO alternativo (<=52 car.): sovrascrive il template della pagina. */
+      titoloSeo: z.string().optional(),
       citta: z.string(),
       regione: z.string(),
       indirizzo: z.string(),

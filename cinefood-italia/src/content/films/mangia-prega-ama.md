@@ -1,5 +1,6 @@
 ---
 titolo: "Mangia prega ama"
+titoloSeo: "Mangia prega ama (Eat Pray Love): le location"
 anno: 2010
 regista: "Ryan Murphy"
 serieTv: false

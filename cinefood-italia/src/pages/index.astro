@@ -14,7 +14,9 @@ import Reveal from "../components/Reveal.astro";
 import Icon from "../components/Icon.astro";
 import { SITE } from "../config/site";
 import { ordinaLocali, cittaUniche, localiPerCitta, contaLocaliPerFilm, formatData, slugify } from "../lib/utils";
-import { websiteJsonLd } from "../lib/schema-org";
+import { websiteJsonLd, faqPageJsonLd } from "../lib/schema-org";
+import HomeFaq from "../components/HomeFaq.astro";
+import { faqHome } from "../lib/home-faq";
 
 const locali = await getCollection("restaurants");
 const films = await getCollection("films");
@@ -50,6 +52,7 @@ const stats = [
 ];
 
 // Indice per i suggerimenti istantanei della ricerca (locali + film + città).
+const statFaq = { locali: locali.length, film: films.length, citta: cittaUniche(locali).length };
 const suggestItems = [
   ...locali.map((l) => ({ label: l.data.nome, sub: `${l.data.citta} · ${l.data.tipo}`, url: `/locale/${l.id}` })),
   ...films.map((f) => ({ label: f.data.titolo, sub: "Film", url: `/film/${f.id}` })),
@@ -57,7 +60,11 @@ const suggestItems = [
 ];
 ---
 
-<BaseLayout jsonLd={websiteJsonLd()}>
+<BaseLayout
+  title="Ristoranti e location dei film in Italia"
+  description={`I ristoranti, bar e caffè italiani veri visti nei film e nelle serie TV: ${locali.length} locali verificati, con indirizzo, scena e mappa. Da Eat Pray Love a Montalbano.`}
+  jsonLd={[websiteJsonLd(), faqPageJsonLd(faqHome("it", statFaq).map((f) => ({ domanda: f.domanda, risposta: f.risposta.replace(/<[^>]+>/g, "") })))]}
+>
   <Hero
     titolo="Mangia dove nascono i film"
     sottotitolo="La guida ai ristoranti, bar e caffè italiani apparsi al cinema e in TV. Scopri le location reali e prenota il tuo tavolo tra le stelle."
@@ -178,6 +185,8 @@ const suggestItems = [
       </section>
     )
   }
+
+  <HomeFaq stat={statFaq} />
 
   <!-- CTA RISTORATORI -->
   <section class="mx-auto max-w-6xl px-4 py-16">

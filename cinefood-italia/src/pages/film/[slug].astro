@@ -10,6 +10,7 @@ import Icon from "../../components/Icon.astro";
 import { SITE } from "../../config/site";
 import { ordinaLocali, localiPerFilm, slugify } from "../../lib/utils";
 import { faqPageJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
+import { fitTitle, clampDesc } from "../../lib/seo";
 import { ITINERARIO_PER_FILM } from "../../lib/itinerari";
 
 export async function getStaticPaths() {
@@ -27,8 +28,14 @@ const cittaFilm = d.citta[0];
 const itinerario = ITINERARIO_PER_FILM[film.id];
 
 // SEO (Search Console): "dove è stato girato X" / "X location" + "dove mangiano ne [film]".
-const title = `${d.titolo}: location e dove mangiare`;
-const description = `Dove è stato girato ${d.titolo} (${d.anno}) di ${d.regista}? Le location reali e i ristoranti, bar e caffè legati al film${cittaFilm ? ` a ${cittaFilm}` : ""}.`;
+const title = fitTitle([
+  d.titoloSeo,
+  `${d.titolo}: location e dove mangiare`,
+  `${d.titolo}: le location vere`,
+  `${d.titolo}: le location`,
+  d.titolo,
+]);
+const description = clampDesc(`Dove è stato girato ${d.titolo} (${d.anno})? Le location reali e i ristoranti, bar e caffè legati al film${cittaFilm ? ` a ${cittaFilm}` : ""}.`);
 
 const crumbs = [
   { name: "Home", href: "/" },

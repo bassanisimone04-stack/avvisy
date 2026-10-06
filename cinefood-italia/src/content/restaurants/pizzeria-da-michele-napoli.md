@@ -1,5 +1,6 @@
 ---
 nome: "L'Antica Pizzeria da Michele"
+titoloSeo: "Da Michele, Napoli: la pizzeria di Eat Pray Love"
 citta: "Napoli"
 regione: "Campania"
 indirizzo: "Via Cesare Sersale 1, 80139 Napoli NA"

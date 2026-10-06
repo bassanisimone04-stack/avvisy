@@ -1,5 +1,6 @@
 ---
 nome: "Ristorante Enzo a Mare"
+titoloSeo: "Enzo a Mare, Punta Secca: il locale di Montalbano"
 citta: "Punta Secca"
 regione: "Sicilia"
 indirizzo: "Lungomare Amerigo Vespucci, 97017 Punta Secca, Santa Croce Camerina RG"

@@ -1,5 +1,5 @@
 ---
-titolo: "Where Was White Lotus Season 2 Filmed? Sicily"
+titolo: "White Lotus Season 2: Sicily Filming Locations"
 descrizione: "The White Lotus season 2 was really filmed in Sicily: San Domenico Palace, Cefalù, Noto. The show's real locations and what to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09

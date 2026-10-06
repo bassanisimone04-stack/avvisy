@@ -1,5 +1,6 @@
 ---
 titolo: "Nuovo Cinema Paradiso"
+titoloSeo: "Nuovo Cinema Paradiso: Palazzo Adriano e il museo"
 anno: 1988
 regista: "Giuseppe Tornatore"
 serieTv: false

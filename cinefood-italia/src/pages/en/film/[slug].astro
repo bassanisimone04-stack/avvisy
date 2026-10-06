@@ -10,9 +10,10 @@ import Icon from "../../../components/Icon.astro";
 import { SITE } from "../../../config/site";
 import { ordinaLocali, localiPerFilm, slugify } from "../../../lib/utils";
 import { faqPageJsonLd, breadcrumbJsonLd } from "../../../lib/schema-org";
+import { fitTitle, clampDesc } from "../../../lib/seo";
 import { ITINERARIO_PER_FILM } from "../../../lib/itinerari";
 import { useT, path } from "../../../i18n/ui";
-import { tFilmTitolo, tFilmSinossi, tFilmFaq, tCitta, tFilmAlt } from "../../../i18n/content-en";
+import { tFilmTitolo, tFilmSinossi, tFilmFaq, tCitta, tFilmAlt, tFilmTitoloSeo } from "../../../i18n/content-en";
 
 const lang = "en" as const;
 const t = useT(lang);
@@ -33,8 +34,14 @@ const cittaFilmEn = cittaFilm ? tCitta(cittaFilm, lang) : undefined;
 const itinerario = ITINERARIO_PER_FILM[film.id];
 
 // SEO (Search Console): people search "where was X filmed" / "X filming locations".
-const title = `${titolo}: filming locations & where to eat`;
-const description = `Where was ${titolo} (${d.anno}) filmed? Real locations and the restaurants, bars and cafés linked to the film by ${d.regista}${cittaFilmEn ? ` in ${cittaFilmEn}` : ""}.`;
+const title = fitTitle([
+  tFilmTitoloSeo(film, lang),
+  `${titolo}: filming locations & where to eat`,
+  `${titolo}: real filming locations`,
+  `${titolo}: filming locations`,
+  titolo,
+]);
+const description = clampDesc(`Where was ${titolo} (${d.anno}) filmed? Real locations and the restaurants, bars and cafés linked to the film${cittaFilmEn ? ` in ${cittaFilmEn}` : ""}.`);
 
 const crumbs = [
   { name: t("loc.home"), href: path("/", lang) },

@@ -1,6 +1,6 @@
 ---
-titolo: "Eat Pray Love Filming Locations: Rome and Naples"
-descrizione: "Where was Eat Pray Love filmed in Italy? Rome's Piazza Navona, Villa Borghese and Trastevere, then Naples and the pizza place Da Michele. What to eat."
+titolo: "Eat Pray Love in Rome: Locations & Restaurants"
+descrizione: "Where Eat Pray Love was filmed in Rome: Piazza Navona, Villa Borghese and Trastevere, plus the trattorias of the film and the Naples pizzeria. Real addresses."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/eat-pray-love-location-roma-napoli.jpg"

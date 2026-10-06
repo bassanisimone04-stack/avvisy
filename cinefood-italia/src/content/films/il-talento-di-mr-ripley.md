@@ -1,5 +1,6 @@
 ---
 titolo: "Il talento di Mr. Ripley"
+titoloSeo: "Il talento di Mr. Ripley: location in Italia"
 anno: 1999
 regista: "Anthony Minghella"
 serieTv: false

@@ -11,6 +11,7 @@ import type { Lang } from "./ui";
 
 interface FilmEn {
   titolo?: string;
+  titoloSeo?: string;
   locandinaAlt?: string;
   sinossi?: string;
   faq?: { domanda: string; risposta: string }[];
@@ -46,6 +47,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-talento-di-mr-ripley": {
+    titoloSeo: "The Talented Mr. Ripley: Italy Filming Locations",
     locandinaAlt: "A room of Caffè Florian in Piazza San Marco, Venice",
     titolo: "The Talented Mr. Ripley",
     sinossi:
@@ -56,6 +58,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "mangia-prega-ama": {
+    titoloSeo: "Eat Pray Love in Italy: All Filming Locations",
     locandinaAlt: "The entrance of L'Antica Pizzeria da Michele in Naples",
     titolo: "Eat Pray Love",
     sinossi:
@@ -67,6 +70,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "benvenuti-al-sud": {
+    titoloSeo: "Benvenuti al Sud: Castellabate Filming Locations",
     locandinaAlt: "The seaside terrace of Ristorante Le Gatte in Castellabate",
     titolo: "Welcome to the South",
     sinossi:
@@ -105,6 +109,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "la-dolce-vita": {
+    titoloSeo: "La Dolce Vita Filming Locations in Rome",
     titolo: "La Dolce Vita",
     sinossi:
       "Fellini's masterpiece with Marcello Mastroianni: the worldly, night-time Rome of Via Veneto, its cafés and the Trevi Fountain, between glamour and melancholy.",
@@ -124,6 +129,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "nuovo-cinema-paradiso": {
+    titoloSeo: "Cinema Paradiso: Palazzo Adriano & the Museum",
     locandinaAlt: "Piazza Umberto I in Palazzo Adriano, with the fountain and the bell tower",
     titolo: "Cinema Paradiso",
     sinossi:
@@ -134,6 +140,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-postino": {
+    titoloSeo: "Il Postino Filming Locations: Salina & Procida",
     titolo: "Il Postino (The Postman)",
     sinossi:
       "Massimo Troisi's last, poetic film: the friendship between a humble postman and the poet Pablo Neruda, shot on the islands of Salina and Procida.",
@@ -250,6 +257,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "the-equalizer-3": {
+    titoloSeo: "The Equalizer 3 Filming Locations: Atrani",
     titolo: "The Equalizer 3",
     sinossi:
       "Robert McCall (Denzel Washington), badly wounded, is nursed back to health in a small village on the Amalfi Coast and ends up defending it from the Camorra. The fictional town of \"Altamonte\" is in fact Atrani, with filming also in Maiori and Minori.",
@@ -432,20 +440,47 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Where can you watch Tucci in Italy?", risposta: "On National Geographic; season two episodes were also released for streaming on Disney+ and Hulu." },
     ],
   },
+  "the-gentlemen-2": {
+    titolo: "The Gentlemen (season 2)",
+    titoloSeo: "The Gentlemen 2: Italian Filming Locations",
+    sinossi: "The second season of the Netflix series created by Guy Ritchie takes Eddie Horniman to Lake Maggiore. The Italian shoot ran between June and July 2025 in Verbania, Pallanza, Intra and Stresa, with the wedding at the heart of episode six.",
+    locandinaAlt: "Poster-style artwork — The Gentlemen season 2 (2026)",
+    faq: [
+      { domanda: "Where was The Gentlemen season 2 filmed in Italy?", risposta: "On Lake Maggiore, not Lake Como: Film Commission Torino Piemonte lists Villa Rusconi-Clerici, Piazza Garibaldi, the church of San Leonardo and the Grand Hotel Majestic among the main sets, all in Verbania-Pallanza, plus Intra and Stresa." },
+      { domanda: "When were the Italian scenes shot?", risposta: "Between June and July 2025, with the Italian work concentrated into about two weeks. The season was released on Netflix on 3 September 2026." },
+      { domanda: "Can you stay or eat at the hotel from the series?", risposta: "Yes: the Grand Hotel Majestic in Pallanza is open to the public and has its own restaurant, La Beola, with the summer terrace Il Portico." },
+      { domanda: "Was the wedding really filmed in a church?", risposta: "Sources list the parish church of San Leonardo, in Pallanza, among the sets of the wedding sequence at the heart of episode six." },
+    ],
+  },
+  "una-finestra-vista-lago": {
+    titolo: "A Window on the Lake (Una finestra vista lago)",
+    titoloSeo: "Una finestra vista lago: Where It Was Filmed",
+    sinossi: "A Rai Fiction series based on Andrea Vitali's novels, on Rai 1 from 29 September 2026. It is set in the fictional Bellamo, but was filmed mostly on Lake Orta, between Orta San Giulio and Miasino.",
+    locandinaAlt: "Poster-style artwork — Una finestra vista lago (2026)",
+    faq: [
+      { domanda: "Where was Una finestra vista lago filmed?", risposta: "Mostly on Lake Orta, between Orta San Giulio and Miasino, in the province of Novara. Lake Como also appears, with the Cernobbio jetty." },
+      { domanda: "Does Bellamo really exist?", risposta: "No: the village in the series is fictional and was pieced together from views of several villages on the Italian lakes." },
+      { domanda: "Which places can you recognise in Orta San Giulio?", risposta: "The area around Piazza Motta, the Broletto and the climb to the church of Santa Maria Assunta, with the island of San Giulio behind." },
+      { domanda: "What is the series based on?", risposta: "On Andrea Vitali's novels, directed by Marco Pontecorvo for Rai Fiction and Alexandra Cinematografica." },
+    ],
+  },
 };
 
 interface RestEn {
   descrizione?: string;
+  titoloSeo?: string;
   /** Descrizione della scena, per slug di film. */
   scena?: Record<string, string>;
 }
 
 export const restaurantsEn: Record<string, RestEn> = {
   "pizzeria-da-michele-napoli": {
+    titoloSeo: "Da Michele, Naples: the Eat Pray Love pizzeria",
     descrizione: "Founded in 1870 in the Forcella district, it is one of the most historic and famous pizzerias in Naples. An essential menu — marinara and margherita — baked in a wood-fired oven according to tradition. A simple, authentic setting, often with a queue outside.",
     scena: { "mangia-prega-ama": "It is the pizzeria where Liz (Julia Roberts) savours the famous Neapolitan margherita pizza, in one of the film's most iconic food scenes." },
   },
   "bar-vitelli-savoca": {
+    titoloSeo: "Bar Vitelli, Savoca: The Godfather Location",
     descrizione: "Historic village bar overlooking the square of Savoca, famous for its granita and as one of the most visited Sicilian film locations.",
     scena: { "il-padrino": "In the village of Savoca, Michael Corleone asks the bar owner for the hand of his daughter Apollonia." },
   },
@@ -466,6 +501,7 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "la-grande-bellezza": "Jep Gambardella dines with Ramona here: one of the Roman scenes of the Oscar-winning film." },
   },
   "ristorante-le-gatte": {
+    titoloSeo: "Le Gatte, Castellabate: Benvenuti al Sud set",
     descrizione: "A seafood restaurant on the port of Castellabate: this is where the dinner among colleagues in Benvenuti al Sud (2010) is set, one of the highest-grossing Italian comedies ever.",
     scena: { "benvenuti-al-sud": "The restaurant is where the dinner among post-office colleagues is set, one of the film's funniest moments." },
   },
@@ -474,6 +510,7 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "benvenuti-al-sud": "The village's little square — the heart of town life in the film — where the bar overlooks the main square of Castellabate." },
   },
   "caffe-del-duomo-crema": {
+    titoloSeo: "Duomocafè, Crema: Call Me by Your Name square",
     descrizione: "A café overlooking Crema's scenic Piazza del Duomo, an ideal stop along the tour of Guadagnino's film locations.",
     scena: { "chiamami-col-tuo-nome": "It does not appear among the filming locations: it is a café on Piazza Duomo, the Crema square where a scene of the film was shot, suggested as a stop along the itinerary." },
   },
@@ -482,6 +519,7 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "la-dolce-vita": "The real worldly hangout on Via Veneto that inspired Fellini: here, in real late-1950s Rome, paparazzi photographed stars and the jet set — the very scene the director later recreated on a soundstage at Cinecittà for the film." },
   },
   "enzo-a-mare-punta-secca": {
+    titoloSeo: "Enzo a Mare, Punta Secca: Montalbano's beach",
     descrizione: "A seafood restaurant on the seafront of Punta Secca, the village with the famous house of Inspector Montalbano. Sea cuisine of the Ragusa tradition.",
     scena: { "il-commissario-montalbano": "A few steps from Montalbano's house in Punta Secca, on the seafront where the inspector loves to enjoy the fresh fish of the Ragusa coast." },
   },
@@ -732,11 +770,22 @@ export const restaurantsEn: Record<string, RestEn> = {
     descrizione: "A three-Michelin-star restaurant on Senigallia's Banchina di Levante, born in 1990 as a beach kiosk: Mauro Uliassi in the kitchen, his sister Catia front of house.",
     scena: { "tucci-in-italy": "In the Marche episode, Stanley Tucci visits Mauro and Catia Uliassi's three-Michelin-star restaurant, the only one in the region with three stars." },
   },
+  "la-beola-grand-hotel-majestic-verbania": {
+    titoloSeo: "Grand Hotel Majestic, Verbania: The Gentlemen set",
+    descrizione: "The restaurant of the Grand Hotel Majestic, a Belle Époque hotel on a headland in Pallanza, Verbania: lake fish, seafood and meat, with the summer terrace Il Portico overlooking the garden.",
+    scena: { "the-gentlemen-2": "The Grand Hotel Majestic, which houses the restaurant, is among the main locations of season two: the crew's base during the Italian shoot and a hotel that appears in the series." },
+  },
 };
 
 /* -------- Helper: restituiscono la versione nella lingua richiesta -------- */
 export function tFilmTitolo(film: Film, lang: Lang): string {
   return lang === "en" ? filmsEn[film.id]?.titolo ?? film.data.titolo : film.data.titolo;
+}
+export function tFilmTitoloSeo(film: Film, lang: Lang): string | undefined {
+  return lang === "en" ? filmsEn[film.id]?.titoloSeo : film.data.titoloSeo;
+}
+export function tLocaleTitoloSeo(locale: Restaurant, lang: Lang): string | undefined {
+  return lang === "en" ? restaurantsEn[locale.id]?.titoloSeo : locale.data.titoloSeo;
 }
 export function tFilmAlt(film: Film, lang: Lang): string {
   return lang === "en" ? filmsEn[film.id]?.locandinaAlt ?? film.data.locandinaAlt : film.data.locandinaAlt;

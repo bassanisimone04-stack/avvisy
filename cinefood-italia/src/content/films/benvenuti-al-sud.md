@@ -1,5 +1,6 @@
 ---
 titolo: "Benvenuti al Sud"
+titoloSeo: "Benvenuti al Sud: le location a Castellabate"
 anno: 2010
 regista: "Luca Miniero"
 serieTv: false

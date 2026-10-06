@@ -10,6 +10,7 @@ import Map from "../../components/Map.astro";
 import Icon from "../../components/Icon.astro";
 import { SITE } from "../../config/site";
 import { slugify, formatData } from "../../lib/utils";
+import { fitTitle, clampDesc } from "../../lib/seo";
 import { restaurantJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
 
 export async function getStaticPaths() {
@@ -32,11 +33,18 @@ const canonical = new URL(`/locale/${locale.id}`, Astro.site ?? SITE.url).href;
 // SEO (Search Console): la gente cerca "nome locale + città" e "film + location".
 // Set reale -> "location di [film]"; legato al film -> "legato a [film]" (mai presentarlo come set).
 const primoFilm = filmEntries[0]?.data.titolo;
-const seoTitle = !primoFilm
-  ? `${d.nome} — ${d.citta}`
-  : d.categoria === "set-reale"
-    ? `${d.nome}, ${d.citta}: location di ${primoFilm}`
-    : `${d.nome}, ${d.citta}: legato a ${primoFilm}`;
+const seoTitle = fitTitle([
+  d.titoloSeo,
+  !primoFilm
+    ? `${d.nome} — ${d.citta}`
+    : d.categoria === "set-reale"
+      ? `${d.nome}, ${d.citta}: location di ${primoFilm}`
+      : `${d.nome}, ${d.citta}: legato a ${primoFilm}`,
+  primoFilm ? `${d.nome}, ${d.citta}: ${primoFilm}` : undefined,
+  primoFilm ? `${d.nome}, ${d.citta}: ${primoFilm.split(":")[0].trim()}` : undefined,
+  `${d.nome}, ${d.citta}`,
+  d.nome,
+]);
 const immagineUrl = new URL(d.immagine.src, Astro.site ?? SITE.url).href;
 
 const crumbs = [
@@ -58,7 +66,7 @@ const jsonLd = [
 
 <BaseLayout
   title={seoTitle}
-  description={`${d.nome} a ${d.citta}: ${d.descrizione}`}
+  description={clampDesc(`${d.nome} a ${d.citta}: ${d.descrizione}`)}
   image={d.immagine.src}
   type="article"
   jsonLd={jsonLd}

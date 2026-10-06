@@ -1,5 +1,6 @@
 ---
 nome: "Duomocafè"
+titoloSeo: "Duomocafè, Crema: la piazza di Chiamami col tuo nome"
 citta: "Crema"
 regione: "Lombardia"
 indirizzo: "Piazza Duomo 13, 26013 Crema CR"
