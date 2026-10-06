@@ -27,7 +27,7 @@ Pacino. The film alternates a New York smuggling story with a parallel
 tale of Dante Alighieri fleeing to Sicily — and much of it was genuinely
 filmed across **Veneto** and **Sicily**.
 
-## Venice
+## Where In the Hand of Dante was filmed: Venice
 
 Venetian locations include the **Marciana Library** in St Mark's Square,
 the island of **Forte di Sant'Andrea**, **Palazzo Rocca Contarini Corfù**

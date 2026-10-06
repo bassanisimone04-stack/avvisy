@@ -34,7 +34,7 @@ originali). Il Comune propone persino un **itinerario ufficiale** — a
 piedi o in bici — tra i luoghi del film. Ecco le tappe principali e dove
 concedersi una pausa golosa.
 
-## Le location nel centro di Crema
+## Dove è stato girato Chiamami col tuo nome: il centro di Crema
 
 Il cuore dell'itinerario è la scenografica **[Piazza del Duomo](/crema)**, dove è
 ambientata la scena dei protagonisti Elio e Oliver seduti al tavolino di un bar.

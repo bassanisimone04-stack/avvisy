@@ -30,7 +30,7 @@ schede, sono apparsi in un film o in una serie — niente set a tema, solo
 indirizzi che esistono ancora oggi, con il nome dell'attore o dell'attrice
 che li ha resi celebri.
 
-## Al Pacino — Bar Vitelli, Savoca (Sicilia)
+## Al Pacino: dove è stato girato Il Padrino, Bar Vitelli a Savoca
 
 Nel borgo di Savoca, il **[Bar Vitelli](/locale/bar-vitelli-savoca)** è dove
 Michael Corleone chiede la mano di Apollonia ne *[Il Padrino](/blog/bar-vitelli-savoca-padrino)*

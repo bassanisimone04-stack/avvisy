@@ -26,7 +26,7 @@ chose **Sicily** as the setting for its acclaimed second season (2022).
 Unlike many productions, the hotel at the centre of the story isn't a
 built set: it's a real hotel, still open to the public today.
 
-## San Domenico Palace, the show's real hotel
+## Where White Lotus season 2 was filmed: San Domenico Palace
 
 The fictional "White Lotus" resort is actually the **San Domenico
 Palace**, a Four Seasons hotel in the heart of **Taormina**. The building

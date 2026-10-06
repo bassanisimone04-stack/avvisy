@@ -38,7 +38,7 @@ the novel's atmosphere. The production instead looked for smaller,
 less-altered villages, and found them in the hills above Taormina:
 **Savoca** and **Forza d'Agrò**, just a few kilometres apart.
 
-## Savoca: the heart of the shoot
+## Where The Godfather was filmed in Sicily: Savoca
 
 **[Savoca](/en/savoca)** is the village where most of the Sicilian scenes
 are set. It's here that Michael Corleone, exiled in Sicily after the

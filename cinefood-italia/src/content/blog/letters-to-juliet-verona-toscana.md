@@ -31,7 +31,7 @@ attraversa due Italie da cartolina: **Verona**, la città di Romeo e Giulietta, 
 le **colline della Toscana**, tra vigneti e cantine. Un itinerario perfetto per
 gli innamorati del cinema e del buon vino.
 
-## La Verona di Giulietta
+## Dove è stato girato Letters to Juliet: la Verona di Giulietta
 
 Il film parte dalla celebre **Casa di Giulietta**, col balcone e il muro
 coperto di lettere d'amore. Una curiosità che sorprende molti visitatori:

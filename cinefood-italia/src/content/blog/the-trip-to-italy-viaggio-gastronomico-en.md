@@ -30,7 +30,7 @@ entirely built around food: six meals at six real restaurants, over six
 days, which Coogan's character is fictionally reviewing for the Observer
 Magazine — a real food itinerary to retrace stop by stop.
 
-## The journey's stops
+## Where The Trip to Italy was filmed: the journey's stops
 
 The film follows the boot from north to south. Among the real restaurants
 named by the sources: Trattoria della Posta in **Monforte d'Alba** (Piedmont),

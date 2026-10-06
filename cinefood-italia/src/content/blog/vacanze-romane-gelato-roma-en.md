@@ -34,7 +34,7 @@ studios, in an era when major studios preferred rebuilding everything back
 in Los Angeles. Here is the itinerary through the film's places and the
 flavours to try.
 
-## The gelato on the Spanish Steps
+## Where Roman Holiday was filmed: the gelato on the Spanish Steps
 
 The gelato scene on the **Spanish Steps** is one of the most famous in film
 history. Even today, an artisan gelato while strolling through the centre is the

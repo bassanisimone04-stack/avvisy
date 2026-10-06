@@ -29,7 +29,7 @@ gastronomica: sei pasti in sei ristoranti veri, in sei giorni, che nella
 finzione Coogan deve recensire per l'Observer Magazine — un vero itinerario
 gastronomico da rifare tappa per tappa.
 
-## Le tappe del viaggio
+## Dove è stato girato The Trip to Italy: le tappe del viaggio
 
 Il film segue lo Stivale da nord a sud. Tra i ristoranti reali citati dalle
 fonti: la Trattoria della Posta a **Monforte d'Alba** (Piemonte), La Cantina a

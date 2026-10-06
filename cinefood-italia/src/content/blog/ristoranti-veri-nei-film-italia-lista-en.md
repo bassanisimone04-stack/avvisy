@@ -30,7 +30,7 @@ walked through them. Here is the list of **real** venues that, according to the
 sources cited on each card, appeared in a film or TV series — no themed sets, just addresses
 that still exist today, alongside the actor whose scene made them famous.
 
-## Al Pacino — Bar Vitelli, Savoca (Sicily)
+## Al Pacino: where The Godfather was filmed, Bar Vitelli in Savoca
 
 In the village of Savoca, **[Bar Vitelli](/en/locale/bar-vitelli-savoca)** is
 where Michael Corleone asks for Apollonia's hand in

@@ -26,7 +26,7 @@ to look for two things: **the filming locations** and, above all, **the food** â
 because Montalbano famously eats the dishes of tradition in reverent silence.
 Here is how to retrace his tour of flavours.
 
-## Where Inspector Montalbano ate
+## Where Montalbano was filmed, and where he ate
 
 The signature restaurant is
 **[Enzo a Mare](/en/locale/enzo-a-mare-punta-secca)**, on the seafront of

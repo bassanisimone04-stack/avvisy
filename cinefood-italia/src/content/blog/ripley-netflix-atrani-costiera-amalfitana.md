@@ -27,7 +27,7 @@ miniserie **Ripley** di Netflix ha riportato il romanzo di Patricia Highsmith
 sullo schermo, girata interamente in Italia in un elegante bianco e nero.
 Protagonista assoluta: la costa di **Atrani**, sulla Costiera Amalfitana.
 
-## Atrani, il cuore della serie
+## Dove è stata girata Ripley: Atrani, il cuore della serie
 
 **Atrani**, il comune più piccolo d'Italia in provincia di Salerno, diventa il
 paese dove il protagonista Tom Ripley raggiunge Dickie Greenleaf. I vicoli

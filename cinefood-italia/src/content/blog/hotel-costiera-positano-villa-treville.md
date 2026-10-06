@@ -25,7 +25,7 @@ scenario per una storia di lusso e misteri. E come per *The White Lotus*,
 l'hotel del titolo non è un set costruito: è un vero albergo a cinque
 stelle, ancora oggi aperto agli ospiti.
 
-## Villa Treville, il vero Hotel Costiera
+## Dove è stata girata Hotel Costiera: Villa Treville a Positano
 
 L'hotel immaginario della serie è **Villa Treville**, proprietà di lusso
 a picco sul mare a **Positano**, poco distante dal centro del paese. La

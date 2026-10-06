@@ -28,7 +28,7 @@ Winner of two **Emmy Awards** in 2024 (including Best Directing), Netflix's
 filmed entirely in Italy in elegant black and white. The absolute star: the
 coast of **Atrani**, on the Amalfi Coast.
 
-## Atrani, the heart of the series
+## Where Ripley was filmed: Atrani, the heart of the series
 
 **Atrani**, the smallest municipality in Italy, in the province of Salerno,
 becomes the town where protagonist Tom Ripley reaches Dickie Greenleaf. The

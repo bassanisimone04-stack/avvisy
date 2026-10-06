@@ -31,7 +31,7 @@ degli anni '50, tra Ischia, Roma e una **Venezia** elegante e inquieta. Proprio
 qui, tra i tavolini di uno dei caffè più celebri del mondo, si svolge una delle
 scene più ricordate del film: il **[Caffè Florian](/locale/caffe-florian)**.
 
-## Il Caffè Florian nel film
+## Dove è stato girato Il talento di Mr. Ripley: il Caffè Florian
 
 Ai tavolini del Florian, in Piazza San Marco, Tom Ripley (Matt Damon) incontra
 Marge e il padre di Dickie. Il caffè, aperto nel **1720** sotto le Procuratie

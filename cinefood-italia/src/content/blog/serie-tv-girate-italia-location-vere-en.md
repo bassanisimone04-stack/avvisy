@@ -24,7 +24,7 @@ Italy. From Sky productions to Netflix and HBO, more and more international
 shows are choosing Italian cities and villages as genuine sets — not just
 backdrops, but places you can actually go and visit.
 
-## The White Lotus — Taormina, Sicily
+## Where The White Lotus was filmed: Taormina, Sicily
 
 Season 2 of the HBO series made **Taormina** one of the most searched
 destinations of 2022-2023. Discover the real locations in our article on

@@ -35,7 +35,7 @@ offers an **official itinerary** — on foot or by bike — through the
 film's locations. Here are the main stops and where to treat yourself to
 a tasty break.
 
-## The locations in central Crema
+## Where Call Me by Your Name was filmed: central Crema
 
 The heart of the itinerary is the scenic **[Piazza del Duomo](/en/crema)**, where
 the scene of Elio and Oliver sitting at a café table is set. A short walk away,

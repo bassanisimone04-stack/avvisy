@@ -26,7 +26,7 @@ setting for a story of luxury and mystery. And like *The White Lotus*, the
 hotel in the title isn't a built set: it's a real five-star hotel, still
 open to guests today.
 
-## Villa Treville, the real Hotel Costiera
+## Where Hotel Costiera was filmed: Villa Treville in Positano
 
 The show's fictional hotel is **Villa Treville**, a clifftop luxury
 property in **Positano**, a short distance from the town centre. The

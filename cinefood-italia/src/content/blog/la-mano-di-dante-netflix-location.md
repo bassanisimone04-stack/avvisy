@@ -26,7 +26,7 @@ e Al Pacino. Il film alterna una storia di contrabbando a New York a un
 racconto parallelo su Dante Alighieri in fuga verso la Sicilia — e gran
 parte delle riprese si è svolta davvero tra **Veneto** e **Sicilia**.
 
-## Venezia
+## Dove è stata girata La mano di Dante: Venezia
 
 Tra le location veneziane: la **Biblioteca Marciana** in Piazza San Marco,
 l'isola del **Forte di Sant'Andrea**, **Palazzo Rocca Contarini Corfù** e

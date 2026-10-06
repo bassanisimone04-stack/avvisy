@@ -26,7 +26,7 @@ stagione (2022). E a differenza di molte produzioni, l'hotel al centro
 della storia non è un set costruito: è un albergo vero, ancora oggi aperto
 al pubblico.
 
-## Il San Domenico Palace, il vero hotel della serie
+## Dove è stata girata The White Lotus 2: il San Domenico Palace
 
 Il resort immaginario "White Lotus" è in realtà il **San Domenico Palace**,
 hotel Four Seasons nel cuore di **Taormina**. L'edificio ha una storia

@@ -37,7 +37,7 @@ restituire l'atmosfera del romanzo. La produzione cercò allora centri più
 piccoli e meno toccati dal tempo, trovandoli sulle colline sopra Taormina:
 **Savoca** e **Forza d'Agrò**, a pochi chilometri l'uno dall'altro.
 
-## Savoca: il cuore delle riprese
+## Dove è stato girato Il Padrino in Sicilia: Savoca
 
 **[Savoca](/savoca)** è il borgo dove si concentra la maggior parte
 delle scene siciliane. È qui che Michael Corleone, esule in Sicilia dopo

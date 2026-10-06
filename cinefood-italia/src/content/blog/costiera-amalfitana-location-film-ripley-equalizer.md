@@ -50,7 +50,7 @@ della piazzetta, trasformando il vero
 **[Ristorante Savò](/locale/ristorante-savo-atrani)** nell'"Aminah's Cafe"
 dove il protagonista prende il suo tè ogni giorno.
 
-## Perché proprio Atrani
+## Dove sono stati girati i film in Costiera: perché proprio Atrani
 
 Con appena 0,12 km² (circa 12 ettari), Atrani è il **comune più piccolo d'Italia**
 per superficie: una piazzetta, vicoli coperti, scalinate strette tra le

@@ -23,7 +23,7 @@ cinematografico in Italia. Dalle produzioni Sky a quelle Netflix e HBO,
 sempre più serie internazionali scelgono città e borghi italiani come set
 reale — non semplici sfondi, ma luoghi che si possono davvero visitare.
 
-## The White Lotus — Taormina, Sicilia
+## Dove è stata girata The White Lotus: Taormina, Sicilia
 
 La seconda stagione della serie HBO ha reso **Taormina** una delle
 destinazioni più cercate del 2022-2023. Scopri le location vere nel nostro

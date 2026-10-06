@@ -33,7 +33,7 @@ studi di Cinecittà, in un'epoca in cui le major preferivano ricostruire
 tutto in studio a Los Angeles. Ecco l'itinerario tra i luoghi del film e i
 sapori da provare.
 
-## Il gelato di Piazza di Spagna
+## Dove è stato girato Vacanze romane: il gelato di Piazza di Spagna
 
 La scena del gelato sulla scalinata di **Piazza di Spagna** è una delle più
 celebri della storia del cinema. Ancora oggi, un gelato artigianale

@@ -51,7 +51,7 @@ the square, turning the real
 **[Ristorante Savò](/en/locale/ristorante-savo-atrani)** into the "Aminah's
 Cafe" where the lead orders his tea every day.
 
-## Why Atrani specifically
+## Where the films were shot on the coast: why Atrani specifically
 
 At barely 0.12 km² (about 12 hectares), Atrani is **Italy's smallest municipality** by
 area: one little square, covered alleys, narrow staircases between the

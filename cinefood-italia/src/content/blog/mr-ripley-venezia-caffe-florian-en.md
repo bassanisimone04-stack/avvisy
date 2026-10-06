@@ -32,7 +32,7 @@ between Ischia, Rome and an elegant, restless **Venice**. It is here, among the
 tables of one of the most famous cafés in the world, that one of the film's most
 memorable scenes takes place: the **[Caffè Florian](/en/locale/caffe-florian)**.
 
-## Caffè Florian in the film
+## Where The Talented Mr. Ripley was filmed: Caffè Florian
 
 At the tables of the Florian, in St Mark's Square, Tom Ripley (Matt Damon) meets
 Marge and Dickie's father. The café, opened in **1720** under the Procuratie

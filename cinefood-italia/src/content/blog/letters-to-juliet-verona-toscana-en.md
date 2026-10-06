@@ -31,7 +31,7 @@ bozza: false
 **Verona**, the city of Romeo and Juliet, and the **hills of Tuscany**, among
 vineyards and wineries. A perfect itinerary for lovers of cinema and good wine.
 
-## The Verona of Juliet
+## Where Letters to Juliet was filmed: the Verona of Juliet
 
 The film starts at the famous **House of Juliet**, with its balcony and the
 wall covered in love letters. A detail that surprises many visitors: the
