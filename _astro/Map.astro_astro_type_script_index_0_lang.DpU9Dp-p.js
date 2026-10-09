@@ -1,0 +1,6 @@
+import{L as r}from"./leaflet-src.DyyHyv63.js";/* empty css                */import"./_commonjsHelpers.CqkleIqs.js";const d={src:"/_astro/marker-icon.hN30_KVU.png",width:25,height:41,format:"png"},g={src:"/_astro/marker-icon-2x._ZA0WGCc.png",width:50,height:82,format:"png"},l={src:"/_astro/marker-shadow.f7SaPCxT.png",width:41,height:41,format:"png"},p=t=>typeof t=="string"?t:t.src;r.Icon.Default.mergeOptions({iconUrl:p(d),iconRetinaUrl:p(g),shadowUrl:p(l)});const e=document.getElementById("mappa"),i=document.getElementById("mappa-dati");if(e&&i){const t=JSON.parse(i.textContent||"[]"),s=Number(e.dataset.zoom)||6,c=e.dataset.scopri||"Scopri di più →",a=r.map(e).setView([41.9,12.5],s);r.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(a);const n=r.featureGroup();for(const o of t){const m=`
+        <strong>${o.nome}</strong>
+        ${o.citta?`<br/><span>${o.citta}</span>`:""}
+        ${o.tipo?`<br/><span style="text-transform:capitalize">${o.tipo}</span>`:""}
+        ${o.url?`<br/><a href="${o.url}">${c}</a>`:""}
+      `;r.marker([o.lat,o.lng]).bindPopup(m).addTo(n)}n.addTo(a),t.length>1?a.fitBounds(n.getBounds().pad(.2)):t.length===1&&a.setView([t[0].lat,t[0].lng],Math.max(s,14))}
