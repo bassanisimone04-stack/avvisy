@@ -539,6 +539,238 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "dog-grooming-schedule-by-breed",
+    title: "How Often Should You Groom Your Dog? A Breed-by-Breed Schedule",
+    description:
+      "How grooming frequency actually depends on coat type rather than breed size, with realistic schedules for smooth, double, curly, and wire coats.",
+    category: "Guides",
+    readingMinutes: 6,
+    published: "2026-04-21",
+    updated: "2026-04-21",
+    keywords: [
+      "dog grooming schedule",
+      "how often to groom a dog",
+      "how often should dogs be groomed",
+      "dog grooming frequency by breed",
+      "how often to brush dog",
+    ],
+    sections: [
+      {
+        heading: "Coat type decides the schedule, not breed size",
+        paragraphs: [
+          "Owners usually ask \"how often for my breed,\" but the honest answer sorts by coat type, not breed. A Chihuahua and a Doberman have nearly identical grooming needs because both have smooth, short coats. A Shih Tzu and a Poodle also match each other closely, despite looking nothing alike, because both have continuously growing hair that mats without regular attention.",
+          "That means the schedules below are organized by coat, and you place your dog into whichever one matches regardless of what the breed standard says.",
+        ],
+      },
+      {
+        heading: "Smooth, short coats (Labradors, Beagles, Boxers, most short-haired breeds)",
+        paragraphs: [
+          "These coats shed continuously in small amounts and rarely mat. A full groom every 8 to 12 weeks is usually enough, with a weekly brush at home in between to manage shedding on furniture and floors.",
+          "The main reason to book sooner is nails and ears, not the coat itself — both need attention on a shorter cycle than the coat does, which is part of why a professional groom is worth keeping on a schedule even for a low-maintenance coat.",
+        ],
+      },
+      {
+        heading: "Double coats (Huskies, Golden Retrievers, German Shepherds, Corgis)",
+        paragraphs: [
+          "Double-coated dogs carry a soft undercoat beneath a coarser outer layer, and they blow that undercoat seasonally rather than shedding evenly year-round. A groom every 6 to 8 weeks, timed around spring and fall coat blows, keeps the undercoat from matting against the skin.",
+          "Never shave a healthy double coat down to the skin expecting it to help with heat or shedding — the double coat regulates temperature in both directions, and shaving it can cause patchy, abnormal regrowth. A de-shedding treatment that removes loose undercoat without cutting the guard hairs is the right tool here, not a close shave.",
+        ],
+      },
+      {
+        heading: "Curly and continuously-growing coats (Poodles, Doodles, Bichons)",
+        paragraphs: [
+          "These coats do not shed out on their own the way a double coat does — loose hair gets trapped in the curl instead of falling to the floor, which is exactly what turns into mats if left alone. A groom every 4 to 6 weeks is the realistic minimum, and daily or near-daily brushing at home is not optional the way it is for other coat types.",
+          "This is the coat type where skipping an appointment has compounding cost: a coat that goes 10 weeks instead of 5 is rarely just \"a bit shaggier\" — it is often matted enough that the groomer has to shave it short rather than trim it, which is why [matting drives mobile grooming prices](/blog/mobile-dog-grooming-cost) more than almost anything else.",
+        ],
+      },
+      {
+        heading: "Wire and broken coats (Terriers, Schnauzers)",
+        paragraphs: [
+          "Wire coats are typically clipped or hand-stripped every 6 to 8 weeks. Clipping is faster and far more common with mobile and salon groomers alike; hand-stripping preserves the wiry texture and color better but takes considerably longer and costs more, and not every groomer offers it. Ask specifically which technique a groomer uses before booking if coat texture matters to you for a show or working dog.",
+        ],
+      },
+      {
+        heading: "Signs you have waited too long, whatever the schedule says",
+        paragraphs: [
+          "Schedules are a starting point, not a rule. Run your fingers through the coat down to the skin, not just over the surface — if you feel resistance, tangles that do not pull apart easily, or felted patches, book sooner regardless of how many weeks it has been. Puppies, dogs who swim or play outdoors often, and dogs recovering from an injury that limited normal brushing all tend to need shorter intervals than their coat type alone would suggest.",
+          "If you are not sure which category your dog falls into, [search groomers in your area](/cities) and ask directly — most will tell you honestly whether your dog's coat needs a 5-week or a 10-week cycle rather than quoting a one-size-fits-all number.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How often should I groom my dog?",
+        answer:
+          "It depends on coat type more than breed: smooth short coats every 8 to 12 weeks, double coats every 6 to 8 weeks, curly or continuously-growing coats every 4 to 6 weeks, and wire coats every 6 to 8 weeks. Daily or weekly home brushing is still needed between visits for most coats.",
+      },
+      {
+        question: "Do short-haired dogs need professional grooming?",
+        answer:
+          "Yes, even though their coats rarely mat. A groom every 8 to 12 weeks still covers nail trimming, ear cleaning, and shedding control, which matter regardless of coat length.",
+      },
+      {
+        question: "Should I shave my double-coated dog in summer?",
+        answer:
+          "No. A double coat regulates temperature in both hot and cold weather, and shaving it can cause patchy, abnormal regrowth. A de-shedding treatment that removes loose undercoat without cutting the guard hairs is the right approach instead.",
+      },
+      {
+        question: "What happens if I skip a grooming appointment for a curly-coated dog?",
+        answer:
+          "Loose hair that would normally be brushed out gets trapped in the curl and mats. A coat left twice as long as usual is often matted enough to need a full shave rather than a trim, which is why curly and doodle coats are the least forgiving to skip.",
+      },
+    ],
+  },
+  {
+    slug: "deshedding-treatment-double-coated-dogs",
+    title: "De-Shedding Treatments for Double-Coated Dogs: What's Actually Involved",
+    description:
+      "What a professional de-shedding treatment does differently from a regular bath and brush, which breeds benefit most, and why shaving isn't the answer.",
+    category: "Guides",
+    readingMinutes: 5,
+    published: "2026-05-05",
+    updated: "2026-05-05",
+    keywords: [
+      "de-shedding treatment for dogs",
+      "dog undercoat removal",
+      "husky shedding treatment",
+      "double coat grooming",
+      "dog shedding treatment cost",
+    ],
+    sections: [
+      {
+        heading: "What a de-shedding treatment actually is",
+        paragraphs: [
+          "A de-shedding treatment is a bath and brush-out built specifically to pull loose, dead undercoat out before it works its way free on its own — onto your floors, furniture, and clothes. It typically involves a de-shedding shampoo and conditioner designed to loosen the undercoat, followed by high-velocity drying that blows loose hair out of the coat, and a thorough brush-out with an undercoat rake or similar tool.",
+          "This is different from a routine bath, which cleans the coat but does not aggressively pull undercoat the way a dedicated treatment does. It is also different from clipping — nothing is cut short. The guard hairs (the coarser outer layer) stay at full length; only the loose, dead undercoat underneath is removed.",
+        ],
+      },
+      {
+        heading: "Which dogs actually benefit",
+        paragraphs: [
+          "Double-coated breeds are the clearest case: Huskies, Golden and Labrador Retrievers, German Shepherds, Corgis, Akitas, and similar breeds carry a dense undercoat that they shed seasonally in large amounts, commonly called \"blowing coat.\" A de-shedding treatment timed around spring and fall shedding seasons is the most effective single thing an owner can do to manage the volume of loose hair around the house.",
+          "Single-coated and smooth-coated dogs shed too, but more evenly and in smaller amounts, so a de-shedding treatment helps less dramatically for them — a regular brush at home usually keeps pace. If you are unsure which category your dog falls into, [our breed-by-breed grooming schedule guide](/blog/dog-grooming-schedule-by-breed) walks through how to tell the difference by coat, not breed name.",
+        ],
+      },
+      {
+        heading: "Why shaving is the wrong solution",
+        paragraphs: [
+          "It is a common instinct to shave a heavily-shedding dog down to the skin, especially before summer, expecting less shedding and a cooler dog. Both assumptions are usually wrong. A double coat insulates against heat as well as cold, and shaving it removes that protection along with real risk of sunburn on exposed skin.",
+          "Shaving a double coat can also trigger uneven regrowth — patchy areas, or a texture change where the undercoat grows back disproportionately thick relative to the guard hairs, sometimes described as \"coat funk\" or post-clipping alopecia. It does not reliably reduce shedding either, since the dog still produces and sheds undercoat; it is simply shorter hair falling out instead of longer hair. A de-shedding treatment achieves the actual goal — less loose hair around the house — without the downsides.",
+        ],
+      },
+      {
+        heading: "What it costs and how often to book it",
+        paragraphs: [
+          "A de-shedding treatment is usually offered as an add-on to a standard groom rather than a separate visit, adding roughly $20 to $40 to the base price depending on coat density and how overdue the dog is — see [general mobile grooming pricing](/blog/mobile-dog-grooming-cost) for how the base price itself is set. Twice a year, timed around the spring and fall coat blow, is enough for most double-coated dogs; a dog that sheds heavily year-round may benefit from a treatment every grooming visit instead.",
+        ],
+      },
+      {
+        heading: "What you can do between visits",
+        paragraphs: [
+          "An undercoat rake or de-shedding brush used at home two or three times a week during shedding season meaningfully reduces how much comes out on its own between professional visits. Regular brushing also makes the professional treatment faster and less uncomfortable for the dog, since the groomer is not working through weeks of accumulated loose undercoat all at once.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What does a dog de-shedding treatment involve?",
+        answer:
+          "A de-shedding shampoo and conditioner to loosen the undercoat, high-velocity drying to blow loose hair free, and a thorough brush-out with an undercoat rake. Nothing is cut — only loose, dead undercoat is removed, while the outer guard hairs stay full length.",
+      },
+      {
+        question: "Does shaving a dog reduce shedding?",
+        answer:
+          "Not reliably, and it removes the coat's natural insulation against both heat and cold. Shaving a double coat can also cause patchy, uneven regrowth. A de-shedding treatment removes the loose undercoat without those risks.",
+      },
+      {
+        question: "How often should a double-coated dog get a de-shedding treatment?",
+        answer:
+          "Twice a year, timed around the spring and fall coat blow, is enough for most double-coated dogs. A dog that sheds heavily year-round may benefit from having it done at every grooming visit instead.",
+      },
+      {
+        question: "How much does a de-shedding treatment cost?",
+        answer:
+          "It is usually an add-on to a standard groom rather than a separate visit, typically adding $20 to $40 to the base price depending on coat density and how overdue the dog is.",
+      },
+    ],
+  },
+  {
+    slug: "puppy-first-grooming-appointment",
+    title: "A Puppy's First Grooming Appointment: When to Start and How to Prepare",
+    description:
+      "The right age to start professional grooming, what a puppy's first visit should actually cover, and how to make it a good experience rather than a stressful one.",
+    category: "Guides",
+    readingMinutes: 5,
+    published: "2026-05-19",
+    updated: "2026-05-19",
+    keywords: [
+      "puppy first grooming appointment",
+      "when to start grooming a puppy",
+      "puppy grooming age",
+      "first time puppy groom",
+      "puppy grooming tips",
+    ],
+    sections: [
+      {
+        heading: "When to start",
+        paragraphs: [
+          "Most groomers recommend a first visit between 12 and 16 weeks old, once a puppy has completed their core vaccination series — many mobile groomers and salons ask for proof of vaccination before the first appointment, since the dog will be handled closely and may encounter other animals' scent even in a one-on-one van setting. Check this when booking rather than assuming it is not required.",
+          "Breeds that need grooming early for coat reasons — Poodles, Doodles, Shih Tzus, and other continuously-growing coats — benefit from starting at the early end of that window, since their coat can begin matting well before a dog is full grown. Smooth-coated puppies have more flexibility and can start a little later without consequence.",
+        ],
+      },
+      {
+        heading: "Why starting early matters more than the coat",
+        paragraphs: [
+          "The biggest reason to groom a puppy early has little to do with the coat itself: it is about building a calm association with being handled, bathed, brushed, and having paws, ears, and a muzzle touched by someone other than the owner. A puppy's first few grooming experiences shape how they respond to every one after that, for the rest of their life.",
+          "This is why a puppy's first visit is usually shorter and gentler than a full adult groom — often just a bath, a light brush, a very light trim if needed, and nail clipping, deliberately stopping well short of a complete groom. The goal of the first appointment is a good experience, not a finished haircut.",
+        ],
+      },
+      {
+        heading: "What to tell the groomer in advance",
+        paragraphs: [
+          "Mention that it's a first visit, your puppy's age, and anything unusual about their temperament — unusually nervous, mouthy, or completely unbothered by handling so far. A good groomer adjusts pace and session length based on this rather than running every puppy through the same routine.",
+          "If your puppy has not been regularly handled at home — paws touched, ears lifted, muzzle held gently — mention that too. A groomer who knows this in advance will go slower and build trust gradually rather than assuming a puppy is used to handling it has never actually experienced.",
+        ],
+      },
+      {
+        heading: "Preparing at home beforehand",
+        paragraphs: [
+          "In the weeks before the appointment, handle your puppy's paws, ears, and mouth briefly and positively every day — a few seconds at a time, paired with praise or a treat, is enough to build familiarity without it becoming a battle. A short, calm car ride or two (if visiting a salon rather than booking mobile) also helps if that is part of the routine ahead.",
+          "For mobile appointments specifically, there is no car ride to prepare for, which removes one common source of puppy stress entirely — [see how a mobile appointment runs](/blog/first-mobile-grooming-appointment) for what to expect regardless of age.",
+        ],
+      },
+      {
+        heading: "Setting up the next few visits",
+        paragraphs: [
+          "Plan on a groom roughly every 3 to 4 weeks through the first six months for continuously-growing coats, mostly for brief, low-stress exposure rather than because the coat strictly needs it that often — it is the association-building that matters most at this age. Once your puppy reaches the coat type's normal adult schedule, you can move to [the regular interval for that coat type](/blog/dog-grooming-schedule-by-breed).",
+          "Keeping the same groomer for these early visits, rather than switching each time, speeds up how quickly your puppy settles — familiarity compounds for puppies the same way it does for anxious adult dogs.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "At what age should a puppy have their first grooming appointment?",
+        answer:
+          "Most groomers recommend 12 to 16 weeks old, once core vaccinations are complete. Breeds with continuously-growing coats, like Poodles and Doodles, benefit from starting at the earlier end of that window since their coat can mat before they're full grown.",
+      },
+      {
+        question: "What happens at a puppy's first grooming visit?",
+        answer:
+          "Usually a bath, a light brush, nail clipping, and at most a light trim — deliberately shorter and gentler than a full adult groom. The goal is building a calm association with handling, not finishing a complete haircut.",
+      },
+      {
+        question: "Does my puppy need all their vaccinations before grooming?",
+        answer:
+          "Most groomers require the core vaccination series to be complete, since the puppy will be closely handled and may encounter other animals' scent. Confirm this with the specific groomer when booking rather than assuming it isn't required.",
+      },
+      {
+        question: "How often should a puppy be groomed?",
+        answer:
+          "Roughly every 3 to 4 weeks through the first six months for continuously-growing coats, mainly for gentle, repeated exposure rather than strict coat need. Move to the normal adult schedule for that coat type once your puppy is grown.",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
