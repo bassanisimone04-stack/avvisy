@@ -54,7 +54,10 @@ export default function ClaimForm({
       <p className="mt-1 text-sm text-ink-soft">We&apos;ll email you a verification link.</p>
 
       {listingSlug && <input type="hidden" name="listing" value={listingSlug} />}
-      {citySlug && <input type="hidden" name="city" value={citySlug} />}
+      {/* Named distinctly from the visible "city" text field below — sharing
+          a name would have FormData.get("city") return whichever comes
+          first in DOM order and silently drop the other. */}
+      {citySlug && <input type="hidden" name="city_slug" value={citySlug} />}
 
       <div className="mt-6 space-y-4">
         <div>

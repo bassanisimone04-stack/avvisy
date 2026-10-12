@@ -14,7 +14,7 @@ export async function submitClaim(formData: FormData) {
   const phone = String(formData.get("phone") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const listingSlug = String(formData.get("listing") ?? "").trim();
-  const listingCitySlug = String(formData.get("city") ?? "").trim();
+  const listingCitySlug = String(formData.get("city_slug") ?? "").trim();
 
   if (!businessName || !email) {
     return { error: "Business name and email are required." };
