@@ -108,23 +108,36 @@ back to free rather than deleting it — the business keeps its page and reviews
 
 Listings live in Supabase when configured, falling back to
 `src/data/groomers.json`; both are read through `src/lib/groomers.ts`. The
-seed file holds 23 **real** unclaimed businesses (name, city, phone, website —
+seed file holds 11 **real** unclaimed businesses (name, city, phone, website —
 compiled from public web search results, then cross-checked against a second
-independent source per business: Yelp, BBB or Nextdoor), 2 each across 11 of
-the 12 featured metros (Denver has 1 — a second candidate there was rejected
-because the search itself flagged an unresolved name-collision risk with an
-unrelated salon and no independent, non-self-hosted confirmation of its
-reviews or legitimacy could be found). Earlier passes also dropped one
-original Seattle candidate once the cross-check showed it had converted to
-a fixed salon, and one Atlanta candidate that turned out to be based 150
-miles away in Evans/Martinez, GA, rather than mislabeling either. No fabricated rating, review count,
+independent source per business: Yelp, BBB, Nextdoor, Thumbtack or a Google
+Business Profile). A second verification pass re-checked every listing and
+removed 12 that didn't hold up: five had a website that fails to resolve
+at the DNS level and zero trace on any review platform (Ortega's Mobile Pet
+Grooming in LA, Dogi's Mobile Grooming in Miami, Fur Fighters Grooming in
+Chicago, Paws on Wheels Austin, and Hug and Trim Mobile Grooming in
+Atlanta); four never cleared a second independent source despite repeated
+search attempts (Doggie's Groom Mobile in LA, Mutz Cutz Mobile Pet
+Grooming in Phoenix, Blooms Grooms in Chicago, Little Bear Mobile Dog
+Grooming in Seattle); one turned out to operate from a fixed office suite
+rather than a van, contradicting the mobile-only premise (Private Mobile
+Grooming in San Diego); and two were confirmed to be in the wrong place
+entirely (Royal Spaw Mobile Grooming is based in Georgetown, TX, not
+Austin; GroomBuggy is a real company, but its only verifiable presence is
+the SF Bay Area and Denver, not Charlotte). Los Angeles, Chicago and
+Austin currently have zero listings as a direct result — left empty
+rather than backfilled with under-verified candidates, the same principle
+already applied to Denver, which has 1 listing after its own second
+candidate was rejected for an unresolved name-collision risk and no
+independent confirmation. No fabricated rating, review count,
 zip coverage, pricing or service tags are included, because none of that was
 independently confirmed — see "Honesty by construction" below. Paid tiers
 rank above free ones within a market, then by rating — the ordering the Pro
 Van plan actually sells, kept in one place. FAQs live in `src/data/faqs.ts`
 and feed both the rendered accordion and the `FAQPage` JSON-LD, so visible
 text and markup cannot drift apart. Featured metros are in
-`src/lib/site-config.ts`; all 12 now have at least one listing.
+`src/lib/site-config.ts`; 3 of the 12 (Los Angeles, Chicago, Austin)
+currently have no listing and render the site's normal empty-market state.
 
 ## Honesty by construction
 

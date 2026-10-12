@@ -1,28 +1,5 @@
 [
   {
-    "slug": "ortegas-mobile-pet-grooming",
-    "name": "Ortega's Mobile Pet Grooming",
-    "city": "Los Angeles",
-    "state": "CA",
-    "citySlug": "los-angeles-ca",
-    "phone": "+1 (323) 877-1569",
-    "website": "https://ortegaspetgrooming.com/",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "doggies-groom-mobile",
-    "name": "Doggie's Groom Mobile",
-    "city": "Los Angeles",
-    "state": "CA",
-    "citySlug": "los-angeles-ca",
-    "phone": "+1 (310) 922-0283",
-    "website": "https://www.doggiesgroommobile.com/",
-    "tagline": "Serving Beverly Hills, Sherman Oaks and the San Fernando Valley since 1999.",
-    "tier": "free",
-    "verified": false
-  },
-  {
     "slug": "haute-pets",
     "name": "Haute Pets",
     "city": "Houston",
@@ -45,18 +22,6 @@
     "verified": false
   },
   {
-    "slug": "dogis-mobile-grooming",
-    "name": "Dogi's Mobile Grooming",
-    "city": "Miami",
-    "state": "FL",
-    "citySlug": "miami-fl",
-    "phone": "+1 (305) 493-8828",
-    "website": "https://dogismobilegrooming.com/",
-    "tagline": "Climate-controlled mobile grooming van serving Miami-Dade County.",
-    "tier": "free",
-    "verified": false
-  },
-  {
     "slug": "golden-mobile-grooming",
     "name": "Golden Mobile Grooming",
     "city": "Miami",
@@ -64,18 +29,6 @@
     "citySlug": "miami-fl",
     "phone": "+1 (786) 769-6161",
     "website": "https://goldenmobilegrooming.com/",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "mutz-cutz-mobile-pet-grooming",
-    "name": "Mutz Cutz Mobile Pet Grooming",
-    "city": "Phoenix",
-    "state": "AZ",
-    "citySlug": "phoenix-az",
-    "phone": "+1 (480) 678-4107",
-    "website": "https://mutz-cutz.com/",
-    "tagline": "Serving the North Phoenix community since 2014.",
     "tier": "free",
     "verified": false
   },
@@ -91,30 +44,6 @@
     "verified": false
   },
   {
-    "slug": "blooms-grooms",
-    "name": "Blooms Grooms",
-    "city": "Chicago",
-    "state": "IL",
-    "citySlug": "chicago-il",
-    "phone": "+1 (773) 966-9118",
-    "website": "https://www.bloomsgroomsmobile.com/",
-    "tagline": "Cage-free mobile grooming serving Chicagoland since 2022.",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "fur-fighters-grooming",
-    "name": "Fur Fighters Grooming",
-    "city": "Chicago",
-    "state": "IL",
-    "citySlug": "chicago-il",
-    "phone": "+1 (312) 972-5653",
-    "website": "https://www.furfightersgrooming.com/",
-    "tagline": "Mobile grooming specializing in large breeds and anxious dogs.",
-    "tier": "free",
-    "verified": false
-  },
-  {
     "slug": "my-denver-pet",
     "name": "My Denver Pet LLC",
     "city": "Denver",
@@ -123,17 +52,6 @@
     "phone": "+1 (720) 951-5093",
     "website": "https://www.mydenverpet.com/",
     "tagline": "Family-owned mobile grooming, A+ BBB rated since 2011.",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "little-bear-mobile-dog-grooming",
-    "name": "Little Bear Mobile Dog Grooming",
-    "city": "Seattle",
-    "state": "WA",
-    "citySlug": "seattle-wa",
-    "phone": "+1 (206) 659-7807",
-    "website": "https://littlebeargrooming.com/",
     "tier": "free",
     "verified": false
   },
@@ -162,53 +80,6 @@
     "verified": false
   },
   {
-    "slug": "paws-on-wheels-austin",
-    "name": "Paws on Wheels Austin",
-    "city": "Austin",
-    "state": "TX",
-    "citySlug": "austin-tx",
-    "phone": "+1 (512) 299-9618",
-    "website": "https://pawsonwheelsaustin.com/",
-    "tagline": "Mobile dog grooming serving Travis and Williamson County, straight to your driveway.",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "royal-spaw-mobile-grooming",
-    "name": "Royal Spaw Mobile Grooming",
-    "city": "Austin",
-    "state": "TX",
-    "citySlug": "austin-tx",
-    "phone": "+1 (512) 316-6495",
-    "website": "https://www.royalspawmg.com/",
-    "tagline": "Mobile dog grooming based in Georgetown, serving the greater Austin area.",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "hug-and-trim-mobile-grooming",
-    "name": "Hug and Trim Mobile Grooming",
-    "city": "Atlanta",
-    "state": "GA",
-    "citySlug": "atlanta-ga",
-    "phone": "+1 (404) 882-4981",
-    "website": "https://hugandtrim.com/",
-    "tagline": "Mobile grooming based in Marietta, serving the greater Atlanta area.",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "private-mobile-grooming",
-    "name": "Private Mobile Grooming",
-    "city": "San Diego",
-    "state": "CA",
-    "citySlug": "san-diego-ca",
-    "phone": "+1 (619) 567-1516",
-    "website": "https://www.privatemobilegrooming.com/",
-    "tier": "free",
-    "verified": false
-  },
-  {
     "slug": "awesome-doggies-mobile-pet-grooming",
     "name": "Awesome Doggies Mobile Pet Grooming",
     "city": "San Diego",
@@ -217,17 +88,6 @@
     "phone": "+1 (858) 633-3641",
     "website": "https://awesomedoggies.com/",
     "tagline": "Low-stress mobile grooming serving San Diego since 2002.",
-    "tier": "free",
-    "verified": false
-  },
-  {
-    "slug": "groombuggy-charlotte",
-    "name": "GroomBuggy",
-    "city": "Charlotte",
-    "state": "NC",
-    "citySlug": "charlotte-nc",
-    "phone": "+1 (704) 207-0274",
-    "website": "https://www.groombuggy.com/nc/charlotte",
     "tier": "free",
     "verified": false
   },
