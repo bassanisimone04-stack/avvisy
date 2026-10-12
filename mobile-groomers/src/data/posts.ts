@@ -54,6 +54,12 @@ export const POSTS: Post[] = [
       "how much is mobile dog grooming",
       "mobile groomer price list",
       "dog grooming tipping",
+      "mobile dog grooming cost per visit",
+      "average cost of mobile dog grooming",
+      "mobile grooming rates",
+      "cost of mobile pet grooming",
+      "dog grooming price by breed",
+      "mobile dog groomer pricing",
     ],
     sections: [
       {
@@ -127,11 +133,21 @@ export const POSTS: Post[] = [
         answer:
           "Tip 15 to 20 percent of the service price, the same as salon grooming. Consider the upper end when a groomer handled an anxious, senior, or difficult dog well. Ask whether they prefer cash, card, or their booking app.",
       },
+      {
+        question: "Does mobile dog grooming cost more in some cities than others?",
+        answer:
+          "Yes. Prices run noticeably higher in expensive metro areas like Los Angeles or Seattle than in most of Texas or the Midwest, largely tracking local cost of living and fuel costs rather than the service itself changing.",
+      },
+      {
+        question: "Are add-ons like nail grinding or teeth brushing included in the price?",
+        answer:
+          "Usually not. Nail grinding, teeth brushing, de-shedding treatments, and anal gland expression are typically priced as add-ons rather than bundled into the base groom, so ask what's included before booking.",
+      },
     ],
   },
   {
     slug: "first-mobile-grooming-appointment",
-    title: "Your First Mobile Grooming Appointment: What to Expect",
+    title: "First Mobile Dog Grooming Appointment: What to Expect",
     description:
       "Where the van parks, whether it needs your water or power, how long it takes, and how to prepare so the appointment runs smoothly.",
     category: "Guides",
@@ -144,6 +160,12 @@ export const POSTS: Post[] = [
       "do mobile groomers need water hookup",
       "mobile grooming van setup",
       "how long does mobile dog grooming take",
+      "what to expect mobile dog grooming",
+      "mobile dog groomer first visit",
+      "mobile grooming appointment tips",
+      "preparing dog for mobile groomer",
+      "mobile grooming van parking",
+      "mobile dog groomer checklist",
     ],
     sections: [
       {
@@ -204,6 +226,16 @@ export const POSTS: Post[] = [
         answer:
           "Most owners do not, and groomers generally prefer it that way. Dogs are consistently calmer when their owner is out of sight. The groomer brings your dog back afterwards and walks you through anything they found.",
       },
+      {
+        question: "Can I request a specific time window for my appointment?",
+        answer:
+          "Most mobile groomers give a window rather than an exact time, since travel between stops varies with traffic and how long the previous appointment ran. Ask how tight their windows typically are when booking.",
+      },
+      {
+        question: "What if my dog has never been groomed before?",
+        answer:
+          "Tell the groomer in advance. A first-time groom is often shorter and more cautious than a routine one, focused on building a calm association rather than completing a full cut in one sitting.",
+      },
     ],
   },
   {
@@ -221,6 +253,12 @@ export const POSTS: Post[] = [
       "mobile groomer or salon",
       "stress free dog grooming",
       "cage free dog grooming",
+      "mobile dog grooming pros and cons",
+      "benefits of mobile dog grooming",
+      "mobile pet grooming vs salon grooming",
+      "at home dog grooming vs salon",
+      "best grooming option for anxious dogs",
+      "mobile dog grooming advantages",
     ],
     sections: [
       {
@@ -296,6 +334,16 @@ export const POSTS: Post[] = [
         answer:
           "Ask about their experience and training, insurance and licensing, how they handle a dog that becomes distressed, their policy on severe matting, and whether they use unattended heated dryers. Ask the same questions of mobile and salon groomers alike.",
       },
+      {
+        question: "Is mobile grooming safe for puppies?",
+        answer:
+          "Yes, and skipping the waiting room full of other animals can make it a gentler first experience than a salon. See [a puppy's first grooming appointment](/blog/puppy-first-grooming-appointment) for the right age to start.",
+      },
+      {
+        question: "Can I switch between mobile and salon grooming?",
+        answer:
+          "Yes, there's no rule against alternating. Some owners use mobile grooming for routine maintenance and a salon for an occasional elaborate trim that needs more equipment or two groomers.",
+      },
     ],
   },
   {
@@ -313,6 +361,12 @@ export const POSTS: Post[] = [
       "mobile cat groomer cost",
       "at home cat grooming",
       "cat grooming without carrier",
+      "cat grooming for long haired cats",
+      "mobile grooming for cats cost",
+      "cat lion cut grooming",
+      "cat de-matting groomer",
+      "stress free cat grooming",
+      "do cats need professional grooming",
     ],
     sections: [
       {
@@ -371,11 +425,21 @@ export const POSTS: Post[] = [
         answer:
           "Keep your cat in one room shortly beforehand so there's no chase through the house, and tell the groomer about any bite history, medical conditions, or past bad grooming experiences before they start handling your cat.",
       },
+      {
+        question: "Can mobile groomers handle a cat with no grooming history?",
+        answer:
+          "Experienced cat groomers can, but they'll usually go slower and ask more questions upfront — bite or scratch history, past vet visits, temperament — to adjust pacing rather than assuming the cat is used to handling.",
+      },
+      {
+        question: "Do indoor cats need professional grooming?",
+        answer:
+          "Short-haired indoor cats often self-groom adequately, but long-haired breeds and any cat prone to matting still benefit from periodic professional grooming, especially around the hindquarters and behind the ears where mats form first.",
+      },
     ],
   },
   {
     slug: "how-to-choose-a-mobile-dog-groomer",
-    title: "How to Choose a Mobile Dog Groomer: Questions to Ask First",
+    title: "How to Choose a Mobile Dog Groomer (Questions to Ask)",
     description:
       "A practical checklist for vetting a mobile groomer before you book — licensing, insurance, equipment, and the questions that reveal how they actually work.",
     category: "Guides",
@@ -388,6 +452,12 @@ export const POSTS: Post[] = [
       "mobile dog groomer questions to ask",
       "is my mobile groomer licensed",
       "mobile dog grooming red flags",
+      "mobile dog groomer insurance",
+      "vetting a mobile dog groomer",
+      "mobile pet groomer reviews",
+      "mobile dog grooming licensing requirements",
+      "how to find a good mobile groomer",
+      "mobile dog groomer certification",
     ],
     sections: [
       {
@@ -458,6 +528,16 @@ export const POSTS: Post[] = [
         answer:
           "Read for specifics rather than star counts — how a groomer handled an anxious dog, whether they warned about matting before shaving, whether the price matched the quote. How a business responds to negative reviews is often more revealing than the reviews themselves.",
       },
+      {
+        question: "How do I verify a mobile groomer's insurance?",
+        answer:
+          "Ask directly for the name of their insurance provider or a certificate of insurance — a legitimate operator can usually produce one without hesitation. Vague answers or reluctance are worth treating as a caution sign.",
+      },
+      {
+        question: "Is a lower price always a red flag?",
+        answer:
+          "Not automatically, but a price far below everyone else's in the same area is worth asking about directly — it can mean less experience, no insurance, or corners cut on time per dog. Compare what's included, not just the number.",
+      },
     ],
   },
   {
@@ -475,6 +555,12 @@ export const POSTS: Post[] = [
       "reactive dog grooming",
       "fear free dog grooming",
       "stress free grooming for dogs",
+      "grooming aggressive dog safely",
+      "senior dog grooming tips",
+      "anxious dog grooming tips",
+      "fear free certified groomer",
+      "grooming a dog that hates the groomer",
+      "sedated dog grooming",
     ],
     sections: [
       {
@@ -537,11 +623,21 @@ export const POSTS: Post[] = [
         answer:
           "A vet-supervised sedated groom is sometimes the safer and kinder option. A responsible mobile groomer will say this directly rather than attempt a groom that risks injury to the dog or themselves — ask in advance how they handle a dog that turns out to be unsafe to continue.",
       },
+      {
+        question: "Should I sedate my dog for grooming at home?",
+        answer:
+          "Only under veterinary guidance, never with over-the-counter or human medication. A vet can prescribe an appropriate sedative for a dog whose anxiety or reactivity makes a conscious groom unsafe, and should be consulted on the plan.",
+      },
+      {
+        question: "How do I find a groomer experienced with reactive dogs?",
+        answer:
+          "Ask directly rather than guessing from a website — specifically whether they've worked with reactive dogs before and what their plan is if a dog shows aggression. [Search groomers by zip code](/cities) and call a few before booking.",
+      },
     ],
   },
   {
     slug: "dog-grooming-schedule-by-breed",
-    title: "How Often Should You Groom Your Dog? A Breed-by-Breed Schedule",
+    title: "How Often Should You Groom Your Dog? By Coat Type",
     description:
       "How grooming frequency actually depends on coat type rather than breed size, with realistic schedules for smooth, double, curly, and wire coats.",
     category: "Guides",
@@ -554,6 +650,12 @@ export const POSTS: Post[] = [
       "how often should dogs be groomed",
       "dog grooming frequency by breed",
       "how often to brush dog",
+      "grooming schedule by coat type",
+      "how often to groom a double coated dog",
+      "how often to groom a poodle",
+      "dog grooming interval",
+      "puppy grooming schedule",
+      "how often to groom a doodle",
     ],
     sections: [
       {
@@ -619,11 +721,21 @@ export const POSTS: Post[] = [
         answer:
           "Loose hair that would normally be brushed out gets trapped in the curl and mats. A coat left twice as long as usual is often matted enough to need a full shave rather than a trim, which is why curly and doodle coats are the least forgiving to skip.",
       },
+      {
+        question: "Do puppies need grooming on the same schedule as adult dogs?",
+        answer:
+          "Not exactly — puppies with continuously-growing coats often visit every 3 to 4 weeks for short, gentle sessions focused on building comfort with handling, moving to the normal adult interval once grown. See [a puppy's first grooming appointment](/blog/puppy-first-grooming-appointment).",
+      },
+      {
+        question: "Does grooming frequency change with the seasons?",
+        answer:
+          "For double-coated breeds, yes — book around the spring and fall coat blow for a de-shedding treatment. Other coat types generally stay on the same year-round interval.",
+      },
     ],
   },
   {
     slug: "deshedding-treatment-double-coated-dogs",
-    title: "De-Shedding Treatments for Double-Coated Dogs: What's Actually Involved",
+    title: "De-Shedding Treatments for Double-Coated Dogs",
     description:
       "What a professional de-shedding treatment does differently from a regular bath and brush, which breeds benefit most, and why shaving isn't the answer.",
     category: "Guides",
@@ -636,6 +748,12 @@ export const POSTS: Post[] = [
       "husky shedding treatment",
       "double coat grooming",
       "dog shedding treatment cost",
+      "deshedding treatment cost",
+      "how to stop dog shedding",
+      "undercoat rake for dogs",
+      "golden retriever shedding treatment",
+      "should I shave my husky",
+      "dog coat blow season",
     ],
     sections: [
       {
@@ -693,11 +811,21 @@ export const POSTS: Post[] = [
         answer:
           "It is usually an add-on to a standard groom rather than a separate visit, typically adding $20 to $40 to the base price depending on coat density and how overdue the dog is.",
       },
+      {
+        question: "Can I de-shed my dog myself at home?",
+        answer:
+          "Partially. A home undercoat rake used two or three times a week during shedding season helps a lot, but a professional treatment with proper shampoo, drying, and tools reaches undercoat a home brush alone usually can't fully clear.",
+      },
+      {
+        question: "Will a de-shedding treatment stop my dog from shedding completely?",
+        answer:
+          "No treatment stops shedding entirely — it's a natural, ongoing process. A de-shedding treatment reduces the volume of loose hair released around your home by removing what's already dead and ready to fall out.",
+      },
     ],
   },
   {
     slug: "puppy-first-grooming-appointment",
-    title: "A Puppy's First Grooming Appointment: When to Start and How to Prepare",
+    title: "Puppy's First Grooming Appointment: When to Start",
     description:
       "The right age to start professional grooming, what a puppy's first visit should actually cover, and how to make it a good experience rather than a stressful one.",
     category: "Guides",
@@ -710,6 +838,12 @@ export const POSTS: Post[] = [
       "puppy grooming age",
       "first time puppy groom",
       "puppy grooming tips",
+      "puppy grooming checklist",
+      "how to prepare puppy for grooming",
+      "puppy grooming vaccination requirements",
+      "best age to groom a puppy",
+      "puppy grooming near me",
+      "puppy first bath and trim",
     ],
     sections: [
       {
@@ -768,6 +902,16 @@ export const POSTS: Post[] = [
         question: "How often should a puppy be groomed?",
         answer:
           "Roughly every 3 to 4 weeks through the first six months for continuously-growing coats, mainly for gentle, repeated exposure rather than strict coat need. Move to the normal adult schedule for that coat type once your puppy is grown.",
+      },
+      {
+        question: "What if my puppy is scared during their first grooming visit?",
+        answer:
+          "A good groomer slows down, shortens the session, or stops rather than pushing through — the goal of a first visit is a calm experience, not a complete groom. Mention any nervousness you've noticed at home before the appointment starts.",
+      },
+      {
+        question: "Should I be present during my puppy's first grooming appointment?",
+        answer:
+          "Most groomers prefer handling the puppy without the owner present, since puppies, like adult dogs, are often calmer without their owner in sight. Ask the groomer's preference when booking.",
       },
     ],
   },
