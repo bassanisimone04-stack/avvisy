@@ -23,7 +23,7 @@ export async function generateMetadata({
   const city = getCity(citySlug);
   if (!city) return {};
   const title = `Mobile Dog Groomers in ${city.city}, ${city.state}`;
-  const description = `Compare verified mobile dog groomers serving ${city.city}, ${city.state}. See zip code coverage, pricing, and request a free quote.`;
+  const description = `Compare mobile dog groomers serving ${city.city}, ${city.state}. See contact details and request a free quote.`;
 
   return {
     title,
@@ -65,7 +65,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
       <h1 className="mt-3 text-4xl">Mobile Dog Groomers in {city.city}, {city.state}</h1>
       <p className="mt-3 max-w-2xl text-ink-soft">
         {groomers.length > 0
-          ? `${groomers.length} verified mobile groomer${groomers.length === 1 ? "" : "s"} serving ${city.city} by zip code.`
+          ? `${groomers.length} mobile groomer${groomers.length === 1 ? "" : "s"} listed in ${city.city} so far.`
           : `We're building out coverage for ${city.city}. Own a van here?`}{" "}
         <Link href="/claim" className="font-semibold text-teal-dark underline">
           Claim your free listing
