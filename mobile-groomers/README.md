@@ -108,12 +108,14 @@ back to free rather than deleting it — the business keeps its page and reviews
 
 Listings live in Supabase when configured, falling back to
 `src/data/groomers.json`; both are read through `src/lib/groomers.ts`. The
-seed file holds 22 **real** unclaimed businesses (name, city, phone, website —
+seed file holds 21 **real** unclaimed businesses (name, city, phone, website —
 compiled from public web search results, then cross-checked against a second
-independent source per business: Yelp, BBB or Nextdoor), 2 each across all 12
-featured metros except Denver and Atlanta (1 each — the only other Atlanta
-candidate found turned out to be based 150 miles away in Evans/Martinez, GA,
-and was dropped rather than mislabeled). No fabricated rating, review count,
+independent source per business: Yelp, BBB or Nextdoor), 2 each across 11 of
+the 12 featured metros (Seattle, Denver and Atlanta have 1 each — one of two
+original Seattle candidates was dropped after the cross-check showed it had
+converted to a fixed salon, and the only other Atlanta candidate found
+turned out to be based 150 miles away in Evans/Martinez, GA and was dropped
+rather than mislabeled). No fabricated rating, review count,
 zip coverage, pricing or service tags are included, because none of that was
 independently confirmed — see "Honesty by construction" below. Paid tiers
 rank above free ones within a market, then by rating — the ordering the Pro
