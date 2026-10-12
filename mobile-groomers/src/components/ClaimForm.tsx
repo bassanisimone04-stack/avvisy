@@ -3,7 +3,13 @@
 import { useState } from "react";
 import { submitClaim } from "@/lib/actions/claim";
 
-export default function ClaimForm({ listingSlug }: { listingSlug?: string }) {
+export default function ClaimForm({
+  listingSlug,
+  citySlug,
+}: {
+  listingSlug?: string;
+  citySlug?: string;
+}) {
   const [state, setState] = useState<"idle" | "pending" | "done" | "verify">("idle");
   const [error, setError] = useState("");
 
@@ -48,6 +54,7 @@ export default function ClaimForm({ listingSlug }: { listingSlug?: string }) {
       <p className="mt-1 text-sm text-ink-soft">We&apos;ll email you a verification link.</p>
 
       {listingSlug && <input type="hidden" name="listing" value={listingSlug} />}
+      {citySlug && <input type="hidden" name="city" value={citySlug} />}
 
       <div className="mt-6 space-y-4">
         <div>

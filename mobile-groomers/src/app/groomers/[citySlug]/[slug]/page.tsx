@@ -143,7 +143,7 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
               <p className="mt-3 leading-relaxed text-ink-soft">
                 This listing was compiled from public business information and has not
                 been claimed yet. {groomer.name} hasn&apos;t added a description —{" "}
-                <Link href={`/claim?listing=${groomer.slug}`} className="font-semibold text-teal-dark underline">
+                <Link href={`/claim?listing=${groomer.slug}&city=${groomer.citySlug}`} className="font-semibold text-teal-dark underline">
                   is this your business?
                 </Link>
               </p>
@@ -195,7 +195,7 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
               Claim this listing to edit your zip codes, add your booking link, and receive
               direct leads from pet owners in {groomer.city} — free to start.
             </p>
-            <Link href={`/claim?listing=${groomer.slug}`} className="btn btn-navy mt-5">
+            <Link href={`/claim?listing=${groomer.slug}&city=${groomer.citySlug}`} className="btn btn-navy mt-5">
               Claim This Listing
             </Link>
           </section>

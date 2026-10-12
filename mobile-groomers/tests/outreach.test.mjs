@@ -141,6 +141,25 @@ test("listing and claim URLs are built from the slugs", () => {
   assert.match(msg.body, /https:\/\/example\.com\/claim\?listing=pawmobile/);
 });
 
+test("the claim URL carries the city slug, since the listing slug alone is not unique", () => {
+  // slug is unique only per (city_slug, slug) — two businesses in different
+  // metros can share one, so the claim link must disambiguate.
+  const msg = buildMessage({ prospect: base, step: emailStep, config });
+  assert.match(
+    msg.body,
+    /https:\/\/example\.com\/claim\?listing=pawmobile&city=los-angeles-ca/,
+  );
+});
+
+test("a listing slug with no city slug falls back to the bare claim URL", () => {
+  const msg = buildMessage({
+    prospect: { ...base, city_slug: "" },
+    step: emailStep,
+    config,
+  });
+  assert.match(msg.body, /https:\/\/example\.com\/claim\?listing=pawmobile(?!&)/);
+});
+
 test("a prospect with no listing yet falls back to the bare site and claim URLs", () => {
   const msg = buildMessage({
     prospect: { ...base, listing_slug: "", city_slug: "" },

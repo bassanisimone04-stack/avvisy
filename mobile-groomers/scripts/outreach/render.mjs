@@ -120,7 +120,14 @@ export function buildMessage({ prospect, step, config, suppressed = new Set() })
     zip: prospect.zip,
     listingUrl:
       slug && citySlug ? `${config.siteUrl}/groomers/${citySlug}/${slug}` : config.siteUrl,
-    claimUrl: slug ? `${config.siteUrl}/claim?listing=${slug}` : `${config.siteUrl}/claim`,
+    // slug alone is only unique per (city_slug, slug) — carry both so the
+    // claim lands on the right business even if another metro reuses the slug.
+    claimUrl:
+      slug && citySlug
+        ? `${config.siteUrl}/claim?listing=${slug}&city=${citySlug}`
+        : slug
+          ? `${config.siteUrl}/claim?listing=${slug}`
+          : `${config.siteUrl}/claim`,
     senderName: config.senderName,
     senderAddress: config.senderAddress,
     unsubscribeUrl: `${config.siteUrl}/unsubscribe?e=${encodeURIComponent(prospect.email ?? "")}`,

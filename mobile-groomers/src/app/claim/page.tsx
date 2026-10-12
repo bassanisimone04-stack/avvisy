@@ -11,10 +11,12 @@ export const metadata: Metadata = {
 export default async function ClaimPage({
   searchParams,
 }: {
-  searchParams: Promise<{ listing?: string }>;
+  searchParams: Promise<{ listing?: string; city?: string }>;
 }) {
-  // Outreach links carry ?listing=<slug> so the claim lands on the right page.
-  const { listing } = await searchParams;
+  // Outreach links carry ?listing=<slug>&city=<citySlug>. Both are required to
+  // find the right row: slug is only unique per (city_slug, slug), so two
+  // businesses in different metros can share a slug.
+  const { listing, city } = await searchParams;
   return (
     <section className="container-page grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr]">
       <div>
@@ -41,7 +43,7 @@ export default async function ClaimPage({
       </div>
 
       <div className="card h-fit p-7">
-        <ClaimForm listingSlug={listing} />
+        <ClaimForm listingSlug={listing} citySlug={city} />
       </div>
     </section>
   );
