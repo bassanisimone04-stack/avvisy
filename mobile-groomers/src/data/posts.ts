@@ -298,6 +298,247 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "mobile-cat-grooming",
+    title: "Mobile Cat Grooming: What to Expect and What It Costs",
+    description:
+      "Mobile grooming works especially well for cats. What a visit covers, how much it costs, and how it differs from grooming a dog.",
+    category: "Guides",
+    readingMinutes: 5,
+    published: "2026-03-10",
+    updated: "2026-03-10",
+    keywords: [
+      "mobile cat grooming",
+      "cat grooming near me",
+      "mobile cat groomer cost",
+      "at home cat grooming",
+      "cat grooming without carrier",
+    ],
+    sections: [
+      {
+        heading: "Why mobile grooming suits cats particularly well",
+        paragraphs: [
+          "Most of the stress in a cat's grooming visit happens before the groomer ever touches them: the carrier, the car ride, and a waiting room that usually smells like dog. A mobile van skips all three. The cat stays on familiar territory, there is no carrier confrontation, and no other animals are present at any point.",
+          "This is not a minor convenience. Cats regulate stress largely through scent-marked territory and predictable routine, and a clinic or salon visit disrupts both at once. Groomers who work with cats mobile-only often report that cats who fight the carrier at home settle within minutes once the groom starts in the driveway — the hard part was getting there, not the grooming itself.",
+        ],
+      },
+      {
+        heading: "What a mobile cat grooming visit includes",
+        paragraphs: [
+          "Core services are a bath, blow-dry, brush-out, nail trim, and sanitary trim (hygiene clipping around the tail and hindquarters, which matters more for cats than people expect). Long-haired breeds — Persians, Maine Coons, Ragdolls — often need a full de-shedding treatment or a partial lion-cut if matting has set in.",
+          "Cats mat differently from dogs: it tends to concentrate behind the ears, under the arms, and around the collar, rather than across the whole coat. A groomer experienced with cats checks those spots first rather than assuming a dog-style brush-out will work.",
+        ],
+      },
+      {
+        heading: "How much it costs",
+        paragraphs: [
+          "Mobile cat grooming typically runs $75 to $130, close to the lower half of the [range for mobile dog grooming](/blog/mobile-dog-grooming-cost) — cats are smaller and faster to bathe, but handling a stressed cat safely takes real skill, which keeps the price from dropping much further. A lion-cut or de-matting shave for a severely matted long-hair runs toward the top of that range or above it.",
+          "Not every mobile groomer takes cats. Check the listing's tags or ask directly — handling an unhappy cat safely is a different skill set from dogs, and a van that does not regularly groom cats may decline rather than risk an injury to the cat or themselves.",
+        ],
+      },
+      {
+        heading: "Preparing your cat for the visit",
+        paragraphs: [
+          "Withhold food for a couple of hours beforehand if your cat tends toward nausea with handling — check with the groomer, since this is not universal advice. Keep your cat in a single room shortly before the appointment so you are not chasing them through the house when the van arrives; a cat that senses a chase is already harder to groom calmly twenty minutes later.",
+          "Mention any history of biting, prior vet visits that went badly, or medical conditions (heart murmurs, arthritis, recent surgery) before the groomer starts. A cat groomer who knows in advance will adjust handling and pacing; one who finds out mid-groom has to stop and reassess, which is harder on the cat.",
+        ],
+      },
+      {
+        heading: "Signs a cat should see a vet instead of — or before — a groomer",
+        paragraphs: [
+          "Severe matting that pulls visibly on the skin, open sores under mats, or a cat that cannot be safely handled at all are reasons to involve a veterinarian, who can sedate for a medical shave when a conscious groom is not safe. A responsible mobile groomer will tell you this rather than attempt it anyway — ask how they handle a cat that turns out to be too distressed to continue.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do mobile groomers groom cats, not just dogs?",
+        answer:
+          "Many do, but not all — cat handling is a distinct skill, so check a listing's tags or ask directly before booking. A groomer experienced with cats will ask about bite or scratch history in advance rather than finding out mid-groom.",
+      },
+      {
+        question: "How much does mobile cat grooming cost?",
+        answer:
+          "Typically $75 to $130 per visit, slightly below the low end of mobile dog grooming. A lion-cut or de-matting shave for a severely matted long-haired cat runs toward the top of that range or higher.",
+      },
+      {
+        question: "Is mobile grooming less stressful for cats than a salon?",
+        answer:
+          "Usually, yes. Most of a cat's grooming stress comes from the carrier, the car ride, and the smell of other animals in a waiting room — a mobile van removes all three, so the cat is groomed in a space that still smells like home.",
+      },
+      {
+        question: "Do I need to do anything before the groomer arrives for my cat?",
+        answer:
+          "Keep your cat in one room shortly beforehand so there's no chase through the house, and tell the groomer about any bite history, medical conditions, or past bad grooming experiences before they start handling your cat.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-choose-a-mobile-dog-groomer",
+    title: "How to Choose a Mobile Dog Groomer: Questions to Ask First",
+    description:
+      "A practical checklist for vetting a mobile groomer before you book — licensing, insurance, equipment, and the questions that reveal how they actually work.",
+    category: "Guides",
+    readingMinutes: 6,
+    published: "2026-03-24",
+    updated: "2026-03-24",
+    keywords: [
+      "how to choose a mobile dog groomer",
+      "best mobile dog groomer near me",
+      "mobile dog groomer questions to ask",
+      "is my mobile groomer licensed",
+      "mobile dog grooming red flags",
+    ],
+    sections: [
+      {
+        heading: "Start with what the van actually is",
+        paragraphs: [
+          "\"Mobile grooming\" covers two very different setups: a fully self-contained van with its own water tank, water heater, and generator or solar power, and a smaller operation that asks to use your outdoor spigot or an exterior outlet. Neither is automatically wrong, but you want to know which one is showing up. Ask directly — [most professional vans are self-contained](/blog/first-mobile-grooming-appointment) and the answer tells you how established the operation is.",
+          "If you have narrowed it down to a few options, [search your zip code](/cities) to see which vans actually list your area rather than guessing from a website's service-area map, which is often broader than what a single van realistically covers in a day.",
+        ],
+      },
+      {
+        heading: "Licensing and insurance",
+        paragraphs: [
+          "Requirements vary by state and city — some require a cosmetology-adjacent pet grooming license, most require none at all, but liability insurance is close to universal among legitimate operators because a single claim (a nicked skin fold, a slipped harness) can otherwise end a small business. Ask whether they carry liability insurance and, if your state licenses groomers, whether they hold that license. A groomer with nothing to show for either question is not automatically unsafe, but it removes a layer of protection if something goes wrong.",
+        ],
+      },
+      {
+        heading: "Questions about the groom itself",
+        paragraphs: [
+          "These separate a careful operator from one who is just fast.",
+        ],
+        list: [
+          "How long have you been grooming professionally, and did you train formally or apprentice?",
+          "What is your plan if my dog becomes distressed mid-groom — do you stop, or push through?",
+          "Do you use cage dryers or leave a dog under a heated dryer unattended? (Reputable mobile groomers generally do not, since there is no cage to begin with.)",
+          "What is your policy on matting — do you charge extra, decline, or shave it out, and at what point?",
+          "Can you handle my breed and size? Giant breeds and double coats take meaningfully longer.",
+          "Do you perform expression of anal glands, and is it included or an add-on?",
+        ],
+      },
+      {
+        heading: "Reading reviews without being misled by them",
+        paragraphs: [
+          "A handful of five-star reviews says little; look for reviews that describe specifics — how a groomer handled an anxious or reactive dog, whether they called about unexpected matting before shaving, whether pricing matched the quote. A string of reviews praising the same groomer by name inside a multi-groomer operation tells you which individual to request, which matters more than the business's overall rating.",
+          "Pay closer attention to how a business responds to a negative review than to the negative review itself. A defensive or dismissive reply is a worse sign than the original complaint.",
+        ],
+      },
+      {
+        heading: "What a transparent quote looks like",
+        paragraphs: [
+          "A groomer who gives a confident flat price over the phone without asking your dog's breed, approximate weight, coat condition, and when it was last groomed is guessing — and the price will likely change at the door once they see a matted or oversized coat in person. A groomer who asks those questions before quoting, and tells you upfront what triggers an add-on fee, is the one less likely to surprise you.",
+        ],
+      },
+      {
+        heading: "Red flags worth walking away from",
+        paragraphs: [
+          "No visible business name on the van, reluctance to answer how long they have been grooming, dismissiveness about matting or distress policies, and pressure to book immediately without answering your questions are all reasons to keep looking. A groomer confident in their own work generally welcomes the questions above rather than treating them as an inconvenience.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What's the most important question to ask a mobile groomer?",
+        answer:
+          "How they handle a dog that becomes distressed mid-groom. The answer reveals more about their actual practice than years of experience or reviews — a groomer who stops and reassesses is a better sign than one who says they \"push through.\"",
+      },
+      {
+        question: "Do mobile dog groomers need to be licensed?",
+        answer:
+          "It depends on the state and city — some require a grooming license, most do not. Liability insurance is close to universal among established operators, so ask about insurance even where a license isn't legally required.",
+      },
+      {
+        question: "How do I know if a mobile grooming quote is accurate?",
+        answer:
+          "A trustworthy quote comes after the groomer asks about your dog's breed, weight, coat condition, and last groom date — not a flat price given blind. If the price changes significantly at the door, ask what specifically triggered the change before agreeing to it.",
+      },
+      {
+        question: "Should I pick a groomer based on reviews alone?",
+        answer:
+          "Read for specifics rather than star counts — how a groomer handled an anxious dog, whether they warned about matting before shaving, whether the price matched the quote. How a business responds to negative reviews is often more revealing than the reviews themselves.",
+      },
+    ],
+  },
+  {
+    slug: "mobile-grooming-anxious-senior-reactive-dogs",
+    title: "Mobile Grooming for Anxious, Senior, and Reactive Dogs",
+    description:
+      "A practical guide to grooming dogs who find the process hardest: what to tell the groomer, how to prepare, and the warning signs to watch for.",
+    category: "Guides",
+    readingMinutes: 6,
+    published: "2026-04-07",
+    updated: "2026-04-07",
+    keywords: [
+      "mobile grooming anxious dog",
+      "grooming senior dog at home",
+      "reactive dog grooming",
+      "fear free dog grooming",
+      "stress free grooming for dogs",
+    ],
+    sections: [
+      {
+        heading: "Why these dogs are different, not just \"harder\"",
+        paragraphs: [
+          "An anxious, senior, or reactive dog is not simply a more difficult version of an easy dog — the grooming process itself needs to change, not just the groomer's patience. A senior dog with arthritis cannot stand on a table as long as a younger dog regardless of temperament. A reactive dog is not being managed well if it is merely tolerated in a room with other animals; it needs to never encounter them. [Mobile grooming removes the waiting room and the car ride](/blog/mobile-grooming-vs-salon) by default, which handles a lot of this — but the groomer's actual technique still matters.",
+        ],
+      },
+      {
+        heading: "What to tell the groomer before they start",
+        paragraphs: [
+          "Specifics help far more than a general warning. \"He's nervous\" tells a groomer little; \"he panics when his back paws are touched and has nipped once when startled there\" tells them exactly where to go slowly. The same applies to seniors: name the joints that are sore, whether they can stand unsupported for the full groom, and whether they need breaks.",
+          "Mention medications, since some affect temperature regulation or bleeding risk (common in older dogs on NSAIDs), and mention any recent vet visits — a dog in quiet pain from an ear infection or a sore tooth can present as sudden reactivity that has nothing to do with the groomer.",
+        ],
+      },
+      {
+        heading: "What fear-free handling actually looks like",
+        paragraphs: [
+          "Some groomers advertise \"fear free\" training (a real certification, not just a marketing phrase) — it covers reading early stress signals, working at the dog's pace rather than a fixed schedule, and stopping before a dog escalates rather than after. In practice this looks like short sessions with breaks for a very anxious dog, or a groom split across two visits rather than forced into one.",
+          "Ask directly whether they will stop if your dog shows real distress, versus completing the groom regardless once started. The honest answer from a good groomer is that an unfinished, calmer groom beats a finished, traumatic one — and that a second shorter visit is sometimes the right call.",
+        ],
+      },
+      {
+        heading: "Senior dogs: the physical side",
+        paragraphs: [
+          "Ask whether the van has a lift table or ramp, since lifting a large senior dog by hand is harder on both the dog and the groomer than a working lift. Standing time matters — ask whether the groomer can work with a dog lying down for parts of the groom rather than standing the whole time, and whether they check paw pads and nails more frequently (older dogs often wear nails unevenly from changed gait, which needs attention most owners don't think to flag).",
+        ],
+      },
+      {
+        heading: "Building tolerance over repeat visits",
+        paragraphs: [
+          "For a dog that is anxious but not reactive to the point of risk, the single most effective thing is staying with the same groomer every time rather than switching. Familiarity compounds — a dog who was tense on the first visit is often visibly calmer by the third, provided nothing traumatic happened in between. This is one more reason a short, deliberately incomplete first groom (just a bath and a brush-out, nothing more) can be worth proposing to the groomer for a dog you know will struggle.",
+        ],
+      },
+      {
+        heading: "When to involve your vet first",
+        paragraphs: [
+          "A dog whose reactivity is severe enough to risk a bite, or a senior dog with conditions that make standing or restraint genuinely risky, may need a vet-supervised sedated groom rather than a conscious one. This is not a failure on the groomer's or owner's part — it is the safer and often kinder option, and a good mobile groomer will say so rather than attempt a groom that is not safe for the dog, themselves, or both.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is mobile grooming better for anxious dogs than a salon?",
+        answer:
+          "Usually, yes — removing the car ride, the waiting room, and other animals addresses most of what triggers anxiety in the first place. The groomer's individual technique still matters, so ask how they handle a dog that becomes distressed rather than assuming the format alone solves it.",
+      },
+      {
+        question: "What is fear-free grooming?",
+        answer:
+          "A real certification (not just marketing language) covering how to read early stress signals, work at the dog's pace, and stop before a dog escalates rather than after. Ask a groomer directly whether they hold this training if it matters to you.",
+      },
+      {
+        question: "Can a senior dog with arthritis still be groomed in a van?",
+        answer:
+          "Yes, with adjustments — ask whether the van has a lift table or ramp, and whether the groomer can work with the dog lying down for part of the session instead of standing the whole time. Older dogs also need more frequent paw and nail checks due to changed gait.",
+      },
+      {
+        question: "What if my dog is too reactive to groom safely while conscious?",
+        answer:
+          "A vet-supervised sedated groom is sometimes the safer and kinder option. A responsible mobile groomer will say this directly rather than attempt a groom that risks injury to the dog or themselves — ask in advance how they handle a dog that turns out to be unsafe to continue.",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
