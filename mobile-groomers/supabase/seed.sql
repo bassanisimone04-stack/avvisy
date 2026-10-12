@@ -4,14 +4,17 @@
 --
 -- These are unclaimed, unverified listings compiled from public web search
 -- results (business name, city, phone, website), cross-checked against a
--- second independent source per business (Yelp/BBB/Nextdoor), with one
--- business (a suspected Atlanta match actually 150 miles away) dropped
--- rather than mislabeled and one (Cloud Mobile Grooming, since converted
--- to a fixed salon) removed after the check showed it no longer offers
--- mobile service. No rating, review count, zip coverage, pricing or
--- service tags are included, because none of that was independently
--- confirmed. That is the honest state of an unclaimed listing: the
--- business fills the rest in by claiming its page.
+-- second independent source per business (Yelp/BBB/Nextdoor). Several
+-- candidates were rejected rather than included: one suspected Atlanta
+-- match was actually 150 miles away in Evans/Martinez, GA; one Seattle
+-- business (Cloud Mobile Grooming) had converted to a fixed salon; one
+-- Denver franchise location could not be independently verified beyond
+-- its own site and sits one letter away from an unrelated business's
+-- name (Lucky Dog Grooming, a non-mobile salon) sharing its city. No
+-- rating, review count, zip coverage, pricing or service tags are
+-- included, because none of that was independently confirmed. That is
+-- the honest state of an unclaimed listing: the business fills the rest
+-- in by claiming its page.
 -- ===========================================================================
 
 insert into groomers (
@@ -120,6 +123,16 @@ insert into groomers (
 (
   'anderson-mobile-grooming', 'Anderson Mobile Grooming', 'Charlotte', 'NC', 'charlotte-nc',
   '+1 (847) 271-9476', 'https://andersonmobilegrooming.com/', 'Family-owned mobile grooming serving the Charlotte metro area.',
+  'free', false
+),
+(
+  'furpets-grooming', 'FurPets Grooming', 'Atlanta', 'GA', 'atlanta-ga',
+  '+1 (678) 429-6255', 'https://www.furpetsgrooming.com/', 'Family-owned mobile dog and cat grooming across Metro Atlanta.',
+  'free', false
+),
+(
+  'bark-in-style-seattle', 'Bark in Style Seattle', 'Seattle', 'WA', 'seattle-wa',
+  '+1 (206) 823-8362', 'https://www.barkinstyleseattle.com/', 'Mobile grooming out of Wallingford — home, office, RV park, or marina.',
   'free', false
 )
 on conflict (city_slug, slug) do nothing;

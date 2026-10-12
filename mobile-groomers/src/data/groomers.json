@@ -242,5 +242,29 @@
     "tagline": "Family-owned mobile grooming serving the Charlotte metro area.",
     "tier": "free",
     "verified": false
+  },
+  {
+    "slug": "furpets-grooming",
+    "name": "FurPets Grooming",
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta-ga",
+    "phone": "+1 (678) 429-6255",
+    "website": "https://www.furpetsgrooming.com/",
+    "tagline": "Family-owned mobile dog and cat grooming across Metro Atlanta.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "bark-in-style-seattle",
+    "name": "Bark in Style Seattle",
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle-wa",
+    "phone": "+1 (206) 823-8362",
+    "website": "https://www.barkinstyleseattle.com/",
+    "tagline": "Mobile grooming out of Wallingford — home, office, RV park, or marina.",
+    "tier": "free",
+    "verified": false
   }
 ]
