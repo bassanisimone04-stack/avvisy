@@ -23,11 +23,19 @@ export async function generateMetadata({
   const city = getCity(citySlug);
   if (!city) return {};
   const title = `Mobile Dog Groomers in ${city.city}, ${city.state}`;
-  const description = `Compare mobile dog groomers serving ${city.city}, ${city.state}. See contact details and request a free quote.`;
+  const description = `Compare van-based mobile dog groomers serving ${city.city}, ${city.state}. See real contact details, check coverage by zip code, and request a free quote.`;
+  const keywords = [
+    `mobile dog groomer ${city.city}`,
+    `mobile dog grooming ${city.city} ${city.state}`,
+    `at-home dog grooming ${city.city}`,
+    `dog groomer near me ${city.city}`,
+    `mobile pet grooming ${city.city}`,
+  ];
 
   return {
     title,
     description,
+    keywords,
     alternates: { canonical: `/cities/${city.slug}` },
     openGraph: {
       title,

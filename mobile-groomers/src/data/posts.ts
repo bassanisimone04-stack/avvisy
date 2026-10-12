@@ -43,7 +43,7 @@ export const POSTS: Post[] = [
     slug: "mobile-dog-grooming-cost",
     title: "How Much Does Mobile Dog Grooming Cost?",
     description:
-      "What US mobile groomers charge, what drives the price up or down, and how to compare quotes without getting surprised at the door.",
+      "What US mobile dog groomers charge per visit, what drives the price up or down by coat and size, and how to compare quotes without surprises at the door.",
     category: "Costs",
     readingMinutes: 6,
     published: "2026-01-15",
@@ -149,7 +149,7 @@ export const POSTS: Post[] = [
     slug: "first-mobile-grooming-appointment",
     title: "First Mobile Dog Grooming Appointment: What to Expect",
     description:
-      "Where the van parks, whether it needs your water or power, how long it takes, and how to prepare so the appointment runs smoothly.",
+      "Where the van parks, whether it needs your water or power hookup, how long a visit takes, and exactly how to prepare so it runs smoothly.",
     category: "Guides",
     readingMinutes: 5,
     published: "2026-02-03",
@@ -242,7 +242,7 @@ export const POSTS: Post[] = [
     slug: "mobile-grooming-vs-salon",
     title: "Mobile Grooming vs. Salon: Which Is Right for Your Dog?",
     description:
-      "An honest comparison of van-based and salon grooming, including the cases where a traditional salon is genuinely the better choice.",
+      "An honest, no-bias comparison of van-based and salon dog grooming, including the specific cases where a traditional salon is genuinely better.",
     category: "Guides",
     readingMinutes: 6,
     published: "2026-02-20",
@@ -350,7 +350,7 @@ export const POSTS: Post[] = [
     slug: "mobile-cat-grooming",
     title: "Mobile Cat Grooming: What to Expect and What It Costs",
     description:
-      "Mobile grooming works especially well for cats. What a visit covers, how much it costs, and how it differs from grooming a dog.",
+      "Mobile grooming works especially well for cats. What a visit covers, how much it costs, and how grooming a cat differs from grooming a dog.",
     category: "Guides",
     readingMinutes: 5,
     published: "2026-03-10",
@@ -544,7 +544,7 @@ export const POSTS: Post[] = [
     slug: "mobile-grooming-anxious-senior-reactive-dogs",
     title: "Mobile Grooming for Anxious, Senior, and Reactive Dogs",
     description:
-      "A practical guide to grooming dogs who find the process hardest: what to tell the groomer, how to prepare, and the warning signs to watch for.",
+      "A practical guide to grooming the dogs who find it hardest: what to tell the groomer in advance, how to prepare, and the warning signs to watch for.",
     category: "Guides",
     readingMinutes: 6,
     published: "2026-04-07",
@@ -639,7 +639,7 @@ export const POSTS: Post[] = [
     slug: "dog-grooming-schedule-by-breed",
     title: "How Often Should You Groom Your Dog? By Coat Type",
     description:
-      "How grooming frequency actually depends on coat type rather than breed size, with realistic schedules for smooth, double, curly, and wire coats.",
+      "How grooming frequency actually depends on coat type rather than breed size or name, with realistic schedules for smooth, double, curly, and wire coats.",
     category: "Guides",
     readingMinutes: 6,
     published: "2026-04-21",
@@ -827,7 +827,7 @@ export const POSTS: Post[] = [
     slug: "puppy-first-grooming-appointment",
     title: "Puppy's First Grooming Appointment: When to Start",
     description:
-      "The right age to start professional grooming, what a puppy's first visit should actually cover, and how to make it a good experience rather than a stressful one.",
+      "The right age to start professional puppy grooming, what a first visit should actually cover, and how to make it calm rather than stressful.",
     category: "Guides",
     readingMinutes: 5,
     published: "2026-05-19",

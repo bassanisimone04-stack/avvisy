@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     "at-home dog grooming",
     "mobile pet grooming van",
     "cat grooming near me",
+    "mobile dog grooming cost",
+    "best mobile dog groomer",
+    "dog grooming van",
+    "stress free dog grooming",
+    "mobile pet grooming directory",
   ],
   alternates: { canonical: "/" },
   openGraph: {

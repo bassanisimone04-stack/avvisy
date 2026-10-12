@@ -4,15 +4,24 @@ import { POSTS } from "@/data/posts";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 
+const BLOG_TITLE = "Mobile Grooming Guides & Advice";
+const BLOG_DESCRIPTION =
+  "Practical guides on mobile dog grooming costs, choosing a groomer, grooming schedules by coat type, anxious and senior dogs, and mobile cat grooming.";
+
 export const metadata: Metadata = {
-  title: "Mobile Grooming Guides & Advice",
-  description:
-    "Guides on mobile dog grooming costs, what to expect at your first appointment, and how it compares to a traditional salon.",
+  title: BLOG_TITLE,
+  description: BLOG_DESCRIPTION,
+  keywords: [
+    "mobile dog grooming guide",
+    "mobile dog grooming advice",
+    "dog grooming tips",
+    "mobile pet grooming blog",
+    "how to choose a dog groomer",
+  ],
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Mobile Grooming Guides & Advice",
-    description:
-      "Guides on mobile dog grooming costs, what to expect at your first appointment, and how it compares to a traditional salon.",
+    title: BLOG_TITLE,
+    description: BLOG_DESCRIPTION,
     url: `${SITE_URL}/blog`,
     siteName: SITE_NAME,
     type: "website",
