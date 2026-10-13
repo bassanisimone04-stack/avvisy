@@ -12,7 +12,9 @@ export default function PrivacyPage() {
   return (
     <section className="container-page max-w-3xl py-16 sm:py-20">
       <h1 className="text-4xl">Privacy Policy</h1>
-      <p className="mt-3 text-sm text-ink-soft">Last updated: {new Date().getFullYear()}</p>
+      {/* A real last-edit date, not the current year on every render — a
+          policy date should say when it last changed, not when it was viewed. */}
+      <p className="mt-3 text-sm text-ink-soft">Last updated: September 7, 2026</p>
 
       <div className="mt-8 space-y-8 leading-relaxed text-ink-soft">
         <div>

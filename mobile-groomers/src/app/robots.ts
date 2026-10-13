@@ -20,7 +20,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
         // Private surfaces, and pages with no standalone search value.
-        disallow: ["/api/", "/dashboard", "/login", "/auth/", "/unsubscribe"],
+        disallow: ["/api/", "/dashboard", "/login", "/auth/", "/unsubscribe", "/admin"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

@@ -12,7 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     POSTS[0]?.updated ?? "",
   );
 
-  const staticPages = ["", "/cities", "/pricing", "/claim", "/faq", "/blog"].map((path) => ({
+  const staticPages = ["", "/cities", "/pricing", "/claim", "/faq", "/blog", "/about", "/for-groomers"].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: path === "/blog" && newestPost ? new Date(newestPost) : now,
     changeFrequency: "weekly" as const,
