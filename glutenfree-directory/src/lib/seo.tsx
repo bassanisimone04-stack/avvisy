@@ -91,18 +91,38 @@ export function faqJsonLd(faqs: FaqItem[]) {
   };
 }
 
+// Tipo schema.org per categoria della directory: usare sempre "Restaurant" per
+// farmacie, hotel e gelaterie dichiarava a Google un'attivita' sbagliata.
+const SCHEMA_TYPE: Record<Business["category"], string> = {
+  ristorante: "Restaurant",
+  pizzeria: "Restaurant", // schema.org non ha "Pizzeria": si usa Restaurant + servesCuisine
+  "bar-pasticceria": "FoodEstablishment",
+  gelateria: "IceCreamShop",
+  hotel: "LodgingBusiness",
+  farmacia: "Pharmacy",
+  negozio: "Store",
+  supermercato: "GroceryStore",
+};
+
+/**
+ * Dati strutturati di una scheda locale. Contiene solo campi presenti e
+ * verificati nei dati: niente orari (non ancora verificati uno per uno), niente
+ * immagine generica del sito al posto di una foto del locale, niente
+ * recensioni se non ce ne sono di reali.
+ */
 export function localBusinessJsonLd(b: Business) {
+  const url = `${SITE_URL}/directory/${b.slug}`;
   return {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "@id": `${SITE_URL}/directory/${b.slug}`,
+    "@type": SCHEMA_TYPE[b.category] ?? "LocalBusiness",
+    "@id": url,
     name: b.name,
     description: b.description,
-    image: `${SITE_URL}/opengraph-image`,
-    servesCuisine: "Senza glutine",
-    priceRange: b.priceRange,
+    ...(b.category === "pizzeria" ? { servesCuisine: "Pizza" } : {}),
     telephone: b.phone,
-    url: `${SITE_URL}/directory/${b.slug}`,
+    url,
+    ...(b.website ? { sameAs: [b.website] } : {}),
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${b.address}, ${b.city}`)}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: b.address,
@@ -112,6 +132,9 @@ export function localBusinessJsonLd(b: Business) {
       addressCountry: "IT",
     },
     geo: { "@type": "GeoCoordinates", latitude: b.lat, longitude: b.lng },
+    ...(b.aicCertified
+      ? { additionalProperty: [{ "@type": "PropertyValue", name: "Programma AIC Alimentazione Fuori Casa", value: true }] }
+      : {}),
     ...(b.reviewCount > 0
       ? {
           aggregateRating: {

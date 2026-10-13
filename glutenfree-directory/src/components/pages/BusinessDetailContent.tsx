@@ -19,6 +19,7 @@ import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { formatDate } from "@/lib/format";
 import { JsonLd, faqJsonLd, localBusinessJsonLd } from "@/lib/seo";
+import { guidesMentioningBusiness } from "@/lib/related-guides";
 
 export default function BusinessDetailContent({ locale, slug }: { locale: Locale; slug: string }) {
   const base = getBusinessBySlug(slug);
@@ -30,6 +31,7 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
   const similar = getSimilarBusinesses(base).map((b) => getLocalizedBusiness(b, locale));
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${business.address}, ${business.city}`)}`;
   const city = cityName(business.city, locale);
+  const guides = guidesMentioningBusiness(base.slug, locale).slice(0, 4);
 
   return (
     <div className="container-page py-10">
@@ -109,6 +111,22 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
               {business.takeaway && <span className="chip chip-brand"><ShoppingBag size={12} /> {t.directory.filters.takeaway}</span>}
             </div>
           </div>
+
+          {/* Guide che citano questo locale (ricavate dai link degli articoli) */}
+          {guides.length > 0 && (
+            <div className="mt-10">
+              <h2 className="mb-3 text-xl font-bold text-ink">{locale === "en" ? "Guides that mention this venue" : "Guide che citano questo locale"}</h2>
+              <ul className="space-y-2">
+                {guides.map((g) => (
+                  <li key={g.id}>
+                    <Link href={localeHref(locale, `/blog/${g.slug}`)} className="flex items-center justify-between rounded-xl border border-line px-4 py-3 text-sm text-ink-soft hover:border-brand hover:text-brand-dark">
+                      <span>{g.title}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* FAQ */}
           <div className="mt-10">

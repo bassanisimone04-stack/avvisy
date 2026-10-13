@@ -12,6 +12,7 @@ import { productPhoto } from "@/lib/cover-photos";
 import { getLocalizedProduct } from "@/lib/i18n/content-product";
 import { ARTICLES } from "@/lib/mock-articles";
 import { getLocalizedArticle } from "@/lib/i18n/content-article";
+import { guidesMentioningProduct } from "@/lib/related-guides";
 import { getBusinessBySlug, BUSINESSES } from "@/lib/mock-businesses";
 import { cityName } from "@/lib/i18n/place-names";
 import { formatPrice, slugify } from "@/lib/format";
@@ -29,6 +30,7 @@ export default function ProductDetailContent({ locale, slug }: { locale: Locale;
   const related = PRODUCTS.filter((p) => p.id !== base.id && p.category === base.category).slice(0, 4);
   const recipes = ARTICLES.filter((a) => a.category === "Ricette" && a.contentHtml.includes(`/prodotti/${base.slug}`))
     .map((a) => getLocalizedArticle(a, locale));
+  const guides = guidesMentioningProduct(base.slug, locale);
   const stores = product.whereToBuy
     .map((name) => BUSINESSES.find((b) => b.name === name) ?? getBusinessBySlug(slugify(name)))
     .filter(Boolean);
@@ -92,6 +94,21 @@ export default function ProductDetailContent({ locale, slug }: { locale: Locale;
               <li key={r.id}>
                 <Link href={localeHref(locale, `/blog/${r.slug}`)} className="flex items-center justify-between rounded-xl border border-line px-4 py-3 text-sm text-ink-soft hover:border-brand hover:text-brand-dark">
                   <span>{r.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {guides.length > 0 && (
+        <div className="mt-14 max-w-2xl">
+          <h2 className="mb-4 text-2xl font-bold text-ink">{locale === "en" ? "Guides that mention this product" : "Guide che citano questo prodotto"}</h2>
+          <ul className="space-y-2">
+            {guides.map((g) => (
+              <li key={g.id}>
+                <Link href={localeHref(locale, `/blog/${g.slug}`)} className="flex items-center justify-between rounded-xl border border-line px-4 py-3 text-sm text-ink-soft hover:border-brand hover:text-brand-dark">
+                  <span>{g.title}</span>
                 </Link>
               </li>
             ))}

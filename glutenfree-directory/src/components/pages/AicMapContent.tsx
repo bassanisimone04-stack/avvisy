@@ -63,6 +63,35 @@ export default function AicMapContent({ locale }: { locale: Locale }) {
         <AicRestaurantsMap businesses={list} locale={locale} />
       </div>
 
+      {/* Elenco leggibile anche senza JavaScript: dà a ogni scheda un link in entrata
+          e a Google il percorso verso le pagine città. */}
+      <section className="mt-12" aria-label={en ? "AIC restaurants by city" : "Ristoranti AIC per città"}>
+        <h2 className="font-editorial text-2xl font-semibold text-ink">
+          {en ? "AIC restaurants and pizzerias, city by city" : "Ristoranti e pizzerie AIC, città per città"}
+        </h2>
+        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {[...list.reduce((m, b) => m.set(b.city, [...(m.get(b.city) ?? []), b]), new Map<string, typeof list>())]
+            .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))
+            .map(([c, items]) => (
+              <div key={c} className="card card-soft p-5">
+                <h3 className="font-semibold text-ink">
+                  <Link href={h(`/directory?comune=${encodeURIComponent(c)}`)} className="link-underline hover:text-brand-dark">
+                    {cityName(c, locale)}
+                  </Link>{" "}
+                  <span className="text-sm font-normal text-muted">({items.length})</span>
+                </h3>
+                <ul className="mt-2 space-y-1 text-sm">
+                  {items.map((b) => (
+                    <li key={b.id}>
+                      <Link href={h(`/directory/${b.slug}`)} className="text-brand-dark hover:underline">{b.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+        </div>
+      </section>
+
       <div className="mt-12 max-w-3xl">
         <h2 className="font-editorial text-2xl font-semibold text-ink">
           {en ? "What \"AIC restaurant\" means" : "Cosa significa \"ristorante AIC\""}

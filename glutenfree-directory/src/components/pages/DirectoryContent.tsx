@@ -11,6 +11,7 @@ import { JsonLd, itemListJsonLd, faqJsonLd } from "@/lib/seo";
 import { parseFilters, filterBusinesses } from "@/lib/filter-businesses";
 import { getCategoryInfo, categoryLabelPlural } from "@/lib/categories";
 import { getLocalizedBusiness } from "@/lib/i18n/content-business";
+import { guidesForDirectory } from "@/lib/related-guides";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary, tf } from "@/lib/i18n/dictionary";
@@ -34,6 +35,7 @@ export default function DirectoryContent({
   const catInfo = filters.categoria ? getCategoryInfo(filters.categoria) : undefined;
   const dirHref = localeHref(locale, "/directory");
   const cityLabel = filters.comune ? cityName(filters.comune, locale) : undefined;
+  const guides = guidesForDirectory(filters.comune ? results[0]?.city : undefined, filters.categoria, locale);
   const faqs = directoryFaqs(locale, cityLabel, catInfo ? { slug: catInfo.slug, label: categoryLabelPlural(catInfo, locale) } : undefined);
 
   const title = catInfo
@@ -57,6 +59,17 @@ export default function DirectoryContent({
               {locale === "en" ? "Only AIC restaurants? Open the AIC restaurants map" : "Cerchi solo i ristoranti AIC? Apri la mappa dei ristoranti AIC"}
             </Link>
           </p>
+          {guides.length > 0 && (
+            <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-soft">
+              <span className="font-medium text-ink">{locale === "en" ? "Related guides:" : "Guide collegate:"}</span>
+              {guides.map((g, i) => (
+                <span key={g.id}>
+                  <Link href={localeHref(locale, `/blog/${g.slug}`)} className="link-underline text-brand-dark">{g.title}</Link>
+                  {i < guides.length - 1 ? " ·" : ""}
+                </span>
+              ))}
+            </p>
+          )}
         </div>
         <SortSelect />
       </div>
