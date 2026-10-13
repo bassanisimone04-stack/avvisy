@@ -65,7 +65,7 @@ Salina's signature products are **capers**, **Malvasia** wine and seafood dishes
 Also try pasta with wild fennel and the humble cuisine of oily fish. A weekend
 here is a dive into Mediterranean slowness.
 
-You will find the connected stops on the **[Il postino](/en/film/il-postino)** page
+For the film's fishing village read **[Il Postino in Procida](/en/blog/il-postino-procida)**, with La Locanda del Postino. You will find the connected stops on the **[Il postino](/en/film/il-postino)** page
 and the venues of **[Salina](/en/salina)**.
 
 ## In short

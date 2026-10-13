@@ -16,4 +16,5 @@ export const ITINERARIO_PER_FILM: Record<string, string> = {
   "la-dolce-vita": "la-dolce-vita-via-veneto-cafe-de-paris",
   "il-talento-di-mr-ripley": "mr-ripley-venezia-caffe-florian",
   "the-white-lotus": "the-white-lotus-sicilia-taormina",
+  "la-vita-e-bella": "la-vita-e-bella-arezzo",
 };

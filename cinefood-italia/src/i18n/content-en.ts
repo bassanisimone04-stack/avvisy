@@ -146,6 +146,7 @@ export const filmsEn: Record<string, FilmEn> = {
       "Massimo Troisi's last, poetic film: the friendship between a humble postman and the poet Pablo Neruda, shot on the islands of Salina and Procida.",
     faq: [
       { domanda: "Where was Il Postino filmed?", risposta: "Across the Aeolian island of Salina (especially Pollara) and Procida, in the Gulf of Naples, with their almost untouched seascapes." },
+      { domanda: "Was Il Postino filmed in Procida or Salina?", risposta: "In both: Procida (Marina Corricella, the inn, the church) is the film's village; Salina (Pollara) hosts Neruda's house and the bike rides." },
       { domanda: "What to eat in Salina?", risposta: "Aeolian flavours: pane cunzato, Salina capers, malvasia wine and fish dishes in the trattorias overlooking the sea." },
     ],
   },
@@ -475,6 +476,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Can you eat at one of the series' locations?", risposta: "Yes: La Cambusa, in Giardini Naxos, is the restaurant that in the series belongs to the resort. In Taormina there is also Principe Cerami, inside the hotel, with a Michelin star." },
     ],
   },
+  "la-vita-e-bella": {
+    titolo: "Life Is Beautiful",
+    titoloSeo: "Life Is Beautiful Filming Locations in Arezzo",
+    locandinaAlt: "Poster-style artwork — Life Is Beautiful (1997)",
+    sinossi: "Roberto Benigni's film about Guido, who turns a concentration camp into a game to protect his son. Shot mostly in Arezzo and around; the camp was rebuilt at Papigno, in Umbria.",
+    faq: [
+      { domanda: "Where was Life Is Beautiful filmed?", risposta: "Mostly in Arezzo (Piazza Grande, Via Borgunto, Logge Vasari), with Villa Masini in Montevarchi, Castiglion Fiorentino and the Teatro Signorelli in Cortona; the camp at Papigno, near Terni." },
+      { domanda: "Was Life Is Beautiful filmed in Matera?", risposta: "No: none of the sources consulted lists Matera among the locations." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -795,6 +806,11 @@ export const restaurantsEn: Record<string, RestEn> = {
     titoloSeo: "Principe Cerami, Taormina: linked to White Lotus",
     descrizione: "A one-Michelin-star restaurant (2026 guide) inside the San Domenico Palace in Taormina: Sicilian cooking reinterpreted by chef Massimo Mantarro. You can book without staying at the hotel.",
     scena: { "the-white-lotus": "It sits inside the San Domenico Palace, the hotel that becomes the White Lotus resort in the series. The restaurant itself isn't listed among the scenes: it is a venue tied to the set." },
+  },
+  "la-locanda-del-postino-procida": {
+    titoloSeo: "La Locanda del Postino, Procida: from the film",
+    descrizione: "An inn-restaurant on the harbour of Marina Corricella, in Procida, tied to Il Postino: fresh fish and shellfish in front of the village's colourful houses.",
+    scena: { "il-postino": "According to italia.it it is the inn where Beatrice works and where Mario falls for her; the film's interiors were rebuilt at Cinecittà, though (Italy for Movies)." },
   },
 };
 

@@ -7,10 +7,12 @@ serieTv: false
 sinossi: "L'ultimo, poetico film di Massimo Troisi: l'amicizia tra un umile postino e il poeta Pablo Neruda, girato nelle isole di Salina e Procida."
 locandina: "../../assets/films/il-postino.jpg"
 locandinaAlt: "Locandina in stile manifesto — Il postino (1994)"
-citta: ["Salina"]
+citta: ["Salina", "Procida"]
 faq:
   - domanda: "Dove è stato girato Il postino?"
     risposta: "Tra le isole Eolie (Salina, in particolare Pollara) e Procida, nel golfo di Napoli, con i loro paesaggi marini rimasti quasi immutati."
+  - domanda: "Il Postino è stato girato a Procida o a Salina?"
+    risposta: "In entrambe: Procida (Marina Corricella, la locanda, la chiesa) è il borgo del film; Salina (Pollara) ospita la casa di Neruda e le corse in bici."
   - domanda: "Cosa mangiare a Salina?"
     risposta: "I sapori eoliani: pane cunzato, capperi di Salina, malvasia e piatti di pesce nelle trattorie affacciate sul mare."
 ---

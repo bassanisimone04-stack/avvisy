@@ -65,7 +65,7 @@ I prodotti-simbolo di Salina sono i **capperi**, la **malvasia** e i piatti di
 mare. Da provare anche la pasta con finocchietto e la cucina povera di pesce
 azzurro. Un weekend qui è un tuffo nella lentezza mediterranea.
 
-Trovi le tappe collegate alla scheda **[Il postino](/film/il-postino)** e i locali
+Per il borgo di pescatori del film leggi **[Il Postino a Procida](/blog/il-postino-procida)**, con la Locanda del Postino. Trovi le tappe collegate alla scheda **[Il postino](/film/il-postino)** e i locali
 di **[Salina](/salina)**.
 
 ## In sintesi
