@@ -61,7 +61,9 @@ check-up completo) e copre in forma più breve gli esami senza ancora un cluster
 HOMA-IR, hs-CRP, calcium score, DEXA, RM total body, VO₂max).
 Cluster: ApoB, il marcatore che il colesterolo totale non ti dice · Lp(a): l'esame che si fa una
 volta nella vita · insulina a digiuno e HOMA-IR · hs-CRP e infiammazione di basso grado ·
-emoglobina glicata e curva glicemica · pannello tiroideo e ormoni · vitamina D, omocisteina, ferritina ·
+emoglobina glicata e curva glicemica · pannello tiroideo e ormoni · vitamina D ·
+omocisteina: il marcatore che divide ricerca e pratica clinica ✅ · ferritina: energia e carenza di ferro ✅ ·
+colesterolo HDL: il mito del "più alto è meglio" ✅ · cortisolo salivare: cosa misura il test dello stress ✅ ·
 calcium score coronarico: a chi serve · RM total body: quando ha senso e quando no ·
 DEXA e composizione corporea · VO₂max: come si misura e perché predice la mortalità ·
 test dell'età biologica: cosa misurano e quanto sono affidabili · test del microbiota: stato dell'arte ·
@@ -153,6 +155,10 @@ spermidina, urolitina A, taurina · come leggere un'etichetta e riconoscere una 
 **spermidina e taurina: cosa dicono i dati** (`/blog/spermidina-taurina-longevita`) e
 **come leggere un'etichetta e riconoscere una bufala** (`/blog/come-leggere-etichetta-integratori`).
 → **Tutti i 10 item del cluster sono ora scritti come articoli dedicati.**
+→ Aggiunto oltre il piano originale: **vitamina B12 e folati: la carenza che si confonde con altro**
+(`/blog/vitamina-b12-folati-carenza`) — unico caso in questa guida con razionale solido di
+integrazione quando la carenza è documentata da esame, a differenza della maggior parte delle
+molecole trattate.
 
 ### Pilastro 7 — `Terapie e tecnologie del biohacking: evidenze, costi, a chi servono` ✅ pubblicato
 `/guide/terapie-biohacking` — collega crioterapia e camera iperbarica; copre sauna, luce rossa,
@@ -183,6 +189,12 @@ forma più breve sindrome metabolica, menopausa, testosterone, salute orale, str
 (`/blog/testosterone-quando-e-un-problema-clinico`), **sindrome metabolica: il terreno comune dietro quattro malattie**
 (`/blog/sindrome-metabolica-terreno-comune`) e **salute orale e infiammazione sistemica: il collegamento sottovalutato**
 (`/blog/salute-orale-infiammazione-sistemica`).
+→ Aggiunti oltre il piano originale: **pressione arteriosa: perché le soglie diagnostiche sono
+cambiate** (`/blog/pressione-arteriosa-soglie-cambiate`), **statine: miti, effetti collaterali
+reali e chi dovrebbe prenderle** (`/blog/statine-miti-effetti-collaterali`) e **steatosi epatica
+metabolica (MASLD): l'epidemia silenziosa** (`/blog/steatosi-epatica-masld`) — tre temi ad alta
+prevalenza, strettamente legati al terreno della sindrome metabolica, non previsti nel cluster
+originale ma evidence-rich e coerenti con il resto della guida.
 
 ### Pilastro 9 (commerciale) — `Guide città e costi` ✅ pubblicato, ma non come descritto qui
 `/citta/[citta].astro` — **decisione deliberata di implementazione, diversa dal piano originale.**

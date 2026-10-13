@@ -5,7 +5,7 @@ biohacking e della medicina preventiva — con blog editoriale e area B2B per le
 Costruito con **Astro 5 + Tailwind v4**, contenuti (schede centri, articoli) via Content
 Collections, backend reale (SQLite + Astro Actions) per moduli, autenticazione e area riservata.
 
-> Le 28 strutture e i 75 articoli sono **dati mock** pensati per popolare il prototipo. Moduli di
+> Le 28 strutture e gli 83 articoli sono **dati mock** pensati per popolare il prototipo. Moduli di
 > contatto/lead, registrazione, login e pannello admin sono invece **backend reale e funzionante**
 > (vedi sotto) — non simulazioni. Pagamenti Stripe e pannello admin richiedono le proprie
 > credenziali per essere attivi (vedi `.env.example`).
@@ -99,7 +99,7 @@ src/
 ├─ content.config.ts     # schema Zod delle collection "centri", "blog" e "guide"
 ├─ content/
 │  ├─ centri/             # 28 schede — un file .md per struttura
-│  ├─ blog/                # 75 articoli cluster, stesso standard editoriale
+│  ├─ blog/                # 83 articoli cluster, stesso standard editoriale
 │  └─ guide/                # 9 guide pilastro — il piano del doc 02 è completo
 ├─ lib/
 │  ├─ taxonomy.ts          # le 9 categorie + sottocategorie, tipi di struttura, MIN_LISTINGS_FOR_CITY_PAGE, getCityPageCombos()
@@ -244,17 +244,17 @@ dominio Vercel reale a `security.allowedDomains` in `astro.config.mjs`.
 - **Title e meta description auditati programmaticamente** (script Node su tutto l'HTML di build,
   non lettura a occhio): 0 pagine sopra i limiti di lunghezza, 0 senza H1 univoco, canonical o
   `og:image`, 0 blocchi JSON-LD non parsabili, 0 pagine con `FAQPage` senza FAQ visibili — su
-  tutte le 86 pagine statiche generate, incluso il controllo che nessuna data di pubblicazione sia
+  tutte le 150 pagine statiche generate, incluso il controllo che nessuna data di pubblicazione sia
   nel futuro (aggiunto dopo aver trovato 10 contenuti su 14 datati fino a 27 giorni avanti, poi
   scattato di nuovo — e verificato — su altri 8 contenuti nel resto di questa sessione). Un secondo
-  script verifica i link interni: 0 rotti su 85 pagine.
+  script verifica i link interni: 0 rotti su 150 pagine.
 - **Dark mode** completa, persistita, con l'aurora che si ricolora da sola.
-- **86 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
+- **150 pagine statiche** generate a build time (`npm run build`), zero errori `astro check`.
 
 ## Stato e prossimi passi
 
 Fase implementata: architettura, tassonomia, 28 schede mock, 10 keyword di lancio, il piano
-editoriale del doc 02 completo (9 guide pilastro, 75 articoli cluster, tutti collegati nelle due
+editoriale del doc 02 completo (9 guide pilastro, 83 articoli cluster, tutti collegati nelle due
 direzioni), tutte le pagine di servizio, filtri funzionanti, SEO tecnica auditata (incluso il fix
 delle FAQ invisibili e il controllo sulle date future), backend reale (SQLite + Astro Actions) per
 contatti, lead, registrazione, autenticazione e area riservata, pannello admin. Il pilastro 9

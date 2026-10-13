@@ -18,6 +18,9 @@ clusterSlugs:
   - "testosterone-quando-e-un-problema-clinico"
   - "sindrome-metabolica-terreno-comune"
   - "salute-orale-infiammazione-sistemica"
+  - "pressione-arteriosa-soglie-cambiate"
+  - "statine-miti-effetti-collaterali"
+  - "steatosi-epatica-masld"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -57,6 +60,16 @@ tradizionale raccontano una storia diversa. Tutti i dettagli, incluso quando ent
 calcium score per i casi intermedi, sono in
 [Rischio cardiovascolare: come si calcola davvero](/blog/rischio-cardiovascolare-come-si-calcola).
 
+La soglia stessa che definisce "ipertensione" è cambiata nel 2017, quando le linee guida
+statunitensi l'hanno abbassata da 140/90 a 130/80 mmHg, dietro un trial interrotto in anticipo per
+i suoi stessi benefici — un cambiamento che ha riclassificato milioni di persone senza che la loro
+pressione fosse cambiata di un millimetro. Approfondisci in
+[Pressione arteriosa: perché le soglie diagnostiche sono cambiate](/blog/pressione-arteriosa-soglie-cambiate).
+Quando il rischio calcolato è elevato, le statine restano il farmaco con il dossier di evidenza più
+solido per ridurlo — ma sono anche tra i più temuti per i presunti effetti collaterali muscolari,
+che un trial ingegnoso ha in gran parte ricondotto all'effetto nocebo. Approfondisci in
+[Statine: miti, effetti collaterali reali e chi dovrebbe prenderle](/blog/statine-miti-effetti-collaterali).
+
 ## Oncologico: non tutti gli screening sono uguali
 
 "Diagnosi precoce" è un'espressione usata sia per screening con decenni di trial randomizzati alle
@@ -87,6 +100,12 @@ alti, HDL basso e glicemia elevata, centrata sull'insulino-resistenza discussa n
 le prove più solide di questo sito — movimento, sonno, alimentazione — hanno un effetto che si
 propaga su più aree contemporaneamente, invece di agire su una sola. Approfondisci in
 [Sindrome metabolica: il terreno comune dietro quattro malattie](/blog/sindrome-metabolica-terreno-comune).
+
+Una delle manifestazioni più dirette di questo stesso terreno metabolico è la steatosi epatica
+(MASLD), che colpisce circa un adulto su tre nei paesi ad alto reddito, quasi sempre senza sintomi
+fino a stadi avanzati, e il cui trattamento con le prove più solide non è un farmaco ma la perdita
+di peso. Approfondisci in
+[Steatosi epatica metabolica (MASLD): l'epidemia silenziosa](/blog/steatosi-epatica-masld).
 
 ## Due capitoli specifici per sesso: menopausa e testosterone
 

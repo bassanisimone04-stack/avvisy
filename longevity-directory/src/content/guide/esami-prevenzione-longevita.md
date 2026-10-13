@@ -24,6 +24,10 @@ clusterSlugs:
   - "insulina-digiuno-homa-ir"
   - "emoglobina-glicata-curva-glicemica"
   - "pannello-tiroideo-ormoni"
+  - "omocisteina-marcatore-rischio"
+  - "ferritina-energia-carenza-ferro"
+  - "hdl-colesterolo-buono-mito"
+  - "cortisolo-salivare-test-stress"
 ctaDirectory: "/directory/diagnostica-avanzata"
 ctaLabel: "Vedi i centri di diagnostica avanzata"
 autore: "Redazione Longevità"
@@ -113,6 +117,24 @@ raccomandano cautela: la U.S. Preventive Services Task Force non trova evidenza 
 raccomandare uno screening tiroideo di routine in adulti asintomatici senza fattori di rischio. Ha
 senso un controllo mirato dopo i 40 anni, con storia familiare di malattia tiroidea, o in gravidanza.
 Approfondisci in [Pannello tiroideo e ormoni: quando ha senso approfondire](/blog/pannello-tiroideo-ormoni).
+
+**Omocisteina, ferritina e HDL** completano il quadro con tre lezioni diverse su cosa significhi
+davvero un biomarcatore. L'omocisteina alta si associa a più eventi cardiovascolari, ma abbassarla
+con le vitamine del gruppo B non riduce gli eventi — un esempio diretto della differenza tra
+marcatore di rischio e bersaglio terapeutico, approfondito in
+[Omocisteina: il marcatore che divide ricerca e pratica clinica](/blog/omocisteina-marcatore-rischio).
+La ferritina, spesso richiesta per la sola carenza di ferro, dice anche altro quando è alta,
+come spiegato in
+[Ferritina: cosa dice sui livelli di energia e quando preoccuparsi](/blog/ferritina-energia-carenza-ferro).
+E l'HDL, per decenni chiamato "colesterolo buono", non segue più la semplice regola "più alto è
+meglio": approfondisci in
+[Colesterolo HDL: perché "più alto è sempre meglio" è un mito superato](/blog/hdl-colesterolo-buono-mito).
+
+**Cortisolo salivare.** Uno strumento di ricerca legittimo per lo studio dello stress cronico su
+base di popolazione, diventato anche la base di una diagnosi commerciale — la "stanchezza
+surrenale" — che una revisione sistematica dedicata definisce priva di fondamento scientifico.
+Approfondisci in
+[Cortisolo salivare: cosa misura davvero il test dello stress](/blog/cortisolo-salivare-test-stress).
 
 ## Composizione corporea e imaging: quando servono, quando no
 

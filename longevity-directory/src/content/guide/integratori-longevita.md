@@ -22,6 +22,7 @@ clusterSlugs:
   - "urolitina-a-studi-uomo"
   - "spermidina-taurina-longevita"
   - "come-leggere-etichetta-integratori"
+  - "vitamina-b12-folati-carenza"
 ctaDirectory: "/directory/medicina-longevita"
 ctaLabel: "Vedi i centri di medicina della longevità"
 autore: "Redazione Longevità"
@@ -97,6 +98,16 @@ integra**. Il dosaggio della 25-OH vitamina D costa poco ed è tra gli esami pi�
 aggiungere a un pannello (vedi la guida
 [Gli esami che contano davvero](/guide/esami-prevenzione-longevita)). Approfondisci in
 [Vitamina D: chi ne ha bisogno davvero](/blog/vitamina-d-chi-ne-ha-bisogno).
+
+## 🟢 Vitamina B12 e folati
+
+A differenza di gran parte delle molecole di questa guida, qui l'integrazione ha un razionale
+solido e diretto quando una carenza è effettivamente documentata — non un caso di "integra per
+sicurezza", ma uno in cui la misura precede e giustifica l'intervento. I sintomi sono spesso
+aspecifici (stanchezza, formicolii, difficoltà di concentrazione) e facilmente attribuiti ad altro,
+il che rende la carenza più comune di quanto si pensi, specialmente tra chi segue una dieta vegana o
+vegetariana stretta e tra gli anziani. Approfondisci in
+[Vitamina B12 e folati: la carenza che si confonde con altro](/blog/vitamina-b12-folati-carenza).
 
 ## 🟡 Magnesio, collagene, urolitina A, spermidina
 
