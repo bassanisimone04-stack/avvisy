@@ -14,7 +14,7 @@ faq:
   - domanda: "Chi ha diretto House of Gucci?"
     risposta: "Ridley Scott (2021), con Lady Gaga e Adam Driver."
   - domanda: "Dove si trova la villa della famiglia Gucci nel film?"
-    risposta: "Le scene ambientate nella villa di famiglia sul Lago di Como sono girate a Villa Balbiano, storica dimora fatta costruire alla fine del '500 dal cardinale Tolomeo Gallio."
+    risposta: "Le scene ambientate nella villa di famiglia sul Lago di Como sono girate a Villa Balbiano, storica dimora cinquecentesca sul lago, nel Comune di Ossuccio."
   - domanda: "Quali altre città italiane compaiono in House of Gucci?"
     risposta: "Oltre a Milano e il Lago di Como (Ossuccio, Tremezzina), il film è stato girato anche a Roma e Firenze, oltre ad alcune scene sulle Alpi a Gressoney."
 prenotazioni:
@@ -43,8 +43,10 @@ architettura e buona tavola.
 
 Le scene ambientate nella sontuosa villa di famiglia, dove **Al Pacino**
 interpreta il patriarca Aldo Gucci, sono state girate a **Villa Balbiano**,
-sul Lago di Como: una dimora storica fatta costruire alla fine del
-Cinquecento dal cardinale Tolomeo Gallio come residenza privata. Le riprese
+sul Lago di Como: una dimora storica cinquecentesca (secondo le fonti consultate
+acquistata nel 1596 da Tolomeo Gallio), oggi proprietà privata. È la stessa villa
+che compare, per alcune fonti, in *Il diavolo veste Prada 2*: leggi
+**[dove è stato girato](/blog/il-diavolo-veste-prada-2-dove-e-stato-girato)**. Le riprese
 sul lago hanno toccato anche Ossuccio e Tremezzina, mentre altre scene sono
 state girate a Roma, Firenze e persino sulle Alpi, a Gressoney.
 

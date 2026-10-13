@@ -17,7 +17,7 @@ sitoWeb: "https://www.palazzoparigi.com"
 ultimoAggiornamento: 2026-09-08
 film:
   - film: "the-devil-wears-prada-2"
-    descrizioneScena: "Per alcune settimane l'hotel ha ospitato il cast e la troupe del film: scene sono state girate nella hall, al Caffè Parigi e negli esterni della struttura durante la Settimana della Moda di Milano."
+    descrizioneScena: "L'hotel ha ospitato il cast e la troupe del film e dichiara scene girate nella hall, al Caffè Parigi e negli esterni della struttura."
 descrizione: "Il caffè-bistrot del Palazzo Parigi Hotel & Grand Spa, hotel 5 stelle nel cuore di Milano tra Brera e il Quadrilatero della Moda. Servizio elegante, colazioni e aperitivi in un ambiente raffinato."
 ---
 
@@ -29,16 +29,13 @@ descrizione: "Il caffè-bistrot del Palazzo Parigi Hotel & Grand Spa, hotel 5 st
      del locale: "Palazzo Parigi Hotel & Grand Spa welcomed the cast and crew
      of 20th Century Studios' The Devil Wears Prada 2 ... scenes filmed
      throughout the hotel's Lobby, Caffè Parigi, and exterior spaces."
-     Confermato indipendentemente da Italy for Movies (portale ufficiale
-     location del Ministero della Cultura) e dal boom turistico misurato da
-     Confcommercio Milano, ripreso da Variety e Il Sole 24 Ore (agosto 2026).
-     NOTA REDAZIONALE: fonti lette solo via snippet di ricerca in questa
-     sessione (fetch diretto bloccato) — verificare a mano prima di ulteriori
-     modifiche a questa scheda. -->
+     Rimossi dati Confcommercio/Variety/Il Sole 24 Ore e la dicitura
+     "estate 2025" (non confermati; riprese milanesi di ottobre 2025 per la
+     stampa italiana, es. LaPresse 8/10/2025). Fonti lette solo via snippet:
+     verificare a mano prima di ulteriori modifiche. -->
 
 Nel cuore di Milano, tra Brera e il Quadrilatero della Moda, il Caffè
-Parigi è il bar-bistrot del Palazzo Parigi Hotel & Grand Spa. Per alcune
-settimane nell'estate 2025 l'hotel è diventato la base milanese del cast
-e della troupe di *The Devil Wears Prada 2*, con scene girate nella hall,
-al Caffè Parigi e negli esterni della struttura — proprio durante la
-Settimana della Moda, la cornice naturale del film.
+Parigi è il bar-bistrot del Palazzo Parigi Hotel & Grand Spa. Nell'autunno
+2025 l'hotel è stato la base milanese del cast e della troupe di *The Devil
+Wears Prada 2* e dichiara scene girate nella hall, al Caffè Parigi e negli
+esterni della struttura.

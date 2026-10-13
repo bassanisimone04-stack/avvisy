@@ -51,8 +51,8 @@ Per questi due non abbiamo verificato indirizzo e stato, quindi non li schediamo
 
 ## Un itinerario milanese tra cinema e tavola
 
-Per altri luoghi di Milano al cinema leggi *[The Devil Wears Prada 2 e il Caffè
-Parigi](/blog/devil-wears-prada-2-milano-caffe-parigi)*, o la guida a *[Il
+Per altri luoghi di Milano al cinema leggi *[Il diavolo veste Prada 2: dove è stato
+girato](/blog/il-diavolo-veste-prada-2-dove-e-stato-girato)*, o la guida a *[Il
 cinema al Nord](/blog/cinema-al-nord-milano-laghi)*. Per le altre puntate
 di Tucci: *[Stanley Tucci in Italia](/blog/stanley-tucci-searching-for-italy-tappe)*.
 

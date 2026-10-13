@@ -98,10 +98,10 @@ nella Roma degli anni '50.
 
 ## Meryl Streep e Anne Hathaway — Caffè Parigi, Milano
 
-Per settimane il **[Caffè Parigi](/locale/caffe-parigi-milano)**, dentro
-il Palazzo Parigi Hotel, è stato la base milanese del cast di
-*[The Devil Wears Prada 2](/blog/devil-wears-prada-2-milano-caffe-parigi)*
-(2026), con scene girate durante la Settimana della Moda.
+Il **[Caffè Parigi](/locale/caffe-parigi-milano)**, dentro
+il Palazzo Parigi Hotel, è nell'hotel che ha ospitato il cast di
+*[The Devil Wears Prada 2](/blog/il-diavolo-veste-prada-2-dove-e-stato-girato)*
+(2026): l'hotel dichiara scene girate in hall, al caffè e negli esterni.
 
 ## Zoe Saldana — Buca dell'Orafo, Firenze
 

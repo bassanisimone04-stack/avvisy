@@ -51,8 +51,8 @@ and status for these two, so we don't list them.
 
 ## A Milanese itinerary between cinema and food
 
-For more film places in Milan read *[The Devil Wears Prada 2 and Caffè
-Parigi](/en/blog/devil-wears-prada-2-milano-caffe-parigi)*, or the guide to
+For more film places in Milan read *[The Devil Wears Prada 2: filming
+locations](/en/blog/il-diavolo-veste-prada-2-dove-e-stato-girato)*, or the guide to
 *[Cinema in the North](/en/blog/cinema-al-nord-milano-laghi)*. For Tucci's other
 episodes: *[Stanley Tucci in Italy](/en/blog/stanley-tucci-searching-for-italy-tappe)*.
 

@@ -12,7 +12,7 @@ faq:
   - domanda: "Cosa mangiare a Milano?"
     risposta: "Risotto allo zafferano, cotoletta alla milanese, ossobuco e l'immancabile aperitivo."
   - domanda: "Quali laghi del Nord sono comparsi al cinema?"
-    risposta: "Il Lago di Como (Villa del Balbianello, in Star Wars, Casino Royale e House of Gucci) e il Lago di Garda (Quantum of Solace)."
+    risposta: "Il Lago di Como (Villa del Balbianello, in Star Wars e Casino Royale; House of Gucci a Villa Balbiano) e il Lago di Garda (Quantum of Solace)."
   - domanda: "Villa del Balbianello è visitabile?"
     risposta: "Sì, è aperta al pubblico da metà marzo a novembre, con visite guidate al giardino e agli interni."
 prenotazioni:

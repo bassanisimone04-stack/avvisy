@@ -12,7 +12,7 @@ faq:
   - domanda: "What should you eat in Milan?"
     risposta: "Saffron risotto, veal cutlet alla milanese, ossobuco and the classic aperitivo."
   - domanda: "Which northern lakes have appeared on screen?"
-    risposta: "Lake Como (Villa del Balbianello, in Star Wars, Casino Royale and House of Gucci) and Lake Garda (Quantum of Solace)."
+    risposta: "Lake Como (Villa del Balbianello, in Star Wars and Casino Royale; House of Gucci at Villa Balbiano) and Lake Garda (Quantum of Solace)."
   - domanda: "Can you visit Villa del Balbianello?"
     risposta: "Yes, it's open to the public from mid-March to November, with guided tours of the garden and interiors."
 lang: "en"

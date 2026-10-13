@@ -14,7 +14,7 @@ faq:
   - domanda: "Who directed House of Gucci?"
     risposta: "Ridley Scott (2021), with Lady Gaga and Adam Driver."
   - domanda: "Where is the Gucci family villa in the film?"
-    risposta: "The scenes set in the family villa on Lake Como were filmed at Villa Balbiano, a historic residence built in the late 16th century by Cardinal Tolomeo Gallio."
+    risposta: "The scenes set in the family villa on Lake Como were filmed at Villa Balbiano, a historic 16th-century residence on the lake, in the municipality of Ossuccio."
   - domanda: "What other Italian cities appear in House of Gucci?"
     risposta: "Besides Milan and Lake Como (Ossuccio, Tremezzina), the film was also shot in Rome and Florence, plus some scenes in the Alps at Gressoney."
 lang: "en"
@@ -44,8 +44,10 @@ shopping, architecture and good food.
 
 The scenes set in the lavish family villa, where **Al Pacino** plays
 patriarch Aldo Gucci, were filmed at **Villa Balbiano** on Lake Como: a
-historic residence built at the end of the 16th century by Cardinal
-Tolomeo Gallio as his private home. Filming on the lake also touched
+historic 16th-century residence (according to the sources we consulted,
+bought in 1596 by Tolomeo Gallio), now private property. It is the same
+villa that, according to some sources, appears in *The Devil Wears Prada 2*:
+read **[where it was filmed](/en/blog/il-diavolo-veste-prada-2-dove-e-stato-girato)**. Filming on the lake also touched
 Ossuccio and Tremezzina, while other scenes were shot in Rome, Florence and
 even in the Alps, at Gressoney.
 
