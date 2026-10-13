@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { CheckCircle2, Store, TrendingUp, Users } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import type { Locale } from "@/lib/i18n/locale";
+import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
 
 const CONTACT_EMAIL = "info@mappasenzaglutine.it";
@@ -35,11 +36,15 @@ export default function BusinessOnboardingContent({ locale }: { locale: Locale }
         <div>
           <h1 className="text-3xl font-bold text-ink sm:text-4xl">{en ? "List your business" : "Inserisci la tua attività"}</h1>
           <p className="mt-3 text-ink-soft">{en ? "Get in front of people with celiac disease looking for safe places in your area." : "Fatti trovare dalle persone celiache che cercano locali sicuri nella tua zona."}</p>
+          <p className="mt-2 text-sm text-ink-soft">
+            {en ? "Not in the AIC program yet? " : "Non sei ancora nel programma AIC? "}
+            <Link href={localeHref(locale, "/blog/ristoratori-come-aderire-al-programma-aic-alimentazione-fuori-casa")} className="link-underline text-brand-dark">{en ? "Here is how to join." : "Ecco come aderire."}</Link>
+          </p>
           <div className="mt-6 space-y-4">
             {[
-              { icon: Store, title: en ? "Free listing" : "Scheda gratuita", body: en ? "Publish your business listing with photos, menu and hours at no activation cost." : "Pubblica la scheda della tua attività con foto, menu e orari senza costi di attivazione." },
+              { icon: Store, title: en ? "Free listing" : "Scheda gratuita", body: en ? "Your business listing, with address, gluten-free menu and contacts, at no activation cost." : "La scheda della tua attività, con indirizzo, menu senza glutine e contatti, senza costi di attivazione." },
               { icon: Users, title: en ? "Qualified community" : "Community qualificata", body: en ? "Direct visibility to celiac users genuinely interested in what you offer." : "Visibilità diretta verso utenti celiaci realmente interessati alla tua offerta." },
-              { icon: TrendingUp, title: en ? "Measurable growth" : "Crescita misurabile", body: en ? "Stats on views, clicks and reviews to track your results." : "Statistiche su visualizzazioni, click e recensioni per monitorare i risultati." },
+              { icon: TrendingUp, title: en ? "Checked data" : "Dati verificati", body: en ? "We check the data before publishing and state whether your kitchen is dedicated or mixed." : "Verifichiamo i dati prima di pubblicarli e indichiamo se la cucina è dedicata o mista." },
             ].map((item) => (
               <div key={item.title} className="flex gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand-dark"><item.icon size={18} /></span>

@@ -79,3 +79,24 @@ nuove verifiche.
 ## 7. Torino e Bologna
 
 Vedi `DA-VERIFICARE-torino-bologna.md`.
+
+## 8. "Buchi di mercato" del documento FAQ AIC x Search Console
+
+| Idea | Stato | Perché e cosa serve |
+|---|---|---|
+| Produzione dedicata vs mista | **Fatto** (28 locali su 45) | Vedi punto 1 |
+| Contenuti per chi gestisce un locale | **Fatto**: guida "Ristoratori: come aderire al programma AIC" | [DA VERIFICARE] i costi e i calendari dei corsi: non risultano dalle fonti, vanno chiesti alla sezione regionale AIC |
+| Un celiaco può fare il panettiere/pizzaiolo | **Fatto** (FAQ AIC sul glutine inalato) | Tema medico: [DA VERIFICARE] da un gastroenterologo |
+| Segnalazioni di contaminazione dalla community | **Non costruito, di proposito** | Pubblicare accuse su un locale con nome e cognome senza verifica può essere diffamazione, e un'accusa sbagliata danneggia un'attività vera. [DA DECIDERE] prima: chi modera, come si verifica, diritto di replica del locale. Alternativa più sicura: un modulo "segnala un problema" che arriva solo a te, che poi contatta il locale |
+| Itinerari multi-giorno con i pin | **Non costruito** | Servirebbero orari e distanze verificati: oggi gli orari delle schede non lo sono. Quando lo saranno, si può fare "weekend a Roma/Milano" con la mappa |
+| Confronto tra linee senza glutine dei supermercati | **Non costruito** | Ho verificato solo Eurospin, Aldi e Lidl. [DA VERIFICARE] Esselunga, Coop, Conad e i prezzi (cambiano) |
+| Contenuti in tedesco e francese | **Non costruito** | Richiede una terza lingua in tutto il sito. Dati: la Germania porta 8 clic su 272 e 131 impressioni (export del 6 ottobre), troppo pochi per decidere. [DA DECIDERE] dopo due mesi di dati inglesi |
+| Rubrica richiami prodotti | **Non costruita** | È un tema di sicurezza: una rubrica non aggiornata è peggio di nessuna rubrica. Serve un processo reale di controllo del sito del Ministero della Salute; nel frattempo meglio rimandare alla fonte ufficiale [DA VERIFICARE] l'indirizzo esatto |
+
+## 9. Correzione alla pagina "Per le aziende"
+
+La pagina prometteva "statistiche su visualizzazioni, click e recensioni" e "foto, menu e
+orari": **il sito non ha una dashboard per i locali né il caricamento di foto**. Ho
+sostituito le due frasi con quello che è vero (scheda con indirizzo, menu e contatti;
+dati verificati). [DA DECIDERE] se vuoi davvero costruire una dashboard: finché non esiste,
+non va promessa.
