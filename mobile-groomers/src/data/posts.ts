@@ -915,6 +915,170 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "dog-nail-trimming-ear-cleaning",
+    title: "Nail Trimming and Ear Cleaning: What's in a Mobile Groom",
+    description:
+      "Why nails and ears matter more than most owners realize, how often each actually needs attention, and what's included versus billed as an add-on.",
+    category: "Guides",
+    readingMinutes: 5,
+    published: "2026-06-02",
+    updated: "2026-06-02",
+    keywords: [
+      "dog nail trimming cost",
+      "dog ear cleaning cost",
+      "how often to trim dog nails",
+      "dog nail grinding vs clipping",
+      "dog ear infection prevention",
+      "mobile dog groomer nail trim",
+      "dog pedicure",
+      "dremel vs clippers for dog nails",
+      "how to tell if dog nails are too long",
+      "dog ear cleaning at home",
+    ],
+    sections: [
+      {
+        heading: "Why nails matter more than they look like they do",
+        paragraphs: [
+          "Overgrown nails do more than click on hardwood. Past a certain length, a nail forces the toe into an unnatural angle every time the dog's paw hits the ground, which changes posture and gait over time and can contribute to joint strain, particularly in older dogs already managing arthritis. The nail quick — the blood vessel running through the center — also grows longer as the nail grows, which is why nails neglected for months become progressively harder and more painful to trim back to a healthy length; waiting makes every future trim worse, not easier.",
+          "Most dogs need a trim every 3 to 4 weeks. Dogs that walk mostly on soft ground (grass, carpet) wear their nails down less than dogs that regularly walk on pavement, so the right interval varies by lifestyle as much as by dog.",
+        ],
+      },
+      {
+        heading: "Clipping versus grinding",
+        paragraphs: [
+          "Clippers cut the nail in one motion and are faster, but carry more risk of cutting into the quick if the groomer misjudges a dark nail where the quick isn't visible. A grinder (often called a Dremel after the brand) removes the nail gradually in small passes, which lets the groomer stop right at the edge of the quick and gives a smoother, rounder finish with less risk of a sharp edge catching on fabric or skin.",
+          "Many mobile groomers use both: clippers to remove the bulk of the length quickly, then a grinder to round and finish. If your dog is nervous about the vibration or sound of a grinder, say so — a groomer can usually do a full trim with clippers alone.",
+        ],
+      },
+      {
+        heading: "Why ears get skipped more than they should",
+        paragraphs: [
+          "Ear cleaning rarely gets the same attention nails do, but it matters more for some dogs than almost any other part of the groom. Breeds with floppy ears or heavy ear hair — Cocker Spaniels, Poodles, Basset Hounds, many Doodles — trap moisture and debris in the ear canal, which is exactly the environment yeast and bacteria need to cause an infection. A groomer who checks and cleans ears at every visit often catches early signs of infection (odor, redness, dark discharge) well before it becomes painful enough for an owner to notice at home.",
+          "A basic ear clean is a gentle wipe of the visible ear and outer canal with a vet-approved solution — not deep probing, which is a job for a vet if there's an actual infection or blockage. A groomer who finds signs of infection should tell you to see a vet rather than attempt to treat it themselves.",
+        ],
+      },
+      {
+        heading: "What's typically included versus billed separately",
+        paragraphs: [
+          "Practice varies by groomer, so this isn't universal, but nail trimming is included in most standard mobile grooming packages, while ear cleaning is sometimes included and sometimes a small add-on — ask when booking rather than assuming. Nail grinding specifically (versus basic clipping) is more often an upcharge than plain clipping, since it takes longer per nail.",
+          "If your dog mainly needs nails and ears done and nothing else, ask whether the groomer offers a standalone nail-and-ear visit rather than a full groom — many mobile vans do, and it's considerably cheaper and faster than booking a full package just to get nails short between full grooms. See [what a full mobile groom costs](/blog/mobile-dog-grooming-cost) for how that compares.",
+        ],
+      },
+      {
+        heading: "Signs you shouldn't wait for the next scheduled groom",
+        paragraphs: [
+          "Audible clicking on hard floors, visible curling of the nail, or a dog that seems to be slipping more than usual are all signs nails have gone past a comfortable length — don't wait for the next 4-to-6-week appointment if you're seeing these. For ears, a strong odor, head-shaking, scratching at one ear repeatedly, or visible redness inside the ear flap are signs worth a vet visit, not just a grooming appointment — grooming addresses routine maintenance, not an active infection.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How often should a dog's nails be trimmed?",
+        answer:
+          "Most dogs need a trim every 3 to 4 weeks. Dogs that walk mostly on pavement wear their nails down naturally and may need it less often than dogs that walk mainly on grass or carpet.",
+      },
+      {
+        question: "Is nail grinding better than clipping?",
+        answer:
+          "Grinding gives a smoother, rounder finish with less risk of cutting the quick, since the groomer can stop right at the edge gradually. Many groomers clip first to remove length, then grind to finish. Clipping alone is faster if a dog dislikes the grinder's vibration or sound.",
+      },
+      {
+        question: "Is ear cleaning included in a mobile dog groom?",
+        answer:
+          "It varies by groomer — some include a basic ear wipe in every standard package, others bill it as a small add-on. Ask when booking. Either way, a groomer who finds signs of infection should refer you to a vet rather than treat it themselves.",
+      },
+      {
+        question: "Can I just get my dog's nails trimmed without a full groom?",
+        answer:
+          "Many mobile groomers offer a standalone nail-and-ear visit, which is faster and cheaper than booking a full groom just for nails. Ask when you book if that's all your dog needs between full appointments.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-start-a-mobile-dog-grooming-business",
+    title: "How to Start a Mobile Dog Grooming Business",
+    description:
+      "What licensing, equipment, and insurance actually cost to get a mobile grooming van on the road, and the real tradeoffs against working from a salon.",
+    category: "For Groomers",
+    readingMinutes: 7,
+    published: "2026-06-16",
+    updated: "2026-06-16",
+    keywords: [
+      "how to start a mobile dog grooming business",
+      "mobile dog grooming van cost",
+      "mobile pet grooming business startup",
+      "dog groomer license requirements",
+      "mobile grooming business insurance",
+      "mobile dog grooming equipment list",
+      "how much does a grooming van cost",
+      "is mobile dog grooming profitable",
+      "mobile grooming business plan",
+      "self contained grooming van",
+    ],
+    sections: [
+      {
+        heading: "The core decision: convert a van, or buy one pre-built",
+        paragraphs: [
+          "A used cargo van or step van converted into a grooming unit — water tank, water heater, generator or battery/solar power, a grooming table and tub — typically runs anywhere from $15,000 to $40,000+ depending on how much of the conversion is done professionally versus DIY, and whether the base vehicle is new or used. A pre-built grooming van from a specialized manufacturer costs more upfront but arrives ready to work, with warrantied systems and a layout already proven by other groomers — worth it for most people starting out, since a DIY conversion with an electrical or plumbing mistake is expensive and dangerous to fix after the fact.",
+          "Either way, budget for ongoing costs beyond the van itself: fuel, generator maintenance, water refills, product, and insurance all recur monthly regardless of how many dogs you groom that week.",
+        ],
+      },
+      {
+        heading: "Licensing and certification",
+        paragraphs: [
+          "Most US states do not require a specific grooming license — grooming is largely unregulated at the state level compared to, say, veterinary work. A handful of states and cities do have requirements, ranging from a general business license to specific pet-care permits, so check your state and city directly rather than assuming either way. Separately, a mobile unit usually needs a commercial vehicle registration and, in some areas, a mobile food/service vendor permit even though you're not selling food — the permit covers operating a commercial service vehicle that parks on residential streets.",
+          "Certification (through organizations like the National Dog Groomers Association of America, or a Fear Free certification covering low-stress handling) isn't legally required almost anywhere, but it matters commercially — clients and listing directories alike treat it as a credibility signal, and it genuinely improves how you handle anxious or difficult dogs. See [what to ask a groomer](/blog/how-to-choose-a-mobile-dog-groomer) for the exact questions prospective clients will be bringing to you.",
+        ],
+      },
+      {
+        heading: "Insurance is not optional in practice",
+        paragraphs: [
+          "General liability insurance covering injury to a pet or property damage during a groom is close to universal among legitimate operators, even in the states that don't legally require it — a single claim (a nicked skin fold during a nail trim, a slipped harness) can otherwise end a small business outright. Commercial auto insurance for the van itself is separate from your personal auto policy and is usually required once the vehicle is used for business purposes. Many groomers also carry care, custody, and control coverage specifically for the time a pet is in your direct care, which general liability alone doesn't always cover.",
+        ],
+      },
+      {
+        heading: "Pricing your first rate card",
+        paragraphs: [
+          "New mobile groomers often underprice to build a client base, which is reasonable short-term but hard to correct later once clients expect a number. Research what [mobile grooming actually costs](/blog/mobile-dog-grooming-cost) in your specific metro before setting rates — pricing in a major coastal city supports meaningfully higher rates than a smaller Midwest market, and a route built around your real travel radius (not an aspirational one) keeps the math honest from day one.",
+        ],
+      },
+      {
+        heading: "Building a route, not just a client list",
+        paragraphs: [
+          "The economics of mobile grooming depend heavily on route density — the fewer miles between appointments, the more dogs you can realistically groom in a day. Many new mobile groomers start by focusing bookings in one or two zip codes rather than taking every client across a wide service area, then expand outward as the schedule fills in. A scattered first month of bookings across a huge radius often looks busy but earns less per hour than a tight, geographically clustered one.",
+        ],
+      },
+      {
+        heading: "Getting found",
+        paragraphs: [
+          "A Google Business Profile, a basic website with your service area and pricing, and local directory listings are the baseline — most pet owners search \"mobile dog groomer near me\" rather than a specific business name when they're first looking. [Claiming a free listing](/claim) on a directory like this one costs nothing and puts your business in front of owners already searching by zip code, which is a faster path to your first clients than waiting for word of mouth alone to build.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does it cost to start a mobile dog grooming business?",
+        answer:
+          "A converted van typically runs $15,000 to $40,000+ depending on build quality and whether it's DIY or professionally converted, plus ongoing costs for fuel, insurance, and product. A pre-built grooming van costs more upfront but arrives ready to work with warrantied systems.",
+      },
+      {
+        question: "Do I need a license to be a mobile dog groomer?",
+        answer:
+          "Most US states don't require a specific grooming license, though some states and cities do — check locally. A mobile unit usually needs commercial vehicle registration and, in some areas, a mobile service vendor permit separate from any grooming-specific license.",
+      },
+      {
+        question: "What insurance does a mobile dog grooming business need?",
+        answer:
+          "General liability insurance is close to universal among legitimate operators even where not legally required, since a single injury or property-damage claim can end a small business. Commercial auto insurance for the van and care-custody-control coverage for pets in your direct care are also standard.",
+      },
+      {
+        question: "Is mobile dog grooming profitable?",
+        answer:
+          "It can be, but route density matters more than client count — a tight, geographically clustered schedule earns more per hour than a wide service area with long drives between appointments. Many new groomers focus bookings in one or two zip codes first, then expand as the schedule fills.",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
