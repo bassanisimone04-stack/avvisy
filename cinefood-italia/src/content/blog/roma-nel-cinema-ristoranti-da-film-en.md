@@ -63,4 +63,4 @@ cultural history).
 
 Rome is the city with the most food locations on our site: discover them all on the
 **[Rome](/en/roma)** page and browse the **[films](/en/film)** that made it
-immortal. For the studios read *[Cinecittà Studios](/en/blog/cinecitta-studios-roma-hollywood-sul-tevere)*.
+immortal. For the Italian-comedy trattorias read *[Sora Lella and Otello](/en/blog/trattorie-storiche-commedia-italiana-roma)*. For the studios read *[Cinecittà Studios](/en/blog/cinecitta-studios-roma-hollywood-sul-tevere)*.
