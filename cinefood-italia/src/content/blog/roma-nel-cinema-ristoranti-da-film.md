@@ -61,4 +61,4 @@ storia del costume).
 
 Roma è la città con più location gastronomiche del nostro sito: scoprile tutte
 alla pagina **[Roma](/roma)** e sfoglia i **[film](/film)** che l'hanno resa
-immortale.
+immortale. Per gli studios leggi *[Cinecittà Studios](/blog/cinecitta-studios-roma-hollywood-sul-tevere)*.

@@ -54,4 +54,4 @@ and historic residences. A weekend as elegant as the stars who chose it.
 ## In short
 
 Lake Como is an open-air set where the luxury of cinema meets the flavours of the
-lake. Discover the other **[films](/en/film)** and their food locations.
+lake. Read the guide to *[Villa del Balbianello](/en/blog/villa-del-balbianello-casino-royale-star-wars)* and discover the other **[films](/en/film)** and their food locations.

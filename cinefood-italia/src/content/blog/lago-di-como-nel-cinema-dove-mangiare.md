@@ -55,4 +55,4 @@ dimore storiche. Un weekend elegante come le star che l'hanno scelto.
 ## In sintesi
 
 Il Lago di Como è un set a cielo aperto dove il lusso del cinema incontra i
-sapori del lago. Scopri gli altri **[film](/film)** e le loro location a tavola.
+sapori del lago. Leggi la guida a *[Villa del Balbianello](/blog/villa-del-balbianello-casino-royale-star-wars)* e scopri gli altri **[film](/film)** e le loro location a tavola.
