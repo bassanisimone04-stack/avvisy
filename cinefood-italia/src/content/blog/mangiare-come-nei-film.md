@@ -29,9 +29,9 @@ documentate, dove sono state girate scene di film celebri, da nord a sud.
 
 Nel borgo di **Savoca**, il **[Bar Vitelli](/locale/bar-vitelli-savoca)** è
 legato a una delle scene più note de *Il Padrino*: qui Michael Corleone
-incontra il padre di Apollonia. Il locale, dentro il settecentesco Palazzo
-Trimarchi, non aveva nemmeno un nome ufficiale prima del film — fu Coppola a
-sceglierlo.
+incontra il padre di Apollonia. Il locale è al piano terra di Palazzo
+Trimarchi, edificio tra fine Seicento e inizio Settecento; le fonti non spiegano
+l'origine del nome "Vitelli", che richiama il personaggio del film.
 
 ## 2. Ristorante Le Gatte, Castellabate (Cilento) — *Benvenuti al Sud* (2010)
 

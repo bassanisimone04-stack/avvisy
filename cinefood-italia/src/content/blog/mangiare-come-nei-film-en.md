@@ -30,9 +30,9 @@ where scenes of famous films were shot, from north to south.
 
 In the village of **Savoca**, **[Bar Vitelli](/en/locale/bar-vitelli-savoca)**
 is tied to one of the best-known scenes of *The Godfather*: here Michael
-Corleone meets Apollonia's father. The venue, inside the 18th-century
-Palazzo Trimarchi, didn't even have an official name before filming in
-1971 — it was Coppola himself who chose it.
+Corleone meets Apollonia's father. The venue is on the ground floor of
+Palazzo Trimarchi, a building from the late 17th–early 18th century; sources
+don't explain the origin of the name "Vitelli", which echoes the film's character.
 
 ## 2. Le Gatte restaurant, Castellabate (Cilento) — *Welcome to the South* (2010)
 

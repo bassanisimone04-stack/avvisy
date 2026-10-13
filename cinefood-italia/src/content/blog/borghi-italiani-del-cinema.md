@@ -31,7 +31,7 @@ sapori del territorio. Ecco otto tappe da non perdere, dal Sud al Nord.
 
 - **Savoca (Sicilia)** — i vicoli de *[Il Padrino](/film/il-padrino)* e la
   granita del **[Bar Vitelli](/locale/bar-vitelli-savoca)**, il bar di paese
-  che dal 1971 non ha quasi cambiato volto.
+  legato alla scena in cui Michael chiede la mano di Apollonia.
 - **Palazzo Adriano (Sicilia)** — la scenografica Piazza Umberto I, cuore di
   *[Nuovo Cinema Paradiso](/film/nuovo-cinema-paradiso)*, oggi anche sede di
   un museo dedicato al film.

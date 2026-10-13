@@ -1,22 +1,23 @@
 ---
-titolo: "Nuovo Cinema Paradiso: Palazzo Adriano e il museo"
-descrizione: "Dove è stato girato Nuovo Cinema Paradiso? Piazza Umberto I a Palazzo Adriano, il museo dedicato al film (aperto ad agosto 2025) e le altre location."
+titolo: "Nuovo Cinema Paradiso: Palazzo Adriano e museo"
+descrizione: "Dove è stato girato Nuovo Cinema Paradiso? Piazza Umberto I a Palazzo Adriano, il museo gratuito dedicato al film e le altre location siciliane."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-17
+dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/palazzo-adriano-piazza.jpg"
 immagineAlt: "Piazza Umberto I a Palazzo Adriano, con la fontana e la chiesa madre"
 tags: ["Nuovo Cinema Paradiso", "Palazzo Adriano", "Sicilia", "cineturismo", "Tornatore"]
 faq:
   - domanda: "Dove è stato girato Nuovo Cinema Paradiso?"
-    risposta: "Principalmente a Palazzo Adriano, in provincia di Palermo, nella scenografica Piazza Umberto I."
-  - domanda: "Esiste ancora il Cinema Paradiso?"
-    risposta: "La facciata del cinema fu costruita per il film e smontata a fine riprese; le scene interne furono girate nella Chiesa del Carmelo."
-  - domanda: "Cosa mangiare a Palazzo Adriano?"
-    risposta: "Pane casereccio, formaggi locali, salumi e dolci di mandorla della tradizione dei Monti Sicani."
-  - domanda: "C'è un museo dedicato a Nuovo Cinema Paradiso?"
-    risposta: "Sì, il Museo Nuovo Cinema Paradiso ha aperto il 4 agosto 2025 di fronte alla piazza-set, con fotografie originali, la riproduzione della cabina di Alfredo e l'area 'baci rubati'."
+    risposta: "Principalmente a Palazzo Adriano, in provincia di Palermo, in Piazza Umberto I. Le riprese toccarono anche altri paesi siciliani, tra cui Cefalù e Bagheria."
+  - domanda: "Esiste ancora il cinema Paradiso di Palazzo Adriano?"
+    risposta: "No: il cinema del film non esiste più, ma la piazza è riconoscibile e quasi immutata rispetto al 1988. Il prospetto dell'ex Municipio, che ispirò la scenografia, ospita oggi il museo dedicato al film."
+  - domanda: "C'è un museo di Nuovo Cinema Paradiso a Palazzo Adriano?"
+    risposta: "Sì: il Museo Nuovo Cinema Paradiso, nell'ex Municipio in Piazza Umberto I, è stato inaugurato il 4 agosto 2023. Secondo Museionline l'ingresso è gratuito e l'orario è 9–13 e 15–19; verifica con una telefonata (+39 091 8349933)."
   - domanda: "Come si arriva a Palazzo Adriano da Palermo?"
-    risposta: "Circa 80 km, poco più di 1h30 in auto via SS121/SS189 e SS188. Senza auto, la soluzione più pratica è treno più taxi per l'ultimo tratto."
+    risposta: "Circa 80 km, poco più di 1h30 in auto. Senza auto, la soluzione più pratica è treno più taxi per l'ultimo tratto."
+  - domanda: "Dove mangiare a Palazzo Adriano?"
+    risposta: "All'Albergo Ristorante Pizzeria del Viale, in Via XX Settembre 2: non è una location del film, ma è un indirizzo reale nel paese del film."
 prenotazioni:
   - nome: "Hotel"
     citta: "Palermo"
@@ -26,68 +27,59 @@ esperienze:
 bozza: false
 ---
 
-Premio Oscar come miglior film straniero il **26 marzo 1990**, *Nuovo Cinema
-Paradiso* del regista bagherese **Giuseppe Tornatore** ha eletto a set
-principale **Palazzo Adriano**, borgo dei Monti Sicani a sud di Palermo. La
-sua piazza è una delle più riconoscibili del cinema italiano. Ecco
-l'itinerario tra le location e la tavola.
+<!-- Fonti (consultate via snippet di ricerca il 2026-10-13; fetch diretto bloccato: verificare a mano): Museionline (scheda Museo Nuovo Cinema Paradiso: ex palazzo del Municipio, Piazza Umberto I, tel. +39 091 8349933, aperto tutti i giorni 9-13 e 15-19, ingresso gratuito, 'verificare gli orari'); Balarm (inaugurazione e contenuti del museo); cinemaitaliano.info (Paradiso Film Fest, quarta edizione dal 4 agosto); Summer in Italy (piazza immutata rispetto al 1988; chiese Santa Maria Assunta e Santa Maria del Lume). CORRETTO rispetto alla versione precedente: il museo e' stato inaugurato il 4 agosto 2023 (non 2025), in apertura del quarto Paradiso Film Fest. RIMOSSO perche' non confermato: Chiesa del Carmelo come set degli interni del cinema (nessuna fonte trovata). DA VERIFICARE: orari e ingresso gratuito del museo; elenco delle altre location siciliane (Bagheria, Cefalu', Castelbuono, Lascari, Chiusa Sclafani, Santa Flavia, San Nicola l'Arena, Termini Imerese, Poggioreale: riportato dalla versione precedente, da riconfermare con Italy for Movies); tempi del tragitto da Palermo (circa 80 km, 1h30); data dell'Oscar (26 marzo 1990). Scheda del locale: Albergo Ristorante Pizzeria del Viale, Via XX Settembre 2 (non e' una location del film). -->
 
-## Dove è stato girato Nuovo Cinema Paradiso: la piazza di Palazzo Adriano
+**Nuovo Cinema Paradiso**, il film di **Giuseppe Tornatore** che vinse l'Oscar come miglior
+film straniero il 26 marzo 1990, ha eletto a set principale **Palazzo Adriano**, borgo dei
+Monti Sicani a sud di Palermo. Se cerchi **Nuovo Cinema Paradiso: dove è stato girato**, la
+risposta è la sua piazza, **Piazza Umberto I**. Qui trovi cosa vedere, il museo (inaugurato nel
+2023), come arrivare e dove mangiare.
 
-Il cuore è **Piazza Umberto I**, dove fu allestita la facciata del "Cinema
-Paradiso" per le scene esterne (poi smontata a fine riprese). La piazza
-conserva la **fontana secentesca**, il campanile con la meridiana, due
-chiese e i vicoli che fanno da sfondo alla storia del piccolo Totò e del
-proiezionista Alfredo. Le scene interne del cinema furono girate nella
-Chiesa di Maria Santissima del Carmelo.
+## Le location in breve
 
-## Non solo Palazzo Adriano: le altre location siciliane del film
+- **Palazzo Adriano**: Piazza Umberto I, la piazza del film.
+- **Altre località siciliane**, secondo le guide (elenco da riconfermare): Bagheria, Cefalù, Castelbuono, Lascari, Chiusa Sclafani, Santa Flavia, San
+  Nicola l'Arena, Termini Imerese e i ruderi di Poggioreale.
 
-Palazzo Adriano è la location più famosa, ma non l'unica: le riprese
-toccarono anche **Bagheria** (città natale di Tornatore), **Cefalù**,
-**Castelbuono**, **Lascari**, **Chiusa Sclafani**, **Santa Flavia**, **San
-Nicola l'Arena**, **Termini Imerese** e i ruderi di **Poggioreale**. Un
-vero itinerario attraverso la Sicilia, con Palazzo Adriano nel ruolo di
-protagonista assoluta.
+## La piazza di Palazzo Adriano
 
-## Il museo dedicato al film
+**Piazza Umberto I** è la piazza del film, ed è riconoscibile e quasi immutata rispetto al
+1988. Il cinema del film **non esiste più**: la facciata fu allestita per le riprese. Le
+guide citano le chiese **Santa Maria Assunta** e **Santa Maria del Lume** (con il campanile)
+tra gli sfondi della scena.
 
-Dal **4 agosto 2025**, proprio di fronte alla piazza-set, ha aperto il
-**Museo Nuovo Cinema Paradiso**, allestito nel palazzo dell'ex municipio.
-All'interno: fotografie originali di scena e backstage, la fedele
-riproduzione della cabina di proiezione di Alfredo, e la cosiddetta "area
-baci rubati", ispirata al celebre montaggio finale del film. Una tappa
-imperdibile per chi arriva fin qui sulle orme di Totò.
+## Il museo Nuovo Cinema Paradiso
 
-## Dove fermarsi a mangiare
+Il **Museo Nuovo Cinema Paradiso** è nell'**ex palazzo del Municipio**, in Piazza Umberto I,
+il cui prospetto ispirò la scenografia. Fu inaugurato il **4 agosto 2023**, in apertura
+del quarto Paradiso Film Fest. Al piano terra ci sono fotografie di scena della Cristaldi
+Film, oggetti del film e un plastico del centro storico; al primo piano un'area
+multimediale e la riproduzione della **cabina di proiezione di Alfredo**.
 
-Nel borgo, a pochi minuti dalla piazza-set, si trova lo storico
-**[Albergo Ristorante Pizzeria del Viale](/locale/bar-paradiso-palazzo-adriano)**,
-tappa reale per una sosta tra una passeggiata e l'altra nello stesso paese
-raccontato dal film (non è tra le location delle riprese).
+- **Indirizzo:** Piazza Umberto I, 90030 Palazzo Adriano ([mappa]({M}Museo+Nuovo+Cinema+Paradiso+Palazzo+Adriano)).
+- **Orari e biglietto:** Museionline indica ingresso **gratuito** e apertura ogni giorno 9–13 e
+  15–19, ma consiglia di verificare. Telefono +39 091 8349933 [DA VERIFICARE].
 
-## I sapori dei Monti Sicani
+## Dove mangiare a Palazzo Adriano
 
-La cucina di questa Sicilia interna è schietta e contadina: pane casereccio,
-formaggi locali, salumi, e i dolci di mandorla della tradizione. Un borgo perfetto
-per un itinerario lento tra cinema e autenticità.
+**[Albergo Ristorante Pizzeria del Viale](/locale/bar-paradiso-palazzo-adriano)**, in **Via XX
+Settembre 2** ([mappa]({M}Albergo+Ristorante+Pizzeria+del+Viale+Palazzo+Adriano)): non è tra le
+location delle riprese, ma è un indirizzo reale nel paese del film. Per il resto, la cucina dei
+Monti Sicani è contadina: pane casereccio, formaggi locali, salumi, dolci di mandorla.
+[DA VERIFICARE: orari e prenotazione].
 
 ## Come arrivare da Palermo
 
-Palazzo Adriano dista circa 80 km da Palermo, poco più di **1h30 in auto**:
-si segue la SS121/SS189 fino a Lercara Friddi, poi la SS188 seguendo le
-indicazioni per Palazzo Adriano. Senza auto, la soluzione più pratica è
-treno più taxi per l'ultimo tratto, con un tempo di percorrenza complessivo
-di circa 1h40.
+Palazzo Adriano dista circa 80 km da Palermo, poco più di 1 ora e 30 in auto (dalla SS121 e
+SS189, poi la SS188). Senza auto, la soluzione più pratica è treno più taxi per l'ultimo tratto.
 
-Trovi le tappe collegate alla scheda
-**[Nuovo Cinema Paradiso](/film/nuovo-cinema-paradiso)** e i locali di
-**[Palazzo Adriano](/palazzo-adriano)**.
+## Per continuare
 
-## In sintesi
+Altre location siciliane: *[Bar Vitelli a Savoca](/blog/bar-vitelli-savoca-padrino)*,
+*[The Odyssey a Favignana](/blog/the-odyssey-nolan-sicilia-favignana)* e
+*[White Lotus a Taormina](/blog/the-white-lotus-sicilia-taormina)*.
 
-A Palazzo Adriano il cinema è ancora nell'aria: fai una sosta
-all'**[Albergo Ristorante Pizzeria del Viale](/locale/bar-paradiso-palazzo-adriano)**,
-guarda la stessa piazza dove Totò sognava davanti al grande schermo, e
-chiudi la visita con una tappa al nuovo museo dedicato al capolavoro di
-Tornatore.
+## Fonti
+
+- Museionline, scheda *Museo Nuovo Cinema Paradiso*; Balarm
+- cinemaitaliano.info, *Paradiso Film Fest*; Summer in Italy
