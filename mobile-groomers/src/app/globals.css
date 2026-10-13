@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/*
+  FindMobileGrooming — design system.
+  Deep navy (trust/authority) as the guiding color, bright teal as the
+  energetic accent for CTAs, slate/white neutrals for a clean SaaS-style
+  UI. Typography: Plus Jakarta Sans for headings, Inter for body/UI.
+*/
+
+:root {
+  --mg-navy: #0f172a;
+  --mg-navy-soft: #1e293b;
+  --mg-teal: #0ea5e9;
+  --mg-teal-dark: #0284c7;
+  --mg-teal-soft: #e0f2fe;
+
+  --mg-ink: #0f172a;
+  --mg-ink-soft: #475569;
+  --mg-muted: #64748b;
+  --mg-canvas: #f8fafc;
+  --mg-surface: #ffffff;
+  --mg-surface-2: #f1f5f9;
+  --mg-line: #e2e8f0;
+  --mg-line-strong: #cbd5e1;
+
+  --mg-success: #16a34a;
+  --mg-success-soft: #dcfce7;
+  --mg-warning: #d97706;
+  --mg-warning-soft: #fef3c7;
+
+  --radius-card: 1rem;
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 28px -18px rgba(15, 23, 42, 0.22);
+  --shadow-lift: 0 4px 10px rgba(15, 23, 42, 0.08), 0 26px 54px -24px rgba(15, 23, 42, 0.32);
+}
+
+@theme inline {
+  --color-navy: var(--mg-navy);
+  --color-navy-soft: var(--mg-navy-soft);
+  --color-teal: var(--mg-teal);
+  --color-teal-dark: var(--mg-teal-dark);
+  --color-teal-soft: var(--mg-teal-soft);
+  --color-ink: var(--mg-ink);
+  --color-ink-soft: var(--mg-ink-soft);
+  --color-muted: var(--mg-muted);
+  --color-canvas: var(--mg-canvas);
+  --color-surface: var(--mg-surface);
+  --color-surface-2: var(--mg-surface-2);
+  --color-line: var(--mg-line);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-jakarta);
+}
+
+body {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), sans-serif;
+}
+
+* {
+  border-color: var(--mg-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--mg-canvas);
+  color: var(--mg-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+}
+
+.container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) {
+  .container-page { padding-inline: 2rem; }
+}
+@media (min-width: 1024px) {
+  .container-page { padding-inline: 2.5rem; }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1;
+    padding: 0.8rem 1.4rem;
+    border-radius: 0.65rem;
+    border: 1px solid transparent;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+      box-shadow 0.15s ease, transform 0.04s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn:focus-visible { outline: 2px solid var(--mg-teal); outline-offset: 2px; }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--mg-teal); color: #fff; }
+  .btn-primary:hover { background: var(--mg-teal-dark); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+  .btn-navy { background: var(--mg-navy); color: #fff; }
+  .btn-navy:hover { background: var(--mg-navy-soft); transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+  .btn-outline { background: var(--mg-surface); color: var(--mg-ink); border-color: var(--mg-line-strong); }
+  .btn-outline:hover { background: var(--mg-surface-2); border-color: var(--mg-teal); }
+  .btn-sm { padding: 0.55rem 1rem; font-size: 0.875rem; border-radius: 0.5rem; }
+  .btn-block { width: 100%; }
+
+  .card {
+    background: var(--mg-surface);
+    border: 1px solid var(--mg-line);
+    border-radius: var(--radius-card);
+  }
+  .card-hover { transition: transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s ease, border-color 0.2s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: var(--mg-line-strong); }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.32rem 0.65rem;
+    border-radius: 999px;
+    line-height: 1.2;
+  }
+  .chip-teal { background: var(--mg-teal-soft); color: var(--mg-teal-dark); }
+  .chip-success { background: var(--mg-success-soft); color: #15803d; }
+  .chip-neutral { background: var(--mg-surface-2); color: var(--mg-ink-soft); }
+
+  .field {
+    width: 100%;
+    background: var(--mg-surface);
+    border: 1px solid var(--mg-line-strong);
+    border-radius: 0.65rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    color: var(--mg-ink);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .field:focus { outline: none; border-color: var(--mg-teal); box-shadow: 0 0 0 3px var(--mg-teal-soft); }
+  .field-label { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--mg-ink-soft); margin-bottom: 0.35rem; }
+}

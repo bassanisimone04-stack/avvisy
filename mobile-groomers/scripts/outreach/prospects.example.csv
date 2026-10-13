@@ -1,0 +1,7 @@
+business_name,first_name,city,state,city_slug,zip,listing_slug,email,instagram,phone,touches,opted_out,claimed
+PawMobile Grooming Co.,Dana,Los Angeles,CA,los-angeles-ca,90210,pawmobile-grooming-co,owner@pawmobile.example,@pawmobile,+13105550142,0,,
+Vanessa's VIP Van Grooming,Vanessa,Houston,TX,houston-tx,77002,vanessa-vip-van-grooming,hello@vipvan.example,,+17135550198,1,,
+Sunshine Suds Mobile Spa,,Miami,FL,miami-fl,33139,sunshine-suds-mobile-spa,,@sunshinesuds,,0,,
+Bark & Bubbles Van,Chris,Phoenix,AZ,phoenix-az,85004,,chris@barkbubbles.example,,,4,,
+Clip N Ship Mobile,Sam,Denver,CO,denver-co,80202,,sam@clipnship.example,,,0,yes,
+Happy Tails Van Spa,Jordan,Austin,TX,austin-tx,78701,,jordan@happytails.example,,,2,,true

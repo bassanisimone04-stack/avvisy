@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "haute-pets",
+    "name": "Haute Pets",
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston-tx",
+    "phone": "+1 (713) 862-6900",
+    "website": "https://hautepets.net/",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "kontota-central-houston",
+    "name": "Kontota of Central Houston",
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston-tx",
+    "phone": "+1 (713) 331-5486",
+    "website": "https://kontota.com/mobile-dog-grooming-houston-tx/",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "golden-mobile-grooming",
+    "name": "Golden Mobile Grooming",
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami-fl",
+    "phone": "+1 (786) 769-6161",
+    "website": "https://goldenmobilegrooming.com/",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "lucky-dog-mobile-groomers",
+    "name": "Lucky Dog Mobile Groomers",
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix-az",
+    "phone": "+1 (480) 426-9000",
+    "website": "https://www.luckydogmobilegroomers.com/phoenix-az/",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "my-denver-pet",
+    "name": "My Denver Pet LLC",
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver-co",
+    "phone": "+1 (720) 951-5093",
+    "website": "https://www.mydenverpet.com/",
+    "tagline": "Family-owned mobile grooming, A+ BBB rated since 2011.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "poochies-mobile-grooming",
+    "name": "Poochies Mobile Grooming",
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas-tx",
+    "phone": "+1 (469) 652-7911",
+    "website": "https://poochiesdallas.com/",
+    "tagline": "Cage-free, at-home dog and cat grooming across Dallas, Park Cities and Preston Hollow.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "primped-pooches-mobile-dog-spa",
+    "name": "Primped Pooches Mobile Dog Spa",
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas-tx",
+    "phone": "+1 (214) 817-0362",
+    "website": "https://www.primpedpooches.com/",
+    "tagline": "Serving McKinney, Frisco, Allen and Plano since 2017.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "awesome-doggies-mobile-pet-grooming",
+    "name": "Awesome Doggies Mobile Pet Grooming",
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego-ca",
+    "phone": "+1 (858) 633-3641",
+    "website": "https://awesomedoggies.com/",
+    "tagline": "Low-stress mobile grooming serving San Diego since 2002.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "anderson-mobile-grooming",
+    "name": "Anderson Mobile Grooming",
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte-nc",
+    "phone": "+1 (847) 271-9476",
+    "website": "https://andersonmobilegrooming.com/",
+    "tagline": "Family-owned mobile grooming serving the Charlotte metro area.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "furpets-grooming",
+    "name": "FurPets Grooming",
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta-ga",
+    "phone": "+1 (678) 429-6255",
+    "website": "https://www.furpetsgrooming.com/",
+    "tagline": "Family-owned mobile dog and cat grooming across Metro Atlanta.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "bark-in-style-seattle",
+    "name": "Bark in Style Seattle",
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle-wa",
+    "phone": "+1 (206) 823-8362",
+    "website": "https://www.barkinstyleseattle.com/",
+    "tagline": "Mobile grooming out of Wallingford — home, office, RV park, or marina.",
+    "tier": "free",
+    "verified": false
+  },
+  {
+    "slug": "lush-pups-mobile-spa",
+    "name": "Lush Pups Mobile Spa",
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle-wa",
+    "phone": "+1 (425) 892-7877",
+    "website": "https://lushpupsspa.com/",
+    "tagline": "Mobile dog grooming based in Bothell, with scheduled service days across Seattle and the Eastside.",
+    "tier": "free",
+    "verified": false
+  }
+]
