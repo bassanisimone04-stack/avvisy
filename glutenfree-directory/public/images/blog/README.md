@@ -2,7 +2,7 @@
 
 Foto di copertina degli articoli. **Già collegate (30):** tutte tranne le tre sotto.
 
-**Ancora da caricare (4):** `intolleranza`, `vicino-a-me` (uno smartphone con una mappa aperta, su un tavolo di un locale), `pasticcerie`, `old-wild-west` (le ultime due vanno scattate davvero in un locale reale). Fino ad allora quegli articoli usano la foto generica.
+**Ancora da caricare (9):** `intolleranza`, `vicino-a-me` (uno smartphone con una mappa aperta, su un tavolo di un locale), `pasticcerie`, `old-wild-west`, e le 5 nuove: `e-senza-glutine` (riso, cous cous e farro in ciotoline, senza etichette di marca), `gelato` (coppette di gelato con frutta, senza persone), `pizza-dove-mangiarla` (una pizza senza glutine appena sfornata in un locale), `pane-senza-glutine` (pane a fette o pagnotta, meglio con un cartello «senza glutine»), `senza-glutine-in-italia` (un piatto di pasta italiana con un monumento sullo sfondo, senza persone riconoscibili) (le ultime due vanno scattate davvero in un locale reale). Fino ad allora quegli articoli usano la foto generica.
 
 ## Indicazioni per tutte le foto
 
