@@ -1,72 +1,121 @@
 ---
-titolo: "Vacanze Romane: location a Roma e il gelato"
-descrizione: "Il gelato di Piazza di Spagna in Vacanze Romane con Audrey Hepburn e la Roma senza tempo del film. Dove assaggiarlo."
+titolo: "Vacanze romane: le location a Roma e il gelato"
+descrizione: "Le location di Vacanze romane a Roma: Piazza di Spagna, Bocca della Verità, Palazzo Colonna, Via Margutta 51 e dove mangiare lì vicino."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26
+dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/vacanze-romane-gelato-roma.jpg"
 immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
-tags: ["Vacanze Romane", "Roma", "Audrey Hepburn", "gelato", "cineturismo"]
+tags: ["Vacanze romane", "Roma", "Audrey Hepburn", "location", "cineturismo"]
 faq:
-  - domanda: "Dove è girata la scena del gelato di Vacanze Romane?"
-    risposta: "Sulla scalinata di Piazza di Spagna a Roma, con Audrey Hepburn."
-  - domanda: "Quali luoghi compaiono in Vacanze Romane?"
-    risposta: "Piazza di Spagna, la Bocca della Verità, il Colosseo e Castel Sant'Angelo."
-  - domanda: "Cosa assaggiare a Roma?"
-    risposta: "Gelato artigianale, maritozzo con la panna, cappuccino e la cucina romana."
-  - domanda: "Vacanze Romane è girato davvero interamente a Roma?"
-    risposta: "Sì: fu il primo grande film hollywoodiano girato interamente sul posto a Roma, tra la città vera e gli studi di Cinecittà, invece che ricostruito in studio a Los Angeles."
-  - domanda: "La scena della Bocca della Verità era nel copione?"
-    risposta: "No, in parte: il gesto di Gregory Peck che finge di aver perso la mano fu un'improvvisazione dell'attore per spaventare Audrey Hepburn, che infatti reagisce in modo del tutto spontaneo e reale nella scena."
+  - domanda: "Dove è stato girato Vacanze romane a Roma?"
+    risposta: "Tra gli altri luoghi: Piazza San Pietro, Via dei Fori Imperiali, Palazzo Barberini, Via Margutta 51, Piazza di Spagna, il Colosseo, Piazza Venezia, la Bocca della Verità, Ponte Sant'Angelo e Palazzo Colonna, secondo Italy for Movies."
+  - domanda: "Dove è girata la scena del gelato di Vacanze romane?"
+    risposta: "A Piazza di Spagna, sulla scalinata di Trinità dei Monti."
+  - domanda: "Si può visitare l'appartamento di Joe Bradley in Via Margutta?"
+    risposta: "Non dentro: Via Margutta 51 è una residenza privata, quindi si vede solo la strada e l'ingresso."
+  - domanda: "Vacanze romane è stato girato tutto a Roma?"
+    risposta: "Le fonti divergono: alcune dicono interamente a Roma, altre a Roma e negli studi di Cinecittà. Le riprese in esterni nella città vera erano insolite per le produzioni americane dell'epoca."
+  - domanda: "Il caffè di Vacanze romane esiste ancora?"
+    risposta: "No. Il caffè Rocca vicino al Pantheon, in Via della Rotonda 25, secondo le guide è sparito e oggi c'è un negozio; un sito di viaggi sospetta persino che sia stato inventato per il film."
 esperienze:
-  - nome: "Tour in Vespa di Roma"
+  - nome: "Tour di Roma in Vespa"
     query: "Rome Vespa tour"
 bozza: false
 ---
 
-*Vacanze Romane* (*Roman Holiday*, 1953), diretto da **William Wyler**, ha
-reso **Roma** eterna nell'immaginario di tutto il mondo. La principessa
-Anna, interpretata da **Audrey Hepburn** al fianco di **Gregory Peck**, gira
-la città in Vespa, si taglia i capelli e assaggia la libertà… con un gelato
-in mano. Un dettaglio produttivo non scontato: fu il primo grande film
-hollywoodiano girato **interamente sul posto**, tra la Roma vera e gli
-studi di Cinecittà, in un'epoca in cui le major preferivano ricostruire
-tutto in studio a Los Angeles. Ecco l'itinerario tra i luoghi del film e i
-sapori da provare.
+Le **location di Vacanze romane** sono una mappa della Roma che tutti sognano. Nel 1953
+William Wyler seguì Audrey Hepburn e Gregory Peck per la città, da Piazza San Pietro a
+Piazza di Spagna, dalla Bocca della Verità alla festa sul fiume accanto a Castel
+Sant'Angelo. Quasi tutti quei posti esistono ancora. Qui trovi le location vere di Roma,
+quelle in cui puoi davvero entrare e dove fare una pausa con un caffè o un gelato.
 
-## Dove è stato girato Vacanze romane: il gelato di Piazza di Spagna
+## Perché le location di Vacanze romane contano ancora
 
-La scena del gelato sulla scalinata di **Piazza di Spagna** è una delle più
-celebri della storia del cinema. Ancora oggi, un gelato artigianale
-passeggiando per il centro è il modo più dolce di vivere Roma come Audrey.
+*Vacanze romane* fece vincere ad Audrey Hepburn l'Oscar come miglior attrice, e fece una
+cosa insolita per un film americano dell'epoca: uscì dallo studio e andò nella città vera.
+Per questo le location sono ancora così riconoscibili. Una giornata basta per vederne la
+maggior parte, se parti presto e hai scarpe comode, perché il percorso mescola scalinate,
+ponti e lunghe camminate.
 
-## La scena (in parte improvvisata) della Bocca della Verità
+## Le location di Vacanze romane a Roma: il percorso in breve
 
-Una delle sequenze più amate del film è quella alla **Bocca della Verità**,
-nella Chiesa di Santa Maria in Cosmedin: Gregory Peck infila la mano nella
-fessura di pietra e finge di averla persa, nascondendola nella giacca. Un
-dettaglio che pochi conoscono: **non era previsto dal copione**. Fu
-un'improvvisazione dell'attore per spaventare la giovane Audrey Hepburn, che
-non era stata avvisata — la sua reazione di sorpresa e il grido, nella
-scena, sono quindi del tutto reali.
+Secondo **Italy for Movies**, il portale del Ministero della Cultura, il film passa da
+questi luoghi:
 
-## Le altre location del film
+- **Piazza San Pietro** e **Via dei Fori Imperiali**: l'arrivo della principessa e la parata.
+- **Palazzo Barberini** e **Via delle Quattro Fontane**: l'ambasciata e la fuga.
+  Palazzo Barberini oggi ospita la Galleria Nazionale d'Arte Antica, quindi si visita.
+- **Piazza della Repubblica**, alla fontana delle Naiadi: dove scende dall'auto.
+- **Via Margutta 51**: l'appartamento di Joe Bradley.
+- **Piazza di Spagna** e **Trinità dei Monti**: la scena del gelato.
+- **Il Colosseo** e **Piazza Venezia**: tappe del giro in Vespa.
+- **La Bocca della Verità**, a Santa Maria in Cosmedin.
+- **Ponte Sant'Angelo** e **Castel Sant'Angelo**: la festa sul fiume.
+- **Palazzo Colonna**: la conferenza stampa finale.
 
-L'itinerario tocca anche **Palazzo Barberini**, **Via delle Quattro
-Fontane**, il **Colosseo**, **Castel Sant'Angelo** e le piazze del centro
-storico. Un giro perfetto tra monumenti e scorci senza tempo.
+## Dove è girata la scena del gelato di Vacanze romane
 
-## Cosa assaggiare nella Roma del film
+Il gelato più famoso della storia del cinema fu mangiato sulla **scalinata di Trinità dei
+Monti**, a Piazza di Spagna. Oggi la scalinata è un luogo dove camminare, non dove
+sedersi: Roma ha regole contro chi si siede sui gradini dal 2019, quindi gusta il gelato
+in piedi lì vicino e controlla le regole attuali. Un blog indica una gelateria precisa come
+quella del film, ma non abbiamo trovato una fonte solida, quindi non la citiamo.
 
-Oltre al gelato, la Roma di *Vacanze Romane* è quella dei caffè storici e
-delle trattorie: concediti un **cappuccino** al bar, un **maritozzo** con
-la panna e la sera la cucina romana verace, tra cacio e pepe e carciofi
-alla giudia. Roma è la città con più location gastronomiche del nostro
-sito: scoprile alla pagina **[Roma](/roma)**.
+## La Bocca della Verità: la scena improvvisata
 
-## In sintesi
+Una delle sequenze più amate si svolge alla **Bocca della Verità**, nel portico della chiesa
+di Santa Maria in Cosmedin. Gregory Peck infila la mano nella bocca di pietra e finge che
+gli sia stata morsa. **Non era nel copione**: fu un'improvvisazione dell'attore per
+spaventare Audrey Hepburn, che non era stata avvertita, quindi la sua reazione è autentica.
+Le fonti non concordano sul punto esatto delle riprese, portico o cortile.
 
-*Vacanze Romane* è un invito a vivere Roma con leggerezza: una Vespa, una
-scalinata e un gelato, in una città che il film ha immortalato sul serio,
-strada per strada. Un classico che, a distanza di decenni, fa ancora venire
-voglia di partire. Sfoglia gli altri **[film](/film)** ambientati nella
-Capitale.
+## Via Margutta 51: l'appartamento di Joe Bradley
+
+L'appartamento del giornalista è in **Via Margutta 51**, una strada tranquilla nota per gli
+studi d'artista. È una **residenza privata**: si vedono la strada e l'ingresso, non gli
+interni. Secondo alcune guide gli interni furono girati in studio, mentre l'esterno e il
+cortile sono veri.
+
+## Palazzo Colonna e Castel Sant'Angelo
+
+Il film si chiude con la conferenza stampa della principessa nella **Sala Grande della
+Galleria di Palazzo Colonna**, in Piazza Santi Apostoli. Il palazzo è visitabile solo in
+alcuni giorni, quindi controlla il sito ufficiale prima di programmare la tappa. Prima,
+la festa sul barcone sul fiume fu girata sotto **Ponte Sant'Angelo**, con il castello
+sullo sfondo: oggi il ponte, con gli angeli del Bernini, si percorre gratis.
+
+## Le location di Vacanze romane: un percorso a piedi o in Vespa
+
+Un ordine logico, dal centro verso l'esterno:
+
+1. **Via Margutta** e **Piazza di Spagna**, nella stessa zona.
+2. **Piazza Venezia** e il **Colosseo**.
+3. **La Bocca della Verità**, a pochi passi da Piazza Venezia.
+4. **Palazzo Colonna**, se è aperto.
+5. **Ponte Sant'Angelo** e **Castel Sant'Angelo**.
+6. **Piazza San Pietro**, per finire.
+
+Il modo più divertente è la Vespa, come Joe e Ann: trovi il link al tour qui sotto.
+
+## Dove mangiare sul percorso di Vacanze romane
+
+La risposta onesta è che non c'è un ristorante aperto documentato come set del film. Il
+**caffè Rocca** (Via della Rotonda 25, vicino al Pantheon), dove Joe, Ann e il fotografo
+bevono champagne e caffè freddo, secondo le guide non esiste più, e al suo posto c'è un
+negozio di abbigliamento; un sito di viaggi pensa che possa persino essere stato inventato
+per il film. Per questo non lo schediamo come locale.
+
+Vicino al percorso, la zona del Pantheon è piena di bar storici come **Tazza d'Oro** e
+**Sant'Eustachio**, senza legame con il film. Per i ristoranti e i caffè che compaiono
+davvero nei film, vedi la nostra **[pagina di Roma](/roma)** e l'articolo
+**[Roma nel cinema: 5 ristoranti da film](/blog/roma-nel-cinema-ristoranti-da-film)**.
+
+## Per continuare
+
+Se ti piace la Roma del cinema, leggi anche
+**[Il Café de Paris de La Dolce Vita](/blog/la-dolce-vita-via-veneto-cafe-de-paris)** e
+**[Eat Pray Love a Roma](/blog/eat-pray-love-location-roma-napoli)**, e sfoglia tutti i
+**[film](/film)** ambientati nella capitale.
+
+<!-- Fonti (consultate via snippet di ricerca il 2026-10-13: verificare a mano): Italy for Movies, scheda di Vacanze Romane (italyformovies.it/film-serie-tv-games/detail/6590): arrivo in Piazza San Pietro, Via dei Fori Imperiali, Palazzo Barberini, Via delle Quattro Fontane, Fontana delle Naiadi, Via Margutta 51, Piazza di Spagna e Trinità dei Monti, Colosseo, Piazza Venezia, Bocca della Verità a Santa Maria in Cosmedin, festa sul fiume sotto Ponte Sant'Angelo, conferenza stampa nella Galleria di Palazzo Colonna; Movie-Locations e guide di viaggio per Via Margutta 51 e il Caffè Rocca (Via della Rotonda 25, oggi un negozio). DA VERIFICARE: ruolo degli studi di Cinecittà (le fonti variano: 'girato interamente a Roma' o 'a Roma e a Cinecittà'), interni di Via Margutta girati in studio (solo guide), punto esatto della scena della Bocca della Verità (pronao o cortile), giorni di apertura di Palazzo Colonna, divieto di sedersi sulla scalinata di Trinità dei Monti (in vigore dal 2019 secondo le notizie, controllare le regole attuali), Caffè Rocca (chiuso secondo le guide; un sito dice che potrebbe essere stato inventato per il film), Tazza d'Oro e Sant'Eustachio come bar vicini senza legame con il film. -->
