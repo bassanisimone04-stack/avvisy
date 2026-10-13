@@ -76,6 +76,37 @@ and Taormina. It is the right address for anyone who wants to eat somewhere that
 appears in the series: **[La Cambusa](/en/locale/la-cambusa-giardini-naxos)**. Check its
 opening days, since the pages of its official website don't match.
 
+## Taormina's venues: addresses and map
+
+W Magazine, in Adam DiMarco's guide (Albie in the series), names **Médousa** and **Gambero
+Rosso** among the places to eat in Taormina. Here are other addresses in the centre too, with
+the details we could verify (not all are "cast venues").
+
+- **Médousa Bistrot & Suites**, **1 Via Sesto Pompeo**, between Porta Catania and Piazza
+  Duomo (two listings agree). [TO VERIFY: menu, pasta alla Norma and gluten-free options]
+  ([map](https://www.google.com/maps/search/?api=1&query=Medousa+Bistrot+Taormina)).
+- **Gambero Rosso**, Taormina: named by W Magazine. [TO VERIFY: address, hours and booking]
+  ([map](https://www.google.com/maps/search/?api=1&query=Gambero+Rosso+Taormina)).
+- **Casamatta**, **Via S. Maria de' Greci**: an informal wine bar with natural wines,
+  cocktails and Sicilian food (a single listing for the address). I found no confirmation
+  of live music: [TO VERIFY] ([map](https://www.google.com/maps/search/?api=1&query=Casamatta+Taormina)).
+- **Bam Bar**, **45 Via di Giovanni**: granita and brioche, the classic Sicilian breakfast.
+  Two guides give Tuesday–Sunday, 7–20, and frequent queues: [TO VERIFY: hours]
+  ([map](https://www.google.com/maps/search/?api=1&query=Bam+Bar+Taormina)).
+- **Ristorante Baronessa**, Corso Umberto I: according to a trade article it's the restaurant
+  in episode two where Albie and Portia dine; single source [TO VERIFY]
+  ([map](https://www.google.com/maps/search/?api=1&query=Ristorante+Baronessa+Taormina)).
+- **Feliciotto**, a historic boutique about ten minutes' walk from the San Domenico Palace:
+  [TO VERIFY: I found no source for its address and hours].
+
+## Castelmola and Bar Turrisi: the day trip
+
+**Castelmola** is the village above Taormina. **Bar Turrisi** is a historic venue with a
+curious theme (decor inspired by masculinity, per the press), open since 1947 according to
+Balarm; its signature is **almond wine**. You go for the novelty, not the food. The address
+varies by source (36 Via Costantino Patricio in one listing, 19 Via Papa Pio IX in another):
+ask in the square or call 0942 281810 [TO VERIFY] ([map](https://www.google.com/maps/search/?api=1&query=Bar+Turrisi+Castelmola)).
+
 ## White Lotus filming locations in central Taormina
 
 Besides the hotel, central Taormina appears in the series. Guides point to the old-town

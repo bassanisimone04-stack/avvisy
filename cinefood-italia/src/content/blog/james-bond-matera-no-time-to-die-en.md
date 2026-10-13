@@ -121,6 +121,27 @@ for Italy*, covered in *[Tucci in Puglia: Antichi Sapori and Matera](/en/blog/st
 For a simpler meal, look for Lucanian cooking in the Sassi: **Matera IGP bread**,
 **peperoni cruschi**, **cavatelli** and **caciocavallo podolico**.
 
+## Where to sleep in 007's footsteps
+
+- **B&B Sul Ponte**, in **Gravina in Puglia**: according to bondlocations.com, Daniel Craig
+  stayed here during the shoot. It's a few steps from the Madonna della Stella aqueduct
+  bridge, the film's real bridge. Single source, no independent confirmation;
+  [TO VERIFY: address and booking]. If you want to sleep by the bridge rather than in the
+  Sassi, this is the address to look for ([map](https://www.google.com/maps/search/?api=1&query=B%26B+Sul+Ponte+Gravina+in+Puglia)).
+- **Sextantio Le Grotte della Civita**, **28 Via Civita**, Sasso Barisano (address from the
+  official site): a hotel in ancient caves. Not a film location; it's in the same area of
+  the Sassi and also offers candle-lit dinners in a 13th-century rock-hewn church
+  ([map](https://www.google.com/maps/search/?api=1&query=Sextantio+Le+Grotte+della+Civita+Matera)).
+- **Palazzo Gattini**, **13 Piazza Duomo**, Matera (address from several listings): a hotel in
+  the old town, above the Sassi. Not a film location ([map](https://www.google.com/maps/search/?api=1&query=Palazzo+Gattini+Matera)).
+
+## By the sea: Riva dei Ginepri
+
+For a beach day, **Riva dei Ginepri** is a beach club with a restaurant on the shore of
+**Marina di Pisticci** (Wanderlog places it on Via Ulisse). Reviews are mixed: some praise
+food and service, others flag cleanliness and quality. Not a film location. [TO VERIFY: hours,
+season and booking] ([map](https://www.google.com/maps/search/?api=1&query=Riva+dei+Ginepri+Marina+di+Pisticci)).
+
 ## Beyond Matera: Maratea and Sapri
 
 For the two leads' trip towards Matera, Italy for Movies lists two more places in the

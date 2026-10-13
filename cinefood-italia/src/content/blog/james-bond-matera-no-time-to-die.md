@@ -122,6 +122,29 @@ segnaliamo perché è sulla stessa via e perché compare nella puntata sulla Pug
 Per un pasto più semplice, nei Sassi cerca la cucina lucana: **pane di Matera IGP**,
 **peperoni cruschi**, **cavatelli** e **caciocavallo podolico**.
 
+## Dove dormire sulle orme di 007
+
+- **B&B Sul Ponte**, a **Gravina in Puglia**: secondo bondlocations.com, Daniel Craig vi ha
+  soggiornato durante le riprese. Sta a pochi passi dal Ponte Acquedotto Madonna della
+  Stella, il vero ponte del film. Fonte unica, nessuna conferma indipendente;
+  [DA VERIFICARE: indirizzo e prenotazione]. Se vuoi dormire accanto al ponte e non nei Sassi,
+  è l'indirizzo da cercare ([mappa](https://www.google.com/maps/search/?api=1&query=B%26B+Sul+Ponte+Gravina+in+Puglia)).
+- **Sextantio Le Grotte della Civita**, **Via Civita 28**, Sasso Barisano (indirizzo dal
+  sito ufficiale): hotel ricavato nelle antiche grotte. Non è una location del film; è
+  nella stessa zona dei Sassi e offre anche cene a lume di candela in una chiesa rupestre
+  del Duecento ([mappa](https://www.google.com/maps/search/?api=1&query=Sextantio+Le+Grotte+della+Civita+Matera)).
+- **Palazzo Gattini**, **Piazza Duomo 13**, Matera (indirizzo da più elenchi): hotel
+  nel centro storico, sopra i Sassi. Non è una location del film
+  ([mappa](https://www.google.com/maps/search/?api=1&query=Palazzo+Gattini+Matera)).
+
+## Sul mare: Riva dei Ginepri
+
+Per una giornata di mare, **Riva dei Ginepri** è uno stabilimento con ristorante sul
+lido di **Marina di Pisticci** (Wanderlog lo colloca in Via Ulisse). Le recensioni sono
+miste: alcuni lodano cibo e servizio, altri segnalano pulizia e qualità da migliorare.
+Non è una location del film. [DA VERIFICARE: orari, stagione e prenotazione]
+([mappa](https://www.google.com/maps/search/?api=1&query=Riva+dei+Ginepri+Marina+di+Pisticci)).
+
 ## Oltre Matera: Maratea e Sapri
 
 Per il viaggio dei due protagonisti verso Matera, Italy for Movies segnala altre due
