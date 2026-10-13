@@ -1,11 +1,11 @@
 import Guide2Content from "@/components/pages/Guide2Content";
 import { pageMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/site-config";
+import meta from "@/lib/guide-meta.json";
 
 export const metadata = pageMetadata({
-  title: `Live Gluten-Free: the PDF Guide | ${SITE_NAME}`,
+  title: "Live Gluten-Free: celiac PDF guide",
   description:
-    "Download the PDF with 11 chapters on diagnosis, food safety, cross-contamination and everyday life with celiac disease: verified content from the blog.",
+    `PDF guide for living with celiac disease: ${meta.en.chapters} chapters from diagnosis to travel, quick sheet, restaurant checklist and an Italian phrase card to print.`,
   path: "/vivere-senza-glutine",
   locale: "en",
 });

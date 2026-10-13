@@ -8,3 +8,8 @@ npm-debug.log*
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
+
+# guida PDF: file intermedi di build
+guida/_body_*.html
+guida/_cover_*.html
+guida/out/_*.pdf

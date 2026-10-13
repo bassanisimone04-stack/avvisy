@@ -15,6 +15,11 @@ export const SITE_LOCALE = "it_IT";
  * nella pagina /vivere-senza-glutine non compare (nessun link rotto).
  */
 export const GUIDE2 = {
+  /** Link Payhip dell'edizione italiana. */
   checkoutUrl: "https://payhip.com/b/BOtuJ",
+  /** Link Payhip dell'edizione inglese: finché è vuoto la pagina EN mostra "in arrivo" (nessun link rotto). */
+  checkoutUrlEn: "",
   price: "$9.97",
+  priceAmount: "9.97",
+  priceCurrency: "USD",
 };

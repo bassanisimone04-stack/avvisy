@@ -1,11 +1,11 @@
 import Guide2Content from "@/components/pages/Guide2Content";
 import { pageMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/site-config";
+import meta from "@/lib/guide-meta.json";
 
 export const metadata = pageMetadata({
-  title: `Vivere Senza Glutine: la guida PDF | ${SITE_NAME}`,
+  title: "Vivere Senza Glutine: guida PDF per celiaci",
   description:
-    "Scarica il PDF con 11 capitoli su diagnosi, sicurezza alimentare, contaminazione crociata e vita quotidiana da celiaco: contenuti verificati dal blog.",
+    `Guida PDF per chi è celiaco: ${meta.it.chapters} capitoli dalla diagnosi ai viaggi, scheda rapida, checklist per il ristorante e tessera di traduzione da stampare.`,
   path: "/vivere-senza-glutine",
   locale: "it",
 });
