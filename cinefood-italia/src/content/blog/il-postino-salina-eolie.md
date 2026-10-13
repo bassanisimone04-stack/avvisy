@@ -1,75 +1,92 @@
 ---
-titolo: "Il Postino: location a Salina e dove mangiare"
-descrizione: "Dove è stato girato Il Postino? Pollara e Salina, nelle Eolie, più Procida. Dove assaggiare pane cunzato, capperi e malvasia."
+titolo: "Il Postino a Salina: Pollara e dove mangiare"
+descrizione: "Il Postino a Salina: la Pollara del film, la spiaggia che non c'è più, come arrivare da Milazzo e dove mangiare granita e pane cunzato."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
+dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/il-postino-salina-eolie.jpg"
 immagineAlt: "Una spiaggia di Salina, nelle Isole Eolie, con il mare e uno scoglio sullo sfondo"
-tags: ["Il Postino", "Salina", "Eolie", "dove mangiare", "cineturismo"]
+tags: ["Il Postino", "Salina", "Eolie", "Pollara", "dove mangiare", "cineturismo"]
 faq:
-  - domanda: "Dove è stato girato Il Postino?"
-    risposta: "Le scene principali sono girate a Pollara, sull'isola di Salina, nelle Eolie, con alcune riprese anche a Procida e Pantelleria."
-  - domanda: "Cosa si mangia a Salina?"
-    risposta: "Piatti eoliani: pesce fresco, i pregiati capperi di Salina, il pane cunzato e la dolce Malvasia delle Lipari."
+  - domanda: "Dove è stato girato Il Postino a Salina?"
+    risposta: "A Pollara, nel comune di Malfa, sul lato occidentale dell'isola. Qui Mario e Neruda parlano sulla spiaggia, con lo scoglio del Faraglione sullo sfondo. Procida è l'altra isola del film e il suo borgo."
+  - domanda: "La spiaggia di Pollara del film esiste ancora?"
+    risposta: "Non come nel film: per l'erosione restano solo piccole zone emerse, raggiungibili a nuoto o in barca, secondo le guide. Controlla le condizioni prima di andare."
+  - domanda: "Dov'è la casa di Mario ne Il Postino?"
+    risposta: "Le fonti non concordano: una indica le balate (ricoveri per barche scavati nella roccia) di Pollara, un'altra un'abitazione in contrada Punta, con facciata rosata, di fronte al mare di Pollara."
   - domanda: "Come si arriva a Salina?"
-    risposta: "Si raggiunge in traghetto o aliscafo da Milazzo, Messina o Napoli."
-  - domanda: "Perché Il Postino è il film-testamento di Massimo Troisi?"
-    risposta: "Perché Troisi girò il film sapendo di dover affrontare urgentemente un intervento al cuore, ma scelse di completare prima le riprese. Morì nel sonno poche ore dopo la fine delle riprese, l'ultima notte di lavorazione."
-  - domanda: "Il Postino è tratto da un libro?"
-    risposta: "Sì, liberamente ispirato al romanzo Il postino di Neruda (Ardiente paciencia) dello scrittore cileno Antonio Skármeta, molto amato dallo stesso Troisi."
-  - domanda: "Quali sono tutte le location del film?"
-    risposta: "Le riprese, durate 12 settimane dal 14 marzo 1994, si sono svolte tra Cinecittà (per gli interni), Pollara sull'isola di Salina (le scene principali) e Procida, con alcune riprese anche a Pantelleria."
+    risposta: "In aliscafo Liberty Lines da Milazzo (circa 1 ora e 35 minuti in diretto) o in traghetto Siremar (circa 3 ore e 20, imbarca le auto)."
+  - domanda: "Dove è stato girato Il Postino, a Salina o a Procida?"
+    risposta: "In entrambe: Salina per la casa di Neruda e le corse in bici; Procida per il borgo di Corricella. Scopri Procida nella guida dedicata."
+prenotazioni:
+  - nome: "Hotel"
+    citta: "Salina"
 esperienze:
   - nome: "Tour in barca delle Isole Eolie"
     query: "Aeolian Islands boat tour Salina"
 bozza: false
 ---
 
-*Il Postino*, l'ultimo film di **Massimo Troisi** (1994, regia di Michael
-Radford), ha reso immortale l'isola di **Salina**, nell'arcipelago delle
-Eolie. Le sue spiagge di ciottoli, i muretti a secco e il mare azzurrissimo
-sono lo sfondo dell'amicizia tra il postino Mario e il poeta Pablo Neruda.
-Il film è liberamente ispirato al romanzo *Il postino di Neruda* (*Ardiente
-paciencia*) dello scrittore cileno **Antonio Skármeta**. Ecco l'itinerario
-tra le location e i sapori dell'isola.
+<!-- Fonti (consultate via snippet di ricerca il 2026-10-13; fetch diretto bloccato: verificare a mano): italia.it, Procida, Salina e il tour di Troisi (procida-salina-troisi-postino-tour) e scheda 'Casa di Mario'; Italy for Movies, scheda Il Postino (detail/6458); Balarm (che fine ha fatto la casa del Postino); The Wom (spiaggia della Pollara); Davinotti (forum, solo indizio); SiViaggia, ferryhopper, traghetti.com (collegamenti Milazzo-Salina); Indagare, Lonely Planet, Wanderlog, Scatti di Gusto (Da Alfredo a Lingua); scheda della Trattoria Cucinotta nel sito. RIMOSSO dalla versione precedente perche' non confermato: 'casa rossa' del poeta, riprese di 12 settimane dal 14 marzo 1994, Troisi 'morto nel sonno l'ultima notte di riprese'. DA VERIFICARE: quale edificio sia la 'casa del Postino' (le balate di Pollara per una fonte, un'abitazione in contrada Punta per un'altra); quanto della spiaggia di Pollara sia ancora accessibile (erosione: solo piccole zone raggiungibili a nuoto o in barca); orari e prezzi dei collegamenti; indirizzo e orari di Da Alfredo (Via Marina Garibaldi 2, Lingua, tel. 090 984 3075 da Indagare); Hotel Signum a Malfa (terrazza ristorante citata da Indagare, non verificata). -->
 
-## Una lavorazione entrata nella storia del cinema italiano
+**Il Postino a Salina**: l'ultimo film di **Massimo Troisi** (1994, regia di Michael
+Radford) ha reso famosa **Pollara**, sul lato ovest dell'isola. Il film è liberamente
+ispirato a *Il postino di Neruda* (*Ardiente paciencia*) di **Antonio Skármeta**. Qui
+trovi cosa è girato a Salina, cosa è cambiato da allora, come arrivare e dove mangiare.
+Per il borgo di pescatori del film leggi
+*[Il Postino a Procida](/blog/il-postino-procida)*.
 
-Le riprese, cominciate il 14 marzo 1994 e durate 12 settimane, si sono
-svolte tra Cinecittà, **Salina** e **Procida**. Dietro la leggerezza
-poetica del film si nasconde una storia produttiva commovente: Troisi
-avrebbe dovuto sottoporsi con urgenza a un delicato intervento al cuore, ma
-scelse di completare prima le riprese. Morì nel sonno poche ore dopo la
-fine delle lavorazioni, l'ultima notte sul set: *Il Postino* resta così il
-suo film-testamento.
+## Il Postino: le location in breve
 
-## Dove è stato girato Il postino: le location a Salina
+- **Pollara** (Salina, comune di Malfa): le conversazioni tra Mario e Neruda, il
+  Faraglione, la casa di Mario.
+- **Procida**: Marina Corricella, la chiesa, la locanda (vedi la guida dedicata).
+- **Pantelleria**: alcune scene iniziali con Mario in bici, secondo Italy for Movies.
+- **Cinecittà**: gli interni.
 
-Il cuore delle riprese è **Pollara**, frazione del comune di Malfa, nella parte
-occidentale dell'isola. La spiaggia di Pollara, protetta da alte pareti di roccia
-e affacciata sullo Scoglio Faraglione, è il luogo delle conversazioni tra Mario e
-Neruda. Da qui, la strada che sale verso la "casa rossa" del poeta regala una
-vista su tutto l'arcipelago.
+Troisi morì nel giugno 1994, poco dopo la fine delle riprese: il film resta il suo
+testamento.
+
+## Pollara: la spiaggia di Mario e Neruda
+
+**Pollara** sta nella parte occidentale dell'isola, in una baia chiusa da alte pareti di
+roccia. Lo scoglio visibile dalla spiaggia è il **Faraglione**, lo sfondo dei dialoghi tra
+Mario e il poeta, mentre a nord le balate di Pollara e l'arco naturale di **Punta
+Perciato** completano il paesaggio. Una nota importante: **la spiaggia del film non
+esiste più com'era**. Per l'erosione restano solo piccole zone emerse, raggiungibili a
+nuoto o in barca. Quindi vai per il panorama e per l'atmosfera, non per sdraiarti sul
+ciottolato di Mario: [DA VERIFICARE le condizioni di accesso prima di scendere].
+
+### E la casa di Mario?
+
+Le fonti non concordano. Secondo una, le **balate** di Pollara diventano la casa di Mario e
+del padre pescatore; secondo un'altra la «casa del Postino» è un'abitazione in **contrada
+Punta**, in stile eoliano, con la facciata rosata che guarda il mare di Pollara (italia.it
+ha una scheda «Casa di Mario»). Non ci sbilanciamo: se vai, chiedi a Malfa.
+
+## Come arrivare a Salina
+
+Da **Milazzo** gli aliscafi Liberty Lines fanno il diretto in circa 1 ora e 35 minuti
+(1 ora e 50 con scali); il traghetto Siremar impiega circa 3 ore e 20, ed è l'unico che
+imbarca le auto. L'approdo più frequente è **Santa Marina Salina**. Orari e prezzi cambiano
+con la stagione: [DA VERIFICARE su Liberty Lines e Siremar].
 
 ## Dove mangiare a Salina
 
-Per la sosta a tavola (il locale non è tra le location del film), la
-**[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)** propone la cucina
-eoliana verace: pesce fresco, capperi di Salina (tra i più pregiati d'Italia),
-**pane cunzato** e la dolce **malvasia delle Lipari**. Sapori semplici e intensi,
-proprio come l'isola del film.
+- **[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)**, **Via Risorgimento 66**,
+  Santa Marina Salina: trattoria nel centro, cucina eoliana con capperi, pane cunzato e
+  malvasia. Non è una location del film ([mappa](https://www.google.com/maps/search/?api=1&query=Trattoria+Cucinotta+Santa+Marina+Salina)).
+- **Da Alfredo**, **Via Marina Garibaldi 2**, **Lingua**: il locale della **granita** di
+  Salina (gusti dalla mandorla al gelso) e del **pane cunzato**. Le porzioni sono
+  abbondanti e nelle ore di punta si aspetta; per alcuni recensori il servizio è lento.
+  Telefono 090 984 3075 secondo Indagare [DA VERIFICARE] ([mappa](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
+- A **Malfa**, Indagare consiglia la terrazza ristorante dell'**Hotel Signum**:
+  [DA VERIFICARE: prenotazione e apertura].
 
-## Cosa assaggiare alle Eolie
+Prodotti da cercare: **capperi di Salina**, **malvasia** e pesce fresco.
 
-I prodotti-simbolo di Salina sono i **capperi**, la **malvasia** e i piatti di
-mare. Da provare anche la pasta con finocchietto e la cucina povera di pesce
-azzurro. Un weekend qui è un tuffo nella lentezza mediterranea.
+## Fonti
 
-Per il borgo di pescatori del film leggi **[Il Postino a Procida](/blog/il-postino-procida)**, con la Locanda del Postino. Trovi le tappe collegate alla scheda **[Il postino](/film/il-postino)** e i locali
-di **[Salina](/salina)**.
-
-## In sintesi
-
-Salina è *Il Postino* fatto isola: mare, poesia e una cucina schietta. Parti dalla
-**[Trattoria Cucinotta](/locale/trattoria-dell-isola-salina)** e lasciati
-conquistare dai sapori delle Eolie.
+- italia.it, *Procida, Salina e il tour di Troisi*
+- Italy for Movies, scheda *Il Postino*
+- Balarm; The Wom; SiViaggia; Indagare
