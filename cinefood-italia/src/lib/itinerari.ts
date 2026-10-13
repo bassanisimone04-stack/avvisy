@@ -15,4 +15,5 @@ export const ITINERARIO_PER_FILM: Record<string, string> = {
   "un-americano-a-roma": "un-americano-a-roma-maccheroni",
   "la-dolce-vita": "la-dolce-vita-via-veneto-cafe-de-paris",
   "il-talento-di-mr-ripley": "mr-ripley-venezia-caffe-florian",
+  "the-white-lotus": "the-white-lotus-sicilia-taormina",
 };

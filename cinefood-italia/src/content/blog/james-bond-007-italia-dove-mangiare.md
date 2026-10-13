@@ -28,7 +28,8 @@ iconiche e dove mangiare da veri agenti.
 
 ## Matera — *No Time to Die*
 L'inseguimento in Aston Martin nei **Sassi di Matera** (Basilicata) è una delle
-scene più spettacolari del cinema recente. Qui la tavola è quella lucana: **pane
+scene più spettacolari del cinema recente. Tutte le location, il ponte (che è a Gravina) e l'hotel che non esiste sono in
+**[James Bond a Matera: le location di No Time to Die](/blog/james-bond-matera-no-time-to-die)**. Qui la tavola è quella lucana: **pane
 di Matera IGP**, peperoni cruschi, cavatelli, salumi e caciocavallo podolico. Una
 cucina antica come le grotte della città.
 

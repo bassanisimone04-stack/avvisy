@@ -464,6 +464,17 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "What is the series based on?", risposta: "On Andrea Vitali's novels, directed by Marco Pontecorvo for Rai Fiction and Alexandra Cinematografica." },
     ],
   },
+  "the-white-lotus": {
+    titolo: "The White Lotus (season 2)",
+    titoloSeo: "The White Lotus 2: Sicily Filming Locations",
+    locandinaAlt: "Poster-style artwork — The White Lotus (season 2)",
+    sinossi: "HBO anthology series created by Mike White. Season two (2022) is set in Sicily: seven episodes based at the San Domenico Palace hotel in Taormina, plus locations in Giardini Naxos, Noto and Palermo.",
+    faq: [
+      { domanda: "Where was season two of The White Lotus filmed?", risposta: "Mostly in Taormina, at the San Domenico Palace hotel. Italy for Movies also lists Giardini Naxos (the restaurant La Cambusa), Noto and Palermo." },
+      { domanda: "Does the series' hotel exist?", risposta: "Yes: it is the San Domenico Palace, a Four Seasons set in a former Dominican convent and turned into a hotel in 1896." },
+      { domanda: "Can you eat at one of the series' locations?", risposta: "Yes: La Cambusa, in Giardini Naxos, is the restaurant that in the series belongs to the resort. In Taormina there is also Principe Cerami, inside the hotel, with a Michelin star." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -774,6 +785,16 @@ export const restaurantsEn: Record<string, RestEn> = {
     titoloSeo: "Grand Hotel Majestic, Verbania: The Gentlemen set",
     descrizione: "The restaurant of the Grand Hotel Majestic, a Belle Époque hotel on a headland in Pallanza, Verbania: lake fish, seafood and meat, with the summer terrace Il Portico overlooking the garden.",
     scena: { "the-gentlemen-2": "The Grand Hotel Majestic, which houses the restaurant, is among the main locations of season two: the crew's base during the Italian shoot and a hotel that appears in the series." },
+  },
+  "la-cambusa-giardini-naxos": {
+    titoloSeo: "La Cambusa, Giardini Naxos: White Lotus set",
+    descrizione: "A seafood restaurant on the Giardini Naxos seafront, on Via Schisò, overlooking the bay and Taormina: in season two of The White Lotus it is the resort's restaurant.",
+    scena: { "the-white-lotus": "According to Italy for Movies, the resort restaurant La Cambusa of season two is in fact this venue on the beach at Giardini Naxos, a few kilometres from Taormina." },
+  },
+  "principe-cerami-taormina": {
+    titoloSeo: "Principe Cerami, Taormina: linked to White Lotus",
+    descrizione: "A one-Michelin-star restaurant (2026 guide) inside the San Domenico Palace in Taormina: Sicilian cooking reinterpreted by chef Massimo Mantarro. You can book without staying at the hotel.",
+    scena: { "the-white-lotus": "It sits inside the San Domenico Palace, the hotel that becomes the White Lotus resort in the series. The restaurant itself isn't listed among the scenes: it is a venue tied to the set." },
   },
 };
 

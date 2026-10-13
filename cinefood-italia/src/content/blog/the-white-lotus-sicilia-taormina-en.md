@@ -1,61 +1,127 @@
 ---
-titolo: "White Lotus Season 2: Sicily Filming Locations"
-descrizione: "The White Lotus season 2 was really filmed in Sicily: San Domenico Palace, Cefalù, Noto. The show's real locations and what to eat."
+titolo: "White Lotus Taormina: Season 2 Filming Locations"
+descrizione: "Where was White Lotus filmed in Sicily? The Taormina locations, San Domenico Palace, La Cambusa and where to eat like in the series."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
-dataAggiornamento: 2026-10-06
+dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/white-lotus-taormina-vero.jpg"
-immagineAlt: "Aerial view of the San Domenico Palace in Taormina, The White Lotus's real filming location"
+immagineAlt: "Aerial view of the San Domenico Palace in Taormina, the real location of The White Lotus"
 tags: ["The White Lotus", "Sicily", "Taormina", "HBO", "film tourism"]
 faq:
-  - domanda: "Where was The White Lotus season 2 filmed?"
-    risposta: "Mainly in Taormina, at the San Domenico Palace hotel, with other scenes in Cefalù, Noto and Palermo, Sicily."
-  - domanda: "Does the White Lotus hotel really exist?"
-    risposta: "Yes: it's the San Domenico Palace, a Four Seasons hotel in Taormina, a 14th-century former convent turned into a hotel in 1896."
-  - domanda: "Can you stay at the hotel from the show?"
-    risposta: "Yes, the San Domenico Palace is a real, still-operating luxury hotel you can book in Taormina."
+  - domanda: "Where was White Lotus filmed in Sicily?"
+    risposta: "Mostly in Taormina, at the San Domenico Palace hotel. Italy for Movies also lists Giardini Naxos (the restaurant La Cambusa), Noto and Palermo; guides add Cefalù for the beach scenes."
+  - domanda: "Does the White Lotus hotel in Taormina exist and can you visit it?"
+    risposta: "Yes: it is the San Domenico Palace, a Four Seasons set in a former Dominican convent and turned into a hotel in 1896. It is open and bookable."
+  - domanda: "Can you eat at the White Lotus locations?"
+    risposta: "Yes. In Taormina there is Principe Cerami inside the hotel, with a Michelin star; in Giardini Naxos there is La Cambusa, the restaurant that becomes the resort's one in the series."
+  - domanda: "Were any White Lotus scenes filmed in Palermo?"
+    risposta: "Yes, Palermo is among the locations listed by Italy for Movies. Guides name Villa Tasca and the Teatro Massimo, but sources disagree about the theatre's interiors."
+  - domanda: "Is there a White Lotus tour in Taormina?"
+    risposta: "Yes, and you can do it on your own: hotel and Taormina's centre in the morning, lunch in Giardini Naxos. Cefalù, Noto and Palermo are in other parts of the island and need separate days."
 lang: "en"
 prenotazioni:
   - nome: "San Domenico Palace, a Four Seasons Hotel"
     citta: "Taormina"
+esperienze:
+  - nome: "Taormina tour"
+    query: "Taormina tour"
 bozza: false
 ---
 
-*The White Lotus*, the HBO anthology series created by **Mike White**,
-chose **Sicily** as the setting for its acclaimed second season (2022).
-Unlike many productions, the hotel at the centre of the story isn't a
-built set: it's a real hotel, still open to the public today.
+**White Lotus in Taormina**: season two of the HBO series created by Mike White (2022)
+is set in a luxury hotel in Sicily, and the question is always the same: *where was it
+really filmed?* In short: the hotel is real, it is the **San Domenico Palace** in
+Taormina, and you can visit it and even eat there. The rest of the series' Sicily is
+scattered across Giardini Naxos, Noto, Cefalù and Palermo. Here are the real filming
+locations and where to sit down to eat.
 
-## Where White Lotus season 2 was filmed: San Domenico Palace
+## White Lotus Sicily: where it was filmed, at a glance
 
-The fictional "White Lotus" resort is actually the **San Domenico
-Palace**, a Four Seasons hotel in the heart of **Taormina**. The building
-has a surprising history: it began as a Dominican convent in the **14th
-century**, was converted into a luxury hotel in **1896**, and after being
-damaged by World War II bombing, was restored into one of Italy's most
-exclusive hotels.
+According to **Italy for Movies**, the Ministry of Culture's portal, the seven episodes
+of season two are set in the San Domenico Palace. The locations it lists are:
 
-## The other Sicilian locations
+- **Taormina**: the San Domenico Palace hotel, the series' resort.
+- **Giardini Naxos**: the restaurant La Cambusa, which in the series is the resort's
+  restaurant.
+- **Noto** and **Palermo**: other locations listed in the entry.
+- **Cefalù**: the beach scenes, according to travel guides (it doesn't appear in the
+  official entry).
 
-Filming also took in the alleys of Taormina's historic centre, **Corso
-Umberto**, the beaches of **Isola Bella**, and the famous **Greek
-Theatre**, which appears in a scene in episode two. Off the coast near
-Palermo, the season's opening beach scene was filmed along the coastline
-of **Cefalù**, while other sequences take in **Noto**, a jewel of Sicilian
-Baroque.
+## The White Lotus hotel in Taormina: the San Domenico Palace
 
-## What to eat in Sicily like in the show
+The hotel is a **Four Seasons** set in a former **Dominican convent**. Sources date the
+convent's foundation between 1374 and 1430. After the suppression of religious orders,
+the building passed to **Prince Cerami**, who in **1896** added a large Art Nouveau wing
+and made it one of Europe's first grand hotels. During the war, in 1943, it was bombed
+by the Allies, and the convent church was largely rebuilt. Today it runs again as a
+luxury hotel, managed by Four Seasons, and you can book it like any other hotel: it is
+not a closed set but a real hotel with its rooms, gardens and restaurants.
 
-Eastern Sicily, between Taormina and Cefalù, is home to rich
-Mediterranean cuisine: **pasta alla Norma**, **cannoli**, **granita** with
-brioche, and of course fresh fish. A food itinerary that pairs
-perfectly with the decadent luxury the show portrays.
+A curiosity for anyone looking for the series' rooms: according to some travel guides,
+the hotel-room scenes were shot in a studio near Rome, while the exteriors are at the real
+hotel. So the room you see on TV may not look like the one you book.
 
-## In short
+## Where to eat like in White Lotus
 
-*The White Lotus* made Taormina one of the most desired destinations in
-the world, and unlike many productions it can boast a real, bookable
-hotel at the heart of the story. Discover other **[films](/en/film)** and
-their food locations in Sicily, like
-**[Nolan's The Odyssey in Favignana](/en/blog/the-odyssey-nolan-sicilia-favignana)**
-and **[The Godfather in Savoca and Forza d'Agrò](/en/blog/padrino-location-savoca-forza-dagro-sicilia)**, less than an hour from Taormina.
+**Principe Cerami**, inside the hotel. It is chef **Massimo Mantarro**'s restaurant, with
+**one Michelin star** in the 2026 guide, at Piazza San Domenico 5. It is named after the
+prince who turned the convent into a hotel. It isn't among the series' scenes, so we list
+it as a venue tied to the set, not as a location: you'll find it at
+**[Principe Cerami](/en/locale/principe-cerami-taormina)**. You can book without staying
+at the hotel, but it is seasonal: confirm with the hotel.
+
+**La Cambusa**, in Giardini Naxos. According to Italy for Movies the resort's restaurant in
+the series is in fact this venue, **at Via Schisò 3**, on the seafront, overlooking the bay
+and Taormina. It is the right address for anyone who wants to eat somewhere that really
+appears in the series: **[La Cambusa](/en/locale/la-cambusa-giardini-naxos)**. Check its
+opening days, since the pages of its official website don't match.
+
+## White Lotus filming locations in central Taormina
+
+Besides the hotel, central Taormina appears in the series. Guides point to the old-town
+streets and the **Ancient Theatre**; we don't have an official source scene by scene, so
+we recommend them as places to see rather than confirmed sets. Taormina can be covered
+on foot in a few hours, with the main street as its axis.
+
+## White Lotus in Palermo: were scenes shot there?
+
+Yes. Palermo is among the season-two locations listed by Italy for Movies. Travel guides
+name **Villa Tasca**, the villa that in the story hosts a stay believed to be in Noto, and
+the **Teatro Massimo**, where the night at the opera is set. Sources disagree on the
+theatre's interiors: one says they were shot elsewhere, in Catania, another that the crew
+worked inside the Massimo. Until there is an official source, treat these two places as
+leads to verify.
+
+## A White Lotus tour in Taormina: a one-day itinerary
+
+A realistic itinerary on your own:
+
+1. **Morning**: the centre of Taormina and the entrance of the San Domenico Palace.
+2. **Lunch**: **La Cambusa** in Giardini Naxos, a few kilometres away.
+3. **Afternoon**: Giardini Naxos' seafront and bay.
+4. **Dinner** (in season): **Principe Cerami**, if you book in time.
+
+Cefalù, Noto and Palermo are in other parts of the island: it is best to give them
+separate days.
+
+## How to book and what to eat in Sicily like in the series
+
+For **La Cambusa** the booking number on its official website is +39 0942 52637. For
+**Principe Cerami** you go through the hotel: it is seasonal, so write or call before
+planning the trip.
+
+As for the rest of the Sicilian table, eastern Sicily offers a rich Mediterranean
+cuisine: **granita with brioche** is the typical breakfast, **pasta alla Norma** was born
+in Catania with fried aubergine, tomato and salted ricotta, and then there are
+**cannoli** and fresh fish. It is a food itinerary that pairs well with the decadent
+luxury the series portrays.
+
+## Keep going
+
+Discover the other **[films](/en/film)** and their Sicilian locations:
+**[The Odyssey in Favignana](/en/blog/the-odyssey-nolan-sicilia-favignana)** and
+**[The Godfather in Savoca and Forza d'Agrò](/en/blog/padrino-location-savoca-forza-dagro-sicilia)**,
+less than an hour from Taormina. For the rest of the island read
+**[Sicily on Screen: Locations and What to Eat](/en/blog/sicilia-del-cinema-a-tavola)**.
+
+<!-- Sources (consulted via snippet di ricerca il 2026-10-13: verify by hand): Italy for Movies, scheda The White Lotus (italyformovies.it/film-serie-tv-games/detail/7234): hotel San Domenico Palace come resort della seconda stagione, sette episodi, convento domenicano trasformato in albergo nel 1896, ristorante La Cambusa in realtà a Giardini Naxos, Noto e Palermo tra le location; Four Seasons (storia del San Domenico Palace, Principe Cerami e ala liberty del 1896, danni del 1943); Guida Michelin 2026 e Four Seasons per Principe Cerami (una stella, chef Massimo Mantarro, Piazza San Domenico 5); sito del ristorante La Cambusa (Via Schisò 3). DA VERIFICARE: scene nelle camere girate in studio vicino a Roma (solo guide di viaggio), Cefalù per le scene di spiaggia (solo guide), Villa Tasca e Teatro Massimo a Palermo (solo guide; sugli interni del Massimo le fonti si contraddicono), Teatro Antico di Taormina, apertura 2026 e giorni di La Cambusa (due pagine del sito danno orari diversi), accesso di Principe Cerami ai non ospiti e stagionalità. -->

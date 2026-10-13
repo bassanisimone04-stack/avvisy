@@ -29,7 +29,8 @@ iconic and where to eat like a true agent.
 
 ## Matera — *No Time to Die*
 The Aston Martin chase through the **Sassi of Matera** (Basilicata) is one of the
-most spectacular scenes in recent cinema. Here the food is Lucanian: **Matera PGI
+most spectacular scenes in recent cinema. All the locations, the bridge (it's in Gravina) and the hotel that doesn't exist are in
+**[James Bond in Matera: No Time to Die Locations](/en/blog/james-bond-matera-no-time-to-die)**. Here the food is Lucanian: **Matera PGI
 bread**, crispy peppers, cavatelli, cured meats and caciocavallo podolico. A
 cuisine as ancient as the city's caves.
 
