@@ -126,5 +126,17 @@
     "tagline": "Mobile grooming out of Wallingford — home, office, RV park, or marina.",
     "tier": "free",
     "verified": false
+  },
+  {
+    "slug": "lush-pups-mobile-spa",
+    "name": "Lush Pups Mobile Spa",
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle-wa",
+    "phone": "+1 (425) 892-7877",
+    "website": "https://lushpupsspa.com/",
+    "tagline": "Mobile dog grooming based in Bothell, with scheduled service days across Seattle and the Eastside.",
+    "tier": "free",
+    "verified": false
   }
 ]

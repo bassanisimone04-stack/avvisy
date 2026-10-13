@@ -5,26 +5,28 @@
 -- These are unclaimed, unverified listings compiled from public web search
 -- results (business name, city, phone, website), cross-checked against a
 -- second independent source per business (Yelp/BBB/Nextdoor/Thumbtack/
--- Google Business Profile). A second verification pass removed 12 earlier
--- entries once re-checked: five had websites that fail to resolve via DNS
--- and zero trace on any review platform (Ortega's Mobile Pet Grooming LA,
--- Dogi's Mobile Grooming Miami, Fur Fighters Grooming Chicago, Paws on
--- Wheels Austin, Hug and Trim Mobile Grooming Atlanta); four never cleared
--- a second independent source despite repeated attempts (Doggie's Groom
--- Mobile LA, Mutz Cutz Mobile Pet Grooming Phoenix, Blooms Grooms Chicago,
--- Little Bear Mobile Dog Grooming Seattle); one turned out to operate from
--- a fixed office suite rather than a van, contradicting the mobile-only
--- premise (Private Mobile Grooming San Diego); and two were confirmed to
--- be in the wrong place entirely (Royal Spaw Mobile Grooming is based in
--- Georgetown, TX, not Austin; GroomBuggy is a real company but with a
--- verified presence only in the SF Bay Area and Denver, not Charlotte).
--- Los Angeles, Chicago and Austin currently have zero listings as a
--- result — left empty rather than backfilled with under-verified
--- candidates, the same principle already applied to Denver. No rating,
--- review count, zip coverage, pricing or service tags are included, since
--- none of that was independently confirmed either. That is the honest
--- state of an unclaimed listing: the business fills the rest in by
--- claiming its page.
+-- Google Business Profile/Checkbook.org). A second verification pass
+-- removed 12 earlier entries once re-checked: five had websites that fail
+-- to resolve via DNS and zero trace on any review platform (Ortega's
+-- Mobile Pet Grooming LA, Dogi's Mobile Grooming Miami, Fur Fighters
+-- Grooming Chicago, Paws on Wheels Austin, Hug and Trim Mobile Grooming
+-- Atlanta); four never cleared a second independent source despite
+-- repeated attempts (Doggie's Groom Mobile LA, Mutz Cutz Mobile Pet
+-- Grooming Phoenix, Blooms Grooms Chicago, Little Bear Mobile Dog
+-- Grooming Seattle); one turned out to operate from a fixed office suite
+-- rather than a van, contradicting the mobile-only premise (Private
+-- Mobile Grooming San Diego); and two were confirmed to be in the wrong
+-- place entirely (Royal Spaw Mobile Grooming is based in Georgetown, TX,
+-- not Austin; GroomBuggy is a real company but with a verified presence
+-- only in the SF Bay Area and Denver, not Charlotte). Los Angeles,
+-- Chicago and Austin currently have zero listings as a result, after
+-- repeated follow-up research passes found no candidate clearing the
+-- two-independent-source bar — left empty rather than backfilled with
+-- under-verified candidates, the same principle already applied to
+-- Denver. No rating, review count, zip coverage, pricing or service tags
+-- are included, since none of that was independently confirmed either.
+-- That is the honest state of an unclaimed listing: the business fills
+-- the rest in by claiming its page.
 -- ===========================================================================
 
 insert into groomers (
@@ -83,6 +85,11 @@ insert into groomers (
 (
   'bark-in-style-seattle', 'Bark in Style Seattle', 'Seattle', 'WA', 'seattle-wa',
   '+1 (206) 823-8362', 'https://www.barkinstyleseattle.com/', 'Mobile grooming out of Wallingford — home, office, RV park, or marina.',
+  'free', false
+),
+(
+  'lush-pups-mobile-spa', 'Lush Pups Mobile Spa', 'Seattle', 'WA', 'seattle-wa',
+  '+1 (425) 892-7877', 'https://lushpupsspa.com/', 'Mobile dog grooming based in Bothell, with scheduled service days across Seattle and the Eastside.',
   'free', false
 )
 on conflict (city_slug, slug) do nothing;

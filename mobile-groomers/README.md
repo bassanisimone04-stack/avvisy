@@ -108,7 +108,7 @@ back to free rather than deleting it — the business keeps its page and reviews
 
 Listings live in Supabase when configured, falling back to
 `src/data/groomers.json`; both are read through `src/lib/groomers.ts`. The
-seed file holds 11 **real** unclaimed businesses (name, city, phone, website —
+seed file holds 12 **real** unclaimed businesses (name, city, phone, website —
 compiled from public web search results, then cross-checked against a second
 independent source per business: Yelp, BBB, Nextdoor, Thumbtack or a Google
 Business Profile). A second verification pass re-checked every listing and
@@ -129,7 +129,13 @@ Austin currently have zero listings as a direct result — left empty
 rather than backfilled with under-verified candidates, the same principle
 already applied to Denver, which has 1 listing after its own second
 candidate was rejected for an unresolved name-collision risk and no
-independent confirmation. No fabricated rating, review count,
+independent confirmation. Seattle has 2: a follow-up research pass added
+Lush Pups Mobile Spa, verified via its Google Business Profile and a
+matching phone number on Checkbook.org, an independent nonprofit
+consumer-ratings service — its home base is Bothell, with disclosed
+scheduled service days in Seattle itself, the same metro-coverage
+pattern already used for several other listings whose base isn't a
+city's downtown. No fabricated rating, review count,
 zip coverage, pricing or service tags are included, because none of that was
 independently confirmed — see "Honesty by construction" below. Paid tiers
 rank above free ones within a market, then by rating — the ordering the Pro
