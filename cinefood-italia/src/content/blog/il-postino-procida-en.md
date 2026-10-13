@@ -64,7 +64,9 @@ hour to walk; the rest of your time is for lunch.
 It's the address most tied to the film: **La Locanda del Postino** is in Marina Corricella,
 at **43 Via Marina di Corricella** (80079 Procida), the address given by italia.it, Suitcase
 Magazine and a fan forum. According to these sources it's the inn where Beatrice (Maria
-Grazia Cucinotta) works, and in front is the square dedicated to Troisi. A 2026 event
+Grazia Cucinotta) works, and in front is the square dedicated to Troisi. It's not
+confirmed that filming took place here (the interiors are from Cinecittà): it's a
+venue tied to the film. A 2026 event
 page gives number 14, though: check before you go.
 
 You come here for **fresh fish and shellfish** served on the harbour. The reviews

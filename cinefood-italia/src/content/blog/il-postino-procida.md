@@ -65,7 +65,8 @@ borgo si gira in un'ora; il resto del tempo serve per la sosta a tavola.
 Corricella, in **Via Marina di Corricella 43** (80079 Procida), l'indirizzo riportato
 da italia.it, da Suitcase Magazine e da un forum di appassionati. Secondo queste
 fonti è la locanda dove lavora Beatrice (Maria Grazia Cucinotta), e davanti c'è la
-piazzetta dedicata a Troisi. Una pagina di un evento 2026 indica però il civico 14:
+piazzetta dedicata a Troisi. Non è confermato che le riprese siano state fatte qui
+(gli interni sono di Cinecittà): è un locale legato al film. Una pagina di un evento 2026 indica però il civico 14:
 controlla prima di andare.
 
 Qui si va per il **pesce e i crostacei freschi** serviti sul porto. Le recensioni

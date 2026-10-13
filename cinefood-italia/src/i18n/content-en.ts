@@ -810,7 +810,7 @@ export const restaurantsEn: Record<string, RestEn> = {
   "la-locanda-del-postino-procida": {
     titoloSeo: "La Locanda del Postino, Procida: from the film",
     descrizione: "An inn-restaurant on the harbour of Marina Corricella, in Procida, tied to Il Postino: fresh fish and shellfish in front of the village's colourful houses.",
-    scena: { "il-postino": "According to italia.it it is the inn where Beatrice works and where Mario falls for her; the film's interiors were rebuilt at Cinecittà, though (Italy for Movies)." },
+    scena: { "il-postino": "According to italia.it it is the film's inn where Beatrice works. It is not confirmed that filming took place here: the interiors were rebuilt at Cinecittà (Italy for Movies), so we list it as a venue tied to the film." },
   },
 };
 

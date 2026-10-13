@@ -8,7 +8,7 @@ coordinate:
   lat: 40.7600
   lng: 14.0205
 tipo: "ristorante"
-categoria: "set-reale"
+categoria: "legato-al-film"
 prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
@@ -17,7 +17,7 @@ immagineAlt: "Il porto di Marina Corricella a Procida con le case colorate"
 ultimoAggiornamento: 2026-10-13
 film:
   - film: "il-postino"
-    descrizioneScena: "Secondo italia.it è la locanda dove lavora Beatrice e dove Mario si innamora di lei; gli interni del film furono però ricostruiti a Cinecittà (Italy for Movies)."
+    descrizioneScena: "Secondo italia.it è la locanda del film dove lavora Beatrice. Non è confermato che le riprese siano state fatte qui: gli interni furono ricostruiti a Cinecittà (Italy for Movies), quindi la schediamo come locale legato al film."
 descrizione: "Locanda-ristorante sul porto di Marina Corricella, a Procida, legata a Il Postino: pesce e crostacei freschi davanti alle case colorate del borgo."
 ---
 
