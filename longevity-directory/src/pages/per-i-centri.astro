@@ -1,0 +1,197 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Aurora from "../components/Aurora.astro";
+import { breadcrumbList } from "../lib/seo";
+import { SITE } from "../lib/site";
+
+const jsonLd = breadcrumbList([
+  { name: "Home", url: "/" },
+  { name: "Per i centri", url: "/per-i-centri" },
+]);
+
+const plans = [
+  { nome: "Base", slug: null, prezzo: "0 €", periodo: "per sempre", evid: false, voci: [
+    ["Scheda pubblica e mappa", true], ["Discipline e servizi", true],
+    ["Link al sito (dofollow)", false], ["Badge verificato", false], ["Contatto diretto", false],
+  ]},
+  { nome: "Verificato", slug: "verificato", prezzo: "39 €", periodo: "al mese", evid: false, voci: [
+    ["Badge \"Verificato\"", true], ["Link dofollow", true], ["5 foto e listino", true],
+    ["Modulo di contatto", true], ["Posizione in evidenza", false],
+  ]},
+  { nome: "Premium", slug: "premium", prezzo: "119 €", periodo: "al mese", evid: true, voci: [
+    ["Prime 3 posizioni \"In evidenza\"", true], ["Foto e video illimitati", true],
+    ["Lead diretti + WhatsApp", true], ["Dashboard statistiche", true], ["Nessun concorrente in scheda", true],
+  ]},
+  { nome: "Esclusiva", slug: "esclusiva", prezzo: "299 €", periodo: "al mese", evid: false, voci: [
+    ["Slot unico per città e disciplina", true], ["2 contenuti editoriali l'anno", true],
+    ["Presenza in newsletter", true], ["Report mensile dei lead", true],
+  ]},
+];
+---
+
+<BaseLayout
+  title="Per le strutture — aggiungi la tua clinica o il tuo studio"
+  description="Fatti trovare da chi sta già cercando un percorso di prevenzione nella tua città. Scheda gratuita, upgrade quando vedi le prime richieste."
+  jsonLd={jsonLd}
+  bareTop
+>
+  <header class="hero-drench relative overflow-hidden rounded-b-[40px] pt-[150px] pb-20 text-center">
+    <Aurora />
+    <div class="pointer-events-none absolute inset-0 z-[1] opacity-[.28] mix-blend-overlay aurora-grain"></div>
+    <!-- stesso scrim uniforme della home: senza, il testo crema può cadere su una zona chiara
+         dell'Aurora animata in un dato frame (bug reale trovato con uno screenshot, non teorico). -->
+    <div class="pointer-events-none absolute inset-0 z-[2]" style="background:color-mix(in srgb,var(--abase) 46%,transparent)"></div>
+    <div class="relative z-[3] mx-auto max-w-[760px] px-6">
+      <span class="reveal inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] font-bold uppercase tracking-[.2em] backdrop-blur-xl" style="background:var(--glass-2);border-color:var(--brd);color:var(--ink-soft)">
+        Per cliniche, centri e professionisti
+      </span>
+      <h1 class="font-display reveal mt-6 mb-4 text-[clamp(2.2rem,5.5vw,3.8rem)]">
+        Fatevi trovare da chi sta già cercando un percorso di prevenzione
+      </h1>
+      <p class="reveal mx-auto max-w-[56ch] text-[16px]" style="color:var(--ink-soft)">
+        Ogni mese vengono cercate migliaia di volte espressioni come "crioterapia [città]" o "test età biologica
+        prezzo": chi cerca così sta già scegliendo dove andare, non informazioni generiche.
+      </p>
+      <a href="/per-i-centri/registrazione" class="reveal mt-7 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[14.5px] font-semibold transition-transform hover:-translate-y-0.5" style="background:var(--ink);color:var(--abase)">
+        Registrazione gratuita →
+      </a>
+    </div>
+  </header>
+
+  <section class="mx-auto max-w-[1000px] px-6 py-20">
+    <div class="reveal mb-9 text-center">
+      <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Come funziona</span>
+      <h2 class="font-display mt-3 text-[clamp(1.8rem,3.6vw,2.5rem)]">Tre passaggi, meno di 24 ore</h2>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-3">
+      {[
+        ["1", "Registrazione", "Nome della struttura, categorie, servizi, medico responsabile e numero di albo. Nove campi obbligatori, il resto opzionale."],
+        ["2", "Verifica", "Controlliamo P.IVA, albo e assenza di claim non ammessi entro 24–48 ore."],
+        ["3", "Pubblicazione", "La scheda va online, gratuita. L'upgrade lo decidete voi, quando vedete le prime richieste in dashboard."],
+      ].map(([n, t, d]) => (
+        <div class="reveal rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+          <span class="font-display text-[2rem]" style="color:var(--color-iris)">{n}</span>
+          <p class="font-display mt-2 text-[1.2rem]">{t}</p>
+          <p class="mt-1.5 text-[13.5px]" style="color:var(--muted)">{d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="piani" class="mx-auto max-w-[1200px] px-6 py-20">
+    <div class="reveal mb-9 text-center">
+      <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Piani e prezzi</span>
+      <h2 class="font-display mt-3 text-[clamp(1.8rem,3.6vw,2.5rem)]">Quattro formule, un profilo gratuito per sempre</h2>
+      <p class="mx-auto mt-3 max-w-[56ch] text-[14.5px]" style="color:var(--muted)">
+        Offerta di lancio "Founding 50": Premium gratuito 6 mesi per i primi 50 centri, prezzo bloccato 12 mesi.
+      </p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {plans.map((p) => (
+        <div
+          class:list={["reveal flex flex-col gap-3.5 rounded-[var(--r-lg)] border p-6"]}
+          style={p.evid ? "border-color:var(--color-iris);background:var(--surface);box-shadow:0 24px 54px -32px var(--color-iris)" : "border-color:var(--line);background:var(--surface)"}
+        >
+          <span class="text-[10.5px] font-bold uppercase tracking-[.16em]" style={p.evid ? "color:var(--color-iris)" : "color:var(--muted)"}>{p.nome}{p.evid && " · più scelto"}</span>
+          <p class="font-display text-[2.1rem] leading-none">{p.prezzo}<small class="text-[12.5px] font-sans" style="color:var(--muted)"> /{p.periodo}</small></p>
+          <ul class="grid gap-2 text-[13.3px]" style="color:var(--ink-soft)">
+            {p.voci.map(([label, on]) => (
+              <li class="flex gap-2">
+                <span style={on ? "color:var(--color-mint)" : "color:var(--muted)"}>{on ? "✓" : "—"}</span>
+                <span style={!on ? "color:var(--muted)" : ""}>{label}</span>
+              </li>
+            ))}
+          </ul>
+          {p.slug === null ? (
+            <a href="/per-i-centri/registrazione" class="mt-auto rounded-full py-2.5 text-center text-[13px] font-semibold" style={p.evid ? "background:var(--ink);color:var(--bg)" : "border:1px solid var(--line)"}>
+              Scegli
+            </a>
+          ) : p.nome === "Esclusiva" ? (
+            <a href="/contatti" class="mt-auto rounded-full py-2.5 text-center text-[13px] font-semibold" style="border:1px solid var(--line)">
+              Parla con noi
+            </a>
+          ) : (
+            <button
+              type="button"
+              class="plan-checkout mt-auto rounded-full py-2.5 text-center text-[13px] font-semibold"
+              data-piano={p.slug}
+              style={p.evid ? "background:var(--ink);color:var(--bg)" : "border:1px solid var(--line)"}
+            >
+              Scegli
+            </button>
+          )}
+        </div>
+      ))}
+    </div>
+    <p id="checkout-msg" hidden class="reveal mx-auto mt-5 max-w-[520px] rounded-[var(--r)] border px-4 py-3 text-center text-[13px]"></p>
+  </section>
+
+  <section class="mx-auto max-w-[900px] px-6 pb-24">
+    <div class="reveal rounded-[var(--r-xl)] border p-8 sm:p-10" style="border-color:var(--line);background:var(--surface-2)">
+      <h2 class="font-display mb-4 text-[1.6rem]">Domande frequenti</h2>
+      <div class="space-y-2.5">
+        {[
+          ["La scheda base è davvero gratuita?", "Sì, resta gratuita per sempre. Include scheda pubblica, mappa e categorie di servizio. Il contatto diretto e la posizione in evidenza sono le uniche funzioni a pagamento."],
+          ["Come funziona la verifica?", "Controlliamo P.IVA, sede fisica, medico responsabile e numero di iscrizione all'albo. La verifica richiede 24–48 ore."],
+          ["Posso disdire in ogni momento?", "Sì, gli abbonamenti mensili si disdicono senza vincoli; la scheda torna al piano Base, non viene rimossa."],
+          ["Fate pubblicità sanitaria vietata dalla legge?", "No: le schede sono informative (servizi, sede, medico responsabile, contatti), coerenti con l'art. 1 comma 525 della L. 145/2018. Nessun claim di risultato, nessuna promessa di guarigione."],
+        ].map(([q, a]) => (
+          <details class="rounded-[var(--r)] border" style="border-color:var(--line);background:var(--surface)">
+            <summary class="cursor-pointer list-none px-4 py-3.5 text-[14.5px] font-semibold">{q}</summary>
+            <p class="px-4 pb-4 text-[14px]" style="color:var(--ink-soft)">{a}</p>
+          </details>
+        ))}
+      </div>
+      <p class="mt-6 text-[13px]" style="color:var(--muted)">
+        Preferisci parlarne direttamente? Scrivi a <a href={`mailto:${SITE.email}`} class="underline" style="color:var(--color-iris)">{SITE.email}</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { actions } from "astro:actions";
+
+  const msg = document.getElementById("checkout-msg") as HTMLParagraphElement | null;
+
+  function showCheckoutMsg(text: string, ok: boolean) {
+    if (!msg) return;
+    msg.hidden = false;
+    msg.textContent = text;
+    msg.style.borderColor = ok ? "var(--color-mint)" : "var(--line)";
+    msg.style.color = "inherit";
+    msg.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  document.querySelectorAll<HTMLButtonElement>(".plan-checkout").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const piano = btn.dataset.piano;
+      if (!piano) return;
+      btn.disabled = true;
+      const original = btn.textContent;
+      btn.textContent = "Un attimo…";
+
+      const form = new FormData();
+      form.set("piano", piano);
+      const { data, error } = await actions.createCheckoutSession(form);
+
+      btn.disabled = false;
+      btn.textContent = original;
+
+      if (error) {
+        if (error.code === "UNAUTHORIZED") {
+          showCheckoutMsg("Accedi con l'account della tua struttura per scegliere un piano a pagamento.", false);
+          setTimeout(() => (window.location.href = `/accedi?redirect=/per-i-centri`), 1400);
+        } else if (error.code === "PRECONDITION_FAILED") {
+          showCheckoutMsg(error.message, false);
+        } else {
+          showCheckoutMsg("Qualcosa non ha funzionato. Riprova tra poco.", false);
+        }
+        return;
+      }
+      if (data?.url) window.location.href = data.url;
+    });
+  });
+</script>

@@ -1,0 +1,59 @@
+---
+import { SITE } from "../lib/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  type?: "website" | "article";
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  noindex?: boolean;
+  /** Percorso assoluto (es. /og-image.png) dell'immagine di condivisione. Default: OG image di sito. */
+  image?: string;
+}
+const {
+  title,
+  description = SITE.description,
+  type = "website",
+  jsonLd,
+  noindex = false,
+  image = "/og-image.png",
+} = Astro.props;
+
+// Il tag <title> va tenuto sotto ~60 caratteri per non essere troncato nei
+// risultati di ricerca. Il suffisso del brand si aggiunge solo se c'è margine:
+// un titolo di pagina già lungo (tipico degli articoli, dove titoloSeo è
+// scelto apposta per riempire i 60 caratteri) resta da solo, senza suffisso.
+const SUFFIX = ` · ${SITE.name}`;
+const pageTitle = title
+  ? title.length + SUFFIX.length <= 60
+    ? `${title}${SUFFIX}`
+    : title
+  : `${SITE.name} — ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, SITE.url).toString();
+const imageUrl = new URL(image, SITE.url).toString();
+const jsonLdList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+---
+
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex,follow" />}
+
+<meta property="og:type" content={type} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={pageTitle} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={pageTitle} />
+
+{jsonLdList.map((ld) => <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />)}

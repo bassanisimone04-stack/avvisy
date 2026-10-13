@@ -1,0 +1,83 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { breadcrumbList } from "../lib/seo";
+
+const jsonLd = breadcrumbList([
+  { name: "Home", url: "/" },
+  { name: "Chi siamo", url: "/chi-siamo" },
+]);
+
+const revisori = [
+  { nome: "Dott. Marco Rinaldi", ruolo: "Medicina Interna — Albo di Milano n. 09412" },
+  { nome: "Dott.ssa Elena Conti", ruolo: "Medicina Interna — Albo di Milano n. 11287" },
+  { nome: "Dott.ssa Alessia Ferretti", ruolo: "Nutrizione Clinica — Albo di Roma n. 19045" },
+  { nome: "Dott. Paolo Greco", ruolo: "Medicina dello Sport — Albo di Milano n. 08765" },
+];
+---
+
+<BaseLayout
+  title="Chi siamo"
+  description="Il metodo di selezione delle strutture, il comitato scientifico e la linea editoriale del progetto."
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-[880px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Il progetto</span>
+    <h1 class="font-display mt-2.5 mb-6 text-[clamp(2rem,4.6vw,3.2rem)]">Un punto di riferimento, non un elenco a pagamento</h1>
+    <p class="mb-10 text-[16px] leading-[1.8]" style="color:var(--ink-soft)">
+      Nasciamo per una ragione semplice: chi cerca un centro di medicina preventiva o di biohacking clinico in Italia
+      trova oggi elenchi generalisti dove la differenza tra un centro con supervisione medica e uno senza non si vede.
+      Selezioniamo le strutture con criteri pubblici, dichiariamo sempre quando una posizione è a pagamento e
+      pubblichiamo contenuti con la gradazione dell'evidenza scientifica in chiaro.
+    </p>
+
+    <h2 class="font-display mb-4 text-[1.7rem]">Il metodo di selezione</h2>
+    <div class="mb-10 grid gap-3 sm:grid-cols-2">
+      {[
+        ["P.IVA e sede verificabili", "Ogni struttura deve avere una ragione sociale e un indirizzo fisico verificabile."],
+        ["Medico responsabile", "Le prestazioni sanitarie richiedono un medico identificabile con numero di iscrizione all'albo."],
+        ["Nessun claim vietato", "Escludiamo terapie senza plausibilità biologica, promesse di guarigione e claim su \"invertire l'invecchiamento\"."],
+        ["Recensioni verificate", "Pubblichiamo solo recensioni verificate; non emettiamo mai una valutazione media senza recensioni reali."],
+      ].map(([t, d]) => (
+        <div class="rounded-[var(--r-lg)] border p-5" style="border-color:var(--line);background:var(--surface)">
+          <p class="font-display text-[1.1rem]">{t}</p>
+          <p class="mt-1.5 text-[13.5px]" style="color:var(--muted)">{d}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="font-display mb-4 text-[1.7rem]">Comitato scientifico</h2>
+    <p class="mb-5 text-[15px]" style="color:var(--muted)">
+      I medici che revisionano i nostri articoli, con il numero di iscrizione all'albo in chiaro su ogni contenuto.
+    </p>
+    <div class="mb-10 grid gap-3 sm:grid-cols-2">
+      {revisori.map((r) => (
+        <div class="flex items-center gap-3 rounded-[var(--r-lg)] border p-4" style="border-color:var(--line);background:var(--surface)">
+          <span class="cv cv1 h-11 w-11 shrink-0 rounded-full"></span>
+          <div>
+            <p class="text-[14px] font-semibold">{r.nome}</p>
+            <p class="text-[12.5px]" style="color:var(--muted)">{r.ruolo}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="font-display mb-4 text-[1.7rem]">Linea editoriale</h2>
+    <ul class="mb-10 list-disc space-y-2 pl-5 text-[15px]" style="color:var(--ink-soft)">
+      <li>Gerarchia delle fonti: revisioni sistematiche e RCT prima di studi osservazionali e studi su animali.</li>
+      <li>Ogni intervento trattato è classificato: evidenza solida, promettente ma incerta, o insufficiente.</li>
+      <li>Ogni articolo clinico è revisionato da un medico, con nome e numero di albo indicati.</li>
+      <li>Nessun consiglio personalizzato: spieghiamo meccanismi e opzioni, non prescriviamo.</li>
+      <li>Affiliazioni e contenuti sponsorizzati sono sempre dichiarati in apertura di articolo.</li>
+    </ul>
+
+    <div class="rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface-2)">
+      <p class="text-[14px]" style="color:var(--ink-soft)">
+        Prototipo dimostrativo — le strutture e gli articoli di questo sito sono <b style="color:var(--ink)">dati fittizi</b> costruiti
+        per mostrare l'architettura descritta nella documentazione del progetto (<code>docs/</code> nel repository).
+        Nessuna delle strutture elencate esiste realmente con questi dati.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,156 @@
+---
+// Pagina dinamica (SSR): pannello interno, gate a password singola (vedi lib/admin-auth.ts).
+import { actions } from "astro:actions";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ADMIN_COOKIE, verifyAdminCookieValue, adminConfigured } from "../../lib/admin-auth";
+import { all, type Submission, type Lead } from "../../lib/db";
+import { formatDate } from "../../lib/format";
+import { getCategory } from "../../lib/taxonomy";
+
+const authed = verifyAdminCookieValue(Astro.cookies.get(ADMIN_COOKIE)?.value);
+const loginResult = Astro.getActionResult(actions.adminLogin);
+if (loginResult && !loginResult.error) return Astro.redirect("/admin");
+
+let submissions: (Submission & { email: string })[] = [];
+let leads: Lead[] = [];
+let messages: { id: number; motivo: string; nome: string; email: string; messaggio: string; created_at: string }[] = [];
+
+if (authed) {
+  submissions = await all<Submission & { email: string }>(
+    `SELECT s.*, u.email FROM submissions s JOIN business_users u ON u.id = s.user_id ORDER BY s.id DESC LIMIT 50`,
+  );
+  leads = await all<Lead>("SELECT * FROM leads ORDER BY id DESC LIMIT 30");
+  messages = await all<(typeof messages)[number]>("SELECT * FROM contact_messages ORDER BY id DESC LIMIT 30");
+}
+---
+
+<BaseLayout title="Pannello interno" noindex bareTop>
+  {!authed ? (
+    <div class="mx-auto flex min-h-[80vh] max-w-[420px] flex-col justify-center px-6 pt-[100px]">
+      <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Solo per il team</span>
+      <h1 class="font-display mt-2.5 mb-7 text-[2.2rem]">Pannello interno</h1>
+
+      {!adminConfigured() ? (
+        <p class="rounded-[var(--r)] border px-4 py-3 text-[13.5px]" style="border-color:var(--line);background:var(--surface-2);color:var(--muted)">
+          ADMIN_PASSWORD non è impostata su questo ambiente: il pannello resta disabilitato finché non la configuri in <code>.env</code>.
+        </p>
+      ) : (
+        <>
+          {loginResult?.error && (
+            <p class="mb-4 rounded-[var(--r)] border px-4 py-3 text-[13.5px]" style="border-color:#e2685c;background:color-mix(in srgb,#e2685c 10%,transparent);color:#e2685c">
+              {loginResult.error.message}
+            </p>
+          )}
+          <form method="POST" action={actions.adminLogin} class="space-y-4 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+            <div>
+              <label for="password" class="mb-1.5 block text-[12.5px] font-semibold">Password</label>
+              <input id="password" name="password" type="password" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+            </div>
+            <button type="submit" class="w-full rounded-full py-3 text-[14px] font-semibold" style="background:var(--ink);color:var(--bg)">Entra</button>
+          </form>
+        </>
+      )}
+    </div>
+  ) : (
+    <div class="mx-auto max-w-[1100px] px-6 pb-24 pt-10">
+      <div class="mb-8 flex items-center justify-between">
+        <h1 class="font-display text-[2rem]">Pannello interno</h1>
+        <form method="POST" action={actions.adminLogout}>
+          <button type="submit" class="rounded-full border px-4 py-2 text-[12.5px] font-semibold" style="border-color:var(--line)">Esci</button>
+        </form>
+      </div>
+
+      <section class="mb-10">
+        <h2 class="font-display mb-4 text-[1.5rem]">
+          Registrazioni ({submissions.filter((s) => s.stato === "in_attesa").length} in attesa)
+        </h2>
+        <div class="space-y-3">
+          {submissions.map((s) => {
+            const color = { in_attesa: "#E0A33E", approvata: "var(--color-mint)", rifiutata: "#E2685C" }[s.stato];
+            const label = { in_attesa: "In attesa", approvata: "Approvata", rifiutata: "Rifiutata" }[s.stato];
+            return (
+              <div class="rounded-[var(--r-lg)] border p-5" style="border-color:var(--line);background:var(--surface)">
+                <div class="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <b class="text-[15px]">{s.nome}</b>
+                      <span class="rounded-full border px-2.5 py-0.5 text-[10.5px] font-semibold" style={`border-color:${color};color:${color}`}>{label}</span>
+                    </div>
+                    <p class="mt-1 text-[12.5px]" style="color:var(--muted)">
+                      {s.email} · {s.citta} · P.IVA {s.piva} · Dir. san. {s.direttore_sanitario} (albo {s.numero_albo}) · {formatDate(s.created_at)}
+                    </p>
+                    <div class="mt-2 flex flex-wrap gap-1.5">
+                      {(JSON.parse(s.categorie) as string[]).map((slug) => {
+                        const c = getCategory(slug);
+                        return c ? <span class="rounded-full border px-2.5 py-0.5 text-[11px]" style="border-color:var(--line);color:var(--ink-soft)">{c.shortLabel}</span> : null;
+                      })}
+                    </div>
+                  </div>
+                  {s.stato === "in_attesa" && (
+                    <div class="flex shrink-0 gap-2">
+                      <form method="POST" action={actions.reviewSubmission}>
+                        <input type="hidden" name="id" value={s.id} />
+                        <input type="hidden" name="decisione" value="approvata" />
+                        <button type="submit" class="rounded-full px-3.5 py-2 text-[12px] font-semibold" style="background:var(--color-mint);color:#08301f">Approva</button>
+                      </form>
+                      <form method="POST" action={actions.reviewSubmission}>
+                        <input type="hidden" name="id" value={s.id} />
+                        <input type="hidden" name="decisione" value="rifiutata" />
+                        <button type="submit" class="rounded-full border px-3.5 py-2 text-[12px] font-semibold" style="border-color:var(--line)">Rifiuta</button>
+                      </form>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+          {submissions.length === 0 && <p class="text-[13.5px]" style="color:var(--muted)">Nessuna registrazione ricevuta.</p>}
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="font-display mb-4 text-[1.5rem]">Ultimi lead ({leads.length})</h2>
+        <div class="overflow-x-auto rounded-[var(--r-lg)] border" style="border-color:var(--line);background:var(--surface)">
+          <table class="w-full min-w-[600px] text-[13px]">
+            <thead>
+              <tr class="border-b text-left" style="border-color:var(--line)">
+                <th class="p-3 font-semibold" style="color:var(--muted)">Struttura</th>
+                <th class="p-3 font-semibold" style="color:var(--muted)">Da</th>
+                <th class="p-3 font-semibold" style="color:var(--muted)">Contatto</th>
+                <th class="p-3 font-semibold" style="color:var(--muted)">Quando</th>
+              </tr>
+            </thead>
+            <tbody>
+              {leads.map((l) => (
+                <tr class="border-b" style="border-color:var(--line)">
+                  <td class="p-3">{l.centro_nome}</td>
+                  <td class="p-3">{l.nome}</td>
+                  <td class="p-3">{l.email}{l.telefono && ` · ${l.telefono}`}</td>
+                  <td class="p-3" style="color:var(--muted)">{formatDate(l.created_at)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {leads.length === 0 && <p class="p-4 text-[13.5px]" style="color:var(--muted)">Nessun lead ricevuto.</p>}
+        </div>
+      </section>
+
+      <section>
+        <h2 class="font-display mb-4 text-[1.5rem]">Messaggi di contatto ({messages.length})</h2>
+        <div class="space-y-3">
+          {messages.map((m) => (
+            <div class="rounded-[var(--r-lg)] border p-4" style="border-color:var(--line);background:var(--surface)">
+              <div class="flex items-center justify-between">
+                <b class="text-[13.5px]">{m.nome} · <span style="color:var(--muted);font-weight:400">{m.motivo}</span></b>
+                <span class="text-[11.5px]" style="color:var(--muted)">{formatDate(m.created_at)}</span>
+              </div>
+              <p class="text-[12.5px]" style="color:var(--muted)">{m.email}</p>
+              <p class="mt-1.5 text-[13px]" style="color:var(--ink-soft)">{m.messaggio}</p>
+            </div>
+          ))}
+          {messages.length === 0 && <p class="text-[13.5px]" style="color:var(--muted)">Nessun messaggio ricevuto.</p>}
+        </div>
+      </section>
+    </div>
+  )}
+</BaseLayout>

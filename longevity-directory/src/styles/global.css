@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+/*
+ * Dark mode con strategia "class": le utility `dark:` si attivano quando
+ * <html> ha la classe .dark. Il toggle in header la aggiunge/rimuove e la
+ * preferenza si salva in localStorage (vedi BaseLayout.astro).
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * ============================================================
+ *  DESIGN SYSTEM — "Color Drenching"
+ *  Vedi docs/04-design-system.md
+ *
+ *  Ispirato alla tecnica d'interior design omonima: un'unica famiglia
+ *  cromatica calda (terracotta/ruggine/ambra) che avvolge ogni superficie,
+ *  invece della palette fredda multicolore precedente ("Aurora / vetro").
+ *  Il meccanismo tecnico (canvas animato in Aurora.astro, gradiente delle
+ *  8 copertine .cv1-.cv8, glassmorphism) resta identico: cambia solo la
+ *  sorgente cromatica, tutta definita qui come custom property — un solo
+ *  punto di modifica per ricolorare l'intero sito.
+ * ============================================================
+ */
+@theme {
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "Manrope Variable", "Manrope", -apple-system, "Segoe UI", sans-serif;
+
+  /* Accento primario: terracotta/ruggine, il colore "drenchato" reso accento leggibile su superficie. */
+  --color-iris: #c1502e;
+  /* Accento "positivo" (verificato, evidenza solida, approvato): salvia caldo, non verde freddo — resta distinguibile ma appartiene alla stessa famiglia terrosa. */
+  --color-mint: #6f8f57;
+  --color-sky: #d9a441;
+  --color-rose: #d98e7c;
+}
+
+:root {
+  --bg: #faf3ea;
+  --surface: #fffcf8;
+  --surface-2: #f3e7d9;
+  --glass: rgba(255, 250, 244, 0.62);
+  --glass-2: rgba(255, 250, 244, 0.86);
+  --brd: rgba(255, 250, 244, 0.9);
+  --ink: #2a1b13;
+  --ink-soft: #5c4a3c;
+  --muted: #8c7768;
+  --line: #e8d9c6;
+
+  /* sorgenti dell'aurora animata e delle copertine (vedi Aurora.astro, .cv1-.cv8) */
+  --a1: #f3c9a0;
+  --a2: #e3905e;
+  --a3: #c6592f;
+  --a4: #e3a88a;
+  --a5: #e8b65e;
+  --abase: #f8ecdd;
+
+  --r: 20px;
+  --r-lg: 28px;
+  --r-xl: 38px;
+  --pill: 999px;
+  --sh: 0 24px 60px -30px rgba(42, 27, 19, 0.35);
+  --sh-lg: 0 44px 100px -46px rgba(42, 27, 19, 0.45);
+  --sh-s: 0 2px 10px rgba(42, 27, 19, 0.08);
+}
+
+.dark {
+  --bg: #1b120c;
+  --surface: #291a11;
+  --surface-2: #21140c;
+  --glass: rgba(255, 235, 215, 0.05);
+  --glass-2: rgba(28, 17, 10, 0.78);
+  --brd: rgba(255, 225, 200, 0.14);
+  --ink: #f6e9da;
+  --ink-soft: #dec4ac;
+  --muted: #a9876e;
+  --line: #3c2717;
+
+  --a1: #4a2415;
+  --a2: #6b2e15;
+  --a3: #8c3a18;
+  --a4: #5c2e24;
+  --a5: #7a4a1c;
+  --abase: #140c08;
+
+  --sh: 0 24px 60px -30px rgba(0, 0, 0, 0.85);
+  --sh-lg: 0 44px 100px -46px rgba(0, 0, 0, 0.9);
+  --sh-s: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*
+ * ---------- hero "drenchato" ----------
+ * Pannello sempre scuro e saturo, indipendente dal toggle chiaro/scuro —
+ * come il pannello fotografico della tecnica d'interior design di
+ * riferimento. Ridefinisce localmente i token letti a valle (Aurora,
+ * badge in vetro, testo): nessuna classe va toccata nel markup esistente,
+ * basta aggiungere .hero-drench al contenitore.
+ */
+.hero-drench {
+  --a1: #6b2e15;
+  --a2: #8c3a18;
+  --a3: #a8451c;
+  --a4: #5c2e24;
+  --a5: #b5641e;
+  --abase: #1b0f09;
+  --ink: #fbeedf;
+  --ink-soft: #e8d2bc;
+  --muted: #c9a98a;
+  --glass: rgba(255, 240, 224, 0.1);
+  --glass-2: rgba(30, 16, 9, 0.42);
+  --brd: rgba(255, 235, 215, 0.22);
+  --line: rgba(255, 235, 215, 0.18);
+  color: var(--ink);
+}
+
+/*
+ * Dentro un pannello .hero-drench, una superficie opaca normale (es. la
+ * barra di ricerca su var(--surface)) deve restare leggibile con il tema
+ * REALE della pagina, non con l'inchiostro chiaro forzato del pannello —
+ * altrimenti il testo scuro-su-scuro (o chiaro-su-chiaro) sparisce.
+ * Va aggiunta esplicitamente: .hero-drench non la applica da sola.
+ */
+.hero-drench .drench-card {
+  --ink: #2a1b13;
+  --ink-soft: #5c4a3c;
+  --muted: #8c7768;
+}
+:root.dark .hero-drench .drench-card {
+  --ink: #f6e9da;
+  --ink-soft: #dec4ac;
+  --muted: #a9876e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transizione morbida colori/bordi, attivata solo per ~300ms al cambio tema (vedi ThemeToggle.astro). */
+.theme-transitioning,
+.theme-transitioning * {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-iris);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ---------- copertine generate (nessuna immagine esterna necessaria) ---------- */
+.cv {
+  background-color: var(--abase);
+}
+.cv1 {
+  background-image: radial-gradient(90% 80% at 20% 15%, var(--a1) 0%, transparent 60%),
+    radial-gradient(85% 75% at 85% 20%, var(--a2) 0%, transparent 58%),
+    radial-gradient(110% 90% at 50% 105%, var(--a3) 0%, transparent 62%);
+}
+.cv2 {
+  background-image: radial-gradient(90% 80% at 78% 12%, var(--a4) 0%, transparent 58%),
+    radial-gradient(95% 80% at 15% 30%, var(--a5) 0%, transparent 60%),
+    radial-gradient(120% 90% at 60% 108%, var(--a2) 0%, transparent 62%);
+}
+.cv3 {
+  background-image: radial-gradient(85% 80% at 25% 20%, var(--a3) 0%, transparent 58%),
+    radial-gradient(95% 85% at 88% 40%, var(--a1) 0%, transparent 60%),
+    radial-gradient(110% 90% at 45% 105%, var(--a5) 0%, transparent 60%);
+}
+.cv4 {
+  background-image: radial-gradient(90% 80% at 15% 18%, var(--a2) 0%, transparent 58%),
+    radial-gradient(90% 80% at 85% 25%, var(--a3) 0%, transparent 58%),
+    radial-gradient(120% 95% at 55% 108%, var(--a4) 0%, transparent 62%);
+}
+.cv5 {
+  background-image: radial-gradient(95% 85% at 70% 15%, var(--a5) 0%, transparent 58%),
+    radial-gradient(85% 75% at 20% 35%, var(--a4) 0%, transparent 58%),
+    radial-gradient(115% 90% at 50% 105%, var(--a1) 0%, transparent 60%);
+}
+.cv6 {
+  background-image: radial-gradient(90% 80% at 30% 12%, var(--a1) 0%, transparent 55%),
+    radial-gradient(90% 80% at 80% 45%, var(--a4) 0%, transparent 58%),
+    radial-gradient(120% 95% at 50% 108%, var(--a2) 0%, transparent 60%);
+}
+.cv7 {
+  background-image: radial-gradient(95% 85% at 22% 25%, var(--a3) 0%, transparent 58%),
+    radial-gradient(90% 80% at 82% 15%, var(--a5) 0%, transparent 58%),
+    radial-gradient(115% 90% at 60% 108%, var(--a4) 0%, transparent 60%);
+}
+.cv8 {
+  background-image: radial-gradient(90% 80% at 18% 20%, var(--a4) 0%, transparent 58%),
+    radial-gradient(95% 80% at 88% 30%, var(--a1) 0%, transparent 58%),
+    radial-gradient(115% 95% at 45% 105%, var(--a3) 0%, transparent 62%);
+}
+
+.aurora-grain {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* ---------- reveal allo scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.72, 0.26, 1),
+    transform 0.7s cubic-bezier(0.22, 0.72, 0.26, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- numeri che contano ---------- */
+[data-count] {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * ---------- rifiniture: FAQ accordion, link nel corpo articolo ----------
+ * Micro-interazioni additive, palette e layout invariati.
+ */
+.article-body details {
+  transition: background-color 0.2s ease;
+}
+.article-body details > summary {
+  position: relative;
+  padding-right: 2.4em;
+  transition: color 0.15s ease;
+}
+.article-body details > summary::-webkit-details-marker {
+  display: none;
+}
+.article-body details > summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.1em;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 1.15em;
+  line-height: 1;
+  color: var(--color-iris);
+  transition: transform 0.25s cubic-bezier(0.22, 0.72, 0.26, 1);
+}
+.article-body details[open] > summary::after {
+  transform: rotate(135deg);
+}
+.article-body details:hover {
+  background: var(--surface-2);
+}
+.article-body details[open] > p {
+  animation: faq-in 0.28s ease both;
+}
+@keyframes faq-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

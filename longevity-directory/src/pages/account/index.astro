@@ -1,0 +1,134 @@
+---
+// Pagina dinamica (SSR): dashboard protetta, legge la sessione a ogni richiesta.
+import { actions } from "astro:actions";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SESSION_COOKIE, getUserFromSession } from "../../lib/auth";
+import { get, all, type Submission, type Lead } from "../../lib/db";
+import { getCategory } from "../../lib/taxonomy";
+import { formatDate } from "../../lib/format";
+import { stripeEnabled } from "../../lib/stripe";
+
+const user = await getUserFromSession(Astro.cookies.get(SESSION_COOKIE)?.value);
+if (!user) return Astro.redirect("/accedi");
+
+const submission = await get<Submission>(
+  "SELECT * FROM submissions WHERE user_id = ? ORDER BY id DESC LIMIT 1",
+  [user.id],
+);
+
+// I lead sono associati alla scheda tramite lo slug: nel prototipo, in assenza
+// di una scheda pubblicata dal flusso di registrazione, mostriamo i lead per
+// il nome struttura come proxy. In produzione: submission.id -> centro.id reale.
+const leads = submission
+  ? await all<Lead>("SELECT * FROM leads WHERE centro_nome = ? ORDER BY id DESC LIMIT 20", [submission.nome])
+  : [];
+
+const stato = submission?.stato ?? "in_attesa";
+const statoLabel = { in_attesa: "In revisione", approvata: "Pubblicata", rifiutata: "Non approvata" }[stato];
+const statoColor = { in_attesa: "#E0A33E", approvata: "var(--color-mint)", rifiutata: "#E2685C" }[stato];
+
+const checkoutOk = Astro.url.searchParams.get("checkout") === "ok";
+---
+
+<BaseLayout title="La tua area riservata" description="Stato della registrazione e richieste ricevute." noindex>
+  <div class="mx-auto max-w-[880px] px-6 pb-24 pt-10">
+    <div class="mb-8 flex items-center justify-between">
+      <div>
+        <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Area riservata</span>
+        <h1 class="font-display mt-2 text-[2.1rem]">{user.nome_struttura}</h1>
+        <p class="text-[13px]" style="color:var(--muted)">{user.email}</p>
+      </div>
+      <form method="POST" action={actions.logout}>
+        <button type="submit" class="rounded-full border px-4 py-2 text-[12.5px] font-semibold" style="border-color:var(--line)">Esci</button>
+      </form>
+    </div>
+
+    {checkoutOk && (
+      <p class="mb-6 rounded-[var(--r)] border px-4 py-3 text-[13.5px]" style="border-color:var(--color-mint);background:color-mix(in srgb,var(--color-mint) 10%,transparent)">
+        Pagamento completato. Il piano si aggiorna a breve.
+      </p>
+    )}
+
+    {!submission ? (
+      <div class="rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+        <p class="text-[14.5px]" style="color:var(--ink-soft)">Nessuna registrazione trovata per questo account.</p>
+      </div>
+    ) : (
+      <>
+        <div class="mb-6 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[11.5px] font-semibold" style={`border-color:${statoColor};color:${statoColor}`}>
+                <span class="inline-block h-2 w-2 rounded-full" style={`background:${statoColor}`}></span>
+                {statoLabel}
+              </span>
+              <p class="mt-2 text-[13px]" style="color:var(--muted)">Inviata il {formatDate(submission.created_at)}</p>
+            </div>
+            <span class="rounded-full border px-3 py-1.5 text-[11.5px] font-semibold uppercase" style="border-color:var(--line);color:var(--ink-soft)">
+              Piano {submission.piano}
+            </span>
+          </div>
+          <div class="mt-5 grid gap-2.5 text-[13.5px] sm:grid-cols-2" style="color:var(--ink-soft)">
+            <div><b style="color:var(--ink)">P.IVA</b> {submission.piva}</div>
+            <div><b style="color:var(--ink)">Città</b> {submission.citta}</div>
+            <div><b style="color:var(--ink)">Direttore sanitario</b> {submission.direttore_sanitario}</div>
+            <div><b style="color:var(--ink)">Numero albo</b> {submission.numero_albo}</div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            {(JSON.parse(submission.categorie) as string[]).map((slug) => {
+              const c = getCategory(slug);
+              return c ? <span class="rounded-full border px-3 py-1 text-[11.5px]" style="border-color:var(--line);color:var(--ink-soft)">{c.shortLabel}</span> : null;
+            })}
+          </div>
+          {stato === "in_attesa" && (
+            <p class="mt-4 text-[13px]" style="color:var(--muted)">
+              La verifichiamo entro 24–48 ore: controlliamo P.IVA, albo e assenza di claim non ammessi.
+            </p>
+          )}
+        </div>
+
+        <div class="mb-6 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+          <h2 class="font-display mb-1 text-[1.4rem]">Piano e fatturazione</h2>
+          {!stripeEnabled ? (
+            <p class="text-[13.5px]" style="color:var(--muted)">
+              I pagamenti non sono ancora configurati su questo ambiente. Il piano resta Base (gratuito) finché non vengono attivate le chiavi Stripe.
+            </p>
+          ) : (
+            <div class="mt-3 flex flex-wrap gap-2">
+              {["verificato", "premium", "esclusiva"].map((p) => (
+                <form method="POST" action={actions.createCheckoutSession}>
+                  <input type="hidden" name="piano" value={p} />
+                  <button type="submit" class="rounded-full border px-4 py-2 text-[12.5px] font-semibold capitalize" style="border-color:var(--line)">
+                    Passa a {p}
+                  </button>
+                </form>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div class="rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+          <h2 class="font-display mb-4 text-[1.4rem]">Richieste ricevute ({leads.length})</h2>
+          {leads.length === 0 ? (
+            <p class="text-[13.5px]" style="color:var(--muted)">
+              Nessuna richiesta ancora. Le richieste inviate dagli utenti dalla scheda della tua struttura compariranno qui.
+            </p>
+          ) : (
+            <div class="space-y-3">
+              {leads.map((l) => (
+                <div class="rounded-[var(--r)] border p-4" style="border-color:var(--line-soft, var(--line))">
+                  <div class="flex items-center justify-between">
+                    <b class="text-[13.5px]">{l.nome}</b>
+                    <span class="text-[11.5px]" style="color:var(--muted)">{formatDate(l.created_at)}</span>
+                  </div>
+                  <p class="mt-1 text-[13px]" style="color:var(--ink-soft)">{l.email}{l.telefono && ` · ${l.telefono}`}</p>
+                  {l.messaggio && <p class="mt-1.5 text-[13px]" style="color:var(--muted)">{l.messaggio}</p>}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </>
+    )}
+  </div>
+</BaseLayout>

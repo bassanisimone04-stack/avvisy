@@ -1,0 +1,207 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+/**
+ * Guida pilastro (doc 02 §1 e §3): collega un gruppo di articoli /blog dello
+ * stesso macro-tema e punta sempre alla pagina directory di categoria.
+ */
+import { getCollection, getEntry, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import ArticleToc from "../../components/ArticleToc.astro";
+import ReadingProgress from "../../components/ReadingProgress.astro";
+import KeyTakeaways from "../../components/KeyTakeaways.astro";
+import { formatDate } from "../../lib/format";
+import { article, faqPage, breadcrumbList, itemList } from "../../lib/seo";
+
+export async function getStaticPaths() {
+  const guide = await getCollection("guide");
+  return guide.map((g) => ({ params: { slug: g.id }, props: { entry: g } }));
+}
+
+const { entry } = Astro.props as { entry: Awaited<ReturnType<typeof getCollection<"guide">>>[number] };
+const d = entry.data;
+const { Content, headings } = await render(entry);
+
+const clusterEntries = (
+  await Promise.all(d.clusterSlugs.map((slug) => getEntry("blog", slug)))
+).filter((e): e is NonNullable<typeof e> => Boolean(e));
+
+const jsonLd = [
+  article({
+    titolo: d.titolo,
+    descrizione: d.metaDescription,
+    url: `/guide/${entry.id}`,
+    autore: d.autore,
+    revisoreMedico: d.revisoreMedico,
+    dataPubblicazione: d.dataPubblicazione,
+    dataAggiornamento: d.dataAggiornamento,
+  }),
+  breadcrumbList([
+    { name: "Home", url: "/" },
+    { name: "Guide", url: "/guide" },
+    { name: d.titolo, url: `/guide/${entry.id}` },
+  ]),
+  clusterEntries.length ? itemList(clusterEntries.map((c) => ({ name: c.data.titolo, url: `/blog/${c.id}` }))) : null,
+  faqPage(d.faqs),
+].filter(Boolean);
+
+const toc = headings.filter((h) => h.depth === 2);
+---
+
+<BaseLayout title={d.titoloSeo} description={d.metaDescription} type="article" jsonLd={jsonLd as Record<string, unknown>[]}>
+  <ReadingProgress />
+  <article class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
+    <nav class="mb-4 text-[12.5px]" style="color:var(--muted)">
+      <a href="/guide" class="hover:underline">Guide</a> / <span style="color:var(--ink)">Guida pilastro</span>
+    </nav>
+
+    <div class="mb-7 max-w-[74ch]">
+      <span
+        class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-[.1em]"
+        style="background:var(--surface-2);color:var(--color-iris)"
+      >
+        Guida pilastro
+      </span>
+      <h1 class="font-display mt-3 mb-3 text-[clamp(2.1rem,4.8vw,3.4rem)]">{d.titolo}</h1>
+      <p class="text-[15.5px]" style="color:var(--ink-soft)">{d.excerpt}</p>
+      <p class="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-[12.5px]" style="color:var(--muted)">
+        <span>{d.autore}</span>
+        <span>· Pubblicata il {formatDate(d.dataPubblicazione.toISOString())}</span>
+        {d.dataAggiornamento && <span>· Aggiornata il {formatDate(d.dataAggiornamento.toISOString())}</span>}
+        {d.revisoreMedico && <span>· Revisionata da {d.revisoreMedico}</span>}
+      </p>
+    </div>
+
+    <div class="relative mb-9 h-[240px] max-w-[900px] overflow-hidden rounded-[var(--r-lg)]">
+      <span class={`cv ${d.cover} absolute inset-0 block`}></span>
+    </div>
+
+    <KeyTakeaways items={d.keyTakeaways} />
+
+    <div class="grid gap-10 lg:grid-cols-[1fr_240px]">
+      <div class="article-body max-w-[70ch] text-[16px] leading-[1.8]" style="color:var(--ink-soft)">
+        <Content />
+
+        <div class="mt-10 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface-2)">
+          <h2 class="font-display mb-2 text-[1.3rem]" style="color:var(--ink)">{d.ctaLabel}</h2>
+          <p class="mb-4 text-[14px]">
+            Trova le strutture selezionate per questo ambito, con medico responsabile e prezzi in chiaro.
+          </p>
+          <a href={d.ctaDirectory} class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-[13.5px] font-semibold" style="background:var(--ink);color:var(--bg)">
+            {d.ctaLabel} →
+          </a>
+        </div>
+
+        <p class="mt-8 rounded-[var(--r)] border-l-[3px] p-4 text-[12.5px] leading-relaxed" style="border-color:var(--color-iris);background:var(--surface-2);color:var(--muted)">
+          Contenuto informativo, non sostituisce il parere del medico. Consulta il tuo medico prima di intraprendere
+          qualsiasi percorso diagnostico o terapeutico. Leggi il <a href="/disclaimer-medico" class="underline">disclaimer medico</a> completo.
+        </p>
+
+        {d.faqs.length > 0 && (
+          <div class="mt-14 reveal">
+            <h2 class="font-display mb-5 text-[1.6rem]" style="color:var(--ink)">Domande frequenti</h2>
+            <div class="space-y-2.5">
+              {d.faqs.map((f) => (
+                <details class="rounded-[var(--r)] border p-0" style="border-color:var(--line);background:var(--surface)">
+                  <summary class="cursor-pointer list-none px-4 py-3.5 text-[14.5px] font-semibold" style="color:var(--ink)">{f.domanda}</summary>
+                  <p class="px-4 pb-4 text-[14px]" style="color:var(--ink-soft)">{f.risposta}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <aside class="hidden lg:block">
+        <ArticleToc toc={toc} label="In questa guida" />
+      </aside>
+    </div>
+
+    {clusterEntries.length > 0 && (
+      <div class="mt-16 border-t pt-10 reveal" style="border-color:var(--line)">
+        <h2 class="font-display mb-2 text-[1.6rem]">Gli articoli di questo pilastro</h2>
+        <p class="mb-5 max-w-[64ch] text-[14px]" style="color:var(--muted)">
+          Ogni tema qui sopra è approfondito in un articolo dedicato, con fonti, gradazione dell'evidenza e prezzi indicativi.
+        </p>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {clusterEntries.map((p) => <ArticleCard post={p} />)}
+        </div>
+      </div>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .article-body :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    color: var(--ink);
+    margin: 2em 0 0.6em;
+  }
+  .article-body :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin: 1.6em 0 0.5em;
+  }
+  .article-body :global(p) {
+    margin-bottom: 1.1em;
+  }
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    margin: 0 0 1.1em 1.3em;
+  }
+  .article-body :global(li) {
+    margin-bottom: 0.4em;
+  }
+  .article-body :global(li)::marker {
+    color: var(--color-iris);
+  }
+  .article-body :global(blockquote) {
+    border-left: 3px solid var(--color-mint);
+    background: var(--surface-2);
+    padding: 1em 1.3em;
+    border-radius: var(--r);
+    margin: 1.5em 0;
+    font-size: 0.96em;
+  }
+  .article-body :global(strong) {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .article-body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.92em;
+  }
+  .article-body :global(th),
+  .article-body :global(td) {
+    border: 1px solid var(--line);
+    padding: 0.6em 0.8em;
+    text-align: left;
+  }
+  .article-body :global(th) {
+    background: var(--surface-2);
+  }
+  .article-body :global(hr) {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 2.2em 0;
+  }
+  .article-body :global(a) {
+    color: var(--color-iris);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, var(--color-iris) 45%, transparent);
+    transition:
+      text-decoration-color 0.15s ease,
+      text-underline-offset 0.15s ease;
+  }
+  .article-body :global(a:hover) {
+    text-decoration-color: var(--color-iris);
+    text-underline-offset: 4px;
+  }
+</style>

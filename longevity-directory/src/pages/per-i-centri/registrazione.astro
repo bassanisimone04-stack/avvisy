@@ -1,0 +1,122 @@
+---
+// Pagina dinamica (SSR): il risultato dell'azione va letto per-richiesta.
+import { actions, isInputError } from "astro:actions";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CATEGORIES, FACILITY_TYPES } from "../../lib/taxonomy";
+import { SESSION_COOKIE, getUserFromSession } from "../../lib/auth";
+
+const existing = await getUserFromSession(Astro.cookies.get(SESSION_COOKIE)?.value);
+if (existing) return Astro.redirect("/account");
+
+const result = Astro.getActionResult(actions.registerBusiness);
+if (result && !result.error) return Astro.redirect("/account");
+
+const fieldErrors = isInputError(result?.error) ? result.error.fields : undefined;
+---
+
+<BaseLayout
+  title="Registra la tua struttura"
+  description="Registrazione gratuita: crea l'account, invia i dati della struttura, ricevi la verifica entro 24-48 ore."
+  noindex
+>
+  <div class="mx-auto max-w-[720px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Per le strutture</span>
+    <h1 class="font-display mt-2.5 mb-3 text-[clamp(2rem,4.6vw,3rem)]">Registra la tua struttura</h1>
+    <p class="mb-8 text-[15px]" style="color:var(--muted)">
+      La scheda base è gratuita. Dopo l'invio la verifichiamo entro 24–48 ore (P.IVA, albo, assenza di claim non
+      ammessi) e ti avvisiamo via email quando è pubblicata.
+    </p>
+
+    {result?.error && (
+      <p class="mb-5 rounded-[var(--r)] border px-4 py-3 text-[13.5px]" style="border-color:#e2685c;background:color-mix(in srgb,#e2685c 10%,transparent);color:#e2685c">
+        {result.error.message}
+      </p>
+    )}
+
+    <form method="POST" action={actions.registerBusiness} class="space-y-4 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label for="email" class="mb-1.5 block text-[12.5px] font-semibold">Email *</label>
+          <input id="email" name="email" type="email" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+          {fieldErrors?.email && <p class="mt-1 text-[12px]" style="color:#e2685c">{fieldErrors.email[0]}</p>}
+        </div>
+        <div>
+          <label for="password" class="mb-1.5 block text-[12.5px] font-semibold">Password *</label>
+          <input id="password" name="password" type="password" minlength="8" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+          {fieldErrors?.password && <p class="mt-1 text-[12px]" style="color:#e2685c">{fieldErrors.password[0]}</p>}
+        </div>
+      </div>
+
+      <div>
+        <label for="nomeStruttura" class="mb-1.5 block text-[12.5px] font-semibold">Nome della struttura *</label>
+        <input id="nomeStruttura" name="nomeStruttura" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label for="piva" class="mb-1.5 block text-[12.5px] font-semibold">Partita IVA *</label>
+          <input id="piva" name="piva" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+        <div>
+          <label for="facilityType" class="mb-1.5 block text-[12.5px] font-semibold">Tipo di struttura *</label>
+          <select id="facilityType" name="facilityType" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)">
+            <option value="">Seleziona…</option>
+            {FACILITY_TYPES.map((f) => <option value={f.slug}>{f.label}</option>)}
+          </select>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label for="indirizzo" class="mb-1.5 block text-[12.5px] font-semibold">Indirizzo *</label>
+          <input id="indirizzo" name="indirizzo" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+        <div>
+          <label for="citta" class="mb-1.5 block text-[12.5px] font-semibold">Città *</label>
+          <input id="citta" name="citta" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+      </div>
+
+      <div>
+        <label class="mb-1.5 block text-[12.5px] font-semibold">Discipline offerte * (una o più)</label>
+        <div class="flex flex-wrap gap-2">
+          {CATEGORIES.map((c) => (
+            <label class="flex cursor-pointer items-center gap-1.5 rounded-full border px-3 py-1.5 text-[12.5px]" style="border-color:var(--line)">
+              <input type="checkbox" name="categorie" value={c.slug} /> {c.shortLabel}
+            </label>
+          ))}
+        </div>
+        {fieldErrors?.categorie && <p class="mt-1.5 text-[12px]" style="color:#e2685c">{fieldErrors.categorie[0]}</p>}
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label for="direttoreSanitario" class="mb-1.5 block text-[12.5px] font-semibold">Medico responsabile *</label>
+          <input id="direttoreSanitario" name="direttoreSanitario" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+        <div>
+          <label for="numeroAlbo" class="mb-1.5 block text-[12.5px] font-semibold">Numero di iscrizione all'albo *</label>
+          <input id="numeroAlbo" name="numeroAlbo" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+        </div>
+      </div>
+
+      <div>
+        <label for="telefono" class="mb-1.5 block text-[12.5px] font-semibold">Telefono</label>
+        <input id="telefono" name="telefono" type="tel" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+
+      <label class="flex items-start gap-2.5 text-[12.5px]" style="color:var(--ink-soft)">
+        <input type="checkbox" required class="mt-0.5" />
+        Dichiaro di essere responsabile dei contenuti della scheda e di accettare i <a href="/termini" class="underline">termini di servizio</a>.
+      </label>
+
+      <button type="submit" class="w-full rounded-full py-3 text-[14px] font-semibold" style="background:var(--ink);color:var(--bg)">
+        Invia la registrazione
+      </button>
+    </form>
+
+    <p class="mt-5 text-center text-[13px]" style="color:var(--muted)">
+      Hai già un account? <a href="/accedi" class="underline" style="color:var(--color-iris)">Accedi</a>
+    </p>
+  </div>
+</BaseLayout>

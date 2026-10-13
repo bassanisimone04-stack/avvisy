@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from "astro:content";
+import EvidencePill from "./EvidencePill.astro";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+const { post } = Astro.props;
+const d = post.data;
+---
+
+<a
+  href={`/blog/${post.id}`}
+  class="group block overflow-hidden rounded-[var(--r-lg)] border transition-transform hover:-translate-y-1"
+  style="border-color:var(--line);background:var(--surface);box-shadow:var(--sh-s)"
+>
+  <div class="relative h-[132px] overflow-hidden">
+    <span class={`cv ${d.cover} absolute inset-0 block transition-transform duration-700 group-hover:scale-105`}></span>
+  </div>
+  <div class="p-[16px_18px_20px]">
+    {d.livelloEvidenza && <EvidencePill level={d.livelloEvidenza} />}
+    <h3 class="font-display mt-3 text-[1.3rem] leading-tight">{d.titolo}</h3>
+    <p class="mt-2 text-[13.5px]" style="color:var(--muted)">{d.excerpt}</p>
+  </div>
+</a>

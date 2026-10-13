@@ -1,0 +1,113 @@
+---
+/**
+ * Sfondo "aurora" animato: masse di colore che derivano lentamente su un
+ * canvas a bassa risoluzione, ingrandito e sfocato via CSS (costo GPU/CPU
+ * trascurabile). Si ricolora da sola al cambio di tema (vedi script sotto).
+ * Rispetta `prefers-reduced-motion` (resta su un singolo frame statico).
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+const id = "au-" + Math.random().toString(36).slice(2, 9);
+---
+
+<div class={`aurora-host ${className}`} style="position:absolute;inset:0;overflow:hidden;z-index:0" aria-hidden="true">
+  <canvas
+    id={id}
+    class="aurora-canvas"
+    style="position:absolute;inset:-10%;width:120%;height:120%;filter:blur(18px) saturate(1.18);transform:translateZ(0)"
+  ></canvas>
+  <div class="aurora-grain" style="position:absolute;inset:0;z-index:1;opacity:.28;mix-blend-mode:overlay;pointer-events:none"></div>
+</div>
+
+<script is:inline define:vars={{ id }}>
+  (function () {
+    var cv = document.getElementById(id);
+    if (!cv) return;
+    var ctx = cv.getContext("2d");
+    var W = 280,
+      H = 170;
+    cv.width = W;
+    cv.height = H;
+    var RM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function hex2rgb(h) {
+      h = (h || "").trim().replace("#", "");
+      if (h.length === 3)
+        h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+      var n = parseInt(h, 16);
+      if (isNaN(n)) return [200, 200, 220];
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+    function rgba(c, a) {
+      var r = hex2rgb(c);
+      return "rgba(" + r[0] + "," + r[1] + "," + r[2] + "," + a + ")";
+    }
+    function cols() {
+      var s = getComputedStyle(document.documentElement);
+      return ["--a1", "--a2", "--a3", "--a4", "--a5"]
+        .map(function (k) {
+          return s.getPropertyValue(k).trim() || "#ccc";
+        })
+        .concat([s.getPropertyValue("--abase").trim() || "#eee"]);
+    }
+
+    var C = cols();
+    var blobs = [];
+    function init() {
+      blobs = [];
+      for (var i = 0; i < 7; i++) {
+        blobs.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: 78 + Math.random() * 72,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.24,
+          c: C[i % 5],
+        });
+      }
+    }
+    function draw() {
+      ctx.fillStyle = C[5];
+      ctx.fillRect(0, 0, W, H);
+      for (var i = 0; i < blobs.length; i++) {
+        var b = blobs[i];
+        b.x += b.vx;
+        b.y += b.vy;
+        if (b.x < -30 || b.x > W + 30) b.vx *= -1;
+        if (b.y < -30 || b.y > H + 30) b.vy *= -1;
+        var gr = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+        gr.addColorStop(0, rgba(b.c, 0.98));
+        gr.addColorStop(0.45, rgba(b.c, 0.62));
+        gr.addColorStop(0.78, rgba(b.c, 0.22));
+        gr.addColorStop(1, rgba(b.c, 0));
+        ctx.fillStyle = gr;
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.r, 0, 6.284);
+        ctx.fill();
+      }
+    }
+    function repaint() {
+      C = cols();
+      init();
+      draw();
+    }
+    init();
+    draw();
+    if (!RM) {
+      (function loop() {
+        draw();
+        requestAnimationFrame(loop);
+      })();
+    }
+    if (window.matchMedia) {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (mq.addEventListener) mq.addEventListener("change", repaint);
+    }
+    new MutationObserver(repaint).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  })();
+</script>

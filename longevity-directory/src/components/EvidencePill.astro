@@ -1,0 +1,16 @@
+---
+import { EVIDENCE_META, type EvidenceLevel } from "../lib/evidence";
+interface Props {
+  level: EvidenceLevel;
+}
+const { level } = Astro.props;
+const m = EVIDENCE_META[level];
+---
+
+<span
+  class="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[11.5px] font-semibold"
+  style="border-color:var(--line);background:var(--surface-2)"
+>
+  <span class="inline-block h-2 w-2 rounded-full" style={`background:${m.dot}`}></span>
+  {m.label}
+</span>

@@ -1,0 +1,22 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Privacy" description="Informativa sul trattamento dei dati personali.">
+  <div class="mx-auto max-w-[720px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Informazioni legali</span>
+    <h1 class="font-display mt-2.5 mb-6 text-[clamp(1.9rem,4vw,2.6rem)]">Privacy</h1>
+    <div class="space-y-4 text-[15px] leading-[1.8]" style="color:var(--ink-soft)">
+      <p>Il titolare del trattamento raccoglie i dati forniti volontariamente tramite i moduli di contatto e di
+      registrazione delle strutture (nome, email, messaggio) al solo scopo di rispondere alla richiesta o di
+      gestire l'iscrizione alla directory.</p>
+      <p>Non raccogliamo dati relativi allo stato di salute degli utenti tramite i moduli pubblici: i campi dei
+      moduli di contatto invitano esplicitamente a non inserire informazioni sulla propria salute.</p>
+      <p>I dati non sono ceduti a terzi per finalità di marketing. Puoi richiedere in ogni momento l'accesso,
+      la rettifica o la cancellazione dei tuoi dati scrivendo all'indirizzo indicato nella pagina Contatti.</p>
+      <p style="color:var(--muted)">Prototipo dimostrativo. Questo testo è un modello e va sostituito con la versione redatta da un legale prima della pubblicazione in produzione.</p>
+    </div>
+  </div>
+</BaseLayout>

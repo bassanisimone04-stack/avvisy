@@ -1,0 +1,74 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import DirectoryApp from "../../../components/DirectoryApp.astro";
+import { CATEGORIES, MIN_LISTINGS_FOR_CITY_PAGE, citySlug } from "../../../lib/taxonomy";
+import { itemList, breadcrumbList } from "../../../lib/seo";
+
+export async function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { categoria: c.slug } }));
+}
+
+const { categoria } = Astro.params;
+const category = CATEGORIES.find((c) => c.slug === categoria)!;
+
+const allCentri = await getCollection("centri");
+const centri = allCentri
+  .filter((c) => c.data.categorie.includes(category.slug))
+  .sort((a, b) => b.data.dataAggiunta.getTime() - a.data.dataAggiunta.getTime());
+
+// Città con almeno MIN_LISTINGS_FOR_CITY_PAGE schede in questa categoria: solo queste hanno
+// una pagina categoria+città generata (regola anti-thin-content, doc 01 §2.1).
+const cityCounts = new Map<string, number>();
+for (const c of centri) cityCounts.set(c.data.citta, (cityCounts.get(c.data.citta) || 0) + 1);
+const cityPages = [...cityCounts.entries()]
+  .filter(([, n]) => n >= MIN_LISTINGS_FOR_CITY_PAGE)
+  .map(([citta]) => citta)
+  .sort();
+
+const jsonLd = [
+  breadcrumbList([
+    { name: "Home", url: "/" },
+    { name: "Directory", url: "/directory" },
+    { name: category.label, url: `/directory/${category.slug}` },
+  ]),
+  itemList(centri.map((c) => ({ name: c.data.nome, url: `/centri/${c.id}` }))),
+];
+---
+
+<BaseLayout title={category.label} description={category.description} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
+    <nav class="mb-4 text-[12.5px]" style="color:var(--muted)">
+      <a href="/directory" class="hover:underline">Directory</a> / <span style="color:var(--ink)">{category.shortLabel}</span>
+    </nav>
+    <h1 class="font-display mb-3 text-[clamp(1.9rem,4vw,2.8rem)]">{category.label}</h1>
+    <p class="mb-5 max-w-[70ch] text-[15.5px]" style="color:var(--ink-soft)">{category.description}</p>
+
+    <div class="mb-8 flex flex-wrap gap-1.5">
+      {category.subcategories.map((s) => (
+        <span class="rounded-full border px-3 py-1.5 text-[12px]" style="border-color:var(--line);color:var(--ink-soft)">
+          {s.label}
+        </span>
+      ))}
+    </div>
+
+    {cityPages.length > 0 && (
+      <div class="mb-8 flex flex-wrap items-center gap-2 text-[13px]" style="color:var(--muted)">
+        <span>Pagine dedicate per città:</span>
+        {cityPages.map((citta) => (
+          <a
+            href={`/directory/${category.slug}/${citySlug(citta)}`}
+            class="rounded-full border px-3 py-1.5 font-medium"
+            style="border-color:var(--line);color:var(--ink)"
+          >
+            {category.shortLabel} a {citta}
+          </a>
+        ))}
+      </div>
+    )}
+
+    <DirectoryApp centri={centri} lockCategory={category.slug} />
+  </div>
+</BaseLayout>

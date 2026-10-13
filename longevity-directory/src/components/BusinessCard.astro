@@ -1,0 +1,75 @@
+---
+import { euro } from "../lib/format";
+import { getCategory } from "../lib/taxonomy";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  centro: CollectionEntry<"centri">;
+  /** Se true espone gli attributi data-* letti dallo script di filtro di /directory. */
+  filterable?: boolean;
+  style?: string;
+}
+const { centro, filterable = false, style } = Astro.props;
+const d = centro.data;
+const primaryCat = getCategory(d.categorie[0]);
+
+const badge =
+  d.piano === "premium" || d.piano === "esclusiva"
+    ? { label: "In evidenza", color: "var(--color-iris)", icon: "★" }
+    : d.verificato
+      ? { label: "Verificata", color: "var(--color-mint)", icon: "✓" }
+      : { label: "Non rivendicata", color: "var(--muted)", icon: null };
+
+const haystack = [d.nome, ...d.categorie, d.citta, d.provincia, ...d.tag, d.descrizioneBreve].join(" ").toLowerCase();
+---
+
+<a
+  href={`/centri/${centro.id}`}
+  class:list={["cc group block overflow-hidden rounded-[var(--r-lg)] border text-left transition-transform hover:-translate-y-1", filterable && "js-card"]}
+  style={`border-color:var(--line);background:var(--surface);box-shadow:var(--sh-s);${style || ""}`}
+  data-nome={d.nome}
+  data-cat={d.categorie.join("|")}
+  data-citta={d.citta}
+  data-prezzo={d.prezzoPrimoConsulto}
+  data-voto={d.valutazione}
+  data-recensioni={d.numeroRecensioni}
+  data-verificato={d.verificato ? 1 : 0}
+  data-piano={d.piano}
+  data-testo={haystack}
+>
+  <div class="relative h-[150px] overflow-hidden">
+    <span class={`cv ${d.cover} absolute inset-0 block transition-transform duration-700 group-hover:scale-105`}></span>
+    <span
+      class="absolute left-3 top-3 z-10 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[10px] font-bold backdrop-blur-md"
+      style="background:var(--glass-2);border-color:var(--brd)"
+    >
+      {badge.icon && <span style={`color:${badge.color}`}>{badge.icon}</span>}
+      {badge.label}
+    </span>
+  </div>
+  <div class="flex flex-1 flex-col gap-2 p-[16px_18px_18px]">
+    <span class="font-display block text-[1.24rem]">{d.nome}</span>
+    <span class="flex flex-wrap items-center gap-2 text-[12.5px]" style="color:var(--muted)">
+      <b style="color:var(--ink)">{d.valutazione.toFixed(1)}</b> · {d.numeroRecensioni} recensioni · {d.citta}
+      {primaryCat && <span>· {primaryCat.shortLabel}</span>}
+    </span>
+    <span class="flex flex-wrap gap-1.5">
+      {d.tag.slice(0, 3).map((t, i) => (
+        <span
+          class="rounded-full border px-2.5 py-1 text-[11.5px]"
+          style={
+            i === 0
+              ? "background:color-mix(in srgb,var(--color-mint) 15%,transparent);border-color:transparent;color:color-mix(in srgb,var(--color-mint) 85%,var(--ink))"
+              : "background:var(--surface-2);border-color:var(--line);color:var(--ink-soft)"
+          }
+        >
+          {t}
+        </span>
+      ))}
+    </span>
+    <span class="mt-auto flex items-center justify-between border-t pt-3" style="border-color:var(--line)">
+      <b class="text-[15px]" style="font-variant-numeric:tabular-nums">da {euro(d.prezzoPrimoConsulto)}</b>
+      <small style="color:var(--muted)">Vedi scheda →</small>
+    </span>
+  </div>
+</a>

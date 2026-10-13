@@ -1,0 +1,107 @@
+---
+import SEO from "../components/SEO.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { SITE } from "../lib/site";
+import "../styles/global.css";
+import "@fontsource/instrument-serif";
+import "@fontsource/instrument-serif/400-italic.css";
+import "@fontsource-variable/manrope";
+
+interface Props {
+  title?: string;
+  description?: string;
+  type?: "website" | "article";
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  noindex?: boolean;
+  /** Nasconde lo spazio riservato all'header fisso (usato dall'hero, che lo gestisce da sé). */
+  bareTop?: boolean;
+}
+
+const { title, description, type, jsonLd, noindex, bareTop = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#F4F6FB" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#070A12" media="(prefers-color-scheme: dark)" />
+    <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      // Anti-FOUC: applica il tema salvato prima del primo paint.
+      (function () {
+        try {
+          if (localStorage.getItem("tema") === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+    <SEO title={title} description={description} type={type} jsonLd={jsonLd} noindex={noindex} />
+  </head>
+  <body>
+    <SiteHeader />
+    <main class={bareTop ? "" : "pt-[92px] md:pt-[86px]"}>
+      <slot />
+    </main>
+    <SiteFooter />
+
+    <script>
+      // Reveal allo scroll, condiviso da tutte le pagine.
+      const RM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      function count(n: HTMLElement) {
+        const to = +(n.dataset.count || "0");
+        if (RM) {
+          n.textContent = to.toLocaleString("it-IT");
+          return;
+        }
+        let t0: number | null = null;
+        const dur = 1100;
+        function step(t: number) {
+          if (t0 === null) t0 = t;
+          const k = Math.min(1, (t - t0) / dur);
+          const e = 1 - Math.pow(1 - k, 3);
+          n.textContent = Math.round(to * e).toLocaleString("it-IT");
+          if (k < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      const io =
+        "IntersectionObserver" in window
+          ? new IntersectionObserver(
+              (es) => {
+                es.forEach((e) => {
+                  if (!e.isIntersecting) return;
+                  const el = e.target as HTMLElement;
+                  el.classList.add("in");
+                  if (el.dataset.count) count(el);
+                  io!.unobserve(el);
+                });
+              },
+              { threshold: 0.18 },
+            )
+          : null;
+      document.querySelectorAll<HTMLElement>(".reveal, [data-count]").forEach((n) => {
+        if (io) io.observe(n);
+        else {
+          n.classList.add("in");
+          if (n.dataset.count) n.textContent = (+n.dataset.count).toLocaleString("it-IT");
+        }
+      });
+
+      // Rete di sicurezza: un elemento .reveal non deve mai restare invisibile
+      // per sempre (timing dell'IntersectionObserver, contesti di scroll
+      // annidati, ecc.). Dopo 2.5s lo rivela comunque.
+      setTimeout(() => {
+        document.querySelectorAll<HTMLElement>(".reveal:not(.in)").forEach((n) => {
+          n.classList.add("in");
+          if (n.dataset.count && n.textContent === "0") count(n);
+        });
+      }, 2500);
+    </script>
+  </body>
+</html>

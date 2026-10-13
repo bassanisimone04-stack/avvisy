@@ -1,0 +1,166 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+/**
+ * Panoramica città — pilastro 9 del doc 02 ("guide città e costi").
+ *
+ * A differenza degli altri 8 pilastri, questo non è un articolo scritto a
+ * mano: è un formato generato dai dati REALI della directory (numero di
+ * strutture, categorie coperte, prezzo medio e minimo del primo consulto),
+ * con la stessa regola anti-thin-content usata altrove (MIN_LISTINGS_FOR_CITY_PAGE).
+ * Nessun prezzo o numero in questa pagina è inventato: sono tutti calcolati
+ * da `src/content/centri/` al momento della build. Se una città scende sotto
+ * la soglia, la sua pagina smette semplicemente di essere generata — non
+ * viene mai lasciato un numero stantio o un contenuto vuoto indicizzato.
+ */
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DirectoryApp from "../../components/DirectoryApp.astro";
+import { CATEGORIES, getCityOverviewPages, getCityPageCombos } from "../../lib/taxonomy";
+import { breadcrumbList, faqPage, itemList } from "../../lib/seo";
+import { euro } from "../../lib/format";
+
+export async function getStaticPaths() {
+  const allCentri = await getCollection("centri");
+  return getCityOverviewPages(allCentri).map(({ citta, cittaSlug }) => ({
+    params: { citta: cittaSlug },
+    props: { cityLabel: citta },
+  }));
+}
+
+const { cityLabel } = Astro.props as { cityLabel: string };
+
+const allCentri = await getCollection("centri");
+const centri = allCentri
+  .filter((c) => c.data.citta === cityLabel)
+  .sort((a, b) => b.data.valutazione - a.data.valutazione);
+
+const prices = centri.map((c) => c.data.prezzoPrimoConsulto);
+const avgPrice = Math.round(prices.reduce((a, b) => a + b, 0) / prices.length);
+const minPrice = Math.min(...prices);
+const maxPrice = Math.max(...prices);
+
+// Combinazioni categoria+città che hanno davvero una pagina dedicata (stessa soglia
+// anti-thin-content di [categoria]/[citta].astro): solo queste ricevono un link diretto,
+// per non generare mai un link verso una pagina che getStaticPaths non costruisce.
+const existingCombos = new Set(
+  getCityPageCombos(allCentri)
+    .filter((combo) => combo.citta === cityLabel)
+    .map((combo) => combo.categoria),
+);
+
+// Riepilogo per categoria: solo le categorie che hanno almeno una scheda reale in questa città.
+const perCategory = CATEGORIES.map((cat) => {
+  const inCat = centri.filter((c) => c.data.categorie.includes(cat.slug));
+  if (inCat.length === 0) return null;
+  const catPrices = inCat.map((c) => c.data.prezzoPrimoConsulto);
+  return {
+    category: cat,
+    count: inCat.length,
+    avgPrice: Math.round(catPrices.reduce((a, b) => a + b, 0) / catPrices.length),
+    minPrice: Math.min(...catPrices),
+    hasCityPage: existingCombos.has(cat.slug),
+  };
+}).filter((x): x is NonNullable<typeof x> => x !== null);
+
+const faqs = [
+  {
+    domanda: `Quanto costa un primo consulto di medicina della longevità a ${cityLabel}?`,
+    risposta: `Tra le ${centri.length} strutture pubblicate a ${cityLabel} il primo consulto va da ${euro(minPrice)} a ${euro(maxPrice)}, con una media di ${euro(avgPrice)}. Il prezzo dipende dalla disciplina e dal percorso scelto: il dettaglio per categoria è nella tabella qui sopra.`,
+  },
+  {
+    domanda: `Quali discipline sono coperte a ${cityLabel}?`,
+    risposta: `Oggi ${cityLabel} ha almeno una struttura pubblicata in ${perCategory.length} ${perCategory.length === 1 ? "categoria" : "categorie"}: ${perCategory.map((p) => p.category.shortLabel.toLowerCase()).join(", ")}. L'elenco cresce mano a mano che nuove strutture vengono verificate e aggiunte.`,
+  },
+  {
+    domanda: "Come vengono selezionate le strutture di questa pagina?",
+    risposta: "Ogni scheda dichiara P.IVA, sede fisica e un medico responsabile con numero di iscrizione all'albo. La politica completa di ammissione è su /chi-siamo.",
+  },
+];
+
+const jsonLd = [
+  breadcrumbList([
+    { name: "Home", url: "/" },
+    { name: "Directory", url: "/directory" },
+    { name: cityLabel, url: `/citta/${Astro.params.citta}` },
+  ]),
+  itemList(centri.map((c) => ({ name: c.data.nome, url: `/centri/${c.id}` }))),
+  faqPage(faqs),
+].filter(Boolean);
+---
+
+<BaseLayout
+  title={`Longevità a ${cityLabel}: centri e prezzi`}
+  description={`${centri.length} strutture di medicina della longevità e prevenzione a ${cityLabel}, in ${perCategory.length} categorie. Prezzi reali del primo consulto da ${euro(minPrice)}.`}
+  jsonLd={jsonLd as Record<string, unknown>[]}
+>
+  <div class="mx-auto max-w-[1200px] px-6 pb-24 pt-10">
+    <nav class="mb-4 text-[12.5px]" style="color:var(--muted)">
+      <a href="/directory" class="hover:underline">Directory</a> / <span style="color:var(--ink)">{cityLabel}</span>
+    </nav>
+    <h1 class="font-display mb-4 text-[clamp(1.9rem,4vw,2.8rem)]">Longevità a {cityLabel}: centri, servizi e quanto costa</h1>
+
+    <div class="mb-8 max-w-[74ch] space-y-3 text-[15.5px]" style="color:var(--ink-soft)">
+      <p>
+        A {cityLabel} abbiamo selezionato <b style="color:var(--ink)">{centri.length} strutture</b> in
+        {perCategory.length} {perCategory.length === 1 ? "categoria" : "categorie"} diverse. Il primo consulto,
+        su tutte le discipline, va da <b style="color:var(--ink)">{euro(minPrice)}</b> a {euro(maxPrice)},
+        con una media di {euro(avgPrice)}.
+      </p>
+      <p>
+        Ogni scheda riporta il medico responsabile e il numero di iscrizione all'albo: è il primo dato da
+        controllare prima di prenotare, insieme alla presenza di uno screening o di un consulto medico
+        incluso nel percorso.
+      </p>
+    </div>
+
+    {perCategory.length > 0 && (
+      <div class="mb-12 overflow-x-auto">
+        <table class="w-full min-w-[480px] border-collapse text-[13.5px]">
+          <thead>
+            <tr style="border-bottom:1px solid var(--line)">
+              <th class="px-3 py-2.5 text-left font-semibold" style="color:var(--muted)">Categoria</th>
+              <th class="px-3 py-2.5 text-right font-semibold" style="color:var(--muted)">Strutture</th>
+              <th class="px-3 py-2.5 text-right font-semibold" style="color:var(--muted)">Prezzo minimo</th>
+              <th class="px-3 py-2.5 text-right font-semibold" style="color:var(--muted)">Prezzo medio</th>
+            </tr>
+          </thead>
+          <tbody>
+            {perCategory.map((p) => (
+              <tr style="border-bottom:1px solid var(--line)">
+                <td class="px-3 py-2.5">
+                  {p.hasCityPage ? (
+                    <a href={`/directory/${p.category.slug}/${Astro.params.citta}`} class="hover:underline" style="color:var(--ink)">
+                      {p.category.shortLabel}
+                    </a>
+                  ) : (
+                    <a href={`/directory/${p.category.slug}`} class="hover:underline" style="color:var(--ink)">
+                      {p.category.shortLabel}
+                    </a>
+                  )}
+                </td>
+                <td class="px-3 py-2.5 text-right" style="color:var(--ink-soft)">{p.count}</td>
+                <td class="px-3 py-2.5 text-right" style="color:var(--ink-soft)">{euro(p.minPrice)}</td>
+                <td class="px-3 py-2.5 text-right font-semibold" style="color:var(--ink)">{euro(p.avgPrice)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    <DirectoryApp centri={centri} lockCity={cityLabel} />
+
+    <div class="mt-16 max-w-[70ch]">
+      <h2 class="font-display mb-5 text-[1.7rem]">Domande frequenti</h2>
+      <div class="space-y-2.5">
+        {faqs.map((f) => (
+          <details class="rounded-[var(--r)] border p-0" style="border-color:var(--line);background:var(--surface)">
+            <summary class="cursor-pointer list-none px-4 py-3.5 text-[14.5px] font-semibold">{f.domanda}</summary>
+            <p class="px-4 pb-4 text-[14px]" style="color:var(--ink-soft)">{f.risposta}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

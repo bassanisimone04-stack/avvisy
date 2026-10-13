@@ -1,0 +1,87 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+// Il form sotto è potenziato via JavaScript lato client (vedi <script> in fondo):
+// la pagina resta un file statico, ma l'invio chiama davvero l'Action del server.
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+import { breadcrumbList } from "../lib/seo";
+
+const jsonLd = breadcrumbList([
+  { name: "Home", url: "/" },
+  { name: "Contatti", url: "/contatti" },
+]);
+---
+
+<BaseLayout title="Contatti" description="Scrivici per segnalare un centro, un errore o per proporre una collaborazione editoriale." jsonLd={jsonLd}>
+  <div class="mx-auto max-w-[720px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Contatti</span>
+    <h1 class="font-display mt-2.5 mb-6 text-[clamp(2rem,4.6vw,3rem)]">Parliamone</h1>
+    <p class="mb-8 text-[15.5px]" style="color:var(--ink-soft)">
+      Scrivi a <a href={`mailto:${SITE.email}`} class="underline" style="color:var(--color-iris)">{SITE.email}</a> oppure usa il modulo qui sotto.
+      Rispondiamo entro 2 giorni lavorativi.
+    </p>
+
+    <form id="contact-form" class="space-y-4 rounded-[var(--r-lg)] border p-6" style="border-color:var(--line);background:var(--surface)">
+      <p id="contact-msg" hidden class="rounded-[var(--r)] border px-4 py-3 text-[13.5px]"></p>
+      <div>
+        <label for="motivo" class="mb-1.5 block text-[12.5px] font-semibold">Motivo del contatto</label>
+        <select id="motivo" name="motivo" class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)">
+          <option>Segnala un centro</option>
+          <option>Segnala un errore</option>
+          <option>Collabora con noi (medici e divulgatori)</option>
+          <option>Sono una struttura, voglio essere presente</option>
+          <option>Altro</option>
+        </select>
+      </div>
+      <div>
+        <label for="nome" class="mb-1.5 block text-[12.5px] font-semibold">Nome</label>
+        <input id="nome" name="nome" type="text" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+      <div>
+        <label for="email" class="mb-1.5 block text-[12.5px] font-semibold">Email</label>
+        <input id="email" name="email" type="email" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)" />
+      </div>
+      <div>
+        <label for="messaggio" class="mb-1.5 block text-[12.5px] font-semibold">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" rows="5" required class="w-full rounded-[var(--r)] border px-3.5 py-2.5 text-[14px]" style="border-color:var(--line);background:var(--surface-2)"></textarea>
+        <p class="mt-1.5 text-[11.5px]" style="color:var(--muted)">Non inserire dati sulla tua salute in questo modulo.</p>
+      </div>
+      <button id="contact-submit" type="submit" class="w-full rounded-full py-3 text-[14px] font-semibold" style="background:var(--ink);color:var(--bg)">
+        Invia
+      </button>
+    </form>
+  </div>
+</BaseLayout>
+
+<script>
+  import { actions, isInputError } from "astro:actions";
+
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const msg = document.getElementById("contact-msg") as HTMLParagraphElement;
+  const submitBtn = document.getElementById("contact-submit") as HTMLButtonElement;
+
+  function showMessage(text: string, ok: boolean) {
+    msg.hidden = false;
+    msg.textContent = text;
+    msg.style.borderColor = ok ? "var(--color-mint)" : "#e2685c";
+    msg.style.background = ok ? "color-mix(in srgb,var(--color-mint) 10%,transparent)" : "color-mix(in srgb,#e2685c 10%,transparent)";
+    msg.style.color = ok ? "inherit" : "#e2685c";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Invio…";
+    const { error } = await actions.sendContactMessage(new FormData(form));
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Invia";
+    if (error) {
+      const detail = isInputError(error) ? Object.values(error.fields).flat().join(" ") : error.message;
+      showMessage(detail || "Qualcosa non ha funzionato. Riprova.", false);
+      return;
+    }
+    showMessage("Messaggio inviato. Ti rispondiamo entro 2 giorni lavorativi.", true);
+    form.reset();
+  });
+</script>

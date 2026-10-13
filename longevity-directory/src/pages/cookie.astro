@@ -1,0 +1,19 @@
+---
+// Pagina statica: pre-renderizzata a build time (vedi astro.config.mjs, output:"server").
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Cookie" description="Informativa sui cookie utilizzati dal sito.">
+  <div class="mx-auto max-w-[720px] px-6 pb-24 pt-10">
+    <span class="text-[10.5px] font-bold uppercase tracking-[.18em]" style="color:var(--muted)">Informazioni legali</span>
+    <h1 class="font-display mt-2.5 mb-6 text-[clamp(1.9rem,4vw,2.6rem)]">Cookie</h1>
+    <div class="space-y-4 text-[15px] leading-[1.8]" style="color:var(--ink-soft)">
+      <p>Questo sito utilizza cookie tecnici necessari al funzionamento (es. preferenza del tema chiaro/scuro,
+      salvata solo nel tuo browser) e, se attivati, cookie analitici in forma aggregata.</p>
+      <p>Non utilizziamo cookie di profilazione di terze parti senza consenso esplicito. Puoi gestire le
+      preferenze sui cookie dalle impostazioni del tuo browser.</p>
+      <p style="color:var(--muted)">Prototipo dimostrativo. Questo testo è un modello e va sostituito con la versione redatta da un legale prima della pubblicazione in produzione.</p>
+    </div>
+  </div>
+</BaseLayout>
