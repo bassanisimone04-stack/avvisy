@@ -37,7 +37,7 @@ ormai troppo moderna. Qui trovi indirizzo, orari, cosa aspettarti e come arrivar
 ## Dove si trova il Bar Vitelli
 
 Il **[Bar Vitelli](/locale/bar-vitelli-savoca)** è in **Piazza Fossia 7**, all'ingresso di
-Savoca ([mappa]({M}Bar+Vitelli+Savoca)), sul piano terra di **Palazzo Trimarchi**, edificio
+Savoca ([mappa](https://www.google.com/maps/search/?api=1&query=Bar+Vitelli+Savoca)), sul piano terra di **Palazzo Trimarchi**, edificio
 nobiliare costruito tra fine Seicento e inizio Settecento e appartenuto alla famiglia dei
 Trimarchi. Il sito del locale è barvitelli.it.
 

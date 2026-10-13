@@ -56,14 +56,14 @@ facade inspired the set. It opened on **4 August 2023**, at the start of the fou
 Film Fest. The ground floor has production stills from Cristaldi Film, props and a model of the
 historic centre; the first floor a multimedia area and a recreation of **Alfredo's projection booth**.
 
-- **Address:** Piazza Umberto I, 90030 Palazzo Adriano ([map]({M}Museo+Nuovo+Cinema+Paradiso+Palazzo+Adriano)).
+- **Address:** Piazza Umberto I, 90030 Palazzo Adriano ([map](https://www.google.com/maps/search/?api=1&query=Museo+Nuovo+Cinema+Paradiso+Palazzo+Adriano)).
 - **Hours and ticket:** Museionline says **free** entry and open every day 9–13 and 15–19, but
   advises checking. Phone +39 091 8349933 [TO VERIFY].
 
 ## Where to eat in Palazzo Adriano
 
 **[Albergo Ristorante Pizzeria del Viale](/en/locale/bar-paradiso-palazzo-adriano)**, at **2 Via
-XX Settembre** ([map]({M}Albergo+Ristorante+Pizzeria+del+Viale+Palazzo+Adriano)): not among the
+XX Settembre** ([map](https://www.google.com/maps/search/?api=1&query=Albergo+Ristorante+Pizzeria+del+Viale+Palazzo+Adriano)): not among the
 filming locations, but a real address in the film's village. Otherwise the cooking of the Sicani
 Mountains is rustic: home-style bread, local cheeses, cured meats, almond sweets. [TO VERIFY:
 hours and booking].

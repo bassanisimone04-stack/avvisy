@@ -56,14 +56,14 @@ del quarto Paradiso Film Fest. Al piano terra ci sono fotografie di scena della 
 Film, oggetti del film e un plastico del centro storico; al primo piano un'area
 multimediale e la riproduzione della **cabina di proiezione di Alfredo**.
 
-- **Indirizzo:** Piazza Umberto I, 90030 Palazzo Adriano ([mappa]({M}Museo+Nuovo+Cinema+Paradiso+Palazzo+Adriano)).
+- **Indirizzo:** Piazza Umberto I, 90030 Palazzo Adriano ([mappa](https://www.google.com/maps/search/?api=1&query=Museo+Nuovo+Cinema+Paradiso+Palazzo+Adriano)).
 - **Orari e biglietto:** Museionline indica ingresso **gratuito** e apertura ogni giorno 9–13 e
   15–19, ma consiglia di verificare. Telefono +39 091 8349933 [DA VERIFICARE].
 
 ## Dove mangiare a Palazzo Adriano
 
 **[Albergo Ristorante Pizzeria del Viale](/locale/bar-paradiso-palazzo-adriano)**, in **Via XX
-Settembre 2** ([mappa]({M}Albergo+Ristorante+Pizzeria+del+Viale+Palazzo+Adriano)): non è tra le
+Settembre 2** ([mappa](https://www.google.com/maps/search/?api=1&query=Albergo+Ristorante+Pizzeria+del+Viale+Palazzo+Adriano)): non è tra le
 location delle riprese, ma è un indirizzo reale nel paese del film. Per il resto, la cucina dei
 Monti Sicani è contadina: pane casereccio, formaggi locali, salumi, dolci di mandorla.
 [DA VERIFICARE: orari e prenotazione].

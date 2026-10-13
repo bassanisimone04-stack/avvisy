@@ -38,7 +38,7 @@ too modern. Here you find the address, hours, what to expect and how to get ther
 ## Where Bar Vitelli is
 
 **[Bar Vitelli](/en/locale/bar-vitelli-savoca)** is at **7 Piazza Fossia**, at the entrance to
-Savoca ([map]({M}Bar+Vitelli+Savoca)), on the ground floor of **Palazzo Trimarchi**, a noble
+Savoca ([map](https://www.google.com/maps/search/?api=1&query=Bar+Vitelli+Savoca)), on the ground floor of **Palazzo Trimarchi**, a noble
 building built between the late 17th and early 18th century and owned by the Trimarchi
 family. The venue's site is barvitelli.it.
 
