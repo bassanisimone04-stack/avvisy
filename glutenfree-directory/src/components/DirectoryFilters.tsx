@@ -7,10 +7,14 @@ import { REGIONS } from "@/lib/regions";
 import { cityName, regionName } from "@/lib/i18n/place-names";
 import { localeHref } from "@/lib/i18n/locale";
 import { useDictionary } from "@/lib/i18n/useLocale";
-import type { PriceRange } from "@/lib/types";
+import type { DishType, PriceRange, ProductionType } from "@/lib/types";
+import { DISH_LABEL, PRODUCTION, PRODUCTION_LABEL } from "@/lib/business-attributes";
 
 const PRICES: PriceRange[] = ["€", "€€", "€€€"];
 const RATINGS = [4.5, 4, 3.5];
+const PRODUCTIONS: ProductionType[] = ["dedicato", "misto"];
+const DISHES = Object.keys(DISH_LABEL) as DishType[];
+const PRODUCTION_KNOWN = Object.keys(PRODUCTION).length;
 
 export default function DirectoryFilters() {
   const router = useRouter();
@@ -106,6 +110,40 @@ export default function DirectoryFilters() {
       </div>
 
       <div>
+        <p className="field-label">{locale === "en" ? "Type of production" : "Tipo di produzione"}</p>
+        <div className="flex flex-col gap-1.5">
+          {PRODUCTIONS.map((p) => (
+            <label key={p} className="flex cursor-pointer items-center gap-2 text-sm text-ink-soft">
+              <input type="radio" name="produzione" checked={searchParams.get("produzione") === p} onChange={() => update("produzione", p)} className="accent-[var(--gf-brand)]" />
+              {PRODUCTION_LABEL[p].short[locale]}
+            </label>
+          ))}
+          {searchParams.get("produzione") && (
+            <button type="button" onClick={() => update("produzione", null)} className="mt-1 text-left text-xs text-brand-dark">{locale === "en" ? "Remove filter" : "Rimuovi filtro"}</button>
+          )}
+          <p className="mt-1 text-xs text-muted">
+            {locale === "en"
+              ? `Shown only for the ${PRODUCTION_KNOWN} venues where we've confirmed it so far.`
+              : `Indicato solo per i ${PRODUCTION_KNOWN} locali per cui l'abbiamo confermato finora.`}
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <p className="field-label">{locale === "en" ? "Dish" : "Tipo di piatto"}</p>
+        <div className="flex flex-wrap gap-2">
+          {DISHES.map((d) => {
+            const active = searchParams.get("piatto") === d;
+            return (
+              <button key={d} type="button" onClick={() => update("piatto", active ? null : d)} aria-pressed={active} className={`chip ${active ? "chip-brand" : "chip-neutral"}`}>
+                {DISH_LABEL[d][locale]}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div>
         <p className="field-label">{f.price}</p>
         <div className="flex gap-2">
           {PRICES.map((p) => (
@@ -142,6 +180,8 @@ export default function DirectoryFilters() {
           { key: "consegna", label: f.delivery },
           { key: "takeaway", label: f.takeaway },
           { key: "certificato", label: f.certified },
+          { key: "vegano", label: locale === "en" ? "Vegan options" : "Opzioni vegane" },
+          { key: "lattosio", label: locale === "en" ? "Lactose-free options" : "Opzioni senza lattosio" },
         ].map((item) => (
           <label key={item.key} className="flex cursor-pointer items-center justify-between text-sm text-ink-soft">
             {item.label}

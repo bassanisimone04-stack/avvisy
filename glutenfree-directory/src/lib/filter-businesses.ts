@@ -1,5 +1,5 @@
 import { BUSINESSES } from "./mock-businesses";
-import type { Business, Category, PriceRange } from "./types";
+import type { Business, Category, DishType, PriceRange, ProductionType } from "./types";
 
 export interface DirectoryFilters {
   q?: string;
@@ -13,6 +13,10 @@ export interface DirectoryFilters {
   consegna?: boolean;
   takeaway?: boolean;
   certificato?: boolean;
+  produzione?: ProductionType;
+  piatto?: DishType;
+  vegano?: boolean;
+  lattosio?: boolean;
   ordina?: "rating" | "recenti" | "nome";
 }
 
@@ -31,6 +35,10 @@ export function parseFilters(sp: Record<string, string | string[] | undefined>):
     consegna: one(sp.consegna) === "1",
     takeaway: one(sp.takeaway) === "1",
     certificato: one(sp.certificato) === "1",
+    produzione: (["dedicato", "misto"] as const).find((p) => p === one(sp.produzione)),
+    piatto: (["pizza", "pasta", "pane", "dolci", "gelato", "fritti", "carne", "sushi", "birra"] as const).find((p) => p === one(sp.piatto)),
+    vegano: one(sp.vegano) === "1",
+    lattosio: one(sp.lattosio) === "1",
     ordina: (one(sp.ordina) as DirectoryFilters["ordina"]) ?? undefined,
   };
 }
@@ -53,6 +61,10 @@ export function filterBusinesses(filters: DirectoryFilters): Business[] {
     if (filters.consegna && !b.delivery) return false;
     if (filters.takeaway && !b.takeaway) return false;
     if (filters.certificato && !b.aicCertified) return false;
+    if (filters.produzione && b.production !== filters.produzione) return false;
+    if (filters.piatto && !(b.dishes ?? []).includes(filters.piatto)) return false;
+    if (filters.vegano && !b.veganFriendly) return false;
+    if (filters.lattosio && !b.lactoseFree) return false;
     return true;
   });
 

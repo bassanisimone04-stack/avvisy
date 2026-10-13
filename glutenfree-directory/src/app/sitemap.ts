@@ -5,6 +5,7 @@ import { PRODUCTS, PRODUCT_CATEGORIES } from "@/lib/mock-products";
 import { CATEGORIES } from "@/lib/categories";
 import { SITE_URL } from "@/lib/site-config";
 import { localeHref } from "@/lib/i18n/locale";
+import { STORIES } from "@/lib/stories";
 
 function entry(
   path: string,
@@ -29,6 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/", { changeFrequency: "daily", priority: 1 }),
     entry("/directory", { changeFrequency: "daily", priority: 0.9 }),
     entry("/mappa-ristoranti-aic", { changeFrequency: "weekly", priority: 0.8 }),
+    entry("/normativa", { changeFrequency: "monthly", priority: 0.7 }),
+    entry("/checklist-ristorante", { changeFrequency: "monthly", priority: 0.6 }),
+    ...(STORIES.length > 0 ? [entry("/le-vostre-storie", { changeFrequency: "weekly", priority: 0.4 })] : []),
     entry("/prodotti", { changeFrequency: "weekly", priority: 0.7 }),
     entry("/blog", { changeFrequency: "daily", priority: 0.8 }),
     entry("/faq", { changeFrequency: "monthly", priority: 0.7 }),

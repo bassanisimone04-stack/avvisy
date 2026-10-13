@@ -1,4 +1,5 @@
 import type { Business, OpeningHoursDay, Review } from "./types";
+import { PRODUCTION, deriveDishes, deriveDiets } from "./business-attributes";
 import { slugify } from "./format";
 import { getCategoryInfo, categoryLabelPlural } from "./categories";
 
@@ -707,9 +708,10 @@ function toFaqs(name: string, city: string, categorySlug: Business["category"]):
 }
 
 export const BUSINESSES: Business[] = seeds.map((s, idx) => {
-  return {
+  const slug = slugify(`${s.name}-${s.city}`);
+  const base: Business = {
     id: `biz-${idx + 1}`,
-    slug: slugify(`${s.name}-${s.city}`),
+    slug,
     name: s.name,
     category: s.category,
     region: s.region,
@@ -743,6 +745,7 @@ export const BUSINESSES: Business[] = seeds.map((s, idx) => {
     // sono state verificate il 29/07, tutte le successive il 30/07.
     createdAt: idx < 4 ? "2026-07-29" : "2026-07-30",
   };
+  return { ...base, production: PRODUCTION[slug], dishes: deriveDishes(base), ...deriveDiets(base) };
 });
 
 export function getBusinessBySlug(slug: string) {

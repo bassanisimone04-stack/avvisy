@@ -9,6 +9,7 @@ import CoverPhoto from "./CoverPhoto";
 import PlaceholderImage from "./PlaceholderImage";
 import RatingStars from "./RatingStars";
 import FavoriteButton from "./FavoriteButton";
+import { DISH_LABEL, PRODUCTION_LABEL } from "@/lib/business-attributes";
 
 export default function BusinessCard({ business, locale = "it" }: { business: Business; locale?: Locale }) {
   const cat = getCategoryInfo(business.category);
@@ -63,6 +64,16 @@ export default function BusinessCard({ business, locale = "it" }: { business: Bu
           <MapPin size={13} /> {cityName(business.city, locale)}, {cityName(business.province, locale)}
         </p>
         <p className="line-clamp-2 text-sm text-ink-soft">{business.shortDescription}</p>
+        {(business.production || (business.dishes?.length ?? 0) > 0) && (
+          <div className="flex flex-wrap gap-1.5">
+            {business.production && (
+              <span className={`chip ${business.production === "dedicato" ? "chip-brand" : "chip-neutral"}`}>{PRODUCTION_LABEL[business.production].short[locale]}</span>
+            )}
+            {(business.dishes ?? []).slice(0, 3).map((d) => (
+              <span key={d} className="chip chip-neutral">{DISH_LABEL[d][locale]}</span>
+            ))}
+          </div>
+        )}
         <div className="mt-auto flex items-center justify-between pt-2">
           <div className="flex items-center gap-1.5">
             {business.reviewCount > 0 && (
