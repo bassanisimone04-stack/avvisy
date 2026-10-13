@@ -76,6 +76,18 @@ export function render(template, vars) {
   return out;
 }
 
+/**
+ * slug alone is only unique per (city_slug, slug), so the claim URL carries
+ * city whenever it's known; a bare listing slug falls back to matching on
+ * slug alone, and no slug at all falls back to the generic claim page.
+ */
+function buildClaimUrl(siteUrl, slug, citySlug) {
+  if (!slug) return `${siteUrl}/claim`;
+  const params = new URLSearchParams({ listing: slug });
+  if (citySlug) params.set("city", citySlug);
+  return `${siteUrl}/claim?${params.toString()}`;
+}
+
 const TRUTHY = new Set(["1", "true", "yes", "y", "stop", "unsubscribed", "opted_out"]);
 
 /**
@@ -120,14 +132,7 @@ export function buildMessage({ prospect, step, config, suppressed = new Set() })
     zip: prospect.zip,
     listingUrl:
       slug && citySlug ? `${config.siteUrl}/groomers/${citySlug}/${slug}` : config.siteUrl,
-    // slug alone is only unique per (city_slug, slug) — carry both so the
-    // claim lands on the right business even if another metro reuses the slug.
-    claimUrl:
-      slug && citySlug
-        ? `${config.siteUrl}/claim?listing=${slug}&city=${citySlug}`
-        : slug
-          ? `${config.siteUrl}/claim?listing=${slug}`
-          : `${config.siteUrl}/claim`,
+    claimUrl: buildClaimUrl(config.siteUrl, slug, citySlug),
     senderName: config.senderName,
     senderAddress: config.senderAddress,
     unsubscribeUrl: `${config.siteUrl}/unsubscribe?e=${encodeURIComponent(prospect.email ?? "")}`,

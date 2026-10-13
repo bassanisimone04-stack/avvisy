@@ -5,7 +5,7 @@ import CitiesGrid from "@/components/CitiesGrid";
 import FaqSection from "@/components/FaqSection";
 import { JsonLd, faqPageJsonLd } from "@/lib/schema";
 import { CORE_FAQS } from "@/data/faqs";
-import { getAllGroomers } from "@/lib/groomers";
+import { getGroomerCount } from "@/lib/groomers";
 
 export const metadata: Metadata = {
   title: "Mobile Dog Grooming Near You | FindMobileGrooming",
@@ -18,7 +18,7 @@ export default async function HomePage() {
   // A real, computed count rather than a fixed marketing number — this is
   // exactly the kind of claim that has to move when the data does, or it
   // becomes a lie the moment the dataset changes.
-  const groomerCount = (await getAllGroomers()).length;
+  const groomerCount = await getGroomerCount();
 
   return (
     <>

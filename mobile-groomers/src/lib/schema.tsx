@@ -1,4 +1,4 @@
-import type { Groomer } from "@/lib/groomers";
+import { hasZipCodes, type Groomer } from "@/lib/groomers";
 import type { Faq } from "@/data/faqs";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { safeExternalUrl, serializeJsonLd } from "@/lib/safe-output";
@@ -52,7 +52,6 @@ export function faqPageJsonLd(faqs: Faq[]) {
  */
 export function localBusinessJsonLd(groomer: Groomer, pageUrl: string) {
   const website = safeExternalUrl(groomer.website);
-  const hasZips = groomer.zipCodes && groomer.zipCodes.length > 0;
 
   return {
     "@context": "https://schema.org",
@@ -73,9 +72,9 @@ export function localBusinessJsonLd(groomer: Groomer, pageUrl: string) {
     ...(groomer.about ? { description: groomer.about } : {}),
     ...(groomer.phone ? { telephone: groomer.phone } : {}),
     ...(website ? { sameAs: [website] } : {}),
-    ...(hasZips
+    ...(hasZipCodes(groomer)
       ? {
-          areaServed: groomer.zipCodes!.map((zip) => ({
+          areaServed: groomer.zipCodes?.map((zip) => ({
             "@type": "PostalCodeRange",
             postalCode: zip,
           })),

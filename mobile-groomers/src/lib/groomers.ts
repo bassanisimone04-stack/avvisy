@@ -68,9 +68,14 @@ type GroomerRow = {
   response_time: string;
 };
 
-/** '' -> undefined. The DB defaults unset text columns to '', not null. */
-function orUndefined(value: string): string | undefined {
+/** '' or null -> undefined. The DB defaults unset text columns to '', not null. */
+function orUndefined(value: string | null | undefined): string | undefined {
   return value ? value : undefined;
+}
+
+/** [] or null -> undefined, so an empty array never renders as a fake "0 tags" list. */
+function orUndefinedArray<T>(value: T[] | null | undefined): T[] | undefined {
+  return value && value.length > 0 ? value : undefined;
 }
 
 function mapRow(row: GroomerRow): Groomer {
@@ -85,11 +90,11 @@ function mapRow(row: GroomerRow): Groomer {
     tier: row.tier,
     verified: row.verified,
     phone: orUndefined(row.phone),
-    website: row.website || undefined,
+    website: orUndefined(row.website),
     tagline: orUndefined(row.tagline),
     about: orUndefined(row.about),
-    tags: row.tags && row.tags.length > 0 ? row.tags : undefined,
-    zipCodes: row.zip_codes && row.zip_codes.length > 0 ? row.zip_codes : undefined,
+    tags: orUndefinedArray(row.tags),
+    zipCodes: orUndefinedArray(row.zip_codes),
     priceRange: orUndefined(row.price_range),
     responseTime: orUndefined(row.response_time),
     // Postgres numeric arrives as a string over the wire. No review yet
@@ -97,6 +102,21 @@ function mapRow(row: GroomerRow): Groomer {
     rating: reviewCount > 0 ? Number(row.rating) : undefined,
     reviewCount: reviewCount > 0 ? reviewCount : undefined,
   };
+}
+
+/**
+ * Shared presence checks so every consumer (cards, the listing page, JSON-LD,
+ * the OG image) agrees on what counts as "has a rating" etc., instead of each
+ * re-deriving the same optional-field check independently.
+ */
+export function hasRating(g: Groomer): boolean {
+  return g.rating !== undefined && g.reviewCount !== undefined;
+}
+export function hasTags(g: Groomer): boolean {
+  return !!g.tags && g.tags.length > 0;
+}
+export function hasZipCodes(g: Groomer): boolean {
+  return !!g.zipCodes && g.zipCodes.length > 0;
 }
 
 /**
@@ -122,6 +142,23 @@ export async function getAllGroomers(): Promise<Groomer[]> {
 
   if (error || !data) return sortForDirectory(DEMO_GROOMERS);
   return sortForDirectory((data as unknown as GroomerRow[]).map(mapRow));
+}
+
+/**
+ * Just the count, for the homepage's "N groomers indexed" line. A plain
+ * `(await getAllGroomers()).length` would fetch and sort every row just to
+ * throw away everything but a number, on the site's highest-traffic page.
+ */
+export async function getGroomerCount(): Promise<number> {
+  const supabase = createPublicClient();
+  if (!supabase) return DEMO_GROOMERS.length;
+
+  const { count, error } = await supabase
+    .from("groomers")
+    .select("id", { count: "exact", head: true })
+    .eq("published", true);
+
+  return error || count === null ? DEMO_GROOMERS.length : count;
 }
 
 export async function getGroomerBySlug(

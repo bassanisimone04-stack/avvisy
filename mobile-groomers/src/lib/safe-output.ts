@@ -44,3 +44,12 @@ export function safeExternalUrl(value: string | null | undefined): string | null
     return null;
   }
 }
+
+/**
+ * Strips a stored phone number down to digits and a leading "+" for use in
+ * a tel:/sms: href. Centralized so every call site strips the same way
+ * instead of repeating the same regex.
+ */
+export function phoneHref(phone: string): string {
+  return phone.replace(/[^\d+]/g, "");
+}

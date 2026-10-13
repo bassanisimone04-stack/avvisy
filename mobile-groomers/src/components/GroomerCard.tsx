@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Groomer } from "@/lib/groomers";
+import { hasRating, hasTags, type Groomer } from "@/lib/groomers";
 
 /**
  * Every optional field is rendered only if present — never backfilled with
@@ -8,9 +8,6 @@ import type { Groomer } from "@/lib/groomers";
  * than paper over the gap with invented numbers.
  */
 export default function GroomerCard({ groomer }: { groomer: Groomer }) {
-  const hasTags = groomer.tags && groomer.tags.length > 0;
-  const hasRating = groomer.rating !== undefined && groomer.reviewCount !== undefined;
-
   return (
     <Link
       href={`/groomers/${groomer.citySlug}/${groomer.slug}`}
@@ -28,18 +25,18 @@ export default function GroomerCard({ groomer }: { groomer: Groomer }) {
 
       {groomer.tagline && <p className="text-sm text-ink-soft">{groomer.tagline}</p>}
 
-      {hasTags && (
+      {hasTags(groomer) && (
         <div className="flex flex-wrap gap-1.5">
-          {groomer.tags!.slice(0, 3).map((tag) => (
+          {groomer.tags?.slice(0, 3).map((tag) => (
             <span key={tag} className="chip chip-neutral">{tag}</span>
           ))}
         </div>
       )}
 
       <div className="mt-1 flex items-center justify-between border-t border-line pt-3 text-sm">
-        {hasRating ? (
+        {hasRating(groomer) ? (
           <span className="font-semibold text-navy">
-            ★ {groomer.rating!.toFixed(1)}{" "}
+            ★ {groomer.rating?.toFixed(1)}{" "}
             <span className="font-normal text-ink-soft">({groomer.reviewCount})</span>
           </span>
         ) : (

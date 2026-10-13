@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getAllGroomers, getGroomerBySlug } from "@/lib/groomers";
+import { getAllGroomers, getGroomerBySlug, hasRating } from "@/lib/groomers";
 import { OG_CONTENT_TYPE, OG_SIZE, OgCard } from "@/lib/og";
 
 export const alt = "Mobile dog groomer listing";
@@ -36,7 +36,7 @@ export default async function Image({
   // ASCII only. A glyph outside the system font (a star, an emoji) makes
   // Satori attempt a dynamic font download, which fails in the build
   // sandbox and would ship a card with a missing character.
-  if (groomer.reviewCount) badges.push(`${groomer.rating!.toFixed(1)} / 5`);
+  if (hasRating(groomer)) badges.push(`${groomer.rating?.toFixed(1)} / 5`);
 
   const footerParts = [
     groomer.zipCodes?.length ? `${groomer.zipCodes.length} zip codes served` : null,

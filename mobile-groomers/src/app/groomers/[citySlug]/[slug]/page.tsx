@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import QuoteForm from "@/components/QuoteForm";
-import { getAllGroomers, getGroomerBySlug } from "@/lib/groomers";
+import { getAllGroomers, getGroomerBySlug, hasRating, hasTags, hasZipCodes } from "@/lib/groomers";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { JsonLd, breadcrumbJsonLd, localBusinessJsonLd } from "@/lib/schema";
-import { safeExternalUrl } from "@/lib/safe-output";
+import { phoneHref, safeExternalUrl } from "@/lib/safe-output";
 
 type Params = { citySlug: string; slug: string };
 
@@ -56,13 +56,11 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
   if (!groomer) notFound();
 
   const pageUrl = `${SITE_URL}/groomers/${citySlug}/${slug}`;
-  const telHref = groomer.phone ? `tel:${groomer.phone.replace(/[^\d+]/g, "")}` : null;
+  const telHref = groomer.phone ? `tel:${phoneHref(groomer.phone)}` : null;
+  const smsHref = groomer.phone ? `sms:${phoneHref(groomer.phone)}` : null;
   // Owner-supplied, so anything that is not an absolute http(s) URL is
   // dropped rather than rendered as an href.
   const websiteUrl = safeExternalUrl(groomer.website);
-  const hasTags = groomer.tags && groomer.tags.length > 0;
-  const hasZips = groomer.zipCodes && groomer.zipCodes.length > 0;
-  const hasRating = groomer.rating !== undefined && groomer.reviewCount !== undefined;
 
   return (
     <>
@@ -101,9 +99,9 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
               {groomer.tagline && <p className="mt-2 text-lg text-ink-soft">{groomer.tagline}</p>}
 
               <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                {hasRating ? (
+                {hasRating(groomer) ? (
                   <span className="font-semibold text-navy">
-                    ★ {groomer.rating!.toFixed(1)}{" "}
+                    ★ {groomer.rating?.toFixed(1)}{" "}
                     <span className="font-normal text-ink-soft">({groomer.reviewCount} reviews)</span>
                   </span>
                 ) : (
@@ -129,8 +127,8 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
                 <div className="text-2xl">🗺️</div>
                 <p className="mt-1 font-semibold text-navy">Service Radius</p>
                 <p className="text-xs">
-                  {hasZips
-                    ? `${groomer.zipCodes!.length} zip codes around ${groomer.city}`
+                  {hasZipCodes(groomer)
+                    ? `${groomer.zipCodes?.length} zip codes around ${groomer.city}`
                     : "Not listed yet"}
                 </p>
               </div>
@@ -157,11 +155,11 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
             )}
           </section>
 
-          {hasTags && (
+          {hasTags(groomer) && (
             <section>
               <h2 className="text-2xl">Van Capabilities &amp; Services</h2>
               <div className="mt-4 flex flex-wrap gap-2">
-                {groomer.tags!.map((tag) => (
+                {groomer.tags?.map((tag) => (
                   <span key={tag} className="chip chip-teal text-sm">{tag}</span>
                 ))}
               </div>
@@ -170,14 +168,14 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
 
           <section>
             <h2 className="text-2xl">Zip Codes Served</h2>
-            {hasZips ? (
+            {hasZipCodes(groomer) ? (
               <>
                 <p className="mt-2 text-sm text-ink-soft">
-                  This van actively covers the following {groomer.zipCodes!.length} zip codes
+                  This van actively covers the following {groomer.zipCodes?.length} zip codes
                   around {groomer.city}, {groomer.state}.
                 </p>
                 <ul className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-5 lg:grid-cols-6">
-                  {groomer.zipCodes!.map((zip) => (
+                  {groomer.zipCodes?.map((zip) => (
                     <li
                       key={zip}
                       className="rounded-lg border border-line bg-surface px-3 py-2 text-center text-sm font-semibold text-navy"
@@ -220,7 +218,7 @@ export default async function GroomerPage({ params }: { params: Promise<Params> 
               {telHref && (
                 <>
                   <a href={telHref} className="btn btn-primary btn-block">📞 Call the Van</a>
-                  <a href={`sms:${groomer.phone!.replace(/[^\d+]/g, "")}`} className="btn btn-outline btn-block">
+                  <a href={smsHref ?? undefined} className="btn btn-outline btn-block">
                     💬 Text for Booking
                   </a>
                 </>
