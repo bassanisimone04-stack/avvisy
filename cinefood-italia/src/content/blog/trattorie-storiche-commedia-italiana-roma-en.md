@@ -35,7 +35,7 @@ the movies read *[Rome in the movies: 5 film restaurants](/en/blog/roma-nel-cine
 ## Sora Lella, the trattoria on Tiber Island
 
 **Sora Lella** is at **16 Via di Ponte Quattro Capi**, on **Tiber Island**
-([map]({M}Trattoria+Sora+Lella+Roma)). It was founded in 1959 by **Elena Fabrizi**, known as
+([map](https://www.google.com/maps/search/?api=1&query=Trattoria+Sora+Lella+Roma)). It was founded in 1959 by **Elena Fabrizi**, known as
 Sora Lella, sister of the actor **Aldo Fabrizi**, who became known as a cook and a TV face in
 the 1960s. On screen she is the grandmother in *Bianco, rosso e Verdone* (1981), Carlo
 Verdone's film: this is the link guides report. Today the family runs it, her grandchildren
@@ -60,7 +60,7 @@ phoned the restaurant directly to reach them, and at those tables pages of neore
 Italian comedy were born. The same sources say the Wednesday-evening gatherings still go on.
 
 **Address:** Turismo Roma gives **40/a Via Mario de' Fiori**
-([map]({M}Otello+alla+Concordia+Roma)); I couldn't confirm the historic Via della Croce
+([map](https://www.google.com/maps/search/?api=1&query=Otello+alla+Concordia+Roma)); I couldn't confirm the historic Via della Croce
 number: [TO VERIFY]. Hours, days and booking: [TO VERIFY by phone].
 
 Note: we found no film titles shot here, so we present it as a place tied to cinema, not a

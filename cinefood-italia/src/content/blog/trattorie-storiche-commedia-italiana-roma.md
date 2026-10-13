@@ -35,7 +35,7 @@ cose da verificare prima di andare. Sul resto di Roma al cinema leggi
 ## Sora Lella, la trattoria dell'Isola Tiberina
 
 **Sora Lella** si trova in **Via di Ponte Quattro Capi 16**, sull'**Isola Tiberina**
-([mappa]({M}Trattoria+Sora+Lella+Roma)). Fu fondata nel 1959 da **Elena Fabrizi**, detta
+([mappa](https://www.google.com/maps/search/?api=1&query=Trattoria+Sora+Lella+Roma)). Fu fondata nel 1959 da **Elena Fabrizi**, detta
 Sora Lella, sorella dell'attore **Aldo Fabrizi**, che divenne nota come cuoca e come volto
 televisivo negli anni Sessanta. Al cinema è la nonna di *Bianco, rosso e Verdone*
 (1981), il film di Carlo Verdone: è questo il legame che le guide riportano.
@@ -61,7 +61,7 @@ nacquero pagine del neorealismo e della commedia all'italiana. Le stesse fonti d
 gli incontri del mercoledì sera continuano ancora oggi.
 
 **Indirizzo:** Turismo Roma indica **Via Mario de' Fiori 40/a**
-([mappa]({M}Otello+alla+Concordia+Roma)); il civico storico di Via della Croce non l'ho
+([mappa](https://www.google.com/maps/search/?api=1&query=Otello+alla+Concordia+Roma)); il civico storico di Via della Croce non l'ho
 potuto confermare: [DA VERIFICARE]. Orari, giorni e prenotazione: [DA VERIFICARE con una
 telefonata].
 
