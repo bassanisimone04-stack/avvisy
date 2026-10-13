@@ -22,14 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const groomer = await getGroomerBySlug(citySlug, slug);
   if (!groomer) return {};
 
-  const title = `${groomer.name} — Mobile Dog Grooming in ${groomer.city}, ${groomer.state}`;
+  const title = `${groomer.name} — Mobile Groomer in ${groomer.city}, ${groomer.state}`;
   const description = groomer.tagline
     ? `${groomer.tagline} See contact details and request a free quote.`
     : `Mobile dog grooming in ${groomer.city}, ${groomer.state}. See contact details and request a free quote.`;
+  const keywords = [
+    groomer.name,
+    `mobile dog groomer ${groomer.city}`,
+    `mobile dog grooming ${groomer.city} ${groomer.state}`,
+    `dog groomer near me ${groomer.city}`,
+  ];
 
   return {
     title,
     description,
+    keywords,
     alternates: { canonical: `/groomers/${citySlug}/${slug}` },
     openGraph: {
       title,

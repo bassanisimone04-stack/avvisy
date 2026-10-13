@@ -1,7 +1,7 @@
 export type Faq = { question: string; answer: string };
 
 /**
- * Core FAQ set used on the homepage and city pages, and mirrored into
+ * Core FAQ set used on the homepage and the /faq page, and mirrored into
  * FAQPage JSON-LD (see lib/schema.ts) so answers are eligible for
  * Google's featured snippet / FAQ rich result.
  */
@@ -35,5 +35,25 @@ export const CORE_FAQS: Faq[] = [
     question: "Do mobile groomers offer cat grooming too?",
     answer:
       "Yes — many mobile grooming vans offer cat grooming, including baths, de-shedding, and sanitary trims. Because there's no barking or other animals in a waiting room, mobile grooming is often less stressful for cats than a traditional salon. Look for the \"Cat Friendly\" tag on a listing to confirm.",
+  },
+  {
+    question: "How do I find a mobile dog groomer near me?",
+    answer:
+      "Search by zip code or city to see which vans actually cover your address — service-area maps on a business's own site are often broader than what a single van can realistically reach in a day. Browse listings by metro area to compare who's available.",
+  },
+  {
+    question: "Is mobile dog grooming safe for puppies and senior dogs?",
+    answer:
+      "Yes, and it's often gentler than a salon for both. Puppies get a calmer first experience without a waiting room full of other animals, and senior dogs avoid a car ride and standing in a kennel. Mention your dog's age and any health conditions when booking.",
+  },
+  {
+    question: "What happens if my dog's coat is severely matted?",
+    answer:
+      "Severe matting usually means the groomer shaves the coat rather than brushing it out, since de-matting a badly matted coat risks nicking already-inflamed skin. Expect an extra charge for the added time, and tell the groomer about matting honestly when booking so the quote is accurate.",
+  },
+  {
+    question: "Are mobile dog groomers licensed and insured?",
+    answer:
+      "Licensing requirements vary by state and city — some require a grooming license, most don't — but liability insurance is close to universal among established operators. Ask directly about insurance, and about a license if your area requires one, before booking.",
   },
 ];
