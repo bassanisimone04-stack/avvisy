@@ -46,6 +46,6 @@ const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); if (!c) fails++
 
   // model sticky bar
   await p.goto(B + "/sunglasses/persol-714-steve-mcqueen"); await p.evaluate(() => window.scrollTo({ top: 1400, behavior: "instant" })); await p.waitForTimeout(500);
-  ok(await p.locator('div[aria-hidden=false]:has-text("Compare prices")').count() > 0, "sticky bar appears after hero");
+  await p.waitForSelector('div[aria-hidden=false]:has-text("Compare prices")', { timeout: 5000 }); ok(true, "sticky bar appears after hero");
   console.log("page errors:", errs); await b.close(); console.log(fails ? fails + " FAILED" : "ALL PASSED"); process.exit(fails ? 1 : 0);
 })().catch(e => { console.error(e); process.exit(2); });

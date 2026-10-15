@@ -210,6 +210,124 @@ The [Ray-Ban Original Wayfarer RB2140](/sunglasses/ray-ban-original-wayfarer-rb2
       { title: "Isolani — Wayfarer: from the Blues Brothers to today", url: "https://isolani.com/gb/magazine/boutique/wayfarer-from-the-iconic-blues-brothers-to-the-stars-who-wear-them-today" },
     ],
   },
+  {
+    ...base, id: "tom-cruise-risky-business-sunglasses", slug: "tom-cruise-risky-business-sunglasses",
+    title: "Tom Cruise Risky Business Sunglasses",
+    metaTitle: "Risky Business Sunglasses: Tom Cruise's Wayfarers",
+    metaDescription: "Risky Business sunglasses: Tom Cruise's Ray-Ban Wayfarers, the sales story and its caveats, the underwear-scene myth and alternatives.",
+    excerpt: "The film that revived the Wayfarer. What the sources say, what traces back to a single figure, and what to buy today.",
+    answer: "The Risky Business sunglasses are Ray-Ban Wayfarers worn by Tom Cruise as Joel Goodsen. The film is widely credited with reviving the model, but the best-known sales figure traces back to one source, so we treat it as reported, not verified.",
+    category: "Guides", targetKeyword: "risky business sunglasses", searchIntent: "Commercial investigation: identify the model, then buy the current equivalent",
+    status: "published", reviewed: false,
+    modelIds: ["ray-ban-wayfarer-bl-vintage", "ray-ban-original-wayfarer-rb2140", "oakley-frogskins", "knockaround-premiums"], movieIds: ["risky-business", "miami-vice"],
+    body: `## The short version
+
+In [Risky Business](/movies/risky-business), Tom Cruise's Joel Goodsen wears **Ray-Ban Wayfarers**. Wikipedia's history of the model and a Mental Floss feature both place the Wayfarer in the film. The current-production equivalent is the [Ray-Ban Original Wayfarer RB2140](/sunglasses/ray-ban-original-wayfarer-rb2140); the period design is recorded as the [Ray-Ban Wayfarer (Bausch & Lomb era)](/sunglasses/ray-ban-wayfarer-bl-vintage).
+
+## The revival story, and its caveats
+
+Sources describe the Wayfarer as close to being discontinued, with sales of about 18,000 pairs by 1981. They also report that Ray-Ban paid a product-placement firm \$50,000 a year from 1982, and that roughly 360,000 pairs sold in 1983. That last figure is repeated across sites but traces back to a single CNN Money source, so it is not independent confirmation. Mental Floss adds that a GQ spread lifted sales earlier, to about 200,000 in 1982.
+
+## The underwear-scene myth
+
+The famous dance scene is often remembered with sunglasses on. Mental Floss notes that Cruise wears the Wayfarers elsewhere in the film and on the poster, not in that scene.
+
+## A wave, not a single film
+
+MeTV's history places Wayfarer sales near 1.5 million a year by 1986 and 1987, helped by [Miami Vice](/movies/miami-vice), The Breakfast Club and Top Gun, which boosted the Aviator instead. Treat the numbers as reported.
+
+## Alternatives
+
+For the shape at a lower price band, see the [Oakley Frogskins](/sunglasses/oakley-frogskins) and the [Knockaround Premiums](/sunglasses/knockaround-premiums). Neither is the film pair. More in [wayfarer styles](/styles/wayfarer).`,
+    faq: [
+      { q: "What sunglasses does Tom Cruise wear in Risky Business?", a: "Ray-Ban Wayfarers, according to Wikipedia's history of the model and a Mental Floss feature." },
+      { q: "Does he wear them in the underwear dance scene?", a: "No. Mental Floss notes the scene is often misremembered; he wears them elsewhere and on the poster." },
+      { q: "Did Risky Business really save the Wayfarer?", a: "It is widely credited with reviving it, but the best-known sales figure traces to a single source, so we call it reported." },
+    ],
+    sources: [
+      { title: "Wikipedia: Ray-Ban Wayfarer", url: "https://en.wikipedia.org/wiki/Ray-Ban_Wayfarer" },
+      { title: "Mental Floss: When Tom Cruise saved the Ray-Ban brand", url: "https://mentalfloss.com/article/643575/tom-cruise-saved-ray-ban-brand" },
+      { title: "MeTV: A comprehensive history of the iconic Ray-Ban Wayfarer", url: "https://metv.com/stories/a-comprehensive-history-of-the-iconic-ray-ban-wayfarer" },
+    ],
+  },
+  {
+    ...base, id: "what-sunglasses-does-neo-wear-in-the-matrix", slug: "what-sunglasses-does-neo-wear-in-the-matrix",
+    title: "What Sunglasses Does Neo Wear in The Matrix?",
+    metaTitle: "Neo's Matrix Sunglasses: Custom Blinde Design Frames",
+    metaDescription: "Neo Matrix sunglasses: reportedly custom frames by Blinde Design for the three leads. What is documented, what is not, and look-alikes.",
+    excerpt: "The Matrix glasses were reportedly made for the cast, not bought off a shelf. Here is what that means for finding a pair.",
+    answer: "Neo's Matrix sunglasses were reportedly custom metal frames made by designer Richard Walker of Blinde Design Project for Keanu Reeves, Carrie-Anne Moss and Laurence Fishburne. Individual model names are not documented in the sources we reviewed, so the identification stays Unconfirmed.",
+    category: "Guides", targetKeyword: "neo matrix sunglasses", searchIntent: "Informational: what are they, and can I buy them",
+    status: "published", reviewed: false,
+    modelIds: ["blinde-design-matrix-custom", "knockaround-fast-lanes", "goodr-og"], movieIds: ["the-matrix"],
+    body: `## What we know
+
+For [The Matrix](/movies/the-matrix), CheatSheet, citing the Chicago Tribune, reports that Richard Walker of Blinde Design Project made custom sunglasses for each of the three leads. Other write-ups describe distinctive metal frames designed per character. Our record is [Blinde Design custom Matrix frames](/sunglasses/blinde-design-matrix-custom).
+
+## What we do not know
+
+- **Model names.** We found no source that names a specific model for Neo, Trinity or Morpheus, so all three identifications are **Unconfirmed**.
+- **The company name.** Sources write both "Blinde Design" and "Blinde Optics".
+- **Later films.** One research credit says Trinity and Agent Smith also used Studio Red designs in The Matrix Reloaded. We have not verified that against a primary source.
+
+## The Morpheus detail
+
+Pretavoir reports that Fishburne's pair had no earpieces and stayed on the nose. It is one retailer's account, so we show it as reported.
+
+## Buying a look-alike
+
+Because the originals were made for the film, anything sold today is either an official or replica line or a look-alike. Sources mention that Blinde and Warner Bros sold Matrix-branded lines after the film, but we cannot confirm what is still available. For a dark, narrow wrap look at a budget price band, see the [Knockaround Fast Lanes](/sunglasses/knockaround-fast-lanes) or the [Goodr OG](/sunglasses/goodr-og). See also [futuristic styles](/styles/futuristic).`,
+    faq: [
+      { q: "What sunglasses does Neo wear in The Matrix?", a: "Reportedly custom frames by Blinde Design Project; no specific model name is documented, so we label it Unconfirmed." },
+      { q: "Can I buy Neo's sunglasses?", a: "The originals were reportedly made for the cast. Replica and look-alike pairs exist, but we have not verified current availability." },
+      { q: "Is it Blinde Design or Blinde Optics?", a: "Sources use both names. We list the brand as Blinde Design and note the discrepancy." },
+    ],
+    sources: [
+      { title: "CheatSheet: The Matrix sunglasses were uniquely made for each cast member", url: "https://www.cheatsheet.com/entertainment/the-matrix-sunglasses-were-uniquely-made-for-each-cast-member.html" },
+      { title: "Pretavoir: The Matrix sunglasses", url: "https://pretavoir.co.uk/blogs/news/the-matrix-sunglasses" },
+    ],
+  },
+  {
+    ...base, id: "the-devil-wears-prada-2-sunglasses-guide", slug: "the-devil-wears-prada-2-sunglasses-guide",
+    title: "The Devil Wears Prada 2 Sunglasses Guide",
+    metaTitle: "The Devil Wears Prada 2 Sunglasses: What We Know",
+    metaDescription: "Devil Wears Prada 2 sunglasses: the pairs retail guides name for Andy and Miranda, where they disagree, and what stays unconfirmed.",
+    excerpt: "Retail guides name many pairs, and they do not agree. A guide that says which claims are scene-specific and which are not.",
+    answer: "The Devil Wears Prada 2 sunglasses are not settled: retail guides name different pairs for Andy and Miranda, mixing scenes from the film with press events. Every identification below is labelled Unconfirmed until a scene-level source confirms it.",
+    category: "Guides", targetKeyword: "devil wears prada 2 sunglasses", searchIntent: "Informational and trend: which pairs, and where to find them",
+    status: "published", reviewed: false,
+    modelIds: ["barton-perreira-samo", "lgr-karthoum", "jimmy-choo-jc5030u"], movieIds: ["the-devil-wears-prada-2"],
+    body: `## Why this is hard
+
+Most guides to [The Devil Wears Prada 2](/movies/the-devil-wears-prada-2) mix three things: pairs seen in the film, pairs seen during filming in New York, and pairs worn at premieres and photocalls. Their authors are also retailers. We separate those cases and label every identification **Unconfirmed**.
+
+## Andy Sachs (Anne Hathaway)
+
+- One guide names the L.G.R Karthoum, black with grey lenses and a 1990s feel: [L.G.R Karthoum](/sunglasses/lgr-karthoum).
+- Another says the large black Barton Perreira Samo is possibly her most prominent pair: [Barton Perreira Samo](/sunglasses/barton-perreira-samo).
+- Further names in guides include a Khaite and Oliver Peoples collaboration, Bvlgari, Celine and Shevoke's Zulu cat-eye.
+
+## Miranda Priestly (Meryl Streep)
+
+One guide lists a marbled beige Tiffany & Co. TF4238U and a black [Jimmy Choo JC5030U](/sunglasses/jimmy-choo-jc5030u) cat-eye from earlier New York filming; another only says Jimmy Choo. At a London photocall Streep wore Emmanuelle Khanh's Cherry cat-eye, which is an event, not a scene.
+
+## Other cast
+
+Guides also place Etnia Barcelona's Deia on Emily Blunt at the photocall, and a Tom Ford TF1129-P on Stanley Tucci's Nigel. Each rests on a single guide.
+
+## How to use this
+
+Treat any shop that sells "the pair from the film" as selling a possible match. Ask which scene a claim refers to. If you like the cat-eye shape, browse [cat-eye styles](/styles/cat-eye). We will update these records as scene-level sources appear.`,
+    faq: [
+      { q: "What sunglasses does Anne Hathaway wear in The Devil Wears Prada 2?", a: "Guides disagree: the L.G.R Karthoum and the Barton Perreira Samo are both named. We label both Unconfirmed." },
+      { q: "What about Miranda Priestly's sunglasses?", a: "One guide names a Jimmy Choo JC5030U cat-eye from earlier filming; her photocall pair was a different, event-only look." },
+      { q: "Why are all the identifications Unconfirmed?", a: "Sources are retail guides that disagree and mix scenes with press events. We need a scene-level source to upgrade them." },
+    ],
+    sources: [
+      { title: "Pretavoir: The Devil Wears Prada 2 glasses and sunglasses", url: "https://pretavoir.co.uk/blogs/news/the-devil-wears-prada-2-glasses-sunglasses" },
+      { title: "OtticaNet: Sunglasses guide, The Devil Wears Prada 2", url: "https://www.otticanet.it/en/blogs/news/sunglasses-guide-the-devil-wears-prada-2" },
+    ],
+  },
 ];
 
 const CHECKLIST = `## What to check before you buy
@@ -282,6 +400,31 @@ ${CHECKLIST}
 
 For the shape, the Original Wayfarer in black is the direct modern equivalent. For a period pair, search vintage listings and ask for temple markings. For a lower budget, see [wayfarer styles](/styles/wayfarer) and the [affordable alternatives](/affordable-alternatives).`,
 };
+
+EXTRA["tom-cruise-risky-business-sunglasses"] = `## Quick facts
+
+- Film: [Risky Business](/movies/risky-business) (1983), Tom Cruise as Joel Goodsen.
+- Model: Ray-Ban Wayfarer; current production is the [Original Wayfarer RB2140](/sunglasses/ray-ban-original-wayfarer-rb2140).
+- Grade on this site: **Exact Match** at the model-family level, from Wikipedia and Mental Floss.
+- Sales figures: reported, one source behind the best-known number.
+
+${CHECKLIST}`;
+EXTRA["what-sunglasses-does-neo-wear-in-the-matrix"] = `## Quick facts
+
+- Film: [The Matrix](/movies/the-matrix) (1999), Keanu Reeves as Neo.
+- Maker reported: Blinde Design Project (Richard Walker), custom frames for the leads.
+- Grade on this site: **Unconfirmed**, no model names documented.
+- Look-alikes: [Knockaround Fast Lanes](/sunglasses/knockaround-fast-lanes), [Goodr OG](/sunglasses/goodr-og).
+
+${CHECKLIST}`;
+EXTRA["the-devil-wears-prada-2-sunglasses-guide"] = `## Quick facts
+
+- Film: [The Devil Wears Prada 2](/movies/the-devil-wears-prada-2) (2026).
+- Pairs named by guides: L.G.R Karthoum, Barton Perreira Samo, Jimmy Choo JC5030U, among others.
+- Grade on this site: **Unconfirmed** for all, because guides disagree.
+- Rule of thumb: ask which scene a claim refers to.
+
+${CHECKLIST}`;
 
 const PATCH: Record<string, Partial<Article>> = {
   "what-sunglasses-does-brad-pitt-wear-in-f1": {

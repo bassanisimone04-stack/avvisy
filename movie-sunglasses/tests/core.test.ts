@@ -142,3 +142,21 @@ describe("compare", () => {
 describe("article headings", () => {
   it("extracts h2 headings with stable ids", () => expect(extractHeadings("## What we know\n\ntext\n\n## [Link](/x) heading")).toEqual([{ id: "what-we-know", text: "What we know" }, { id: "link-heading", text: "Link heading" }]));
 });
+
+import { offersFromCsv } from "../src/lib/offers-import";
+describe("offers CSV import", () => {
+  const models = seed.models as never[], merchants = seed.merchants as never[];
+  const head = "model,merchant,price,availability,shipping,url,last_checked\n";
+  it("accepts valid rows and resolves by id, slug or name", () => {
+    const r = offersFromCsv(head + 'ray-ban-aviator-classic-rb3025,ebay,"$1,149.50",in stock,Free,https://www.ebay.com/itm/1,2026-10-01\nRay-Ban Predator 2,eBay,,,,https://www.ebay.com/itm/2,\n', models, merchants, "2026-10-15");
+    expect(r.errors).toEqual([]);
+    expect(r.offers.map((o) => [o.modelId, o.price, o.availability, o.lastChecked])).toEqual([["ray-ban-aviator-classic-rb3025", 1149.5, "in_stock", "2026-10-01"], ["ray-ban-predator-2-rb2027", null, "unknown", "2026-10-15"]]);
+  });
+  it("rejects http URLs, unknown models, non-USD and negative prices without guessing", () => {
+    const r = offersFromCsv(head + "persol-649,ebay,10,in stock,,http://x.com/a,\nnope,ebay,10,in stock,,https://x.com,\npersol-649,ebay,-5,in stock,,https://x.com,\npersol-649,ebay,5,in stock,,https://x.com,2026-1-1\n", models, merchants);
+    expect(r.errors.length).toBe(4);
+    expect(r.offers.length).toBe(1 - 1);
+  });
+  it("requires the key columns", () => expect(offersFromCsv("price\n5\n", models, merchants).errors[0].message).toMatch(/obbligatoria/));
+  it("reimport of the same model+merchant keeps one offer", () => expect(offersFromCsv(head + "persol-649,ebay,10,in stock,,https://x.com/1,\npersol-649,ebay,12,in stock,,https://x.com/2,\n", models, merchants).offers.length).toBe(1));
+});

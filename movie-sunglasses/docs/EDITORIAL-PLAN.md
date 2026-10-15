@@ -9,9 +9,9 @@
 | 3 | Men in Black Sunglasses: Original Models | `/blog/men-in-black-sunglasses-original-models` | men in black sunglasses | Commercial investigation: identify the model and find a current equivalent | Sviluppato (bozza per revisione) |
 | 4 | Audrey Hepburn's Breakfast at Tiffany's Sunglasses | `/blog/audrey-hepburn-breakfast-at-tiffanys-sunglasses` | breakfast at tiffany's sunglasses | Commercial: find the exact reissue and cheaper lookalikes | Sviluppato (bozza per revisione) |
 | 5 | The Blues Brothers Sunglasses | `/blog/the-blues-brothers-sunglasses` | blues brothers sunglasses | Commercial: identify the model and buy the current equivalent | Sviluppato (bozza per revisione) |
-| 6 | The Devil Wears Prada 2 Sunglasses Guide | `/blog/the-devil-wears-prada-2-sunglasses-guide` | devil wears prada 2 sunglasses | Informational / trend | Brief |
-| 7 | What Sunglasses Does Neo Wear in The Matrix? | `/blog/what-sunglasses-does-neo-wear-in-the-matrix` | neo matrix sunglasses | Informational | Brief |
-| 8 | Tom Cruise Risky Business Sunglasses | `/blog/tom-cruise-risky-business-sunglasses` | risky business sunglasses | Commercial investigation | Brief |
+| 6 | Tom Cruise Risky Business Sunglasses | `/blog/tom-cruise-risky-business-sunglasses` | risky business sunglasses | Commercial investigation: identify the model, then buy the current equivalent | Sviluppato (bozza per revisione) |
+| 7 | What Sunglasses Does Neo Wear in The Matrix? | `/blog/what-sunglasses-does-neo-wear-in-the-matrix` | neo matrix sunglasses | Informational: what are they, and can I buy them | Sviluppato (bozza per revisione) |
+| 8 | The Devil Wears Prada 2 Sunglasses Guide | `/blog/the-devil-wears-prada-2-sunglasses-guide` | devil wears prada 2 sunglasses | Informational and trend: which pairs, and where to find them | Sviluppato (bozza per revisione) |
 | 9 | Most Iconic Sunglasses in Movie History | `/blog/most-iconic-sunglasses-in-movie-history` | iconic movie sunglasses | Informational list | Brief |
 | 10 | Best Movie-Inspired Sunglasses Under $100 | `/blog/best-movie-inspired-sunglasses-under-100` | movie inspired sunglasses under 100 | Commercial | Brief |
 | 11 | Affordable Alternatives to Famous Movie Sunglasses | `/blog/affordable-alternatives-to-famous-movie-sunglasses` | affordable alternatives movie sunglasses | Commercial | Brief |
@@ -30,10 +30,13 @@ Titolo SEO ≤ 60 caratteri · meta description ≤ 155 · risposta immediata al
 La pubblicazione è bloccata dall'admin finché mancano revisione umana, risposta, meta, corpo e almeno una fonte.
 
 ## Articoli sviluppati (pronti per revisione editoriale)
-1. What Sunglasses Does Brad Pitt Wear in F1? — identificazione contesa, etichetta *Unconfirmed*
+1. What Sunglasses Does Brad Pitt Wear in F1?
 2. Top Gun Sunglasses: Tom Cruise's Iconic Aviators
 3. Men in Black Sunglasses: Original Models
 4. Audrey Hepburn's Breakfast at Tiffany's Sunglasses
 5. The Blues Brothers Sunglasses
+6. Tom Cruise Risky Business Sunglasses
+7. What Sunglasses Does Neo Wear in The Matrix?
+8. The Devil Wears Prada 2 Sunglasses Guide
 
 Ogni affermazione proviene da fonti elencate a fondo pagina e nelle schede modello (ricerca del 2026-10-15). Le fonti sono quasi tutte secondarie (rivenditori, database di appassionati, stampa): **nessuna fonte primaria (studio, costumista, asta) è stata consultata**. Per questo molte identificazioni risultano *Unconfirmed* per regola.

@@ -21,6 +21,7 @@ export default async function PanelLayout({ children }: { children: React.ReactN
             <div key={g}><p className="eyebrow !text-champagne px-2">{g}</p>
               <ul className="mt-1">
                 {ENTITIES.filter((e) => e.group === g).map((e) => <li key={e.key}><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href={`/admin/${e.key}`}>{e.label}</Link></li>)}
+                {g === "Commercio" && <li><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href="/admin/offers/import">Importa offerte (CSV)</Link></li>}
                 {g === "Editoriale" && <li><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href="/admin/keywords">Keyword & cluster (CSV)</Link></li>}
               </ul></div>
           ))}

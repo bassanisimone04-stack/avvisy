@@ -73,7 +73,7 @@ export const ENTITIES: EntityConfig[] = [
       { name: "affiliateParams", label: "Parametri affiliato (es. campid=123&customid=sito)", type: "text", help: "Aggiunti ai link in uscita. Compila solo dopo l'approvazione del programma." },
       { name: "estimatedEpc", label: "EPC stimato (USD per clic)", type: "number", nullable: true, help: "Ipotesi editoriale usata SOLO per la riga «ricavi stimati»." }, { name: "active", label: "Attivo", type: "boolean" }] },
   { key: "offers", label: "Offerte e prezzi", singular: "offerta", group: "Commercio", columns: ["modelId", "merchantId", "price", "availability", "lastChecked"],
-    help: "Inserisci solo prezzi verificati sul negozio o provenienti da un feed affiliato. Il sito non ne inventa.",
+    help: "Inserisci solo prezzi verificati sul negozio o provenienti da un feed affiliato. Il sito non ne inventa. Per molte offerte usa «Importa CSV» (link nella barra laterale).",
     fields: [{ name: "modelId", label: "Modello", type: "ref", ref: "models", required: true }, { name: "merchantId", label: "Negozio", type: "ref", ref: "merchants", required: true },
       { name: "price", label: "Prezzo (vuoto = sconosciuto)", type: "number", nullable: true }, { name: "currency", label: "Valuta", type: "select", required: true, options: [["USD", "USD"]] },
       { name: "availability", label: "Disponibilità", type: "select", required: true, options: [["in_stock", "Disponibile"], ["limited", "Scorte limitate"], ["out_of_stock", "Esaurito"], ["unknown", "Da verificare"]] },

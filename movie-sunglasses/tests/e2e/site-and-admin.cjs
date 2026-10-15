@@ -93,6 +93,15 @@ const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); if (!c) fails++
   await p.goto(B + "/admin/brands"); await p.click('form button[aria-label^="Elimina Ray-Ban"]'); await p.waitForSelector("[role=alert]:has-text('Non eliminabile')");
   ok(true, "cannot delete a brand still in use");
 
+  // CSV offers import
+  await p.goto(B + "/admin/offers/import");
+  await p.fill("#csv", "model,merchant,price,availability,url\npersol-649,ebay,99,in stock,http://bad.example/x\nnope,ebay,1,in stock,https://x.com\n"); await p.click('button:has-text("Verifica")');
+  await p.waitForSelector("[role=alert]:has-text('nulla è stato importato')"); ok(true, "import with errors is all-or-nothing");
+  await p.fill("#csv", "model,merchant,price,availability,shipping,url\npersol-649,ebay,99,in stock,Free,https://www.ebay.com/itm/649\n"); await p.click('button:has-text("Verifica")');
+  await p.waitForSelector("text=Verifica superata"); ok(true, "dry run validates without saving");
+  await p.uncheck('input[name=dry]'); await p.click('button:has-text("Verifica")'); await p.waitForSelector("text=Importate o aggiornate 1");
+  await p.goto(B + "/sunglasses/persol-649"); ok(await p.locator("text=$99.00").count() > 0, "imported offer appears in comparator");
+
   // keywords
   await p.goto(B + "/admin/keywords");
   await p.fill("#csv", "Keyword,Volume,KD\nmatrix sunglasses,1200,30\nneo matrix sunglasses,300,20\nwhere to buy blinde matrix,,\n");

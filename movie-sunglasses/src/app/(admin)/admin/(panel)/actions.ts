@@ -169,3 +169,24 @@ export async function generateCandidatesAction() {
   refresh();
   redirect(`/admin/keywords?ok=${encodeURIComponent(`${fresh.length} keyword candidate aggiunte (senza volume) e ${patch.length} mappate a una pagina. Esporta il CSV e verifica i volumi prima di usarle.`)}`);
 }
+
+export interface OfferImportState { done: boolean; saved: number; rows: number; errors: { line: number; message: string }[]; dryRun: boolean }
+
+export async function importOffersAction(_: OfferImportState, form: FormData): Promise<OfferImportState> {
+  await requireAdmin();
+  const { offersFromCsv } = await import("@/lib/offers-import");
+  const file = form.get("file");
+  let text = String(form.get("csv") ?? "");
+  if (file instanceof File && file.size > 0) {
+    if (file.size > 2_000_000) return { done: true, saved: 0, rows: 0, dryRun: false, errors: [{ line: 0, message: "File troppo grande (max 2 MB)." }] };
+    text = await file.text();
+  }
+  const dryRun = form.get("dry") === "on";
+  const [models, merchants] = await Promise.all([listAll("models"), listAll("merchants")]);
+  const res = offersFromCsv(text, models, merchants);
+  // all-or-nothing: a file with any error is not imported, so a feed never half-applies
+  if (res.errors.length || dryRun || res.offers.length === 0) return { done: true, saved: 0, rows: res.rows, errors: res.errors, dryRun };
+  await upsertMany("offers", res.offers);
+  refresh();
+  return { done: true, saved: res.offers.length, rows: res.rows, errors: [], dryRun: false };
+}

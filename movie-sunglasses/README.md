@@ -50,7 +50,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 |---|---|
 | Persistenza in produzione | Progetto **Supabase**: esegui `supabase/schema.sql`, poi `npm run db:seed`, imposta `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY`. Il driver (`src/lib/store/supabase.ts`) è scritto ma **non è stato provato** su un progetto reale |
 | Bozze AI | `AI_API_KEY` (+ `AI_PROVIDER=anthropic|openai`, `AI_MODEL`, `AI_BASE_URL`). Chiamata implementata, mai eseguita qui (nessuna chiave) |
-| Prezzi reali | Programmi affiliati approvati (eBay Partner Network, Ray-Ban/altri via rete): inserisci offerte in Admin → Offerte e i parametri affiliato nel negozio. Feed/API automatici **non sono implementati** (vedi §8) |
+| Prezzi reali | Programmi affiliati approvati (eBay Partner Network, Ray-Ban/altri via rete): inserisci offerte in Admin → Offerte, oppure **importa un CSV/feed** in Admin → Importa offerte (verifica a secco, tutto o niente, https e USD obbligatori). Il collegamento automatico a API/feed in tempo reale **non è implementato** |
 | Analytics | `NEXT_PUBLIC_GA_ID` (caricato solo dopo consenso) |
 | Foto autorizzate | File su Supabase Storage + record in Admin → Fotografie (licenza obbligatoria). Nessuna foto di film è inclusa |
 | Volumi SEO | Export CSV da Semrush/Ahrefs/Keyword Planner → Admin → Keyword & cluster |
@@ -58,7 +58,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 ### ⏳ Non implementato (onestamente)
 - Supabase Auth (l'admin usa credenziali singole via variabili d'ambiente; vedi §7).
 - Upload diretto di immagini dal pannello (si incolla l'URL).
-- Import automatico offerte da feed/API affiliati e controllo di prezzi/disponibilità programmato.
+- Import automatico e programmato di offerte da API affiliate (esiste solo l'import manuale da CSV) e controllo periodico di prezzi/disponibilità.
 - Traduzioni/routing multilingua (c'è solo la predisposizione `hreflang` in `src/lib/site.ts` e `src/lib/seo.ts`).
 - Rate-limit distribuito (ora in memoria per istanza), invio email dei messaggi di contatto (vengono salvati e visibili in admin).
 - Pubblicità: `<AdSlot>` esiste ma è disattivato (`NEXT_PUBLIC_ADS_ENABLED=true` per mostrare i segnaposto).
@@ -68,7 +68,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 
 ## 3. Contenuti iniziali e loro affidabilità
 
-- **18 titoli**, **31 modelli** (21 visti sullo schermo + 10 alternative), **21 attori**, **19 marchi**, **31 identificazioni**, **49 citazioni di fonti**, **33 coppie originale→alternativa**, **20 articoli** (5 sviluppati, 15 brief).
+- **18 titoli**, **31 modelli** (21 visti sullo schermo + 10 alternative), **21 attori**, **19 marchi**, **31 identificazioni**, **49 citazioni di fonti**, **33 coppie originale→alternativa**, **20 articoli** (8 sviluppati, 12 brief).
 - I fatti derivano da una ricerca web del **2026-10-15** e da fonti **quasi solo secondarie** (rivenditori, database di appassionati, stampa). **Nessuna fonte primaria** (studio, costumista, casa d'aste) è stata consultata.
 - Per questo molte identificazioni risultano *Unconfirmed* per regola (es. tutte quelle di James Bond: una sola fonte fan; F1: fonti contrastanti; Taxi Driver: Ray-Ban vs American Optical).
 - Tutti i record sono marcati "in attesa di revisione editoriale" (avviso visibile finché `NEXT_PUBLIC_SHOW_UNREVIEWED_NOTICE` ≠ `false`). **Rivedi ogni scheda prima del lancio.**
