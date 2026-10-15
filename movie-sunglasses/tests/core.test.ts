@@ -229,3 +229,35 @@ describe("markdown rendering", () => {
   });
   it("drops javascript: links", () => expect(renderToStaticMarkup(createElement(Markdown, { source: "[x](javascript:alert(1))" }))).not.toContain("href"));
 });
+
+import { validatePhoto } from "../src/lib/photos";
+describe("photo rights", () => {
+  const ok = { url: "https://cdn.example.com/a.jpg", alt: "Black Wayfarer frame on grey background", credit: "Studio X", license: "owned", approved: true, modelId: "persol-649", kind: "product" as const };
+  it("accepts an owned, approved product photo", () => expect(validatePhoto(ok)).toBeNull());
+  it("requires proof for anything not owned", () => {
+    expect(validatePhoto({ ...ok, license: "press" })).toMatch(/prova/);
+    expect(validatePhoto({ ...ok, license: "licensed", licenseUrl: "http://x.com" })).toMatch(/prova/);
+    expect(validatePhoto({ ...ok, license: "cc", licenseUrl: "https://commons.wikimedia.org/wiki/File:X.jpg" })).toBeNull();
+  });
+  it("rejects unknown licenses, short alt text, missing credit and unlinked photos when approving", () => {
+    expect(validatePhoto({ ...ok, license: "found-on-google" })).toMatch(/licenza/);
+    expect(validatePhoto({ ...ok, alt: "frame" })).toMatch(/alternativo/);
+    expect(validatePhoto({ ...ok, credit: " " })).toMatch(/credito/);
+    expect(validatePhoto({ ...ok, modelId: undefined })).toMatch(/Collega|modello/);
+  });
+  it("lets drafts be saved without proof but never http", () => {
+    expect(validatePhoto({ ...ok, approved: false, license: "press" })).toBeNull();
+    expect(validatePhoto({ ...ok, url: "http://x.com/a.jpg" })).toMatch(/https/);
+  });
+  it("only approved photos reach the catalog indexes", () => {
+    const d = { ...(seed as never as Record<string, unknown[]>), photos: [
+      { id: "p1", url: "https://x.com/1.jpg", alt: "a long alt text", credit: "c", license: "owned", approved: true, kind: "product", modelId: "persol-649" },
+      { id: "p2", url: "https://x.com/2.jpg", alt: "a long alt text", credit: "c", license: "owned", approved: false, kind: "product", modelId: "persol-649" },
+      { id: "p3", url: "https://x.com/3.jpg", alt: "a long alt text", credit: "c", license: "owned", approved: true, kind: "scene", movieId: "top-gun", modelId: "persol-649" },
+    ] };
+    const c = buildCatalog(d as never);
+    expect(c.approvedPhotos("persol-649").map((p) => p.id)).toEqual(["p1"]);
+    expect(c.scenePhotosForModel("persol-649").map((p) => p.id)).toEqual(["p3"]);
+    expect(c.photosForMovie("top-gun").map((p) => p.id)).toEqual(["p3"]);
+  });
+});

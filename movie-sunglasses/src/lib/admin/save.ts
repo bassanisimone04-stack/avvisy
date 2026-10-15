@@ -3,6 +3,7 @@ import { listAll, upsert, remove } from "../store";
 import { slugify } from "../format";
 import type { CollectionName, Collections } from "../types";
 import { ENTITIES, type EntityConfig, type Field } from "./entities";
+import { validatePhoto } from "../photos";
 
 type Row = Record<string, unknown>;
 export type SaveResult = { ok: true; id: string } | { ok: false; error: string };
@@ -128,7 +129,7 @@ async function validateAndFinalize(cfg: EntityConfig, d: Row, existing?: Row): P
       if (d.price == null && d.availability !== "unknown") d.availability = "unknown";
       break;
     }
-    case "photos": if (!isHttps(String(d.url))) return "L'URL dell'immagine deve iniziare con https://"; if (d.approved && !d.licenseUrl && !String(d.license).trim()) return "Per approvare una foto serve una licenza."; break;
+    case "photos": { const err = validatePhoto(d as never); if (err) return err; break; }
     case "evidence": d.checkedAt = d.checkedAt ?? today; d.stance = d.stance ?? "supports"; break;
     case "merchants":
       if (d.affiliateParams && !/^[A-Za-z0-9_.=&%~-]*$/.test(String(d.affiliateParams))) return "I parametri affiliato contengono caratteri non ammessi.";

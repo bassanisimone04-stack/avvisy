@@ -102,6 +102,18 @@ const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); if (!c) fails++
   await p.uncheck('input[name=dry]'); await p.click('button:has-text("Verifica")'); await p.waitForSelector("text=Importate o aggiornate 1");
   await p.goto(B + "/sunglasses/persol-649"); ok(await p.locator("text=$99.00").count() > 0, "imported offer appears in comparator");
 
+  // photos: rights are enforced
+  const photoForm = async (f) => { await p.goto(B + "/admin/photos/new"); await p.fill("#f-url", f.url); await p.fill("#f-alt", f.alt); await p.selectOption("#f-kind", f.kind); await p.fill("#f-credit", f.credit); await p.selectOption("#f-license", f.license); if (f.proof) await p.fill("#f-licenseUrl", f.proof); if (f.model) await p.selectOption("#f-modelId", f.model); if (f.movie) await p.selectOption("#f-movieId", f.movie); if (f.approved) await p.check("input[name=approved]"); await p.click('button:has-text("Crea")'); };
+  await photoForm({ url: "https://img.example.com/x.jpg", alt: "Persol 649 frame on a grey background", kind: "product", credit: "Studio", license: "press", model: "persol-649", approved: true });
+  await p.waitForSelector("[role=alert]:has-text('prova dei diritti')"); ok(true, "approving a press photo without proof is rejected");
+  await photoForm({ url: "https://img.example.com/p649.jpg", alt: "Persol 649 frame on a grey background", kind: "product", credit: "Own studio", license: "owned", model: "persol-649", approved: true }); await p.waitForURL(/saved=1/);
+  await photoForm({ url: "https://img.example.com/scene.jpg", alt: "Maverick on the flight deck at sunset", kind: "scene", credit: "Commons author", license: "cc", proof: "https://commons.wikimedia.org/wiki/File:Example.jpg", movie: "top-gun", approved: true }); await p.waitForURL(/saved=1/);
+  await photoForm({ url: "https://img.example.com/draft.jpg", alt: "Draft photo that must stay hidden", kind: "product", credit: "Draft", license: "owned", model: "ray-ban-predator-2-rb2027", approved: false }); await p.waitForURL(/saved=1/);
+  await p.goto(B + "/sunglasses/persol-649"); ok(await p.locator('img[alt="Persol 649 frame on a grey background"]').count() > 0 && (await p.locator("text=Photo: Own studio").count()) > 0, "approved product photo shows on the model page with credit");
+  await p.goto(B + "/sunglasses?q=persol"); ok(await p.locator('#results img[alt="Persol 649 frame on a grey background"]').count() > 0, "approved product photo replaces the illustration on the card");
+  await p.goto(B + "/movies/top-gun"); ok((await p.locator('figure img[alt="Maverick on the flight deck at sunset"]').count()) > 0 && (await p.locator('figure a[href*="commons.wikimedia.org"]').count()) > 0, "scene photo shows on the film page with rights link");
+  await p.goto(B + "/sunglasses/ray-ban-predator-2-rb2027"); ok((await p.locator('img[alt="Draft photo that must stay hidden"]').count()) === 0, "unapproved photo never shows");
+
   // keywords
   await p.goto(B + "/admin/keywords");
   await p.fill("#csv", "Keyword,Volume,KD\nmatrix sunglasses,1200,30\nneo matrix sunglasses,300,20\nwhere to buy blinde matrix,,\n");

@@ -14,11 +14,15 @@ export function ModelCard({ c, m, as: H = "h3" }: { c: Catalog; m: SunglassesMod
   const films = [...new Set(c.appsForModel(m.id).map((a) => c.movieById.get(a.movieId)?.title).filter(Boolean))];
   const { band, source } = c.priceBandOf(m);
   const lowest = c.lowestOffer(m.id);
+  const photo = c.approvedPhotos(m.id)[0];
   return (
     <div className="card-lift group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white">
       <Link href={`/sunglasses/${m.slug}`} className="flex h-full flex-col">
         <div className="relative flex aspect-[16/10] items-center justify-center bg-gradient-to-b from-paper to-[#efece4] p-6">
-          <GlassesArt shape={m.shape} frame={m.frameColor} lens={m.lensColor} className="w-full max-w-[260px] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-2" />
+          {photo
+            // eslint-disable-next-line @next/next/no-img-element
+            ? <img src={photo.url} alt={photo.alt} loading="lazy" decoding="async" referrerPolicy="no-referrer" className="h-full w-full object-contain mix-blend-multiply" />
+            : <GlassesArt shape={m.shape} frame={m.frameColor} lens={m.lensColor} className="w-full max-w-[260px] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-2" />}
           <div className="absolute left-3 top-3"><MatchBadge type={c.modelMatch(m.id)} /></div>
         </div>
         <div className="flex flex-1 flex-col gap-2 p-5">

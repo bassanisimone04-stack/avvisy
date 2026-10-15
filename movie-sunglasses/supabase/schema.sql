@@ -96,8 +96,13 @@ create table if not exists contact_messages (
   id text primary key, at text not null, name text not null, email text not null, subject text not null, body text not null, handled boolean not null default false
 );
 create table if not exists photos (
-  id text primary key, url text not null check (url like 'https://%'), alt text not null, credit text not null, license text not null, license_url text,
-  model_id text references sunglasses_models(id) on delete set null, movie_id text references movies(id) on delete set null, approved boolean not null default false
+  id text primary key, url text not null check (url like 'https://%'), alt text not null, credit text not null,
+  license text not null check (license in ('owned','licensed','press','cc','public_domain','affiliate_feed')),
+  license_url text, source_url text, kind text check (kind in ('product','scene')),
+  model_id text references sunglasses_models(id) on delete set null, movie_id text references movies(id) on delete set null, article_id text references articles(id) on delete set null,
+  approved boolean not null default false,
+  -- a photo can only be live with provable rights: owned shots need none, everything else needs a proof link
+  check (not approved or license = 'owned' or license_url like 'https://%')
 );
 
 -- Lock everything down: the anon/authenticated roles get no access; only the service role (server) bypasses RLS.

@@ -12,6 +12,8 @@ import { ArticleCard, Grid, ModelCard } from "@/components/cards";
 import { PriceTable } from "@/components/price-table";
 import { ViewBeacon } from "@/components/misc";
 import { StickyModelBar } from "@/components/interactive";
+import { Figure } from "@/components/photo";
+import { LICENSE_LABEL } from "@/lib/photos";
 
 export const revalidate = 600;
 export async function generateStaticParams() { return (await getCatalog()).models.map((m) => ({ slug: m.slug })); }
@@ -39,6 +41,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
   const { band, source } = c.priceBandOf(m);
   const articles = c.articlesForModel(m.id);
   const photos = c.approvedPhotos(m.id);
+  const scenes = c.scenePhotosForModel(m.id);
   const related = (() => {
     const seen = new Set([m.id, ...alts.map((x) => x.model.id)]);
     const pool = [
@@ -76,7 +79,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
             )}
           </div>
           <p className="mt-2 text-xs text-mist">
-            {photos[0] ? `Photo: ${photos[0].credit} · ${photos[0].license}` : "Illustration generated from the model’s recorded shape and colours — not a product photograph. Authorised photography is added by our editors."}
+            {photos[0] ? `Photo: ${photos[0].credit} · ${LICENSE_LABEL[photos[0].license] ?? photos[0].license}` : "Illustration generated from the model’s recorded shape and colours — not a product photograph. Authorised photography is added by our editors."}
           </p>
         </div>
         <div>
@@ -139,6 +142,13 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
           })}
         </div>
       </section>
+
+      {scenes.length > 0 && (
+        <section aria-labelledby="scenes" className="mt-14">
+          <h2 id="scenes" className="font-display text-4xl font-semibold">On screen</h2>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">{scenes.slice(0, 4).map((p) => <Figure key={p.id} photo={p} />)}</div>
+        </section>
+      )}
 
       <div className="mt-14"><PriceTable c={c} m={m} src={`model:${m.slug}`} /></div>
 

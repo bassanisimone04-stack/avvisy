@@ -8,6 +8,7 @@ import { formatDate } from "@/lib/format";
 import { Breadcrumbs, Container, JsonLd, UnreviewedNotice } from "@/components/ui";
 import { Markdown, extractHeadings } from "@/components/markdown";
 import { ArticleToc, ReadingProgress, ShareButton } from "@/components/interactive";
+import { Figure } from "@/components/photo";
 import { Grid, ModelCard } from "@/components/cards";
 import { ViewBeacon } from "@/components/misc";
 import { ArticleRef } from "@/components/tracked-link";
@@ -27,6 +28,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!a) return notFoundOrRedirect(`/blog/${slug}`);
   const models = a.modelIds.map((i) => c.modelById.get(i)).filter((m): m is NonNullable<typeof m> => !!m);
   const toc = [...extractHeadings(a.body), ...(a.faq.length ? [{ id: "faq", text: "FAQ" }] : []), ...(a.sources.length ? [{ id: "src", text: "Sources" }] : [])];
+  const hero = c.photosForArticle(a.id)[0];
   const movies = a.movieIds.map((i) => c.movieById.get(i)).filter((m): m is NonNullable<typeof m> => !!m);
   return (
     <Container className="pt-10">
@@ -39,6 +41,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <p className="eyebrow mb-3">{a.category}</p>
         <h1 className="font-display text-5xl font-semibold leading-[0.95] sm:text-6xl">{a.title}</h1>
         <p className="mt-4 flex flex-wrap items-center gap-x-3 text-sm text-slate"><span>Updated {formatDate(a.updatedAt)} · {a.reviewed ? "Editorially reviewed" : "Awaiting editorial review"}</span><ShareButton title={a.title} /></p>
+        {hero && <Figure photo={hero} ratio="16/9" priority className="mt-8" />}
         <div className="mt-8"><UnreviewedNotice /></div>
         {a.answer && (
           <aside aria-label="Quick answer" className="my-8 rounded-2xl border-l-4 border-champagne bg-white p-6 shadow-sm">

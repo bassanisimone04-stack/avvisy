@@ -52,7 +52,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 | Bozze AI | `AI_API_KEY` (+ `AI_PROVIDER=anthropic|openai`, `AI_MODEL`, `AI_BASE_URL`). Chiamata implementata, mai eseguita qui (nessuna chiave) |
 | Prezzi reali | Programmi affiliati approvati (eBay Partner Network, Ray-Ban/altri via rete): inserisci offerte in Admin → Offerte, oppure **importa un CSV/feed** in Admin → Importa offerte (verifica a secco, tutto o niente, https e USD obbligatori). Il collegamento automatico a API/feed in tempo reale **non è implementato** |
 | Analytics | `NEXT_PUBLIC_GA_ID` (caricato solo dopo consenso) |
-| Foto autorizzate | File su Supabase Storage + record in Admin → Fotografie (licenza obbligatoria). Nessuna foto di film è inclusa |
+| Foto autorizzate | File su Supabase Storage + record in Admin → Fotografie. Il sito le mostra (card, scheda, film, articolo) **solo se approvate con prova dei diritti**: vedi `docs/PHOTOS.md` per le strade possibili e i rischi dei fotogrammi. Nessuna foto di film è inclusa |
 | Volumi SEO | Export CSV da Semrush/Ahrefs/Keyword Planner → Admin → Keyword & cluster |
 
 ### ⏳ Non implementato (onestamente)

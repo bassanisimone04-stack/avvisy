@@ -1,4 +1,5 @@
 import type { CollectionName } from "../types";
+import { LICENSES } from "../photos";
 
 export type FieldType = "text" | "textarea" | "number" | "select" | "ref" | "refs" | "boolean" | "date" | "datetime" | "tags" | "pairs" | "url";
 export interface Field {
@@ -19,7 +20,7 @@ const SHAPES = ["aviator", "wayfarer", "cat-eye", "rectangular", "oval", "round"
 
 export const ENTITIES: EntityConfig[] = [
   { key: "movies", label: "Film e serie", singular: "film", group: "Contenuti", columns: ["title", "year", "kind", "genre"], publicPath: (r) => `/movies/${r.slug}`,
-    uses: [["appearances", "movieId"], ["characters", "movieId"], ["articles", "movieIds", true]],
+    uses: [["appearances", "movieId"], ["characters", "movieId"], ["articles", "movieIds", true], ["photos", "movieId"]],
     fields: [
       { name: "title", label: "Titolo", type: "text", required: true }, { name: "slug", label: "Slug (URL)", type: "text", help: "Lascia vuoto per generarlo dal titolo. Se lo cambi viene creato un redirect 301 automatico." },
       { name: "year", label: "Anno", type: "number", required: true }, { name: "kind", label: "Tipo", type: "select", required: true, options: [["film", "Film"], ["series", "Serie TV"]] },
@@ -63,10 +64,16 @@ export const ENTITIES: EntityConfig[] = [
     ] },
   { key: "alternatives", label: "Alternative economiche", singular: "alternativa", group: "Contenuti", columns: ["originalModelId", "alternativeModelId", "reason"],
     fields: [{ name: "originalModelId", label: "Modello originale", type: "ref", ref: "models", required: true }, { name: "alternativeModelId", label: "Alternativa", type: "ref", ref: "models", required: true }, { name: "reason", label: "Perché è simile", type: "text", required: true }] },
-  { key: "photos", label: "Fotografie autorizzate", singular: "foto", group: "Contenuti", columns: ["modelId", "credit", "license", "approved"],
-    help: "Carica il file su Supabase Storage (o altro CDN) e incolla qui l'URL. Approva solo immagini di cui hai i diritti.",
-    fields: [{ name: "url", label: "URL immagine (https)", type: "url", required: true }, { name: "alt", label: "Testo alternativo", type: "text", required: true }, { name: "credit", label: "Credito", type: "text", required: true },
-      { name: "license", label: "Licenza", type: "text", required: true }, { name: "licenseUrl", label: "URL licenza/permesso", type: "url" }, { name: "modelId", label: "Modello", type: "ref", ref: "models" }, { name: "movieId", label: "Film", type: "ref", ref: "movies" }, { name: "approved", label: "Diritti verificati e approvata", type: "boolean" }] },
+  { key: "photos", label: "Fotografie autorizzate", singular: "foto", group: "Contenuti", columns: ["modelId", "movieId", "kind", "license", "approved"],
+    help: "Una foto va online solo se «approvata», e si approva solo con prova dei diritti (vedi docs/PHOTOS.md). Carica il file su Supabase Storage (o un CDN tuo) e incolla qui l'URL https.",
+    fields: [
+      { name: "url", label: "URL immagine (https)", type: "url", required: true }, { name: "alt", label: "Testo alternativo (descrivi cosa si vede)", type: "text", required: true },
+      { name: "kind", label: "Tipo", type: "select", required: true, options: [["product", "Prodotto (packshot: schede e card)"], ["scene", "Scena/fotogramma (film, articolo)"]] },
+      { name: "credit", label: "Credito (autore / agenzia)", type: "text", required: true },
+      { name: "license", label: "Come hai ottenuto i diritti", type: "select", required: true, options: LICENSES.map((l) => [l.value, l.label] as [string, string]), help: "Tutto tranne «Scatto nostro» richiede il link alla prova dei diritti." },
+      { name: "licenseUrl", label: "Link alla prova dei diritti (licenza, ricevuta, termini presskit, pagina Commons)", type: "url" }, { name: "sourceUrl", label: "Pagina di origine (opzionale)", type: "url" },
+      { name: "modelId", label: "Modello", type: "ref", ref: "models" }, { name: "movieId", label: "Film", type: "ref", ref: "movies" }, { name: "articleId", label: "Articolo", type: "ref", ref: "articles" },
+      { name: "approved", label: "Diritti verificati: pubblica", type: "boolean" }] },
   { key: "merchants", label: "Negozi / programmi affiliati", singular: "negozio", group: "Commercio", columns: ["name", "network", "active"], uses: [["offers", "merchantId"]],
     fields: [{ name: "name", label: "Nome", type: "text", required: true }, { name: "slug", label: "Slug", type: "text" }, { name: "network", label: "Rete affiliata / stato programma", type: "text", required: true }, { name: "domain", label: "Dominio", type: "text", required: true },
       { name: "searchUrlTemplate", label: "Template link di ricerca (usa {q})", type: "url", help: "Link di ricerca senza prezzo, usati quando non esistono offerte verificate." },
@@ -82,7 +89,7 @@ export const ENTITIES: EntityConfig[] = [
     help: "«Reale» = importo da report della rete affiliata. «Stimato» = ipotesi manuale. Restano sempre separati nelle statistiche.",
     fields: [{ name: "merchantId", label: "Negozio", type: "ref", ref: "merchants", required: true }, { name: "periodStart", label: "Dal", type: "date", required: true }, { name: "periodEnd", label: "Al", type: "date", required: true },
       { name: "amount", label: "Importo (USD)", type: "number", required: true }, { name: "kind", label: "Tipo", type: "select", required: true, options: [["reported", "Reale (da report affiliato)"], ["estimated", "Stimato"]] }, { name: "note", label: "Note / riferimento report", type: "text" }] },
-  { key: "articles", label: "Articoli SEO", singular: "articolo", group: "Editoriale", columns: ["title", "status", "reviewed", "updatedAt"], publicPath: (r) => `/blog/${r.slug}`,
+  { key: "articles", label: "Articoli SEO", singular: "articolo", group: "Editoriale", columns: ["title", "status", "reviewed", "updatedAt"], publicPath: (r) => `/blog/${r.slug}`, uses: [["photos", "articleId"]],
     fields: [
       { name: "title", label: "Titolo (H1)", type: "text", required: true }, { name: "slug", label: "Slug (URL)", type: "text" },
       { name: "metaTitle", label: "Meta title (≤ 60 caratteri)", type: "text" }, { name: "metaDescription", label: "Meta description (≤ 155 caratteri)", type: "textarea", rows: 2 },

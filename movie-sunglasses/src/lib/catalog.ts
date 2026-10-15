@@ -40,7 +40,11 @@ export function buildCatalog(d: CatalogData, now = Date.now()) {
   const offersByModel = group(d.offers, (o) => o.modelId);
   const altsByOriginal = group(d.alternatives, (a) => a.originalModelId);
   const altsByAlternative = group(d.alternatives, (a) => a.alternativeModelId);
-  const photosByModel = group(d.photos.filter((p) => p.approved && p.modelId), (p) => p.modelId!);
+  const livePhotos = d.photos.filter((p) => p.approved);
+  const photosByModel = group(livePhotos.filter((p) => p.modelId && p.kind !== "scene"), (p) => p.modelId!);
+  const scenesByModel = group(livePhotos.filter((p) => p.modelId && p.kind === "scene"), (p) => p.modelId!);
+  const photosByMovie = group(livePhotos.filter((p) => p.movieId), (p) => p.movieId!);
+  const photosByArticle = group(livePhotos.filter((p) => p.articleId), (p) => p.articleId!);
   const uniqModels = (apps: MovieAppearance[]) => [...new Set(apps.map((a) => a.modelId))].map((i) => modelById.get(i)!).filter(Boolean);
 
   const matchCache = new Map<string, EffectiveMatch>();
@@ -50,7 +54,11 @@ export function buildCatalog(d: CatalogData, now = Date.now()) {
     return m;
   };
   const appsForModel = (id: string): MovieAppearance[] => appsByModel.get(id) ?? EMPTY;
+  /** Approved product photos for a model (packshots). */
   const approvedPhotos = (modelId: string) => photosByModel.get(modelId) ?? EMPTY;
+  const scenePhotosForModel = (modelId: string) => scenesByModel.get(modelId) ?? EMPTY;
+  const photosForMovie = (movieId: string) => photosByMovie.get(movieId) ?? EMPTY;
+  const photosForArticle = (articleId: string) => photosByArticle.get(articleId) ?? EMPTY;
 
   const modelMatchCache = new Map<string, MatchType>();
   const modelMatch = (id: string): MatchType => {
@@ -92,7 +100,7 @@ export function buildCatalog(d: CatalogData, now = Date.now()) {
 
   return {
     ...d, articles, movieById, actorById, charById, brandById, modelById, merchantById, appById, evByApp,
-    matchOf, modelMatch, appsForModel, approvedPhotos, offersFor, lowestOffer, priceBandOf, isAlternativeOnly,
+    matchOf, modelMatch, appsForModel, approvedPhotos, scenePhotosForModel, photosForMovie, photosForArticle, offersFor, lowestOffer, priceBandOf, isAlternativeOnly,
     alternativesOf, originalsOf,
     modelsForMovie: (movieId: string) => uniqModels(appsByMovie.get(movieId) ?? []),
     modelsForActor: (actorId: string) => uniqModels(appsByActor.get(actorId) ?? []),
