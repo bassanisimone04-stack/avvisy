@@ -5,37 +5,40 @@ import { PRICE_BAND_LABEL } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 import { GlassesArt } from "./glasses";
 import { MatchBadge } from "./ui";
+import { CardActions } from "./card-actions";
 
 const STATUS: Record<string, string> = { in_production: "In production", discontinued: "Discontinued", vintage: "Vintage", unknown: "Availability unverified" };
 
-export function ModelCard({ c, m }: { c: Catalog; m: SunglassesModel }) {
+export function ModelCard({ c, m, as: H = "h3" }: { c: Catalog; m: SunglassesModel; as?: "h2" | "h3" }) {
   const brand = c.brandById.get(m.brandId);
   const films = [...new Set(c.appsForModel(m.id).map((a) => c.movieById.get(a.movieId)?.title).filter(Boolean))];
   const { band, source } = c.priceBandOf(m);
   const lowest = c.lowestOffer(m.id);
   return (
-    <Link href={`/sunglasses/${m.slug}`} className="card-lift group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white">
-      <div className="relative flex aspect-[16/10] items-center justify-center bg-gradient-to-b from-paper to-[#efece4] p-6">
-        <GlassesArt shape={m.shape} frame={m.frameColor} lens={m.lensColor} className="w-full max-w-[260px] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-2" />
-        <div className="absolute left-3 top-3"><MatchBadge type={c.modelMatch(m.id)} /></div>
-        {m.status === "vintage" && <span className="absolute right-3 top-3 eyebrow">Vintage</span>}
-      </div>
-      <div className="flex flex-1 flex-col gap-2 p-5">
-        <p className="eyebrow">{brand?.name}</p>
-        <h3 className="font-display text-2xl font-semibold leading-tight">{m.name}</h3>
-        {films.length > 0 && <p className="text-sm text-slate">As seen in {films.slice(0, 2).join(", ")}{films.length > 2 ? ` +${films.length - 2}` : ""}</p>}
-        <div className="mt-auto flex items-center justify-between pt-3 text-xs text-slate">
-          <span>{STATUS[m.status]}</span>
-          <span className="font-medium text-ink">
-            {lowest?.price != null ? `From $${lowest.price.toFixed(0)}` : band ? `${PRICE_BAND_LABEL[band]}${source === "editorial" ? " (est.)" : ""}` : "Price: see stores"}
-          </span>
+    <div className="card-lift group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white">
+      <Link href={`/sunglasses/${m.slug}`} className="flex h-full flex-col">
+        <div className="relative flex aspect-[16/10] items-center justify-center bg-gradient-to-b from-paper to-[#efece4] p-6">
+          <GlassesArt shape={m.shape} frame={m.frameColor} lens={m.lensColor} className="w-full max-w-[260px] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-2" />
+          <div className="absolute left-3 top-3"><MatchBadge type={c.modelMatch(m.id)} /></div>
         </div>
-      </div>
-    </Link>
+        <div className="flex flex-1 flex-col gap-2 p-5">
+          <p className="eyebrow">{brand?.name}</p>
+          <H className="font-display text-2xl font-semibold leading-tight">{m.name}</H>
+          {films.length > 0 && <p className="text-sm text-slate">As seen in {films.slice(0, 2).join(", ")}{films.length > 2 ? ` +${films.length - 2}` : ""}</p>}
+          <div className="mt-auto flex items-center justify-between pt-3 text-xs text-slate">
+            <span>{STATUS[m.status]}</span>
+            <span className="font-medium text-ink">
+              {lowest?.price != null ? `From $${lowest.price.toFixed(0)}` : band ? `${PRICE_BAND_LABEL[band]}${source === "editorial" ? " (est.)" : ""}` : "Price: see stores"}
+            </span>
+          </div>
+        </div>
+      </Link>
+      <CardActions id={m.id} name={m.name} />
+    </div>
   );
 }
 
-export function MovieCard({ c, movie }: { c: Catalog; movie: Movie }) {
+export function MovieCard({ c, movie, as: H = "h3" }: { c: Catalog; movie: Movie; as?: "h2" | "h3" }) {
   const models = c.modelsForMovie(movie.id);
   const first = models[0];
   return (
@@ -43,7 +46,7 @@ export function MovieCard({ c, movie }: { c: Catalog; movie: Movie }) {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_0%,rgba(201,170,113,.35),transparent_60%)] opacity-70 transition-opacity group-hover:opacity-100" aria-hidden />
       <div className="relative">
         <p className="eyebrow !text-champagne">{movie.kind === "series" ? "TV series" : movie.genre} · {movie.year}</p>
-        <h3 className="mt-3 font-display text-4xl font-semibold leading-[0.95]">{movie.title}</h3>
+        <H className="mt-3 font-display text-4xl font-semibold leading-[0.95]">{movie.title}</H>
       </div>
       <div className="relative">
         {first && <GlassesArt shape={first.shape} frame={first.frameColor} lens={first.lensColor} className="mx-auto w-4/5 opacity-95 transition-transform duration-700 group-hover:scale-110" />}

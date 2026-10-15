@@ -8,6 +8,7 @@ import { GlassesArt } from "@/components/glasses";
 import { ActorCard, ArticleCard, BrandCard, Grid, ModelCard, MovieCard } from "@/components/cards";
 import { Container, MatchBadge, SectionHeading, btn, btnGhost } from "@/components/ui";
 import { Reveal } from "@/components/misc";
+import { TiltStage } from "@/components/interactive";
 import type { MatchType } from "@/lib/types";
 
 export const revalidate = 300;
@@ -54,7 +55,7 @@ export default async function Home() {
           </div>
           <div className="relative mx-auto w-full max-w-lg" aria-hidden>
             <div className="absolute -inset-10 rounded-full bg-champagne/15 blur-3xl" />
-            <GlassesArt shape={hero.shape} frame={hero.frameColor} lens={hero.lensColor} className="relative w-full animate-float drop-shadow-[0_40px_60px_rgba(0,0,0,.6)]" />
+            <TiltStage><GlassesArt shape={hero.shape} frame={hero.frameColor} lens={hero.lensColor} className="relative w-full animate-float drop-shadow-[0_40px_60px_rgba(0,0,0,.6)]" /></TiltStage>
           </div>
         </Container>
         <div className="border-t border-white/10 bg-black/40 py-4" aria-hidden>

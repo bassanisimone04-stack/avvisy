@@ -9,7 +9,7 @@ export function Footer() {
         <div className="md:col-span-2">
           <p className="font-display text-3xl font-semibold text-white">Screen<span className="text-champagne">shade</span></p>
           <p className="mt-3 max-w-md text-sm leading-relaxed">{SITE.description}</p>
-          <p className="mt-5 max-w-md text-xs leading-relaxed text-white/50">
+          <p className="mt-5 max-w-md text-xs leading-relaxed text-white/65">
             Affiliate disclosure: some outbound links to stores may earn us a commission at no extra cost to you. Identification labels follow our published evidence rules, never commission rates. See <Link className="underline" href="/affiliate-disclosure">Affiliate Disclosure</Link>.
           </p>
         </div>
@@ -27,7 +27,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 px-5 py-6 text-center text-xs text-white/40 sm:px-8">
+      <div className="border-t border-white/10 px-5 py-6 text-center text-xs text-white/65 sm:px-8">
         © {new Date().getFullYear()} {SITE.name}. All trademarks belong to their owners. Not affiliated with any film studio or eyewear brand mentioned.
       </div>
     </footer>

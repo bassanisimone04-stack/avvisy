@@ -3,6 +3,8 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ConsentManager } from "@/components/consent";
 import { JsonLd } from "@/components/ui";
+import { CommandPalette } from "@/components/command-palette";
+import { CompareTray } from "@/components/tray";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,6 +14,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <main id="main">{children}</main>
       <Footer />
       <ConsentManager />
+      <CommandPalette />
+      <CompareTray />
       <JsonLd data={[
         { "@context": "https://schema.org", "@type": "WebSite", name: SITE.name, url: SITE.url, inLanguage: SITE.locale,
           potentialAction: { "@type": "SearchAction", target: `${SITE.url}/search?q={search_term_string}`, "query-input": "required name=search_term_string" } },

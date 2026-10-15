@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { slugify } from "@/lib/format";
 
 function inline(text: string, keyBase: string): React.ReactNode[] {
   const out: React.ReactNode[] = [];
@@ -27,11 +28,18 @@ export function Markdown({ source }: { source: string }) {
   return (
     <div className="prose-article">
       {blocks.map((b, i) => {
-        if (b.startsWith("## ")) return <h2 key={i}>{inline(b.slice(3), `h${i}`)}</h2>;
+        if (b.startsWith("## ")) return <h2 key={i} id={slugify(b.slice(3).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"))} className="scroll-mt-28">{inline(b.slice(3), `h${i}`)}</h2>;
         const lines = b.split("\n");
         if (lines.every((l) => l.startsWith("- "))) return <ul key={i}>{lines.map((l, j) => <li key={j}>{inline(l.slice(2), `l${i}-${j}`)}</li>)}</ul>;
         return <p key={i}>{inline(lines.join(" "), `p${i}`)}</p>;
       })}
     </div>
   );
+}
+
+export function extractHeadings(source: string): { id: string; text: string }[] {
+  return source.split(/\n{2,}/).filter((b) => b.startsWith("## ")).map((b) => {
+    const text = b.slice(3).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*/g, "").trim();
+    return { id: slugify(text), text };
+  });
 }

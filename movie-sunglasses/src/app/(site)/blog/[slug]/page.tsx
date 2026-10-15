@@ -6,7 +6,8 @@ import { SITE } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/format";
 import { Breadcrumbs, Container, JsonLd, UnreviewedNotice } from "@/components/ui";
-import { Markdown } from "@/components/markdown";
+import { Markdown, extractHeadings } from "@/components/markdown";
+import { ArticleToc, ReadingProgress, ShareButton } from "@/components/interactive";
 import { Grid, ModelCard } from "@/components/cards";
 import { ViewBeacon } from "@/components/misc";
 import { ArticleRef } from "@/components/tracked-link";
@@ -25,16 +26,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const a = c.articles.find((x) => x.slug === slug);
   if (!a) return notFoundOrRedirect(`/blog/${slug}`);
   const models = a.modelIds.map((i) => c.modelById.get(i)).filter((m): m is NonNullable<typeof m> => !!m);
+  const toc = [...extractHeadings(a.body), ...(a.faq.length ? [{ id: "faq", text: "FAQ" }] : []), ...(a.sources.length ? [{ id: "src", text: "Sources" }] : [])];
   const movies = a.movieIds.map((i) => c.movieById.get(i)).filter((m): m is NonNullable<typeof m> => !!m);
   return (
     <Container className="pt-10">
       <Breadcrumbs items={[{ name: "Guides", href: "/blog" }, { name: a.title }]} />
       <ViewBeacon type="article" id={a.id} />
       <ArticleRef slug={a.slug} />
-      <article className="mx-auto max-w-3xl">
+      <ReadingProgress />
+      <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[minmax(0,720px)_190px] lg:justify-center">
+      <article className="min-w-0">
         <p className="eyebrow mb-3">{a.category}</p>
         <h1 className="font-display text-5xl font-semibold leading-[0.95] sm:text-6xl">{a.title}</h1>
-        <p className="mt-4 text-sm text-slate">Updated {formatDate(a.updatedAt)} · {a.reviewed ? "Editorially reviewed" : "Awaiting editorial review"}</p>
+        <p className="mt-4 flex flex-wrap items-center gap-x-3 text-sm text-slate"><span>Updated {formatDate(a.updatedAt)} · {a.reviewed ? "Editorially reviewed" : "Awaiting editorial review"}</span><ShareButton title={a.title} /></p>
         <div className="mt-8"><UnreviewedNotice /></div>
         {a.answer && (
           <aside aria-label="Quick answer" className="my-8 rounded-2xl border-l-4 border-champagne bg-white p-6 shadow-sm">
@@ -60,6 +64,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         )}
         {movies.length > 0 && <p className="mt-10 text-sm text-slate">Related titles: {movies.map((m, i) => <span key={m.id}>{i > 0 && ", "}<Link className="underline underline-offset-4" href={`/movies/${m.slug}`}>{m.title}</Link></span>)}</p>}
       </article>
+      <aside><ArticleToc items={toc} /></aside>
+      </div>
       {models.length > 0 && (
         <section aria-labelledby="mentioned" className="mt-16">
           <h2 id="mentioned" className="font-display text-4xl font-semibold">Models in this guide</h2>

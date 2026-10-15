@@ -120,3 +120,25 @@ describe("seo copy", () => {
     expect(a.rows.filter((r) => r.kind !== "Articolo").every((r) => !r.issues.some((i) => i.startsWith("title di")))).toBe(true);
   });
 });
+
+import { compareRows, parseCompareIds } from "../src/lib/compare";
+import { extractHeadings } from "../src/components/markdown";
+
+describe("compare", () => {
+  const c = buildCatalog(seed as never);
+  it("keeps only known, unique ids and at most three", () => {
+    const ids = parseCompareIds(c, "persol-649,nope,persol-649,ray-ban-original-wayfarer-rb2140,oakley-frogskins", "knockaround-premiums");
+    expect(ids).toEqual(["persol-649", "ray-ban-original-wayfarer-rb2140", "oakley-frogskins"]);
+  });
+  it("accepts add= when there is room", () => expect(parseCompareIds(c, "persol-649", "oakley-frogskins")).toEqual(["persol-649", "oakley-frogskins"]));
+  it("flags differing rows and shows no invented offers", () => {
+    const rows = compareRows(c, ["persol-714-steve-mcqueen", "persol-649"].map((i) => c.modelById.get(i)!));
+    expect(rows.find((r) => r.label === "Brand")!.differs).toBe(false);
+    expect(rows.find((r) => r.label === "Evidence grade")!.differs).toBe(true);
+    expect(rows.find((r) => r.label === "Lowest verified offer")!.values).toEqual(["None yet", "None yet"]);
+  });
+});
+
+describe("article headings", () => {
+  it("extracts h2 headings with stable ids", () => expect(extractHeadings("## What we know\n\ntext\n\n## [Link](/x) heading")).toEqual([{ id: "what-we-know", text: "What we know" }, { id: "link-heading", text: "Link heading" }]));
+});

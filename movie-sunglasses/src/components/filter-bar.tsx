@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Catalog } from "@/lib/catalog";
 import { MATCH_LABEL, PRICE_BAND_LABEL } from "@/lib/site";
 import { colorGroup, one, type Params } from "@/lib/filter";
+import { LiveForm } from "./live-form";
 
 function Select({ name, label, value, options }: { name: string; label: string; value?: string; options: [string, string][] }) {
   return (
@@ -22,7 +23,7 @@ export function SunglassesFilters({ c, p, action = "/sunglasses", only }: { c: C
   const colors = [...new Set(c.models.map((m) => colorGroup(m.frameColor)))].sort();
   const active = ["q", "movie", "actor", "brand", "shape", "color", "status", "match", "budget", "kind"].some((k) => one(p[k]));
   return (
-    <form action={action} method="get" className="rounded-2xl border border-line bg-white p-5" aria-label="Filter sunglasses">
+    <LiveForm action={action} label="Filter sunglasses" className="rounded-2xl border border-line bg-white p-5">
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {show("q") && <div className="col-span-2">
           <label htmlFor="f-q" className="mb-1 block text-xs font-medium uppercase tracking-widest text-mist">Search</label>
@@ -40,9 +41,9 @@ export function SunglassesFilters({ c, p, action = "/sunglasses", only }: { c: C
         <Select name="sort" label="Sort by" value={one(p.sort)} options={[["featured", "Best evidence"], ["name", "Name A–Z"], ["year", "Newest film"], ["price", "Lowest price"]]} />
       </div>
       <div className="mt-5 flex items-center gap-4">
-        <button type="submit" className="rounded-full bg-ink px-6 py-2.5 text-sm font-medium text-white hover:bg-champagne-text">Apply filters</button>
+        <button type="submit" className="js-hide rounded-full bg-ink px-6 py-2.5 text-sm font-medium text-white hover:bg-champagne-text">Apply filters</button>
         {active && <Link href={action} className="text-sm text-slate underline">Reset</Link>}
       </div>
-    </form>
+    </LiveForm>
   );
 }

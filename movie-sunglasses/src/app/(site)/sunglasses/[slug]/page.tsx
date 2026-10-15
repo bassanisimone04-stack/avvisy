@@ -11,6 +11,7 @@ import { Breadcrumbs, Container, JsonLd, MatchBadge, UnreviewedNotice, btn } fro
 import { ArticleCard, Grid, ModelCard } from "@/components/cards";
 import { PriceTable } from "@/components/price-table";
 import { ViewBeacon } from "@/components/misc";
+import { StickyModelBar } from "@/components/interactive";
 
 export const revalidate = 600;
 export async function generateStaticParams() { return (await getCatalog()).models.map((m) => ({ slug: m.slug })); }
@@ -63,7 +64,8 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
     <Container className="pt-10">
       <Breadcrumbs items={[{ name: "Sunglasses", href: "/sunglasses" }, { name: brand?.name ?? "Brand", href: brand ? `/brands/${brand.slug}` : undefined }, { name: m.name }]} />
       <ViewBeacon type="model" id={m.id} />
-      <div className="grid gap-10 lg:grid-cols-2">
+      <StickyModelBar id={m.id} name={m.name} />
+      <div id="model-hero" className="grid gap-10 lg:grid-cols-2">
         <div>
           <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-b from-white to-[#ebe8df] p-10 ring-1 ring-line">
             {photos[0] ? (

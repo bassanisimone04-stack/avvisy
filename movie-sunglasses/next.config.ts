@@ -10,6 +10,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Blocking <head> metadata for every client (title/description always in <head>, also on dynamic pages).
+  htmlLimitedBots: /.*/,
+  experimental: { inlineCss: true },
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },

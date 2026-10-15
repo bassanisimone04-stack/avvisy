@@ -17,7 +17,7 @@ cd movie-sunglasses
 npm install
 cp .env.example .env.local   # poi imposta almeno: SESSION_SECRET (npm run admin:secret), ADMIN_EMAIL e, solo in sviluppo, ADMIN_PASSWORD
 npm run dev          # http://localhost:3000
-npm test             # 32 test (prove, auth, CSV, claims, integrità del seed, titoli/description SEO)
+npm test             # 36 test (prove, auth, CSV, claims, integrità del seed, titoli/description SEO)
 npm run build && npm start
 ```
 
@@ -31,7 +31,8 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 | Area | Dettaglio |
 |---|---|
 | Sito pubblico | Home (hero, ricerca, Trending, Iconic Looks, Popular Actors, Shop by Movie/Style, Affordable Alternatives, Vintage & Rare, Latest Guides, Featured Brands), film, attori, catalogo, marchi, stili, alternative, vintage, blog, ricerca, pagine legali, About/metodologia, Contact |
-| Ricerca | Autocomplete accessibile (combobox ARIA, tastiera), API `/api/search`, pagina `/search` |
+| Ricerca | Autocomplete accessibile (combobox ARIA, tastiera), ricerche recenti, palette globale con `/` o Ctrl/⌘+K, API `/api/search`, pagina `/search` |
+| Interattività | Filtri che aggiornano i risultati mentre si cambiano (e restano URL condivisibili, anche senza JavaScript), salvataggio dei modelli (cuore) e **confronto fino a 3 modelli** con differenze evidenziate (`/compare`, `/saved`; dati solo nel browser), barra di confronto flottante, indice dei contenuti e barra di lettura negli articoli, pulsante Condividi, barra sticky nelle schede, hero che segue il puntatore (disattivato con touch e `prefers-reduced-motion`), skeleton di caricamento |
 | Filtri | Film, attore, marchio, forma, colore, prezzo, evidenza, stato, tipo, ordinamento — URL condivisibili, funzionano anche senza JavaScript |
 | Schede prodotto | Specifiche, apparizioni, fonti con data e contestazioni, alternative per fascia, articoli correlati, comparatore |
 | Etichette | Exact Match / Official Reissue / Similar Style / Unconfirmed **calcolate** (`src/lib/evidence.ts`): una proposta "Exact" decade a "Unconfirmed" se nessuna fonte forte la sostiene o se una fonte la contesta |
@@ -169,6 +170,8 @@ Nota: con Supabase le pagine pubbliche sono ISR (5–10 minuti) e si rigenerano 
 ## 9. Verifiche eseguite
 
 - `npm run build` (produzione) senza errori; `tsc --noEmit` pulito.
-- `npm test`: 32 test — regole delle prove, integrità referenziale del seed, nessun prezzo inventato, ricerca, parser CSV, clustering, controllo affermazioni, link interni, token di sessione.
+- `npm test`: 36 test — regole delle prove, integrità referenziale del seed, nessun prezzo inventato, ricerca, parser CSV, clustering, controllo affermazioni, link interni, token di sessione.
 - Test end-to-end con Chromium su build di produzione: autocomplete con tastiera, filtri/canonical/noindex, comparatore con offerta reale + JSON-LD `AggregateOffer`, redirect `/go` (e rifiuto di destinazioni arbitrarie), login corretto/errato e attributi del cookie, rifiuto URL non-https, blocco pubblicazione senza revisione, redirect automatico al cambio slug, blocco eliminazione di record in uso, import CSV + cluster, statistiche reali/stimate, pannello AI disattivato senza chiave.
-- Non eseguito: audit Lighthouse/axe automatico, test con Supabase reale, chiamate reali all'API AI, test su dispositivi fisici.
+- Lighthouse (mobile, throttling simulato, build locale): Accessibility 100, Best Practices 100, SEO 100, Performance 87–98 a seconda della pagina e della corsa, CLS 0. L'LCP *misurato* in locale è ~0,2 s; i 2,5–3,5 s del punteggio sono la simulazione di rete lenta. Va ripetuto sul dominio reale (PageSpeed/CrUX).
+- Suite e2e nel repo: `tests/e2e` (vedi il README lì).
+- Non eseguito: audit axe completo, test con Supabase reale, chiamate reali all'API AI, test su dispositivi fisici.

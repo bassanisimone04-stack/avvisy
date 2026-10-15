@@ -4,6 +4,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { NAV, SITE } from "@/lib/site";
 import { SearchBox } from "./search-box";
+import { SearchTrigger } from "./command-palette";
+import { SavedLink } from "./tray";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -34,9 +36,8 @@ export function Header() {
           ))}
         </nav>
         <div className="ml-auto hidden w-64 xl:block"><SearchBox /></div>
-        <Link href="/search" className="ml-auto rounded-full p-2 hover:bg-line/60 xl:hidden" aria-label="Search">
-          <svg aria-hidden width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" strokeLinecap="round" /></svg>
-        </Link>
+        <SearchTrigger className="ml-auto rounded-full p-2 hover:bg-line/60 xl:hidden" />
+        <SavedLink className="rounded-full p-2 hover:bg-line/60" />
         <button type="button" className="rounded-full p-2 hover:bg-line/60 lg:hidden" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen((o) => !o)}>
           <svg aria-hidden width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">{open ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}</svg>
         </button>
