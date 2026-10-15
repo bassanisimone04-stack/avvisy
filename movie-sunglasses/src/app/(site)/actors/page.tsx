@@ -5,7 +5,7 @@ import { ActorCard, Grid } from "@/components/cards";
 import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
 
 export const revalidate = 600;
-export const metadata: Metadata = buildMetadata({ title: "Actors & the Sunglasses They Wore On Screen", description: "Browse actors by the sunglasses they wore in film and TV, with characters, titles and identified models.", path: "/actors" });
+export const metadata: Metadata = buildMetadata({ title: "Actors & Their Movie Sunglasses", description: "Find the sunglasses worn by actors on screen, from Tom Cruise to Audrey Hepburn: characters, films, identified models and where to buy them.", path: "/actors" });
 
 export default async function ActorsPage() {
   const c = await getCatalog();

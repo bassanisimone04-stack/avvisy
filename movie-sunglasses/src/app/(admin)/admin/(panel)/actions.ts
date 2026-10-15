@@ -10,6 +10,7 @@ import { deleteEntity, findEntity, saveEntity } from "@/lib/admin/save";
 import { aiConfigured, generateDraft } from "@/lib/ai";
 import { applyLink, buildFacts, suggestMeta } from "@/lib/editorial";
 import { clusterKeywords, keywordsFromCsv } from "@/lib/keywords";
+import { keywordCandidates } from "@/lib/keyword-candidates";
 import { slugify } from "@/lib/format";
 import type { Article } from "@/lib/types";
 
@@ -154,3 +155,17 @@ export async function createBriefAction(cluster: string) {
 }
 
 
+
+export async function generateCandidatesAction() {
+  await requireAdmin();
+  const c = await getCatalog();
+  const existing = await listAll("keywords");
+  const byTerm = new Map(existing.map((k) => [k.term.toLowerCase().trim(), k]));
+  const cands = keywordCandidates(c);
+  // never overwrite keywords that already carry data; only add new terms and fill a missing target page
+  const fresh = cands.filter((k) => !byTerm.has(k.term));
+  const patch = cands.filter((k) => byTerm.get(k.term) && !byTerm.get(k.term)!.targetUrl).map((k) => ({ ...byTerm.get(k.term)!, targetUrl: k.targetUrl }));
+  await upsertMany("keywords", [...fresh, ...patch]);
+  refresh();
+  redirect(`/admin/keywords?ok=${encodeURIComponent(`${fresh.length} keyword candidate aggiunte (senza volume) e ${patch.length} mappate a una pagina. Esporta il CSV e verifica i volumi prima di usarle.`)}`);
+}

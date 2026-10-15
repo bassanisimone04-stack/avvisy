@@ -3,7 +3,7 @@ import type { Article, Keyword } from "@/lib/types";
 const D = "2026-10-15";
 const base = { createdAt: D, updatedAt: D, publishAt: null, aiGenerated: false } as const;
 
-export const fullArticles: Article[] = [
+const baseArticles: Article[] = [
   {
     ...base, id: "what-sunglasses-does-brad-pitt-wear-in-f1", slug: "what-sunglasses-does-brad-pitt-wear-in-f1",
     title: "What Sunglasses Does Brad Pitt Wear in F1?",
@@ -212,6 +212,101 @@ The [Ray-Ban Original Wayfarer RB2140](/sunglasses/ray-ban-original-wayfarer-rb2
   },
 ];
 
+const CHECKLIST = `## What to check before you buy
+
+- Match the reference printed on the frame or in the listing to the model page. Sellers often use a film name for a look-alike.
+- Compare frame and lens colour with the details above. Several of these designs were sold in more than one colour.
+- For vintage pairs, ask for photos of the temple markings and the lens etching, and prefer sellers who accept returns.
+- Be wary of any listing that promises the "exact film pair" without citing a source. This site grades that claim by evidence instead.
+- Check size (lens width and bridge) before buying; classic designs often came in several sizes.`;
+
+const EXTRA: Record<string, string> = {
+  "what-sunglasses-does-brad-pitt-wear-in-f1": `## Quick facts
+
+- Film: [F1](/movies/f1-the-movie) (2025), Brad Pitt as Sonny Hayes.
+- Proposed model: [S.T. Dupont D002](/sunglasses/st-dupont-d002-6051), reference 6051, gold frame, brown gradient lenses.
+- Grade on this site: **Unconfirmed**, because one source disputes the brand.
+- Alternative named by a source: [Dita Kudru](/sunglasses/dita-kudru).
+
+${CHECKLIST}
+
+## How this answer may change
+
+If a costume-department credit, an auction listing or an interview names the pair, we will update the record, add the new source with its date and re-grade the identification. Until then, treat any shop that sells "the F1 sunglasses" as selling a look-alike. See all [affordable alternatives](/affordable-alternatives) and [vintage eyewear](/vintage).`,
+  "top-gun-sunglasses-tom-cruise-aviators": `## Quick facts
+
+- Films: [Top Gun](/movies/top-gun) (1986) and [Top Gun: Maverick](/movies/top-gun-maverick) (2022), Tom Cruise as Maverick.
+- 2022 model named by three retail guides: [Ray-Ban Aviator Classic RB3025](/sunglasses/ray-ban-aviator-classic-rb3025), gold frame, green lenses.
+- 1986 model: [Ray-Ban Aviator (Bausch & Lomb era)](/sunglasses/ray-ban-aviator-bl-vintage); the exact reference is not documented.
+- Supporting-cast pairs (Caravan RB3136, Shooter RB3138) come from a single retailer and stay **Unconfirmed**.
+
+${CHECKLIST}
+
+## Aviator or look-alike?
+
+The Aviator is one of the most copied shapes, so most listings that mention Top Gun are look-alikes. If you want the real design, the RB3025 is the current-production Ray-Ban. If you want the look for less, browse [aviator styles](/styles/aviator) and the [affordable alternatives](/affordable-alternatives).`,
+  "men-in-black-sunglasses-original-models": `## Quick facts
+
+- Film: [Men in Black](/movies/men-in-black) (1997), Will Smith as Agent J and Tommy Lee Jones as Agent K.
+- Model: [Ray-Ban Predator 2](/sunglasses/ray-ban-predator-2-rb2027), wraparound, black frame, dark lenses.
+- References cited: 2027 and 2030 (we show both and pick neither).
+- Grade on this site: **Exact Match**, supported by a fan database and period press coverage.
+
+${CHECKLIST}
+
+## Why the reference number matters
+
+Retail pages use "RB2027", "2027" and "2030" interchangeably. When you shop, compare photos of the frame shape and the lens curve instead of relying on the number alone, and confirm availability, because we could not verify that the model is still in production. For other dark wrap styles see [futuristic sunglasses](/styles/futuristic).`,
+  "audrey-hepburn-breakfast-at-tiffanys-sunglasses": `## Quick facts
+
+- Film: [Breakfast at Tiffany's](/movies/breakfast-at-tiffanys) (1961), Audrey Hepburn as Holly Golightly.
+- Model: [Oliver Goldsmith Manhattan](/sunglasses/oliver-goldsmith-manhattan), the brand's reissue, released for the 50th anniversary in 2011 per SunglassesID.
+- Frame: dark tortoise with green lenses matches the on-screen pair, per SunglassesID.
+- Grade on this site: **Official Reissue**, supported by the brand and a reference database.
+
+${CHECKLIST}
+
+## Original, reissue or look-alike?
+
+The Manhattan is the maker's own replica, so it is the closest buyable match. Anything else sold as "Audrey Hepburn sunglasses" is a look-alike inspired by the wayfarer shape. Compare more in [wayfarer styles](/styles/wayfarer) and [vintage eyewear](/vintage).`,
+  "the-blues-brothers-sunglasses": `## Quick facts
+
+- Film: [The Blues Brothers](/movies/the-blues-brothers) (1980), John Belushi as Jake and Dan Aykroyd as Elwood.
+- Model: [Ray-Ban Wayfarer (Bausch & Lomb era)](/sunglasses/ray-ban-wayfarer-bl-vintage); current production is the [Original Wayfarer RB2140](/sunglasses/ray-ban-original-wayfarer-rb2140).
+- Reference 5022: reported by one retailer, so **unconfirmed**.
+- Grade on this site: **Exact Match** at the model-family level, supported by three retail sources.
+
+${CHECKLIST}
+
+## Which Wayfarer should you buy?
+
+For the shape, the Original Wayfarer in black is the direct modern equivalent. For a period pair, search vintage listings and ask for temple markings. For a lower budget, see [wayfarer styles](/styles/wayfarer) and the [affordable alternatives](/affordable-alternatives).`,
+};
+
+const PATCH: Record<string, Partial<Article>> = {
+  "what-sunglasses-does-brad-pitt-wear-in-f1": {
+    answer: "Brad Pitt's F1 sunglasses are most likely a vintage gold S.T. Dupont D002 (6051) with brown gradient lenses, according to two sources, but one retailer says the aviators are unbranded frames from the costume designer's family. We label the identification Unconfirmed.",
+    metaDescription: "Brad Pitt F1 sunglasses: two sources name a vintage gold S.T. Dupont D002, a third disputes it. See the evidence and wearable alternatives.",
+  },
+  "top-gun-sunglasses-tom-cruise-aviators": {
+    answer: "The Top Gun sunglasses are Ray-Ban Aviators. For Top Gun: Maverick (2022), three retail guides name the Aviator Classic RB3025 in gold with green lenses; one source describes a custom tint. The 1986 production reference is not documented in the sources we reviewed.",
+    metaDescription: "Top Gun sunglasses: Maverick's Ray-Ban Aviators in 1986 and 2022. What is documented, what is disputed and affordable alternatives.",
+  },
+  "men-in-black-sunglasses-original-models": {
+    answer: "The Men in Black sunglasses are the wraparound Ray-Ban Predator 2, cited as reference 2027 (some pages say 2030). Both leads are reported to wear the same style.",
+    metaDescription: "Men in Black sunglasses: the wraparound Ray-Ban Predator 2 worn by Agents J and K, its reference numbers and budget wrap alternatives.",
+  },
+  "audrey-hepburn-breakfast-at-tiffanys-sunglasses": {
+    metaDescription: "Breakfast at Tiffany's sunglasses: Holly Golightly's black wayfarer-style Oliver Goldsmith, the Manhattan reissue and cheaper alternatives.",
+  },
+  "the-blues-brothers-sunglasses": {
+    answer: "The Blues Brothers sunglasses are Ray-Ban Wayfarers worn by Jake and Elwood. Several sources agree on the model; one retailer blog cites the vintage 5022 reference, which we treat as unconfirmed.",
+    metaDescription: "Blues Brothers sunglasses: Jake and Elwood's Ray-Ban Wayfarers, what sources agree on, the unconfirmed 5022 reference and alternatives.",
+  },
+};
+
+export const fullArticles: Article[] = baseArticles.map((a) => ({ ...a, ...(PATCH[a.id] ?? {}), body: a.body + "\n\n" + (EXTRA[a.id] ?? "") }));
+
 type B = [slug: string, title: string, kw: string, cat: string, intent: string, movies: string[], models: string[], angle: string];
 const BRIEFS: B[] = [
   ["what-sunglasses-does-brad-pitt-wear-in-f1", "What Sunglasses Does Brad Pitt Wear in F1?", "brad pitt f1 sunglasses", "Guides", "Informational", ["f1-the-movie"], [], ""],
@@ -244,6 +339,6 @@ const briefs: Article[] = BRIEFS.filter((b) => !full.has(b[0])).map(([slug, titl
 
 export const articles: Article[] = [...fullArticles, ...briefs];
 
-export const keywords: Keyword[] = BRIEFS.map(([slug, , kw, , intent], i) => ({
-  id: `kw-${String(i + 1).padStart(3, "0")}`, term: kw, volume: null, difficulty: null, intent, cluster: kw.split(" ")[0], source: "editorial plan (volume unverified)", articleId: slug,
+export const keywords: Keyword[] = BRIEFS.map(([slug, , kw, , intent]) => ({
+  id: `kw-${kw.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`, term: kw, volume: null, difficulty: null, intent, cluster: kw.split(" ")[0], source: "editorial plan (volume unverified)", articleId: slug, targetUrl: `/blog/${slug}`,
 }));

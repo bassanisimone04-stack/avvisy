@@ -5,7 +5,7 @@ import { BrandCard, Grid } from "@/components/cards";
 import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
 
 export const revalidate = 600;
-export const metadata: Metadata = buildMetadata({ title: "Sunglasses Brands in Film: Ray-Ban, Persol, Tom Ford & More", description: "Eyewear brands behind the movie sunglasses we track, with every documented model.", path: "/brands" });
+export const metadata: Metadata = buildMetadata({ title: "Movie Sunglasses Brands: Ray-Ban, Persol & More", description: "Eyewear brands behind the movie sunglasses we track, from Ray-Ban and Persol to Tom Ford, with every documented model, source and alternative.", path: "/brands" });
 
 export default async function BrandsPage() {
   const c = await getCatalog();

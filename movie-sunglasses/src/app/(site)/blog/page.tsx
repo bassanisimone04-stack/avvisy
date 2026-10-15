@@ -5,7 +5,7 @@ import { ArticleCard, Grid } from "@/components/cards";
 import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
 
 export const revalidate = 300;
-export const metadata: Metadata = buildMetadata({ title: "Movie Sunglasses Guides: Identification, Comparisons & Where to Buy", description: "In-depth, sourced guides to the sunglasses worn in famous films — with honest uncertainty where the evidence is thin.", path: "/blog" });
+export const metadata: Metadata = buildMetadata({ title: "Movie Sunglasses Guides & Comparisons", description: "Sourced guides to the sunglasses in famous films, with straight answers, evidence grades, alternatives and honest uncertainty where sources conflict.", path: "/blog" });
 
 export default async function BlogPage() {
   const c = await getCatalog();

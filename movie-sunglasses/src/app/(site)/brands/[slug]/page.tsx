@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getCatalog } from "@/lib/catalog";
 import { SITE } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { brandSeo } from "@/lib/seo-copy";
 import { Breadcrumbs, Container, JsonLd, PageHeader } from "@/components/ui";
 import { Grid, ModelCard } from "@/components/cards";
 
@@ -10,8 +11,11 @@ export const revalidate = 600;
 export async function generateStaticParams() { return (await getCatalog()).brands.map((b) => ({ slug: b.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const b = (await getCatalog()).brands.find((x) => x.slug === slug);
-  return b ? buildMetadata({ title: `${b.name} Movie Sunglasses: Models Seen On Screen`, description: `${b.description} Browse every ${b.name} model we track, with film appearances and sources.`, path: `/brands/${b.slug}` }) : {};
+  const c = await getCatalog();
+  const b = c.brands.find((x) => x.slug === slug);
+  if (!b) return {};
+  const seo = brandSeo(c, b);
+  return buildMetadata({ title: seo.title, description: seo.description, path: `/brands/${b.slug}`, absoluteTitle: true, noindex: c.modelsForBrand(b.id).length < 2 });
 }
 
 export default async function BrandPage({ params }: { params: Promise<{ slug: string }> }) {

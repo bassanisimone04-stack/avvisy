@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...statics.map((p) => ({ url: u(p), changeFrequency: "weekly" as const, priority: p === "/" ? 1 : 0.7 })),
     ...c.movies.map((m) => ({ url: u(`/movies/${m.slug}`), changeFrequency: "monthly" as const, priority: 0.7 })),
     ...c.actors.filter((a) => c.modelsForActor(a.id).length).map((a) => ({ url: u(`/actors/${a.slug}`), changeFrequency: "monthly" as const, priority: 0.6 })),
-    ...c.brands.filter((b) => c.modelsForBrand(b.id).length).map((b) => ({ url: u(`/brands/${b.slug}`), changeFrequency: "monthly" as const, priority: 0.6 })),
+    ...c.brands.filter((b) => c.modelsForBrand(b.id).length >= 2).map((b) => ({ url: u(`/brands/${b.slug}`), changeFrequency: "monthly" as const, priority: 0.6 })),
     ...STYLES.filter((s) => c.modelsForStyle(s.slug).length).map((s) => ({ url: u(`/styles/${s.slug}`), changeFrequency: "monthly" as const, priority: 0.6 })),
     ...c.models.map((m) => ({ url: u(`/sunglasses/${m.slug}`), lastModified: m.verifiedAt ? latest(m.verifiedAt) : undefined, changeFrequency: "weekly" as const, priority: 0.8 })),
     ...c.articles.map((a) => ({ url: u(`/blog/${a.slug}`), lastModified: latest(a.updatedAt), changeFrequency: "monthly" as const, priority: 0.8 })),

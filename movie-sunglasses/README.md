@@ -17,7 +17,7 @@ cd movie-sunglasses
 npm install
 cp .env.example .env.local   # poi imposta almeno: SESSION_SECRET (npm run admin:secret), ADMIN_EMAIL e, solo in sviluppo, ADMIN_PASSWORD
 npm run dev          # http://localhost:3000
-npm test             # 25 test (regole delle prove, auth, CSV, claims, integrità del seed)
+npm test             # 32 test (prove, auth, CSV, claims, integrità del seed, titoli/description SEO)
 npm run build && npm start
 ```
 
@@ -39,7 +39,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 | Tracciamento | `/go` (redirect affiliato server-side, destinazione solo da database → no open redirect), click log senza IP, contatori viste aggregati senza cookie, attribuzione ai guide letti |
 | Admin | Login sicuro, CRUD per 16 entità, controllo integrità (riferimenti, URL https, slug unici, redirect 301 automatico al cambio slug, blocco eliminazione se in uso), statistiche con ricavi **reali** e **stimati** separati |
 | Editoriale | Import CSV keyword (Semrush/Ahrefs/Keyword Planner), raggruppamento in cluster, creazione brief, meta suggeriti, link interni suggeriti, collegamento prodotti, controllo affermazioni non verificate, flusso bozza → revisione → programmazione → pubblicazione (bloccato senza revisione umana e fonti) |
-| SEO | SSR/ISR, URL descrittivi, canonical, meta, breadcrumb + JSON-LD (WebSite, Organization, BreadcrumbList, Product, Movie/TVSeries, Person, Brand, Article, FAQPage), sitemap dinamica, robots, filtri `noindex`, predisposizione hreflang, redirect gestiti |
+| SEO | SSR/ISR, URL descrittivi, title ≤ 60 e description ≤ 155 su tutte le pagine, FAQ guidate dai dati, canonical, breadcrumb + JSON-LD (WebSite, Organization, BreadcrumbList, Product, Movie/TVSeries, Person, Brand, Article, FAQPage, ItemList), immagini Open Graph, sitemap dinamica, robots, filtri e pagine sottili `noindex`, predisposizione hreflang, redirect gestiti, **audit SEO e generatore di keyword candidate nell'admin** (vedi `docs/SEO-STRATEGY.md`) |
 | Legale/UX | Privacy, Cookie, Terms, Affiliate Disclosure, About; banner consenso (analytics GA4 solo dopo consenso); skip-link, focus visibile, `prefers-reduced-motion`, ARIA |
 | Sicurezza | Cookie di sessione HMAC `HttpOnly; SameSite=Strict; Secure`, scrypt, rate-limit login/ricerca/contatti/tracking, header di sicurezza, middleware + `requireAdmin()` in ogni azione, sanitizzazione markdown (niente HTML grezzo) |
 
@@ -169,6 +169,6 @@ Nota: con Supabase le pagine pubbliche sono ISR (5–10 minuti) e si rigenerano 
 ## 9. Verifiche eseguite
 
 - `npm run build` (produzione) senza errori; `tsc --noEmit` pulito.
-- `npm test`: 25 test — regole delle prove, integrità referenziale del seed, nessun prezzo inventato, ricerca, parser CSV, clustering, controllo affermazioni, link interni, token di sessione.
+- `npm test`: 32 test — regole delle prove, integrità referenziale del seed, nessun prezzo inventato, ricerca, parser CSV, clustering, controllo affermazioni, link interni, token di sessione.
 - Test end-to-end con Chromium su build di produzione: autocomplete con tastiera, filtri/canonical/noindex, comparatore con offerta reale + JSON-LD `AggregateOffer`, redirect `/go` (e rifiuto di destinazioni arbitrarie), login corretto/errato e attributi del cookie, rifiuto URL non-https, blocco pubblicazione senza revisione, redirect automatico al cambio slug, blocco eliminazione di record in uso, import CSV + cluster, statistiche reali/stimate, pannello AI disattivato senza chiave.
 - Non eseguito: audit Lighthouse/axe automatico, test con Supabase reale, chiamate reali all'API AI, test su dispositivi fisici.

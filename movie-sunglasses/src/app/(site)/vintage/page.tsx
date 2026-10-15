@@ -5,7 +5,7 @@ import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
 import { Grid, ModelCard } from "@/components/cards";
 
 export const revalidate = 600;
-export const metadata: Metadata = buildMetadata({ title: "Vintage & Rare Movie Sunglasses: Out-of-Production Models & Reissues", description: "Historic, rare and out-of-production movie sunglasses, plus the official reissues that replace them.", path: "/vintage" });
+export const metadata: Metadata = buildMetadata({ title: "Vintage Movie Sunglasses & Reissues", description: "Historic, rare and out-of-production movie sunglasses, plus the official reissues that carry the design on. Where to look and what to check.", path: "/vintage" });
 
 export default async function VintagePage() {
   const c = await getCatalog();

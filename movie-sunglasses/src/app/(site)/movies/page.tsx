@@ -6,11 +6,12 @@ import { hasFilters, one, type Params } from "@/lib/filter";
 import { normalize } from "@/lib/format";
 import { buildMetadata } from "@/lib/seo";
 import { Grid, MovieCard } from "@/components/cards";
-import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
+import { Breadcrumbs, Container, JsonLd, PageHeader } from "@/components/ui";
+import { SITE } from "@/lib/site";
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Params> }): Promise<Metadata> {
   const p = await searchParams;
-  return buildMetadata({ title: "Movies & TV Shows: Sunglasses Worn On Screen", description: "Browse films and series by the sunglasses their characters wear — identified models, actors and where to buy.", path: "/movies", noindex: hasFilters(p) });
+  return buildMetadata({ title: "Movies & TV Shows With Famous Sunglasses", description: "Browse films and series by the sunglasses their characters wear: identified models, actors, characters, sources and affordable alternatives.", path: "/movies", noindex: hasFilters(p) });
 }
 
 export default async function MoviesPage({ searchParams }: { searchParams: Promise<Params> }) {
@@ -33,6 +34,7 @@ export default async function MoviesPage({ searchParams }: { searchParams: Promi
       </form>
       <p className="mb-4 text-sm text-slate" aria-live="polite">{rows.length} titles</p>
       <Grid cols={4}>{rows.map((m) => <MovieCard key={m.id} c={c} movie={m} />)}</Grid>
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: c.movies.map((m, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE.url}/movies/${m.slug}`, name: m.title })) }} />
     </Container>
   );
 }

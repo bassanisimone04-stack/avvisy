@@ -8,7 +8,7 @@ import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
 import { Grid, ModelCard } from "@/components/cards";
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Params> }): Promise<Metadata> {
-  return buildMetadata({ title: "Affordable Alternatives to Famous Movie Sunglasses", description: "Look-alikes of famous movie sunglasses under $50, $100 and $200, matched to the originals they resemble.", path: "/affordable-alternatives", noindex: hasFilters(await searchParams) });
+  return buildMetadata({ title: "Cheap Alternatives to Movie Sunglasses", description: "Look-alikes of famous movie sunglasses under $50, $100 and $200, matched to the originals they resemble. Price bands are editorial estimates.", path: "/affordable-alternatives", noindex: hasFilters(await searchParams) });
 }
 
 export default async function AffordablePage({ searchParams }: { searchParams: Promise<Params> }) {

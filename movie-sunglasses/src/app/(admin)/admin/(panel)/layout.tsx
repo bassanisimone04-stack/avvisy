@@ -16,7 +16,7 @@ export default async function PanelLayout({ children }: { children: React.ReactN
       <aside className="bg-ink p-5 text-sm text-white/80 lg:sticky lg:top-0 lg:h-screen lg:overflow-auto">
         <Link href="/admin" className="font-display text-2xl font-semibold text-white">Screen<span className="text-champagne">shade</span> <span className="text-xs font-sans font-normal text-white/50">admin</span></Link>
         <nav aria-label="Admin" className="mt-6 space-y-5">
-          <ul><li><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href="/admin">Dashboard</Link></li><li><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href="/admin/stats">Statistiche e ricavi</Link></li></ul>
+          <ul><li><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href="/admin">Dashboard</Link></li><li><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href="/admin/stats">Statistiche e ricavi</Link></li><li><Link className="block rounded px-2 py-1.5 hover:bg-white/10" href="/admin/seo">Audit SEO</Link></li></ul>
           {groups.map((g) => (
             <div key={g}><p className="eyebrow !text-champagne px-2">{g}</p>
               <ul className="mt-1">

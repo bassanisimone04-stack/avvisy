@@ -76,7 +76,7 @@ create table if not exists articles (
 );
 create table if not exists keywords (
   id text primary key, term text not null, volume int, difficulty int, intent text not null default '',
-  cluster text not null default '', source text not null default '', article_id text
+  cluster text not null default '', source text not null default '', article_id text, target_url text
 );
 create table if not exists click_events (
   id text primary key, at text not null, merchant_id text not null, model_id text not null, offer_id text, src text not null,

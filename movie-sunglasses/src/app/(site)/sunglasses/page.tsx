@@ -4,11 +4,12 @@ import { hasFilters, type Params } from "@/lib/filter";
 import { buildMetadata } from "@/lib/seo";
 import { SunglassesFilters } from "@/components/filter-bar";
 import { ModelResults } from "@/components/model-grid";
-import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
+import { Breadcrumbs, Container, JsonLd, PageHeader } from "@/components/ui";
+import { SITE } from "@/lib/site";
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Params> }): Promise<Metadata> {
   const p = await searchParams;
-  return buildMetadata({ title: "Movie Sunglasses Catalog: Models, Brands & Where to Buy", description: "Browse sunglasses worn in movies and TV. Filter by film, actor, brand, shape, colour and price, with evidence-graded identification.", path: "/sunglasses", noindex: hasFilters(p) || "page" in p });
+  return buildMetadata({ title: "Movie Sunglasses Catalog by Film & Actor", description: "Browse sunglasses worn in movies and TV. Filter by film, actor, brand, shape, colour and price band, with evidence-graded identification and sources.", path: "/sunglasses", noindex: hasFilters(p) || "page" in p });
 }
 
 export default async function SunglassesPage({ searchParams }: { searchParams: Promise<Params> }) {
@@ -19,6 +20,7 @@ export default async function SunglassesPage({ searchParams }: { searchParams: P
       <PageHeader eyebrow="Catalog" title="Movie Sunglasses" intro="Every model below is tied to a film appearance or serves as a documented alternative. Use the filters to narrow by film, actor, brand, shape, colour, evidence level or price band." />
       <SunglassesFilters c={c} p={p} />
       <ModelResults c={c} p={p} basePath="/sunglasses" />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: c.screenModels.slice(0, 50).map((m, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE.url}/sunglasses/${m.slug}`, name: m.name })) }} />
     </Container>
   );
 }

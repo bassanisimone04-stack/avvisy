@@ -4,7 +4,7 @@ import { MATCH_HELP, MATCH_LABEL } from "@/lib/site";
 import { Breadcrumbs, Container, MatchBadge } from "@/components/ui";
 import type { MatchType } from "@/lib/types";
 
-export const metadata = buildMetadata({ title: "About & Methodology: How We Identify Movie Sunglasses", description: "Our evidence rules for labelling movie sunglasses, how we handle disputed sources, and how we make money.", path: "/about" });
+export const metadata = buildMetadata({ title: "About & Methodology", description: "How we identify movie sunglasses: our evidence rules, how we treat disputed sources and retailer blogs, and how the site makes money.", path: "/about" });
 
 export default function About() {
   return (

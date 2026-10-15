@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getCatalog } from "@/lib/catalog";
 import { SITE } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { movieSeo } from "@/lib/seo-copy";
 import { Breadcrumbs, Container, JsonLd, MatchBadge, PageHeader } from "@/components/ui";
 import { ArticleCard, Grid, ModelCard } from "@/components/cards";
 import { ViewBeacon } from "@/components/misc";
@@ -15,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const c = await getCatalog();
   const mv = c.movies.find((m) => m.slug === slug);
   if (!mv) return {};
-  const names = c.modelsForMovie(mv.id).map((m) => m.name).slice(0, 3).join(", ");
-  return buildMetadata({ title: `${mv.title} (${mv.year}) Sunglasses: Models Worn On Screen`, description: `Which sunglasses appear in ${mv.title}? ${names ? names + ". " : ""}Evidence-graded identification, sources and alternatives.`, path: `/movies/${mv.slug}` });
+  const seo = movieSeo(c, mv);
+  return buildMetadata({ title: seo.title, description: seo.description, path: `/movies/${mv.slug}`, absoluteTitle: true });
 }
 
 export default async function MoviePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -28,6 +29,7 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
   const models = c.modelsForMovie(mv.id);
   const cast = c.actorsForMovie(mv.id);
   const articles = c.articlesForMovie(mv.id);
+  const faq = movieSeo(c, mv).faq;
   return (
     <Container className="pt-10">
       <Breadcrumbs items={[{ name: "Movies", href: "/movies" }, { name: mv.title }]} />
@@ -50,6 +52,15 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
       </ul>
       {models.length > 0 && <><h2 className="font-display mt-16 text-4xl font-semibold">Models from {mv.title}</h2><div className="mt-6"><Grid>{models.map((m) => <ModelCard key={m.id} c={c} m={m} />)}</Grid></div></>}
       {articles.length > 0 && <><h2 className="font-display mt-16 text-4xl font-semibold">Guides</h2><div className="mt-6"><Grid>{articles.map((a) => <ArticleCard key={a.id} a={a} c={c} />)}</Grid></div></>}
+      {faq.length > 0 && (
+        <section aria-labelledby="faq" className="mt-16">
+          <h2 id="faq" className="font-display text-4xl font-semibold">Frequently asked questions</h2>
+          <div className="mt-5 divide-y divide-line rounded-2xl border border-line bg-white">
+            {faq.map((f) => <details key={f.q} className="p-5"><summary className="cursor-pointer font-medium">{f.q}</summary><p className="mt-3 leading-relaxed text-slate">{f.a}</p></details>)}
+          </div>
+          <JsonLd data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }} />
+        </section>
+      )}
       <JsonLd data={{ "@context": "https://schema.org", "@type": mv.kind === "series" ? "TVSeries" : "Movie", name: mv.title, datePublished: String(mv.year), genre: mv.genre, description: mv.synopsis, url: `${SITE.url}/movies/${mv.slug}`, actor: cast.map((a) => ({ "@type": "Person", name: a.name })) }} />
     </Container>
   );

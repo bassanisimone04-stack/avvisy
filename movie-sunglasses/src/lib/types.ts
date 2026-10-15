@@ -58,6 +58,8 @@ export interface Article {
 export interface Keyword {
   id: string; term: string; volume: number | null; difficulty: number | null;
   intent: string; cluster: string; source: string; articleId?: string;
+  /** Page this keyword is meant to rank for (one keyword → one URL avoids cannibalisation). */
+  targetUrl?: string;
 }
 export interface ClickEvent { id: string; at: string; merchantId: string; modelId: string; offerId?: string; src: string; kind: "offer" | "search" }
 export interface ViewCount { id: string; type: "model" | "article" | "movie"; refId: string; date: string; count: number }

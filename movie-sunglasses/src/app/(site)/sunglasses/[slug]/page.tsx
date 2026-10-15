@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getCatalog } from "@/lib/catalog";
 import { SITE, MATCH_HELP, PRICE_BAND_LABEL } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { modelSeo } from "@/lib/seo-copy";
 import { formatDate } from "@/lib/format";
 import { GlassesArt } from "@/components/glasses";
 import { Breadcrumbs, Container, JsonLd, MatchBadge, UnreviewedNotice, btn } from "@/components/ui";
@@ -19,12 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const c = await getCatalog();
   const m = c.models.find((x) => x.slug === slug);
   if (!m) return {};
-  const brand = c.brandById.get(m.brandId)?.name ?? "";
-  const films = [...new Set(c.appsForModel(m.id).map((a) => c.movieById.get(a.movieId)?.title))].filter(Boolean);
-  return buildMetadata({
-    title: `${m.name}${m.modelCode && !m.name.includes(m.modelCode) ? ` (${m.modelCode})` : ""}${films.length ? ` — Sunglasses from ${films[0]}` : ""}`,
-    description: `${m.description} Evidence, sources, price comparison and cheaper alternatives.`, path: `/sunglasses/${m.slug}`,
-  });
+  const seo = modelSeo(c, m);
+  return buildMetadata({ title: seo.title, description: seo.description, path: `/sunglasses/${m.slug}`, absoluteTitle: true });
 }
 
 export default async function ModelPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -33,6 +30,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
   const m = c.models.find((x) => x.slug === slug);
   if (!m) return notFoundOrRedirect(`/sunglasses/${slug}`);
   const brand = c.brandById.get(m.brandId);
+  const faq = modelSeo(c, m).faq;
   const apps = c.appsForModel(m.id);
   const alts = c.alternativesOf(m.id);
   const originals = c.originalsOf(m.id);
@@ -40,6 +38,16 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
   const { band, source } = c.priceBandOf(m);
   const articles = c.articlesForModel(m.id);
   const photos = c.approvedPhotos(m.id);
+  const related = (() => {
+    const seen = new Set([m.id, ...alts.map((x) => x.model.id)]);
+    const pool = [
+      ...apps.flatMap((a) => c.modelsForMovie(a.movieId)),
+      ...apps.flatMap((a) => c.modelsForActor(a.actorId)),
+      ...c.modelsForBrand(m.brandId),
+      ...c.models.filter((x) => x.shape === m.shape),
+    ];
+    return pool.filter((x) => (seen.has(x.id) ? false : (seen.add(x.id), true))).slice(0, 3);
+  })();
   const match = c.modelMatch(m.id);
   const bandGroups = (["under50", "under100", "under200", "over200"] as const)
     .map((b) => ({ b, items: alts.filter((x) => c.priceBandOf(x.model).band === b) })).filter((g) => g.items.length);
@@ -144,11 +152,26 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
         </section>
       )}
 
+      {related.length > 0 && (
+        <section aria-labelledby="more" className="mt-16">
+          <h2 id="more" className="font-display text-4xl font-semibold">More movie sunglasses</h2>
+          <div className="mt-6"><Grid>{related.map((x) => <ModelCard key={x.id} c={c} m={x} />)}</Grid></div>
+        </section>
+      )}
+
+      <section aria-labelledby="faq" className="mt-16">
+        <h2 id="faq" className="font-display text-4xl font-semibold">Frequently asked questions</h2>
+        <div className="mt-5 divide-y divide-line rounded-2xl border border-line bg-white">
+          {faq.map((f) => <details key={f.q} className="p-5"><summary className="cursor-pointer font-medium">{f.q}</summary><p className="mt-3 leading-relaxed text-slate">{f.a}</p></details>)}
+        </div>
+      </section>
+
       {articles.length > 0 && (
         <section aria-labelledby="rel" className="mt-16"><h2 id="rel" className="font-display text-4xl font-semibold">Related guides</h2>
           <div className="mt-6"><Grid>{articles.map((a) => <ArticleCard key={a.id} a={a} c={c} />)}</Grid></div></section>
       )}
 
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }} />
       <JsonLd data={{
         "@context": "https://schema.org", "@type": "Product", name: m.name, description: m.description,
         brand: brand ? { "@type": "Brand", name: brand.name } : undefined, mpn: m.modelCode, color: m.frameColor, url: `${SITE.url}/sunglasses/${m.slug}`,

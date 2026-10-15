@@ -7,7 +7,7 @@ import { GlassesArt } from "@/components/glasses";
 import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
 
 export const revalidate = 600;
-export const metadata: Metadata = buildMetadata({ title: "Sunglasses Styles: Aviator, Wayfarer, Cat-Eye & More", description: "Shop movie sunglasses by silhouette — aviator, wayfarer, cat-eye, rectangular, oval, vintage and futuristic.", path: "/styles" });
+export const metadata: Metadata = buildMetadata({ title: "Sunglasses Styles: Aviator, Wayfarer & More", description: "Shop movie sunglasses by silhouette: aviator, wayfarer, cat-eye, rectangular, oval, vintage and futuristic, with the films that made each famous.", path: "/styles" });
 
 export default async function StylesPage() {
   const c = await getCatalog();

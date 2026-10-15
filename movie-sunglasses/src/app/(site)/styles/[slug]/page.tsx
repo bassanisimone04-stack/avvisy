@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getCatalog } from "@/lib/catalog";
 import { STYLES } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { styleSeo } from "@/lib/seo-copy";
 import { Breadcrumbs, Container, PageHeader } from "@/components/ui";
 import { Grid, ModelCard } from "@/components/cards";
 
@@ -11,7 +12,9 @@ export function generateStaticParams() { return STYLES.map((s) => ({ slug: s.slu
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const s = STYLES.find((x) => x.slug === slug);
-  return s ? buildMetadata({ title: `${s.name} Sunglasses Worn in Movies`, description: `${s.blurb} Browse ${s.name.toLowerCase()} sunglasses seen on screen, with cheaper alternatives.`, path: `/styles/${s.slug}` }) : {};
+  if (!s) return {};
+  const seo = styleSeo(s.slug);
+  return buildMetadata({ title: seo.title, description: seo.description, path: `/styles/${s.slug}`, absoluteTitle: true });
 }
 
 export default async function StylePage({ params }: { params: Promise<{ slug: string }> }) {

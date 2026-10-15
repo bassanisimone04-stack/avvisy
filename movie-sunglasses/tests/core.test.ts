@@ -84,3 +84,39 @@ describe("session tokens", () => {
   it("rejects tampering", async () => { const t = await createSessionToken("a@b.c"); expect(await verifySessionToken(t.slice(0, -2) + "xx")).toBeNull(); });
   it("rejects garbage", async () => expect(await verifySessionToken("nope")).toBeNull());
 });
+
+import { fitTitle, modelSeo, movieSeo, actorSeo, brandSeo, styleSeo } from "../src/lib/seo-copy";
+import { keywordCandidates } from "../src/lib/keyword-candidates";
+import { auditSite } from "../src/lib/seo-audit";
+
+describe("seo copy", () => {
+  const c = buildCatalog(seed as never);
+  it("keeps every generated title within 60 characters and description within 155", () => {
+    const all = [
+      ...c.models.map((m) => modelSeo(c, m)), ...c.movies.map((m) => movieSeo(c, m)),
+      ...c.actors.filter((a) => c.modelsForActor(a.id).length).map((a) => actorSeo(c, a)), ...c.brands.map((b) => brandSeo(c, b)),
+      ...["aviator", "wayfarer", "cat-eye", "rectangular", "oval", "vintage", "futuristic"].map(styleSeo),
+    ];
+    for (const s of all) { expect(s.title.length, s.title).toBeLessThanOrEqual(60); expect(s.description.length, s.description).toBeLessThanOrEqual(155); }
+  });
+  it("generates unique titles for all model pages", () => {
+    const t = c.models.map((m) => modelSeo(c, m).title);
+    expect(new Set(t).size).toBe(t.length);
+  });
+  it("never leaks '(reported)' codes into titles", () => expect(c.models.every((m) => !modelSeo(c, m).title.includes("reported"))).toBe(true));
+  it("fitTitle trims on a word boundary", () => expect(fitTitle("A ".repeat(40)).length).toBeLessThanOrEqual(60));
+  it("FAQ answers for unconfirmed identifications never state certainty", () => {
+    const faq = modelSeo(c, c.modelById.get("st-dupont-d002-6051")!).faq;
+    expect(faq[0].a).toMatch(/Unconfirmed/);
+  });
+  it("candidate keywords carry no volume and map to a page", () => {
+    const k = keywordCandidates(c);
+    expect(k.length).toBeGreaterThan(80);
+    expect(k.every((x) => x.volume === null && !!x.targetUrl)).toBe(true);
+    expect(new Set(k.map((x) => x.id)).size).toBe(k.length);
+  });
+  it("audit finds no over-long titles in generated pages", () => {
+    const a = auditSite(c, []);
+    expect(a.rows.filter((r) => r.kind !== "Articolo").every((r) => !r.issues.some((i) => i.startsWith("title di")))).toBe(true);
+  });
+});
