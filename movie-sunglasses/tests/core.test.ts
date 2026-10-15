@@ -261,3 +261,14 @@ describe("photo rights", () => {
     expect(c.photosForMovie("top-gun").map((p) => p.id)).toEqual(["p3"]);
   });
 });
+
+describe("fair use photos", () => {
+  const f = { url: "https://cdn.example.com/s.jpg", alt: "Maverick on the flight deck at sunset", credit: "Paramount Pictures", license: "fair_use", approved: true, kind: "scene" as const, movieId: "top-gun", sourceUrl: "https://studio.example.com/press/still", rightsNote: "Reduced still shown beside our evidence analysis of the sunglasses; credited to the studio." };
+  it("accepts a documented, hosted scene still", () => expect(validatePhoto(f, { ownHost: "cdn.example.com" })).toBeNull());
+  it("requires a written rationale and a source page", () => {
+    expect(validatePhoto({ ...f, rightsNote: "short" })).toMatch(/motivazione/);
+    expect(validatePhoto({ ...f, sourceUrl: undefined })).toMatch(/origine/);
+  });
+  it("is limited to scene stills, never product shots", () => expect(validatePhoto({ ...f, kind: "product", modelId: "persol-649" })).toMatch(/solo per fotogrammi/));
+  it("refuses hotlinks when an own storage host is configured", () => expect(validatePhoto({ ...f, url: "https://other-site.com/s.jpg" }, { ownHost: "cdn.example.com" })).toMatch(/hotlink/));
+});

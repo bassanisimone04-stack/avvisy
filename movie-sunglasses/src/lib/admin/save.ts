@@ -129,7 +129,7 @@ async function validateAndFinalize(cfg: EntityConfig, d: Row, existing?: Row): P
       if (d.price == null && d.availability !== "unknown") d.availability = "unknown";
       break;
     }
-    case "photos": { const err = validatePhoto(d as never); if (err) return err; break; }
+    case "photos": { let ownHost: string | undefined; try { ownHost = process.env.SUPABASE_URL ? new URL(process.env.SUPABASE_URL).host : undefined; } catch { /* ignore */ } const err = validatePhoto(d as never, { ownHost }); if (err) return err; break; }
     case "evidence": d.checkedAt = d.checkedAt ?? today; d.stance = d.stance ?? "supports"; break;
     case "merchants":
       if (d.affiliateParams && !/^[A-Za-z0-9_.=&%~-]*$/.test(String(d.affiliateParams))) return "I parametri affiliato contengono caratteri non ammessi.";

@@ -31,3 +31,25 @@ Per questo le pagine usano illustrazioni generate (dichiarate come tali) finché
 - Una foto non approvata non appare mai sul sito. Il credito e il tipo di licenza compaiono sotto ogni immagine.
 
 Sul database la stessa regola è imposta da un vincolo (`photos`: non si può approvare senza prova dei diritti, tranne per gli scatti propri).
+
+## Se scegli comunque di usare fotogrammi ("fair use dichiarato")
+
+È una scelta tua e il rischio è tuo. Il sito la rende possibile con questi paletti, pensati per ridurre il rischio e permetterti di reagire in fretta:
+
+- **Tipo di licenza "Fair use dichiarato (NON è una licenza)".** Vale solo per immagini di tipo *Scena* (mai foto prodotto).
+- **Motivazione scritta obbligatoria** (almeno 40 caratteri): perché l'uso è commento/identificazione e come lo limiti.
+- **Pagina di origine obbligatoria** e **credito** a chi detiene i diritti (lo studio). Sotto l'immagine compaiono "Still © …", il link alla fonte e la pagina `/copyright`.
+- **Ospita tu l'immagine.** Con Supabase configurato, un'immagine in fair use deve stare sul tuo storage: il sito rifiuta il collegamento diretto (hotlink) a siti altrui.
+- **Pagina /copyright** con la procedura di segnalazione (modello da far rivedere). Compila i dati dell'agente designato.
+- **Interruttore di emergenza:** nella dashboard compare un avviso con il numero di foto in fair use e il pulsante **"Ritira tutte subito"**, che le toglie dal sito senza cancellarle.
+
+Buone pratiche che aiutano, ma non garantiscono nulla:
+
+- immagini piccole (es. 1280 px sul lato lungo), una o due per scheda, mai come sfondo o decorazione;
+- l'immagine sta accanto a un'analisi originale (prove, fonti, grado di identificazione): è ciò che rende l'uso "commento";
+- non usare immagini ad alta risoluzione ritagliate da trailer/materiali coperti da accordi particolari;
+- rispondi subito a ogni richiesta di rimozione e conserva la corrispondenza;
+- negli USA, per la tutela prevista dal DMCA (safe harbor) serve registrare un **agente designato** presso il Copyright Office (comporta una piccola tassa) e rispettare la procedura di notifica e rimozione;
+- fai valutare il caso a un legale: pubblicità e link affiliati rendono l'uso più "commerciale" e indeboliscono l'argomento.
+
+Alternative più sicure per le scene: link o incorporamento del trailer ufficiale, oppure immagini del presskit con termini che le consentono.

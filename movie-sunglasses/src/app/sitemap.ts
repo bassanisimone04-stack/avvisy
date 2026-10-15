@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const c = await getCatalog();
   const u = (p: string) => SITE.url + p;
   const latest = (d: string) => new Date(d.length === 10 ? d + "T12:00:00Z" : d);
-  const statics = ["/", "/movies", "/actors", "/sunglasses", "/brands", "/styles", "/affordable-alternatives", "/vintage", "/blog", "/about", "/contact", "/privacy-policy", "/cookie-policy", "/terms", "/affiliate-disclosure"];
+  const statics = ["/", "/movies", "/actors", "/sunglasses", "/brands", "/styles", "/affordable-alternatives", "/vintage", "/blog", "/about", "/contact", "/privacy-policy", "/cookie-policy", "/terms", "/affiliate-disclosure", "/copyright"];
   return [
     ...statics.map((p) => ({ url: u(p), changeFrequency: "weekly" as const, priority: p === "/" ? 1 : 0.7 })),
     ...c.movies.map((m) => ({ url: u(`/movies/${m.slug}`), changeFrequency: "monthly" as const, priority: 0.7 })),

@@ -17,7 +17,7 @@ cd movie-sunglasses
 npm install
 cp .env.example .env.local   # poi imposta almeno: SESSION_SECRET (npm run admin:secret), ADMIN_EMAIL e, solo in sviluppo, ADMIN_PASSWORD
 npm run dev          # http://localhost:3000
-npm test             # 56 test (prove, auth, CSV, claims, integrità del seed, titoli/description SEO)
+npm test             # 73 test (prove, auth, CSV, claims, integrità del seed, titoli/description SEO)
 npm run build && npm start
 ```
 
@@ -52,7 +52,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 | Bozze AI | `AI_API_KEY` (+ `AI_PROVIDER=anthropic|openai`, `AI_MODEL`, `AI_BASE_URL`). Chiamata implementata, mai eseguita qui (nessuna chiave) |
 | Prezzi reali | Programmi affiliati approvati (eBay Partner Network, Ray-Ban/altri via rete): inserisci offerte in Admin → Offerte, oppure **importa un CSV/feed** in Admin → Importa offerte (verifica a secco, tutto o niente, https e USD obbligatori). Il collegamento automatico a API/feed in tempo reale **non è implementato** |
 | Analytics | `NEXT_PUBLIC_GA_ID` (caricato solo dopo consenso) |
-| Foto autorizzate | File su Supabase Storage + record in Admin → Fotografie. Il sito le mostra (card, scheda, film, articolo) **solo se approvate con prova dei diritti**: vedi `docs/PHOTOS.md` per le strade possibili e i rischi dei fotogrammi. Nessuna foto di film è inclusa |
+| Foto autorizzate | File su Supabase Storage + record in Admin → Fotografie. Il sito le mostra (card, scheda, film, articolo) **solo se approvate con prova dei diritti**: vedi `docs/PHOTOS.md` per le strade possibili e i rischi dei fotogrammi. Nessuna foto di film è inclusa. È disponibile anche il **«fair use dichiarato»** (solo scene, con motivazione scritta, fonte, credito, pagina `/copyright` e interruttore «Ritira tutte subito»): non è una licenza e il rischio resta tuo |
 | Volumi SEO | Export CSV da Semrush/Ahrefs/Keyword Planner → Admin → Keyword & cluster |
 
 ### ⏳ Non implementato (onestamente)
@@ -171,7 +171,7 @@ Nota: con Supabase le pagine pubbliche sono ISR (5–10 minuti) e si rigenerano 
 ## 9. Verifiche eseguite
 
 - `npm run build` (produzione) senza errori; `tsc --noEmit` pulito.
-- `npm test`: 56 test — regole delle prove, integrità referenziale del seed, nessun prezzo inventato, ricerca, parser CSV, clustering, controllo affermazioni, link interni, token di sessione.
+- `npm test`: 73 test — regole delle prove, integrità referenziale del seed, nessun prezzo inventato, ricerca, parser CSV, clustering, controllo affermazioni, link interni, token di sessione.
 - Test end-to-end con Chromium su build di produzione: autocomplete con tastiera, filtri/canonical/noindex, comparatore con offerta reale + JSON-LD `AggregateOffer`, redirect `/go` (e rifiuto di destinazioni arbitrarie), login corretto/errato e attributi del cookie, rifiuto URL non-https, blocco pubblicazione senza revisione, redirect automatico al cambio slug, blocco eliminazione di record in uso, import CSV + cluster, statistiche reali/stimate, pannello AI disattivato senza chiave.
 - Lighthouse (mobile, throttling simulato, build locale): Accessibility 100, Best Practices 100, SEO 100, Performance 87–98 a seconda della pagina e della corsa, CLS 0. L'LCP *misurato* in locale è ~0,2 s; i 2,5–3,5 s del punteggio sono la simulazione di rete lenta. Va ripetuto sul dominio reale (PageSpeed/CrUX).
 - Suite e2e nel repo: `tests/e2e` (vedi il README lì).

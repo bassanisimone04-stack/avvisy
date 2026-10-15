@@ -190,3 +190,12 @@ export async function importOffersAction(_: OfferImportState, form: FormData): P
   refresh();
   return { done: true, saved: res.offers.length, rows: res.rows, errors: [], dryRun: false };
 }
+
+/** Emergency switch: takes every "fair use" photo offline at once (after a complaint, or to review with a lawyer). Records stay in the database. */
+export async function withdrawFairUseAction() {
+  await requireAdmin();
+  const photos = (await listAll("photos")).filter((p) => p.license === "fair_use" && p.approved);
+  await upsertMany("photos", photos.map((p) => ({ ...p, approved: false })));
+  refresh();
+  redirect(`/admin?ok=${encodeURIComponent(`${photos.length} foto in fair use ritirate dal sito.`)}`);
+}

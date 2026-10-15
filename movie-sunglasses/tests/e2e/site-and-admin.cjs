@@ -114,6 +114,16 @@ const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); if (!c) fails++
   await p.goto(B + "/movies/top-gun"); ok((await p.locator('figure img[alt="Maverick on the flight deck at sunset"]').count()) > 0 && (await p.locator('figure a[href*="commons.wikimedia.org"]').count()) > 0, "scene photo shows on the film page with rights link");
   await p.goto(B + "/sunglasses/ray-ban-predator-2-rb2027"); ok((await p.locator('img[alt="Draft photo that must stay hidden"]').count()) === 0, "unapproved photo never shows");
 
+  // fair use: guardrails + emergency switch
+  const fu = async (f) => { await p.goto(B + "/admin/photos/new"); await p.fill("#f-url", f.url); await p.fill("#f-alt", "Maverick on the flight deck at sunset"); await p.selectOption("#f-kind", "scene"); await p.fill("#f-credit", "Studio Pictures"); await p.selectOption("#f-license", "fair_use"); if (f.note) await p.fill("#f-rightsNote", f.note); if (f.source) await p.fill("#f-sourceUrl", f.source); await p.selectOption("#f-movieId", "top-gun-maverick"); await p.check("input[name=approved]"); await p.click('button:has-text("Crea")'); };
+  await fu({ url: "https://img.example.com/fu.jpg" }); await p.waitForSelector("[role=alert]:has-text('motivazione')"); ok(true, "fair use without rationale is rejected");
+  await fu({ url: "https://img.example.com/fu.jpg", note: "Reduced still shown beside our evidence analysis of the sunglasses; credited to the studio.", source: "https://studio.example.com/press/still" }); await p.waitForURL(/saved=1/);
+  await p.goto(B + "/movies/top-gun-maverick"); ok((await p.locator("figcaption:has-text('Still ©')").count()) > 0 && (await p.locator('figcaption a[href="/copyright"]').count()) > 0, "fair use still shows credit, source and copyright notice");
+  await p.goto(B + "/admin"); ok((await p.locator("text=foto pubblicate in «fair use dichiarato»").count()) > 0, "dashboard warns about fair use photos");
+  await p.click('button:has-text("Ritira tutte subito")'); await p.waitForSelector("text=foto in fair use ritirate");
+  await p.goto(B + "/movies/top-gun-maverick"); ok((await p.locator("figcaption:has-text('Still ©')").count()) === 0, "withdraw-all takes fair use photos offline");
+  await p.goto(B + "/copyright"); ok((await p.locator("h1:has-text('Copyright Notice')").count()) > 0, "copyright notice page exists");
+
   // keywords
   await p.goto(B + "/admin/keywords");
   await p.fill("#csv", "Keyword,Volume,KD\nmatrix sunglasses,1200,30\nneo matrix sunglasses,300,20\nwhere to buy blinde matrix,,\n");

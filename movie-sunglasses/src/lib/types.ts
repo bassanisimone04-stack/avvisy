@@ -66,11 +66,13 @@ export interface ViewCount { id: string; type: "model" | "article" | "movie"; re
 export interface RevenueEntry { id: string; merchantId: string; periodStart: string; periodEnd: string; amount: number; kind: "reported" | "estimated"; note: string }
 export interface Redirect { id: string; from: string; to: string; permanent: boolean }
 export interface ContactMessage { id: string; at: string; name: string; email: string; subject: string; body: string; handled: boolean }
-export type PhotoLicense = "owned" | "licensed" | "press" | "cc" | "public_domain" | "affiliate_feed";
+export type PhotoLicense = "owned" | "licensed" | "press" | "cc" | "public_domain" | "affiliate_feed" | "fair_use";
 export interface Photo {
   id: string; url: string; alt: string; credit: string;
   /** How the right to publish was obtained. Anything other than "owned" needs proof (licenseUrl) before approval. */
   license: PhotoLicense | string; licenseUrl?: string; sourceUrl?: string;
+  /** For "fair_use": the written rationale (why this use is commentary/identification). Not a licence: the claim can be challenged. */
+  rightsNote?: string;
   /** "product" = packshot used on cards and as the main image; "scene" = still or on-set photo shown with the film/guide. */
   kind?: "product" | "scene";
   modelId?: string; movieId?: string; articleId?: string; approved: boolean;
