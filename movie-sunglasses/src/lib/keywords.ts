@@ -1,4 +1,4 @@
-import { normalize, slugify } from "./format";
+import { normalize, parseNumber, slugify } from "./format";
 import type { Keyword } from "./types";
 
 /** RFC-4180-ish CSV parser (quotes, escaped quotes, CRLF, ; or , or tab delimiter). */
@@ -26,7 +26,7 @@ const HEAD = {
   difficulty: ["difficulty", "kd", "keyword difficulty", "kd %", "difficolta"],
   intent: ["intent", "search intent", "intento"],
 };
-const num = (s: string | undefined) => { const n = parseFloat((s ?? "").replace(/[^\d.]/g, "")); return Number.isFinite(n) && (s ?? "").trim() !== "" ? n : null; };
+const num = (s: string | undefined) => parseNumber(s);
 
 export function keywordsFromCsv(text: string, source: string): { items: Keyword[]; skipped: number } {
   const rows = parseCsv(text);

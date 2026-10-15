@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { SearchBox } from "./search-box";
-import { consumePending } from "@/lib/client-store";
+import { markMounted } from "@/lib/client-store";
 
 /** Global search overlay: press "/" or Ctrl/⌘+K anywhere. */
 export function CommandPalette() {
@@ -23,8 +23,9 @@ export function CommandPalette() {
     const onOpen = () => { returnTo.current = document.activeElement as HTMLElement | null; setOpen(true); };
     window.addEventListener("keydown", onKey);
     window.addEventListener("ss-open-search", onOpen);
-    if (consumePending("ss-open-search")) onOpen();
-    return () => { window.removeEventListener("keydown", onKey); window.removeEventListener("ss-open-search", onOpen); };
+    const m = markMounted("ss-open-search");
+    if (m.parked) onOpen();
+    return () => { m.unmount(); window.removeEventListener("keydown", onKey); window.removeEventListener("ss-open-search", onOpen); };
   }, []);
   useEffect(() => {
     if (!open) { returnTo.current?.focus?.(); return; }

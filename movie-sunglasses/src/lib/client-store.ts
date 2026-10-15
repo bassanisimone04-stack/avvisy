@@ -44,6 +44,16 @@ export function toggleId(key: string, id: string, max = 50): "added" | "removed"
 }
 
 /** Events fired before a lazily loaded component mounted are parked here and consumed on mount. */
-type PendingWindow = Window & { __ssPending?: Set<string> };
-export function parkEvent(name: string) { const w = window as PendingWindow; (w.__ssPending ??= new Set()).add(name); }
-export function consumePending(name: string): boolean { const w = window as PendingWindow; return !!w.__ssPending?.delete(name); }
+type PendingWindow = Window & { __ssPending?: Set<string>; __ssMounted?: Set<string> };
+export function parkEvent(name: string) {
+  const w = window as PendingWindow;
+  if (w.__ssMounted?.has(name)) return; // the component is already listening itself
+  (w.__ssPending ??= new Set()).add(name);
+}
+/** Called by a lazy component when it starts listening; returns the cleanup. Also drains a parked request. */
+export function markMounted(name: string): { parked: boolean; unmount: () => void } {
+  const w = window as PendingWindow;
+  (w.__ssMounted ??= new Set()).add(name);
+  const parked = !!w.__ssPending?.delete(name);
+  return { parked, unmount: () => { w.__ssMounted?.delete(name); } };
+}

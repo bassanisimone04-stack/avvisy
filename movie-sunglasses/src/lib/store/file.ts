@@ -46,3 +46,25 @@ export function fileWrite<K extends CollectionName>(name: K, rows: Collections[K
 export function fileVersion(): string {
   try { return String(fs.statSync(FILE).mtimeMs); } catch { return "seed"; }
 }
+
+/** Read-modify-write inside the write queue, so concurrent upserts to one collection can never drop each other's rows. */
+export function fileUpdate<K extends CollectionName>(name: K, mutate: (rows: Collections[K][]) => Collections[K][]): Promise<void> {
+  const run = async () => {
+    const o = readOverlay();
+    const current = ((o[name] ?? seed[name]) as Collections[K][]).slice();
+    const next = mutate(current);
+    const merged = { ...o, [name]: next } as Overlay;
+    try {
+      fs.mkdirSync(path.dirname(FILE), { recursive: true });
+      const tmp = FILE + ".tmp";
+      fs.writeFileSync(tmp, JSON.stringify(merged, null, 2));
+      fs.renameSync(tmp, FILE);
+      cache = null;
+    } catch (e) {
+      throw new Error("Impossibile scrivere sul file system (ambiente in sola lettura?). Configura Supabase per la persistenza in produzione. " + (e as Error).message);
+    }
+  };
+  const p = queue.then(run, run);
+  queue = p.catch(() => undefined);
+  return p;
+}

@@ -1,5 +1,5 @@
 import type { CollectionName, Collections } from "../types";
-import { fileList, fileVersion, fileWrite } from "./file";
+import { fileList, fileUpdate, fileVersion } from "./file";
 import { sbList, sbRemove, sbUpsert } from "./supabase";
 
 export const usingSupabase = () => Boolean(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
@@ -29,10 +29,7 @@ export async function upsert<K extends CollectionName>(name: K, row: Collections
     memo.delete(name); epoch++;
     return;
   }
-  const rows = [...(await fileList(name))];
-  const i = rows.findIndex((r) => (r as { id: string }).id === (row as { id: string }).id);
-  if (i >= 0) rows[i] = row; else rows.push(row);
-  await fileWrite(name, rows);
+  await fileUpdate(name, (rows) => { const i = rows.findIndex((r) => (r as { id: string }).id === (row as { id: string }).id); if (i >= 0) rows[i] = row; else rows.push(row); return rows; });
 }
 
 export async function remove(name: CollectionName, id: string): Promise<void> {
@@ -41,8 +38,7 @@ export async function remove(name: CollectionName, id: string): Promise<void> {
     memo.delete(name); epoch++;
     return;
   }
-  const rows = (await fileList(name)).filter((r) => (r as { id: string }).id !== id);
-  await fileWrite(name, rows as never);
+  await fileUpdate(name, (rows) => rows.filter((r) => (r as { id: string }).id !== id));
 }
 
 export async function upsertMany<K extends CollectionName>(name: K, items: Collections[K][]): Promise<void> {
@@ -51,10 +47,8 @@ export async function upsertMany<K extends CollectionName>(name: K, items: Colle
     memo.delete(name); epoch++;
     return;
   }
-  const rows = [...(await fileList(name))];
-  for (const row of items) {
-    const i = rows.findIndex((r) => (r as { id: string }).id === (row as { id: string }).id);
-    if (i >= 0) rows[i] = row; else rows.push(row);
-  }
-  await fileWrite(name, rows);
+  await fileUpdate(name, (rows) => {
+    for (const row of items) { const i = rows.findIndex((r) => (r as { id: string }).id === (row as { id: string }).id); if (i >= 0) rows[i] = row; else rows.push(row); }
+    return rows;
+  });
 }

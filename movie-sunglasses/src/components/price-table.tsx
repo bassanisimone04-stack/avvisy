@@ -13,7 +13,7 @@ export function PriceTable({ c, m, src }: { c: Catalog; m: SunglassesModel; src:
     <section aria-labelledby="deals" className="rounded-2xl border border-line bg-white p-6 sm:p-8">
       <h2 id="deals" className="font-display text-3xl font-semibold">Compare prices</h2>
       {offers.length > 0 ? (
-        <div className="mt-5 overflow-x-auto">
+        <div className="relative mt-5 overflow-x-auto">
           <table className="w-full min-w-[620px] text-left text-sm">
             <caption className="sr-only">Offers for {m.name}</caption>
             <thead><tr className="border-b border-line text-xs uppercase tracking-widest text-mist">

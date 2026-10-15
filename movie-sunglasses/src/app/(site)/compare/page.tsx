@@ -26,7 +26,7 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
         <CompareFromStorage />
       ) : (
         <>
-          <div className="overflow-x-auto rounded-2xl border border-line bg-white">
+          <div className="relative overflow-x-auto rounded-2xl border border-line bg-white">
             <table className="w-full min-w-[640px] table-fixed text-left text-sm">
               <caption className="sr-only">Comparison of {models.map((m) => m.name).join(", ")}</caption>
               <thead>

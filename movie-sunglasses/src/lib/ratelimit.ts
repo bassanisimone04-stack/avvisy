@@ -9,8 +9,16 @@ export function rateLimit(key: string, max: number, windowMs: number): boolean {
   if (buckets.size > 5000) for (const [k, v] of buckets) if (!v.some((t) => now - t < windowMs)) buckets.delete(k);
   return true;
 }
+/**
+ * Client address for rate limiting. The FIRST X-Forwarded-For entry is client-controlled (spoofable), so it is never used:
+ * prefer headers set by the platform, else the LAST entry (appended by the nearest proxy).
+ */
 export function clientIp(headers: Headers): string {
-  return headers.get("x-forwarded-for")?.split(",")[0]?.trim() || headers.get("x-real-ip") || "unknown";
+  const platform = headers.get("x-vercel-forwarded-for") || headers.get("x-real-ip");
+  if (platform) return platform.split(",")[0].trim();
+  const xff = headers.get("x-forwarded-for");
+  if (xff) return xff.split(",").map((x) => x.trim()).filter(Boolean).pop() ?? "unknown";
+  return "unknown";
 }
 
 /** Non-recording check + explicit recording, for limits that should only count failures (e.g. logins). */

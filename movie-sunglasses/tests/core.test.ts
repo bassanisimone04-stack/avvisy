@@ -160,3 +160,18 @@ describe("offers CSV import", () => {
   it("requires the key columns", () => expect(offersFromCsv("price\n5\n", models, merchants).errors[0].message).toMatch(/obbligatoria/));
   it("reimport of the same model+merchant keeps one offer", () => expect(offersFromCsv(head + "persol-649,ebay,10,in stock,,https://x.com/1,\npersol-649,ebay,12,in stock,,https://x.com/2,\n", models, merchants).offers.length).toBe(1));
 });
+
+import { parseNumber } from "../src/lib/format";
+describe("number parsing", () => {
+  it.each([["1,300", 1300], ["1.300", 1300], ["1.149,50", 1149.5], ["$1,149.50", 1149.5], ["12,5", 12.5], ["12.5", 12.5], ["-5", -5], ["99", 99], ["1,234,567", 1234567]])("%s -> %d", (i, n) => expect(parseNumber(i)).toBe(n));
+  it.each(["", "abc", "-"])("%s -> null", (i) => expect(parseNumber(i)).toBeNull());
+  it("keeps EU thousands in keyword CSV", () => expect(keywordsFromCsv("Keyword;Volume\nfoo bar;1.300\n", "t").items[0].volume).toBe(1300));
+});
+
+import { clientIp, isBlocked, recordHit } from "../src/lib/ratelimit";
+describe("rate limiting", () => {
+  const h = (o: Record<string, string>) => new Headers(o);
+  it("ignores a spoofed first X-Forwarded-For entry", () => expect(clientIp(h({ "x-forwarded-for": "6.6.6.6, 203.0.113.9" }))).toBe("203.0.113.9"));
+  it("prefers platform headers", () => { expect(clientIp(h({ "x-vercel-forwarded-for": "198.51.100.4", "x-forwarded-for": "6.6.6.6" }))).toBe("198.51.100.4"); expect(clientIp(h({ "x-real-ip": "198.51.100.5" }))).toBe("198.51.100.5"); });
+  it("blocks only after the limit of recorded failures", () => { for (let i = 0; i < 3; i++) { expect(isBlocked("t:1", 3, 1000)).toBe(false); recordHit("t:1"); } expect(isBlocked("t:1", 3, 1000)).toBe(true); });
+});

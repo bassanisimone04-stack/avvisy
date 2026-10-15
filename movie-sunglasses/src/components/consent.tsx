@@ -1,7 +1,7 @@
 "use client";
 import Script from "next/script";
 import { useEffect, useState } from "react";
-import { consumePending } from "@/lib/client-store";
+import { markMounted } from "@/lib/client-store";
 
 const KEY = "ss-consent";
 type State = "granted" | "denied" | null;
@@ -16,8 +16,9 @@ export function ConsentManager() {
     setState(read()); setReady(true);
     const open = () => setForceOpen(true);
     window.addEventListener("ss-open-consent", open);
-    if (consumePending("ss-open-consent")) setForceOpen(true);
-    return () => window.removeEventListener("ss-open-consent", open);
+    const m = markMounted("ss-open-consent");
+    if (m.parked) setForceOpen(true);
+    return () => { m.unmount(); window.removeEventListener("ss-open-consent", open); };
   }, []);
   const choose = (v: "granted" | "denied") => { try { localStorage.setItem(KEY, v); } catch { /* storage blocked */ } setState(v); setForceOpen(false); };
   const show = ready && (state === null || forceOpen);

@@ -1,4 +1,4 @@
-import { normalize } from "./format";
+import { normalize, parseNumber } from "./format";
 import { parseCsv } from "./keywords";
 import type { AffiliateOffer, Availability, Merchant, SunglassesModel } from "./types";
 
@@ -52,7 +52,7 @@ export function offersFromCsv(text: string, models: SunglassesModel[], merchants
     if (!ok) return fail("L'URL deve essere un indirizzo https valido.");
     const rawPrice = cell("price");
     let price: number | null = null;
-    if (rawPrice) { price = Number(rawPrice.replace(/[^0-9.,-]/g, "").replace(/,(?=\d{3}\b)/g, "").replace(",", ".")); if (!Number.isFinite(price) || price < 0) return fail(`Prezzo non valido: «${rawPrice}».`); }
+    if (rawPrice) { price = parseNumber(rawPrice); if (price == null || price < 0) return fail(`Prezzo non valido: «${rawPrice}».`); }
     const currency = (cell("currency") || "USD").toUpperCase();
     if (currency !== "USD") return fail(`Valuta non supportata (${currency}): il sito mostra solo USD.`);
     const availability = AVAIL[normalize(cell("availability")).replace(/ /g, " ")] ?? null;
