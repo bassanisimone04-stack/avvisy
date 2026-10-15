@@ -11,7 +11,7 @@
     "admin:hash": "node scripts/hash-password.mjs",
     "admin:secret": "node -e \"console.log(require('crypto').randomBytes(32).toString('hex'))\"",
     "db:seed": "tsx --tsconfig tsconfig.json --env-file=.env.local scripts/seed-supabase.ts",
-    "e2e": "node tests/e2e/site-and-admin.cjs && node tests/e2e/interactions.cjs"
+    "e2e": "node tests/e2e/site-and-admin.cjs && node tests/e2e/interactions.cjs && node tests/e2e/lazy-extras.cjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",

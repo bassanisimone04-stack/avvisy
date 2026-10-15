@@ -18,13 +18,25 @@ export const colorGroup = (frame: string) => {
 const BAND_RANK = { under50: 0, under100: 1, under200: 2, over200: 3 } as const;
 export const PAGE_SIZE = 12;
 
+const hayCache = new WeakMap<Catalog, Map<string, string>>();
+function haystack(c: Catalog, m: SunglassesModel): string {
+  let cache = hayCache.get(c);
+  if (!cache) { cache = new Map(); hayCache.set(c, cache); }
+  let h = cache.get(m.id);
+  if (h === undefined) {
+    h = normalize(`${m.name} ${c.brandById.get(m.brandId)?.name} ${m.modelCode ?? ""} ${c.appsForModel(m.id).map((a) => `${c.movieById.get(a.movieId)?.title} ${c.actorById.get(a.actorId)?.name} ${c.charById.get(a.characterId)?.name}`).join(" ")}`);
+    cache.set(m.id, h);
+  }
+  return h;
+}
+
 export function filterModels(c: Catalog, p: Params, base: SunglassesModel[] = c.models) {
   const q = normalize(one(p.q) ?? "");
   const movie = one(p.movie), actor = one(p.actor), brand = one(p.brand), shape = one(p.shape), color = one(p.color);
   const status = one(p.status), match = one(p.match), budget = one(p.budget), kind = one(p.kind);
   let rows = base.filter((m) => {
     if (q) {
-      const hay = normalize(`${m.name} ${c.brandById.get(m.brandId)?.name} ${m.modelCode ?? ""} ${c.appsForModel(m.id).map((a) => `${c.movieById.get(a.movieId)?.title} ${c.actorById.get(a.actorId)?.name} ${c.charById.get(a.characterId)?.name}`).join(" ")}`);
+      const hay = haystack(c, m);
       if (!q.split(" ").every((w) => hay.includes(w))) return false;
     }
     if (movie && !c.appsForModel(m.id).some((a) => a.movieId === movie)) return false;

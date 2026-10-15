@@ -16,13 +16,13 @@ export function Footer() {
         <div>
           <p className="eyebrow mb-4">Explore</p>
           <ul className="space-y-2 text-sm">
-            {[["/movies", "Movies & TV"], ["/actors", "Actors"], ["/sunglasses", "All sunglasses"], ["/brands", "Brands"], ["/styles", "Styles"], ["/affordable-alternatives", "Affordable alternatives"], ["/vintage", "Vintage & rare"], ["/blog", "Guides"]].map(([h, l]) => <li key={h}><Link className="hover:text-white hover:underline" href={h}>{l}</Link></li>)}
+            {[["/movies", "Movies & TV"], ["/actors", "Actors"], ["/sunglasses", "All sunglasses"], ["/brands", "Brands"], ["/styles", "Styles"], ["/affordable-alternatives", "Affordable alternatives"], ["/vintage", "Vintage & rare"], ["/blog", "Guides"]].map(([h, l]) => <li key={h}><Link prefetch={false} className="hover:text-white hover:underline" href={h}>{l}</Link></li>)}
           </ul>
         </div>
         <div>
           <p className="eyebrow mb-4">Company</p>
           <ul className="space-y-2 text-sm">
-            {[["/about", "About & methodology"], ["/contact", "Contact"], ["/privacy-policy", "Privacy Policy"], ["/cookie-policy", "Cookie Policy"], ["/terms", "Terms of Use"], ["/affiliate-disclosure", "Affiliate Disclosure"]].map(([h, l]) => <li key={h}><Link className="hover:text-white hover:underline" href={h}>{l}</Link></li>)}
+            {[["/about", "About & methodology"], ["/contact", "Contact"], ["/privacy-policy", "Privacy Policy"], ["/cookie-policy", "Cookie Policy"], ["/terms", "Terms of Use"], ["/affiliate-disclosure", "Affiliate Disclosure"]].map(([h, l]) => <li key={h}><Link prefetch={false} className="hover:text-white hover:underline" href={h}>{l}</Link></li>)}
             <li><ManageCookiesButton /></li>
           </ul>
         </div>

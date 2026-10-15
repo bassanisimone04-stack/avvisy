@@ -42,3 +42,7 @@ export function fileWrite<K extends CollectionName>(name: K, rows: Collections[K
   queue = p.catch(() => undefined);
   return p;
 }
+
+export function fileVersion(): string {
+  try { return String(fs.statSync(FILE).mtimeMs); } catch { return "seed"; }
+}

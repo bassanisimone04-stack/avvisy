@@ -42,3 +42,8 @@ export function toggleId(key: string, id: string, max = 50): "added" | "removed"
   writeList(key, [...cur, id]);
   return "added";
 }
+
+/** Events fired before a lazily loaded component mounted are parked here and consumed on mount. */
+type PendingWindow = Window & { __ssPending?: Set<string> };
+export function parkEvent(name: string) { const w = window as PendingWindow; (w.__ssPending ??= new Set()).add(name); }
+export function consumePending(name: string): boolean { const w = window as PendingWindow; return !!w.__ssPending?.delete(name); }

@@ -5,7 +5,6 @@ import { SITE } from "@/lib/site";
 
 const display = localFont({
   src: [
-    { path: "../../node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-normal.woff2", weight: "500", style: "normal" },
     { path: "../../node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-600-normal.woff2", weight: "600", style: "normal" },
     { path: "../../node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-italic.woff2", weight: "500", style: "italic" },
   ],
@@ -13,7 +12,7 @@ const display = localFont({
 });
 const sans = localFont({
   src: "../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
-  variable: "--font-inter", weight: "100 900", display: "swap", adjustFontFallback: "Arial",
+  variable: "--font-inter", weight: "100 900", display: "swap", adjustFontFallback: "Arial", preload: false,
 });
 
 export const metadata: Metadata = {

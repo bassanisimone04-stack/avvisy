@@ -41,6 +41,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 | Admin | Login sicuro, CRUD per 16 entità, controllo integrità (riferimenti, URL https, slug unici, redirect 301 automatico al cambio slug, blocco eliminazione se in uso), statistiche con ricavi **reali** e **stimati** separati |
 | Editoriale | Import CSV keyword (Semrush/Ahrefs/Keyword Planner), raggruppamento in cluster, creazione brief, meta suggeriti, link interni suggeriti, collegamento prodotti, controllo affermazioni non verificate, flusso bozza → revisione → programmazione → pubblicazione (bloccato senza revisione umana e fonti) |
 | SEO | SSR/ISR, URL descrittivi, title ≤ 60 e description ≤ 155 su tutte le pagine, FAQ guidate dai dati, canonical, breadcrumb + JSON-LD (WebSite, Organization, BreadcrumbList, Product, Movie/TVSeries, Person, Brand, Article, FAQPage, ItemList), immagini Open Graph, sitemap dinamica, robots, filtri e pagine sottili `noindex`, predisposizione hreflang, redirect gestiti, **audit SEO e generatore di keyword candidate nell'admin** (vedi `docs/SEO-STRATEGY.md`) |
+| Prestazioni | Font locali con fallback a metriche compatibili (CLS 0), solo il font di display in precaricamento, CSS inline, cookie banner/palette/barra di confronto caricati a browser inattivo (con replay delle richieste anticipate), indici in memoria sul catalogo condiviso tra richieste (si ricostruisce solo se i dati cambiano), cache CDN sulle pagine di elenco, `error.tsx`/`global-error.tsx` |
 | Legale/UX | Privacy, Cookie, Terms, Affiliate Disclosure, About; banner consenso (analytics GA4 solo dopo consenso); skip-link, focus visibile, `prefers-reduced-motion`, ARIA |
 | Sicurezza | Cookie di sessione HMAC `HttpOnly; SameSite=Strict; Secure`, scrypt, rate-limit login/ricerca/contatti/tracking, header di sicurezza, middleware + `requireAdmin()` in ogni azione, sanitizzazione markdown (niente HTML grezzo) |
 
@@ -143,7 +144,7 @@ Cambiare uno slug crea un redirect 301 automatico. Un elemento in uso non può e
 - Server Actions con controllo Origin integrato di Next.js; ogni azione richiama `requireAdmin()`.
 - API pubbliche con rate-limit (in memoria: per limiti globali usa Upstash/Vercel KV).
 - Supabase: RLS attivo senza policy pubbliche; la service-role key resta solo lato server.
-- Header: HSTS, X-Frame-Options DENY, nosniff, Referrer-Policy, Permissions-Policy. **Non è impostata una CSP**: aggiungila dopo aver deciso quali script esterni usare (GA4).
+- Header: HSTS, X-Frame-Options DENY, nosniff, Referrer-Policy, Permissions-Policy, COOP e una **Content-Security-Policy** moderata (solo risorse dello stesso dominio più Google Tag Manager/Analytics; blocca frame, `object`, `form-action` esterni e `base` alterato). Resta `'unsafe-inline'` per gli script/stili di avvio di Next: una CSP con nonce renderebbe dinamiche tutte le pagine e farebbe perdere l'ISR.
 - Per un team o 2FA, sostituisci `src/lib/auth*.ts` con Supabase Auth (non implementato).
 
 ---
@@ -174,4 +175,5 @@ Nota: con Supabase le pagine pubbliche sono ISR (5–10 minuti) e si rigenerano 
 - Test end-to-end con Chromium su build di produzione: autocomplete con tastiera, filtri/canonical/noindex, comparatore con offerta reale + JSON-LD `AggregateOffer`, redirect `/go` (e rifiuto di destinazioni arbitrarie), login corretto/errato e attributi del cookie, rifiuto URL non-https, blocco pubblicazione senza revisione, redirect automatico al cambio slug, blocco eliminazione di record in uso, import CSV + cluster, statistiche reali/stimate, pannello AI disattivato senza chiave.
 - Lighthouse (mobile, throttling simulato, build locale): Accessibility 100, Best Practices 100, SEO 100, Performance 87–98 a seconda della pagina e della corsa, CLS 0. L'LCP *misurato* in locale è ~0,2 s; i 2,5–3,5 s del punteggio sono la simulazione di rete lenta. Va ripetuto sul dominio reale (PageSpeed/CrUX).
 - Suite e2e nel repo: `tests/e2e` (vedi il README lì).
+- Carico locale (10 richieste parallele, 4 core): pagine statiche/ISR 30–45 ms; ogni pagina dinamica costa 13–22 ms a richiesta singola. Le pagine di elenco con filtri sono cacheabili dal CDN per 2 minuti (`s-maxage=120`).
 - Non eseguito: audit axe completo, test con Supabase reale, chiamate reali all'API AI, test su dispositivi fisici.

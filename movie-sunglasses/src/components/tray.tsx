@@ -49,7 +49,7 @@ export function CompareTray() {
 export function SavedLink({ className = "" }: { className?: string }) {
   const n = useList(SAVED_KEY).length;
   return (
-    <Link href="/saved" aria-label={`Saved sunglasses (${n})`} className={`relative ${className}`}>
+    <Link href="/saved" prefetch={false} aria-label={`Saved sunglasses (${n})`} className={`relative ${className}`}>
       <svg aria-hidden width="20" height="20" viewBox="0 0 24 24" fill={n ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8"><path d="M12 21s-7-4.6-9.3-9A5.3 5.3 0 0 1 12 6.6 5.3 5.3 0 0 1 21.3 12C19 16.4 12 21 12 21Z" strokeLinejoin="round" /></svg>
       {n > 0 && <span aria-hidden className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-ink px-1 text-[10px] text-white">{n}</span>}
     </Link>
