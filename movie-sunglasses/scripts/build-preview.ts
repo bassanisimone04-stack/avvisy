@@ -21,6 +21,7 @@ const data = {
     origs: c.originalsOf(m.id).map(({ alt }) => ({ id: alt.originalModelId })),
   })),
 };
-const html = readFileSync("scripts/preview-template.html", "utf8").replace("/*__DATA__*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
+const cites = seed.evidence.length;
+const html = readFileSync("scripts/preview-template.html", "utf8").replace(/\d+ titles, \d+ models, \d+ sourced citations/, `${seed.movies.length} titles, ${seed.models.length} models, ${cites} sourced citations`).replace("/*__DATA__*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 writeFileSync("docs/preview.html", html);
 console.log("docs/preview.html", Math.round(html.length / 1024) + " KB");

@@ -175,3 +175,57 @@ describe("rate limiting", () => {
   it("prefers platform headers", () => { expect(clientIp(h({ "x-vercel-forwarded-for": "198.51.100.4", "x-forwarded-for": "6.6.6.6" }))).toBe("198.51.100.4"); expect(clientIp(h({ "x-real-ip": "198.51.100.5" }))).toBe("198.51.100.5"); });
   it("blocks only after the limit of recorded failures", () => { for (let i = 0; i < 3; i++) { expect(isBlocked("t:1", 3, 1000)).toBe(false); recordHit("t:1"); } expect(isBlocked("t:1", 3, 1000)).toBe(true); });
 });
+
+import { STYLES } from "../src/lib/site";
+describe("articles are consistent with the catalog", () => {
+  const c = buildCatalog(seed as never);
+  const slugs = {
+    sunglasses: new Set(seed.models.map((m) => m.slug)), movies: new Set(seed.movies.map((m) => m.slug)), actors: new Set(seed.actors.map((m) => m.slug)),
+    brands: new Set(seed.brands.map((m) => m.slug)), blog: new Set(seed.articles.map((m) => m.slug)), styles: new Set(STYLES.map((s) => s.slug)),
+  } as Record<string, Set<string>>;
+  const statics = new Set(["/sunglasses", "/movies", "/actors", "/brands", "/styles", "/vintage", "/affordable-alternatives", "/blog", "/about", "/contact", "/affiliate-disclosure"]);
+  it("every internal link in every article body resolves", () => {
+    for (const a of seed.articles) for (const m of a.body.matchAll(/\]\((\/[^)#]*)\)/g)) {
+      const [, section, slug] = m[1].split("/");
+      const ok = statics.has(m[1]) || (slugs[section]?.has(slug) ?? false);
+      expect(ok, `${a.slug} -> ${m[1]}`).toBe(true);
+    }
+  });
+  it("every source URL is https and every article has at least one source once developed", () => {
+    for (const a of seed.articles.filter((x) => x.status !== "brief")) { expect(a.sources.length, a.slug).toBeGreaterThan(0); for (const s of a.sources) expect(s.url.startsWith("https://"), a.slug + s.url).toBe(true); }
+  });
+  it("all 20 planned articles are developed and none is marked reviewed (human review pending)", () => {
+    expect(seed.articles.filter((a) => a.status === "brief").length).toBe(0);
+    expect(seed.articles.every((a) => a.reviewed === false)).toBe(true);
+  });
+  it("grades quoted in the roundups match the computed grades", () => {
+    const g = (id: string) => c.matchOf(c.appById.get(id)!).type;
+    expect(g("a-rd-clubmaster")).toBe("exact");
+    expect(g("a-tl-randolph")).toBe("unconfirmed");
+    expect(g("a-mib-j")).toBe("exact"); expect(g("a-term-gargoyles")).toBe("exact"); expect(g("a-mv-wayfarer")).toBe("exact");
+    expect(g("a-tca-714")).toBe("official_reissue"); expect(g("a-bat-manhattan")).toBe("official_reissue");
+    expect(g("a-spec-snowdon")).toBe("unconfirmed"); expect(g("a-f1-d002")).toBe("unconfirmed"); expect(g("a-mx-neo")).toBe("unconfirmed");
+    expect(g("a-leon-magnoli")).toBe("similar");
+  });
+});
+
+describe("article text hygiene", () => {
+  it("has no stray escapes or template leftovers", () => {
+    for (const a of seed.articles) for (const t of [a.body, a.answer, a.metaDescription, a.metaTitle, a.excerpt, ...a.faq.map((f) => f.a)]) expect(/\\\$|\$\{|\bundefined\b|\[object/.test(t), a.slug).toBe(false);
+  });
+});
+
+import { renderToStaticMarkup } from "react-dom/server";
+import { createElement } from "react";
+import { Markdown } from "../src/components/markdown";
+describe("markdown rendering", () => {
+  it("renders links inside bold and leaves no raw markdown", () => {
+    const html = renderToStaticMarkup(createElement(Markdown, { source: "- **[Premiums](/sunglasses/knockaround-premiums).** Text and [x](/movies/top-gun)" }));
+    expect(html).toContain('<strong><a href="/sunglasses/knockaround-premiums">Premiums</a>.</strong>');
+    expect(html).not.toMatch(/\]\(/);
+  });
+  it("renders no raw markdown for any article body", () => {
+    for (const a of seed.articles) expect(/\]\(\/|\*\*/.test(renderToStaticMarkup(createElement(Markdown, { source: a.body }))), a.slug).toBe(false);
+  });
+  it("drops javascript: links", () => expect(renderToStaticMarkup(createElement(Markdown, { source: "[x](javascript:alert(1))" }))).not.toContain("href"));
+});

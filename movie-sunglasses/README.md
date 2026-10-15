@@ -68,7 +68,7 @@ Admin: <http://localhost:3000/admin> — in sviluppo funziona senza database: i 
 
 ## 3. Contenuti iniziali e loro affidabilità
 
-- **18 titoli**, **31 modelli** (21 visti sullo schermo + 10 alternative), **21 attori**, **19 marchi**, **31 identificazioni**, **49 citazioni di fonti**, **33 coppie originale→alternativa**, **20 articoli** (8 sviluppati, 12 brief).
+- **20 titoli**, **32 modelli** (23 visti sullo schermo + 9 alternative), **22 attori**, **19 marchi**, **33 identificazioni** (10 Exact Match, 5 Official Reissue, 1 Similar Style, 17 Unconfirmed), **53 citazioni di fonti**, **33 coppie originale→alternativa**, **20 articoli sviluppati** (nessun brief rimasto; tutti in attesa di revisione umana).
 - I fatti derivano da una ricerca web del **2026-10-15** e da fonti **quasi solo secondarie** (rivenditori, database di appassionati, stampa). **Nessuna fonte primaria** (studio, costumista, casa d'aste) è stata consultata.
 - Per questo molte identificazioni risultano *Unconfirmed* per regola (es. tutte quelle di James Bond: una sola fonte fan; F1: fonti contrastanti; Taxi Driver: Ray-Ban vs American Optical).
 - Tutti i record sono marcati "in attesa di revisione editoriale" (avviso visibile finché `NEXT_PUBLIC_SHOW_UNREVIEWED_NOTICE` ≠ `false`). **Rivedi ogni scheda prima del lancio.**

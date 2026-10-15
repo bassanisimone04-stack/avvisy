@@ -4,12 +4,12 @@ import { slugify } from "@/lib/format";
 
 function inline(text: string, keyBase: string): React.ReactNode[] {
   const out: React.ReactNode[] = [];
-  const re = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
+  const re = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g; // bold may wrap a link
   let last = 0, m: RegExpExecArray | null, i = 0;
   while ((m = re.exec(text))) {
     if (m.index > last) out.push(text.slice(last, m.index));
     const tok = m[0];
-    if (tok.startsWith("**")) out.push(<strong key={`${keyBase}-${i++}`}>{tok.slice(2, -2)}</strong>);
+    if (tok.startsWith("**")) out.push(<strong key={`${keyBase}-${i++}`}>{inline(tok.slice(2, -2), `${keyBase}b${i}`)}</strong>);
     else {
       const [, label, href] = /\[([^\]]+)\]\(([^)]+)\)/.exec(tok)!;
       if (href.startsWith("/")) out.push(<Link key={`${keyBase}-${i++}`} href={href}>{label}</Link>);

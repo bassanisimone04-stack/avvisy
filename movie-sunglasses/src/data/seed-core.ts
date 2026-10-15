@@ -22,6 +22,8 @@ export const movies: Movie[] = [
   m("f1-the-movie", "F1", 2025, "film", "Sports", "A veteran driver joins a struggling Formula 1 team."),
   m("the-devil-wears-prada-2", "The Devil Wears Prada 2", 2026, "film", "Comedy", "The sequel to the 2006 fashion-world comedy-drama."),
   m("miami-vice", "Miami Vice", 1984, "series", "Crime", "TV crime series following two Miami detectives; it aired from 1984 to 1990."),
+  m("reservoir-dogs", "Reservoir Dogs", 1992, "film", "Crime", "Criminals try to work out who betrayed them after a jewelry heist goes wrong."),
+  m("thelma-and-louise", "Thelma & Louise", 1991, "film", "Drama", "Two friends take a road trip that spirals out of control."),
 ];
 
 const a = (name: string, bio?: string): Actor => ({
@@ -34,7 +36,7 @@ export const actors: Actor[] = [
   a("Audrey Hepburn"), a("Will Smith"), a("Tommy Lee Jones"), a("Steve McQueen"),
   a("Arnold Schwarzenegger"), a("Robert De Niro"), a("Johnny Depp"), a("Jean Reno"),
   a("Keanu Reeves"), a("Carrie-Anne Moss"), a("Laurence Fishburne"), a("Daniel Craig"),
-  a("Brad Pitt"), a("Anne Hathaway"), a("Meryl Streep"), a("Don Johnson"),
+  a("Brad Pitt"), a("Tim Roth"), a("Anne Hathaway"), a("Meryl Streep"), a("Don Johnson"),
 ];
 
 const c = (id: string, name: string, actorId: string, movieId: string): Character => ({ id, name, actorId, movieId });
@@ -64,6 +66,8 @@ export const characters: Character[] = [
   c("andy-sachs", "Andy Sachs", "anne-hathaway", "the-devil-wears-prada-2"),
   c("miranda-priestly", "Miranda Priestly", "meryl-streep", "the-devil-wears-prada-2"),
   c("sonny-crockett", "Sonny Crockett", "don-johnson", "miami-vice"),
+  c("mr-orange", "Mr. Orange", "tim-roth", "reservoir-dogs"),
+  c("jd", "J.D.", "brad-pitt", "thelma-and-louise"),
 ];
 
 const b = (name: string, country: string, description: string, website?: string): Brand => ({

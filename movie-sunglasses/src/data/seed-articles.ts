@@ -1,4 +1,5 @@
 import type { Article, Keyword } from "@/lib/types";
+import { roundupArticles } from "./seed-articles-2";
 
 const D = "2026-10-15";
 const base = { createdAt: D, updatedAt: D, publishAt: null, aiGenerated: false } as const;
@@ -448,7 +449,7 @@ const PATCH: Record<string, Partial<Article>> = {
   },
 };
 
-export const fullArticles: Article[] = baseArticles.map((a) => ({ ...a, ...(PATCH[a.id] ?? {}), body: a.body + "\n\n" + (EXTRA[a.id] ?? "") }));
+export const fullArticles: Article[] = [...baseArticles, ...roundupArticles].map((a) => ({ ...a, ...(PATCH[a.id] ?? {}), body: a.body + "\n\n" + (EXTRA[a.id] ?? "") }));
 
 type B = [slug: string, title: string, kw: string, cat: string, intent: string, movies: string[], models: string[], angle: string];
 const BRIEFS: B[] = [
@@ -467,7 +468,7 @@ const BRIEFS: B[] = [
   ["best-1990s-movie-sunglasses", "Best 1990s Movie Sunglasses", "90s movie sunglasses", "Lists", "Informational list", ["men-in-black", "the-matrix", "leon-the-professional"], [], "Decade list; Léon and Matrix entries need stronger sources."],
   ["best-aviator-sunglasses-inspired-by-movies", "Best Aviator Sunglasses Inspired by Movies", "movie aviator sunglasses", "Roundups", "Commercial", ["top-gun"], ["ray-ban-aviator-classic-rb3025", "knockaround-fort-knocks"], "Group by film; separate exact models from lookalikes."],
   ["vintage-movie-sunglasses-you-can-still-buy", "Vintage Movie Sunglasses You Can Still Buy", "vintage movie sunglasses", "Guides", "Commercial investigation", [], ["ray-ban-wayfarer-bl-vintage", "ray-ban-aviator-bl-vintage"], "Needs verified marketplace listings; explain authentication risks."],
-  ["famous-sunglasses-worn-by-hollywood-actors", "Famous Sunglasses Worn by Hollywood Actors", "celebrity movie sunglasses", "Lists", "Informational list", [], [], "Actor-first list linking to /actors."],
+  ["famous-sunglasses-worn-by-hollywood-actors", "Famous Sunglasses Worn by Hollywood Actors", "sunglasses worn by hollywood actors", "Lists", "Informational list", [], [], "Actor-first list linking to /actors."],
   ["best-sunglasses-inspired-by-action-movies", "Best Sunglasses Inspired by Action Movies", "action movie sunglasses", "Roundups", "Commercial", ["top-gun", "the-terminator", "men-in-black"], [], "Action-film roundup."],
   ["movie-sunglasses-for-men", "Movie Sunglasses for Men", "movie sunglasses for men", "Roundups", "Commercial", [], [], "Check whether this query differs enough from the main hub to justify a page."],
   ["movie-sunglasses-for-women", "Movie Sunglasses for Women", "movie sunglasses for women", "Roundups", "Commercial", ["breakfast-at-tiffanys", "the-devil-wears-prada-2"], ["oliver-goldsmith-manhattan", "jimmy-choo-jc5030u"], "Needs more women-led film entries before publishing."],
