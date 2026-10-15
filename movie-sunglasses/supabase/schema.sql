@@ -6,7 +6,7 @@
 create table if not exists movies (
   id text primary key, slug text unique not null, title text not null, year int not null check (year between 1880 and 2100),
   kind text not null check (kind in ('film','series')), genre text not null, synopsis text not null,
-  image_url text, image_credit text
+  image_url text, image_credit text, trailer_url text check (trailer_url is null or trailer_url like 'https://%')
 );
 create table if not exists actors (
   id text primary key, slug text unique not null, name text not null, bio text, image_url text, image_credit text

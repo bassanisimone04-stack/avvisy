@@ -272,3 +272,27 @@ describe("fair use photos", () => {
   it("is limited to scene stills, never product shots", () => expect(validatePhoto({ ...f, kind: "product", modelId: "persol-649" })).toMatch(/solo per fotogrammi/));
   it("refuses hotlinks when an own storage host is configured", () => expect(validatePhoto({ ...f, url: "https://other-site.com/s.jpg" }, { ownHost: "cdn.example.com" })).toMatch(/hotlink/));
 });
+
+import { youtubeId } from "../src/lib/video";
+import { photosFromCsv } from "../src/lib/photos-import";
+describe("trailer links", () => {
+  it.each([["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "dQw4w9WgXcQ"], ["https://youtu.be/dQw4w9WgXcQ?t=5", "dQw4w9WgXcQ"], ["https://www.youtube.com/embed/dQw4w9WgXcQ", "dQw4w9WgXcQ"], ["https://m.youtube.com/watch?v=dQw4w9WgXcQ&feature=x", "dQw4w9WgXcQ"]])("%s", (u, id) => expect(youtubeId(u)).toBe(id));
+  it.each(["http://youtube.com/watch?v=dQw4w9WgXcQ", "https://vimeo.com/123", "https://evil.com/watch?v=dQw4w9WgXcQ", "https://youtube.com/watch?v=short", "javascript:alert(1)", ""])("rejects %s", (u) => expect(youtubeId(u)).toBeNull());
+});
+describe("photos CSV import", () => {
+  const h = "url,alt,kind,credit,license,license_url,source_url,rights_note,movie,model,approved\n";
+  const args = [seed.models, seed.movies, seed.articles] as [never, never, never];
+  it("imports valid rows; unapproved rows stay drafts", () => {
+    const r = photosFromCsv(h + "https://s.example.com/a.jpg,Maverick on the flight deck at sunset,scene,Studio,cc,https://commons.wikimedia.org/wiki/File:A.jpg,,,top-gun,,yes\nhttps://s.example.com/b.jpg,Persol 649 frame on grey,product,Own,owned,,,,,persol-649,\n", ...args);
+    expect(r.errors).toEqual([]); expect(r.photos.map((p) => [p.movieId ?? p.modelId, p.approved])).toEqual([["top-gun", true], ["persol-649", false]]);
+  });
+  it("applies the same rights rules and is all-or-nothing", () => {
+    const r = photosFromCsv(h + "https://s.example.com/a.jpg,Maverick on the flight deck at sunset,scene,Studio,press,,,,top-gun,,yes\nhttps://s.example.com/b.jpg,x long enough alt text,scene,Studio,fair_use,,,,nope,,yes\n", ...args);
+    expect(r.errors.length).toBe(2); expect(r.errors[0].message).toMatch(/prova/); expect(r.errors[1].message).toMatch(/sconosciuto/);
+  });
+  it("accepts fair use only with rationale and source", () => {
+    const row = (note: string, src: string) => h + `https://s.example.com/f.jpg,Maverick on the flight deck at sunset,scene,Paramount,fair_use,,${src},${note},top-gun,,yes\n`;
+    expect(photosFromCsv(row("", ""), ...args).errors.length).toBe(1);
+    expect(photosFromCsv(row("Reduced still beside our evidence analysis; credited to the studio", "https://studio.example.com/press"), ...args).errors).toEqual([]);
+  });
+});

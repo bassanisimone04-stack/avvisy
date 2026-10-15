@@ -199,3 +199,23 @@ export async function withdrawFairUseAction() {
   refresh();
   redirect(`/admin?ok=${encodeURIComponent(`${photos.length} foto in fair use ritirate dal sito.`)}`);
 }
+
+export async function importPhotosAction(_: OfferImportState, form: FormData): Promise<OfferImportState> {
+  await requireAdmin();
+  const { photosFromCsv } = await import("@/lib/photos-import");
+  const file = form.get("file");
+  let text = String(form.get("csv") ?? "");
+  if (file instanceof File && file.size > 0) {
+    if (file.size > 2_000_000) return { done: true, saved: 0, rows: 0, dryRun: false, errors: [{ line: 0, message: "File troppo grande (max 2 MB)." }] };
+    text = await file.text();
+  }
+  const dryRun = form.get("dry") === "on";
+  const [models, movies, articles] = await Promise.all([listAll("models"), listAll("movies"), listAll("articles")]);
+  let ownHost: string | undefined;
+  try { ownHost = process.env.SUPABASE_URL ? new URL(process.env.SUPABASE_URL).host : undefined; } catch { /* ignore */ }
+  const res = photosFromCsv(text, models, movies, articles, { ownHost });
+  if (res.errors.length || dryRun || res.photos.length === 0) return { done: true, saved: 0, rows: res.rows, errors: res.errors, dryRun };
+  await upsertMany("photos", res.photos);
+  refresh();
+  return { done: true, saved: res.photos.length, rows: res.rows, errors: [], dryRun: false };
+}

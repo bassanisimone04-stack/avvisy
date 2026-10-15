@@ -10,6 +10,7 @@ const csp = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
+  "frame-src https://www.youtube-nocookie.com",
   "object-src 'none'", "base-uri 'self'", "form-action 'self'", "frame-ancestors 'none'",
   ...(prod ? ["upgrade-insecure-requests"] : []),
 ].join("; ");

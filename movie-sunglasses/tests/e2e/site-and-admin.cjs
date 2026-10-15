@@ -124,6 +124,18 @@ const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); if (!c) fails++
   await p.goto(B + "/movies/top-gun-maverick"); ok((await p.locator("figcaption:has-text('Still ©')").count()) === 0, "withdraw-all takes fair use photos offline");
   await p.goto(B + "/copyright"); ok((await p.locator("h1:has-text('Copyright Notice')").count()) > 0, "copyright notice page exists");
 
+  // trailer facade + photo CSV import
+  await p.goto(B + "/admin/movies/risky-business"); await p.fill("#f-trailerUrl", "https://vimeo.com/123"); await p.click('button:has-text("Salva modifiche")'); await p.waitForSelector("[role=alert]:has-text('YouTube')"); ok(true, "non-YouTube trailer is rejected");
+  await p.fill("#f-trailerUrl", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"); await p.click('button:has-text("Salva modifiche")'); await p.waitForURL(/saved=1/);
+  await p.goto(B + "/movies/risky-business"); const reqs = []; p.on("request", (r) => /youtube/.test(r.url()) && reqs.push(r.url()));
+  await p.waitForSelector("text=Play the official trailer"); ok(reqs.length === 0 && (await p.locator("iframe").count()) === 0, "trailer is a facade: no YouTube request before play");
+  await p.click("text=Play the official trailer"); await p.waitForSelector('iframe[src^="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"]'); ok(true, "play loads the privacy-enhanced embed");
+  await p.goto(B + "/admin/photos/import");
+  await p.fill("#csv", "url,alt,kind,credit,license,source_url,rights_note,movie,approved\nhttps://img.example.com/i1.jpg,Maverick on the flight deck at sunset,scene,Studio,fair_use,,,top-gun,yes\n"); await p.click('button:has-text("Verifica")');
+  await p.waitForSelector("[role=alert]:has-text('nulla è stato importato')"); ok(true, "photo import enforces rights rules");
+  await p.fill("#csv", "url,alt,kind,credit,license,license_url,movie,approved\nhttps://img.example.com/i2.jpg,Doc Brown style still for the catalogue,scene,Commons author,cc,https://commons.wikimedia.org/wiki/File:Z.jpg,the-blues-brothers,yes\n"); await p.uncheck("input[name=dry]"); await p.click('button:has-text("Verifica")'); await p.waitForSelector("text=Importate o aggiornate 1 foto");
+  await p.goto(B + "/movies/the-blues-brothers"); ok((await p.locator('figure img[alt="Doc Brown style still for the catalogue"]').count()) > 0, "imported photo is live on the film page");
+
   // keywords
   await p.goto(B + "/admin/keywords");
   await p.fill("#csv", "Keyword,Volume,KD\nmatrix sunglasses,1200,30\nneo matrix sunglasses,300,20\nwhere to buy blinde matrix,,\n");

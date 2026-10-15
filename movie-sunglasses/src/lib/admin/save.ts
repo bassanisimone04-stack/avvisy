@@ -4,6 +4,7 @@ import { slugify } from "../format";
 import type { CollectionName, Collections } from "../types";
 import { ENTITIES, type EntityConfig, type Field } from "./entities";
 import { validatePhoto } from "../photos";
+import { youtubeId } from "../video";
 
 type Row = Record<string, unknown>;
 export type SaveResult = { ok: true; id: string } | { ok: false; error: string };
@@ -115,7 +116,10 @@ async function validateAndFinalize(cfg: EntityConfig, d: Row, existing?: Row): P
     if ((await listAll(k)).some((r) => (r as { id: string }).id === d.id)) return "Esiste già un elemento identico.";
   }
   switch (k) {
-    case "movies": if (Number(d.year) < 1880 || Number(d.year) > 2100) return "Anno non valido."; break;
+    case "movies":
+      if (Number(d.year) < 1880 || Number(d.year) > 2100) return "Anno non valido.";
+      if (d.trailerUrl && !youtubeId(String(d.trailerUrl))) return "Il trailer deve essere un link YouTube valido (youtube.com/watch?v=… o youtu.be/…).";
+      break;
     case "models": d.styleTags = ((d.styleTags as string[]) ?? []); d.specs = d.specs ?? []; break;
     case "appearances": {
       const ch = (await listAll("characters")).find((c) => c.id === d.characterId);

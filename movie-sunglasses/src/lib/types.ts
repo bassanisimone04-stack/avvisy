@@ -8,6 +8,8 @@ export type ArticleStatus = "brief" | "draft" | "in_review" | "scheduled" | "pub
 export interface Movie {
   id: string; slug: string; title: string; year: number; kind: "film" | "series";
   genre: string; synopsis: string; imageUrl?: string; imageCredit?: string;
+  /** Official trailer (YouTube link). Embedded only after the visitor presses play. */
+  trailerUrl?: string;
 }
 export interface Actor { id: string; slug: string; name: string; bio?: string; imageUrl?: string; imageCredit?: string }
 export interface Character { id: string; name: string; actorId: string; movieId: string }

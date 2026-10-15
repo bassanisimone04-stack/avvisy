@@ -9,6 +9,8 @@ import { Breadcrumbs, Container, JsonLd, MatchBadge, PageHeader } from "@/compon
 import { ArticleCard, Grid, ModelCard } from "@/components/cards";
 import { ViewBeacon } from "@/components/misc";
 import { Figure } from "@/components/photo";
+import { Trailer } from "@/components/trailer";
+import { youtubeId } from "@/lib/video";
 
 export const revalidate = 600;
 export async function generateStaticParams() { return (await getCatalog()).movies.map((m) => ({ slug: m.slug })); }
@@ -32,6 +34,7 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
   const articles = c.articlesForMovie(mv.id);
   const faq = movieSeo(c, mv).faq;
   const photos = c.photosForMovie(mv.id);
+  const trailer = youtubeId(mv.trailerUrl);
   return (
     <Container className="pt-10">
       <Breadcrumbs items={[{ name: "Movies", href: "/movies" }, { name: mv.title }]} />
@@ -39,6 +42,7 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
       <PageHeader eyebrow={`${mv.kind === "series" ? "TV series" : "Film"} · ${mv.genre} · ${mv.year}`} title={`${mv.title} sunglasses`} intro={mv.synopsis} />
       {cast.length > 0 && <p className="-mt-4 mb-10 text-slate">With {cast.map((a, i) => <span key={a.id}>{i > 0 && ", "}<Link className="underline underline-offset-4" href={`/actors/${a.slug}`}>{a.name}</Link></span>)}</p>}
       {photos[0] && <Figure photo={photos[0]} ratio="21/9" priority className="mb-10" />}
+      {trailer && <section aria-label="Trailer" className="mb-10 max-w-3xl"><Trailer id={trailer} title={mv.title} /></section>}
       <h2 className="font-display text-4xl font-semibold">Who wears what</h2>
       <ul className="mt-6 divide-y divide-line rounded-2xl border border-line bg-white">
         {apps.map((a) => {

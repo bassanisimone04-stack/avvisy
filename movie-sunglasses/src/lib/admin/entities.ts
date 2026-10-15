@@ -24,7 +24,7 @@ export const ENTITIES: EntityConfig[] = [
     fields: [
       { name: "title", label: "Titolo", type: "text", required: true }, { name: "slug", label: "Slug (URL)", type: "text", help: "Lascia vuoto per generarlo dal titolo. Se lo cambi viene creato un redirect 301 automatico." },
       { name: "year", label: "Anno", type: "number", required: true }, { name: "kind", label: "Tipo", type: "select", required: true, options: [["film", "Film"], ["series", "Serie TV"]] },
-      { name: "genre", label: "Genere", type: "text", required: true }, { name: "synopsis", label: "Sinossi (breve, fattuale)", type: "textarea", required: true, rows: 3 },
+      { name: "genre", label: "Genere", type: "text", required: true }, { name: "trailerUrl", label: "Trailer ufficiale (link YouTube)", type: "url", help: "Solo dal canale ufficiale dello studio. Il video parte solo quando il visitatore preme Play (nessun tracciamento prima)." }, { name: "synopsis", label: "Sinossi (breve, fattuale)", type: "textarea", required: true, rows: 3 },
     ] },
   { key: "actors", label: "Attori", singular: "attore", group: "Contenuti", columns: ["name"], publicPath: (r) => `/actors/${r.slug}`,
     uses: [["characters", "actorId"], ["appearances", "actorId"]],
