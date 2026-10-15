@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { COMPARE_KEY, SAVED_KEY, useList, writeList } from "@/lib/client-store";
 
 export interface ModelLite { id: string; slug: string; name: string; brand: string; match: string; shape: string; frame: string; lens: string }
@@ -19,9 +20,10 @@ export function useModels(ids: string[]): ModelLite[] {
 
 /** Floating comparison tray: appears once at least one model is selected. */
 export function CompareTray() {
+  const path = usePathname();
   const ids = useList(COMPARE_KEY);
   const models = useModels(ids);
-  if (ids.length === 0) return null;
+  if (ids.length === 0 || path.startsWith("/compare")) return null;
   return (
     <aside aria-label="Comparison" className="fixed inset-x-3 bottom-3 z-40 mx-auto flex max-w-2xl flex-wrap items-center gap-3 rounded-2xl border border-line bg-white p-3 pl-4 shadow-2xl">
       <p className="text-sm font-medium">Compare <span className="text-mist">({ids.length}/3)</span></p>

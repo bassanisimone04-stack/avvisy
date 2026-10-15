@@ -45,7 +45,7 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
               <tbody>
                 {rows.map((r) => (
                   <tr key={r.label} className={`border-b border-line/70 last:border-0 ${r.differs ? "bg-champagne-light/30" : ""}`}>
-                    <th scope="row" className="p-4 text-xs font-medium uppercase tracking-widest text-mist">{r.label}{r.differs && models.length > 1 && <span className="ml-2 rounded bg-champagne-light px-1.5 py-0.5 text-[0.6rem] text-champagne-text">differs</span>}</th>
+                    <th scope="row" className="p-4 text-xs font-medium uppercase tracking-widest text-mist"><div className="flex flex-wrap items-center gap-x-2 gap-y-1">{r.label}{r.differs && models.length > 1 && <span className="rounded bg-champagne-light px-1.5 py-0.5 text-[0.6rem] text-champagne-text">differs</span>}</div></th>
                     {r.values.map((v, i) => <td key={i} className="p-4 align-top">{v}</td>)}
                   </tr>
                 ))}
