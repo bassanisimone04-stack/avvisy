@@ -54,3 +54,13 @@ body { background: var(--color-paper); color: var(--color-ink); font-family: var
 
 /* controls that only matter without JavaScript */
 html:not(.no-js) .js-hide { display: none; }
+
+/* modern navigation and rendering (progressive enhancement; ignored by older browsers) */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; animation-timing-function: cubic-bezier(.2,.7,.2,1); }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+footer { content-visibility: auto; contain-intrinsic-size: auto 480px; }
+@supports (animation-timeline: view()) {
+  .reveal-scroll { animation: reveal-in linear both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
+  @keyframes reveal-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+}
