@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+import { getCatalog } from "@/lib/catalog";
+import { hasFilters, type Params } from "@/lib/filter";
+import { buildMetadata } from "@/lib/seo";
+import { SunglassesFilters } from "@/components/filter-bar";
+import { ModelResults } from "@/components/model-grid";
+import { Breadcrumbs, Container, JsonLd, PageHeader } from "@/components/ui";
+import { SITE } from "@/lib/site";
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Params> }): Promise<Metadata> {
+  const p = await searchParams;
+  return buildMetadata({ title: "Movie Sunglasses Catalog by Film & Actor", description: "Browse sunglasses worn in movies and TV. Filter by film, actor, brand, shape, colour and price band, with evidence-graded identification and sources.", path: "/sunglasses", noindex: hasFilters(p) || "page" in p });
+}
+
+export default async function SunglassesPage({ searchParams }: { searchParams: Promise<Params> }) {
+  const [c, p] = await Promise.all([getCatalog(), searchParams]);
+  return (
+    <Container className="pt-10">
+      <Breadcrumbs items={[{ name: "Sunglasses" }]} />
+      <PageHeader eyebrow="Catalog" title="Movie Sunglasses" intro="Every model below is tied to a film appearance or serves as a documented alternative. Use the filters to narrow by film, actor, brand, shape, colour, evidence level or price band." />
+      <SunglassesFilters c={c} p={p} />
+      <ModelResults c={c} p={p} basePath="/sunglasses" />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: c.screenModels.slice(0, 50).map((m, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE.url}/sunglasses/${m.slug}`, name: m.name })) }} />
+    </Container>
+  );
+}
