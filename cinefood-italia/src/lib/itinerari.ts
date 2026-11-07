@@ -17,4 +17,5 @@ export const ITINERARIO_PER_FILM: Record<string, string> = {
   "il-talento-di-mr-ripley": "mr-ripley-venezia-caffe-florian",
   "the-white-lotus": "the-white-lotus-sicilia-taormina",
   "la-vita-e-bella": "la-vita-e-bella-arezzo",
+  "l-oro-di-napoli": "pizzerie-napoli-nei-film-oltre-da-michele",
 };

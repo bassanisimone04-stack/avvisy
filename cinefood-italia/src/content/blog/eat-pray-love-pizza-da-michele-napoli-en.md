@@ -51,6 +51,8 @@ of the most quoted food scenes in recent cinema. That place really exists, and
 it is one of the temples of Neapolitan pizza:
 **[L'Antica Pizzeria da Michele](/en/locale/pizzeria-da-michele-napoli)**.
 
+After Da Michele? Read **[Naples Pizzerias in Films: Beyond Da Michele](/en/blog/pizzerie-napoli-nei-film-oltre-da-michele)**.
+
 ## Where the Eat Pray Love pizza scene was filmed
 
 We are in the **Forcella** district, on Via Cesare Sersale, a short walk from

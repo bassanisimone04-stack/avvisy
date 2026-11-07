@@ -486,6 +486,16 @@ export const filmsEn: Record<string, FilmEn> = {
       { domanda: "Was Life Is Beautiful filmed in Matera?", risposta: "No: none of the sources consulted lists Matera among the locations." },
     ],
   },
+  "l-oro-di-napoli": {
+    titolo: "The Gold of Naples (L'oro di Napoli)",
+    titoloSeo: "The Gold of Naples: the pizzeria of the film",
+    locandinaAlt: "Poster-style artwork — The Gold of Naples (1954)",
+    sinossi: "Vittorio De Sica's anthology film from Giuseppe Marotta's stories, set in post-war Naples. In the pizza-maker episode Sophia Loren fries pizzas in a neighbourhood shop.",
+    faq: [
+      { domanda: "Where was the fried-pizza scene of The Gold of Naples filmed?", risposta: "By tradition at the Starita pizzeria in Materdei, which claims the link; some Neapolitans say the film's shop was elsewhere, so the connection remains disputed." },
+      { domanda: "Who stars in The Gold of Naples?", risposta: "The cast includes Sophia Loren, as the pizza maker, in a film directed by Vittorio De Sica (1954)." },
+    ],
+  },
 };
 
 interface RestEn {
@@ -811,6 +821,11 @@ export const restaurantsEn: Record<string, RestEn> = {
     titoloSeo: "La Locanda del Postino, Procida: from the film",
     descrizione: "An inn-restaurant on the harbour of Marina Corricella, in Procida, tied to Il Postino: fresh fish and shellfish in front of the village's colourful houses.",
     scena: { "il-postino": "According to italia.it it is the film's inn where Beatrice works. It is not confirmed that filming took place here: the interiors were rebuilt at Cinecittà (Italy for Movies), so we list it as a venue tied to the film." },
+  },
+  "pizzeria-starita-napoli": {
+    titoloSeo: "Starita, Naples: the pizza of The Gold of Naples",
+    descrizione: "A historic pizzeria born in 1901 as a cellar in the Materdei district, now family-run: known for fried pizza and for its claimed link to The Gold of Naples (1954).",
+    scena: { "l-oro-di-napoli": "By tradition it is the pizzeria of the fried-pizza scene with Sophia Loren; the link is disputed by some Neapolitans, so we treat it as a venue tied to the film." },
   },
 };
 
