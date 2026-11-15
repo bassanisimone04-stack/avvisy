@@ -11,6 +11,7 @@ import { JsonLd, itemListJsonLd, faqJsonLd } from "@/lib/seo";
 import { parseFilters, filterBusinesses } from "@/lib/filter-businesses";
 import { getCategoryInfo, categoryLabelPlural } from "@/lib/categories";
 import { getLocalizedBusiness } from "@/lib/i18n/content-business";
+import { guidesForDirectory } from "@/lib/related-guides";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary, tf } from "@/lib/i18n/dictionary";
@@ -34,6 +35,7 @@ export default function DirectoryContent({
   const catInfo = filters.categoria ? getCategoryInfo(filters.categoria) : undefined;
   const dirHref = localeHref(locale, "/directory");
   const cityLabel = filters.comune ? cityName(filters.comune, locale) : undefined;
+  const guides = guidesForDirectory(filters.comune ? results[0]?.city : undefined, filters.categoria, locale);
   const faqs = directoryFaqs(locale, cityLabel, catInfo ? { slug: catInfo.slug, label: categoryLabelPlural(catInfo, locale) } : undefined);
 
   const title = catInfo
@@ -52,6 +54,22 @@ export default function DirectoryContent({
         <div>
           <h1 className="font-editorial text-3xl font-semibold text-ink">{title}</h1>
           <p className="mt-1 text-ink-soft">{results.length} {results.length === 1 ? t.directory.resultFound : t.directory.resultsFound}</p>
+          <p className="mt-1 text-sm">
+            <Link href={localeHref(locale, "/mappa-ristoranti-aic")} className="link-underline text-brand-dark">
+              {locale === "en" ? "Only AIC restaurants? Open the AIC restaurants map" : "Cerchi solo i ristoranti AIC? Apri la mappa dei ristoranti AIC"}
+            </Link>
+          </p>
+          {guides.length > 0 && (
+            <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-soft">
+              <span className="font-medium text-ink">{locale === "en" ? "Related guides:" : "Guide collegate:"}</span>
+              {guides.map((g, i) => (
+                <span key={g.id}>
+                  <Link href={localeHref(locale, `/blog/${g.slug}`)} className="link-underline text-brand-dark">{g.title}</Link>
+                  {i < guides.length - 1 ? " ·" : ""}
+                </span>
+              ))}
+            </p>
+          )}
         </div>
         <SortSelect />
       </div>
@@ -68,6 +86,14 @@ export default function DirectoryContent({
               <SearchX size={32} className="text-muted" />
               <p className="font-semibold text-ink">{t.directory.emptyTitle}</p>
               <p className="max-w-sm text-sm text-ink-soft">{t.directory.emptyBody}</p>
+              {filters.categoria === "supermercato" && (
+                <p className="max-w-sm text-sm text-ink-soft">
+                  {locale === "en" ? "We don't list supermarkets yet, but our guide explains where to buy gluten-free products and where the celiac voucher can be spent: " : "Non abbiamo ancora supermercati in elenco, ma nella nostra guida trovi dove comprare i prodotti senza glutine e dove spendere il buono per celiaci: "}
+                  <Link href={localeHref(locale, "/blog/dove-comprare-prodotti-senza-glutine-supermercati-farmacie-e-negozi-specializzati")} className="font-semibold text-brand-dark underline">
+                    {locale === "en" ? "where to buy gluten-free products" : "dove comprare prodotti senza glutine"}
+                  </Link>.
+                </p>
+              )}
               <Link href={dirHref} className="btn btn-outline mt-2"><SlidersHorizontal size={15} /> {t.directory.resetFilters}</Link>
             </div>
           ) : (

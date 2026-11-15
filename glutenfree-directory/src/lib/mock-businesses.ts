@@ -1,4 +1,5 @@
 import type { Business, OpeningHoursDay, Review } from "./types";
+import { PRODUCTION, deriveDishes, deriveDiets } from "./business-attributes";
 import { slugify } from "./format";
 import { getCategoryInfo, categoryLabelPlural } from "./categories";
 
@@ -41,7 +42,6 @@ interface Seed {
   description: string;
   shortDescription: string;
   gallerySeeds: number[];
-  photoUrl?: string;
   featured?: boolean;
 }
 
@@ -53,13 +53,12 @@ const seeds: Seed[] = [
     address: "Via Piero della Francesca 34", postalCode: "20154", lat: 45.4845, lng: 9.1560,
     priceRange: "€€€", aicCertified: true, delivery: false, takeaway: false, openNow: true,
     hoursPattern: [null, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER],
-    phone: "02 3319391", website: "https://www.rosaventi.eu",
+    phone: "02 347338", website: "https://www.ristorantelarosadeiventi.it",
     services: ["Certificato AIC", "Cucina di pesce", "Menu senza glutine"],
     glutenFreeMenu: ["Pane e pasta senza glutine", "Piatti di pesce"],
     description: "Storico ristorante di pesce nella zona di Sempione/Bullona a Milano, aperto dal 2001 e segnalato anche dalla Guida Michelin. Certificato AIC, propone una selezione di piatti senza glutine tra cui pane e pasta.",
     shortDescription: "Ristorante di pesce certificato AIC, dal 2001 a Milano.",
     gallerySeeds: [1, 2, 3, 4],
-    photoUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -67,7 +66,7 @@ const seeds: Seed[] = [
     category: "pizzeria",
     region: "Lombardia", province: "Milano", provinceCode: "MI", city: "Milano",
     address: "Viale Col di Lana 4", postalCode: "20144", lat: 45.4508, lng: 9.1730,
-    priceRange: "€€", aicCertified: false, delivery: false, takeaway: true, openNow: true,
+    priceRange: "€€", aicCertified: true, delivery: false, takeaway: true, openNow: true,
     hoursPattern: [LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER],
     phone: "02 8376972", website: "https://bebopmilano.it",
     services: ["Ristorante e pizzeria", "Opzioni vegan", "Vicino ai Navigli"],
@@ -75,7 +74,6 @@ const seeds: Seed[] = [
     description: "Ristorante e pizzeria a due passi dai Navigli, attivo dal 1986, con un ampio menu che include pizza e piatti tradizionali in versione senza glutine oltre a opzioni vegan.",
     shortDescription: "Ristorante e pizzeria vicino ai Navigli, dal 1986, con pizza senza glutine.",
     gallerySeeds: [5, 6, 7, 8],
-    photoUrl: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -83,7 +81,7 @@ const seeds: Seed[] = [
     category: "pizzeria",
     region: "Lazio", province: "Roma", provinceCode: "RM", city: "Roma",
     address: "Via del Porto Fluviale 3", postalCode: "00154", lat: 41.8660, lng: 12.4770,
-    priceRange: "€€", aicCertified: false, delivery: false, takeaway: true, openNow: true,
+    priceRange: "€€", aicCertified: true, delivery: false, takeaway: true, openNow: true,
     hoursPattern: [null, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER],
     phone: "06 5120022", website: "https://ilsecchioelolivaro.it",
     services: ["Pizzeria e bruschetteria", "Forno a legna", "Menu senza glutine in laboratorio dedicato"],
@@ -91,7 +89,6 @@ const seeds: Seed[] = [
     description: "Pizzeria e bruschetteria nel quartiere Ostiense a Roma, attiva dal 1999, nota per le pizze alte cotte in forno a legna. Propone un menu senza glutine preparato in un laboratorio dedicato.",
     shortDescription: "Pizzeria e bruschetteria a Ostiense, dal 1999, menu senza glutine dedicato.",
     gallerySeeds: [9, 10, 11, 12],
-    photoUrl: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -107,7 +104,6 @@ const seeds: Seed[] = [
     description: "Locale nel quartiere Alessandrino a Roma con cucina interamente certificata AIC, separata dal resto della struttura. Offre pizza, griglia e hamburger senza glutine, oltre a opzioni vegan e senza lattosio.",
     shortDescription: "Pizzeria, braceria e hamburgheria certificata AIC nel quartiere Alessandrino.",
     gallerySeeds: [13, 14, 15, 16],
-    photoUrl: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   // ── Nord Italia ──────────────────────────────────────────
@@ -124,7 +120,6 @@ const seeds: Seed[] = [
     description: "Pizzeria d'autore nel quartiere Isola a Milano, certificata AIC. Nota per l'impasto ad alta idratazione e lunga lievitazione, offre pizza senza glutine preparata con ingredienti dedicati e premiata come Best Pizza GF 2025.",
     shortDescription: "Pizzeria d'autore certificata AIC nel quartiere Isola, premiata Best Pizza GF.",
     gallerySeeds: [17, 18, 19, 20],
-    photoUrl: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -140,7 +135,6 @@ const seeds: Seed[] = [
     description: "Ristorante-pizzeria con doppia cucina completamente separata per garantire zero contaminazione crociata. Tutti i piatti del menu sono disponibili senza glutine e senza lattosio, certificato AIC.",
     shortDescription: "Ristorante certificato AIC con doppia cucina separata, zero contaminazione.",
     gallerySeeds: [21, 22, 23, 24],
-    photoUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Panperfocaccia",
@@ -155,7 +149,6 @@ const seeds: Seed[] = [
     description: "Ristorante nel centro di Torino certificato AIC, specializzato in cucina ligure e piemontese. Propone focaccia di Recco, farinata e primi piatti tutti disponibili in versione senza glutine.",
     shortDescription: "Ristorante certificato AIC a Torino, specialità liguri e piemontesi senza glutine.",
     gallerySeeds: [25, 26, 27, 28],
-    photoUrl: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "La Smorfia",
@@ -170,7 +163,6 @@ const seeds: Seed[] = [
     description: "Storica pizzeria certificata AIC a Venaria Reale, alle porte di Torino, con oltre 25 anni di esperienza nella preparazione senza glutine. Pizza napoletana con impasto dedicato e linea completa di antipasti e dolci.",
     shortDescription: "Pizzeria certificata AIC da oltre 25 anni a Venaria Reale, vicino Torino.",
     gallerySeeds: [29, 30, 31, 32],
-    photoUrl: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Trattoria Vecchio Mercato",
@@ -185,7 +177,6 @@ const seeds: Seed[] = [
     description: "Trattoria a Bologna con cucina esclusivamente senza glutine, certificata AIC. Propone la tradizione emiliana — tagliatelle, tortellini, crescentine — tutta in versione gluten free. Uno dei pochi locali in Italia interamente dedicati.",
     shortDescription: "Trattoria certificata AIC a Bologna, cucina esclusivamente senza glutine.",
     gallerySeeds: [33, 34, 35, 36],
-    photoUrl: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   // ── Centro-Sud Italia ────────────────────────────────────
@@ -202,7 +193,6 @@ const seeds: Seed[] = [
     description: "Sede romana di Mama Eat a Borgo Pio, vicino al Vaticano. Doppia cucina completamente separata per zero contaminazione crociata, certificato AIC. Piatti serviti su stoviglie di colore diverso per identificazione.",
     shortDescription: "Ristorante certificato AIC a Borgo Pio, doppia cucina separata per zero contaminazione.",
     gallerySeeds: [37, 38, 39, 40],
-    photoUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Celiachiamo",
@@ -217,7 +207,6 @@ const seeds: Seed[] = [
     description: "Forno e pasticceria nel quartiere EUR a Roma, interamente dedicati alla produzione senza glutine con laboratorio interno. Ogni giorno pizza al taglio, pane fresco, dolci artigianali e un assortimento di prodotti confezionati rimborsabili con ricetta ASL.",
     shortDescription: "Forno e pasticceria 100% senza glutine all'EUR, con laboratorio artigianale.",
     gallerySeeds: [41, 42, 43, 44],
-    photoUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Pizzeria Starita",
@@ -232,7 +221,6 @@ const seeds: Seed[] = [
     description: "Storica pizzeria napoletana fondata nel 1901 nel quartiere Materdei, gestita dalla famiglia Starita da generazioni. Tutte le pizze sono disponibili in versione senza glutine e cotte in un forno separato dedicato.",
     shortDescription: "Storica pizzeria napoletana dal 1901, pizza senza glutine con forno dedicato.",
     gallerySeeds: [45, 46, 47, 48],
-    photoUrl: "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -248,7 +236,6 @@ const seeds: Seed[] = [
     description: "Pizzeria certificata AIC con tre sedi a Napoli, dotata di bancone e forno interamente dedicati alla preparazione senza glutine. L'intero menu è disponibile in versione gluten-free, inclusi fritti, primi piatti e dolci.",
     shortDescription: "Pizzeria certificata AIC a Napoli con bancone e forno dedicati senza glutine.",
     gallerySeeds: [49, 50, 51, 52],
-    photoUrl: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Leopoldo Cafebar",
@@ -263,7 +250,6 @@ const seeds: Seed[] = [
     description: "Primo cafebar senza glutine di Casa Infante, con laboratorio al primo piano dedicato esclusivamente alla produzione gluten-free. Situato di fronte al MANN, offre l'intera tradizione dolciaria napoletana in versione senza glutine.",
     shortDescription: "Cafebar con pasticceria napoletana esclusivamente senza glutine, di fronte al MANN.",
     gallerySeeds: [53, 54, 55, 56],
-    photoUrl: "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Ciro & Sons",
@@ -278,7 +264,6 @@ const seeds: Seed[] = [
     description: "Ristorante-pizzeria con oltre 70 anni di storia (dal 1948), vincitore al campionato mondiale della pizza senza glutine. Certificato AIC e AVPN, offre l'intero menu in versione gluten-free con forno separato.",
     shortDescription: "Pizzeria certificata AIC a Firenze, campione mondiale di pizza senza glutine.",
     gallerySeeds: [57, 58, 59, 60],
-    photoUrl: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   {
@@ -294,7 +279,6 @@ const seeds: Seed[] = [
     description: "Primo ristorante 100% gluten-free di Firenze, aperto dal 2014 e certificato AIC. Situato in un suggestivo chiostro cinquecentesco con orto urbano, offre cucina gourmet che fonde tradizione toscana e sapori orientali.",
     shortDescription: "Primo ristorante 100% senza glutine di Firenze, certificato AIC, nel chiostro cinquecentesco.",
     gallerySeeds: [61, 62, 63, 64],
-    photoUrl: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=75",
     featured: true,
   },
   // ── Milano e Roma, seconda ondata ───────────────────────
@@ -311,7 +295,6 @@ const seeds: Seed[] = [
     description: "Panificio e pasticceria a Milano con laboratorio interamente dedicato alla produzione senza glutine. Ogni giorno propone pane, croissant, dolci, pizze e arancini preparati senza rischio di contaminazione crociata, nel circuito di attività riconosciute da AIC.",
     shortDescription: "Panificio-pasticceria 100% senza glutine a Milano, certificato AIC.",
     gallerySeeds: [65, 66, 67, 68],
-    photoUrl: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Pansy",
@@ -326,7 +309,6 @@ const seeds: Seed[] = [
     description: "Pasticceria a Milano con produzione interamente senza glutine e senza lattosio, senza possibilità di contaminazione crociata. Propone torte, mignon, pane, grissini e torte salate, con diverse opzioni vegan, disponibili anche per asporto e consegna a domicilio in città.",
     shortDescription: "Pasticceria 100% senza glutine e senza lattosio a Milano, con consegna a domicilio.",
     gallerySeeds: [69, 70, 71, 72],
-    photoUrl: "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Sushi&Sound",
@@ -341,22 +323,20 @@ const seeds: Seed[] = [
     description: "Ristorante di sushi fusion sui Navigli, tra i primi a Milano ad offrire un menu quasi interamente senza glutine, certificato AIC. Propone piatti di cucina giapponese rivisitata preparati seguendo i protocolli dell'Associazione Italiana Celiachia.",
     shortDescription: "Ristorante sushi certificato AIC sui Navigli, menu quasi interamente senza glutine.",
     gallerySeeds: [73, 74, 75, 76],
-    photoUrl: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Zero Gelato",
     category: "gelateria",
     region: "Lombardia", province: "Milano", provinceCode: "MI", city: "Milano",
     address: "Corso Ventidue Marzo 52", postalCode: "20137", lat: 45.4580, lng: 9.2075,
-    priceRange: "€", aicCertified: false, delivery: false, takeaway: true, openNow: true,
+    priceRange: "€", aicCertified: true, delivery: false, takeaway: true, openNow: true,
     hoursPattern: ["12:00–22:00", "12:00–22:00", "12:00–22:00", "12:00–22:00", "12:00–22:00", "12:00–22:00", "12:00–22:00"],
     phone: "02 8343 8725", website: "",
-    services: ["Gusti interamente senza glutine", "Molte varianti senza lattosio"],
+    services: ["Certificato AIC", "Gusti interamente senza glutine", "Molte varianti senza lattosio"],
     glutenFreeMenu: ["Gelato artigianale senza glutine", "Varianti senza lattosio"],
-    description: "Gelateria a Milano che propone gusti preparati interamente senza glutine, molti dei quali anche senza lattosio. Segnalata nelle principali guide specializzate sul senza glutine a Milano.",
-    shortDescription: "Gelateria con gusti interamente senza glutine a Milano.",
+    description: "Gelateria a Milano certificata AIC, che propone gusti preparati interamente senza glutine, molti dei quali anche senza lattosio. Segnalata nelle principali guide specializzate sul senza glutine a Milano.",
+    shortDescription: "Gelateria certificata AIC con gusti interamente senza glutine a Milano.",
     gallerySeeds: [77, 78, 79, 80],
-    photoUrl: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Le Specialità",
@@ -371,14 +351,13 @@ const seeds: Seed[] = [
     description: "Pizzeria storica a Milano, attiva dal 1977, con oltre 50 varianti di pizza cotta nel forno a legna disponibili in versione senza glutine, oltre a birre gluten free. Certificata AIC dopo anni di collaborazione con l'Associazione.",
     shortDescription: "Pizzeria storica dal 1977 a Milano, certificata AIC, oltre 50 pizze senza glutine.",
     gallerySeeds: [81, 82, 83, 84],
-    photoUrl: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Sans de Blé",
     category: "bar-pasticceria",
     region: "Lazio", province: "Roma", provinceCode: "RM", city: "Roma",
     address: "Via Gabriello Chiabrera 58/C", postalCode: "00145", lat: 41.8615, lng: 12.4835,
-    priceRange: "€", aicCertified: false, delivery: false, takeaway: true, openNow: true,
+    priceRange: "€", aicCertified: true, delivery: false, takeaway: true, openNow: true,
     hoursPattern: [null, "09:00–14:00, 16:30–19:30", "09:00–14:00, 16:30–19:30", "09:00–14:00, 16:30–19:30", "09:00–14:00, 16:30–19:30", "09:00–14:00, 16:30–19:30", "09:00–13:00"],
     phone: "06 6465 0277", website: "https://sansdeble.it",
     services: ["Laboratorio 100% senza glutine e senza lattosio", "Zona Garbatella", "Dolci stagionali"],
@@ -386,7 +365,6 @@ const seeds: Seed[] = [
     description: "Panificio e pasticceria artigianale a Roma, con laboratorio interamente dedicato alla produzione senza glutine e senza lattosio. Propone pane, cannoli siciliani, dolci stagionali come panettone e pandoro, oltre alla pasticceria quotidiana.",
     shortDescription: "Panificio-pasticceria artigianale 100% senza glutine e senza lattosio a Roma.",
     gallerySeeds: [85, 86, 87, 88],
-    photoUrl: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "La Gallina Bianca",
@@ -401,7 +379,6 @@ const seeds: Seed[] = [
     description: "Trattoria e griglieria a Roma, certificata AIC, dove quasi tutto il menu è disponibile senza glutine: primi di pasta, fritti, carni alla griglia, pizze e pane.",
     shortDescription: "Trattoria e griglieria certificata AIC a Roma, menu quasi interamente senza glutine.",
     gallerySeeds: [89, 90, 91, 92],
-    photoUrl: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Mangiafuoco Pizza & Grill",
@@ -416,7 +393,6 @@ const seeds: Seed[] = [
     description: "Ristorante-griglieria e pizzeria a Roma, certificato AIC, con cucina separata dedicata alla preparazione dei piatti senza glutine per evitare contaminazioni crociate. Ampi spazi interni ed esterni.",
     shortDescription: "Pizzeria e griglieria certificata AIC a Roma, cucina separata senza glutine.",
     gallerySeeds: [93, 94, 95, 96],
-    photoUrl: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Ramè - Sushi Naturale Italiano",
@@ -425,13 +401,12 @@ const seeds: Seed[] = [
     address: "Via Folco Portinari 33", postalCode: "00151", lat: 41.8590, lng: 12.4460,
     priceRange: "€€", aicCertified: true, delivery: true, takeaway: true, openNow: true,
     hoursPattern: [LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER],
-    phone: "331 133 1273", website: "https://ramesushi.it",
+    phone: "06 8538 9597", website: "https://ramesushi.it",
     services: ["Certificato AIC", "Ricette originali senza glutine", "Consegna anche su Deliveroo"],
     glutenFreeMenu: ["Sushi e sashimi senza glutine", "Ricette fusion italo-giapponesi"],
     description: "Ristorante di sushi a Roma, certificato AIC, con ricette originali e preparazioni garantite senza glutine. Offre consegna e asporto anche tramite piattaforme di food delivery.",
     shortDescription: "Ristorante sushi certificato AIC a Roma, con consegna a domicilio.",
     gallerySeeds: [97, 98, 99, 100],
-    photoUrl: "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Senza Pensieri Healthy Bakery",
@@ -446,7 +421,6 @@ const seeds: Seed[] = [
     description: "Pasticceria e bakery nel quartiere San Lorenzo a Roma, con prodotti dolci e salati senza glutine, molti anche senza lattosio e vegan. Possibilità di mangiare sul posto, ordinare o portare via.",
     shortDescription: "Bakery senza glutine a San Lorenzo, Roma, con opzioni vegan e senza lattosio.",
     gallerySeeds: [101, 102, 103, 104],
-    photoUrl: "https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=800&q=75",
   },
   // ── Venezia e Bari ───────────────────────────────────────
   {
@@ -454,15 +428,14 @@ const seeds: Seed[] = [
     category: "gelateria",
     region: "Veneto", province: "Venezia", provinceCode: "VE", city: "Venezia",
     address: "Campo San Barnaba 2761", postalCode: "30123", lat: 45.4326, lng: 12.3265,
-    priceRange: "€", aicCertified: false, delivery: false, takeaway: true, openNow: true,
+    priceRange: "€", aicCertified: true, delivery: false, takeaway: true, openNow: true,
     hoursPattern: ["10:00–00:00", "10:00–00:00", "10:00–00:00", "10:00–00:00", "10:00–00:30", "10:00–00:30", "10:00–00:00"],
     phone: "041 2413531", website: "https://www.grom.it",
-    services: ["Gelato artigianale in coni dedicati senza glutine", "Attenzione alla contaminazione crociata", "Zona Dorsoduro"],
+    services: ["Certificato AIC", "Gelato artigianale in coni dedicati senza glutine", "Attenzione alla contaminazione crociata", "Zona Dorsoduro"],
     glutenFreeMenu: ["Gelato artigianale senza glutine", "Coni dedicati gluten free"],
-    description: "Gelateria della catena Grom a Dorsoduro, con gelato artigianale prodotto in coni dedicati senza glutine in tutti i punti vendita del marchio, per ridurre il rischio di contaminazione crociata.",
-    shortDescription: "Gelateria a Dorsoduro con gelato artigianale in coni dedicati senza glutine.",
+    description: "Gelateria della catena Grom a Dorsoduro, certificata AIC nell'ambito del programma nazionale Alimentazione Fuori Casa: gelato artigianale prodotto in coni dedicati senza glutine in tutti i punti vendita del marchio, per ridurre il rischio di contaminazione crociata.",
+    shortDescription: "Gelateria certificata AIC a Dorsoduro con gelato artigianale in coni dedicati senza glutine.",
     gallerySeeds: [105, 106, 107, 108],
-    photoUrl: "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Hotel Al Piave",
@@ -477,7 +450,6 @@ const seeds: Seed[] = [
     description: "Hotel a Castello, vicino a Piazza San Marco, segnalato come uno dei pochi alberghi a Venezia con certificazione AIC. Offre colazione interamente senza glutine, con pane, biscotti, cereali e dolci dedicati, oltre a opzioni senza lattosio su richiesta.",
     shortDescription: "Hotel a Castello certificato AIC, colazione interamente senza glutine.",
     gallerySeeds: [109, 110, 111, 112],
-    photoUrl: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Pizzeria OKE",
@@ -492,7 +464,6 @@ const seeds: Seed[] = [
     description: "Pizzeria e ristorante alle Zattere, tra i primi locali di Venezia formati dall'AIC, con due cucine fisicamente separate: una dedicata esclusivamente a piatti senza farine contenenti glutine. Offre anche consegna a domicilio in alcune zone della città.",
     shortDescription: "Pizzeria alle Zattere formata dall'AIC, cucine separate e delivery.",
     gallerySeeds: [113, 114, 115, 116],
-    photoUrl: "https://images.unsplash.com/photo-1533777324565-a040eb52facd?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "La Gouterie",
@@ -507,7 +478,6 @@ const seeds: Seed[] = [
     description: "Pasticceria e gastronomia a Bari, 100% dedicata alla produzione senza glutine dal 2013, la prima del suo genere in città. Propone dolce e salato, rosticceria e prodotti confezionati anche erogabili con buono ASL.",
     shortDescription: "Pasticceria e gastronomia 100% senza glutine a Bari, dal 2013.",
     gallerySeeds: [117, 118, 119, 120],
-    photoUrl: "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Panificio Magda",
@@ -522,13 +492,12 @@ const seeds: Seed[] = [
     description: "Panificio e pasticceria a Bari con un laboratorio autorizzato dal Ministero della Salute per la produzione certificata senza glutine. Propone focaccia barese, panzerotti, pane e prodotti da forno gluten free accanto alla produzione tradizionale.",
     shortDescription: "Panificio a Bari con laboratorio autorizzato per produzione senza glutine.",
     gallerySeeds: [121, 122, 123, 124],
-    photoUrl: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Solho",
     category: "pizzeria",
     region: "Puglia", province: "Bari", provinceCode: "BA", city: "Bari",
-    address: "Via Sparano da Bari 137", postalCode: "70121", lat: 41.1175, lng: 16.8695,
+    address: "Via Sparano da Bari 139", postalCode: "70121", lat: 41.1175, lng: 16.8695,
     priceRange: "€€", aicCertified: false, delivery: false, takeaway: false, openNow: true,
     hoursPattern: [LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER, LUNCH_DINNER],
     phone: "080 917 9580", website: "https://www.solho.it",
@@ -537,7 +506,6 @@ const seeds: Seed[] = [
     description: "Pizzeria nel centro di Bari, su Via Sparano, che propone pizza in teglia con impasto a base di farina di riso come alternativa senza glutine, accanto alla cucina pugliese tradizionale.",
     shortDescription: "Pizzeria nel centro di Bari con pizza in teglia senza glutine.",
     gallerySeeds: [125, 126, 127, 128],
-    photoUrl: "https://images.unsplash.com/photo-1548369937-47519962c11a?auto=format&fit=crop&w=800&q=75",
   },
   // ── Palermo, Genova e Verona ─────────────────────────────
   {
@@ -553,7 +521,6 @@ const seeds: Seed[] = [
     description: "Pizzeria a Palermo interamente dedicata al senza glutine fin dalla nascita, non semplicemente \"anche\" gluten free: cucina, forno e postazioni di lavoro sono esclusivamente riservati alle preparazioni senza glutine. Certificata AIC.",
     shortDescription: "Pizzeria 100% dedicata al senza glutine a Palermo, certificata AIC.",
     gallerySeeds: [129, 130, 131, 132],
-    photoUrl: "https://images.unsplash.com/photo-1590534247854-e97d5e3feef8?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Bistrot 107",
@@ -568,7 +535,6 @@ const seeds: Seed[] = [
     description: "Bistrot nel centro di Palermo, certificato AIC, dove quasi tutto il menu è disponibile in versione senza glutine: fritti preparati con friggitrice dedicata, arancini, panini e piadine dolci e salate della tradizione siciliana.",
     shortDescription: "Bistrot certificato AIC nel centro di Palermo, quasi tutto il menu senza glutine.",
     gallerySeeds: [133, 134, 135, 136],
-    photoUrl: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "No Gluten Bakery",
@@ -583,7 +549,6 @@ const seeds: Seed[] = [
     description: "Forno, pasticceria e gastronomia a Palermo con laboratorio interamente dedicato al senza glutine: nessun prodotto con glutine viene lavorato sul posto. Produzione propria di brioche, pane, pizza, panelle e pasta.",
     shortDescription: "Forno-pasticceria 100% senza glutine a Palermo, produzione propria.",
     gallerySeeds: [137, 138, 139, 140],
-    photoUrl: "https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Gelato 2",
@@ -598,7 +563,6 @@ const seeds: Seed[] = [
     description: "Gelateria storica di Palermo, attiva dal 1976, con particolare attenzione alla clientela celiaca, vegana e senza lattosio: i gusti senza glutine sono disponibili senza sovrapprezzo rispetto agli altri.",
     shortDescription: "Gelateria storica dal 1976 a Palermo, gusti senza glutine senza sovrapprezzo.",
     gallerySeeds: [141, 142, 143, 144],
-    photoUrl: "https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Franco Pizzeria",
@@ -613,7 +577,6 @@ const seeds: Seed[] = [
     description: "Pizzeria a Sampierdarena, Genova, certificata AIC con forno dedicato alla preparazione senza glutine. Propone pizze senza glutine e senza lattosio, oltre a birra e dolci gluten free.",
     shortDescription: "Pizzeria certificata AIC a Sampierdarena, Genova, con forno dedicato.",
     gallerySeeds: [145, 146, 147, 148],
-    photoUrl: "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "I Due Fratelli",
@@ -628,7 +591,6 @@ const seeds: Seed[] = [
     description: "Bar-pizzeria nel quartiere di Prà, Genova, certificato AIC, con impasti alternativi tra cui integrale, kamut e senza glutine.",
     shortDescription: "Pizzeria certificata AIC a Prà, Genova, con impasti alternativi senza glutine.",
     gallerySeeds: [149, 150, 151, 152],
-    photoUrl: "https://images.unsplash.com/photo-1552539618-7eec9b4d1796?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Randazzo Gluten Free",
@@ -643,7 +605,6 @@ const seeds: Seed[] = [
     description: "Panificio e pasticceria a Sestri Ponente, Genova, aperto alla fine del 2024 come laboratorio artigianale dedicato esclusivamente al senza glutine, con prodotti anche senza lattosio. Entrato di recente nel circuito AIC Liguria.",
     shortDescription: "Panificio-pasticceria dedicato al senza glutine a Sestri Ponente, Genova, circuito AIC.",
     gallerySeeds: [153, 154, 155, 156],
-    photoUrl: "https://images.unsplash.com/photo-1590137876181-2a5a7e340de2?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Ristorante Flora",
@@ -658,7 +619,6 @@ const seeds: Seed[] = [
     description: "Ristorante a Verona con menu interamente vegano, senza glutine e senza lattosio, certificato AIC. Pranzo con formula a buffet, cena à la carte.",
     shortDescription: "Ristorante vegano e senza glutine certificato AIC nel centro di Verona.",
     gallerySeeds: [157, 158, 159, 160],
-    photoUrl: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "La Costa in Bra",
@@ -673,7 +633,6 @@ const seeds: Seed[] = [
     description: "Ristorante-pizzeria proprio di fronte all'Arena di Verona, con impasti senza glutine e senza lattosio certificati AIC.",
     shortDescription: "Pizzeria di fronte all'Arena di Verona, impasti senza glutine certificati AIC.",
     gallerySeeds: [161, 162, 163, 164],
-    photoUrl: "https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Gusto Libero",
@@ -688,7 +647,6 @@ const seeds: Seed[] = [
     description: "Negozio specializzato a Verona con oltre 100 prodotti senza glutine e senza lattosio per la spesa quotidiana dei celiaci, convenzionato con l'ULSS del Veneto per il ritiro dei buoni.",
     shortDescription: "Negozio specializzato a Verona, oltre 100 prodotti senza glutine, convenzionato ULSS.",
     gallerySeeds: [165, 166, 167, 168],
-    photoUrl: "https://images.unsplash.com/photo-1601599963565-b7f49deb1e97?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Gelateria Artigianale Oasi",
@@ -703,7 +661,6 @@ const seeds: Seed[] = [
     description: "Gelateria artigianale a Verona, nel circuito AIC dal 2010, con un assortimento genuino dedicato a chi ha intolleranza al glutine.",
     shortDescription: "Gelateria artigianale a Verona, certificata AIC dal 2010.",
     gallerySeeds: [169, 170, 171, 172],
-    photoUrl: "https://images.unsplash.com/photo-1629385697093-9ba4d6a1c2c5?auto=format&fit=crop&w=800&q=75",
   },
   // ── Negozio e farmacia ────────────────────────────────────
   {
@@ -719,7 +676,6 @@ const seeds: Seed[] = [
     description: "Negozio specializzato a Milano, punto vendita di riferimento della catena Milano Senza Glutine, con laboratorio interno per pane, prodotti da forno e pasta fresca, oltre a un ampio assortimento di prodotti confezionati.",
     shortDescription: "Negozio 100% dedicato al senza glutine a Milano, con laboratorio interno.",
     gallerySeeds: [173, 174, 175, 176],
-    photoUrl: "https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=800&q=75",
   },
   {
     name: "Farmacia Santa Rita",
@@ -734,7 +690,6 @@ const seeds: Seed[] = [
     description: "Farmacia nel quartiere Garbatella a Roma, con un reparto dedicato agli alimenti per celiaci ampio e curato, oltre ai consueti prodotti farmaceutici e dermocosmetici.",
     shortDescription: "Farmacia a Garbatella, Roma, con ampio reparto alimenti senza glutine per celiaci.",
     gallerySeeds: [177, 178, 179, 180],
-    photoUrl: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=75",
   },
 ];
 
@@ -753,9 +708,10 @@ function toFaqs(name: string, city: string, categorySlug: Business["category"]):
 }
 
 export const BUSINESSES: Business[] = seeds.map((s, idx) => {
-  return {
+  const slug = slugify(`${s.name}-${s.city}`);
+  const base: Business = {
     id: `biz-${idx + 1}`,
-    slug: slugify(`${s.name}-${s.city}`),
+    slug,
     name: s.name,
     category: s.category,
     region: s.region,
@@ -781,7 +737,6 @@ export const BUSINESSES: Business[] = seeds.map((s, idx) => {
     services: s.services,
     glutenFreeMenu: s.glutenFreeMenu,
     gallerySeeds: s.gallerySeeds,
-    photoUrl: s.photoUrl,
     reviews: [],
     faqs: toFaqs(s.name, s.city, s.category),
     featured: s.featured,
@@ -790,6 +745,7 @@ export const BUSINESSES: Business[] = seeds.map((s, idx) => {
     // sono state verificate il 29/07, tutte le successive il 30/07.
     createdAt: idx < 4 ? "2026-07-29" : "2026-07-30",
   };
+  return { ...base, production: PRODUCTION[slug], dishes: deriveDishes(base), ...deriveDiets(base) };
 });
 
 export function getBusinessBySlug(slug: string) {

@@ -24,13 +24,26 @@ function pinIcon(active: boolean) {
 
 function FitToBusinesses({ businesses }: { businesses: Business[] }) {
   const map = useMap();
-  const didFit = useRef(false);
+  const latest = useRef(businesses);
+  latest.current = businesses;
+  // Si riadatta quando cambia l'insieme dei locali (per esempio con i filtri),
+  // non a ogni render: la chiave e l'elenco degli id.
+  const key = businesses.map((b) => b.id).join(",");
   useEffect(() => {
-    if (didFit.current || businesses.length === 0) return;
-    didFit.current = true;
-    const bounds = L.latLngBounds(businesses.map((b) => [b.lat, b.lng] as [number, number]));
-    map.fitBounds(bounds, { padding: [32, 32], maxZoom: 12 });
-  }, [businesses, map]);
+    const list = latest.current;
+    if (list.length === 0) return;
+    const bounds = L.latLngBounds(list.map((b) => [b.lat, b.lng] as [number, number]));
+    map.fitBounds(bounds, { padding: [32, 32], maxZoom: list.length === 1 ? 14 : 12 });
+  }, [key, map]);
+  return null;
+}
+
+function FocusOn({ businesses, focusId }: { businesses: Business[]; focusId?: string | null }) {
+  const map = useMap();
+  useEffect(() => {
+    const b = focusId ? businesses.find((x) => x.id === focusId) : undefined;
+    if (b) map.flyTo([b.lat, b.lng], Math.max(map.getZoom(), 13), { duration: 0.6 });
+  }, [focusId, businesses, map]);
   return null;
 }
 
@@ -38,10 +51,12 @@ export default function InteractiveMap({
   businesses,
   activeId,
   onSelect,
+  focusId,
 }: {
   businesses: Business[];
   activeId: string | null;
   onSelect: (id: string) => void;
+  focusId?: string | null;
 }) {
   return (
     <MapContainer
@@ -56,6 +71,7 @@ export default function InteractiveMap({
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       <FitToBusinesses businesses={businesses} />
+      <FocusOn businesses={businesses} focusId={focusId} />
       {businesses.map((b) => (
         <Marker
           key={b.id}

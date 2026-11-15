@@ -19,6 +19,8 @@ import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { formatDate } from "@/lib/format";
 import { JsonLd, faqJsonLd, localBusinessJsonLd } from "@/lib/seo";
+import { guidesMentioningBusiness } from "@/lib/related-guides";
+import { DISH_LABEL, PRODUCTION_LABEL } from "@/lib/business-attributes";
 
 export default function BusinessDetailContent({ locale, slug }: { locale: Locale; slug: string }) {
   const base = getBusinessBySlug(slug);
@@ -30,6 +32,7 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
   const similar = getSimilarBusinesses(base).map((b) => getLocalizedBusiness(b, locale));
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${business.address}, ${business.city}`)}`;
   const city = cityName(business.city, locale);
+  const guides = guidesMentioningBusiness(base.slug, locale).slice(0, 4);
 
   return (
     <div className="container-page py-10">
@@ -88,6 +91,56 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
             <p>{business.description}</p>
           </div>
 
+          {/* In breve: tipo di produzione, piatti, esigenze (solo dati presenti nella scheda) */}
+          {(business.production || (business.dishes?.length ?? 0) > 0 || business.veganFriendly || business.lactoseFree) && (
+            <div className="card card-soft mt-8 p-5">
+              <h2 className="mb-3 text-lg font-bold text-ink">{locale === "en" ? "At a glance" : "In breve"}</h2>
+              <dl className="space-y-3 text-sm">
+                {business.production && (
+                  <div>
+                    <dt className="font-semibold text-ink">{locale === "en" ? "Type of production" : "Tipo di produzione"}</dt>
+                    <dd className="mt-1 text-ink-soft">
+                      <span className={`chip mr-2 ${business.production === "dedicato" ? "chip-brand" : "chip-neutral"}`}>{PRODUCTION_LABEL[business.production].short[locale]}</span>
+                      {PRODUCTION_LABEL[business.production].long[locale]}
+                    </dd>
+                  </div>
+                )}
+                {(business.dishes?.length ?? 0) > 0 && (
+                  <div>
+                    <dt className="font-semibold text-ink">{locale === "en" ? "What you can eat" : "Cosa puoi mangiare"}</dt>
+                    <dd className="mt-1 flex flex-wrap gap-1.5">
+                      {(business.dishes ?? []).map((d) => (
+                        <Link key={d} href={localeHref(locale, `/directory?piatto=${d}`)} className="chip chip-neutral">{DISH_LABEL[d][locale]}</Link>
+                      ))}
+                    </dd>
+                  </div>
+                )}
+                {(business.veganFriendly || business.lactoseFree) && (
+                  <div>
+                    <dt className="font-semibold text-ink">{locale === "en" ? "Other needs" : "Altre esigenze"}</dt>
+                    <dd className="mt-1 flex flex-wrap gap-1.5">
+                      {business.veganFriendly && <span className="chip chip-neutral">{locale === "en" ? "Vegan options" : "Opzioni vegane"}</span>}
+                      {business.lactoseFree && <span className="chip chip-neutral">{locale === "en" ? "Lactose-free options" : "Opzioni senza lattosio"}</span>}
+                    </dd>
+                  </div>
+                )}
+                {business.menuUrl && (
+                  <div>
+                    <dt className="font-semibold text-ink">{locale === "en" ? "Gluten-free menu" : "Menu senza glutine"}</dt>
+                    <dd className="mt-1">
+                      <a href={business.menuUrl} target="_blank" rel="noopener noreferrer" className="link-underline text-brand-dark">{locale === "en" ? "Open the menu" : "Apri il menu"}</a>
+                    </dd>
+                  </div>
+                )}
+              </dl>
+              <p className="mt-3 text-xs text-muted">
+                {locale === "en"
+                  ? "Taken from the venue's listing: always confirm with the venue before going."
+                  : "Ricavato dalla scheda del locale: conferma sempre con il locale prima di andare."}
+              </p>
+            </div>
+          )}
+
           {/* Menu gluten free */}
           <div className="mt-8">
             <h2 className="mb-3 flex items-center gap-2 text-xl font-bold text-ink"><UtensilsCrossed size={20} className="text-brand" /> {t.business.menuTitle}</h2>
@@ -109,6 +162,47 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
               {business.takeaway && <span className="chip chip-brand"><ShoppingBag size={12} /> {t.directory.filters.takeaway}</span>}
             </div>
           </div>
+
+          {/* Recensione in evidenza: compare solo quando esistono recensioni reali */}
+          {business.reviews.length > 0 && (
+            <div className="mt-10">
+              <h2 className="mb-3 text-xl font-bold text-ink">{locale === "en" ? "Featured review" : "Recensione in evidenza"}</h2>
+              <blockquote className="card card-soft p-5 text-sm text-ink-soft">
+                <p className="font-semibold text-ink">{business.reviews[0].title}</p>
+                <p className="mt-1">{business.reviews[0].body}</p>
+                <footer className="mt-2 text-xs text-muted">{business.reviews[0].author} · {formatDate(business.reviews[0].date, locale)}</footer>
+              </blockquote>
+            </div>
+          )}
+
+          {/* Nessuna recensione: invito a raccontare l'esperienza (storie reali, con consenso) */}
+          {business.reviews.length === 0 && (
+            <div className="card card-soft mt-10 p-5 text-sm text-ink-soft">
+              <p className="font-semibold text-ink">{locale === "en" ? "Been here?" : "Ci sei stato?"}</p>
+              <p className="mt-1">
+                {locale === "en" ? "There are no reviews for this venue yet. " : "Per questo locale non ci sono ancora recensioni. "}
+                <Link href={localeHref(locale, "/le-vostre-storie")} className="link-underline text-brand-dark">
+                  {locale === "en" ? "Tell us how it went" : "Raccontaci com'è andata"}
+                </Link>.
+              </p>
+            </div>
+          )}
+
+          {/* Guide che citano questo locale (ricavate dai link degli articoli) */}
+          {guides.length > 0 && (
+            <div className="mt-10">
+              <h2 className="mb-3 text-xl font-bold text-ink">{locale === "en" ? "Guides that mention this venue" : "Guide che citano questo locale"}</h2>
+              <ul className="space-y-2">
+                {guides.map((g) => (
+                  <li key={g.id}>
+                    <Link href={localeHref(locale, `/blog/${g.slug}`)} className="flex items-center justify-between rounded-xl border border-line px-4 py-3 text-sm text-ink-soft hover:border-brand hover:text-brand-dark">
+                      <span>{g.title}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* FAQ */}
           <div className="mt-10">

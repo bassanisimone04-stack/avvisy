@@ -1,9 +1,9 @@
 export const SITE_NAME = "Mappa Senza Glutine";
 export const SITE_URL = "https://www.mappasenzaglutine.it";
 export const SITE_DESCRIPTION =
-  "La mappa italiana dei locali senza glutine: trova ristoranti, pizzerie, hotel, negozi e farmacie certificati AIC vicino a te, scopri prodotti senza glutine verificati e leggi guide su celiachia e alimentazione senza glutine.";
+  "La mappa italiana dei locali senza glutine: ristoranti, hotel e negozi certificati AIC, prodotti verificati e guide su celiachia e alimentazione senza glutine.";
 export const SITE_DESCRIPTION_EN =
-  "Italy's map of gluten-free venues: find certified restaurants, pizzerias, hotels, shops and pharmacies near you, discover verified gluten-free products and read guides on celiac disease and gluten-free nutrition.";
+  "Italy's map of gluten-free venues: certified restaurants, hotels and shops near you, verified products, and guides on celiac disease and nutrition.";
 export const SITE_LOCALE = "it_IT";
 
 /**
@@ -15,6 +15,11 @@ export const SITE_LOCALE = "it_IT";
  * nella pagina /vivere-senza-glutine non compare (nessun link rotto).
  */
 export const GUIDE2 = {
+  /** Link Payhip dell'edizione italiana. */
   checkoutUrl: "https://payhip.com/b/BOtuJ",
+  /** Link Payhip dell'edizione inglese: finché è vuoto la pagina EN mostra "in arrivo" (nessun link rotto). */
+  checkoutUrlEn: "",
   price: "$9.97",
+  priceAmount: "9.97",
+  priceCurrency: "USD",
 };

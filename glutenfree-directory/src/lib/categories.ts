@@ -19,8 +19,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Pizzeria",
     labelPluralEn: "Pizzerias",
     icon: "Pizza",
-    description: "Pizzerie senza glutine con impasti e forni dedicati, per una pizza napoletana o gourmet sicura al 100% per i celiaci.",
-    descriptionEn: "Gluten-free pizzerias with dedicated dough and separate ovens, for safe Neapolitan or gourmet pizza.",
+    description: "Pizzerie senza glutine con impasti e forni dedicati, per una pizza napoletana o gourmet pensata per i celiaci.",
+    descriptionEn: "Gluten-free pizzerias with dedicated dough and separate ovens, for Neapolitan or gourmet pizza made with celiacs in mind.",
   },
   {
     slug: "hotel",
@@ -39,8 +39,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Pharmacy",
     labelPluralEn: "Pharmacies",
     icon: "Stethoscope",
-    description: "Farmacie con prodotti senza glutine erogabili con buono AIC, integratori per celiaci e consulenza dedicata sulla dieta gluten free.",
-    descriptionEn: "Pharmacies with AIC-voucher gluten-free products, celiac supplements and dedicated advice on the gluten-free diet.",
+    description: "Farmacie con un assortimento di prodotti senza glutine, acquistabili anche con il buono per celiaci dove la farmacia è convenzionata.",
+    descriptionEn: "Pharmacies with a range of gluten-free products, which can also be bought with the celiac voucher where the pharmacy takes part.",
   },
   {
     slug: "supermercato",
@@ -59,8 +59,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Specialty shop",
     labelPluralEn: "Specialty shops",
     icon: "Store",
-    description: "Negozi specializzati 100% senza glutine, con pane, pasta e dolci freschi certificati AIC per la spesa dei celiaci.",
-    descriptionEn: "Specialty shops 100% dedicated to gluten-free, with fresh AIC-certified bread, pasta and desserts for celiac shopping.",
+    description: "Negozi specializzati nel senza glutine, con pane, pasta e dolci freschi o confezionati per la spesa quotidiana dei celiaci.",
+    descriptionEn: "Shops specialized in gluten-free food, with fresh or packaged bread, pasta and desserts for everyday celiac shopping.",
   },
   {
     slug: "bar-pasticceria",
@@ -69,8 +69,8 @@ export const CATEGORIES: CategoryInfo[] = [
     labelEn: "Café & Bakery",
     labelPluralEn: "Cafés & Bakeries",
     icon: "Croissant",
-    description: "Bar e pasticcerie con colazione senza glutine tutti i giorni: cornetti, lievitati e dolci certificati per celiaci.",
-    descriptionEn: "Cafés and bakeries with gluten-free breakfast every day: croissants, pastries and certified treats for celiacs.",
+    description: "Bar e pasticcerie con colazione senza glutine tutti i giorni: cornetti, lievitati e dolci per celiaci.",
+    descriptionEn: "Cafés and bakeries with gluten-free breakfast every day: croissants, pastries and treats for celiacs.",
   },
   {
     slug: "gelateria",

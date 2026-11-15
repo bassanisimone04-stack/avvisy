@@ -34,8 +34,45 @@ const BLOG_COVER: Record<number, string> = {
 
 const FALLBACK = unsplash("photo-1466978913421-dad2ebd01d17");
 
+// Foto caricate dall'utente in public/images/blog/ (ritagliate 4:3, 1600 px).
+// Hanno la precedenza sulle foto Unsplash; gli articoli senza voce qui
+// continuano a usare la foto di riserva finché non arriva la loro foto.
+const LOCAL_BLOG_COVER: Record<number, string> = {
+  112: "contaminazione-cucina",
+  143: "napoli",
+  144: "venezia",
+  145: "bari",
+  146: "palermo",
+  147: "genova",
+  148: "verona",
+  149: "dieta-dimagrire",
+  150: "spesa-discount",
+  151: "panettone-colomba",
+  152: "birra",
+  153: "celiachia-uomini",
+  154: "volare",
+  155: "farine",
+  156: "svezzamento",
+  157: "sagre",
+  158: "sushi-etnico",
+  159: "certificazione-aic",
+  160: "besciamella",
+  161: "pane",
+  162: "crostata",
+  163: "crepes",
+  164: "pancake",
+  165: "biscotti",
+  166: "glutine",
+  168: "avena",
+  169: "pasta",
+  170: "dolci",
+  172: "dove-comprare",
+  174: "catene",
+};
+
 export function blogCoverPhoto(_category: string, seed: number): string {
-  return BLOG_COVER[seed] ?? FALLBACK;
+  const local = LOCAL_BLOG_COVER[seed];
+  return local ? `/images/blog/${local}.jpg` : (BLOG_COVER[seed] ?? FALLBACK);
 }
 
 // Le 13 ricette (categoria Ricette + la merenda scuola) non usano foto

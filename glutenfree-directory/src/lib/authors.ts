@@ -10,22 +10,10 @@ export interface AuthorInfo {
 
 export const AUTHORS: AuthorInfo[] = [
   {
-    slug: slugify("Dott.ssa Elena Rossi"),
-    name: "Dott.ssa Elena Rossi",
-    bio: "Biologa nutrizionista specializzata in intolleranze alimentari, scrive su Mappa Senza Glutine guide basate su evidenze scientifiche su celiachia, alimentazione e salute.",
-    bioEn: "Nutritionist and biologist specializing in food intolerances, writing evidence-based guides for Mappa Senza Glutine on celiac disease, nutrition and health.",
-  },
-  {
-    slug: slugify("Marco Bianchi"),
-    name: "Marco Bianchi",
-    bio: "Content specialist su sicurezza alimentare e normativa, con un occhio di riguardo per etichette, viaggi e novità del settore senza glutine.",
-    bioEn: "Content specialist in food safety and regulation, with a focus on labels, travel and news from the gluten-free world.",
-  },
-  {
-    slug: slugify("Giulia Ferri"),
-    name: "Giulia Ferri",
-    bio: "Food blogger gluten free, condivide ricette testate in prima persona e i prodotti senza glutine che ama davvero.",
-    bioEn: "Gluten-free food blogger, sharing personally tested recipes and the gluten-free products she truly loves.",
+    slug: slugify("Redazione Mappa Senza Glutine"),
+    name: "Redazione Mappa Senza Glutine",
+    bio: "La redazione scrive guide su celiachia, sicurezza alimentare e vita senza glutine basandosi su fonti ufficiali (AIC, Ministero della Salute, normativa vigente) e verifiche dirette, senza dati inventati.",
+    bioEn: "The editorial team writes guides on celiac disease, food safety and gluten-free life based on official sources (AIC, Ministero della Salute, current regulations) and direct verification, with no invented data.",
   },
 ];
 

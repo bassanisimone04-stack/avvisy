@@ -29,7 +29,7 @@ export default function AboutContent({ locale }: { locale: Locale }) {
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {[
             { icon: Target, title: en ? "Our mission" : "La nostra missione", body: en ? "Making gluten-free life simpler anywhere in Italy, with verified venues and reliable information on celiac disease." : "Rendere la vita senza glutine più semplice ovunque in Italia, con locali verificati e informazioni affidabili sulla celiachia." },
-            { icon: Heart, title: en ? "Built by the community" : "Fatto dalla community", body: en ? "Reviews and reports come from real people with celiac disease, not bots: safety told by those who live it every day." : "Recensioni e segnalazioni arrivano da persone celiache reali, non da bot: la sicurezza raccontata da chi la vive ogni giorno." },
+            { icon: Heart, title: en ? "Built by the community" : "Fatto dalla community", body: en ? "Reviews can only come from real people with celiac disease, never from bots or invented data: until real reviews arrive, we don't show any." : "Le recensioni possono arrivare solo da persone celiache reali, mai da bot o dati inventati: finché non arrivano recensioni vere, non ne mostriamo nessuna." },
             { icon: ShieldCheck, title: en ? "Constantly verified" : "Verifica costante", body: en ? "We periodically update addresses, hours and AIC certifications, so information stays reliable over time." : "Aggiorniamo periodicamente indirizzi, orari e certificazioni AIC, così le informazioni restano affidabili nel tempo." },
           ].map((item) => (
             <div key={item.title} className="card card-soft p-5">

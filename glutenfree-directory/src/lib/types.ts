@@ -44,6 +44,9 @@ export interface FaqItem {
   answer: string;
 }
 
+export type ProductionType = "dedicato" | "misto";
+export type DishType = "pizza" | "pasta" | "pane" | "dolci" | "gelato" | "fritti" | "carne" | "sushi" | "birra";
+
 export interface Business {
   id: string;
   slug: string;
@@ -73,6 +76,14 @@ export interface Business {
   hours: OpeningHoursDay[];
   services: string[];
   glutenFreeMenu: string[];
+  /** Tipo di produzione, solo dove il testo verificato della scheda lo dice chiaramente. */
+  production?: ProductionType;
+  /** Link al menu senza glutine, se il locale lo pubblica. */
+  menuUrl?: string;
+  /** Tipi di piatto ricavati dal menu e dai servizi gia' elencati. */
+  dishes?: DishType[];
+  veganFriendly?: boolean;
+  lactoseFree?: boolean;
   gallerySeeds: number[];
   /** Foto reale caricata dal locale o verificata da noi; se assente si usa l'illustrazione SVG. */
   photoUrl?: string;
@@ -147,6 +158,8 @@ export interface Product {
   brand: string;
   category: ProductCategory;
   description: string;
+  metaTitle?: string;
+  metaDescription?: string;
   imageSeed: number;
   price: number;
   rating: number;
