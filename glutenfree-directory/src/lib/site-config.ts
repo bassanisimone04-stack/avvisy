@@ -1,9 +1,9 @@
 export const SITE_NAME = "Mappa Senza Glutine";
 export const SITE_URL = "https://www.mappasenzaglutine.it";
 export const SITE_DESCRIPTION =
-  "La mappa italiana dei locali senza glutine: ristoranti, hotel e negozi certificati AIC, prodotti verificati e guide su celiachia e alimentazione senza glutine.";
+  "La mappa italiana dei locali senza glutine: ristoranti, hotel e negozi, prodotti verificati e guide su celiachia e alimentazione.";
 export const SITE_DESCRIPTION_EN =
-  "Italy's map of gluten-free venues: certified restaurants, hotels and shops near you, verified products, and guides on celiac disease and nutrition.";
+  "Italy's map of gluten-free venues: restaurants, hotels and shops near you, verified products, and guides on celiac disease and nutrition.";
 export const SITE_LOCALE = "it_IT";
 
 /**
