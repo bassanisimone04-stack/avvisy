@@ -125,6 +125,34 @@ const OVERRIDES_IT: Record<string, Override> = {
     title: "Ristorante Flora, Verona: vegano e AIC",
     description: "Ristorante Flora a Verona: menu interamente vegano, senza glutine e senza lattosio, certificato AIC. Pranzo a buffet, cena à la carte. Su Mappa Senza Glutine.",
   },
+  "trattoria-vecchio-mercato-bologna": {
+    title: "Trattoria Vecchio Mercato, Bologna: tutto senza glutine",
+    description: "Trattoria Vecchio Mercato, via Gobetti 49/F, Bologna: cucina solo senza glutine, certificata AIC. Tagliatelle, tortellini e tigelle. Orari e telefono.",
+  },
+  "la-gallina-bianca-roma": {
+    title: "La Gallina Bianca, Roma: trattoria certificata AIC",
+    description: "La Gallina Bianca in via Rosmini, Roma: trattoria e griglieria certificata AIC con quasi tutto il menu senza glutine, pizze e pane. Su Mappa Senza Glutine.",
+  },
+  "la-costa-in-bra-verona": {
+    title: "La Costa in Bra, Verona: pizza di fronte all'Arena",
+    description: "La Costa in Bra in Piazza Bra, Verona: pizzeria di fronte all'Arena con impasti senza glutine e senza lattosio certificati AIC. Su Mappa Senza Glutine.",
+  },
+  "panificio-magda-bari": {
+    title: "Panificio Magda, Bari: focaccia e panzerotti senza glutine",
+    description: "Panificio Magda, via Petroni, Bari: laboratorio autorizzato dal Ministero della Salute per focaccia barese, panzerotti e pane senza glutine.",
+  },
+  "la-gouterie-bari": {
+    title: "La Gouterie, Bari: pasticceria 100% senza glutine",
+    description: "La Gouterie in via Fornari, Bari: pasticceria e gastronomia solo senza glutine dal 2013, dolce e salato, anche con buono ASL. Su Mappa Senza Glutine.",
+  },
+  "panperfocaccia-torino": {
+    title: "Panperfocaccia, Torino: ristorante certificato AIC",
+    description: "Panperfocaccia in via Conte Verde, Torino: ristorante certificato AIC con focaccia di Recco, farinata e primi piatti senza glutine. Su Mappa Senza Glutine.",
+  },
+  "pansy-milano": {
+    title: "Pansy, Milano: pasticceria senza glutine e lattosio",
+    description: "Pansy in via Santa Sofia, Milano: pasticceria interamente senza glutine e senza lattosio, torte, mignon e opzioni vegan, con consegna. Su Mappa Senza Glutine.",
+  },
 };
 
 const OVERRIDES_EN: Record<string, Override> = {
@@ -235,6 +263,34 @@ const OVERRIDES_EN: Record<string, Override> = {
   "ristorante-flora-verona": {
     title: "Ristorante Flora, Verona: vegan and AIC",
     description: "Ristorante Flora in Verona: an entirely vegan, gluten-free and lactose-free menu, AIC-certified. Lunch buffet, à la carte dinner. On Mappa Senza Glutine.",
+  },
+  "trattoria-vecchio-mercato-bologna": {
+    title: "Trattoria Vecchio Mercato, Bologna: all gluten-free",
+    description: "Trattoria Vecchio Mercato on via Gobetti 49/F, Bologna: exclusively gluten-free kitchen, AIC-certified. Tagliatelle, tortellini and tigelle. Hours and phone.",
+  },
+  "la-gallina-bianca-roma": {
+    title: "La Gallina Bianca, Rome: AIC-certified trattoria",
+    description: "La Gallina Bianca on via Rosmini, Rome: AIC-certified trattoria and grill with almost the whole menu gluten-free, pizza and bread. On Mappa Senza Glutine.",
+  },
+  "la-costa-in-bra-verona": {
+    title: "La Costa in Bra, Verona: pizza across from the Arena",
+    description: "La Costa in Bra on Piazza Bra, Verona: pizzeria across from the Arena with AIC-certified gluten-free and dairy-free dough. On Mappa Senza Glutine.",
+  },
+  "panificio-magda-bari": {
+    title: "Panificio Magda, Bari: gluten-free focaccia and panzerotti",
+    description: "Panificio Magda on via Petroni, Bari: bakery authorized by the Ministry of Health for gluten-free Bari focaccia, panzerotti and bread. On Mappa Senza Glutine.",
+  },
+  "la-gouterie-bari": {
+    title: "La Gouterie, Bari: 100% gluten-free pastry shop",
+    description: "La Gouterie on via Fornari, Bari: gluten-free-only pastry shop and deli since 2013, sweet and savory, also with ASL voucher. On Mappa Senza Glutine.",
+  },
+  "panperfocaccia-torino": {
+    title: "Panperfocaccia, Turin: AIC-certified restaurant",
+    description: "Panperfocaccia on via Conte Verde, Turin: AIC-certified restaurant with Recco focaccia, farinata and gluten-free pasta dishes. On Mappa Senza Glutine.",
+  },
+  "pansy-milano": {
+    title: "Pansy, Milan: gluten-free and lactose-free pastry",
+    description: "Pansy on via Santa Sofia, Milan: entirely gluten-free and lactose-free pastry shop, cakes, mignon and vegan options, with delivery. On Mappa Senza Glutine.",
   },
 };
 
