@@ -2349,6 +2349,40 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["work", "baker", "pizza maker", "inhaled gluten"],
   },
+  "art-73": {
+    title: "Gluten-Free Bologna: Where to Eat Tagliatelle, Tortellini and Tigelle Safely",
+    excerpt: "A guide to gluten-free Bologna: where gluten hides in Emilian cooking, the AIC-certified trattoria with an exclusively gluten-free kitchen, and how to check venues before booking.",
+    metaTitle: "Gluten-Free Bologna: Where to Eat | Mappa Senza Glutine",
+    metaDescription: "Gluten-free Bologna: where gluten hides in Emilian cooking, the AIC-certified trattoria with a dedicated kitchen, and how to check a venue.",
+    authorRole: "Content verified by the editorial team",
+    keyTakeaways: [
+      "In Bologna gluten is everywhere: egg pasta, tortellini, lasagne, breaded cutlets, tigelle and spoon desserts.",
+      "Trattoria Vecchio Mercato has an exclusively gluten-free kitchen and is AIC-certified: the safest starting point in the city.",
+      "Before choosing a venue for Emilian specialties, always check certification on the official AIC list or app.",
+      "Travelers through Marconi airport find a dedicated celiac service, born from the Celiac Project by AIC, the local health authority and the Region.",
+    ],
+    sections: [
+      { h2: "Eating gluten-free in Bologna: where gluten hides", body: "Bologna is the city of fresh pasta, which is exactly why it is tricky with celiac disease. Tagliatelle, tortellini and lasagne are made with wheat flour and eggs, the Bolognese cutlet is breaded, tigelle and crescentine come from flour doughs, and desserts like zuppa inglese contain sponge fingers. Even a ragù can contain flour. The rule is simple: <strong>always ask</strong> how a dish is made and whether the kitchen has dedicated procedures. For the questions to ask, see our guide to <a href=\"/en/blog/come-evitare-la-contaminazione-crociata-al-ristorante-la-guida-completa-per-mangiare-senza-glutine-in-sicurezza\">cross-contamination at restaurants</a>." },
+      { h2: "Trattoria Vecchio Mercato: Emilian cooking, all gluten-free", body: "The reference point we can name with certainty is the trattoria in the Bolognina area.", h3: [
+        { title: "One venue, one kitchen", body: "<a href=\"/en/directory/trattoria-vecchio-mercato-bologna\">Trattoria Vecchio Mercato</a>, at via Pietro Gobetti 49/F, has an <strong>exclusively gluten-free kitchen</strong> and is listed as AIC-certified. Contamination with regular flour is ruled out at the source, because wheat flour is not in the kitchen. According to Bologna Welcome, the city's tourism portal, it opened in 2015 as the first exclusively gluten-free restaurant-pizzeria in Bologna and its province." },
+        { title: "What's on the menu", body: "The menu follows Emilian tradition in gluten-free form: <strong>tagliatelle al ragù, tortellini, crescentine and tigelle</strong>. These are exactly the dishes hardest to find safely in the city, so it's the natural stop to taste Bolognese cuisine without compromise. Phone and website are on the venue page: book ahead, especially on weekends." },
+      ] },
+      { h2: "How to check a venue before booking", body: "Besides the trattoria, Bologna has other venues with gluten-free options, but not all offer the same level of assurance. A venue saying «we have gluten-free» is not automatically certified. Before booking, check the official list in the <strong>AIC app</strong> and read <a href=\"/en/blog/certificazione-aic-cosa-significa-e-come-riconoscere-un-locale-davvero-certificato\">what AIC certification really means</a>. At the table, always say you have celiac disease: it changes how the kitchen handles your order. If a venue isn't certified, ask whether it uses a dedicated oven and fryer and cooks pasta in separate water." },
+      { h2: "Arriving or leaving via Marconi airport", body: "Travelers by air find a service designed for celiacs in Bologna. At Guglielmo Marconi airport the «Progetto Celiachia» is active, born from a collaboration between AIC, the Bologna local health authority and the Emilia-Romagna Region. Hours and arrangements can change, so check current information on the airport's website before you travel. For in-flight meals and what to carry, see our guide to <a href=\"/en/blog/volare-senza-glutine-il-pasto-gfml-in-aereo-e-cosa-portare\">flying gluten-free</a>." },
+      { h2: "Frequently asked questions about gluten-free Bologna", body: "The most common questions from visitors or residents dealing with celiac disease.", h3: [
+        { title: "Can I eat gluten-free tortellini in Bologna?", body: "Yes, at Trattoria Vecchio Mercato, where tortellini are on the menu in an exclusively gluten-free kitchen." },
+        { title: "How do I know a restaurant is really safe?", body: "Check certification on the official AIC list or app, then ask at the table how they handle cross-contamination." },
+      ] },
+      { h2: "Beyond Bologna", body: "For other destinations in northern Italy read our <a href=\"/en/blog/verona-senza-glutine-cosa-mangiare-tra-arena-centro-storico-e-negozi-specializzati\">Verona guide</a> or the overview of the <a href=\"/en/blog/le-migliori-citta-italiane-per-una-vacanza-senza-glutine\">best Italian cities for a gluten-free holiday</a>. If you know other Bologna venues with verified procedures, let us know: we will add them after checking." },
+    ],
+    faqs: [
+      { question: "Where can I eat gluten-free in Bologna?", answer: "Trattoria Vecchio Mercato has an exclusively gluten-free kitchen and is listed as AIC-certified. For any other venue, check certification on the AIC app." },
+      { question: "Are there gluten-free tortellini and tagliatelle in Bologna?", answer: "Yes: at Trattoria Vecchio Mercato you'll find gluten-free tortellini, tagliatelle al ragù, crescentine and tigelle." },
+      { question: "What should I avoid in Bolognese cuisine?", answer: "Egg pasta, lasagne, breaded cutlets, tigelle and desserts with biscuits or flour, unless the venue is fully gluten-free." },
+      { question: "Is there a celiac service at Bologna airport?", answer: "Yes, the Marconi airport Celiac Project was born from a collaboration between AIC, the Bologna health authority and the Emilia-Romagna Region. Check current hours before you travel." },
+    ],
+    tags: ["Bologna", "Emilia-Romagna", "tortellini", "tigelle", "AIC certification"],
+  },
 };
 
 

@@ -76,7 +76,7 @@ const CITY_GUIDES: Record<string, string> = {
   Palermo: "palermo-senza-glutine-pizzerie-arancini-e-gelato-per-una-citta-a-misura-di-celiaco",
   Genova: "genova-senza-glutine-pizza-focaccia-e-forno-dedicato-tra-i-quartieri-della-citta",
   Verona: "verona-senza-glutine-cosa-mangiare-tra-arena-centro-storico-e-negozi-specializzati",
-  Bologna: "le-migliori-citta-italiane-per-una-vacanza-senza-glutine",
+  Bologna: "bologna-senza-glutine-dove-mangiare-tagliatelle-tortellini-e-tigelle-in-sicurezza",
 };
 
 /** Guide pertinenti a una pagina della directory filtrata per città e/o categoria. */

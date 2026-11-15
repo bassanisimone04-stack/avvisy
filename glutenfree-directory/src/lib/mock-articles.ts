@@ -2444,6 +2444,41 @@ const seeds: Seed[] = [
       { question: "Posso mangiare in una pizzeria dove si lavora anche la farina normale?", answer: "È rischioso: l'AIC segnala che nelle pizzerie promiscue la contaminazione è molto probabile perché la farina è volatile. Meglio scegliere locali con forno e area dedicati." },
     ],
   },
+  {
+    title: "Bologna senza glutine: dove mangiare tagliatelle, tortellini e tigelle in sicurezza",
+    category: "Guide",
+    excerpt: "Guida a Bologna senza glutine: dove si nasconde il glutine nella cucina emiliana, la trattoria certificata AIC con cucina esclusivamente senza glutine e come verificare i locali prima di prenotare.",
+    metaTitle: "Bologna senza glutine: dove mangiare | Mappa Senza Glutine",
+    metaDescription: "Bologna senza glutine: dove si nasconde il glutine nella cucina emiliana, la trattoria certificata AIC con cucina dedicata e come verificare un locale.",
+    coverSeed: 187, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-11-15",
+    tags: ["Bologna", "Emilia-Romagna", "tortellini", "tigelle", "certificazione AIC"],
+    keyTakeaways: [
+      "A Bologna il glutine è ovunque: pasta all'uovo, tortellini, lasagne, cotoletta impanata, tigelle e dolci al cucchiaio.",
+      "La Trattoria Vecchio Mercato ha una cucina esclusivamente senza glutine ed è certificata AIC: è il punto di partenza più sicuro in città.",
+      "Prima di scegliere un locale per le specialità emiliane, verifica sempre la certificazione sull'elenco ufficiale o sull'app dell'AIC.",
+      "Anche chi passa dall'aeroporto Marconi trova un servizio dedicato ai celiaci, nato dal Progetto Celiachia di AIC, AUSL e Regione.",
+    ],
+    sections: [
+      { h2: "Mangiare senza glutine a Bologna: dove si nasconde il glutine", body: "Bologna è la città della pasta fresca, e proprio per questo è una delle più insidiose per chi ha la celiachia. Le tagliatelle, i tortellini e le lasagne sono fatti con farina di grano e uova, la cotoletta alla bolognese è impanata, le tigelle e le crescentine nascono da impasti di farina, e anche dolci come la zuppa inglese contengono savoiardi. Anche in un ragù può entrare la farina. Per questo la regola è semplice: <strong>chiedi sempre</strong> come è preparato il piatto e se la cucina ha procedure dedicate. Per le domande da fare in sala trovi la guida alla <a href=\"/blog/come-evitare-la-contaminazione-crociata-al-ristorante-la-guida-completa-per-mangiare-senza-glutine-in-sicurezza\">contaminazione crociata al ristorante</a>." },
+      { h2: "Trattoria Vecchio Mercato: la cucina emiliana tutta senza glutine", body: "Il punto di riferimento che possiamo indicare con certezza è la trattoria in zona Bolognina.", h3: [
+        { title: "Un solo locale, una sola cucina", body: "<a href=\"/directory/trattoria-vecchio-mercato-bologna\">Trattoria Vecchio Mercato</a>, in via Pietro Gobetti 49/F, ha una <strong>cucina esclusivamente senza glutine</strong> ed è segnalata come certificata AIC. Il rischio di contaminazione con la farina normale è escluso a monte, perché in cucina la farina di grano non c'è. Secondo Bologna Welcome, il portale turistico della città, il locale ha aperto nel 2015 come primo ristorante-pizzeria esclusivamente senza glutine di Bologna e provincia." },
+        { title: "Cosa trovi nel menu", body: "Il menu segue la tradizione emiliana in versione senza glutine: <strong>tagliatelle al ragù, tortellini, crescentine e tigelle</strong>. Sono proprio i piatti più difficili da trovare sicuri in città, per cui è la tappa naturale per chi vuole assaggiare la cucina bolognese senza rinunce. Telefono e sito sono nella scheda del locale: prenota, soprattutto nei fine settimana." },
+      ] },
+      { h2: "Come verificare un locale prima di prenotare", body: "Oltre alla trattoria, Bologna ha altri locali che offrono opzioni senza glutine, ma non tutti hanno lo stesso livello di garanzia. Un locale che dice «abbiamo il senza glutine» non è automaticamente certificato. Prima di prenotare controlla l'elenco ufficiale dell'<strong>app AIC</strong> e leggi <a href=\"/blog/certificazione-aic-cosa-significa-e-come-riconoscere-un-locale-davvero-certificato\">cosa significa davvero la certificazione AIC</a>. In sala di' sempre che sei celiaco: cambia il modo in cui viene gestita la cucina. Se un locale non è certificato, chiedi se usa un forno e una friggitrice dedicati e se la pasta cuoce in acqua separata." },
+      { h2: "Arrivare o partire dall'aeroporto Marconi", body: "Chi viaggia in aereo trova a Bologna un servizio pensato per i celiaci. All'aeroporto Guglielmo Marconi è attivo il «Progetto Celiachia», nato dalla collaborazione tra AIC, AUSL di Bologna e Regione Emilia-Romagna. Orari e modalità possono cambiare, quindi verifica le informazioni aggiornate sul sito dell'aeroporto prima di partire. Per il pasto in volo e cosa portare con te c'è la guida su <a href=\"/blog/volare-senza-glutine-il-pasto-gfml-in-aereo-e-cosa-portare\">come volare senza glutine</a>." },
+      { h2: "Domande frequenti su Bologna senza glutine", body: "Le domande più comuni di chi visita la città o ci vive con la celiachia.", h3: [
+        { title: "Si possono mangiare i tortellini senza glutine a Bologna?", body: "Sì, alla Trattoria Vecchio Mercato, dove i tortellini sono nel menu di una cucina esclusivamente senza glutine." },
+        { title: "Come faccio a sapere se un ristorante è davvero sicuro?", body: "Controlla la certificazione nell'elenco ufficiale o nell'app dell'AIC, poi chiedi in sala come gestiscono la contaminazione crociata." },
+      ] },
+      { h2: "Se vai oltre Bologna", body: "Per altre mete nel Nord Italia leggi la <a href=\"/blog/verona-senza-glutine-cosa-mangiare-tra-arena-centro-storico-e-negozi-specializzati\">guida a Verona</a> o la panoramica sulle <a href=\"/blog/le-migliori-citta-italiane-per-una-vacanza-senza-glutine\">migliori città per una vacanza senza glutine</a>. Se conosci altri locali di Bologna con procedure verificate, segnalacelo: li aggiungeremo dopo il controllo." },
+    ],
+    faqs: [
+      { question: "Dove mangiare senza glutine a Bologna?", answer: "La Trattoria Vecchio Mercato ha una cucina esclusivamente senza glutine ed è segnalata come certificata AIC. Per ogni altro locale verifica la certificazione sull'app AIC." },
+      { question: "Ci sono tortellini e tagliatelle senza glutine a Bologna?", answer: "Sì: alla Trattoria Vecchio Mercato trovi tortellini, tagliatelle al ragù, crescentine e tigelle senza glutine." },
+      { question: "Cosa devo evitare nella cucina bolognese?", answer: "Pasta all'uovo, lasagne, cotoletta impanata, tigelle e dolci con biscotti o farina, salvo che il locale non sia dedicato al senza glutine." },
+      { question: "C'è un servizio per celiaci all'aeroporto di Bologna?", answer: "Sì, il Progetto Celiachia dell'aeroporto Marconi nasce dalla collaborazione tra AIC, AUSL di Bologna e Regione Emilia-Romagna. Controlla gli orari aggiornati prima di partire." },
+    ],
+  },
 ];
 
 export function makeHeadings(sections: Seed["sections"]): ArticleHeading[] {

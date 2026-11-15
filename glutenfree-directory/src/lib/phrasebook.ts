@@ -32,4 +32,4 @@ export const PHRASEBOOK_EN_SECTION = {
 };
 
 // Guide delle citta' (id articolo) a cui si aggiunge il frasario nella versione inglese.
-export const CITY_GUIDE_IDS = new Set(["art-15", "art-19", "art-28", "art-29", "art-30", "art-31", "art-32", "art-33"]);
+export const CITY_GUIDE_IDS = new Set(["art-15", "art-19", "art-28", "art-29", "art-30", "art-31", "art-32", "art-33", "art-73"]);
