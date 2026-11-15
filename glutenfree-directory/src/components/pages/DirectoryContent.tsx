@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { SlidersHorizontal, SearchX } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -16,6 +17,7 @@ import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 import { getDictionary, tf } from "@/lib/i18n/dictionary";
 import { directoryFaqs } from "@/lib/directory-faqs";
+import { cityIntro, cityPageCities } from "@/lib/city-pages";
 
 const PAGE_SIZE = 9;
 
@@ -38,6 +40,10 @@ export default function DirectoryContent({
   const guides = guidesForDirectory(filters.comune ? results[0]?.city : undefined, filters.categoria, locale);
   const faqs = directoryFaqs(locale, cityLabel, catInfo ? { slug: catInfo.slug, label: categoryLabelPlural(catInfo, locale) } : undefined);
 
+  // Testo introduttivo proprio solo sulle pagine città "pulite" (senza categoria).
+  const cityRealName = filters.comune ? cityPageCities().find((c) => c.toLowerCase() === filters.comune!.toLowerCase()) : undefined;
+  const intro = cityRealName && !catInfo ? cityIntro(cityRealName, locale) : undefined;
+
   const title = catInfo
     ? tf(cityLabel ? t.directory.titleCategoryCity : t.directory.titleCategory, { category: categoryLabelPlural(catInfo, locale), city: cityLabel ?? "" })
     : cityLabel
@@ -54,6 +60,7 @@ export default function DirectoryContent({
         <div>
           <h1 className="font-editorial text-3xl font-semibold text-ink">{title}</h1>
           <p className="mt-1 text-ink-soft">{results.length} {results.length === 1 ? t.directory.resultFound : t.directory.resultsFound}</p>
+          {intro && <p className="mt-3 max-w-3xl text-ink-soft">{intro}</p>}
           <p className="mt-1 text-sm">
             <Link href={localeHref(locale, "/mappa-ristoranti-aic")} className="link-underline text-brand-dark">
               {locale === "en" ? "Only AIC restaurants? Open the AIC restaurants map" : "Cerchi solo i ristoranti AIC? Apri la mappa dei ristoranti AIC"}
@@ -71,16 +78,16 @@ export default function DirectoryContent({
             </p>
           )}
         </div>
-        <SortSelect />
+        <Suspense fallback={null}><SortSelect /></Suspense>
       </div>
 
       <DirectoryMap businesses={results.map((b) => getLocalizedBusiness(b, locale))} />
 
       <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
-        <DirectoryFilters />
+        <Suspense fallback={null}><DirectoryFilters /></Suspense>
 
         <div>
-          <QuickFilters />
+          <Suspense fallback={null}><QuickFilters /></Suspense>
           {pageResults.length === 0 ? (
             <div className="card card-soft flex flex-col items-center gap-3 p-14 text-center">
               <SearchX size={32} className="text-muted" />

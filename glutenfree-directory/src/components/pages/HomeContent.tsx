@@ -1,3 +1,4 @@
+import { cityPath } from "@/lib/city-pages";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Users, MapPinned, Sparkles } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
@@ -137,7 +138,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           <div className="mt-8 flex flex-wrap gap-3">
             {topCities.map((city, i) => (
               <Reveal key={city} delay={i * 30}>
-                <Link href={`${h("/directory")}?comune=${encodeURIComponent(city)}`} className="btn btn-outline bg-surface">
+                <Link href={h(cityPath(city))} className="btn btn-outline bg-surface">
                   <MapPinned size={15} /> {cityName(city, locale)}
                 </Link>
               </Reveal>

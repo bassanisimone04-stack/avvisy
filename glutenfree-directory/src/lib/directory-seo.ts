@@ -6,6 +6,7 @@ import { cityName } from "./i18n/place-names";
 import { getLocalizedBusiness } from "./i18n/content-business";
 import { pageMetadata, seoTitle } from "./seo";
 import { SITE_NAME } from "./site-config";
+import { cityPath } from "./city-pages";
 import type { Locale } from "./i18n/locale";
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -108,7 +109,7 @@ export function directoryMetadata(sp: SearchParams, locale: Locale): Metadata {
             `${results[0].shortDescription} Indirizzo e orari su ${site}.`,
           ]);
     }
-    meta = pageMetadata({ title, description, path: `/directory?comune=${encodeURIComponent(city)}`, locale });
+    meta = pageMetadata({ title, description, path: cityPath(city), locale });
   } else if (cat) {
     const base = categoryDescription(cat, locale);
     const count = n === 0 ? "" : en ? ` ${venues(n)} verified on ${SITE_NAME}.` : ` ${n === 1 ? "1 locale verificato" : `${n} locali verificati`} su ${SITE_NAME}.`;
