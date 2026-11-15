@@ -70,9 +70,33 @@ const LOCAL_BLOG_COVER: Record<number, string> = {
   174: "catene",
 };
 
+// Illustrazioni originali (SVG in public/images/blog/) per gli articoli senza foto.
+// La foto vera in LOCAL_BLOG_COVER ha sempre la precedenza: quando arriva, si sostituisce.
+const ILLUSTRATED_BLOG_COVER: Record<number, string> = {
+  167: "intolleranza",
+  171: "pasticcerie",
+  173: "old-wild-west",
+  175: "vicino-a-me",
+  176: "alimenti-dubbi",
+  177: "gelato",
+  178: "pizza",
+  179: "pane",
+  180: "dall-estero",
+  181: "ingredienti",
+  182: "ingestione",
+  183: "false-credenze",
+  184: "cena-amici",
+  185: "ristoratori",
+  186: "panettiere",
+  187: "bologna",
+};
+
 export function blogCoverPhoto(_category: string, seed: number): string {
   const local = LOCAL_BLOG_COVER[seed];
-  return local ? `/images/blog/${local}.jpg` : (BLOG_COVER[seed] ?? FALLBACK);
+  if (local) return `/images/blog/${local}.jpg`;
+  const illustrated = ILLUSTRATED_BLOG_COVER[seed];
+  if (illustrated) return `/images/blog/${illustrated}.svg`;
+  return BLOG_COVER[seed] ?? FALLBACK;
 }
 
 // Le 13 ricette (categoria Ricette + la merenda scuola) non usano foto
