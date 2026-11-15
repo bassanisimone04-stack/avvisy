@@ -1,5 +1,5 @@
 ---
-titolo: "Una finestra vista lago: Where It Was Filmed"
+titolo: "Una finestra vista lago: an Orta and Miasino itinerary"
 descrizione: "Bellamo does not exist: the Rai series was filmed on Lake Orta, between Orta San Giulio and Miasino, plus the Cernobbio jetty. Real locations and where to eat."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-06

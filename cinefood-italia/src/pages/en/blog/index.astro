@@ -15,7 +15,7 @@ const articoli = (await getCollection("blog"))
 const slugOf = (id: string) => id.replace(/-en$/, "");
 ---
 
-<BaseLayout lang={lang} title={t("blog.titolo")} description={t("blog.sub")}>
+<BaseLayout lang={lang} title="Blog: Italian film locations and where to eat" description="Articles and itineraries on Italian film and TV locations, with the real restaurants, bars and trattorias where you can eat like on screen.">
   <section class="mx-auto max-w-4xl px-4 py-12">
     <h1 class="font-display text-4xl font-extrabold">{t("blog.titolo")}</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">{t("blog.sub")}</p>

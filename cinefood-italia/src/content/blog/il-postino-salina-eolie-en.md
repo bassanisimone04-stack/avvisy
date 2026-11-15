@@ -1,6 +1,6 @@
 ---
-titolo: "Il Postino in Salina: Pollara and Where to Eat"
-descrizione: "Il Postino in Salina: the film's Pollara, the beach that is gone, how to get there from Milazzo and where to eat granita and pane cunzato."
+titolo: "Il Postino Filming Locations in Salina: Pollara"
+descrizione: "Where was Il Postino filmed? The film's Pollara in Salina, the beach that is gone, how to get there from Milazzo and where to eat granita and pane cunzato."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
 dataAggiornamento: 2026-10-13
