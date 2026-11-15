@@ -89,6 +89,7 @@ const ILLUSTRATED_BLOG_COVER: Record<number, string> = {
   185: "ristoratori",
   186: "panettiere",
   187: "bologna",
+  188: "buono-celiachia",
 };
 
 export function blogCoverPhoto(_category: string, seed: number): string {

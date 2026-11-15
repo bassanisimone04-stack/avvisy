@@ -2387,6 +2387,35 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["Bologna", "Emilia-Romagna", "tortellini", "tigelle", "AIC certification"],
   },
+  "art-74": {
+    title: "Celiac Food Voucher in Italy: Monthly Spending Caps by Age, How It Works and Where to Spend It",
+    excerpt: "How much the monthly voucher for gluten-free products paid by the Italian health service is worth: the caps by age and sex set by the decree of 10 August 2018, how to get it and where to spend it.",
+    metaTitle: "Celiac Voucher Italy: Amounts by Age and How It Works",
+    metaDescription: "Italy's celiac voucher: monthly caps by age and sex (decree of 10 August 2018), how to get it from the health authority, and where to spend it.",
+    authorRole: "Content verified by the editorial team",
+    keyTakeaways: [
+      "Italy's National Health Service guarantees free gluten-free foods specifically formulated for celiacs, up to a monthly spending cap.",
+      "Caps depend on age and sex and are set nationally by the Ministry of Health decree of 10 August 2018: for adults aged 18 to 59, 110 euros a month for men and 90 for women.",
+      "Practical arrangements (health card, vouchers, where to buy) are set by each Region, so they vary across Italy.",
+      "The voucher applies to products in the national Register of eligible gluten-free foods, not to any product labeled gluten-free.",
+    ],
+    sections: [
+      { h2: "What the celiac voucher is", body: "The «buono celiachia» is the monthly allowance through which the Italian National Health Service guarantees people diagnosed with celiac disease free gluten-free foods specifically formulated for celiacs. It is not a cash refund: it is a monthly budget you spend up to a limit. The right comes from law 123 of 2005, and the Ministry of Health decree of 10 August 2018 updated the spending limits. For the other costs of the diet, see our guide to <a href=\"/en/blog/quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali\">how much the gluten-free diet costs</a>." },
+      { h2: "How much it is worth: monthly caps by age and sex", body: "The decree of 10 August 2018 set monthly maximums by age and sex. These are the amounts as published by Regione Lombardia, which applies them from the December 2018 budget: <ul><li><strong>6 months - 5 years:</strong> 56 euros</li><li><strong>6 - 9 years:</strong> 70 euros</li><li><strong>10 - 13 years:</strong> 100 euros (male), 90 euros (female)</li><li><strong>14 - 17 years:</strong> 124 euros (male), 99 euros (female)</li><li><strong>18 - 59 years:</strong> 110 euros (male), 90 euros (female)</li><li><strong>60 years and over:</strong> 89 euros (male), 75 euros (female)</li></ul> The decree says the Ministry updates the limits periodically, so always check the amount valid for your Region on your local health authority's website." },
+      { h2: "How to get it", body: "The procedure is defined by each Region, but the path is similar. After diagnosis, you go to your local health authority with the documentation certifying celiac disease, and it assigns the monthly budget. In Lombardy, for example, the budget is loaded each month onto the Regional Services Card, that is, the health card. Other Regions may use paper vouchers or other arrangements: for details, ask your local health authority or the regional AIC section." },
+      { h2: "Where to spend it and what you can buy", body: "The voucher is spent in the channels the Region provides. In Lombardy, for example, these are pharmacies, specialty shops in your health authority's area and supermarket chains that joined a regional agreement. You can buy foods included in the <strong>national Register</strong> published by the Ministry of Health, that is, products labeled «senza glutine, specificatamente formulati per celiaci» or «for people intolerant to gluten». A product that only says «gluten-free» is not automatically eligible. For where to buy and how channels differ, see our guide to <a href=\"/en/blog/dove-comprare-prodotti-senza-glutine-supermercati-farmacie-e-negozi-specializzati\">where to buy gluten-free products</a>." },
+      { h2: "If you move to another Region", body: "Arrangements are regional and for years the vouchers could only be used in your Region of residence. AIC announced on 20 July 2026 that, as part of a pilot, the <strong>circulation of vouchers between Lombardy and Liguria</strong> is active. For any other pair of Regions, ask your local health authority whether the budget can be used outside the Region." },
+      { h2: "Sources", body: "<ul><li><a href=\"https://www.celiachia.it/assets/uploads/2019/09/decreto-10-agosto-2018.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Ministry of Health, decree of 10 August 2018 (text published by AIC)</a></li><li><a href=\"https://www.regione.lombardia.it/sanita/farmaci-protesi-e-assistenza-integrata/alimenti-per-celiaci\" target=\"_blank\" rel=\"noopener noreferrer\">Regione Lombardia, foods for celiacs</a></li><li><a href=\"https://static.celiachia.it/assets/uploads/2026/07/Nota-stampa_AIC_sperimentazione-circolarita-buoni-Lombardia-e-Ligura_20-luglio-2026.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">AIC press release on voucher circulation Lombardy-Liguria, 20 July 2026</a></li></ul> This guide is informational and does not replace advice from your local health authority or doctor." },
+    ],
+    faqs: [
+      { question: "How much is the celiac voucher for an adult?", answer: "Under the decree of 10 August 2018, between 18 and 59 the monthly cap is 110 euros for men and 90 for women; from 60 it is 89 for men and 75 for women. Check the amount with your local health authority." },
+      { question: "Is the celiac voucher a cash refund?", answer: "No: it is a monthly budget to spend on eligible gluten-free products, in the channels set by your Region." },
+      { question: "Can I use the voucher in another Region?", answer: "Generally arrangements are regional. Voucher circulation between Lombardy and Liguria is active as a pilot; for other Regions ask your local health authority." },
+      { question: "Can I buy any gluten-free product with the voucher?", answer: "No: it applies to products in the national Register of eligible gluten-free foods, with the specific wording for celiacs." },
+      { question: "Where do I apply for the celiac voucher?", answer: "At your local health authority, with the documentation certifying the diagnosis: exact procedures vary by Region." },
+    ],
+    tags: ["celiac voucher", "spending cap", "National Health Service", "decree 10 August 2018", "celiac rights"],
+  },
 };
 
 
