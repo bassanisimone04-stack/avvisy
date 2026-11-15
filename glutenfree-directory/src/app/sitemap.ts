@@ -6,6 +6,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { SITE_URL } from "@/lib/site-config";
 import { localeHref } from "@/lib/i18n/locale";
 import { STORIES } from "@/lib/stories";
+import { cityPageCities, cityPath } from "@/lib/city-pages";
 
 function entry(
   path: string,
@@ -51,14 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((c) => populatedDirectoryCategories.has(c.slug))
     .map((c) => entry(`/directory?categoria=${c.slug}`, { changeFrequency: "weekly", priority: 0.6 }));
 
-  // Pagine città con almeno 2 locali verificati: hanno titolo, descrizione e
-  // canonical propri (vedi lib/directory-seo.ts). Le città con un solo locale
-  // restano raggiungibili dai link interni ma non vengono spinte in sitemap.
-  const cityCounts = new Map<string, number>();
-  for (const b of BUSINESSES) cityCounts.set(b.city, (cityCounts.get(b.city) ?? 0) + 1);
-  const cityPages: MetadataRoute.Sitemap = [...cityCounts]
-    .filter(([, n]) => n >= 2)
-    .map(([city]) => entry(`/directory?comune=${encodeURIComponent(city)}`, { changeFrequency: "weekly", priority: 0.6 }));
+  // Pagine città con indirizzo pulito (/senza-glutine/roma) per le città con almeno
+  // 2 locali verificati (vedi lib/city-pages.ts). Le versioni con filtro
+  // (?comune=) restano raggiungibili ma hanno il canonical sulla pagina pulita.
+  const cityPages: MetadataRoute.Sitemap = cityPageCities().map((city) =>
+    entry(cityPath(city), { changeFrequency: "weekly", priority: 0.7 }),
+  );
 
   const productCategoryPages: MetadataRoute.Sitemap = PRODUCT_CATEGORIES.map((c) =>
     entry(`/prodotti?categoria=${encodeURIComponent(c)}`, { changeFrequency: "weekly", priority: 0.5 }),

@@ -1,3 +1,4 @@
+import { cityPath } from "@/lib/city-pages";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AicRestaurantsMap from "@/components/AicRestaurantsMap";
@@ -75,7 +76,7 @@ export default function AicMapContent({ locale }: { locale: Locale }) {
             .map(([c, items]) => (
               <div key={c} className="card card-soft p-5">
                 <h3 className="font-semibold text-ink">
-                  <Link href={h(`/directory?comune=${encodeURIComponent(c)}`)} className="link-underline hover:text-brand-dark">
+                  <Link href={h(cityPath(c))} className="link-underline hover:text-brand-dark">
                     {cityName(c, locale)}
                   </Link>{" "}
                   <span className="text-sm font-normal text-muted">({items.length})</span>
