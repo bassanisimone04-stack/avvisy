@@ -2416,6 +2416,35 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
     ],
     tags: ["celiac voucher", "spending cap", "National Health Service", "decree 10 August 2018", "celiac rights"],
   },
+  "art-75": {
+    title: "Michelin Guide and Celiac Disease: How to Book a Starred or Bib Gourmand Restaurant Gluten-Free",
+    excerpt: "A star or a Bib Gourmand says nothing about safety for someone with celiac disease. How to choose and book a Michelin Guide restaurant safely, what to ask, and how to check using the directory.",
+    metaTitle: "Michelin Guide for Celiacs: How to Book Safely",
+    metaDescription: "Starred and Bib Gourmand restaurants for celiacs: what the Michelin Guide doesn't say, how to book, what to ask the kitchen and how to verify with AIC.",
+    authorRole: "Content verified by the editorial team",
+    keyTakeaways: [
+      "Stars and the Bib Gourmand reward cooking quality and value for money: they are not a guarantee of safety for someone with celiac disease.",
+      "For a celiac diner the choice starts with direct checking: book ahead, explain celiac disease and ask how the kitchen is managed.",
+      "Tasting menus can often be adapted, but only if the venue has time and procedures: tell them when booking, not at the table.",
+      "Always check certification on the AIC list or app, and use the Mappa Senza Glutine directory for venues already verified.",
+    ],
+    sections: [
+      { h2: "What the Michelin Guide actually rewards", body: "The Michelin Guide Italia 2027, the 72nd edition, was presented on 12 November 2026 at the Teatro Municipale in Piacenza. Alongside the stars, the selection includes the <strong>Bib Gourmand</strong>, the distinction for restaurants with good value for money: the 2027 edition lists 276, 37 of them new. Stars and the Bib Gourmand concern cooking quality and, for the Bib, price. For the updated number of starred restaurants, check the Guide's official site." },
+      { h2: "A star is not a guarantee for someone with celiac disease", body: "A restaurant can have a star or a Bib Gourmand and no celiac procedures at all, or very careful ones. Among the distinctions described by the Guide we found no criteria tied to safety for people with celiac disease: so nothing can be deduced from the award alone. The main risk remains <a href=\"/en/blog/come-evitare-la-contaminazione-crociata-al-ristorante-la-guida-completa-per-mangiare-senza-glutine-in-sicurezza\">cross-contamination</a>: airborne flour, shared equipment, sauces and stocks thickened with flour." },
+      { h2: "How to book a Michelin Guide restaurant with celiac disease", body: "Preparation matters more than the venue's name. Some practical steps: <ul><li><strong>Contact the restaurant in advance</strong>, by phone or email, rather than only in an online booking form with no explanation.</li><li><strong>Say you have celiac disease</strong>, not that you «avoid gluten»: staff understand it is a medical need.</li><li><strong>Ask about the tasting menu</strong>: many venues adapt it, but they need time to reorganize the kitchen.</li><li><strong>Ask how the kitchen is managed</strong>: surfaces, utensils, fryer, cooking water, bread and bread service.</li><li><strong>Confirm the day before</strong> with a short phone call.</li></ul>" },
+      { h2: "Questions to ask before you sit down", body: "So you forget nothing, print or open our <a href=\"/en/checklist-ristorante\">restaurant checklist</a>. The key questions for a fine-dining venue: who in the kitchen has experience with celiac disease, whether stocks, sauces and reductions are made without flour, whether gluten-free bread and desserts are prepared in a separate space, and whether you can get the ingredients in writing. If answers are vague, it is a sign to choose elsewhere." },
+      { h2: "Using the directory alongside the Guide", body: "If you are planning a trip, you can start from the Michelin Guide for the venues you like and from our <a href=\"/en/directory\">directory</a> to check what is already listed as gluten-free in the city: you can filter by city and category. To understand what certification really means read our guide to <a href=\"/en/blog/certificazione-aic-cosa-significa-e-come-riconoscere-un-locale-davvero-certificato\">AIC certification</a> and always check the official AIC list or app. If a venue is not certified it does not mean it is unsafe, but direct checking becomes essential." },
+      { h2: "If budget matters: the Bib Gourmand", body: "The Bib Gourmand flags venues with a more moderate price than a starred restaurant. The same rules apply: no award replaces the conversation with the restaurant. For managing the costs of the diet in general see our guide to <a href=\"/en/blog/quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali\">how much the gluten-free diet costs</a>." },
+      { h2: "Sources", body: "<ul><li><a href=\"https://www.scattidigusto.it/guida-michelin-2027-le-nuove-stelle-a-piacenza-il-12-novembre\" target=\"_blank\" rel=\"noopener noreferrer\">Scatti di Gusto: Michelin Guide 2027 presentation in Piacenza</a></li><li><a href=\"https://siviaggia.it/notizie/nuovi-ristoranti-bib-gourmand-guida-michelin-italia-2027/608872/\" target=\"_blank\" rel=\"noopener noreferrer\">SiViaggia: Bib Gourmand of the Michelin Guide Italia 2027</a></li><li><a href=\"https://guide.michelin.com/it/it/notizia/michelin-guide-ceremony/bib-gourmand-2026-scopri-la-nuova-selezione-della-guida-michelin-italia\" target=\"_blank\" rel=\"noopener noreferrer\">Michelin Guide: Bib Gourmand</a></li></ul> Mappa Senza Glutine is not affiliated with the Michelin Guide. This guide is informational." },
+    ],
+    faqs: [
+      { question: "Does the Michelin Guide flag gluten-free restaurants?", answer: "Among the distinctions described (stars, Bib Gourmand) we found no celiac criteria: they reward cooking and, for the Bib, value for money. Always check with the restaurant." },
+      { question: "Can a starred restaurant prepare a gluten-free tasting menu?", answer: "Many fine-dining venues adapt menus, but it depends on kitchen organization. Tell them when booking and ask how they handle cross-contamination." },
+      { question: "What is the Bib Gourmand?", answer: "It is the Michelin Guide distinction for restaurants with good value for money. The Italy 2027 edition includes 276, 37 of them new." },
+      { question: "How do I know if a restaurant is AIC-certified?", answer: "Check the official AIC list or app. Our directory shows venues already listed, but checking the official source is still recommended." },
+    ],
+    tags: ["Michelin Guide", "starred restaurants", "Bib Gourmand", "booking", "celiac disease"],
+  },
 };
 
 
