@@ -11,7 +11,7 @@ const articoli = (await getCollection("blog"))
   .sort((a, b) => b.data.dataPubblicazione.getTime() - a.data.dataPubblicazione.getTime());
 ---
 
-<BaseLayout title="Blog" description="Articoli, itinerari e curiosità sul cinema e la buona tavola in Italia.">
+<BaseLayout title="Blog: location dei film e dove mangiare in Italia" description="Articoli e itinerari sulle location di film e serie TV in Italia, con i ristoranti, bar e trattorie veri dove mangiare come sullo schermo.">
   <section class="mx-auto max-w-4xl px-4 py-12">
     <h1 class="font-display text-4xl font-extrabold">Blog</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">Itinerari, curiosità e storie di cinema e cucina.</p>

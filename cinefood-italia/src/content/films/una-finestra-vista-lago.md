@@ -1,6 +1,6 @@
 ---
 titolo: "Una finestra vista lago"
-titoloSeo: "Una finestra vista lago: dove è stata girata"
+titoloSeo: "Una finestra vista lago: film, location e locali"
 anno: 2026
 regista: "Marco Pontecorvo"
 serieTv: true

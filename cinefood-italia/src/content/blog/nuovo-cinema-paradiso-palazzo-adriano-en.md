@@ -1,6 +1,6 @@
 ---
-titolo: "Cinema Paradiso Filming Locations: Palazzo Adriano"
-descrizione: "Where was Cinema Paradiso filmed? Palazzo Adriano's Piazza Umberto I, the free museum dedicated to the film and other Sicilian locations."
+titolo: "Cinema Paradiso Museum & Locations: Palazzo Adriano"
+descrizione: "Where was Cinema Paradiso filmed? Palazzo Adriano's Piazza Umberto I, the free Cinema Paradiso museum and other Sicilian locations."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-17
 dataAggiornamento: 2026-10-13
