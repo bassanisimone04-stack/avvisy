@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { MapPin, BadgeCheck } from "lucide-react";
 import type { Business } from "@/lib/types";
@@ -9,10 +8,7 @@ import { getCategoryInfo, categoryLabel } from "@/lib/categories";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref, type Locale } from "@/lib/i18n/locale";
 
-const InteractiveMap = dynamic(() => import("./InteractiveMap"), {
-  ssr: false,
-  loading: () => <div className="h-full w-full animate-pulse bg-brand-soft" />,
-});
+import InteractiveMap from "./LazyInteractiveMap";
 
 type TypeFilter = "tutti" | "ristorante" | "pizzeria";
 

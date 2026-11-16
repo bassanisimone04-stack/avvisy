@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -8,12 +8,12 @@ import type { Business } from "@/lib/types";
 
 const ITALY_CENTER: [number, number] = [42.5, 12.6];
 
-function pinIcon(active: boolean) {
+function buildIcon(active: boolean) {
   const fill = active ? "var(--gf-btn-accent)" : "var(--gf-btn-primary)";
   const size = active ? 36 : 28;
   return L.divIcon({
     className: "gf-map-pin",
-    html: `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    html: `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" fill="${fill}" stroke="white" stroke-width="1.4"/>
       <circle cx="12" cy="10" r="3" fill="white"/>
     </svg>`,
@@ -21,6 +21,35 @@ function pinIcon(active: boolean) {
     iconAnchor: [size / 2, size],
   });
 }
+
+// Le due icone (normale e attiva) sono create una sola volta: prima se ne
+// creava una nuova per ogni pin a ogni passaggio del mouse, e Leaflet
+// ridisegnava tutti i marcatori.
+const ICONS = { normal: buildIcon(false), active: buildIcon(true) };
+
+const Pin = memo(function Pin({
+  business,
+  active,
+  onSelect,
+}: {
+  business: Business;
+  active: boolean;
+  onSelect: (id: string) => void;
+}) {
+  return (
+    <Marker
+      position={[business.lat, business.lng]}
+      icon={active ? ICONS.active : ICONS.normal}
+      title={business.name}
+      alt={business.name}
+      zIndexOffset={active ? 1000 : 0}
+      eventHandlers={{
+        click: () => onSelect(business.id),
+        mouseover: () => onSelect(business.id),
+      }}
+    />
+  );
+});
 
 function FitToBusinesses({ businesses }: { businesses: Business[] }) {
   const map = useMap();
@@ -67,21 +96,15 @@ export default function InteractiveMap({
       attributionControl={true}
     >
       <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        updateWhenIdle
+        keepBuffer={1}
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       <FitToBusinesses businesses={businesses} />
       <FocusOn businesses={businesses} focusId={focusId} />
       {businesses.map((b) => (
-        <Marker
-          key={b.id}
-          position={[b.lat, b.lng]}
-          icon={pinIcon(b.id === activeId)}
-          eventHandlers={{
-            click: () => onSelect(b.id),
-            mouseover: () => onSelect(b.id),
-          }}
-        />
+        <Pin key={b.id} business={b} active={b.id === activeId} onSelect={onSelect} />
       ))}
     </MapContainer>
   );

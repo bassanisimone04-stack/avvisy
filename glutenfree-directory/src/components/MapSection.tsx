@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { MapPin, BadgeCheck, Heart } from "lucide-react";
 import type { Business } from "@/lib/types";
@@ -12,10 +11,7 @@ import { useDictionary } from "@/lib/i18n/useLocale";
 import { tf } from "@/lib/i18n/dictionary";
 import RatingStars from "./RatingStars";
 
-const InteractiveMap = dynamic(() => import("./InteractiveMap"), {
-  ssr: false,
-  loading: () => <div className="h-full w-full animate-pulse bg-brand-soft" />,
-});
+import InteractiveMap from "./LazyInteractiveMap";
 
 export default function MapSection({ businesses }: { businesses: Business[] }) {
   const [activeId, setActiveId] = useState<string | null>(businesses[0]?.id ?? null);
