@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { MapPin, BadgeCheck, Heart } from "lucide-react";
 import type { Business } from "@/lib/types";
@@ -10,10 +9,7 @@ import { localeHref } from "@/lib/i18n/locale";
 import { useDictionary } from "@/lib/i18n/useLocale";
 import { tf } from "@/lib/i18n/dictionary";
 
-const InteractiveMap = dynamic(() => import("./InteractiveMap"), {
-  ssr: false,
-  loading: () => <div className="h-full w-full animate-pulse bg-brand-soft" />,
-});
+import InteractiveMap from "./LazyInteractiveMap";
 
 /**
  * Mappa dei risultati correnti della directory: mostra tutte le attività che
