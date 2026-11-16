@@ -22,6 +22,12 @@ faq:
     risposta: "Its story starts in 1870 with Salvatore Condurro. His son Michele opened his own place in 1906, and in 1930 the pizzeria moved to its current home on Via Cesare Sersale, still run by the same family today."
   - domanda: "How do you get to Da Michele from Naples Central Station?"
     risposta: "It's less than a 10-minute walk from Napoli Centrale station, Piazza Garibaldi exit — one of the easiest historic pizzerias to reach in the city."
+  - domanda: "What did Julia Roberts eat in the Eat Pray Love pizza scene?"
+    risposta: "A margherita pizza: Liz bites into it in the Naples part of the film. At Da Michele the two historic pizzas are margherita and marinara."
+  - domanda: "Is the Eat Pray Love pizza place real?"
+    risposta: "Yes. It is L'Antica Pizzeria da Michele on Via Cesare Sersale in Naples, still run by the same family and open to the public, with a short menu and a queue at the door."
+  - domanda: "Where does Julia Roberts eat in Rome in Eat Pray Love?"
+    risposta: "In trattorias in the historic centre, including Trattoria Santa Lucia in Largo Febo and Da Pancrazio, below the ancient Theatre of Pompey. The pizza scene is the Naples one, at Da Michele."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"

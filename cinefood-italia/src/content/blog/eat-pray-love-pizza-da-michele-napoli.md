@@ -22,6 +22,12 @@ faq:
     risposta: "La storia comincia nel 1870 con Salvatore Condurro. Il figlio Michele apre un locale proprio nel 1906 e nel 1930 la pizzeria si trasferisce nella sede attuale di via Cesare Sersale, gestita ancora oggi dalla stessa famiglia."
   - domanda: "Come si arriva da Michele da Napoli Centrale?"
     risposta: "A piedi in meno di 10 minuti dalla Stazione Napoli Centrale, uscita Piazza Garibaldi: è una delle pizzerie storiche più comode da raggiungere in città."
+  - domanda: "Cosa mangia Julia Roberts nella scena della pizza di Mangia prega ama?"
+    risposta: "Una pizza margherita: Liz la assaggia nella parte del film ambientata a Napoli. Da Michele le due pizze storiche sono margherita e marinara."
+  - domanda: "La pizzeria di Mangia prega ama esiste davvero?"
+    risposta: "Sì: è L'Antica Pizzeria da Michele, in via Cesare Sersale a Napoli, ancora gestita dalla stessa famiglia e aperta al pubblico, con menù ridotto e coda all'ingresso."
+  - domanda: "Dove mangia Julia Roberts a Roma in Mangia prega ama?"
+    risposta: "In trattorie del centro storico, tra cui la Trattoria Santa Lucia in Largo Febo e Da Pancrazio, sotto l'antico Teatro di Pompeo. La scena della pizza è invece quella di Napoli, da Michele."
 prenotazioni:
   - nome: "Hotel"
     citta: "Napoli"
