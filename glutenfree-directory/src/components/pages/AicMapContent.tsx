@@ -12,7 +12,33 @@ import type { FaqItem } from "@/lib/types";
 
 export const AIC_MAP_PATH = "/mappa-ristoranti-aic";
 
+/** FAQ per città (Roma, Milano): numeri e nomi calcolati dai dati, mai scritti a mano. */
+function cityFaqs(locale: Locale): FaqItem[] {
+  const en = locale === "en";
+  return ["Roma", "Milano"].flatMap((city) => {
+    const names = aicRestaurants().filter((b) => b.city === city).map((b) => b.name);
+    if (names.length === 0) return [];
+    const list = names.join(", ");
+    const shown = cityName(city, locale);
+    return [
+      en
+        ? {
+            question: `Are there AIC restaurants in ${shown}?`,
+            answer: `On this map we list ${names.length} restaurants and pizzerias in ${shown} that are marked as AIC members: ${list}. It is not the complete list for the city: check the AIC's own list and call the venue before you go.`,
+          }
+        : {
+            question: `Ci sono ristoranti AIC a ${shown}?`,
+            answer: `Sulla nostra mappa trovi ${names.length} ristoranti e pizzerie a ${shown} che risultano aderenti ad AIC: ${list}. Non è l'elenco completo della città: controlla anche quello di AIC e telefona al locale prima di andare.`,
+          },
+    ];
+  });
+}
+
 export function aicMapFaqs(locale: Locale, n: number, cities: number): FaqItem[] {
+  return [...baseFaqs(locale, n, cities), ...cityFaqs(locale)];
+}
+
+function baseFaqs(locale: Locale, n: number, cities: number): FaqItem[] {
   return locale === "en"
     ? [
         { question: "What is the map of AIC restaurants?", answer: `A map of the restaurants and pizzerias in the Mappa Senza Glutine directory that take part in the Alimentazione Fuori Casa program of the Italian Celiac Association (AIC). Today it shows ${n} venues in ${cities} cities.` },

@@ -8,7 +8,7 @@ const cities = new Set(aicRestaurants().map((b) => b.city)).size;
 
 export const metadata = pageMetadata({
   title: `Mappa ristoranti AIC: ${n} locali certificati`,
-  description: `La mappa dei ristoranti e delle pizzerie del programma AIC Alimentazione Fuori Casa: ${n} locali in ${cities} città, con indirizzo e scheda su ${SITE_NAME}.`,
+  description: `Elenco e mappa di ristoranti e pizzerie AIC (Alimentazione Fuori Casa): ${n} locali in ${cities} città, anche Roma e Milano. Indirizzi su ${SITE_NAME}.`,
   path: AIC_MAP_PATH,
   locale: "it",
 });
