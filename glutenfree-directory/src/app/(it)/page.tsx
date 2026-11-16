@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import { SITE_DESCRIPTION } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
-  title: "Mappa Senza Glutine: ristoranti e locali in Italia",
+  title: "Mappa Senza Glutine: ristoranti e locali per celiaci",
   description: SITE_DESCRIPTION,
   path: "/",
   locale: "it",

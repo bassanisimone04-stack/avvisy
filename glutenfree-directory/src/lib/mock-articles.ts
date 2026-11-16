@@ -683,8 +683,8 @@ const seeds: Seed[] = [
     title: "McDonald's senza glutine in Italia: cosa può mangiare davvero un celiaco",
     category: "Guide",
     excerpt: "McDonald's senza glutine in Italia: cosa garantisce davvero il Gluten Free Burger, perché la catena non è certificata AIC e quali altri prodotti comportano un rischio di contaminazione crociata.",
-    metaTitle: "McDonald's gluten free: panino, patatine e gelato",
-    metaDescription: "McDonald's senza glutine in Italia: il panino gluten free garantito, se patatine, gelato e McFlurry sono sicuri e come leggere la tabella allergeni.",
+    metaTitle: "McDonald's senza glutine: patatine, panino e gelato",
+    metaDescription: "McDonald's senza glutine in Italia: le patatine sono sicure per un celiaco? Cosa è garantito (panino gluten free), cosa no (gelato, McFlurry) e la tabella allergeni.",
     coverSeed: 121, author: "Redazione Mappa Senza Glutine", authorRole: "Contenuti verificati dalla redazione", publishedAt: "2026-07-30",
     tags: ["McDonald's", "fast food", "sicurezza alimentare", "AIC"],
     keyTakeaways: [

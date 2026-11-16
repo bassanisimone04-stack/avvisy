@@ -650,7 +650,7 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-21": {
     title: "Gluten-Free McDonald's in Italy: What a Celiac Can Really Eat",
     excerpt: "Gluten-free McDonald's in Italy: what the Gluten Free Burger actually guarantees, why the chain isn't AIC certified, and which other products carry a cross-contamination risk.",
-    metaTitle: "McDonald's Gluten Free in Italy | Mappa Senza Glutine",
+    metaTitle: "McDonald's Gluten Free Italy: Fries, Burger, Ice Cream",
     metaDescription: "Gluten-free McDonald's in Italy: the guaranteed gluten-free burger, whether fries, ice cream and McFlurry are safe, and how to read the allergen table.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
