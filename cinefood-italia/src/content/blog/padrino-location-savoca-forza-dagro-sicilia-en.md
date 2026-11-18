@@ -1,5 +1,5 @@
 ---
-titolo: "The Godfather Locations in Sicily: Savoca, Forza d'Agrò"
+titolo: "Godfather Sicily Locations: Savoca, Forza d'Agrò"
 descrizione: "Where The Godfather was filmed in Sicily: Savoca, Forza d'Agrò and Al Pacino's Bar Vitelli. A complete guide to the film's real locations."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-25

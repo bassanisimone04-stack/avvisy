@@ -18,7 +18,7 @@ const conteggi = contaLocaliPerFilm(locali);
 const jsonLd = itemListJsonLd(t("film.titolo"), films.map((f) => new URL(path(`/film/${f.id}`, lang), SITE.url).href));
 ---
 
-<BaseLayout lang={lang} title={t("film.titolo")} description={t("film.sub")} jsonLd={jsonLd}>
+<BaseLayout lang={lang} title={t("film.titolo")} description={t("film.sub") + " Browse films and TV series shot in Italy, with the restaurants, bars and cafés linked to each, plus address, scene and source."} jsonLd={jsonLd}>
   <section class="mx-auto max-w-6xl px-4 py-12">
     <h1 class="font-display text-4xl font-extrabold">{t("film.titolo")}</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">{t("film.sub")}</p>

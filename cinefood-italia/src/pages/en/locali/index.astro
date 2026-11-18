@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import LocaleCard from "../../../components/LocaleCard.astro";
 import FilterBar from "../../../components/FilterBar.astro";
-import { ordinaLocali, cittaUniche, tipiUnici, filmIdsDiLocale } from "../../../lib/utils";
+import { ordinaLocali, cittaUniche, tipiUnici, filmIdsDiLocale, slugify } from "../../../lib/utils";
 import { itemListJsonLd } from "../../../lib/schema-org";
 import { SITE } from "../../../config/site";
 import { useT, path } from "../../../i18n/ui";
@@ -41,6 +41,11 @@ const jsonLd = itemListJsonLd(t("locali.titolo"), locali.map((l) => new URL(path
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="font-display text-4xl font-extrabold">{t("locali.titolo")}</h1>
     <p class="mt-2 text-ink-600 dark:text-ink-400">{t("locali.sub")}</p>
+
+    <nav class="mt-4 flex flex-wrap items-center gap-2 text-sm" aria-label="Venues by type">
+      <span class="text-ink-600 dark:text-ink-400">By type:</span>
+      {tipi.map((tp) => <a href={path(`/tipo/${slugify(tp)}`, lang)} class="rounded-full border border-ink-200 px-3 py-1 capitalize hover:underline dark:border-ink-700">{tp}</a>)}
+    </nav>
 
     <div class="mt-6">
       <FilterBar citta={citta} tipi={tipi} film={filmOpzioni} lang={lang} />
