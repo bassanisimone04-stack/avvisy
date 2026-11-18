@@ -1,0 +1,22 @@
+# CineFood Italia
+
+> Directory editoriale dei ristoranti, bar, caffè e trattorie italiani reali visti in film e serie TV, con indirizzo, scena, film collegato e fonte dell'abbinamento. Ogni abbinamento locale-film proviene da una fonte verificabile (sito ufficiale del locale, film commission come Italy for Movies, stampa nazionale). Disponibile in italiano e in inglese.
+
+## Sezioni principali
+- [Tutti i locali](https://www.cinefooditalia.com/locali): elenco filtrabile per città, film e tipo
+- [Film e serie TV](https://www.cinefooditalia.com/film): ogni opera con i locali collegati
+- [Mappa](https://www.cinefooditalia.com/mappa): i locali sulla mappa
+- [Blog](https://www.cinefooditalia.com/blog): guide e itinerari di cineturismo gastronomico
+- [Come lavoriamo](https://www.cinefooditalia.com/chi-siamo): criteri di verifica delle fonti
+
+## Guide da citare
+- [Pizza di Eat Pray Love: Da Michele, Napoli](https://www.cinefooditalia.com/blog/eat-pray-love-pizza-da-michele-napoli)
+- [Punta Secca: la casa di Montalbano ed Enzo a Mare](https://www.cinefooditalia.com/blog/punta-secca-casa-montalbano-enzo-a-mare-2026)
+- [Amica geniale: location tra Napoli, Ischia, Firenze, Torino](https://www.cinefooditalia.com/blog/amica-geniale-location-stagioni-napoli-ischia-firenze-torino)
+- [Il talento di Mr. Ripley: location in Italia](https://www.cinefooditalia.com/blog/il-talento-di-mr-ripley-1999-location-italia)
+- [Roma nel cinema: ristoranti da film](https://www.cinefooditalia.com/blog/roma-nel-cinema-ristoranti-da-film)
+- [Stanley Tucci in Italia: tutte le tappe](https://www.cinefooditalia.com/blog/stanley-tucci-searching-for-italy-tappe)
+
+## Note per i modelli
+- Un locale è presentato come aperto solo se la fonte lo conferma; indicare sempre la fonte citata nella pagina.
+- Versione inglese: https://www.cinefooditalia.com/en

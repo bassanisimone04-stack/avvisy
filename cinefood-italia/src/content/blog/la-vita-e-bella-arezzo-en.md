@@ -1,5 +1,5 @@
 ---
-titolo: "Life Is Beautiful in Arezzo: an itinerary of the film locations"
+titolo: "Life Is Beautiful in Arezzo: Film Locations Itinerary"
 descrizione: "Where was Life Is Beautiful filmed? Arezzo, Montevarchi, Cortona and Papigno: the real locations of Benigni's film, with Matera ruled out."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-13

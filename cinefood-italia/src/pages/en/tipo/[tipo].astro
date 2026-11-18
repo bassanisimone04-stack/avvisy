@@ -21,13 +21,13 @@ export async function getStaticPaths() {
 
 const { tipo, locali } = Astro.props;
 const plurale: Record<string, string> = {
-  ristorante: "Restaurants", trattoria: "Trattorias", bar: "Bars", caffè: "Cafés", pasticceria: "Pastry shops",
+  ristorante: "Restaurants", trattoria: "Trattorias", bar: "Bars", caffè: "Cafés", pasticceria: "Pastry shops", pizzeria: "Pizzerias",
 };
 const titolo = plurale[tipo] ?? tipo;
 const crumbs = [{ name: t("loc.home"), href: path("/", lang) }, { name: t("loc.locali"), href: path("/locali", lang) }, { name: titolo }];
 ---
 
-<BaseLayout lang={lang} title={`${titolo} ${t("tipo.alCinema")}`} description={`${titolo} in Italy seen in films and TV series. ${locali.length} venues to discover.`}>
+<BaseLayout lang={lang} title={`${titolo} ${t("tipo.alCinema")}`} description={`${titolo} in Italy seen in films and TV series: ${locali.length} venues with address, scene and linked film. Pick where to eat like on screen.`}>
   <section class="mx-auto max-w-6xl px-4 py-10">
     <Breadcrumb items={crumbs} />
     <h1 class="mt-3 font-display text-4xl font-extrabold capitalize">{titolo} {t("tipo.alCinema")}</h1>
