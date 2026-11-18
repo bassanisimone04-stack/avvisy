@@ -1,0 +1,19 @@
+# Mappa Senza Glutine
+
+> Directory italiana di ristoranti, pizzerie, hotel, negozi e farmacie senza glutine, con guide su celiachia e dieta senza glutine. Le informazioni sanitarie citano fonti come l'Associazione Italiana Celiachia (AIC) e il Ministero della Salute; i locali sono segnalati, non garantiti: la verifica va fatta direttamente con il locale.
+
+## Sezioni principali
+- [Directory dei locali](https://www.mappasenzaglutine.it/directory): ricerca per città e categoria.
+- [Mappa dei ristoranti AIC](https://www.mappasenzaglutine.it/mappa-ristoranti-aic): ristoranti e pizzerie segnalati come aderenti al programma AIC Alimentazione Fuori Casa.
+- [Blog e guide](https://www.mappasenzaglutine.it/blog): guide su celiachia, etichette, contaminazione crociata, viaggi, ricette e feste.
+- [Checklist per il ristorante](https://www.mappasenzaglutine.it/checklist-ristorante): le domande da fare prima di mangiare fuori.
+- [FAQ](https://www.mappasenzaglutine.it/faq)
+
+## Guide più consultate
+- [McDonald's senza glutine in Italia](https://www.mappasenzaglutine.it/blog/mcdonald-s-senza-glutine-in-italia-cosa-puo-mangiare-davvero-un-celiaco)
+- [Certificazione AIC: cosa significa](https://www.mappasenzaglutine.it/blog/certificazione-aic-cosa-significa-e-come-riconoscere-un-locale-davvero-certificato)
+- [Come evitare la contaminazione crociata al ristorante](https://www.mappasenzaglutine.it/blog/come-evitare-la-contaminazione-crociata-al-ristorante-la-guida-completa-per-mangiare-senza-glutine-in-sicurezza)
+- [Natale e Capodanno senza glutine](https://www.mappasenzaglutine.it/blog/natale-e-capodanno-senza-glutine-menu-regole-in-cucina-e-cenone-fuori-casa)
+
+## Nota
+Il sito è disponibile anche in inglese sotto /en/. Il contenuto è informativo e non sostituisce il parere del medico.
