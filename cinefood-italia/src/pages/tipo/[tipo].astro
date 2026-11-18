@@ -24,7 +24,7 @@ const titolo = plurale[tipo] ?? tipo;
 const crumbs = [{ name: "Home", href: "/" }, { name: "Locali", href: "/locali" }, { name: titolo }];
 ---
 
-<BaseLayout title={`${titolo} del cinema`} description={`${titolo} italiani visti in film e serie TV: ${locali.length} locali con indirizzo, scena e film collegato. Scegli dove mangiare come sullo schermo.`}>
+<BaseLayout title={`${titolo} del cinema`} description={`${titolo} nei film e nelle serie TV: ${locali.length} locali con indirizzo, scena e film collegato. Scegli dove mangiare come sullo schermo.`}>
   <section class="mx-auto max-w-6xl px-4 py-10">
     <Breadcrumb items={crumbs} />
     <h1 class="mt-3 font-display text-4xl font-extrabold capitalize">{titolo} al cinema</h1>
