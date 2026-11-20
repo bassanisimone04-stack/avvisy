@@ -122,7 +122,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-commissario-montalbano": {
-    locandinaAlt: "The seaside veranda of Enzo a Mare in Punta Secca",
+    locandinaAlt: "A man in profile in front of a Baroque Sicilian village by the sea, with a lemon, a coffee cup and arancini",
     titolo: "Inspector Montalbano",
     sinossi:
       "The cult TV series based on Camilleri's novels, filmed in south-eastern Sicily (Ragusa, Scicli, Punta Secca). The inspector is also famous for his love of Sicilian food.",

@@ -70,6 +70,9 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
         {d.locandinaTipo === "illustrativa" && (
           <figcaption class="mt-2 text-center text-xs text-ink-500 dark:text-ink-400">Foto illustrativa: non è una locandina né una scena del film</figcaption>
         )}
+        {d.locandinaTipo === "ai" && (
+          <figcaption class="mt-2 text-center text-xs text-ink-500 dark:text-ink-400">Illustrazione generata con AI: non è una foto né una scena del film</figcaption>
+        )}
       </figure>
       <div>
         <Breadcrumb items={crumbs} />
