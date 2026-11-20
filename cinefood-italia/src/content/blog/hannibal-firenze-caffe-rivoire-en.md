@@ -55,6 +55,38 @@ Palazzo Vecchio and the Fountain of Neptune.
 > among the places recognisable in the film — without attributing precise
 > scenes we cannot verify.
 
+## Hannibal's Florence places, one by one
+
+Sources on the exact places are mostly travel guides and fan sites, with some
+disagreement. So we group them by how much support they have.
+
+**Places with more support**
+- **Palazzo Vecchio and Piazza della Signoria**: several sites name them as the backdrop
+  to the meetings between Lecter and Inspector Pazzi and to Pazzi's final scene. The
+  **Salone dei Cinquecento** is mentioned in several scenes.
+- **Ponte Vecchio**: appears among the film's places in several lists.
+- **Santa Croce**: the theatre where Pazzi watches a show with his wife was reportedly
+  set up in one of the convent's cloisters, in the courtyard next to the Pazzi Chapel.
+- **Mercato Nuovo and the Porcellino**: a location site ties the pickpocket scene here,
+  and the one where Pazzi washes his hands in the boar fountain.
+
+**Places with conflicting support**
+- **Dr. Fell's library**: some sources say **Palazzo Capponi**, others point to the
+  **Spedale degli Innocenti**. We have no source that settles it, so we don't assign the
+  interior to a specific building.
+- **Santa Maria Novella pharmacy and other minor places**: they appear in some lists
+  without solid confirmation.
+
+Useful context: according to one source, Ridley Scott had never filmed in Florence
+before this film, and the crew worked in peak tourist season.
+
+## Planning a walking route
+
+Florence's centre is walkable. A sensible order, to follow the best-documented places:
+**Piazza della Signoria and Palazzo Vecchio** (and Rivoire for a break), then
+**Mercato Nuovo** with the Porcellino, **Ponte Vecchio**, and finally **Santa Croce**.
+Check the opening hours of the monuments before you go, as they change with the season.
+
 ## Planning your visit
 
 Piazza della Signoria is the natural starting point: the Uffizi, Ponte

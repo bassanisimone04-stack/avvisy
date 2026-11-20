@@ -55,7 +55,40 @@ dritti verso Palazzo Vecchio e la Fontana del Nettuno.
 > riconoscibili nel film — senza attribuire scene puntuali che non
 > possiamo verificare.
 
-## Come organizzare la visita
+## I luoghi di Hannibal a Firenze, uno per uno
+
+Le fonti sui luoghi esatti sono in gran parte guide di viaggio e siti di appassionati,
+con qualche discordanza. Per questo li dividiamo in base a quanti riscontri abbiamo.
+
+**Luoghi con più riscontri**
+- **Palazzo Vecchio e Piazza della Signoria**: più siti li indicano come sfondo degli
+  incontri tra Lecter e l'ispettore Pazzi e della scena finale di Pazzi. Il
+  **Salone dei Cinquecento** viene citato in più scene.
+- **Ponte Vecchio**: compare tra i luoghi del film in più elenchi.
+- **Santa Croce**: il teatro dove Pazzi assiste a uno spettacolo con la moglie sarebbe
+  stato allestito in uno dei chiostri del convento, nel cortile accanto alla Cappella dei
+  Pazzi.
+- **Mercato Nuovo e il Porcellino**: un sito di location lega qui la scena del borseggiatore
+  e quella in cui Pazzi si lava le mani nella fontana del cinghiale.
+
+**Luoghi con riscontri discordanti**
+- **La biblioteca di "Dottor Fell"**: alcune fonti parlano di **Palazzo Capponi**, altre
+  indicano lo **Spedale degli Innocenti**. Non abbiamo una fonte che risolva il conflitto,
+  quindi non attribuiamo l'interno a un edificio preciso.
+- **Farmacia di Santa Maria Novella e altri luoghi minori**: li troviamo in alcune liste ma
+  senza conferme solide.
+
+Un contesto utile: secondo una fonte, Ridley Scott non aveva mai girato a Firenze
+prima di questo film, e la troupe ha lavorato in piena stagione turistica.
+
+## Come organizzare un percorso a piedi
+
+Il centro di Firenze si gira a piedi. Un ordine sensato, per chi vuole seguire i luoghi più
+documentati: **Piazza della Signoria e Palazzo Vecchio** (e il Rivoire per una pausa), poi
+il **Mercato Nuovo** con il Porcellino, **Ponte Vecchio**, e infine **Santa Croce**. Controlla
+gli orari di apertura dei monumenti prima di andare, perché cambiano con la stagione.
+
+## Come organizzare la visita (e il Rivoire)
 
 Piazza della Signoria è il punto di partenza naturale: da lì si
 raggiungono a piedi in pochi minuti gli Uffizi, Ponte Vecchio e Santa
@@ -70,3 +103,7 @@ scenografia, e il Rivoire è il modo più semplice per entrarci dentro: un
 tavolino, una cioccolata e la stessa vista che il film ha portato in
 tutto il mondo. Scopri gli altri **[film e serie](/film)** girati in
 Italia sul nostro sito.
+
+<!-- Fonti sezione "luoghi uno per uno" (ricerca 2026-11-20, siti non leggibili direttamente; fonti di settore/forum, non primarie):
+     movie-locations.com (Mercato Nuovo/Porcellino, Palazzo Vecchio), movie-tourist.blogspot.com e davinotti.com (Palazzo Capponi vs Spedale degli Innocenti: CONFLITTO, non risolto),
+     elenchi di location per Santa Croce/Cappella dei Pazzi e Ponte Vecchio. Da verificare con fonte primaria (Film Commission Toscana / Italy for Movies) prima di rendere i dettagli piu' netti. -->
