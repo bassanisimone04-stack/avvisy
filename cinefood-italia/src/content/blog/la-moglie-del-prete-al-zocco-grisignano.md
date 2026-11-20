@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato La moglie del prete di Dino Risi? Al ristoran
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/la-moglie-del-prete-al-zocco-grisignano.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama un ristorante di provincia"
+immagineAlt: "Un'abbazia con campanile in mattoni tra colline boscose e balle di fieno in un prato, in Veneto"
 tags: ["La moglie del prete", "Sophia Loren", "Vicenza", "Dino Risi", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato La moglie del prete?"

@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/trattoria-della-posta-monforte-dalba.jpg"
-immagineAlt: "Facciata della Trattoria della Posta a Monforte d'Alba tra le vigne delle Langhe"
+immagineAlt: "Colline coltivate a noccioleti e vigneti con un borgo e un castello, nelle Langhe"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "the-trip-to-italy"

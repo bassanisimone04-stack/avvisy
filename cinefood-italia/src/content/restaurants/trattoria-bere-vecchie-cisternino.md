@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/trattoria-bere-vecchie-cisternino.jpg"
-immagineAlt: "Vicolo del centro storico di Cisternino con l'ingresso della trattoria Bere Vecchie"
+immagineAlt: "Trulli con i tetti conici in pietra a secco e i comignoli bianchi, in Puglia"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-30
 film:
   - film: "stanley-tucci-searching-for-italy"

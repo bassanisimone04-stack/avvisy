@@ -4,7 +4,7 @@ descrizione: "Il talento di Mr. Ripley (1999): Procida, Ischia, Roma e Venezia c
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-11-07
 immagine: "../../assets/placeholder/il-talento-di-mr-ripley-location.jpg"
-immagineAlt: "Il porto colorato di Marina Corricella a Procida, tra le location del film"
+immagineAlt: "Scalinata tra case color ocra che scende verso il mare azzurro"
 tags: ["Il talento di Mr. Ripley", "Procida", "Ischia", "Venezia", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Il talento di Mr. Ripley (1999)?"

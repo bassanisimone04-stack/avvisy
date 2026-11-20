@@ -4,7 +4,7 @@ descrizione: "The Italian 007 locations: Matera, Venice and Lake Como. Where to 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/james-bond-007-italia-dove-mangiare.jpg"
-immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
+immagineAlt: "A stairway between ochre-coloured houses leading down to the blue sea"
 tags: ["James Bond", "007", "Italy", "itineraries", "film tourism"]
 faq:
   - domanda: "Which Italian cities were used in James Bond films?"

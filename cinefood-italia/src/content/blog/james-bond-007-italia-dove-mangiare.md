@@ -4,7 +4,7 @@ descrizione: "Le location italiane di 007: Matera, Venezia e il Lago di Como. Do
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/james-bond-007-italia-dove-mangiare.jpg"
-immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
+immagineAlt: "Scalinata tra case color ocra che scende verso il mare azzurro"
 tags: ["James Bond", "007", "Italia", "itinerari", "cineturismo"]
 faq:
   - domanda: "In quali città italiane è stato girato James Bond?"

@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/lo-scoglio-nerano.jpg"
-immagineAlt: "Il ristorante Lo Scoglio sul mare di Marina del Cantone, a Nerano"
+immagineAlt: "Spiaggia di ciottoli con ombrelloni blu e il mare turchese, vista dall'alto"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.hotelloscoglio.com"
 ultimoAggiornamento: 2026-09-29
 film:

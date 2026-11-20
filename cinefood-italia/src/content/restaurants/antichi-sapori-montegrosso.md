@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/antichi-sapori-montegrosso.jpg"
-immagineAlt: "Ingresso del ristorante Antichi Sapori a Montegrosso, frazione di Andria"
+immagineAlt: "Trulli con i tetti conici in pietra a secco e i comignoli bianchi, in Puglia"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.pietrozito.it"
 ultimoAggiornamento: 2026-09-30
 film:

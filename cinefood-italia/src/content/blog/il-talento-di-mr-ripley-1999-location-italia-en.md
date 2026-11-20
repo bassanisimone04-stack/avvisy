@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-11-07
 lang: "en"
 immagine: "../../assets/placeholder/il-talento-di-mr-ripley-location.jpg"
-immagineAlt: "The colourful harbour of Marina Corricella in Procida, among the film's locations"
+immagineAlt: "A stairway between ochre-coloured houses leading down to the blue sea"
 tags: ["The Talented Mr. Ripley", "Procida", "Ischia", "Venice", "film tourism"]
 faq:
   - domanda: "Where was The Talented Mr. Ripley (1999) filmed?"

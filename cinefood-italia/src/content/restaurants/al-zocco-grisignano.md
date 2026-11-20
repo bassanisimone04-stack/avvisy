@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/al-zocco-grisignano.jpg"
-immagineAlt: "Insegna del ristorante Al Zocco a Grisignano di Zocco, in provincia di Vicenza"
+immagineAlt: "Un'abbazia con campanile in mattoni tra colline boscose e balle di fieno in un prato, in Veneto"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.alzocco.it"
 ultimoAggiornamento: 2026-09-29
 film:

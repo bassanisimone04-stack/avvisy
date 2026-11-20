@@ -4,7 +4,7 @@ descrizione: "Where was Dino Risi's La moglie del prete (The Priest's Wife) film
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/la-moglie-del-prete-al-zocco-grisignano.jpg"
-immagineAlt: "Warm abstract gradient evoking a provincial restaurant"
+immagineAlt: "An abbey with a brick bell tower among wooded hills and hay bales in a meadow, in the Veneto"
 tags: ["La moglie del prete", "Sophia Loren", "Vicenza", "Dino Risi", "film tourism"]
 faq:
   - domanda: "Where was La moglie del prete filmed?"
