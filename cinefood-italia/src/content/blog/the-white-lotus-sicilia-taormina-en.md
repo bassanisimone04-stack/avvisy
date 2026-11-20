@@ -83,21 +83,21 @@ Rosso** among the places to eat in Taormina. Here are other addresses in the cen
 the details we could verify (not all are "cast venues").
 
 - **Médousa Bistrot & Suites**, **1 Via Sesto Pompeo**, between Porta Catania and Piazza
-  Duomo (two listings agree). [TO VERIFY: menu, pasta alla Norma and gluten-free options]
+  Duomo (two listings agree). (to be verified: menu, pasta alla Norma and gluten-free options)
   ([map](https://www.google.com/maps/search/?api=1&query=Medousa+Bistrot+Taormina)).
-- **Gambero Rosso**, Taormina: named by W Magazine. [TO VERIFY: address, hours and booking]
+- **Gambero Rosso**, Taormina: named by W Magazine. (to be verified: address, hours and booking)
   ([map](https://www.google.com/maps/search/?api=1&query=Gambero+Rosso+Taormina)).
 - **Casamatta**, **Via S. Maria de' Greci**: an informal wine bar with natural wines,
   cocktails and Sicilian food (a single listing for the address). I found no confirmation
-  of live music: [TO VERIFY] ([map](https://www.google.com/maps/search/?api=1&query=Casamatta+Taormina)).
+  of live music: (to be verified) ([map](https://www.google.com/maps/search/?api=1&query=Casamatta+Taormina)).
 - **Bam Bar**, **45 Via di Giovanni**: granita and brioche, the classic Sicilian breakfast.
-  Two guides give Tuesday–Sunday, 7–20, and frequent queues: [TO VERIFY: hours]
+  Two guides give Tuesday–Sunday, 7–20, and frequent queues: (to be verified: hours)
   ([map](https://www.google.com/maps/search/?api=1&query=Bam+Bar+Taormina)).
 - **Ristorante Baronessa**, Corso Umberto I: according to a trade article it's the restaurant
-  in episode two where Albie and Portia dine; single source [TO VERIFY]
+  in episode two where Albie and Portia dine; single source (to be verified)
   ([map](https://www.google.com/maps/search/?api=1&query=Ristorante+Baronessa+Taormina)).
 - **Feliciotto**, a historic boutique about ten minutes' walk from the San Domenico Palace:
-  [TO VERIFY: I found no source for its address and hours].
+  (to be verified: I found no source for its address and hours).
 
 ## Castelmola and Bar Turrisi: the day trip
 
@@ -105,7 +105,7 @@ the details we could verify (not all are "cast venues").
 curious theme (decor inspired by masculinity, per the press), open since 1947 according to
 Balarm; its signature is **almond wine**. You go for the novelty, not the food. The address
 varies by source (36 Via Costantino Patricio in one listing, 19 Via Papa Pio IX in another):
-ask in the square or call 0942 281810 [TO VERIFY] ([map](https://www.google.com/maps/search/?api=1&query=Bar+Turrisi+Castelmola)).
+ask in the square or call 0942 281810 (to be verified) ([map](https://www.google.com/maps/search/?api=1&query=Bar+Turrisi+Castelmola)).
 
 ## White Lotus filming locations in central Taormina
 

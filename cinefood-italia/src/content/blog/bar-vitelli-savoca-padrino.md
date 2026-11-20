@@ -45,14 +45,14 @@ Trimarchi. Il sito del locale è barvitelli.it.
 
 Nella scena, girata davanti al bar, Michael (Al Pacino) incontra il padre di Apollonia. Le
 date delle riprese variano nelle fonti: 1971 per alcune, 1972 per altre
-[DA VERIFICARE]. Quanto è cambiato il locale? Le fonti sono divise: per alcune è rimasto fermo
+(da verificare). Quanto è cambiato il locale? Le fonti sono divise: per alcune è rimasto fermo
 agli anni Settanta, per altre fu allestito da Coppola come bar per la scena. Sul nome, le
 fonti non spiegano l'origine: lo legano al personaggio Vitelli.
 
 ## Orari, prezzi, cosa ordinare
 
 - **Orari:** un aggregatore (aggiornato a novembre 2025) indica 9–17:30, chiuso il lunedì
-  [DA VERIFICARE sul sito ufficiale].
+  (da verificare: sul sito ufficiale).
 - **Cosa ordinare:** la **granita** (limone, mandorla, gelso) con la brioche e i dolcetti locali,
   sotto il pergolato.
 - **Prezzi:** i recensori lo giudicano turistico e caro (7 euro un cappuccino piccolo, per
@@ -65,7 +65,7 @@ fonti non spiegano l'origine: lo legano al personaggio Vitelli.
 A Savoca, più fonti indicano la **Chiesa di Santa Lucia** (a volte chiamata San Nicolò) come la
 chiesa del matrimonio di Michael e Apollonia. La facciata della **Chiesa di San Nicolò**, del
 XIV secolo, compare in molte inquadrature. I tour citano anche **Forza d'Agrò** per la
-scena dell'arrivo di Michael: [DA VERIFICARE]. Il borgo medievale ha vista sulla costa ionica
+scena dell'arrivo di Michael: (da verificare). Il borgo medievale ha vista sulla costa ionica
 e, nelle giornate limpide, sull'Etna.
 
 ## Come arrivare a Savoca

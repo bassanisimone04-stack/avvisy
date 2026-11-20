@@ -48,8 +48,8 @@ export const SITE = {
 
   /** Link ai social (lascia vuoto "" per nasconderli dal footer). */
   social: {
-    instagram: "https://instagram.com/",
-    facebook: "https://facebook.com/",
+    instagram: "", // ▶️ inserisci qui il link al tuo profilo reale (es. https://instagram.com/nomeprofilo)
+    facebook: "", // ▶️ come sopra: finché è vuoto l'icona non compare nel footer
     tiktok: "",
   },
 

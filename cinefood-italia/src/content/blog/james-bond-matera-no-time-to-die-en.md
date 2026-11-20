@@ -126,7 +126,7 @@ For a simpler meal, look for Lucanian cooking in the Sassi: **Matera IGP bread**
 - **B&B Sul Ponte**, in **Gravina in Puglia**: according to bondlocations.com, Daniel Craig
   stayed here during the shoot. It's a few steps from the Madonna della Stella aqueduct
   bridge, the film's real bridge. Single source, no independent confirmation;
-  [TO VERIFY: address and booking]. If you want to sleep by the bridge rather than in the
+  (to be verified: address and booking). If you want to sleep by the bridge rather than in the
   Sassi, this is the address to look for ([map](https://www.google.com/maps/search/?api=1&query=B%26B+Sul+Ponte+Gravina+in+Puglia)).
 - **Sextantio Le Grotte della Civita**, **28 Via Civita**, Sasso Barisano (address from the
   official site): a hotel in ancient caves. Not a film location; it's in the same area of
@@ -139,8 +139,8 @@ For a simpler meal, look for Lucanian cooking in the Sassi: **Matera IGP bread**
 
 For a beach day, **Riva dei Ginepri** is a beach club with a restaurant on the shore of
 **Marina di Pisticci** (Wanderlog places it on Via Ulisse). Reviews are mixed: some praise
-food and service, others flag cleanliness and quality. Not a film location. [TO VERIFY: hours,
-season and booking] ([map](https://www.google.com/maps/search/?api=1&query=Riva+dei+Ginepri+Marina+di+Pisticci)).
+food and service, others flag cleanliness and quality. Not a film location. (to be verified: hours,
+season and booking) ([map](https://www.google.com/maps/search/?api=1&query=Riva+dei+Ginepri+Marina+di+Pisticci)).
 
 ## Beyond Matera: Maratea and Sapri
 

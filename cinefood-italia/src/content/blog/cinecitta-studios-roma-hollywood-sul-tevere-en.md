@@ -69,19 +69,19 @@ reused for *The New Pope*.
 
 - **What to see:** the permanent exhibition *Cinecittà si Mostra* (four pavilions) and
   the sets; there is also the **MIAC** museum, with a separate or combined ticket
-  [TO VERIFY on cinecittasimostra.it].
+  (to be verified: on cinecittasimostra.it).
 - **Hours:** for the 2026 edition a listing shows 30 September to 26 October, Wednesday
   to Monday, 10 am–6 pm, last entry 4:30 pm. Other sources say open every day except
   Tuesday: **check the official site**.
 - **Guided tour:** in Italian at 10:30, 12:30, 14:30 and 16:30; in English on Saturday at
   11. Book online, especially at weekends.
-- **Tickets:** [TO VERIFY: no 2026 price confirmed].
+- **Tickets:** (to be verified: no 2026 price confirmed).
 - **Closed sets:** some sets are closed when a production is under way; check before you go.
 - **Getting there:** metro A, *Cinecittà* stop.
 
 ## Where to eat near Cinecittà
 
-[TO VERIFY: name of a venue]. We found no historic venue nearby with a documented link to
+(to be verified: name of a venue). We found no historic venue nearby with a documented link to
 cinema, and we prefer not to recommend one at random. For film dinners in Rome read
 *[Rome in the movies: film restaurants](/en/blog/roma-nel-cinema-ristoranti-da-film)* and
 *[The Great Beauty: restaurants in Rome](/en/blog/la-grande-bellezza-ristoranti-roma)*.

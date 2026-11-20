@@ -78,7 +78,7 @@ prima della seconda guerra mondiale.
 - **Biglietti (pagina FAI consultata, da riverificare):** solo giardino 15 € intero,
   11 € ridotto (6–18 anni), gratis per gli iscritti FAI. Villa e giardino con visita
   guidata di circa 50 minuti: 25 € intero, 17 € ridotto, 5 € iscritti FAI.
-- **Orari:** [DA VERIFICARE: le fonti non concordano; controlla fondoambiente.it].
+- **Orari:** (da verificare: le fonti non concordano; controlla fondoambiente.it).
 - **A piedi:** da Lenno circa 1 km, 25 minuti, con un tratto ripido.
 - **In barca:** taxi-boat a pagamento dal Lido di Lenno; ci sono anche i battelli
   Bellagio–Lenno, con circa 30 minuti a piedi dall'approdo. Controlla orari e tariffe.
@@ -86,7 +86,7 @@ prima della seconda guerra mondiale.
 
 ## Dove mangiare a Lenno
 
-[DA VERIFICARE: nome di un locale]. Non ho trovato recensioni affidabili di ristoranti
+(da verificare: nome di un locale). Non ho trovato recensioni affidabili di ristoranti
 a Lenno collegati al film o alla visita, quindi non ti consigliamo un nome che non
 posso garantire. Per le specialità del lago (risotto con pesce persico, missoltini)
 leggi *[Il Lago di Como nel cinema e dove mangiare](/blog/lago-di-como-nel-cinema-dove-mangiare)*.

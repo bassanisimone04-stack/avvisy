@@ -93,11 +93,18 @@ export function blogPostingJsonLd(
     "@type": "BlogPosting",
     headline: titolo,
     description: descrizione,
-    author: { "@type": "Person", name: autore },
+    // "Redazione ..." / "... Editorial Team" non sono persone: dichiararle come Organization.
+    author: /redazione|editorial|cinefood/i.test(autore)
+      ? { "@type": "Organization", name: autore, url: SITE.url }
+      : { "@type": "Person", name: autore },
     datePublished: data.toISOString(),
     dateModified: (dataModifica ?? data).toISOString(),
     url: canonicalUrl,
-    publisher: { "@type": "Organization", name: SITE.name },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name,
+      logo: { "@type": "ImageObject", url: new URL("/logo.png", SITE.url).href },
+    },
     ...(immagineUrl ? { image: immagineUrl } : {}),
   };
 }
@@ -120,7 +127,7 @@ export function websiteJsonLd(): Record<string, unknown> {
       url: SITE.url,
       logo: {
         "@type": "ImageObject",
-        url: new URL("/favicon.svg", SITE.url).href,
+        url: new URL("/logo.png", SITE.url).href,
       },
       ...(sameAs.length ? { sameAs } : {}),
     },

@@ -58,15 +58,14 @@ historic centre; the first floor a multimedia area and a recreation of **Alfredo
 
 - **Address:** Piazza Umberto I, 90030 Palazzo Adriano ([map](https://www.google.com/maps/search/?api=1&query=Museo+Nuovo+Cinema+Paradiso+Palazzo+Adriano)).
 - **Hours and ticket:** Museionline says **free** entry and open every day 9–13 and 15–19, but
-  advises checking. Phone +39 091 8349933 [TO VERIFY].
+  advises checking. Phone +39 091 8349933 (to be verified).
 
 ## Where to eat in Palazzo Adriano
 
 **[Albergo Ristorante Pizzeria del Viale](/en/locale/bar-paradiso-palazzo-adriano)**, at **2 Via
 XX Settembre** ([map](https://www.google.com/maps/search/?api=1&query=Albergo+Ristorante+Pizzeria+del+Viale+Palazzo+Adriano)): not among the
 filming locations, but a real address in the film's village. Otherwise the cooking of the Sicani
-Mountains is rustic: home-style bread, local cheeses, cured meats, almond sweets. [TO VERIFY:
-hours and booking].
+Mountains is rustic: home-style bread, local cheeses, cured meats, almond sweets. (to be verified: hours and booking).
 
 ## How to get there from Palermo
 

@@ -455,7 +455,7 @@ export const filmsEn: Record<string, FilmEn> = {
   },
   "una-finestra-vista-lago": {
     titolo: "A Window on the Lake (Una finestra vista lago)",
-    titoloSeo: "Una finestra vista lago: Where It Was Filmed",
+    titoloSeo: "Una finestra vista lago: Film & Real Locations",
     sinossi: "A Rai Fiction series based on Andrea Vitali's novels, on Rai 1 from 29 September 2026. It is set in the fictional Bellamo, but was filmed mostly on Lake Orta, between Orta San Giulio and Miasino.",
     locandinaAlt: "Poster-style artwork — Una finestra vista lago (2026)",
     faq: [
@@ -478,7 +478,7 @@ export const filmsEn: Record<string, FilmEn> = {
   },
   "la-vita-e-bella": {
     titolo: "Life Is Beautiful",
-    titoloSeo: "Life Is Beautiful Filming Locations in Arezzo",
+    titoloSeo: "Life Is Beautiful: Film, Set and Locations",
     locandinaAlt: "Poster-style artwork — Life Is Beautiful (1997)",
     sinossi: "Roberto Benigni's film about Guido, who turns a concentration camp into a game to protect his son. Shot mostly in Arezzo and around; the camp was rebuilt at Papigno, in Umbria.",
     faq: [

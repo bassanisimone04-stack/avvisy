@@ -53,8 +53,8 @@ The rock you see from the beach is the **Faraglione**, the backdrop of the dialo
 Mario and the poet, while to the north Pollara's balate and the natural arch of **Punta
 Perciato** complete the landscape. An important note: **the film's beach no longer exists as
 it was**. Because of erosion only small emerged areas remain, reachable by swimming or boat.
-So go for the view and the atmosphere, not to lie on Mario's pebbles: [TO VERIFY access
-conditions before going down].
+So go for the view and the atmosphere, not to lie on Mario's pebbles: (to be verified: access
+conditions before going down).
 
 ### And Mario's house?
 
@@ -68,7 +68,7 @@ Punta**, Aeolian in style, with a pinkish facade overlooking Pollara's sea (ital
 From **Milazzo** Liberty Lines hydrofoils take about 1 hour 35 minutes direct (1 hour 50 with
 stops); the Siremar ferry takes about 3 hours 20 and is the only one that carries cars.
 The most frequent landing is **Santa Marina Salina**. Times and prices change with the
-season: [TO VERIFY on Liberty Lines and Siremar].
+season: (to be verified: on Liberty Lines and Siremar).
 
 ## Where to eat in Salina
 
@@ -78,9 +78,9 @@ season: [TO VERIFY on Liberty Lines and Siremar].
 - **Da Alfredo**, **2 Via Marina Garibaldi**, **Lingua**: the home of Salina's **granita**
   (flavours from almond to mulberry) and **pane cunzato**. Portions are large and at peak
   times you wait; for some reviewers service is slow. Phone 090 984 3075 per Indagare
-  [TO VERIFY] ([map](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
+  (to be verified) ([map](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
 - In **Malfa**, Indagare recommends the restaurant terrace at **Hotel Signum**:
-  [TO VERIFY: booking and opening].
+  (to be verified: booking and opening).
 
 Products to look for: **Salina capers**, **malvasia** and fresh fish.
 

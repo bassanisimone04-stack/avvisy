@@ -58,8 +58,8 @@ from March 2025, ANSA about eight weeks in the Egadi. For the coves, one preview
 
 The fort stands on top of Monte Santa Caterina, at about 310 metres, on the site of a
 watchtower: local tradition speaks of Saracen origins and of use as a Bourbon prison. Today it
-is **abandoned but reachable on foot**. There are no official opening hours: [TO VERIFY with
-Favignana's town hall or the tourist office]. Guides advise closed shoes, full daylight and
+is **abandoned but reachable on foot**. There are no official opening hours: (to be verified: with
+Favignana's town hall or the tourist office). Guides advise closed shoes, full daylight and
 stable weather, and a torch for the interiors. From the top you see the quarries, the island's
 «butterfly» and, on clear days, the other Egadi.
 
@@ -76,23 +76,22 @@ list: the matches rest on press reports. For the flavours of Salina and the Aeol
 
 From **Trapani** Liberty Lines hydrofoils take about 30–40 minutes and Siremar ferries about
 an hour; from **Marsala** mostly hydrofoils run. Only Siremar carries vehicles, and hydrofoils
-limit hand luggage. Runs increase in summer and one-way prices start around €12: [TO VERIFY
-on Liberty Lines and Siremar].
+limit hand luggage. Runs increase in summer and one-way prices start around €12: (to be verified: on Liberty Lines and Siremar).
 
 ## Where to eat in Favignana
 
 Favignana is the home of **red tuna**. To see why, visit the **Ex Stabilimento Florio delle
 Tonnare**, at **29 Via Amendola** ([map](https://www.google.com/maps/search/?api=1&query=Ex+Stabilimento+Florio+Favignana)). Entry is only
 with paid guided visits (€8 full according to one listing), but sources' hours disagree: call
-+39 338 5365899 [TO VERIFY].
++39 338 5365899 (to be verified).
 
 For a meal, three addresses guides mention (none tied to the film):
 
 - **La Bettola**: a historic family-run restaurant, known for **fish couscous**, at 47 Via
-  Nicotera (the address also appears for another venue: [TO VERIFY]).
+  Nicotera (the address also appears for another venue: (to be verified)).
 - **Quello che c'è... c'è!**: Via Garibaldi, in the centre; spaghetti with sea urchin, fish
   couscous and tuna carpaccio.
-- **Osteria Cavallo**: traditional cooking, outside the centre; address [TO VERIFY].
+- **Osteria Cavallo**: traditional cooking, outside the centre; address (to be verified).
 
 Another thing to look for on menus: **frascatole**, similar to couscous.
 

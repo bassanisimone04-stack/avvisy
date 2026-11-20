@@ -46,9 +46,9 @@ Practical information:
 
 - **Booking:** advised. Website: trattoriasoralella.it.
 - **Phone:** 06 6861601 per Turismo Roma; another listing gives a different number, so
-  [TO VERIFY].
+  (to be verified).
 - **Days and hours:** one source says closed on Sundays, but I found no confirmation:
-  [TO VERIFY on the official site].
+  (to be verified: on the official site).
 
 ## Otello alla Concordia, cinema's post-war hangout
 
@@ -61,7 +61,7 @@ Italian comedy were born. The same sources say the Wednesday-evening gatherings 
 
 **Address:** Turismo Roma gives **40/a Via Mario de' Fiori**
 ([map](https://www.google.com/maps/search/?api=1&query=Otello+alla+Concordia+Roma)); I couldn't confirm the historic Via della Croce
-number: [TO VERIFY]. Hours, days and booking: [TO VERIFY by phone].
+number: (to be verified). Hours, days and booking: (to be verified: by phone).
 
 Note: we found no film titles shot here, so we present it as a place tied to cinema, not a
 location.

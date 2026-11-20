@@ -15,6 +15,8 @@ interface Props {
   type?: "website" | "article";
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   lang?: Lang;
+  /** Pagine di servizio (es. ringraziamento): non indicizzare. */
+  noindex?: boolean;
 }
 
 const {
@@ -26,6 +28,7 @@ const {
   type = "website",
   jsonLd,
   lang = "it",
+  noindex = false,
 } = Astro.props;
 
 const defaultDesc =
@@ -55,7 +58,7 @@ const ogImage = image
 <link rel="alternate" hreflang="x-default" href={itHref} />
 
 <!-- Indicizzazione: consenti anteprime ricche (immagini/testo) nei risultati. -->
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
 {SITE.googleSiteVerification && (
   <meta name="google-site-verification" content={SITE.googleSiteVerification} />
 )}

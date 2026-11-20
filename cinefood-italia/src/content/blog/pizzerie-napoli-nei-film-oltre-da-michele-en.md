@@ -67,7 +67,7 @@ the identification: for them the film's shop was elsewhere. Until sources conver
 as a **venue tied to the film**, not a set.
 
 - **Address:** 27/28 Via Materdei, 80136 Naples ([map](https://www.google.com/maps/search/?api=1&query=Pizzeria+Starita+Materdei+Napoli)).
-- **Hours:** [TO VERIFY: one source says closed on Monday, another open every day].
+- **Hours:** (to be verified: one source says closed on Monday, another open every day).
 - **Booking:** one guide notes there are no bookings and advises arriving at 12:30 or 7:30 pm
   to avoid the queue.
 
@@ -77,8 +77,8 @@ as a **venue tied to the film**, not a set.
 pizzeria": by tradition, in 1889 Raffaele Esposito made the pizza dedicated to the queen here.
 Gambero Rosso calls the story a legend: the documents don't mention pizza. On the cinema side I
 found no source tying it to a film, and its founding date changes by source (1738, 1760 or
-1780). The press also reported a NAS closure in October 2022, for two days: [TO VERIFY current
-status]. For Sorbillo and Di Matteo I found no link with a film, so we don't present them as
+1780). The press also reported a NAS closure in October 2022, for two days: (to be verified: current
+status). For Sorbillo and Di Matteo I found no link with a film, so we don't present them as
 cinema venues.
 
 ## How to plan the tour
