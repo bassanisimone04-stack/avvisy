@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/vini-da-arturo-venezia.jpg"
-immagineAlt: "La piccola sala di Vini da Arturo in calle degli Assassini a Venezia"
+immagineAlt: "Canale tra case di mattoni a Venezia, con riflessi sull'acqua"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "somebody-feed-phil-venezia"

@@ -4,7 +4,7 @@ descrizione: "Where was Andrea Segre's Io sono Li filmed? In Chioggia: the film'
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/io-sono-li-osteria-paradiso-chioggia.jpg"
-immagineAlt: "Abstract gradient evoking the colours of the Chioggia lagoon"
+immagineAlt: "Palaces overlooking the water in Venice, with mooring poles"
 tags: ["Io sono Li", "Chioggia", "Andrea Segre", "osteria", "film tourism"]
 faq:
   - domanda: "Where was Io sono Li filmed?"

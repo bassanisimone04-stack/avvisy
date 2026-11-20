@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/venissa-mazzorbo.jpg"
-immagineAlt: "Vigneto e ristorante Venissa sull'isola di Mazzorbo"
+immagineAlt: "Campanile in mattoni sulla riva di un'isola della laguna di Venezia"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.venissa.it"
 ultimoAggiornamento: 2026-09-29
 film:

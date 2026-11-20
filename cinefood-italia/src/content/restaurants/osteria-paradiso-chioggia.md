@@ -12,7 +12,8 @@ prezzo: "€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/osteria-paradiso-chioggia.jpg"
-immagineAlt: "Facciata dell'Osteria Paradiso lungo la Fondamenta Canal Lombardo a Chioggia"
+immagineAlt: "Canale veneziano con pali d'ormeggio e riflessi colorati sull'acqua"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "io-sono-li"

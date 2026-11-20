@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/al-covo-venezia.jpg"
-immagineAlt: "L'ingresso del ristorante Al Covo nel sestiere di Castello a Venezia"
+immagineAlt: "Canale stretto con una gondola tra palazzi di Venezia"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "somebody-feed-phil-venezia"

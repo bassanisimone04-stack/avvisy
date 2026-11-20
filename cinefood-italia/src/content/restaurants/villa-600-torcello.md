@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/villa-600-torcello.jpg"
-immagineAlt: "Ingresso del ristorante Villa 600 sull'isola di Torcello"
+immagineAlt: "Riva alberata di un'isola della laguna di Venezia con pali d'ormeggio"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.villa600.it"
 ultimoAggiornamento: 2026-09-29
 film:

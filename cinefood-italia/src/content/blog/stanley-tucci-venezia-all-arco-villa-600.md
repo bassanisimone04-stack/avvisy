@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci a Venezia in Searching for Italy: i
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-venezia-all-arco-villa-600.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama i colori della laguna di Venezia"
+immagineAlt: "Piazza San Marco a Venezia con il campanile e la basilica"
 tags: ["Stanley Tucci", "Venezia", "cicchetti", "Torcello", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci a Venezia?"

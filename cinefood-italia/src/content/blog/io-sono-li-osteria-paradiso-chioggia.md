@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato Io sono Li di Andrea Segre? A Chioggia: l'ost
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/io-sono-li-osteria-paradiso-chioggia.jpg"
-immagineAlt: "Sfondo a gradiente che richiama i colori della laguna di Chioggia"
+immagineAlt: "Palazzi affacciati sull'acqua a Venezia, con pali d'ormeggio"
 tags: ["Io sono Li", "Chioggia", "Andrea Segre", "osteria", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Io sono Li?"

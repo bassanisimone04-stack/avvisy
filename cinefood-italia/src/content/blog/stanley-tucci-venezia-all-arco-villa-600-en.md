@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Venice in Searching for Italy: the baca
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-venezia-all-arco-villa-600.jpg"
-immagineAlt: "Warm abstract gradient evoking the colours of the Venetian lagoon"
+immagineAlt: "St Mark's Square in Venice with the bell tower and the basilica"
 tags: ["Stanley Tucci", "Venice", "cicchetti", "Torcello", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Venice?"

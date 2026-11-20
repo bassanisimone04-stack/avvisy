@@ -12,7 +12,8 @@ prezzo: "€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/all-arco-venezia.jpg"
-immagineAlt: "Ingresso del bacaro All'Arco vicino al mercato di Rialto a Venezia"
+immagineAlt: "Il Canal Grande a Venezia con palazzi storici e pali d'ormeggio"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "stanley-tucci-searching-for-italy"

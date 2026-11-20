@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/orient-experience-venezia.jpg"
-immagineAlt: "Sala del ristorante Orient Experience a Cannaregio, Venezia"
+immagineAlt: "Rio di Venezia con un ponte coperto tra palazzi color terracotta"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "stanley-tucci-searching-for-italy"
