@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato La vita è bella? Arezzo, Montevarchi, Corton
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-10-13
 immagine: "../../assets/placeholder/la-vita-e-bella-arezzo.jpg"
-immagineAlt: "Una strada del centro storico di Arezzo, dove è stato girato La vita è bella"
+immagineAlt: "Via in mattoni di un borgo medievale toscano"
 tags: ["La vita è bella", "Arezzo", "Roberto Benigni", "Toscana", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato La vita è bella?"

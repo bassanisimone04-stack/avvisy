@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/osteria-cinghiale-bianco-firenze.jpg"
-immagineAlt: "Ingresso dell'Osteria del Cinghiale Bianco in Borgo San Jacopo a Firenze"
+immagineAlt: "Case affacciate sull'Arno vicino a Ponte Vecchio, a Firenze"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.cinghialebianco.net"
 ultimoAggiornamento: 2026-09-29
 film:

@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato I laureati di Pieraccioni? A Firenze, con una
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/i-laureati-coco-lezzone-firenze.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama una trattoria fiorentina"
+immagineAlt: "Vicolo del centro di Firenze con lampioni in ferro battuto"
 tags: ["I laureati", "Firenze", "Pieraccioni", "trattoria", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato I laureati?"

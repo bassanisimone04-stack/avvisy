@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/buca-dellorafo-firenze.jpg"
-immagineAlt: "L'ingresso storico della trattoria Buca dell'Orafo a Firenze, vicino Ponte Vecchio"
+immagineAlt: "Ponte Vecchio e le case sull'Arno a Firenze"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-08
 film:
   - film: "from-scratch"

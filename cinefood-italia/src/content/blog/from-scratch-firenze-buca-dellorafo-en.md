@@ -4,7 +4,7 @@ descrizione: "Where Lino works in From Scratch: Buca dell'Orafo, a historic Flor
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-08
 immagine: "../../assets/placeholder/buca-dellorafo-firenze.jpg"
-immagineAlt: "The historic entrance of Buca dell'Orafo trattoria in Florence, near Ponte Vecchio"
+immagineAlt: "Ponte Vecchio and the houses along the Arno in Florence"
 tags: ["From Scratch", "Florence", "Netflix", "Zoe Saldana", "film tourism"]
 faq:
   - domanda: "Is From Scratch based on a true story?"

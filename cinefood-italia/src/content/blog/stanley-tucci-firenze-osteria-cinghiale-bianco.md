@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci a Firenze in Searching for Italy: r
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-firenze-osteria-cinghiale-bianco.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama una osteria fiorentina"
+immagineAlt: "La torre di Palazzo Vecchio a Firenze"
 tags: ["Stanley Tucci", "Firenze", "Toscana", "ribollita", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci a Firenze?"

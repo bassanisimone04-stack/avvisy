@@ -4,7 +4,7 @@ descrizione: "The film Under the Tuscan Sun is set in Cortona: hills, wine and T
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/under-the-tuscan-sun-toscana-cortona.jpg"
-immagineAlt: "A table laid with dishes from the Italian tradition"
+immagineAlt: "A cypress-lined drive with a farmhouse at the end, among Tuscan hills"
 tags: ["Under the Tuscan Sun", "Tuscany", "Cortona", "wine", "film tourism"]
 faq:
   - domanda: "Where is Under the Tuscan Sun set?"

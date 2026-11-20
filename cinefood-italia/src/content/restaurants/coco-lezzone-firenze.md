@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/coco-lezzone-firenze.jpg"
-immagineAlt: "Ingresso della trattoria Coco Lezzone in via del Parioncino a Firenze"
+immagineAlt: "Vicolo del centro di Firenze con lampioni in ferro battuto"
+immagineTipo: "illustrativa"
 sitoWeb: "https://cocolezzone.it"
 ultimoAggiornamento: 2026-09-29
 film:

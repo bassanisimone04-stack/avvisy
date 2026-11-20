@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Florence in Searching for Italy: riboll
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-firenze-osteria-cinghiale-bianco.jpg"
-immagineAlt: "Warm abstract gradient evoking a Florentine osteria"
+immagineAlt: "The tower of Palazzo Vecchio in Florence"
 tags: ["Stanley Tucci", "Florence", "Tuscany", "ribollita", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Florence?"

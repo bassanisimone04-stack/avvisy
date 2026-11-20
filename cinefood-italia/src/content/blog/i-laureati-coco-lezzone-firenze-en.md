@@ -4,7 +4,7 @@ descrizione: "Where was I laureati by Pieraccioni filmed? In Florence, with a sc
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/i-laureati-coco-lezzone-firenze.jpg"
-immagineAlt: "Warm abstract gradient evoking a Florentine trattoria"
+immagineAlt: "A lane in central Florence with wrought-iron lamps"
 tags: ["I laureati", "Florence", "Pieraccioni", "trattoria", "film tourism"]
 faq:
   - domanda: "Where was I laureati filmed?"

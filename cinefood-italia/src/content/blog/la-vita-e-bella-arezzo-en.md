@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/la-vita-e-bella-arezzo.jpg"
-immagineAlt: "A street in Arezzo's old town, where Life Is Beautiful was filmed"
+immagineAlt: "A brick street in a medieval Tuscan village"
 tags: ["Life Is Beautiful", "Arezzo", "Roberto Benigni", "Tuscany", "film tourism"]
 faq:
   - domanda: "Where was Life Is Beautiful filmed?"
