@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/me-cumpari-turiddu-catania.jpg"
-immagineAlt: "Sala rustica del ristorante Mè Cumpari Turiddu a Catania"
+immagineAlt: "La facciata barocca della Cattedrale di Sant'Agata a Catania, con i passanti sulla piazza bagnata"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.mecumparituriddu.it"
 ultimoAggiornamento: 2026-09-29
 film:

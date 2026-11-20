@@ -4,7 +4,7 @@ descrizione: "Marilù's restaurant in Màkari is a set built inside the Tonnara 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-17
 immagine: "../../assets/placeholder/tonnara-di-scopello.jpg"
-immagineAlt: "The historic tonnara of Scopello overlooking the sea stacks, in Sicily"
+immagineAlt: "Sea stacks rising from the turquoise water in the bay of Scopello, Sicily"
 tags: ["Màkari", "Sicily", "San Vito Lo Capo", "Rai", "film tourism"]
 faq:
   - domanda: "Is Màkari really filmed in Sicily?"

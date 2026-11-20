@@ -4,7 +4,7 @@ descrizione: "Where Ivano and Jessica celebrate their wedding in Carlo Verdone's
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/ristorante-paradiso-terrestre-roma.jpg"
-immagineAlt: "The reception hall of Ristorante Paradiso Terrestre in Rome"
+immagineAlt: "A historic villa with statues and citrus pots on a stone balustrade, under a blue sky"
 tags: ["Honeymoons", "Rome", "Carlo Verdone", "weddings", "film tourism"]
 faq:
   - domanda: "Where do Ivano and Jessica get married in Honeymoons?"

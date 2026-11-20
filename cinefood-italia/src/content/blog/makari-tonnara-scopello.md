@@ -4,7 +4,7 @@ descrizione: "Il ristorante di Marilù in Màkari è un set allestito alla Tonna
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-17
 immagine: "../../assets/placeholder/tonnara-di-scopello.jpg"
-immagineAlt: "L'antica tonnara di Scopello affacciata sui faraglioni, in Sicilia"
+immagineAlt: "Faraglioni a picco sul mare turchese nella baia di Scopello, in Sicilia"
 tags: ["Màkari", "Sicilia", "San Vito Lo Capo", "Rai", "cineturismo"]
 faq:
   - domanda: "Màkari è girata davvero in Sicilia?"

@@ -13,7 +13,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/principe-cerami-taormina.jpg"
-immagineAlt: "Il ristorante Principe Cerami all'interno del San Domenico Palace a Taormina"
+immagineAlt: "Vicolo di Taormina con case colorate e il monte che sale alle spalle"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.fourseasons.com/taormina/dining/restaurants/principe-cerami/"
 ultimoAggiornamento: 2026-10-13
 film:

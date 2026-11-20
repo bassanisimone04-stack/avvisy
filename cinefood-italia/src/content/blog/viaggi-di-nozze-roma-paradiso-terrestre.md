@@ -4,7 +4,7 @@ descrizione: "Dove Ivano e Jessica festeggiano le nozze in Viaggi di nozze di Ve
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/ristorante-paradiso-terrestre-roma.jpg"
-immagineAlt: "Sala per ricevimenti del ristorante Paradiso Terrestre a Roma"
+immagineAlt: "Villa storica con statue e vasi di agrumi su un balcone di pietra, sotto un cielo azzurro"
 tags: ["Viaggi di nozze", "Roma", "Carlo Verdone", "matrimoni", "cineturismo"]
 faq:
   - domanda: "Dove si sposano Ivano e Jessica in Viaggi di nozze?"

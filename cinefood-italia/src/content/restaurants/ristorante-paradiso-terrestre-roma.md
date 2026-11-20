@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/ristorante-paradiso-terrestre-roma.jpg"
-immagineAlt: "Sala per ricevimenti del ristorante Paradiso Terrestre a Roma"
+immagineAlt: "Villa storica con statue e vasi di agrumi su un balcone di pietra, sotto un cielo azzurro"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.ristoranteparadisoterrestre.com"
 ultimoAggiornamento: 2026-09-12
 film:

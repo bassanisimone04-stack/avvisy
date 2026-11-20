@@ -13,7 +13,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/la-cambusa-giardini-naxos.jpg"
-immagineAlt: "Terrazza sul mare del ristorante La Cambusa a Giardini Naxos con vista su Taormina"
+immagineAlt: "Vicolo con una buganvillea fucsia e vasi turchesi davanti a una facciata bianca"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.lacambusaristorante.com"
 ultimoAggiornamento: 2026-10-13
 film:

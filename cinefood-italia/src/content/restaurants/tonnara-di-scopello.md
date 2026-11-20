@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/tonnara-di-scopello.jpg"
-immagineAlt: "L'antica tonnara di Scopello affacciata sui faraglioni, in Sicilia"
+immagineAlt: "Faraglioni a picco sul mare turchese nella baia di Scopello, in Sicilia"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.tonnaradiscopello.it"
 ultimoAggiornamento: 2026-09-17
 film:

@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Sicilia in Searching for Italy: 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama i colori della Sicilia"
+immagineAlt: "La facciata barocca della Cattedrale di Sant'Agata a Catania"
 tags: ["Stanley Tucci", "Sicilia", "Catania", "Bagheria", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Sicilia?"

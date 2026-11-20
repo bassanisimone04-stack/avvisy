@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Sicily in Searching for Italy: I Pupi i
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu.jpg"
-immagineAlt: "Warm abstract gradient evoking the colours of Sicily"
+immagineAlt: "The Baroque façade of Sant'Agata Cathedral in Catania"
 tags: ["Stanley Tucci", "Sicily", "Catania", "Bagheria", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Sicily?"
