@@ -12,6 +12,9 @@ import { SITE } from "../../config/site";
 import { ordinaLocali, cittaUniche, localiPerCitta, slugify, filmIdsDiLocale } from "../../lib/utils";
 import { breadcrumbJsonLd, faqPageJsonLd } from "../../lib/schema-org";
 import CittaInfo from "../../components/CittaInfo.astro";
+import { tRegione } from "../../lib/mappa-content";
+import Prosegui from "../../components/Prosegui.astro";
+import { filmDellaRegione } from "../../lib/correlati.ts";
 import { faqCitta } from "../../lib/citta-content";
 import { fitTitle, clampDesc } from "../../lib/seo";
 import { useT, path } from "../../i18n/ui";
@@ -37,6 +40,7 @@ const cityImg = imgKey ? cityImages[imgKey].default : undefined;
 
 const filmIds = [...new Set(locali.flatMap(filmIdsDiLocale))];
 const filmEntries = await getEntries(filmIds.map((id) => ({ collection: "films" as const, id })));
+const altriFilm = filmDellaRegione(regione, new Set(filmIds), await getCollection("films"), await getCollection("restaurants"), 4);
 
 
 // Città vicine: stessa regione, per i link interni fra pagine città.
@@ -102,4 +106,11 @@ const jsonLd = [
       {locali.map((locale, i) => (<Reveal delay={i * 60}><LocaleCard locale={locale} lang={lang} /></Reveal>))}
     </div>
   </section>
+  <Prosegui
+    lang={lang}
+    films={altriFilm}
+    titoloFilm={`More films and series in ${tRegione(regione, lang)}`}
+    mappaHref={path("/mappa", lang)}
+    mappaLabel="Open the venue map"
+  />
 </BaseLayout>

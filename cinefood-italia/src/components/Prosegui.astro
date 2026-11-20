@@ -1,0 +1,49 @@
+---
+/** Blocco "Continua a esplorare" in fondo alle pagine film e città: mappa, altri film, guida PDF. */
+import { Image } from "astro:assets";
+import type { Film } from "../lib/utils";
+import { path, type Lang } from "../i18n/ui";
+import { tFilmTitolo, tFilmAlt } from "../i18n/content-en";
+
+interface Props {
+  lang?: Lang;
+  films: Film[];
+  /** Titolo del blocco film (es. "Altri film a Napoli"). */
+  titoloFilm?: string;
+  mappaHref?: string;
+  mappaLabel?: string;
+  cittaHref?: string;
+  cittaLabel?: string;
+}
+const { lang = "it", films, titoloFilm, mappaHref, mappaLabel, cittaHref, cittaLabel } = Astro.props;
+const en = lang === "en";
+const T = en
+  ? { h: "Keep exploring", films: "More films and series nearby", guida: "Get the PDF guide", guidaSub: "All venues, routes and a film index in one PDF", serie: "TV series", film: "Film" }
+  : { h: "Continua a esplorare", films: "Altri film e serie nelle vicinanze", guida: "Scarica la guida PDF", guidaSub: "Tutti i locali, i percorsi e l'indice dei film in un PDF", serie: "Serie TV", film: "Film" };
+const btn = "inline-flex items-center gap-2 rounded-full border border-ink-500/20 bg-white px-5 py-2.5 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold-500 dark:border-noir-600 dark:bg-noir-900";
+---
+
+<section class="mx-auto max-w-6xl px-4 pb-14">
+  <h2 class="font-display text-2xl font-bold">{T.h}</h2>
+  <div class="mt-4 flex flex-wrap gap-3">
+    {mappaHref && <a href={mappaHref} class={btn}>📍 {mappaLabel}</a>}
+    {cittaHref && <a href={cittaHref} class={btn}>🍽️ {cittaLabel}</a>}
+    <a href={path("/guida", lang)} class="inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-2.5 text-sm font-bold text-noir-950 shadow-sm transition-all hover:-translate-y-0.5 hover:bg-gold-400">📘 {T.guida}</a>
+  </div>
+  {films.length > 0 && (
+    <>
+      <h3 class="mt-8 font-display text-lg font-bold">{titoloFilm || T.films}</h3>
+      <ul class="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        {films.map((f) => (
+          <li>
+            <a href={path(`/film/${f.id}`, lang)} class="group block">
+              <Image src={f.data.locandina} alt={tFilmAlt(f, lang) || tFilmTitolo(f, lang)} width={240} height={360} loading="lazy" class="aspect-[2/3] w-full rounded-xl object-cover shadow-md transition-transform group-hover:scale-[1.03]" />
+              <span class="mt-2 block text-sm font-semibold leading-snug group-hover:text-gold-600 dark:group-hover:text-gold-400">{tFilmTitolo(f, lang)}</span>
+              <span class="text-xs text-ink-500 dark:text-ink-400">{f.data.serieTv ? T.serie : T.film} · {f.data.anno}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+</section>

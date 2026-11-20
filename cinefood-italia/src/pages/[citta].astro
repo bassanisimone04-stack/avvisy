@@ -12,7 +12,11 @@ import { SITE } from "../config/site";
 import { ordinaLocali, cittaUniche, localiPerCitta, slugify, filmIdsDiLocale } from "../lib/utils";
 import { breadcrumbJsonLd, faqPageJsonLd } from "../lib/schema-org";
 import CittaInfo from "../components/CittaInfo.astro";
+import { tRegione } from "../lib/mappa-content";
+import Prosegui from "../components/Prosegui.astro";
+import { filmDellaRegione } from "../lib/correlati.ts";
 import { faqCitta } from "../lib/citta-content";
+import { path } from "../i18n/ui";
 import { fitTitle, clampDesc } from "../lib/seo";
 
 export async function getStaticPaths() {
@@ -23,6 +27,7 @@ export async function getStaticPaths() {
   }));
 }
 
+const lang = "it" as const;
 const { citta, locali } = Astro.props;
 const regione = locali[0]?.data.regione ?? "";
 
@@ -39,6 +44,7 @@ const filmIds = [...new Set(locali.flatMap(filmIdsDiLocale))];
 const filmEntries = await getEntries(
   filmIds.map((id) => ({ collection: "films" as const, id }))
 );
+const altriFilm = filmDellaRegione(regione, new Set(filmIds), await getCollection("films"), await getCollection("restaurants"), 4);
 
 
 // Città vicine: stessa regione, per i link interni fra pagine città.
@@ -120,4 +126,11 @@ const jsonLd = [
       ))}
     </div>
   </section>
+  <Prosegui
+    lang={lang}
+    films={altriFilm}
+    titoloFilm={`Altri film e serie in ${tRegione(regione, lang)}`}
+    mappaHref={path("/mappa", lang)}
+    mappaLabel="Apri la mappa dei locali"
+  />
 </BaseLayout>

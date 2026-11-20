@@ -7,6 +7,9 @@ import LocaleCard from "../../components/LocaleCard.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import Reveal from "../../components/Reveal.astro";
 import Icon from "../../components/Icon.astro";
+import Prosegui from "../../components/Prosegui.astro";
+import { path } from "../../i18n/ui";
+import { filmCorrelati } from "../../lib/correlati.ts";
 import { SITE } from "../../config/site";
 import { ordinaLocali, localiPerFilm, slugify } from "../../lib/utils";
 import { faqPageJsonLd, breadcrumbJsonLd } from "../../lib/schema-org";
@@ -22,10 +25,14 @@ export async function getStaticPaths() {
   }));
 }
 
+const lang = "it" as const;
 const { film, locali } = Astro.props;
 const d = film.data;
 const cittaFilm = d.citta[0];
 const itinerario = ITINERARIO_PER_FILM[film.id];
+const tuttiFilm = await getCollection("films");
+const tuttiLocali = await getCollection("restaurants");
+const correlati = filmCorrelati(film, tuttiFilm, tuttiLocali, 4);
 
 // SEO (Search Console): "dove è stato girato X" / "X location" + "dove mangiano ne [film]".
 const title = fitTitle([
@@ -147,4 +154,12 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
       </section>
     )
   }
+  <Prosegui
+    lang={lang}
+    films={correlati}
+    mappaHref={locali[0] ? path(`/mappa#${locali[0].id}`, lang) : path("/mappa", lang)}
+    mappaLabel="Vedi i locali sulla mappa"
+    cittaHref={cittaFilm ? path(`/${slugify(cittaFilm)}`, lang) : undefined}
+    cittaLabel={cittaFilm ? `Tutti i locali a ${cittaFilm}` : undefined}
+  />
 </BaseLayout>
