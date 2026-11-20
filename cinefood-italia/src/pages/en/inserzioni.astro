@@ -1,43 +1,6 @@
 ---
-/** English "Advertising" page for venue owners. */
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { SITE } from "../../config/site";
-const lang = "en" as const;
-
-const piani = [
-  { nome: "Basic", prezzo: "Free", evidenza: false, voci: ["Venue listing in the directory", "Photo and description", "Link to the films", "Presence on the map"] },
-  { nome: "Featured", prezzo: "on request", evidenza: true, voci: ["Everything in Basic", "“Featured” badge", "Priority position on the homepage", "Direct booking link"] },
-  { nome: "Partner", prezzo: "on request", evidenza: false, voci: ["Everything in Featured", "Dedicated blog article", "Social media sharing", "Periodic visit report"] },
-];
+/** English "Advertising" page for venue owners. Content lives in InserzioniLanding. */
+import InserzioniLanding from "../../components/InserzioniLanding.astro";
 ---
 
-<BaseLayout lang={lang} title="Advertising" description={`Feature your restaurant on ${SITE.name}. Discover the plans for venue owners.`}>
-  <section class="mx-auto max-w-5xl px-4 py-12">
-    <div class="text-center">
-      <h1 class="font-display text-4xl font-extrabold">Make your venue shine</h1>
-      <p class="mx-auto mt-3 max-w-2xl text-lg text-ink-700 dark:text-cream-200">Are you a venue owner? Reach thousands of cinema and food lovers. Here's how we can spotlight your venue on {SITE.name}.</p>
-    </div>
-
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-      {
-        piani.map((p) => (
-          <div class:list={["flex flex-col rounded-3xl border bg-white p-6 dark:bg-noir-900", p.evidenza ? "border-gold-500/50 ring-2 ring-gold-500/30" : "border-ink-500/10 dark:border-noir-700"]}>
-            {p.evidenza && <span class="mb-2 inline-block w-fit rounded-full bg-gold-500 px-3 py-0.5 text-xs font-semibold text-noir-950">Most popular</span>}
-            <h2 class="font-display text-xl font-bold">{p.nome}</h2>
-            <p class="mt-1 font-display text-2xl font-extrabold text-gold-600 dark:text-gold-400">{p.prezzo}</p>
-            <ul class="mt-4 flex-1 space-y-2 text-sm text-ink-700 dark:text-cream-200">
-              {p.voci.map((v) => <li class="flex gap-2"><span class="text-gold-500">✓</span><span>{v}</span></li>)}
-            </ul>
-            <a href={`mailto:${SITE.email}?subject=Advertising%20${encodeURIComponent(p.nome)}`} class:list={["mt-6 rounded-full px-5 py-2.5 text-center text-sm font-semibold", p.evidenza ? "bg-gold-500 text-noir-950 hover:bg-gold-400" : "border border-ink-500/25 hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800"]}>Request info</a>
-          </div>
-        ))
-      }
-    </div>
-
-    <div class="mt-10 rounded-3xl border border-ink-500/10 bg-white p-6 text-center dark:border-noir-700 dark:bg-noir-900">
-      <h2 class="font-display text-xl font-bold">Any questions?</h2>
-      <p class="mt-2 text-ink-700 dark:text-cream-200">Write to us at <a class="font-semibold text-gold-600 hover:underline dark:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a> and we'll find the right solution for your venue.</p>
-    </div>
-    <p class="mt-6 text-center text-xs text-ink-500 dark:text-ink-400">The prices and plans shown are examples and should be customised.</p>
-  </section>
-</BaseLayout>
+<InserzioniLanding lang="en" />
