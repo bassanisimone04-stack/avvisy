@@ -1,0 +1,65 @@
+---
+/**
+ * Invio dei moduli (form[data-cf-form]) senza backend.
+ *  - Con SITE.forms.web3formsKey: invia a Web3Forms (arriva un'email a chi ha creato la chiave).
+ *  - Senza chiave: apre il programma di posta dell'utente con il messaggio già compilato.
+ * Antispam: campo trappola "bot-field" (se compilato, l'invio viene scartato).
+ */
+import { SITE } from "../config/site";
+const cfg = { key: SITE.forms.web3formsKey, email: SITE.email, site: SITE.name };
+---
+
+<script is:inline type="application/json" id="cf-form-cfg" set:html={JSON.stringify(cfg)} />
+<script>
+  const cfgEl = document.getElementById("cf-form-cfg");
+  const cfg = JSON.parse(cfgEl?.textContent || "{}") as { key: string; email: string; site: string };
+  const en = document.documentElement.lang === "en";
+  const msg = {
+    sending: en ? "Sending…" : "Invio in corso…",
+    err: en ? "Something went wrong. Please try again or write to us by email." : "Qualcosa non ha funzionato. Riprova o scrivici via email.",
+  };
+
+  document.querySelectorAll<HTMLFormElement>("form[data-cf-form]").forEach((form) => {
+    const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const status = document.createElement("p");
+    status.setAttribute("role", "status");
+    status.className = "mt-2 w-full text-sm text-red-600 dark:text-red-400";
+    status.hidden = true;
+    form.appendChild(status);
+    const thanks = form.getAttribute("action") || "/grazie";
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      if (String(data.get("bot-field") || "")) { location.href = thanks; return; } // bot: finge di accettare
+      const nome = String(data.get("form-name") || "form");
+      const fields = [...data.entries()].filter(([k]) => k !== "form-name" && k !== "bot-field");
+
+      if (!cfg.key) {
+        const body = fields.map(([k, v]) => `${k}: ${v}`).join("\n");
+        location.href = `mailto:${cfg.email}?subject=${encodeURIComponent(`${cfg.site}: ${nome}`)}&body=${encodeURIComponent(body)}`;
+        return;
+      }
+
+      const old = btn?.textContent || "";
+      if (btn) { btn.disabled = true; btn.textContent = msg.sending; }
+      status.hidden = true;
+      try {
+        const payload: Record<string, string> = { access_key: cfg.key, subject: `${cfg.site}: ${nome}`, from_name: cfg.site };
+        fields.forEach(([k, v]) => { payload[k] = String(v); });
+        const r = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok && j.success) { location.href = thanks; return; }
+        throw new Error("send");
+      } catch {
+        status.textContent = msg.err;
+        status.hidden = false;
+        if (btn) { btn.disabled = false; btn.textContent = old; }
+      }
+    });
+  });
+</script>

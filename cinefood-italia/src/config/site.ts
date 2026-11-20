@@ -34,6 +34,16 @@ export const SITE = {
   /** Email di contatto mostrata nelle pagine e nei form. */
   email: "info@cinefooditalia.com",
 
+  /**
+   * Invio dei moduli (aggiungi locale, newsletter). Il sito è su Vercel, che non ha moduli integrati.
+   * ▶️ Crea un account gratuito su https://web3forms.com, inserisci la tua email, ricevi la "Access Key"
+   *    e incollala qui sotto (è una chiave pubblica fatta per stare nel codice del sito).
+   *    Finché è vuota, il modulo apre il programma di posta dell'utente con il messaggio già scritto.
+   */
+  forms: {
+    web3formsKey: "",
+  },
+
   /** Autore/organizzazione (usato nei dati strutturati). */
   author: "CineFood Italia",
 

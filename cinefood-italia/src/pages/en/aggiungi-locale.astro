@@ -1,5 +1,5 @@
 ---
-/** English "Add your venue" page with contact form (Netlify Forms). */
+/** English "Add your venue" page with contact form (invio con Web3Forms, vedi FormHandler). */
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { SITE } from "../../config/site";
 import { path } from "../../i18n/ui";
@@ -13,7 +13,7 @@ const labelClass = "mb-1 block text-sm font-medium text-ink-700 dark:text-cream-
     <h1 class="font-display text-4xl font-extrabold">Add your venue</h1>
     <p class="mt-3 text-lg text-ink-700 dark:text-cream-200">Do you own a venue that appeared in a film or TV series? Know a place we should include? Fill in the form: we'll get back to you soon.</p>
 
-    <form name="add-venue" method="POST" data-netlify="true" netlify-honeypot="bot-field" action={path("/grazie", lang)}
+    <form data-cf-form name="add-venue" method="POST" action={path("/grazie", lang)}
       class="mt-8 space-y-4 rounded-3xl border border-ink-500/10 bg-white p-6 dark:border-noir-700 dark:bg-noir-900">
       <input type="hidden" name="form-name" value="add-venue" />
       <p class="hidden"><label>Don't fill this in: <input name="bot-field" /></label></p>

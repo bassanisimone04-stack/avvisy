@@ -1,5 +1,5 @@
 ---
-/** Modulo newsletter (Netlify Forms). `lang` per la lingua. */
+/** Modulo newsletter (invio con Web3Forms, vedi FormHandler). `lang` per la lingua. */
 import { useT, path, type Lang } from "../i18n/ui";
 interface Props {
   lang?: Lang;
@@ -9,10 +9,9 @@ const t = useT(lang);
 ---
 
 <form
+  data-cf-form
   name="newsletter"
   method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
   action={path("/grazie", lang)}
   class="flex w-full max-w-md flex-col gap-2 sm:flex-row"
 >
