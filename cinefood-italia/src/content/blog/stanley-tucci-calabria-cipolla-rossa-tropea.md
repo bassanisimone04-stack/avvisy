@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Calabria in Searching for Italy:
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-calabria-cipolla-rossa-tropea.jpg"
-immagineAlt: "Sfondo a gradiente rosso porpora che richiama le cipolle rosse di Tropea"
+immagineAlt: "Una spiaggia di sabbia chiara ai piedi di una falesia, con ombrelloni colorati e acqua color smeraldo"
 tags: ["Stanley Tucci", "Calabria", "Tropea", "cipolla rossa", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Calabria?"

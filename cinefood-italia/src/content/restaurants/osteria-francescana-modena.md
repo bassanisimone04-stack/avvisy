@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/osteria-francescana-modena.jpg"
-immagineAlt: "Ingresso dell'Osteria Francescana in via Stella a Modena"
+immagineAlt: "Il Duomo di Modena con la torre Ghirlandina, visto dalla piazza"
+immagineTipo: "illustrativa"
 sitoWeb: "https://osteriafrancescana.it"
 ultimoAggiornamento: 2026-09-29
 film:

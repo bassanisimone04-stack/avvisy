@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Umbria in Searching for Italy: i
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-umbria-alla-via-di-mezzo-montefalco.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama i colori delle colline umbre"
+immagineAlt: "Vicolo medievale con archi in pietra e la targa «Via di Visiale», in un borgo dell'Italia centrale"
 tags: ["Stanley Tucci", "Umbria", "Montefalco", "Giorgione", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Umbria?"

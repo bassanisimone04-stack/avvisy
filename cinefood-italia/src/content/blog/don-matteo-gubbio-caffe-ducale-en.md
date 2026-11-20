@@ -4,7 +4,7 @@ descrizione: "Where Don Matteo and Sergeant Cecchini played chess: Caffè Ducale
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-09
 immagine: "../../assets/placeholder/caffe-ducale-gubbio.jpg"
-immagineAlt: "Caffè Ducale on Piazza Grande in Gubbio, a historic Don Matteo location"
+immagineAlt: "A medieval lane with stone arches and a «Via di Visiale» street sign, in a town in central Italy"
 tags: ["Don Matteo", "Gubbio", "Umbria", "Rai", "film tourism"]
 faq:
   - domanda: "Where is Don Matteo filmed?"

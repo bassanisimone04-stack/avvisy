@@ -12,7 +12,8 @@ prezzo: "€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/bar-tiffany-modena.jpg"
-immagineAlt: "Vetrina del Bar Tiffany di via Canalino a Modena"
+immagineAlt: "Il Duomo di Modena con la torre Ghirlandina, visto dalla piazza"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "somebody-feed-phil-venezia"

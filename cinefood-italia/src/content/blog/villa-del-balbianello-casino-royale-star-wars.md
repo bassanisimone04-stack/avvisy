@@ -4,7 +4,7 @@ descrizione: "Villa del Balbianello a Lenno: le scene di Casino Royale e Star Wa
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-10-13
 immagine: "../../assets/placeholder/villa-del-balbianello-lenno.jpg"
-immagineAlt: "Il loggiato di Villa del Balbianello sul promontorio di Lenno, Lago di Como"
+immagineAlt: "Loggia coperta d'edera con balaustra e vista sul lago tra le montagne e i cipressi"
 tags: ["Villa del Balbianello", "Casino Royale", "Star Wars", "Lago di Como", "cineturismo"]
 faq:
   - domanda: "Si può visitare Villa del Balbianello?"

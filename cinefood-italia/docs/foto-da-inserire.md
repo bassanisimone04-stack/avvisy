@@ -1,6 +1,6 @@
 # Foto da inserire su CineFood Italia
 
-**Stato al 20 novembre 2026.** Sul sito le immagini non mancano come file (0 immagini rotte), ma **21 immagini su 146 sono sfondi astratti generati** (gradiente sfocato), non foto vere; **13** foto vere sono troppo piccole; **96** sono foto vere inserite ma non del luogo (sezione 3); le altre 16 sono foto reali buone (sezione 4). La tabella è ordinata per impressioni su Google (Search Console, 5 ago – 4 nov 2026): parti dalle prime righe, perché una stessa foto copre più pagine.
+**Stato al 20 novembre 2026.** Sul sito le immagini non mancano come file (0 immagini rotte), ma **11 immagini su 146 sono sfondi astratti generati** (gradiente sfocato), non foto vere; **13** foto vere sono troppo piccole; **106** sono foto vere inserite ma non del luogo (sezione 3); le altre 16 sono foto reali buone (sezione 4). La tabella è ordinata per impressioni su Google (Search Console, 5 ago – 4 nov 2026): parti dalle prime righe, perché una stessa foto copre più pagine.
 
 ## Come inserirle
 
@@ -34,25 +34,15 @@ Sono foto vere ma sotto i 900 px di larghezza: sul sito vengono ingrandite a 120
 |---|---|---|---|---|---|---|
 | 1 | `james-bond-007-italia-dove-mangiare.jpg` | `src/assets/src/assets/placeholder` | 5 | articolo: James Bond in Italia: location e dove mangiare | Copertina: James Bond in Italia: location e dove mangiare | [cerca](https://commons.wikimedia.org/w/index.php?search=James%20Bond%20in%20Italia) |
 | 2 | `al-zocco-grisignano.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Al Zocco | Al Zocco, Grisignano di Zocco: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Al%20Zocco%2C%20Grisignano%20di%20Zocco) |
-| 3 | `alla-via-di-mezzo-montefalco.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Alla Via di Mezzo da Giorgione | Alla Via di Mezzo da Giorgione, Montefalco: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Alla%20Via%20di%20Mezzo%20da%20Giorgione%2C%20Montefalco) |
-| 4 | `antichi-sapori-montegrosso.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Antichi Sapori | Antichi Sapori, Andria: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Antichi%20Sapori%2C%20Andria) |
-| 5 | `bar-tiffany-modena.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Bar Tiffany | Bar Tiffany, Modena: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Bar%20Tiffany%2C%20Modena) |
-| 6 | `caffe-ducale-gubbio.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Caffè Ducale; articolo: Don Matteo a Gubbio: location e Caffè Ducale | Caffè Ducale, Gubbio: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Caff%C3%A8%20Ducale%2C%20Gubbio) |
-| 7 | `casa-artusi-forlimpopoli.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Casa Artusi | Casa Artusi, Forlimpopoli: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Casa%20Artusi%2C%20Forlimpopoli) |
-| 8 | `i-pupi-bagheria.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: I Pupi | I Pupi, Bagheria: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=I%20Pupi%2C%20Bagheria) |
-| 9 | `lo-scoglio-nerano.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Lo Scoglio da Tommaso | Lo Scoglio da Tommaso, Massa Lubrense: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Lo%20Scoglio%20da%20Tommaso%2C%20Massa%20Lubrense) |
-| 10 | `osteria-della-cipolla-rossa-tropea.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Osteria della Cipolla Rossa | Osteria della Cipolla Rossa, Tropea: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Osteria%20della%20Cipolla%20Rossa%2C%20Tropea) |
-| 11 | `osteria-francescana-modena.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Osteria Francescana | Osteria Francescana, Modena: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Osteria%20Francescana%2C%20Modena) |
-| 12 | `trattoria-bere-vecchie-cisternino.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Trattoria Bere Vecchie | Trattoria Bere Vecchie, Cisternino: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Trattoria%20Bere%20Vecchie%2C%20Cisternino) |
-| 13 | `trattoria-della-posta-monforte-dalba.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Trattoria della Posta | Trattoria della Posta, Monforte d'Alba: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Trattoria%20della%20Posta%2C%20Monforte%20d%27Alba) |
-| 14 | `uliassi-senigallia.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Uliassi | Uliassi, Senigallia: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Uliassi%2C%20Senigallia) |
-| 15 | `il-talento-di-mr-ripley-location.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Il talento di Mr. Ripley: dove è stato girato | Copertina: Il talento di Mr. Ripley: dove è stato girato | [cerca](https://commons.wikimedia.org/w/index.php?search=Il%20talento%20di%20Mr.%20Ripley) |
-| 16 | `guida-cover-preview.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Presentiamo La Guida CineFood Italia (PDF) | Copertina: Presentiamo La Guida CineFood Italia (PDF) | [cerca](https://commons.wikimedia.org/w/index.php?search=Presentiamo%20La%20Guida%20CineFood%20Italia%20%28PDF%29) |
-| 17 | `la-moglie-del-prete-al-zocco-grisignano.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: La moglie del prete: il ristorante Al Zocco | Copertina: La moglie del prete: il ristorante Al Zocco | [cerca](https://commons.wikimedia.org/w/index.php?search=La%20moglie%20del%20prete) |
-| 18 | `somebody-feed-phil-modena-osteria-francescana.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Somebody Feed Phil a Modena: Osteria Francescana | Copertina: Somebody Feed Phil a Modena: Osteria Francescana | [cerca](https://commons.wikimedia.org/w/index.php?search=Somebody%20Feed%20Phil%20a%20Modena) |
-| 19 | `stanley-tucci-calabria-cipolla-rossa-tropea.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Tucci in Calabria: la Cipolla Rossa a Tropea | Copertina: Tucci in Calabria: la Cipolla Rossa a Tropea | [cerca](https://commons.wikimedia.org/w/index.php?search=Tucci%20in%20Calabria) |
-| 20 | `stanley-tucci-umbria-alla-via-di-mezzo-montefalco.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Tucci in Umbria: Giorgione a Montefalco | Copertina: Tucci in Umbria: Giorgione a Montefalco | [cerca](https://commons.wikimedia.org/w/index.php?search=Tucci%20in%20Umbria) |
-| 21 | `villa-del-balbianello-lenno.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Villa del Balbianello: Casino Royale e Star Wars | Copertina: Villa del Balbianello: Casino Royale e Star Wars | [cerca](https://commons.wikimedia.org/w/index.php?search=Villa%20del%20Balbianello) |
+| 3 | `antichi-sapori-montegrosso.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Antichi Sapori | Antichi Sapori, Andria: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Antichi%20Sapori%2C%20Andria) |
+| 4 | `casa-artusi-forlimpopoli.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Casa Artusi | Casa Artusi, Forlimpopoli: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Casa%20Artusi%2C%20Forlimpopoli) |
+| 5 | `i-pupi-bagheria.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: I Pupi | I Pupi, Bagheria: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=I%20Pupi%2C%20Bagheria) |
+| 6 | `lo-scoglio-nerano.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Lo Scoglio da Tommaso | Lo Scoglio da Tommaso, Massa Lubrense: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Lo%20Scoglio%20da%20Tommaso%2C%20Massa%20Lubrense) |
+| 7 | `trattoria-bere-vecchie-cisternino.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Trattoria Bere Vecchie | Trattoria Bere Vecchie, Cisternino: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Trattoria%20Bere%20Vecchie%2C%20Cisternino) |
+| 8 | `trattoria-della-posta-monforte-dalba.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Trattoria della Posta | Trattoria della Posta, Monforte d'Alba: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Trattoria%20della%20Posta%2C%20Monforte%20d%27Alba) |
+| 9 | `il-talento-di-mr-ripley-location.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Il talento di Mr. Ripley: dove è stato girato | Copertina: Il talento di Mr. Ripley: dove è stato girato | [cerca](https://commons.wikimedia.org/w/index.php?search=Il%20talento%20di%20Mr.%20Ripley) |
+| 10 | `guida-cover-preview.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Presentiamo La Guida CineFood Italia (PDF) | Copertina: Presentiamo La Guida CineFood Italia (PDF) | [cerca](https://commons.wikimedia.org/w/index.php?search=Presentiamo%20La%20Guida%20CineFood%20Italia%20%28PDF%29) |
+| 11 | `la-moglie-del-prete-al-zocco-grisignano.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: La moglie del prete: il ristorante Al Zocco | Copertina: La moglie del prete: il ristorante Al Zocco | [cerca](https://commons.wikimedia.org/w/index.php?search=La%20moglie%20del%20prete) |
 
 ## 3. Foto inserite ma non del luogo (da sostituire quando hai quella giusta)
 Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano il posto indicato. Il testo alternativo dice solo cosa si vede. Sulle schede dei locali compare la dicitura "Foto illustrativa".
@@ -96,7 +86,10 @@ Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano 
 | `bar-navona-vero.jpg` | 3 | Fontana del Moro, Piazza Navona (non il bar) | Bar Navona: tavolini o ingresso |
 | `al-covo-venezia.jpg` | 0 | Rio di Venezia (non il locale) | Al Covo: ingresso e tavoli, Castello 3968 |
 | `all-arco-venezia.jpg` | 0 | Canal Grande, Venezia (non è il bacaro) | All'Arco: l'ingresso vicino a Rialto |
+| `alla-via-di-mezzo-montefalco.jpg` | 0 | Vicolo con archi, targa Via di Visiale (sembra Spoleto, non Montefalco) | Alla Via di Mezzo: ingresso o sala, Montefalco |
+| `bar-tiffany-modena.jpg` | 0 | Duomo di Modena (non il bar) | Bar Tiffany: ingresso o tavolini |
 | `buca-dellorafo-firenze.jpg` | 0 | Ponte Vecchio (non il locale) | Buca dell'Orafo: l'ingresso nella Volta dei Girolami |
+| `caffe-ducale-gubbio.jpg` | 0 | Vicolo con archi (sembra Spoleto, non Gubbio) | Caffè Ducale: ingresso, Via Cavour 25, Gubbio |
 | `caffe-parigi-milano.jpg` | 0 | Duomo di Milano (non il caffè) | Caffè Parigi: facciata o tavolini, Corso di Porta Nuova |
 | `christian-e-manuel-vercelli.jpg` | 0 | Campi allagati dall'alto (probabilmente risaie, non confermato, non il locale) | Christian e Manuel: facciata o sala, Corso Magenta 71, Vercelli |
 | `coco-lezzone-firenze.jpg` | 0 | Vicolo di Firenze (non il locale) | Coco Lezzone: ingresso in Via del Parioncino |
@@ -118,6 +111,8 @@ Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano 
 | `orient-experience-venezia.jpg` | 0 | Rio con ponte coperto a Venezia (non il locale) | Orient Experience: sala o ingresso |
 | `osteria-cinghiale-bianco-firenze.jpg` | 0 | Case sull'Arno (non il locale) | Osteria del Cinghiale Bianco: ingresso in Borgo San Jacopo |
 | `osteria-del-treno-milano.jpg` | 0 | Naviglio a Milano (non il locale) | Osteria del Treno: sala o ingresso, Via San Gregorio 46 |
+| `osteria-della-cipolla-rossa-tropea.jpg` | 0 | Spiaggia sotto una falesia (sembra Tropea, non il locale) | Osteria della Cipolla Rossa: ingresso, Tropea |
+| `osteria-francescana-modena.jpg` | 0 | Duomo di Modena (non il locale) | Osteria Francescana: ingresso o sala, Via Stella 22 |
 | `osteria-io-e-simone-rimini.jpg` | 0 | Costa adriatica dall'alto (probabilmente Romagna, non confermata, non il locale) | Osteria io e Simone: ingresso o sala, Rimini |
 | `osteria-paradiso-chioggia.jpg` | 0 | Canale veneziano (non Chioggia) | Osteria Paradiso: facciata su Fondamenta Canal Lombardo, Chioggia |
 | `pizzeria-starita-napoli.jpg` | 0 | Via di Napoli (non il locale) | Pizzeria Starita: ingresso, Via Materdei |
@@ -128,6 +123,7 @@ Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano 
 | `ristorante-san-giulio-orta.jpg` | 0 | Lago prealpino con nebbia (non il lago d'Orta confermato, non il locale) | Ristorante San Giulio: facciata o vista sull'isola di San Giulio |
 | `roma-sparita-trastevere.jpg` | 0 | Vicolo di Roma di sera (non il locale) | Roma Sparita: Piazza di Santa Cecilia 24 |
 | `tonnara-di-scopello.jpg` | 0 | Faraglioni di Scopello (non confermato, non il locale) | Tonnara di Scopello: l'edificio o il cortile |
+| `uliassi-senigallia.jpg` | 0 | Pontile sul mare (non è in Italia, probabilmente Bulgaria) | Senigallia: spiaggia di velluto o Rotonda a mare |
 | `venissa-mazzorbo.jpg` | 0 | Campanile e isola della laguna (sembra Mazzorbo, da confermare) | Venissa: vigneto, ingresso o sala |
 | `villa-600-torcello.jpg` | 0 | Riva di un'isola della laguna (Torcello non confermata) | Villa 600: ingresso o giardino a Torcello |
 | `vini-da-arturo-venezia.jpg` | 0 | Rio di Venezia (non Calle degli Assassini) | Vini da Arturo: la piccola sala o l'ingresso |
@@ -141,6 +137,8 @@ Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano 
 | `la-corrispondenza-ristorante-san-giulio-orta.jpg` | 0 | Lago prealpino con nebbia (non Orta confermato) | Lago d'Orta con l'isola di San Giulio |
 | `la-vita-e-bella-arezzo.jpg` | 0 | Via in mattoni di un borgo toscano (sembra Certaldo, non Arezzo) | Arezzo: Piazza Grande o Corso Italia |
 | `pizzerie-napoli-nei-film.jpg` | 0 | Via di Napoli | va bene com'è |
+| `somebody-feed-phil-modena-osteria-francescana.jpg` | 0 | Duomo di Modena | va bene com'è |
+| `stanley-tucci-calabria-cipolla-rossa-tropea.jpg` | 0 | Spiaggia sotto una falesia (sembra Tropea) | va bene com'è |
 | `stanley-tucci-emilia-romagna-rimini-bologna.jpg` | 0 | Costa adriatica dall'alto | Rimini, Bologna o Casa Artusi |
 | `stanley-tucci-firenze-osteria-cinghiale-bianco.jpg` | 0 | Torre di Palazzo Vecchio | va bene com'è |
 | `stanley-tucci-liguria-cracco-portofino-il-genovese.jpg` | 0 | Portofino | va bene com'è |
@@ -149,11 +147,13 @@ Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano 
 | `stanley-tucci-puglia-antichi-sapori-matera.jpg` | 0 | Castel del Monte (Andria, Puglia) | Antichi Sapori a Montegrosso o i Sassi di Matera |
 | `stanley-tucci-sardegna-mabrouk-pomata-fradis-minoris.jpg` | 0 | Baia con faro bianco in Sardegna (sembra Palau, da confermare) | Alghero (Mabrouk), Cagliari (Pomata) o Pula |
 | `stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu.jpg` | 0 | Cattedrale di Catania | va bene com'è |
+| `stanley-tucci-umbria-alla-via-di-mezzo-montefalco.jpg` | 0 | Vicolo con archi (sembra Spoleto) | Montefalco: piazza o vigneti |
 | `stanley-tucci-venezia-all-arco-villa-600.jpg` | 0 | Piazza San Marco, Venezia | va bene com'è come copertina |
 | `the-gentlemen-2-lago-maggiore-verbania.jpg` | 0 | Lago dall'alto (sembra Lago Maggiore) | va bene com'è |
 | `trattorie-commedia-italiana-roma.jpg` | 0 | Tavoli della «Trattoria Angelino», Roma (non una delle trattorie dell'articolo) | va bene com'è come copertina |
 | `tucci-in-italy-marche-uliassi-senigallia.jpg` | 0 | Piazza con palazzo rinascimentale nelle Marche (sembra Fermo, da confermare) | Senigallia (spiaggia) o ingresso di Uliassi |
 | `una-finestra-vista-lago-orta-miasino.jpg` | 0 | Lago prealpino con nebbia (non Orta confermato) | Lago d'Orta o Miasino |
+| `villa-del-balbianello-lenno.jpg` | 0 | Loggia con edera sul lago (sembra Villa del Balbianello) | va bene com'è |
 | `weekend-cinema-e-cucina.jpg` | 0 | Tramonto sul mare con ombrelloni a righe | Copertina generica: va bene così |
 
 ## 4. Foto reali già buone (da controllare)

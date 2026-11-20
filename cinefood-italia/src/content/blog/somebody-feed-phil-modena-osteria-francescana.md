@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Phil Rosenthal a Modena in Somebody Feed Phil: Os
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/somebody-feed-phil-modena-osteria-francescana.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama i colori di Modena"
+immagineAlt: "Il Duomo di Modena con la torre Ghirlandina, visto dalla piazza"
 tags: ["Somebody Feed Phil", "Modena", "Osteria Francescana", "gnocco fritto", "aceto balsamico"]
 faq:
   - domanda: "Dove ha mangiato Phil Rosenthal a Modena?"

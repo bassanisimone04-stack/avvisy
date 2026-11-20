@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/uliassi-senigallia.jpg"
-immagineAlt: "Terrazza sul mare del ristorante Uliassi a Senigallia"
+immagineAlt: "Un lungo pontile sul mare turchese, con una torretta panoramica"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.uliassi.com"
 ultimoAggiornamento: 2026-09-30
 film:

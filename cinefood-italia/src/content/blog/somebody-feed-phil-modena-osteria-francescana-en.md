@@ -4,7 +4,7 @@ descrizione: "Where Phil Rosenthal ate in Modena in Somebody Feed Phil: Osteria 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/somebody-feed-phil-modena-osteria-francescana.jpg"
-immagineAlt: "Warm abstract gradient evoking the colours of Modena"
+immagineAlt: "Modena Cathedral with the Ghirlandina tower, seen from the square"
 tags: ["Somebody Feed Phil", "Modena", "Osteria Francescana", "gnocco fritto", "balsamic vinegar"]
 faq:
   - domanda: "Where did Phil Rosenthal eat in Modena?"

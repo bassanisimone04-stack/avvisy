@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/caffe-ducale-gubbio.jpg"
-immagineAlt: "Il Caffè Ducale in Piazza Grande a Gubbio, location storica di Don Matteo"
+immagineAlt: "Vicolo medievale con archi in pietra e la targa «Via di Visiale», in un borgo dell'Italia centrale"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-09
 film:
   - film: "don-matteo"

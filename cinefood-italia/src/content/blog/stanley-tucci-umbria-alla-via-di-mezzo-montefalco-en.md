@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Umbria in Searching for Italy: Giorgion
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-umbria-alla-via-di-mezzo-montefalco.jpg"
-immagineAlt: "Warm abstract gradient evoking the colours of the Umbrian hills"
+immagineAlt: "A medieval lane with stone arches and a «Via di Visiale» street sign, in a town in central Italy"
 tags: ["Stanley Tucci", "Umbria", "Montefalco", "Giorgione", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Umbria?"

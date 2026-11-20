@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/alla-via-di-mezzo-montefalco.jpg"
-immagineAlt: "Ingresso del ristorante Alla Via di Mezzo a Montefalco, in Umbria"
+immagineAlt: "Vicolo medievale con archi in pietra e la targa «Via di Visiale», in un borgo dell'Italia centrale"
+immagineTipo: "illustrativa"
 sitoWeb: "http://www.ristoranteallaviadimezzo.it"
 ultimoAggiornamento: 2026-09-30
 film:

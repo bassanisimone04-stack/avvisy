@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/villa-del-balbianello-lenno.jpg"
-immagineAlt: "The loggia of Villa del Balbianello on the Lenno promontory, Lake Como"
+immagineAlt: "A loggia covered in ivy, with a balustrade and a view of the lake between mountains and cypresses"
 tags: ["Villa del Balbianello", "Casino Royale", "Star Wars", "Lake Como", "film tourism"]
 faq:
   - domanda: "Can you visit Villa del Balbianello?"

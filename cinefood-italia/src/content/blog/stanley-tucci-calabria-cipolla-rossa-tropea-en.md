@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Calabria in Searching for Italy: Osteri
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-calabria-cipolla-rossa-tropea.jpg"
-immagineAlt: "Deep purple-red abstract gradient evoking the red onions of Tropea"
+immagineAlt: "A pale sand beach at the foot of a cliff, with colourful parasols and emerald water"
 tags: ["Stanley Tucci", "Calabria", "Tropea", "red onion", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Calabria?"

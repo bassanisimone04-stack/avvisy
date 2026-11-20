@@ -4,7 +4,7 @@ descrizione: "Dove giocavano a scacchi Don Matteo e il Maresciallo Cecchini: il 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-09
 immagine: "../../assets/placeholder/caffe-ducale-gubbio.jpg"
-immagineAlt: "Il Caffè Ducale in Piazza Grande a Gubbio, location storica di Don Matteo"
+immagineAlt: "Vicolo medievale con archi in pietra e la targa «Via di Visiale», in un borgo dell'Italia centrale"
 tags: ["Don Matteo", "Gubbio", "Umbria", "Rai", "cineturismo"]
 faq:
   - domanda: "Dove è girato Don Matteo?"

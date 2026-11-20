@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/osteria-della-cipolla-rossa-tropea.jpg"
-immagineAlt: "Tavolo all'aperto dell'Osteria della Cipolla Rossa vicino a Tropea"
+immagineAlt: "Una spiaggia di sabbia chiara ai piedi di una falesia, con ombrelloni colorati e acqua color smeraldo"
+immagineTipo: "illustrativa"
 sitoWeb: "https://osteriadellacipollarossa.com"
 ultimoAggiornamento: 2026-09-30
 film:
