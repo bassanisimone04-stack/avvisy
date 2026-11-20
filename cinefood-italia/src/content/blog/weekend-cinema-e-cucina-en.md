@@ -4,7 +4,7 @@ descrizione: "A practical guide for a two-day trip in the footsteps of Italian f
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/weekend-cinema-e-cucina.jpg"
-immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
+immagineAlt: "Sunset over the sea with striped beach umbrellas in silhouette"
 tags: ["guide", "itineraries", "weekend", "tips"]
 faq:
   - domanda: "How do you plan a film-tourism weekend in Italy?"

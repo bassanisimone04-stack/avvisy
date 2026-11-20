@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci nelle Marche in Tucci in Italy: Uli
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/tucci-in-italy-marche-uliassi-senigallia.jpg"
-immagineAlt: "Sfondo a gradiente azzurro e sabbia che richiama la spiaggia di Senigallia"
+immagineAlt: "Piazza storica con un palazzo rinascimentale e una scalinata, vista da un portico in una città delle Marche"
 tags: ["Stanley Tucci", "Marche", "Senigallia", "Uliassi", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci nelle Marche?"

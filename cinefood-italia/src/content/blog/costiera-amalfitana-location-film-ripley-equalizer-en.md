@@ -4,7 +4,7 @@ descrizione: "The real Amalfi Coast filming locations: Atrani in Netflix's Riple
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-25
 immagine: "../../assets/placeholder/costiera-amalfitana-location-film-ripley-equalizer.jpg"
-immagineAlt: "Positano and the Amalfi Coast lit up at sunset"
+immagineAlt: "Ochre and pink houses overlooking the sea in a village on the Amalfi Coast"
 tags: ["Amalfi Coast", "Atrani", "Positano", "Ripley", "The Equalizer 3"]
 faq:
   - domanda: "Which films were shot on the Amalfi Coast?"

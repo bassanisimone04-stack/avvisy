@@ -4,7 +4,7 @@ descrizione: "Da Al Pacino a Julia Roberts, da Denzel Washington a Lady Gaga: tu
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25
 immagine: "../../assets/placeholder/ristoranti-veri-nei-film-italia-lista.jpg"
-immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
+immagineAlt: "Ristorante affacciato sull'acqua con vetrate illuminate al tramonto"
 tags: ["ristoranti dei film", "cineturismo", "lista", "star hollywoodiane"]
 faq:
   - domanda: "Come faccio a sapere se un ristorante è davvero apparso in un film?"

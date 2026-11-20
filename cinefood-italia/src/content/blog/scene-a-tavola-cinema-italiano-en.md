@@ -4,7 +4,7 @@ descrizione: "From Alberto Sordi's macaroni to Roman dolce vita: why food has al
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/scene-a-tavola-cinema-italiano.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "Laid table with glasses and a pot of cyclamen"
 tags: ["Italian cinema", "food", "trivia"]
 faq:
   - domanda: "What is the most famous dining scene in Italian cinema?"

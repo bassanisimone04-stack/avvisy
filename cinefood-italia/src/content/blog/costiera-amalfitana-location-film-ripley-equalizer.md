@@ -4,7 +4,7 @@ descrizione: "Le location cinematografiche vere della Costiera Amalfitana: Atran
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-25
 immagine: "../../assets/placeholder/costiera-amalfitana-location-film-ripley-equalizer.jpg"
-immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
+immagineAlt: "Case color ocra e rosa affacciate sul mare in un borgo della Costiera Amalfitana"
 tags: ["Costiera Amalfitana", "Atrani", "Positano", "Ripley", "The Equalizer 3"]
 faq:
   - domanda: "Quali film sono stati girati sulla Costiera Amalfitana?"

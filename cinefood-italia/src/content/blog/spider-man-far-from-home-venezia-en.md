@@ -4,7 +4,7 @@ descrizione: "Where was Spider-Man: Far From Home filmed in Venice? Real locatio
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/spider-man-far-from-home-venezia.jpg"
-immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
+immagineAlt: "Orange facade of a Venetian building with flower-filled balconies"
 tags: ["Spider-Man", "Venice", "Marvel", "where to eat", "film tourism"]
 faq:
   - domanda: "Where is Spider-Man Far From Home set in Italy?"

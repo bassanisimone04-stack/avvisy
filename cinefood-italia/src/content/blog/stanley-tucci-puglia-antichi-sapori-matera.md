@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Puglia in Searching for Italy: A
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-puglia-antichi-sapori-matera.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama i colori delle Murge e della Puglia"
+immagineAlt: "Castel del Monte, il castello ottagonale di Federico II in Puglia, visto dalla scalinata"
 tags: ["Stanley Tucci", "Puglia", "Matera", "Cisternino", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Puglia?"

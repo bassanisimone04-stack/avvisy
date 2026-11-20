@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato Spider-Man: Far From Home a Venezia? Le locat
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/spider-man-far-from-home-venezia.jpg"
-immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
+immagineAlt: "Facciata arancione di un palazzo veneziano con balconi fioriti"
 tags: ["Spider-Man", "Venezia", "Marvel", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove è ambientato Spider-Man Far From Home in Italia?"

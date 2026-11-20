@@ -4,7 +4,7 @@ descrizione: "Guida pratica per un weekend di due giorni sulle orme dei film ita
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/weekend-cinema-e-cucina.jpg"
-immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
+immagineAlt: "Tramonto sul mare con ombrelloni a righe in controluce"
 tags: ["guida", "itinerari", "weekend", "consigli"]
 faq:
   - domanda: "Come organizzare un weekend di cineturismo in Italia?"

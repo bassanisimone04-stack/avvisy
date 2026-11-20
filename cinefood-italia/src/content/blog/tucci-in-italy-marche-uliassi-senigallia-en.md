@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Le Marche in Tucci in Italy: Uliassi in
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/tucci-in-italy-marche-uliassi-senigallia.jpg"
-immagineAlt: "Abstract blue and sand gradient evoking Senigallia's beach"
+immagineAlt: "A historic square with a Renaissance palace and a staircase, seen from an arcade in a town in the Marche"
 tags: ["Stanley Tucci", "Marche", "Senigallia", "Uliassi", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Le Marche?"

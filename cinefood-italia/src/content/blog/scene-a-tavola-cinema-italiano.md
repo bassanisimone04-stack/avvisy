@@ -4,7 +4,7 @@ descrizione: "Dai maccheroni di Alberto Sordi alla dolce vita romana: perché il
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/scene-a-tavola-cinema-italiano.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "Tavolo apparecchiato con calici di vetro e un vaso di ciclamini"
 tags: ["cinema italiano", "food", "curiosità"]
 faq:
   - domanda: "Qual è la scena a tavola più famosa del cinema italiano?"
