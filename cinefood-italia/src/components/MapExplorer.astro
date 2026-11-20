@@ -31,14 +31,14 @@ const L10 = lang === "en"
       schermo: "Full screen", esci: "Exit full screen", italia: "Whole Italy", solo: "Only venues in the map view",
       scopri: "Discover more", reale: "Real location", legato: "Film-related", chiuso: "Closed",
       geoErr: "We couldn't get your position. Check your browser permissions.", km: "km", elenco: "Venues", aperto: "Open map in full screen",
-      legenda: "Legend", carico: "Loading map…",
+      legenda: "Legend", carico: "Loading map…", locali: "venues", hint: "Click a region to filter",
     }
   : {
       cerca: "Cerca locale, città o film…", nessuno: "Nessun locale trovato.", vicino: "Vicino a me", vicinoTit: "Mostra i locali più vicini a me",
       schermo: "Schermo intero", esci: "Esci dallo schermo intero", italia: "Tutta Italia", solo: "Solo i locali nella vista della mappa",
       scopri: "Scopri di più", reale: "Location reale", legato: "Legato al film", chiuso: "Chiuso",
       geoErr: "Non siamo riusciti a ottenere la tua posizione. Controlla i permessi del browser.", km: "km", elenco: "Locali", aperto: "Apri la mappa a schermo intero",
-      legenda: "Legenda", carico: "Caricamento mappa…",
+      legenda: "Legenda", carico: "Caricamento mappa…", locali: "locali", hint: "Clicca una regione per filtrare",
     };
 ---
 
@@ -69,6 +69,7 @@ const L10 = lang === "en"
         <span><i class="dot dot-set"></i>{L10.reale}</span>
         <span><i class="dot dot-legato"></i>{L10.legato}</span>
         <span><i class="dot dot-chiuso"></i>{L10.chiuso}</span>
+        <span class="hint">{L10.hint}</span>
       </div>
     </div>
 
@@ -100,6 +101,12 @@ const L10 = lang === "en"
   /* Mare e sfondo: palette ispirata alla vista satellitare dell'Italia */
   .cfx-map.leaflet-container { background: radial-gradient(ellipse at 38% 62%, #1d62a0 0%, #12467c 42%, #0a2c55 100%); font-family: inherit; }
   .cf-tiles { filter: saturate(.7) sepia(.22) hue-rotate(20deg) brightness(.92) contrast(1.05); }
+  .cfx-mapwrap::before { content: ""; position: absolute; inset: 0; border-radius: 1rem; pointer-events: none; z-index: 450; box-shadow: inset 0 0 90px rgba(3,15,35,.5); }
+  .cf-regtip { background: rgba(8,28,52,.92); color: #fff; border: 1px solid rgba(255,255,255,.2); border-radius: 10px; font-weight: 700; font-size: 12.5px; padding: 5px 10px; box-shadow: 0 4px 14px rgba(0,0,0,.4); }
+  .cf-regtip::before { display: none; }
+  .cf-regtip b { color: #f4b73a; }
+  .cfx-legend .hint { opacity: .7; font-style: italic; }
+  .cfx-map.leaflet-container:focus:not(:focus-visible) { outline: none; }
   .cfx-loading { position: absolute; inset: 0; z-index: 400; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 1rem; color: #cfe0f1; font-size: 14px; font-weight: 600; background: radial-gradient(ellipse at 38% 62%, #1d62a0 0%, #12467c 42%, #0a2c55 100%); transition: opacity .35s; pointer-events: none; }
   .cfx-loading.done { opacity: 0; }
   .cfx-loading .spin { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(255,255,255,.25); border-top-color: #f4b73a; animation: cfspin .8s linear infinite; }
@@ -207,6 +214,7 @@ const L10 = lang === "en"
     const baseRenderer = L.canvas({ pane: "basePane", padding: 0.5 });
     const loading = $("cfx-loading");
     const hideLoading = () => { loading?.classList.add("done"); setTimeout(() => loading?.remove(), 450); };
+    const regionLayers: { name: string; base: string; layer: any }[] = [];
     const ESTERNI = ["#4b5d35", "#55673b", "#485a32", "#5c6b3e"];
     const REGIONI = ["#6f8546", "#7d8b4e", "#657c40", "#86905a", "#74874a"];
     try {
@@ -215,8 +223,10 @@ const L10 = lang === "en"
         style: (f: any) => ({ fillColor: ESTERNI[(f.properties.n.length) % ESTERNI.length], fillOpacity: 1, color: "#e9dc5a", weight: 1, opacity: 0.65 }) } as any).addTo(map);
       L.geoJSON(base.it, { renderer: baseRenderer, interactive: false, style: { fill: false, color: "#5aa9df", weight: 8, opacity: 0.22 } } as any).addTo(map);
       let i = 0;
-      L.geoJSON(base.it, { renderer: baseRenderer, interactive: false,
-        style: () => ({ fillColor: REGIONI[i++ % REGIONI.length], fillOpacity: 1, color: "#d9cf6c", weight: 0.7, opacity: 0.5 }) } as any).addTo(map);
+      L.geoJSON(base.it, { renderer: baseRenderer, interactive: true, bubblingMouseEvents: false,
+        style: () => { const c = REGIONI[i++ % REGIONI.length]; return { fillColor: c, fillOpacity: 1, color: "#d9cf6c", weight: 0.7, opacity: 0.5 }; },
+        onEachFeature: (f: any, layer: any) => { regionLayers.push({ name: f.properties.n, base: layer.options.fillColor, layer }); },
+      } as any).addTo(map);
     } catch {
       // Se i confini non si caricano, usa le tile OSM a tutti i livelli.
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, className: "cf-tiles" }).addTo(map);
@@ -339,6 +349,7 @@ const L10 = lang === "en"
       if (vuoto) vuoto.hidden = vis.length > 0;
       if (fit) fitVisible();
       renderList();
+      styleRegions();
     }
 
     function vai(id: string) {
@@ -352,6 +363,34 @@ const L10 = lang === "en"
       map.once("moveend", () => { cluster.zoomToShowLayer(mk, () => mk.openPopup()); });
       map.flyTo([m.lat, m.lng], Math.max(map.getZoom(), 13), { duration: 0.9 });
     }
+
+    // --- Regioni interattive: evidenzia, mostra quanti locali, clic = filtra ---
+    const regOf = (n: string) => { const x = norm(n); return data.find((m) => x.startsWith(norm(m.regione)))?.regione || ""; };
+    const perReg = new Map<string, number>();
+    data.forEach((m) => perReg.set(m.regione, (perReg.get(m.regione) || 0) + 1));
+    function styleRegions() {
+      const sel = selReg?.value || "";
+      regionLayers.forEach((r) => {
+        const reg = regOf(r.name);
+        const on = !!sel && reg === sel;
+        r.layer.setStyle(on
+          ? { fillColor: "#9bb25a", color: "#f4b73a", weight: 2.2, opacity: 1 }
+          : { fillColor: sel && reg !== sel ? "#5b6f3c" : r.base, color: "#d9cf6c", weight: 0.7, opacity: 0.5 });
+        if (on) r.layer.bringToFront();
+      });
+    }
+    regionLayers.forEach((r) => {
+      const reg = regOf(r.name), n = perReg.get(reg) || 0;
+      const nome = r.name.split("/")[0];
+      r.layer.bindTooltip(`${esc(nome)} · <b>${n}</b> ${esc(S.locali)}`, { sticky: true, direction: "top", className: "cf-regtip", opacity: 1 });
+      r.layer.on("mouseover", () => { if ((selReg?.value || "") !== reg && n) r.layer.setStyle({ fillColor: "#8fa356", opacity: 0.9 }); });
+      r.layer.on("mouseout", () => styleRegions());
+      r.layer.on("click", () => {
+        if (!n || !selReg) return;
+        selReg.value = selReg.value === reg ? "" : reg; // secondo clic = toglie il filtro
+        applica(true);
+      });
+    });
 
     // --- Eventi ---
     [selCat, selReg, chkAperti].forEach((e) => e?.addEventListener("change", () => applica(true)));
