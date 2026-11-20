@@ -37,7 +37,7 @@ const jsonLd = faqPageJsonLd(faqMappa(lang, statistiche(locali)));
 >
   <section class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="font-display text-4xl font-extrabold">Mappa dei locali</h1>
-    <p class="mt-2 text-ink-600 dark:text-ink-400">Clicca un segnaposto o scegli un locale dall'elenco: la mappa ti ci porta. Cerca per locale, città o film, oppure trova quelli vicino a te. Mappa basata su OpenStreetMap.</p>
+    <p class="mt-2 text-ink-600 dark:text-ink-400">Clicca un segnaposto o scegli un locale dall'elenco: la mappa ti ci porta. Cerca per locale, città o film, oppure trova quelli vicino a te. Dettaglio stradale da OpenStreetMap.</p>
     <div class="mt-6"><MappaFiltri regioni={regioni} totale={locali.length} /></div>
     <MapExplorer markers={markers} />
     <MappaInfo locali={locali} />

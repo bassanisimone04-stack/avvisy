@@ -31,14 +31,14 @@ const L10 = lang === "en"
       schermo: "Full screen", esci: "Exit full screen", italia: "Whole Italy", solo: "Only venues in the map view",
       scopri: "Discover more", reale: "Real location", legato: "Film-related", chiuso: "Closed",
       geoErr: "We couldn't get your position. Check your browser permissions.", km: "km", elenco: "Venues", aperto: "Open map in full screen",
-      legenda: "Legend",
+      legenda: "Legend", carico: "Loading map…",
     }
   : {
       cerca: "Cerca locale, città o film…", nessuno: "Nessun locale trovato.", vicino: "Vicino a me", vicinoTit: "Mostra i locali più vicini a me",
       schermo: "Schermo intero", esci: "Esci dallo schermo intero", italia: "Tutta Italia", solo: "Solo i locali nella vista della mappa",
       scopri: "Scopri di più", reale: "Location reale", legato: "Legato al film", chiuso: "Chiuso",
       geoErr: "Non siamo riusciti a ottenere la tua posizione. Controlla i permessi del browser.", km: "km", elenco: "Locali", aperto: "Apri la mappa a schermo intero",
-      legenda: "Legenda",
+      legenda: "Legenda", carico: "Caricamento mappa…",
     };
 ---
 
@@ -46,6 +46,7 @@ const L10 = lang === "en"
   <div class="cfx-grid grid gap-4 lg:grid-cols-[1fr_340px]">
     <div class="cfx-mapwrap relative">
       <div id="mappa" class="cfx-map z-0 w-full overflow-hidden rounded-2xl border border-ink-100"></div>
+      <div id="cfx-loading" class="cfx-loading" role="status"><span class="spin" aria-hidden="true"></span>{L10.carico}</div>
 
       <!-- Comandi sopra la mappa -->
       <div class="cfx-tools">
@@ -96,40 +97,57 @@ const L10 = lang === "en"
     .cfx-map { height: 60vh; }
     .cfx-side { height: auto; max-height: 420px; min-height: 0; }
   }
+  /* Mare e sfondo: palette ispirata alla vista satellitare dell'Italia */
+  .cfx-map.leaflet-container { background: radial-gradient(ellipse at 38% 62%, #1d62a0 0%, #12467c 42%, #0a2c55 100%); font-family: inherit; }
+  .cf-tiles { filter: saturate(.7) sepia(.22) hue-rotate(20deg) brightness(.92) contrast(1.05); }
+  .cfx-loading { position: absolute; inset: 0; z-index: 400; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 1rem; color: #cfe0f1; font-size: 14px; font-weight: 600; background: radial-gradient(ellipse at 38% 62%, #1d62a0 0%, #12467c 42%, #0a2c55 100%); transition: opacity .35s; pointer-events: none; }
+  .cfx-loading.done { opacity: 0; }
+  .cfx-loading .spin { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(255,255,255,.25); border-top-color: #f4b73a; animation: cfspin .8s linear infinite; }
+  @keyframes cfspin { to { transform: rotate(360deg); } }
+
   .cfx-tools { position: absolute; top: 12px; right: 12px; z-index: 500; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-  .cfx-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #fff; color: #1c1b22; border: 1px solid rgba(0,0,0,.12); font-size: 13px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.18); cursor: pointer; transition: transform .15s, box-shadow .15s; }
-  .cfx-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.25); }
-  .cfx-btn:focus-visible { outline: 2px solid #e0a526; outline-offset: 2px; }
+  .cfx-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 13px; border-radius: 999px; background: rgba(8,28,52,.78); color: #fff; border: 1px solid rgba(255,255,255,.2); font-size: 13px; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,.35); cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform .15s, background .15s, border-color .15s; }
+  .cfx-btn:hover { transform: translateY(-1px); background: rgba(8,28,52,.92); border-color: #f4b73a; }
+  .cfx-btn:focus-visible { outline: 2px solid #f4b73a; outline-offset: 2px; }
   @media (max-width: 520px) { .cfx-btn span { display: none; } .cfx-btn { padding: 9px; } }
-  .cfx-legend { position: absolute; left: 12px; bottom: 26px; z-index: 500; display: flex; gap: 12px; flex-wrap: wrap; padding: 7px 12px; border-radius: 12px; background: rgba(255,255,255,.92); color: #1c1b22; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  .cfx-legend { position: absolute; left: 12px; bottom: 26px; z-index: 500; display: flex; gap: 12px; flex-wrap: wrap; padding: 7px 13px; border-radius: 12px; background: rgba(8,28,52,.78); color: #eaf2fa; font-size: 12px; border: 1px solid rgba(255,255,255,.15); box-shadow: 0 4px 14px rgba(0,0,0,.35); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
   .cfx-legend span { display: inline-flex; align-items: center; gap: 6px; }
   .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-  .dot-set { background: #e0a526; } .dot-legato { background: #2fa39a; } .dot-chiuso { background: #8a8f98; }
+  .dot-set { background: #f4b73a; } .dot-legato { background: #34c3b5; } .dot-chiuso { background: #9aa3ad; }
+
+  /* Controlli Leaflet nello stesso stile */
+  .cfx-map .leaflet-bar { border: 1px solid rgba(255,255,255,.2); box-shadow: 0 4px 14px rgba(0,0,0,.35); border-radius: 12px; overflow: hidden; }
+  .cfx-map .leaflet-bar a { background: rgba(8,28,52,.82); color: #fff; border-bottom-color: rgba(255,255,255,.15); }
+  .cfx-map .leaflet-bar a:hover { background: rgba(8,28,52,.95); color: #f4b73a; }
+  .cfx-map .leaflet-control-attribution { background: rgba(8,28,52,.7); color: #b9cce0; font-size: 10px; border-radius: 8px 0 0 0; }
+  .cfx-map .leaflet-control-attribution a { color: #e9c874; }
 
   /* Segnaposto a goccia */
   .cf-pin { background: none; border: 0; }
-  .cf-pin .pin { width: 30px; height: 30px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid #fff; box-shadow: 0 3px 8px rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; transition: transform .15s; }
+  .cf-pin .pin { width: 30px; height: 30px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2.5px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,.55), 0 0 0 3px rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center; transition: transform .15s; }
   .cf-pin .pin::after { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #fff; }
   .cf-pin:hover .pin, .cf-pin.is-active .pin { transform: rotate(-45deg) scale(1.25); }
-  .pin-set { background: #e0a526; } .pin-legato { background: #2fa39a; } .pin-chiuso { background: #8a8f98; }
+  .pin-set { background: #f4b73a; } .pin-legato { background: #34c3b5; } .pin-chiuso { background: #9aa3ad; }
 
   /* Cluster */
   .cf-cluster { background: none; }
-  .cf-cluster div { width: 40px; height: 40px; margin: 0; border-radius: 50%; background: #e0a526; color: #1c1b22; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 3px solid rgba(255,255,255,.9); box-shadow: 0 3px 10px rgba(0,0,0,.35); }
+  .cf-cluster div { width: 40px; height: 40px; margin: 0; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #ffd978, #f4b73a 60%, #d9961a); color: #1c1b22; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 3px solid rgba(255,255,255,.92); box-shadow: 0 4px 12px rgba(0,0,0,.5), 0 0 0 5px rgba(244,183,58,.25); }
   .cf-cluster.md div { width: 46px; height: 46px; } .cf-cluster.lg div { width: 52px; height: 52px; font-size: 16px; }
 
   /* Popup */
-  .cf-popup .leaflet-popup-content-wrapper { border-radius: 16px; padding: 0; overflow: hidden; }
-  .cf-popup .leaflet-popup-content { margin: 0; width: 250px !important; color: #1c1b22; font-family: inherit; }
+  .cf-popup .leaflet-popup-content-wrapper { border-radius: 16px; padding: 0; overflow: hidden; background: #0f2540; color: #fff; border: 1px solid rgba(255,255,255,.15); box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+  .cf-popup .leaflet-popup-tip { background: #0f2540; }
+  .cf-popup a.leaflet-popup-close-button { color: #cfe0f1; }
+  .cf-popup .leaflet-popup-content { margin: 0; width: 250px !important; color: #fff; font-family: inherit; }
   .cf-card { padding: 14px 16px 16px; }
   .cf-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; color: #1c1b22; margin-bottom: 6px; }
-  .cf-badge.set { background: #f6d98a; } .cf-badge.legato { background: #a9e0da; } .cf-badge.chiuso { background: #d7d9dd; }
-  .cf-card h3 { font-size: 16px; font-weight: 800; line-height: 1.25; margin: 0; }
-  .cf-card .meta { font-size: 12.5px; color: #55566a; margin-top: 2px; text-transform: capitalize; }
-  .cf-card .films { font-size: 12.5px; font-style: italic; margin-top: 8px; color: #33344a; }
-  .cf-card .desc { font-size: 12.5px; line-height: 1.4; margin-top: 8px; color: #33344a; }
-  .cf-card a.go { display: inline-block; margin-top: 12px; background: #e0a526; color: #1c1b22 !important; font-weight: 700; font-size: 13px; padding: 7px 14px; border-radius: 999px; text-decoration: none; }
-  .cf-card a.go:hover { background: #f0b73a; }
+  .cf-badge.set { background: #f4b73a; } .cf-badge.legato { background: #34c3b5; } .cf-badge.chiuso { background: #c3cad1; }
+  .cf-card h3 { font-size: 16px; font-weight: 800; line-height: 1.25; margin: 0; color: #fff; }
+  .cf-card .meta { font-size: 12.5px; color: #a9bfd6; margin-top: 2px; text-transform: capitalize; }
+  .cf-card .films { font-size: 12.5px; font-style: italic; margin-top: 8px; color: #f1dc9a; }
+  .cf-card .desc { font-size: 12.5px; line-height: 1.4; margin-top: 8px; color: #d7e2ee; }
+  .cf-card a.go { display: inline-block; margin-top: 12px; background: #f4b73a; color: #1c1b22 !important; font-weight: 700; font-size: 13px; padding: 7px 14px; border-radius: 999px; text-decoration: none; }
+  .cf-card a.go:hover { background: #ffd067; }
 
   /* Elenco */
   .cfx-item { width: 100%; text-align: left; display: flex; gap: 10px; align-items: flex-start; padding: 9px 10px; border-radius: 12px; cursor: pointer; background: transparent; border: 0; color: inherit; transition: background .12s; }
@@ -138,6 +156,7 @@ const L10 = lang === "en"
   .cfx-item .n { font-weight: 600; font-size: 14px; line-height: 1.25; }
   .cfx-item .s { font-size: 12px; opacity: .7; text-transform: capitalize; }
   .cfx-item .d { margin-left: auto; font-size: 12px; font-weight: 700; white-space: nowrap; color: #b57f0c; }
+  .dark .cfx-item .d { color: #f4b73a; }
 
   /* Schermo intero */
   .cfx.cfx-full { position: fixed; inset: 0; z-index: 9000; margin: 0; padding: 12px; background: var(--fs-bg, #16151c); overflow: auto; }
@@ -162,6 +181,8 @@ const L10 = lang === "en"
 
   async function init() {
     if (!root || !mapEl || !datiEl) return;
+    const basePromise = fetch("/mappa/base.json").then((r) => { if (!r.ok) throw new Error("base"); return r.json(); });
+    basePromise.catch(() => {}); // evita "unhandled rejection": l'errore è gestito sotto
     const Lmod = await import("leaflet");
     const L = ((Lmod as any).default ?? Lmod) as typeof import("leaflet");
     (window as any).L = L;
@@ -175,15 +196,44 @@ const L10 = lang === "en"
     const clsOf = (m: M) => (m.chiuso ? "chiuso" : m.categoria === "legato-al-film" ? "legato" : "set");
     const badgeOf = (m: M) => (m.chiuso ? S.chiuso : m.categoria === "legato-al-film" ? S.legato : S.reale);
 
-    const map = L.map(mapEl, { zoomControl: true, scrollWheelZoom: true }).setView([41.9, 12.5], 6);
+    const map = L.map(mapEl, {
+      zoomControl: true, scrollWheelZoom: true, preferCanvas: true, minZoom: 5, maxZoom: 18,
+      zoomSnap: 0.5, zoomDelta: 0.5, wheelPxPerZoomLevel: 90,
+      maxBounds: [[33.5, -3], [50.5, 24.5]], maxBoundsViscosity: 0.7,
+    }).setView([41.9, 12.5], 6);
+
+    // Sfondo stilizzato (mare + terre in toni satellitari): niente tile ai livelli bassi, parte subito.
+    map.createPane("basePane").style.zIndex = "150";
+    const baseRenderer = L.canvas({ pane: "basePane", padding: 0.5 });
+    const loading = $("cfx-loading");
+    const hideLoading = () => { loading?.classList.add("done"); setTimeout(() => loading?.remove(), 450); };
+    const ESTERNI = ["#4b5d35", "#55673b", "#485a32", "#5c6b3e"];
+    const REGIONI = ["#6f8546", "#7d8b4e", "#657c40", "#86905a", "#74874a"];
+    try {
+      const base = await basePromise;
+      L.geoJSON(base.world, { renderer: baseRenderer, interactive: false,
+        style: (f: any) => ({ fillColor: ESTERNI[(f.properties.n.length) % ESTERNI.length], fillOpacity: 1, color: "#e9dc5a", weight: 1, opacity: 0.65 }) } as any).addTo(map);
+      L.geoJSON(base.it, { renderer: baseRenderer, interactive: false, style: { fill: false, color: "#5aa9df", weight: 8, opacity: 0.22 } } as any).addTo(map);
+      let i = 0;
+      L.geoJSON(base.it, { renderer: baseRenderer, interactive: false,
+        style: () => ({ fillColor: REGIONI[i++ % REGIONI.length], fillOpacity: 1, color: "#d9cf6c", weight: 0.7, opacity: 0.5 }) } as any).addTo(map);
+    } catch {
+      // Se i confini non si caricano, usa le tile OSM a tutti i livelli.
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, className: "cf-tiles" }).addTo(map);
+    }
+    // Dettaglio stradale solo dallo zoom 9 in su: tile caricate solo quando servono.
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      minZoom: 9, maxZoom: 19, className: "cf-tiles", keepBuffer: 2, updateWhenIdle: true, updateWhenZooming: false,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 19,
     }).addTo(map);
+    map.attributionControl.addAttribution('Confini: <a href="https://www.istat.it/">ISTAT</a>/<a href="https://github.com/openpolis/geojson-italy">openpolis</a> (CC-BY), <a href="https://www.naturalearthdata.com/">Natural Earth</a>');
+    hideLoading();
 
     const cluster = (L as any).markerClusterGroup({
       showCoverageOnHover: false,
       maxClusterRadius: 45,
+      chunkedLoading: true,
+      removeOutsideVisibleBounds: true,
       spiderfyOnMaxZoom: true,
       iconCreateFunction: (c: any) => {
         const n = c.getChildCount();
