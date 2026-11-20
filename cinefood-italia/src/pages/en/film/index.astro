@@ -45,7 +45,7 @@ const jsonLd = itemListJsonLd(t("film.titolo"), films.map((f) => new URL(path(`/
                   <h2 class="font-display text-lg font-bold leading-tight text-white">{tFilmTitolo(film, lang)}</h2>
                 </div>
               </div>
-              <p class="mt-2 text-sm text-ink-500 dark:text-ink-400">{conteggi.get(film.id) ?? 0} {t("film.locali")}</p>
+              <p class="mt-2 text-sm text-ink-600 dark:text-ink-300">{conteggi.get(film.id) ?? 0} {t("film.locali")}</p>
             </a>
           </Reveal>
         ))
