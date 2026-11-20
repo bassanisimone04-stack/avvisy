@@ -14,12 +14,8 @@ const locali = await getCollection("restaurants");
 const blog = (await getCollection("blog")).filter((b) => !b.data.bozza && (en ? b.data.lang === "en" : b.data.lang !== "en"));
 const nLocali = locali.length;
 const nCitta = new Set(locali.map((l) => l.data.citta)).size;
-const nRegioni = new Set(locali.map((l) => l.data.regione)).size;
 const nFilm = new Set(locali.flatMap((l) => l.data.film.map((f) => f.film.id))).size;
 const nArticoli = blog.length;
-
-const mail = (subject: string, body: string) =>
-  `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
 const t = en
   ? {
@@ -72,6 +68,8 @@ const t = en
       bodyIntro: "Hello, I would like more information about",
       bodyFields: "Venue name:\nCity:\nFilm or series it is linked to:\nPhone (optional):\n",
       subjectBase: "Advertising request",
+      formH: "Request information", formLead: "Fill in the form: we reply by email, with no obligation.",
+      fName: "Your name *", fEmail: "Email *", fVenue: "Venue name *", fCity: "City", fFilm: "Film or series it is linked to", fPlan: "Plan you are interested in", fPlanAny: "Not sure yet", fPhone: "Phone (optional)", fMsg: "Message", fSend: "Send request", fAlt: "Prefer email? Write to",
     }
   : {
       title: "Inserzioni per i locali",
@@ -123,11 +121,14 @@ const t = en
       bodyIntro: "Buongiorno, vorrei maggiori informazioni su",
       bodyFields: "Nome del locale:\nCittà:\nFilm o serie a cui è legato:\nTelefono (facoltativo):\n",
       subjectBase: "Richiesta inserzione",
+      formH: "Richiedi informazioni", formLead: "Compila il modulo: ti rispondiamo via email, senza impegno.",
+      fName: "Il tuo nome *", fEmail: "Email *", fVenue: "Nome del locale *", fCity: "Città", fFilm: "Film o serie a cui è legato", fPlan: "Piano che ti interessa", fPlanAny: "Non so ancora", fPhone: "Telefono (facoltativo)", fMsg: "Messaggio", fSend: "Invia la richiesta", fAlt: "Preferisci scrivere una email? Scrivi a",
     };
 
-const link = (plan?: string) =>
-  mail(plan ? `${t.subjectBase}: ${plan}` : t.subjectBase, `${t.bodyIntro} ${plan ? plan : (en ? "advertising on " : "le inserzioni su ") + SITE.name}.\n\n${t.bodyFields}`);
+const link = (_plan?: string) => "#richiedi";
 
+const inp = "w-full rounded-xl border border-ink-500/20 bg-white px-4 py-2.5 text-sm text-ink-900 dark:border-noir-600 dark:bg-noir-800 dark:text-cream-100";
+const lab = "mb-1 block text-sm font-medium text-ink-700 dark:text-cream-200";
 const btn = "inline-flex items-center justify-center gap-2 rounded-full bg-[#16a34a] px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-[#16a34a]/35 ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:bg-[#22c55e] hover:shadow-xl hover:shadow-[#22c55e]/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22c55e]";
 const btnSm = "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#16a34a] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-[#16a34a]/30 transition hover:-translate-y-0.5 hover:bg-[#22c55e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22c55e]";
 const mailIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>`;
@@ -140,7 +141,7 @@ const mailIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" st
       <h1 class="mt-3 font-display text-4xl font-extrabold sm:text-5xl">{t.h1}</h1>
       <p class="mx-auto mt-4 max-w-2xl text-lg text-ink-700 dark:text-cream-200">{t.lead}</p>
       <div class="mt-7 flex flex-col items-center gap-2">
-        <a href={link()} class={btn}><Fragment set:html={mailIcon} />{t.cta}</a>
+        <a href={link()} class={btn} data-plan=""><Fragment set:html={mailIcon} />{t.cta}</a>
         <span class="text-xs text-ink-500 dark:text-ink-400">{t.ctaSub}</span>
       </div>
     </div>
@@ -179,7 +180,7 @@ const mailIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" st
             <ul class="mt-4 flex-1 space-y-2 text-sm text-ink-700 dark:text-cream-200">
               {p.voci.map((v) => <li class="flex gap-2"><span class="text-[#16a34a]">✓</span><span>{v}</span></li>)}
             </ul>
-            <a href={link(p.subj)} class:list={[btnSm, "mt-6"]}><Fragment set:html={mailIcon} />{t.cta}</a>
+            <a href={link(p.subj)} data-plan={p.nome} class:list={[btnSm, "mt-6"]}><Fragment set:html={mailIcon} />{t.cta}</a>
           </div>
         ))}
       </div>
@@ -222,13 +223,55 @@ const mailIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" st
       </div>
     </div>
 
+    <div id="richiedi" class="mt-14 scroll-mt-24 rounded-[2rem] border border-ink-500/10 bg-white p-6 dark:border-noir-700 dark:bg-noir-900 sm:p-8">
+      <h2 class="font-display text-3xl font-bold">{t.formH}</h2>
+      <p class="mt-1 text-ink-600 dark:text-ink-300">{t.formLead}</p>
+      <form data-cf-form name={en ? "advertising-request" : "richiesta-inserzione"} method="POST" action={path("/grazie", lang)} class="mt-6 space-y-4">
+        <input type="hidden" name="form-name" value={en ? "advertising-request" : "richiesta-inserzione"} />
+        <p class="hidden"><label>Non compilare: <input name="bot-field" /></label></p>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div><label for="ri-nome" class={lab}>{t.fName}</label><input id="ri-nome" name="nome" type="text" required class={inp} /></div>
+          <div><label for="ri-email" class={lab}>{t.fEmail}</label><input id="ri-email" name="email" type="email" required class={inp} /></div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div><label for="ri-locale" class={lab}>{t.fVenue}</label><input id="ri-locale" name="locale" type="text" required class={inp} /></div>
+          <div><label for="ri-citta" class={lab}>{t.fCity}</label><input id="ri-citta" name="citta" type="text" class={inp} /></div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div><label for="ri-film" class={lab}>{t.fFilm}</label><input id="ri-film" name="film" type="text" class={inp} /></div>
+          <div><label for="ri-tel" class={lab}>{t.fPhone}</label><input id="ri-tel" name="telefono" type="tel" class={inp} /></div>
+        </div>
+        <div>
+          <label for="ri-piano" class={lab}>{t.fPlan}</label>
+          <select id="ri-piano" name="piano" class={inp}>
+            <option value="">{t.fPlanAny}</option>
+            {t.plans.map((p) => <option value={p.nome}>{p.nome}</option>)}
+          </select>
+        </div>
+        <div><label for="ri-msg" class={lab}>{t.fMsg}</label><textarea id="ri-msg" name="messaggio" rows="4" class={inp}></textarea></div>
+        <button type="submit" class={btn}><Fragment set:html={mailIcon} />{t.fSend}</button>
+      </form>
+      <p class="mt-4 text-sm text-ink-500 dark:text-ink-400">{t.fAlt} <a class="font-semibold text-gold-600 hover:underline dark:text-gold-400" href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    </div>
+
     <div class="mt-14 rounded-[2rem] bg-noir-900 px-6 py-12 text-center">
       <h2 class="font-display text-3xl font-bold text-white">{t.endH}</h2>
       <p class="mx-auto mt-2 max-w-xl text-cream-200">{t.endP}</p>
-      <div class="mt-6"><a href={link()} class={btn}><Fragment set:html={mailIcon} />{t.cta}</a></div>
+      <div class="mt-6"><a href={link()} class={btn} data-plan=""><Fragment set:html={mailIcon} />{t.cta}</a></div>
       <p class="mt-4 text-sm text-cream-200">{t.addH} <a class="font-semibold text-gold-400 underline" href={path("/aggiungi-locale", lang)}>{t.add}</a></p>
     </div>
 
     <p class="mt-8 text-center text-xs text-ink-500 dark:text-ink-400">{t.note}</p>
   </section>
 </BaseLayout>
+
+<script>
+  // Il tasto di un piano preseleziona quel piano nel modulo e porta il cursore sul primo campo.
+  document.querySelectorAll<HTMLAnchorElement>('a[href="#richiedi"][data-plan]').forEach((a) => {
+    a.addEventListener("click", () => {
+      const sel = document.getElementById("ri-piano") as HTMLSelectElement | null;
+      if (sel) sel.value = a.dataset.plan || "";
+      setTimeout(() => document.getElementById("ri-nome")?.focus({ preventScroll: true }), 400);
+    });
+  });
+</script>
