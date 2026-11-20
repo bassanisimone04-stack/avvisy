@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Liguria in Searching for Italy: 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-liguria-cracco-portofino-il-genovese.jpg"
-immagineAlt: "Sfondo a gradiente verde e azzurro che richiama la Riviera ligure"
+immagineAlt: "Il porticciolo di Portofino con le case color pastello, il campanile e le barche"
 tags: ["Stanley Tucci", "Liguria", "Portofino", "Genova", "pesto"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Liguria?"

@@ -4,7 +4,7 @@ descrizione: "The Gentlemen season 2 was not filmed on Lake Como: the Italian se
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-06
 immagine: "../../assets/placeholder/the-gentlemen-2-lago-maggiore-verbania.jpg"
-immagineAlt: "Blue abstract gradient evoking Lake Maggiore seen from Pallanza"
+immagineAlt: "An aerial view of a lake ringed by mountains, with the terracotta roofs of a village in the foreground"
 tags: ["The Gentlemen", "Lake Maggiore", "Verbania", "Netflix", "film tourism"]
 faq:
   - domanda: "Where was The Gentlemen season 2 filmed in Italy?"

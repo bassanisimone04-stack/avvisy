@@ -13,7 +13,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/la-beola-grand-hotel-majestic-verbania.jpg"
-immagineAlt: "Sfondo a gradiente azzurro che richiama il Lago Maggiore a Pallanza"
+immagineAlt: "Veduta dall'alto di un lago circondato da montagne, con i tetti in cotto di un borgo in primo piano"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.grandhotelmajestic.it"
 ultimoAggiornamento: 2026-10-06
 film:

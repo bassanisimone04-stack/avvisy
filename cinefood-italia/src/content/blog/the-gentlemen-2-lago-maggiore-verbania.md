@@ -4,7 +4,7 @@ descrizione: "The Gentlemen 2 non è girata sul lago di Como: il set italiano è
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-10-06
 immagine: "../../assets/placeholder/the-gentlemen-2-lago-maggiore-verbania.jpg"
-immagineAlt: "Sfondo a gradiente azzurro che richiama il Lago Maggiore visto da Pallanza"
+immagineAlt: "Veduta dall'alto di un lago circondato da montagne, con i tetti in cotto di un borgo in primo piano"
 tags: ["The Gentlemen", "Lago Maggiore", "Verbania", "Netflix", "cineturismo"]
 faq:
   - domanda: "Dove è stata girata The Gentlemen 2 in Italia?"

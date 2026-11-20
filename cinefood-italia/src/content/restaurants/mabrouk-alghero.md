@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/mabrouk-alghero.jpg"
-immagineAlt: "Via del centro storico di Alghero con l'ingresso del ristorante Mabrouk"
+immagineAlt: "Le mura bastionate di Alghero sul mare, con le case colorate affacciate sul lungomare"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-30
 film:
   - film: "stanley-tucci-searching-for-italy"

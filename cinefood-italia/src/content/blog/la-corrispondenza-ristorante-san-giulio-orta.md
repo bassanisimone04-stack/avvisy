@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato La corrispondenza di Tornatore? Sul lago d'Or
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/la-corrispondenza-ristorante-san-giulio-orta.jpg"
-immagineAlt: "Sfondo a gradiente che richiama i colori del lago d'Orta"
+immagineAlt: "Un lago prealpino all'alba con la nebbia e un promontorio in lontananza"
 tags: ["La corrispondenza", "Tornatore", "lago d'Orta", "Orta San Giulio", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato La corrispondenza?"

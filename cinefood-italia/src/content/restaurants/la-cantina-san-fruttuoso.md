@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/la-cantina-san-fruttuoso.jpg"
-immagineAlt: "Il ristorante La Cantina sulla baia di San Fruttuoso, a Camogli"
+immagineAlt: "Le colline verdi con pini e cipressi sopra le case di Portofino"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.lacantinasanfruttuoso.it"
 ultimoAggiornamento: 2026-09-30
 film:

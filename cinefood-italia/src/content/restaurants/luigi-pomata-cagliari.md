@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/luigi-pomata-cagliari.jpg"
-immagineAlt: "Sala del ristorante Luigi Pomata a Cagliari"
+immagineAlt: "Le mura bastionate di Alghero sul mare, con le case colorate affacciate sul lungomare"
+immagineTipo: "illustrativa"
 sitoWeb: "https://luigipomata.com"
 ultimoAggiornamento: 2026-09-30
 film:

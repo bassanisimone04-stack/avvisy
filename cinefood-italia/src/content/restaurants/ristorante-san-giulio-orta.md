@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/ristorante-san-giulio-orta.jpg"
-immagineAlt: "Terrazza sul lago d'Orta del Ristorante San Giulio"
+immagineAlt: "Un lago prealpino all'alba con la nebbia e un promontorio in lontananza"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "la-corrispondenza"

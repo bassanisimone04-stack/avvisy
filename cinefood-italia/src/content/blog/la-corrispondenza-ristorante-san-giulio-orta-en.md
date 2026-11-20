@@ -4,7 +4,7 @@ descrizione: "Where was Tornatore's La corrispondenza filmed? On Lake Orta, with
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/la-corrispondenza-ristorante-san-giulio-orta.jpg"
-immagineAlt: "Abstract gradient evoking the colours of Lake Orta"
+immagineAlt: "A pre-Alpine lake at dawn, with mist and a headland in the distance"
 tags: ["La corrispondenza", "Tornatore", "Lake Orta", "Orta San Giulio", "film tourism"]
 faq:
   - domanda: "Where was La corrispondenza filmed?"

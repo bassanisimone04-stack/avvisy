@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/cracco-portofino.jpg"
-immagineAlt: "Il molo di Portofino con il ristorante Cracco Portofino sul mare"
+immagineAlt: "Il porticciolo di Portofino con le case color pastello, il campanile e le barche"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.craccoportofino.it"
 ultimoAggiornamento: 2026-09-30
 film:

@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/il-genovese-genova.jpg"
-immagineAlt: "Mortaio di marmo con basilico per il pesto al ristorante Il Genovese di Genova"
+immagineAlt: "Barche di legno ormeggiate nel porticciolo di Portofino, con le case sullo sfondo"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.ilgenovese.com"
 ultimoAggiornamento: 2026-09-30
 film:

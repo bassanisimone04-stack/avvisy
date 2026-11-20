@@ -4,7 +4,7 @@ descrizione: "Bellamo does not exist: the Rai series was filmed on Lake Orta, be
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-06
 immagine: "../../assets/placeholder/una-finestra-vista-lago-orta-miasino.jpg"
-immagineAlt: "Green and blue abstract gradient evoking Lake Orta"
+immagineAlt: "A pre-Alpine lake at dawn, with mist and a headland in the distance"
 tags: ["Una finestra vista lago", "Lake Orta", "Orta San Giulio", "Rai", "film tourism"]
 faq:
   - domanda: "Where was Una finestra vista lago filmed?"

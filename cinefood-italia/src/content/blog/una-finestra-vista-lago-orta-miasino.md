@@ -4,7 +4,7 @@ descrizione: "Bellamo non esiste: la fiction Rai è girata sul lago d'Orta, tra 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-10-06
 immagine: "../../assets/placeholder/una-finestra-vista-lago-orta-miasino.jpg"
-immagineAlt: "Sfondo a gradiente verde e azzurro che richiama il lago d'Orta"
+immagineAlt: "Un lago prealpino all'alba con la nebbia e un promontorio in lontananza"
 tags: ["Una finestra vista lago", "lago d'Orta", "Orta San Giulio", "Rai", "cineturismo"]
 faq:
   - domanda: "Dove è stata girata Una finestra vista lago?"

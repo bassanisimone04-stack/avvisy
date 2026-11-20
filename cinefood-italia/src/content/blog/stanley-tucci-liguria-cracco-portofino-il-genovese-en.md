@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Liguria in Searching for Italy: Cracco 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-liguria-cracco-portofino-il-genovese.jpg"
-immagineAlt: "Abstract green and blue gradient evoking the Ligurian Riviera"
+immagineAlt: "The Portofino harbour with its pastel-coloured houses, bell tower and boats"
 tags: ["Stanley Tucci", "Liguria", "Portofino", "Genoa", "pesto"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Liguria?"

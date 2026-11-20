@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/fradis-minoris-pula.jpg"
-immagineAlt: "Laguna di Nora vista dal ristorante Fradis Minoris a Pula"
+immagineAlt: "Torre costiera su una scogliera sopra il mare turchese della Sardegna, vista dall'alto"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-30
 film:
   - film: "stanley-tucci-searching-for-italy"
