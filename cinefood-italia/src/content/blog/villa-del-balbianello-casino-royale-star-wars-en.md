@@ -79,7 +79,7 @@ World War.
 - **Tickets (FAI page consulted, to be rechecked):** garden only €15 full, €11 reduced
   (ages 6–18), free for FAI members. Villa and garden with a guided tour of about 50
   minutes: €25 full, €17 reduced, €5 FAI members.
-- **Hours:** [TO VERIFY: sources disagree; check fondoambiente.it].
+- **Hours:** (to be verified: sources disagree; check fondoambiente.it).
 - **On foot:** from Lenno about 1 km, 25 minutes, with a steep stretch.
 - **By boat:** paid taxi boat from the Lido di Lenno; there are also Bellagio–Lenno ferries,
   with about 30 minutes' walk from the landing. Check times and fares.
@@ -87,7 +87,7 @@ World War.
 
 ## Where to eat in Lenno
 
-[TO VERIFY: name of a venue]. I found no reliable reviews of restaurants in Lenno tied
+(to be verified: name of a venue). I found no reliable reviews of restaurants in Lenno tied
 to the film or the visit, so we won't recommend a name I can't vouch for. For the lake's
 specialities (risotto with perch, missoltini) read
 *[Lake Como in the movies and where to eat](/en/blog/lago-di-como-nel-cinema-dove-mangiare)*.

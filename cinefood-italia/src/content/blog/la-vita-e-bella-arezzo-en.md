@@ -59,7 +59,7 @@ old town.
 
 - **Villa Masini, Montevarchi**: a liberty and Art Deco building, used both as Dora's
   house and as the Grand Hotel where Guido works. Visit Tuscany reports summer openings
-  with events and guided tours: [TO VERIFY: current dates and hours].
+  with events and guided tours: (to be verified: current dates and hours).
 - **Castiglion Fiorentino**: Benigni's hometown; the scene where Guido is mistaken for the
   king was shot here.
 - **Cortona, Teatro Signorelli**: at its entrance Guido meets his «princess», according to
@@ -79,10 +79,10 @@ the shoot. Three historic addresses near Piazza Grande, to verify:
 
 - **Buca di San Francesco** (1929, next to the Basilica of San Francesco): a historic
   restaurant closed during the pandemic and then bought by Patrizio Bertelli, Prada's
-  chairman. One source speaks of a restoration; [TO VERIFY: reopening and hours].
+  chairman. One source speaks of a restoration; (to be verified: reopening and hours).
 - **Caffè dei Costanti**: Benigni filmed in front of this historic café, but according to
   Dissapore it had been closed since November 2021 and was seeking a new operator. Current
-  status [TO VERIFY]; we don't consider it open.
+  status (to be verified); we don't consider it open.
 - **Le chiavi d'oro**, 7 Piazza San Francesco: a restaurant Dissapore reviewed as an
   exception among tourist squares; the review is dated, check whether it is open.
 

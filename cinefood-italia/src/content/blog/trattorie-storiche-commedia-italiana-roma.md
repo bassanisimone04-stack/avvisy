@@ -46,9 +46,9 @@ Tra i piatti ricordati dalle guide: le **polpettine «Nonna Lella» in umido** e
 
 - **Prenotazione:** consigliata. Sito: trattoriasoralella.it.
 - **Telefono:** 06 6861601 secondo Turismo Roma; un'altra scheda riporta un numero
-  diverso, quindi [DA VERIFICARE].
+  diverso, quindi (da verificare).
 - **Giorni e orari:** una fonte indica chiusura la domenica, ma non ho trovato conferme:
-  [DA VERIFICARE sul sito ufficiale].
+  (da verificare: sul sito ufficiale).
 
 ## Otello alla Concordia, il ritrovo del cinema nel dopoguerra
 
@@ -62,8 +62,8 @@ gli incontri del mercoledì sera continuano ancora oggi.
 
 **Indirizzo:** Turismo Roma indica **Via Mario de' Fiori 40/a**
 ([mappa](https://www.google.com/maps/search/?api=1&query=Otello+alla+Concordia+Roma)); il civico storico di Via della Croce non l'ho
-potuto confermare: [DA VERIFICARE]. Orari, giorni e prenotazione: [DA VERIFICARE con una
-telefonata].
+potuto confermare: (da verificare). Orari, giorni e prenotazione: (da verificare: con una
+telefonata).
 
 Nota: non abbiamo trovato titoli di film girati qui, quindi lo presentiamo come luogo
 legato al cinema, non come location.

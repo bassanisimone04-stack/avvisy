@@ -6,6 +6,23 @@ import tailwindcss from "@tailwindcss/vite";
 
 import { SITE } from "./src/config/site.ts";
 
+/**
+ * Le note editoriali (fonti, "verificare a mano") restano nei file .md come
+ * commenti HTML, ma non devono finire nell'HTML pubblicato.
+ */
+function remarkStripHtmlComments() {
+  return (/** @type {any} */ tree) => {
+    const walk = (/** @type {any} */ node) => {
+      if (!node.children) return;
+      node.children = node.children.filter(
+        (/** @type {any} */ c) => !(c.type === "html" && /^\s*<!--[\s\S]*-->\s*$/.test(c.value))
+      );
+      node.children.forEach(walk);
+    };
+    walk(tree);
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
   // URL pubblico del sito: usato per sitemap, canonical, Open Graph.
@@ -13,6 +30,7 @@ export default defineConfig({
   site: SITE.url,
   // Output statico (SSG) per la massima velocità e SEO.
   output: "static",
+  markdown: { remarkPlugins: [remarkStripHtmlComments] },
   // URL SENZA slash finale ovunque (i link interni del sito sono già scritti
   // così, es. /blog/slug): build.format "file" genera .html piatti invece di
   // cartelle con index.html, così ogni pagina ha una sola URL reale, senza
@@ -29,6 +47,8 @@ export default defineConfig({
     // Genera automaticamente sitemap-index.xml + sitemap-0.xml.
     // Con i18n la sitemap include gli hreflang it/en per ogni pagina.
     sitemap({
+      // Le pagine di ringraziamento non vanno indicizzate.
+      filter: (page) => !/\/grazie\/?$/.test(page),
       i18n: {
         defaultLocale: "it",
         locales: { it: "it", en: "en" },

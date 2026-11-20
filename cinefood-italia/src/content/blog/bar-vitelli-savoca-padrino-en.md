@@ -45,15 +45,15 @@ family. The venue's site is barvitelli.it.
 ## The Godfather scene
 
 In the scene, shot in front of the bar, Michael (Al Pacino) meets Apollonia's father. Shooting
-dates vary by source: 1971 for some, 1972 for others [TO VERIFY]. How much has the venue
+dates vary by source: 1971 for some, 1972 for others (to be verified). How much has the venue
 changed? Sources are split: for some it has stayed frozen in the 1970s, for others Coppola
 dressed it as a bar for the scene. On the name, sources don't explain its origin: they tie it
 to the character Vitelli.
 
 ## Hours, prices, what to order
 
-- **Hours:** an aggregator (updated November 2025) shows 9–17:30, closed Monday [TO VERIFY on
-  the official site].
+- **Hours:** an aggregator (updated November 2025) shows 9–17:30, closed Monday (to be verified: on
+  the official site).
 - **What to order:** **granita** (lemon, almond, mulberry) with brioche and local sweets, under the
   pergola.
 - **Prices:** reviewers find it touristy and expensive (€7 for a small cappuccino, per one
@@ -66,7 +66,7 @@ to the character Vitelli.
 In Savoca, several sources name the **Church of Santa Lucia** (sometimes called San Nicolò) as the
 church of Michael and Apollonia's wedding. The 14th-century facade of the **Church of San Nicolò**
 appears in many shots. Tours also cite **Forza d'Agrò** for the scene of Michael's arrival:
-[TO VERIFY]. The medieval village looks over the Ionian coast and, on clear days, Etna.
+(to be verified). The medieval village looks over the Ionian coast and, on clear days, Etna.
 
 ## How to get to Savoca
 

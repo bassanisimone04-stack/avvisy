@@ -85,21 +85,20 @@ Rosso** tra i posti dove mangiare a Taormina. Qui trovi anche altri indirizzi de
 con i dati che abbiamo potuto verificare (non sono tutti "locali del cast").
 
 - **Médousa Bistrot & Suites**, **Via Sesto Pompeo 1**, tra Porta Catania e Piazza Duomo
-  (due elenchi concordano). [DA VERIFICARE: menù, pasta alla Norma e opzioni senza glutine]
+  (due elenchi concordano). (da verificare: menù, pasta alla Norma e opzioni senza glutine)
   ([mappa](https://www.google.com/maps/search/?api=1&query=Medousa+Bistrot+Taormina)).
-- **Gambero Rosso**, Taormina: citato da W Magazine. [DA VERIFICARE: indirizzo, orari e
-  prenotazione] ([mappa](https://www.google.com/maps/search/?api=1&query=Gambero+Rosso+Taormina)).
+- **Gambero Rosso**, Taormina: citato da W Magazine. (da verificare: indirizzo, orari e
+  prenotazione) ([mappa](https://www.google.com/maps/search/?api=1&query=Gambero+Rosso+Taormina)).
 - **Casamatta**, **Via S. Maria de' Greci**: wine bar informale con vini naturali, cocktail
   e cucina siciliana (un solo elenco per l'indirizzo). Non ho trovato conferme su musica dal
-  vivo: [DA VERIFICARE] ([mappa](https://www.google.com/maps/search/?api=1&query=Casamatta+Taormina)).
+  vivo: (da verificare) ([mappa](https://www.google.com/maps/search/?api=1&query=Casamatta+Taormina)).
 - **Bam Bar**, **Via di Giovanni 45**: granita e brioche, la colazione classica siciliana.
-  Due guide indicano apertura martedì–domenica, 7–20, e code frequenti: [DA VERIFICARE:
-  orari] ([mappa](https://www.google.com/maps/search/?api=1&query=Bam+Bar+Taormina)).
+  Due guide indicano apertura martedì–domenica, 7–20, e code frequenti: (da verificare: orari) ([mappa](https://www.google.com/maps/search/?api=1&query=Bam+Bar+Taormina)).
 - **Ristorante Baronessa**, Corso Umberto I: secondo un articolo di settore è il ristorante
-  del secondo episodio dove cenano Albie e Portia; fonte unica [DA VERIFICARE]
+  del secondo episodio dove cenano Albie e Portia; fonte unica (da verificare)
   ([mappa](https://www.google.com/maps/search/?api=1&query=Ristorante+Baronessa+Taormina)).
 - **Feliciotto**, boutique storica a circa dieci minuti a piedi dal San Domenico Palace:
-  [DA VERIFICARE: non ho trovato alcuna fonte su indirizzo e orari].
+  (da verificare: non ho trovato alcuna fonte su indirizzo e orari).
 
 ## Castelmola e Bar Turrisi: la gita fuori porta
 
@@ -107,7 +106,7 @@ con i dati che abbiamo potuto verificare (non sono tutti "locali del cast").
 (arredi ispirati alla mascolinità, secondo la stampa) e storico, aperto dal 1947 secondo
 Balarm; il suo prodotto tipico è il **vino alla mandorla**. Va per la novità, non per il cibo.
 L'indirizzo cambia da fonte a fonte (Via Costantino Patricio 36 per un elenco, Via Papa Pio IX
-19 per un altro): chiedi in piazza o chiama lo 0942 281810 [DA VERIFICARE]
+19 per un altro): chiedi in piazza o chiama lo 0942 281810 (da verificare)
 ([mappa](https://www.google.com/maps/search/?api=1&query=Bar+Turrisi+Castelmola)).
 
 ## Le location di White Lotus nel centro di Taormina

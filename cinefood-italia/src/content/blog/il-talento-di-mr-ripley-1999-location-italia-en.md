@@ -49,13 +49,13 @@ village with colourful houses, and Via San Rocco (the same houses as *Il Postino
 Postino in Procida](/en/blog/il-postino-procida)*). In **Ischia** location catalogues cite
 **Ischia Ponte**, the Piazza Malcovati waterfront and the Piazzale Aragonese, in front of the
 Aragonese Castle. You get there from Naples or Pozzuoli by ferry or hydrofoil. The exact match
-between each scene and each corner of Ischia comes from blog lists: [TO VERIFY on the spot].
+between each scene and each corner of Ischia comes from blog lists: (to be verified: on the spot).
 
 ## Rome in the film
 
 In Rome location lists name **Piazza Navona**, **Piazza di Spagna**, the **Capitoline Hill** with
 its view over the Imperial Forums and **Piazza Mattei**. A single list also cites **Caffè
-Latino** in Testaccio [TO VERIFY]. To eat in the Rome of the movies read *[Rome in the movies: 5
+Latino** in Testaccio (to be verified). To eat in the Rome of the movies read *[Rome in the movies: 5
 film restaurants](/en/blog/roma-nel-cinema-ristoranti-da-film)*.
 
 ## Venice and Caffè Florian
@@ -64,7 +64,7 @@ The ending is in Venice, on **Piazza San Marco**. At **[Caffè Florian](/en/loca
 under the Procuratie Nuove, Tom meets Marge and Dickie's father. Open since 1720, it is
 considered Italy's oldest café still in operation, with frescoed rooms. Address: **57 Piazza San
 Marco, 30124 Venice** ([map](https://www.google.com/maps/search/?api=1&query=Caffe+Florian+Venezia)). Only one site also cites the **Westin Europa
-& Regina** hotel [TO VERIFY]. The guide to the scene is in *[The Talented Mr. Ripley in Venice:
+& Regina** hotel (to be verified). The guide to the scene is in *[The Talented Mr. Ripley in Venice:
 Caffè Florian](/en/blog/mr-ripley-venezia-caffe-florian)*.
 
 ## 1999 film or 2024 Netflix series?

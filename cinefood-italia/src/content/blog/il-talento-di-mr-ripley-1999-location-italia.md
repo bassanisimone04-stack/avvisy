@@ -50,13 +50,13 @@ pescatori dalle case colorate, e Via San Rocco (le stesse case de *Il postino*: 
 citano **Ischia Ponte**, il lungomare di Piazza Malcovati e il Piazzale Aragonese, davanti
 al Castello Aragonese. Si arriva da Napoli o da Pozzuoli in traghetto o aliscafo. La
 corrispondenza esatta fra ogni scena e ogni angolo di Ischia viene da elenchi di blog:
-[DA VERIFICARE sul posto].
+(da verificare: sul posto).
 
 ## Roma nel film
 
 A Roma gli elenchi di location indicano **Piazza Navona**, **Piazza di Spagna**, il
 **Campidoglio** con vista sui Fori Imperiali e **Piazza Mattei**. Un solo elenco cita anche
-il **Caffè Latino** a Testaccio [DA VERIFICARE]. Per mangiare nella Roma dei film leggi
+il **Caffè Latino** a Testaccio (da verificare). Per mangiare nella Roma dei film leggi
 *[Roma nel cinema: 5 ristoranti da film](/blog/roma-nel-cinema-ristoranti-da-film)*.
 
 ## Venezia e il Caffè Florian
@@ -65,7 +65,7 @@ Il finale è a Venezia, in **Piazza San Marco**. Al **[Caffè Florian](/locale/c
 sotto le Procuratie Nuove, Tom incontra Marge e il padre di Dickie. Aperto nel 1720, è
 considerato il caffè più antico d'Italia ancora in attività, con sale affrescate. Indirizzo:
 **Piazza San Marco 57, 30124 Venezia** ([mappa](https://www.google.com/maps/search/?api=1&query=Caffe+Florian+Venezia)). Un solo sito cita
-anche l'hotel **Westin Europa & Regina** [DA VERIFICARE]. La guida alla scena è in
+anche l'hotel **Westin Europa & Regina** (da verificare). La guida alla scena è in
 *[Il talento di Mr. Ripley a Venezia: Caffè Florian](/blog/mr-ripley-venezia-caffe-florian)*.
 
 ## Film del 1999 o serie Netflix del 2024?

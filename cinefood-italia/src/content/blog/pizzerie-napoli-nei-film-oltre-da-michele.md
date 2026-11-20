@@ -68,7 +68,7 @@ napoletani contestano l'identificazione: la bottega del film, per loro, era altr
 Finché le fonti non convergono la teniamo come **locale legato al film**, non come set.
 
 - **Indirizzo:** Via Materdei 27/28, 80136 Napoli ([mappa](https://www.google.com/maps/search/?api=1&query=Pizzeria+Starita+Materdei+Napoli)).
-- **Orari:** [DA VERIFICARE: una fonte dice chiusa il lunedì, un'altra aperta ogni giorno].
+- **Orari:** (da verificare: una fonte dice chiusa il lunedì, un'altra aperta ogni giorno).
 - **Prenotazione:** una guida segnala che non si prenota e consiglia di arrivare alle 12:30
   o alle 19:30 per evitare la coda.
 
@@ -80,7 +80,7 @@ la pizza dedicata alla regina. Una storia che Gambero Rosso definisce una leggen
 documenti non citano la pizza. Sul fronte del cinema non ho trovato nessuna fonte che la
 colleghi a un film, e la sua data di fondazione cambia da fonte a fonte (1738, 1760 o
 1780). La stampa ha raccontato anche una chiusura da parte dei NAS nell'ottobre 2022, per
-due giorni: [DA VERIFICARE lo stato attuale]. Per Sorbillo e Di Matteo non ho trovato
+due giorni: (da verificare: lo stato attuale). Per Sorbillo e Di Matteo non ho trovato
 nessun collegamento con un film, quindi non li presentiamo come locali del cinema.
 
 ## Come organizzare il giro

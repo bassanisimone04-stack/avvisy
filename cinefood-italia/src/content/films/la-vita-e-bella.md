@@ -1,6 +1,6 @@
 ---
 titolo: "La vita è bella"
-titoloSeo: "La vita è bella: dove è girato (Arezzo)"
+titoloSeo: "La vita è bella: film, set e location"
 anno: 1997
 regista: "Roberto Benigni"
 serieTv: false

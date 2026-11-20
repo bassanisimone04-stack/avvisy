@@ -55,7 +55,7 @@ Mario e il poeta, mentre a nord le balate di Pollara e l'arco naturale di **Punt
 Perciato** completano il paesaggio. Una nota importante: **la spiaggia del film non
 esiste più com'era**. Per l'erosione restano solo piccole zone emerse, raggiungibili a
 nuoto o in barca. Quindi vai per il panorama e per l'atmosfera, non per sdraiarti sul
-ciottolato di Mario: [DA VERIFICARE le condizioni di accesso prima di scendere].
+ciottolato di Mario: (da verificare: le condizioni di accesso prima di scendere).
 
 ### E la casa di Mario?
 
@@ -69,7 +69,7 @@ ha una scheda «Casa di Mario»). Non ci sbilanciamo: se vai, chiedi a Malfa.
 Da **Milazzo** gli aliscafi Liberty Lines fanno il diretto in circa 1 ora e 35 minuti
 (1 ora e 50 con scali); il traghetto Siremar impiega circa 3 ore e 20, ed è l'unico che
 imbarca le auto. L'approdo più frequente è **Santa Marina Salina**. Orari e prezzi cambiano
-con la stagione: [DA VERIFICARE su Liberty Lines e Siremar].
+con la stagione: (da verificare: su Liberty Lines e Siremar).
 
 ## Dove mangiare a Salina
 
@@ -79,9 +79,9 @@ con la stagione: [DA VERIFICARE su Liberty Lines e Siremar].
 - **Da Alfredo**, **Via Marina Garibaldi 2**, **Lingua**: il locale della **granita** di
   Salina (gusti dalla mandorla al gelso) e del **pane cunzato**. Le porzioni sono
   abbondanti e nelle ore di punta si aspetta; per alcuni recensori il servizio è lento.
-  Telefono 090 984 3075 secondo Indagare [DA VERIFICARE] ([mappa](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
+  Telefono 090 984 3075 secondo Indagare (da verificare) ([mappa](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
 - A **Malfa**, Indagare consiglia la terrazza ristorante dell'**Hotel Signum**:
-  [DA VERIFICARE: prenotazione e apertura].
+  (da verificare: prenotazione e apertura).
 
 Prodotti da cercare: **capperi di Salina**, **malvasia** e pesce fresco.
 

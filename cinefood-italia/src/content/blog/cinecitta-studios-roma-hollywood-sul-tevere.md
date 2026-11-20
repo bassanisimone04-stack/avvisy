@@ -69,20 +69,20 @@ per *Habemus Papam* e fu riusato per *The New Pope*.
 
 - **Cosa visitare:** la mostra permanente *Cinecittà si Mostra* (quattro padiglioni)
   e i set; esiste anche il museo **MIAC**, con biglietto separato o combinato
-  [DA VERIFICARE su cinecittasimostra.it].
+  (da verificare: su cinecittasimostra.it).
 - **Orari:** per l'edizione 2026 un annuncio indica dal 30 settembre al 26 ottobre,
   da mercoledì a lunedì, 10–18, ultimo ingresso alle 16:30. Altre fonti parlano di
   apertura tutti i giorni tranne il martedì: **verifica sul sito ufficiale**.
 - **Tour guidato:** in italiano alle 10:30, 12:30, 14:30 e 16:30; in inglese il
   sabato alle 11. Prenota online, soprattutto nei weekend.
-- **Biglietti:** [DA VERIFICARE: nessun prezzo 2026 confermato].
+- **Biglietti:** (da verificare: nessun prezzo 2026 confermato).
 - **Set chiusi:** alcuni set sono chiusi se c'è una produzione in corso; controlla
   prima di andare.
 - **Come arrivare:** metro A, fermata *Cinecittà*.
 
 ## Dove mangiare vicino a Cinecittà
 
-[DA VERIFICARE: nome di un locale]. Non abbiamo trovato un locale storico dei dintorni
+(da verificare: nome di un locale). Non abbiamo trovato un locale storico dei dintorni
 con un legame documentato col cinema, e preferiamo non consigliarne uno a caso.
 Per cene da film a Roma leggi
 *[Roma nel cinema: ristoranti da film](/blog/roma-nel-cinema-ristoranti-da-film)* e

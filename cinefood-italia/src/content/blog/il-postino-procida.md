@@ -78,8 +78,8 @@ rosso e gli spaghetti alle cozze: onesta, non perfetta, e la vista vale la tavol
 - **Dove:** Via Marina di Corricella 43, 80079 Procida NA ([apri la mappa](https://www.google.com/maps/search/?api=1&query=La+Locanda+del+Postino+Procida)).
 - **Stato:** risulta in attività; ti consigliamo di verificare apertura e giorni prima
   di partire.
-- **Orari e prenotazione:** [DA VERIFICARE: non ho trovato orari aggiornati, telefono
-  né stagionalità]. In alta stagione e nei weekend, prenota direttamente col locale.
+- **Orari e prenotazione:** (da verificare: non ho trovato orari aggiornati, telefono
+  né stagionalità). In alta stagione e nei weekend, prenota direttamente col locale.
 
 Trovi la scheda completa con la mappa in
 **[La Locanda del Postino](/locale/la-locanda-del-postino-procida)**.

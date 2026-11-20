@@ -78,7 +78,7 @@ and the spaghetti with mussels: honest, not perfect, and the view is worth the m
 - **Where:** 43 Via Marina di Corricella, 80079 Procida NA ([open the map](https://www.google.com/maps/search/?api=1&query=La+Locanda+del+Postino+Procida)).
 - **Status:** it appears to be operating; we recommend checking opening and days before
   you leave.
-- **Hours and booking:** [TO VERIFY: I found no up-to-date hours, phone or seasonality].
+- **Hours and booking:** (to be verified: I found no up-to-date hours, phone or seasonality).
   In high season and on weekends, book directly with the venue.
 
 The full listing with map is at

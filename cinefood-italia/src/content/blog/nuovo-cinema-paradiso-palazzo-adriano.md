@@ -58,7 +58,7 @@ multimediale e la riproduzione della **cabina di proiezione di Alfredo**.
 
 - **Indirizzo:** Piazza Umberto I, 90030 Palazzo Adriano ([mappa](https://www.google.com/maps/search/?api=1&query=Museo+Nuovo+Cinema+Paradiso+Palazzo+Adriano)).
 - **Orari e biglietto:** Museionline indica ingresso **gratuito** e apertura ogni giorno 9–13 e
-  15–19, ma consiglia di verificare. Telefono +39 091 8349933 [DA VERIFICARE].
+  15–19, ma consiglia di verificare. Telefono +39 091 8349933 (da verificare).
 
 ## Dove mangiare a Palazzo Adriano
 
@@ -66,7 +66,7 @@ multimediale e la riproduzione della **cabina di proiezione di Alfredo**.
 Settembre 2** ([mappa](https://www.google.com/maps/search/?api=1&query=Albergo+Ristorante+Pizzeria+del+Viale+Palazzo+Adriano)): non è tra le
 location delle riprese, ma è un indirizzo reale nel paese del film. Per il resto, la cucina dei
 Monti Sicani è contadina: pane casereccio, formaggi locali, salumi, dolci di mandorla.
-[DA VERIFICARE: orari e prenotazione].
+(da verificare: orari e prenotazione).
 
 ## Come arrivare da Palermo
 

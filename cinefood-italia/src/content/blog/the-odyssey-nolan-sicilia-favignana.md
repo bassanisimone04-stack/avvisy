@@ -60,7 +60,7 @@ settimane alle Egadi. Per le calette, un'anteprima cita **Cala Rossa**, **Cala A
 Il forte sta sulla cima del Monte Santa Caterina, a circa 310 metri, sul sito di una torre
 di avvistamento: la tradizione locale parla di origini saracene e di un uso come carcere
 borbonico. Oggi è **abbandonato ma raggiungibile a piedi**. Non esiste un orario ufficiale
-di apertura: [DA VERIFICARE con il Comune di Favignana o l'ufficio turistico]. Le guide
+di apertura: (da verificare: con il Comune di Favignana o l'ufficio turistico). Le guide
 consigliano scarpe chiuse, luce piena e tempo stabile, e una torcia per gli interni. Dalla
 cima si vedono le cave, la «farfalla» dell'isola e, nelle giornate limpide, le altre Egadi.
 
@@ -79,22 +79,22 @@ Salina e delle Eolie leggi
 Da **Trapani** gli aliscafi Liberty Lines impiegano circa 30–40 minuti e i traghetti Siremar
 circa un'ora; da **Marsala** partono soprattutto aliscafi. Solo Siremar imbarca i veicoli, e
 sugli aliscafi il bagaglio a mano è limitato. Le corse crescono d'estate e i prezzi di una
-tratta partono da circa 12 euro: [DA VERIFICARE su Liberty Lines e Siremar].
+tratta partono da circa 12 euro: (da verificare: su Liberty Lines e Siremar).
 
 ## Dove mangiare a Favignana
 
 Favignana è la patria del **tonno rosso**. Per capire perché, visita l'**Ex Stabilimento
 Florio delle Tonnare**, in **Via Amendola 29** ([mappa](https://www.google.com/maps/search/?api=1&query=Ex+Stabilimento+Florio+Favignana)).
 L'ingresso è solo con visite guidate a pagamento (8 euro intero secondo una scheda), ma gli
-orari delle fonti sono discordanti: chiama il +39 338 5365899 [DA VERIFICARE].
+orari delle fonti sono discordanti: chiama il +39 338 5365899 (da verificare).
 
 Per un pasto, tre indirizzi citati dalle guide (nessuno legato al film):
 
 - **La Bettola**: ristorante storico a conduzione familiare, noto per il **cous cous di
-  pesce**, in Via Nicotera 47 (l'indirizzo compare anche per un altro locale: [DA VERIFICARE]).
+  pesce**, in Via Nicotera 47 (l'indirizzo compare anche per un altro locale: (da verificare)).
 - **Quello che c'è... c'è!**: Via Garibaldi, nel centro; spaghetti ai ricci, cous cous di pesce
   e carpaccio di tonno.
-- **Osteria Cavallo**: cucina tradizionale, fuori dal centro; indirizzo [DA VERIFICARE].
+- **Osteria Cavallo**: cucina tradizionale, fuori dal centro; indirizzo (da verificare).
 
 Altre cose da cercare nei menu: le **frascatole**, simili a un cous cous.
 

@@ -58,7 +58,7 @@ Borgunto stanno nello stesso centro storico.
 
 - **Villa Masini, Montevarchi**: edificio in stile liberty e Art Déco, usato sia come
   casa di Dora sia come Grand Hotel dove lavora Guido. Visit Tuscany segnala aperture
-  estive con eventi e visite guidate: [DA VERIFICARE: date e orari attuali].
+  estive con eventi e visite guidate: (da verificare: date e orari attuali).
 - **Castiglion Fiorentino**: paese natale di Benigni; qui le riprese della scena in cui
   Guido è scambiato per il re.
 - **Cortona, Teatro Signorelli**: all'ingresso Guido incontra la sua «principessa»,
@@ -79,10 +79,10 @@ legato alle riprese. Due indirizzi storici vicini a Piazza Grande, da verificare
 
 - **Buca di San Francesco** (1929, accanto alla Basilica di San Francesco): storico
   ristorante chiuso durante la pandemia e poi acquistato da Patrizio Bertelli,
-  presidente di Prada. Una fonte parla di restauro; [DA VERIFICARE: riapertura e orari].
+  presidente di Prada. Una fonte parla di restauro; (da verificare: riapertura e orari).
 - **Caffè dei Costanti**: Benigni girò davanti a questo storico caffè, ma secondo
   Dissapore era chiuso da novembre 2021 in cerca di un gestore. Stato attuale
-  [DA VERIFICARE]; non lo consideriamo aperto.
+  (da verificare); non lo consideriamo aperto.
 - **Le chiavi d'oro**, Piazza San Francesco 7: ristorante recensito da Dissapore come
   un'eccezione tra le piazze turistiche; la recensione è datata, controlla se è aperto.
 
