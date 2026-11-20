@@ -6,7 +6,7 @@ dataPubblicazione: 2026-07-18
 dataAggiornamento: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/il-postino-salina-eolie.jpg"
-immagineAlt: "A beach on Salina, in the Aeolian Islands, with the sea and a sea stack in the distance"
+immagineAlt: "Sunset over the sea with striped beach umbrellas in silhouette"
 tags: ["Il Postino", "Salina", "Aeolian Islands", "Pollara", "where to eat", "film tourism"]
 faq:
   - domanda: "Where was Il Postino filmed in Salina?"

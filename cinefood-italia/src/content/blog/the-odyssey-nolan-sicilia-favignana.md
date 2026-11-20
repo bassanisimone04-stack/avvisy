@@ -5,7 +5,7 @@ autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-07
 dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/the-odyssey-nolan-sicilia-favignana.jpg"
-immagineAlt: "Il porto di Favignana, nelle Egadi, con le barche da pesca e un palazzo affacciato sul mare"
+immagineAlt: "Costa rocciosa con saline e una falesia bianca sul Mediterraneo"
 tags: ["The Odyssey", "Nolan", "Sicilia", "Favignana", "Eolie", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato The Odyssey di Christopher Nolan in Sicilia?"

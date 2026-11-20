@@ -5,7 +5,7 @@ autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
 dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/il-postino-salina-eolie.jpg"
-immagineAlt: "Una spiaggia di Salina, nelle Isole Eolie, con il mare e uno scoglio sullo sfondo"
+immagineAlt: "Tramonto sul mare con ombrelloni a righe in controluce"
 tags: ["Il Postino", "Salina", "Eolie", "Pollara", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Il Postino a Salina?"

@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato The American con George Clooney? Sulmona, Pia
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-tucci-sulmona.jpg"
-immagineAlt: "Il Caffè Tucci affacciato su Piazza Garibaldi a Sulmona"
+immagineAlt: "Piazza storica con portici e un palazzo rinascimentale"
 tags: ["The American", "Sulmona", "Abruzzo", "George Clooney", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato The American con George Clooney?"

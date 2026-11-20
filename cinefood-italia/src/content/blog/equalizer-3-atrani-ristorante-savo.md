@@ -4,7 +4,7 @@ descrizione: "Ristorante di famiglia da tre generazioni: è il vero bar di Denze
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/ristorante-savo-atrani.jpg"
-immagineAlt: "Il Ristorante Savò affacciato sulla piazzetta di Atrani, in Costiera Amalfitana"
+immagineAlt: "Veduta di un borgo della Costiera Amalfitana con case color ocra sul mare"
 tags: ["The Equalizer 3", "Atrani", "Costiera Amalfitana", "Denzel Washington", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato The Equalizer 3?"

@@ -4,7 +4,7 @@ descrizione: "Where was The Equalizer 3 filmed? Atrani, the fictional 'Altamonte
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/ristorante-savo-atrani.jpg"
-immagineAlt: "Ristorante Savò on the little square of Atrani, on the Amalfi Coast"
+immagineAlt: "View of an Amalfi Coast village with ochre houses by the sea"
 tags: ["The Equalizer 3", "Atrani", "Amalfi Coast", "Denzel Washington", "film tourism"]
 faq:
   - domanda: "Where was The Equalizer 3 filmed?"

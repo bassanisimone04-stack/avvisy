@@ -87,6 +87,7 @@ const jsonLd = [
       fetchpriority="high"
       class="mt-4 aspect-[3/2] w-full rounded-3xl object-cover shadow-lg"
     />
+    {d.immagineTipo === "illustrativa" && <p class="mt-2 text-xs text-ink-500 dark:text-ink-400">Foto illustrativa: non è una foto del locale.</p>}
 
     <div class="mt-6 flex flex-wrap items-center gap-2">
       <Badges evidenza={d.inEvidenza} />

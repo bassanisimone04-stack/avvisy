@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/ristorante-savo-atrani.jpg"
-immagineAlt: "Il Ristorante Savò affacciato sulla piazzetta di Atrani, in Costiera Amalfitana"
+immagineAlt: "Veduta di un borgo della Costiera Amalfitana con case color ocra sul mare"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.ristorantesavo.it"
 ultimoAggiornamento: 2026-08-11
 film:

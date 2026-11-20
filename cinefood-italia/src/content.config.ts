@@ -119,6 +119,8 @@ const restaurants = defineCollection({
       /** Immagine principale. */
       immagine: image(),
       immagineAlt: z.string().default(""),
+      /** "illustrativa": la foto non è del locale (vista generica): in pagina compare la dicitura "Foto illustrativa". */
+      immagineTipo: z.enum(["illustrativa"]).optional(),
       /** Galleria di foto aggiuntive (opzionale). */
       galleria: z.array(image()).default([]),
       ultimoAggiornamento: z.coerce.date(),

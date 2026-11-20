@@ -4,7 +4,7 @@ descrizione: "Where was The American with George Clooney filmed? Sulmona's Piazz
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-tucci-sulmona.jpg"
-immagineAlt: "Caffè Tucci facing Piazza Garibaldi in Sulmona"
+immagineAlt: "A historic square with arcades and a Renaissance palace"
 tags: ["The American", "Sulmona", "Abruzzo", "George Clooney", "film tourism"]
 faq:
   - domanda: "Where was The American with George Clooney filmed?"

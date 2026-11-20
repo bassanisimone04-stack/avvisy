@@ -6,7 +6,7 @@ dataPubblicazione: 2026-08-07
 dataAggiornamento: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/the-odyssey-nolan-sicilia-favignana.jpg"
-immagineAlt: "The harbour of Favignana, in the Egadi Islands, with fishing boats and a palace on the sea"
+immagineAlt: "Rocky coast with salt pans and a white cliff on the Mediterranean"
 tags: ["The Odyssey", "Nolan", "Sicily", "Favignana", "Aeolian Islands", "film tourism"]
 faq:
   - domanda: "Where was Christopher Nolan's The Odyssey filmed in Sicily?"

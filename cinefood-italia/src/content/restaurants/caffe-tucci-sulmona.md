@@ -12,7 +12,8 @@ prezzo: "€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/caffe-tucci-sulmona.jpg"
-immagineAlt: "Il Caffè Tucci affacciato su Piazza Garibaldi a Sulmona"
+immagineAlt: "Piazza storica con portici e un palazzo rinascimentale"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-08-11
 film:
   - film: "the-american"
