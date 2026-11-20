@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/caffe-nazionale-aosta.jpg"
-immagineAlt: "Il Caffè Nazionale sotto i portici di piazza Chanoux ad Aosta"
+immagineAlt: "Villaggio alpino con ponte in pietra, campanile e torrente tra le montagne"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.paologriffa.com"
 ultimoAggiornamento: 2026-08-11
 film:

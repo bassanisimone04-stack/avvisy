@@ -4,7 +4,7 @@ descrizione: "Il Caffè Nazionale di piazza Chanoux fu riaperto apposta per gira
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-nazionale-aosta.jpg"
-immagineAlt: "Il Caffè Nazionale sotto i portici di piazza Chanoux ad Aosta"
+immagineAlt: "Villaggio alpino con ponte in pietra, campanile e torrente tra le montagne"
 tags: ["Rocco Schiavone", "Aosta", "Valle d'Aosta", "caffè storici", "cineturismo"]
 faq:
   - domanda: "Dove è girata la serie Rocco Schiavone?"

@@ -5,7 +5,7 @@ autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26
 dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/vacanze-romane-gelato-roma.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "La scalinata di Trinità dei Monti e la fontana della Barcaccia a Piazza di Spagna, Roma"
 tags: ["Vacanze romane", "Roma", "Audrey Hepburn", "location", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Vacanze romane a Roma?"

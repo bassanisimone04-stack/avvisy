@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26
 dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/vacanze-romane-gelato-roma.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "The Trinità dei Monti steps and the Barcaccia fountain in Piazza di Spagna, Rome"
 tags: ["Roman Holiday", "Rome", "Audrey Hepburn", "filming locations", "film tourism"]
 faq:
   - domanda: "Where were the Roman Holiday filming locations in Rome?"

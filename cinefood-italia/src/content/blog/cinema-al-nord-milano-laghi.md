@@ -4,7 +4,7 @@ descrizione: "Chiamami col tuo nome, House of Gucci e 007: i film girati tra Mil
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-28
 immagine: "../../assets/placeholder/cinema-al-nord-milano-laghi.jpg"
-immagineAlt: "Borgo sul lago del Nord Italia, tra montagne e riflessi sull'acqua"
+immagineAlt: "Piazza di una città lombarda con una cattedrale di mattoni dalla grande cupola e portici"
 tags: ["Milano", "Crema", "cinema", "itinerari"]
 faq:
   - domanda: "Quali film sono stati girati al Nord Italia?"

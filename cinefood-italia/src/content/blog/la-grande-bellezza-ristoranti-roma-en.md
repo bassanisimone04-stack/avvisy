@@ -4,7 +4,7 @@ descrizione: "Where Jep Gambardella dines in The Great Beauty: La Veranda dell'H
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-19
 immagine: "../../assets/placeholder/la-grande-bellezza-ristoranti-roma.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "Laid tables on a terrace overlooking St Peter's dome in Rome at sunset"
 tags: ["The Great Beauty", "Rome", "restaurants", "film tourism", "Sorrentino"]
 faq:
   - domanda: "Where does Jep Gambardella dine in The Great Beauty?"

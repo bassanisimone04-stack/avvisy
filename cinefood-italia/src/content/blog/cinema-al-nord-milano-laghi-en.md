@@ -4,7 +4,7 @@ descrizione: "Call Me by Your Name, House of Gucci and 007: films shot between M
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-28
 immagine: "../../assets/placeholder/cinema-al-nord-milano-laghi.jpg"
-immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
+immagineAlt: "A square in a Lombard town with a brick cathedral and a large dome, and arcades"
 tags: ["Milan", "Crema", "cinema", "itineraries"]
 faq:
   - domanda: "Which films were shot in Northern Italy?"

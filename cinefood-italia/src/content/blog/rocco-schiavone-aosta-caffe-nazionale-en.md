@@ -4,7 +4,7 @@ descrizione: "The Caffè Nazionale on Piazza Chanoux was reopened just to film R
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-nazionale-aosta.jpg"
-immagineAlt: "The Caffè Nazionale under the arcades of Piazza Chanoux in Aosta"
+immagineAlt: "An alpine village with a stone bridge, a bell tower and a mountain stream"
 tags: ["Rocco Schiavone", "Aosta", "Aosta Valley", "historic cafés", "film tourism"]
 faq:
   - domanda: "Where is the series Rocco Schiavone filmed?"

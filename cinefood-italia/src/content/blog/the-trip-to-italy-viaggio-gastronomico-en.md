@@ -4,7 +4,7 @@ descrizione: "Steve Coogan and Rob Brydon cross Italy eating in the finest resta
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/the-trip-to-italy-viaggio-gastronomico.jpg"
-immagineAlt: "A table laid with dishes from the Italian tradition"
+immagineAlt: "Tables laid with yellow tablecloths under a large umbrella in an Amalfi Coast lane"
 tags: ["The Trip to Italy", "itineraries", "restaurants", "Italy", "film tourism"]
 faq:
   - domanda: "What is The Trip to Italy about?"

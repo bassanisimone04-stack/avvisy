@@ -4,7 +4,7 @@ descrizione: "Dove cena Jep Gambardella ne La Grande Bellezza: la Veranda dell'H
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-19
 immagine: "../../assets/placeholder/la-grande-bellezza-ristoranti-roma.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "Tavoli apparecchiati su una terrazza con vista sulla cupola di San Pietro a Roma al tramonto"
 tags: ["La Grande Bellezza", "Roma", "ristoranti", "cineturismo", "Sorrentino"]
 faq:
   - domanda: "Dove cena Jep Gambardella ne La Grande Bellezza?"
