@@ -1,6 +1,6 @@
 ---
 titolo: "Presentiamo La Guida CineFood Italia (PDF)"
-descrizione: "Abbiamo raccolto i 75 locali reali di CineFood Italia in una guida PDF scaricabile, con 4 itinerari pronti e un indice per film."
+descrizione: "Abbiamo raccolto i 76 locali reali di CineFood Italia in una guida PDF scaricabile, con percorsi per area e un indice per film."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
 immagine: "../../assets/placeholder/guida-cover-blog.jpg"
@@ -8,7 +8,7 @@ immagineAlt: "Una sedia da regista vuota e un tavolo con tovaglia a quadretti e 
 tags: ["Guida PDF", "itinerari", "novità"]
 faq:
   - domanda: "Cosa contiene La Guida CineFood Italia?"
-    risposta: "I 75 locali reali della directory (indirizzo, prezzo, film e scena collegata), organizzati per regione, più 4 itinerari pronti e un indice per film."
+    risposta: "I 76 locali reali della directory (indirizzo, prezzo, film e scena collegata), organizzati per regione, più 4 percorsi per area (Roma e Lazio, Napoli e la costa, Sicilia, Nord Italia) e un indice per film."
   - domanda: "È diversa dal sito?"
     risposta: "Il sito resta gratuito e sempre aggiornato. La guida è una versione PDF scaricabile e organizzata per un viaggio: comoda da consultare offline, in aereo o senza connessione."
   - domanda: "È disponibile anche in inglese?"
@@ -23,14 +23,14 @@ la directory in viaggio.
 
 ## Cosa contiene
 
-I **75 locali reali** della directory — stesso identico livello di verifica
-che trovi sul sito, nessun esempio inventato — organizzati per **18
-regioni**, con indirizzo, fascia di prezzo, film o serie collegati e la
-scena esatta girata o ambientata lì. In più, **4 itinerari pronti**: una
-giornata a Roma tra Via Veneto e Trastevere; un percorso tra Napoli e la
-costa, da Forcella a Castellabate; un tour in Sicilia sulle tracce del
-Padrino, di Montalbano e de Il Postino; un Gran Tour del Nord tra Torino,
-Milano, Crema, Venezia e Trieste.
+I **76 locali reali** della directory — stesso livello di verifica che
+trovi sul sito, nessun esempio inventato — organizzati per **18 regioni**,
+con indirizzo, fascia di prezzo, film o serie collegati (**43 titoli**) e
+la scena a cui sono legati. Ogni scheda dice chiaramente se il locale è un
+**set reale** o è solo **legato al film**, e riporta la data dell'ultimo
+controllo; i locali chiusi sono segnalati. In più, **4 percorsi per area**
+(Roma e Lazio, Napoli e la costa, Sicilia, Nord Italia) con i locali
+raggruppati per città e il link alla mappa, e un **indice per film e serie**.
 
 ## Perché un PDF, se il sito è gratis
 
