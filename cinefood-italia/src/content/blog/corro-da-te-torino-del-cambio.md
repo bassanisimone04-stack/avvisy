@@ -4,7 +4,7 @@ descrizione: "Favino e Miriam Leone cenano al Del Cambio di Torino in Corro da t
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/del-cambio-torino.jpg"
-immagineAlt: "La sala storica del Ristorante Del Cambio in Piazza Carignano a Torino"
+immagineAlt: "Piazza di Torino con palazzi ottocenteschi a portici e tavolini all'aperto con gli ombrelloni chiusi"
 tags: ["Corro da te", "Torino", "Pierfrancesco Favino", "ristoranti storici", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Corro da te?"

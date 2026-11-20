@@ -4,7 +4,7 @@ descrizione: "The Sky series about Milan was shot almost entirely in Turin: Rist
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/del-cambio-torino.jpg"
-immagineAlt: "The historic dining room of Ristorante Del Cambio on Piazza Carignano in Turin"
+immagineAlt: "A Turin square with arcaded nineteenth-century buildings and outdoor tables with closed parasols"
 tags: ["Blocco 181", "Turin", "Sky", "Salmo", "film tourism"]
 faq:
   - domanda: "Is Blocco 181 really filmed in Milan?"

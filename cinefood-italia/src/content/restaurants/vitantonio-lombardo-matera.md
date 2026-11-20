@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/vitantonio-lombardo-matera.jpg"
-immagineAlt: "Sala scavata nella roccia del ristorante Vitantonio Lombardo nei Sassi di Matera"
+immagineAlt: "Veduta dall'alto dei Sassi di Matera, con una chiesa e la gravina sullo sfondo"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-30
 film:
   - film: "stanley-tucci-searching-for-italy"

@@ -4,7 +4,7 @@ descrizione: "Favino and Miriam Leone dine at Turin's Del Cambio in Corro da te:
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/del-cambio-torino.jpg"
-immagineAlt: "The historic dining room of Ristorante Del Cambio on Piazza Carignano in Turin"
+immagineAlt: "A Turin square with arcaded nineteenth-century buildings and outdoor tables with closed parasols"
 tags: ["Corro da te", "Turin", "Pierfrancesco Favino", "historic restaurants", "film tourism"]
 faq:
   - domanda: "Where was Corro da te filmed?"

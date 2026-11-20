@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Emilia-Romagna in Searching for 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-emilia-romagna-rimini-bologna.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama i colori dell'Emilia-Romagna"
+immagineAlt: "Costa adriatica con una lunga spiaggia e una torre, vista dall'alto"
 tags: ["Stanley Tucci", "Emilia-Romagna", "Bologna", "Rimini", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci a Bologna e in Emilia-Romagna?"

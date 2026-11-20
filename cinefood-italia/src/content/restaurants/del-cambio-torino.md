@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/del-cambio-torino.jpg"
-immagineAlt: "La sala storica del Ristorante Del Cambio in Piazza Carignano a Torino"
+immagineAlt: "Piazza di Torino con palazzi ottocenteschi a portici e tavolini all'aperto con gli ombrelloni chiusi"
+immagineTipo: "illustrativa"
 sitoWeb: "https://ristorantedelcambio.it"
 ultimoAggiornamento: 2026-09-29
 film:

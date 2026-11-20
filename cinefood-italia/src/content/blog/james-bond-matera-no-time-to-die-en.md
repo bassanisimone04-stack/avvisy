@@ -4,7 +4,7 @@ descrizione: "James Bond in Matera: the No Time to Die locations in the Sassi, t
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-13
 immagine: "../../assets/placeholder/james-bond-matera-no-time-to-die.jpg"
-immagineAlt: "Warm gradient evoking the stone of the Sassi di Matera"
+immagineAlt: "An aerial view of the Sassi of Matera, with a church and the ravine in the background"
 tags: ["James Bond", "No Time to Die", "Matera", "Gravina in Puglia", "film tourism"]
 faq:
   - domanda: "Where is the James Bond bridge in Matera?"

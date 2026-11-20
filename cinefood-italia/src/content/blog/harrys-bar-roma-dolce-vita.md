@@ -4,7 +4,7 @@ descrizione: "Aperto dal 1918 su Via Veneto, Harry's Bar è ancora oggi in attiv
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-17
 immagine: "../../assets/placeholder/harrys-bar-roma.jpg"
-immagineAlt: "L'ingresso storico di Harry's Bar su Via Vittorio Veneto a Roma"
+immagineAlt: "Angolo di un vicolo di Roma con un bar dalla facciata arancione e persone ai tavolini"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Roma", "cineturismo"]
 faq:
   - domanda: "Harry's Bar a Roma esiste ancora?"

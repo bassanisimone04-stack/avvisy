@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/bar-navona-vero.jpg"
-immagineAlt: "Tavolini all'aperto su Piazza Navona a Roma, di sera"
+immagineAlt: "La Fontana del Moro in Piazza Navona a Roma, con i tavolini dei ristoranti sullo sfondo"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "to-rome-with-love"

@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/harrys-bar-roma.jpg"
-immagineAlt: "L'ingresso storico di Harry's Bar su Via Vittorio Veneto a Roma"
+immagineAlt: "Angolo di un vicolo di Roma con un bar dalla facciata arancione e persone ai tavolini"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.harrysbar.it"
 ultimoAggiornamento: 2026-09-29
 film:

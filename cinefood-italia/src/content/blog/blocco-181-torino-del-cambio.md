@@ -4,7 +4,7 @@ descrizione: "La serie Sky su Milano è stata girata quasi tutta a Torino: il Ri
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/del-cambio-torino.jpg"
-immagineAlt: "La sala storica del Ristorante Del Cambio in Piazza Carignano a Torino"
+immagineAlt: "Piazza di Torino con palazzi ottocenteschi a portici e tavolini all'aperto con gli ombrelloni chiusi"
 tags: ["Blocco 181", "Torino", "Sky", "Salmo", "cineturismo"]
 faq:
   - domanda: "Blocco 181 è girato davvero a Milano?"

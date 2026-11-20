@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Emilia-Romagna in Searching for Italy: 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-emilia-romagna-rimini-bologna.jpg"
-immagineAlt: "Warm abstract gradient evoking the colours of Emilia-Romagna"
+immagineAlt: "The Adriatic coast with a long beach and a tower, seen from above"
 tags: ["Stanley Tucci", "Emilia-Romagna", "Bologna", "Rimini", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Bologna and Emilia-Romagna?"

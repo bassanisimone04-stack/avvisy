@@ -4,7 +4,7 @@ descrizione: "Open since 1918 on Via Veneto, Harry's Bar is still in business to
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-17
 immagine: "../../assets/placeholder/harrys-bar-roma.jpg"
-immagineAlt: "The historic entrance of Harry's Bar on Via Vittorio Veneto in Rome"
+immagineAlt: "The corner of a Roman lane with an orange-fronted bar and people at the tables"
 tags: ["La Dolce Vita", "Fellini", "Via Veneto", "Rome", "film tourism"]
 faq:
   - domanda: "Is Harry's Bar in Rome still open?"

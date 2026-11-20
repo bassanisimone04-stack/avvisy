@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/osteria-io-e-simone-rimini.jpg"
-immagineAlt: "Tavoli dell'Osteria io e Simone in Piazzetta Teatini a Rimini"
+immagineAlt: "Costa adriatica con una lunga spiaggia e una torre, vista dall'alto"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.ioesimone.com"
 ultimoAggiornamento: 2026-09-29
 film:
