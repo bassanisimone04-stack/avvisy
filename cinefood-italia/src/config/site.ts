@@ -41,7 +41,7 @@ export const SITE = {
    *    Finché è vuota, il modulo apre il programma di posta dell'utente con il messaggio già scritto.
    */
   forms: {
-    web3formsKey: "",
+    web3formsKey: "db9b4389-3b56-4544-92d5-cf5e7f7c2756",
   },
 
   /** Autore/organizzazione (usato nei dati strutturati). */
