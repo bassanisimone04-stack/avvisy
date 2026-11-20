@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/casa-artusi-forlimpopoli.jpg"
-immagineAlt: "Casa Artusi a Forlimpopoli, centro dedicato alla cucina di Pellegrino Artusi"
+immagineAlt: "Un canale tra case colorate con una torre in mattoni che si riflette nell'acqua, in un paese dell'Emilia-Romagna"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.casartusi.it"
 ultimoAggiornamento: 2026-09-29
 film:

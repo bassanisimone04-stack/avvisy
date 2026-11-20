@@ -1,6 +1,6 @@
 # Foto da inserire su CineFood Italia
 
-**Stato al 20 novembre 2026.** Sul sito le immagini non mancano come file (0 immagini rotte), ma **3 immagini su 146 sono sfondi astratti generati** (gradiente sfocato), non foto vere; **13** foto vere sono troppo piccole; **114** sono foto vere inserite ma non del luogo (sezione 3); le altre 16 sono foto reali buone (sezione 4). La tabella è ordinata per impressioni su Google (Search Console, 5 ago – 4 nov 2026): parti dalle prime righe, perché una stessa foto copre più pagine.
+**Stato al 20 novembre 2026.** Sul sito le immagini non mancano come file (0 immagini rotte), ma **1 immagini su 146 sono sfondi astratti generati** (gradiente sfocato), non foto vere; **13** foto vere sono troppo piccole; **116** sono foto vere inserite ma non del luogo (sezione 3); le altre 16 sono foto reali buone (sezione 4). La tabella è ordinata per impressioni su Google (Search Console, 5 ago – 4 nov 2026): parti dalle prime righe, perché una stessa foto copre più pagine.
 
 ## Come inserirle
 
@@ -32,9 +32,7 @@ Sono foto vere ma sotto i 900 px di larghezza: sul sito vengono ingrandite a 120
 
 | # | File | Cartella | Impr. 3 mesi | Dove compare | Foto da inserire | Cerca su Commons |
 |---|---|---|---|---|---|---|
-| 1 | `casa-artusi-forlimpopoli.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: Casa Artusi | Casa Artusi, Forlimpopoli: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=Casa%20Artusi%2C%20Forlimpopoli) |
-| 2 | `i-pupi-bagheria.jpg` | `src/assets/src/assets/placeholder` | 0 | locale: I Pupi | I Pupi, Bagheria: facciata, ingresso o interno (non una foto di scena del film) | [cerca](https://commons.wikimedia.org/w/index.php?search=I%20Pupi%2C%20Bagheria) |
-| 3 | `guida-cover-preview.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Presentiamo La Guida CineFood Italia (PDF) | Copertina: Presentiamo La Guida CineFood Italia (PDF) | [cerca](https://commons.wikimedia.org/w/index.php?search=Presentiamo%20La%20Guida%20CineFood%20Italia%20%28PDF%29) |
+| 1 | `guida-cover-preview.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Presentiamo La Guida CineFood Italia (PDF) | Copertina: Presentiamo La Guida CineFood Italia (PDF) | [cerca](https://commons.wikimedia.org/w/index.php?search=Presentiamo%20La%20Guida%20CineFood%20Italia%20%28PDF%29) |
 
 ## 3. Foto inserite ma non del luogo (da sostituire quando hai quella giusta)
 Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano il posto indicato. Il testo alternativo dice solo cosa si vede. Sulle schede dei locali compare la dicitura "Foto illustrativa".
@@ -86,12 +84,14 @@ Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano 
 | `buca-dellorafo-firenze.jpg` | 0 | Ponte Vecchio (non il locale) | Buca dell'Orafo: l'ingresso nella Volta dei Girolami |
 | `caffe-ducale-gubbio.jpg` | 0 | Vicolo con archi (sembra Spoleto, non Gubbio) | Caffè Ducale: ingresso, Via Cavour 25, Gubbio |
 | `caffe-parigi-milano.jpg` | 0 | Duomo di Milano (non il caffè) | Caffè Parigi: facciata o tavolini, Corso di Porta Nuova |
+| `casa-artusi-forlimpopoli.jpg` | 0 | Canale con torre in mattoni (sembra Comacchio, non Forlimpopoli, non il locale) | Casa Artusi: il complesso di Via Costa 27, Forlimpopoli |
 | `christian-e-manuel-vercelli.jpg` | 0 | Campi allagati dall'alto (probabilmente risaie, non confermato, non il locale) | Christian e Manuel: facciata o sala, Corso Magenta 71, Vercelli |
 | `coco-lezzone-firenze.jpg` | 0 | Vicolo di Firenze (non il locale) | Coco Lezzone: ingresso in Via del Parioncino |
 | `cracco-portofino.jpg` | 0 | Portofino (non il locale) | Cracco Portofino: terrazza o sala |
 | `fradis-minoris-pula.jpg` | 0 | Torre costiera in Sardegna (località non confermata, non il locale) | Fradis Minoris: facciata o terrazza, Pula |
 | `gran-caffe-gambrinus-napoli.jpg` | 0 | Piazza del Plebiscito (non il caffè) | Gran Caffè Gambrinus: sala liberty o tavolini, Via Chiaia 12 |
 | `harrys-bar-roma.jpg` | 0 | Bar in un vicolo di Roma (Trastevere, non Via Veneto) | Harry's Bar: ingresso su Via Veneto 150 |
+| `i-pupi-bagheria.jpg` | 0 | Carro siciliano dipinto in una piazza (sembra Palermo, non Bagheria, non il locale) | I Pupi: ingresso o sala, Bagheria |
 | `il-genovese-genova.jpg` | 0 | Portofino (non Genova, non il locale) | Il Genovese: ingresso o sala, Genova |
 | `il-riccio-anacapri.jpg` | 0 | Faraglioni di Capri (non il locale) | Il Riccio: terrazza o sala, Anacapri |
 | `la-beola-grand-hotel-majestic-verbania.jpg` | 0 | Lago di montagna dall'alto (sembra Lago Maggiore, non confermato) | La Beola: sala o terrazza, Grand Hotel Majestic, Verbania |

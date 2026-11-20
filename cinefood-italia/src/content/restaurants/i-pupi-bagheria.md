@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/i-pupi-bagheria.jpg"
-immagineAlt: "Sala del ristorante I Pupi a Bagheria, vicino a Villa Palagonia"
+immagineAlt: "Un carro siciliano dipinto con scene sacre e decorazioni floreali, in una piazza tra palazzi storici"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "stanley-tucci-searching-for-italy"
