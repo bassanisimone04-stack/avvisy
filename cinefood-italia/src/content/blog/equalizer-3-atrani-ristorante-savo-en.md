@@ -15,6 +15,8 @@ faq:
     risposta: "Partly not. The production replaced the shop signs around the square, dressing a set bakery, grocery and hardware store. The buildings and the square itself, though, are real."
   - domanda: "Can you visit Ristorante Savò?"
     risposta: "Yes, it's open: a family restaurant serving Amalfi Coast seafood, run by the Savo family, now in its third generation."
+  - domanda: "When were the Amalfi Coast scenes filmed?"
+    risposta: "The Italian shoot began in autumn 2022 across Atrani, Amalfi, Maiori and Minori, with Naples' historic centre; the last scenes were shot at Cinecittà in Rome."
 prenotazioni:
   - nome: "Hotel"
     citta: "Amalfi"
@@ -25,46 +27,71 @@ lang: "en"
 bozza: false
 ---
 
-In 2023 Antoine Fuqua closed out the *Equalizer* trilogy by taking
-**Denzel Washington** to the Amalfi Coast. The village where Robert
-McCall recovers after an ambush is called "Altamonte" and doesn't exist:
-it's **Atrani**, Italy's smallest municipality by area, barely 0.12 km²
-(about 12 hectares) wedged between the mountain and the sea.
+<!-- Sources: see the Italian version (same facts, checked 2026-11-20). -->
 
-## Where The Equalizer 3 was filmed: Atrani, the fake Altamonte
+In 2023 Antoine Fuqua closed the *Equalizer* trilogy by taking **Denzel Washington** to
+the Amalfi Coast. The village where Robert McCall recovers after an ambush is called
+**"Altamonte"** in the film (Italian press has also spelled it "Altomonte") and doesn't
+exist: it is **Atrani**, Italy's smallest municipality by area, just 0.12 km² (about 12
+hectares) squeezed between the mountain and the sea.
 
-Filming covered Atrani and, elsewhere on the coast, **Maiori** and
-**Minori**. To turn the little square into the film's fictional village,
-the production **replaced the signs** on almost every shop facing it,
-dressing a bakery, a grocery and a hardware store for the
-camera. The buildings, alleys and stairways, though, are exactly the real
-ones.
+## Where The Equalizer 3 was filmed
+
+The Italian shoot began in **autumn 2022** and covered Campania across **Atrani**,
+**Amalfi**, **Maiori** and **Minori**, plus Naples' historic centre. The last scenes
+were recorded in **Rome**, at the **Cinecittà** studios. The heart of the film is
+Atrani, though: it's where the crew stayed longest and where, according to the press,
+the Amalfi Coast shoot ended, at the **Santuario di Santa Maria del Bando**.
+
+The sources don't agree on every detail (for example on how much Ravello mattered), so
+in this article we only name places with clear support.
+
+## Atrani, the fake Altamonte
+
+To turn the little square into the film's imaginary village, the production
+**replaced the signs** of almost all the shops around the square, building a bakery, a
+grocery and a hardware store for the film. The buildings, alleys and stairways are the
+real ones. So if you go to Atrani you won't find the film's signs: you'll find the
+square, the church and the village as it is.
 
 ## Ristorante Savò, the film's "Aminah's Cafe"
 
-The venue that becomes the **"Aminah's Cafe"** on screen — the café where
-McCall orders his tea every day, building the routine that ties him to
-the community — is **[Ristorante Savò](/en/locale/ristorante-savo-atrani)**,
-on Atrani's square.
+The place that becomes **"Aminah's Cafe"** in the film — the café where McCall orders
+his tea every day, building the routine that ties him to the community — is
+**[Ristorante Savò](/en/locale/ristorante-savo-atrani)**, on Atrani's little square.
 
-The venue tells the story itself, on a dedicated page on its website:
-Savò "was a location for the film The Equalizer 3 with Denzel Washington,
-represented in the film as a bar". In reality it isn't a café but a
-family restaurant, serving Amalfi Coast seafood, run by the Savo family
-in its third generation. Since the film came out, the owners say,
+The source for this pairing is the venue itself, which tells the story on a dedicated
+page of its website: Savò "was a location for the film The Equalizer 3 with Denzel
+Washington, represented in the film as a bar". We say so openly: we found no
+independent confirmation in the press, which covers the Atrani sets without naming the
+venue. Under our rules a venue's official page is a valid source, which is why Savò is
+in our guide as a real set.
+
+In reality it isn't a café but a family restaurant serving Amalfi Coast seafood, run by
+the Savo family, now in its third generation. Since the film came out, the venue says,
 visitors ask to sit at the table where the lead sat.
 
 ## Getting to Atrani
 
-Atrani is a few minutes' walk from **Amalfi**, along the coast, and is
-served by the same SITA coast buses. There's no parking in the centre,
-which is pedestrian and made almost entirely of steps and covered alleys.
-That's precisely why it has stayed far quieter than neighbouring Amalfi
-and Positano — one of the reasons the production chose it.
+Atrani is a few minutes' walk from **Amalfi**: you reach it on foot along the coast,
+and it's served by the same SITA buses as the rest of the coast. There's no parking in
+the centre, which is pedestrian and made almost entirely of stairs and covered alleys.
+That's precisely why it has stayed much quieter than nearby Amalfi and Positano — one
+of the reasons the production chose it.
+
+## An itinerary in the film's footsteps
+
+- **Atrani**: the little square, Ristorante Savò and the Santuario di Santa Maria del Bando.
+- **Amalfi**: on foot along the coast, with the Cathedral and the seafront.
+- **Maiori and Minori**: the two nearby towns where the crew shot other scenes.
+- **Naples**: the historic centre, to complete the route of locations.
+
+If you're interested in the Coast in cinema, also read **[Amalfi Coast: Films Shot Between
+Ripley and Equalizer](/en/blog/costiera-amalfitana-location-film-ripley-equalizer)** and
+**[Ripley on Netflix: Atrani and the Amalfi Coast](/en/blog/ripley-netflix-atrani-costiera-amalfitana)**.
 
 ## In short
 
-*The Equalizer 3* put one of the smallest and least crowded villages on
-the coast on the map. Savò is the most direct way to find the set again,
-minus the fake signage. Discover more **[films and shows](/en/film)** shot
-in Italy on our site.
+*The Equalizer 3* put one of the coast's smallest and least crowded villages on the
+map. Savò is the most direct way to find its set again, without the film's signs.
+Discover the other **[films and series](/en/film)** shot in Italy on our site.
