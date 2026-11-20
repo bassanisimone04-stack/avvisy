@@ -34,8 +34,9 @@ const filmTitoli = filmEntries
       alt={d.immagineAlt || d.nome}
       width={640}
       height={427}
-      densities={[1, 2]}
-      quality={85}
+      widths={[400, 640, 900]}
+      sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 31vw"
+      quality={68}
       loading="lazy"
       class="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
     />
