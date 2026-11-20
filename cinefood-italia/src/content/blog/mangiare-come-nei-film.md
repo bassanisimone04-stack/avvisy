@@ -4,7 +4,7 @@ descrizione: "Quattro ristoranti veri, location di film italiani, verificati con
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-01
 immagine: "../../assets/placeholder/mangiare-come-nei-film.jpg"
-immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
+immagineAlt: "Facciata di una trattoria italiana con insegna «Cucina Italiana», tovaglia a quadretti rossi e lavagna del menu"
 tags: ["itinerari", "food", "cinema", "Sicilia", "Cilento"]
 faq:
   - domanda: "Quali ristoranti dei film si possono visitare davvero?"

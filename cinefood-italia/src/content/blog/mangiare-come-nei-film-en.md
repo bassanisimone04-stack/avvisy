@@ -4,7 +4,7 @@ descrizione: "Four real restaurants, verified Italian film locations, backed by 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-01
 immagine: "../../assets/placeholder/mangiare-come-nei-film.jpg"
-immagineAlt: "A table laid with dishes from the Italian tradition"
+immagineAlt: "Front of an Italian trattoria with a «Cucina Italiana» sign, a red-checked tablecloth and a menu chalkboard"
 tags: ["itineraries", "food", "cinema", "Sicily", "Cilento"]
 faq:
   - domanda: "Which film restaurants can you actually visit?"

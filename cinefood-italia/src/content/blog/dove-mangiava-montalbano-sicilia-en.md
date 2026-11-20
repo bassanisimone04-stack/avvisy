@@ -4,7 +4,7 @@ descrizione: "From the house in Punta Secca to Enzo a Mare restaurant: where Ins
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-24
 immagine: "../../assets/placeholder/dove-mangiava-montalbano-sicilia.jpg"
-immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
+immagineAlt: "A white lighthouse and houses with blue shutters on a street on the Sicilian coast"
 tags: ["Montalbano", "Sicily", "itineraries", "where to eat", "film tourism"]
 faq:
   - domanda: "Where is Inspector Montalbano's house?"

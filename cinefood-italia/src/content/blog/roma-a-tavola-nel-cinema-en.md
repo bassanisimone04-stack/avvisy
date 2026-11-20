@@ -4,7 +4,7 @@ descrizione: "Da Pancrazio and Trattoria Santa Lucia: two Roman trattorias seen 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/roma-a-tavola-nel-cinema.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "Outdoor tables with checked tablecloths under an «Antica Trattoria Romana» sign on a square in Rome"
 tags: ["Rome", "trattorias", "cinema", "itineraries"]
 faq:
   - domanda: "Which Roman trattorias have appeared in films?"

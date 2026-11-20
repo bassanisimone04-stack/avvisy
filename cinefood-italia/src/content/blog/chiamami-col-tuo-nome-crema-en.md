@@ -4,7 +4,7 @@ descrizione: "Where was Call Me by Your Name filmed? Crema's Piazza del Duomo, t
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-21
 immagine: "../../assets/placeholder/chiamami-col-tuo-nome-crema.jpg"
-immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
+immagineAlt: "A street in the centre of a Northern Italian town with colourful hanging umbrellas and an ice-cream cone in the foreground"
 tags: ["Call Me by Your Name", "Crema", "Lombardy", "itineraries", "film tourism"]
 faq:
   - domanda: "Where was Call Me by Your Name filmed?"

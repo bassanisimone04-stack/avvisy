@@ -4,7 +4,7 @@ descrizione: "La celebre scena dei maccheroni in Un Americano a Roma e la Roma p
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/un-americano-a-roma-maccheroni.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "Piatto di pasta corta condita con erba cipollina, su un tavolo di legno"
 tags: ["Un Americano a Roma", "Alberto Sordi", "Roma", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Qual è la scena dei maccheroni di Alberto Sordi?"

@@ -4,7 +4,7 @@ descrizione: "The famous macaroni scene in An American in Rome and the working-c
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-16
 immagine: "../../assets/placeholder/un-americano-a-roma-maccheroni.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "A plate of short pasta dressed with spring onion, on a wooden table"
 tags: ["An American in Rome", "Alberto Sordi", "Rome", "where to eat", "film tourism"]
 faq:
   - domanda: "What is Alberto Sordi's macaroni scene?"

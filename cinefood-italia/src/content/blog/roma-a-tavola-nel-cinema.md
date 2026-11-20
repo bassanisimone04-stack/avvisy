@@ -4,7 +4,7 @@ descrizione: "Da Pancrazio e Trattoria Santa Lucia: due trattorie romane compars
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-06-15
 immagine: "../../assets/placeholder/roma-a-tavola-nel-cinema.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "Tavoli all'aperto con tovaglie a quadretti sotto l'insegna «Antica Trattoria Romana» in una piazza di Roma"
 tags: ["Roma", "trattorie", "cinema", "itinerari"]
 faq:
   - domanda: "Quali trattorie romane sono comparse nei film?"

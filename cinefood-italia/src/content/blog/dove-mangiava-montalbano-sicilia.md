@@ -4,7 +4,7 @@ descrizione: "Dalla casa di Punta Secca al ristorante Enzo a Mare: dove mangiava
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-24
 immagine: "../../assets/placeholder/dove-mangiava-montalbano-sicilia.jpg"
-immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
+immagineAlt: "Faro bianco e case con persiane azzurre su una strada della costa siciliana"
 tags: ["Montalbano", "Sicilia", "itinerari", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove si trova la casa del Commissario Montalbano?"

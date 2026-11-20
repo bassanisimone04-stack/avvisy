@@ -4,7 +4,7 @@ descrizione: "Dove è stato girato Chiamami col tuo nome? Le location a Crema: P
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-21
 immagine: "../../assets/placeholder/chiamami-col-tuo-nome-crema.jpg"
-immagineAlt: "Borgo sul lago del Nord Italia, tra montagne e riflessi sull'acqua"
+immagineAlt: "Via del centro di una cittadina del Nord Italia con ombrelli colorati sospesi e un cono gelato in primo piano"
 tags: ["Chiamami col tuo nome", "Crema", "Lombardia", "itinerari", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Chiamami col tuo nome?"
