@@ -5,8 +5,8 @@ regista: "Alessandro D'Alatri"
 serieTv: true
 sinossi: "Serie Rai 1 tratta dai romanzi di Maurizio De Giovanni. Napoli, anni '30: il commissario Luigi Alfredo Ricciardi (Lino Guanciale) possiede un dono soprannaturale — percepisce gli ultimi pensieri delle vittime di morte violenta — che usa per risolvere i casi, tra fascismo e alta società partenopea."
 locandina: "../../assets/films/il-commissario-ricciardi.jpg"
-locandinaAlt: "Una via del centro storico di Napoli con balconi in ferro battuto"
-locandinaTipo: "illustrativa"
+locandinaAlt: "Un uomo con i baffi e un cappotto scuro in un vicolo di notte, con i lampioni accesi e una montagna sullo sfondo"
+locandinaTipo: "ai"
 citta: ["Napoli"]
 faq:
   - domanda: "Il Commissario Ricciardi è girato davvero a Napoli?"

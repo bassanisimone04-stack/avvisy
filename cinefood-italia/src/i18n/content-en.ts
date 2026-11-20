@@ -335,7 +335,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "diabolik-ginko-allattacco": {
-    locandinaAlt: "Trieste's Grand Canal at sunset, with moored boats",
+    locandinaAlt: "A man in a black balaclava and a blonde woman in an evening gown against a red background, with a vintage car and an illuminated headland",
     titolo: "Diabolik - Ginko Attacks!",
     sinossi:
       "The second chapter of the Italian trilogy about Diabolik, based on the famous comic by the Giussani sisters. Inspector Ginko hunts the masked thief through the fictional city of Clerville, recreated across Bologna, Trieste and Milan.",
@@ -346,7 +346,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-commissario-ricciardi": {
-    locandinaAlt: "A street in Naples' old town with wrought-iron balconies",
+    locandinaAlt: "A man with a moustache and a dark overcoat in an alley at night, with lit street lamps and a mountain in the background",
     titolo: "Commissioner Ricciardi",
     sinossi:
       "A Rai 1 series based on Maurizio De Giovanni's novels. Naples, the 1930s: Commissioner Luigi Alfredo Ricciardi (Lino Guanciale) has a supernatural gift — he perceives the last thoughts of murder victims — which he uses to solve cases amid fascism and Neapolitan high society.",
@@ -401,7 +401,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "don-matteo": {
-    locandinaAlt: "A medieval lane with stone arches, in a town in central Italy",
+    locandinaAlt: "A priest in a black beret with a bicycle in front of a hill town with a stone church and a carabinieri car",
     titolo: "Don Matteo",
     sinossi:
       "A Rai 1 series on air since 2000, still in production. Terence Hill plays Don Matteo, a detective priest who helps the local police solve cases alongside Sergeant Cecchini (Nino Frassica). Filmed in Gubbio for the first eight seasons (2000-2011), then in Spoleto.",
