@@ -13,7 +13,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/la-locanda-del-postino-procida.jpg"
-immagineAlt: "Il porto di Marina Corricella a Procida con le case colorate"
+immagineAlt: "Case color pastello affacciate sul porticciolo di Marina Corricella, a Procida"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-10-13
 film:
   - film: "il-postino"

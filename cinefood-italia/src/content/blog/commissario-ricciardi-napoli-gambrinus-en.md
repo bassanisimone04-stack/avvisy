@@ -4,7 +4,7 @@ descrizione: "Commissioner Ricciardi's table really exists: at Naples' Gran Caff
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/gran-caffe-gambrinus-napoli.jpg"
-immagineAlt: "The historic interior of Gran Caffè Gambrinus in Naples, facing Piazza del Plebiscito"
+immagineAlt: "Piazza del Plebiscito in Naples, with the basilica of San Francesco di Paola and its colonnade"
 tags: ["Commissioner Ricciardi", "Naples", "Rai", "Lino Guanciale", "film tourism"]
 faq:
   - domanda: "Was Commissioner Ricciardi really filmed in Naples?"

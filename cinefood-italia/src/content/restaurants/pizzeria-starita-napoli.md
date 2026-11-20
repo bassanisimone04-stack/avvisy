@@ -13,7 +13,8 @@ prezzo: "€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/pizzeria-starita-napoli.jpg"
-immagineAlt: "Una pizza fritta dorata in una pizzeria storica di Napoli"
+immagineAlt: "Una via del centro storico di Napoli con balconi in ferro battuto e la collina del Vomero sullo sfondo"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-11-07
 film:
   - film: "l-oro-di-napoli"

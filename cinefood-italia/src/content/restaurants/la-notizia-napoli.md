@@ -12,7 +12,8 @@ prezzo: "€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/la-notizia-napoli.jpg"
-immagineAlt: "Il forno a legna della pizzeria La Notizia 53 di Enzo Coccia a Napoli"
+immagineAlt: "Passanti e bancarelle in una via del centro di Napoli"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.pizzarialanotizia.com"
 ultimoAggiornamento: 2026-09-29
 film:

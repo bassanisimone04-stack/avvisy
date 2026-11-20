@@ -4,7 +4,7 @@ descrizione: "Da Michele, Starita, La Notizia, Brandi: quali pizzerie di Napoli 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-11-07
 immagine: "../../assets/placeholder/pizzerie-napoli-nei-film.jpg"
-immagineAlt: "Una pizza margherita appena sfornata in una pizzeria di Napoli"
+immagineAlt: "Passanti e bancarelle in una via del centro di Napoli"
 tags: ["Napoli", "pizza", "Eat Pray Love", "L'oro di Napoli", "cineturismo"]
 faq:
   - domanda: "Quali pizzerie di Napoli compaiono nei film?"

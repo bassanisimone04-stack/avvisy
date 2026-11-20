@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-11-07
 lang: "en"
 immagine: "../../assets/placeholder/pizzerie-napoli-nei-film.jpg"
-immagineAlt: "A margherita pizza fresh from the oven in a Naples pizzeria"
+immagineAlt: "Passers-by and market stalls on a street in central Naples"
 tags: ["Naples", "pizza", "Eat Pray Love", "L'oro di Napoli", "film tourism"]
 faq:
   - domanda: "Which Naples pizzerias appear in films?"

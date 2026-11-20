@@ -4,7 +4,7 @@ descrizione: "Il tavolo del Commissario Ricciardi esiste davvero: al Gran Caffè
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/gran-caffe-gambrinus-napoli.jpg"
-immagineAlt: "Gli interni storici del Gran Caffè Gambrinus a Napoli, affacciato su Piazza del Plebiscito"
+immagineAlt: "Piazza del Plebiscito a Napoli con la basilica di San Francesco di Paola e il colonnato"
 tags: ["Il Commissario Ricciardi", "Napoli", "Rai", "Lino Guanciale", "cineturismo"]
 faq:
   - domanda: "Il Commissario Ricciardi è girato davvero a Napoli?"

@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/relais-blu-massa-lubrense.jpg"
-immagineAlt: "Terrazza sul mare del ristorante Relais Blu a Massa Lubrense con vista su Capri"
+immagineAlt: "Due faraglioni a picco sul mare azzurro, a Capri"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.relaisblu.com"
 ultimoAggiornamento: 2026-09-30
 film:

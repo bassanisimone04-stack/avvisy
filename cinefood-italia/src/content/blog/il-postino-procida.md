@@ -4,7 +4,7 @@ descrizione: "Il Postino a Procida: Marina Corricella, la locanda di Beatrice e 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-10-13
 immagine: "../../assets/placeholder/il-postino-procida.jpg"
-immagineAlt: "Le case colorate di Marina Corricella a Procida, il borgo di pescatori de Il Postino"
+immagineAlt: "Case color pastello affacciate sul porticciolo di Marina Corricella, a Procida"
 tags: ["Il Postino", "Procida", "Massimo Troisi", "Corricella", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato davvero Il Postino, a Procida o a Salina?"

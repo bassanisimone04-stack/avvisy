@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/il-riccio-anacapri.jpg"
-immagineAlt: "Terrazza sul mare del ristorante Il Riccio ad Anacapri"
+immagineAlt: "I Faraglioni di Capri visti dall'alto, con il mare blu e alcune barche"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.ristoranteilriccio.com"
 ultimoAggiornamento: 2026-09-29
 film:

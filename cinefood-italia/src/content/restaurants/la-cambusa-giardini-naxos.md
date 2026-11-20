@@ -13,7 +13,7 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/la-cambusa-giardini-naxos.jpg"
-immagineAlt: "Vicolo con una buganvillea fucsia e vasi turchesi davanti a una facciata bianca"
+immagineAlt: "La costa siciliana vista dall'alto, con la spiaggia e le case lungo il mare"
 immagineTipo: "illustrativa"
 sitoWeb: "https://www.lacambusaristorante.com"
 ultimoAggiornamento: 2026-10-13

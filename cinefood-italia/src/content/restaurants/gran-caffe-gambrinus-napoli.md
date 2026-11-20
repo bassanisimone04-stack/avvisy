@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/gran-caffe-gambrinus-napoli.jpg"
-immagineAlt: "Gli interni storici del Gran Caffè Gambrinus a Napoli, affacciato su Piazza del Plebiscito"
+immagineAlt: "Piazza del Plebiscito a Napoli con la basilica di San Francesco di Paola e il colonnato"
+immagineTipo: "illustrativa"
 sitoWeb: "https://grancaffegambrinus.com"
 ultimoAggiornamento: 2026-09-12
 film:

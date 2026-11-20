@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/il-postino-procida.jpg"
-immagineAlt: "The colourful houses of Marina Corricella in Procida, the fishing village in Il Postino"
+immagineAlt: "Pastel-coloured houses overlooking the Marina Corricella harbour, Procida"
 tags: ["Il Postino", "Procida", "Massimo Troisi", "Corricella", "film tourism"]
 faq:
   - domanda: "Where was Il Postino really filmed, Procida or Salina?"
