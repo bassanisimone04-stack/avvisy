@@ -4,7 +4,7 @@ descrizione: "Il caffè storico di Trieste che appare ne La porta rossa: l'Antic
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
-immagineAlt: "Gli interni liberty dell'Antico Caffè San Marco a Trieste"
+immagineAlt: "Il Canal Grande di Trieste al tramonto, con barche ormeggiate e la chiesa di Sant'Antonio sullo sfondo"
 tags: ["La porta rossa", "Trieste", "Rai", "Lino Guanciale", "cineturismo"]
 faq:
   - domanda: "Dove è girata La porta rossa?"

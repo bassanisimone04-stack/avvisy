@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/osteria-del-treno-milano.jpg"
-immagineAlt: "Sala dell'Osteria del Treno in via San Gregorio a Milano"
+immagineAlt: "Un naviglio di Milano al tramonto, con tavolini e persone sulle rive"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.osteriadeltreno.it"
 ultimoAggiornamento: 2026-09-29
 film:

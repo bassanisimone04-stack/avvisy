@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
-immagineAlt: "Gli interni liberty dell'Antico Caffè San Marco a Trieste"
+immagineAlt: "Il Canal Grande di Trieste al tramonto, con barche ormeggiate e la chiesa di Sant'Antonio sullo sfondo"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.caffesanmarco.com"
 ultimoAggiornamento: 2026-08-11
 film:

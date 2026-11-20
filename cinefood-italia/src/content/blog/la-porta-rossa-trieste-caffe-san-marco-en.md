@@ -4,7 +4,7 @@ descrizione: "The historic Trieste café that appears in The Red Door: Antico Ca
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
-immagineAlt: "The Liberty-style interior of the Antico Caffè San Marco in Trieste"
+immagineAlt: "Trieste's Grand Canal at sunset, with moored boats and the church of Sant'Antonio in the background"
 tags: ["The Red Door", "Trieste", "Rai", "Lino Guanciale", "film tourism"]
 faq:
   - domanda: "Where is The Red Door filmed?"

@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci a Milano in Searching for Italy: co
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-milano-ratana-osteria-del-treno.jpg"
-immagineAlt: "Sfondo a gradiente che richiama le luci serali di Milano"
+immagineAlt: "Un naviglio di Milano al tramonto, con tavolini e persone sulle rive"
 tags: ["Stanley Tucci", "Milano", "risotto", "cotoletta", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci a Milano?"

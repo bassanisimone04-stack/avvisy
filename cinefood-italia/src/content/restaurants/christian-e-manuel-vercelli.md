@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/christian-e-manuel-vercelli.jpg"
-immagineAlt: "Piatto di risotto del ristorante Christian e Manuel a Vercelli"
+immagineAlt: "Campi allagati e canali tra alberi autunnali, con un cascinale, visti dall'alto"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.christianemanuel.it"
 ultimoAggiornamento: 2026-09-29
 film:

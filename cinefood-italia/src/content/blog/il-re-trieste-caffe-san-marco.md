@@ -4,7 +4,7 @@ descrizione: "La serie Sky con Luca Zingaretti ha girato a Trieste tra Piazza Ob
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
-immagineAlt: "Gli interni liberty dell'Antico Caffè San Marco a Trieste"
+immagineAlt: "Il Canal Grande di Trieste al tramonto, con barche ormeggiate e la chiesa di Sant'Antonio sullo sfondo"
 tags: ["Il Re", "Trieste", "Luca Zingaretti", "caffè letterari", "cineturismo"]
 faq:
   - domanda: "Dove è girata la serie Il Re con Luca Zingaretti?"

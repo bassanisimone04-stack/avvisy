@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Piedmont in Searching for Italy: Del Ca
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-piemonte-del-cambio-vercelli.jpg"
-immagineAlt: "Warm abstract gradient evoking the colours of Piedmont"
+immagineAlt: "Flooded fields and canals among autumn trees, with a farmhouse, seen from above"
 tags: ["Stanley Tucci", "Piedmont", "Turin", "Vercelli", "risotto"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Piedmont?"

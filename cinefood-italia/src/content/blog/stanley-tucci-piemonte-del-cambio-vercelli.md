@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Piemonte in Searching for Italy:
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-piemonte-del-cambio-vercelli.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama i colori del Piemonte"
+immagineAlt: "Campi allagati e canali tra alberi autunnali, con un cascinale, visti dall'alto"
 tags: ["Stanley Tucci", "Piemonte", "Torino", "Vercelli", "risotto"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Piemonte?"

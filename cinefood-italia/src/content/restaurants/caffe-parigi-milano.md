@@ -12,7 +12,8 @@ prezzo: "€€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/caffe-parigi-milano.jpg"
-immagineAlt: "Il Caffè Parigi all'interno del Palazzo Parigi Hotel & Grand Spa a Milano"
+immagineAlt: "La facciata del Duomo di Milano"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.palazzoparigi.com"
 ultimoAggiornamento: 2026-09-08
 film:

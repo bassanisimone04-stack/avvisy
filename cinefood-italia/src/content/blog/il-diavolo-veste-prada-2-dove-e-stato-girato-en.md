@@ -6,7 +6,7 @@ dataPubblicazione: 2026-09-08
 dataAggiornamento: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/caffe-parigi-milano.jpg"
-immagineAlt: "Caffè Parigi inside the Palazzo Parigi Hotel & Grand Spa in Milan"
+immagineAlt: "The façade of Milan Cathedral"
 tags: ["The Devil Wears Prada 2", "Milan", "Lake Como", "Meryl Streep", "Anne Hathaway", "film tourism"]
 faq:
   - domanda: "Where was The Devil Wears Prada 2 filmed in Italy?"

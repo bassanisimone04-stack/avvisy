@@ -4,7 +4,7 @@ descrizione: "The Sky series with Luca Zingaretti filmed in Trieste across Piazz
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-11
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
-immagineAlt: "The Liberty-style interior of the Antico Caffè San Marco in Trieste"
+immagineAlt: "Trieste's Grand Canal at sunset, with moored boats and the church of Sant'Antonio in the background"
 tags: ["Il Re", "Trieste", "Luca Zingaretti", "literary cafés", "film tourism"]
 faq:
   - domanda: "Where was the series Il Re with Luca Zingaretti filmed?"

@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Milan in Searching for Italy: cotoletta
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 immagine: "../../assets/placeholder/stanley-tucci-milano-ratana-osteria-del-treno.jpg"
-immagineAlt: "Abstract gradient evoking Milan's evening lights"
+immagineAlt: "A Milan canal at sunset, with outdoor tables and people along the banks"
 tags: ["Stanley Tucci", "Milan", "risotto", "cotoletta", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Milan?"

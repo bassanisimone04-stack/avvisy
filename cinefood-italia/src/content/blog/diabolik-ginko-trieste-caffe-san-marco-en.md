@@ -4,7 +4,7 @@ descrizione: "How Trieste became Clerville in Diabolik - Ginko Attacks!: the car
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
-immagineAlt: "The Liberty-style interior of the Antico Caffè San Marco in Trieste"
+immagineAlt: "Trieste's Grand Canal at sunset, with moored boats and the church of Sant'Antonio in the background"
 tags: ["Diabolik", "Trieste", "Manetti Bros", "Giacomo Gianniotti", "film tourism"]
 faq:
   - domanda: "Where was Diabolik - Ginko Attacks! filmed?"

@@ -5,7 +5,7 @@ autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-08
 dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/caffe-parigi-milano.jpg"
-immagineAlt: "Il Caffè Parigi all'interno del Palazzo Parigi Hotel & Grand Spa a Milano"
+immagineAlt: "La facciata del Duomo di Milano"
 tags: ["The Devil Wears Prada 2", "Milano", "Lago di Como", "Meryl Streep", "Anne Hathaway", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Il Diavolo Veste Prada 2 in Italia?"

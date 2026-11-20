@@ -4,7 +4,7 @@ descrizione: "Come Trieste è diventata Clerville in Diabolik - Ginko all'attacc
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-12
 immagine: "../../assets/placeholder/caffe-san-marco-trieste.jpg"
-immagineAlt: "Gli interni liberty dell'Antico Caffè San Marco a Trieste"
+immagineAlt: "Il Canal Grande di Trieste al tramonto, con barche ormeggiate e la chiesa di Sant'Antonio sullo sfondo"
 tags: ["Diabolik", "Trieste", "Manetti Bros", "Giacomo Gianniotti", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Diabolik - Ginko all'attacco!?"

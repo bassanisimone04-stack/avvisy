@@ -12,7 +12,8 @@ prezzo: "€€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/ratana-milano.jpg"
-immagineAlt: "Sala del ristorante Ratanà in via de Castillia a Milano"
+immagineAlt: "Tram arancione su una strada acciottolata del centro di Milano"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.ratana.it"
 ultimoAggiornamento: 2026-09-29
 film:
