@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-29
 dataAggiornamento: 2026-10-06
 immagine: "../../assets/placeholder/eat-pray-love-location-roma-napoli.jpg"
-immagineAlt: "Warm abstract gradient evoking the golden light of Rome and Naples"
+immagineAlt: "The Colosseum in Rome under a cloudy sky"
 tags: ["Eat Pray Love", "Rome", "Naples", "filming locations", "film tourism"]
 faq:
   - domanda: "Where was Eat Pray Love filmed in Italy?"

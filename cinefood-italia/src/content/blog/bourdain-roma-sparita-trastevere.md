@@ -4,7 +4,7 @@ descrizione: "La cacio e pepe preferita di Anthony Bourdain a Roma è al Ristora
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-17
 immagine: "../../assets/placeholder/roma-sparita-trastevere.jpg"
-immagineAlt: "La sala del Ristorante Roma Sparita affacciata su Piazza di Santa Cecilia a Trastevere"
+immagineAlt: "Vicolo acciottolato di Roma di sera, con tavolini illuminati e una cupola sullo sfondo"
 tags: ["Anthony Bourdain", "Roma", "Trastevere", "cacio e pepe", "cineturismo"]
 faq:
   - domanda: "Dove ha mangiato Anthony Bourdain a Roma?"

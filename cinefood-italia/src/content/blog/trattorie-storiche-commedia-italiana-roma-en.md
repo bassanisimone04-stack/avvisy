@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/trattorie-commedia-italiana-roma.jpg"
-immagineAlt: "A table in a traditional Roman trattoria"
+immagineAlt: "Outdoor tables of a Roman trattoria, with the «Trattoria Angelino» sign and an ivy-covered corner"
 tags: ["Rome", "Italian comedy", "Sora Lella", "Otello alla Concordia", "film tourism"]
 faq:
   - domanda: "Which Rome trattorias are tied to Italian cinema?"

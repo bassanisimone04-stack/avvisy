@@ -4,7 +4,7 @@ descrizione: "Cinecittà Studios a Roma: film girati qui (Ben-Hur, Cleopatra, Ro
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-10-13
 immagine: "../../assets/placeholder/cinecitta-studios-roma.jpg"
-immagineAlt: "Ingresso degli studios di Cinecittà a Roma"
+immagineAlt: "Operatore con una cinepresa professionale su un set, in una stanza con mappe e una lavagna"
 tags: ["Cinecittà", "Roma", "Ben-Hur", "Cleopatra", "The Young Pope", "cineturismo"]
 faq:
   - domanda: "Si può visitare Cinecittà?"

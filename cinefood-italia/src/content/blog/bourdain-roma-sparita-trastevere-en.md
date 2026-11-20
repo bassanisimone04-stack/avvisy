@@ -4,7 +4,7 @@ descrizione: "Anthony Bourdain's favorite cacio e pepe in Rome is at Ristorante 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-17
 immagine: "../../assets/placeholder/roma-sparita-trastevere.jpg"
-immagineAlt: "The dining room of Ristorante Roma Sparita overlooking Piazza di Santa Cecilia in Trastevere"
+immagineAlt: "A cobbled lane in Rome at night, with lit outdoor tables and a dome in the background"
 tags: ["Anthony Bourdain", "Rome", "Trastevere", "cacio e pepe", "film tourism"]
 faq:
   - domanda: "Where did Anthony Bourdain eat in Rome?"

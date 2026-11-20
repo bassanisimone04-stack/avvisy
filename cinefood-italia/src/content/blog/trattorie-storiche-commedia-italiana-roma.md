@@ -4,7 +4,7 @@ descrizione: "Sora Lella all'Isola Tiberina e Otello alla Concordia: le trattori
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-10-13
 immagine: "../../assets/placeholder/trattorie-commedia-italiana-roma.jpg"
-immagineAlt: "Il tavolo di una trattoria romana tradizionale"
+immagineAlt: "Tavolini all'aperto di una trattoria romana, con l'insegna «Trattoria Angelino» e un angolo coperto d'edera"
 tags: ["Roma", "commedia all'italiana", "Sora Lella", "Otello alla Concordia", "cineturismo"]
 faq:
   - domanda: "Quali trattorie di Roma sono legate al cinema italiano?"

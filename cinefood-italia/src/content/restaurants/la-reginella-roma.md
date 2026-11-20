@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/la-reginella-roma.jpg"
-immagineAlt: "I tavoli all'aperto de La Reginella in via del Portico d'Ottavia, nel Ghetto di Roma"
+immagineAlt: "Ponte in pietra sul Tevere a Roma, con pini e palazzi sulla riva"
+immagineTipo: "illustrativa"
 ultimoAggiornamento: 2026-09-29
 film:
   - film: "stanley-tucci-searching-for-italy"

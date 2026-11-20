@@ -5,7 +5,7 @@ autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-10-13
 lang: "en"
 immagine: "../../assets/placeholder/cinecitta-studios-roma.jpg"
-immagineAlt: "Entrance of the Cinecittà studios in Rome"
+immagineAlt: "A camera operator with a professional film camera on a set, in a room with maps and a whiteboard"
 tags: ["Cinecittà", "Rome", "Ben-Hur", "Cleopatra", "The Young Pope", "film tourism"]
 faq:
   - domanda: "Can you visit Cinecittà?"

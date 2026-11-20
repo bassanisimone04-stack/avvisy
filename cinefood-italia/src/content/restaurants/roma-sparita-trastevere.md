@@ -12,7 +12,8 @@ prezzo: "€€"
 stato: "aperto"
 inEvidenza: false
 immagine: "../../assets/placeholder/roma-sparita-trastevere.jpg"
-immagineAlt: "La sala del Ristorante Roma Sparita affacciata su Piazza di Santa Cecilia a Trastevere"
+immagineAlt: "Vicolo acciottolato di Roma di sera, con tavolini illuminati e una cupola sullo sfondo"
+immagineTipo: "illustrativa"
 sitoWeb: "https://www.romasparita.com"
 ultimoAggiornamento: 2026-09-17
 film:

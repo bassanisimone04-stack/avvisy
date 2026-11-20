@@ -5,7 +5,7 @@ autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-29
 dataAggiornamento: 2026-10-06
 immagine: "../../assets/placeholder/eat-pray-love-location-roma-napoli.jpg"
-immagineAlt: "Sfondo a gradiente caldo che richiama la luce di Roma e Napoli"
+immagineAlt: "Il Colosseo a Roma sotto un cielo nuvoloso"
 tags: ["Mangia prega ama", "Roma", "Napoli", "location", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Mangia prega ama in Italia?"
