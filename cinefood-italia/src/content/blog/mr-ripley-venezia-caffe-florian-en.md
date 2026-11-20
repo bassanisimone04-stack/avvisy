@@ -4,7 +4,7 @@ descrizione: "Matt Damon's Venice locations from The Talented Mr. Ripley: Caffè
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/mr-ripley-venezia-caffe-florian.jpg"
-immagineAlt: "A table laid with dishes from the Italian tradition"
+immagineAlt: "Café tables in Piazzetta San Marco in Venice, with the Marciana Library and the column of St Theodore"
 tags: ["The Talented Mr. Ripley", "Venice", "Caffè Florian", "film tourism"]
 faq:
   - domanda: "Where is Caffè Florian?"

@@ -4,7 +4,7 @@ descrizione: "Matt Damon nei luoghi de Il talento di Mr. Ripley a Venezia: il Ca
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-14
 immagine: "../../assets/placeholder/mr-ripley-venezia-caffe-florian.jpg"
-immagineAlt: "Tavola imbandita con piatti della tradizione italiana"
+immagineAlt: "Tavolini di un caffè in Piazzetta San Marco a Venezia, con la Biblioteca Marciana e la colonna di San Todaro"
 tags: ["Il talento di Mr. Ripley", "Venezia", "Caffè Florian", "cineturismo"]
 faq:
   - domanda: "Dove si trova il Caffè Florian?"

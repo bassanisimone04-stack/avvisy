@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Searching for Italy: dalla pizza
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/stanley-tucci-searching-for-italy-tappe.jpg"
-immagineAlt: "Sala di un ristorante elegante, atmosfera da film"
+immagineAlt: "Bottega di prodotti tipici napoletani con pasta, limoncello e mozzarella esposti in un vicolo"
 tags: ["Stanley Tucci", "cucina italiana", "itinerari", "Italia", "cineturismo"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Italia?"

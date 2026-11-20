@@ -4,7 +4,7 @@ descrizione: "Da Savoca a Castellabate, i borghi più belli d'Italia diventati s
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/borghi-italiani-del-cinema.jpg"
-immagineAlt: "Vicolo in pietra di un borgo italiano, con vasi di piante sulle scale"
+immagineAlt: "Strada del centro storico con palazzi colorati e una torre con orologio"
 tags: ["borghi", "itinerari", "cinema", "Italia"]
 faq:
   - domanda: "Quali borghi italiani sono famosi per il cinema?"

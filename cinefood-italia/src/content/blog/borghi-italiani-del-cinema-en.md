@@ -4,7 +4,7 @@ descrizione: "From Savoca to Castellabate, Italy's most beautiful villages turne
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-18
 immagine: "../../assets/placeholder/borghi-italiani-del-cinema.jpg"
-immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
+immagineAlt: "A street in a historic town centre with colourful buildings and a clock tower"
 tags: ["villages", "itineraries", "cinema", "Italy"]
 faq:
   - domanda: "Which Italian villages are famous for cinema?"

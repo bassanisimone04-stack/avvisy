@@ -4,7 +4,7 @@ descrizione: "I luoghi di Letters to Juliet tra Verona, con la Casa di Giulietta
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/letters-to-juliet-verona-toscana.jpg"
-immagineAlt: "Vicolo in pietra di un borgo italiano, con vasi di piante sulle scale"
+immagineAlt: "Il cortile della Casa di Giulietta a Verona con la statua di bronzo e le finestre in mattoni"
 tags: ["Letters to Juliet", "Verona", "Toscana", "vino", "cineturismo"]
 faq:
   - domanda: "Dove è ambientato Letters to Juliet?"

@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Searching for Italy: from Enzo Coccia's
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/stanley-tucci-searching-for-italy-tappe.jpg"
-immagineAlt: "An elegant restaurant dining room, a cinematic atmosphere"
+immagineAlt: "A shop of Neapolitan specialities with pasta, limoncello and mozzarella on display in an alley"
 tags: ["Stanley Tucci", "Italian cuisine", "itineraries", "Italy", "film tourism"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Italy?"

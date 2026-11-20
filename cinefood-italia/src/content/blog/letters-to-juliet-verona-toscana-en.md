@@ -4,7 +4,7 @@ descrizione: "The Letters to Juliet locations between Verona, with the House of 
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/letters-to-juliet-verona-toscana.jpg"
-immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
+immagineAlt: "The courtyard of Juliet's House in Verona with the bronze statue and the brick windows"
 tags: ["Letters to Juliet", "Verona", "Tuscany", "wine", "film tourism"]
 faq:
   - domanda: "Where is Letters to Juliet set?"
