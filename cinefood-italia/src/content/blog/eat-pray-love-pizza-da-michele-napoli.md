@@ -15,13 +15,13 @@ faq:
   - domanda: "La scena della pizza di Eat Pray Love è girata a Napoli?"
     risposta: "Sì: la scena della pizza appartiene alla parte napoletana del film ed è ambientata da Da Michele, mentre le scene a tavola a Roma sono in altre trattorie."
   - domanda: "Che pizza si mangia da Michele?"
-    risposta: "Il menù è cortissimo: le due pizze storiche sono marinara e margherita, cotte nel forno a legna; in menù ci sono anche due varianti (cosacca e marita, metà margherita e metà marinara)."
+    risposta: "Le due pizze storiche sono marinara e margherita, cotte nel forno a legna. Alcune fonti citano anche la doppia mozzarella e varianti come cosacca e marita: il menù può cambiare, quindi controllalo sul posto."
   - domanda: "Serve prenotare da Michele?"
     risposta: "Non si prenota: si ritira un numero e si aspetta il proprio turno, spesso con la fila fuori."
   - domanda: "Da quando esiste la pizzeria da Michele?"
     risposta: "La storia comincia nel 1870 con Salvatore Condurro. Il figlio Michele apre un locale proprio nel 1906 e nel 1930 la pizzeria si trasferisce nella sede attuale di via Cesare Sersale, gestita ancora oggi dalla stessa famiglia."
   - domanda: "Come si arriva da Michele da Napoli Centrale?"
-    risposta: "A piedi in meno di 10 minuti dalla Stazione Napoli Centrale, uscita Piazza Garibaldi: è una delle pizzerie storiche più comode da raggiungere in città."
+    risposta: "A piedi in circa 10-15 minuti dalla Stazione Napoli Centrale, uscita Piazza Garibaldi: è una delle pizzerie storiche più comode da raggiungere in città."
   - domanda: "Cosa mangia Julia Roberts nella scena della pizza di Mangia prega ama?"
     risposta: "Una pizza margherita: Liz la assaggia nella parte del film ambientata a Napoli. Da Michele le due pizze storiche sono margherita e marinara."
   - domanda: "La pizzeria di Mangia prega ama esiste davvero?"
@@ -37,91 +37,124 @@ esperienze:
 bozza: false
 ---
 
+<!-- Fonti (verificate il 2026-11-20 via ricerca; i siti non erano raggiungibili per lettura diretta):
+     - Scena della pizza girata da Da Michele, Via Cesare Sersale: Italy for Movies (italyformovies.com, scheda "Eat Pray Love"),
+       National Geographic Travel, Fodor's, Afar. Il film tocca Italia (Roma e Napoli), India e Bali.
+     - Date: la famiglia Condurro rimanda al 1870; Michele apre nel 1906; trasferimento nel 1930 in via Cesare Sersale
+       (collegato alla costruzione dell'ospedale Ascalesi): Dissapore, Scatti di Gusto. Le fonti non coincidono in tutto.
+     - Menù: solo marinara e margherita secondo più fonti; una fonte recente parla anche di altre pizze -> verificare sul posto.
+     - Sedi: Forbes Italia 2025 (Salerno, Aversa, Pompei, Caserta e altre sedi in Italia e all'estero).
+     - Tempo a piedi dalla stazione: le fonti danno 10 e 15 minuti -> scritto "10-15".
+     - Prezzi attuali NON verificati: non indicati. -->
+
 **In breve.** La pizzeria di *Mangia prega ama* (*Eat Pray Love*) è
 **[L'Antica Pizzeria da Michele](/locale/pizzeria-da-michele-napoli)**, in Via Cesare
 Sersale, nel quartiere **Forcella** di **Napoli**. È lì che il personaggio di Julia
 Roberts mangia la margherita della scena più citata del film.
 
-- **Cosa ordinare:** marinara o margherita, le due pizze storiche, più due varianti
-  (cosacca e marita).
+- **Cosa ordinare:** marinara o margherita, le due pizze storiche.
 - **Prenotazioni:** non si prenota. Si prende il numero all'ingresso e si aspetta il turno.
-- **Come arrivare:** meno di 10 minuti a piedi dalla stazione di Napoli Centrale, uscita Piazza Garibaldi.
+- **Come arrivare:** circa 10-15 minuti a piedi da Napoli Centrale, uscita Piazza Garibaldi.
+- **Prezzi:** cambiano nel tempo e non li riportiamo: controlla sul posto.
 
 ---
 
-C'è una scena di *Mangia prega ama* (*Eat Pray Love*) che ha fatto venire fame a
-milioni di spettatori: Liz, interpretata da **Julia Roberts**, che a Napoli
-addenta una pizza margherita lasciandosi finalmente andare al piacere del cibo,
-dopo settimane passate a contare le calorie. È una delle scene "food" più
-citate del cinema degli ultimi vent'anni. Quel luogo esiste davvero, ed è uno
-dei templi della pizza napoletana: **[L'Antica Pizzeria da
+C'è una scena di *Mangia prega ama* (*Eat Pray Love*, 2010, regia di Ryan Murphy) che
+ha fatto venire fame a milioni di spettatori: Liz, interpretata da **Julia Roberts**,
+che a Napoli addenta una pizza margherita lasciandosi andare al piacere del cibo.
+È una delle scene "food" più citate del cinema degli ultimi vent'anni. Quel luogo
+esiste davvero, ed è uno dei templi della pizza napoletana: **[L'Antica Pizzeria da
 Michele](/locale/pizzeria-da-michele-napoli)**.
 
 Dopo Da Michele? Leggi **[Pizzerie di Napoli nei film: oltre Da Michele](/blog/pizzerie-napoli-nei-film-oltre-da-michele)**.
 
-## Dove è girata la scena della pizza di Eat Pray Love
+## Il film e la tappa napoletana
 
-Siamo nel quartiere **Forcella**, in Via Cesare Sersale, a due passi dalla
-Stazione Centrale e da Piazza Garibaldi. Da Michele ha una storia che comincia
-nel **1870**, quando **Salvatore Condurro** apre la sua prima pizzeria nel
-cuore di Napoli. Il figlio **Michele Condurro** — da cui il nome che conosciamo
-oggi — apre nel 1906 un locale proprio, e nel **1930** la pizzeria si trasferisce
-nella sede attuale di via Cesare Sersale, quella che compare (con qualche
-licenza cinematografica) nel film. Da allora la pizzeria è rimasta nelle mani
-della stessa famiglia, fedele a un menù cortissimo: le due pizze storiche,
-**marinara** e **margherita**, cotte nel forno a legna, più due varianti
-(la **cosacca** e la **marita**, metà margherita e metà marinara).
+*Mangia prega ama* è tratto dal memoir di Elizabeth Gilbert e segue il viaggio di
+Liz in tre tappe: **Italia**, **India** e **Bali**. La parte italiana, quella
+dedicata al piacere di mangiare, passa da **Roma** e da **Napoli**. A Roma le scene
+a tavola sono in trattorie del centro, come la
+**[Trattoria Santa Lucia](/locale/trattoria-santa-lucia)** e
+**[Da Pancrazio](/locale/da-pancrazio)**; a Napoli c'è la pizza, ed è la scena che
+ha reso famoso il locale in tutto il mondo.
 
-## Cosa aspettarsi (e cosa ordinare)
+L'abbinamento tra la scena della pizza e Da Michele è riportato da più fonti, tra cui
+il portale **Italy for Movies** del Ministero della Cultura, e da guide di viaggio
+internazionali come National Geographic Travel e Fodor's. Per questo lo diamo come
+**set reale** nella nostra scheda.
 
-Da Michele è un'esperienza verace: ambiente essenziale, tavoli di marmo
-condivisi con altri avventori, il numero elettronico alla porta e spesso la
-**fila fuori**, anche a orari non canonici — fa parte del rito, non un difetto.
-Il menù è volutamente minimale: **marinara** (pomodoro, aglio, origano, olio)
-o **margherita** (pomodoro, mozzarella, basilico), eventualmente "doppia
-mozzarella" per chi la vuole più ricca. Da bere, una birra artigianale
-napoletana o una gassosa. Non cercare pizze gourmet o farciture strane: qui
-il valore sta tutto nell'impasto a lunga lievitazione, nel pomodoro San
-Marzano e nella cottura rapidissima nel forno a legna, che porta la pizza in
-tavola in pochi minuti.
+## Dove è girata la scena della pizza
 
-> Consiglio pratico: vai a orari "spalla" (12:00-12:30 a pranzo, o dopo le
-> 15:00) per ridurre l'attesa. Si paga in contanti o carta, il conto è tra i
-> più bassi d'Italia per la qualità offerta.
+Siamo nel quartiere **Forcella**, in Via Cesare Sersale, a pochi passi dalla
+Stazione Centrale e da Piazza Garibaldi. Il film non ha inventato nulla: Da Michele
+è una pizzeria storica di Napoli molto prima del 2010 e ha una famiglia, i
+**Condurro**, che la gestisce da generazioni.
+
+## La storia di Da Michele (e perché le date non coincidono)
+
+Se cerchi quando è nata Da Michele trovi più date, e **non tutte le fonti
+coincidono**. La famiglia fa risalire l'attività al **1870**, quando **Salvatore
+Condurro** apre la sua prima pizzeria. Il figlio **Michele** apre un locale proprio nel
+**1906**, e nel **1930** la pizzeria si trasferisce nella sede attuale di via Cesare
+Sersale: secondo una ricostruzione, il trasloco è legato alla costruzione
+dell'ospedale Ascalesi. Il nome di oggi viene da Michele. Quello che è certo è che si
+tratta di una delle pizzerie più antiche e riconoscibili della città, ancora in mano
+alla famiglia. Per questo parliamo di "oltre 150 anni" dalle origini, e non di una data
+di apertura unica.
+
+## Cosa aspettarsi e cosa ordinare
+
+Da Michele è un'esperienza verace: ambiente essenziale, tavoli condivisi con altri
+avventori, il numero alla porta e spesso la **fila fuori**. Fa parte del rito.
+Il menù è corto: le due pizze storiche sono la **marinara** (pomodoro, aglio,
+origano, olio) e la **margherita** (pomodoro, mozzarella, basilico), cotte nel forno a
+legna. Alcune fonti parlano anche di "doppia mozzarella" e di varianti come la
+cosacca e la marita (metà margherita e metà marinara): il menù può cambiare, quindi
+guardalo quando arrivi. Non cercare pizze gourmet o farciture strane: qui il valore
+sta nella semplicità.
+
+> Consiglio pratico: vai a orari "spalla", per esempio verso le 12:00 a pranzo o dopo
+> le 15:00, per ridurre l'attesa. È un suggerimento, non una regola: l'affluenza
+> cambia con la stagione e il giorno.
 
 ## Come arrivare
 
-Da Michele è a meno di 10 minuti a piedi dalla **Stazione Napoli Centrale**
-(uscita Piazza Garibaldi), il che la rende una tappa comoda anche solo di
-passaggio, prima o dopo un treno. Chi arriva in auto può lasciarla in uno dei
-parcheggi custoditi della zona: il centro storico ha ZTL attiva in diverse
-fasce orarie.
+Da Michele è a circa **10-15 minuti a piedi** dalla **Stazione Napoli Centrale** (uscita
+Piazza Garibaldi), quindi è una tappa comoda anche solo di passaggio, prima o dopo un
+treno. Se arrivi in auto ricorda che il centro storico ha una ZTL con fasce orarie:
+controlla gli accessi prima di entrare.
 
 ## Un itinerario napoletano sulle orme del film
 
-Dopo la pizza, Forcella e il centro storico di Napoli meritano una
-passeggiata: **Spaccanapoli**, la storica via dritta che taglia il centro
-antico, **San Gregorio Armeno** con le sue botteghe di presepi tutto l'anno,
-e il lungomare di Via Caracciolo per chiudere in bellezza con vista sul
-Vesuvio. Trovi indirizzo e mappa alla scheda **[Pizzeria da
+Dopo la pizza, Forcella e il centro storico meritano una passeggiata: **Spaccanapoli**,
+la strada dritta che taglia il centro antico, **San Gregorio Armeno** con le sue
+botteghe di presepi, e il lungomare di Via Caracciolo per chiudere con vista sul
+Vesuvio. Trovi indirizzo e mappa nella scheda **[Pizzeria da
 Michele](/locale/pizzeria-da-michele-napoli)** e gli altri luoghi del film su
 **[Mangia prega ama](/film/mangia-prega-ama)**.
 
 Vuoi vedere anche le altre location del film, da Piazza Navona a Villa Borghese? Le trovi in **[Mangia prega ama: location a Roma e Napoli](/blog/eat-pray-love-location-roma-napoli)**.
 
-## Un successo che ha varcato i confini
+## Da Michele oggi: il marchio e la sede storica
 
-Il successo (anche cinematografico) di Da Michele è tale che oggi esistono
-affiliati con lo stesso nome in diverse città italiane e nel mondo — da
-Roma a Londra, da Dubai a Miami — ma la sede storica, quella della scena del
-film, resta una sola: via Cesare Sersale, Napoli.
+Il successo (anche cinematografico) di Da Michele ha portato il nome oltre Napoli:
+secondo Forbes Italia (2025) esistono sedi in altre città della Campania e in altre
+parti d'Italia e del mondo. Ma la sede della scena del film è una sola, quella
+storica: **via Cesare Sersale, a Napoli**. Se vuoi vivere l'esperienza del film,
+è lì che devi andare.
+
+## Domande che ci fanno più spesso
+
+**Quanto costa?** I prezzi cambiano nel tempo e non abbiamo un dato aggiornato da riportare: controlla sul posto o sul sito della pizzeria prima di andare.
+
+**E per altri film girati a Napoli?** Il locale compare nel film *Mangia prega
+ama*. Per altri film e serie girati in città guarda
+**[L'amica geniale](/blog/amica-geniale-napoli-scottojonno)** e
+**[È stata la mano di Dio](/blog/mano-di-dio-napoli-villa-giusso)**.
 
 ## In sintesi
 
 Se hai amato la scena della pizza di *Eat Pray Love*, sederti (dopo la fila) da
 **[Michele](/locale/pizzeria-da-michele-napoli)** è d'obbligo: è il modo più
-autentico per assaggiare la Napoli del film, una margherita alla volta, nello
-stesso locale gestito dalla stessa famiglia da oltre 150 anni. Resta in tema
-con **[L'amica geniale](/blog/amica-geniale-napoli-scottojonno)** e
-**[È stata la mano di Dio](/blog/mano-di-dio-napoli-villa-giusso)**, altri due
-racconti di Napoli girati tra vere location della città.
+autentico per assaggiare la Napoli del film, una margherita alla volta, nel locale di
+una famiglia che lo porta avanti da generazioni.

@@ -15,13 +15,13 @@ faq:
   - domanda: "Is the Eat Pray Love pizza scene filmed in Naples?"
     risposta: "Yes: the pizza scene belongs to the Naples part of the film and is set at Da Michele, while the Rome food scenes are set in other trattorias."
   - domanda: "What pizza do they serve at Da Michele?"
-    risposta: "The menu is very short: the two historic pizzas are marinara and margherita, baked in a wood-fired oven; two variations (cosacca and marita, half margherita and half marinara) are also on the menu."
+    risposta: "The two historic pizzas are marinara and margherita, baked in a wood-fired oven. Some sources also mention double mozzarella and variations such as cosacca and marita: the menu can change, so check it on the spot."
   - domanda: "Do you need to book at Da Michele?"
     risposta: "You can't book: you take a number and wait your turn, often with a queue outside."
   - domanda: "How old is Da Michele pizzeria?"
     risposta: "Its story starts in 1870 with Salvatore Condurro. His son Michele opened his own place in 1906, and in 1930 the pizzeria moved to its current home on Via Cesare Sersale, still run by the same family today."
   - domanda: "How do you get to Da Michele from Naples Central Station?"
-    risposta: "It's less than a 10-minute walk from Napoli Centrale station, Piazza Garibaldi exit — one of the easiest historic pizzerias to reach in the city."
+    risposta: "It's about a 10-15 minute walk from Napoli Centrale station, Piazza Garibaldi exit — one of the easiest historic pizzerias to reach in the city."
   - domanda: "What did Julia Roberts eat in the Eat Pray Love pizza scene?"
     risposta: "A margherita pizza: Liz bites into it in the Naples part of the film. At Da Michele the two historic pizzas are margherita and marinara."
   - domanda: "Is the Eat Pray Love pizza place real?"
@@ -38,88 +38,111 @@ esperienze:
 bozza: false
 ---
 
-**Short answer.** The pizza place in *Eat Pray Love* is
-**[L'Antica Pizzeria da Michele](/en/locale/pizzeria-da-michele-napoli)**, on Via Cesare
-Sersale in the Forcella district of **Naples**. It is where Julia Roberts' character eats
-the margherita in the film's most quoted food scene.
+<!-- Sources and caveats: see the Italian version of this article (same facts, checked 2026-11-20 via search). -->
 
-- **What to order:** marinara or margherita — those are the two historic pizzas, plus two
-  variations (cosacca and marita).
-- **Bookings:** none. You take a number at the door and wait your turn.
-- **Getting there:** under a 10-minute walk from Napoli Centrale station, Piazza Garibaldi exit.
+**In short.** The pizzeria in *Eat Pray Love* is
+**[L'Antica Pizzeria da Michele](/en/locale/pizzeria-da-michele-napoli)**, on Via Cesare
+Sersale in the **Forcella** district of **Naples**. It's where Julia Roberts' character
+eats the margherita of the film's most quoted food scene.
+
+- **What to order:** marinara or margherita, the two historic pizzas.
+- **Booking:** you can't book. You take a number at the door and wait your turn.
+- **Getting there:** about a 10-15 minute walk from Napoli Centrale, Piazza Garibaldi exit.
+- **Prices:** they change over time and we don't quote them: check on the spot.
 
 ---
 
-There is a scene in *Eat Pray Love* that made millions of viewers hungry: Liz,
-played by **Julia Roberts**, biting into a margherita pizza in Naples and finally
-surrendering to the pleasure of food, after weeks of counting calories. It's one
-of the most quoted food scenes in recent cinema. That place really exists, and
-it is one of the temples of Neapolitan pizza:
-**[L'Antica Pizzeria da Michele](/en/locale/pizzeria-da-michele-napoli)**.
+There's a scene in *Eat Pray Love* (2010, directed by Ryan Murphy) that has made
+millions of viewers hungry: Liz, played by **Julia Roberts**, bites into a margherita
+pizza in Naples and lets herself enjoy food. It's one of the most quoted food scenes
+in recent cinema. The place really exists, and it is one of the temples of Neapolitan
+pizza: **[L'Antica Pizzeria da Michele](/en/locale/pizzeria-da-michele-napoli)**.
 
 After Da Michele? Read **[Naples Pizzerias in Films: Beyond Da Michele](/en/blog/pizzerie-napoli-nei-film-oltre-da-michele)**.
 
-## Where the Eat Pray Love pizza scene was filmed
+## The film and its Naples stop
 
-We are in the **Forcella** district, on Via Cesare Sersale, a short walk from
-Naples Central Station and Piazza Garibaldi. Da Michele's story begins in
-**1870**, when **Salvatore Condurro** opened his first pizzeria in the heart
-of Naples. His son **Michele Condurro** — the name we know today — opened his
-own place in 1906, and in **1930** the pizzeria moved to its current home on
-Via Cesare Sersale, the very one that appears (with a little cinematic
-license) in the film. The pizzeria has stayed in the same family and keeps
-a very short menu: the two historic pizzas, **marinara** and **margherita**, baked in a
-wood-fired oven, plus two variations (**cosacca** and **marita**, half margherita and half marinara).
+*Eat Pray Love* is based on Elizabeth Gilbert's memoir and follows Liz's journey in
+three places: **Italy**, **India** and **Bali**. The Italian part, devoted to the
+pleasure of eating, goes through **Rome** and **Naples**. In Rome the table scenes are
+set in trattorias in the historic centre, such as
+**[Trattoria Santa Lucia](/en/locale/trattoria-santa-lucia)** and
+**[Da Pancrazio](/en/locale/da-pancrazio)**; in Naples there is the pizza, the scene
+that made the venue famous around the world.
 
-## What to expect (and what to order)
+The link between the pizza scene and Da Michele is reported by several sources,
+including the **Italy for Movies** portal of the Italian Ministry of Culture, and by
+international travel guides such as National Geographic Travel and Fodor's. That's why
+we list it as a **real set** on our venue page.
 
-Da Michele is an authentic experience: a bare-bones setting, marble tables
-shared with other diners, an electronic number system at the door, and often
-a **queue outside** even outside peak hours — that's part of the ritual, not
-a flaw. The menu is deliberately minimal: **marinara** (tomato, garlic,
-oregano, oil) or **margherita** (tomato, mozzarella, basil), with "double
-mozzarella" for those who want it richer. To drink, a Neapolitan craft beer
-or a soda. Don't look for gourmet toppings: here it's all about the
-long-leavened dough, San Marzano tomatoes, and the fast wood-fired bake that
-gets the pizza to your table in minutes.
+## Where the pizza scene was filmed
 
-> Tip: go at off-peak times (12:00-12:30 for lunch, or after 3pm) to cut the
-> wait. Cash and card both accepted, and the bill is remarkably low for the
-> quality on offer.
+We're in the **Forcella** district, on Via Cesare Sersale, a short walk from the
+Central Station and Piazza Garibaldi. The film didn't invent anything: Da Michele has
+been a historic Naples pizzeria long before 2010, run for generations by the
+**Condurro** family.
 
-## How to get there
+## Da Michele's history (and why the dates don't match)
 
-Da Michele is less than a 10-minute walk from **Naples Central Station**
-(Piazza Garibaldi exit), which makes it an easy stop even just passing
-through, before or after a train. If you're driving, use one of the guarded
-car parks nearby — the historic center has restricted traffic zones (ZTL)
-active at various times of day.
+If you look up when Da Michele began, you'll find several dates, and **the sources
+don't all agree**. The family traces the business back to **1870**, when **Salvatore
+Condurro** opened his first pizzeria. His son **Michele** opened a place of his own in
+**1906**, and in **1930** the pizzeria moved to its current home on Via Cesare Sersale:
+according to one account, the move was tied to the building of the Ascalesi hospital.
+Today's name comes from Michele. What is certain is that it is one of the oldest and
+most recognisable pizzerias in the city, still in the family's hands. That's why we say
+"over 150 years" from its origins, not a single opening date.
+
+## What to expect and what to order
+
+Da Michele is a no-frills experience: simple rooms, tables shared with other diners,
+the number at the door and often a **queue outside**. It's part of the ritual. The menu
+is short: the two historic pizzas are **marinara** (tomato, garlic, oregano, oil) and
+**margherita** (tomato, mozzarella, basil), baked in a wood-fired oven. Some sources also
+mention "double mozzarella" and variations such as the cosacca and the marita (half
+margherita, half marinara): the menu can change, so check it when you arrive. Don't
+look for gourmet pizzas or odd toppings: the value here is in simplicity.
+
+> Practical tip: go at "shoulder" times, for example around 12:00 at lunch or after
+> 15:00, to cut the wait. It's a suggestion, not a rule: crowds change with the season
+> and the day.
+
+## Getting there
+
+Da Michele is about a **10-15 minute walk** from **Napoli Centrale station** (Piazza
+Garibaldi exit), so it's an easy stop even just passing through, before or after a
+train. If you come by car, remember that the historic centre has a restricted traffic
+zone (ZTL) with time slots: check the access before you enter.
 
 ## A Naples itinerary in the footsteps of the film
 
-After the pizza, Forcella and Naples' historic centre are worth a stroll:
-**Spaccanapoli**, the long straight street cutting through the old town,
-**San Gregorio Armeno** with its year-round nativity-scene workshops, and the
-Via Caracciolo seafront for a scenic finish with views of Vesuvius. You will
-find the address and map on the **[Pizzeria da
-Michele](/en/locale/pizzeria-da-michele-napoli)** page and the film's other
-locations on **[Eat Pray Love](/en/film/mangia-prega-ama)**.
+After the pizza, Forcella and the historic centre are worth a stroll: **Spaccanapoli**,
+the long straight street cutting through the old town, **San Gregorio Armeno** with its
+nativity-scene workshops, and the Via Caracciolo seafront to finish with a view of
+Vesuvius. You'll find the address and map on the **[Pizzeria da
+Michele](/en/locale/pizzeria-da-michele-napoli)** page and the film's other locations on
+**[Eat Pray Love](/en/film/mangia-prega-ama)**.
 
 Want the film's other locations, from Piazza Navona to Villa Borghese? See **[Eat Pray Love Filming Locations: Rome and Naples](/en/blog/eat-pray-love-location-roma-napoli)**.
 
-## A fame that crossed borders
+## Da Michele today: the brand and the historic site
 
-Da Michele's success — partly thanks to the film — is such that affiliated
-pizzerias with the same name now exist across Italy and around the world,
-from Rome to London, Dubai to Miami. But the historic location, the one from
-the film's scene, remains only one: Via Cesare Sersale, Naples.
+Da Michele's success (partly cinematic) has taken the name beyond Naples: according to
+Forbes Italia (2025) there are branches in other Campania towns and in other parts of
+Italy and the world. But the venue of the film's scene is only one, the historic one:
+**Via Cesare Sersale, Naples**. If you want the film experience, that's where to go.
+
+## Questions we get most often
+
+**How much does it cost?** Prices change over time and we have no up-to-date figure to quote: check on the spot or on the pizzeria's website before you go.
+
+**For other films and series shot in the city**, see
+**[My Brilliant Friend](/en/blog/amica-geniale-napoli-scottojonno)** and
+**[The Hand of God](/en/blog/mano-di-dio-napoli-villa-giusso)**.
 
 ## In short
 
-If you loved the pizza scene in *Eat Pray Love*, sitting down (after the
-queue) at **[Michele](/en/locale/pizzeria-da-michele-napoli)** is a must: it
-is the most authentic way to taste the Naples of the film, one margherita at
-a time, in the same place run by the same family for over 150 years. Stay on
-theme with **[My Brilliant Friend](/en/blog/amica-geniale-napoli-scottojonno)**
-and **[The Hand of God](/en/blog/mano-di-dio-napoli-villa-giusso)**, two more
-Naples stories filmed in real locations across the city.
+If you loved the pizza scene in *Eat Pray Love*, sitting down (after the queue) at
+**[Michele](/en/locale/pizzeria-da-michele-napoli)** is a must: it's the most authentic
+way to taste the Naples of the film, one margherita at a time, in the venue of a family
+that has carried it on for generations.
