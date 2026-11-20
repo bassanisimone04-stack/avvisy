@@ -3,8 +3,8 @@ titolo: "Presentiamo La Guida CineFood Italia (PDF)"
 descrizione: "Abbiamo raccolto i 75 locali reali di CineFood Italia in una guida PDF scaricabile, con 4 itinerari pronti e un indice per film."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/guida-cover-preview.jpg"
-immagineAlt: "Copertina de La Guida CineFood Italia"
+immagine: "../../assets/placeholder/guida-cover-blog.jpg"
+immagineAlt: "Una sedia da regista vuota e un tavolo con tovaglia a quadretti e un bicchiere di vino, illuminati da un proiettore"
 tags: ["Guida PDF", "itinerari", "novità"]
 faq:
   - domanda: "Cosa contiene La Guida CineFood Italia?"

@@ -1,6 +1,6 @@
 # Foto da inserire su CineFood Italia
 
-**Stato al 20 novembre 2026.** Sul sito le immagini non mancano come file (0 immagini rotte), ma **1 immagini su 146 sono sfondi astratti generati** (gradiente sfocato), non foto vere; **13** foto vere sono troppo piccole; **116** sono foto vere inserite ma non del luogo (sezione 3); le altre 16 sono foto reali buone (sezione 4). La tabella è ordinata per impressioni su Google (Search Console, 5 ago – 4 nov 2026): parti dalle prime righe, perché una stessa foto copre più pagine.
+**Stato al 20 novembre 2026.** Sul sito le immagini non mancano come file (0 immagini rotte), ma **0 immagini su 146 sono sfondi astratti generati** (gradiente sfocato), non foto vere; **13** foto vere sono troppo piccole; **116** sono foto vere inserite ma non del luogo (sezione 3); le altre 17 sono foto reali buone (sezione 4). La tabella è ordinata per impressioni su Google (Search Console, 5 ago – 4 nov 2026): parti dalle prime righe, perché una stessa foto copre più pagine.
 
 ## Come inserirle
 
@@ -32,7 +32,6 @@ Sono foto vere ma sotto i 900 px di larghezza: sul sito vengono ingrandite a 120
 
 | # | File | Cartella | Impr. 3 mesi | Dove compare | Foto da inserire | Cerca su Commons |
 |---|---|---|---|---|---|---|
-| 1 | `guida-cover-preview.jpg` | `src/assets/src/assets/placeholder` | 0 | articolo: Presentiamo La Guida CineFood Italia (PDF) | Copertina: Presentiamo La Guida CineFood Italia (PDF) | [cerca](https://commons.wikimedia.org/w/index.php?search=Presentiamo%20La%20Guida%20CineFood%20Italia%20%28PDF%29) |
 
 ## 3. Foto inserite ma non del luogo (da sostituire quando hai quella giusta)
 Sono foto vere, pubblicate per non lasciare lo sfondo astratto, ma non mostrano il posto indicato. Il testo alternativo dice solo cosa si vede. Sulle schede dei locali compare la dicitura "Foto illustrativa".
@@ -168,6 +167,7 @@ Non posso verificare da dove vengano né la licenza: controlla di averne i dirit
 - `hotel-costiera-positano-vero.jpg` (src/assets/placeholder) — articolo: Hotel Costiera: location a Positano, Villa Treville
 - `house-of-gucci-milano.jpg` (src/assets/placeholder) — articolo: House of Gucci: location a Milano e sul Lago di Como
 - `il-mostro-firenze-vero.jpg` (src/assets/placeholder) — articolo: Il Mostro Netflix: location in Toscana
+- `guida-cover-blog.jpg` (src/assets/placeholder) — articolo: Presentiamo La Guida CineFood Italia (PDF)
 - `la-mano-di-dante-venezia-vero.jpg` (src/assets/placeholder) — articolo: La mano di Dante (Netflix): le location vere
 - `lago-di-como-nel-cinema-dove-mangiare.jpg` (src/assets/placeholder) — articolo: Lago di Como nel cinema: location e dove mangiare
 - `letters-to-juliet-verona-toscana.jpg` (src/assets/placeholder) — articolo: Letters to Juliet: location a Verona e in Toscana

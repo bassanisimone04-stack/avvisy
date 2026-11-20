@@ -3,8 +3,8 @@ titolo: "Introducing The CineFood Italia Guide (PDF)"
 descrizione: "We've packed the 51 real CineFood Italia venues into a downloadable PDF guide, with 4 ready-made itineraries and an index by film."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
-immagine: "../../assets/placeholder/guida-cover-preview-en.jpg"
-immagineAlt: "Cover of The CineFood Italia Guide"
+immagine: "../../assets/placeholder/guida-cover-blog.jpg"
+immagineAlt: "An empty director's chair and a checked-tablecloth table with a glass of wine, lit by a film projector"
 tags: ["PDF Guide", "itineraries", "news"]
 faq:
   - domanda: "What's inside The CineFood Italia Guide?"
