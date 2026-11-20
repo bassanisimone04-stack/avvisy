@@ -1,0 +1,25 @@
+name: Deploy CineFood Italia
+
+# Vercel does not deploy commits whose author is not linked to the Vercel account
+# (e.g. commits made by Claude). A Deploy Hook is not subject to that check, so every
+# push to main that touches cinefood-italia/ triggers a production build this way.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cinefood-italia/**"
+      - ".github/workflows/deploy-cinefood.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "Secret VERCEL_DEPLOY_HOOK is not set"; exit 1
+          fi
+          curl --fail --silent --show-error -X POST "$HOOK"
