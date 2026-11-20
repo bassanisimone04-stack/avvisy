@@ -4,7 +4,7 @@ descrizione: "I ristoranti e caffè di Roma diventati celebri col cinema: da La 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-11
 immagine: "../../assets/placeholder/roma-nel-cinema-ristoranti-da-film.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "Vicolo acciottolato di Roma con i tavolini all'aperto di una trattoria"
 tags: ["Roma", "ristoranti", "cinema", "itinerari", "cineturismo"]
 faq:
   - domanda: "Quali ristoranti di Roma sono comparsi nei film?"

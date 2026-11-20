@@ -4,7 +4,7 @@ descrizione: "The Milan of Lady Gaga and Adam Driver in House of Gucci, from the
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/house-of-gucci-milano.jpg"
-immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
+immagineAlt: "A street in central Milan leading to the Sforza Castle at sunset"
 tags: ["House of Gucci", "Milan", "fashion", "film tourism"]
 faq:
   - domanda: "Where was House of Gucci filmed?"

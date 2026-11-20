@@ -4,7 +4,7 @@ descrizione: "La serie Netflix Ripley, Emmy 2024, è girata ad Atrani sulla Cost
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-06
 immagine: "../../assets/placeholder/ripley-netflix-atrani-costiera-amalfitana.jpg"
-immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
+immagineAlt: "Strada sotto una falesia con archi e case colorate in un borgo della Costiera Amalfitana"
 tags: ["Ripley", "Netflix", "Costiera Amalfitana", "Atrani", "cineturismo"]
 faq:
   - domanda: "Dove è stata girata la serie Ripley di Netflix?"

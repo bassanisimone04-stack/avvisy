@@ -4,7 +4,7 @@ descrizione: "Where Succession was filmed in Tuscany: Villa La Foce, Villa Cetin
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-09
 immagine: "../../assets/placeholder/succession-toscana-villa-la-foce.jpg"
-immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
+immagineAlt: "A farmhouse ringed by cypress trees among Tuscan hills at dawn, with olive groves in the foreground"
 tags: ["Succession", "Tuscany", "Val d'Orcia", "HBO", "film tourism"]
 faq:
   - domanda: "Where was Succession filmed in Tuscany?"

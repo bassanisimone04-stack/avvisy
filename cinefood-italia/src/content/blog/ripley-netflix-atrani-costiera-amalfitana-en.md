@@ -4,7 +4,7 @@ descrizione: "Where was Netflix's Ripley filmed? Atrani on the Amalfi Coast, Cap
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-06
 immagine: "../../assets/placeholder/ripley-netflix-atrani-costiera-amalfitana.jpg"
-immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
+immagineAlt: "A road beneath a cliff with arches and colourful houses in an Amalfi Coast village"
 tags: ["Ripley", "Netflix", "Amalfi Coast", "Atrani", "film tourism"]
 faq:
   - domanda: "Where was Netflix's Ripley filmed?"

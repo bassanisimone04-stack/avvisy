@@ -4,7 +4,7 @@ descrizione: "The Rome restaurants and cafés made famous by cinema: from The Gr
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-11
 immagine: "../../assets/placeholder/roma-nel-cinema-ristoranti-da-film.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "A cobbled alley in Rome with the outdoor tables of a trattoria"
 tags: ["Rome", "restaurants", "cinema", "itineraries", "film tourism"]
 faq:
   - domanda: "Which Rome restaurants have appeared in films?"
