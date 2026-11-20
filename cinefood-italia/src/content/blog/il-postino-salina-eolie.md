@@ -55,7 +55,7 @@ Mario e il poeta, mentre a nord le balate di Pollara e l'arco naturale di **Punt
 Perciato** completano il paesaggio. Una nota importante: **la spiaggia del film non
 esiste più com'era**. Per l'erosione restano solo piccole zone emerse, raggiungibili a
 nuoto o in barca. Quindi vai per il panorama e per l'atmosfera, non per sdraiarti sul
-ciottolato di Mario: (da verificare: le condizioni di accesso prima di scendere).
+ciottolato di Mario, e controlla le condizioni di accesso prima di scendere.
 
 ### E la casa di Mario?
 
@@ -64,12 +64,39 @@ del padre pescatore; secondo un'altra la «casa del Postino» è un'abitazione i
 Punta**, in stile eoliano, con la facciata rosata che guarda il mare di Pollara (italia.it
 ha una scheda «Casa di Mario»). Non ci sbilanciamo: se vai, chiedi a Malfa.
 
+## Salina e Procida: come dividere il film
+
+Il film è ambientato e in gran parte girato a **Procida**, nel golfo di Napoli, con
+alcune scene aggiuntive a **Salina**. A Procida ci sono il porticciolo di **Marina
+Corricella**, dove la piazzetta è oggi intitolata a Massimo Troisi, e la spiaggia di
+**Pozzovecchio**, detta «del Postino», usata per le scene degli innamorati (scheda FAI).
+A Salina c'è invece **Pollara**, con la casa dove vive Neruda e il mare che si vede dalla
+casa di Mario. Per questo, se vuoi seguire il film, conviene vedere **entrambe le isole**:
+a Salina il paesaggio e le conversazioni con Neruda, a Procida il borgo e la vita
+quotidiana di Mario.
+
+## Visitare Pollara con rispetto
+
+La casa di Neruda a Pollara è un'**abitazione privata**. Secondo una notizia di cronaca,
+il proprietario della casa con la facciata rosata ha rifiutato che venisse usata per
+commemorazioni del film. Quindi guarda da lontano e non entrare nella proprietà. Il
+modo migliore di vivere Pollara è camminare lungo la baia e godersi il panorama dall'alto,
+senza cercare di avvicinarsi alle case.
+
+## Un itinerario di due isole
+
+1. **Salina**: Pollara per il panorama, Malfa per una sosta, poi la granita a Lingua.
+2. **Procida**: Marina Corricella e la **[Locanda del Postino](/locale/la-locanda-del-postino-procida)**,
+   un locale legato al film, non una location delle riprese (leggi la nostra
+   *[guida a Procida](/blog/il-postino-procida)*).
+3. Vuoi vedere altri luoghi girati in Sicilia? Leggi **[Tucci in Sicilia](/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu)**.
+
 ## Come arrivare a Salina
 
 Da **Milazzo** gli aliscafi Liberty Lines fanno il diretto in circa 1 ora e 35 minuti
 (1 ora e 50 con scali); il traghetto Siremar impiega circa 3 ore e 20, ed è l'unico che
 imbarca le auto. L'approdo più frequente è **Santa Marina Salina**. Orari e prezzi cambiano
-con la stagione: (da verificare: su Liberty Lines e Siremar).
+con la stagione: controllali sui siti di Liberty Lines e Siremar.
 
 ## Dove mangiare a Salina
 
@@ -79,9 +106,9 @@ con la stagione: (da verificare: su Liberty Lines e Siremar).
 - **Da Alfredo**, **Via Marina Garibaldi 2**, **Lingua**: il locale della **granita** di
   Salina (gusti dalla mandorla al gelso) e del **pane cunzato**. Le porzioni sono
   abbondanti e nelle ore di punta si aspetta; per alcuni recensori il servizio è lento.
-  Telefono 090 984 3075 secondo Indagare (da verificare) ([mappa](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
+  ([mappa](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
 - A **Malfa**, Indagare consiglia la terrazza ristorante dell'**Hotel Signum**:
-  (da verificare: prenotazione e apertura).
+  verifica prenotazione e apertura prima di andare.
 
 Prodotti da cercare: **capperi di Salina**, **malvasia** e pesce fresco.
 
@@ -90,3 +117,5 @@ Prodotti da cercare: **capperi di Salina**, **malvasia** e pesce fresco.
 - italia.it, *Procida, Salina e il tour di Troisi*
 - Italy for Movies, scheda *Il Postino*
 - Balarm; The Wom; SiViaggia; Indagare
+
+<!-- Fonti aggiunte 2026-11-20 (via ricerca; siti non leggibili direttamente): Wikipedia (film ambientato e girato a Procida, alcune scene a Salina; Corricella), fondoambiente.it (spiaggia di Pozzovecchio detta del Postino, piazzetta Massimo Troisi), italia.it (scheda Casa di Mario a Pollara; casa privata), enjoysicilia.it. Il rifiuto del proprietario di usare la casa per commemorazioni viene da un articolo di cronaca (NZ Herald): data non verificata. Telefono di Da Alfredo rimosso (non verificato). -->

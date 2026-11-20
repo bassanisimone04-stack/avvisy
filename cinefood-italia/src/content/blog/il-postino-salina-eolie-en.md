@@ -53,8 +53,7 @@ The rock you see from the beach is the **Faraglione**, the backdrop of the dialo
 Mario and the poet, while to the north Pollara's balate and the natural arch of **Punta
 Perciato** complete the landscape. An important note: **the film's beach no longer exists as
 it was**. Because of erosion only small emerged areas remain, reachable by swimming or boat.
-So go for the view and the atmosphere, not to lie on Mario's pebbles: (to be verified: access
-conditions before going down).
+So go for the view and the atmosphere, not to lie on Mario's pebbles, and check access conditions before you go down.
 
 ### And Mario's house?
 
@@ -63,12 +62,36 @@ fisherman father; according to another the «Postman's house» is a house in **c
 Punta**, Aeolian in style, with a pinkish facade overlooking Pollara's sea (italia.it has a
 «Mario's house» page). We don't take sides: if you go, ask in Malfa.
 
+## Salina and Procida: how to split the film
+
+The film is set and mostly shot on **Procida**, in the Gulf of Naples, with some
+additional scenes on **Salina**. Procida has the harbour of **Marina Corricella**, where
+the little square is now named after Massimo Troisi, and **Pozzovecchio** beach, known as
+"the Postman's beach", used for the lovers' scenes (FAI listing). Salina has **Pollara**,
+with the house where Neruda lives and the sea seen from Mario's house. So to follow the
+film it's best to see **both islands**: Salina for the landscape and the conversations with
+Neruda, Procida for the village and Mario's everyday life.
+
+## Visiting Pollara respectfully
+
+Neruda's house in Pollara is a **private home**. According to a news report, the owner of
+the pink-fronted house has refused to let it be used for film commemorations. So look from a
+distance and don't enter the property. The best way to enjoy Pollara is to walk along the
+bay and take in the view from above, without trying to get close to the houses.
+
+## A two-island itinerary
+
+1. **Salina**: Pollara for the view, Malfa for a stop, then granita at Lingua.
+2. **Procida**: Marina Corricella and the **[Locanda del Postino](/en/locale/la-locanda-del-postino-procida)**,
+   a venue linked to the film, not a filming location (read our *[Procida guide](/en/blog/il-postino-procida)*).
+3. Want more places shot in Sicily? Read **[Tucci in Sicily](/en/blog/stanley-tucci-sicilia-i-pupi-me-cumpari-turiddu)**.
+
 ## How to get to Salina
 
 From **Milazzo** Liberty Lines hydrofoils take about 1 hour 35 minutes direct (1 hour 50 with
 stops); the Siremar ferry takes about 3 hours 20 and is the only one that carries cars.
 The most frequent landing is **Santa Marina Salina**. Times and prices change with the
-season: (to be verified: on Liberty Lines and Siremar).
+season: check them on the Liberty Lines and Siremar sites.
 
 ## Where to eat in Salina
 
@@ -77,10 +100,10 @@ season: (to be verified: on Liberty Lines and Siremar).
   and malvasia. Not a film location ([map](https://www.google.com/maps/search/?api=1&query=Trattoria+Cucinotta+Santa+Marina+Salina)).
 - **Da Alfredo**, **2 Via Marina Garibaldi**, **Lingua**: the home of Salina's **granita**
   (flavours from almond to mulberry) and **pane cunzato**. Portions are large and at peak
-  times you wait; for some reviewers service is slow. Phone 090 984 3075 per Indagare
-  (to be verified) ([map](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
+  times you wait; for some reviewers service is slow. 
+  ([map](https://www.google.com/maps/search/?api=1&query=Da+Alfredo+Lingua+Salina)).
 - In **Malfa**, Indagare recommends the restaurant terrace at **Hotel Signum**:
-  (to be verified: booking and opening).
+  check booking and opening before you go.
 
 Products to look for: **Salina capers**, **malvasia** and fresh fish.
 
