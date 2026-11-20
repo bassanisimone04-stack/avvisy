@@ -121,6 +121,7 @@ export function localBusinessJsonLd(b: Business) {
     ...(b.category === "pizzeria" ? { servesCuisine: "Pizza" } : {}),
     telephone: b.phone,
     url,
+    ...(b.photoUrl ? { image: `${SITE_URL}${b.photoUrl}` } : {}),
     ...(b.website ? { sameAs: [b.website] } : {}),
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${b.address}, ${b.city}`)}`,
     address: {

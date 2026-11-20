@@ -79,7 +79,7 @@ export default function BusinessDetailContent({ locale, slug }: { locale: Locale
           {/* Foto */}
           <div className="mt-6">
             {business.photoUrl ? (
-              <CoverPhoto photoUrl={business.photoUrl} seed={business.gallerySeeds[0]} variant={business.category} className="rounded-2xl" ratio="aspect-[16/10]" label={business.name} priority />
+              <CoverPhoto photoUrl={business.photoUrl} objectPosition={business.photoPosition} seed={business.gallerySeeds[0]} variant={business.category} className="rounded-2xl" ratio="aspect-[16/10]" label={business.name} priority />
             ) : (
               <PlaceholderImage seed={business.gallerySeeds[0]} variant={business.category} className="rounded-2xl" ratio="aspect-[16/10]" label={business.name} />
             )}

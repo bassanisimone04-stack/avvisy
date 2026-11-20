@@ -25,6 +25,7 @@ export default function BusinessCard({ business, locale = "it" }: { business: Bu
         {business.photoUrl ? (
           <CoverPhoto
             photoUrl={business.photoUrl}
+            objectPosition={business.photoPosition}
             seed={business.gallerySeeds[0]}
             variant={business.category}
             label={photoAlt}
