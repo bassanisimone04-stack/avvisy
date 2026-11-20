@@ -4,7 +4,7 @@ descrizione: "Real set, film-related or themed: how to read the venue badges and
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/set-reale-o-a-tema.jpg"
-immagineAlt: "A film crew at work on set, among lights and camera rigs"
+immagineAlt: "A cobbled lane in a mountain town with a small church and autumn larch woods"
 tags: ["guide", "tips", "cinema"]
 faq:
   - domanda: "What is the difference between a real set and a themed venue?"

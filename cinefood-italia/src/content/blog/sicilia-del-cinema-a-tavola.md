@@ -4,7 +4,7 @@ descrizione: "Da Montalbano a Il Padrino: i luoghi siciliani del cinema e cosa m
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-10
 immagine: "../../assets/placeholder/sicilia-del-cinema-a-tavola.jpg"
-immagineAlt: "Il Teatro Politeama Garibaldi a Palermo"
+immagineAlt: "Piatto di fusilli al pomodoro con formaggio grattugiato e prezzemolo su un tagliere di legno"
 tags: ["Sicilia", "Montalbano", "itinerari", "cinema"]
 faq:
   - domanda: "Quali film sono stati girati in Sicilia?"

@@ -4,7 +4,7 @@ descrizione: "Set reale, legato al film o a tema: come leggere i badge dei local
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-12
 immagine: "../../assets/placeholder/set-reale-o-a-tema.jpg"
-immagineAlt: "Troupe cinematografica al lavoro su un set, tra luci e cavalletti"
+immagineAlt: "Vicolo acciottolato di un paese di montagna con chiesetta e boschi autunnali di larici"
 tags: ["guida", "consigli", "cinema"]
 faq:
   - domanda: "Che differenza c'è tra set reale e locale a tema?"

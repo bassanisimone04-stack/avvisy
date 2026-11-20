@@ -4,7 +4,7 @@ descrizione: "Michael Mann's Ferrari is set in Modena, capital of motors and tas
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/ferrari-film-modena-cucina.jpg"
-immagineAlt: "An elegant restaurant dining room, a cinematic atmosphere"
+immagineAlt: "A restaurant room with brick arches, timber beams and a hanging Italian flag"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "where to eat", "film tourism"]
 faq:
   - domanda: "Where is the film Ferrari set?"

@@ -4,7 +4,7 @@ descrizione: "Dove ha mangiato Stanley Tucci in Sardegna in Searching for Italy:
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-sardegna-mabrouk-pomata-fradis-minoris.jpg"
-immagineAlt: "Sfondo a gradiente blu e sabbia che richiama la costa sarda"
+immagineAlt: "Baia con spiaggia, acqua turchese, case color terracotta e un faro bianco sugli scogli, in Sardegna"
 tags: ["Stanley Tucci", "Sardegna", "Alghero", "Cagliari", "cucina italiana"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Sardegna?"

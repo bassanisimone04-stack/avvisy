@@ -4,7 +4,7 @@ descrizione: "Il film Ferrari di Michael Mann è ambientato a Modena: motori e c
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-26
 immagine: "../../assets/placeholder/ferrari-film-modena-cucina.jpg"
-immagineAlt: "Sala di un ristorante elegante, atmosfera da film"
+immagineAlt: "Sala di un ristorante con archi in mattoni, travi di legno e una bandiera italiana appesa"
 tags: ["Ferrari", "Modena", "Emilia-Romagna", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove è ambientato il film Ferrari?"

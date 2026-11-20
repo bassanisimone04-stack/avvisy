@@ -4,7 +4,7 @@ descrizione: "Where Stanley Tucci ate in Sardinia in Searching for Italy: Mabrou
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-09-30
 immagine: "../../assets/placeholder/stanley-tucci-sardegna-mabrouk-pomata-fradis-minoris.jpg"
-immagineAlt: "Abstract blue and sand gradient evoking the Sardinian coast"
+immagineAlt: "A bay with a beach, turquoise water, terracotta-coloured houses and a white lighthouse on the rocks, in Sardinia"
 tags: ["Stanley Tucci", "Sardinia", "Alghero", "Cagliari", "Italian food"]
 faq:
   - domanda: "Where did Stanley Tucci eat in Sardinia?"

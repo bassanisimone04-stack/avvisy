@@ -4,7 +4,7 @@ descrizione: "La Roma di To Rome with Love, la commedia di Woody Allen: i luoghi
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/to-rome-with-love-roma.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "Tavolini con tovaglie a quadretti sotto un glicine fiorito davanti a un ristorante nel centro di Roma"
 tags: ["To Rome with Love", "Roma", "Woody Allen", "cineturismo"]
 faq:
   - domanda: "Dove è ambientato To Rome with Love?"

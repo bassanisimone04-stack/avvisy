@@ -4,7 +4,7 @@ descrizione: "The Rome of To Rome with Love, Woody Allen's comedy: the Roman pla
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-13
 immagine: "../../assets/placeholder/to-rome-with-love-roma.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "Tables with checked tablecloths under a flowering wisteria in front of a restaurant in central Rome"
 tags: ["To Rome with Love", "Rome", "Woody Allen", "film tourism"]
 faq:
   - domanda: "Where is To Rome with Love set?"
