@@ -4,7 +4,7 @@ descrizione: "From The White Lotus to Il Re, from Ripley to Rocco Schiavone: the
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-08-25
 immagine: "../../assets/placeholder/serie-tv-girate-italia-location-vere.jpg"
-immagineAlt: "Santa Severa Castle by the sea, in Lazio"
+immagineAlt: "Panorama of the Gulf of Naples seen from the hill, among colourful buildings and pine trees"
 tags: ["TV shows", "filming locations", "Netflix", "HBO", "Sky"]
 faq:
   - domanda: "Which famous TV shows were filmed in Italy?"
