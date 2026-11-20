@@ -4,7 +4,7 @@ descrizione: "Star Wars, 007 and House of Gucci: Lake Como is a movie star. Vill
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/lago-di-como-nel-cinema-dove-mangiare.jpg"
-immagineAlt: "A lakeside town in Northern Italy, between mountains and water reflections"
+immagineAlt: "Bellagio on Lake Como: colourful lakefront houses, a bell tower and mountains behind"
 tags: ["Lake Como", "Star Wars", "007", "itineraries", "film tourism"]
 faq:
   - domanda: "Which films were shot on Lake Como?"

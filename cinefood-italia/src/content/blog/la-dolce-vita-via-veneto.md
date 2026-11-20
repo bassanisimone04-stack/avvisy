@@ -4,7 +4,7 @@ descrizione: "Dove è ambientata La Dolce Vita di Fellini: Via Veneto, i caffè 
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-05
 immagine: "../../assets/placeholder/la-dolce-vita-via-veneto.jpg"
-immagineAlt: "Skyline di Roma al tramonto, tra cupole e palazzi storici"
+immagineAlt: "La Fontana di Trevi a Roma, la fontana della scena più famosa de La dolce vita"
 tags: ["Roma", "Fellini", "caffè", "cinema"]
 faq:
   - domanda: "Dov'è ambientata La Dolce Vita?"

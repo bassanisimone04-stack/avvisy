@@ -4,7 +4,7 @@ descrizione: "Pixar's Luca is set in Liguria: colourful villages and sea. What t
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-27
 immagine: "../../assets/placeholder/luca-pixar-liguria-pesto.jpg"
-immagineAlt: "A stone alley in an Italian hilltop village, with potted plants on the steps"
+immagineAlt: "Manarola in the Cinque Terre: colourful houses clinging to the cliff above the sea"
 tags: ["Luca", "Pixar", "Liguria", "where to eat", "film tourism"]
 faq:
   - domanda: "Where is Pixar's Luca set?"

@@ -4,7 +4,7 @@ descrizione: "I luoghi di Benvenuti al Sud a Castellabate: la piazzetta del film
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-20
 immagine: "../../assets/placeholder/benvenuti-al-sud-castellabate.jpg"
-immagineAlt: "Positano e la Costiera Amalfitana illuminate al tramonto"
+immagineAlt: "Porticciolo con barche ormeggiate e case colorate sulla collina"
 tags: ["Benvenuti al Sud", "Castellabate", "Cilento", "dove mangiare", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato Benvenuti al Sud?"

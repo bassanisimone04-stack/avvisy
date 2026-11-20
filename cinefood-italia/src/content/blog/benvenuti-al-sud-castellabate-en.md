@@ -4,7 +4,7 @@ descrizione: "Where was Welcome to the South filmed? Castellabate's little squar
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-20
 immagine: "../../assets/placeholder/benvenuti-al-sud-castellabate.jpg"
-immagineAlt: "Positano and the Amalfi Coast lit up at dusk"
+immagineAlt: "A small harbour with moored boats and colourful houses on the hillside"
 tags: ["Welcome to the South", "Castellabate", "Cilento", "where to eat", "film tourism"]
 faq:
   - domanda: "Where was Welcome to the South filmed?"

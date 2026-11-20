@@ -5,7 +5,7 @@ autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
 dataAggiornamento: 2026-10-13
 immagine: "../../assets/placeholder/white-lotus-taormina-vero.jpg"
-immagineAlt: "Vista aerea del San Domenico Palace a Taormina, location reale di The White Lotus"
+immagineAlt: "Il Teatro Antico di Taormina, in Sicilia, con le gradinate in mattoni e il mare sullo sfondo"
 tags: ["The White Lotus", "Sicilia", "Taormina", "HBO", "cineturismo"]
 faq:
   - domanda: "Dove è stato girato White Lotus in Sicilia?"

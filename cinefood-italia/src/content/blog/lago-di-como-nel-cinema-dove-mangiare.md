@@ -4,7 +4,7 @@ descrizione: "Star Wars, 007 e House of Gucci: il Lago di Como è una star del c
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-25
 immagine: "../../assets/placeholder/lago-di-como-nel-cinema-dove-mangiare.jpg"
-immagineAlt: "Borgo sul lago del Nord Italia, tra montagne e riflessi sull'acqua"
+immagineAlt: "Bellagio sul Lago di Como: case colorate sul lungolago, campanile e montagne sullo sfondo"
 tags: ["Lago di Como", "Star Wars", "007", "itinerari", "cineturismo"]
 faq:
   - domanda: "Quali film sono stati girati sul Lago di Como?"

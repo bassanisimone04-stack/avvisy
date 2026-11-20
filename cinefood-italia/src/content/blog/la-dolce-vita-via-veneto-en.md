@@ -4,7 +4,7 @@ descrizione: "La Dolce Vita locations in Rome: Via Veneto, its historic cafés a
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-07-05
 immagine: "../../assets/placeholder/la-dolce-vita-via-veneto.jpg"
-immagineAlt: "Rome's skyline at dusk, among domes and historic palaces"
+immagineAlt: "The Trevi Fountain in Rome, the fountain of the most famous scene in La dolce vita"
 tags: ["Rome", "Fellini", "cafés", "cinema"]
 faq:
   - domanda: "Where is La Dolce Vita set?"
