@@ -123,7 +123,7 @@ const desc = tLocaleDesc(locale, lang);
       <h2 class="font-display text-2xl font-bold">{t("loc.dove")}</h2>
       <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{d.indirizzo} — {cittaEn}, {d.regione}</p>
       <div class="mt-4">
-        <Map markers={[{ lat: d.coordinate.lat, lng: d.coordinate.lng, nome: d.nome, citta: d.citta, tipo: d.tipo }]} height="380px" zoom={15} lang={lang} />
+        <Map markers={[{ lat: d.coordinate.lat, lng: d.coordinate.lng, nome: d.nome, citta: d.citta, tipo: d.tipo, categoria: d.categoria, chiuso: d.stato !== "aperto" }]} height="380px" zoom={15} lang={lang} />
       </div>
     </section>
 

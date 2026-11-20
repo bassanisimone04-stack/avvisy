@@ -180,7 +180,7 @@ const jsonLd = [
       <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{d.indirizzo} — {d.citta}, {d.regione}</p>
       <div class="mt-4">
         <Map
-          markers={[{ lat: d.coordinate.lat, lng: d.coordinate.lng, nome: d.nome, citta: d.citta, tipo: d.tipo }]}
+          markers={[{ lat: d.coordinate.lat, lng: d.coordinate.lng, nome: d.nome, citta: d.citta, tipo: d.tipo, categoria: d.categoria, chiuso: d.stato !== "aperto" }]}
           height="380px"
           zoom={15}
         />

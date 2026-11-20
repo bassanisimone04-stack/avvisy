@@ -13,6 +13,9 @@ export interface MapMarker {
   citta?: string;
   tipo?: string;
   url?: string;
+  /** "set-reale" | "legato-al-film" | "a-tema-cinema" (sceglie l'icona del pin). */
+  categoria?: string;
+  chiuso?: boolean;
 }
 
 import { useT, type Lang } from "../i18n/ui";
@@ -32,7 +35,7 @@ const t = useT(lang);
 
 <div
   id="mappa"
-  class="z-0 w-full overflow-hidden rounded-2xl border border-ink-100"
+  class="cf-map z-0 w-full overflow-hidden rounded-2xl border border-ink-100"
   style={`height:${height}`}
   data-zoom={zoom}
   data-scopri={`${t("card.scopri")} →`}
@@ -45,57 +48,45 @@ const t = useT(lang);
 <script>
   import L from "leaflet";
   import "leaflet/dist/leaflet.css";
-
-  // Corregge il percorso delle icone dei segnaposto quando si usa un bundler.
-  import iconUrl from "leaflet/dist/images/marker-icon.png";
-  import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
-  import shadowUrl from "leaflet/dist/images/marker-shadow.png";
-
-  // A seconda del bundler, l'import di un'immagine può restituire una
-  // stringa (URL) oppure un oggetto { src }. Gestiamo entrambi i casi.
-  const toUrl = (m: string | { src: string }) =>
-    typeof m === "string" ? m : m.src;
-
-  L.Icon.Default.mergeOptions({
-    iconUrl: toUrl(iconUrl),
-    iconRetinaUrl: toUrl(iconRetinaUrl),
-    shadowUrl: toUrl(shadowUrl),
-  });
+  import "../styles/mappa-tema.css";
+  import { caricaBase, disegnaBase, aggiungiTile, pinIcon } from "../lib/mappa-tema";
 
   const el = document.getElementById("mappa");
   const datiEl = document.getElementById("mappa-dati");
 
   if (el && datiEl) {
     type Marker = {
-      lat: number;
-      lng: number;
-      nome: string;
-      citta?: string;
-      tipo?: string;
-      url?: string;
+      lat: number; lng: number; nome: string; citta?: string; tipo?: string; url?: string;
+      categoria?: string; chiuso?: boolean;
     };
+    const esc = (v: string) => v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     const markers: Marker[] = JSON.parse(datiEl.textContent || "[]");
     const zoom = Number(el.dataset.zoom) || 6;
     const scopri = el.dataset.scopri || "Scopri di più →";
 
-    // Centro predefinito: Italia.
-    const map = L.map(el).setView([41.9, 12.5], zoom);
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 19,
-    }).addTo(map);
+    // Stesso tema della mappa principale. Il dettaglio stradale è quello che serve da vicino.
+    const map = L.map(el, { preferCanvas: true, minZoom: 5, maxZoom: 18, scrollWheelZoom: false }).setView([41.9, 12.5], zoom);
+    aggiungiTile(L, map);
+    // Il file dei confini (sfondo da zoom basso) si scarica solo se qualcuno allontana la mappa.
+    let baseCaricata = false;
+    const caricaSfondo = () => {
+      el.classList.toggle("cf-vicino", map.getZoom() >= 9);
+      if (baseCaricata || map.getZoom() >= 9) return;
+      baseCaricata = true;
+      caricaBase().then((b) => disegnaBase(L, map, b, false)).catch(() => { baseCaricata = false; });
+    };
+    map.on("zoomend", caricaSfondo);
+    caricaSfondo();
+    map.on("click", () => map.scrollWheelZoom.enable()); // la rotella zooma solo dopo un clic (non blocca lo scroll della pagina)
 
     const gruppo = L.featureGroup();
     for (const m of markers) {
-      const popup = `
-        <strong>${m.nome}</strong>
-        ${m.citta ? `<br/><span>${m.citta}</span>` : ""}
-        ${m.tipo ? `<br/><span style="text-transform:capitalize">${m.tipo}</span>` : ""}
-        ${m.url ? `<br/><a href="${m.url}">${scopri}</a>` : ""}
-      `;
-      L.marker([m.lat, m.lng]).bindPopup(popup).addTo(gruppo);
+      const popup = `<div class="cf-card">
+        <h3>${esc(m.nome)}</h3>
+        ${m.citta || m.tipo ? `<div class="meta">${esc([m.citta, m.tipo].filter(Boolean).join(" · "))}</div>` : ""}
+        ${m.url ? `<a class="go" href="${m.url}">${esc(scopri)}</a>` : ""}</div>`;
+      L.marker([m.lat, m.lng], { icon: pinIcon(L, m.categoria || "set-reale", !!m.chiuso), title: m.nome, alt: m.nome })
+        .bindPopup(popup, { className: "cf-popup", maxWidth: 280 }).addTo(gruppo);
     }
     gruppo.addTo(map);
 
@@ -105,5 +96,6 @@ const t = useT(lang);
     } else if (markers.length === 1) {
       map.setView([markers[0].lat, markers[0].lng], Math.max(zoom, 14));
     }
+    caricaSfondo();
   }
 </script>

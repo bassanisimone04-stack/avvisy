@@ -9,7 +9,8 @@ import MappaInfo from "../../components/MappaInfo.astro";
 import { ordinaLocali, tipoLabel } from "../../lib/utils";
 import { faqPageJsonLd } from "../../lib/schema-org";
 import { faqMappa, statistiche, tRegione } from "../../lib/mappa-content";
-import { tFilmTitolo, tLocaleDesc } from "../../i18n/content-en";
+import { getImage } from "astro:assets";
+import { tFilmTitolo, tFilmAlt, tLocaleDesc } from "../../i18n/content-en";
 import { useT, path } from "../../i18n/ui";
 
 const lang = "en" as const;
@@ -17,14 +18,23 @@ const t = useT(lang);
 const locali = ordinaLocali(await getCollection("restaurants"));
 const films = new Map((await getCollection("films")).map((f) => [f.id, f]));
 const breve = (s: string) => (s.length > 140 ? s.slice(0, 137).replace(/\s+\S*$/, "") + "…" : s);
-const markers: ExplorerMarker[] = locali.map((l) => ({
+// Miniatura della copertina (64×96, 2x) generata in fase di build, una per film.
+const posters = new Map<string, string>();
+for (const f of films.values()) posters.set(f.id, (await getImage({ src: f.data.locandina, width: 128, height: 192, format: "webp" })).src);
+const markers: ExplorerMarker[] = locali.map((l) => {
+  const f0 = films.get(l.data.film[0]?.film.id ?? "");
+  return {
   id: l.id, lat: l.data.coordinate.lat, lng: l.data.coordinate.lng,
   nome: l.data.nome, citta: l.data.citta, regione: l.data.regione, regioneLabel: tRegione(l.data.regione, lang),
   tipo: tipoLabel(l.data.tipo, lang), categoria: l.data.categoria, chiuso: l.data.stato !== "aperto",
   film: l.data.film.map((f) => films.get(f.film.id)).filter(Boolean).map((f) => tFilmTitolo(f!, lang)),
   desc: breve(tLocaleDesc(l, lang)),
   url: path(`/locale/${l.id}`, lang),
-}));
+  poster: f0 ? posters.get(f0.id) : undefined,
+  posterAlt: f0 ? tFilmAlt(f0, lang) : undefined,
+  posterTipo: f0?.data.locandinaTipo,
+  };
+});
 const regioni = [...new Set(locali.map((l) => l.data.regione))].sort((a, b) => a.localeCompare(b, "it"));
 const jsonLd = faqPageJsonLd(faqMappa(lang, statistiche(locali)));
 ---
