@@ -5,7 +5,8 @@ regista: "Jesse Armstrong"
 serieTv: true
 sinossi: "La serie HBO premio Emmy sulla famiglia Roy. Il matrimonio nel finale della terza stagione è girato in Toscana, tra Villa La Foce e Villa Cetinale, nel Val d'Orcia."
 locandina: "../../assets/films/succession.jpg"
-locandinaAlt: "Locandina in stile manifesto — Succession (2018)"
+locandinaAlt: "Un viale di cipressi con un casale in fondo, tra le colline toscane"
+locandinaTipo: "illustrativa"
 citta: ["Pienza"]
 faq:
   - domanda: "Dove è stata girata Succession in Toscana?"

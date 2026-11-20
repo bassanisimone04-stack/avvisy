@@ -5,7 +5,8 @@ regista: "Carlo Verdone"
 serieTv: false
 sinossi: "Commedia in tre episodi sui disastri dei viaggi di nozze. Nel primo, Ivano (Carlo Verdone) e Jessica (Claudia Gerini) celebrano un matrimonio 'stonato' tra Roma e la Sardegna, prima che il viaggio si trasformi in una serie di equivoci."
 locandina: "../../assets/films/viaggi-di-nozze.jpg"
-locandinaAlt: "Locandina in stile manifesto — Viaggi di nozze (1995)"
+locandinaAlt: "Villa storica con statue e vasi di agrumi su un balcone di pietra, sotto un cielo azzurro"
+locandinaTipo: "illustrativa"
 citta: ["Roma"]
 faq:
   - domanda: "Dove si sposano Ivano e Jessica in Viaggi di nozze?"

@@ -5,7 +5,8 @@ regista: "Carlo Lucarelli e Giampiero Rigosi (creatori)"
 serieTv: true
 sinossi: "Serie noir Rai 2 in tre stagioni (2017-2023), ambientata a Trieste. Il commissario Leonardo Cagliostro (Lino Guanciale), rimasto in una dimensione sospesa dopo essere stato ucciso, indaga sul proprio omicidio insieme al giudice Anna Mayer (Gabriella Pession)."
 locandina: "../../assets/films/la-porta-rossa.jpg"
-locandinaAlt: "Locandina in stile manifesto — La porta rossa"
+locandinaAlt: "Il Canal Grande di Trieste al tramonto, con le barche ormeggiate"
+locandinaTipo: "illustrativa"
 citta: ["Trieste"]
 faq:
   - domanda: "Dove è girata La porta rossa?"

@@ -5,7 +5,8 @@ regista: "Leonardo Pieraccioni"
 serieTv: false
 sinossi: "Commedia del 1995 diretta e interpretata da Leonardo Pieraccioni, tra i primi successi del regista toscano, ambientata a Firenze."
 locandina: "../../assets/films/i-laureati.jpg"
-locandinaAlt: "Locandina in stile manifesto — I laureati (1995)"
+locandinaAlt: "Un vicolo del centro di Firenze con lampioni in ferro battuto"
+locandinaTipo: "illustrativa"
 citta: ["Firenze"]
 faq:
   - domanda: "Dove è stato girato I laureati?"

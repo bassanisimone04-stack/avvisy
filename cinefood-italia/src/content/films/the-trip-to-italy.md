@@ -5,7 +5,8 @@ regista: "Michael Winterbottom"
 serieTv: false
 sinossi: "Steve Coogan e Rob Brydon attraversano l'Italia mangiando in ristoranti veri, dal Piemonte a Capri. Nasce come serie TV della BBC diretta da Michael Winterbottom ed è stato montato anche come film per il cinema."
 locandina: "../../assets/films/the-trip-to-italy.jpg"
-locandinaAlt: "Locandina in stile manifesto — The Trip to Italy (2014)"
+locandinaAlt: "Tavoli apparecchiati in un vicolo della Costiera Amalfitana"
+locandinaTipo: "illustrativa"
 citta: ["Monforte d'Alba", "Camogli", "Massa Lubrense", "Anacapri"]
 faq:
   - domanda: "Quali ristoranti veri compaiono in The Trip to Italy?"

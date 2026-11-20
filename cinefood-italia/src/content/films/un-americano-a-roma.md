@@ -5,7 +5,8 @@ regista: "Steno"
 serieTv: false
 sinossi: "Commedia cult con Alberto Sordi nei panni di Nando Mericoni, il romano ossessionato dall'America. Sua la celebre scena dei 'maccheroni'."
 locandina: "../../assets/films/un-americano-a-roma.jpg"
-locandinaAlt: "Locandina in stile manifesto — Un americano a Roma (1954)"
+locandinaAlt: "Tavoli all'aperto con tovaglie a quadretti sotto l'insegna «Antica Trattoria Romana» in una piazza di Roma"
+locandinaTipo: "illustrativa"
 citta: ["Roma"]
 faq:
   - domanda: "Qual è la scena più famosa di Un americano a Roma?"

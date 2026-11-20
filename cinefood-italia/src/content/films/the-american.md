@@ -5,7 +5,8 @@ regista: "Anton Corbijn"
 serieTv: false
 sinossi: "George Clooney interpreta un armaiolo e sicario che si rifugia in un borgo abruzzese dopo un agguato. Girato tra Sulmona, Castel del Monte, Pacentro, Calascio e Campo Imperatore, il film ha trasformato la provincia dell'Aquila nel suo paesaggio principale."
 locandina: "../../assets/films/the-american.jpg"
-locandinaAlt: "Locandina in stile manifesto — The American (2010)"
+locandinaAlt: "Una piazza con portici e un palazzo rinascimentale in una città dell'Italia centrale"
+locandinaTipo: "illustrativa"
 citta: ["Sulmona"]
 faq:
   - domanda: "Dove è stato girato The American con George Clooney?"

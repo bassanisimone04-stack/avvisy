@@ -6,7 +6,8 @@ regista: "Antoine Fuqua"
 serieTv: false
 sinossi: "Robert McCall (Denzel Washington), ferito gravemente, viene curato in un piccolo borgo della Costiera Amalfitana e finisce per difenderlo dalla camorra. Il paese immaginario di \"Altamonte\" è in realtà Atrani, con riprese anche a Maiori e Minori."
 locandina: "../../assets/films/the-equalizer-3.jpg"
-locandinaAlt: "Locandina in stile manifesto — The Equalizer 3 (2023)"
+locandinaAlt: "Un borgo di case color ocra sul mare, sulla Costiera Amalfitana"
+locandinaTipo: "illustrativa"
 citta: ["Atrani"]
 faq:
   - domanda: "Dove è stato girato The Equalizer 3?"

@@ -5,7 +5,8 @@ regista: "Enrico Oldoini (creatore)"
 serieTv: true
 sinossi: "Fiction Rai 1 in onda dal 2000, tuttora in produzione. Terence Hill è Don Matteo, prete-detective che aiuta i carabinieri di una piccola città a risolvere casi, insieme al Maresciallo Cecchini (Nino Frassica). Girata a Gubbio per le prime otto stagioni (2000-2011), poi a Spoleto."
 locandina: "../../assets/films/don-matteo.jpg"
-locandinaAlt: "Locandina in stile manifesto — Don Matteo"
+locandinaAlt: "Un vicolo medievale con archi in pietra, in un borgo dell'Italia centrale"
+locandinaTipo: "illustrativa"
 citta: ["Gubbio"]
 faq:
   - domanda: "Dove è girato Don Matteo?"

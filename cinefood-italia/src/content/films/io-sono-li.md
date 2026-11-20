@@ -5,7 +5,8 @@ regista: "Andrea Segre"
 serieTv: false
 sinossi: "Film del 2011 di Andrea Segre ambientato a Chioggia, nella laguna veneta, dove la protagonista Shun Li lavora in un'osteria frequentata da pescatori."
 locandina: "../../assets/films/io-sono-li.jpg"
-locandinaAlt: "Locandina in stile manifesto — Io sono Li (2011)"
+locandinaAlt: "Un canale di Venezia con un ponte coperto tra palazzi color terracotta"
+locandinaTipo: "illustrativa"
 citta: ["Chioggia"]
 faq:
   - domanda: "Dove è stato girato Io sono Li?"

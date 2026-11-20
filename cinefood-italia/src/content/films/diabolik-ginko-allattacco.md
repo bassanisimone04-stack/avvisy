@@ -5,7 +5,8 @@ regista: "Manetti Bros."
 serieTv: false
 sinossi: "Secondo capitolo della trilogia italiana su Diabolik, tratta dal celebre fumetto delle sorelle Giussani. L'ispettore Ginko dà la caccia al ladro mascherato nella città immaginaria di Clerville, ricreata tra Bologna, Trieste e Milano."
 locandina: "../../assets/films/diabolik-ginko-allattacco.jpg"
-locandinaAlt: "Locandina in stile manifesto — Diabolik - Ginko all'attacco! (2022)"
+locandinaAlt: "Il Canal Grande di Trieste al tramonto, con le barche ormeggiate"
+locandinaTipo: "illustrativa"
 citta: ["Trieste"]
 faq:
   - domanda: "Dove è stato girato Diabolik - Ginko all'attacco!?"

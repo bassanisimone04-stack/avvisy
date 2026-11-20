@@ -5,7 +5,8 @@ regista: "Anthony Bourdain"
 serieTv: true
 sinossi: "Episodio della serie di viaggio culinario Travel Channel condotta da Anthony Bourdain: lo chef e scrittore esplora Roma tra osterie storiche e la Via Veneto della 'dolce vita', alla ricerca dell'arte italiana di vivere bene."
 locandina: "../../assets/films/no-reservations-rome.jpg"
-locandinaAlt: "Locandina in stile manifesto — Anthony Bourdain: No Reservations, Roma"
+locandinaAlt: "Un vicolo acciottolato di Roma di sera, con tavolini illuminati e una cupola sullo sfondo"
+locandinaTipo: "illustrativa"
 citta: ["Roma"]
 faq:
   - domanda: "Cos'è Anthony Bourdain: No Reservations?"

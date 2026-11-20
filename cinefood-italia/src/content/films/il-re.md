@@ -5,7 +5,8 @@ regista: "Giuseppe Gagliardi"
 serieTv: true
 sinossi: "Serie Sky Original con Luca Zingaretti nei panni di Bruno Testori, direttore di un carcere di frontiera che applica regole tutte sue. Girata tra Roma, Torino, Civitavecchia e Trieste, dove il set ha usato Piazza Oberdan, Ponterosso, il Porto Vecchio e l'Antico Caffè San Marco."
 locandina: "../../assets/films/il-re.jpg"
-locandinaAlt: "Locandina in stile manifesto — Il Re (2022)"
+locandinaAlt: "Il Canal Grande di Trieste al tramonto, con le barche ormeggiate"
+locandinaTipo: "illustrativa"
 citta: ["Trieste"]
 faq:
   - domanda: "Dove è girata la serie Il Re con Luca Zingaretti?"

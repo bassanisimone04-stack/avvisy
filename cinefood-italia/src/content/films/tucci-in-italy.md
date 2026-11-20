@@ -5,7 +5,8 @@ regista: "Stanley Tucci"
 serieTv: true
 sinossi: "Serie di National Geographic in cui Stanley Tucci racconta le regioni italiane attraverso cibo, paesaggio e storia. La prima stagione è del 2025; la seconda, del 2026, comprende una puntata sulle Marche."
 locandina: "../../assets/films/tucci-in-italy.jpg"
-locandinaAlt: "Locandina in stile manifesto — Tucci in Italy"
+locandinaAlt: "Una piazza con un palazzo rinascimentale in una città delle Marche"
+locandinaTipo: "illustrativa"
 citta: ["Senigallia"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci nelle Marche?"

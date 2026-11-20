@@ -5,7 +5,8 @@ regista: "Dino Risi"
 serieTv: false
 sinossi: "Film del 1970 di Dino Risi con Sophia Loren e Marcello Mastroianni, girato a Vicenza e nei dintorni."
 locandina: "../../assets/films/la-moglie-del-prete.jpg"
-locandinaAlt: "Locandina in stile manifesto — La moglie del prete (1970)"
+locandinaAlt: "Un'abbazia con campanile in mattoni tra colline boscose, in Veneto"
+locandinaTipo: "illustrativa"
 citta: ["Grisignano di Zocco"]
 faq:
   - domanda: "Dove è stato girato La moglie del prete?"

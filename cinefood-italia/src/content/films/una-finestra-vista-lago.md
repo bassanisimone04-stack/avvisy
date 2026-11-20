@@ -6,7 +6,8 @@ regista: "Marco Pontecorvo"
 serieTv: true
 sinossi: "Serie di Rai Fiction tratta dai romanzi di Andrea Vitali, in onda su Rai 1 dal 29 settembre 2026. È ambientata nella Bellamo immaginaria, ma è stata girata soprattutto sul lago d'Orta, tra Orta San Giulio e Miasino."
 locandina: "../../assets/films/una-finestra-vista-lago.jpg"
-locandinaAlt: "Locandina in stile manifesto — Una finestra vista lago (2026)"
+locandinaAlt: "Un lago prealpino all'alba con la nebbia e le montagne sullo sfondo"
+locandinaTipo: "illustrativa"
 citta: ["Orta San Giulio"]
 faq:
   - domanda: "Dove è stata girata Una finestra vista lago?"

@@ -5,7 +5,8 @@ regista: "Attica Locke e Tembi Locke (creatrici), Nzingha Stewart (regia)"
 serieTv: true
 sinossi: "Miniserie Netflix in 8 episodi tratta dal memoir autobiografico di Tembi Locke. Amy (Zoe Saldana), studentessa americana a Firenze, si innamora dello chef siciliano Lino: la storia segue la loro vita tra la Toscana e la Sicilia."
 locandina: "../../assets/films/from-scratch.jpg"
-locandinaAlt: "Locandina in stile manifesto — From Scratch (2022)"
+locandinaAlt: "Ponte Vecchio e le case sull'Arno a Firenze"
+locandinaTipo: "illustrativa"
 citta: ["Firenze"]
 faq:
   - domanda: "From Scratch è basata su una storia vera?"

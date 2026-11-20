@@ -6,7 +6,8 @@ regista: "Roberto Benigni"
 serieTv: false
 sinossi: "Il film di Roberto Benigni sulla storia di Guido, che per proteggere il figlio trasforma un campo di concentramento in un gioco. Girato soprattutto ad Arezzo e dintorni; il campo è ricostruito a Papigno, in Umbria."
 locandina: "../../assets/films/la-vita-e-bella.jpg"
-locandinaAlt: "Locandina in stile manifesto — La vita è bella (1997)"
+locandinaAlt: "Una via in mattoni di un borgo medievale toscano"
+locandinaTipo: "illustrativa"
 citta: []
 faq:
   - domanda: "Dove è stato girato La vita è bella?"

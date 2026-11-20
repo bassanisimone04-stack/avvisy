@@ -5,7 +5,8 @@ regista: "Vittorio De Sica"
 serieTv: false
 sinossi: "Film a episodi di Vittorio De Sica tratto dai racconti di Giuseppe Marotta, ambientato nella Napoli del dopoguerra. Nell'episodio della pizzaiola Sophia Loren frigge le pizze in una bottega del rione."
 locandina: "../../assets/films/l-oro-di-napoli.jpg"
-locandinaAlt: "Locandina in stile manifesto — L'oro di Napoli (1954)"
+locandinaAlt: "Piazza del Plebiscito a Napoli con la basilica di San Francesco di Paola"
+locandinaTipo: "illustrativa"
 citta: ["Napoli"]
 faq:
   - domanda: "Dove è stata girata la scena della pizza fritta de L'oro di Napoli?"

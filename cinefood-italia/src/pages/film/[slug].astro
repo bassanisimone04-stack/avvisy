@@ -67,6 +67,9 @@ if (d.faq.length > 0) jsonLd.push(faqPageJsonLd(d.faq));
         {d.locandinaTipo === "luogo" && (
           <figcaption class="mt-2 text-center text-xs text-ink-500 dark:text-ink-400">Foto di un luogo delle riprese</figcaption>
         )}
+        {d.locandinaTipo === "illustrativa" && (
+          <figcaption class="mt-2 text-center text-xs text-ink-500 dark:text-ink-400">Foto illustrativa: non è una locandina né una scena del film</figcaption>
+        )}
       </figure>
       <div>
         <Breadcrumb items={crumbs} />

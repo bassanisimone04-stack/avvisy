@@ -195,6 +195,13 @@ Non forzare push, non saltare i controlli di build prima del merge su
   `src/assets/placeholder/<slug>.jpg`.
 - Mai usare foto stock di piatti/locali non verificate come reali, né
   immagini di scena protette da copyright.
+- Foto fornite dall'editore (cartella `src/assets/placeholder/` e `src/assets/films/`):
+  se non ritraggono il luogo esatto, la scheda locale usa
+  `immagineTipo: "illustrativa"` e la locandina film usa
+  `locandinaTipo: "illustrativa"` (compare la dicitura "Foto illustrativa");
+  l'alt text descrive solo ciò che si vede, senza nominare luoghi non
+  confermati. `locandinaTipo: "luogo"` solo per foto di un luogo
+  davvero legato alle riprese.
 
 ## Tono editoriale
 

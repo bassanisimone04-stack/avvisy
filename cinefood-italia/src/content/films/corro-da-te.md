@@ -5,7 +5,8 @@ regista: "Riccardo Milani"
 serieTv: false
 sinossi: "Commedia con Pierfrancesco Favino e Miriam Leone, girata a Torino nel 2020. Gianni, seduttore seriale, finge di essere in sedia a rotelle per conquistare Chiara, musicista paraplegica — e finisce per doversi guardare davvero allo specchio."
 locandina: "../../assets/films/corro-da-te.jpg"
-locandinaAlt: "Locandina in stile manifesto — Corro da te (2022)"
+locandinaAlt: "Una piazza di Torino con palazzi a portici e tavolini all'aperto con gli ombrelloni chiusi"
+locandinaTipo: "illustrativa"
 citta: ["Torino"]
 faq:
   - domanda: "Dove è stato girato Corro da te?"

@@ -5,7 +5,8 @@ regista: "Michele Soavi"
 serieTv: true
 sinossi: "Serie Rai 1 tratta dai romanzi di Gaetano Savatteri. Saverio Lamanna (Claudio Gioè), scrittore in crisi, torna nella Sicilia natale e si trova coinvolto in indagini insieme all'amico investigatore privato Peppe Piccionello, tra il borgo di Macari e San Vito Lo Capo."
 locandina: "../../assets/films/makari.jpg"
-locandinaAlt: "Locandina in stile manifesto — Màkari"
+locandinaAlt: "Faraglioni a picco sul mare turchese nella baia di Scopello, in Sicilia"
+locandinaTipo: "illustrativa"
 citta: ["Castellammare del Golfo"]
 faq:
   - domanda: "Màkari è girata davvero in Sicilia?"

@@ -177,4 +177,4 @@ Non posso verificare da dove vengano né la licenza: controlla di averne i dirit
 - `vacanze-romane-gelato-roma.jpg` (src/assets/placeholder) — articolo: Vacanze romane: le location a Roma e il gelato
 
 ## Locandine dei film
-Sono sfondi astratti a proposito: non sostituirle con locandine ufficiali (coperte da copyright). Per i film con `locandinaTipo: luogo` si usa una foto del luogo, non una locandina.
+Ora sono foto di luoghi (illustrative o dei luoghi delle riprese): non sostituirle con locandine ufficiali (coperte da copyright). Per i film con `locandinaTipo: luogo` si usa una foto del luogo, non una locandina.

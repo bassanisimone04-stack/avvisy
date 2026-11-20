@@ -91,6 +91,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "un-americano-a-roma": {
+    locandinaAlt: "Outdoor tables with checked tablecloths under an «Antica Trattoria Romana» sign on a square in Rome",
     titolo: "An American in Rome",
     sinossi:
       "A cult comedy with Alberto Sordi as Nando Mericoni, the Roman obsessed with America. His is the legendary 'macaroni' scene.",
@@ -100,6 +101,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "chiamami-col-tuo-nome": {
+    locandinaAlt: "A street in the centre of a Northern Italian town with colourful hanging umbrellas and an ice-cream cone in the foreground",
     titolo: "Call Me by Your Name",
     sinossi:
       "An Oscar-winning summer love story (Best Adapted Screenplay), filmed in the Lombard lowlands, with Crema and its surroundings at its scenic heart.",
@@ -109,6 +111,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "la-dolce-vita": {
+    locandinaAlt: "The Trevi Fountain in Rome, the fountain of the film's most famous scene",
     titoloSeo: "La Dolce Vita Filming Locations in Rome",
     titolo: "La Dolce Vita",
     sinossi:
@@ -140,6 +143,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-postino": {
+    locandinaAlt: "Pastel-coloured houses overlooking the Marina Corricella harbour, Procida",
     titoloSeo: "Il Postino Filming Locations: Salina & Procida",
     titolo: "Il Postino (The Postman)",
     sinossi:
@@ -151,6 +155,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "to-rome-with-love": {
+    locandinaAlt: "Tables with checked tablecloths under a flowering wisteria in front of a restaurant in central Rome",
     titolo: "To Rome with Love",
     sinossi:
       "Woody Allen's ensemble comedy set in Rome, among squares, alleys and restaurants of the Eternal City, in an ironic tribute to the capital.",
@@ -160,6 +165,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "house-of-gucci": {
+    locandinaAlt: "An orange tram on a cobbled street in central Milan",
     titolo: "House of Gucci",
     sinossi:
       "Ridley Scott's drama about the Gucci dynasty with Lady Gaga and Adam Driver, filmed between Milan, Lake Como and Rome, amid elegance and ambition.",
@@ -179,6 +185,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "succession": {
+    locandinaAlt: "A cypress-lined drive with a farmhouse at the end, among Tuscan hills",
     sinossi:
       "The Emmy-winning HBO series about the Roy family. The wedding in the season 3 finale is filmed in Tuscany, between Villa La Foce and Villa Cetinale, in the Val d'Orcia.",
     faq: [
@@ -218,6 +225,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "the-american": {
+    locandinaAlt: "A square with arcades and a Renaissance palace in a central Italian town",
     titolo: "The American",
     sinossi:
       "George Clooney plays a gunsmith and assassin who takes refuge in an Abruzzo village after an ambush. Shot across Sulmona, Castel del Monte, Pacentro, Calascio and Campo Imperatore, the film turned the province of L'Aquila into its main landscape.",
@@ -228,6 +236,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "corro-da-te": {
+    locandinaAlt: "A Turin square with arcaded buildings and outdoor tables with closed parasols",
     titolo: "Running to You (Corro da te)",
     sinossi:
       "A comedy with Pierfrancesco Favino and Miriam Leone, shot in Turin in 2020. Gianni, a serial seducer, pretends to use a wheelchair in order to win over Chiara, a paraplegic musician — and ends up having to face himself.",
@@ -238,6 +247,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-re": {
+    locandinaAlt: "Trieste's Grand Canal at sunset, with moored boats",
     titolo: "The King (Il Re)",
     sinossi:
       "A Sky Original series starring Luca Zingaretti as Bruno Testori, the governor of a border prison who runs it by his own rules. Shot across Rome, Turin, Civitavecchia and Trieste, where the production used Piazza Oberdan, Ponterosso, the Porto Vecchio and the Antico Caffè San Marco.",
@@ -248,6 +258,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "rocco-schiavone": {
+    locandinaAlt: "An Alpine village with a stone bridge and mountains behind",
     titolo: "Rocco Schiavone",
     sinossi:
       "Based on Antonio Manzini's novels, this Rai series follows Roman deputy police chief Rocco Schiavone (Marco Giallini), transferred to Aosta as a punishment. Shot in the Aosta Valley with the support of the regional film commission.",
@@ -258,6 +269,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "the-equalizer-3": {
+    locandinaAlt: "A village of ochre-coloured houses by the sea, on the Amalfi Coast",
     titoloSeo: "The Equalizer 3 Filming Locations: Atrani",
     titolo: "The Equalizer 3",
     sinossi:
@@ -269,6 +281,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "the-devil-wears-prada-2": {
+    locandinaAlt: "The façade of Milan Cathedral",
     titolo: "The Devil Wears Prada 2",
     sinossi:
       "Twenty years after the first film, Andy Sachs (Anne Hathaway), now a media executive, has to work with her former boss Miranda Priestly (Meryl Streep), whose publishing empire is in crisis. Partly filmed in Milan and on Lake Como in autumn 2025, released in Italian cinemas on 29 April 2026 (1 May in the United States).",
@@ -279,6 +292,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "from-scratch": {
+    locandinaAlt: "Ponte Vecchio and the houses along the Arno in Florence",
     titolo: "From Scratch",
     sinossi:
       "An 8-episode Netflix limited series based on Tembi Locke's autobiographical memoir. Amy (Zoe Saldana), an American student in Florence, falls for Sicilian chef Lino: the story follows their life between Tuscany and Sicily.",
@@ -289,6 +303,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "blocco-181-gangs-of-milano": {
+    locandinaAlt: "A Turin square with arcaded buildings and outdoor tables with closed parasols",
     titolo: "Blocco 181 - Gangs of Milano",
     sinossi:
       "A Sky Original crime drama created and musically supervised by Salmo, about youth gangs in Milan's suburbs. The story is set in Milan, but season 2 was filmed almost entirely in Turin, between October 2023 and April 2024.",
@@ -299,6 +314,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "la-porta-rossa": {
+    locandinaAlt: "Trieste's Grand Canal at sunset, with moored boats",
     titolo: "The Red Door",
     sinossi:
       "A Rai 2 noir series in three seasons (2017-2023), set in Trieste. Inspector Leonardo Cagliostro (Lino Guanciale), left in a suspended state after being murdered, investigates his own killing alongside judge Anna Mayer (Gabriella Pession).",
@@ -309,6 +325,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "viaggi-di-nozze": {
+    locandinaAlt: "A historic villa with statues and citrus pots on a stone balustrade, under a blue sky",
     titolo: "Honeymoons",
     sinossi:
       "A three-story comedy about disastrous honeymoons. In the first, Ivano (Carlo Verdone) and Jessica (Claudia Gerini) celebrate an 'off-key' wedding between Rome and Sardinia, before the trip turns into a string of mishaps.",
@@ -318,6 +335,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "diabolik-ginko-allattacco": {
+    locandinaAlt: "Trieste's Grand Canal at sunset, with moored boats",
     titolo: "Diabolik - Ginko Attacks!",
     sinossi:
       "The second chapter of the Italian trilogy about Diabolik, based on the famous comic by the Giussani sisters. Inspector Ginko hunts the masked thief through the fictional city of Clerville, recreated across Bologna, Trieste and Milan.",
@@ -328,6 +346,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "il-commissario-ricciardi": {
+    locandinaAlt: "A street in Naples' old town with wrought-iron balconies",
     titolo: "Commissioner Ricciardi",
     sinossi:
       "A Rai 1 series based on Maurizio De Giovanni's novels. Naples, the 1930s: Commissioner Luigi Alfredo Ricciardi (Lino Guanciale) has a supernatural gift — he perceives the last thoughts of murder victims — which he uses to solve cases amid fascism and Neapolitan high society.",
@@ -338,6 +357,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "stanley-tucci-searching-for-italy": {
+    locandinaAlt: "The corner of a Roman lane with an orange-fronted bar and people at the tables",
     titolo: "Stanley Tucci: Searching for Italy",
     sinossi:
       "A CNN food-travel series: actor Stanley Tucci explores Italian cuisine region by region, from Naples to Rome, Emilia-Romagna to Sicily, through trattorias, pizzerias and great restaurants. Winner of multiple Emmys for outstanding hosted non-fiction series.",
@@ -348,6 +368,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "somebody-feed-phil-venezia": {
+    locandinaAlt: "A Venetian canal with a gondola between the palaces",
     titolo: "Somebody Feed Phil - Venice and Modena",
     sinossi:
       "The Venice episode of the Netflix food-travel series hosted by Phil Rosenthal, creator of Everybody Loves Raymond: bacari, cicchetti and historic trattorias, in search of the Venice that Venetians actually eat in.",
@@ -358,6 +379,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "no-reservations-rome": {
+    locandinaAlt: "A cobbled lane in Rome at night, with lit outdoor tables and a dome in the background",
     titolo: "Anthony Bourdain: No Reservations - Rome",
     sinossi:
       "An episode of the Travel Channel culinary travel series hosted by Anthony Bourdain: the chef and writer explores Rome between historic trattorias and the Via Veneto of the 'dolce vita', in search of the Italian art of living well.",
@@ -368,6 +390,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "makari": {
+    locandinaAlt: "Sea stacks rising from the turquoise water in the bay of Scopello, Sicily",
     titolo: "Màkari",
     sinossi:
       "A Rai 1 series based on Gaetano Savatteri's novels. Saverio Lamanna (Claudio Gioè), a writer in crisis, returns to his native Sicily and gets drawn into investigations alongside his friend, private investigator Peppe Piccionello, between the village of Macari and San Vito Lo Capo.",
@@ -378,6 +401,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "don-matteo": {
+    locandinaAlt: "A medieval lane with stone arches, in a town in central Italy",
     titolo: "Don Matteo",
     sinossi:
       "A Rai 1 series on air since 2000, still in production. Terence Hill plays Don Matteo, a detective priest who helps the local police solve cases alongside Sergeant Cecchini (Nino Frassica). Filmed in Gubbio for the first eight seasons (2000-2011), then in Spoleto.",
@@ -388,6 +412,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "i-laureati": {
+    locandinaAlt: "A lane in central Florence with wrought-iron lamps",
     titolo: "I laureati",
     sinossi: "A 1995 comedy directed by and starring Leonardo Pieraccioni, one of the Tuscan director's first hits, set in Florence.",
     faq: [
@@ -397,6 +422,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "the-trip-to-italy": {
+    locandinaAlt: "Laid tables in a lane on the Amalfi Coast",
     titolo: "The Trip to Italy",
     sinossi: "Steve Coogan and Rob Brydon cross Italy eating at real restaurants, from Piedmont to Capri. It began as a BBC TV series directed by Michael Winterbottom and was also cut as a feature film.",
     faq: [
@@ -406,6 +432,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "la-moglie-del-prete": {
+    locandinaAlt: "An abbey with a brick bell tower among wooded hills, in the Veneto",
     titolo: "The Priest's Wife (La moglie del prete)",
     sinossi: "A 1970 film by Dino Risi with Sophia Loren and Marcello Mastroianni, shot in Vicenza and its surroundings.",
     faq: [
@@ -415,6 +442,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "io-sono-li": {
+    locandinaAlt: "A Venetian canal with a covered bridge between terracotta-coloured palaces",
     titolo: "Shun Li and the Poet (Io sono Li)",
     sinossi: "A 2011 film by Andrea Segre set in Chioggia, where the protagonist Shun Li works in an osteria frequented by fishermen.",
     faq: [
@@ -424,6 +452,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "la-corrispondenza": {
+    locandinaAlt: "A pre-Alpine lake at dawn, with mist and a headland in the distance",
     titolo: "The Correspondence (La corrispondenza)",
     sinossi: "A 2016 film by Giuseppe Tornatore with Jeremy Irons and Olga Kurylenko, shot in several places including Lake Orta.",
     faq: [
@@ -433,6 +462,7 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "tucci-in-italy": {
+    locandinaAlt: "A square with a Renaissance palace in a town in the Marche",
     titolo: "Tucci in Italy",
     sinossi: "A National Geographic series in which Stanley Tucci explores Italy's regions through their food, landscape and history. Season one aired in 2025; season two, in 2026, includes an episode on Le Marche.",
     faq: [
@@ -442,10 +472,10 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "the-gentlemen-2": {
+    locandinaAlt: "An aerial view of a lake among mountains, with the terracotta roofs of a village in the foreground",
     titolo: "The Gentlemen (season 2)",
     titoloSeo: "The Gentlemen 2: Italian Filming Locations",
     sinossi: "The second season of the Netflix series created by Guy Ritchie takes Eddie Horniman to Lake Maggiore. The Italian shoot ran between June and July 2025 in Verbania, Pallanza, Intra and Stresa, with the wedding at the heart of episode six.",
-    locandinaAlt: "Poster-style artwork — The Gentlemen season 2 (2026)",
     faq: [
       { domanda: "Where was The Gentlemen season 2 filmed in Italy?", risposta: "On Lake Maggiore, not Lake Como: Film Commission Torino Piemonte lists Villa Rusconi-Clerici, Piazza Garibaldi, the church of San Leonardo and the Grand Hotel Majestic among the main sets, all in Verbania-Pallanza, plus Intra and Stresa." },
       { domanda: "When were the Italian scenes shot?", risposta: "Between June and July 2025, with the Italian work concentrated into about two weeks. The season was released on Netflix on 3 September 2026." },
@@ -454,10 +484,10 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "una-finestra-vista-lago": {
+    locandinaAlt: "A pre-Alpine lake at dawn, with mist and mountains in the background",
     titolo: "A Window on the Lake (Una finestra vista lago)",
     titoloSeo: "Una finestra vista lago: Film & Real Locations",
     sinossi: "A Rai Fiction series based on Andrea Vitali's novels, on Rai 1 from 29 September 2026. It is set in the fictional Bellamo, but was filmed mostly on Lake Orta, between Orta San Giulio and Miasino.",
-    locandinaAlt: "Poster-style artwork — Una finestra vista lago (2026)",
     faq: [
       { domanda: "Where was Una finestra vista lago filmed?", risposta: "Mostly on Lake Orta, between Orta San Giulio and Miasino, in the province of Novara. Lake Como also appears, with the Cernobbio jetty." },
       { domanda: "Does Bellamo really exist?", risposta: "No: the village in the series is fictional and was pieced together from views of several villages on the Italian lakes." },
@@ -466,9 +496,9 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "the-white-lotus": {
+    locandinaAlt: "A lane in Taormina with colourful houses and the mountain rising behind",
     titolo: "The White Lotus (season 2)",
     titoloSeo: "The White Lotus 2: Sicily Filming Locations",
-    locandinaAlt: "Poster-style artwork — The White Lotus (season 2)",
     sinossi: "HBO anthology series created by Mike White. Season two (2022) is set in Sicily: seven episodes based at the San Domenico Palace hotel in Taormina, plus locations in Giardini Naxos, Noto and Palermo.",
     faq: [
       { domanda: "Where was season two of The White Lotus filmed?", risposta: "Mostly in Taormina, at the San Domenico Palace hotel. Italy for Movies also lists Giardini Naxos (the restaurant La Cambusa), Noto and Palermo." },
@@ -477,9 +507,9 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "la-vita-e-bella": {
+    locandinaAlt: "A brick street in a medieval Tuscan village",
     titolo: "Life Is Beautiful",
     titoloSeo: "Life Is Beautiful: Film, Set and Locations",
-    locandinaAlt: "Poster-style artwork — Life Is Beautiful (1997)",
     sinossi: "Roberto Benigni's film about Guido, who turns a concentration camp into a game to protect his son. Shot mostly in Arezzo and around; the camp was rebuilt at Papigno, in Umbria.",
     faq: [
       { domanda: "Where was Life Is Beautiful filmed?", risposta: "Mostly in Arezzo (Piazza Grande, Via Borgunto, Logge Vasari), with Villa Masini in Montevarchi, Castiglion Fiorentino and the Teatro Signorelli in Cortona; the camp at Papigno, near Terni." },
@@ -487,9 +517,9 @@ export const filmsEn: Record<string, FilmEn> = {
     ],
   },
   "l-oro-di-napoli": {
+    locandinaAlt: "Piazza del Plebiscito in Naples, with the basilica of San Francesco di Paola",
     titolo: "The Gold of Naples (L'oro di Napoli)",
     titoloSeo: "The Gold of Naples: the pizzeria of the film",
-    locandinaAlt: "Poster-style artwork — The Gold of Naples (1954)",
     sinossi: "Vittorio De Sica's anthology film from Giuseppe Marotta's stories, set in post-war Naples. In the pizza-maker episode Sophia Loren fries pizzas in a neighbourhood shop.",
     faq: [
       { domanda: "Where was the fried-pizza scene of The Gold of Naples filmed?", risposta: "By tradition at the Starita pizzeria in Materdei, which claims the link; some Neapolitans say the film's shop was elsewhere, so the connection remains disputed." },

@@ -5,7 +5,8 @@ regista: "Woody Allen"
 serieTv: false
 sinossi: "Commedia corale di Woody Allen ambientata a Roma, tra piazze, vicoli e ristoranti della Città Eterna, in un omaggio ironico alla capitale."
 locandina: "../../assets/films/to-rome-with-love.jpg"
-locandinaAlt: "Locandina in stile manifesto — To Rome with Love (2012)"
+locandinaAlt: "Tavolini con tovaglie a quadretti sotto un glicine fiorito davanti a un ristorante nel centro di Roma"
+locandinaTipo: "illustrativa"
 citta: ["Roma"]
 faq:
   - domanda: "Dove è stato girato To Rome with Love?"

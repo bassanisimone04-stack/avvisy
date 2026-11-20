@@ -5,7 +5,8 @@ regista: "Luca Guadagnino"
 serieTv: false
 sinossi: "Storia d'amore estiva premio Oscar per la sceneggiatura, girata nella Bassa lombarda, con Crema e i suoi dintorni come cuore scenografico."
 locandina: "../../assets/films/chiamami-col-tuo-nome.jpg"
-locandinaAlt: "Locandina in stile manifesto — Chiamami col tuo nome (2017)"
+locandinaAlt: "Una via del centro di una cittadina del Nord con ombrelli colorati sospesi e un gelato in primo piano"
+locandinaTipo: "illustrativa"
 citta: ["Crema"]
 faq:
   - domanda: "Dove è stato girato Chiamami col tuo nome?"

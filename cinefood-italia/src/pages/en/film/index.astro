@@ -33,6 +33,9 @@ const jsonLd = itemListJsonLd(t("film.titolo"), films.map((f) => new URL(path(`/
                 {film.data.locandinaTipo === "luogo" && (
                   <span class="absolute left-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">Location photo</span>
                 )}
+                {film.data.locandinaTipo === "illustrativa" && (
+                  <span class="absolute left-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">Illustrative photo</span>
+                )}
                 <div class="absolute inset-0 overlay-bottom"></div>
                 <div class="relative w-full p-3">
                   <span class="text-[11px] font-semibold uppercase tracking-wide text-gold-400">{film.data.serieTv ? t("film.serie") : t("film.film")} · {film.data.anno}</span>

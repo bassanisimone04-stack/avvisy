@@ -5,7 +5,8 @@ regista: "Antonio Manzini (soggetto), Rai Fiction"
 serieTv: true
 sinossi: "Tratta dai romanzi di Antonio Manzini, la serie Rai segue il vicequestore romano Rocco Schiavone (Marco Giallini), trasferito per punizione ad Aosta. Girata in Valle d'Aosta con il supporto della Film Commission regionale, usa la città e le sue montagne come contraltare al carattere del protagonista."
 locandina: "../../assets/films/rocco-schiavone.jpg"
-locandinaAlt: "Locandina in stile manifesto — Rocco Schiavone"
+locandinaAlt: "Un villaggio alpino con un ponte in pietra e le montagne alle spalle"
+locandinaTipo: "illustrativa"
 citta: ["Aosta"]
 faq:
   - domanda: "Dove è girata la serie Rocco Schiavone?"

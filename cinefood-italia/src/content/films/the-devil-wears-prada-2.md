@@ -5,7 +5,8 @@ regista: "David Frankel"
 serieTv: false
 sinossi: "Vent'anni dopo il primo film, Andy Sachs (Anne Hathaway), ora dirigente media, si ritrova a dover collaborare con la sua ex capo Miranda Priestly (Meryl Streep), il cui impero editoriale è in crisi. Girato in parte a Milano e sul Lago di Como nell'autunno 2025, uscito nelle sale italiane il 29 aprile 2026 (negli Stati Uniti il 1° maggio)."
 locandina: "../../assets/films/the-devil-wears-prada-2.jpg"
-locandinaAlt: "Locandina in stile manifesto — The Devil Wears Prada 2 (2026)"
+locandinaAlt: "La facciata del Duomo di Milano"
+locandinaTipo: "illustrativa"
 citta: ["Milano"]
 faq:
   - domanda: "The Devil Wears Prada 2 è stato girato davvero a Milano?"

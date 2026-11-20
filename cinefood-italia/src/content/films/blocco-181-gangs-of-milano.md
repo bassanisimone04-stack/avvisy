@@ -5,7 +5,8 @@ regista: "Ciro Visco"
 serieTv: true
 sinossi: "Crime drama Sky Original ideato e supervisionato musicalmente da Salmo, sulle gang giovanili delle periferie milanesi. La storia è ambientata a Milano, ma la seconda stagione è stata girata quasi interamente a Torino, tra ottobre 2023 e aprile 2024."
 locandina: "../../assets/films/blocco-181-gangs-of-milano.jpg"
-locandinaAlt: "Locandina in stile manifesto — Blocco 181 - Gangs of Milano"
+locandinaAlt: "Una piazza di Torino con palazzi a portici e tavolini all'aperto con gli ombrelloni chiusi"
+locandinaTipo: "illustrativa"
 citta: ["Torino"]
 faq:
   - domanda: "Blocco 181 è girato davvero a Milano?"

@@ -5,7 +5,8 @@ regista: "Stanley Tucci"
 serieTv: true
 sinossi: "Serie di viaggio gastronomico prodotta dalla CNN: l'attore Stanley Tucci esplora la cucina italiana regione per regione, da Napoli a Roma, dall'Emilia-Romagna alla Sicilia, tra trattorie, pizzerie e grandi ristoranti. Vincitrice di più Emmy come miglior serie non-fiction condotta."
 locandina: "../../assets/films/stanley-tucci-searching-for-italy.jpg"
-locandinaAlt: "Locandina in stile manifesto — Stanley Tucci: Searching for Italy"
+locandinaAlt: "L'angolo di un vicolo di Roma con un bar dalla facciata arancione e persone ai tavolini"
+locandinaTipo: "illustrativa"
 citta: ["Roma", "Napoli", "Massa Lubrense", "Forlimpopoli", "Bagheria", "Catania", "Firenze", "Milano", "Venezia", "Vercelli", "Andria", "Cisternino", "Matera", "Montefalco", "Alghero", "Cagliari", "Pula", "Tropea", "Portofino", "Genova"]
 faq:
   - domanda: "Dove ha mangiato Stanley Tucci in Searching for Italy?"

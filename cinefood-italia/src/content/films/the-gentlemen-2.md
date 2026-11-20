@@ -6,7 +6,8 @@ regista: "Guy Ritchie (creatore)"
 serieTv: true
 sinossi: "La seconda stagione della serie Netflix creata da Guy Ritchie porta Eddie Horniman sul Lago Maggiore. Le riprese italiane si sono svolte tra giugno e luglio 2025 a Verbania, Pallanza, Intra e Stresa, con il matrimonio al centro del sesto episodio."
 locandina: "../../assets/films/the-gentlemen-2.jpg"
-locandinaAlt: "Locandina in stile manifesto — The Gentlemen 2 (2026)"
+locandinaAlt: "Veduta dall'alto di un lago tra le montagne, con i tetti in cotto di un borgo in primo piano"
+locandinaTipo: "illustrativa"
 citta: ["Verbania"]
 faq:
   - domanda: "Dove è stata girata The Gentlemen 2 in Italia?"

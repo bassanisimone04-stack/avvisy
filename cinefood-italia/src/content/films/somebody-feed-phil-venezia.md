@@ -5,7 +5,8 @@ regista: "Phil Rosenthal"
 serieTv: true
 sinossi: "Puntata veneziana (con una parte a Modena) della serie Netflix di viaggio gastronomico condotta da Phil Rosenthal, creatore di Tutti amano Raymond: tra bacari, cicchetti e trattorie storiche, alla scoperta della Venezia che mangiano i veneziani."
 locandina: "../../assets/films/somebody-feed-phil-venezia.jpg"
-locandinaAlt: "Locandina in stile manifesto — Somebody Feed Phil, Venezia"
+locandinaAlt: "Un canale di Venezia con una gondola tra i palazzi"
+locandinaTipo: "illustrativa"
 citta: ["Venezia", "Modena"]
 faq:
   - domanda: "Cos'è Somebody Feed Phil?"

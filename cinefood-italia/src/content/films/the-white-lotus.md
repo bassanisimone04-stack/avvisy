@@ -6,7 +6,8 @@ regista: "Mike White (creatore)"
 serieTv: true
 sinossi: "Serie antologica HBO ideata da Mike White. La seconda stagione (2022) è ambientata in Sicilia: sette episodi con base nell'hotel San Domenico Palace di Taormina, più location a Giardini Naxos, Noto e Palermo."
 locandina: "../../assets/films/the-white-lotus.jpg"
-locandinaAlt: "Locandina in stile manifesto — The White Lotus (stagione 2)"
+locandinaAlt: "Un vicolo di Taormina con case colorate e il monte che sale alle spalle"
+locandinaTipo: "illustrativa"
 citta: ["Taormina", "Giardini Naxos"]
 faq:
   - domanda: "Dove è stata girata la seconda stagione di The White Lotus?"

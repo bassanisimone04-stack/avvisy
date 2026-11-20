@@ -5,7 +5,8 @@ regista: "Giuseppe Tornatore"
 serieTv: false
 sinossi: "Film del 2016 di Giuseppe Tornatore con Jeremy Irons e Olga Kurylenko, girato in più luoghi, tra cui il lago d'Orta."
 locandina: "../../assets/films/la-corrispondenza.jpg"
-locandinaAlt: "Locandina in stile manifesto — La corrispondenza (2016)"
+locandinaAlt: "Un lago prealpino all'alba con la nebbia e un promontorio in lontananza"
+locandinaTipo: "illustrativa"
 citta: ["Orta San Giulio"]
 faq:
   - domanda: "Dove è stato girato La corrispondenza?"
