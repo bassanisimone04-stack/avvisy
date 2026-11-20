@@ -129,8 +129,8 @@ const link = (_plan?: string) => "#richiedi";
 
 const inp = "w-full rounded-xl border border-ink-500/20 bg-white px-4 py-2.5 text-sm text-ink-900 dark:border-noir-600 dark:bg-noir-800 dark:text-cream-100";
 const lab = "mb-1 block text-sm font-medium text-ink-700 dark:text-cream-200";
-const btn = "inline-flex items-center justify-center gap-2 rounded-full bg-[#16a34a] px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-[#16a34a]/35 ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:bg-[#22c55e] hover:shadow-xl hover:shadow-[#22c55e]/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22c55e]";
-const btnSm = "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#16a34a] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-[#16a34a]/30 transition hover:-translate-y-0.5 hover:bg-[#22c55e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22c55e]";
+const btn = "inline-flex items-center justify-center gap-2 rounded-full bg-[#15803d] px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-[#15803d]/35 ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:bg-[#166534] hover:shadow-xl hover:shadow-[#166534]/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16a34a]";
+const btnSm = "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#15803d] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-[#15803d]/30 transition hover:-translate-y-0.5 hover:bg-[#166534] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16a34a]";
 const mailIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>`;
 ---
 
@@ -178,7 +178,7 @@ const mailIcon = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" st
             <p class="text-xs font-semibold uppercase tracking-wide text-ink-500 dark:text-ink-400">{p.ideal}</p>
             <p class="mt-2 font-display text-2xl font-extrabold text-gold-600 dark:text-gold-400">{p.prezzo}</p>
             <ul class="mt-4 flex-1 space-y-2 text-sm text-ink-700 dark:text-cream-200">
-              {p.voci.map((v) => <li class="flex gap-2"><span class="text-[#16a34a]">✓</span><span>{v}</span></li>)}
+              {p.voci.map((v) => <li class="flex gap-2"><span class="text-[#15803d] dark:text-[#4ade80]">✓</span><span>{v}</span></li>)}
             </ul>
             <a href={link(p.subj)} data-plan={p.nome} class:list={[btnSm, "mt-6"]}><Fragment set:html={mailIcon} />{t.cta}</a>
           </div>

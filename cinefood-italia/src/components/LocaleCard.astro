@@ -9,10 +9,13 @@ import { useT, path, type Lang } from "../i18n/ui";
 import { tLocaleDesc, tFilmTitolo, tCitta } from "../i18n/content-en";
 
 interface Props {
+  /** Livello del titolo della card: "h2" se la pagina non ha altri h2 prima dell'elenco. */
+  heading?: "h2" | "h3";
   locale: Restaurant;
   lang?: Lang;
 }
-const { locale, lang = "it" } = Astro.props;
+const { locale, lang = "it", heading = "h3" } = Astro.props;
+const Heading = heading;
 const d = locale.data;
 const t = useT(lang);
 const url = path(`/locale/${locale.id}`, lang);
@@ -53,11 +56,11 @@ const filmTitoli = filmEntries
       <Badges prezzo={d.prezzo} lang={lang} />
     </div>
 
-    <h3 class="font-display text-xl font-bold leading-tight">
+    <Heading class="font-display text-xl font-bold leading-tight">
       <a href={url} class="transition-colors hover:text-gold-600 dark:hover:text-gold-400">
         {d.nome}
       </a>
-    </h3>
+    </Heading>
     <p class="mt-1 inline-flex items-center gap-1 text-sm text-ink-500 dark:text-ink-400"><Icon name="pin" class="h-3.5 w-3.5" /> {cittaEn}, {d.regione}</p>
     <p class="mt-2 line-clamp-2 text-sm text-ink-600 dark:text-ink-400">{descrizione}</p>
 

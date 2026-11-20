@@ -55,7 +55,7 @@ const jsonLd = itemListJsonLd(t("locali.titolo"), locali.map((l) => new URL(path
       {
         locali.map((locale) => (
           <div class="locale-card" {...datiFiltro(locale)}>
-            <LocaleCard locale={locale} lang={lang} />
+            <LocaleCard locale={locale} lang={lang} heading="h2" />
           </div>
         ))
       }

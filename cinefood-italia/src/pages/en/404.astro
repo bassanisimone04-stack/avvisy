@@ -1,17 +1,39 @@
 ---
-/** Pagina di errore 404 (non trovata) — versione inglese. */
+/** Pagina di errore 404 (versione inglese): ricerca e link utili per non perdere il visitatore. */
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Icon from "../../components/Icon.astro";
+import SearchSuggest from "../../components/SearchSuggest.astro";
+import { cittaUniche, slugify } from "../../lib/utils";
+import { path } from "../../i18n/ui";
+import { tFilmTitolo, tCitta } from "../../i18n/content-en";
+
+const lang = "en" as const;
+const locali = await getCollection("restaurants");
+const films = await getCollection("films");
+const items = [
+  ...locali.map((l) => ({ label: l.data.nome, sub: `${tCitta(l.data.citta, lang)} · ${l.data.tipo}`, url: path(`/locale/${l.id}`, lang) })),
+  ...films.map((f) => ({ label: tFilmTitolo(f, lang), sub: "Film", url: path(`/film/${f.id}`, lang) })),
+  ...cittaUniche(locali).map((c) => ({ label: tCitta(c, lang), sub: "City", url: path(`/${slugify(c)}`, lang) })),
+];
+const links = [
+  { href: path("/", lang), label: "Home" },
+  { href: path("/locali", lang), label: "All venues" },
+  { href: path("/film", lang), label: "Films and series" },
+  { href: path("/mappa", lang), label: "Map" },
+  { href: path("/blog", lang), label: "Blog" },
+];
 ---
 
-<BaseLayout title="Page not found" description="The page you're looking for doesn't exist." lang="en">
-  <section class="mx-auto max-w-xl px-4 py-24 text-center">
+<BaseLayout lang={lang} title="Page not found" description="The page you're looking for doesn't exist." noindex>
+  <section class="mx-auto max-w-xl px-4 py-20 text-center">
     <Icon name="film" class="mx-auto h-16 w-16 text-gold-500" />
-    <h1 class="mt-4 font-display text-4xl font-extrabold">Cut! That's a wrap.</h1>
-    <p class="mt-3 text-lg text-ink-700 dark:text-cream-200">The page you're looking for doesn't exist or has been moved.</p>
-    <div class="mt-8 flex flex-wrap justify-center gap-3">
-      <a href="/en" class="rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-noir-950 hover:bg-gold-400">Back to home</a>
-      <a href="/en/locali" class="rounded-full border border-ink-500/25 px-6 py-3 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800">Browse venues</a>
-    </div>
+    <h1 class="mt-4 font-display text-4xl font-extrabold">Cut! Page not found</h1>
+    <p class="mt-3 text-lg text-ink-700 dark:text-cream-200">The page you're looking for doesn't exist or has moved. Try searching for a venue, a film or a city:</p>
+    <div class="mt-6"><SearchSuggest items={items} lang={lang} /></div>
+    <ul class="mt-8 flex flex-wrap justify-center gap-3">
+      {links.map((l) => <li><a href={l.href} class="rounded-full border border-ink-500/25 px-5 py-2.5 text-sm font-semibold hover:bg-cream-100 dark:border-noir-600 dark:hover:bg-noir-800">{l.label}</a></li>)}
+    </ul>
+    <p class="mt-8 text-sm text-ink-500 dark:text-ink-400"><a class="font-semibold text-gold-600 underline dark:text-gold-400" href="/">Vai alla versione italiana</a></p>
   </section>
 </BaseLayout>

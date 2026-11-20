@@ -91,6 +91,7 @@ const selectClass =
   aria-live="polite"
   data-word={t("conta.uno")}
   data-of={t("conta.su")}
+  data-more={lang === "en" ? "Show more" : "Mostra altri"}
 ></p>
 
 <script>
@@ -100,11 +101,21 @@ const selectClass =
   const vuoto = document.getElementById("nessun-risultato");
   const WORD = conteggio?.dataset.word || "locali";
   const OF = conteggio?.dataset.of || "su";
+  const MORE = conteggio?.dataset.more || "Mostra altri";
+  const PAGINA = 24; // schede mostrate per volta: le altre restano nell'HTML (per Google) ma nascoste, quindi le loro immagini non si scaricano
 
   if (form && griglia) {
     const cards = Array.from(griglia.querySelectorAll<HTMLElement>(".locale-card"));
     const $ = (id: string) =>
       document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null;
+
+    let limite = PAGINA;
+    const btnMore = document.createElement("button");
+    btnMore.type = "button";
+    btnMore.hidden = true;
+    btnMore.className = "mx-auto mt-8 block rounded-full border border-ink-500/20 bg-white px-6 py-3 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold-500 dark:border-noir-600 dark:bg-noir-900";
+    griglia.insertAdjacentElement("afterend", btnMore);
+    btnMore.addEventListener("click", () => { limite += PAGINA; applica(); });
 
     function applica() {
       const cerca = ($("f-cerca")?.value || "").trim().toLowerCase();
@@ -124,9 +135,11 @@ const selectClass =
           (!tipo || d.tipo === tipo) &&
           (!categoria || d.categoria === categoria) &&
           (!prezzo || d.prezzo === prezzo);
-        card.hidden = !ok;
         if (ok) visibili++;
+        card.hidden = !ok || visibili > limite;
       }
+      btnMore.hidden = visibili <= limite;
+      btnMore.textContent = `${MORE} (${visibili - limite})`;
 
       if (conteggio)
         conteggio.textContent =
@@ -136,8 +149,8 @@ const selectClass =
       if (vuoto) vuoto.hidden = visibili !== 0;
     }
 
-    form.addEventListener("input", applica);
-    form.addEventListener("reset", () => setTimeout(applica, 0));
+    form.addEventListener("input", () => { limite = PAGINA; applica(); });
+    form.addEventListener("reset", () => { limite = PAGINA; setTimeout(applica, 0); });
 
     const params = new URLSearchParams(location.search);
     const set = (id: string, key: string) => {

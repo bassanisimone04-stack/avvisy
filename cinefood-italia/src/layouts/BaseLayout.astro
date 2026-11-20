@@ -52,6 +52,13 @@ const t = useT(lang);
     </script>
     <SEO title={title} description={description} image={image} imageWidth={imageWidth} imageHeight={imageHeight} type={type} jsonLd={jsonLd} lang={lang} noindex={noindex} />
     <Analytics />
+    <!-- Con build.format "file" il percorso letto in fase di build termina con .html: lo togliamo prima dell'invio, così Analytics mostra gli indirizzi reali. -->
+    <script is:inline>
+      window.webAnalyticsBeforeSend = function (event) {
+        try { event.url = event.url.replace(/\.html(?=$|[?#])/, ""); } catch (e) {}
+        return event;
+      };
+    </script>
     <VercelAnalytics />
     <FormHandler />
   </head>
