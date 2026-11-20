@@ -31,10 +31,10 @@ const t = useT(lang);
     fetchpriority="high"
     class="hero-zoom absolute inset-0 -z-10 h-full w-full object-cover object-[75%_center] sm:object-center"
   />
-  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-noir-950/25 via-transparent to-noir-950/45"></div>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-noir-950/40 via-noir-950/5 to-noir-950/50"></div>
 
   <div class="mx-auto w-full max-w-4xl px-4 py-20 text-center [text-shadow:_0_2px_16px_rgba(0,0,0,0.55)]">
-    <p class="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-gold-300">
+    <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-noir-950/55 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.3em] text-gold-300 backdrop-blur-sm [text-shadow:none]">
       <Icon name="film" class="h-4 w-4" /> {t("hero.kicker")}
     </p>
     <h1 class="font-display text-5xl font-extrabold leading-[1.05] text-white sm:text-6xl md:text-7xl">
@@ -58,7 +58,7 @@ const t = useT(lang);
 
     {
       stats.length > 0 && (
-        <div class="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-cream-200">
+        <div class="mx-auto mt-10 flex w-fit max-w-full flex-wrap justify-center gap-x-6 gap-y-1 rounded-3xl bg-noir-950/55 px-6 py-3 sm:gap-x-10 sm:rounded-full sm:px-8 text-sm text-cream-100 backdrop-blur-sm [text-shadow:none]">
           {stats.map((s) => (
             <span>
               <strong class="font-display text-2xl text-gold-400">{s.valore}</strong>{" "}
