@@ -42,11 +42,15 @@ girate lungo il mare, verso la Torre Perrotti.
 
 ## Dove mangiare: Le Gatte e la piazzetta
 
-La scena in cui Alberto scopre i sapori del Sud è ambientata al
-**[Ristorante Le Gatte](/locale/ristorante-le-gatte)**, a Santa Maria di
-Castellabate, in un edificio storico affacciato sul mare: cucina mediterranea,
-pesce fresco e pizza napoletana. Per un caffè o un aperitivo nella piazzetta del
-film, la tappa è il **[Bar La Piazzetta](/locale/bar-la-piazzetta-castellabate)**.
+La cena tra colleghi è ambientata al **Porto delle Gatte**, a Santa Maria di
+Castellabate, dove si trova il **[Ristorante Le Gatte](/locale/ristorante-le-gatte)**,
+affacciato sul mare: cucina mediterranea e pesce fresco. Lo indichiamo come locale
+**legato al film**: non abbiamo trovato una fonte che dica che la scena sia stata
+girata nella sua sala. Leggi la storia completa in
+**[Le Gatte e il Porto delle Gatte](/blog/le-gatte-castellabate-benvenuti-al-sud)**.
+Per un caffè nella piazzetta del film puoi fermarti al
+**[Bar La Piazzetta](/locale/bar-la-piazzetta-castellabate)**, un bar sulla piazza
+(non abbiamo trovato fonti che lo indichino come location).
 
 ## I sapori del Cilento
 

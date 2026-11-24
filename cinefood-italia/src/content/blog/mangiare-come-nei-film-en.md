@@ -36,10 +36,11 @@ don't explain the origin of the name "Vitelli", which echoes the film's characte
 
 ## 2. Le Gatte restaurant, Castellabate (Cilento) — *Welcome to the South* (2010)
 
-On the port of **Castellabate**, **[Le Gatte](/en/locale/ristorante-le-gatte)**
-is the restaurant where the hilarious dinner among colleagues in *Welcome
-to the South* is set — the box-office hit comedy that made this beautiful
-Campanian village famous.
+On the **Porto delle Gatte** in Castellabate, **[Le Gatte](/en/locale/ristorante-le-gatte)**
+is the restaurant on the port where the hilarious dinner among colleagues in
+*Welcome to the South* is set — the box-office hit comedy that made this beautiful
+Campanian village famous. It is linked to the film: we found no sources naming the
+dining room as a set.
 
 ## 3. Caffè Florian, Venice — *The Talented Mr. Ripley* (1999)
 

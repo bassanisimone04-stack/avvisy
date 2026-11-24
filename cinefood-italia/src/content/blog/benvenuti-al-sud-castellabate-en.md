@@ -44,12 +44,14 @@ final scenes were shot along the sea, towards the Torre Perrotti.
 
 ## Where to eat: Le Gatte and the little square
 
-The scene where Alberto discovers the flavours of the South is set at the
-**[Le Gatte restaurant](/en/locale/ristorante-le-gatte)**, in Santa Maria di
-Castellabate, in a historic building overlooking the sea: Mediterranean cuisine,
-fresh fish and Neapolitan pizza. For a coffee or an aperitivo in the film's
-square, the stop is the
-**[Bar La Piazzetta](/en/locale/bar-la-piazzetta-castellabate)**.
+The dinner among colleagues is set on the **Porto delle Gatte**, in Santa Maria di
+Castellabate, where the **[Le Gatte restaurant](/en/locale/ristorante-le-gatte)**
+stands, overlooking the sea: Mediterranean cuisine and fresh fish. We list it as
+*linked to the film*: we found no source saying the scene was shot in its dining
+room. Read the full story in **[Le Gatte and the Porto delle Gatte](/en/blog/le-gatte-castellabate-benvenuti-al-sud)**.
+For a coffee in the film's square you can stop at the
+**[Bar La Piazzetta](/en/locale/bar-la-piazzetta-castellabate)**, a bar on the square
+(we found no source naming it as a location).
 
 ## The flavours of Cilento
 

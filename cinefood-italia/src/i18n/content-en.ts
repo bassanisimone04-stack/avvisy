@@ -77,7 +77,7 @@ export const filmsEn: Record<string, FilmEn> = {
       "A blockbuster comedy with Claudio Bisio and Alessandro Siani, largely shot in Castellabate, in the Cilento area.",
     faq: [
       { domanda: "Where was Welcome to the South filmed?", risposta: "Mainly in Castellabate, a village in the Cilento (province of Salerno), among the little square, the port of San Marco and the old alleys." },
-      { domanda: "Where to eat like in the film in Castellabate?", risposta: "At the Le Gatte restaurant, on the port, where the colleagues' dinner is set, and in the bars of the little square overlooking the sea." },
+      { domanda: "Where to eat like in the film in Castellabate?", risposta: "On the Porto delle Gatte in Santa Maria di Castellabate, where the colleagues' dinner is set (the Le Gatte restaurant stands on the port), and in the bars of the little square overlooking the sea." },
     ],
   },
   "la-grande-bellezza": {
@@ -564,12 +564,12 @@ export const restaurantsEn: Record<string, RestEn> = {
   },
   "ristorante-le-gatte": {
     titoloSeo: "Le Gatte, Castellabate: Benvenuti al Sud set",
-    descrizione: "A seafood restaurant on the port of Castellabate: this is where the dinner among colleagues in Benvenuti al Sud (2010) is set, one of the highest-grossing Italian comedies ever.",
-    scena: { "benvenuti-al-sud": "The restaurant is where the dinner among post-office colleagues is set, one of the film's funniest moments." },
+    descrizione: "A restaurant on the Porto delle Gatte in Santa Maria di Castellabate: the dinner among colleagues in Benvenuti al Sud (2010) is set in the port. Linked to the film, not confirmed as the set of the dining room.",
+    scena: { "benvenuti-al-sud": "The restaurant stands on the Porto delle Gatte, where the dinner among post-office colleagues is set. We found no source saying the scene was shot in the venue's dining room." },
   },
   "bar-la-piazzetta-castellabate": {
-    descrizione: "A bar on the main square of Castellabate, a meeting point of the Cilento village made famous by 'Welcome to the South'. Perfect for a coffee with a sea view.",
-    scena: { "benvenuti-al-sud": "The village's little square — the heart of town life in the film — where the bar overlooks the main square of Castellabate." },
+    descrizione: "A bar on the main square of Castellabate, the Cilento village made famous by 'Welcome to the South'. It is on the film's square, but we found no sources naming it as a location.",
+    scena: { "benvenuti-al-sud": "The bar overlooks the little square where the village life of the film is set. We found no source naming this bar as a location." },
   },
   "caffe-del-duomo-crema": {
     titoloSeo: "Duomocafè, Crema: Call Me by Your Name square",

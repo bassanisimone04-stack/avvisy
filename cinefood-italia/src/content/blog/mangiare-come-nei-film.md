@@ -35,10 +35,11 @@ l'origine del nome "Vitelli", che richiama il personaggio del film.
 
 ## 2. Ristorante Le Gatte, Castellabate (Cilento) — *Benvenuti al Sud* (2010)
 
-Sul porto di **Castellabate**, **[Le Gatte](/locale/ristorante-le-gatte)** è
-il ristorante dove è ambientata la spassosa cena tra colleghi di *Benvenuti
-al Sud*, la commedia campione d'incassi che ha fatto conoscere questo
-splendido borgo campano.
+Sul **Porto delle Gatte** di Castellabate, **[Le Gatte](/locale/ristorante-le-gatte)** è
+il ristorante sul porto dove è ambientata la spassosa cena tra colleghi di
+*Benvenuti al Sud*, la commedia campione d'incassi che ha fatto conoscere questo
+splendido borgo campano. È un locale legato al film: non abbiamo trovato fonti che
+indichino la sala come set.
 
 ## 3. Caffè Florian, Venezia — *Il talento di Mr. Ripley* (1999)
 
