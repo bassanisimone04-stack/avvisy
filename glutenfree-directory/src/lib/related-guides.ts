@@ -57,6 +57,7 @@ const CATEGORY_GUIDES: Partial<Record<Category, string[]>> = {
     "quanto-costa-la-dieta-senza-glutine-guida-a-costi-buoni-pasto-aic-e-detrazioni-fiscali",
   ],
   negozio: [
+    "negozi-senza-glutine-a-roma-e-milano-catene-e-punti-vendita",
     "dove-comprare-prodotti-senza-glutine-supermercati-farmacie-e-negozi-specializzati",
     "pane-senza-glutine-come-sceglierlo-dove-comprarlo-e-conservarlo",
   ],
@@ -77,6 +78,9 @@ const CITY_GUIDES: Record<string, string> = {
   Genova: "genova-senza-glutine-pizza-focaccia-e-forno-dedicato-tra-i-quartieri-della-citta",
   Verona: "verona-senza-glutine-cosa-mangiare-tra-arena-centro-storico-e-negozi-specializzati",
   Bologna: "bologna-senza-glutine-dove-mangiare-tagliatelle-tortellini-e-tigelle-in-sicurezza",
+  Firenze: "firenze-senza-glutine-ristoranti-pizza-e-piatti-toscani",
+  Torino: "torino-senza-glutine-focaccia-farinata-e-piatti-piemontesi",
+  "Venaria Reale": "torino-senza-glutine-focaccia-farinata-e-piatti-piemontesi",
 };
 
 /** Guide pertinenti a una pagina della directory filtrata per città e/o categoria. */

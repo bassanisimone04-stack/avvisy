@@ -87,6 +87,8 @@ export interface Business {
   gallerySeeds: number[];
   /** Foto reale caricata dal locale o verificata da noi; se assente si usa l'illustrazione SVG. */
   photoUrl?: string;
+  /** Valore CSS object-position per ritagliare la foto (es. "50% 8%" per tenere la parte alta). */
+  photoPosition?: string;
   reviews: Review[];
   faqs: FaqItem[];
   featured?: boolean;

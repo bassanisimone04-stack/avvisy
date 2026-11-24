@@ -67,7 +67,26 @@ const LOCAL_BLOG_COVER: Record<number, string> = {
   169: "pasta",
   170: "dolci",
   172: "dove-comprare",
+  171: "pasticcerie",
   174: "catene",
+  175: "vicino-a-me",
+  176: "e-senza-glutine",
+  177: "gelato-senza-glutine",
+  178: "pizza-dove-mangiarla",
+  179: "pane-senza-glutine",
+  180: "senza-glutine-in-italia",
+  182: "ingestione-accidentale",
+  184: "cena-amici",
+  185: "ristoratori-aic",
+  186: "panettiere-pizzaiolo",
+  187: "bologna",
+  188: "buono-celiachia",
+  189: "guida-michelin",
+  190: "natale-senza-glutine",
+  193: "surgelati",
+  195: "firenze",
+  197: "arancini",
+  198: "pub",
 };
 
 // Illustrazioni originali (SVG in public/images/blog/) per gli articoli senza foto.
@@ -91,6 +110,13 @@ const ILLUSTRATED_BLOG_COVER: Record<number, string> = {
   187: "bologna",
   188: "buono-celiachia",
   189: "guida-ristoranti",
+  193: "surgelati",
+  194: "negozi",
+  195: "firenze",
+  196: "torino",
+  197: "arancini",
+  198: "pub",
+  199: "ingrosso",
 };
 
 export function blogCoverPhoto(_category: string, seed: number): string {

@@ -14,6 +14,7 @@ export default function CoverPhoto({
   tint,
   sizes = "(max-width: 768px) 100vw, 50vw",
   priority = false,
+  objectPosition,
 }: {
   photoUrl: string;
   seed: number;
@@ -24,6 +25,8 @@ export default function CoverPhoto({
   tint?: { soft: string; accent: string; bg1: string; bg2: string };
   sizes?: string;
   priority?: boolean;
+  /** Valore CSS object-position, per tenere in vista la parte che conta della foto. */
+  objectPosition?: string;
 }) {
   const [errored, setErrored] = useState(false);
 
@@ -40,6 +43,7 @@ export default function CoverPhoto({
         sizes={sizes}
         priority={priority}
         className="object-cover"
+        style={objectPosition ? { objectPosition } : undefined}
         onError={() => setErrored(true)}
       />
     </div>
