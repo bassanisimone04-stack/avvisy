@@ -4,7 +4,7 @@ descrizione: "Master of None arriva davvero a Modena: Dev scopre Osteria Frances
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-08-09
 immagine: "../../assets/placeholder/master-of-none-modena-osteria-francescana.jpg"
-immagineAlt: "Veduta dall'alto del centro di Modena con la torre Ghirlandina e il Duomo"
+immagineAlt: "Il Duomo di Modena con la torre Ghirlandina, visto dalla piazza"
 tags: ["Master of None", "Modena", "Netflix", "Osteria Francescana", "cineturismo"]
 faq:
   - domanda: "È vero che Master of None è stato girato a Modena?"
