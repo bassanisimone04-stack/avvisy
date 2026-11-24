@@ -4,6 +4,8 @@ Foto di copertina degli articoli. **Già collegate (30):** tutte tranne le tre s
 
 **Ancora da caricare (15):** `intolleranza`, `vicino-a-me` (uno smartphone con una mappa aperta, su un tavolo di un locale), `pasticcerie`, `old-wild-west`, e le 5 nuove: `e-senza-glutine` (riso, cous cous e farro in ciotoline, senza etichette di marca), `gelato` (coppette di gelato con frutta, senza persone), `pizza-dove-mangiarla` (una pizza senza glutine appena sfornata in un locale), `pane-senza-glutine` (pane a fette o pagnotta, meglio con un cartello «senza glutine»), `ristoratori-aic` (un tavolo apparecchiato in un locale, senza persone), `panettiere-pizzaiolo` (mani infarinate che impastano, senza volto), `vero-o-falso` (una lavagna o un foglio con «Vero» e «Falso», senza persone), `galateo-cena` (una tavola apparecchiata per due, con piatti semplici), `ingredienti-etichetta` (un'etichetta di alimento con l'elenco ingredienti ben leggibile, senza marchi in primo piano), `errore-glutine` (un bicchiere d'acqua e una tisana su un tavolo, senza persone), `senza-glutine-in-italia` (un piatto di pasta italiana con un monumento sullo sfondo, senza persone riconoscibili) (le ultime due vanno scattate davvero in un locale reale). Fino ad allora quegli articoli usano la foto generica.
 
+**Aggiornamento del 24 novembre 2026:** cinque di queste sono ora coperte da foto Pexels (vedi in fondo): `vicino-a-me`, `pasticcerie`, `gelato`, `pizza-dove-mangiarla` e `pane-senza-glutine`. Restano da caricare le altre dieci.
+
 ## Indicazioni per tutte le foto
 
 - **Orizzontale, con il soggetto al centro**: nella pagina dell'articolo la foto viene ritagliata quadrata, nelle anteprime in formato 16:9.
@@ -67,4 +69,6 @@ Questi 7 articoli usano per ora un'**illustrazione originale** (file `.svg` in q
 ### Foto prese da Pexels (24 novembre 2026)
 
 `surgelati.jpg`, `firenze.jpg`, `arancini.jpg` e `pub.jpg` vengono da Pexels, indicata dal titolare del sito (autori non registrati qui). La licenza Pexels consente l'uso gratuito, anche commerciale, senza obbligo di attribuzione. Sono foto generiche: `firenze.jpg` è un ritaglio dello skyline (tolti bottiglia con marchio e biscotti), `arancini.jpg` mostra arancini tradizionali con panatura (non si può dire che siano senza glutine), `pub.jpg` mostra una bottiglia senza etichetta, `surgelati.jpg` frutta surgelata semplice (frutti di bosco e fragole con ghiaccio e menta). Se in futuro scatti foto tue, sostituisci i file con lo stesso nome.
+
+Il 24 novembre sono arrivate altre cinque foto Pexels, per articoli che avevano l'illustrazione: `pizza-dove-mangiarla.jpg` (pizza con prosciutto, gorgonzola e noci), `pasticcerie.jpg` (vetrina con dolci alle fragole), `vicino-a-me.jpg` (smartphone con una mappa, su un tavolino), `gelato-senza-glutine.jpg` (gelato con frutta) e `pane-senza-glutine.jpg` (pane a fette infarinato). Sono **foto generiche**: dal solo aspetto non si può dire se pizza, dolci, gelato e pane siano senza glutine, e la mappa sullo smartphone è quella di un'altra città. Per sostituirle con foto tue, usa lo stesso nome file.
 
