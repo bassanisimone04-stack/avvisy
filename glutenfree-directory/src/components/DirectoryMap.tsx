@@ -38,13 +38,13 @@ export default function DirectoryMap({ businesses }: { businesses: Business[] })
         <InteractiveMap businesses={businesses} activeId={activeId} onSelect={setActiveId} locale={locale} />
         <ul className="pointer-events-none absolute bottom-3 left-3 z-[500] flex max-w-[70%] flex-wrap gap-1.5">
           {legend.map((l) => (
-            <li key={l.slug} className="flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-medium text-ink-soft shadow-sm backdrop-blur">
-              <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full" style={{ background: PIN_COLORS[l.slug] }} />
+            <li key={l.slug} className="flex items-center gap-1.5 rounded-full bg-surface/90 px-2.5 py-1 text-[11px] font-medium text-ink shadow-sm backdrop-blur">
+              <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full ring-1 ring-white/70" style={{ background: PIN_COLORS[l.slug] }} />
               {l.label} · {l.n}
             </li>
           ))}
         </ul>
-        <p className="pointer-events-none absolute bottom-3 right-3 z-[500] rounded-full bg-white/85 px-3 py-1 text-[11px] text-ink-soft backdrop-blur">
+        <p className="pointer-events-none absolute bottom-3 right-3 z-[500] rounded-full bg-surface/90 px-3 py-1 text-[11px] font-medium text-ink shadow-sm backdrop-blur">
           {tf(t.map.caption, { n: businesses.length })}
         </p>
       </div>

@@ -30,7 +30,7 @@ export default function ProductCard({ product, locale = "it" }: { product: Produ
           <PlaceholderImage seed={p.imageSeed} variant={illustration} label={p.name} ratio="aspect-square" className="transition-transform duration-500 group-hover:scale-105" />
         )}
         {p.aicCertified && (
-          <span className="chip absolute left-3 top-3 bg-white/90 text-brand-dark backdrop-blur">
+          <span className="chip absolute left-3 top-3 bg-surface/90 text-brand-dark backdrop-blur">
             <BadgeCheck size={12} /> AIC
           </span>
         )}
