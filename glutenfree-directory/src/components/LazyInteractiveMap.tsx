@@ -9,6 +9,12 @@ const InteractiveMap = dynamic(() => import("./InteractiveMap"), {
   loading: () => <div className="h-full w-full animate-pulse bg-brand-soft" />,
 });
 
+// Appena il browser è libero scarica in anticipo il codice della mappa (Leaflet),
+// così quando il blocco entra nello schermo è già pronto.
+function prefetchMap() {
+  void import("./InteractiveMap");
+}
+
 /**
  * Carica Leaflet, il suo CSS e le tile OpenStreetMap solo quando la mappa sta
  * per entrare nello schermo: chi non scorre fin lì non scarica nulla.
@@ -16,6 +22,12 @@ const InteractiveMap = dynamic(() => import("./InteractiveMap"), {
 export default function LazyInteractiveMap(props: ComponentProps<typeof InteractiveMap>) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const w = window as Window & { requestIdleCallback?: (cb: () => void) => number };
+    if (w.requestIdleCallback) w.requestIdleCallback(prefetchMap);
+    else setTimeout(prefetchMap, 1200);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
