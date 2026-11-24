@@ -4,6 +4,7 @@ import { StoreProvider } from "@/lib/store";
 import ThemeInit from "@/components/ThemeInit";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import MotionExtras from "@/components/MotionExtras";
 import { JsonLd, organizationJsonLd } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/locale";
 
@@ -33,6 +34,7 @@ export default function RootShell({ lang, children }: { lang: Locale; children: 
           <SiteHeader />
           <main id="main-content">{children}</main>
           <SiteFooter />
+          <MotionExtras />
         </StoreProvider>
         <Analytics />
       </body>

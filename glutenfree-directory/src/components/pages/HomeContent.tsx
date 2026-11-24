@@ -10,11 +10,12 @@ import FaqAccordion from "@/components/FaqAccordion";
 import BusinessMapExplorer from "@/components/BusinessMapExplorer";
 import Reveal from "@/components/Reveal";
 import GuidePromo from "@/components/GuidePromo";
+import CountUp from "@/components/CountUp";
 import { JsonLd, faqJsonLd } from "@/lib/seo";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
 import { REGIONS } from "@/lib/regions";
 import { BUSINESSES, getFeaturedBusinesses, getTopRatedBusinesses } from "@/lib/mock-businesses";
-import { getLatestArticles, getRecipeArticles } from "@/lib/mock-articles";
+import { ARTICLES, getLatestArticles, getRecipeArticles } from "@/lib/mock-articles";
 import { HOME_FAQS } from "@/lib/mock-site";
 import { getLocalizedBusiness } from "@/lib/i18n/content-business";
 import { HOME_FAQS_EN } from "@/lib/i18n/content-site";
@@ -102,7 +103,9 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       </div>
 
       {/* RICETTE */}
-      <section className="bg-brand-soft py-14">
+      <section className="relative isolate overflow-hidden bg-brand-soft py-14">
+        <div aria-hidden="true" className="gf-blob absolute -right-24 top-0 -z-10 h-80 w-80 rounded-full bg-[#f2b100]/20 blur-3xl" />
+        <div aria-hidden="true" className="gf-blob gf-blob-2 absolute -left-24 bottom-0 -z-10 h-72 w-72 rounded-full bg-[#2d6a4f]/15 blur-3xl" />
         <div className="container-page">
           <div className="mb-8 flex items-end justify-between gap-4">
             <Reveal>
@@ -141,9 +144,12 @@ export default function HomeContent({ locale }: { locale: Locale }) {
             <Reveal key={c.slug} delay={i * 40}>
               <Link
                 href={`${h("/directory")}?categoria=${c.slug}`}
-                className="card card-hover flex flex-col items-center gap-2.5 p-4 text-center"
+                className="card card-hover group flex flex-col items-center gap-2.5 p-4 text-center"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft text-brand-dark">
+                <span
+                  className="gf-icon-bob flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft text-brand-dark transition-colors duration-300 group-hover:bg-[#f2b100] group-hover:text-[#14231c]"
+                  style={{ animationDelay: `${-i * 0.45}s` }}
+                >
                   <CategoryIcon icon={c.icon} size={22} />
                 </span>
                 <span className="text-sm font-medium text-ink">{categoryLabelPlural(c, locale)}</span>
@@ -163,8 +169,8 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           <div className="mt-8 flex flex-wrap gap-3">
             {topCities.map((city, i) => (
               <Reveal key={city} delay={i * 30}>
-                <Link href={h(cityPath(city))} className="btn btn-outline bg-surface">
-                  <MapPinned size={15} /> {cityName(city, locale)}
+                <Link href={h(cityPath(city))} className="btn btn-outline group bg-surface hover:-translate-y-0.5">
+                  <MapPinned size={15} className="transition-transform group-hover:-translate-y-0.5 group-hover:scale-125" /> {cityName(city, locale)}
                 </Link>
               </Reveal>
             ))}
@@ -231,6 +237,26 @@ export default function HomeContent({ locale }: { locale: Locale }) {
 
       {/* FIDUCIA */}
       <section className="container-page py-14">
+        <div className="gf-guide relative isolate mb-8 overflow-hidden rounded-3xl bg-[linear-gradient(120deg,#1b4332,#2d6a4f)] px-6 py-8 sm:px-10">
+          <div aria-hidden="true" className="gf-blob absolute -right-16 -top-20 -z-10 h-64 w-64 rounded-full bg-[#f2b100]/25 blur-3xl" />
+          <div aria-hidden="true" className="gf-blob gf-blob-2 absolute -bottom-24 left-10 -z-10 h-64 w-64 rounded-full bg-[#ff8a5c]/20 blur-3xl" />
+          <dl className="grid grid-cols-2 gap-6 text-center lg:grid-cols-4">
+            {[
+              { n: BUSINESSES.length, l: locale === "en" ? "venues in the directory" : "locali in directory" },
+              { n: new Set(BUSINESSES.map((b) => b.city)).size, l: locale === "en" ? "cities" : "città" },
+              { n: ARTICLES.filter((a) => a.category === "Ricette").length, l: locale === "en" ? "gluten-free recipes" : "ricette senza glutine" },
+              { n: ARTICLES.length, l: locale === "en" ? "guides and articles" : "guide e articoli" },
+            ].map((x) => (
+              <div key={x.l}>
+                <dt className="sr-only">{x.l}</dt>
+                <dd className="font-editorial text-4xl font-bold text-[#f2b100] sm:text-5xl">
+                  <CountUp value={x.n} />
+                </dd>
+                <dd className="mt-1 text-sm font-medium text-white/85">{x.l}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
         <div className="grid gap-5 sm:grid-cols-3">
           {[
             { icon: ShieldCheck, title: t.home.trust1Title, body: t.home.trust1Body },

@@ -4,6 +4,7 @@ import { SlidersHorizontal, SearchX } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessCard from "@/components/BusinessCard";
 import DirectoryMap from "@/components/DirectoryMap";
+import PageHeroBand from "@/components/PageHeroBand";
 import DirectoryFilters from "@/components/DirectoryFilters";
 import QuickFilters from "@/components/QuickFilters";
 import SortSelect from "@/components/SortSelect";
@@ -56,10 +57,11 @@ export default function DirectoryContent({
       <JsonLd data={faqJsonLd(faqs)} />
       <Breadcrumbs locale={locale} items={[{ name: t.nav.directory, path: "/directory" }]} />
 
-      <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h1 className="font-editorial text-3xl font-semibold text-ink">{title}</h1>
-          <p className="mt-1 text-ink-soft">{results.length} {results.length === 1 ? t.directory.resultFound : t.directory.resultsFound}</p>
+      <PageHeroBand
+        eyebrow={locale === "en" ? "Gluten-free directory" : "Directory senza glutine"}
+        title={title}
+        subtitle={<p>{results.length} {results.length === 1 ? t.directory.resultFound : t.directory.resultsFound}</p>}
+      >
           {intro && <p className="mt-3 max-w-3xl text-ink-soft">{intro}</p>}
           <p className="mt-1 text-sm">
             <Link href={localeHref(locale, "/mappa-ristoranti-aic")} className="link-underline text-brand-dark">
@@ -77,7 +79,8 @@ export default function DirectoryContent({
               ))}
             </p>
           )}
-        </div>
+      </PageHeroBand>
+      <div className="mb-8 mt-5 flex justify-end">
         <Suspense fallback={null}><SortSelect /></Suspense>
       </div>
 
