@@ -76,3 +76,5 @@ Altre due foto Pexels, sempre generiche: `e-senza-glutine.jpg` (un piatto con co
 
 Altre quattro foto Pexels: `ingestione-accidentale.jpg` (una tazza di tisana con la bustina), `ristoratori-aic.jpg` (un tavolo apparecchiato con tovaglia a quadri in un locale, senza persone), `guida-michelin.jpg` (la sala di un ristorante vista da una vetrina) e `panettiere-pizzaiolo.jpg` (mani infarinate che impastano). La foto della Guida Michelin è un'immagine generica di un ristorante: non indica un locale stellato né segnalato. Per sostituirle con foto tue, usa lo stesso nome file.
 
+
+Altre quattro foto Pexels: `bologna.jpg` (portici di Bologna con tavolini di un bar, una persona lontana e illeggibile), `buono-celiachia.jpg` (fette di pane scuro con spighe e chicchi: pane e cereali **contengono glutine**, è un'immagine generica sul tema alimentazione), `cena-amici.jpg` (un piatto di capasanta con fagioli azuki in un ristorante, ritaglio senza la mano sullo sfondo: non è una cena in casa) e `natale-senza-glutine.jpg` (panettone e tazza davanti all'albero di Natale: non si può dire che il panettone sia senza glutine). Per sostituirle con foto tue, usa lo stesso nome file.
