@@ -7,6 +7,8 @@ function unsplash(id: string): string {
 // con le foto inline degli articoli.
 const BLOG_COVER: Record<number, string> = {
   101: unsplash("photo-1576091160399-112ba8d25d1d"),
+  200: unsplash("photo-1590947132387-155cc02f3212"),
+  201: unsplash("photo-1513104890138-7c749659a591"),
   102: unsplash("photo-1517248135467-4c7edcad34c4"),
   103: unsplash("photo-1473093295043-cdd812d0e601"),
   104: unsplash("photo-1541014741259-de529411b96a"),
