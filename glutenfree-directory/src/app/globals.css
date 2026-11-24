@@ -718,3 +718,30 @@ input[type="search"]::-webkit-search-decoration {
     }
   }
 }
+
+/* ───── Movimento, seconda parte ───── */
+@keyframes gf-icon-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Icone delle categorie che respirano, sfalsate */
+  .gf-icon-bob { animation: gf-icon-bob 3.6s ease-in-out infinite; }
+
+  /* Luce che segue il mouse sulle schede (posizione da MotionExtras) */
+  .card-hover { position: relative; }
+  .card-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(242, 177, 0, 0.16), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .card-hover:hover::before { opacity: 1; }
+
+  /* Pulsanti chiari che si sollevano */
+  .btn-outline { transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease; }
+  .btn-outline:hover { transform: translateY(-2px); }
+}

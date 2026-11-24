@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PageHeroBand from "@/components/PageHeroBand";
 import { ArrowRight } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
@@ -37,10 +38,11 @@ export default function BlogContent({
   return (
     <div className="container-page py-10">
       <Breadcrumbs locale={locale} items={[{ name: t.nav.blog, path: "/blog" }]} />
-      <div>
-        <h1 className="font-serif text-4xl font-semibold text-ink sm:text-5xl">{t.blog.title}</h1>
-        <p className="mt-3 max-w-2xl text-lg text-ink-soft">{t.blog.subtitle}</p>
-      </div>
+      <PageHeroBand
+        eyebrow={locale === "en" ? "Guides and recipes" : "Guide e ricette"}
+        title={t.blog.title}
+        subtitle={<p>{t.blog.subtitle}</p>}
+      />
 
       <div className="mt-7 flex flex-wrap gap-2">
         <Link href={blogHref} className={`chip ${!activeCategory ? "chip-brand" : "chip-neutral"}`}>{t.blog.all}</Link>
