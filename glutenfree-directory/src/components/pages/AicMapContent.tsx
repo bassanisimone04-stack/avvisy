@@ -42,6 +42,7 @@ function baseFaqs(locale: Locale, n: number, cities: number): FaqItem[] {
   return locale === "en"
     ? [
         { question: "What is the map of AIC restaurants?", answer: `A map of the restaurants and pizzerias in the Mappa Senza Glutine directory that take part in the Alimentazione Fuori Casa program of the Italian Celiac Association (AIC). Today it shows ${n} venues in ${cities} cities.` },
+        { question: "What is the AIC circuit (Alimentazione Fuori Casa)?", answer: "It is the network of venues in the AIC's Alimentazione Fuori Casa (AFC) program: restaurants, pizzerias, bars, ice cream shops, hotels and other venues whose staff has taken the association's training, which follow procedures agreed with the AIC and are checked periodically. This map is a shorter list of that network: only the restaurants and pizzerias we have checked." },
         { question: "Are all the venues on the map AIC members?", answer: "Yes: only restaurants and pizzerias marked as AIC members in our directory appear here. Hotels, shops, pharmacies, bakeries and ice cream shops are left out on purpose, and you'll find them in the full directory." },
         { question: "Is this the complete list of AIC restaurants in Italy?", answer: `No. The map shows only the venues we have checked so far, ${n} in ${cities} cities. The complete and up-to-date list of members is published by AIC itself, on its website and in its app: use it alongside ours.` },
         { question: "Does AIC membership mean zero risk?", answer: "No. Membership means the staff has been trained and the venue follows procedures agreed with the association, which lowers the margin of error, but it is not a guarantee against every risk. It's still worth telling the staff you have celiac disease and asking about the fryer and the kitchen." },
@@ -49,6 +50,7 @@ function baseFaqs(locale: Locale, n: number, cities: number): FaqItem[] {
       ]
     : [
         { question: "Cos'è la mappa dei ristoranti AIC?", answer: `È una mappa dei ristoranti e delle pizzerie della directory di Mappa Senza Glutine che aderiscono al programma Alimentazione Fuori Casa dell'Associazione Italiana Celiachia (AIC). Oggi mostra ${n} locali in ${cities} città.` },
+        { question: "Cos'è il circuito AIC (Alimentazione Fuori Casa)?", answer: "È la rete di locali del programma Alimentazione Fuori Casa (AFC) dell'AIC: ristoranti, pizzerie, bar, gelaterie, hotel e altri locali il cui personale ha seguito la formazione dell'associazione, che adottano procedure condivise con l'AIC e ricevono controlli periodici. Questa mappa è un elenco ridotto di quella rete: solo i ristoranti e le pizzerie che abbiamo verificato." },
         { question: "Tutti i locali della mappa aderiscono ad AIC?", answer: "Sì: qui compaiono solo i ristoranti e le pizzerie che nella nostra directory risultano aderenti ad AIC. Hotel, negozi, farmacie, pasticcerie e gelaterie sono esclusi di proposito, e li trovi nella directory completa." },
         { question: "È l'elenco completo dei ristoranti AIC in Italia?", answer: `No. La mappa mostra solo i locali che abbiamo verificato finora, ${n} in ${cities} città. L'elenco completo e aggiornato degli aderenti lo pubblica AIC stessa, sul suo sito e nella sua app: conviene usarlo insieme al nostro.` },
         { question: "L'adesione ad AIC significa rischio zero?", answer: "No. Significa che il personale è formato e che il locale segue procedure condivise con l'associazione, e questo riduce il margine di errore, ma non è una garanzia contro ogni rischio. Resta utile dire che si è celiaci e chiedere di friggitrice e cucina." },
@@ -130,6 +132,19 @@ export default function AicMapContent({ locale }: { locale: Locale }) {
           {en ? "We explain it in detail in the guide to " : "Lo spieghiamo nel dettaglio nella guida alla "}
           <Link href={h("/blog/certificazione-aic-cosa-significa-e-come-riconoscere-un-locale-davvero-certificato")} className="link-underline text-brand-dark">
             {en ? "AIC certification" : "certificazione AIC"}
+          </Link>
+          .
+        </p>
+
+        <h2 className="font-editorial mt-10 text-2xl font-semibold text-ink">
+          {en ? "The AIC circuit: what Alimentazione Fuori Casa is and how to read this list" : "Il circuito AIC: cos'è l'Alimentazione Fuori Casa e come leggere questa lista"}
+        </h2>
+        <p className="mt-3 leading-relaxed text-ink-soft">
+          {en
+            ? "When people talk about the «AIC circuit» or the «list of AIC restaurants», they mean the network of venues in the Alimentazione Fuori Casa (AFC) program: restaurants, pizzerias, bars, ice cream shops, hotels and other venues that have taken the Italian Celiac Association's training, follow procedures agreed with the association and are checked periodically. In its December 2024 guidelines for Christmas and New Year, the AIC pointed to the AFC Guide with over 4,000 trained venues. This page is a shorter list drawn from that network: only the restaurants and pizzerias we have checked. For the complete list use the AIC website and app; to see how joining works, read the guide for "
+            : "Quando si parla di «circuito AIC» o di «lista dei ristoranti AIC» si intende la rete di locali del programma Alimentazione Fuori Casa (AFC): ristoranti, pizzerie, bar, gelaterie, hotel e altri locali che hanno seguito la formazione dell'Associazione Italiana Celiachia, adottano procedure condivise con l'associazione e ricevono controlli periodici. Nel suo decalogo per Natale e Capodanno del dicembre 2024, l'AIC indicava la Guida AFC con oltre 4.000 locali formati. Questa pagina è un elenco ridotto di quella rete: solo i ristoranti e le pizzerie che abbiamo verificato. Per l'elenco completo usa il sito e l'app dell'AIC; per capire come funziona l'adesione, c'è la guida per i "}
+          <Link href={h("/blog/ristoratori-come-aderire-al-programma-aic-alimentazione-fuori-casa")} className="link-underline text-brand-dark">
+            {en ? "restaurateurs" : "ristoratori"}
           </Link>
           .
         </p>

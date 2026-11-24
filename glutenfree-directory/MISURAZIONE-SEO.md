@@ -47,3 +47,26 @@ L'export a 3 mesi **mescola il prima e il dopo** e diluisce l'effetto. Meglio:
 ## Cosa non misura questo file
 
 Le vendite del PDF (Payhip) e i clic sul pulsante "Acquista": il sito non li registra.
+
+## Aggiornamento del 24 novembre 2026: nuovi contenuti da misurare
+
+Punto di partenza: export Search Console del 24 novembre (ultimi 3 mesi, fino al 22 novembre). Le righe sono gruppi di query raccolti per argomento; «posizione» è la media pesata sulle impressioni.
+
+| Argomento | Impressioni | Posizione | Cosa abbiamo fatto |
+|---|---|---|---|
+| Surgelati senza glutine (11 query) | 124 | 11-16 | Nuovo articolo «Surgelati senza glutine: come riconoscere quelli sicuri» |
+| Negozi e catene (Mondo Senza Glutine, Le Bontà Italiane...) | 261 | circa 51 | Nuovo articolo «Negozi senza glutine a Roma e Milano» |
+| Firenze (guida assente) | 138 | circa 58 | Nuovo articolo «Firenze senza glutine» |
+| Torino (guida assente) | 77 | circa 53 | Nuovo articolo «Torino senza glutine» |
+| Arancini / arancine | 94 | circa 8 | Nuovo articolo «Arancini senza glutine» |
+| Pub per celiaci a Napoli | 67 | circa 35 | Nuovo articolo «Pub senza glutine» (nessun pub verificato in directory) |
+| Vendita / cash and carry / ingrosso | 123 | circa 42 | Nuovo articolo «Prodotti senza glutine per ristoratori» |
+| Circuito AIC, lista ristoranti AIC | 160 | circa 19 | Nuovo blocco in /mappa-ristoranti-aic e FAQ |
+| «Se un celiaco mangia glutine dopo quanto sta male» | 41 | 9,5 | Titolo di sezione e FAQ nell'articolo sull'ingestione accidentale |
+| Amido di frumento deglutinato | 67 | 11 | Sottosezione e FAQ nell'articolo sugli ingredienti dubbi |
+| «Gluten free holidays Italy» (EN) | 65 | circa 45 | Nuovo titolo EN della guida sulle migliori città |
+| Farro | 28 | circa 33 | Titolo di sezione e FAQ «contiene glutine?» |
+| Pizza con Mix It! Universale Schär | 30 | 8-12 | Ricetta riscritta con le dosi ufficiali del produttore |
+| Quartieri di Roma e Milano (Ostiense, Navigli, Isola...) | 284 | circa 29 | Sezioni «per zona» nelle due guide città |
+
+**Come misurare:** aspetta almeno 14 giorni dal merge e confronta «Ultimi 28 giorni» con il periodo precedente, riga per riga, guardando **posizione** e **CTR** prima dei clic. Per i nuovi articoli fai «Richiedi indicizzazione» in Search Console il giorno della pubblicazione.

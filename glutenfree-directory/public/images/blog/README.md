@@ -49,3 +49,18 @@ Foto di copertina degli articoli. **Già collegate (30):** tutte tranne le tre s
 | `dove-comprare.jpg` | Dove comprare prodotti senza glutine | Lo scaffale senza glutine di un supermercato o di una farmacia |
 | `old-wild-west.jpg` | Old Wild West senza glutine | Un hamburger senza glutine scattato davvero in un Old Wild West che ha il menu senza glutine |
 | `catene.jpg` | Catene di ristoranti senza glutine | Un tavolo con hamburger, patatine e bibita, senza loghi di catene specifiche |
+
+## Nuovi articoli del 24 novembre 2026
+
+Questi 7 articoli usano per ora un'**illustrazione originale** (file `.svg` in questa cartella): quando carichi la foto vera, sostituisce l'illustrazione. Per collegarla basta il nome del file e una riga in `src/lib/cover-photos.ts` (`LOCAL_BLOG_COVER`, chiave = numero indicato). Stesse regole di sopra: foto tue, orizzontali, almeno 1200 px, niente persone riconoscibili.
+
+| Nome file | Numero | Articolo | Cosa deve mostrare la foto |
+|---|---|---|---|
+| `surgelati.jpg` | 193 | Surgelati senza glutine | Un freezer aperto con verdure e confezioni, senza marchi in primo piano; oppure una confezione con la dicitura «senza glutine» o la Spiga Barrata ben leggibile |
+| `negozi.jpg` | 194 | Negozi senza glutine a Roma e Milano | La vetrina o lo scaffale di un negozio specializzato (con il permesso del titolare) |
+| `firenze.jpg` | 195 | Firenze senza glutine | Un piatto senza glutine con uno scorcio di Firenze; **l'articolo contiene già la tua foto di Quinoa** |
+| `torino.jpg` | 196 | Torino senza glutine | Focaccia di Recco o farinata senza glutine, con uno scorcio di Torino se possibile; **l'articolo contiene già la tua foto di Panperfocaccia** |
+| `arancini.jpg` | 197 | Arancini senza glutine | Arancini o arancine senza glutine (meglio spezzati a metà per vedere il ripieno), senza persone |
+| `pub.jpg` | 198 | Pub senza glutine | Un bicchiere di birra accanto alla bottiglia con la dicitura «senza glutine» su un bancone |
+| `ingrosso.jpg` | 199 | Prodotti senza glutine per ristoratori | Scaffali o casse di prodotti senza glutine in un magazzino o in un locale (con il permesso del titolare) |
+
