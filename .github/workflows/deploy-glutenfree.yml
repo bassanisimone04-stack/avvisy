@@ -21,6 +21,6 @@ jobs:
           HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_GLUTENFREE }}
         run: |
           if [ -z "$HOOK" ]; then
-            echo "Secret VERCEL_DEPLOY_HOOK_GLUTENFREE is not set"; exit 1
+            echo "::warning::Secret VERCEL_DEPLOY_HOOK_GLUTENFREE non impostato: nessun hook chiamato (il deploy resta affidato al collegamento Git di Vercel)."; exit 0
           fi
           curl --fail --silent --show-error -X POST "$HOOK"
