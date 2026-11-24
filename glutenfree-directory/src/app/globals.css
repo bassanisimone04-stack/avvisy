@@ -655,3 +655,66 @@ input[type="search"]::-webkit-search-decoration {
   --gf-shadow: rgba(15, 35, 25, 1);
   color-scheme: light;
 }
+
+/* ───── Movimento in tutto il sito ─────
+   Tutto si spegne con «riduci movimento» del sistema operativo. Le entrate allo
+   scorrimento usano le animazioni legate alla vista (CSS scroll-driven): dove il
+   browser non le supporta, gli elementi restano semplicemente visibili. */
+@keyframes gf-page-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes gf-scroll-in { from { opacity: 0; translate: 0 32px; scale: 0.97; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes gf-kenburns { from { scale: 1; } to { scale: 1.09; } }
+@keyframes gf-header-line { from { background-position: 0% 0; } to { background-position: 200% 0; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Ogni pagina entra con una dissolvenza */
+  #main-content { animation: gf-page-in 0.45s ease-out both; }
+
+  /* Foto dell'hero della home: zoom lentissimo avanti e indietro */
+  .gf-kenburns { animation: gf-kenburns 22s ease-in-out infinite alternate; }
+
+  /* Linea colorata che scorre sotto l'intestazione */
+  .gf-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: linear-gradient(90deg, #1b4332, #f2b100, #c2431f, #2d6a4f, #1b4332);
+    background-size: 200% 100%;
+    animation: gf-header-line 8s linear infinite;
+    opacity: 0.85;
+    pointer-events: none;
+  }
+
+  /* Pulsanti: riflesso che attraversa al passaggio del mouse */
+  .btn-primary, .btn-accent { position: relative; overflow: hidden; isolation: isolate; }
+  .btn-primary::after, .btn-accent::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    translate: -160% 0;
+    transition: translate 0.7s ease;
+    pointer-events: none;
+  }
+  .btn-primary:hover::after, .btn-accent:hover::after { translate: 330% 0; }
+
+  /* Etichette e icone che reagiscono al mouse */
+  a.chip, button.chip { transition: transform 0.18s ease, background-color 0.18s ease; }
+  a.chip:hover, button.chip:hover { transform: translateY(-2px); }
+
+  /* Entrate allo scorrimento: schede, titoli di sezione e testo degli articoli */
+  @supports (animation-timeline: view()) {
+    #main-content .card,
+    #main-content section h2,
+    .prose-article > :is(h2, h3, p, ul, ol, figure, blockquote, table) {
+      animation: gf-scroll-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}

@@ -31,7 +31,7 @@ export default function SiteHeader() {
   if (pathname?.startsWith("/admin")) return null;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur">
+    <header className="gf-header sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur">
       <div className="container-page flex h-16 items-center gap-4">
         <Logo locale={locale} />
         <nav className="ml-2 hidden items-center gap-1 lg:flex">
