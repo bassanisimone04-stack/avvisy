@@ -273,7 +273,7 @@ export default function BusinessMapExplorer({
             userPos={userPos}
             locale={locale}
           />
-          <p className="pointer-events-none absolute bottom-3 right-3 z-[500] rounded-full bg-white/85 px-3 py-1 text-[11px] text-ink-soft backdrop-blur">
+          <p className="pointer-events-none absolute bottom-3 right-3 z-[500] rounded-full bg-surface/90 px-3 py-1 text-[11px] font-medium text-ink shadow-sm backdrop-blur">
             {en
               ? `${visible.length} ${aic ? "AIC " : ""}${visible.length === 1 ? "venue" : "venues"} on the map`
               : `${visible.length} ${visible.length === 1 ? "locale" : "locali"}${aic ? " AIC" : ""} sulla mappa`}

@@ -52,7 +52,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
         <div className="container-page relative py-20 sm:py-28 lg:py-36">
           <div className="max-w-2xl">
             <Reveal delay={40}>
-              <span className="eyebrow inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 shadow-sm">
+              <span className="eyebrow inline-flex items-center gap-1.5 rounded-full bg-surface px-3 py-1.5 shadow-sm">
                 <Sparkles size={13} /> {t.home.eyebrow}
               </span>
             </Reveal>
@@ -74,7 +74,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
                 <Link href={h("/directory")} className="btn btn-accent">
                   {t.home.ctaDirectory} <ArrowRight size={16} />
                 </Link>
-                <Link href={h("/per-le-aziende")} className="btn btn-outline bg-white">
+                <Link href={h("/per-le-aziende")} className="btn btn-outline bg-surface">
                   {t.home.ctaBusiness}
                 </Link>
               </div>

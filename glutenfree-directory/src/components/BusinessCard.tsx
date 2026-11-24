@@ -40,13 +40,13 @@ export default function BusinessCard({ business, locale = "it" }: { business: Bu
           />
         )}
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
-          <span className="chip chip-neutral bg-white/90 backdrop-blur">{cat ? categoryLabel(cat, locale) : ""}</span>
+          <span className="chip chip-neutral bg-surface/90 backdrop-blur">{cat ? categoryLabel(cat, locale) : ""}</span>
           {business.aicCertified ? (
-            <span className="chip bg-white/90 text-brand-dark backdrop-blur">
+            <span className="chip bg-surface/90 text-brand-dark backdrop-blur">
               <BadgeCheck size={12} /> AIC
             </span>
           ) : (
-            <span className="chip bg-white/90 text-accent-dark backdrop-blur">
+            <span className="chip bg-surface/90 text-accent-dark backdrop-blur">
               <Heart size={12} /> {t.business.communityVerifiedShort}
             </span>
           )}
