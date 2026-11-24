@@ -564,3 +564,94 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
   appearance: none;
 }
+
+/* ───── Pagina guida PDF: movimento ───── */
+@keyframes gf-blob-move {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.08); }
+  66% { transform: translate(-30px, 25px) scale(0.95); }
+}
+@keyframes gf-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes gf-fan-l { 0%, 100% { transform: rotate(-12deg) translateX(-6px); } 50% { transform: rotate(-16deg) translateX(-18px); } }
+@keyframes gf-fan-r { 0%, 100% { transform: rotate(11deg) translateX(6px); } 50% { transform: rotate(15deg) translateX(18px); } }
+@keyframes gf-badge-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes gf-shine-move { 0% { transform: translateX(-120%) skewX(-20deg); } 60%, 100% { transform: translateX(260%) skewX(-20deg); } }
+@keyframes gf-gradient-pan { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes gf-spin { to { transform: rotate(360deg); } }
+@keyframes gf-ping { 0% { box-shadow: 0 0 0 0 rgba(242, 177, 0, 0.55); } 80%, 100% { box-shadow: 0 0 0 14px rgba(242, 177, 0, 0); } }
+@keyframes gf-twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(1.25) rotate(20deg); opacity: 0.7; } }
+@keyframes gf-dash-move { to { background-position: 40px 0; } }
+
+.gf-blob { animation: gf-blob-move 16s ease-in-out infinite; }
+.gf-blob-2 { animation-duration: 20s; animation-delay: -6s; }
+.gf-blob-3 { animation-duration: 13s; animation-delay: -3s; }
+.gf-marquee { animation: gf-marquee 60s linear infinite; }
+.gf-marquee:hover { animation-play-state: paused; }
+.gf-fan-l { animation: gf-fan-l 7s ease-in-out infinite; transform-origin: bottom right; }
+.gf-fan-r { animation: gf-fan-r 7s ease-in-out infinite; transform-origin: bottom left; }
+.gf-badge { animation: gf-badge-bob 4.5s ease-in-out infinite; }
+.gf-badge-2 { animation-delay: -1.5s; }
+.gf-badge-3 { animation: none; }
+.gf-twinkle { animation: gf-twinkle 2.4s ease-in-out infinite; }
+.gf-gradient-text {
+  background: linear-gradient(90deg, #c2431f, #f2b100, #2d6a4f, #c2431f);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gf-gradient-pan 8s ease-in-out infinite;
+}
+.gf-shine { position: relative; overflow: hidden; isolation: isolate; }
+.gf-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  animation: gf-shine-move 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+.gf-spin-border { animation: gf-spin 9s linear infinite; }
+.gf-pulse { animation: gf-ping 2.2s ease-out infinite; }
+.gf-dash {
+  background-image: linear-gradient(90deg, #f2b100 50%, transparent 50%);
+  background-size: 20px 2px;
+  animation: gf-dash-move 1.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gf-blob, .gf-marquee, .gf-fan-l, .gf-fan-r, .gf-badge, .gf-twinkle, .gf-gradient-text,
+  .gf-shine::after, .gf-spin-border, .gf-pulse, .gf-dash, .animate-float { animation: none !important; }
+}
+
+/* La pagina della guida resta chiara anche con il tema scuro: si riusano i colori del tema chiaro. */
+.gf-guide {
+  --gf-ink: #14231c;
+  --gf-ink-soft: #3d5347;
+  --gf-muted: #66766d;
+  --gf-canvas: #fafaf7;
+  --gf-surface: #ffffff;
+  --gf-surface-2: #eef3ee;
+  --gf-line: #e2e9e3;
+  --gf-line-strong: #c9d5cb;
+  --gf-brand: #1b4332;
+  --gf-brand-dark: #122b20;
+  --gf-brand-light: #2d6a4f;
+  --gf-brand-soft: #e7f0ea;
+  --gf-accent: #c2431f;
+  --gf-accent-dark: #963316;
+  --gf-accent-darker: #7a2811;
+  --gf-accent-soft: #fbe7de;
+  --gf-btn-primary: #1b4332;
+  --gf-btn-primary-hover: #122b20;
+  --gf-btn-accent: #c2431f;
+  --gf-btn-accent-hover: #963316;
+  --gf-gold: #f2b100;
+  --gf-gold-soft: #fdf2d6;
+  --gf-danger: #d6483f;
+  --gf-danger-soft: #fbe6e3;
+  --gf-panel: #0e1f17;
+  --gf-texture: rgba(18, 36, 28, 0.05);
+  --gf-shadow: rgba(15, 35, 25, 1);
+  color-scheme: light;
+}
