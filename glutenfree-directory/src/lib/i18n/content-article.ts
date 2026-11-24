@@ -2864,6 +2864,48 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
       { question: "Can I use the same pizza stone as for regular pizza?", answer: "Better not: the stone is porous and holds flour residue even after cleaning. Use baking paper, a washed tray or a stone kept only for gluten-free pizza." },
     ],
   },
+  "art-88": {
+    title: "Soft gluten-free focaccia: an easy recipe with rice flour",
+    excerpt: "Homemade gluten-free focaccia, soft and airy, with rice flour or a gluten-free mix: quantities, rising, brine and baking step by step, with a Genoa-style version and tips for celiacs.",
+    metaTitle: "Soft gluten-free focaccia: easy recipe",
+    metaDescription: "Soft gluten-free focaccia with rice flour or a mix: quantities, rising, brine and baking step by step, a Genoa-style version and tips for celiacs.",
+    tags: ["recipes", "focaccia", "dough", "rice flour", "dry yeast"],
+    authorRole: "Content verified by the editorial team",
+    keyTakeaways: [
+      "For one tray: 500 g rice flour or gluten-free flour mix, 365 g water, 1 heaped teaspoon dry brewer's yeast (or 10 g fresh), half a teaspoon of sugar and 11 g salt.",
+      "The dough is mixed in a bowl with a spoon: it does not become elastic like wheat dough and looks almost like a thick batter, which is normal.",
+      "Two rises: in the bowl until doubled, then in the tray; dimples made with oiled fingers and an oil-and-water brine give the classic surface.",
+      "For a celiac, the rice flour, the yeast and every other packaged ingredient must be labelled “gluten-free”.",
+    ],
+    sections: [
+      { h2: "Ingredients for one tray", body: "The quantities come from Simona Mirto's gluten-free focaccia published on <a href=\"https://www.tavolartegusto.it/?p=23068\" target=\"_blank\" rel=\"noopener noreferrer\">Tavolartegusto</a> (in Italian):<ul><li>500 g rice flour or gluten-free flour mix</li><li>365 g water at room temperature</li><li>1 heaped teaspoon dry brewer's yeast, or 10 g fresh brewer's yeast</li><li>½ teaspoon sugar</li><li>11 g salt</li><li>extra virgin olive oil, coarse or flaky salt and fresh rosemary for the topping</li></ul>For the brine (our suggestion): 3 tablespoons extra virgin olive oil and 3 tablespoons water, whisked with a pinch of salt. As a reference we use a rectangular tray of about 30×40 cm." },
+      { h2: "Rice flour or gluten-free mix?", body: "The recipe works with both. Rice flour alone gives a more rustic, crumbly focaccia; a gluten-free bread and pizza mix, which usually contains starches and binders such as psyllium fibre, makes the dough easier to spread and the crumb softer. If you use a mix, check whether the pack suggests a different amount of water: every blend absorbs differently. The individual flours are compared in the <a href=\"/en/blog/farine-senza-glutine-guida-alle-alternative-alla-farina-00\">guide to gluten-free flours</a>." },
+      { h2: "Step by step", body: "Rising times, brine and oven temperature are our editorial suggestions: adjust them to your oven and the temperature of your kitchen.", h3: [
+        { title: "1. Activate the yeast", body: "In a large bowl dissolve the yeast and sugar in a third of the water. With dry yeast, wait a few minutes until a light foam forms on top." },
+        { title: "2. Mix the dough", body: "Add the flour, then the rest of the water a little at a time, and the salt last. Stir with a spoon or spatula for 3-4 minutes until no lumps of flour are left. The dough stays soft and sticky: do not add flour to make it handleable." },
+        { title: "3. First rise", body: "Cover the bowl with cling film and leave it somewhere warm, for example in the switched-off oven with the light on, until the dough doubles: usually an hour and a half to two hours. With slower yeast or in a cold kitchen it takes longer." },
+        { title: "4. Spread in the tray", body: "Oil the tray generously, pour in the dough and spread it to the corners with oiled hands or a wet spatula, without pressing it down too much." },
+        { title: "5. Second rise", body: "Let it rise in the tray, covered, for another 30-40 minutes. Meanwhile heat the oven to 220°C, conventional (no fan)." },
+        { title: "6. Dimples and brine", body: "Press the surface with oiled fingertips to make the classic dimples, pour over the oil-and-water brine, then scatter coarse salt and rosemary." },
+        { title: "7. Bake", body: "Bake on the lower shelf at 220°C for about 25 minutes, until golden. For a crisper top, move the tray up for the last 5 minutes." },
+        { title: "8. Rest", body: "Take it out, add a drizzle of raw olive oil and let it cool for about ten minutes before cutting: straight from the oven the crumb is still moist." },
+      ] },
+      { h2: "Dry yeast, fresh yeast or sourdough", body: "Brewer's yeast, fresh or dry, is gluten-free in itself; still choose one labelled “gluten-free” or listed in the AIC Prontuario. The original recipe also suggests 100 g of sourdough starter, doubling the rising times: for a celiac only a gluten-free starter is suitable, because the usual one is made with wheat flour. If you bake often, more tips are in the <a href=\"/en/blog/pane-senza-glutine-fatto-in-casa-la-ricetta-base-con-lievito-di-birra\">homemade gluten-free bread</a> recipe." },
+      { h2: "Genoa-style version and other toppings", body: "For a focaccia closer to the Genoa style, spread it thinner so it stays low, and be generous with the oil-and-water brine before baking so the dimples stay glossy. Among the simplest variations:<ul><li>halved cherry tomatoes and oregano, added before the second rise;</li><li>pitted olives and thinly sliced red onion;</li><li>just flaky salt and a drizzle of oil, to fill after baking.</li></ul>If you fill it with cured meats or cheese, check which ones need a label check in the guide to <a href=\"/en/blog/pizza-senza-glutine-fatta-in-casa-idee-di-farciture-e-ingredienti-sicuri\">toppings and safe ingredients</a>." },
+      { h2: "How to store it", body: "It keeps for a day at room temperature in a food bag; the next day refresh it for a few minutes in a hot oven. You can also freeze it cut into pieces and heat it in the oven straight from frozen." },
+      { h2: "At home: watch out for cross-contamination", body: "If wheat flour is also used in your kitchen, make the focaccia with a washed bowl, spatula and tray, and never dust the worktop with regular flour. The full rules are in our guide to <a href=\"/en/blog/contaminazione-crociata-in-cucina-le-regole-d-oro-per-una-casa-sicura\">cross-contamination in the kitchen</a>." },
+      { h2: "Gluten-free focaccia to buy", body: "If you would rather buy it, our guides list verified places that make it: gluten-free Genoese focaccia in <a href=\"/en/blog/genova-senza-glutine-pizza-focaccia-e-forno-dedicato-tra-i-quartieri-della-citta\">Genoa</a>, focaccia barese in <a href=\"/en/blog/bari-senza-glutine-focaccia-panzerotti-e-pizza-in-teglia-senza-rinunce\">Bari</a> and focaccia di Recco in <a href=\"/en/blog/torino-senza-glutine-focaccia-farinata-e-piatti-piemontesi\">Turin</a>." },
+      { h2: "Sources", body: "<ul><li><a href=\"https://www.tavolartegusto.it/?p=23068\" target=\"_blank\" rel=\"noopener noreferrer\">Simona Mirto, Focaccia senza glutine, Tavolartegusto (ingredient quantities; in Italian)</a></li></ul>Rising times, brine, tray size, oven temperature and method are suggestions from the Mappa Senza Glutine editorial team." },
+    ],
+    faqs: [
+      { question: "Can I make gluten-free focaccia with rice flour only?", answer: "Yes, the recipe uses 500 g of rice flour or gluten-free flour mix. With rice flour alone it is more rustic and crumbly, with a bread and pizza mix it is softer. For a celiac, the rice flour must be labelled “gluten-free”." },
+      { question: "How long should gluten-free focaccia rise?", answer: "In our suggestions, until it doubles in the bowl (usually an hour and a half to two hours somewhere warm), then another 30-40 minutes in the tray. With a gluten-free sourdough starter the times double." },
+      { question: "What temperature do I bake gluten-free focaccia at?", answer: "In our suggestions, in a preheated conventional oven at 220°C, on the lower shelf, for about 25 minutes, until golden." },
+      { question: "How much dry yeast for 500 g of flour?", answer: "The recipe uses 1 heaped teaspoon of dry brewer's yeast, or 10 g of fresh brewer's yeast, for 500 g of rice flour or gluten-free mix." },
+      { question: "Why is gluten-free focaccia dough sticky?", answer: "Because without gluten the elastic network of wheat dough does not form: the mixture stays soft, like a thick batter. That is normal: spread it with oiled hands or a wet spatula, without adding flour." },
+      { question: "Can gluten-free focaccia be frozen?", answer: "Yes, ideally cut into pieces: heat it in the oven straight from frozen." },
+    ],
+  },
 };
 
 
