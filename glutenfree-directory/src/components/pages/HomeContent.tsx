@@ -222,13 +222,18 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       </section>
 
       {/* FAQ */}
-      <section className="container-page py-14">
-        <Reveal>
-          <p className="eyebrow text-center">{t.home.faqEyebrow}</p>
-          <h2 className="font-editorial mb-8 mt-1 text-center text-2xl font-semibold text-ink sm:text-3xl">{t.home.faqTitle}</h2>
-        </Reveal>
-        <div className="mx-auto max-w-3xl">
-          <FaqAccordion items={faqs} />
+      <section className="relative overflow-hidden bg-[var(--gf-panel)] py-16 sm:py-20">
+        <div aria-hidden="true" className="pointer-events-none absolute -left-24 -top-24 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(45,106,79,0.55),transparent_65%)]" />
+        <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -right-20 h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,rgba(242,177,0,0.18),transparent_65%)]" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:22px_22px]" />
+        <div className="container-page relative">
+          <Reveal>
+            <p className="eyebrow text-center !text-gold">{t.home.faqEyebrow}</p>
+            <h2 className="font-editorial mb-10 mt-1 text-center text-2xl font-semibold text-white sm:text-3xl">{t.home.faqTitle}</h2>
+          </Reveal>
+          <div className="mx-auto max-w-3xl">
+            <FaqAccordion items={faqs} />
+          </div>
         </div>
       </section>
     </>
