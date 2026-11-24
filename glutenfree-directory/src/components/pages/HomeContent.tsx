@@ -6,13 +6,13 @@ import CategoryIcon from "@/components/CategoryIcon";
 import BusinessCard from "@/components/BusinessCard";
 import ArticleCard from "@/components/ArticleCard";
 import FaqAccordion from "@/components/FaqAccordion";
-import MapSection from "@/components/MapSection";
+import BusinessMapExplorer from "@/components/BusinessMapExplorer";
 import HeroPhotoCollage from "@/components/HeroPhotoCollage";
 import Reveal from "@/components/Reveal";
 import { JsonLd, faqJsonLd } from "@/lib/seo";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
 import { REGIONS } from "@/lib/regions";
-import { getFeaturedBusinesses, getTopRatedBusinesses } from "@/lib/mock-businesses";
+import { BUSINESSES, getFeaturedBusinesses, getTopRatedBusinesses } from "@/lib/mock-businesses";
 import { getLatestArticles, getRecipeArticles } from "@/lib/mock-articles";
 import { HOME_FAQS } from "@/lib/mock-site";
 import { getLocalizedBusiness } from "@/lib/i18n/content-business";
@@ -156,7 +156,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           <p className="mt-2 max-w-2xl text-ink-soft">{t.home.mapSubtitle}</p>
         </Reveal>
         <div className="mt-8">
-          <MapSection businesses={featured} />
+          <BusinessMapExplorer businesses={BUSINESSES.map((b) => getLocalizedBusiness(b, locale))} locale={locale} />
         </div>
       </section>
 

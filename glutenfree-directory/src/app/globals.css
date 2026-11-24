@@ -487,6 +487,45 @@ body {
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
     transition: transform 0.15s ease;
   }
+  .gf-cluster { background: transparent; border: none; }
+  .gf-cluster span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 13px;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.28), 0 4px 12px rgba(0, 0, 0, 0.35);
+    transition: transform 0.15s ease;
+  }
+  .gf-cluster:hover span { transform: scale(1.08); }
+  .gf-map-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    gap: 8px;
+  }
+  .gf-map-controls button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 9999px;
+    border: 1px solid var(--gf-line);
+    background: color-mix(in srgb, var(--gf-surface) 92%, transparent);
+    color: var(--gf-ink);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+  }
+  .gf-map-controls button:hover { background: var(--gf-surface); }
+  .gf-map-controls button:last-child { width: 36px; padding: 0; justify-content: center; }
   .gf-map-user { background: transparent; border: none; }
   .gf-map-user-dot {
     display: block;
@@ -517,4 +556,11 @@ body {
 @media print {
   header, footer, nav, .no-print { display: none !important; }
   body { background: #fff !important; }
+}
+
+/* Il pulsante "cancella" nativo dei campi di ricerca doppiava il nostro: si tiene solo il nostro. */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
 }
