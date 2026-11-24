@@ -9,6 +9,7 @@ import ArticleCard from "@/components/ArticleCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import BusinessMapExplorer from "@/components/BusinessMapExplorer";
 import Reveal from "@/components/Reveal";
+import GuidePromo from "@/components/GuidePromo";
 import { JsonLd, faqJsonLd } from "@/lib/seo";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
 import { REGIONS } from "@/lib/regions";
@@ -44,7 +45,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           fill
           priority
           sizes="100vw"
-          className="-z-10 object-cover object-[72%_50%]"
+          className="gf-kenburns -z-10 object-cover object-[72%_50%]"
         />
         {/* Velo scuro: uniforme su telefono, sfumato da sinistra su schermi larghi, così il testo resta leggibile e il piatto in vista. */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[#0e1f17]/70 lg:hidden" />
@@ -82,6 +83,23 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
+
+      {/* NASTRO IN MOVIMENTO */}
+      <div className="gf-guide overflow-hidden border-y border-[#f0d9a0] bg-[#fdf2d6] py-3" aria-hidden="true">
+        <div className="gf-marquee flex w-max gap-8 whitespace-nowrap text-sm font-semibold text-[#1b4332]">
+          {[0, 1].flatMap((k) =>
+            (locale === "en"
+              ? ["Verified venues", "AIC certified restaurants", "Satellite map", "Gluten-free recipes", "Cities across Italy", "PDF guide", "Community reviews"]
+              : ["Locali verificati", "Ristoranti certificati AIC", "Mappa satellitare", "Ricette senza glutine", "Città di tutta Italia", "Guida PDF", "Recensioni della community"]
+            ).map((x) => (
+              <span key={`${k}-${x}`} className="inline-flex items-center gap-8">
+                {x}
+                <span className="text-[#c2431f]">✦</span>
+              </span>
+            )),
+          )}
+        </div>
+      </div>
 
       {/* RICETTE */}
       <section className="bg-brand-soft py-14">
@@ -208,6 +226,8 @@ export default function HomeContent({ locale }: { locale: Locale }) {
           ))}
         </div>
       </section>
+
+      <GuidePromo locale={locale} />
 
       {/* FIDUCIA */}
       <section className="container-page py-14">
