@@ -68,6 +68,9 @@ const LOCAL_BLOG_COVER: Record<number, string> = {
   170: "dolci",
   172: "dove-comprare",
   174: "catene",
+  195: "firenze",
+  197: "arancini",
+  198: "pub",
 };
 
 // Illustrazioni originali (SVG in public/images/blog/) per gli articoli senza foto.

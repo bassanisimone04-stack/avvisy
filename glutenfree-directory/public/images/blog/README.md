@@ -58,9 +58,13 @@ Questi 7 articoli usano per ora un'**illustrazione originale** (file `.svg` in q
 |---|---|---|---|
 | `surgelati.jpg` | 193 | Surgelati senza glutine | Un freezer aperto con verdure e confezioni, senza marchi in primo piano; oppure una confezione con la dicitura «senza glutine» o la Spiga Barrata ben leggibile |
 | `negozi.jpg` | 194 | Negozi senza glutine a Roma e Milano | La vetrina o lo scaffale di un negozio specializzato (con il permesso del titolare) |
-| `firenze.jpg` | 195 | Firenze senza glutine | Un piatto senza glutine con uno scorcio di Firenze; **l'articolo contiene già la tua foto di Quinoa** |
+| `firenze.jpg` | 195 | Firenze senza glutine | **Collegata (Pexels).** Per una foto tua, sostituisci il file |
 | `torino.jpg` | 196 | Torino senza glutine | Focaccia di Recco o farinata senza glutine, con uno scorcio di Torino se possibile; **l'articolo contiene già la tua foto di Panperfocaccia** |
-| `arancini.jpg` | 197 | Arancini senza glutine | Arancini o arancine senza glutine (meglio spezzati a metà per vedere il ripieno), senza persone |
-| `pub.jpg` | 198 | Pub senza glutine | Un bicchiere di birra accanto alla bottiglia con la dicitura «senza glutine» su un bancone |
+| `arancini.jpg` | 197 | Arancini senza glutine | **Collegata (Pexels).** Per una foto tua, sostituisci il file |
+| `pub.jpg` | 198 | Pub senza glutine | **Collegata (Pexels).** Per una foto tua, sostituisci il file |
 | `ingrosso.jpg` | 199 | Prodotti senza glutine per ristoratori | Scaffali o casse di prodotti senza glutine in un magazzino o in un locale (con il permesso del titolare) |
+
+### Foto prese da Pexels (24 novembre 2026)
+
+`firenze.jpg`, `arancini.jpg` e `pub.jpg` vengono da Pexels, indicata dal titolare del sito (autori non registrati qui). La licenza Pexels consente l'uso gratuito, anche commerciale, senza obbligo di attribuzione. Sono foto generiche: `firenze.jpg` è un ritaglio dello skyline (tolti bottiglia con marchio e biscotti), `arancini.jpg` mostra arancini tradizionali con panatura (non si può dire che siano senza glutine), `pub.jpg` mostra una bottiglia senza etichetta. Se in futuro scatti foto tue, sostituisci i file con lo stesso nome.
 
