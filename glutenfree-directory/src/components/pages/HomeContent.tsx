@@ -1,5 +1,6 @@
 import { cityPath } from "@/lib/city-pages";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ShieldCheck, Users, MapPinned, Sparkles } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import CategoryIcon from "@/components/CategoryIcon";
@@ -7,7 +8,6 @@ import BusinessCard from "@/components/BusinessCard";
 import ArticleCard from "@/components/ArticleCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import BusinessMapExplorer from "@/components/BusinessMapExplorer";
-import HeroPhotoCollage from "@/components/HeroPhotoCollage";
 import Reveal from "@/components/Reveal";
 import { JsonLd, faqJsonLd } from "@/lib/seo";
 import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
@@ -37,37 +37,44 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       <JsonLd data={faqJsonLd(faqs)} />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-brand-soft">
-        <div className="grid-texture absolute inset-0 opacity-60" />
-        <div className="container-page relative py-16 sm:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <Reveal>
-              <HeroPhotoCollage label={t.home.title1} />
-            </Reveal>
+      <section className="relative isolate overflow-hidden bg-[var(--gf-panel)]">
+        <Image
+          src="/images/home/hero.jpg"
+          alt={locale === "en" ? "Wooden table with fresh pasta, pizza and olive oil" : "Tavolo di legno con pasta fresca, pizza e olio d'oliva"}
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-[72%_50%]"
+        />
+        {/* Velo scuro: uniforme su telefono, sfumato da sinistra su schermi larghi, così il testo resta leggibile e il piatto in vista. */}
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[#0e1f17]/70 lg:hidden" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-[#0e1f17]/95 via-[#0e1f17]/75 to-[#0e1f17]/5 lg:block" />
+        <div className="container-page relative py-20 sm:py-28 lg:py-36">
+          <div className="max-w-2xl">
             <Reveal delay={40}>
-              <span className="eyebrow mt-8 inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 shadow-sm">
+              <span className="eyebrow inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 shadow-sm">
                 <Sparkles size={13} /> {t.home.eyebrow}
               </span>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="font-editorial mt-5 text-4xl font-semibold text-ink sm:text-5xl lg:text-6xl">
-                {t.home.title1} <span className="text-brand">{t.home.title2}</span>
+              <h1 className="font-editorial mt-5 text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">
+                {t.home.title1} <span className="text-[var(--gf-gold)]">{t.home.title2}</span>
               </h1>
             </Reveal>
             <Reveal delay={140}>
-              <p className="mx-auto mt-5 max-w-xl text-lg text-ink-soft">{t.home.subtitle}</p>
+              <p className="mt-5 max-w-xl text-lg text-white/85">{t.home.subtitle}</p>
             </Reveal>
             <Reveal delay={200}>
-              <div className="mx-auto mt-8 max-w-xl">
+              <div className="mt-8 max-w-xl">
                 <SearchBar />
               </div>
             </Reveal>
             <Reveal delay={260}>
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-                <Link href={h("/directory")} className="btn btn-primary">
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Link href={h("/directory")} className="btn btn-accent">
                   {t.home.ctaDirectory} <ArrowRight size={16} />
                 </Link>
-                <Link href={h("/per-le-aziende")} className="btn btn-outline">
+                <Link href={h("/per-le-aziende")} className="btn btn-outline bg-white">
                   {t.home.ctaBusiness}
                 </Link>
               </div>
