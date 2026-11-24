@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { MapPin, BadgeCheck, Heart } from "lucide-react";
 import type { Business } from "@/lib/types";
+import { CATEGORIES, categoryLabelPlural } from "@/lib/categories";
+import { PIN_COLORS } from "@/lib/map-colors";
 import { cityName } from "@/lib/i18n/place-names";
 import { localeHref } from "@/lib/i18n/locale";
 import { useDictionary } from "@/lib/i18n/useLocale";
@@ -21,12 +23,27 @@ export default function DirectoryMap({ businesses }: { businesses: Business[] })
   const { locale, t } = useDictionary();
   const active = businesses.find((b) => b.id === activeId);
 
+  // Legenda: solo i tipi presenti tra i risultati, con il colore del loro pin.
+  const legend = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const b of businesses) counts.set(b.category, (counts.get(b.category) ?? 0) + 1);
+    return CATEGORIES.filter((c) => counts.has(c.slug)).map((c) => ({ slug: c.slug, label: categoryLabelPlural(c, locale), n: counts.get(c.slug) ?? 0 }));
+  }, [businesses, locale]);
+
   if (businesses.length === 0) return null;
 
   return (
     <div className="card card-soft mb-8 overflow-hidden">
       <div className="relative aspect-[16/10] bg-brand-soft sm:aspect-[21/9]">
-        <InteractiveMap businesses={businesses} activeId={activeId} onSelect={setActiveId} />
+        <InteractiveMap businesses={businesses} activeId={activeId} onSelect={setActiveId} locale={locale} />
+        <ul className="pointer-events-none absolute bottom-3 left-3 z-[500] flex max-w-[70%] flex-wrap gap-1.5">
+          {legend.map((l) => (
+            <li key={l.slug} className="flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-medium text-ink-soft shadow-sm backdrop-blur">
+              <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full" style={{ background: PIN_COLORS[l.slug] }} />
+              {l.label} · {l.n}
+            </li>
+          ))}
+        </ul>
         <p className="pointer-events-none absolute bottom-3 right-3 z-[500] rounded-full bg-white/85 px-3 py-1 text-[11px] text-ink-soft backdrop-blur">
           {tf(t.map.caption, { n: businesses.length })}
         </p>

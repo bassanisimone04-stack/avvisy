@@ -1,5 +1,5 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
-import FaqAccordion from "@/components/FaqAccordion";
+import FaqExplorer from "@/components/FaqExplorer";
 import { JsonLd, faqJsonLd } from "@/lib/seo";
 import { FAQ_GROUPS_IT, FAQ_GROUPS_EN } from "@/lib/faq-page-content";
 import { getDictionary } from "@/lib/i18n/dictionary";
@@ -16,16 +16,12 @@ export default function FaqPageContent({ locale }: { locale: Locale }) {
       <Breadcrumbs locale={locale} items={[{ name: t.footer.faq, path: "/faq" }]} />
 
       <div className="mx-auto max-w-3xl">
-        <h1 className="font-editorial text-3xl font-semibold text-ink sm:text-4xl">{t.faqPage.title}</h1>
+        <p className="eyebrow">{locale === "en" ? "Help centre" : "Centro assistenza"}</p>
+        <h1 className="font-editorial mt-1 text-3xl font-semibold text-ink sm:text-4xl">{t.faqPage.title}</h1>
         <p className="mt-3 text-lg text-ink-soft">{t.faqPage.subtitle}</p>
 
-        <div className="mt-10 flex flex-col gap-10">
-          {groups.map((group) => (
-            <section key={group.title}>
-              <h2 className="mb-4 font-editorial text-xl font-semibold text-ink">{group.title}</h2>
-              <FaqAccordion items={group.items} />
-            </section>
-          ))}
+        <div className="mt-8">
+          <FaqExplorer groups={groups} locale={locale} />
         </div>
       </div>
     </div>
