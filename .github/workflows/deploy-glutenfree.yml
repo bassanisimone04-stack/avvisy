@@ -1,0 +1,26 @@
+name: Deploy Mappa Senza Glutine
+
+# Vercel non fa partire i deploy dei commit il cui autore non e' collegato all'account
+# Vercel (per esempio quelli fatti da Claude). Un Deploy Hook non ha questo controllo:
+# a ogni push su main che tocca glutenfree-directory/ parte quindi un build di produzione.
+# Si puo' lanciare anche a mano: Actions -> "Deploy Mappa Senza Glutine" -> Run workflow.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "glutenfree-directory/**"
+      - ".github/workflows/deploy-glutenfree.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_GLUTENFREE }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "Secret VERCEL_DEPLOY_HOOK_GLUTENFREE is not set"; exit 1
+          fi
+          curl --fail --silent --show-error -X POST "$HOOK"
