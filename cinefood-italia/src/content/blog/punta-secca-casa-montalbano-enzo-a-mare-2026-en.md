@@ -3,8 +3,8 @@ titolo: "Punta Secca Today: Montalbano's House and Enzo a Mare"
 descrizione: "What changed in Punta Secca in 2026: Cyclone Harry, Enzo a Mare, Montalbano's house and new venues. What to check before you go."
 autore: "CineFood Italia Editorial Team"
 dataPubblicazione: 2026-11-16
-immagine: "../../assets/placeholder/dove-mangiava-montalbano-sicilia.jpg"
-immagineAlt: "Sicilian coastline with turquoise waters and boats at anchor"
+immagine: "../../assets/placeholder/punta-secca-casa-montalbano-enzo-a-mare-2026.jpg"
+immagineAlt: "A white lighthouse and houses with blue shutters on a seafront street in Punta Secca"
 tags: ["Montalbano", "Punta Secca", "Sicily", "Enzo a Mare", "film tourism"]
 faq:
   - domanda: "Is Enzo a Mare open in 2026?"

@@ -3,8 +3,8 @@ titolo: "Punta Secca oggi: la casa di Montalbano e Enzo a Mare"
 descrizione: "Cosa è cambiato a Punta Secca nel 2026: il ciclone Harry, Enzo a Mare, la casa di Montalbano e i nuovi locali. Cosa verificare prima di andare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-11-16
-immagine: "../../assets/placeholder/dove-mangiava-montalbano-sicilia.jpg"
-immagineAlt: "Costa siciliana con acque turchesi e barche all'ancora"
+immagine: "../../assets/placeholder/punta-secca-casa-montalbano-enzo-a-mare-2026.jpg"
+immagineAlt: "Faro bianco e case con persiane azzurre su una strada sul mare, a Punta Secca"
 tags: ["Montalbano", "Punta Secca", "Sicilia", "Enzo a Mare", "cineturismo"]
 faq:
   - domanda: "Enzo a Mare è aperto nel 2026?"
