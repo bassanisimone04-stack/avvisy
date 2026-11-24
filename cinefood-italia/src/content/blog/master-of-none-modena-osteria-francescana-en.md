@@ -8,13 +8,13 @@ immagineAlt: "Aerial view of central Modena with the Ghirlandina tower and the C
 tags: ["Master of None", "Modena", "Netflix", "Osteria Francescana", "film tourism"]
 faq:
   - domanda: "Was Master of None really filmed in Modena?"
-    risposta: "Yes: season 2 (2017) opens with several weeks genuinely filmed in Modena, where lead character Dev (Aziz Ansari) moves to learn the art of fresh pasta."
+    risposta: "Yes: season 2 (2017) opens with an episode, The Thief, filmed in Modena. Ansari has said he chose the city after a trip he took years earlier."
   - domanda: "Is Osteria Francescana a real restaurant?"
     risposta: "Yes: it's chef Massimo Bottura's three-Michelin-star restaurant on Via Stella in Modena, voted the world's best restaurant in both 2016 and 2018 by The World's 50 Best Restaurants."
   - domanda: "What other real Modena spots appear in the show?"
-    risposta: "Among others, the historic Hosteria Giusti (Vicolo Squallore 46), opened in 1989 behind the Giusti delicatessen running since 1598, and the Cappuccino da Angiolina bar on Vicolo Forni."
-  - domanda: "Did Aziz Ansari really learn to make pasta for the role?"
-    risposta: "Yes: the actor and co-creator actually moved to Modena for weeks, studying Italian and the art of hand-rolled pasta sheets before filming."
+    risposta: "According to Il Post and Modena's tourist board: Piazzetta San Giacomo, the Menomoka bar on Via Canalchiaro, Cappuccino da Angiolina on Vicolo Forni and the Mercato Albinelli. Plus Hosteria Giusti (Vicolo Squallore 46), opened in 1989 behind the Giusti delicatessen, running since 1605."
+  - domanda: "Is there an official Master of None itinerary in Modena?"
+    risposta: "Yes: Modena's tourist board offers the itinerary In Modena with Master of None, covering the places of the series."
 lang: "en"
 prenotazioni:
   - nome: "Hotel"
@@ -25,38 +25,55 @@ esperienze:
 bozza: false
 ---
 
-*Master of None*, the Netflix series created by **Aziz Ansari** and Alan
-Yang, opens its second season (2017) with an episode filmed entirely in
-Italy — and not just any city, but Emilia's food capital: **Modena**.
+<!-- Sources and caveats: see the Italian version (same facts, checked 2026-11-24). -->
 
-## Where Master of None was filmed in Modena: Osteria Francescana
+*Master of None*, the Netflix series created by **Aziz Ansari** and Alan Yang, opens its second season
+(2017) with a part shot in Italy, and not in just any city: in **Modena**, Emilia's food capital. The opening
+episode is called *The Thief*. Ansari has said he chose Modena after a trip he took years earlier.
 
-In the episode *The Thief*, Dev and his friend Arnold dine
-at **[Osteria Francescana](/en/locale/osteria-francescana-modena)**, chef **Massimo Bottura**'s
-three-Michelin-star restaurant on Via Stella. It's not a set: it's a real
-restaurant, voted the world's best in *The World's 50 Best Restaurants*
-ranking in both 2016 and 2018.
+## Where Master of None was filmed in Modena
 
-## Hosteria Giusti, since 1598
+According to Il Post, the first Modena location of the premiere is **Piazzetta San Giacomo**, with three
+restaurants around it. The second bar of the episode, where Dev meets Francesca, Pino and Ale, is
+**Menomoka**, on Via Canalchiaro. Modena's tourist board also offers an official itinerary, *In Modena with
+Master of None*, with other places from the series: **Cappuccino da Angiolina**, a bar on Vicolo Forni, and the
+**Mercato Albinelli**, the covered market in the centre.
 
-Among the show's other real locations is **Hosteria Giusti**, at Vicolo
-Squallore 46 (the delicatessen is at Via Farini 75): just four tables, carved out in 1989 from the former
-slaughterhouse behind the historic Giusti delicatessen, running since
-1598 — one of Europe's oldest food shops. Also featured is the
-**Cappuccino da Angiolina** bar on Vicolo Forni.
+## Osteria Francescana
 
-## Modena, a food capital
+Among the Modena places shown in the series is **[Osteria Francescana](/en/locale/osteria-francescana-modena)**,
+the three-Michelin-star restaurant of chef **Massimo Bottura**, on Via Stella. It isn't a set: it's a real venue, voted
+the world's best restaurant in *The World's 50 Best Restaurants* in both 2016 and 2018. Bottura told the *Gazzetta di
+Modena* he had befriended Ansari. Booking takes weeks or months in advance: if you can't get in, the rest of the
+itinerary is still within reach.
 
-To play Dev learning hand-made pasta, Aziz Ansari actually moved to
-Modena for weeks, studying Italian and the technique of rolling fresh
-dough. The result is an authentic portrait of a city known for
-**tortellini**, **tigelle**, **traditional balsamic vinegar** and
-**Lambrusco** — the same Modena told in our article on
-**[Ferrari and Modena's cuisine](/en/blog/ferrari-film-modena-cucina)**.
+## Hosteria Giusti
+
+Another address to note is **[Hosteria Giusti](/en/locale/hosteria-giusti-modena)**, at Vicolo Squallore 46, behind the
+Giusti delicatessen at Via Farini 75. It is a tiny place with four tables, opened in 1989. The **delicatessen** is much
+older: the Giusti family has run it since **1605** according to several sources, and only one gives 1598 as the year an
+ancestor joined the cured-meat guild. For our guide, the safe date is 1605. Always check opening days and hours, as there
+are very few seats.
+
+## A walking itinerary in Modena
+
+The centre is small and walkable. One possible order:
+1. **Mercato Albinelli** in the morning, with its stalls of cured meats, cheeses and vegetables.
+2. **Piazzetta San Giacomo** and the bars nearby, for a coffee or lunch.
+3. **Cappuccino da Angiolina**, on Vicolo Forni, for a break.
+4. **Hosteria Giusti** or **Osteria Francescana**, if you can book.
+
+For more cinema-linked places in the same city read **[Ferrari and Modena's Cuisine](/en/blog/ferrari-film-modena-cucina)**
+and **[Somebody Feed Phil in Modena](/en/blog/somebody-feed-phil-modena-osteria-francescana)**. Want all the venues in the city?
+They are on the **[Modena](/en/modena)** page.
+
+## What to eat in Modena
+
+The city is the home of **tortellini**, **tigelle**, **traditional balsamic vinegar** and **Lambrusco**. They aren't tied to the series,
+but they are the products that make Modena a food destination, and the ones people following Dev's journeys tend to look for.
 
 ## In short
 
-*Master of None* proves the world's best cooking is often found in a
-provincial town: Modena, led by Osteria Francescana, remains one of
-Italy's most sought-after food destinations. Discover more
-**[films and shows](/en/film)** with real Italian locations on our site.
+*Master of None* shows that the best cooking in the world is often found in provincial cities. Modena, with Osteria Francescana at
+the top, remains one of Italy's most coveted food destinations. Discover other **[films and series](/en/film)** with real
+Italian locations on our site.

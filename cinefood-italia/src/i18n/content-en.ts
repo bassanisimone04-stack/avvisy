@@ -151,6 +151,9 @@ export const filmsEn: Record<string, FilmEn> = {
     faq: [
       { domanda: "Where was Il Postino filmed?", risposta: "Across the Aeolian island of Salina (especially Pollara) and Procida, in the Gulf of Naples, with their almost untouched seascapes." },
       { domanda: "Was Il Postino filmed in Procida or Salina?", risposta: "In both: Procida (Marina Corricella, the inn, the church) is the film's village; Salina (Pollara) hosts Neruda's house and the bike rides." },
+      { domanda: "Can you visit Neruda's house in Pollara?", risposta: "It is a private home. Look from a distance and don't enter the property: according to a news report the owner has refused to let it be used for film commemorations." },
+      { domanda: "Where is the Postman's beach?", risposta: "On Procida, Pozzovecchio beach is known as \"the Postman's beach\" and is linked to the lovers' scenes (FAI listing). On Salina the reference is Pollara." },
+      { domanda: "Where to eat in the footsteps of Il Postino?", risposta: "On Procida at Locanda del Postino (a venue linked to the film, not a location) and on Salina at trattorias such as Trattoria Cucinotta in Santa Marina Salina." },
       { domanda: "What to eat in Salina?", risposta: "Aeolian flavours: pane cunzato, Salina capers, malvasia wine and fish dishes in the trattorias overlooking the sea." },
     ],
   },
@@ -602,7 +605,7 @@ export const restaurantsEn: Record<string, RestEn> = {
     scena: { "house-of-gucci": "It does not appear among the filming locations: it is a historic restaurant in Milan's Brera district, suggested only as a place to eat in the city." },
   },
   "hosteria-giusti-modena": {
-    descrizione: "A four-table osteria in the heart of Modena, carved out in 1989 from the former slaughterhouse behind the historic Giusti delicatessen, running since 1598: one of Europe's oldest food shops.",
+    descrizione: "A four-table osteria in the heart of Modena, carved out in 1989 from the former slaughterhouse behind the historic Giusti delicatessen, running since at least 1605: one of Europe's oldest food shops.",
     scena: { "master-of-none": "Among the real locations of Master of None season 2, set in Modena while Dev learns the art of fresh pasta." },
   },
   "dopolavoro-la-foce": {

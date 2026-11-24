@@ -18,7 +18,7 @@ ultimoAggiornamento: 2026-08-09
 film:
   - film: "master-of-none"
     descrizioneScena: "Tra le location reali della stagione 2 di Master of None, ambientata a Modena mentre Dev impara l'arte della pasta fresca."
-descrizione: "Osteria di sole quattro tavoli nel cuore di Modena, ricavata nel 1989 nell'ex macello dietro la storica salumeria Giusti, attiva dal 1598: una delle botteghe gastronomiche più antiche d'Europa."
+descrizione: "Osteria di sole quattro tavoli nel cuore di Modena, ricavata nel 1989 nell'ex macello dietro la storica salumeria Giusti, attiva almeno dal 1605: una delle botteghe gastronomiche più antiche d'Europa."
 ---
 
 <!-- Locale reale verificato: Hosteria Giusti, Vicolo Squallore 46, Modena
@@ -29,7 +29,7 @@ descrizione: "Osteria di sole quattro tavoli nel cuore di Modena, ricavata nel 1
 
 Quattro tavoli soltanto, aperti solo a pranzo (le sere sono riservate a
 gruppi), dentro l'ex macello ricavato nel 1989 dietro la storica
-salumeria **Giusti**, le cui origini risalgono al 1598 — tra le botteghe
+salumeria **Giusti**, gestita dalla famiglia Giusti almeno dal 1605 (una sola fonte indica il 1598) — tra le botteghe
 gastronomiche più antiche d'Europa. Travi a vista, pavimento in
 cotto e un'atmosfera da casa di famiglia: un indirizzo storico nel cuore
 della Modena gastronomica.

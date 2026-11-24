@@ -1,6 +1,6 @@
 ---
-titolo: "Pizza di Eat Pray Love: Da Michele, Napoli"
-descrizione: "Dove Julia Roberts mangia la pizza in Eat Pray Love: L'Antica Pizzeria da Michele a Napoli. Menù, fila, indirizzo e come arrivare."
+titolo: "Eat Pray Love: la pizza è da Michele, Napoli"
+descrizione: "La pizzeria di Eat Pray Love è L'Antica Pizzeria da Michele a Napoli: la margherita di Julia Roberts. Indirizzo, menù, fila e come arrivare."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-22
 dataAggiornamento: 2026-10-06

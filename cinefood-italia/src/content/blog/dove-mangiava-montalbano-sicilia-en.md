@@ -7,6 +7,10 @@ immagine: "../../assets/placeholder/dove-mangiava-montalbano-sicilia.jpg"
 immagineAlt: "A white lighthouse and houses with blue shutters on a street on the Sicilian coast"
 tags: ["Montalbano", "Sicily", "itineraries", "where to eat", "film tourism"]
 faq:
+  - domanda: "What is Montalbano's restaurant?"
+    risposta: "The one guides point to most is Enzo a Mare, on the seafront of Punta Secca (Lungomare Amerigo Vespucci 2, in the hamlet of Santa Croce Camerina, Ragusa)."
+  - domanda: "What is Enzo a Mare like?"
+    risposta: "According to reviews it is a wooden, open-air structure on the beach serving fresh fish. Check hours and seasonality before you go."
   - domanda: "Where is Inspector Montalbano's house?"
     risposta: "Montalbano's house is in Punta Secca, a hamlet of Santa Croce Camerina (Ragusa), right on the seafront. Today it is a guesthouse."
   - domanda: "Where did Montalbano eat in the series?"
@@ -26,13 +30,17 @@ to look for two things: **the filming locations** and, above all, **the food** ‚
 because Montalbano famously eats the dishes of tradition in reverent silence.
 Here is how to retrace his tour of flavours.
 
-## Where Montalbano was filmed, and where he ate
+## Montalbano's restaurant: Enzo a Mare
+
+**In short.** Montalbano's restaurant is **Enzo a Mare**, at **Lungomare Amerigo Vespucci 2, Punta Secca** (hamlet of Santa Croce Camerina, Ragusa), a short walk from the inspector's house. Seafood cuisine in an open-air wooden structure on the beach.
 
 The signature restaurant is
 **[Enzo a Mare](/en/locale/enzo-a-mare-punta-secca)**, on the seafront of
 **[Punta Secca](/en/punta-secca)**, a short walk from the inspector's famous
-house. This is where, on screen, Montalbano sits at his favourite table and
-orders the catch of the day, often with his colleagues or his fianc√©e Livia.
+house. According to guides, it is the venue tied to the series' restaurant scenes, and the one
+many call "Montalbano's restaurant". We found no source saying which table or which
+scenes. For a nearby alternative, one review mentions Pappappero, next to the little harbour,
+with a menu that echoes Montalbano's lines (a reviewer's remark, not verified).
 Ragusa-style seafood cuisine: raw fish, pasta with sardines, fried fish and, of
 course, freshly caught fish.
 

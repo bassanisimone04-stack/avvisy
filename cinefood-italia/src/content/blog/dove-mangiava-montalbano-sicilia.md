@@ -1,12 +1,16 @@
 ---
-titolo: "Dove mangiava Montalbano: i luoghi in Sicilia"
-descrizione: "Dalla casa di Punta Secca al ristorante Enzo a Mare: dove mangiava Montalbano in Sicilia, tra pasta 'ncasciata e arancini."
+titolo: "Il ristorante di Montalbano: Enzo a Mare"
+descrizione: "Il ristorante di Montalbano è Enzo a Mare, a Punta Secca: indirizzo, cosa si mangia, dove dormire e i luoghi della serie in Sicilia."
 autore: "Redazione CineFood Italia"
 dataPubblicazione: 2026-07-24
 immagine: "../../assets/placeholder/dove-mangiava-montalbano-sicilia.jpg"
 immagineAlt: "Faro bianco e case con persiane azzurre su una strada della costa siciliana"
 tags: ["Montalbano", "Sicilia", "itinerari", "dove mangiare", "cineturismo"]
 faq:
+  - domanda: "Qual è il ristorante di Montalbano?"
+    risposta: "Quello più indicato dalle guide è Enzo a Mare, sul lungomare di Punta Secca (Lungomare Amerigo Vespucci 2, frazione di Santa Croce Camerina, Ragusa)."
+  - domanda: "Com'è fatto Enzo a Mare?"
+    risposta: "Secondo le recensioni è una struttura in legno, all'aperto, sulla spiaggia, con cucina di pesce fresco. Controlla orari e stagionalità prima di andare."
   - domanda: "Dove si trova la casa del Commissario Montalbano?"
     risposta: "La casa di Montalbano si trova a Punta Secca, frazione di Santa Croce Camerina (Ragusa), affacciata sul lungomare. Oggi è una struttura ricettiva."
   - domanda: "Dove mangiava Montalbano nella fiction?"
@@ -26,13 +30,16 @@ soprattutto, **la tavola** — perché Montalbano, si sa, mangia in religioso
 silenzio i piatti della tradizione. Ecco la guida per rifare il suo itinerario
 del gusto.
 
-## Dove mangiava il Commissario Montalbano
+## Il ristorante di Montalbano: Enzo a Mare
+
+**In breve.** Il ristorante di Montalbano è **Enzo a Mare**, al **Lungomare Amerigo Vespucci 2, Punta Secca** (frazione di Santa Croce Camerina, Ragusa), a pochi passi dalla casa del commissario. Cucina di mare, in una struttura in legno aperta sulla spiaggia.
 
 Il ristorante-simbolo è **[Enzo a Mare](/locale/enzo-a-mare-punta-secca)**, sul
 lungomare di **[Punta Secca](/punta-secca)**, a pochi passi dalla celebre casa
-del commissario. È qui che, nella finzione, Montalbano si siede al suo tavolo
-preferito e ordina il pesce del giorno, spesso in compagnia dei colleghi o della
-fidanzata Livia. Cucina di mare della tradizione ragusana: crudi, pasta con le
+del commissario. Secondo le guide, è il locale a cui sono legate le scene del ristorante della
+serie, ed è quello che molti indicano come «il ristorante di Montalbano». Non
+abbiamo trovato una fonte che precisi quale tavolo o quali scene. Per un'alternativa vicina, una recensione cita Pappappero, accanto al porticciolo, con un
+menù che richiama le frasi di Montalbano (segnalazione di una recensione, non verificata). Cucina di mare della tradizione ragusana: crudi, pasta con le
 sarde, frittura, e naturalmente il pesce appena pescato.
 
 > Consiglio pratico: verifica sempre orari e apertura prima di partire — i

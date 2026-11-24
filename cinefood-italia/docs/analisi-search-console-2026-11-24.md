@@ -31,3 +31,8 @@ Posizione media 7,7, ma CTR 0,5% (atteso 2-4%). Su ~8.300 impressioni sono 150-3
 
 ## Anomalia tecnica
 Nelle Pagine ci sono 127 URL con slash finale e 84 senza; 38 pagine compaiono in entrambe le forme. Il sito usa la forma senza slash come canonica: le impressioni si consolideranno quando Google ricarica, ma va controllato che gli URL con slash reindirizzino (308) alla forma senza.
+
+## Test titolo/descrizione: Eat Pray Love (avviato il 24/11/2026)
+Baseline (export del 24/11, ultimi ~3 mesi): pagina IT ~13.400 impr., pos 7,2, CTR 0,52%; pagina EN ~4.000 impr., pos 7,3-7,8, CTR circa 0,8%.
+Modifiche: IT "Eat Pray Love: la pizza è da Michele, Napoli" (prima: "Pizza di Eat Pray Love: Da Michele, Napoli"); EN "Eat Pray Love Pizza Place: Da Michele, Naples, Italy" (aggiunto "Italy" contro le ricerche su Naples, Florida); descrizioni riscritte con il nome della pizzeria e la promessa concreta.
+Da confrontare con l'export del 18/12: CTR (clic/impressioni) a parità di posizione. Servono almeno 3-4 settimane.
