@@ -27,11 +27,11 @@ export function Label({ className, ...props }: React.LabelHTMLAttributes<HTMLLab
   return <label className={cn("mb-1.5 block text-[0.8125rem] font-medium text-forest", className)} {...props} />;
 }
 
-export function Checkbox({ label, className, ...props }: React.InputHTMLAttributes<HTMLInputElement> & { label: React.ReactNode }) {
+export function Checkbox({ label, className, tone = "light", ...props }: React.InputHTMLAttributes<HTMLInputElement> & { label: React.ReactNode; tone?: "light" | "dark" }) {
   return (
-    <label className={cn("group flex cursor-pointer items-center gap-2.5 py-1 text-sm text-ink", className)}>
-      <input type="checkbox" className="peer size-4 shrink-0 cursor-pointer appearance-none rounded-xs border border-line-strong bg-white checked:border-forest checked:bg-forest ui-checkbox focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clay-ink" {...props} />
-      <span className="group-hover:text-forest">{label}</span>
+    <label className={cn("group flex cursor-pointer items-center gap-2.5 py-1.5 text-sm", tone === "dark" ? "text-ivory/90" : "text-ink", className)}>
+      <input type="checkbox" className={cn("peer size-4 shrink-0 cursor-pointer appearance-none rounded-xs border ui-checkbox focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clay-ink", tone === "dark" ? "border-ivory/60 bg-transparent checked:border-ivory checked:bg-ivory ui-checkbox-dark focus-visible:outline-ivory" : "border-line-strong bg-white checked:border-forest checked:bg-forest")} {...props} />
+      <span className={tone === "dark" ? "group-hover:text-white" : "group-hover:text-forest"}>{label}</span>
     </label>
   );
 }

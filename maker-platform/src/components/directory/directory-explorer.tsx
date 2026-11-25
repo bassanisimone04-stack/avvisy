@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, List, Map as MapIcon, MapPin, Search, SlidersHorizontal, X } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, List, Map as MapIcon, MapPin, Search, SlidersHorizontal, X } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -9,7 +9,7 @@ import { Checkbox, Select } from "@/components/ui/field";
 import { directoryCategories, fileFormatOptions, flagFilters, materialOptions } from "@/features/directory/categories";
 import { demoPlaceLabels, type Bounds } from "@/features/directory/geo";
 import { RADIUS_OPTIONS, searchDirectory, serializeDirectoryQuery, type DirectoryQuery } from "@/features/directory/search";
-import type { Business, BusinessFlag, DirectoryCategorySlug } from "@/features/directory/types";
+import type { Business, BusinessFlag } from "@/features/directory/types";
 import { cn } from "@/lib/utils";
 
 const DirectoryMap = dynamic(() => import("@/components/maps/directory-map"), {
@@ -33,6 +33,7 @@ export function DirectoryExplorer({ businesses, initialQuery }: { businesses: Bu
   const [activeId, setActiveId] = useState<string | null>(null);
   const [mobileView, setMobileView] = useState<"list" | "map">("list");
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [panelOpen, setPanelOpen] = useState(false);
   const listTop = useRef<HTMLDivElement>(null);
 
   const result = useMemo(() => searchDirectory(businesses, { ...query, bounds: searchOnMove ? bounds : null }), [businesses, query, bounds, searchOnMove]);
@@ -97,8 +98,7 @@ export function DirectoryExplorer({ businesses, initialQuery }: { businesses: Bu
     ...(query.format ? [{ label: `Accepts ${query.format}`, clear: () => update({ format: "" }) }] : []),
     ...(query.material ? [{ label: query.material, clear: () => update({ material: "" }) }] : []),
   ];
-  const moreCount = (query.flags?.length ?? 0) + (query.cnc ? 1 : 0) + (query.format ? 1 : 0) + (query.material ? 1 : 0);
-
+  
   const resetAll = () => {
     setText("");
     setNear("");
@@ -179,130 +179,186 @@ export function DirectoryExplorer({ businesses, initialQuery }: { businesses: Bu
     />
   );
 
-  return (
-    <div>
-      {/* ——— Filter bar: a plain GET form, so it also works without JavaScript ——— */}
-      <form
-        action={BASE}
-        method="get"
-        onSubmit={(e) => {
-          e.preventDefault();
-          update({ q: text, near });
-        }}
-        className="z-30 border-y border-line bg-ivory/95 backdrop-blur-md lg:sticky lg:top-[4.5rem]"
-        aria-label="Directory filters"
-      >
-        <div className="flex flex-wrap items-center gap-2 px-4 py-3 md:px-6 xl:px-8">
-          <label className="flex h-10 min-w-0 flex-[1_1_14rem] items-center gap-2 rounded-sm border border-line-strong bg-white px-3 focus-within:border-forest">
-            <Search className="size-4 shrink-0 text-sage-ink" aria-hidden />
-            <span className="sr-only">Keyword</span>
-            <input name="q" value={text} onChange={(e) => setText(e.target.value)} placeholder="CNC router, walnut, classes…" className="w-full bg-transparent text-sm focus:outline-none" />
-          </label>
-          <label className="flex h-10 min-w-0 flex-[1_1_12rem] items-center gap-2 rounded-sm border border-line-strong bg-white px-3 focus-within:border-forest">
-            <MapPin className="size-4 shrink-0 text-sage-ink" aria-hidden />
-            <span className="sr-only">City, state or ZIP code</span>
-            <input
-              name="near"
-              value={near}
-              onChange={(e) => setNear(e.target.value)}
-              onBlur={() => near !== query.near && update({ near })}
-              placeholder="City, state or ZIP"
-              list="demo-places"
-              className="w-full bg-transparent text-sm focus:outline-none"
-            />
-            <datalist id="demo-places">
-              {demoPlaceLabels.map((p) => (
-                <option key={p} value={p} />
-              ))}
-            </datalist>
-          </label>
-          <label className="sr-only" htmlFor="radius">
-            Distance
-          </label>
-          <Select id="radius" name="radius" value={query.radius} onChange={(e) => update({ radius: Number(e.target.value) })} className="h-10 w-auto flex-none text-sm" disabled={!query.near}>
-            {RADIUS_OPTIONS.map((r) => (
-              <option key={r} value={r}>
-                {r} mi
-              </option>
-            ))}
-          </Select>
-          <label className="sr-only" htmlFor="category">
-            Category
-          </label>
-          <Select id="category" name="category" value={query.category ?? ""} onChange={(e) => update({ category: e.target.value as DirectoryCategorySlug | "" })} className="h-10 w-auto max-w-[14rem] flex-none text-sm">
-            <option value="">All categories</option>
-            {directoryCategories.map((c) => (
-              <option key={c.slug} value={c.slug}>
-                {c.plural}
-              </option>
-            ))}
-          </Select>
+  const field = "flex h-11 min-w-0 items-center gap-2.5 rounded-sm bg-white px-3 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-ivory";
+  const labelCls = "mb-2 block text-[0.6875rem] font-semibold tracking-[0.14em] text-ivory/75 uppercase";
 
-          <details className="group relative">
-            <summary className="flex h-10 cursor-pointer list-none items-center gap-2 rounded-sm border border-line-strong bg-white px-3.5 text-sm font-medium text-forest hover:border-forest [&::-webkit-details-marker]:hidden">
-              <SlidersHorizontal className="size-4" aria-hidden /> Filters
-              {moreCount ? <span className="nums grid size-5 place-items-center rounded-full bg-forest text-[0.6875rem] text-ivory">{moreCount}</span> : null}
-            </summary>
-            <div className="fixed inset-x-3 top-32 z-40 max-h-[70vh] overflow-auto rounded-md border border-line bg-white p-5 shadow-lift sm:absolute sm:inset-x-auto sm:top-12 sm:right-0 sm:w-[30rem] lg:right-auto lg:left-0">
-              <fieldset>
-                <legend className="eyebrow mb-2">Access & services</legend>
-                <div className="grid grid-cols-1 gap-x-4 sm:grid-cols-2">
-                  {flagFilters.map((f) => (
-                    <Checkbox key={f.key} name="f" value={f.key} checked={(query.flags ?? []).includes(f.key)} onChange={() => toggleFlag(f.key)} label={f.label} />
-                  ))}
-                  <Checkbox name="cnc" value="1" checked={Boolean(query.cnc)} onChange={() => update({ cnc: !query.cnc })} label="CNC machine on site" />
+  return (
+    <div className="xl:grid xl:grid-cols-[19rem_minmax(0,1fr)]">
+      {/* ——— Filter panel (forest). A plain GET form, so it also works without JavaScript ——— */}
+      <aside className="bg-forest text-ivory xl:sticky xl:top-[4.5rem] xl:h-[calc(100dvh-4.5rem)] xl:overflow-y-auto">
+        <noscript>
+          <style>{"#filter-panel{display:block!important}"}</style>
+        </noscript>
+        <button
+          type="button"
+          aria-expanded={panelOpen}
+          aria-controls="filter-panel"
+          onClick={() => setPanelOpen((o) => !o)}
+          className="flex w-full items-center justify-between px-4 py-4 text-left md:px-6 xl:hidden"
+        >
+          <span className="inline-flex items-center gap-2.5 font-medium">
+            <SlidersHorizontal className="size-4" aria-hidden /> Search &amp; filters
+            {activeChips.length ? <span className="nums grid size-5 place-items-center rounded-full bg-ivory text-[0.6875rem] text-forest">{activeChips.length}</span> : null}
+          </span>
+          <ChevronDown className={cn("size-5 transition-transform", panelOpen && "rotate-180")} aria-hidden />
+        </button>
+
+        <form
+          id="filter-panel"
+          action={BASE}
+          method="get"
+          aria-label="Directory filters"
+          onSubmit={(e) => {
+            e.preventDefault();
+            update({ q: text, near });
+            setPanelOpen(false);
+          }}
+          className={cn("px-4 pb-7 md:px-6 xl:block xl:p-6", panelOpen ? "block" : "hidden")}
+        >
+          <div className="grid gap-x-8 gap-y-6 md:grid-cols-2 xl:grid-cols-1">
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="dir-q" className={labelCls}>
+                  Search
+                </label>
+                <div className={field}>
+                  <Search className="size-4 shrink-0 text-forest" aria-hidden />
+                  <input id="dir-q" name="q" value={text} onChange={(e) => setText(e.target.value)} placeholder="CNC router, walnut, classes…" className="w-full bg-transparent text-sm text-ink placeholder:text-subtle focus:outline-none" />
                 </div>
-              </fieldset>
-              <div className="mt-5 grid grid-cols-2 gap-4 border-t border-line pt-5">
-                <div>
-                  <label htmlFor="format" className="mb-1.5 block text-[0.8125rem] font-medium text-forest">
-                    Accepted file format
+              </div>
+              <div>
+                <label htmlFor="dir-near" className={labelCls}>
+                  Place
+                </label>
+                <div className="grid grid-cols-[1fr_5.5rem] gap-2">
+                  <div className={field}>
+                    <MapPin className="size-4 shrink-0 text-forest" aria-hidden />
+                    <input
+                      id="dir-near"
+                      name="near"
+                      value={near}
+                      onChange={(e) => setNear(e.target.value)}
+                      onBlur={() => near !== query.near && update({ near })}
+                      placeholder="City, state or ZIP"
+                      list="demo-places"
+                      className="w-full bg-transparent text-sm text-ink placeholder:text-subtle focus:outline-none"
+                    />
+                    <datalist id="demo-places">
+                      {demoPlaceLabels.map((p) => (
+                        <option key={p} value={p} />
+                      ))}
+                    </datalist>
+                  </div>
+                  <label className="sr-only" htmlFor="radius">
+                    Distance
                   </label>
-                  <Select id="format" name="format" value={query.format ?? ""} onChange={(e) => update({ format: e.target.value })} className="h-10 text-sm">
-                    <option value="">Any</option>
-                    {fileFormatOptions.map((f) => (
-                      <option key={f}>{f}</option>
-                    ))}
-                  </Select>
-                </div>
-                <div>
-                  <label htmlFor="material" className="mb-1.5 block text-[0.8125rem] font-medium text-forest">
-                    Material
-                  </label>
-                  <Select id="material" name="material" value={query.material ?? ""} onChange={(e) => update({ material: e.target.value })} className="h-10 text-sm">
-                    <option value="">Any</option>
-                    {materialOptions.map((m) => (
-                      <option key={m}>{m}</option>
+                  <Select id="radius" name="radius" value={query.radius} onChange={(e) => update({ radius: Number(e.target.value) })} className="h-11 border-0 text-sm" disabled={!query.near}>
+                    {RADIUS_OPTIONS.map((r) => (
+                      <option key={r} value={r}>
+                        {r} mi
+                      </option>
                     ))}
                   </Select>
                 </div>
               </div>
               <noscript>
-                <button type="submit" className="mt-5 w-full rounded-sm bg-forest py-2.5 text-sm font-medium text-ivory">
-                  Apply filters
-                </button>
+                <label htmlFor="category" className={labelCls}>
+                  Category
+                </label>
+                <Select id="category" name="category" defaultValue={query.category ?? ""} className="h-11 text-sm">
+                  <option value="">All categories</option>
+                  {directoryCategories.map((c) => (
+                    <option key={c.slug} value={c.slug}>
+                      {c.plural}
+                    </option>
+                  ))}
+                </Select>
               </noscript>
             </div>
-          </details>
 
-          <button type="submit" className="h-10 rounded-sm bg-forest px-4 text-sm font-medium text-ivory hover:bg-forest-deep">
-            Search
-          </button>
-        </div>
+            <fieldset>
+              <legend className={labelCls}>Type of place</legend>
+              <div className="flex flex-wrap gap-2">
+                {directoryCategories.map((c) => {
+                  const on = query.category === c.slug;
+                  return (
+                    <button
+                      key={c.slug}
+                      type="button"
+                      aria-pressed={on}
+                      onClick={() => update({ category: on ? "" : c.slug })}
+                      className={cn(
+                        "rounded-full border px-3 py-1.5 text-[0.8125rem] transition-colors",
+                        on ? "border-ivory bg-ivory font-medium text-forest" : "border-ivory/35 text-ivory/90 hover:border-ivory hover:text-white",
+                      )}
+                    >
+                      {c.plural}
+                    </button>
+                  );
+                })}
+              </div>
+            </fieldset>
 
-        {activeChips.length ? (
-          <div className="flex flex-wrap items-center gap-2 px-4 pb-3 md:px-6 xl:px-8">
-            {activeChips.map((c) => (
-              <button key={c.label} type="button" onClick={c.clear} className="inline-flex items-center gap-1.5 rounded-full bg-forest/[0.07] py-1 pr-2 pl-3 text-[0.8125rem] text-forest hover:bg-forest/[0.12]">
-                {c.label} <X className="size-3.5" aria-label={`Remove ${c.label}`} />
-              </button>
-            ))}
-            <button type="button" onClick={resetAll} className="ml-1 text-[0.8125rem] text-clay-ink underline-offset-2 hover:underline">
-              Clear all
+            <fieldset>
+              <legend className={labelCls}>Refine available</legend>
+              <div className="grid gap-x-4 sm:grid-cols-2 xl:grid-cols-1">
+                {flagFilters.map((f) => (
+                  <Checkbox key={f.key} tone="dark" name="f" value={f.key} checked={(query.flags ?? []).includes(f.key)} onChange={() => toggleFlag(f.key)} label={f.label} />
+                ))}
+                <Checkbox tone="dark" name="cnc" value="1" checked={Boolean(query.cnc)} onChange={() => update({ cnc: !query.cnc })} label="CNC machine on site" />
+              </div>
+            </fieldset>
+
+            <div className="grid grid-cols-2 gap-3 self-start">
+              <div>
+                <label htmlFor="format" className={labelCls}>
+                  File format
+                </label>
+                <Select id="format" name="format" value={query.format ?? ""} onChange={(e) => update({ format: e.target.value })} className="h-11 border-0 text-sm">
+                  <option value="">Any</option>
+                  {fileFormatOptions.map((f) => (
+                    <option key={f}>{f}</option>
+                  ))}
+                </Select>
+              </div>
+              <div>
+                <label htmlFor="material" className={labelCls}>
+                  Material
+                </label>
+                <Select id="material" name="material" value={query.material ?? ""} onChange={(e) => update({ material: e.target.value })} className="h-11 border-0 text-sm">
+                  <option value="">Any</option>
+                  {materialOptions.map((m) => (
+                    <option key={m}>{m}</option>
+                  ))}
+                </Select>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-7 grid grid-cols-2 gap-3">
+            <button type="button" onClick={resetAll} className="h-11 rounded-sm border border-ivory/40 text-sm font-medium text-ivory transition-colors hover:border-ivory hover:bg-ivory/10">
+              Clear filters
+            </button>
+            <button type="submit" className="h-11 rounded-sm bg-ivory text-sm font-medium text-forest transition-colors hover:bg-white">
+              Apply filters
             </button>
           </div>
-        ) : null}
-      </form>
+        </form>
+      </aside>
+
+      <div className="min-w-0">
+      {activeChips.length ? (
+        <div className="flex flex-wrap items-center gap-2 px-4 pt-4 md:px-6 xl:px-8">
+          {activeChips.map((c) => (
+            <button key={c.label} type="button" onClick={c.clear} className="inline-flex items-center gap-1.5 rounded-full bg-forest/[0.07] py-1 pr-2 pl-3 text-[0.8125rem] text-forest hover:bg-forest/[0.12]">
+              {c.label} <X className="size-3.5" aria-label={`Remove ${c.label}`} />
+            </button>
+          ))}
+          <button type="button" onClick={resetAll} className="ml-1 text-[0.8125rem] text-clay-ink underline-offset-2 hover:underline">
+            Clear all
+          </button>
+        </div>
+      ) : null}
 
       {/* ——— Mobile view switcher ——— */}
       <div className="flex items-center justify-between gap-3 px-4 py-3 lg:hidden">
@@ -324,9 +380,9 @@ export function DirectoryExplorer({ businesses, initialQuery }: { businesses: Bu
         </div>
       </div>
 
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] xl:grid-cols-[minmax(0,46rem)_1fr]">
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] xl:grid-cols-[minmax(0,26rem)_1fr]">
         {/* list column */}
-        <div ref={listTop} className={cn("scroll-mt-40 px-4 pt-1 pb-10 lg:pt-4 md:px-6 lg:block xl:px-8", mobileView === "map" && "hidden")}>
+        <div ref={listTop} className={cn("scroll-mt-24 px-4 pt-1 pb-10 lg:pt-4 md:px-6 lg:block xl:px-6", mobileView === "map" && "hidden")}>
           <div className="mb-4 hidden items-center justify-between lg:flex">
             {summary}
             <span className="text-xs text-muted">{result.place ? "Sorted by distance" : "Sorted by city"}</span>
@@ -337,7 +393,7 @@ export function DirectoryExplorer({ businesses, initialQuery }: { businesses: Bu
         {/* map column — sticky on desktop, full-screen with bottom sheet on mobile */}
         <div
           className={cn(
-            "relative lg:sticky lg:top-[8.25rem] lg:block lg:h-[calc(100dvh-8.25rem)] lg:border-l lg:border-line",
+            "relative lg:sticky lg:top-[4.5rem] lg:block lg:h-[calc(100dvh-4.5rem)] lg:border-l lg:border-line",
             mobileView === "map" ? "fixed inset-0 z-50 block lg:inset-auto lg:z-auto" : "hidden",
           )}
         >
@@ -382,6 +438,7 @@ export function DirectoryExplorer({ businesses, initialQuery }: { businesses: Bu
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

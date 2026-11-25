@@ -12,7 +12,7 @@ test("hero search lands on filtered, shareable directory results", async ({ page
 test("directory filters update results and the URL", async ({ page }, info) => {
   test.skip(info.project.name === "mobile", "desktop layout");
   await page.goto("/explore/us/woodworking");
-  await page.getByLabel("Category").selectOption("cnc-services");
+  await page.getByRole("button", { name: "CNC machining services" }).click();
   await expect(page).toHaveURL(/category=cnc-services/);
   await expect(page.locator("article h3").first()).toBeVisible();
   const cards = page.locator("article[id^='biz-']");
