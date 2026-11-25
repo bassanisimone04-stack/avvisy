@@ -1,0 +1,35 @@
+name: maker-platform CI
+
+# Quality checks only — no deployment.
+on:
+  push:
+    branches: [main]
+    paths: ["maker-platform/**", ".github/workflows/maker-platform-ci.yml"]
+  pull_request:
+    paths: ["maker-platform/**", ".github/workflows/maker-platform-ci.yml"]
+
+defaults:
+  run:
+    working-directory: maker-platform
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: maker-platform/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: maker-platform/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e

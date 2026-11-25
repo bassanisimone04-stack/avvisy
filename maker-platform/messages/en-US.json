@@ -1,0 +1,27 @@
+{
+  "Common": {
+    "skipToContent": "Skip to content",
+    "demoBanner": "Preview build. Every listing, product and price on this site is fictional demo data.",
+    "demoBannerLink": "What's real?",
+    "search": "Search",
+    "favorites": "Favorites",
+    "cart": "Cart",
+    "signIn": "Sign in",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "comingSoon": "Coming soon"
+  },
+  "Nav": {
+    "explore": "Explore",
+    "shop": "Digital Projects",
+    "tools": "Free Tools",
+    "resources": "Resources"
+  },
+  "Footer": {
+    "tagline": "Made for makers. Discover where to make it, what to make and how — in one place.",
+    "language": "Language",
+    "languageNote": "More languages are planned. English (US) is the only published language today.",
+    "legalDraft": "Legal pages are drafts pending professional review.",
+    "rights": "All rights reserved."
+  }
+}
