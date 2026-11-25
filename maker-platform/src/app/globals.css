@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — single source of truth for the design system.
+ * Documented in docs/DESIGN_SYSTEM.md. Change values here, not in components.
+ *
+ * Brand palette (approved): Warm Ivory #F8F6F0 · Deep Forest #263B32 ·
+ * Sage Green #78866B · Terracotta #C47751 · Charcoal #222222 · White #FFFFFF.
+ * Functional "-ink" variants are darker shades tuned for WCAG AA text contrast.
+ */
+@theme {
+  /* Brand */
+  --color-ivory: #f8f6f0;
+  --color-ivory-deep: #f0ece2;
+  --color-forest: #263b32;
+  --color-forest-deep: #1b2a24;
+  --color-forest-soft: #33493f;
+  --color-sage: #78866b;
+  --color-sage-ink: #56614b; /* 5.9:1 on ivory */
+  --color-sage-tint: #e6e9df;
+  --color-clay: #c47751;
+  --color-clay-ink: #9a5432; /* 5.2:1 on ivory */
+  --color-clay-tint: #f3e3d8;
+  --color-ink: #222222;
+  --color-white: #ffffff;
+
+  /* Neutrals derived from ivory/ink */
+  --color-muted: #5f5c55; /* 6.4:1 on ivory — secondary text */
+  --color-subtle: #6f6b62; /* 4.8:1 on ivory — tertiary text */
+  --color-line: #e3ded2;
+  --color-line-strong: #cfc8b8;
+
+  /* Feedback */
+  --color-success: #2f6b4b;
+  --color-warning: #8a5a12;
+  --color-danger: #a23b2a;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--letter-spacing: 0.14em;
+  --text-display-xl: clamp(2.75rem, 1.6rem + 4.6vw, 5.75rem);
+  --text-display-xl--line-height: 0.98;
+  --text-display-lg: clamp(2.25rem, 1.5rem + 3vw, 4rem);
+  --text-display-lg--line-height: 1.02;
+  --text-display-md: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  --text-display-md--line-height: 1.08;
+  --text-display-sm: clamp(1.375rem, 1.15rem + 0.9vw, 1.75rem);
+  --text-display-sm--line-height: 1.15;
+
+  /* Radii — deliberately restrained */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Shadows — light, warm */
+  --shadow-hairline: 0 0 0 1px rgb(34 34 34 / 0.06);
+  --shadow-soft: 0 1px 2px rgb(38 59 50 / 0.06), 0 8px 24px -12px rgb(38 59 50 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(38 59 50 / 0.06), 0 22px 48px -24px rgb(38 59 50 / 0.35);
+
+  /* Breakpoints (mobile-first): 390 · 768 · 1024 · 1440 */
+  --breakpoint-xs: 24.375rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 90rem;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-rise: rise 700ms var(--ease-out-soft) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-weight: 380;
+    letter-spacing: -0.015em;
+  }
+  h1,
+  h2,
+  h3 {
+    color: var(--color-forest);
+  }
+
+  ::selection {
+    background: var(--color-clay-tint);
+    color: var(--color-forest-deep);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--text-eyebrow--letter-spacing);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-sage-ink);
+  }
+
+  .container-page {
+    width: 100%;
+    max-width: 84rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+  @media (min-width: 80rem) {
+    .container-page {
+      padding-inline: 3rem;
+    }
+  }
+
+  .rule {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .prose-editorial {
+    max-width: 42rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-ink);
+  }
+  .prose-editorial h2 {
+    font-size: var(--text-display-sm);
+    line-height: var(--text-display-sm--line-height);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-editorial h3 {
+    font-size: 1.25rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-editorial p,
+  .prose-editorial ul,
+  .prose-editorial ol {
+    margin-bottom: 1rem;
+  }
+  .prose-editorial ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  .prose-editorial ol {
+    list-style: decimal;
+    padding-left: 1.25rem;
+  }
+  .prose-editorial a {
+    color: var(--color-clay-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose-editorial code {
+    font-size: 0.92em;
+    background: var(--color-ivory-deep);
+    padding: 0.1em 0.35em;
+    border-radius: var(--radius-xs);
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms var(--ease-out-soft);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+
+  /* Tabular numerals for prices, measurements and calculator output */
+  .nums {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
+
+/* MapLibre: keep controls consistent with the design system */
+.maplibregl-ctrl-group {
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+}
+
+/* Directory map markers (HTML markers, keyboard-focusable buttons) */
+.dm-pin {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 3px rgb(27 42 36 / 0.35));
+  transition: transform 180ms var(--ease-out-soft);
+  transform-origin: 50% 100%;
+}
+.dm-pin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-forest);
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg) scale(0.78);
+  transform-origin: 50% 50%;
+  width: 30px;
+  height: 30px;
+}
+.dm-pin span {
+  position: relative;
+  margin-top: -8px;
+  font: 600 11px/1 var(--font-sans);
+  color: var(--color-ivory);
+  font-variant-numeric: tabular-nums;
+}
+.dm-pin[data-active="true"] {
+  transform: scale(1.22);
+}
+.dm-pin[data-active="true"]::before {
+  background: var(--color-clay-ink);
+}
+.dm-pin:focus-visible {
+  outline: 2px solid var(--color-clay-ink);
+  outline-offset: 2px;
+}
+.dm-cluster {
+  display: grid;
+  place-items: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 3px solid rgb(255 255 255 / 0.9);
+  background: var(--color-forest);
+  color: var(--color-ivory);
+  font: 600 13px/1 var(--font-sans);
+  box-shadow: 0 0 0 6px rgb(38 59 50 / 0.15), var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 180ms var(--ease-out-soft);
+}
+.dm-cluster:hover {
+  transform: scale(1.06);
+}
+
+/* Form controls that need inline SVG backgrounds */
+.ui-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23263B32' stroke-width='1.6'%3E%3Cpath d='m2 4.5 4 4 4-4'/%3E%3C/svg%3E");
+  background-size: 12px;
+  background-position: right 0.85rem center;
+  background-repeat: no-repeat;
+}
+.ui-checkbox:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23F8F6F0' stroke-width='2.2'%3E%3Cpath d='m4 8.5 2.5 2.5L12 5.5'/%3E%3C/svg%3E");
+  background-position: center;
+}
