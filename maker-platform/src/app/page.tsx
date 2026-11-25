@@ -1,9 +1,8 @@
 import { Hero } from "@/components/home/hero";
 import { BusinessSection, CraftIndex, DirectoryShowcase, HowItWorks, NewsletterSection, ProjectsShowcase, ToolsBand } from "@/components/home/sections";
 import { siteConfig } from "@/config/site";
-import { getProduct, listProducts } from "@/features/catalog/repository";
-import { directoryStats, getBusiness, listBusinesses } from "@/features/directory/repository";
-import { tools } from "@/features/tools/registry";
+import { getProduct } from "@/features/catalog/repository";
+import { getBusiness, listBusinesses } from "@/features/directory/repository";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -14,8 +13,6 @@ export const metadata = pageMetadata({
 
 export default function HomePage() {
   const businesses = listBusinesses();
-  const products = listProducts();
-  const stats = directoryStats();
 
   const byCity = new Map<string, { id: string; lat: number; lng: number; label: string; count: number }>();
   for (const b of businesses) {
@@ -34,8 +31,8 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero stats={{ places: stats.businesses, projects: products.length, tools: tools.length }} />
-      <CraftIndex counts={{ places: stats.businesses, projects: products.length }} />
+      <Hero />
+      <CraftIndex />
       <DirectoryShowcase businesses={showcase} pins={[...byCity.values()]} />
       <ProjectsShowcase featured={featured} products={grid} />
       <ToolsBand />

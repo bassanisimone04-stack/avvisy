@@ -11,6 +11,7 @@ import { Badge, DemoBadge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { verticals } from "@/config/verticals";
+import { photoOrPlaceholder } from "@/lib/photos";
 import type { Product } from "@/features/catalog/types";
 import { flagFilters } from "@/features/directory/categories";
 import type { Business } from "@/features/directory/types";
@@ -21,54 +22,44 @@ import { NewsletterForm } from "./newsletter-form";
 
 /* ———————————————————————— Explore your craft ———————————————————————— */
 
-export function CraftIndex({ counts }: { counts: { places: number; projects: number } }) {
-  const [active, ...rest] = verticals;
+export function CraftIndex() {
   return (
-    <section aria-labelledby="craft-h" className="container-page py-16 md:py-24">
-      <SectionHeading
-        eyebrow="Explore your craft"
-        title={<span id="craft-h">One place for every material you love to work.</span>}
-        lede="We are starting with wood. Each new craft arrives only when its directory, projects and tools are ready to be genuinely useful."
-      />
-      <div className="mt-12 grid gap-6 lg:grid-cols-12 lg:gap-10">
-        <Link
-          href="/explore/us/woodworking"
-          className="group relative isolate flex min-h-[26rem] flex-col justify-end overflow-hidden rounded-lg p-6 text-ivory sm:p-8 lg:col-span-7 lg:min-h-[34rem]"
-        >
-          <Image src={active.image} alt={active.imageAlt} fill sizes="(min-width:1024px) 55vw, 100vw" className="-z-10 object-cover transition-transform duration-[1.2s] ease-[var(--ease-out-soft)] group-hover:scale-[1.03]" />
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgb(27_42_36/0.05)_20%,rgb(27_42_36/0.82)_100%)]" />
-          <Badge tone="forest" className="absolute top-6 left-6 bg-ivory text-forest sm:top-8 sm:left-8">
-            Now open
-          </Badge>
-          <p className="text-[0.6875rem] font-semibold tracking-[0.14em] text-ivory/70 uppercase">Vertical 01</p>
-          <h3 className="mt-2 text-display-lg text-ivory">{active.name}</h3>
-          <p className="mt-3 max-w-md text-[1.0625rem] leading-relaxed text-ivory/80">{active.summary}</p>
-          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-ivory/20 pt-5 text-sm text-ivory/85">
-            <span className="nums">{counts.places} places</span>
-            <span className="nums">{counts.projects} projects</span>
-            <span>3 free tools</span>
-            <span className="ml-auto inline-flex items-center gap-2 font-medium text-ivory">
-              Start exploring <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
-            </span>
-          </div>
-        </Link>
-
-        <ol className="flex flex-col lg:col-span-5">
-          {rest.map((v, i) => (
-            <li key={v.slug} className="group grid grid-cols-[4.25rem_1fr_auto] items-center gap-4 border-b border-line py-4 first:border-t sm:grid-cols-[5.5rem_1fr_auto] sm:gap-5">
-              <div className="relative aspect-square overflow-hidden rounded-sm">
-                <Image src={v.image} alt={v.imageAlt} fill sizes="88px" className="object-cover grayscale-[35%] transition-all duration-500 group-hover:grayscale-0" />
+    <section aria-labelledby="craft-h" className="container-page py-12 md:py-20">
+      <h2 id="craft-h" className="font-sans text-[1.0625rem] font-medium tracking-normal text-sage-ink">
+        Explore your craft.
+      </h2>
+      <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 md:gap-x-6 md:gap-y-10">
+        {verticals.map((v) => {
+          const active = v.status === "active";
+          const photo = photoOrPlaceholder(`craft-${v.slug}`, v.image);
+          const card = (
+            <>
+              <div className="relative aspect-[4/3.3] overflow-hidden rounded-lg bg-ivory-deep">
+                <Image
+                  src={photo.src}
+                  alt={photo.isPlaceholder ? v.imageAlt : `${v.name}`}
+                  fill
+                  sizes="(min-width: 768px) 30vw, 46vw"
+                  className={cn("object-cover transition-transform duration-700 ease-[var(--ease-out-soft)]", active && "group-hover:scale-[1.03]", !active && photo.isPlaceholder && "grayscale-[40%]")}
+                />
               </div>
-              <div className="min-w-0">
-                <p className="nums text-[0.6875rem] text-subtle">0{i + 2}</p>
-                <h3 className="text-[1.25rem] leading-tight">{v.name}</h3>
-                <p className="mt-0.5 line-clamp-1 text-sm text-muted">{v.summary}</p>
-              </div>
-              <Badge tone="outline">Coming soon</Badge>
+              <p className="mt-3 text-[0.9375rem] font-semibold text-forest">{v.name}</p>
+              <p className="mt-0.5 text-[0.8125rem] text-muted">{active ? "Workshops & digital plans" : "Coming soon"}</p>
+            </>
+          );
+          return (
+            <li key={v.slug}>
+              {active ? (
+                <Link href="/explore/us/woodworking" className="group block">
+                  {card}
+                </Link>
+              ) : (
+                <div aria-label={`${v.name} — coming soon`}>{card}</div>
+              )}
             </li>
-          ))}
-        </ol>
-      </div>
+          );
+        })}
+      </ul>
     </section>
   );
 }
@@ -261,7 +252,7 @@ export function HowItWorks() {
 export function BusinessSection() {
   return (
     <section aria-labelledby="biz-h" className="container-page py-8 md:py-12">
-      <div className="grid overflow-hidden rounded-lg bg-clay-tint lg:grid-cols-2">
+      <div className="grid overflow-hidden rounded-lg bg-forest text-ivory lg:grid-cols-2">
         <div className="relative min-h-[20rem] lg:min-h-[32rem]">
           <Image src="/images/materials/plywood-edge.jpg" alt="" fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
           <div className="absolute inset-0 grid place-items-center p-6">
@@ -283,18 +274,18 @@ export function BusinessSection() {
           </div>
         </div>
         <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
-          <p className="eyebrow text-clay-ink">For businesses</p>
-          <h2 id="biz-h" className="mt-3 text-display-md">
+          <p className="text-[0.75rem] font-semibold tracking-[0.14em] text-[#B8C2AC] uppercase">For businesses</p>
+          <h2 id="biz-h" className="mt-3 text-display-md text-ivory">
             Put your business on the map.
           </h2>
-          <p className="mt-4 max-w-md text-[1.0625rem] leading-relaxed text-ink/75">
+          <p className="mt-4 max-w-md text-[1.0625rem] leading-relaxed text-ivory/80">
             Reach makers who are already looking for a shop, a machine or the right lumber. Basic listings are free — and correcting your information or verifying ownership will never cost a thing.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/for-business" className={buttonVariants({ variant: "primary", size: "lg" })}>
+            <Link href="/for-business" className={buttonVariants({ variant: "light", size: "lg" })}>
               List your business
             </Link>
-            <Link href="/for-business#claim" className={buttonVariants({ variant: "outline", size: "lg" })}>
+            <Link href="/for-business#claim" className={`${buttonVariants({ variant: "ghost", size: "lg" })} border border-ivory/30 text-ivory hover:bg-ivory/10`}>
               Claim a listing
             </Link>
           </div>

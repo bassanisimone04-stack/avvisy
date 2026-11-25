@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1] — 2026-11-25 — Allineamento ai riferimenti grafici
+### Modificato
+- Hero ricomposta come da riferimento: grande fotografia, titolo centrato in verde foresta, sottotitolo, box di ricerca e pulsante "Explore the map" a tutta larghezza.
+- "Explore your craft": griglia di fotografie con didascalia sotto (2 colonne mobile, 3 desktop).
+- Sezione business in verde foresta (rimosso il blocco rosa-terracotta fuori palette).
+### Aggiunto
+- Slot fotografici in `public/images/photos/` (vedi README): una foto con il nome indicato sostituisce automaticamente il segnaposto.
+
 ## [0.1.0] — 2026-11-25 — Fase 0 + Fase 1 (frontend dimostrativo)
 
 ### Aggiunto

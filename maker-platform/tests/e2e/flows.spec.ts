@@ -4,7 +4,7 @@ test("hero search lands on filtered, shareable directory results", async ({ page
   await page.goto("/");
   const hero = page.getByRole("search", { name: "Search workshops and suppliers" });
   await hero.getByPlaceholder("City, state or ZIP code").fill("Austin");
-  await hero.getByRole("button", { name: "Search", exact: true }).click();
+  await hero.getByRole("button", { name: "Explore the map" }).click();
   await expect(page).toHaveURL(/\/explore\/us\/woodworking\?.*near=Austin/);
   await expect(page.getByText(/within 25 mi of/).filter({ visible: true }).first()).toBeVisible();
 });
