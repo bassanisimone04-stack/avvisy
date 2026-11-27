@@ -5,6 +5,7 @@ import ThemeInit from "@/components/ThemeInit";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import MotionExtras from "@/components/MotionExtras";
+import SiteAssistant from "@/components/SiteAssistant";
 import { JsonLd, organizationJsonLd } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/locale";
 
@@ -35,6 +36,7 @@ export default function RootShell({ lang, children }: { lang: Locale; children: 
           <main id="main-content">{children}</main>
           <SiteFooter />
           <MotionExtras />
+          <SiteAssistant locale={lang} />
         </StoreProvider>
         <Analytics />
       </body>
