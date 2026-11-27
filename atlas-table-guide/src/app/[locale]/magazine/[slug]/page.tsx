@@ -9,7 +9,7 @@ import { PageShell } from "@/features/PageShell";
 import { SmartImage, imageSrc } from "@/components/media/SmartImage";
 import { PhotoCard } from "@/components/cards/Cards";
 import { buildAlt } from "@/lib/alt";
-import { isFallback, t, type ArticleCategory } from "@/db/types";
+import { t, type ArticleCategory } from "@/db/types";
 import { JsonLd } from "@/components/JsonLd";
 import { buildArticleJsonLd, buildItemListJsonLd } from "@/seo/jsonld";
 import { slugify } from "@/lib/slug";
@@ -72,8 +72,8 @@ export default async function MagazineSlug({ params }: P) {
       <div className="mt-6"><SmartImage imageKey={a.image.key} alt={buildAlt({ subject: "dish" }, { name: title, city: "", locale })} sizes="(min-width:1232px) 1136px, 100vw" ratio="16 / 7" priority label={dict.common.illustrative} /></div>
       <div className="mt-10 grid gap-10 lg:grid-cols-12">
         <nav aria-label={tx(locale, "Table of contents", "Indice dei contenuti")} className="lg:col-span-3"><p className="eyebrow mb-2">{tx(locale, "Contents", "Contenuti")}</p><ol className="space-y-1 text-sm">{a.sections.map((s) => <li key={s.heading}><a href={`#${slugify(s.heading)}`} className="hover:text-carmine hover:underline">{s.heading}</a></li>)}</ol></nav>
-        <div className="prose-editorial max-w-2xl lg:col-span-9" lang={isFallback(a.title, locale) || locale !== "en" ? "en" : undefined}>
-          {locale !== "en" && <p className="mb-4 text-xs text-stone" lang={locale}>{dict.common.translationPending}</p>}
+        <div className="prose-editorial max-w-2xl lg:col-span-9" lang={locale !== "en" && !a.sectionsIt ? "en" : undefined}>
+          {locale !== "en" && !a.sectionsIt && <p className="mb-4 text-xs text-stone" lang={locale}>{dict.common.translationPending}</p>}
           {a.sections.map((s) => (<section key={s.heading}><h2 id={slugify(s.heading)} className="font-serif">{s.heading}</h2>{s.paragraphs.map((p, i) => <p key={i}>{p}</p>)}</section>))}
           {cities.length > 0 && <p className="mt-6 text-sm">{tx(locale, "Destinations", "Destinazioni")}: {cities.map((c, i) => <span key={c.slug}>{i > 0 && ", "}<Link href={`/${locale}/restaurants/${c.countrySlug}/${c.slug}/`} className="text-carmine underline">{t(c.name, locale)}</Link></span>)}</p>}
         </div>

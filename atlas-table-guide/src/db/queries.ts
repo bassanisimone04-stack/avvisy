@@ -83,3 +83,14 @@ export function collectionMembers(d: Dataset, c: Collection, rates: Rates | null
 export function itinerariesFeaturing(d: Dataset, slug: string) {
   return d.itineraries.filter((it) => it.days.some((day) => day.items.some((i) => i.ref === slug)));
 }
+
+/** Returns a copy of the dataset whose plain-string fields (experience names, hotel amenities, article body) are in `locale`. */
+export function localizeDataset(d: Dataset, locale: Locale): Dataset {
+  if (locale !== "it") return d;
+  return {
+    ...d,
+    experiences: d.experiences.map((x) => (x.nameIt ? { ...x, name: x.nameIt } : x)),
+    hotels: d.hotels.map((h) => (h.amenitiesIt ? { ...h, amenities: h.amenitiesIt } : h)),
+    articles: d.articles.map((a) => (a.sectionsIt ? { ...a, sections: a.sectionsIt } : a)),
+  };
+}

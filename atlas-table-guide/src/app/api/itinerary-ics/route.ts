@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getDataset } from "@/db/repository";
+import { localizeDataset } from "@/db/queries";
 import { buildIcs } from "@/lib/ics";
 import { t } from "@/db/types";
 import { SITE_URL } from "@/config/brand";
@@ -11,7 +12,7 @@ export async function GET(req: NextRequest) {
   const start = sp.get("start") ?? "";
   const locale = isLocale(sp.get("locale") ?? "") ? (sp.get("locale") as "en" | "it") : "en";
   if (!/^\d{4}-\d{2}-\d{2}$/.test(start)) return NextResponse.json({ error: "start must be YYYY-MM-DD" }, { status: 400 });
-  const d = await getDataset();
+  const d = localizeDataset(await getDataset(), locale);
   const it = d.itineraries.find((i) => i.slug === slug);
   if (!it) return NextResponse.json({ error: "unknown itinerary" }, { status: 404 });
   const name = (ref: string | undefined, type: string) => (type === "restaurant" ? d.restaurants.find((r) => r.slug === ref)?.name : type === "hotel" ? d.hotels.find((h) => h.slug === ref)?.name : type === "experience" ? d.experiences.find((x) => x.slug === ref)?.name : undefined);

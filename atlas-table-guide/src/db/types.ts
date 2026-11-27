@@ -184,6 +184,7 @@ export interface Hotel extends Record_ {
   category: "recognised-restaurant" | "restaurant-with-rooms" | "boutique" | "gastronomic-resort" | "wine-estate" | "countryside-retreat";
   description: L10n;
   amenities: string[];
+  amenitiesIt?: string[];
   restaurantSlugs: string[];
   affiliateId?: AffiliateId;
   priceFrom: { amount: number; currency: string; status: PriceStatus } | null;
@@ -196,6 +197,7 @@ export interface Hotel extends Record_ {
 
 export interface Experience extends Record_ {
   name: string;
+  nameIt?: string;
   category:
     | "chefs-table"
     | "private-dining"
@@ -254,6 +256,7 @@ export interface Article extends Record_ {
   author: { name: string; role: string };
   publishedAt: string;
   sections: { heading: string; paragraphs: string[] }[];
+  sectionsIt?: { heading: string; paragraphs: string[] }[];
   sponsored: boolean;
   sponsor?: string;
   relatedRestaurants: string[];
@@ -307,4 +310,9 @@ export function t(v: L10n | undefined, locale: Locale): string {
 /** true when the localized value falls back to English */
 export function isFallback(v: L10n | undefined, locale: Locale): boolean {
   return locale !== "en" && !!v && !v[locale as "it"];
+}
+
+/** Experience name in the visitor's language (falls back to English). */
+export function xname(x: { name: string; nameIt?: string }, locale: Locale): string {
+  return locale === "it" && x.nameIt ? x.nameIt : x.name;
 }

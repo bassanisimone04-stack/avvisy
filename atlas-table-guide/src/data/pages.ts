@@ -13,29 +13,59 @@ export const LEGAL: ContentPage[] = [
     { h: "Retention", p: ["Unconfirmed newsletter sign-ups are deleted after 30 days. Form submissions are kept for up to 24 months. Account data is kept until you delete your account."] },
     { h: "Your rights", p: ["You can access, export, correct and delete your data at any time from your account page or by emailing us. You may lodge a complaint with your supervisory authority."] },
     { h: "Processors", p: ["Hosting, database (Supabase), email delivery (Resend), payments (Stripe), privacy-friendly analytics (Plausible) — each only when configured."] },
-  ] },
+  ],
+  it: { title: "Informativa sulla privacy", lead: `Come ${B} raccoglie, usa e protegge i dati personali.`, sections: [
+    { h: "Titolare del trattamento", p: [`Il titolare del trattamento è ${BRAND.legalEntity}. Contatto: ${BRAND.supportEmail}.`] },
+    { h: "Cosa raccogliamo", p: ["Newsletter: indirizzo email, lingua, argomenti e città scelti, data e versione del testo del consenso.", "Moduli (contatti, correzioni, concierge, liste d’attesa): i dati che inserisci.", "Account (quando attivi): indirizzo email, elementi salvati, confronti, avvisi e preferenze.", "Clic sui link di affiliazione: l’identificativo del link, la pagina di provenienza, un hash con sale del tuo indirizzo IP e lo user agent del browser, senza cookie."] },
+    { h: "Basi giuridiche", p: ["Consenso (newsletter, cookie di analisi), contratto (account), legittimo interesse (sicurezza, prevenzione delle frodi, statistiche aggregate sull’affiliazione)."] },
+    { h: "Conservazione", p: ["Le iscrizioni alla newsletter non confermate vengono cancellate dopo 30 giorni. I moduli inviati sono conservati fino a 24 mesi. I dati dell’account sono conservati finché non lo cancelli."] },
+    { h: "I tuoi diritti", p: ["Puoi accedere, esportare, correggere e cancellare i tuoi dati in qualsiasi momento dalla pagina del tuo account o scrivendoci. Puoi proporre reclamo all’autorità di controllo competente."] },
+    { h: "Responsabili del trattamento", p: ["Hosting, database (Supabase), invio email (Resend), pagamenti (Stripe), statistiche rispettose della privacy (Plausible): ciascuno solo quando configurato."] },
+  ] } },
   { slug: "cookies", template: true, title: "Cookie policy", lead: "Which cookies and local storage we use, and why.", sections: [
     { h: "Strictly necessary", p: ["atg_consent (your cookie choices, 180 days), atg_currency (preferred currency, 1 year). Local storage keeps favourites, comparisons and recent searches on your device."] },
     { h: "Analytics (optional)", p: ["Only after consent, we load Plausible, which does not use cookies and does not track you across sites."] },
     { h: "Changing your choice", p: ["Use the \"Cookie settings\" link in the footer at any time."] },
-  ] },
+  ],
+  it: { title: "Cookie policy", lead: "Quali cookie e quale archiviazione locale usiamo, e perché.", sections: [
+    { h: "Strettamente necessari", p: ["atg_consent (le tue scelte sui cookie, 180 giorni), atg_currency (valuta preferita, 1 anno). L’archiviazione locale conserva sul tuo dispositivo preferiti, confronti e ricerche recenti."] },
+    { h: "Statistiche (facoltative)", p: ["Solo dopo il tuo consenso carichiamo Plausible, che non usa cookie e non ti traccia tra siti diversi."] },
+    { h: "Cambiare la scelta", p: ["Usa in qualsiasi momento il link «Impostazioni cookie» nel piè di pagina."] },
+  ] } },
   { slug: "terms", template: true, title: "Terms of use", lead: `Conditions for using ${B}.`, sections: [
     { h: "Information only", p: [`${B} publishes information about restaurants, hotels and experiences. Prices, opening hours and availability can change; always confirm with the venue.`] },
     { h: "Bookings and purchases", p: ["Reservations, hotel stays and experiences are contracts between you and the venue or partner. Gift cards and memberships are sold only once merchant agreements are in place."] },
     { h: "Acceptable use", p: ["Do not scrape, overload or attempt to bypass security measures of this site."] },
-  ] },
+  ],
+  it: { title: "Termini di utilizzo", lead: `Condizioni per usare ${B}.`, sections: [
+    { h: "Solo informazione", p: [`${B} pubblica informazioni su ristoranti, hotel ed esperienze. Prezzi, orari e disponibilità possono cambiare: conferma sempre con il locale.`] },
+    { h: "Prenotazioni e acquisti", p: ["Prenotazioni, soggiorni in hotel ed esperienze sono contratti tra te e il locale o il partner. Gift card e iscrizioni verranno vendute solo quando gli accordi con gli esercenti saranno attivi."] },
+    { h: "Uso consentito", p: ["Non effettuare scraping, non sovraccaricare il sito e non tentare di aggirarne le misure di sicurezza."] },
+  ] } },
   { slug: "affiliate-disclosure", template: true, title: "Affiliate disclosure", lead: "How we earn money from some links.", sections: [
     { h: "What affiliate links are", p: ["Some links to hotels and experiences go through /go/ and may earn us a commission if you book. They are marked as sponsored links."] },
     { h: "Editorial independence", p: [`Commissions, partner plans and sponsorships never influence recognitions, the ${BRAND.selectionName} or the order of directory results.`] },
-  ] },
+  ],
+  it: { title: "Informativa sull’affiliazione", lead: "Come guadagniamo con alcuni link.", sections: [
+    { h: "Cosa sono i link di affiliazione", p: ["Alcuni link a hotel ed esperienze passano da /go/ e possono farci guadagnare una commissione se prenoti. Sono indicati come link sponsorizzati."] },
+    { h: "Indipendenza editoriale", p: [`Commissioni, piani per i partner e sponsorizzazioni non influenzano mai i riconoscimenti, la ${BRAND.selectionName} né l’ordine dei risultati dell’elenco.`] },
+  ] } },
   { slug: "sponsored-content", template: true, title: "Sponsored content policy", lead: "How paid content is labelled.", sections: [
     { h: "Labelling", p: ["Sponsored articles carry a visible \"Sponsored\" label at the top and in listings, name the sponsor, and are marked as sponsored in structured data."] },
     { h: "Separation", p: ["Sponsors do not review editorial content, recognitions or price data."] },
-  ] },
+  ],
+  it: { title: "Politica sui contenuti sponsorizzati", lead: "Come etichettiamo i contenuti a pagamento.", sections: [
+    { h: "Etichettatura", p: ["Gli articoli sponsorizzati portano un’etichetta «Sponsorizzato» ben visibile in testa e negli elenchi, indicano lo sponsor e sono segnalati come tali anche nei dati strutturati."] },
+    { h: "Separazione", p: ["Gli sponsor non rivedono i contenuti editoriali, i riconoscimenti né i dati sui prezzi."] },
+  ] } },
   { slug: "data-correction", template: true, title: "Data correction policy", lead: "How to report and how we fix incorrect information.", sections: [
     { h: "Reporting", p: ["Use \"Report incorrect information\" on any profile or the contact page. Venues can also claim their profile to update operational details."] },
     { h: "Handling", p: ["We acknowledge reports within 5 working days, verify against a primary source, update the record, and log the change with its source and date."] },
-  ] },
+  ],
+  it: { title: "Politica di correzione dei dati", lead: "Come segnalare e come correggiamo le informazioni errate.", sections: [
+    { h: "Segnalare", p: ["Usa «Segnala un’informazione errata» in ogni scheda o nella pagina dei contatti. I locali possono anche rivendicare la propria scheda per aggiornare i dati operativi."] },
+    { h: "Gestione", p: ["Confermiamo la ricezione entro 5 giorni lavorativi, verifichiamo su una fonte primaria, aggiorniamo la scheda e registriamo la modifica con fonte e data."] },
+  ] } },
 ];
 
 export const STATIC: ContentPage[] = [
@@ -74,16 +104,26 @@ export const STATIC: ContentPage[] = [
 ];
 
 export const BUSINESS: (ContentPage & { form: "claim" | "partner-lead" })[] = [
-  { slug: "claim-your-restaurant", form: "claim", title: "Claim your restaurant", lead: "Keep your profile accurate: menus, prices, photos, hours and booking links.", sections: [{ h: "Verification", p: ["We verify claims by email domain, a document check, or a phone call-back to the number on your official website. An editor approves every claim before you can edit."] }, { h: "What you can edit", p: ["Operational details only: description, contact, opening hours, menus and prices (marked as restaurant-supplied until verified), authorised photos (with licence confirmation) and booking links. Recognitions and editorial fields are never editable by partners."] }] },
-  { slug: "list-your-hotel", form: "partner-lead", title: "List your hotel", lead: "For hotels built around their kitchens.", sections: [{ h: "Who we list", p: ["Hotels with notable restaurants, restaurants with rooms, wine estates, gastronomic resorts and countryside retreats."] }] },
-  { slug: "experience-partner", form: "partner-lead", title: "Become an experience partner", lead: "Chef's tables, classes, tastings, tours and culinary weekends.", sections: [{ h: "Integration", p: ["Start with a booking link; a supplier API integration is available for partners with live inventory."] }] },
-  { slug: "advertise", form: "partner-lead", title: "Advertise", lead: "Clearly labelled placements for brands relevant to fine dining and travel.", sections: [{ h: "Rules", p: ["All placements are labelled as sponsored and never alter recognitions or rankings."] }] },
-  { slug: "sponsored-editorial", form: "partner-lead", title: "Sponsored editorial", lead: "Partner stories, labelled and separated from our editorial.", sections: [{ h: "Disclosure", p: ["Sponsored articles carry a prominent label and the sponsor's name."] }] },
-  { slug: "brand-partnerships", form: "partner-lead", title: "Brand partnerships", lead: "Collaborations with wine, hospitality and travel brands.", sections: [{ h: "How it works", p: ["Tell us about your brand and goals; we propose formats that keep our editorial independence intact."] }] },
-  { slug: "supplier-marketplace", form: "partner-lead", title: "Supplier marketplace", lead: "A planned marketplace connecting restaurants with specialist suppliers.", sections: [{ h: "Status", p: ["In development — register interest and we will contact you when it opens."] }] },
-  { slug: "careers", form: "partner-lead", title: "Careers", lead: "Editors, data verifiers and engineers who care about getting the details right.", sections: [{ h: "Open roles", p: ["No open roles are published yet. Send us a note and we will keep it on file."] }] },
-  { slug: "media-kit", form: "partner-lead", title: "Media kit", lead: "Brand assets and audience information for press and partners.", sections: [{ h: "Assets", p: ["Logo files are available on request. Audience statistics will be published once measured — we do not publish estimates."] }] },
-  { slug: "contact-sales", form: "partner-lead", title: "Contact sales", lead: "Talk to us about partner plans and campaigns.", sections: [{ h: "Response time", p: ["We reply within two working days."] }] },
+  { slug: "claim-your-restaurant", form: "claim", title: "Claim your restaurant", lead: "Keep your profile accurate: menus, prices, photos, hours and booking links.", sections: [{ h: "Verification", p: ["We verify claims by email domain, a document check, or a phone call-back to the number on your official website. An editor approves every claim before you can edit."] }, { h: "What you can edit", p: ["Operational details only: description, contact, opening hours, menus and prices (marked as restaurant-supplied until verified), authorised photos (with licence confirmation) and booking links. Recognitions and editorial fields are never editable by partners."] }],
+  it: { title: "Rivendica il tuo ristorante", lead: "Mantieni la scheda accurata: menu, prezzi, foto, orari e link di prenotazione.", sections: [{ h: "Verifica", p: ["Verifichiamo le rivendicazioni tramite dominio email, controllo di un documento o richiamata al numero indicato sul tuo sito ufficiale. Un editor approva ogni richiesta prima che tu possa modificare."] }, { h: "Cosa puoi modificare", p: ["Solo i dati operativi: descrizione, contatti, orari, menu e prezzi (indicati come forniti dal ristorante finché non verificati), foto autorizzate (con conferma della licenza) e link di prenotazione. Riconoscimenti e campi editoriali non sono mai modificabili dai partner."] }] } },
+  { slug: "list-your-hotel", form: "partner-lead", title: "List your hotel", lead: "For hotels built around their kitchens.", sections: [{ h: "Who we list", p: ["Hotels with notable restaurants, restaurants with rooms, wine estates, gastronomic resorts and countryside retreats."] }],
+  it: { title: "Inserisci il tuo hotel", lead: "Per hotel costruiti attorno alle loro cucine.", sections: [{ h: "Chi inseriamo", p: ["Hotel con ristoranti di rilievo, ristoranti con camere, tenute vinicole, resort gastronomici e ritiri in campagna."] }] } },
+  { slug: "experience-partner", form: "partner-lead", title: "Become an experience partner", lead: "Chef's tables, classes, tastings, tours and culinary weekends.", sections: [{ h: "Integration", p: ["Start with a booking link; a supplier API integration is available for partners with live inventory."] }],
+  it: { title: "Diventa partner di esperienze", lead: "Tavoli dello chef, corsi, degustazioni, tour e weekend gastronomici.", sections: [{ h: "Integrazione", p: ["Si parte da un link di prenotazione; per i partner con disponibilità in tempo reale è prevista l’integrazione via API."] }] } },
+  { slug: "advertise", form: "partner-lead", title: "Advertise", lead: "Clearly labelled placements for brands relevant to fine dining and travel.", sections: [{ h: "Rules", p: ["All placements are labelled as sponsored and never alter recognitions or rankings."] }],
+  it: { title: "Pubblicità", lead: "Spazi chiaramente etichettati per marchi pertinenti all’alta cucina e ai viaggi.", sections: [{ h: "Regole", p: ["Tutti gli spazi sono etichettati come sponsorizzati e non modificano mai riconoscimenti o classifiche."] }] } },
+  { slug: "sponsored-editorial", form: "partner-lead", title: "Sponsored editorial", lead: "Partner stories, labelled and separated from our editorial.", sections: [{ h: "Disclosure", p: ["Sponsored articles carry a prominent label and the sponsor's name."] }],
+  it: { title: "Editoriale sponsorizzato", lead: "Storie dei partner, etichettate e separate dalla nostra redazione.", sections: [{ h: "Trasparenza", p: ["Gli articoli sponsorizzati portano un’etichetta ben visibile e il nome dello sponsor."] }] } },
+  { slug: "brand-partnerships", form: "partner-lead", title: "Brand partnerships", lead: "Collaborations with wine, hospitality and travel brands.", sections: [{ h: "How it works", p: ["Tell us about your brand and goals; we propose formats that keep our editorial independence intact."] }],
+  it: { title: "Partnership con i marchi", lead: "Collaborazioni con marchi del vino, dell’ospitalità e dei viaggi.", sections: [{ h: "Come funziona", p: ["Raccontaci il tuo marchio e i tuoi obiettivi: proporremo formati che mantengano intatta la nostra indipendenza editoriale."] }] } },
+  { slug: "supplier-marketplace", form: "partner-lead", title: "Supplier marketplace", lead: "A planned marketplace connecting restaurants with specialist suppliers.", sections: [{ h: "Status", p: ["In development — register interest and we will contact you when it opens."] }],
+  it: { title: "Marketplace dei fornitori", lead: "Un marketplace in programma che metterà in contatto ristoranti e fornitori specializzati.", sections: [{ h: "Stato", p: ["In sviluppo: registra il tuo interesse e ti contatteremo all’apertura."] }] } },
+  { slug: "careers", form: "partner-lead", title: "Careers", lead: "Editors, data verifiers and engineers who care about getting the details right.", sections: [{ h: "Open roles", p: ["No open roles are published yet. Send us a note and we will keep it on file."] }],
+  it: { title: "Lavora con noi", lead: "Redattori, verificatori di dati e ingegneri attenti ai dettagli.", sections: [{ h: "Posizioni aperte", p: ["Al momento non ci sono posizioni pubblicate. Scrivici e terremo il tuo contatto."] }] } },
+  { slug: "media-kit", form: "partner-lead", title: "Media kit", lead: "Brand assets and audience information for press and partners.", sections: [{ h: "Assets", p: ["Logo files are available on request. Audience statistics will be published once measured — we do not publish estimates."] }],
+  it: { title: "Media kit", lead: "Risorse del marchio e informazioni sul pubblico per stampa e partner.", sections: [{ h: "Risorse", p: ["I file del logo sono disponibili su richiesta. Le statistiche sul pubblico saranno pubblicate quando misurate: non pubblichiamo stime."] }] } },
+  { slug: "contact-sales", form: "partner-lead", title: "Contact sales", lead: "Talk to us about partner plans and campaigns.", sections: [{ h: "Response time", p: ["We reply within two working days."] }],
+  it: { title: "Contatta le vendite", lead: "Parla con noi di piani per i partner e campagne.", sections: [{ h: "Tempi di risposta", p: ["Rispondiamo entro due giorni lavorativi."] }] } },
 ];
 
 export const PLANS = [

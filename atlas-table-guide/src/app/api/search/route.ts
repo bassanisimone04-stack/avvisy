@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getDataset } from "@/db/repository";
+import { localizeDataset } from "@/db/queries";
 import { search, type SearchDoc } from "@/lib/search";
 import { t } from "@/db/types";
 import { rateLimit } from "@/lib/rate-limit";
@@ -12,7 +13,7 @@ export async function GET(req: NextRequest) {
   const q = (req.nextUrl.searchParams.get("q") ?? "").slice(0, 80);
   const lp = req.nextUrl.searchParams.get("locale") ?? "en";
   const locale = isLocale(lp) ? lp : "en";
-  const d = await getDataset();
+  const d = localizeDataset(await getDataset(), locale);
   const city = (s: string) => d.cities.find((c) => c.slug === s);
   const both = (v: { en: string; it?: string } | undefined) => `${v?.en ?? ""} ${v?.it ?? ""}`;
   const docs: SearchDoc[] = [

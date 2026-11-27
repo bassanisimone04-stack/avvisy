@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, it as it_ } from "vitest";
 import { demoDataset } from "@/db/demo";
 import { filterPublished } from "@/db/repository";
 import { validateJsonLd } from "@/seo/jsonld";
@@ -70,3 +70,20 @@ describe("buildAlt", () => {
   });
 });
 void validateJsonLd;
+
+describe("Italian demo translations", () => {
+  const it = demoDataset();
+  it_("covers every restaurant, chef, hotel, experience and article", () => {
+    expect(it.restaurants.every((r) => r.description.it && r.style.it)).toBe(true);
+    expect(it.chefs.every((c) => c.bio.it)).toBe(true);
+    expect(it.hotels.every((h) => h.description.it)).toBe(true);
+    expect(it.experiences.every((x) => x.nameIt && x.description.it)).toBe(true);
+    expect(it.articles.every((a) => a.excerpt.it && a.sectionsIt && a.sectionsIt.length === a.sections.length)).toBe(true);
+  });
+  it_("localizeDataset swaps plain-string fields for Italian only", async () => {
+    const { localizeDataset } = await import("@/db/queries");
+    const x = it.experiences[0]!;
+    expect(localizeDataset(it, "it").experiences[0]!.name).toBe(x.nameIt);
+    expect(localizeDataset(it, "en").experiences[0]!.name).toBe(x.name);
+  });
+});

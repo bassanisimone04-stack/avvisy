@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { getDataset } from "@/db/repository";
+import { localizeDataset } from "@/db/queries";
 import { getRates } from "@/lib/fx";
 import { rulePlan, type Plan } from "@/lib/concierge";
 import { rateLimit } from "@/lib/rate-limit";
@@ -23,7 +24,8 @@ export async function POST(req: NextRequest) {
   const parsed = Input.safeParse(await req.json().catch(() => ({})));
   if (!parsed.success) return NextResponse.json({ error: "invalid_input", issues: parsed.error.issues.map((i) => i.path.join(".")) }, { status: 400 });
   const { locale, ...input } = parsed.data;
-  const [d, rates] = await Promise.all([getDataset(), getRates()]);
+  const [raw, rates] = await Promise.all([getDataset(), getRates()]);
+  const d = localizeDataset(raw, locale);
   const base = rulePlan(d, input, rates, locale);
   const key = process.env.LLM_API_KEY;
   if (!key || !base.items.length) return NextResponse.json({ plan: base, llm: key ? "skipped" : "not-configured" });
@@ -37,7 +39,7 @@ export async function POST(req: NextRequest) {
         temperature: 0.3,
         response_format: { type: "json_object" },
         messages: [
-          { role: "system", content: "You are a dining concierge. You may ONLY use the records provided in the tool result. Never invent venues, prices, awards or availability. Return JSON {\"intro\": string, \"notes\": {slug: string}} with one short note per slug explaining the choice. Mention that availability is unconfirmed." },
+          { role: "system", content: `You are a dining concierge. You may ONLY use the records provided in the tool result. Never invent venues, prices, awards or availability. Return JSON {"intro": string, "notes": {slug: string}} with one short note per slug explaining the choice. Mention that availability is unconfirmed. Write ALL text in ${locale === "it" ? "Italian" : "English"}.` },
           { role: "user", content: JSON.stringify({ request: input, candidates: base.items.map((i) => ({ slug: i.slug, type: i.type, name: i.name, day: i.day, time: i.time, estimateEUR: i.estimateEUR, facts: i.note })) }) },
         ],
       }),
