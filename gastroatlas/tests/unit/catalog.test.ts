@@ -18,7 +18,7 @@ describe("demo catalogue", () => {
     expect(restaurants.every((r) => [1, 2, 3].includes(r.level))).toBe(true);
   });
   it("every image referenced exists in /public/assets", () => {
-    const names = new Set([...restaurants.map((r) => r.image), ...cities.map((c) => c.slug), "hero", "tuscany", "tasting", "dining", "lake", "wine", "plate1", "plate2"]);
+    const names = new Set([...restaurants.map((r) => r.image), ...cities.map((c) => c.slug), "hero", "tuscany", "tasting", "dining", "lake", "wine", "plate1", "plate2", "tortellini", "terrazza-lago"]);
     for (const n of names) expect(existsSync(new URL(`../../public/assets/${n}.webp`, import.meta.url)), n).toBe(true);
   });
   it("prices are plausible and stable", () => {

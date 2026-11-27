@@ -81,7 +81,7 @@ export default async function Home({ params }: P) {
 
       <Section heading={t("Dine & Stay", "Cena e soggiorno")}>
         <div className="split">
-          <Photo name="dining" alt={t("A dining room with warm lighting", "Una sala da pranzo con luce calda")} sizes="(min-width: 661px) 580px, 100vw" />
+          <Photo name="terrazza-lago" alt={t("A stone terrace with set tables overlooking a lake at dusk", "Una terrazza in pietra con tavoli apparecchiati su un lago al tramonto")} sizes="(min-width: 661px) 580px, 100vw" />
           <div><h3>{t("Exceptional dining deserves an exceptional stay.", "Una cena speciale merita un soggiorno all’altezza.")}</h3><p className="topline"><More href={url(locale, "hotels")} label={t("Explore stays", "Esplora i soggiorni")} /></p></div>
         </div>
       </Section>

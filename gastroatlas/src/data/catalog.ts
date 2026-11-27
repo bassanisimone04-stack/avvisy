@@ -7,7 +7,8 @@ import type { Locale } from "@/lib/i18n";
 export type Bilingual = Record<Locale, string>;
 export type City = { slug: string; name: Bilingual; country: Bilingual };
 export type Cuisine = { key: string; name: Bilingual };
-export type PhotoName = "plate0" | "plate1" | "plate2";
+export type PhotoName = "plate0" | "plate1" | "plate2" | "tortellini";
+const DISH_PHOTOS: PhotoName[] = ["plate0", "plate1", "plate2", "tortellini"];
 export type Restaurant = {
   slug: string;
   name: string;
@@ -54,7 +55,7 @@ export const restaurants: Restaurant[] = names.map((name, i) => ({
   cuisine: cuisines[i % 4]!,
   level: (1 + (i % 3)) as 1 | 2 | 3,
   price: 65 + ((i * 17) % 219),
-  image: `plate${i % 3}` as PhotoName,
+  image: DISH_PHOTOS[i % 4]!,
   rooms: i % 4 === 0,
   isDemo: true,
 }));

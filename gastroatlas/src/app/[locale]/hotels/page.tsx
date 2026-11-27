@@ -11,7 +11,7 @@ export default async function Hotels({ params }: { params: Promise<{ locale: str
   const t = T(locale);
   return (
     <Page heading={title("hotels", locale)}>
-      <div className="wide topline"><Photo name="dining" alt={t("A dining room with warm lighting", "Una sala da pranzo con luce calda")} sizes="(min-width: 1180px) 1180px, 100vw" /></div>
+      <div className="wide topline"><Photo name="terrazza-lago" alt={t("A stone terrace with set tables overlooking a lake at dusk", "Una terrazza in pietra con tavoli apparecchiati su un lago al tramonto")} sizes="(min-width: 1180px) 1180px, 100vw" /></div>
       <Notice>{t("Verified stays and partner booking links are pending.", "I soggiorni verificati e i link di prenotazione sono in attesa di attivazione.")}</Notice>
       <Link className="btn" href={`${url(locale, "restaurants")}?rooms=1`}>{t("Browse demo restaurants with rooms", "Esplora i ristoranti demo con camere")}</Link>
     </Page>
