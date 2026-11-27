@@ -6,6 +6,13 @@ type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
 export async function generateMetadata({ searchParams }: { searchParams: SearchParams }) {
   const sp = await searchParams;
+  const meta = baseMetadata(sp);
+  // Le combinazioni con il filtro «esigenza» (vegano, senza lattosio…) sono permutazioni
+  // dello stesso elenco: restano raggiungibili ma non vanno nell'indice.
+  return sp.esigenza ? { ...meta, robots: { index: false, follow: true } } : meta;
+}
+
+function baseMetadata(sp: Record<string, string | string[] | undefined>) {
   const categoriaParam = Array.isArray(sp.categoria) ? sp.categoria[0] : sp.categoria;
   const cat = PRODUCT_CATEGORIES.find((c) => c === categoriaParam);
 
