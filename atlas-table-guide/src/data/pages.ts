@@ -1,6 +1,7 @@
 import { BRAND } from "@/config/brand";
 
-export type ContentPage = { slug: string; title: string; lead: string; sections: { h: string; p: string[] }[]; template?: boolean };
+type Body = { title: string; lead: string; sections: { h: string; p: string[] }[] };
+export type ContentPage = { slug: string; title: string; lead: string; sections: { h: string; p: string[] }[]; template?: boolean; it?: Body };
 const B = BRAND.shortName;
 
 /** Editable templates. Legal pages MUST be reviewed by a lawyer before launch (see docs/REPORT.md). */
@@ -41,19 +42,35 @@ export const STATIC: ContentPage[] = [
   { slug: "about", title: `About ${B}`, lead: `${B} is an independent guide to fine dining: what it costs, where it is, and whether the information is current.`, sections: [
     { h: "What we do", p: ["We publish structured, sourced profiles of restaurants, with verified tasting-menu prices, opening hours, dietary options and recognitions — each with the date it was last checked.", "We also map hotels, experiences and culinary itineraries around those restaurants."] },
     { h: "Independence", p: [`${B} is not affiliated with any restaurant guide or award body. When we mention third-party recognitions, we state them as facts with the awarding body, year and a source link.`] },
-  ] },
+  ],
+  it: { title: `Chi siamo — ${B}`, lead: `${B} è una guida indipendente all'alta cucina: quanto costa, dove si trova e se le informazioni sono aggiornate.`, sections: [
+    { h: "Cosa facciamo", p: ["Pubblichiamo schede strutturate e documentate dei ristoranti, con prezzi verificati dei menu degustazione, orari, opzioni alimentari e riconoscimenti, ciascuna con la data dell'ultimo controllo.", "Mappiamo anche hotel, esperienze e itinerari gastronomici attorno a quei ristoranti."] },
+    { h: "Indipendenza", p: [`${B} non è affiliata ad alcuna guida di ristoranti né ente che assegna premi. Quando citiamo riconoscimenti di terzi li riportiamo come fatti, con ente, anno e link alla fonte.`] },
+  ] } },
   { slug: "editorial-policy", title: "Editorial policy", lead: "How we decide what to publish and how we stay independent.", sections: [
     { h: "Our own selection", p: [`The ${BRAND.selectionName} is an editorial distinction awarded by our team. It cannot be bought, and partners cannot influence it.`] },
     { h: "Third-party recognitions", p: ["We report third-party recognitions only as plain text, attributed to the awarding body, with the year and a source link. We never reproduce third-party logos or symbols."] },
     { h: "Commercial separation", p: ["Partner plans can improve how complete a profile is (photos, menus, booking links) but never its recognition, its ranking under \"Recommended\", or its inclusion in collections."] },
-  ] },
+  ],
+  it: { title: "Linee editoriali", lead: "Come decidiamo cosa pubblicare e come restiamo indipendenti.", sections: [
+    { h: "La nostra selezione", p: [`La ${BRAND.selectionName} è una distinzione editoriale assegnata dalla nostra redazione. Non si può comprare e i partner non possono influenzarla.`] },
+    { h: "Riconoscimenti di terzi", p: ["Riportiamo i riconoscimenti di terzi solo come testo semplice, attribuiti all'ente che li assegna, con anno e link alla fonte. Non riproduciamo mai loghi o simboli di terzi."] },
+    { h: "Separazione commerciale", p: ["I piani per i partner possono rendere più completa una scheda (foto, menu, link di prenotazione) ma non ne cambiano il riconoscimento, la posizione in \"Consigliati\" né l'inclusione nelle selezioni."] },
+  ] } },
   { slug: "methodology", title: "Methodology", lead: "How prices and facts are collected, verified and displayed.", sections: [
     { h: "Sources", p: ["Restaurant submissions, licensed datasets, official websites where terms allow, confirmed bookings and editorial research. Every record stores its source URL and collection date."] },
     { h: "Price statuses", p: ["Verified: confirmed from a primary source within the staleness window (default 180 days). Estimated: from a reliable but indirect source. Missing: we do not have it and say so."] },
     { h: "Price history", p: ["Prices are stored in their original currency and every change is appended to an immutable price history; we never overwrite old prices."] },
     { h: "Price Index", p: ["Figures use verified prices only. Each figure shows its sample size (n) and collection date; figures with fewer than 5 verified prices are hidden. Currency conversions use ECB reference rates when available."] },
     { h: "Quality gates", p: ["Destination pages are indexed by search engines only when they list at least 5 verified restaurants and have an original introduction."] },
-  ] },
+  ],
+  it: { title: "Metodologia", lead: "Come raccogliamo, verifichiamo e mostriamo prezzi e informazioni.", sections: [
+    { h: "Fonti", p: ["Segnalazioni dei ristoranti, dataset con licenza, siti ufficiali dove i termini lo consentono, prenotazioni confermate e ricerca editoriale. Ogni scheda riporta l'URL della fonte e la data di raccolta."] },
+    { h: "Stato dei prezzi", p: ["Verificato: confermato da una fonte primaria entro la finestra di validità (predefinita 180 giorni). Stimato: da una fonte affidabile ma indiretta. Mancante: non lo abbiamo e lo diciamo."] },
+    { h: "Storico dei prezzi", p: ["I prezzi sono salvati nella valuta originale e ogni variazione viene aggiunta a uno storico non modificabile: non sovrascriviamo mai i prezzi precedenti."] },
+    { h: "Indice dei prezzi", p: ["I dati usano solo prezzi verificati. Ogni valore mostra campione (n) e data di raccolta; i valori con meno di 5 prezzi verificati sono nascosti. Le conversioni usano i tassi di riferimento BCE, quando disponibili."] },
+    { h: "Soglie di qualità", p: ["Le pagine di destinazione vengono indicizzate dai motori di ricerca solo se elencano almeno 5 ristoranti verificati e hanno un'introduzione originale."] },
+  ] } },
 ];
 
 export const BUSINESS: (ContentPage & { form: "claim" | "partner-lead" })[] = [

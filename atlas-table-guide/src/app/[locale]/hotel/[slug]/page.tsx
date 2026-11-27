@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { pageCtx } from "../../_ctx";
 import { getDataset } from "@/db/repository";
-import { LOCALES } from "@/i18n";
+import { LOCALES, tx } from "@/i18n";
 import { buildMetadata } from "@/seo/metadata";
 import { PageShell } from "@/features/PageShell";
 import { SmartImage, imageSrc } from "@/components/media/SmartImage";
@@ -51,21 +51,21 @@ export default async function HotelPage({ params }: P) {
         <div className="lg:col-span-8">
           <SmartImage imageKey={h.images[0]!.key} alt={buildAlt(h.images[0]!, { name: h.name, city, locale })} sizes="(min-width:1024px) 760px, 100vw" ratio="16 / 9" priority label={dict.common.illustrative} />
           <p className="mt-6 text-lg leading-relaxed" lang={isFallback(h.description, locale) ? "en" : undefined}>{t(h.description, locale)}</p>
-          <h2 className="mt-10 font-serif text-2xl">Amenities</h2>
-          <ul className="mt-3 flex flex-wrap gap-2">{h.amenities.map((a) => <li key={a} className="rounded-full border border-line bg-white px-3 py-1 text-sm">{a}</li>)}<li className="rounded-full border border-line bg-white px-3 py-1 text-sm">{h.rooms} rooms</li></ul>
-          {rs.length > 0 && (<><h2 className="mt-10 font-serif text-2xl">Dining</h2><ul className="mt-4 grid gap-6 sm:grid-cols-2">{rs.map((r) => <li key={r.slug}><RestaurantCard r={r} locale={locale} dict={dict} {...cardInfo(data, r, locale)} /></li>)}</ul></>)}
+          <h2 className="mt-10 font-serif text-2xl">{tx(locale, "Amenities", "Servizi")}</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">{h.amenities.map((a) => <li key={a} className="rounded-full border border-line bg-white px-3 py-1 text-sm">{a}</li>)}<li className="rounded-full border border-line bg-white px-3 py-1 text-sm">{h.rooms} {tx(locale, "rooms", "camere")}</li></ul>
+          {rs.length > 0 && (<><h2 className="mt-10 font-serif text-2xl">{tx(locale, "Dining", "Ristorazione")}</h2><ul className="mt-4 grid gap-6 sm:grid-cols-2">{rs.map((r) => <li key={r.slug}><RestaurantCard r={r} locale={locale} dict={dict} {...cardInfo(data, r, locale)} /></li>)}</ul></>)}
           {near.length > 0 && (<><h2 className="mt-10 font-serif text-2xl">{dict.profile.similar}</h2><ul className="mt-4 grid gap-6 sm:grid-cols-3">{near.map((r) => <li key={r.slug}><RestaurantCard r={r} locale={locale} dict={dict} {...cardInfo(data, r, locale)} /></li>)}</ul></>)}
         </div>
         <aside className="lg:col-span-4">
           <div className="sticky top-[calc(var(--header-h)+16px)] rounded-[12px] border border-line bg-white p-5 shadow-card">
             <div className="flex items-center gap-2">{h.isDemo && <DemoBadge label={dict.common.demoData} />}</div>
-            {h.priceFrom ? <p className="mt-2 text-sm text-stone">{dict.common.from} <Price amount={h.priceFrom.amount} currency={h.priceFrom.currency} locale={locale} className="font-serif text-2xl text-ink" /> / night <StatusPill status={h.priceFrom.status} label={h.priceFrom.status === "verified" ? dict.common.verified : dict.common.estimated} /></p> : <p className="text-sm text-stone">{dict.profile.noPrice}</p>}
+            {h.priceFrom ? <p className="mt-2 text-sm text-stone">{dict.common.from} <Price amount={h.priceFrom.amount} currency={h.priceFrom.currency} locale={locale} className="font-serif text-2xl text-ink" /> / {tx(locale, "night", "notte")} <StatusPill status={h.priceFrom.status} label={h.priceFrom.status === "verified" ? dict.common.verified : dict.common.estimated} /></p> : <p className="text-sm text-stone">{dict.profile.noPrice}</p>}
             {link ? (
               <a href={`/go/${link.id}/?from=${encodeURIComponent(`/${locale}/hotel/${h.slug}/`)}`} rel="sponsored nofollow noopener" target="_blank" className="mt-4 flex min-h-12 items-center justify-center gap-1 rounded-[8px] bg-carmine font-semibold text-white hover:bg-red-700">{link.label} <ExternalIcon size={16} /></a>
             ) : (
               <Link href={`/${locale}/concierge/?hotel=${h.slug}`} className="mt-4 flex min-h-12 items-center justify-center rounded-[8px] bg-carmine font-semibold text-white">{dict.profile.requestConcierge}</Link>
             )}
-            <p className="mt-2 text-xs text-stone">Affiliate link: we may earn a commission. It never affects recognitions or ranking. <Link href={`/${locale}/legal/affiliate-disclosure/`} className="underline">{dict.footer.affiliate}</Link></p>
+            <p className="mt-2 text-xs text-stone">{tx(locale, "Affiliate link: we may earn a commission. It never affects recognitions or ranking.", "Link di affiliazione: potremmo ricevere una commissione. Non influisce mai su riconoscimenti o classifica.")} <Link href={`/${locale}/legal/affiliate-disclosure/`} className="underline">{dict.footer.affiliate}</Link></p>
             <div className="mt-3"><FavouriteButton itemKey={`hotel:${h.slug}`} name={h.name} variant="inline" labels={{ add: dict.favourites.add, remove: dict.favourites.remove, saved: dict.common.saved, save: dict.common.save }} /></div>
           </div>
         </aside>

@@ -6,17 +6,19 @@ import { ContentBody } from "@/features/ContentPageView";
 import { STATIC } from "@/data/pages";
 
 export const revalidate = 86400;
-const PAGE = STATIC.find((p) => p.slug === "methodology")!;
+const BASE = STATIC.find((p) => p.slug === "methodology")!;
 type P = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: P): Promise<Metadata> {
   const { locale } = await pageCtx(params);
-  return buildMetadata({ locale, path: "/methodology/", title: PAGE.title, description: PAGE.lead });
+  const T = locale === "it" && BASE.it ? BASE.it : BASE;
+  return buildMetadata({ locale, path: "/methodology/", title: T.title, description: T.lead });
 }
 export default async function Page({ params }: P) {
   const { locale, dict } = await pageCtx(params);
+  const T = locale === "it" && BASE.it ? BASE.it : BASE;
   return (
-    <PageShell crumbs={[{ name: dict.common.home, path: `/${locale}/` }, { name: PAGE.title, path: `/${locale}/methodology/` }]} title={PAGE.title} lead={PAGE.lead}>
-      <ContentBody page={PAGE} locale={locale} translationNote={dict.common.translationPending} />
+    <PageShell crumbs={[{ name: dict.common.home, path: `/${locale}/` }, { name: T.title, path: `/${locale}/methodology/` }]} title={T.title} lead={T.lead}>
+      <ContentBody page={BASE} locale={locale} translationNote={dict.common.translationPending} />
     </PageShell>
   );
 }

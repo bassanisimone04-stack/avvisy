@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { pageCtx } from "../../_ctx";
 import { getDataset } from "@/db/repository";
-import { LOCALES } from "@/i18n";
+import { LOCALES, tx } from "@/i18n";
 import { buildMetadata } from "@/seo/metadata";
 import { PageShell } from "@/features/PageShell";
 import { SmartImage, imageSrc } from "@/components/media/SmartImage";
@@ -59,7 +59,7 @@ export default async function ItineraryPage({ params }: P) {
         <ol className="space-y-8 lg:col-span-7">
           {it.days.map((d) => (
             <li key={d.day}>
-              <h2 className="font-serif text-2xl">Day {d.day} · {t(d.title, locale)}</h2>
+              <h2 className="font-serif text-2xl">{tx(locale, "Day", "Giorno")} {d.day} · {t(d.title, locale)}</h2>
               <ul className="mt-3 divide-y divide-line rounded-[12px] border border-line bg-white">
                 {d.items.map((i, k) => { const r = resolve(i.type, i.ref); return (
                   <li key={k} className="flex gap-4 p-4"><span className="w-14 shrink-0 font-semibold tabular-nums">{i.time}</span><div><p className="font-semibold">{r ? <Link href={r.path} className="underline-offset-4 hover:underline">{r.name}</Link> : t(i.note, locale)}</p>{r && <p className="text-sm text-stone">{t(i.note, locale)}</p>}<p className="text-xs uppercase tracking-wide text-stone">{i.type}</p></div></li>
@@ -73,7 +73,7 @@ export default async function ItineraryPage({ params }: P) {
           <div className="rounded-[12px] border border-line bg-sand p-5">
             <p className="text-sm text-stone">{dict.common.estimate} · {dict.common.perPerson}</p>
             <p className="font-serif text-3xl">{formatMoney(it.budgetEstimate.amount, it.budgetEstimate.currency, locale)}</p>
-            <p className="mt-1 text-xs text-stone">Estimate of meals, rooms and experiences listed; excludes transport. Availability is not confirmed — book each venue directly or via the concierge.</p>
+            <p className="mt-1 text-xs text-stone">{tx(locale, "Estimate of meals, rooms and experiences listed; excludes transport. Availability is not confirmed — book each venue directly or via the concierge.", "Stima di pasti, camere ed esperienze elencati; esclusi i trasporti. La disponibilità non è confermata: prenota ogni locale direttamente o tramite il concierge.")}</p>
           </div>
         </aside>
       </div>

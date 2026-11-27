@@ -17,3 +17,6 @@ export function fmt(s: string, vars: Record<string, string | number> = {}): stri
 
 export const LOCALE_NAMES: Record<Locale, string> = { en: "English", it: "Italiano" };
 export const HTML_LANG: Record<Locale, string> = { en: "en", it: "it" };
+
+/** Inline bilingual text for page copy that is not worth a dictionary key. */
+export const tx = (locale: string, en: string, it: string) => (locale === "it" ? it : en);

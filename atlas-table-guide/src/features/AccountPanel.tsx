@@ -6,6 +6,7 @@ import type { SupabaseClient, Session } from "@supabase/supabase-js";
 import { useApp } from "./providers";
 import { Notice } from "@/components/ui/ui";
 import { compareHref } from "@/lib/compare-url";
+import { tx } from "@/i18n";
 
 type Item = { key: string; name: string; href: string; sub: string };
 
@@ -43,6 +44,7 @@ export function FavouritesList({ index, labels }: { index: Item[]; labels: { emp
 }
 
 export function AccountPanel({ locale }: { locale: string }) {
+  const T = (en: string, it: string) => tx(locale, en, it);
   const sb = useSupabase();
   const { favourites, compare } = useApp();
   const [session, setSession] = useState<Session | null>(null);
@@ -75,48 +77,48 @@ export function AccountPanel({ locale }: { locale: string }) {
     a.href = URL.createObjectURL(blob); a.download = "my-data.json"; a.click(); URL.revokeObjectURL(a.href);
   };
   const deleteAll = async () => {
-    if (!window.confirm("Delete all data stored for you? This cannot be undone.")) return;
+    if (!window.confirm(T("Delete all data stored for you? This cannot be undone.", "Cancellare tutti i dati che ti riguardano? L'operazione non è reversibile."))) return;
     for (const k of ["atg:favs", "atg:compare", "atg:plans", "atg:recent", "atg:currency", "atg:units"]) localStorage.removeItem(k);
     if (sb && session) {
       const res = await fetch("/api/account/delete/", { method: "POST", headers: { Authorization: `Bearer ${session.access_token}` } });
-      setMsg(res.ok ? "Your account and data were deleted." : "Local data deleted. Account deletion failed — contact us.");
+      setMsg(res.ok ? T("Your account and data were deleted.", "Account e dati cancellati.") : T("Local data deleted. Account deletion failed — contact us.", "Dati locali cancellati. La cancellazione dell'account non è riuscita: contattaci."));
       await sb.auth.signOut();
-    } else setMsg("Data stored on this device was deleted.");
+    } else setMsg(T("Data stored on this device was deleted.", "I dati salvati su questo dispositivo sono stati cancellati."));
     setTimeout(() => window.location.reload(), 1200);
   };
 
   return (
     <div className="grid gap-6 lg:grid-cols-3">
       <section className="rounded-[12px] border border-line bg-white p-5 lg:col-span-1" aria-labelledby="signin">
-        <h2 id="signin" className="font-sans text-base font-bold">Sign in</h2>
+        <h2 id="signin" className="font-sans text-base font-bold">{T("Sign in", "Accedi")}</h2>
         {!sb ? (
-          <div className="mt-3"><Notice tone="warning">Accounts are not configured on this deployment (Supabase Auth missing). Your favourites, comparisons and plans are kept on this device.</Notice></div>
+          <div className="mt-3"><Notice tone="warning">{T("Accounts are not configured on this deployment (Supabase Auth missing). Your favourites, comparisons and plans are kept on this device.", "Gli account non sono configurati su questa installazione (manca Supabase Auth). Preferiti, confronti e piani restano su questo dispositivo.")}</Notice></div>
         ) : session ? (
-          <div className="mt-3 text-sm"><p>Signed in as <strong>{session.user.email}</strong>. Local favourites are merged into your account.</p><button type="button" onClick={() => sb.auth.signOut()} className="mt-3 min-h-11 rounded-[8px] border border-line px-4 font-semibold">Sign out</button></div>
+          <div className="mt-3 text-sm"><p>{T("Signed in as", "Accesso eseguito come")} <strong>{session.user.email}</strong>. {T("Local favourites are merged into your account.", "I preferiti locali vengono uniti al tuo account.")}</p><button type="button" onClick={() => sb.auth.signOut()} className="mt-3 min-h-11 rounded-[8px] border border-line px-4 font-semibold">{T("Sign out", "Esci")}</button></div>
         ) : (
-          <form className="mt-3 space-y-2" onSubmit={async (e) => { e.preventDefault(); const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: `${window.location.origin}/${locale}/account/` } }); setMsg(error ? error.message : "Check your inbox for a sign-in link."); }}>
-            <label htmlFor="acc-email" className="block text-sm font-semibold">Email</label>
+          <form className="mt-3 space-y-2" onSubmit={async (e) => { e.preventDefault(); const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: `${window.location.origin}/${locale}/account/` } }); setMsg(error ? error.message : T("Check your inbox for a sign-in link.", "Controlla la posta: ti abbiamo inviato un link di accesso.")); }}>
+            <label htmlFor="acc-email" className="block text-sm font-semibold">{T("Email", "Email")}</label>
             <input id="acc-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" className="min-h-11 w-full rounded-[8px] border border-line px-3" />
-            <button type="submit" className="min-h-11 w-full rounded-[8px] bg-carmine text-sm font-semibold text-white">Email me a sign-in link</button>
+            <button type="submit" className="min-h-11 w-full rounded-[8px] bg-carmine text-sm font-semibold text-white">{T("Email me a sign-in link", "Inviami un link di accesso")}</button>
           </form>
         )}
         {msg && <p role="status" className="mt-3 text-sm">{msg}</p>}
       </section>
       <section className="rounded-[12px] border border-line bg-white p-5" aria-labelledby="saved">
-        <h2 id="saved" className="font-sans text-base font-bold">Saved</h2>
+        <h2 id="saved" className="font-sans text-base font-bold">{T("Saved", "Salvati")}</h2>
         <ul className="mt-3 space-y-2 text-sm">
-          <li><Link href={`/${locale}/account/favourites/`} className="font-semibold text-carmine hover:underline">Favourites ({favourites.length})</Link></li>
-          <li>{compare.length ? <Link href={compareHref(locale, compare.map((c) => c.slug))} className="font-semibold text-carmine hover:underline">Current comparison ({compare.length})</Link> : <span className="text-stone">No comparison in progress</span>}</li>
+          <li><Link href={`/${locale}/account/favourites/`} className="font-semibold text-carmine hover:underline">{T("Favourites", "Preferiti")} ({favourites.length})</Link></li>
+          <li>{compare.length ? <Link href={compareHref(locale, compare.map((c) => c.slug))} className="font-semibold text-carmine hover:underline">{T("Current comparison", "Confronto in corso")} ({compare.length})</Link> : <span className="text-stone">{T("No comparison in progress", "Nessun confronto in corso")}</span>}</li>
           {plans.map((p) => <li key={p.at}><a href={p.url} className="hover:underline">{p.plan.title}</a> <span className="text-stone">· {p.at.slice(0, 10)}</span></li>)}
         </ul>
-        <p className="mt-4 text-xs text-stone">Price alerts and memberships require a signed-in account and are sent by email once email delivery is configured.</p>
+        <p className="mt-4 text-xs text-stone">{T("Price alerts and memberships require a signed-in account and are sent by email once email delivery is configured.", "Avvisi di prezzo e iscrizioni richiedono un account e vengono inviati via email quando l'invio email sarà configurato.")}</p>
       </section>
       <section className="rounded-[12px] border border-line bg-white p-5" aria-labelledby="privacy">
-        <h2 id="privacy" className="font-sans text-base font-bold">Your data (GDPR)</h2>
-        <p className="mt-2 text-sm text-stone">Download everything we store about you, or delete it.</p>
+        <h2 id="privacy" className="font-sans text-base font-bold">{T("Your data (GDPR)", "I tuoi dati (GDPR)")}</h2>
+        <p className="mt-2 text-sm text-stone">{T("Download everything we store about you, or delete it.", "Scarica tutto ciò che conserviamo su di te, oppure cancellalo.")}</p>
         <div className="mt-3 flex flex-wrap gap-2">
-          <button type="button" onClick={exportData} className="min-h-11 rounded-[8px] border border-carmine px-4 text-sm font-semibold text-carmine hover:bg-blush">Export my data</button>
-          <button type="button" onClick={deleteAll} className="min-h-11 rounded-[8px] bg-carmine px-4 text-sm font-semibold text-white hover:bg-red-700">Delete my data</button>
+          <button type="button" onClick={exportData} className="min-h-11 rounded-[8px] border border-carmine px-4 text-sm font-semibold text-carmine hover:bg-blush">{T("Export my data", "Esporta i miei dati")}</button>
+          <button type="button" onClick={deleteAll} className="min-h-11 rounded-[8px] bg-carmine px-4 text-sm font-semibold text-white hover:bg-red-700">{T("Delete my data", "Cancella i miei dati")}</button>
         </div>
       </section>
     </div>

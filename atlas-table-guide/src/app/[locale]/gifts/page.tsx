@@ -1,3 +1,4 @@
+import { tx } from "@/i18n";
 import type { Metadata } from "next";
 import { pageCtx } from "../_ctx";
 import { buildMetadata } from "@/seo/metadata";
@@ -16,7 +17,7 @@ export const revalidate = 3600;
 type P = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: P): Promise<Metadata> {
   const { locale, dict } = await pageCtx(params);
-  return buildMetadata({ locale, path: "/gifts/", title: `${dict.nav.gifts} — fine dining gift cards`, description: "Fine dining gift vouchers: tasting menus, dine & stay, chef's tables and wine experiences." });
+  return buildMetadata({ locale, path: "/gifts/", title: `${dict.nav.gifts} — fine dining gift cards`, description: locale === "it" ? "Buoni regalo per l'alta cucina: menu degustazione, cena e soggiorno, tavoli dello chef ed esperienze nel vino." : "Fine dining gift vouchers: tasting menus, dine & stay, chef's tables and wine experiences." });
 }
 const DESIGN: Record<string, string> = { carmine: "bg-carmine text-ivory", garnet: "bg-garnet text-ivory", ivory: "bg-ivory text-carmine border border-line" };
 
@@ -25,7 +26,7 @@ export default async function Gifts({ params }: P) {
   const stripe = integrations().stripe;
   return (
     <PageShell crumbs={[{ name: dict.common.home, path: `/${locale}/` }, { name: dict.nav.gifts, path: `/${locale}/gifts/` }]} title={dict.home.cards.gift[0]!} lead={dict.home.cards.gift[1]}>
-      <Notice tone="warning" title={stripe ? "Test mode" : "Not available yet"}>{stripe ? NOT_CONFIGURED.paymentsTest : NOT_CONFIGURED.payments}</Notice>
+      <Notice tone="warning" title={stripe ? tx(locale, "Test mode", "Modalità test") : tx(locale, "Not available yet", "Non ancora disponibile")}>{stripe ? tx(locale, NOT_CONFIGURED.paymentsTest, "Stripe in MODALITÀ TEST: nessuna carta viene addebitata e nessuna gift card reale viene emessa.") : tx(locale, NOT_CONFIGURED.payments, "Il pagamento online non è ancora disponibile: nessun accordo con un esercente è configurato. Non verrà addebitato nulla. Lascia la tua email e ti avviseremo all'apertura.")}</Notice>
       <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {data.giftCards.map((g) => (
           <li key={g.slug} className="rounded-[12px] border border-line bg-white p-4">
@@ -39,16 +40,16 @@ export default async function Gifts({ params }: P) {
         ))}
       </ul>
       <section className="mt-12 max-w-2xl rounded-[12px] border border-line bg-white p-6" aria-labelledby="gift-form">
-        <h2 id="gift-form" className="font-serif text-2xl">{stripe ? "Prepare a gift card (test mode)" : "Tell me when gift cards open"}</h2>
-        <p className="mb-4 mt-1 text-sm text-stone">Choose a design, value, recipient, message and delivery date. {stripe ? "Checkout runs in Stripe test mode only." : "We store your request only — nothing is charged or issued."}</p>
-        <MessageForm kind="gift-interest" d={{ ...dict.forms, submit: dict.common.submit, sending: dict.common.sending }} fields={["name", "email", "message"]} messageLabel="Message for the recipient"
+        <h2 id="gift-form" className="font-serif text-2xl">{stripe ? tx(locale, "Prepare a gift card (test mode)", "Prepara una gift card (modalità test)") : tx(locale, "Tell me when gift cards open", "Avvisami quando le gift card saranno disponibili")}</h2>
+        <p className="mb-4 mt-1 text-sm text-stone">{tx(locale, "Choose a design, value, recipient, message and delivery date.", "Scegli grafica, importo, destinatario, messaggio e data di consegna.")} {stripe ? tx(locale, "Checkout runs in Stripe test mode only.", "Il pagamento funziona solo in modalità test di Stripe.") : tx(locale, "We store your request only — nothing is charged or issued.", "Conserviamo solo la tua richiesta: non viene addebitato né emesso nulla.")}</p>
+        <MessageForm kind="gift-interest" d={{ ...dict.forms, submit: dict.common.submit, sending: dict.common.sending }} fields={["name", "email", "message"]} messageLabel={tx(locale, "Message for the recipient", "Messaggio per il destinatario")}
           extra={[
-            { name: "card", label: "Gift card", type: "select", options: data.giftCards.map((g) => ({ value: g.slug, label: t(g.name, locale) })) },
-            { name: "design", label: "Design", type: "select", options: [{ value: "carmine", label: "Carmine" }, { value: "garnet", label: "Garnet" }, { value: "ivory", label: "Ivory" }] },
-            { name: "value", label: "Value (EUR)", type: "select", options: [100, 150, 250, 400, 500, 900].map((v) => ({ value: String(v), label: `€${v}` })) },
-            { name: "recipient", label: "Recipient's name" },
-            { name: "delivery_date", label: "Delivery date", type: "date" },
-          ]} submitLabel={stripe ? "Continue to test checkout" : "Notify me"} />
+            { name: "card", label: tx(locale, "Gift card", "Gift card"), type: "select", options: data.giftCards.map((g) => ({ value: g.slug, label: t(g.name, locale) })) },
+            { name: "design", label: tx(locale, "Design", "Grafica"), type: "select", options: [{ value: "carmine", label: "Carmine" }, { value: "garnet", label: "Garnet" }, { value: "ivory", label: "Ivory" }] },
+            { name: "value", label: tx(locale, "Value (EUR)", "Importo (EUR)"), type: "select", options: [100, 150, 250, 400, 500, 900].map((v) => ({ value: String(v), label: `€${v}` })) },
+            { name: "recipient", label: tx(locale, "Recipient's name", "Nome del destinatario") },
+            { name: "delivery_date", label: tx(locale, "Delivery date", "Data di consegna"), type: "date" },
+          ]} submitLabel={stripe ? tx(locale, "Continue to test checkout", "Continua al pagamento di prova") : tx(locale, "Notify me", "Avvisami")} />
       </section>
       {data.giftCards.map((g) => <JsonLd key={g.slug} data={buildGiftCardJsonLd(g, locale)} />)}
     </PageShell>

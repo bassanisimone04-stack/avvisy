@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { pageCtx } from "../../_ctx";
 import { getDataset } from "@/db/repository";
-import { LOCALES } from "@/i18n";
+import { LOCALES, tx } from "@/i18n";
 import { buildMetadata } from "@/seo/metadata";
 import { PageShell } from "@/features/PageShell";
 import { SmartImage, imageSrc } from "@/components/media/SmartImage";
@@ -64,7 +64,7 @@ export default async function ExperiencePage({ params }: P) {
             ) : (
               <Link href={`/${locale}/concierge/?experience=${x.slug}`} className="mt-4 flex min-h-12 items-center justify-center rounded-[8px] bg-carmine font-semibold text-white">{dict.profile.requestConcierge}</Link>
             )}
-            <p className="mt-2 text-xs text-stone">Availability is confirmed by the partner, not by us. Affiliate link — see <Link href={`/${locale}/legal/affiliate-disclosure/`} className="underline">{dict.footer.affiliate}</Link>.</p>
+            <p className="mt-2 text-xs text-stone">{tx(locale, "Availability is confirmed by the partner, not by us. Affiliate link — see", "La disponibilità è confermata dal partner, non da noi. Link di affiliazione — vedi")} <Link href={`/${locale}/legal/affiliate-disclosure/`} className="underline">{dict.footer.affiliate}</Link>.</p>
             <div className="mt-3"><FavouriteButton itemKey={`experience:${x.slug}`} name={x.name} variant="inline" labels={{ add: dict.favourites.add, remove: dict.favourites.remove, saved: dict.common.saved, save: dict.common.save }} /></div>
           </div>
         </aside>
