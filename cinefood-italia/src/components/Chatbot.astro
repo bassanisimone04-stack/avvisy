@@ -1,0 +1,451 @@
+---
+/**
+ * Assistente del sito (chat) per aiutare il visitatore a trovare locali, film e articoli.
+ * Funziona interamente nel browser: nessun server, nessuna chiave, nessun dato inviato a terzi.
+ * Risponde SOLO con i contenuti del sito (indice /assistente.json, caricato alla prima apertura),
+ * quindi non può inventare locali o abbinamenti film-locale.
+ */
+import type { Lang } from "../i18n/ui";
+import { path } from "../i18n/ui";
+
+interface Props {
+  lang?: Lang;
+}
+const { lang = "it" } = Astro.props;
+const en = lang === "en";
+
+const L = en
+  ? {
+      open: "Open the assistant", close: "Close the assistant", name: "CineFood Assistant", sub: "Answers only with this site's content",
+      teaser: "Need help planning your visit?", ph: "Ask about a city, a film, a venue…", send: "Send", label: "Your message",
+      hello: "Hi! I'm CineFood's automatic assistant. I can help you find venues, films and articles on this site. I only answer with what's published here: I don't make things up.",
+      chips: ["Where to eat in Rome", "Venues from a film", "Real filming locations only", "I own a venue"],
+      note: "Automatic assistant. No data leaves your browser.",
+      index: path("/assistente.json", lang),
+    }
+  : {
+      open: "Apri l'assistente", close: "Chiudi l'assistente", name: "Assistente CineFood", sub: "Risponde solo con i contenuti del sito",
+      teaser: "Serve aiuto per organizzare la visita?", ph: "Chiedi di una città, un film, un locale…", send: "Invia", label: "Il tuo messaggio",
+      hello: "Ciao! Sono l'assistente automatico di CineFood Italia. Ti aiuto a trovare locali, film e articoli di questo sito. Rispondo solo con quello che è pubblicato qui: non invento nulla.",
+      chips: ["Dove mangiare a Roma", "Locali di un film", "Solo set reali", "Ho un locale"],
+      note: "Assistente automatico. Nessun dato lascia il tuo browser.",
+      index: path("/assistente.json", lang),
+    };
+---
+
+<div id="cfbot" class="cfbot" data-lang={lang} data-index={L.index} data-labels={JSON.stringify(L)} data-urls={JSON.stringify({
+  mappa: path("/mappa", lang), guida: path("/guida", lang), inserzioni: path("/inserzioni", lang), aggiungi: path("/aggiungi-locale", lang),
+  locali: path("/locali", lang), film: path("/film", lang), blog: path("/blog", lang), chisiamo: path("/chi-siamo", lang),
+})}>
+  <div id="cfbot-teaser" class="cfbot-teaser" hidden>
+    <button type="button" id="cfbot-teaser-x" class="cfbot-teaser-x" aria-label={L.close}>×</button>
+    <span>{L.teaser}</span>
+  </div>
+
+  <button type="button" id="cfbot-launch" class="cfbot-launch" aria-expanded="false" aria-controls="cfbot-panel" aria-label={L.open}>
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.5-4.7A8 8 0 1 1 21 12Z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01" stroke-width="2.6"/></svg>
+  </button>
+
+  <section id="cfbot-panel" class="cfbot-panel" role="dialog" aria-label={L.name} hidden>
+    <header class="cfbot-head">
+      <span class="cfbot-avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+      </span>
+      <div class="cfbot-title"><strong>{L.name}</strong><small>{L.sub}</small></div>
+      <button type="button" id="cfbot-close" class="cfbot-x" aria-label={L.close}>×</button>
+    </header>
+    <div id="cfbot-log" class="cfbot-log" role="log" aria-live="polite" tabindex="0"></div>
+    <div id="cfbot-chips" class="cfbot-chips"></div>
+    <form id="cfbot-form" class="cfbot-form" autocomplete="off">
+      <label for="cfbot-input" class="sr-only">{L.label}</label>
+      <input id="cfbot-input" type="text" maxlength="200" placeholder={L.ph} />
+      <button type="submit" aria-label={L.send}>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+    <p class="cfbot-note">{L.note}</p>
+  </section>
+</div>
+
+<style is:global>
+  .cfbot { position: fixed; right: 16px; bottom: calc(16px + var(--cfbot-lift, 0px)); z-index: 55; font-family: inherit; }
+  .cfbot-launch { width: 58px; height: 58px; border-radius: 50%; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #fff; background: radial-gradient(circle at 35% 30%, #22a352, #15803d 62%, #116b33); box-shadow: 0 8px 24px rgba(0,0,0,.4), 0 0 0 4px rgba(21,128,61,.3); transition: transform .15s, box-shadow .15s; }
+  .cfbot-launch:hover { transform: translateY(-2px) scale(1.04); }
+  .cfbot-launch:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .cfbot-teaser { position: absolute; right: 0; bottom: 70px; width: 230px; padding: 10px 28px 10px 14px; border-radius: 16px 16px 4px 16px; background: #fff; color: #1c1b22; font-size: 14px; font-weight: 600; line-height: 1.3; box-shadow: 0 8px 24px rgba(0,0,0,.35); animation: cfbotpop .35s ease-out; }
+  .dark .cfbot-teaser { background: #2c2c37; color: #faf7f0; }
+  .cfbot-teaser-x { position: absolute; top: 2px; right: 6px; background: none; border: 0; cursor: pointer; font-size: 18px; line-height: 1; color: inherit; opacity: .6; }
+  @keyframes cfbotpop { from { opacity: 0; transform: translateY(8px) scale(.96); } to { opacity: 1; transform: none; } }
+
+  .cfbot-panel { position: absolute; right: 0; bottom: 0; width: min(390px, calc(100vw - 32px)); height: min(600px, calc(100vh - 32px - var(--cfbot-lift, 0px))); display: flex; flex-direction: column; overflow: hidden; border-radius: 22px; background: #faf7f0; color: #1c1b22; border: 1px solid rgba(0,0,0,.12); box-shadow: 0 24px 60px rgba(0,0,0,.45); animation: cfbotpop .25s ease-out; }
+  .dark .cfbot-panel { background: #22222b; color: #faf7f0; border-color: rgba(255,255,255,.14); }
+  .cfbot-panel[hidden] { display: none; }
+  .cfbot-head { display: flex; align-items: center; gap: 10px; padding: 14px 14px 12px 16px; background: linear-gradient(135deg, #052e16, #0f4a26 60%, #15803d); color: #fff; }
+  .cfbot-avatar { width: 38px; height: 38px; border-radius: 50%; background: #fff; color: #15803d; display: flex; align-items: center; justify-content: center; flex: none; }
+  .cfbot-title { display: flex; flex-direction: column; min-width: 0; flex: 1; line-height: 1.2; }
+  .cfbot-title strong { font-size: 15px; }
+  .cfbot-title small { font-size: 12px; opacity: .8; }
+  .cfbot-x { background: none; border: 0; color: #fff; font-size: 26px; line-height: 1; cursor: pointer; padding: 2px 8px; border-radius: 8px; }
+  .cfbot-x:hover { background: rgba(255,255,255,.15); }
+  .cfbot-log { position: relative; flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; scroll-behavior: smooth; }
+  .cfbot-msg { max-width: 88%; padding: 10px 13px; border-radius: 16px; font-size: 14px; line-height: 1.45; word-wrap: break-word; }
+  .cfbot-msg.bot { align-self: flex-start; background: #fff; border: 1px solid rgba(0,0,0,.08); border-bottom-left-radius: 4px; }
+  .dark .cfbot-msg.bot { background: #2c2c37; border-color: rgba(255,255,255,.1); }
+  .cfbot-msg.user { align-self: flex-end; background: #15803d; color: #fff; border-bottom-right-radius: 4px; font-weight: 500; }
+  .cfbot-msg a { color: inherit; }
+  .cfbot-cards { display: flex; flex-direction: column; gap: 8px; max-width: 94%; align-self: flex-start; width: 100%; }
+  .cfbot-card { display: block; padding: 10px 12px; border-radius: 14px; background: #fff; border: 1px solid rgba(0,0,0,.1); text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  .dark .cfbot-card { background: #2c2c37; border-color: rgba(255,255,255,.12); }
+  .cfbot-card:hover, .cfbot-card:focus-visible { border-color: #16a34a; transform: translateY(-1px); outline: none; }
+  .cfbot-card b { display: block; font-size: 14px; }
+  .cfbot-card span { display: block; font-size: 12.5px; opacity: .75; margin-top: 1px; }
+  .cfbot-card em { display: inline-block; margin-top: 5px; padding: 1px 8px; border-radius: 99px; font-style: normal; font-size: 11px; font-weight: 700; color: #1c1b22; }
+  .cfbot-card em.s { background: #f4b73a; } .cfbot-card em.l { background: #34c3b5; } .cfbot-card em.x { background: #c3cad1; } .cfbot-card em.f { background: #a9bfd6; }
+  .cfbot-typing { align-self: flex-start; display: flex; gap: 4px; padding: 12px 14px; border-radius: 16px; background: #fff; border: 1px solid rgba(0,0,0,.08); }
+  .dark .cfbot-typing { background: #2c2c37; border-color: rgba(255,255,255,.1); }
+  .cfbot-typing i { width: 7px; height: 7px; border-radius: 50%; background: #9ca3af; animation: cfbotdot 1s infinite; }
+  .cfbot-typing i:nth-child(2) { animation-delay: .15s; } .cfbot-typing i:nth-child(3) { animation-delay: .3s; }
+  @keyframes cfbotdot { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-4px); opacity: 1; } }
+  .cfbot-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 10px; }
+  .cfbot-chips:empty { display: none; }
+  .cfbot-chip { padding: 6px 12px; border-radius: 99px; border: 1px solid #15803d; background: transparent; color: #166534; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s; }
+  .dark .cfbot-chip { color: #4ade80; border-color: #22c55e; }
+  .cfbot-chip:hover, .cfbot-chip:focus-visible { background: rgba(34,197,94,.18); outline: none; }
+  .cfbot-form { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid rgba(0,0,0,.1); background: #fff; }
+  .dark .cfbot-form { background: #1b1b22; border-color: rgba(255,255,255,.12); }
+  .cfbot-form input { flex: 1; min-width: 0; border-radius: 99px; border: 1px solid rgba(0,0,0,.2); padding: 9px 14px; font-size: 14px; background: #faf7f0; color: #1c1b22; }
+  .dark .cfbot-form input { background: #2c2c37; color: #faf7f0; border-color: rgba(255,255,255,.2); }
+  .cfbot-form input:focus-visible { outline: 2px solid #16a34a; outline-offset: 1px; }
+  .cfbot-form button { width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer; background: #15803d; color: #fff; display: flex; align-items: center; justify-content: center; flex: none; }
+  .cfbot-form button:hover { background: #166534; }
+  .cfbot-note { margin: 0; padding: 0 14px 10px; font-size: 11px; text-align: center; opacity: .6; background: inherit; }
+  .dark .cfbot-form + .cfbot-note { background: #1b1b22; }
+  .cfbot-form + .cfbot-note { background: #fff; padding-top: 0; }
+  @media (max-width: 520px) {
+    .cfbot { right: 12px; bottom: calc(12px + var(--cfbot-lift, 0px)); }
+    .cfbot-panel { position: fixed; inset: 0 0 0 0; width: auto; height: auto; border-radius: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .cfbot-teaser, .cfbot-panel { animation: none; } .cfbot-log { scroll-behavior: auto; } }
+</style>
+
+<script>
+  type Venue = { id: string; n: string; c: string; cs: string; r: string; t: string; tk: string; k: "s" | "l" | "a"; x: number; p: string; f: string[]; d: string; u: string };
+  type Film = { id: string; t: string; a: string; y: number; s: number; c: string[]; v: number; u: string };
+  type City = { n: string; s: string; v: number; r: string; it: string };
+  type Article = { id: string; t: string; d: string; g: string[]; u: string };
+  type Index = { lang: string; stats: { venues: number; cities: number; films: number; regions: number }; venues: Venue[]; films: Film[]; cities: City[]; regions: { it: string; n: string }[]; articles: Article[] };
+  type Card = { t: string; s: string; u: string; b?: string; bc?: string };
+  type Msg = { role: "bot" | "user"; text: string; cards?: Card[]; chips?: string[] };
+
+  const root = document.getElementById("cfbot");
+  if (root) {
+    const en = root.dataset.lang === "en";
+    const S = JSON.parse(root.dataset.labels || "{}");
+    const U = JSON.parse(root.dataset.urls || "{}") as Record<string, string>;
+    const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+    const launch = $<HTMLButtonElement>("cfbot-launch"), panel = $("cfbot-panel"), log = $("cfbot-log"), chipsEl = $("cfbot-chips");
+    const form = $<HTMLFormElement>("cfbot-form"), input = $<HTMLInputElement>("cfbot-input"), teaser = $("cfbot-teaser");
+
+    // ---------- testi ----------
+    const T = en
+      ? {
+          typeWord: { pizzeria: "pizzerias", caffe: "cafés and bars", bar: "bars", ristorante: "restaurants", pasticceria: "pastry shops" } as Record<string, string>,
+          cityRes: (n: number, c: string) => `In ${c} I found ${n} venue${n === 1 ? "" : "s"} linked to films and series:`,
+          cityNone: (c: string) => `I have no venues matching that in ${c}. Here are the ones I do have there:`,
+          regionRes: (n: number, r: string) => `In ${r} I found ${n} venue${n === 1 ? "" : "s"}:`,
+          filmRes: (t: string, y: number, n: number) => `“${t}” (${y}) — ${n} venue${n === 1 ? "" : "s"} linked to it:`,
+          filmOnly: (t: string, y: number) => `“${t}” (${y}) is on the site, but no venue is linked to it yet. Here is its page:`,
+          venueRes: (n: string) => `Here is ${n}:`,
+          seeCity: (c: string) => `All venues in ${c}`, seeFilm: "Film page", seeAll: "See all venues", map: "Open the map",
+          articles: "Related articles:", found: "Here is what I found:",
+          askCity: "Which city are you interested in? Here are the ones with most venues:",
+          askType: (c: string) => `What are you looking for in ${c}? Pick a type or ask me anything.`,
+          none: "I couldn't find anything about that on the site. Try a city (Rome, Naples, Venice…), a film or a venue name, or browse the full list.",
+          noneLink: "Search all venues", real: "Real filming location", linked: "Linked to the film", themed: "Cinema-themed", closed: "Closed", film: "Film", series: "TV series", article: "Article", city: "City",
+          closedNote: "Note: some of these are closed, marked as such.",
+          guide: "The CineFood Italia PDF guide gathers all the venues, routes by area and a film index in one file, in Italian and English. Here is the page:",
+          guideBtn: "PDF guide", ads: "If you run a venue, you can be listed for free and ask about featured placement. Here is how it works:", adsBtn: "Advertising for venues", addBtn: "Add your venue",
+          add: "You can suggest a venue or report a mistake with the form. We only publish links to films backed by a verifiable source:",
+          contact: "You can write to us through the form on the page below, or by email at info@cinefooditalia.com.",
+          mapMsg: "The map shows every venue, with filters by category and region. Click a region to filter it:", about: (s: Index["stats"]) => `CineFood Italia is a guide to ${s.venues} real venues in ${s.cities} cities (${s.regions} regions) linked to ${s.films} films and TV series. We say clearly whether a venue was really filmed there (“real set”) or is only linked to the film, and we show the date of the last check.`,
+          aboutBtn: "About us", blogMsg: "Our latest articles:", help: "I can: find venues in a city, list the venues of a film, filter by type (pizzeria, café, restaurant) or by “real set”, point you to articles, the map and the PDF guide.", hi: "Hi! What would you like to see?", thanks: "You're welcome! Anything else?", cheap: "budget-friendly", lux: "upscale",
+          chips: { cities: "Venues in…", film: "Venues from a film", real: "Real filming locations only", map: "Open the map", guide: "PDF guide", ads: "I own a venue" },
+          cityChipPrefix: "Where to eat in", moreFilm: "Another film", reset: "Start over",
+        }
+      : {
+          typeWord: { pizzeria: "pizzerie", caffe: "caffè e bar", bar: "bar", ristorante: "ristoranti", pasticceria: "pasticcerie" } as Record<string, string>,
+          cityRes: (n: number, c: string) => `A ${c} ho trovato ${n} ${n === 1 ? "locale legato" : "locali legati"} a film e serie:`,
+          cityNone: (c: string) => `A ${c} non ho locali che corrispondano. Questi sono quelli che ho:`,
+          regionRes: (n: number, r: string) => `In ${r} ho trovato ${n} ${n === 1 ? "locale" : "locali"}:`,
+          filmRes: (t: string, y: number, n: number) => `«${t}» (${y}) — ${n} ${n === 1 ? "locale collegato" : "locali collegati"}:`,
+          filmOnly: (t: string, y: number) => `«${t}» (${y}) è sul sito, ma non ha ancora locali collegati. Ecco la sua pagina:`,
+          venueRes: (n: string) => `Ecco ${n}:`,
+          seeCity: (c: string) => `Tutti i locali a ${c}`, seeFilm: "Pagina del film", seeAll: "Vedi tutti i locali", map: "Apri la mappa",
+          articles: "Articoli collegati:", found: "Ecco cosa ho trovato:",
+          askCity: "In quale città? Queste sono quelle con più locali:",
+          askType: (c: string) => `Cosa cerchi a ${c}? Scegli un tipo di locale o chiedimi pure.`,
+          none: "Su questo non ho trovato niente nel sito. Prova con una città (Roma, Napoli, Venezia…), un film o il nome di un locale, oppure sfoglia l'elenco completo.",
+          noneLink: "Cerca tra tutti i locali", real: "Location reale", linked: "Legato al film", themed: "A tema cinema", closed: "Chiuso", film: "Film", series: "Serie TV", article: "Articolo", city: "Città",
+          closedNote: "Nota: alcuni sono chiusi e sono indicati come tali.",
+          guide: "La Guida CineFood Italia in PDF raccoglie tutti i locali, i percorsi per area e un indice dei film in un unico file, in italiano e in inglese. Ecco la pagina:",
+          guideBtn: "Guida PDF", ads: "Se hai un locale puoi essere presente gratis e chiedere informazioni sull'evidenza. Ecco come funziona:", adsBtn: "Inserzioni per i locali", addBtn: "Aggiungi il tuo locale",
+          add: "Puoi segnalare un locale o un errore con il modulo. Pubblichiamo solo abbinamenti con i film supportati da una fonte verificabile:",
+          contact: "Puoi scriverci con il modulo nella pagina qui sotto, oppure via email a info@cinefooditalia.com.",
+          mapMsg: "La mappa mostra tutti i locali, con filtri per categoria e regione. Clicca una regione per filtrarla:", about: (s: Index["stats"]) => `CineFood Italia è una guida a ${s.venues} locali reali in ${s.cities} città (${s.regions} regioni) legati a ${s.films} film e serie TV. Diciamo chiaramente se un locale è stato girato davvero lì («set reale») o è solo legato al film, e indichiamo la data dell'ultimo controllo.`,
+          aboutBtn: "Chi siamo", blogMsg: "Ecco gli ultimi articoli:", help: "Posso: trovare locali in una città, elencare i locali di un film, filtrare per tipo (pizzeria, caffè, ristorante) o per «set reale», indicarti articoli, mappa e Guida PDF.", hi: "Ciao! Cosa vuoi vedere?", thanks: "Prego! Altro?", cheap: "economici", lux: "di fascia alta",
+          chips: { cities: "Locali a…", film: "Locali di un film", real: "Solo set reali", map: "Apri la mappa", guide: "Guida PDF", ads: "Ho un locale" },
+          cityChipPrefix: "Dove mangiare a", moreFilm: "Un altro film", reset: "Ricomincia",
+        };
+
+    // ---------- utilità ----------
+    const norm = (s: string) => " " + s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’'`´]/g, " ").replace(/[^a-z0-9€ ]+/g, " ").replace(/\s+/g, " ").trim() + " ";
+    const STOP = new Set(("il lo la i gli le un uno una di a da in con su per tra fra e ed o ma che chi cosa come dove quale quali ho hai sono mi ti ci vi del della dei delle al alla alle nel nella nei nelle dal dalla non piu molto voglio vorrei posso puoi film serie tv the an of at on and or to for from is are where what how which me my we you can could would like want do does did movie del dello degli agli sul sulla sulle consigli consigliami mostrami cerco cerca trova trovami fammi fammi vedere show find give").split(" "));
+    const GENERIC = new Set("ristorante trattoria osteria pizzeria bar caffe cafe antica antico locale restaurant da del della dei di il la le lo dal".split(" "));
+    const sig = (s: string) => norm(s).trim().split(" ").filter((t) => t.length > 2 && !STOP.has(t));
+    const rx = (q: string, r: RegExp) => r.test(q);
+    const CITY_ALIAS: Record<string, string> = { rome: "roma", naples: "napoli", milan: "milano", venice: "venezia", florence: "firenze", turin: "torino", genoa: "genova", sicily: "sicilia", sardinia: "sardegna", tuscany: "toscana", lombardy: "lombardia", piedmont: "piemonte", apulia: "puglia", "amalfi coast": "amalfi", capri: "anacapri" };
+
+    let idx: Index | null = null;
+    let loading: Promise<Index | null> | null = null;
+    const load = () =>
+      (loading ??= fetch(root.dataset.index || "/assistente.json")
+        .then((r) => (r.ok ? (r.json() as Promise<Index>) : null))
+        .then((d) => (idx = d))
+        .catch(() => null));
+
+    // ---------- motore ----------
+    function findCity(q: string, d: Index): City | null {
+      let t = q;
+      for (const [k, v] of Object.entries(CITY_ALIAS)) if (t.includes(" " + k + " ")) t = t + v + " ";
+      let best: City | null = null, bl = 0;
+      for (const c of d.cities) for (const name of [c.n, c.it]) { const nn = norm(name).trim(); if (nn.length > 2 && t.includes(" " + nn + " ") && nn.length > bl) { best = c; bl = nn.length; } }
+      return best;
+    }
+    function findRegion(q: string, d: Index) {
+      let t = q;
+      for (const [k, v] of Object.entries(CITY_ALIAS)) if (t.includes(" " + k + " ")) t = t + v + " ";
+      for (const r of d.regions) for (const name of [r.n, r.it]) { const nn = norm(name).trim(); if (nn.length > 3 && t.includes(" " + nn + " ")) return r; }
+      return null;
+    }
+    function findFilm(q: string, qt: string[], d: Index): Film | null {
+      let best: Film | null = null, bs = 0;
+      for (const f of d.films) for (const title of [f.t, f.a]) {
+        const nt = norm(title);
+        let s = 0;
+        if (q.includes(nt)) s = 10 + nt.length;
+        else {
+          const ts = sig(title);
+          if (!ts.length) continue;
+          const m = ts.filter((x) => qt.some((w) => w === x || (x.length >= 5 && w.length >= 5 && (w.startsWith(x.slice(0, 5)) && x.startsWith(w.slice(0, 5)))))).length;
+          if (m === ts.length || (ts.length >= 3 && m / ts.length >= 0.67)) s = 5 + m;
+        }
+        if (s > bs) { bs = s; best = f; }
+      }
+      return best;
+    }
+    function findVenue(q: string, qt: string[], d: Index): Venue | null {
+      let best: Venue | null = null, bs = 0;
+      for (const v of d.venues) {
+        const nn = norm(v.n);
+        let s = 0;
+        if (q.includes(nn) && nn.trim().length > 4) s = 10 + nn.length;
+        else {
+          const ts = sig(v.n).filter((x) => !GENERIC.has(x));
+          if (!ts.length) continue;
+          const m = ts.filter((x) => qt.includes(x)).length;
+          if (m === ts.length && m >= (ts.length === 1 ? 1 : 2)) s = 5 + m;
+        }
+        if (s > bs) { bs = s; best = v; }
+      }
+      return best;
+    }
+    const badge = (v: Venue): Pick<Card, "b" | "bc"> => (v.x ? { b: T.closed, bc: "x" } : v.k === "s" ? { b: T.real, bc: "s" } : v.k === "l" ? { b: T.linked, bc: "l" } : { b: T.themed, bc: "l" });
+    const vCard = (v: Venue): Card => ({ t: v.n, s: `${v.c} · ${v.t} · ${v.p}`, u: v.u, ...badge(v) });
+    const fCard = (f: Film): Card => ({ t: f.t, s: `${f.s ? T.series : T.film} · ${f.y}${f.v ? ` · ${f.v} ${en ? (f.v === 1 ? "venue" : "venues") : (f.v === 1 ? "locale" : "locali")}` : ""}`, u: f.u, b: T.film, bc: "f" });
+    const aCard = (a: Article): Card => ({ t: a.t, s: a.d, u: a.u, b: T.article, bc: "f" });
+    const rank = (vs: Venue[]) => [...vs].sort((a, b) => a.x - b.x || (a.k === "s" ? 0 : 1) - (b.k === "s" ? 0 : 1) || a.n.localeCompare(b.n));
+
+    function articlesFor(terms: string[], d: Index, n = 2): Article[] {
+      const ts = terms.filter((t) => t.length > 3);
+      if (!ts.length) return [];
+      return d.articles
+        .map((a) => { const hay = norm(a.t + " " + a.g.join(" ")); return { a, s: ts.filter((t) => hay.includes(" " + t) || hay.includes(t)).length }; })
+        .filter((x) => x.s > 0)
+        .sort((x, y) => y.s - x.s)
+        .slice(0, n)
+        .map((x) => x.a);
+    }
+
+    function answer(raw: string, d: Index): Msg {
+      const q = norm(raw), qt = q.trim().split(" ").filter(Boolean);
+      const chipsBase = [T.chips.cities, T.chips.film, T.chips.map];
+      const link = (k: string, label: string): Card => ({ t: label, s: "", u: U[k] });
+
+      if (!q.trim()) return { role: "bot", text: T.hi, chips: chipsBase };
+      if (rx(q, /^ (ciao|salve|buongiorno|buonasera|hey|hello|hi|hola) /)) return { role: "bot", text: T.hi, chips: chipsBase };
+      if (rx(q, / (grazie|thanks|thank you|thx) /)) return { role: "bot", text: T.thanks, chips: chipsBase };
+      if (rx(q, / (aiuto|help|cosa sai fare|cosa puoi fare|what can you do) /)) return { role: "bot", text: T.help, chips: chipsBase };
+
+      // intenti sul sito
+      if (rx(q, / (ho un|ho il|ho una|gestisco|sono un|sono il|i own|i run|my restaurant|my venue|my bar|owner|ristorator\w*|inserzion\w*|pubblicit\w*|advertis\w*|promuov\w*|sponsor\w*|visibilita) /))
+        return { role: "bot", text: T.ads, cards: [link("inserzioni", T.adsBtn), link("aggiungi", T.addBtn)], chips: chipsBase };
+      if (rx(q, / (guida|pdf|ebook|acquist\w*|compra\w*|buy|guide) /) && !findFilm(q, qt, d)) return { role: "bot", text: T.guide, cards: [link("guida", T.guideBtn)], chips: chipsBase };
+      if (rx(q, / (aggiung\w*|segnal\w*|manca|missing|suggest\w*|errore|sbagli\w*|mistake|wrong|report) /)) return { role: "bot", text: T.add, cards: [link("aggiungi", T.addBtn)] };
+      if (rx(q, / (contatt\w*|email|mail|scriver\w*|telefono|contact|write to) /)) return { role: "bot", text: T.contact, cards: [link("aggiungi", T.addBtn)] };
+      if (rx(q, / (cos e|cosa e|chi siete|chi siamo|come funziona|about|what is this|how does|fonti|verificat\w*|affidabil\w*|reliable|sources|true) /))
+        return { role: "bot", text: T.about(d.stats), cards: [link("chisiamo", T.aboutBtn)], chips: chipsBase };
+      if (rx(q, / (mappa|map|vicino a me|near me|nearby|dintorni) /) && !findCity(q, d)) return { role: "bot", text: T.mapMsg, cards: [link("mappa", T.map)] };
+      if (rx(q, / (articol\w*|blog|leggere|read|stories) /) && !findCity(q, d) && !findFilm(q, qt, d))
+        return { role: "bot", text: T.blogMsg, cards: d.articles.slice(0, 3).map(aCard), chips: chipsBase };
+
+      // filtri
+      const filters: { tk?: string[]; k?: string; price?: string[]; closedOnly?: boolean } = {};
+      if (rx(q, / (pizz\w*) /)) filters.tk = ["pizzeria"];
+      else if (rx(q, / (pasticceri\w*|dolci|dessert|pastry) /)) filters.tk = ["pasticceria"];
+      else if (rx(q, / (caffe|caffetteria|cafe|coffee|colazione|breakfast|aperitiv\w*|bar) /)) filters.tk = ["caffè", "bar"];
+      else if (rx(q, / (trattoria|osteria|tipic\w*) /)) filters.tk = ["trattoria"];
+      else if (rx(q, / (ristorant\w*|restaurant\w*|cena|dinner|pranzo|lunch) /)) filters.tk = ["ristorante", "trattoria"];
+      if (rx(q, / (set reale|real set|real location|girat\w* davvero|davvero girat\w*|actually filmed|really filmed|set reali|real sets) /)) filters.k = "s";
+      else if (rx(q, / (legat\w* al film|linked to the film) /)) filters.k = "l";
+      if (rx(q, / (economic\w*|cheap|budget|spendere poco|low cost) /)) filters.price = ["€", "€€"];
+      else if (rx(q, / (lusso|luxury|expensive|stellat\w*|michelin|alta cucina|fine dining) /)) filters.price = ["€€€", "€€€€"];
+      if (rx(q, / (chius\w*|closed) /)) filters.closedOnly = true;
+      const filt = (vs: Venue[]) => vs.filter((v) => (!filters.tk || filters.tk.includes(v.tk)) && (!filters.k || v.k === filters.k) && (!filters.price || filters.price.includes(v.p)) && (!filters.closedOnly || v.x === 1));
+      const hasFilter = Object.keys(filters).length > 0;
+
+      const film = findFilm(q, qt, d);
+      const city = findCity(q, d);
+      const venue = !film ? findVenue(q, qt, d) : null;
+
+      if (venue && !city) {
+        const cards = [vCard(venue)];
+        const fl = venue.f.map((id) => d.films.find((f) => f.id === id)).filter(Boolean) as Film[];
+        return { role: "bot", text: T.venueRes(venue.n), cards: [...cards, ...fl.slice(0, 2).map(fCard)], chips: [T.seeCity(venue.c), T.chips.map] };
+      }
+      if (film) {
+        const vs = rank(filt(d.venues.filter((v) => v.f.includes(film.id))));
+        const arts = articlesFor(sig(film.t).concat(sig(film.a)), d, 2);
+        if (!vs.length) return { role: "bot", text: T.filmOnly(film.t, film.y), cards: [fCard(film), ...arts.map(aCard)], chips: chipsBase };
+        const text = T.filmRes(film.t, film.y, vs.length) + (vs.some((v) => v.x) ? " " + T.closedNote : "");
+        return { role: "bot", text, cards: [...vs.slice(0, 4).map(vCard), fCard(film), ...arts.map(aCard)], chips: [T.moreFilm, T.chips.map] };
+      }
+      if (city) {
+        const all = rank(d.venues.filter((v) => v.cs === city.s));
+        const vs = rank(filt(all));
+        if (!vs.length) return { role: "bot", text: T.cityNone(city.n), cards: all.slice(0, 4).map(vCard), chips: [T.seeCity(city.n)] };
+        const label = filters.tk ? `${T.typeWord[(filters.tk[0] === "caffè" ? "caffe" : filters.tk[0]) as string] ?? ""} ` : "";
+        const txt = hasFilter && label ? (en ? `In ${city.n} I found ${vs.length} ${label.trim()}:` : `A ${city.n} ho trovato ${vs.length} ${label.trim()}:`) : T.cityRes(vs.length, city.n);
+        const arts = articlesFor(sig(city.n).concat(sig(city.it)), d, 1);
+        return { role: "bot", text: txt + (vs.some((v) => v.x) ? " " + T.closedNote : ""), cards: [...vs.slice(0, 4).map(vCard), { t: T.seeCity(city.n), s: `${city.v} ${en ? (city.v === 1 ? "venue" : "venues") : (city.v === 1 ? "locale" : "locali")}`, u: (en ? "/en/" : "/") + city.s, b: T.city, bc: "f" }, ...arts.map(aCard)], chips: [T.chips.map, T.chips.film] };
+      }
+      const region = findRegion(q, d);
+      if (region) {
+        const vs = rank(filt(d.venues.filter((v) => v.r === region.n)));
+        if (vs.length) return { role: "bot", text: T.regionRes(vs.length, region.n), cards: vs.slice(0, 5).map(vCard), chips: [T.chips.map] };
+      }
+      if (hasFilter) {
+        const vs = rank(filt(d.venues));
+        const top = [...d.cities].sort((a, b) => b.v - a.v).slice(0, 5);
+        if (filters.k || filters.price) return { role: "bot", text: T.found, cards: vs.slice(0, 5).map(vCard), chips: top.map((c) => `${T.cityChipPrefix} ${c.n}`) };
+        return { role: "bot", text: T.askCity, chips: top.map((c) => `${T.cityChipPrefix} ${c.n}`) };
+      }
+
+      // ricerca libera
+      const terms = qt.filter((t) => t.length > 2 && !STOP.has(t));
+      if (terms.length) {
+        const sv = d.venues.map((v) => { const h = norm(v.n + " " + v.c + " " + v.r + " " + v.d); return { v, s: terms.filter((t) => h.includes(" " + t) || (t.length >= 5 && h.includes(t))).length }; }).filter((x) => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 3);
+        const sf = d.films.map((f) => { const h = norm(f.t + " " + f.a + " " + f.c.join(" ")); return { f, s: terms.filter((t) => h.includes(" " + t)).length }; }).filter((x) => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 2);
+        const sa = articlesFor(terms, d, 2);
+        const need = Math.max(1, Math.ceil(terms.length / 2));
+        const cards = [...sv.filter((x) => x.s >= need).map((x) => vCard(x.v)), ...sf.filter((x) => x.s >= need).map((x) => fCard(x.f)), ...sa.map(aCard)];
+        if (cards.length) return { role: "bot", text: T.found, cards: cards.slice(0, 5), chips: chipsBase };
+      }
+      return { role: "bot", text: T.none, cards: [{ t: T.noneLink, s: "", u: `${U.locali}?cerca=${encodeURIComponent(raw.slice(0, 60))}` }], chips: chipsBase };
+    }
+
+    // ---------- interfaccia ----------
+    const msgs: Msg[] = [];
+    const save = () => { try { sessionStorage.setItem("cfbot", JSON.stringify(msgs.slice(-30))); } catch { /* ignore */ } };
+    function draw(m: Msg) {
+      const el = document.createElement("div");
+      el.className = "cfbot-msg " + m.role;
+      el.textContent = m.text;
+      log.appendChild(el);
+      if (m.cards?.length) {
+        const wrap = document.createElement("div");
+        wrap.className = "cfbot-cards";
+        for (const c of m.cards) {
+          const a = document.createElement("a");
+          a.className = "cfbot-card";
+          a.href = c.u;
+          const b = document.createElement("b"); b.textContent = c.t; a.appendChild(b);
+          if (c.s) { const s = document.createElement("span"); s.textContent = c.s; a.appendChild(s); }
+          if (c.b) { const e = document.createElement("em"); e.className = c.bc || "f"; e.textContent = c.b; a.appendChild(e); }
+          wrap.appendChild(a);
+        }
+        log.appendChild(wrap);
+      }
+      // la risposta con schede: mostra l'inizio del messaggio, non la fine
+      log.scrollTop = m.role === "bot" && m.cards?.length ? Math.max(0, el.offsetTop - 10) : log.scrollHeight;
+    }
+    function setChips(list?: string[]) {
+      chipsEl.textContent = "";
+      (list || []).slice(0, 5).forEach((c) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "cfbot-chip"; b.textContent = c;
+        b.addEventListener("click", () => ask(c));
+        chipsEl.appendChild(b);
+      });
+    }
+    const push = (m: Msg) => { msgs.push(m); draw(m); save(); };
+
+    async function ask(text: string) {
+      const t = text.trim();
+      if (!t) return;
+      // i suggerimenti "generici" guidano la conversazione invece di cercare testo
+      if (t === T.chips.cities) { push({ role: "user", text: t }); const top = [...(idx?.cities ?? (await load())?.cities ?? [])].sort((a, b) => b.v - a.v).slice(0, 5); const r: Msg = { role: "bot", text: T.askCity, chips: top.map((c) => `${T.cityChipPrefix} ${c.n}`) }; push(r); setChips(r.chips); return; }
+      if (t === T.chips.film || t === T.moreFilm) { push({ role: "user", text: t }); const d = idx ?? (await load()); const fl = [...(d?.films ?? [])].sort((a, b) => b.v - a.v).slice(0, 5); const r: Msg = { role: "bot", text: en ? "Pick a film or series, or type its name:" : "Scegli un film o una serie, oppure scrivi il titolo:", chips: fl.map((f) => f.t) }; push(r); setChips(r.chips); return; }
+      push({ role: "user", text: t });
+      setChips([]);
+      input.value = "";
+      const typing = document.createElement("div");
+      typing.className = "cfbot-typing"; typing.innerHTML = "<i></i><i></i><i></i>";
+      log.appendChild(typing); log.scrollTop = log.scrollHeight;
+      const d = idx ?? (await load());
+      await new Promise((r) => setTimeout(r, 380));
+      typing.remove();
+      const r: Msg = d ? answer(t.replace(new RegExp(`^${T.cityChipPrefix} `, "i"), ""), d) : { role: "bot", text: en ? "I can't load the site index right now. You can still browse the full list:" : "Ora non riesco a caricare l'indice del sito. Puoi comunque sfogliare l'elenco completo:", cards: [{ t: T.noneLink, s: "", u: U.locali }] };
+      // «Dove mangiare a Roma» → cerca la città anche se la frase è stata ridotta
+      push(r); setChips(r.chips);
+    }
+
+    function open() {
+      panel.hidden = false; launch.setAttribute("aria-expanded", "true"); launch.hidden = true; teaser.hidden = true;
+      try { sessionStorage.setItem("cfbot-teaser", "1"); } catch { /* ignore */ }
+      load();
+      if (!msgs.length) { const m: Msg = { role: "bot", text: S.hello, chips: S.chips }; push(m); setChips(m.chips); }
+      setTimeout(() => input.focus(), 50);
+    }
+    function close() { panel.hidden = true; launch.hidden = false; launch.setAttribute("aria-expanded", "false"); launch.focus(); }
+
+    launch.addEventListener("click", open);
+    $("cfbot-close").addEventListener("click", close);
+    $("cfbot-teaser-x").addEventListener("click", () => { teaser.hidden = true; try { sessionStorage.setItem("cfbot-teaser", "1"); } catch { /* ignore */ } });
+    teaser.addEventListener("click", (e) => { if ((e.target as HTMLElement).id !== "cfbot-teaser-x") open(); });
+    form.addEventListener("submit", (e) => { e.preventDefault(); ask(input.value); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) close(); });
+
+    // ripristina la conversazione della sessione
+    try { const old = JSON.parse(sessionStorage.getItem("cfbot") || "[]") as Msg[]; old.forEach((m) => { msgs.push(m); draw(m); }); const last = old[old.length - 1]; if (last?.chips) setChips(last.chips); } catch { /* ignore */ }
+
+    // non sovrapporsi al banner dei cookie
+    const banner = document.getElementById("cookie-banner");
+    const lift = () => root.style.setProperty("--cfbot-lift", banner && !banner.hidden ? `${banner.offsetHeight}px` : "0px");
+    if (banner) { new MutationObserver(lift).observe(banner, { attributes: true, attributeFilter: ["hidden"] }); window.addEventListener("resize", lift); }
+    setTimeout(lift, 200);
+
+    // fumetto di invito, una volta per sessione
+    let seen = false; try { seen = !!sessionStorage.getItem("cfbot-teaser"); } catch { /* ignore */ }
+    if (!seen) setTimeout(() => { if (panel.hidden) teaser.hidden = false; }, 4000);
+  }
+</script>

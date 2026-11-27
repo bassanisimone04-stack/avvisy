@@ -9,6 +9,7 @@ import Analytics from "../components/Analytics.astro";
 import VercelAnalytics from "@vercel/analytics/astro";
 import FormHandler from "../components/FormHandler.astro";
 import CookieBanner from "../components/CookieBanner.astro";
+import Chatbot from "../components/Chatbot.astro";
 import { useT, type Lang } from "../i18n/ui";
 import "../styles/global.css";
 import "@fontsource-variable/inter";
@@ -75,5 +76,6 @@ const t = useT(lang);
     </main>
     <Footer lang={lang} />
     <CookieBanner lang={lang} />
+    <Chatbot lang={lang} />
   </body>
 </html>
