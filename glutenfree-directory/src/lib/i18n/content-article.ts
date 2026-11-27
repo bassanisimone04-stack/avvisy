@@ -56,8 +56,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-2": {
     title: "How to Read Food Labels If You Have Celiac Disease",
     excerpt: "A practical guide to spotting risky ingredients on labels, the Crossed Grain symbol, and the wording you should always check.",
-    metaTitle: "Food Labels for Celiacs: A Guide | Mappa Senza Glutine",
-    metaDescription: "How to read food labels if you have celiac disease: risky ingredients, the Crossed Grain symbol and the wording you should always check.",
+    metaTitle: "How to Read Food Labels as a Celiac: Practical Guide",
+    metaDescription: "Crossed Grain symbol, the “gluten-free” wording (under 20 ppm), starch, flavourings and yeasts: what to check on a label before it goes in your basket.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "The Crossed Grain symbol is the fastest way to spot an AIC-verified product on the shelf.",
@@ -148,8 +148,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-5": {
     title: "Celiac Kids at School: Managing Cafeterias and Field Trips",
     excerpt: "Practical advice for parents on organizing the school cafeteria, field trips and birthday parties for a celiac child.",
-    metaTitle: "Celiac Kids at School: Cafeteria and Trips | Mappa Senza Glutine",
-    metaDescription: "Practical advice for parents of a celiac child: how to organize the school cafeteria, field trips and birthday parties safely.",
+    metaTitle: "Celiac Child at School: Gluten-Free Meals and Rights",
+    metaDescription: "A gluten-free school meal is a legal right, at no extra cost: a medical certificate is enough. How to organise cafeteria, trips and birthday parties.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "A gluten-free school meal is a legal right in Italy, at no extra cost for the family.",
@@ -279,8 +279,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-10": {
     title: "2026 Regulatory Updates: What Changes for Celiacs in Italy",
     excerpt: "The latest news on reimbursements, food vouchers and regulations for people with celiac disease in Italy, updated for 2026.",
-    metaTitle: "2026 Rules for Celiacs in Italy | Mappa Senza Glutine",
-    metaDescription: "What changes for celiacs in Italy in 2026: the latest on reimbursements, food vouchers and regulations, updated with the 2026 Budget Law.",
+    metaTitle: "Digital Celiac Voucher 2026: What Changes in Italy",
+    metaDescription: "The 2026 Budget Law (art. 77) makes the voucher digital and valid across Italy, as regions switch it on. The amount stays the same.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Italy's 2026 Budget Law (art. 77) digitalizes the gluten-free product voucher, making it usable anywhere in the country.",
@@ -505,8 +505,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-17": {
     title: "How Much Does a Gluten-Free Diet Cost? Costs, Vouchers and Tax Deductions",
     excerpt: "How much more people on a gluten-free diet spend, how the monthly voucher from Italy's National Health Service works, and which tax deductions celiacs are entitled to.",
-    metaTitle: "How Much Does a Gluten-Free Diet Cost? | Mappa Senza Glutine",
-    metaDescription: "How much more a gluten-free diet costs, how the monthly voucher from Italy's National Health Service works, and the tax deductions available to celiacs.",
+    metaTitle: "How Much Does a Gluten-Free Diet Cost? Costs and Voucher",
+    metaDescription: "According to an Assoutenti survey, gluten-free products cost from about a third more to over triple. How the monthly voucher works, plus tax deductions.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "According to a survey by the consumer research centre C.R.C. with Assoutenti, gluten-free products cost from about a third more to over three times more than their gluten-containing equivalents: +110% for pasta, +257% for rusks.",
@@ -663,8 +663,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-21": {
     title: "Gluten-Free McDonald's in Italy: What a Celiac Can Really Eat",
     excerpt: "Gluten-free McDonald's in Italy: what the Gluten Free Burger actually guarantees, why the chain isn't AIC certified, and which other products carry a cross-contamination risk.",
-    metaTitle: "McDonald's Gluten Free Italy: Fries, Burger, Ice Cream",
-    metaDescription: "Gluten-free McDonald's in Italy: the guaranteed gluten-free burger, whether fries, ice cream and McFlurry are safe, and how to read the allergen table.",
+    metaTitle: "McDonald's Gluten Free in Italy: What Celiacs Can Eat",
+    metaDescription: "The Gluten Free Burger is the only item guaranteed gluten-free. Fries and salads have no gluten ingredients, but cross-contamination isn't ruled out.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "The Gluten Free Burger, developed with Dr. Schär, is the only item on the McDonald's Italy menu explicitly guaranteed gluten-free.",
@@ -1931,8 +1931,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-59": {
     title: "Gluten-Free Old Wild West: The Celiac Menu and How to Find It",
     excerpt: "Gluten-free Old Wild West: what's on the celiac menu developed with AIC, how it's prepared to avoid contamination, and why it isn't available at every restaurant in the chain.",
-    metaTitle: "Gluten-Free Old Wild West Menu | Mappa Senza Glutine",
-    metaDescription: "Gluten-free Old Wild West: the celiac menu developed with AIC, dedicated fryer and toaster, and how to find the restaurants where it's available.",
+    metaTitle: "Old Wild West Gluten-Free: The Menu and Where to Find It",
+    metaDescription: "The celiac menu developed with AIC: separate kitchen area, dedicated fryer and toaster. Not in every restaurant: how to tell if yours has it.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Old Wild West has a full gluten-free menu, prepared following procedures identified with the support of the Italian Celiac Association (AIC).",
@@ -2181,8 +2181,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-67": {
     title: "Does It Contain Gluten? Wheat Starch, Soy Sauce, Yeast and Other Doubtful Ingredients",
     excerpt: "Wheat starch, soy sauce, brewer's yeast, sourdough, balsamic vinegar, gelatin: what AIC says about the ingredients that confuse people reading a label.",
-    metaTitle: "Does It Contain Gluten? Wheat Starch, Soy, Yeast",
-    metaDescription: "Wheat starch, soy sauce, brewer's yeast, sourdough, balsamic vinegar, gelatin: which ingredients contain gluten and what AIC says about each one.",
+    metaTitle: "Does Wheat Starch Contain Gluten? And Other Doubts",
+    metaDescription: "Regular wheat starch is not safe for a celiac; deglutinated starch (under 20 ppm) is, if declared. Soy, yeast, vinegar and gelatin: what AIC says.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Ordinary wheat starch is not suitable for someone with celiac disease; deglutinated starch, under 20 ppm, is suitable according to AIC, but only in products declared gluten-free.",
@@ -2215,8 +2215,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-68": {
     title: "Accidental Gluten Ingestion: What to Do If Someone With Celiac Disease Eats It by Mistake",
     excerpt: "What to do if someone with celiac disease eats gluten by mistake: what AIC says, which symptoms can appear and when, how to feel better and when to call the doctor.",
-    metaTitle: "Accidental Gluten Ingestion: What to Do",
-    metaDescription: "What to do if someone with celiac disease eats gluten by mistake: symptoms and timing, what AIC says, how to feel better and when to see a doctor.",
+    metaTitle: "If a Celiac Eats Gluten: Symptoms, Timing, What to Do",
+    metaDescription: "How long until a celiac feels ill after eating gluten? Symptoms, when they appear, show up 1-2 hours to 24-48 hours later. What to do and when to call a doctor.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "There is no specific treatment that blocks gluten already swallowed: AIC advises not to panic.",
@@ -2407,8 +2407,8 @@ export const ARTICLE_EN: Record<string, ArticleTranslation> = {
   "art-74": {
     title: "Celiac Food Voucher in Italy: Monthly Spending Caps by Age, How It Works and Where to Spend It",
     excerpt: "How much the monthly voucher for gluten-free products paid by the Italian health service is worth: the caps by age and sex set by the decree of 10 August 2018, how to get it and where to spend it.",
-    metaTitle: "Celiac Voucher Italy: Amounts by Age and How It Works",
-    metaDescription: "Italy's celiac voucher: monthly caps by age and sex (decree of 10 August 2018), how to get it from the health authority, and where to spend it.",
+    metaTitle: "Celiac Voucher Italy: How Much by Age and How to Get It",
+    metaDescription: "Monthly caps by age and sex (decree of 10 August 2018): for adults aged 18-59, 110 euro for men and 90 for women. How to get it from the health authority.",
     authorRole: "Content verified by the editorial team",
     keyTakeaways: [
       "Italy's National Health Service guarantees free gluten-free foods specifically formulated for celiacs, up to a monthly spending cap.",
