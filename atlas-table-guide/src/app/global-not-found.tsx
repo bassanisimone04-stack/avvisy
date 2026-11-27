@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
-import { inter, playfair } from "./fonts";
+import { inter } from "./fonts";
 import { BRAND } from "@/config/brand";
 import { Logo } from "@/components/Logo";
 import { cities } from "@/data/demo/geo";
@@ -13,7 +13,7 @@ export const metadata: Metadata = { title: `Page not found | ${BRAND.name}`, rob
 export default function GlobalNotFound() {
   const dict = getDict("en");
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="min-h-screen bg-ivory text-ink antialiased">
         <header className="on-dark bg-carmine text-ivory"><div className="container-page flex h-[var(--header-h)] items-center"><Link href="/en/" aria-label={BRAND.name}><Logo variant="light" /></Link></div></header>
         <main id="main" className="container-page py-20 text-center">

@@ -9,14 +9,14 @@ import { buildMetadata } from "@/seo/metadata";
 import { SmartImage } from "@/components/media/SmartImage";
 import { PhotoCard } from "@/components/cards/Cards";
 import { RestaurantCard } from "@/components/cards/RestaurantCard";
-import { LinkButton, SectionHeader, Divider, Notice } from "@/components/ui/ui";
+import { LinkButton, SectionHeader, Divider } from "@/components/ui/ui";
 import { Tabs } from "@/components/ui/Tabs";
 import { HeroSearch } from "@/features/home/HeroSearch";
 import { NewsletterForm } from "@/features/forms/Forms";
 import { Price } from "@/features/Price";
 import { buildAlt } from "@/lib/alt";
 import { cardInfo } from "@/features/helpers";
-import { collectionMembers, isVerified } from "@/db/queries";
+import { collectionMembers } from "@/db/queries";
 import { collections } from "@/data/collections";
 import { lowestEUR } from "@/lib/filters";
 import { statsBy, lunchDinnerRatio, cheapestRecognised } from "@/lib/price-index";
@@ -52,57 +52,51 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const [lead, ...rest] = articles;
   const tuscany = data.itineraries.find((i) => i.slug === "gastronomic-journey-tuscany") ?? data.itineraries[0];
   const others = data.itineraries.filter((i) => i !== tuscany).slice(0, 3);
-  const anyDemo = data.restaurants.some((r) => r.isDemo);
 
   return (
     <>
       {/* 1. HERO — Carmine frame, inset rounded image, H1 BELOW the image */}
-      <section className="on-dark bg-carmine pb-12 text-ivory md:pb-16" aria-labelledby="hero-title">
-        <div className="mx-auto max-w-[1232px] px-4">
+      <section className="on-dark bg-carmine pb-6 text-ivory md:pb-12" aria-labelledby="hero-title">
+        <div className="mx-auto max-w-[1232px] px-2 sm:px-4">
           <div className="relative">
-            <SmartImage imageKey="hero-mediterranean" alt={buildAlt({ subject: "terrace" }, { name: "a coastal restaurant", city: "the Mediterranean", locale })} sizes="(min-width:1232px) 1200px, 100vw" priority className="aspect-[4/3] md:aspect-[21/9]" label={dict.common.illustrative} />
+            <SmartImage imageKey="hero-mediterranean" alt={buildAlt({ subject: "terrace" }, { name: "a coastal restaurant", city: "the Mediterranean", locale })} sizes="(min-width:1232px) 1200px, 100vw" priority className="aspect-[4/3] min-[480px]:aspect-[16/9] lg:aspect-[21/9]" label={dict.common.illustrative} />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 rounded-b-[12px] bg-gradient-to-t from-ink/25 to-transparent" />
           </div>
-          <div className="mt-8 text-center">
-            <h1 id="hero-title" className="font-serif text-[28px] font-semibold text-ivory md:text-[44px]">{locale === "it" ? BRAND.taglineIt : BRAND.tagline}</h1>
-            <p className="mt-2 text-base text-ivory/80">{h.heroSubtitle}</p>
+          <div className="mt-5 text-center md:mt-8">
+            <h1 id="hero-title" className="text-[21px] font-bold text-white md:text-[34px]">{locale === "it" ? BRAND.taglineIt : BRAND.tagline}</h1>
+            <p className="mx-auto mt-2 max-w-xl text-sm text-ivory/80 md:text-base">{h.heroSubtitle}</p>
           </div>
-          <div className="mt-6">
+          <div className="mt-4 md:mt-6">
             <HeroSearch locale={locale} labels={{ placeholder: h.searchPlaceholder, explore: h.explore, destination: h.destination, experienceType: h.experienceType, date: h.date, guests: h.guests, any: h.anyExperience }}
               cities={data.cities.map((c) => ({ value: `${c.countrySlug}/${c.slug}`, label: t(c.name, locale) }))}
               cuisines={data.cuisines.map((c) => ({ value: c.slug, label: t(c.name, locale) }))} />
           </div>
-          <ul className="scroll-snap-x mx-auto mt-5 flex max-w-[860px] gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-center" aria-label={dict.directory.filters}>
+          <ul className="scroll-snap-x mx-auto mt-3 flex max-w-[860px] gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-center" aria-label={dict.directory.filters}>
             {[[h.chips.one, "?rec=1"], [h.chips.two, "?rec=2"], [h.chips.three, "?rec=3"], [h.chips.under100, "?dinner=-100"], [h.chips.dineStay, "?feat=rooms"], [h.chips.romantic, "?feat=romantic"]].map(([label, q], i) => (
               <li key={q} className="shrink-0">
-                <Link href={L(`/restaurants/${q}`)} title={i < 3 ? h.chipTooltip : undefined} className="inline-flex min-h-10 items-center rounded-full border border-ivory/90 px-4 text-sm text-ivory transition-colors hover:bg-ivory hover:text-carmine">{label}</Link>
+                <Link href={L(`/restaurants/${q}`)} title={i < 3 ? h.chipTooltip : undefined} className="inline-flex min-h-9 items-center rounded-full border border-ivory/60 px-3.5 text-[13px] text-ivory transition-colors hover:bg-ivory hover:text-carmine">{label}</Link>
               </li>
             ))}
           </ul>
         </div>
       </section>
 
-      {anyDemo && (
-        <div className="container-page pt-6"><Notice tone="info">{dict.common.demoNotice}</Notice></div>
-      )}
-
       {/* 2. EXPLORE CULINARY DESTINATIONS */}
       <section className="section-y" aria-labelledby="dest-title">
         <div className="container-page">
           <SectionHeader eyebrow={h.destEyebrow} title={h.destTitle} id="dest-title" />
-          <ul className="scroll-snap-x -mx-4 flex gap-4 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 xl:grid-cols-4">
-            {data.cities.map((c, i) => {
-              const verified = data.restaurants.filter((r) => r.citySlug === c.slug && isVerified(r)).length;
+          <ul className="scroll-snap-x -mx-4 flex gap-3 overflow-x-auto px-4 pb-2 min-[480px]:mx-0 min-[480px]:grid min-[480px]:grid-cols-3 min-[480px]:gap-3 min-[480px]:overflow-visible min-[480px]:px-0 md:gap-4">
+            {data.cities.slice(0, 6).map((c, i) => {
               return (
-                <li key={c.slug} className="w-[78%] shrink-0 sm:w-[45%] md:w-auto">
+                <li key={c.slug} className="w-[62%] shrink-0 min-[480px]:w-auto">
                   <PhotoCard href={L(`/restaurants/${c.countrySlug}/${c.slug}/`)} imageKey={c.image.key} alt={buildAlt(c.image, { city: t(c.name, locale), locale })} ratio="3 / 4"
-                    sizes="(min-width:1280px) 280px, (min-width:768px) 33vw, 78vw" title={t(c.name, locale)} priority={i < 2 && false}
-                    subtitle={`${country(c.countrySlug)}${verified > 0 ? ` · ${fmt(h.restaurantsCount, { n: verified })}` : ""}`} illustrativeLabel={dict.common.illustrative} />
+                    sizes="(min-width:1280px) 380px, (min-width:480px) 33vw, 62vw" title={t(c.name, locale)} priority={i < 2 && false}
+                    subtitle={country(c.countrySlug)} illustrativeLabel={dict.common.illustrative} />
                 </li>
               );
             })}
           </ul>
-          <div className="mt-8"><Divider /></div>
+          <div className="mt-6"><Divider /></div>
           <div className="mt-3 flex justify-end"><Link href={L("/destinations/")} className="inline-flex min-h-11 items-center text-sm font-semibold text-carmine underline-offset-4 hover:underline">{h.viewAllDestinations} →</Link></div>
         </div>
       </section>
@@ -151,10 +145,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <section className="section-y pt-0 defer-render" aria-labelledby="next-title">
         <div className="container-page">
           <SectionHeader title={h.nextTitle} id="next-title" />
-          <ul className="grid gap-x-6 gap-y-10 md:grid-cols-2">
+          <ul className="grid gap-x-3 gap-y-6 min-[480px]:grid-cols-2 md:gap-x-4">
             {([["tasting", "tasting-menu", L("/collections/restaurants-with-wine-pairing/"), "dish"], ["dineStay", "dine-and-stay", L("/collections/restaurants-with-rooms/"), "hotel"], ["lastMinute", "restaurant-interior", L("/concierge/"), "interior"], ["gift", "gift-card", L("/gifts/"), "gift"]] as const).map(([k, img, href, subject]) => (
               <li key={k}>
-                <PhotoCard href={href} imageKey={img} alt={buildAlt({ subject }, { name: h.cards[k][0], city: "", locale })} title={h.cards[k][0]!} subtitle={h.cards[k][1]} sizes="(min-width:768px) 560px, 100vw" illustrativeLabel={dict.common.illustrative} />
+                <PhotoCard href={href} imageKey={img} alt={buildAlt({ subject }, { name: h.cards[k][0], city: "", locale })} title={h.cards[k][0]!} subtitle={h.cards[k][1]} sizes="(min-width:480px) 560px, 100vw" illustrativeLabel={dict.common.illustrative} />
               </li>
             ))}
           </ul>
@@ -186,8 +180,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <section className="section-y defer-render" aria-labelledby="travel-title">
           <div className="container-page">
             <SectionHeader title={h.travelTitle} id="travel-title" action={<Link href={L("/travel/")} className="text-sm font-semibold text-carmine hover:underline">{dict.common.viewAll} →</Link>} />
-            <PhotoCard href={L(`/travel/${tuscany.slug}/`)} imageKey={tuscany.image.key} alt={buildAlt(tuscany.image, { name: t(tuscany.title, locale), city: "Tuscany", locale })} ratio="16 / 7" sizes="(min-width:1232px) 1136px, 100vw" title={t(tuscany.title, locale)} subtitle={t(tuscany.summary, locale)} illustrativeLabel={dict.common.illustrative} />
-            <h3 className="mt-12 mb-4 font-serif text-xl">{h.journeysTitle}</h3>
+            <PhotoCard href={L(`/travel/${tuscany.slug}/`)} imageKey={tuscany.image.key} alt={buildAlt(tuscany.image, { name: t(tuscany.title, locale), city: "Tuscany", locale })} ratio="16 / 9" className="lg:[&_div]:!aspect-[16/7]" sizes="(min-width:1232px) 1136px, 100vw" title={t(tuscany.title, locale)} subtitle={t(tuscany.summary, locale)} illustrativeLabel={dict.common.illustrative} />
+            <h3 className="mb-3 mt-8 text-[17px] font-bold">{h.journeysTitle}</h3>
             <ul className="scroll-snap-x -mx-4 flex gap-4 overflow-x-auto px-4 md:mx-0 md:grid md:grid-cols-3 md:px-0">
               {others.map((it) => (
                 <li key={it.slug} className="w-[78%] shrink-0 md:w-auto">

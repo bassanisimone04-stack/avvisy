@@ -12,10 +12,10 @@ export function PhotoCard({ href, imageKey, alt, title, subtitle, ratio = "4 / 3
         <SmartImage imageKey={imageKey} alt={alt} ratio={ratio} sizes={sizes} priority={priority} label={illustrativeLabel} />
         {badge && <div className="absolute left-2 top-2">{badge}</div>}
       </div>
-      <T className="mt-3 font-sans text-base font-bold leading-snug">
+      <T className="mt-2.5 font-sans text-[15px] font-bold leading-snug">
         <Link href={href} className="after:absolute after:inset-0 after:content-[''] hover:underline">{title}</Link>
       </T>
-      {subtitle && <p className="text-sm text-stone">{subtitle}</p>}
+      {subtitle && <p className="mt-0.5 text-[13px] leading-snug text-stone">{subtitle}</p>}
       {meta && <div className="mt-1 text-sm">{meta}</div>}
     </article>
   );

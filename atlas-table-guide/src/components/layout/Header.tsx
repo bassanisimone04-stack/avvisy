@@ -2,16 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import clsx from "clsx";
 import { Logo } from "@/components/Logo";
 import { BRAND } from "@/config/brand";
-import { ChevronDown, CloseIcon, HeartIcon, MenuIcon, SearchIcon, UserIcon } from "@/components/ui/icons";
+import { ChevronDown, HeartIcon, SearchIcon, UserIcon } from "@/components/ui/icons";
 import { useApp } from "@/features/providers";
 import dynamic from "next/dynamic";
 const loadSearch = () => import("@/features/GlobalSearch").then((m) => m.GlobalSearch);
 const GlobalSearch = dynamic(loadSearch, { ssr: false });
-import { useFocusTrap } from "@/features/useFocusTrap";
 import type { Dict } from "@/i18n/en";
 
 export type HeaderData = {
@@ -30,15 +29,11 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
   const { locale } = data;
   const pathname = usePathname() ?? `/${locale}/`;
   const { favourites, currency, setCurrency, units, setUnits } = useApp();
-  const [drawer, setDrawer] = useState(false);
   const [search, setSearch] = useState(false);
   const [prefs, setPrefs] = useState(false);
   const [mega, setMega] = useState<null | "restaurants" | "destinations">(null);
   const [scrolled, setScrolled] = useState(false);
-  const drawerRef = useRef<HTMLDivElement>(null);
-  const closeDrawer = useCallback(() => setDrawer(false), []);
   const closeSearch = useCallback(() => setSearch(false), []);
-  useFocusTrap(drawerRef, drawer, closeDrawer);
 
   const NAV: NavItem[] = [
     { key: "restaurants", href: `/${locale}/restaurants/`, mega: "restaurants" },
@@ -68,7 +63,7 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => { document.removeEventListener("keydown", onKey); window.removeEventListener("scroll", onScroll); };
   }, []);
-  useEffect(() => { setDrawer(false); setMega(null); setPrefs(false); }, [pathname]);
+  useEffect(() => { setMega(null); setPrefs(false); }, [pathname]);
 
   const switchLocale = (code: string) => pathname.replace(/^\/(en|it)(?=\/|$)/, `/${code}`) || `/${code}/`;
   const favCount = favourites.length;
@@ -76,7 +71,7 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
   return (
     <header className="on-dark sticky top-0 z-50 bg-carmine text-ivory">
       <div className="container-page flex h-[var(--header-h)] items-center justify-between gap-3">
-        <Link href={`/${locale}/`} className="shrink-0 py-2" aria-label={`${BRAND.name} — ${dict.common.home}`}>
+        <Link href={`/${locale}/`} className="shrink-0 py-2 min-h-11" aria-label={`${BRAND.name} — ${dict.common.home}`}>
           <Logo variant="light" />
         </Link>
 
@@ -123,10 +118,10 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
         </nav>
 
         <div className="flex items-center gap-0.5">
-          <button type="button" onClick={() => setSearch(true)} className="grid h-11 w-11 place-items-center rounded-full hover:bg-red-700" aria-label={`${dict.nav.search} (${dict.search.hint})`} aria-keyshortcuts="/">
+          <button type="button" onClick={() => setSearch(true)} className="grid h-10 w-10 place-items-center rounded-full hover:bg-red-700" aria-label={`${dict.nav.search} (${dict.search.hint})`} aria-keyshortcuts="/">
             <SearchIcon />
           </button>
-          <div className="relative hidden sm:block">
+          <div className="relative">
             <button type="button" aria-expanded={prefs} aria-controls="prefs-popover" onClick={() => setPrefs((v) => !v)} className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-2 text-[13px] font-semibold tracking-wide hover:bg-red-700" aria-label={`${dict.prefs.title}: ${locale.toUpperCase()} · ${currency}`}>
               {locale.toUpperCase()} · {currency}
             </button>
@@ -148,19 +143,18 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
               </div>
             )}
           </div>
-          <Link prefetch={false} href={`/${locale}/account/favourites/`} className="relative grid h-11 w-11 place-items-center rounded-full hover:bg-red-700" aria-label={`${dict.nav.favourites} (${favCount})`}>
+          <Link prefetch={false} href={`/${locale}/account/favourites/`} className="relative grid h-10 w-10 place-items-center rounded-full hover:bg-red-700" aria-label={`${dict.nav.favourites} (${favCount})`}>
             <HeartIcon />
             {favCount > 0 && <span className="absolute right-1 top-1 grid h-5 min-w-5 place-items-center rounded-full bg-ivory px-1 text-[11px] font-bold text-carmine" aria-hidden="true">{favCount}</span>}
           </Link>
-          <Link prefetch={false} href={`/${locale}/account/`} className="hidden h-11 w-11 place-items-center rounded-full hover:bg-red-700 sm:grid" aria-label={dict.nav.account}><UserIcon /></Link>
+          <Link prefetch={false} href={`/${locale}/account/`} className="hidden h-10 w-10 place-items-center rounded-full hover:bg-red-700 min-[480px]:grid" aria-label={dict.nav.account}><UserIcon /></Link>
           <Link href={`/${locale}/club/`} className="ml-2 hidden min-h-10 items-center whitespace-nowrap rounded-[8px] border border-ivory/80 px-3 text-[13px] font-semibold hover:bg-ivory hover:text-carmine xl:inline-flex">{dict.nav.joinClub}</Link>
-          <button type="button" onClick={() => setDrawer(true)} className="grid h-11 w-11 place-items-center rounded-full hover:bg-red-700 lg:hidden" aria-label={dict.nav.menu} aria-expanded={drawer} aria-controls="mobile-drawer"><MenuIcon /></button>
         </div>
       </div>
 
-      {/* Second row on tablet/mobile: horizontally scrollable text nav; collapses on scroll */}
+      {/* Second row on tablet/mobile (as in the reference): small centred text nav, scrolls if it does not fit; collapses on scroll */}
       <nav aria-label={`${dict.nav.primary} (mobile)`} className={clsx("lg:hidden", scrolled && "hidden")}>
-        <ul className="scroll-snap-x container-page flex gap-5 overflow-x-auto pb-2 text-[13px]">
+        <ul className="scroll-snap-x mx-auto flex w-max max-w-full gap-5 overflow-x-auto px-4 pb-1.5 text-[13px]">
           {NAV.map((n) => (
             <li key={n.key} className="shrink-0">
               <Link href={n.href} aria-current={isActive(n.href) ? "page" : undefined} className={clsx("inline-flex min-h-9 items-center whitespace-nowrap border-b-2", isActive(n.href) ? "border-ivory" : "border-transparent")}>{dict.nav[n.key]}</Link>
@@ -168,30 +162,6 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
           ))}
         </ul>
       </nav>
-
-      {drawer && (
-        <div className="fixed inset-0 z-[75] bg-carmine lg:hidden" id="mobile-drawer" ref={drawerRef} role="dialog" aria-modal="true" aria-label={dict.nav.menu}>
-          <div className="container-page flex h-[var(--header-h)] items-center justify-between">
-            <Logo variant="light" />
-            <button type="button" onClick={closeDrawer} className="grid h-11 w-11 place-items-center rounded-full hover:bg-red-700" aria-label={dict.nav.close} data-autofocus><CloseIcon /></button>
-          </div>
-          <nav aria-label={dict.nav.menu} className="container-page overflow-y-auto pb-10">
-            <ul className="divide-y divide-ivory/20 border-y border-ivory/20">
-              {NAV.map((n) => <li key={n.key}><Link href={n.href} className="flex min-h-14 items-center font-serif text-2xl">{dict.nav[n.key]}</Link></li>)}
-              <li><Link href={`/${locale}/account/`} className="flex min-h-14 items-center text-lg">{dict.nav.account}</Link></li>
-            </ul>
-            <Link href={`/${locale}/club/`} className="mt-6 inline-flex min-h-11 items-center rounded-[8px] border border-ivory px-5 font-semibold">{dict.nav.joinClub}</Link>
-            <div className="mt-8 space-y-4 rounded-[12px] bg-red-700 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em]">{dict.prefs.title}</p>
-              <ul className="flex gap-2">{data.locales.map((l) => <li key={l.code}><Link hrefLang={l.code} lang={l.code} href={switchLocale(l.code)} aria-current={l.code === locale ? "true" : undefined} className={clsx("inline-flex min-h-11 items-center rounded-full border px-4 text-sm", l.code === locale ? "border-ivory bg-ivory text-carmine" : "border-ivory/70")}>{l.name}</Link></li>)}</ul>
-              <div><label htmlFor="drawer-currency" className="mb-1 block text-sm">{dict.prefs.currency}</label>
-                <select id="drawer-currency" value={currency} onChange={(e) => setCurrency(e.target.value)} className="min-h-11 w-full rounded-[8px] bg-white px-3 text-ink">{data.currencies.map((c) => <option key={c} value={c}>{c}</option>)}</select>
-                <p className="mt-1 text-xs text-ivory/90">{data.fxNote}</p></div>
-              <fieldset><legend className="mb-1 text-sm">{dict.prefs.units}</legend><div className="flex gap-4 text-sm">{(["metric", "imperial"] as const).map((u) => <label key={u} className="inline-flex min-h-11 items-center gap-2"><input type="radio" name="units-drawer" checked={units === u} onChange={() => setUnits(u)} />{dict.prefs[u]}</label>)}</div></fieldset>
-            </div>
-          </nav>
-        </div>
-      )}
 
       {search && <GlobalSearch
         locale={locale}

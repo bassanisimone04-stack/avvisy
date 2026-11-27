@@ -22,11 +22,11 @@ export function LinkButton({ variant = "primary", className, ...p }: ComponentPr
 
 export function SectionHeader({ eyebrow, title, sub, as: As = "h2", id, action }: { eyebrow?: string; title: string; sub?: string; as?: "h1" | "h2"; id?: string; action?: ReactNode }) {
   return (
-    <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+    <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
       <div className="max-w-2xl">
-        {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
-        <As id={id} className={clsx("font-serif text-ink", As === "h1" ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl")}>{title}</As>
-        {sub && <p className="mt-2 text-stone">{sub}</p>}
+        {eyebrow && <p className="eyebrow mb-1.5">{eyebrow}</p>}
+        <As id={id} className={clsx("text-ink", As === "h1" ? "text-2xl md:text-3xl" : "text-[17px] md:text-2xl")}>{title}</As>
+        {sub && <p className="mt-1 text-sm text-stone">{sub}</p>}
       </div>
       {action}
     </div>

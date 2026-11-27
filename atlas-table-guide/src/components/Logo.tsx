@@ -12,14 +12,9 @@ export function SelectionMark({ size = 18, className, title }: { size?: number; 
   );
 }
 
-/** Wordmark: uppercase high-contrast serif with generous tracking. Text comes from BRAND. */
+/** Wordmark: bold uppercase sans, cream on red / red on ivory. Text comes from BRAND. */
 export function Logo({ variant = "light", className }: { variant?: "light" | "dark" | "mark"; className?: string }) {
-  const color = variant === "light" ? "text-ivory" : "text-carmine";
+  const color = variant === "light" ? "text-sand" : "text-carmine";
   if (variant === "mark") return <SelectionMark size={28} className={color} title={BRAND.name} />;
-  return (
-    <span className={`inline-flex items-center gap-2 ${color} ${className ?? ""}`}>
-      <SelectionMark size={22} />
-      <span className="whitespace-nowrap font-serif text-[13px] font-semibold uppercase tracking-[0.12em] sm:text-[15px] sm:tracking-[0.18em] xl:text-[16px] xl:tracking-[0.2em]">{BRAND.name}</span>
-    </span>
-  );
+  return <span className={`whitespace-nowrap font-sans text-[17px] font-bold uppercase tracking-[0.05em] sm:text-[19px] ${color} ${className ?? ""}`}>{BRAND.name}</span>;
 }

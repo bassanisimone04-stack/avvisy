@@ -26,11 +26,11 @@ export function HeroSearch({ locale, labels, cities, cuisines }: { locale: strin
   const field = "min-h-11 w-full rounded-[8px] border border-line bg-white px-3 text-sm text-ink";
   return (
     <form ref={formRef} role="search" onSubmit={submit} onFocus={() => setOpen(true)} className="mx-auto w-full max-w-[860px]">
-      <div className="flex items-center gap-2 rounded-[10px] bg-white p-1.5 pl-4 shadow-card">
+      <div className="flex items-center gap-2 rounded-[8px] bg-white p-1 pl-3 shadow-card">
         <SearchIcon className="shrink-0 text-stone" />
         <label htmlFor="hero-q" className="sr-only">{labels.placeholder}</label>
-        <input id="hero-q" name="q" type="search" placeholder={labels.placeholder} autoComplete="off" className="min-h-11 min-w-0 flex-1 bg-transparent text-base text-ink placeholder:text-stone outline-none" aria-controls="hero-adv" />
-        <button type="submit" className="min-h-11 shrink-0 rounded-[8px] bg-garnet px-5 text-sm font-semibold text-white hover:bg-red-700">{labels.explore}</button>
+        <input id="hero-q" name="q" type="search" placeholder={labels.placeholder} autoComplete="off" className="min-h-10 min-w-0 flex-1 bg-transparent text-sm text-ink md:text-base placeholder:text-stone outline-none" aria-controls="hero-adv" />
+        <button type="submit" className="min-h-10 shrink-0 rounded-[6px] bg-garnet px-4 text-sm font-semibold text-white hover:bg-red-700">{labels.explore}</button>
       </div>
       <div id="hero-adv" hidden={!open} className="mt-2 grid gap-2 rounded-[10px] bg-white p-3 text-left shadow-card sm:grid-cols-4">
         <div>

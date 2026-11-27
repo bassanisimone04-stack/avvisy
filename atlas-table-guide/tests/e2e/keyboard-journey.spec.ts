@@ -48,14 +48,13 @@ test("skip link moves focus to main", async ({ page }) => {
   await expect(page.locator("#main")).toBeFocused();
 });
 
-test("mobile drawer traps focus and closes on Escape", async ({ page }) => {
+test("mobile header: one compact bar, centred nav row, preferences popover", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/en/");
-  await page.getByRole("button", { name: "Menu" }).click();
-  const drawer = page.getByRole("dialog", { name: "Menu" });
-  await expect(drawer).toBeVisible();
-  for (let i = 0; i < 15; i++) await page.keyboard.press("Tab");
-  expect(await drawer.evaluate((d) => d.contains(document.activeElement))).toBe(true);
+  await expect(page.getByRole("button", { name: /Preferences/ })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Primary (mobile)" }).getByRole("link", { name: "Hotels" })).toBeVisible();
+  await page.getByRole("button", { name: /Preferences/ }).click();
+  await expect(page.getByRole("dialog", { name: "Preferences" })).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(drawer).toBeHidden();
+  await expect(page.getByRole("dialog", { name: "Preferences" })).toBeHidden();
 });

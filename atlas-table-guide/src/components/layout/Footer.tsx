@@ -6,7 +6,7 @@ import { Logo } from "@/components/Logo";
 import { NewsletterForm } from "@/features/forms/Forms";
 import { ConsentManageButton } from "@/features/CookieConsent";
 
-export function Footer({ locale, dict, cities, countries }: { locale: Locale; dict: Dict; cities: { slug: string; country: string; name: string }[]; countries: { slug: string; name: string }[] }) {
+export function Footer({ locale, dict, cities, countries, demo }: { locale: Locale; dict: Dict; demo?: boolean; cities: { slug: string; country: string; name: string }[]; countries: { slug: string; name: string }[] }) {
   const L = (p: string) => `/${locale}${p}`;
   const f = dict.footer;
   const cols: { title: string; links: [string, string][] }[] = [
@@ -47,6 +47,7 @@ export function Footer({ locale, dict, cities, countries }: { locale: Locale; di
           <div className="space-y-3">
             <p className="text-sand"><span className="font-semibold text-ivory">{f.social}: </span>{f.socialNote}</p>
             <p className="max-w-3xl text-sand">{disclaimer()}</p>
+            {demo && <p className="text-sand">{dict.common.demoNotice}</p>}
             <p className="text-sand">{fmt(f.rights, { year: new Date().getFullYear(), entity: BRAND.legalEntity })}</p>
           </div>
           <div className="flex flex-col items-start gap-2 md:items-end">
