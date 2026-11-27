@@ -56,7 +56,7 @@
   --text-5xl: 4rem;
 }
 
-html { scroll-padding-top: calc(var(--header-h) + 56px); -webkit-text-size-adjust: 100%; }
+html { overflow-x: clip; scroll-padding-top: calc(var(--header-h) + 56px); -webkit-text-size-adjust: 100%; }
 body { background: var(--ivory); color: var(--ink); font-family: var(--font-sans); }
 h1, h2, h3, .font-serif { font-family: var(--font-serif); }
 h1, h2 { line-height: 1.12; letter-spacing: -0.01em; }
@@ -85,7 +85,7 @@ h1, h2 { line-height: 1.12; letter-spacing: -0.01em; }
 .card-lift .zoom { transition: transform 0.5s ease; }
 .card-lift:hover .zoom { transform: scale(1.03); }
 
-.scroll-snap-x { scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; }
+.scroll-snap-x { scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; scroll-padding-inline: 16px; }
 .scroll-snap-x::-webkit-scrollbar { display: none; }
 .scroll-snap-x > * { scroll-snap-align: start; }
 

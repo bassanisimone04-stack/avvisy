@@ -1,6 +1,5 @@
 "use client";
 
-import "maplibre-gl/dist/maplibre-gl.css";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -24,7 +23,7 @@ export function MapSplit({ items, styleUrl, basePath, filters, labels }: { items
     let m: MLMap | null = null;
     (async () => {
       try {
-        const ml = await import("maplibre-gl");
+        const [ml] = await Promise.all([import("maplibre-gl"), import("maplibre-gl/dist/maplibre-gl.css")]);
         if (cancelled || !el.current) return;
         m = new ml.Map({ container: el.current, style: styleUrl, attributionControl: { compact: true }, cooperativeGestures: true, bounds: bounds(items), fitBoundsOptions: { padding: 48, maxZoom: 13 } });
         map.current = m;

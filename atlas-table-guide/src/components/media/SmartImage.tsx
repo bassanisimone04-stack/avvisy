@@ -25,6 +25,7 @@ export function SmartImage({ imageKey, alt, sizes, priority, className, imgClass
         fill
         sizes={sizes}
         priority={priority}
+        quality={priority ? 60 : 75}
         fetchPriority={priority ? "high" : undefined}
         placeholder={m.blurDataURL ? "blur" : "empty"}
         blurDataURL={m.blurDataURL || undefined}

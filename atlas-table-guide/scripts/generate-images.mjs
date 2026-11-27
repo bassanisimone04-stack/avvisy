@@ -259,7 +259,7 @@ const ROOMS = [
 function interior(w, h, seed) {
   const r = rng(seed * 104729 + 7);
   const R = ROOMS[seed % ROOMS.length];
-  const vpX = w * (0.45 + r() * 0.1), vpY = h * 0.42, back = { l: w * 0.18, r: w * 0.82, t: h * 0.12, b: h * 0.56 };
+  const vpX = w * (0.45 + r() * 0.1), back = { l: w * 0.18, r: w * 0.82, t: h * 0.12, b: h * 0.56 };
   let body = `<rect width="${w}" height="${h}" fill="url(#wall)"/>`;
   body += `<path d="M0,${h} L${back.l},${back.b} L${back.r},${back.b} L${w},${h} Z" fill="url(#floor)"/>`;
   for (let i = -12; i <= 12; i++) body += `<line x1="${f(vpX + i * (w / 20))}" y1="${h}" x2="${f(lerp(back.l, back.r, (i + 12) / 24))}" y2="${back.b}" stroke="#000" stroke-opacity="0.12" stroke-width="1.5"/>`;

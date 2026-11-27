@@ -79,8 +79,8 @@ export default async function RestaurantPage({ params }: { params: Promise<{ loc
   const lunch = menuPrice(r, "tasting", "lunch");
   const dinner = menuPrice(r, "tasting", "dinner");
   const wine = menuPrice(r, "wine_pairing");
-  const recText = r.awards.length ? `, ${fmt(dict.recognition.recognisedBy, { body: r.awards[0]!.body, title: r.awards[0]!.title, year: r.awards[0]!.year })}` : r.recognition.kind === "demo" ? ` (${fmt(dict.recognition.demo, { n: r.recognition.level })})` : "";
-  const answer = fmt(P.answer, { name: r.name, style: t(r.style, locale).toLowerCase(), city: cityName, country: countryName, rec: recText, price: pf ? fmt(P.answerPrice, { price: `${pf.amount.toLocaleString(locale)} ${pf.currency}` }) : P.answerNoPrice, date: formatDate(r.lastVerifiedAt, locale) || dict.common.notVerified });
+  const recText = r.awards.length ? `, ${fmt(dict.recognition.recognisedBy, { body: r.awards[0]!.body, title: r.awards[0]!.title, year: r.awards[0]!.year })}` : r.recognition.kind === "demo" ? ` — ${fmt(dict.recognition.demo, { n: r.recognition.level })}` : "";
+  const answer = fmt(P.answer, { name: r.name, style: t(r.style, locale), city: cityName, country: countryName, rec: recText, price: pf ? fmt(P.answerPrice, { price: `${pf.amount.toLocaleString(locale)} ${pf.currency}` }) : P.answerNoPrice, date: formatDate(r.lastVerifiedAt, locale) || dict.common.notVerified });
   const faq = [
     { q: fmt(P.faqQ.price, { name: r.name }), a: pf ? `${[lunch, dinner].filter((m) => m && usable(m)).map((m) => `${t(m!.name, locale)}: ${m!.amount!.toLocaleString(locale)} ${m!.currency} (${statusLabel(m!.status).toLowerCase()}, ${formatDate(m!.collectedAt, locale)})`).join("; ")}.` : P.answerNoPrice },
     { q: fmt(P.faqQ.veg, { name: r.name }), a: `${dict.directory.diet.vegetarian}: ${yesNo(r.dietary.vegetarian)} · ${dict.directory.diet.vegan}: ${yesNo(r.dietary.vegan)} · ${dict.directory.diet.glutenFree}: ${yesNo(r.dietary.glutenFree)}.` },

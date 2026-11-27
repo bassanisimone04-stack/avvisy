@@ -19,7 +19,7 @@ export function Logo({ variant = "light", className }: { variant?: "light" | "da
   return (
     <span className={`inline-flex items-center gap-2 ${color} ${className ?? ""}`}>
       <SelectionMark size={22} />
-      <span className="font-serif text-[15px] font-semibold uppercase tracking-[0.22em] sm:text-[17px]">{BRAND.name}</span>
+      <span className="whitespace-nowrap font-serif text-[13px] font-semibold uppercase tracking-[0.12em] sm:text-[15px] sm:tracking-[0.18em] xl:text-[16px] xl:tracking-[0.2em]">{BRAND.name}</span>
     </span>
   );
 }

@@ -13,7 +13,8 @@ export function useFocusTrap(ref: RefObject<HTMLElement | null>, active: boolean
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") { e.preventDefault(); onClose(); return; }
       if (e.key !== "Tab" || !el) return;
-      const items = [...el.querySelectorAll<HTMLElement>(sel)].filter((x) => x.offsetParent !== null);
+      // Tab reaches only the checked radio of a group, so skip its unchecked siblings when finding the edges.
+      const items = [...el.querySelectorAll<HTMLElement>(sel)].filter((x) => x.offsetParent !== null && !(x instanceof HTMLInputElement && x.type === "radio" && !x.checked && el.querySelector(`input[type="radio"][name="${CSS.escape(x.name)}"]:checked`)));
       if (!items.length) return;
       const f = items[0]!, l = items[items.length - 1]!;
       if (e.shiftKey && document.activeElement === f) { e.preventDefault(); l.focus(); }

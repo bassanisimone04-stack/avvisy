@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import { Logo } from "@/components/Logo";
+import { BRAND } from "@/config/brand";
 import { ChevronDown, CloseIcon, HeartIcon, MenuIcon, SearchIcon, UserIcon } from "@/components/ui/icons";
 import { useApp } from "@/features/providers";
 import { GlobalSearch } from "@/features/GlobalSearch";
@@ -67,17 +68,17 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
   return (
     <header className="on-dark sticky top-0 z-50 bg-carmine text-ivory">
       <div className="container-page flex h-[var(--header-h)] items-center justify-between gap-3">
-        <Link href={`/${locale}/`} className="shrink-0 py-2" aria-label={`${dict.common.home} — ${data.locale.toUpperCase()}`}>
+        <Link href={`/${locale}/`} className="shrink-0 py-2" aria-label={`${BRAND.name} — ${dict.common.home}`}>
           <Logo variant="light" />
         </Link>
 
         <nav aria-label={dict.nav.primary} className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center">
             {NAV.map((n) => (
               <li key={n.key} className="relative" onMouseLeave={() => n.mega && setMega(null)}>
                 <div className="flex items-center">
                   <Link href={n.href} aria-current={isActive(n.href) ? "page" : undefined} onMouseEnter={() => n.mega && setMega(n.mega)}
-                    className={clsx("inline-flex min-h-11 items-center px-2.5 text-[14px] font-medium hover:underline hover:underline-offset-8", isActive(n.href) && "underline decoration-2 underline-offset-8")}>
+                    className={clsx("inline-flex min-h-11 items-center whitespace-nowrap px-2 text-[14px] font-medium hover:underline hover:underline-offset-8", isActive(n.href) && "underline decoration-2 underline-offset-8")}>
                     {dict.nav[n.key]}
                   </Link>
                   {n.mega && (
@@ -117,8 +118,8 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
           <button type="button" onClick={() => setSearch(true)} className="grid h-11 w-11 place-items-center rounded-full hover:bg-red-700" aria-label={`${dict.nav.search} (${dict.search.hint})`} aria-keyshortcuts="/">
             <SearchIcon />
           </button>
-          <div className="relative">
-            <button type="button" aria-expanded={prefs} aria-controls="prefs-popover" onClick={() => setPrefs((v) => !v)} className="inline-flex min-h-11 items-center rounded-full px-2 text-[13px] font-semibold tracking-wide hover:bg-red-700" aria-label={`${dict.prefs.title}: ${locale.toUpperCase()} · ${currency}`}>
+          <div className="relative hidden sm:block">
+            <button type="button" aria-expanded={prefs} aria-controls="prefs-popover" onClick={() => setPrefs((v) => !v)} className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-2 text-[13px] font-semibold tracking-wide hover:bg-red-700" aria-label={`${dict.prefs.title}: ${locale.toUpperCase()} · ${currency}`}>
               {locale.toUpperCase()} · {currency}
             </button>
             {prefs && (
@@ -144,7 +145,7 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
             {favCount > 0 && <span className="absolute right-1 top-1 grid h-5 min-w-5 place-items-center rounded-full bg-ivory px-1 text-[11px] font-bold text-carmine" aria-hidden="true">{favCount}</span>}
           </Link>
           <Link href={`/${locale}/account/`} className="hidden h-11 w-11 place-items-center rounded-full hover:bg-red-700 sm:grid" aria-label={dict.nav.account}><UserIcon /></Link>
-          <Link href={`/${locale}/club/`} className="ml-2 hidden min-h-10 items-center rounded-[8px] border border-ivory/80 px-4 text-[13px] font-semibold hover:bg-ivory hover:text-carmine xl:inline-flex">{dict.nav.joinClub}</Link>
+          <Link href={`/${locale}/club/`} className="ml-2 hidden min-h-10 items-center whitespace-nowrap rounded-[8px] border border-ivory/80 px-3 text-[13px] font-semibold hover:bg-ivory hover:text-carmine xl:inline-flex">{dict.nav.joinClub}</Link>
           <button type="button" onClick={() => setDrawer(true)} className="grid h-11 w-11 place-items-center rounded-full hover:bg-red-700 lg:hidden" aria-label={dict.nav.menu} aria-expanded={drawer} aria-controls="mobile-drawer"><MenuIcon /></button>
         </div>
       </div>
@@ -172,6 +173,14 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
               <li><Link href={`/${locale}/account/`} className="flex min-h-14 items-center text-lg">{dict.nav.account}</Link></li>
             </ul>
             <Link href={`/${locale}/club/`} className="mt-6 inline-flex min-h-11 items-center rounded-[8px] border border-ivory px-5 font-semibold">{dict.nav.joinClub}</Link>
+            <div className="mt-8 space-y-4 rounded-[12px] bg-red-700 p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em]">{dict.prefs.title}</p>
+              <ul className="flex gap-2">{data.locales.map((l) => <li key={l.code}><Link hrefLang={l.code} lang={l.code} href={switchLocale(l.code)} aria-current={l.code === locale ? "true" : undefined} className={clsx("inline-flex min-h-11 items-center rounded-full border px-4 text-sm", l.code === locale ? "border-ivory bg-ivory text-carmine" : "border-ivory/70")}>{l.name}</Link></li>)}</ul>
+              <div><label htmlFor="drawer-currency" className="mb-1 block text-sm">{dict.prefs.currency}</label>
+                <select id="drawer-currency" value={currency} onChange={(e) => setCurrency(e.target.value)} className="min-h-11 w-full rounded-[8px] bg-white px-3 text-ink">{data.currencies.map((c) => <option key={c} value={c}>{c}</option>)}</select>
+                <p className="mt-1 text-xs text-ivory/90">{data.fxNote}</p></div>
+              <fieldset><legend className="mb-1 text-sm">{dict.prefs.units}</legend><div className="flex gap-4 text-sm">{(["metric", "imperial"] as const).map((u) => <label key={u} className="inline-flex min-h-11 items-center gap-2"><input type="radio" name="units-drawer" checked={units === u} onChange={() => setUnits(u)} />{dict.prefs[u]}</label>)}</div></fieldset>
+            </div>
           </nav>
         </div>
       )}

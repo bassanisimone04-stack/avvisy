@@ -62,7 +62,7 @@ export default async function Compare({ params, searchParams }: P) {
                 <th key={r.slug} scope="col" className="p-4 text-left align-top">
                   <SmartImage imageKey={r.images[0]!.key} alt={buildAlt(r.images[0]!, { name: r.name, city: t(cityOf(data, r.citySlug)?.name, locale), locale })} sizes="220px" ratio="4 / 3" />
                   <Link href={`/${locale}/restaurant/${r.slug}/`} className="mt-2 block font-serif text-lg hover:underline">{r.name}</Link>
-                  <Link href={`/${locale}/compare/?r=${slugs.filter((s) => s !== r.slug).join(",")}`} className="text-xs font-normal text-carmine underline">{C.remove}</Link>
+                  <Link href={`/${locale}/compare/?r=${slugs.filter((s) => s !== r.slug).join(",")}`} className="inline-flex min-h-6 items-center py-1 text-xs font-normal text-carmine underline">{C.remove}</Link>
                 </th>
               ))}
             </tr>

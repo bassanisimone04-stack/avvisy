@@ -1,0 +1,41 @@
+name: Atlas Table Guide CI
+
+on:
+  push:
+    paths: ["atlas-table-guide/**", ".github/workflows/atlas-ci.yml"]
+  pull_request:
+    paths: ["atlas-table-guide/**", ".github/workflows/atlas-ci.yml"]
+
+defaults:
+  run:
+    working-directory: atlas-table-guide
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env: { POSTGRES_PASSWORD: postgres }
+        ports: ["5432:5432"]
+        options: --health-cmd "pg_isready -U postgres" --health-interval 5s --health-retries 10
+    env:
+      ALLOW_DEMO_DATA: "true"
+      FX_PROVIDER: none
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: atlas-table-guide/package-lock.json }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run check:banned
+      - name: Migrations, seed & RLS tests
+        run: npm run db:test
+        env: { DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/postgres" }
+      - run: npm run build
+      - run: npm run check:secrets
+      - run: npm run seo:check
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e

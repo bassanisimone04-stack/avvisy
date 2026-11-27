@@ -107,7 +107,9 @@ export function FilterPanel({ basePath, localeRoot, filters, opts, labels, scope
   const [count, setCount] = useState<number | null>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   useFocusTrap(sheetRef, sheet, () => setSheet(false));
-  useEffect(() => { setDraft(filters); setDraftPath(basePath); }, [filters, basePath]);
+  // Optimistic sidebar state: controls reflect the click immediately while the URL navigation runs.
+  const [live, setLive] = useState<Filters>(filters);
+  useEffect(() => { setDraft(filters); setDraftPath(basePath); setLive(filters); }, [filters, basePath]);
 
   const keep = useMemo(() => ({ sort: filters.sort, view: filters.view, near: filters.near }), [filters]);
   const href = (path: string, f: Filters) => { const qs = serializeFilters({ ...f, ...keep, page: 1 }); return `${path}${qs ? `?${qs}` : ""}`; };
@@ -126,7 +128,7 @@ export function FilterPanel({ basePath, localeRoot, filters, opts, labels, scope
     return () => ctl.abort();
   }, [draft, draftPath, sheet, localeRoot]);
 
-  const applyNow = (p: Partial<Filters>) => { const next = { ...filters, ...p }; navigate(href(basePath, next)); };
+  const applyNow = (p: Partial<Filters>) => { const next = { ...live, ...p }; setLive(next); navigate(href(basePath, next)); };
   void scopeQuery;
   const cleared: Filters = { ...filters, q: undefined, recognition: [], selection: false, cuisine: [], lunch: {}, dinner: {}, wine: {}, diet: [], features: [], reservation: undefined, bbox: undefined, page: 1 };
 
@@ -134,7 +136,7 @@ export function FilterPanel({ basePath, localeRoot, filters, opts, labels, scope
     <>
       <aside aria-label={labels.filters} className="sticky top-[calc(var(--header-h)+16px)] hidden max-h-[calc(100vh-var(--header-h)-32px)] w-[280px] shrink-0 overflow-y-auto pr-2 lg:block">
         <div className="mb-2 flex items-center justify-between"><h2 className="font-sans text-base font-bold">{labels.filters}</h2><button type="button" onClick={() => navigate(href(basePath, cleared))} className="min-h-9 text-sm text-carmine underline-offset-4 hover:underline">{labels.clearAll}</button></div>
-        <FilterFields idp="side" f={filters} set={applyNow} opts={opts} L={labels} onLocation={(v) => navigate(href(pathFor(v), filters))} />
+        <FilterFields idp="side" f={live} set={applyNow} opts={opts} L={labels} onLocation={(v) => navigate(href(pathFor(v), filters))} />
       </aside>
 
       <button type="button" onClick={() => setSheet(true)} className="inline-flex min-h-11 items-center gap-2 rounded-[8px] border border-line bg-white px-4 text-sm font-semibold lg:hidden" aria-haspopup="dialog" aria-expanded={sheet}>

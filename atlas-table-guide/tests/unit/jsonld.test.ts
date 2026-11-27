@@ -65,7 +65,7 @@ describe("other builders validate", () => {
     ["Place", buildPlaceJsonLd(city, country, "en", "/en/restaurants/france/paris/", "/i.webp")],
   ])("%s", (_name, node) => expect(validateJsonLd(node)).toEqual([]));
   it("ItemList positions are 1-based and sequential", () => {
-    const n = buildItemListJsonLd("x", [{ name: "a", path: "/a" }, { name: "b", path: "/b" }]) as { itemListElement: { position: number }[] };
+    const n = buildItemListJsonLd("x", [{ name: "a", path: "/a" }, { name: "b", path: "/b" }]) as unknown as { itemListElement: { position: number }[] };
     expect(n.itemListElement.map((i) => i.position)).toEqual([1, 2]);
   });
   it("hotel geo is nested", () => expect(json(buildHotelJsonLd(d.hotels[0]!, { locale: "en", imageUrls: [], restaurants: [] }))).toContain('"geo":{"@type":"GeoCoordinates"'));

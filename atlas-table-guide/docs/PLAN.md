@@ -130,7 +130,7 @@ Legend: [x] done · [~] done with documented fallback/stub · [ ] not done (see 
 - [x] §3 Buttons/cards/focus ring/sticky header/reduced motion
 - [x] §3 `/design-system` page (noindex)
 - [x] §3B Header/Hero/Destinations/Experiences/Travel layouts
-- [~] §3B Visual-regression baselines (390/768/1280) — reference screenshots were not attached; see REPORT
+- [~] §3B Visual-regression baselines (390/768/1280) committed — reference screenshots were not attached; see REPORT
 ### Images
 - [~] §4 Procedural art-directed images rasterised to WebP (REPLACE BEFORE LAUNCH), blur placeholders, responsive via next/image
 - [x] §4 `buildAlt()`; CI fails on `<img>` without alt; "Illustrative image" label
@@ -158,4 +158,4 @@ Legend: [x] done · [~] done with documented fallback/stub · [ ] not done (see 
 - [x] Unit: filters/sort, price/currency, slug, JSON-LD, compare URL, RBAC guards, CSV import + duplicates, facets, contrast, search
 - [x] E2E + axe + visual snapshots
 - [x] `seo:check`, `check:banned`, `check:secrets`
-- [~] SQL RLS tests (run when a local Postgres is available)
+- [x] SQL RLS tests — 22 assertions pass on PostgreSQL 16 + PostGIS (`npm run db:test`)
