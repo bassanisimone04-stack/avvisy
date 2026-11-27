@@ -8,6 +8,7 @@ export const BRAND = {
   shortName: "Atlas Table",
   domain: "example-guide.com", // PLACEHOLDER – owner will replace
   tagline: "Every great table, mapped.",
+  taglineIt: "Ogni grande tavola, sulla mappa.",
   legalEntity: "TO BE COMPLETED",
   supportEmail: "hello@example-guide.com",
   selectionName: "Atlas Selection",

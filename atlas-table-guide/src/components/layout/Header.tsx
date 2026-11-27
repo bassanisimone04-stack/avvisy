@@ -8,7 +8,9 @@ import { Logo } from "@/components/Logo";
 import { BRAND } from "@/config/brand";
 import { ChevronDown, CloseIcon, HeartIcon, MenuIcon, SearchIcon, UserIcon } from "@/components/ui/icons";
 import { useApp } from "@/features/providers";
-import { GlobalSearch } from "@/features/GlobalSearch";
+import dynamic from "next/dynamic";
+const loadSearch = () => import("@/features/GlobalSearch").then((m) => m.GlobalSearch);
+const GlobalSearch = dynamic(loadSearch, { ssr: false });
 import { useFocusTrap } from "@/features/useFocusTrap";
 import type { Dict } from "@/i18n/en";
 
@@ -49,6 +51,12 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
   ];
   const isActive = (href: string) => pathname.startsWith(href) || (href.endsWith("/restaurants/") && pathname.includes(`/${locale}/restaurant/`));
 
+  // Fetch the search chunk when the browser is idle so "/" and the search button open instantly.
+  useEffect(() => {
+    const idle = (window as unknown as { requestIdleCallback?: (cb: () => void) => number }).requestIdleCallback;
+    const id = idle ? idle(() => void loadSearch()) : window.setTimeout(() => void loadSearch(), 1500);
+    return () => { if (!idle) clearTimeout(id); };
+  }, []);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const tgt = e.target as HTMLElement;
@@ -140,11 +148,11 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
               </div>
             )}
           </div>
-          <Link href={`/${locale}/account/favourites/`} className="relative grid h-11 w-11 place-items-center rounded-full hover:bg-red-700" aria-label={`${dict.nav.favourites} (${favCount})`}>
+          <Link prefetch={false} href={`/${locale}/account/favourites/`} className="relative grid h-11 w-11 place-items-center rounded-full hover:bg-red-700" aria-label={`${dict.nav.favourites} (${favCount})`}>
             <HeartIcon />
             {favCount > 0 && <span className="absolute right-1 top-1 grid h-5 min-w-5 place-items-center rounded-full bg-ivory px-1 text-[11px] font-bold text-carmine" aria-hidden="true">{favCount}</span>}
           </Link>
-          <Link href={`/${locale}/account/`} className="hidden h-11 w-11 place-items-center rounded-full hover:bg-red-700 sm:grid" aria-label={dict.nav.account}><UserIcon /></Link>
+          <Link prefetch={false} href={`/${locale}/account/`} className="hidden h-11 w-11 place-items-center rounded-full hover:bg-red-700 sm:grid" aria-label={dict.nav.account}><UserIcon /></Link>
           <Link href={`/${locale}/club/`} className="ml-2 hidden min-h-10 items-center whitespace-nowrap rounded-[8px] border border-ivory/80 px-3 text-[13px] font-semibold hover:bg-ivory hover:text-carmine xl:inline-flex">{dict.nav.joinClub}</Link>
           <button type="button" onClick={() => setDrawer(true)} className="grid h-11 w-11 place-items-center rounded-full hover:bg-red-700 lg:hidden" aria-label={dict.nav.menu} aria-expanded={drawer} aria-controls="mobile-drawer"><MenuIcon /></button>
         </div>
@@ -185,13 +193,13 @@ export function Header({ data, dict }: { data: HeaderData; dict: Pick<Dict, "nav
         </div>
       )}
 
-      <GlobalSearch
+      {search && <GlobalSearch
         locale={locale}
         open={search}
         onClose={closeSearch}
         popular={data.cities.slice(0, 8).map((c) => ({ title: c.name, href: `/${locale}/restaurants/${c.country}/${c.slug}/` }))}
         labels={{ ...dict.search, close: dict.nav.close }}
-      />
+      />}
     </header>
   );
 }

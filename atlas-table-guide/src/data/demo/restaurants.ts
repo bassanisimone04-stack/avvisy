@@ -148,7 +148,7 @@ const INTERIOR_POOL = 8;
 
 function images(s: Spec, i: number): ImageRef[] {
   const seed = hash(s.slug);
-  const d = (k: number) => `dish-${((seed + k * 5) % DISH_POOL) + 1}`;
+  const d = (k: number) => `dish-${((i * 5 + k * 7) % DISH_POOL) + 1}`;
   const r = (k: number) => `interior-${((seed + k * 3) % INTERIOR_POOL) + 1}`;
   return [
     { key: d(0), subject: "dish", dish: s.dish, illustrative: true },

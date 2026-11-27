@@ -27,8 +27,8 @@ export function SmartImage({ imageKey, alt, sizes, priority, className, imgClass
         priority={priority}
         quality={priority ? 60 : 75}
         fetchPriority={priority ? "high" : undefined}
-        placeholder={m.blurDataURL ? "blur" : "empty"}
-        blurDataURL={m.blurDataURL || undefined}
+        placeholder={m.blurDataURL && !priority ? "blur" : "empty"}
+        blurDataURL={m.blurDataURL && !priority ? m.blurDataURL : undefined}
         className={clsx("zoom object-cover", imgClassName)}
       />
       {label && m.illustrative && (

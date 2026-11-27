@@ -1,20 +1,26 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { createClient, type SupabaseClient, type Session } from "@supabase/supabase-js";
+import type { SupabaseClient, Session } from "@supabase/supabase-js";
 import { useApp } from "./providers";
 import { Notice } from "@/components/ui/ui";
 import { compareHref } from "@/lib/compare-url";
 
 type Item = { key: string; name: string; href: string; sub: string };
 
+/** Supabase is loaded on demand (≈180 KB) so it never weighs on the rest of the site. */
 function useSupabase(): SupabaseClient | null {
-  return useMemo(() => {
+  const [sb, setSb] = useState<SupabaseClient | null>(null);
+  useEffect(() => {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-    return url && key ? createClient(url, key) : null;
+    if (!url || !key) return;
+    let alive = true;
+    import("@supabase/supabase-js").then(({ createClient }) => { if (alive) setSb(createClient(url, key)); });
+    return () => { alive = false; };
   }, []);
+  return sb;
 }
 
 export function FavouritesList({ index, labels }: { index: Item[]; labels: { empty: string; remove: string; count: string } }) {

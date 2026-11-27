@@ -24,8 +24,8 @@ const config: NextConfig = {
   outputFileTracingRoot: fileURLToPath(new URL(".", import.meta.url)),
   poweredByHeader: false,
   reactStrictMode: true,
-  experimental: { globalNotFound: true },
-  images: { formats: ["image/avif", "image/webp"], qualities: [60, 75], deviceSizes: [480, 768, 1080, 1280, 1920], imageSizes: [64, 128, 256, 384] },
+  experimental: { globalNotFound: true, inlineCss: true },
+  images: { formats: ["image/avif", "image/webp"], qualities: [60, 75], deviceSizes: [360, 480, 640, 768, 1080, 1280, 1920], imageSizes: [64, 128, 256, 384] },
   async headers() {
     return [
       {

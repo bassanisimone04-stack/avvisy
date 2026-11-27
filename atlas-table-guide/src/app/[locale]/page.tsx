@@ -64,7 +64,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 rounded-b-[12px] bg-gradient-to-t from-ink/25 to-transparent" />
           </div>
           <div className="mt-8 text-center">
-            <h1 id="hero-title" className="font-serif text-[28px] font-semibold text-ivory md:text-[44px]">{BRAND.tagline}</h1>
+            <h1 id="hero-title" className="font-serif text-[28px] font-semibold text-ivory md:text-[44px]">{locale === "it" ? BRAND.taglineIt : BRAND.tagline}</h1>
             <p className="mt-2 text-base text-ivory/80">{h.heroSubtitle}</p>
           </div>
           <div className="mt-6">
@@ -108,7 +108,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* 3. EXCEPTIONAL RESTAURANTS */}
-      <section className="section-y bg-sand" aria-labelledby="exc-title">
+      <section className="section-y bg-sand defer-render" aria-labelledby="exc-title">
         <div className="container-page">
           <SectionHeader title={h.exceptionalTitle} sub={h.exceptionalSub} id="exc-title" action={<Link href={L("/restaurants/")} className="text-sm font-semibold text-carmine hover:underline">{dict.common.viewAll} →</Link>} />
           <Tabs label={dict.directory.f.recognition} tabs={[3, 2, 1].map((lvl) => ({
@@ -123,7 +123,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* 4. FINE DINING FOR EVERY BUDGET */}
-      <section className="section-y" aria-labelledby="budget-title">
+      <section className="section-y defer-render" aria-labelledby="budget-title">
         <div className="container-page">
           <SectionHeader title={h.budgetTitle} sub={h.budgetSub} id="budget-title" />
           <ul className="grid grid-cols-2 gap-4 md:grid-cols-5">
@@ -148,7 +148,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* 5. FIND YOUR NEXT EXPERIENCE */}
-      <section className="section-y pt-0" aria-labelledby="next-title">
+      <section className="section-y pt-0 defer-render" aria-labelledby="next-title">
         <div className="container-page">
           <SectionHeader title={h.nextTitle} id="next-title" />
           <ul className="grid gap-x-6 gap-y-10 md:grid-cols-2">
@@ -162,7 +162,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* 6. DINE & STAY split screen */}
-      <section className="bg-sand" aria-labelledby="ds-title">
+      <section className="bg-sand defer-render" aria-labelledby="ds-title">
         <div className="container-page grid items-center gap-8 py-16 md:grid-cols-2 md:py-24">
           <SmartImage imageKey="luxury-hotel" alt={buildAlt({ subject: "hotel" }, { name: "A hotel with its own restaurant", city: "dusk", locale })} sizes="(min-width:768px) 560px, 100vw" ratio="4 / 3" label={dict.common.illustrative} />
           <div>
@@ -183,7 +183,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       {/* 7. TRAVEL FOR TASTE / CULINARY JOURNEYS */}
       {tuscany && (
-        <section className="section-y" aria-labelledby="travel-title">
+        <section className="section-y defer-render" aria-labelledby="travel-title">
           <div className="container-page">
             <SectionHeader title={h.travelTitle} id="travel-title" action={<Link href={L("/travel/")} className="text-sm font-semibold text-carmine hover:underline">{dict.common.viewAll} →</Link>} />
             <PhotoCard href={L(`/travel/${tuscany.slug}/`)} imageKey={tuscany.image.key} alt={buildAlt(tuscany.image, { name: t(tuscany.title, locale), city: "Tuscany", locale })} ratio="16 / 7" sizes="(min-width:1232px) 1136px, 100vw" title={t(tuscany.title, locale)} subtitle={t(tuscany.summary, locale)} illustrativeLabel={dict.common.illustrative} />
@@ -200,38 +200,38 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       )}
 
       {/* 8. PRICE INDEX */}
-      <section className="section-y bg-sand" aria-labelledby="pi-title">
+      <section className="section-y bg-sand defer-render" aria-labelledby="pi-title">
         <div className="container-page">
           <SectionHeader title={h.priceIndexTitle} sub={h.priceIndexSub} id="pi-title" action={<Link href={L("/price-index/")} className="text-sm font-semibold text-carmine hover:underline">{dict.common.viewAll} →</Link>} />
           <div className="grid gap-6 lg:grid-cols-3">
             <figure className="rounded-[12px] border border-line bg-white p-5 lg:col-span-2">
               <figcaption className="mb-4 font-semibold">{dict.profile.dinner} — {dict.directory.f.city}</figcaption>
               <table className="w-full text-sm">
-                <thead className="sr-only"><tr><th scope="col">{dict.directory.f.city}</th><th scope="col">Average</th><th scope="col">n</th></tr></thead>
+                <thead className="sr-only"><tr><th scope="col">{dict.directory.f.city}</th><th scope="col">{dict.px.average}</th><th scope="col">n</th></tr></thead>
                 <tbody>
                   {cityStats.slice(0, 6).map((s) => (
                     <tr key={`${s.key}-${s.currency}`} className="border-b border-line last:border-0">
                       <th scope="row" className="py-2 pr-3 text-left font-medium">{s.label}</th>
-                      <td className="py-2">{s.suppressed ? <span className="text-stone">Not enough verified data</span> : formatMoney(s.avg!, s.currency, locale)}</td>
+                      <td className="py-2">{s.suppressed ? <span className="text-stone">{dict.px.notEnough}</span> : formatMoney(s.avg!, s.currency, locale)}</td>
                       <td className="py-2 text-right text-stone">n = {s.n}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-              <p className="mt-3 text-xs text-stone">Verified prices only · n ≥ {SITE.priceIndexMinSample} · {formatDate(cityStats[0]?.collectedAt ?? undefined, locale)} · <Link href={L("/methodology/")} className="underline">{dict.footer.methodology}</Link></p>
+              <p className="mt-3 text-xs text-stone">{dict.px.verifiedOnly} · n ≥ {SITE.priceIndexMinSample} · {formatDate(cityStats[0]?.collectedAt ?? undefined, locale)} · <Link href={L("/methodology/")} className="underline">{dict.footer.methodology}</Link></p>
             </figure>
             <div className="space-y-4">
               <div className="rounded-[12px] border border-line bg-white p-5">
-                <p className="text-sm text-stone">Lunch ÷ dinner (same venue)</p>
+                <p className="text-sm text-stone">{dict.px.lunchDinnerShort}</p>
                 <p className="font-serif text-3xl text-carmine">{ratio.suppressed ? "—" : `${Math.round(ratio.ratio! * 100)}%`}</p>
-                <p className="text-xs text-stone">{ratio.suppressed ? "Not enough verified data" : `n = ${ratio.n} · ${formatDate(ratio.collectedAt ?? undefined, locale)}`}</p>
+                <p className="text-xs text-stone">{ratio.suppressed ? dict.px.notEnough : `n = ${ratio.n} · ${formatDate(ratio.collectedAt ?? undefined, locale)}`}</p>
               </div>
               <div className="rounded-[12px] border border-line bg-white p-5">
-                <p className="mb-2 text-sm text-stone">Most accessible recognised menus</p>
+                <p className="mb-2 text-sm text-stone">{dict.px.accessibleShort}</p>
                 <ol className="space-y-1 text-sm">
                   {cheapest.map((c) => <li key={c.r.slug} className="flex justify-between gap-2"><Link href={L(`/restaurant/${c.r.slug}/`)} className="hover:underline">{c.r.name}</Link><Price amount={c.amount} currency={c.currency} locale={locale} /></li>)}
                 </ol>
-                <p className="mt-2 text-xs text-stone">n = {totalVerified} verified menus</p>
+                <p className="mt-2 text-xs text-stone">{fmt(dict.px.verifiedMenus, { n: totalVerified })}</p>
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       {/* 9. MAGAZINE */}
       {lead && (
-        <section className="section-y" aria-labelledby="mag-title">
+        <section className="section-y defer-render" aria-labelledby="mag-title">
           <div className="container-page">
             <SectionHeader title={h.magazineTitle} sub={h.magazineSub} id="mag-title" action={<Link href={L("/magazine/")} className="text-sm font-semibold text-carmine hover:underline">{dict.common.viewAll} →</Link>} />
             <div className="grid gap-8 lg:grid-cols-2">
@@ -259,7 +259,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       )}
 
       {/* 10. CLUB */}
-      <section className="on-dark bg-garnet text-ivory" aria-labelledby="club-title">
+      <section className="on-dark bg-garnet text-ivory defer-render" aria-labelledby="club-title">
         <div className="container-page grid gap-8 py-16 md:grid-cols-2 md:py-24">
           <div>
             <p className="eyebrow !text-gold">{BRAND.shortName}</p>
@@ -274,7 +274,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* 11. NEWSLETTER */}
-      <section className="section-y" aria-labelledby="nl-title">
+      <section className="section-y defer-render" aria-labelledby="nl-title">
         <div className="container-page max-w-3xl">
           <SectionHeader title={h.newsletterTitle} sub={h.newsletterSub} id="nl-title" />
           <NewsletterForm locale={locale} d={{ ...dict.forms, submit: dict.common.submit, sending: dict.common.sending }} entity={BRAND.legalEntity} privacyHref={L("/legal/privacy/")} cities={data.cities.map((c) => ({ slug: c.slug, name: t(c.name, locale) }))} />
