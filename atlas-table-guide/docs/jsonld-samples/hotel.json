@@ -1,0 +1,102 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example-guide.com/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Hotels",
+        "item": "https://example-guide.com/en/hotels/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Palazzo Celeste",
+        "item": "https://example-guide.com/en/hotel/palazzo-celeste-rome/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "@id": "https://example-guide.com/en/hotel/palazzo-celeste-rome/#hotel",
+    "name": "Palazzo Celeste",
+    "url": "https://example-guide.com/en/hotel/palazzo-celeste-rome/",
+    "image": [
+      "https://example-guide.com/images/generated/luxury-hotel.webp",
+      "https://example-guide.com/images/generated/interior-2.webp"
+    ],
+    "description": "A restored 18th-century palazzo with 22 rooms beneath the rooftop restaurant Terrazza Celeste.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rome"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.9038,
+      "longitude": 12.4914
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Rooftop",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Concierge",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Bar",
+        "value": true
+      }
+    ],
+    "numberOfRooms": 15,
+    "containsPlace": [
+      {
+        "@type": "Restaurant",
+        "name": "Terrazza Celeste",
+        "url": "https://example-guide.com/en/restaurant/terrazza-celeste-rome/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://example-guide.com/#organization",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com",
+    "logo": "https://example-guide.com/favicon.svg",
+    "email": "hello@example-guide.com"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://example-guide.com/#website",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com/en/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://example-guide.com/#organization",
+      "name": "ATLAS TABLE GUIDE"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://example-guide.com/en/restaurants/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+]

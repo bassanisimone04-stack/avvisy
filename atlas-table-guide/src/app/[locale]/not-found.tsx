@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <div className="container-page py-20 text-center">
       <p className="eyebrow">404</p>
-      <h1 className="mt-2 font-serif text-3xl md:text-4xl">{dict.notFound.title}</h1>
+      <h1 className="mt-2 text-2xl md:text-3xl">{dict.notFound.title}</h1>
       <p className="mx-auto mt-3 max-w-xl text-stone">{dict.notFound.body}</p>
       <form action={`/${locale}/restaurants/`} method="get" role="search" className="mx-auto mt-8 flex max-w-lg gap-2">
         <label htmlFor="nf-q" className="sr-only">{dict.search.placeholder}</label>

@@ -4,10 +4,10 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { timingSafeEqual } from "node:crypto";
 import { createAdminSession } from "@/lib/admin-session";
-import { ADMIN_COOKIE, requireAdmin } from "./auth";
+import { ADMIN_COOKIE, SB_COOKIE, requireAdmin } from "./auth";
 import { dryRunImport, type ImportReport } from "@/lib/csv-import";
 import { getDataset } from "@/db/repository";
-import { supabaseService } from "@/db/supabase";
+import { supabaseAnon, supabaseService } from "@/db/supabase";
 import { rateLimit } from "@/lib/rate-limit";
 
 export async function login(_: { error?: string }, fd: FormData): Promise<{ error?: string }> {
@@ -21,8 +21,19 @@ export async function login(_: { error?: string }, fd: FormData): Promise<{ erro
   redirect("/admin/");
 }
 
+export async function loginSupabase(_: { error?: string }, fd: FormData): Promise<{ error?: string }> {
+  if (!rateLimit("admin-login", 10, 60_000).ok) return { error: "Too many attempts." };
+  const anon = supabaseAnon();
+  if (!anon) return { error: "Supabase is not configured." };
+  const { data, error } = await anon.auth.signInWithPassword({ email: String(fd.get("email") ?? ""), password: String(fd.get("password") ?? "") });
+  if (error || !data.session) return { error: "Invalid email or password." };
+  (await cookies()).set(SB_COOKIE, data.session.access_token, { httpOnly: true, sameSite: "strict", secure: process.env.NODE_ENV === "production", path: "/", maxAge: Math.min(data.session.expires_in ?? 3600, 8 * 3600) });
+  redirect("/admin/");
+}
+
 export async function logout() {
   (await cookies()).delete({ name: ADMIN_COOKIE, path: "/admin" });
+  (await cookies()).delete({ name: SB_COOKIE, path: "/" });
   redirect("/admin/login/");
 }
 

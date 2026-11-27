@@ -21,7 +21,9 @@
     "format": "prettier --write .",
     "images": "node scripts/generate-images.mjs",
     "ci": "npm run lint && npm run typecheck && npm run test && npm run check:banned && npm run build && npm run check:secrets && npm run seo:check && npm run e2e",
-    "photos": "node scripts/import-photos.mjs"
+    "photos": "node scripts/import-photos.mjs",
+    "search:sync": "tsx --tsconfig tsconfig.json scripts/typesense-sync.ts",
+    "jsonld:dump": "tsx --tsconfig tsconfig.json scripts/dump-jsonld.ts"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",

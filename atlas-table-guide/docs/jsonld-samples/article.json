@@ -1,0 +1,88 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example-guide.com/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Magazine",
+        "item": "https://example-guide.com/en/magazine/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Guides",
+        "item": "https://example-guide.com/en/magazine/guides/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "How to read a tasting-menu price",
+        "item": "https://example-guide.com/en/magazine/how-to-read-a-tasting-menu-price/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://example-guide.com/en/magazine/how-to-read-a-tasting-menu-price/#article",
+    "headline": "How to read a tasting-menu price",
+    "description": "Service charges, taxes, supplements and pairings: what the headline figure includes, and what it leaves out.",
+    "image": [
+      "https://example-guide.com/images/generated/tasting-menu.webp"
+    ],
+    "datePublished": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "inLanguage": "en",
+    "articleSection": "guides",
+    "author": {
+      "@type": "Person",
+      "name": "Elena Varga",
+      "jobTitle": "Editor (demo)"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://example-guide.com/#organization",
+      "name": "ATLAS TABLE GUIDE",
+      "logo": "https://example-guide.com/favicon.svg"
+    },
+    "mainEntityOfPage": "https://example-guide.com/en/magazine/how-to-read-a-tasting-menu-price/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://example-guide.com/#organization",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com",
+    "logo": "https://example-guide.com/favicon.svg",
+    "email": "hello@example-guide.com"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://example-guide.com/#website",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com/en/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://example-guide.com/#organization",
+      "name": "ATLAS TABLE GUIDE"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://example-guide.com/en/restaurants/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+]

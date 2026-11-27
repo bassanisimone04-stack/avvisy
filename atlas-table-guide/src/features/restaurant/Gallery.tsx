@@ -23,7 +23,7 @@ export function Gallery({ images, labels }: { images: Img[]; labels: { open: str
       <button type="button" onClick={() => setOpen(i)} className="absolute inset-0 z-[1] h-full w-full" aria-label={label(i)}>
         <Image src={src(img.key).src} alt={img.alt} fill sizes={sizes} priority={priority} quality={priority ? 60 : 75} fetchPriority={priority ? "high" : undefined} placeholder={src(img.key).blurDataURL ? "blur" : "empty"} blurDataURL={src(img.key).blurDataURL || undefined} className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
       </button>
-      {i === 0 && src(img.key).illustrative && <span className="pointer-events-none absolute bottom-2 left-2 z-[2] rounded-[4px] bg-ink/70 px-1.5 py-0.5 text-[11px] text-white">{labels.illustrative}</span>}
+      {i === 0 && src(img.key).illustrative && <span className="pointer-events-none absolute bottom-2 right-2 z-[2] rounded-[4px] bg-ink/70 px-1.5 py-0.5 text-[11px] text-white">{labels.illustrative}</span>}
     </div>
   );
   return (

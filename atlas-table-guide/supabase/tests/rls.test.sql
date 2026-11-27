@@ -124,6 +124,11 @@ set local request.jwt.claim.sub = '00000000-0000-0000-0000-0000000000d4';
 select pg_temp.assert((select count(*) from restaurants where slug in ('pub-r','draft-r','other-r')) = 3, 'admin reads drafts');
 reset role;
 
+-- 8b. orders are admin-only
+set local role anon;
+do $$ begin perform 1 from orders; raise exception 'ASSERTION FAILED: anon read orders'; exception when insufficient_privilege then raise notice 'ok - anon cannot read orders'; end $$;
+reset role;
+
 -- 9. RLS is enabled on every public table
 select pg_temp.assert(not exists (select 1 from pg_tables where schemaname='public' and tablename <> 'spatial_ref_sys' and not rowsecurity), 'RLS enabled on every table');
 

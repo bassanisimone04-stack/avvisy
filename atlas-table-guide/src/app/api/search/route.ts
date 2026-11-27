@@ -1,8 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getDataset } from "@/db/repository";
 import { localizeDataset } from "@/db/queries";
-import { search, type SearchDoc } from "@/lib/search";
-import { t } from "@/db/types";
+import { search } from "@/lib/search";
+import { buildSearchDocs } from "@/lib/search-docs";
+import { typesenseSearch } from "@/lib/typesense";
 import { rateLimit } from "@/lib/rate-limit";
 import { isLocale } from "@/i18n";
 
@@ -14,17 +15,9 @@ export async function GET(req: NextRequest) {
   const lp = req.nextUrl.searchParams.get("locale") ?? "en";
   const locale = isLocale(lp) ? lp : "en";
   const d = localizeDataset(await getDataset(), locale);
-  const city = (s: string) => d.cities.find((c) => c.slug === s);
-  const both = (v: { en: string; it?: string } | undefined) => `${v?.en ?? ""} ${v?.it ?? ""}`;
-  const docs: SearchDoc[] = [
-    ...d.restaurants.map((r) => ({ type: "restaurant" as const, id: r.slug, title: r.name, subtitle: `${t(city(r.citySlug)?.name, locale)} · ${r.cuisines.map((c) => t(d.cuisines.find((x) => x.slug === c)?.name, locale)).join(", ")}`, href: `/${locale}/restaurant/${r.slug}/`, text: `${both(city(r.citySlug)?.name)} ${r.cuisines.join(" ")} ${r.style.en} ${d.chefs.find((c) => c.slug === r.chefSlug)?.name ?? ""} tasting`, boost: r.recognition.level * 0.01 })),
-    ...d.cities.map((c) => ({ type: "city" as const, id: c.slug, title: t(c.name, locale), subtitle: t(d.countries.find((x) => x.slug === c.countrySlug)?.name, locale), href: `/${locale}/restaurants/${c.countrySlug}/${c.slug}/`, text: `${both(c.name)} ${both(d.countries.find((x) => x.slug === c.countrySlug)?.name)}`, boost: 0.05 })),
-    ...d.chefs.map((c) => ({ type: "chef" as const, id: c.slug, title: c.name, subtitle: d.restaurants.filter((r) => r.chefSlug === c.slug).map((r) => r.name).join(", "), href: `/${locale}/chefs/${c.slug}/`, text: "chef" })),
-    ...d.cuisines.map((c) => ({ type: "cuisine" as const, id: c.slug, title: t(c.name, locale), subtitle: `${d.restaurants.filter((r) => r.cuisines.includes(c.slug)).length}`, href: `/${locale}/restaurants/?cuisine=${c.slug}`, text: both(c.name) })),
-    ...d.articles.map((a) => ({ type: "article" as const, id: a.slug, title: t(a.title, locale), subtitle: a.category.replace(/-/g, " "), href: `/${locale}/magazine/${a.slug}/`, text: `${a.excerpt.en}` })),
-    ...d.hotels.map((h) => ({ type: "hotel" as const, id: h.slug, title: h.name, subtitle: h.address.locality, href: `/${locale}/hotel/${h.slug}/`, text: `${h.address.locality} hotel ${h.category}` })),
-    ...d.experiences.map((x) => ({ type: "experience" as const, id: x.slug, title: x.name, subtitle: t(city(x.citySlug)?.name, locale), href: `/${locale}/experience/${x.slug}/`, text: `${both(city(x.citySlug)?.name)} ${x.category}` })),
-  ];
+  const typesense = await typesenseSearch(q, locale, 10);
+  if (typesense) return NextResponse.json({ hits: typesense }, { headers: { "Cache-Control": "public, max-age=60", "X-Robots-Tag": "noindex" } });
+  const docs = buildSearchDocs(d, locale);
   const hits = search(docs, q, 10).map(({ text: _text, boost: _b, score: _s, ...h }) => h);
   return NextResponse.json({ hits }, { headers: { "Cache-Control": "public, max-age=60", "X-Robots-Tag": "noindex" } });
 }

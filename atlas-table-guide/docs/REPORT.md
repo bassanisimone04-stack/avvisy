@@ -44,19 +44,28 @@ _Last updated: 2026-11-27. Status of every requirement of the master prompt, wit
 
 ## 3. Stubbed / partial (honest states shown in the UI)
 
+Implemented since the first report — **code complete and unit-tested where possible, but not exercised against live services** (Supabase, Stripe, Resend and Typesense are not reachable from this sandbox):
+
 | Area | State |
 |---|---|
-| Accounts | Supabase magic-link sign-in, favourites merge, GDPR export/delete implemented; **untested against a live Supabase project**. Without it, favourites/comparisons/plans live in localStorage and the page says so. Price-alert cron + email not built (table + RLS exist). |
-| Admin editing modules | Restaurants/prices are read-only views; editing for chefs, awards, hotels, articles, media, translations, SEO overrides, redirects uses Supabase Studio for now (schema + RLS ready). Production admin auth (Supabase role) is wired in RLS but the `/admin` guard currently uses the dev token fallback — **must be switched to Supabase sessions before launch**. |
-| Supabase loader | Loads countries/regions/cities/chefs/cuisines/restaurants. Hotels, experiences, itineraries, articles, gift cards are still served from the bundled dataset only. |
-| Partner dashboard | Claim/lead forms work (stored when DB configured); the editing dashboard itself is not built. |
-| Payments | Gift cards, club and partner plans show "Not available yet / test mode" and collect interest only. No Stripe checkout or webhook handler yet. |
+| Admin auth | Supabase email+password sign-in; role read server-side from `profiles` (service role), cookie httpOnly. Dev-token login remains for development only. |
+| Partner dashboard | `/business/dashboard`: magic-link sign-in, create partner profile, request claims, edit details and submit prices (saved as *estimated*) — all through the partner's own session, so RLS/triggers decide what is allowed. |
+| Stripe | `/api/checkout` (gift cards, **test keys only**, live keys refused) + `/api/stripe/webhook` (signature verification, unit-tested) + `orders` table. Club and partner-plan checkout not built. |
+| Price alerts | "Alert me" button (needs account), `alerts` table, daily cron `/api/cron/price-alerts` (+ Resend email), logic unit-tested. |
+| Typesense | Adapter with automatic fallback to the built-in search; `npm run search:sync`. Not tested against a server. |
+
+Still partial / not done:
+
+| Area | State |
+|---|---|
+| Accounts | Supabase magic-link sign-in, favourites merge, GDPR export/delete implemented; untested against a live project. |
+| Admin editing modules | Restaurants/prices are read-only views; editing chefs, awards, hotels, articles, media, translations, SEO overrides, redirects still uses Supabase Studio. |
+| Supabase loader | Loads countries/regions/cities/chefs/cuisines/restaurants only; hotels, experiences, itineraries, articles, gift cards come from the bundled dataset. |
 | Reservations | No provider integration; profiles never show availability (by design). |
-| Search | Built-in typo-tolerant search with synonyms. Typesense adapter **not** implemented (env vars reserved); Postgres `search_restaurants()` exists. |
-| Translations | EN + IT UI, metadata and URLs complete; demo restaurant descriptions/articles/legal text are English with `lang="en"` and a "translation pending" note on IT pages. RTL-ready architecture not exercised. |
-| Maps | MapLibre with OpenFreeMap style by default; tiles could not be loaded inside the sandbox (network policy), so map rendering was tested only for the graceful fallback. |
-| Visual reference | **The reference screenshots (`docs/reference/reference-home-*.png`) were not attached**, so layout follows the written §3B spec. Baselines are committed in `tests/e2e/visual.spec.ts-snapshots/`; compare them against the screenshots once supplied and record differences here. |
-| Phase 4 | Reservation-provider interfaces, B2B marketplace, licensed data API and extra languages are not started (pages show "coming soon" with a working contact form). |
+| Languages | EN + IT only. FR, ES, DE, JA, PT, AR, ZH are **not** started (architecture allows it). |
+| Photos | All images are generated illustrations until real photos are imported (`npm run photos`). |
+| Performance | Lighthouse mobile 90–96, LCP ≈ 3 s under simulated 4G in this sandbox; must be re-measured on a CDN (see docs/LAUNCH.md). |
+| Phase 4 | Reservation providers, B2B marketplace, licensed data API are not started. |
 
 ## 4. Images — REPLACE BEFORE LAUNCH
 
@@ -79,16 +88,17 @@ No image-generation tool or licensed photography was available. All 46 images in
 |---|---|---|---|
 | Supabase | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` | Real data, form storage, accounts, admin writes, click logs, GDPR deletion | Demo dataset; forms say "not stored — database not configured"; local favourites |
 | Map tiles | `NEXT_PUBLIC_MAP_STYLE_URL` | Map view & mini-maps | Default OpenFreeMap (no key); list alternative always shown |
-| Typesense | `TYPESENSE_HOST`, `TYPESENSE_API_KEY` | Hosted search (adapter to build) | Built-in search |
-| Stripe (test) | `STRIPE_SECRET_KEY` (sk_test_), `STRIPE_WEBHOOK_SECRET` | Test-mode labels; checkout to build | "Not available yet" + interest form |
+| Typesense | `TYPESENSE_HOST`, `TYPESENSE_API_KEY` | Hosted search (`npm run search:sync`) | Built-in search |
+| Stripe (test) | `STRIPE_SECRET_KEY` (sk_test_), `STRIPE_WEBHOOK_SECRET` | Gift-card test checkout + orders | "Not available yet" + interest form |
 | Resend | `RESEND_API_KEY`, `EMAIL_FROM` | Double opt-in emails | Subscription stored as pending; UI says emails aren't configured |
 | LLM | `LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL` | AI concierge annotations (DB-restricted) | Rule-based planner, labelled |
 | FX rates | `FX_PROVIDER` | Live ECB conversions | Original currency only (or labelled demo rates) |
 | Affiliate networks | rows in `affiliate_links` | Hotel/experience booking links | Demo `example.com` links |
 | Analytics | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Consent-gated Plausible | No analytics |
 | Admin (dev) | `ADMIN_DEV_TOKEN` | `/admin` without Supabase (dev only) | Admin login disabled |
+| Cron | `CRON_SECRET` | Daily price-alert emails | Job returns 501 |
 
-## 7. Launch blockers for the owner
+## 7. Launch blockers for the owner (full checklist: docs/LAUNCH.md)
 
 1. Final brand name, **trademark clearance**, domain → edit `src/config/brand.ts`, run `npm run images` (OG image text) and redeploy.
 2. **Legal review** of all templates in `src/data/pages.ts` (privacy, cookies, terms, affiliate, sponsored, data-correction) and the legal entity name.

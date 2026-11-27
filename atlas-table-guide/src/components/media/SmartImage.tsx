@@ -32,7 +32,7 @@ export function SmartImage({ imageKey, alt, sizes, priority, className, imgClass
         className={clsx("zoom object-cover", imgClassName)}
       />
       {label && m.illustrative && (
-        <span className="pointer-events-none absolute bottom-2 left-2 rounded-[4px] bg-ink/70 px-1.5 py-0.5 text-[11px] font-medium text-white">{label}</span>
+        <span className="pointer-events-none absolute bottom-2 right-2 rounded-[4px] bg-ink/70 px-1.5 py-0.5 text-[10px] font-medium text-white">{label}</span>
       )}
     </div>
   );

@@ -18,6 +18,7 @@ import { Price } from "@/features/Price";
 import { FavouriteButton } from "@/features/FavouriteButton";
 import { CompareToggle } from "@/features/CompareToggle";
 import { MessageForm } from "@/features/forms/Forms";
+import { PriceAlertButton } from "@/features/PriceAlertButton";
 import { RestaurantCard } from "@/components/cards/RestaurantCard";
 import { PhotoCard } from "@/components/cards/Cards";
 import { RecognitionText } from "@/components/cards/Recognition";
@@ -127,7 +128,7 @@ export default async function RestaurantPage({ params }: { params: Promise<{ loc
         <article className="lg:col-span-8">
           <header>
             <div className="flex flex-wrap items-center gap-2">{r.isDemo && <DemoBadge label={dict.common.demoData} />}<StatusPill status={ver === "verified" ? "verified" : ver === "stale" ? "stale" : "pending"} label={ver === "verified" ? fmt(dict.common.lastVerified, { date: formatDate(r.lastVerifiedAt, locale) }) : ver === "stale" ? `${dict.common.stale} · ${formatDate(r.lastVerifiedAt, locale)}` : dict.common.notVerified} />{r.sourceUrl && <a href={r.sourceUrl} rel="nofollow noopener" target="_blank" className="text-xs text-stone underline">{dict.common.source}</a>}</div>
-            <h1 className="mt-3 font-serif text-3xl md:text-5xl">{r.name}</h1>
+            <h1 className="mt-3 text-2xl md:text-4xl">{r.name}</h1>
             <p className="mt-2 flex items-center gap-1 text-stone"><PinIcon size={16} /> {cityName}, {countryName} · {cuisines.join(" · ")}</p>
             <p className="mt-2 text-sm"><RecognitionText r={r} dict={dict} /></p>
             {chef && <p className="mt-1 text-sm">{P.chef}: <Link href={L(`/chefs/${chef.slug}/`)} className="font-semibold underline-offset-4 hover:underline">{chef.name}</Link></p>}
@@ -256,6 +257,7 @@ export default async function RestaurantPage({ params }: { params: Promise<{ loc
                 <CompareToggle slug={r.slug} name={r.name} label={dict.common.compare} fullMsg={dict.compare.full} variant="inline" className="justify-center" />
                 <FavouriteButton itemKey={`restaurant:${r.slug}`} name={r.name} variant="inline" className="justify-center" labels={{ add: dict.favourites.add, remove: dict.favourites.remove, saved: dict.common.saved, save: dict.common.save }} />
               </div>
+              <PriceAlertButton slug={r.slug} locale={locale} />
               {r.features.giftCard && <Link href={L(`/gifts/?restaurant=${r.slug}`)} className="flex min-h-11 w-full items-center justify-center rounded-[8px] border border-carmine text-sm font-semibold text-carmine hover:bg-blush">{P.buyGift}</Link>}
               {r.website && <a href={r.website} target="_blank" rel="noopener nofollow" className="flex min-h-11 w-full items-center justify-center gap-1 text-sm font-semibold text-carmine underline-offset-4 hover:underline">{dict.common.website} <ExternalIcon size={14} /></a>}
             </div>

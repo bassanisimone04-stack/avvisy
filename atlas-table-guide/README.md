@@ -30,6 +30,9 @@ Optional full local stack (Docker): `npm run dev:setup` starts PostgreSQL 16 + P
 | `npm run check:secrets` | Scans the client bundle for secrets (run after build) |
 | `npm run db:test` | Spins up a throwaway Postgres+PostGIS, applies migrations + seed, runs the RLS test-suite |
 | `npm run db:seed-sql` | Regenerates `supabase/seed.sql` from the demo dataset |
+| `npm run photos -- <folder>` | Replaces generated illustrations with real photos (see docs/PHOTOS.md) |
+| `npm run search:sync` | Rebuilds the Typesense collections (needs TYPESENSE_* env) |
+| `npm run jsonld:dump` | Writes each key page's JSON-LD to docs/jsonld-samples/ for the Google / schema.org validators |
 | `npm run images` | Regenerates the procedural illustrations + blur placeholders |
 | `npm run ci` | Everything above in order |
 

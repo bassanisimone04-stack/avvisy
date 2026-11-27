@@ -18,7 +18,7 @@ export default function GlobalNotFound() {
         <header className="on-dark bg-carmine text-ivory"><div className="container-page flex h-[var(--header-h)] items-center"><Link href="/en/" aria-label={BRAND.name}><Logo variant="light" /></Link></div></header>
         <main id="main" className="container-page py-20 text-center">
           <p className="eyebrow">404</p>
-          <h1 className="mt-2 font-serif text-3xl md:text-4xl">{dict.notFound.title}</h1>
+          <h1 className="mt-2 text-2xl md:text-3xl">{dict.notFound.title}</h1>
           <p className="mx-auto mt-3 max-w-xl text-stone">{dict.notFound.body}</p>
           <form action="/en/restaurants/" method="get" role="search" className="mx-auto mt-8 flex max-w-lg gap-2">
             <label htmlFor="gnf-q" className="sr-only">{dict.search.placeholder}</label>

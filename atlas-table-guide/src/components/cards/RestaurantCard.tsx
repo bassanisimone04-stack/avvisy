@@ -26,15 +26,15 @@ export function RestaurantCard({ r, locale, dict, city, country, cuisines, prior
           <SmartImage imageKey={img.key} alt={buildAlt(img, { name: r.name, city, locale })} sizes="(min-width:1280px) 280px, (min-width:768px) 33vw, 90vw" ratio="4 / 3" priority={priority} label={dict.common.illustrative} />
         </Link>
         <FavouriteButton itemKey={`restaurant:${r.slug}`} name={r.name} labels={{ add: dict.favourites.add, remove: dict.favourites.remove, saved: dict.common.saved, save: dict.common.save }} className="absolute right-2 top-2" />
-        <CompareToggle slug={r.slug} name={r.name} label={dict.common.compare} fullMsg={dict.compare.full} className="absolute bottom-2 right-2" />
+        <CompareToggle slug={r.slug} name={r.name} label={dict.common.compare} fullMsg={dict.compare.full} className="absolute bottom-2 left-2" />
         {r.isDemo && <DemoBadge label={dict.common.demoData} className="absolute left-2 top-2" />}
       </div>
       <div className="pt-3">
         <H className="font-sans text-base font-bold leading-snug">
           <Link href={href} className="after:absolute after:inset-0 after:content-[''] hover:underline">{r.name}</Link>
         </H>
-        <p className="text-sm text-stone">{city}, {country}</p>
-        <p className="mt-1 text-sm">
+        <p className="text-[13px] text-stone">{city}, {country}</p>
+        <p className="mt-1 text-[13px] leading-snug">
           {cuisines.join(" · ")}
           {from && <> · <span className="font-medium">{fmt(dict.common.tastingFrom, { price: "" }).trim()} <Price amount={from.amount} currency={from.currency} locale={locale} /></span></>}
         </p>

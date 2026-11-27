@@ -1,0 +1,32 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://example-guide.com/#organization",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com",
+    "logo": "https://example-guide.com/favicon.svg",
+    "email": "hello@example-guide.com"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://example-guide.com/#website",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com/en/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://example-guide.com/#organization",
+      "name": "ATLAS TABLE GUIDE"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://example-guide.com/en/restaurants/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+]

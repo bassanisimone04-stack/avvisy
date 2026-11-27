@@ -30,7 +30,7 @@ export default async function Business({ params }: P) {
       <section className="mt-14 rounded-[12px] border border-line bg-sand p-6" aria-labelledby="portal">
         <h2 id="portal" className="font-serif text-2xl">{tx(locale, "Partner dashboard", "Dashboard partner")}</h2>
         <p className="mt-2 text-sm">The dashboard (profile editing, authorised image uploads with licence confirmation, price updates that append to price history, booking links, view/click analytics) opens after your claim is verified and approved by an editor. {integrations().supabase ? "" : "It requires accounts, which are not configured on this deployment."}</p>
-        <Link href={`/${locale}/business/claim-your-restaurant/`} className="mt-4 inline-flex min-h-11 items-center rounded-[8px] bg-carmine px-5 text-sm font-semibold text-white">{tx(locale, "Start a claim", "Avvia una rivendicazione")}</Link>
+        <div className="mt-4 flex flex-wrap gap-2"><Link href={`/${locale}/business/dashboard/`} className="inline-flex min-h-11 items-center rounded-[8px] bg-carmine px-5 text-sm font-semibold text-white">{tx(locale, "Open the dashboard", "Apri la dashboard")}</Link><Link href={`/${locale}/business/claim-your-restaurant/`} className="inline-flex min-h-11 items-center rounded-[8px] border border-carmine px-5 text-sm font-semibold text-carmine">{tx(locale, "Start a claim", "Avvia una rivendicazione")}</Link></div>
       </section>
     </PageShell>
   );

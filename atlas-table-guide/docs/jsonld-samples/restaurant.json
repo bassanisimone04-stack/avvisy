@@ -1,0 +1,231 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example-guide.com/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Restaurants",
+        "item": "https://example-guide.com/en/restaurants/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "France",
+        "item": "https://example-guide.com/en/restaurants/france/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Paris",
+        "item": "https://example-guide.com/en/restaurants/france/paris/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Maison Lune",
+        "item": "https://example-guide.com/en/restaurant/maison-lune-paris/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://example-guide.com/en/restaurant/maison-lune-paris/#restaurant",
+    "name": "Maison Lune",
+    "url": "https://example-guide.com/en/restaurant/maison-lune-paris/",
+    "image": [
+      "https://example-guide.com/images/generated/dish-1.webp",
+      "https://example-guide.com/images/generated/interior-4.webp",
+      "https://example-guide.com/images/generated/dish-8.webp",
+      "https://example-guide.com/images/generated/interior-7.webp",
+      "https://example-guide.com/images/generated/dish-15.webp"
+    ],
+    "description": "A hushed Left Bank dining room where vegetables from three market gardens lead a long, precise French tasting menu.",
+    "servesCuisine": [
+      "French",
+      "Contemporary"
+    ],
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 Rue des Lanternes",
+      "postalCode": "75006",
+      "addressLocality": "Paris",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.8526,
+      "longitude": 2.3462
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday"
+        ],
+        "opens": "12:00",
+        "closes": "14:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday"
+        ],
+        "opens": "19:00",
+        "closes": "22:30"
+      }
+    ],
+    "specialOpeningHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "validFrom": "2026-12-25",
+        "validThrough": "2026-12-25",
+        "opens": "00:00",
+        "closes": "00:00"
+      }
+    ],
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Tasting menus",
+      "inLanguage": "en",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Lunch tasting menu",
+          "offers": {
+            "@type": "Offer",
+            "price": 145,
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Dinner tasting menu",
+          "offers": {
+            "@type": "Offer",
+            "price": 320,
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Wine pairing",
+          "offers": {
+            "@type": "Offer",
+            "price": 190,
+            "priceCurrency": "EUR"
+          }
+        }
+      ]
+    },
+    "acceptsReservations": true,
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wheelchair accessible",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Private dining room",
+        "value": true
+      }
+    ],
+    "employee": {
+      "@type": "Person",
+      "name": "Claire Montrose",
+      "jobTitle": "Head chef",
+      "url": "https://example-guide.com/en/chefs/claire-montrose/"
+    },
+    "containedInPlace": {
+      "@type": "City",
+      "name": "Paris",
+      "url": "https://example-guide.com/en/restaurants/france/paris/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much is the tasting menu at Maison Lune?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lunch tasting menu: 145 EUR (verified, 20 September 2026); Dinner tasting menu: 320 EUR (verified, 20 September 2026)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Maison Lune cater for vegetarians?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vegetarian: Yes · Vegan: No · Gluten-free: Yes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book Maison Lune?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online booking. Bookings open 30 days ahead. Dietary requirements should be shared at least 48 hours before the visit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a dress code at Maison Lune?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Smart casual"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://example-guide.com/#organization",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com",
+    "logo": "https://example-guide.com/favicon.svg",
+    "email": "hello@example-guide.com"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://example-guide.com/#website",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com/en/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://example-guide.com/#organization",
+      "name": "ATLAS TABLE GUIDE"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://example-guide.com/en/restaurants/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+]

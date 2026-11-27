@@ -57,7 +57,7 @@ export function DirectoryView({ m, locale, dict, data, rates, extraParams }: { m
     <div className="container-page py-8 md:py-12">
       <Breadcrumbs items={m.breadcrumbs} />
       <header className="mt-4 max-w-3xl">
-        <h1 className="font-serif text-3xl md:text-4xl">{m.h1}</h1>
+        <h1 className="text-2xl md:text-3xl">{m.h1}</h1>
         <p className="mt-2 text-stone">{count === 1 ? D.resultsOne : fmt(D.results, { n: count })}{!m.decision.index && activeFilterCount(f) > 0 ? ` · ${D.faq.noindexNote}` : ""}</p>
         {m.answer && <p className="mt-4 rounded-[10px] border border-line bg-white p-4 text-sm leading-relaxed" data-answer-first>{m.answer}</p>}
       </header>

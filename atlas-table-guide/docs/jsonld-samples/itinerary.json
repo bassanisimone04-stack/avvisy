@@ -1,0 +1,114 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example-guide.com/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Travel",
+        "item": "https://example-guide.com/en/travel/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "A gastronomic journey through Tuscany",
+        "item": "https://example-guide.com/en/travel/gastronomic-journey-tuscany/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "@id": "https://example-guide.com/en/travel/gastronomic-journey-tuscany/#trip",
+    "name": "A gastronomic journey through Tuscany",
+    "description": "Four days from Rome into the Chianti hills: wine estates, a truffle lunch and two tasting menus.",
+    "url": "https://example-guide.com/en/travel/gastronomic-journey-tuscany/",
+    "image": "https://example-guide.com/images/generated/tuscany-travel.webp",
+    "touristType": "Food lovers",
+    "itinerary": {
+      "@type": "ItemList",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Orto di Monti",
+          "url": "https://example-guide.com/en/restaurant/orto-di-monti-rome/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Quinto Elemento",
+          "url": "https://example-guide.com/en/restaurant/quinto-elemento-rome/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Palazzo Celeste",
+          "url": "https://example-guide.com/en/hotel/palazzo-celeste-rome/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Chianti vineyard walk and lunch",
+          "url": "https://example-guide.com/en/experience/chianti-vineyard-walk-and-lunch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Castello della Vigna",
+          "url": "https://example-guide.com/en/hotel/castello-vigna-tuscany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Podere dei Cipressi",
+          "url": "https://example-guide.com/en/hotel/podere-cipressi-tuscany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Terrazza Celeste",
+          "url": "https://example-guide.com/en/restaurant/terrazza-celeste-rome/"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://example-guide.com/#organization",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com",
+    "logo": "https://example-guide.com/favicon.svg",
+    "email": "hello@example-guide.com"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://example-guide.com/#website",
+    "name": "ATLAS TABLE GUIDE",
+    "url": "https://example-guide.com/en/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://example-guide.com/#organization",
+      "name": "ATLAS TABLE GUIDE"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://example-guide.com/en/restaurants/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+]
