@@ -48,7 +48,7 @@ export default function MotionExtras() {
       aria-label="Torna su"
       title="Torna su"
       tabIndex={show ? 0 : -1}
-      className={`fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-surface text-brand-dark shadow-lg ring-1 ring-line transition-all duration-300 hover:-translate-y-1 ${
+      className={`fixed bottom-24 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-surface text-brand-dark shadow-lg ring-1 ring-line transition-all duration-300 hover:-translate-y-1 ${
         show ? "opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >

@@ -180,7 +180,7 @@ export default function HomeContent({ locale }: { locale: Locale }) {
       </section>
 
       {/* MAPPA INTERATTIVA */}
-      <section className="container-page py-14">
+      <section id="mappa" className="container-page scroll-mt-20 py-14">
         <Reveal>
           <p className="eyebrow">{t.home.mapEyebrow}</p>
           <h2 className="font-editorial mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t.home.mapTitle}</h2>

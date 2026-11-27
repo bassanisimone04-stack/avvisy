@@ -745,3 +745,18 @@ input[type="search"]::-webkit-search-decoration {
   .btn-outline { transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease; }
   .btn-outline:hover { transform: translateY(-2px); }
 }
+
+/* ───── Assistente del sito ───── */
+@keyframes gf-panel-in { from { opacity: 0; transform: translateY(16px) scale(0.97); } to { opacity: 1; transform: none; } }
+@keyframes gf-msg-in { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+@keyframes gf-dot { 0%, 80%, 100% { transform: translateY(0); opacity: 0.4; } 40% { transform: translateY(-4px); opacity: 1; } }
+@keyframes gf-hint-in { from { opacity: 0; transform: translateY(8px) scale(0.95); } to { opacity: 1; transform: none; } }
+@keyframes gf-fab-ring { 0% { box-shadow: 0 0 0 0 rgba(45, 106, 79, 0.45); } 80%, 100% { box-shadow: 0 0 0 16px rgba(45, 106, 79, 0); } }
+
+.gf-dot { display: inline-block; width: 7px; height: 7px; border-radius: 9999px; background: var(--gf-brand-light); animation: gf-dot 1s ease-in-out infinite; }
+@media (prefers-reduced-motion: no-preference) {
+  .gf-assistant-panel { animation: gf-panel-in 0.28s cubic-bezier(0.22, 1, 0.36, 1); transform-origin: bottom right; }
+  .gf-msg { animation: gf-msg-in 0.3s ease-out both; }
+  .gf-assistant-hint { animation: gf-hint-in 0.35s ease-out both; }
+  .gf-assistant-fab { animation: gf-fab-ring 2.6s ease-out infinite; }
+}
