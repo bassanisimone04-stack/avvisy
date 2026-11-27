@@ -143,5 +143,8 @@ export function directoryMetadata(sp: SearchParams, locale: Locale): Metadata {
     );
   }
 
-  return n === 0 ? { ...meta, robots: { index: false, follow: true } } : meta;
+  // Pagine 2, 3… dell'elenco: stesso elenco in più pezzi, non vanno nell'indice
+  // (le schede dei locali restano in sitemap e raggiungibili dai link).
+  const pageNum = Number(Array.isArray(sp.page) ? sp.page[0] : sp.page) || 1;
+  return n === 0 || pageNum > 1 ? { ...meta, robots: { index: false, follow: true } } : meta;
 }
