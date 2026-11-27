@@ -198,6 +198,12 @@ export function itemListJsonLd(items: { name: string; path: string }[]) {
   };
 }
 
+/**
+ * Dati strutturati delle schede prodotto del sito. Sono schede informative: i
+ * prodotti non si comprano qui e il prezzo è solo indicativo, quindi NON si
+ * dichiara un'offerta (prezzo e disponibilità) a Google. L'unico prodotto in
+ * vendita è la guida PDF, che ha la sua offerta in Guide2Content.
+ */
 export function productJsonLd(p: Product) {
   return {
     "@context": "https://schema.org",
@@ -209,7 +215,6 @@ export function productJsonLd(p: Product) {
     ...(p.reviewCount > 0
       ? { aggregateRating: { "@type": "AggregateRating", ratingValue: p.rating, reviewCount: p.reviewCount } }
       : {}),
-    offers: { "@type": "Offer", priceCurrency: "EUR", price: p.price, availability: "https://schema.org/InStock" },
   };
 }
 
