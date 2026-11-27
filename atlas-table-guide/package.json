@@ -12,13 +12,15 @@
     "test": "vitest run",
     "e2e": "playwright test --trace off",
     "a11y": "playwright test --trace off --grep @a11y",
-    "seo:check": "node scripts/seo-check.mjs",
+    "seo:check": "tsx --tsconfig tsconfig.json scripts/seo-check.ts",
     "check:banned": "node scripts/banned-terms.mjs",
     "check:secrets": "node scripts/secret-scan.mjs",
     "db:seed-sql": "tsx scripts/generate-seed-sql.ts",
     "db:test": "bash scripts/db-test.sh",
     "dev:setup": "bash scripts/dev-setup.sh",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "images": "node scripts/generate-images.mjs",
+    "ci": "npm run lint && npm run typecheck && npm run test && npm run check:banned && npm run build && npm run check:secrets && npm run seo:check && npm run e2e"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",

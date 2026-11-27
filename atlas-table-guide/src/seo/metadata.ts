@@ -25,7 +25,7 @@ export function buildMetadata(a: Args): Metadata {
   for (const l of locales) languages[l] = `${SITE_URL}/${l}${a.path}`;
   languages["x-default"] = `${SITE_URL}/${BRAND.defaultLocale}${a.path}`;
   const fullTitle = a.title.includes(BRAND.name) ? a.title : `${a.title} | ${BRAND.name}`;
-  const image = a.image ?? "/og-default.png";
+  const image = a.image ?? `/api/og/?title=${encodeURIComponent(a.title.slice(0, 90))}`;
   return {
     title: { absolute: fullTitle },
     description: a.description,

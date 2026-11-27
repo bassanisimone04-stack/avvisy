@@ -61,19 +61,23 @@ export function trigramSimilarity(a: string, b: string): number {
   return inter / (A.size + B.size - inter || 1);
 }
 
+/** Optimal-string-alignment (Damerau–Levenshtein) distance: adjacent transpositions cost 1. */
 export function levenshtein(a: string, b: string): number {
   if (a === b) return 0;
   const m = a.length;
   const n = b.length;
   if (!m) return n;
   if (!n) return m;
-  let prev = Array.from({ length: n + 1 }, (_, i) => i);
+  const d: number[][] = Array.from({ length: m + 1 }, (_, i) => [i, ...Array(n).fill(0)]);
+  for (let j = 0; j <= n; j++) d[0]![j] = j;
   for (let i = 1; i <= m; i++) {
-    const cur = [i];
-    for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j]! + 1, cur[j - 1]! + 1, prev[j - 1]! + (a[i - 1] === b[j - 1] ? 0 : 1));
-    prev = cur;
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      d[i]![j] = Math.min(d[i - 1]![j]! + 1, d[i]![j - 1]! + 1, d[i - 1]![j - 1]! + cost);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i]![j] = Math.min(d[i]![j]!, d[i - 2]![j - 2]! + 1);
+    }
   }
-  return prev[n]!;
+  return d[m]![n]!;
 }
 
 function tokenScore(q: string, docTokens: string[]): number {
@@ -82,7 +86,7 @@ function tokenScore(q: string, docTokens: string[]): number {
     if (d === q) return 1;
     if (d.startsWith(q) && q.length >= 2) best = Math.max(best, 0.9);
     else if (q.length >= 4) {
-      const lev = levenshtein(q, d.slice(0, Math.max(q.length, d.length)));
+      const lev = levenshtein(q, d);
       const maxTypos = q.length >= 8 ? 2 : 1;
       if (lev <= maxTypos) best = Math.max(best, 0.8);
       else {

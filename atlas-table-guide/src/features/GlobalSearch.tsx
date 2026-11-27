@@ -30,7 +30,7 @@ export function GlobalSearch({ locale, labels, popular, open, onClose }: { local
     const ctl = new AbortController();
     setLoading(true);
     const id = setTimeout(() => {
-      fetch(`/api/search?q=${encodeURIComponent(q)}&locale=${locale}`, { signal: ctl.signal })
+      fetch(`/api/search/?q=${encodeURIComponent(q)}&locale=${locale}`, { signal: ctl.signal })
         .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
         .then((j: { hits: Hit[] }) => { setHits(j.hits); setActive(0); setError(false); })
         .catch((e) => { if (e?.name !== "AbortError") setError(true); })

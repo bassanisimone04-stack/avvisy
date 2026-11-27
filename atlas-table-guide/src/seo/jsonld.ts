@@ -28,7 +28,7 @@ export const ALLOWED: Record<string, readonly string[]> = {
   MenuSection: ["@type", "name", "hasMenuItem", "offers"],
   MenuItem: ["@type", "name", "description", "offers"],
   LocationFeatureSpecification: ["@type", "name", "value"],
-  Person: ["@type", "name", "jobTitle", "url"],
+  Person: ["@context", "@type", "@id", "name", "jobTitle", "url", "description", "worksFor"],
   City: ["@type", "name", "url"],
   Place: ["@context", "@type", "@id", "name", "url", "description", "geo", "address", "containedInPlace", "image"],
   Country: ["@type", "name"],
@@ -225,5 +225,13 @@ export function buildItineraryJsonLd(it: Itinerary, ctx: { locale: Locale; image
     "@context": "https://schema.org", "@type": "TouristTrip", "@id": `${url}#trip`, name: t(it.title, ctx.locale), description: t(it.summary, ctx.locale), url, image: abs(ctx.imageUrl),
     touristType: "Food lovers",
     itinerary: { "@type": "ItemList", numberOfItems: ctx.stops.length, itemListElement: ctx.stops.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.name, url: abs(s.path) })) },
+  });
+}
+
+export function buildChefJsonLd(chef: Chef, ctx: { locale: Locale; restaurants: { name: string; slug: string }[] }): Node {
+  const url = `${SITE_URL}/${ctx.locale}/chefs/${chef.slug}/`;
+  return clean({
+    "@context": "https://schema.org", "@type": "Person", "@id": `${url}#person`, name: chef.name, jobTitle: "Chef", url, description: t(chef.bio, ctx.locale),
+    worksFor: ctx.restaurants.map((r) => ({ "@type": "Restaurant", name: r.name, url: `${SITE_URL}/${ctx.locale}/restaurant/${r.slug}/` })),
   });
 }
