@@ -69,7 +69,7 @@ const L = en
 
 <style is:global>
   .cfbot { position: fixed; right: 16px; bottom: calc(16px + var(--cfbot-lift, 0px)); z-index: 55; font-family: inherit; }
-  .cfbot-launch { width: 58px; height: 58px; border-radius: 50%; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #1c1b22; background: radial-gradient(circle at 35% 30%, #ffd978, #f4b73a 62%, #d9961a); box-shadow: 0 8px 24px rgba(0,0,0,.4), 0 0 0 4px rgba(244,183,58,.25); transition: transform .15s, box-shadow .15s; }
+  .cfbot-launch { width: 58px; height: 58px; border-radius: 50%; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #fff; background: radial-gradient(circle at 35% 30%, #22a352, #15803d 62%, #116b33); box-shadow: 0 8px 24px rgba(0,0,0,.4), 0 0 0 4px rgba(21,128,61,.3); transition: transform .15s, box-shadow .15s; }
   .cfbot-launch:hover { transform: translateY(-2px) scale(1.04); }
   .cfbot-launch:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
   .cfbot-teaser { position: absolute; right: 0; bottom: 70px; width: 230px; padding: 10px 28px 10px 14px; border-radius: 16px 16px 4px 16px; background: #fff; color: #1c1b22; font-size: 14px; font-weight: 600; line-height: 1.3; box-shadow: 0 8px 24px rgba(0,0,0,.35); animation: cfbotpop .35s ease-out; }
@@ -80,8 +80,8 @@ const L = en
   .cfbot-panel { position: absolute; right: 0; bottom: 0; width: min(390px, calc(100vw - 32px)); height: min(600px, calc(100vh - 32px - var(--cfbot-lift, 0px))); display: flex; flex-direction: column; overflow: hidden; border-radius: 22px; background: #faf7f0; color: #1c1b22; border: 1px solid rgba(0,0,0,.12); box-shadow: 0 24px 60px rgba(0,0,0,.45); animation: cfbotpop .25s ease-out; }
   .dark .cfbot-panel { background: #22222b; color: #faf7f0; border-color: rgba(255,255,255,.14); }
   .cfbot-panel[hidden] { display: none; }
-  .cfbot-head { display: flex; align-items: center; gap: 10px; padding: 14px 14px 12px 16px; background: linear-gradient(135deg, #2a0a10, #4a1020 60%, #5a1a20); color: #fff; }
-  .cfbot-avatar { width: 38px; height: 38px; border-radius: 50%; background: #f4b73a; color: #1c1b22; display: flex; align-items: center; justify-content: center; flex: none; }
+  .cfbot-head { display: flex; align-items: center; gap: 10px; padding: 14px 14px 12px 16px; background: linear-gradient(135deg, #052e16, #0f4a26 60%, #15803d); color: #fff; }
+  .cfbot-avatar { width: 38px; height: 38px; border-radius: 50%; background: #fff; color: #15803d; display: flex; align-items: center; justify-content: center; flex: none; }
   .cfbot-title { display: flex; flex-direction: column; min-width: 0; flex: 1; line-height: 1.2; }
   .cfbot-title strong { font-size: 15px; }
   .cfbot-title small { font-size: 12px; opacity: .8; }
@@ -91,12 +91,12 @@ const L = en
   .cfbot-msg { max-width: 88%; padding: 10px 13px; border-radius: 16px; font-size: 14px; line-height: 1.45; word-wrap: break-word; }
   .cfbot-msg.bot { align-self: flex-start; background: #fff; border: 1px solid rgba(0,0,0,.08); border-bottom-left-radius: 4px; }
   .dark .cfbot-msg.bot { background: #2c2c37; border-color: rgba(255,255,255,.1); }
-  .cfbot-msg.user { align-self: flex-end; background: #f4b73a; color: #1c1b22; border-bottom-right-radius: 4px; font-weight: 500; }
+  .cfbot-msg.user { align-self: flex-end; background: #15803d; color: #fff; border-bottom-right-radius: 4px; font-weight: 500; }
   .cfbot-msg a { color: inherit; }
   .cfbot-cards { display: flex; flex-direction: column; gap: 8px; max-width: 94%; align-self: flex-start; width: 100%; }
   .cfbot-card { display: block; padding: 10px 12px; border-radius: 14px; background: #fff; border: 1px solid rgba(0,0,0,.1); text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
   .dark .cfbot-card { background: #2c2c37; border-color: rgba(255,255,255,.12); }
-  .cfbot-card:hover, .cfbot-card:focus-visible { border-color: #f4b73a; transform: translateY(-1px); outline: none; }
+  .cfbot-card:hover, .cfbot-card:focus-visible { border-color: #16a34a; transform: translateY(-1px); outline: none; }
   .cfbot-card b { display: block; font-size: 14px; }
   .cfbot-card span { display: block; font-size: 12.5px; opacity: .75; margin-top: 1px; }
   .cfbot-card em { display: inline-block; margin-top: 5px; padding: 1px 8px; border-radius: 99px; font-style: normal; font-size: 11px; font-weight: 700; color: #1c1b22; }
@@ -108,16 +108,16 @@ const L = en
   @keyframes cfbotdot { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-4px); opacity: 1; } }
   .cfbot-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 10px; }
   .cfbot-chips:empty { display: none; }
-  .cfbot-chip { padding: 6px 12px; border-radius: 99px; border: 1px solid #c4880f; background: transparent; color: #7a4f06; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s; }
-  .dark .cfbot-chip { color: #f4b73a; border-color: #f4b73a; }
-  .cfbot-chip:hover, .cfbot-chip:focus-visible { background: rgba(244,183,58,.2); outline: none; }
+  .cfbot-chip { padding: 6px 12px; border-radius: 99px; border: 1px solid #15803d; background: transparent; color: #166534; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s; }
+  .dark .cfbot-chip { color: #4ade80; border-color: #22c55e; }
+  .cfbot-chip:hover, .cfbot-chip:focus-visible { background: rgba(34,197,94,.18); outline: none; }
   .cfbot-form { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid rgba(0,0,0,.1); background: #fff; }
   .dark .cfbot-form { background: #1b1b22; border-color: rgba(255,255,255,.12); }
   .cfbot-form input { flex: 1; min-width: 0; border-radius: 99px; border: 1px solid rgba(0,0,0,.2); padding: 9px 14px; font-size: 14px; background: #faf7f0; color: #1c1b22; }
   .dark .cfbot-form input { background: #2c2c37; color: #faf7f0; border-color: rgba(255,255,255,.2); }
-  .cfbot-form input:focus-visible { outline: 2px solid #f4b73a; outline-offset: 1px; }
-  .cfbot-form button { width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer; background: #f4b73a; color: #1c1b22; display: flex; align-items: center; justify-content: center; flex: none; }
-  .cfbot-form button:hover { background: #ffd067; }
+  .cfbot-form input:focus-visible { outline: 2px solid #16a34a; outline-offset: 1px; }
+  .cfbot-form button { width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer; background: #15803d; color: #fff; display: flex; align-items: center; justify-content: center; flex: none; }
+  .cfbot-form button:hover { background: #166534; }
   .cfbot-note { margin: 0; padding: 0 14px 10px; font-size: 11px; text-align: center; opacity: .6; background: inherit; }
   .dark .cfbot-form + .cfbot-note { background: #1b1b22; }
   .cfbot-form + .cfbot-note { background: #fff; padding-top: 0; }
