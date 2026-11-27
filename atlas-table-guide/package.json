@@ -1,0 +1,53 @@
+{
+  "name": "atlas-table-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build": "next build",
+    "start": "next start -p 3100",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "playwright test --trace off",
+    "a11y": "playwright test --trace off --grep @a11y",
+    "seo:check": "node scripts/seo-check.mjs",
+    "check:banned": "node scripts/banned-terms.mjs",
+    "check:secrets": "node scripts/secret-scan.mjs",
+    "db:seed-sql": "tsx scripts/generate-seed-sql.ts",
+    "db:test": "bash scripts/db-test.sh",
+    "dev:setup": "bash scripts/dev-setup.sh",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "@supabase/supabase-js": "^2.119.2",
+    "clsx": "^2.1.1",
+    "maplibre-gl": "^6.20.0",
+    "next": "^15.5.29",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.1",
+    "@eslint/eslintrc": "^3.3.7",
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.11",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.5.29",
+    "node-html-parser": "^9.0.7",
+    "prettier": "^3.10.1",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.2"
+  }
+}

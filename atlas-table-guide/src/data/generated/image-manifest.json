@@ -1,0 +1,370 @@
+{
+ "hero-mediterranean": {
+  "src": "/images/generated/hero-mediterranean.webp",
+  "width": 2100,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4WAoAAAAQAAAADwAABgAAQUxQSD8AAAABuYzofzgcRZKkWo/5mWD/ct75OWCmz99BbcwlYgImoHkSBAQdKJSK8e/KYbHbCBpCiUFNHLoS/z6hA3mhQAAAVlA4IEoAAACwAQCdASoQAAcAA4BaJbACdAEOuwSAAP6EHHb8zTILGMPNTG76c2kLP7J8ni3mA+b0Q4nTXwO9bLrLfAGQW4E0km+P23yJWAwAAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-paris": {
+  "src": "/images/generated/destination-paris.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSDQAAAABYBRJkiL/No+ZGZ8Z6yAiJiD/Mc8ks1TSRJJYYotCVYn0i6y3bK8c9D/y3XI/8tgn3x8cVlA4IGoAAACwAwCdASoQABUAPu1mq04ppaQiMAgBMB2JZACdACHCeay4js7SQAD+zTqoxs8F+dIxKgJJn3ulxs8EdtVH5WuRwvwqvNSGJb4EV1oyfmeHAFGOqBtlnPnNAUgaBzBS3ZhGIDtEB5+xDiAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-tokyo": {
+  "src": "/images/generated/destination-tokyo.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSFAAAAABf6CgbRuGP+Z26yMREam9KEg6CQxp25by56EZ5SOEEEIoIYQQQgihBHPu+goR/Z+AxeC/ioW+WSx0i0cN9Ga6Ap2eDtfTxKYC7Z6asrSZblZQOCBOAAAAcAMAnQEqEAAVAC61drtdo6mpqYmAtEoAtshDw2ljZWXDdCIAAP71cFmS5KuwSEytFHN7wN+t6PSxQMKJstF5DNQtPUjV8j62jUuYKnAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-milan": {
+  "src": "/images/generated/destination-milan.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSDQAAAABBraRJDnJP000mFqD2UUIGxET0H7YNtJYLakkVDbUSTHQJO0mA4275JTnpUtyS+yV9/sdVlA4IGYAAADQAwCdASoQABUAPu1kqU2ppaQiMAgBMB2JYwCdACHHGA0ASbRtcQAA/tpbmlbU8hsnQhu+xtrALf7ynahJZkZF6R4/PKi/GSv3/xDFCKjClP/KNNr/U3tzANa9XSIeT1ILHZPAAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-london": {
+  "src": "/images/generated/destination-london.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSFAAAAABb6CgbRuGP+S+XRIRkf2G1Q+G1LZX2X3rHkIIIQwhhBBCCCGEIYQQ3PudFCL6PwHF4N3Ro3pqA70jfWqiJi5xiqOIQNXwZkWg6mlXllbzG1ZQOCBcAAAA0AMAnQEqEAAVAD7taK1NqaakojAIATAdiWIAuwBpUsSKxZFg4KeSAP776geqQoUD3SJLgnBMYEIIaDP2g/xd7INvH9ZABUHplCddQT8IcRmZnwrF05rKu/ZI4AA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-new-york": {
+  "src": "/images/generated/destination-new-york.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSFAAAAABf6AgbQPGv+ad2IiI4PiaATCobVvGnydjBBFEEUEEUUQRQQQRRBDi3KVCRP8noDN49XSrgZ6R3oG+XjQ6Cx2ZdrEJE4S2NHtaHS3K0mx+A1ZQOCBaAAAA8AMAnQEqEAAVAD7taKpOqaYkIjAIATAdiWIAuwBpX7VQgk2xGb2VgAD+/FOxzul89XsIdItyI9mKL8jt+tNuW3lgJ1qTXUE/krgSKK8q43Cp9UnakmrRyAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-dubai": {
+  "src": "/images/generated/destination-dubai.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSEcAAAABb0AmbeNf8a41NiIiCJkDDGnblvLneUIIIbQQPkIoIXyEoO5dTyGi/xNQFTzkJ4d8ZBf0sox2QI8nTqKYkSyLboMuptFSYgBWUDggcAAAANADAJ0BKhAAFQA+7WKpTamlo6IwCAEwHYliAJ0AIdG8CiPdN+9zsAD+u6YTaq2Az67uC148mXYOI8JfRoFUJRuLKHAw2WyeE1AADwLCqdeGQTaAkDQxh7AX0MpyvkHt2nlWJOmQ3joKDtD7FuGIIAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-rome": {
+  "src": "/images/generated/destination-rome.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSFIAAAABd6CgbRuGP+J2/4KIiKzKqrREPTCobVvGnydjBBFEEEkEEUQQQQQRRBDm3KVCRP8noBo8G12qo7unZ6BXjfSpRkemPdEWyTjhaRaro0VZms1vVlA4IGwAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JQBdj+ABgXGRF+UKKrbTzYAD+zTffqYJ5tq6Wc2o8QmJGui3DyiPkOA66FLzHj88qL8ZK/f/ELyvD9yv1B+/0F/DQXX/up6CI4HEOCVuZVcboAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-barcelona": {
+  "src": "/images/generated/destination-barcelona.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRugAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSE8AAAABb6CgbRuGP+L9mUZEBC+YBWBQ27aMP88fEUQQQSQRRBBBBBF+BKHOW79CRP8nICm8Mz1SobfS12hInf6pkekKgqfTktK0WToM7ZKmTU0DAFZQOCByAAAA0AMAnQEqEAAVAD7tZKpOKaWkIjAIATAdiWYAnQAh0oKT7F8pEzdEAP67wHGt6IJ1GrUklU7YkAFVGTqnNyHu8Ep4uXVpoGoIm4l62mJbkVejnGi07/TdLPqOZxBGDdVZQuIoxkJhq2gx2h9i3DEyIAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-copenhagen": {
+  "src": "/images/generated/destination-copenhagen.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSE8AAAABd6CmbQOGP9++uyQiIn3JoA8GsW1FYd91iEIEIxjFKEYwAhGMYATD3D9UiOj/BGSFd6FHqjQbvRt90k7/WqIZ6DJ0CkNTd3RYGpKmrpYBAFZQOCBwAAAAMAQAnQEqEAAVAD7tYqlNqaWjojAIATAdiWYAsP3/7dABM80Lv1qojgYAAP7pNEKuylhzVNLS7E9YjKQ1yWE5QwZa1CcEb1A3fYlWiadE1F6lS/9/F9XCXxv8xGbvseHKJq+PW85uZiClrvrbSCAAAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "destination-singapore": {
+  "src": "/images/generated/destination-singapore.webp",
+  "width": 900,
+  "height": 1200,
+  "blurDataURL": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAADwAAFAAAQUxQSFAAAAABd6CobRuIP+G+7o1ERGSekPMBg9q2Zfx5xPoRRBBBBBFEEEUEEUQQQajz1qsQ0f8JqAbvRo/U6Z3om+mXFs0lnIUOT6tRWxqBdk+bZGkYNVZQOCBSAAAAcAMAnQEqEAAVAC61drtdo6mpqYmAtEsgAAXO+Qj5O9ng/c9AAP71dGkFopV5fgi3+dq16MYwgXUF32ZFW+ey+rtza4NLJKOpSzJeALDYgDrQAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "tasting-menu": {
+  "src": "/images/generated/tasting-menu.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAQCdASoQAAwAA4BaJZwAAcZFjYBWAAD+2oqM/6Nvy5zUZpb5es4xyunyZtA2u9lFrNTdVtLzwBoCjNaQQxdmYF7cquNDl6OFIRzmfZm35f+ILlp7cTzLCz0f6e5h0Do1l4AA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "restaurant-interior": {
+  "src": "/images/generated/restaurant-interior.webp",
+  "width": 1600,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAkAA4BaJYwCdAENm6WcCoAA/upWSKFuJsQuM/2m9W20f9u+CE7gLjs7xDxaf3yqUrk/MNdr0QEraihNBillADif5sz06SSJn1IGXzH5Vp7oYIAAAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dine-and-stay": {
+  "src": "/images/generated/dine-and-stay.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4WAoAAAAQAAAADwAACwAAQUxQSCgAAAABR6CgbRuGP+K2+4dERGSzPwEiAQgbTHDBBRts8T9aENH/xG2NLRF3VlA4IEIAAADwAQCdASoQAAwAA4BaJQBOgCIbsXsAaugA/eMdDuMU5FM0w0iy+59kdVNuUAks+cKePSkH2kB4xWYr3aUHRM41AAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "romantic-dining": {
+  "src": "/images/generated/romantic-dining.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAwAA4BaJYgCdAEOlmyLzgAA/vaNXACMrVke25hg0Xotl8iU6NDCeb1DhmXhfYdFjqMQfEa3hUfZ0DUmNcCGWDEHga4UAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "wine-experience": {
+  "src": "/images/generated/wine-experience.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4WAoAAAAQAAAADwAACwAAQUxQSC8AAAABb6CgbRuGP979GxoREYQM/LEwB0Nto5yGk3BqTsT90MebIJFgIKL/iXNU22PiDQBWUDggOgAAABACAJ0BKhAADAADgFolmAJ0ARBHC+Ox5fQA/sj4Li1THXoQhMuQGw5BTn5CbQqOwZopIbyh3IqhAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "chefs-table": {
+  "src": "/images/generated/chefs-table.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAwAA4BaJQBOgMXSyjX5vMuAAP7xGPSlnhs4myqggI2mX0uhfHd6S/dkHCpbwV6V+GmVm5Cbrv7D99nqMUVvuoK0WgedNV5waB+eXK/tn5F9AAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "gift-card": {
+  "src": "/images/generated/gift-card.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAwAA4BaJbACdAEQAgtZbZ+HdAAA/vP6MUkjLykJgLQAHsyyxDoc5EQhiXurtN2Pm4kJye5S7tv5cY4iI9Ebfeaf7TIqobmVqb850TIOoy/BUALoIAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "tuscany-travel": {
+  "src": "/images/generated/tuscany-travel.webp",
+  "width": 1600,
+  "height": 700,
+  "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQAAcAA4BaJZgCdAEOun3PAAD+yHPlmE2dfm63+vZfE5YxO138VGxgIymQRwAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "luxury-hotel": {
+  "src": "/images/generated/luxury-hotel.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABQAgCdASoQAAwAA4BaJaACdH8AGBtDhse9eAAA/q1Gwcb/Um9T2WzAAcIbN3w2+cUKCy5Nartp0H4lClNf0RLo28iCZgOKOcsVffLINXiregdKogA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "chef-editorial": {
+  "src": "/images/generated/chef-editorial.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAwAA4BaJYgCdADvgZ2hDVAAAP5VhGRt19QKL5P4VPROkioco5vs1EWM5Md4bG/HVArWmRFgK3jFNvoxHaMJm3lviJUkAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "terrace-1": {
+  "src": "/images/generated/terrace-1.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAwAA4BaJbACdAEOuKzjYAD+2tXDaVvU4plbKiVsoPJUIUsI9Ico2d8yGl65L5RbUofY2EBGCIb/rV5JJPz4MXxCwAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-1": {
+  "src": "/images/generated/dish-1.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAgCdASoQAAwAA4BaJZQCdAYtp2qHCqG9Y7gA/ufuJHXDun8m44d15Z70MU0mvH1QIx/Ml74jOmLxmwCGntNRisWPeZ648klLcKWJGTy8RQAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-2": {
+  "src": "/images/generated/dish-2.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAwAA4BaJQBOgCPvs0tlMAD+GNLtgKaqSGwpIZK+CCQiHX1LjxLDgUzbWVXC0kdPT++BowNNwkKJvC7AAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-3": {
+  "src": "/images/generated/dish-3.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAwAA4BaJZQAAxdLk40H04AAAP7Aa5zrDCs9Gf6B+1eOGCajR1mq8vXQ7zIrnU3VmEYONWqoJeehu/89ItP+DB+4CYx2wwNT3IAwAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-4": {
+  "src": "/images/generated/dish-4.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQAAwAA4BaJZwAAxZMXxxJvAAA/u4fc4ItqFNSJ5kWPT8wJIw/dBifoLfhguS3Rd4uAAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-5": {
+  "src": "/images/generated/dish-5.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAQAgCdASoQAAwAA4BaJZQCdAEfZsv8+AQAAP7uIXaAqXQi2hs+7agayz2Dwtm7cBH2nRmIXgAAAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-6": {
+  "src": "/images/generated/dish-6.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJZgCdAD6QbMpIEAAAP2YxfYqZq6IiRymfUR24M7HuaHjSGTS0Vwy6LX67LGMWI07STqv0kmajozDYOwumvawzQOV8HsQYsRhozsneIAAAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-7": {
+  "src": "/images/generated/dish-7.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAAwAA4BaJZQAAhVnoSpKdAD+0NZBAKH3mYq7hTYcH2+0Jz+xrpTOP4nIcvt90zCwsxR5mYmLPQcbeBXAcZRRuoSDWnfk0bfPby9+uvkT91MAAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-8": {
+  "src": "/images/generated/dish-8.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQAAwAA4BaJZQAAudpUvM0anwA/vB2Mb/g4ZKxfWMzl6HacgBFxahEVtsCK50W9UhwAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-9": {
+  "src": "/images/generated/dish-9.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAwAA4BaJZQCdADH2bTSMjtAAP7rc4UvvtC5KOWGGIozUQ8qbPb8eljNJ+82zqTcKNyKhCrkGWqR1q+lJzqKL8XDxl4W7wEhvOzNr7qgAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-10": {
+  "src": "/images/generated/dish-10.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAwAA4BaJYgCdAEDZodB+AAA/hZx0r3XdDUG3nbZQP+sP80uUvl0DxD+QIIYDwiArRtAAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-11": {
+  "src": "/images/generated/dish-11.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQAgCdASoQAAwAA4BaJZwAD40xfAwohl9jP+AA/sG78EGwNgGynHYsbppaLJ9qvL0XzL5ZLLr9IbkO1/XuVvudTDzkH679+0CMzFmoG9hZ7WoVRBmK9aFMAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-12": {
+  "src": "/images/generated/dish-12.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQAAwAA4BaJZQAAuRmflBYwAD+8HWdqBXwSGa3yaxNGMKSRVgLH4GewaBtzIAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-13": {
+  "src": "/images/generated/dish-13.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAwAA4BaJZQCdAEUjH7Z5dEAAP7uIehDc4DCElQ+w+65G+Q1PC6odB95LcCqXMyXbbnxuTsJk/jQAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-14": {
+  "src": "/images/generated/dish-14.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAwAA4BaJQBOgCP3nylzCzTsAAD2oAsKvk9r9HUfp9tf/bffsjb0lbxM7WbDH2v+K4jXQt24f5xihKdeTnAsm0/3nBWnnyqIAAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-15": {
+  "src": "/images/generated/dish-15.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAwAA4BaJZQAAxdK+r5gVQ4AAP7BvBpUZKiYX8gSd5BNV0JGN0dZqvL2U3ftHWyZiPIDb5rEy2Jc+x68Kvc9tBXDUCZXoydXRk77wXIAAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "dish-16": {
+  "src": "/images/generated/dish-16.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoQAAwAA4BaJZQCdAEPAy/CH+AAAP7wdjG/4OHEYdWmUrfjnQWxDBo0tUnHnAVRPr4JUAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-1": {
+  "src": "/images/generated/interior-1.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQAAwAA4BaJZQCdAEUpGhWFKvagAD+4i688fU+Q4a1QeQrvPWYqjzHmX0ic54M8kcfU81jpk5cTU2TiN58y+VAT+Tk7SAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-2": {
+  "src": "/images/generated/interior-2.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQAgCdASoQAAwAA4BaJZACdAYrxv2YAwS9/NAA/vNjFmqqzo5+AMfrU/z3irf38k3j/s/9XbCANmx/imSv2Mksu+ga1xE5CaoTkISme3uVMCXwYSlO1dPxmG3v+a342js37ynrdqj9h9n8ZHAqCHHzRJDPVlpQwAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-3": {
+  "src": "/images/generated/interior-3.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAwAA4BaJQBOgMVp5OfZ50iFGgAA/sny72CoHILbIt2kR4nNwI3dRTtcazyAFAwxpIs8z2UreYfGXtDov3Pe7Y9d74I/b02kTw1ntcAAAA==",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-4": {
+  "src": "/images/generated/interior-4.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwAgCdASoQAAwAA4BaJYwCdAYtzvP1V3L5AAD+7Sgk8KTy9DhS/NQCIWt/4gAOU5o3L9etVt8UW3Mk8B0ZEu1nTU6VuccsmFCEglleL/I4JNXR0usO+a3WIDz7yogdq/6TAZkJl5Y7G/jJwrINTYPgAAA=",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-5": {
+  "src": "/images/generated/interior-5.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAwAA4BaJZQAAveGdR/BJUqAAP7iLrzx9T5DhqjyH7/zqyr0cEaHvhzQQ+5x1mWGjgY3+Kz9nePzng/eEa9of29UhwAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-6": {
+  "src": "/images/generated/interior-6.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwAgCdASoQAAwAA4BaJZgCdAYtfv2YAnfSXdYAAP7xujz9CNxBkHtlyfiGW6Rwe3yAJjYe5Ol3HRtX/jWaJhnmEhRg2wn6cVWvTza/twYmMS+U1bU/wf5V59WGqp9p7reb6YY9au/kwfPGxM+KbIZ6stKGAAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-7": {
+  "src": "/images/generated/interior-7.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAwAA4BaJQBOgCKq3IH+uhwAAP7J8u9gqBx2hPkz0+ywhGcy2sF2yWOvPrF36FHs6/1QO/891oN5V28Hl9QmsAH1mSH6miV0Enk/R9KnYAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ },
+ "interior-8": {
+  "src": "/images/generated/interior-8.webp",
+  "width": 1200,
+  "height": 900,
+  "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQAgCdASoQAAwAA4BaJYwCdAYtLv6MH9kVSegA/u0gCaWd6yWGQ/FDhRqQb8PhHKVuj3AqRxnw8ztnUIH53kUROSqDPSvrCKzePhlpyZyQSaujjpdgNFjs1j1PTTHr3N/rQKBdcqJT0trQamwfAAAA",
+  "illustrative": true,
+  "licence": "generated-illustrative (REPLACE BEFORE LAUNCH)"
+ }
+}
